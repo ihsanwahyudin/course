@@ -32,7 +32,10 @@ func TestInputValidation(t *testing.T) {
 	}{
 		// Protected endpoints reject anonymous requests before anything else.
 		{"POST", "/api/v1/sessions", `{"course":"english","nodeId":"a0-alphabet-sounds"}`, 401, "unauthorized"},
-		{"POST", "/api/v1/sessions/not-a-uuid/messages", `{"content":"hi"}`, 401, "unauthorized"},
+		{"POST", "/api/v1/sessions/not-a-uuid/steps/0/ask", `{"content":"hi"}`, 401, "unauthorized"},
+		{"GET", "/api/v1/me/memory", ``, 401, "unauthorized"},
+		{"GET", "/api/v1/notes", ``, 401, "unauthorized"},
+		{"GET", "/api/v1/tts?text=hi", ``, 401, "unauthorized"},
 		{"GET", "/api/v1/dashboard", ``, 401, "unauthorized"},
 		{"POST", "/api/v1/courses/english/enroll", ``, 401, "unauthorized"},
 		{"GET", "/api/v1/auth/me", ``, 401, "unauthorized"},

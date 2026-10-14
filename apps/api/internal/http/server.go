@@ -6,12 +6,14 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"io"
 	"log/slog"
 	"net/http"
 	"os"
 	"path"
 	"path/filepath"
 	"regexp"
+	"strconv"
 	"strings"
 	"time"
 
@@ -90,10 +92,12 @@ func (s *Server) Router() http.Handler {
 	allLimit, aiLimit, authLimit := s.limits()
 
 	r.Route("/api/v1", func(r chi.Router) {
-		r.Use(middleware.Timeout(90 * time.Second))
+		// Writing a lesson plan can take a while on the first visit.
+		r.Use(middleware.Timeout(170 * time.Second))
 		r.Use(perIP(allLimit))
-		// JSON-only POSTs: with SameSite=Lax cookies this blocks cross-site form CSRF.
-		r.Use(middleware.AllowContentType("application/json"))
+		// JSON-only bodies (audio for /transcribe): with SameSite=Lax cookies
+		// this blocks cross-site form CSRF, since forms can't send these types.
+		r.Use(allowBodies)
 		r.Use(s.identify)
 		r.Use(withLocale)
 
@@ -119,6 +123,14 @@ func (s *Server) Router() http.Handler {
 			r.Get("/dashboard", s.dashboard)
 			r.Post("/sessions", s.startSession)
 			r.Get("/sessions/{sessionId}", s.getSession)
+			r.Get("/me/memory", s.memory)
+			r.Patch("/me/memory", s.setMemory)
+			r.Delete("/me/memory", s.deleteAllMemory)
+			r.Patch("/me/memory/{memoryId}", s.updateMemory)
+			r.Delete("/me/memory/{memoryId}", s.deleteMemory)
+			r.Get("/notes", s.notes)
+			r.Post("/notes", s.saveNote)
+			r.Delete("/notes/{noteId}", s.deleteNote)
 			r.Post("/flashcards", s.saveFlashcards)
 			r.Get("/flashcards/due", s.dueFlashcards)
 			r.Post("/flashcards/{cardId}/review", s.reviewFlashcard)
@@ -126,8 +138,15 @@ func (s *Server) Router() http.Handler {
 			r.Group(func(r chi.Router) {
 				// Tighter limit on calls that spend AI budget.
 				r.Use(perIP(aiLimit))
-				r.Post("/sessions/{sessionId}/messages", s.sendMessage)
+				r.Post("/sessions/{sessionId}/steps/{step}/next", s.nextStep)
+				r.Post("/sessions/{sessionId}/steps/{step}/answer", s.answerStep)
+				r.Post("/sessions/{sessionId}/steps/{step}/hint", s.hintStep)
+				r.Post("/sessions/{sessionId}/steps/{step}/reveal", s.revealStep)
+				r.Post("/sessions/{sessionId}/steps/{step}/similar", s.similarStep)
+				r.Post("/sessions/{sessionId}/steps/{step}/ask", s.askStep)
 				r.Post("/sessions/{sessionId}/assessment", s.submitAssessment)
+				r.Get("/tts", s.speech)
+				r.Post("/transcribe", s.transcribe)
 			})
 		})
 	})
@@ -479,17 +498,228 @@ func (s *Server) getSession(w http.ResponseWriter, r *http.Request) {
 	respond(w, v, err)
 }
 
-func (s *Server) sendMessage(w http.ResponseWriter, r *http.Request) {
+// allowBodies accepts JSON bodies everywhere and audio for /transcribe.
+func allowBodies(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.ContentLength == 0 || r.Method == http.MethodGet || r.Method == http.MethodHead || r.Method == http.MethodOptions {
+			next.ServeHTTP(w, r)
+			return
+		}
+		ct := strings.ToLower(strings.TrimSpace(strings.Split(r.Header.Get("Content-Type"), ";")[0]))
+		if ct == "application/json" || (strings.HasSuffix(r.URL.Path, "/transcribe") && strings.HasPrefix(ct, "audio/")) {
+			next.ServeHTTP(w, r)
+			return
+		}
+		writeErr(w, &apperr.Error{Status: 415, Code: "unsupported_media_type", Message: "Send JSON."})
+	})
+}
+
+// ---- lesson steps ----
+
+func stepParams(w http.ResponseWriter, r *http.Request) (string, int, bool) {
 	id, ok := sessionID(w, r)
+	if !ok {
+		return "", 0, false
+	}
+	n, err := strconv.Atoi(chi.URLParam(r, "step"))
+	if err != nil || n < 0 || n > 100 {
+		writeErr(w, &apperr.Error{Status: 404, Code: "step_not_open", Message: "That step isn't open yet."})
+		return "", 0, false
+	}
+	return id, n, true
+}
+
+type similarFlag struct {
+	Similar bool `json:"similar"`
+}
+
+// optionalBody decodes a JSON body if there is one.
+func optionalBody(w http.ResponseWriter, r *http.Request, v any) bool {
+	if r.ContentLength == 0 {
+		return true
+	}
+	return decode(w, r, v)
+}
+
+func (s *Server) nextStep(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
 	if !ok {
 		return
 	}
-	var body learning.MessageInput
+	v, err := s.Svc.NextStep(r.Context(), userID(r), id, n)
+	respond(w, v, err)
+}
+
+func (s *Server) answerStep(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
+	if !ok {
+		return
+	}
+	var body learning.AnswerInput
 	if !decode(w, r, &body) {
 		return
 	}
-	v, err := s.Svc.SendMessage(r.Context(), userID(r), id, body)
+	v, err := s.Svc.AnswerStep(r.Context(), userID(r), id, n, body)
 	respond(w, v, err)
+}
+
+func (s *Server) hintStep(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
+	if !ok {
+		return
+	}
+	var body similarFlag
+	if !optionalBody(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.HintStep(r.Context(), userID(r), id, n, body.Similar)
+	respond(w, v, err)
+}
+
+func (s *Server) revealStep(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
+	if !ok {
+		return
+	}
+	var body similarFlag
+	if !optionalBody(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.RevealStep(r.Context(), userID(r), id, n, body.Similar)
+	respond(w, v, err)
+}
+
+func (s *Server) similarStep(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
+	if !ok {
+		return
+	}
+	v, err := s.Svc.SimilarStep(r.Context(), userID(r), id, n)
+	respond(w, v, err)
+}
+
+func (s *Server) askStep(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
+	if !ok {
+		return
+	}
+	var body learning.AskInput
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.AskStep(r.Context(), userID(r), id, n, body)
+	respond(w, v, err)
+}
+
+// ---- speech ----
+
+func (s *Server) speech(w http.ResponseWriter, r *http.Request) {
+	audio, err := s.Svc.Speech(r.Context(), userID(r), r.URL.Query().Get("text"))
+	if err != nil {
+		writeErr(w, err)
+		return
+	}
+	w.Header().Set("Content-Type", "audio/mpeg")
+	w.Header().Set("Cache-Control", "private, max-age=604800")
+	_, _ = w.Write(audio)
+}
+
+var audioExt = map[string]string{"audio/webm": "webm", "audio/ogg": "ogg", "audio/mp4": "m4a", "audio/m4a": "m4a", "audio/x-m4a": "m4a",
+	"audio/mpeg": "mp3", "audio/wav": "wav", "audio/x-wav": "wav", "audio/aac": "aac"}
+
+func (s *Server) transcribe(w http.ResponseWriter, r *http.Request) {
+	ct := strings.ToLower(strings.TrimSpace(strings.Split(r.Header.Get("Content-Type"), ";")[0]))
+	ext, ok := audioExt[ct]
+	if !ok {
+		writeErr(w, &apperr.Error{Status: 415, Code: "unsupported_audio", Message: "Unsupported audio format."})
+		return
+	}
+	r.Body = http.MaxBytesReader(w, r.Body, learning.MaxAudioBytes)
+	audio, err := io.ReadAll(r.Body)
+	if err != nil {
+		writeErr(w, &apperr.Error{Status: 413, Code: "body_too_large", Message: "Recordings must be under 2 MB (about a minute)."})
+		return
+	}
+	text, err := s.Svc.Transcribe(r.Context(), userID(r), audio, "recording."+ext)
+	respond(w, map[string]string{"text": text}, err)
+}
+
+// ---- memory & notes ----
+
+func (s *Server) memory(w http.ResponseWriter, r *http.Request) {
+	v, err := s.Svc.Memory(r.Context(), userID(r))
+	respond(w, v, err)
+}
+
+func (s *Server) setMemory(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Enabled bool `json:"enabled"`
+	}
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.SetMemoryEnabled(r.Context(), userID(r), body.Enabled)
+	respond(w, v, err)
+}
+
+func (s *Server) deleteAllMemory(w http.ResponseWriter, r *http.Request) {
+	v, err := s.Svc.DeleteAllMemory(r.Context(), userID(r))
+	respond(w, v, err)
+}
+
+func memoryID(w http.ResponseWriter, r *http.Request, param, code string) (string, bool) {
+	id := chi.URLParam(r, param)
+	if !uuidRe.MatchString(id) {
+		writeErr(w, &apperr.Error{Status: 404, Code: code, Message: "Not found."})
+		return "", false
+	}
+	return id, true
+}
+
+func (s *Server) updateMemory(w http.ResponseWriter, r *http.Request) {
+	id, ok := memoryID(w, r, "memoryId", "memory_not_found")
+	if !ok {
+		return
+	}
+	var body struct {
+		Text string `json:"text"`
+	}
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.UpdateMemory(r.Context(), userID(r), id, body.Text)
+	respond(w, v, err)
+}
+
+func (s *Server) deleteMemory(w http.ResponseWriter, r *http.Request) {
+	id, ok := memoryID(w, r, "memoryId", "memory_not_found")
+	if !ok {
+		return
+	}
+	v, err := s.Svc.DeleteMemory(r.Context(), userID(r), id)
+	respond(w, v, err)
+}
+
+func (s *Server) notes(w http.ResponseWriter, r *http.Request) {
+	v, err := s.Svc.Notes(r.Context(), userID(r))
+	respond(w, map[string]any{"notes": v}, err)
+}
+
+func (s *Server) saveNote(w http.ResponseWriter, r *http.Request) {
+	var body learning.NoteInput
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.SaveNote(r.Context(), userID(r), body)
+	respond(w, v, err)
+}
+
+func (s *Server) deleteNote(w http.ResponseWriter, r *http.Request) {
+	id, ok := memoryID(w, r, "noteId", "note_not_found")
+	if !ok {
+		return
+	}
+	respond(w, map[string]bool{"ok": true}, s.Svc.DeleteNote(r.Context(), userID(r), id))
 }
 
 // ---- flashcards ----

@@ -6,84 +6,72 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 	"time"
-
-	"fluentpath/api/internal/tutor"
 )
 
-func fakeOpenAI(t *testing.T, reply string, seen *map[string]any) *OpenAI {
+func fakeOpenAI(t *testing.T, handler http.HandlerFunc) *OpenAI {
 	t.Helper()
-	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		body, _ := io.ReadAll(r.Body)
-		if seen != nil {
-			_ = json.Unmarshal(body, seen)
-		}
-		w.Header().Set("Content-Type", "application/json")
-		_, _ = io.WriteString(w, reply)
-	}))
+	srv := httptest.NewServer(handler)
 	t.Cleanup(srv.Close)
 	o := NewOpenAI("test-key", "tutor-model", "", srv.URL)
 	o.HTTP = &http.Client{Timeout: 5 * time.Second}
 	return o
 }
 
-func TestOpenAITutorRequestAndUsage(t *testing.T) {
+func TestOpenAILessonCallAndUsage(t *testing.T) {
 	var body map[string]any
-	o := fakeOpenAI(t, `{"status":"completed","output":[{"type":"message","content":[{"type":"output_text","text":"{\"message\":\"hi\",\"quiz\":[],\"flashcards\":[],\"search\":{\"kind\":\"\",\"query\":\"\"}}"}]}],
-		"usage":{"input_tokens":1500,"output_tokens":40,"input_tokens_details":{"cached_tokens":1280}}}`, &body)
-	in, _ := lessonInput(t, "a1-to-be")
-	in.Intent, in.CacheKey = tutor.IntentQuiz, "english:a1-to-be:id"
-	in.Messages = []ChatMessage{{Role: "user", Content: "earlier"}, {Role: "assistant", Content: "answer"}, {Role: "user", Content: "quiz me"}}
-	res, err := o.TutorReply(context.Background(), in)
+	o := fakeOpenAI(t, func(w http.ResponseWriter, r *http.Request) {
+		raw, _ := io.ReadAll(r.Body)
+		_ = json.Unmarshal(raw, &body)
+		_, _ = io.WriteString(w, `{"status":"completed","output":[{"type":"message","content":[{"type":"output_text","text":"{\"hint\":\"Think about Andi.\"}"}]}],
+			"usage":{"input_tokens":1500,"output_tokens":40,"input_tokens_details":{"cached_tokens":1280}}}`)
+	})
+	in, _ := lessonInput(t, "a0-pronouns", "en")
+	in.CacheKey = "english:a0-pronouns:en"
+	res, err := o.Hint(context.Background(), HintInput{LessonInput: in})
 	if err != nil {
 		t.Fatal(err)
 	}
-	if res.Usage != (Usage{Input: 1500, Cached: 1280, Output: 40}) {
-		t.Fatalf("usage not parsed: %+v", res.Usage)
+	if res.Usage != (Usage{Input: 1500, Cached: 1280, Output: 40}) || body["prompt_cache_key"] != "english:a0-pronouns:en" {
+		t.Fatalf("usage %+v body %v", res.Usage, body["prompt_cache_key"])
 	}
-	if body["prompt_cache_key"] != "english:a1-to-be:id" || body["max_output_tokens"].(float64) != float64(tutor.IntentQuiz.MaxOutputTokens()) {
-		t.Fatalf("request missing cache key or token cap: %v", body)
-	}
-	input := body["input"].([]any)
 	roles := []string{}
-	for _, m := range input {
+	for _, m := range body["input"].([]any) {
 		roles = append(roles, m.(map[string]any)["role"].(string))
 	}
-	want := []string{"system", "user", "assistant", "developer", "user"}
-	if len(roles) != len(want) {
-		t.Fatalf("roles %v, want %v", roles, want)
-	}
-	for i := range want {
-		if roles[i] != want[i] {
-			t.Fatalf("roles %v, want %v", roles, want)
-		}
+	if strings.Join(roles, ",") != "system,developer" {
+		t.Fatalf("roles: %v", roles)
 	}
 }
 
-func TestOpenAIWebSearchKeepsOnlyCitedURLs(t *testing.T) {
-	var body map[string]any
-	o := fakeOpenAI(t, `{"status":"completed","output":[{"type":"web_search_call"},{"type":"message","content":[{"type":"output_text",
-		"text":"See https://made-up.example/video and the cited ones.",
-		"annotations":[
-			{"type":"url_citation","url":"https://www.youtube.com/watch?v=wlbQLBhLk_4&utm_source=openai","title":"Alphabet song"},
-			{"type":"url_citation","url":"https://www.youtube.com/watch?v=wlbQLBhLk_4","title":"dup"},
-			{"type":"url_citation","url":"https://example.com/not-a-video","title":"page"},
-			{"type":"url_citation","url":"http://youtube.com/watch?v=b3L4pLSUwig","title":"insecure"}]}]}],
-		"usage":{"input_tokens":300,"output_tokens":80}}`, &body)
-	links, usage, err := o.WebSearch(context.Background(), SearchInput{Kind: tutor.KindVideo, Query: "alphabet song", LessonTitle: "Alphabet"})
-	if err != nil {
-		t.Fatal(err)
+func TestOpenAISpeechAndTranscription(t *testing.T) {
+	var gotModel, gotFile string
+	o := fakeOpenAI(t, func(w http.ResponseWriter, r *http.Request) {
+		switch r.URL.Path {
+		case "/audio/speech":
+			var b map[string]any
+			_ = json.NewDecoder(r.Body).Decode(&b)
+			gotModel = b["model"].(string)
+			w.Header().Set("Content-Type", "audio/mpeg")
+			_, _ = w.Write([]byte("ID3fake"))
+		case "/audio/transcriptions":
+			_ = r.ParseMultipartForm(1 << 20)
+			gotModel = r.FormValue("model")
+			f, h, _ := r.FormFile("file")
+			if f != nil {
+				gotFile = h.Filename
+			}
+			_, _ = io.WriteString(w, `{"text":" They work in marketing. "}`)
+		}
+	})
+	audio, err := o.Speech(context.Background(), "Hello")
+	if err != nil || string(audio) != "ID3fake" || gotModel != "gpt-4o-mini-tts" {
+		t.Fatalf("speech: %q %v %s", audio, err, gotModel)
 	}
-	if len(links) != 1 || links[0].URL != "https://www.youtube.com/watch?v=wlbQLBhLk_4" || links[0].Source != "youtube.com" || usage.Input != 300 {
-		t.Fatalf("links %+v usage %+v", links, usage)
-	}
-	tools := body["tools"].([]any)
-	if tools[0].(map[string]any)["type"] != "web_search" || tools[0].(map[string]any)["search_context_size"] != "low" {
-		t.Fatalf("web_search tool not requested: %v", body["tools"])
-	}
-	o.DisableSearch = true
-	if _, _, err := o.WebSearch(context.Background(), SearchInput{Kind: tutor.KindArticle}); err != ErrNoSearch {
-		t.Fatal("WEB_SEARCH=off must disable search")
+	text, err := o.Transcribe(context.Background(), []byte("webm"), "answer.webm")
+	if err != nil || text != "They work in marketing." || gotModel != "gpt-4o-mini-transcribe" || gotFile != "answer.webm" {
+		t.Fatalf("transcribe: %q %v %s %s", text, err, gotModel, gotFile)
 	}
 }

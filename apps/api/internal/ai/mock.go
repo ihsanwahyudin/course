@@ -11,16 +11,18 @@ import (
 	"fluentpath/api/internal/tutor"
 )
 
-// Mock is a deterministic, offline provider. It answers from the lesson's
-// key points, builds quizzes and flashcards from the lesson's practice data,
-// and grades answers by matching the curriculum's reference answers. Used
-// for tests, e2e checks and local development without an API key.
+// Mock is a deterministic, offline provider: plans come straight from the
+// lesson material, hints and answers are canned, and grading matches the
+// curriculum's reference answers. Used for tests, e2e checks and local
+// development without an API key.
 type Mock struct {
 	// Optional overrides for tests.
-	TutorFunc func(TutorInput) (json.RawMessage, error)
-	EvalFunc  func(EvalInput) (json.RawMessage, error)
+	PlanFunc func(LessonInput) (json.RawMessage, error)
+	HintFunc func(HintInput) (json.RawMessage, error)
+	AskFunc  func(AskInput) (json.RawMessage, error)
+	EvalFunc func(EvalInput) (json.RawMessage, error)
 	// Calls counts provider calls (tests check caching and pre-grading).
-	Calls struct{ Tutor, Eval, Search int }
+	Calls struct{ Plan, Hint, Similar, Ask, Summary, Eval int }
 }
 
 func (m *Mock) Name() string { return "mock" }
@@ -28,53 +30,94 @@ func (m *Mock) Name() string { return "mock" }
 // mockUsage is a fixed, plausible token count so usage accounting can be tested.
 var mockUsage = Usage{Input: 1000, Cached: 0, Output: 100}
 
-func (m *Mock) TutorReply(ctx context.Context, in TutorInput) (Result, error) {
-	m.Calls.Tutor++
-	if m.TutorFunc != nil {
-		raw, err := m.TutorFunc(in)
+func ok(v any) (Result, error) {
+	raw, err := json.Marshal(v)
+	return Result{Raw: raw, Usage: mockUsage}, err
+}
+
+func (m *Mock) LessonPlan(ctx context.Context, in LessonInput) (Result, error) {
+	m.Calls.Plan++
+	if m.PlanFunc != nil {
+		raw, err := m.PlanFunc(in)
 		return Result{Raw: raw, Usage: mockUsage}, err
 	}
 	if err := ctx.Err(); err != nil {
 		return Result{}, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}
-	raw, err := json.Marshal(mockReply(in))
-	return Result{Raw: raw, Usage: mockUsage}, err
+	p := tutor.FallbackPlan(in.Node, in.Lesson, in.Material, in.Locale)
+	p.Greeting = phrase(in.Locale, "greeting")
+	return ok(p)
 }
 
-func (m *Mock) WebSearch(ctx context.Context, in SearchInput) ([]Link, Usage, error) {
-	m.Calls.Search++
-	return nil, Usage{}, ErrNoSearch
+func (m *Mock) Hint(ctx context.Context, in HintInput) (Result, error) {
+	m.Calls.Hint++
+	if m.HintFunc != nil {
+		raw, err := m.HintFunc(in)
+		return Result{Raw: raw, Usage: mockUsage}, err
+	}
+	key := "hint1"
+	if len(in.Previous) > 0 {
+		key = "hint2"
+	}
+	return ok(tutor.Hint{Hint: phrase(in.Locale, key)})
 }
 
-func mockReply(in TutorInput) tutor.Reply {
+func (m *Mock) SimilarQuestion(ctx context.Context, in SimilarInput) (Result, error) {
+	m.Calls.Similar++
 	l := in.Lesson
-	r := tutor.Reply{Quiz: []tutor.QuizQuestion{}, Flashcards: []tutor.Card{}}
-	last := ""
-	if n := len(in.Messages); n > 0 {
-		last = in.Messages[n-1].Content
-	}
-	switch in.Intent {
-	case tutor.IntentQuiz:
-		r.Message = say(in, "quiz")
-		r.Quiz = mockQuiz(l)
-	case tutor.IntentFlashcards:
-		r.Message = say(in, "cards")
-		for _, k := range l.KeyPoints {
-			for _, e := range k.Examples {
-				if len(r.Flashcards) < tutor.MaxFlashcards {
-					r.Flashcards = append(r.Flashcards, tutor.Card{Front: e.ID, Back: e.EN})
-				}
-			}
+	prompts := append(append([]curriculum.PracticePrompt{}, l.GuidedPractice...), l.IndependentPrompt...)
+	for i, p := range prompts {
+		if p.ObjectiveID != in.Question.ObjectiveID || p.Prompt == in.Question.Prompt {
+			continue
 		}
-	case tutor.IntentExamples, tutor.IntentVideo, tutor.IntentImage:
-		r.Message = say(in, string(in.Intent))
-		r.Search = tutor.Search{Kind: in.Intent.SearchKind(), Query: in.Node.Title}
-	case tutor.IntentSimpler:
-		r.Message = say(in, "simpler") + keyPoint(in, l.KeyPoints[0])
-	default:
-		r.Message = say(in, "about") + keyPoint(in, bestKeyPoint(l, last))
+		if q, okq := tutor.QuestionFromPrompt(p, prompts, i+1); okq {
+			return ok(q)
+		}
 	}
-	return r
+	// Same question with the options in another order.
+	q := in.Question
+	if q.Type == tutor.QuestionMCQ && len(q.Options) > 1 {
+		opts := append(append([]string{}, q.Options[1:]...), q.Options[0])
+		q.Options, q.Answer = opts, (q.Answer-1+len(opts))%len(opts)
+	}
+	return ok(q)
+}
+
+func (m *Mock) Ask(ctx context.Context, in AskInput) (Result, error) {
+	m.Calls.Ask++
+	if m.AskFunc != nil {
+		raw, err := m.AskFunc(in)
+		return Result{Raw: raw, Usage: mockUsage}, err
+	}
+	k := bestKeyPoint(in.Lesson, in.Question)
+	text := phrase(in.Locale, "about") + k.Title + ": " + k.Explanation
+	if len(k.Examples) > 0 {
+		text += fmt.Sprintf(phrase(in.Locale, "example"), k.Examples[0].EN, k.Examples[0].ID)
+	}
+	return ok(tutor.Answer{Answer: text, Scope: tutor.ScopeIn})
+}
+
+func (m *Mock) Summarize(ctx context.Context, in SummaryInput) (Result, error) {
+	m.Calls.Summary++
+	s := tutor.Summary{Mastered: []string{}, Review: []string{}, Memory: []string{}}
+	for _, o := range in.Node.Objectives {
+		if in.Scores[o.ID] >= 80 {
+			s.Mastered = append(s.Mastered, o.Text)
+		} else {
+			s.Review = append(s.Review, o.Text)
+			s.Memory = append(s.Memory, fmt.Sprintf(phrase(in.Locale, "needs"), lowerFirst(o.Text)))
+		}
+	}
+	if in.NextLesson != "" {
+		s.NextOpening = fmt.Sprintf(phrase(in.Locale, "next"), in.Node.Title, in.NextLesson)
+	}
+	return ok(s)
+}
+
+func (m *Mock) Speech(ctx context.Context, text string) ([]byte, error) { return nil, ErrNoAudio }
+
+func (m *Mock) Transcribe(ctx context.Context, audio []byte, filename string) (string, error) {
+	return "", ErrNoAudio
 }
 
 // bestKeyPoint picks the key point sharing the most words with the question.
@@ -96,77 +139,32 @@ func bestKeyPoint(l *curriculum.Lesson, question string) curriculum.KeyPoint {
 	return best
 }
 
-// mockQuiz turns practice prompts into multiple-choice questions, using the
-// other prompts' answers as distractors.
-func mockQuiz(l *curriculum.Lesson) []tutor.QuizQuestion {
-	prompts := append(append([]curriculum.PracticePrompt{}, l.GuidedPractice...), l.IndependentPrompt...)
-	var answers []string
-	for _, p := range prompts {
-		if len(p.Expected) > 0 {
-			answers = append(answers, p.Expected[0])
-		}
+func lowerFirst(s string) string {
+	if s == "" {
+		return s
 	}
-	var out []tutor.QuizQuestion
-	for i, p := range prompts {
-		if len(p.Expected) == 0 || len(out) >= 4 {
-			continue
-		}
-		opts := []string{p.Expected[0]}
-		for j := 1; j < len(answers) && len(opts) < 3; j++ {
-			d := answers[(i+j)%len(answers)]
-			if Normalize(d) != Normalize(p.Expected[0]) && !contains(opts, d) {
-				opts = append(opts, d)
-			}
-		}
-		if len(opts) < 2 {
-			continue
-		}
-		// Rotate so the right answer isn't always first.
-		k := i % len(opts)
-		opts = append(opts[k:], opts[:k]...)
-		out = append(out, tutor.QuizQuestion{Prompt: p.Prompt, Options: opts, Answer: (len(opts) - k) % len(opts), Explain: p.Hint})
-	}
-	return out
-}
-
-func contains(xs []string, x string) bool {
-	for _, y := range xs {
-		if y == x {
-			return true
-		}
-	}
-	return false
-}
-
-func keyPoint(in TutorInput, k curriculum.KeyPoint) string {
-	s := k.Title + ": " + k.Explanation
-	if len(k.Examples) > 0 {
-		s += fmt.Sprintf(say(in, "example"), k.Examples[0].EN, k.Examples[0].ID)
-	}
-	return s
+	return strings.ToLower(s[:1]) + s[1:]
 }
 
 // Mock phrasing per UI language. Lesson content stays as written.
 var mockText = map[string]map[string]string{
 	"en": {
-		"about": "Here's the key idea. ", "simpler": "Let's make it simple. ", "example": " Example: %q (%s).",
-		"quiz": "Here's a short practice quiz. It doesn't count towards mastery.", "cards": "Here are some flashcards for this lesson.",
-		"examples": "Here's where people use this in real life.", "video": "Here are videos that show this in action.",
-		"image":       "Here are some pictures to help.",
+		"greeting": "Hi! Let's go through this lesson one step at a time. Tap Next when you're ready, or ask me anything about it.",
+		"hint1":    "Look at who or what the sentence is about first.", "hint2": "Compare each option with the rule on the concept card.",
+		"about": "Here's the key idea. ", "example": " Example: %q (%s).", "needs": "Needs more practice with %s",
+		"next":        "You've finished %s. Next we'll build on it in %s.",
 		"all_correct": "Excellent work — every answer met the objective.", "review": "Review and try again: %s.",
 		"correct_answer": "Correct: %q", "none_correct": "No fully correct answers yet.",
 	},
 	"id": {
-		"about": "Ini ide utamanya. ", "simpler": "Kita buat sederhana. ", "example": " Contoh: %q (%s).",
-		"quiz": "Ini kuis latihan singkat. Tidak memengaruhi status dikuasai.", "cards": "Ini beberapa flashcard untuk pelajaran ini.",
-		"examples": "Ini contoh pemakaiannya di kehidupan nyata.", "video": "Ini video yang menunjukkan penerapannya.",
-		"image":       "Ini beberapa gambar yang bisa membantu.",
+		"greeting": "Hai! Kita jalani pelajaran ini satu langkah demi satu langkah. Tekan Lanjut kalau siap, atau tanyakan apa saja tentang pelajaran ini.",
+		"hint1":    "Lihat dulu kalimat ini membicarakan siapa atau apa.", "hint2": "Bandingkan setiap pilihan dengan aturan di kartu konsep.",
+		"about": "Ini ide utamanya. ", "example": " Contoh: %q (%s).", "needs": "Masih perlu latihan: %s",
+		"next":        "Kamu sudah menyelesaikan %s. Berikutnya kita lanjutkan di %s.",
 		"all_correct": "Kerja bagus — semua jawaban memenuhi tujuan pelajaran.", "review": "Ulas lagi lalu coba kembali: %s.",
 		"correct_answer": "Benar: %q", "none_correct": "Belum ada jawaban yang sepenuhnya benar.",
 	},
 }
-
-func say(in TutorInput, key string) string { return phrase(in.Locale, key) }
 
 func phrase(locale, key string) string {
 	if m, ok := mockText[locale]; ok {

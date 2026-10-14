@@ -291,3 +291,81 @@ func TestProfileEndpoints(t *testing.T) {
 		t.Fatalf("profile not applied: %v %v", profile, enrollment)
 	}
 }
+
+func TestStepMemoryNotesAndSpeechEndpoints(t *testing.T) {
+	h, _ := dbRouter(t)
+	rec, _ := do(h, call{method: "POST", path: "/api/v1/auth/register", body: `{"email":"s@example.com","password":"longenough","displayName":"S"}`})
+	c := sessionCookie(rec)
+	rec, body := do(h, call{method: "POST", path: "/api/v1/sessions", body: `{"course":"english","nodeId":"a0-alphabet-sounds"}`, cookie: c})
+	if rec.Code != 200 || body["lesson"] == nil {
+		t.Fatalf("start session: %d %v", rec.Code, body)
+	}
+	id := body["id"].(string)
+	base := "/api/v1/sessions/" + id + "/steps/"
+
+	if _, body = do(h, call{method: "POST", path: base + "0/ask", body: `{"content":"Why is I read ai?"}`, cookie: c}); body["lesson"] == nil {
+		t.Fatalf("ask: %v", body)
+	}
+	steps := body["lesson"].(map[string]any)["steps"].([]any)
+	if asks := steps[0].(map[string]any)["asks"].([]any); len(asks) != 1 {
+		t.Fatalf("ask stored: %v", asks)
+	}
+	if _, body = do(h, call{method: "POST", path: base + "5/next", cookie: c}); errCode(body) != "step_not_open" {
+		t.Fatalf("closed step: %v", body)
+	}
+	if _, body = do(h, call{method: "POST", path: base + "x/next", cookie: c}); errCode(body) != "step_not_open" {
+		t.Fatalf("bad step: %v", body)
+	}
+	if _, body = do(h, call{method: "POST", path: base + "0/next", cookie: c}); body["lesson"].(map[string]any)["stepIndex"] != float64(1) {
+		t.Fatalf("next: %v", body)
+	}
+	if _, body = do(h, call{method: "POST", path: base + "1/answer", body: `{"choice":0,"extra":1}`, cookie: c}); errCode(body) != "invalid_json" {
+		t.Fatalf("unknown fields are rejected: %v", body)
+	}
+	if _, body = do(h, call{method: "POST", path: "/api/v1/sessions/" + id + "/assessment", body: `{"answers":[]}`, cookie: c}); errCode(body) != "finish_steps_first" {
+		t.Fatalf("checkpoint before the steps: %v", body)
+	}
+
+	// Memory and notes.
+	if rec, body = do(h, call{method: "GET", path: "/api/v1/me/memory", cookie: c}); rec.Code != 200 || body["enabled"] != true {
+		t.Fatalf("memory: %d %v", rec.Code, body)
+	}
+	if _, body = do(h, call{method: "PATCH", path: "/api/v1/me/memory", body: `{"enabled":false}`, cookie: c}); body["enabled"] != false {
+		t.Fatalf("memory off: %v", body)
+	}
+	if _, body = do(h, call{method: "PATCH", path: "/api/v1/me/memory/not-a-uuid", body: `{"text":"x"}`, cookie: c}); errCode(body) != "memory_not_found" {
+		t.Fatalf("bad memory id: %v", body)
+	}
+	if rec, body = do(h, call{method: "POST", path: "/api/v1/notes", body: `{"course":"english","nodeId":"a0-pronouns","artifact":{"title":"Sheet","intro":"","headers":["a","b"],"rows":[["he","dia"]],"tips":[],"examples":[]}}`, cookie: c}); rec.Code != 200 || body["id"] == nil {
+		t.Fatalf("save note: %d %v", rec.Code, body)
+	}
+	note := body["id"].(string)
+	if _, body = do(h, call{method: "GET", path: "/api/v1/notes", cookie: c}); len(body["notes"].([]any)) != 1 {
+		t.Fatalf("notes: %v", body)
+	}
+	if rec, _ = do(h, call{method: "DELETE", path: "/api/v1/notes/" + note, cookie: c}); rec.Code != 200 {
+		t.Fatalf("delete note: %d", rec.Code)
+	}
+
+	// Speech: the offline provider has no voice, so the app uses the device's.
+	if rec, body = do(h, call{method: "GET", path: "/api/v1/tts?text=Hello", cookie: c}); rec.Code != 501 || errCode(body) != "speech_unavailable" {
+		t.Fatalf("tts: %d %v", rec.Code, body)
+	}
+	audio := func(ct string, n int) *httptest.ResponseRecorder {
+		req := httptest.NewRequest("POST", "/api/v1/transcribe", strings.NewReader(strings.Repeat("a", n)))
+		req.Header.Set("Content-Type", ct)
+		req.AddCookie(c)
+		rec := httptest.NewRecorder()
+		h.ServeHTTP(rec, req)
+		return rec
+	}
+	if rec = audio("text/plain", 10); rec.Code != 415 {
+		t.Fatalf("non-audio: %d %s", rec.Code, rec.Body)
+	}
+	if rec = audio("audio/webm", learning.MaxAudioBytes+1); rec.Code != 413 {
+		t.Fatalf("too large: %d %s", rec.Code, rec.Body)
+	}
+	if rec = audio("audio/webm;codecs=opus", 10); rec.Code != 501 {
+		t.Fatalf("offline transcription: %d %s", rec.Code, rec.Body)
+	}
+}

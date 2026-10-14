@@ -21,7 +21,6 @@ import (
 	"fluentpath/api/internal/assessment"
 	"fluentpath/api/internal/curriculum"
 	"fluentpath/api/internal/progress"
-	"fluentpath/api/internal/resources"
 	"fluentpath/api/internal/storage"
 	"fluentpath/api/internal/tutor"
 )
@@ -43,12 +42,12 @@ type Service struct {
 	Store   *storage.Store
 	Catalog *curriculum.Catalog
 	AI      ai.Provider
-	// Commons finds pictures for the helper (nil disables image search).
-	Commons *resources.Commons
 	// TimeZone decides where a "day" starts for streaks and AI budgets.
 	TimeZone string
 	// DailyTokens caps each learner's AI tokens per day (0 = no cap).
 	DailyTokens int
+	// SpeechCacheDir stores synthesised audio (default: a temp folder).
+	SpeechCacheDir string
 }
 
 func (s *Service) course(slug string) (*curriculum.Curriculum, error) {
@@ -423,9 +422,8 @@ type SessionView struct {
 	storage.Session
 	Course      CourseRef                `json:"course"`
 	Node        NodeView                 `json:"node"`
-	Material    *curriculum.MaterialView `json:"material"`
-	Greeting    string                   `json:"greeting"` // personal line from onboarding, if any
-	Messages    []storage.Message        `json:"messages"`
+	Material    *curriculum.MaterialView `json:"material"` // full material, opened from the header
+	Lesson      *LessonView              `json:"lesson"`
 	CanChat     bool                     `json:"canChat"`
 	Assessment  []AssessmentItemView     `json:"assessment"`
 	LastAttempt *storage.Attempt         `json:"lastAttempt"`
@@ -454,14 +452,17 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 	if err != nil {
 		return SessionView{}, err
 	}
-	msgs, err := storage.ListMessages(ctx, db, sess.ID)
+	lang := cur.Lang(sess.Locale)
+	v := SessionView{
+		Session: sess, Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Node: nodeView(st, n),
+		Material: cur.MaterialIn(n.ID, lang), CanChat: sess.EndedAt == nil, Assessment: []AssessmentItemView{},
+	}
+	lc, err := decodeLesson(cur, n, sess)
 	if err != nil {
 		return SessionView{}, err
 	}
-	v := SessionView{
-		Session: sess, Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Node: nodeView(st, n), Messages: msgs,
-		Material: cur.MaterialIn(n.ID, st.lang), Greeting: greeting(st, st.lang),
-		CanChat: sess.EndedAt == nil, Assessment: []AssessmentItemView{},
+	if v.Lesson, err = s.lessonView(ctx, db, st, lc, lang); err != nil {
+		return SessionView{}, err
 	}
 	// The final quiz is always available while learning (answers stay on the server).
 	if sess.EndedAt == nil {
@@ -530,6 +531,12 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 	if err != nil {
 		return SessionView{}, err
 	}
+	// The first visit writes this learner's lesson plan.
+	if sess.EndedAt == nil {
+		if err := s.ensurePlan(ctx, st, n, &sess); err != nil {
+			return SessionView{}, err
+		}
+	}
 	return s.sessionView(ctx, s.Store.Pool, sess)
 }
 
@@ -572,6 +579,12 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 	cur, n, err := s.sessionCourse(sess)
 	if err != nil {
 		return AssessmentResult{}, err
+	}
+	// The checkpoint comes after the lesson's steps.
+	if lc, err := decodeLesson(cur, n, sess); err != nil {
+		return AssessmentResult{}, err
+	} else if len(lc.plan.Steps) == 0 || sess.StepIndex < len(lc.plan.Steps) {
+		return AssessmentResult{}, errStepsFirst
 	}
 	lesson, _ := cur.Lesson(n.ID)
 	clean := map[string]string{}
@@ -668,6 +681,9 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 	}
 	if out.Unlocked == nil {
 		out.Unlocked = []NodeView{}
+	}
+	if out.NewlyMastered {
+		s.finishLesson(ctx, userID, cur, n, sess, res.ObjectiveScores)
 	}
 	out.Session, err = s.GetSession(ctx, userID, sess.ID)
 	return out, err

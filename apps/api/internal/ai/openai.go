@@ -7,12 +7,10 @@ import (
 	"fmt"
 	"io"
 	"log/slog"
+	"mime/multipart"
 	"net/http"
-	"net/url"
 	"strings"
 	"time"
-
-	"fluentpath/api/internal/curriculum"
 )
 
 // OpenAI calls the Responses API with strict JSON-schema structured output.
@@ -25,8 +23,12 @@ type OpenAI struct {
 	MaxRetries  int
 	TutorBudget time.Duration
 	EvalBudget  time.Duration
-	// DisableSearch turns off the web_search tool (WEB_SEARCH=off).
-	DisableSearch bool
+	// PlanBudget bounds writing a whole lesson plan (a long reply).
+	PlanBudget time.Duration
+	// Speech models (configurable; see .env.example).
+	TTSModel        string
+	TTSVoice        string
+	TranscribeModel string
 }
 
 func NewOpenAI(apiKey, tutorModel, evalModel, baseURL string) *OpenAI {
@@ -37,39 +39,65 @@ func NewOpenAI(apiKey, tutorModel, evalModel, baseURL string) *OpenAI {
 		evalModel = tutorModel
 	}
 	return &OpenAI{
-		APIKey:      apiKey,
-		TutorModel:  tutorModel,
-		EvalModel:   evalModel,
-		BaseURL:     strings.TrimRight(baseURL, "/"),
-		HTTP:        &http.Client{Timeout: 60 * time.Second},
-		MaxRetries:  2,
-		TutorBudget: 45 * time.Second,
-		EvalBudget:  60 * time.Second,
+		APIKey:          apiKey,
+		TutorModel:      tutorModel,
+		EvalModel:       evalModel,
+		BaseURL:         strings.TrimRight(baseURL, "/"),
+		HTTP:            &http.Client{Timeout: 150 * time.Second},
+		MaxRetries:      2,
+		TutorBudget:     45 * time.Second,
+		EvalBudget:      60 * time.Second,
+		PlanBudget:      150 * time.Second,
+		TTSModel:        "gpt-4o-mini-tts",
+		TTSVoice:        "alloy",
+		TranscribeModel: "gpt-4o-mini-transcribe",
 	}
 }
 
 func (o *OpenAI) Name() string { return "openai" }
 
-func (o *OpenAI) TutorReply(ctx context.Context, in TutorInput) (Result, error) {
-	ctx, cancel := context.WithTimeout(ctx, o.TutorBudget)
-	defer cancel()
-	// Static prompt first so the provider can cache it; the per-turn
-	// instruction goes right before the learner's newest message.
-	input := []map[string]string{{"role": "system", "content": tutorStaticPrompt(in)}}
-	msgs := in.Messages
-	var last *ChatMessage
-	if n := len(msgs); n > 0 && msgs[n-1].Role == "user" {
-		last, msgs = &msgs[n-1], msgs[:n-1]
+func (o *OpenAI) lessonCall(ctx context.Context, in LessonInput, task, user, name string, schema map[string]any, maxTokens int, history []ChatMessage) (Result, error) {
+	budget := o.TutorBudget
+	if name == "lesson_plan" {
+		budget = o.PlanBudget
 	}
-	for _, m := range msgs {
+	ctx, cancel := context.WithTimeout(ctx, budget)
+	defer cancel()
+	// The lesson prefix comes first and never changes between calls, so the
+	// provider can reuse its prompt cache; the task goes after it.
+	input := []map[string]string{{"role": "system", "content": lessonPrefix(in)}}
+	for _, m := range history {
 		input = append(input, map[string]string{"role": m.Role, "content": m.Content})
 	}
-	input = append(input, map[string]string{"role": "developer", "content": tutorTurnPrompt(in)})
-	if last != nil {
-		input = append(input, map[string]string{"role": "user", "content": last.Content})
+	input = append(input, map[string]string{"role": "developer", "content": task})
+	if user != "" {
+		input = append(input, map[string]string{"role": "user", "content": user})
 	}
-	return o.respond(ctx, request{Model: o.TutorModel, Input: input, Name: "tutor_reply", Schema: tutorSchema(),
-		MaxTokens: in.Intent.MaxOutputTokens(), CacheKey: in.CacheKey})
+	return o.respond(ctx, request{Model: o.TutorModel, Input: input, Name: name, Schema: schema, MaxTokens: maxTokens, CacheKey: in.CacheKey})
+}
+
+func (o *OpenAI) LessonPlan(ctx context.Context, in LessonInput) (Result, error) {
+	return o.lessonCall(ctx, in, planTask(in), "", "lesson_plan", planSchema(), 6000, nil)
+}
+
+func (o *OpenAI) Hint(ctx context.Context, in HintInput) (Result, error) {
+	return o.lessonCall(ctx, in.LessonInput, hintTask(in), "", "hint", hintSchema(), 300, nil)
+}
+
+func (o *OpenAI) SimilarQuestion(ctx context.Context, in SimilarInput) (Result, error) {
+	return o.lessonCall(ctx, in.LessonInput, similarTask(in), "", "question", questionSchema(), 600, nil)
+}
+
+func (o *OpenAI) Ask(ctx context.Context, in AskInput) (Result, error) {
+	h := in.History
+	if len(h) > 8 {
+		h = h[len(h)-8:]
+	}
+	return o.lessonCall(ctx, in.LessonInput, askTask(in), in.Question, "answer", answerSchema(), 700, h)
+}
+
+func (o *OpenAI) Summarize(ctx context.Context, in SummaryInput) (Result, error) {
+	return o.lessonCall(ctx, in.LessonInput, summaryTask(in), "", "summary", summarySchema(), 700, nil)
 }
 
 func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
@@ -82,87 +110,87 @@ func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
 	return o.respond(ctx, request{Model: o.EvalModel, Input: input, Name: "assessment_result", Schema: evalSchema(in), MaxTokens: 1200})
 }
 
-// WebSearch uses the Responses API web_search tool and keeps only the URLs
-// the tool actually cited, so a link can never be made up by the model.
-func (o *OpenAI) WebSearch(ctx context.Context, in SearchInput) ([]Link, Usage, error) {
-	if o.DisableSearch {
-		return nil, Usage{}, ErrNoSearch
-	}
-	ctx, cancel := context.WithTimeout(ctx, o.TutorBudget)
+// Speech calls the text-to-speech endpoint and returns MP3 audio.
+func (o *OpenAI) Speech(ctx context.Context, text string) ([]byte, error) {
+	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
 	defer cancel()
-	what := "real-world pages (news, guides, everyday examples) that show this English in use"
-	if in.Kind == "video" {
-		what = "beginner-friendly YouTube videos (youtube.com) that teach or show this"
-	}
-	prompt := fmt.Sprintf("Find up to 4 %s for an English learner studying %q. Search for: %s. "+
-		"Prefer well-known educational sources. Cite every result you mention.", what, in.LessonTitle, in.Query)
-	tool := map[string]any{"type": "web_search", "search_context_size": "low"}
-	if in.Kind == "video" {
-		tool["filters"] = map[string]any{"allowed_domains": []string{"youtube.com"}}
-	}
-	body := map[string]any{
-		"model":             o.TutorModel,
-		"input":             prompt,
-		"tools":             []map[string]any{tool},
-		"max_output_tokens": 400,
-		"store":             false,
-	}
-	raw, err := json.Marshal(body)
+	body, _ := json.Marshal(map[string]any{"model": o.TTSModel, "voice": o.TTSVoice, "input": text, "response_format": "mp3",
+		"instructions": "Speak clearly and a little slowly, like an English teacher for beginners."})
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, o.BaseURL+"/audio/speech", bytes.NewReader(body))
 	if err != nil {
-		return nil, Usage{}, err
+		return nil, err
 	}
-	r, err := o.call(ctx, raw)
+	req.Header.Set("Authorization", "Bearer "+o.APIKey)
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := o.HTTP.Do(req)
 	if err != nil {
-		return nil, Usage{}, err
+		return nil, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}
-	var links []Link
-	seen := map[string]bool{}
-	for _, item := range r.Output {
-		for _, c := range item.Content {
-			for _, a := range c.Annotations {
-				if a.Type != "url_citation" {
-					continue
-				}
-				u := cleanURL(a.URL)
-				if u == "" || seen[u] || len(links) >= 4 {
-					continue
-				}
-				if in.Kind == "video" {
-					if _, ok := curriculum.YouTubeID(u); !ok {
-						continue
-					}
-				}
-				seen[u] = true
-				links = append(links, Link{Kind: in.Kind, Title: strings.TrimSpace(a.Title), URL: u, Source: hostOf(u)})
-			}
-		}
+	defer resp.Body.Close()
+	audio, err := io.ReadAll(io.LimitReader(resp.Body, 5<<20))
+	if err != nil {
+		return nil, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}
-	return links, r.usage(), nil
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("%w: openai speech status %d: %s", ErrUnavailable, resp.StatusCode, apiError(audio))
+	}
+	return audio, nil
 }
 
-// cleanURL keeps https URLs and drops tracking parameters.
-func cleanURL(raw string) string {
-	u, err := url.Parse(raw)
-	if err != nil || u.Scheme != "https" || u.Host == "" || u.User != nil {
-		return ""
+// Transcribe sends a short recording to the transcription endpoint.
+func (o *OpenAI) Transcribe(ctx context.Context, audio []byte, filename string) (string, error) {
+	ctx, cancel := context.WithTimeout(ctx, 45*time.Second)
+	defer cancel()
+	var buf bytes.Buffer
+	w := multipart.NewWriter(&buf)
+	_ = w.WriteField("model", o.TranscribeModel)
+	_ = w.WriteField("language", "en")
+	_ = w.WriteField("response_format", "json")
+	fw, err := w.CreateFormFile("file", filename)
+	if err != nil {
+		return "", err
 	}
-	q := u.Query()
-	for k := range q {
-		if strings.HasPrefix(k, "utm_") {
-			q.Del(k)
-		}
+	if _, err := fw.Write(audio); err != nil {
+		return "", err
 	}
-	u.RawQuery = q.Encode()
-	u.Fragment = ""
-	return u.String()
+	if err := w.Close(); err != nil {
+		return "", err
+	}
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, o.BaseURL+"/audio/transcriptions", &buf)
+	if err != nil {
+		return "", err
+	}
+	req.Header.Set("Authorization", "Bearer "+o.APIKey)
+	req.Header.Set("Content-Type", w.FormDataContentType())
+	resp, err := o.HTTP.Do(req)
+	if err != nil {
+		return "", fmt.Errorf("%w: %v", ErrUnavailable, err)
+	}
+	defer resp.Body.Close()
+	raw, _ := io.ReadAll(io.LimitReader(resp.Body, 1<<20))
+	if resp.StatusCode != http.StatusOK {
+		return "", fmt.Errorf("%w: openai transcription status %d: %s", ErrUnavailable, resp.StatusCode, apiError(raw))
+	}
+	var out struct {
+		Text string `json:"text"`
+	}
+	if err := json.Unmarshal(raw, &out); err != nil {
+		return "", fmt.Errorf("%w: decode transcription: %v", ErrUnavailable, err)
+	}
+	return strings.TrimSpace(out.Text), nil
 }
 
-func hostOf(raw string) string {
-	u, err := url.Parse(raw)
-	if err != nil {
-		return ""
+// apiError extracts OpenAI's error message (never the request contents).
+func apiError(raw []byte) string {
+	var e struct {
+		Error *struct {
+			Message string `json:"message"`
+		} `json:"error"`
 	}
-	return strings.TrimPrefix(u.Hostname(), "www.")
+	if json.Unmarshal(raw, &e) == nil && e.Error != nil {
+		return e.Error.Message
+	}
+	return ""
 }
 
 type responsesReply struct {

@@ -105,8 +105,8 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(sess.Messages) != 0 || sess.Material == nil || len(sess.Material.Sections) < 3 || len(sess.Assessment) == 0 || sess.Phase != string(tutor.PhaseLearning) {
-		t.Fatalf("a new lesson opens on its material with the final quiz available: %+v", sess)
+	if sess.Lesson == nil || len(sess.Lesson.Steps) != 1 || sess.Lesson.TotalSteps < tutor.MinSteps || sess.Material == nil || len(sess.Assessment) == 0 || sess.Phase != string(tutor.PhaseLearning) {
+		t.Fatalf("a new lesson opens on its first step with the material at hand: %+v", sess)
 	}
 	if sess.Prev != nil || sess.Next == nil || sess.Next.ID != "a0-pronouns" {
 		t.Fatalf("lesson navigation: prev %v next %v", sess.Prev, sess.Next)
@@ -115,6 +115,10 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	if err != nil || again.ID != sess.ID {
 		t.Fatalf("starting twice should resume the same session: %v %s vs %s", err, again.ID, sess.ID)
 	}
+	if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true)); code(err) != "finish_steps_first" {
+		t.Fatalf("the checkpoint comes after the steps: %v", err)
+	}
+	finishSteps(t, s, sess)
 
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true))
 	if err != nil {
@@ -172,7 +176,7 @@ func assertAttempts(t *testing.T, s *Service, sessionID string, want int) {
 func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
-	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	sess := startDone(t, s, ctx, "a0-alphabet-sounds")
 
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", false))
 	if err != nil {
@@ -184,8 +188,8 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 	if res.Session.Phase != string(tutor.PhaseLearning) || !res.Session.CanChat || len(res.Session.Assessment) == 0 {
 		t.Fatalf("a failed quiz keeps the lesson open for more learning: %+v", res.Session)
 	}
-	if last := res.Session.Messages[len(res.Session.Messages)-1]; !strings.Contains(last.Content, "Review:") {
-		t.Fatalf("review message expected: %q", last.Content)
+	if a := res.Session.LastAttempt; a == nil || a.Passed || res.Session.Lesson.Summary != nil {
+		t.Fatalf("a failed checkpoint is recorded without a lesson summary: %+v", res.Session.LastAttempt)
 	}
 	if res.Session.Node.Status != progress.StatusInProgress {
 		t.Fatalf("node status = %s", res.Session.Node.Status)
@@ -221,52 +225,28 @@ func TestCannotStartLockedOrComingSoon(t *testing.T) {
 	}
 }
 
-func TestMessageValidation(t *testing.T) {
-	s := newService(t, &ai.Mock{})
-	ctx := context.Background()
-	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "   "}); code(err) != "empty_message" {
-		t.Fatalf("empty: %v", err)
-	}
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: strings.Repeat("a", MaxMessageRunes+1)}); code(err) != "message_too_long" {
-		t.Fatalf("long: %v", err)
-	}
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Intent: "dance"}); code(err) != "invalid_intent" {
-		t.Fatalf("intent: %v", err)
-	}
-	if _, err := s.SendMessage(ctx, learnerID, "00000000-0000-4000-8000-00000000ffff", MessageInput{Content: "hi"}); code(err) != "session_not_found" {
-		t.Fatalf("missing session: %v", err)
-	}
-	if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true)); err != nil {
-		t.Fatal(err)
-	}
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "hi"}); code(err) != "lesson_closed" {
-		t.Fatalf("a mastered lesson is closed: %v", err)
-	}
-}
-
 func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 	mock := &ai.Mock{}
 	s := newService(t, mock)
 	ctx := context.Background()
 	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
 
-	// Tutor unavailable: nothing stored, retry works.
-	mock.TutorFunc = func(ai.TutorInput) (json.RawMessage, error) { return nil, ai.ErrUnavailable }
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "hello"}); code(err) != "tutor_unavailable" {
-		t.Fatalf("got %v", err)
-	}
-	// Malformed tutor output: also rejected.
-	mock.TutorFunc = func(ai.TutorInput) (json.RawMessage, error) { return json.RawMessage(`{"message":""}`), nil }
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "hello"}); code(err) != "tutor_unavailable" {
-		t.Fatalf("got %v", err)
+	// Tutor unavailable or malformed: nothing stored, retry works.
+	for _, fn := range []func(ai.AskInput) (json.RawMessage, error){
+		func(ai.AskInput) (json.RawMessage, error) { return nil, ai.ErrUnavailable },
+		func(ai.AskInput) (json.RawMessage, error) { return json.RawMessage(`{"answer":""}`), nil },
+	} {
+		mock.AskFunc = fn
+		if _, err := s.AskStep(ctx, learnerID, sess.ID, 0, AskInput{Content: "hello"}); code(err) != "tutor_unavailable" {
+			t.Fatalf("got %v", err)
+		}
 	}
 	view, _ := s.GetSession(ctx, learnerID, sess.ID)
-	if len(view.Messages) != 0 {
-		t.Fatalf("failed turns must not be stored: %d messages", len(view.Messages))
+	if len(view.Lesson.Steps[0].Asks) != 0 {
+		t.Fatalf("failed turns must not be stored: %+v", view.Lesson.Steps[0].Asks)
 	}
-	mock.TutorFunc = nil
-	sess = view
+	mock.AskFunc = nil
+	sess = finishSteps(t, s, view)
 
 	for name, fn := range map[string]func(ai.EvalInput) (json.RawMessage, error){
 		"timeout": func(ai.EvalInput) (json.RawMessage, error) { return nil, fmt.Errorf("%w: deadline", ai.ErrUnavailable) },
@@ -298,7 +278,7 @@ func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 func TestConcurrentSubmissionsMasterOnce(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
-	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	sess := startDone(t, s, ctx, "a0-alphabet-sounds")
 
 	const n = 5
 	var wg sync.WaitGroup
@@ -331,10 +311,7 @@ func TestFiveLessonsEndToEnd(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
 	for _, id := range []string{"a0-alphabet-sounds", "a0-pronouns", "a0-common-vocabulary", "a0-basic-sentences", "a1-to-be", "a1-simple-present", "a1-questions"} {
-		sess, err := s.StartSession(ctx, learnerID, course, id)
-		if err != nil {
-			t.Fatalf("%s: %v", id, err)
-		}
+		sess := startDone(t, s, ctx, id)
 		res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, id, true))
 		if err != nil || !res.NewlyMastered {
 			t.Fatalf("%s: %+v %v", id, res, err)
@@ -368,8 +345,11 @@ func TestUsersAreIsolated(t *testing.T) {
 	if _, err := s.GetSession(ctx, other, sess.ID); code(err) != "session_not_found" {
 		t.Fatalf("other user read the session: %v", err)
 	}
-	if _, err := s.SendMessage(ctx, other, sess.ID, MessageInput{Content: "hi"}); code(err) != "session_not_found" {
+	if _, err := s.AskStep(ctx, other, sess.ID, 0, AskInput{Content: "hi"}); code(err) != "session_not_found" {
 		t.Fatalf("other user wrote to the session: %v", err)
+	}
+	if _, err := s.NextStep(ctx, other, sess.ID, 0); code(err) != "session_not_found" {
+		t.Fatalf("other user moved the session: %v", err)
 	}
 	if _, err := s.SubmitAssessment(ctx, other, sess.ID, nil); code(err) != "session_not_found" {
 		t.Fatalf("other user submitted an assessment: %v", err)
@@ -481,9 +461,15 @@ func TestStreak(t *testing.T) {
 	}
 }
 
-func TestHelperFollowsTheUILanguage(t *testing.T) {
-	var seen []ai.TutorInput
+func TestLessonKeepsItsLanguage(t *testing.T) {
+	var seen []ai.AskInput
 	mock := &ai.Mock{}
+	inner := &ai.Mock{}
+	mock.AskFunc = func(in ai.AskInput) (json.RawMessage, error) {
+		seen = append(seen, in)
+		r, err := inner.Ask(context.Background(), in)
+		return r.Raw, err
+	}
 	s := newService(t, mock)
 	idCtx := WithLang(context.Background(), "id")
 	sess, err := s.StartSession(idCtx, learnerID, course, "a0-alphabet-sounds")
@@ -493,28 +479,78 @@ func TestHelperFollowsTheUILanguage(t *testing.T) {
 	if sess.Node.Title != "Alfabet & Bunyi" || sess.Course.Title != "Bahasa Inggris" || sess.Material.Sections[0].Title != "Nama huruf berbeda dari bahasa Indonesia" {
 		t.Fatalf("views should be localized: %q %q", sess.Node.Title, sess.Course.Title)
 	}
-	inner := &ai.Mock{}
-	mock.TutorFunc = func(in ai.TutorInput) (json.RawMessage, error) {
-		seen = append(seen, in)
-		r, err := inner.TutorReply(context.Background(), in)
-		return r.Raw, err
+	if sess.Lesson.Steps[0].Title != "Nama huruf berbeda dari bahasa Indonesia" {
+		t.Fatalf("the plan should be in the lesson's language: %q", sess.Lesson.Steps[0].Title)
 	}
-	if _, err := s.SendMessage(idCtx, learnerID, sess.ID, MessageInput{Content: "Kenapa I dibaca ai?"}); err != nil {
+	// Switching the UI language later doesn't switch a lesson mid-way.
+	if _, err := s.AskStep(WithLang(context.Background(), "en"), learnerID, sess.ID, 0, AskInput{Content: "Kenapa I dibaca ai?"}); err != nil {
 		t.Fatal(err)
 	}
-	enCtx := WithLang(context.Background(), "en")
-	if _, err := s.SendMessage(enCtx, learnerID, sess.ID, MessageInput{Content: "Why?"}); err != nil {
-		t.Fatal(err)
+	if len(seen) != 1 || seen[0].Locale != "id" || !strings.Contains(seen[0].LanguagePolicy, "Indonesian") {
+		t.Fatalf("the tutor should answer in the lesson's language: %+v", seen)
 	}
-	if len(seen) != 2 || seen[0].Locale != "id" || !strings.Contains(seen[0].LanguagePolicy, "Indonesian") || seen[1].Locale != "en" {
-		t.Fatalf("helper should follow the current UI language: %+v", seen)
+}
+
+// startDone starts a lesson and walks all of its steps, so the checkpoint is open.
+func startDone(t *testing.T, s *Service, ctx context.Context, nodeID string) SessionView {
+	t.Helper()
+	sess, err := s.StartSession(ctx, learnerID, course, nodeID)
+	if err != nil {
+		t.Fatalf("%s: %v", nodeID, err)
 	}
-	res, err := s.SubmitAssessment(idCtx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", false))
+	return finishSteps(t, s, sess)
+}
+
+// planOf reads the server-side plan (with answers) of a session.
+func planOf(t *testing.T, s *Service, sessionID string) tutor.Plan {
+	t.Helper()
+	sess, err := storage.GetSession(context.Background(), s.Store.Pool, sessionID, learnerID)
 	if err != nil {
 		t.Fatal(err)
 	}
-	last := res.Session.Messages[len(res.Session.Messages)-1].Content
-	if !strings.HasPrefix(last, "Nilaimu") || !strings.Contains(last, "Ulas lagi") {
-		t.Fatalf("review message should be Indonesian: %q", last)
+	var p tutor.Plan
+	if err := json.Unmarshal(sess.Plan, &p); err != nil {
+		t.Fatal(err)
 	}
+	return p
+}
+
+// rightAnswer is the correct answer to q.
+func rightAnswer(q tutor.Question) AnswerInput {
+	if q.Type == tutor.QuestionMCQ {
+		a := q.Answer
+		return AnswerInput{Choice: &a}
+	}
+	return AnswerInput{Tokens: strings.Fields(q.Solution)}
+}
+
+// wrongAnswer is an incorrect answer to q.
+func wrongAnswer(q tutor.Question) AnswerInput {
+	if q.Type == tutor.QuestionMCQ {
+		a := (q.Answer + 1) % len(q.Options)
+		return AnswerInput{Choice: &a}
+	}
+	w := strings.Fields(q.Solution)
+	w[0], w[len(w)-1] = w[len(w)-1], w[0]
+	return AnswerInput{Tokens: w}
+}
+
+// finishSteps answers every open question correctly and moves to the checkpoint.
+func finishSteps(t *testing.T, s *Service, sess SessionView) SessionView {
+	t.Helper()
+	ctx := context.Background()
+	plan := planOf(t, s, sess.ID)
+	for !sess.Lesson.Checkpoint {
+		i := sess.Lesson.StepIndex
+		var err error
+		if q := sess.Lesson.Steps[i].Question; q != nil && !q.Answered && !q.Revealed {
+			if sess, err = s.AnswerStep(ctx, learnerID, sess.ID, i, rightAnswer(*plan.Steps[i].Question)); err != nil {
+				t.Fatalf("answer step %d: %v", i, err)
+			}
+		}
+		if sess, err = s.NextStep(ctx, learnerID, sess.ID, i); err != nil {
+			t.Fatalf("next step %d: %v", i, err)
+		}
+	}
+	return sess
 }

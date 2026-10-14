@@ -134,13 +134,15 @@ type User struct {
 	Locale         string    `json:"locale"` // UI language: en | id
 	CreatedAt      time.Time `json:"createdAt"`
 	PasswordHash   string    `json:"-"`
+	// MemoryEnabled lets the tutor save new notes about the learner.
+	MemoryEnabled bool `json:"memoryEnabled"`
 }
 
-const userCols = `id, COALESCE(email, ''), display_name, native_language, locale, created_at, COALESCE(password_hash, '')`
+const userCols = `id, COALESCE(email, ''), display_name, native_language, locale, created_at, COALESCE(password_hash, ''), memory_enabled`
 
 func scanUser(row pgx.Row) (User, error) {
 	var u User
-	err := row.Scan(&u.ID, &u.Email, &u.DisplayName, &u.NativeLanguage, &u.Locale, &u.CreatedAt, &u.PasswordHash)
+	err := row.Scan(&u.ID, &u.Email, &u.DisplayName, &u.NativeLanguage, &u.Locale, &u.CreatedAt, &u.PasswordHash, &u.MemoryEnabled)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return u, ErrNotFound
 	}
@@ -168,6 +170,10 @@ func GetUserByEmail(ctx context.Context, db DB, email string) (User, error) {
 	return scanUser(db.QueryRow(ctx, `SELECT `+userCols+` FROM users WHERE email=$1`, email))
 }
 
+func SetMemoryEnabled(ctx context.Context, db DB, id string, on bool) (User, error) {
+	return scanUser(db.QueryRow(ctx, `UPDATE users SET memory_enabled=$2 WHERE id=$1 RETURNING `+userCols, id, on))
+}
+
 func SetUserLocale(ctx context.Context, db DB, id, locale string) (User, error) {
 	return scanUser(db.QueryRow(ctx, `UPDATE users SET locale=$2 WHERE id=$1 RETURNING `+userCols, id, locale))
 }
@@ -186,7 +192,7 @@ func CreateAuthSession(ctx context.Context, db DB, userID, tokenHash, userAgent 
 // UserForToken returns the user behind an unexpired session token hash and
 // slides the expiry forward (at most once a minute, to limit writes).
 func UserForToken(ctx context.Context, db DB, tokenHash string, ttl time.Duration) (User, error) {
-	u, err := scanUser(db.QueryRow(ctx, `SELECT u.id, COALESCE(u.email, ''), u.display_name, u.native_language, u.locale, u.created_at, ''
+	u, err := scanUser(db.QueryRow(ctx, `SELECT u.id, COALESCE(u.email, ''), u.display_name, u.native_language, u.locale, u.created_at, '', u.memory_enabled
 		FROM auth_sessions a JOIN users u ON u.id = a.user_id
 		WHERE a.token_hash=$1 AND a.expires_at > NOW()`, tokenHash))
 	if err != nil {
@@ -342,17 +348,24 @@ type Session struct {
 	NodeID     string     `json:"nodeId"`
 	Locale     string     `json:"locale"` // language the lesson runs in
 	Phase      string     `json:"phase"`
-	PhaseTurns int        `json:"phaseTurns"`
+	PhaseTurns int        `json:"-"`
 	StartedAt  time.Time  `json:"startedAt"`
 	UpdatedAt  time.Time  `json:"updatedAt"`
 	EndedAt    *time.Time `json:"endedAt"`
+	// Step-based lesson: the AI-written plan (server only), the current
+	// step, per-step state and the post-checkpoint summary.
+	Plan      json.RawMessage `json:"-"`
+	StepIndex int             `json:"stepIndex"`
+	StepState json.RawMessage `json:"-"`
+	Summary   json.RawMessage `json:"-"`
 }
 
-const sessionCols = `id, user_id, course_slug, node_id, locale, phase, phase_turns, started_at, updated_at, ended_at`
+const sessionCols = `id, user_id, course_slug, node_id, locale, phase, phase_turns, started_at, updated_at, ended_at, plan, step_index, step_state, summary`
 
 func scanSession(row pgx.Row) (Session, error) {
 	var s Session
-	err := row.Scan(&s.ID, &s.UserID, &s.CourseSlug, &s.NodeID, &s.Locale, &s.Phase, &s.PhaseTurns, &s.StartedAt, &s.UpdatedAt, &s.EndedAt)
+	err := row.Scan(&s.ID, &s.UserID, &s.CourseSlug, &s.NodeID, &s.Locale, &s.Phase, &s.PhaseTurns, &s.StartedAt, &s.UpdatedAt, &s.EndedAt,
+		&s.Plan, &s.StepIndex, &s.StepState, &s.Summary)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return s, ErrNotFound
 	}

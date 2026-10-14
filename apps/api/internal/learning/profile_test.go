@@ -46,13 +46,13 @@ func TestProfileValidationAndSkip(t *testing.T) {
 }
 
 func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
-	var seenTutor []ai.TutorInput
+	var seenPlan []ai.LessonInput
 	var seenEval []ai.EvalInput
 	mock := &ai.Mock{}
 	inner := &ai.Mock{}
-	mock.TutorFunc = func(in ai.TutorInput) (json.RawMessage, error) {
-		seenTutor = append(seenTutor, in)
-		r, err := inner.TutorReply(context.Background(), in)
+	mock.PlanFunc = func(in ai.LessonInput) (json.RawMessage, error) {
+		seenPlan = append(seenPlan, in)
+		r, err := inner.LessonPlan(context.Background(), in)
 		return r.Raw, err
 	}
 	mock.EvalFunc = func(in ai.EvalInput) (json.RawMessage, error) {
@@ -99,23 +99,20 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 		t.Fatalf("stored answers wrong: %+v", p)
 	}
 
-	// The helper greets with the goal's line, in the UI language.
-	sess, err := s.StartSession(WithLang(ctx, "id"), learnerID, course, "a0-alphabet-sounds")
+	// The lesson plan is written for the learner's profile.
+	sess, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
 	if err != nil {
 		t.Fatal(err)
 	}
-	if sess.Greeting != "Tujuanmu untuk kerja, jadi contoh-contohnya akan pakai situasi kantor." {
-		t.Fatalf("greeting should be personalised: %q", sess.Greeting)
+	if len(seenPlan) != 1 {
+		t.Fatalf("one plan call expected, got %d", len(seenPlan))
 	}
-
-	// The helper and evaluator get the profile.
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "What is a vowel?"}); err != nil {
-		t.Fatal(err)
-	}
-	in := seenTutor[0]
+	in := seenPlan[0]
 	if len(in.LearnerProfile) != 2 || !strings.Contains(in.LearnerProfile[0], "work and job interviews") || !strings.Contains(in.LearnerProfile[1], "practice first") {
 		t.Fatalf("tutor profile hints wrong: %v", in.LearnerProfile)
 	}
+	sess = finishSteps(t, s, sess)
+	// The evaluator gets the profile too.
 	// One wrong answer, so the evaluator is consulted for that item only.
 	ans := answers(s, "a0-alphabet-sounds", true)
 	ans["alpha-5"] = "g-r-e-n"
@@ -136,10 +133,7 @@ func TestNextNodePrefersGoal(t *testing.T) {
 	ctx := context.Background()
 	master := func(node string) {
 		t.Helper()
-		sess, err := s.StartSession(ctx, learnerID, course, node)
-		if err != nil {
-			t.Fatal(err)
-		}
+		sess := startDone(t, s, ctx, node)
 		if res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, node, true)); err != nil || !res.Passed {
 			t.Fatalf("master %s: %v", node, err)
 		}

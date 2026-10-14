@@ -98,14 +98,6 @@ func (s *Service) SaveProfile(ctx context.Context, userID, courseSlug string, in
 	return s.Roadmap(ctx, userID, courseSlug)
 }
 
-// greeting is the goal's personal line shown when the helper opens.
-func greeting(st state, lang string) string {
-	if o := st.cur.Option(st.profile, curriculum.GoalQuestion); o != nil {
-		return st.cur.LocalOption(o, lang).IntroLine
-	}
-	return ""
-}
-
 // neighbours are the previous and next lessons with content, in roadmap order.
 func neighbours(st state, n *curriculum.Node) (prev, next *NodeView) {
 	var ready []*curriculum.Node

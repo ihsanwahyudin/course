@@ -1,8 +1,9 @@
-// Package ai adapts AI providers to the jobs FluentPath gives them: the
-// lesson helper, rubric-based assessment and real-world link search.
-// Providers return raw JSON; the tutor and assessment packages validate it
-// before anything is stored, and nothing a provider returns can change
-// mastery directly.
+// Package ai adapts AI providers to the jobs FluentPath gives them: writing a
+// lesson plan, hints, similar questions, answering questions inside a step,
+// summarising a finished lesson, rubric-based assessment, and speech
+// (text-to-speech and transcription). Providers return raw JSON; the tutor
+// and assessment packages validate it before anything is stored, and nothing
+// a provider returns can change mastery directly.
 package ai
 
 import (
@@ -18,8 +19,9 @@ import (
 // truncated output) that the client may retry.
 var ErrUnavailable = errors.New("ai provider unavailable")
 
-// ErrNoSearch means the provider can't search the web.
-var ErrNoSearch = errors.New("web search not available")
+// ErrNoAudio means the provider can't do speech; clients fall back to the
+// device's own voice.
+var ErrNoAudio = errors.New("speech not available")
 
 type ChatMessage struct {
 	Role    string `json:"role"` // user | assistant
@@ -34,35 +36,53 @@ type Usage struct {
 	Output int `json:"output"`
 }
 
-func (u Usage) Add(o Usage) Usage {
-	return Usage{u.Input + o.Input, u.Cached + o.Cached, u.Output + o.Output}
-}
-
 // Result is a provider's raw JSON answer plus what it cost.
 type Result struct {
 	Raw   json.RawMessage
 	Usage Usage
 }
 
-type TutorInput struct {
+// LessonInput is the shared, cacheable context for every lesson call.
+type LessonInput struct {
 	Policy         string // course.json tutor.policy
-	Locale         string // language the lesson runs in (en | id)
+	Locale         string // en | id
 	LanguagePolicy string // course.json tutor.languagePolicy[Locale]
 	CurrentLevel   string
 	TargetLevel    string
-	Node           *curriculum.Node   // objectives in the lesson's language
-	Lesson         *curriculum.Lesson // material and key points (English)
-	// LearnerProfile holds author-written hints chosen by the learner's
-	// onboarding answers; LearnerNotes is what they typed themselves (data).
-	LearnerProfile []string
-	LearnerNotes   []string
-	// Dynamic, per-turn context (kept after the cacheable prefix).
-	Intent         tutor.Intent
-	WeakObjectives []string // from the last failed final quiz
-	Messages       []ChatMessage
-	// CacheKey groups requests that share a prompt prefix (course, node,
-	// language) so the provider can reuse its prompt cache.
-	CacheKey string
+	Node           *curriculum.Node         // objectives in the lesson's language
+	Lesson         *curriculum.Lesson       // English material and practice
+	Material       *curriculum.MaterialView // material in the lesson's language
+	LearnerProfile []string                 // author-written hints from onboarding answers
+	LearnerNotes   []string                 // the learner's own words (data)
+	Memory         []string                 // what the tutor remembers about the learner
+	CacheKey       string
+}
+
+type HintInput struct {
+	LessonInput
+	Question tutor.Question
+	Previous []string // hints already given
+}
+
+type SimilarInput struct {
+	LessonInput
+	Question tutor.Question // the one the learner got wrong
+}
+
+type AskInput struct {
+	LessonInput
+	Step         tutor.Step
+	Question     string
+	History      []ChatMessage // earlier questions in this step
+	OtherLessons []string      // titles of the course's other lessons, for redirects
+}
+
+type SummaryInput struct {
+	LessonInput
+	Passed     bool
+	Scores     map[string]int // objective id -> score
+	Mistakes   []string       // practice questions the learner got wrong
+	NextLesson string         // title of the next lesson, if any
 }
 
 type EvalInput struct {
@@ -78,27 +98,16 @@ type EvalInput struct {
 	GoalHint string
 }
 
-// SearchInput asks for real-world links about a lesson.
-type SearchInput struct {
-	Kind        string // tutor.KindVideo | tutor.KindArticle
-	Query       string
-	LessonTitle string
-	Locale      string
-}
-
-// Link is a search result. Providers only return URLs their search tool
-// actually cited.
-type Link struct {
-	Kind   string `json:"kind"`
-	Title  string `json:"title"`
-	URL    string `json:"url"`
-	Source string `json:"source"`
-}
-
 type Provider interface {
 	Name() string
-	TutorReply(ctx context.Context, in TutorInput) (Result, error)
+	LessonPlan(ctx context.Context, in LessonInput) (Result, error)
+	Hint(ctx context.Context, in HintInput) (Result, error)
+	SimilarQuestion(ctx context.Context, in SimilarInput) (Result, error)
+	Ask(ctx context.Context, in AskInput) (Result, error)
+	Summarize(ctx context.Context, in SummaryInput) (Result, error)
 	Evaluate(ctx context.Context, in EvalInput) (Result, error)
-	// WebSearch returns ErrNoSearch when the provider has no search tool.
-	WebSearch(ctx context.Context, in SearchInput) ([]Link, Usage, error)
+	// Speech returns MP3 audio, or ErrNoAudio.
+	Speech(ctx context.Context, text string) ([]byte, error)
+	// Transcribe turns a short English recording into text, or ErrNoAudio.
+	Transcribe(ctx context.Context, audio []byte, filename string) (string, error)
 }

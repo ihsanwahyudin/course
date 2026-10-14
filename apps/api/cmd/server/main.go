@@ -19,7 +19,6 @@ import (
 	"fluentpath/api/internal/curriculum"
 	apihttp "fluentpath/api/internal/http"
 	"fluentpath/api/internal/learning"
-	"fluentpath/api/internal/resources"
 	"fluentpath/api/internal/storage"
 )
 
@@ -67,9 +66,6 @@ func run() error {
 
 	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta"),
 		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000)}
-	if env("IMAGE_SEARCH", "on") != "off" {
-		svc.Commons = resources.NewCommons(env("CONTACT_URL", "https://github.com/fluentpath"))
-	}
 	srv := &apihttp.Server{
 		Svc: svc, Auth: &auth.Service{Store: store}, Catalog: catalog,
 		CORSOrigins:   strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),
@@ -143,7 +139,15 @@ func newProvider() (ai.Provider, error) {
 			return nil, errors.New("AI_PROVIDER=openai needs OPENAI_API_KEY and OPENAI_MODEL")
 		}
 		o := ai.NewOpenAI(key, model, os.Getenv("OPENAI_EVAL_MODEL"), os.Getenv("OPENAI_BASE_URL"))
-		o.DisableSearch = env("WEB_SEARCH", "on") == "off"
+		if v := os.Getenv("OPENAI_TTS_MODEL"); v != "" {
+			o.TTSModel = v
+		}
+		if v := os.Getenv("OPENAI_TTS_VOICE"); v != "" {
+			o.TTSVoice = v
+		}
+		if v := os.Getenv("OPENAI_TRANSCRIBE_MODEL"); v != "" {
+			o.TranscribeModel = v
+		}
 		return o, nil
 	default:
 		return nil, fmt.Errorf("unknown AI_PROVIDER %q (want openai or mock)", p)
