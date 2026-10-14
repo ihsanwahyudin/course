@@ -22,7 +22,7 @@ export default function ProgressScreen() {
   const course = picked ?? enrolled[0]?.slug;
   const { data, isPending: progressPending, isError, error, refetch, isRefetching } = useCourseProgress(course);
   const isPending = dashboard.isPending || (!!course && progressPending);
-  const weekly = dashboard.data?.weekly ?? { messages: 0, attempts: 0, mastered: 0 };
+  const weekly = dashboard.data?.weekly ?? { steps: 0, attempts: 0, mastered: 0 };
   const { wide, gap, contentWidth } = useLayout();
   const t = useT();
   const errorText = useErrorText();
@@ -103,7 +103,7 @@ export default function ProgressScreen() {
               <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.last7')}</Eyebrow>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 {[
-                  [t('progress.replies'), weekly.messages],
+                  [t('progress.steps'), weekly.steps],
                   [t('progress.attempts'), weekly.attempts],
                   [t('progress.masteredShort'), weekly.mastered],
                 ].map(([k, v]) => (

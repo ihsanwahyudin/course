@@ -2,6 +2,7 @@ import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import { MemorySection } from '@/components/account/MemorySection';
 import { PageHeader } from '@/components/PageHeader';
 import { Card } from '@/components/ui/Card';
 import { Avatar } from '@/components/ui/FloatingNav';
@@ -54,14 +55,15 @@ export default function AccountScreen() {
             ))}
           </View>
         </Card>
-        <Card reveal={1} style={{ gap: 14 }}>
+        <MemorySection reveal={1} />
+        <Card reveal={2} style={{ gap: 14 }}>
           <View style={[styles.row, { justifyContent: 'space-between' }]}>
             <Eyebrow>{t('common.language')}</Eyebrow>
             <LanguageToggle />
           </View>
           <Text color={colors.muted}>{t('account.languageText')}</Text>
         </Card>
-        <Card reveal={2} style={{ gap: 14 }}>
+        <Card reveal={3} style={{ gap: 14 }}>
           <View style={styles.row}>
             <Icon name="logout" size={18} color={colors.muted} />
             <Eyebrow>{t('account.session')}</Eyebrow>

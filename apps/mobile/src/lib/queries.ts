@@ -2,7 +2,7 @@ import { QueryClient, useMutation, useQuery, useQueryClient } from '@tanstack/re
 
 import { useLocale, currentLocale } from '@/i18n';
 
-import { ApiError, api, type Intent, type ProfileInput, type ReviewGrade, type Session } from './api';
+import { ApiError, api, type AnswerInput, type Artifact, type MemoryView, type ProfileInput, type ReviewGrade, type Session } from './api';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,6 +24,8 @@ export const keys = {
   session: (id: string, l: string) => ['session', id, l] as const,
   profile: (course: string, l: string) => ['profile', course, l] as const,
   flashcards: (l: string) => ['flashcards', l] as const,
+  memory: (l: string) => ['memory', l] as const,
+  notes: (l: string) => ['notes', l] as const,
 };
 
 const useL = () => useLocale((s) => s.locale);
@@ -117,11 +119,30 @@ export function useStartSession() {
   });
 }
 
-export function useSendMessage(sessionId: string) {
+export type StepAction =
+  | { action: 'next' | 'similar'; step: number }
+  | { action: 'hint' | 'reveal'; step: number; similar?: boolean }
+  | { action: 'answer'; step: number; input: AnswerInput }
+  | { action: 'ask'; step: number; content: string };
+
+// Every lesson step action returns the updated session.
+export function useStepAction(sessionId: string) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (b: { content?: string; intent?: Intent }) => api.sendMessage(sessionId, b),
-    onSuccess: (s) => {
+    mutationFn: (a: StepAction) => {
+      switch (a.action) {
+        case 'answer':
+          return api.answer(sessionId, a.step, a.input);
+        case 'ask':
+          return api.ask(sessionId, a.step, a.content);
+        case 'hint':
+        case 'reveal':
+          return api.step(sessionId, a.step, a.action, a.similar ? { similar: true } : undefined);
+        default:
+          return api.step(sessionId, a.step, a.action);
+      }
+    },
+    onSuccess: (s: Session) => {
       qc.setQueryData(keys.session(s.id, currentLocale()), s);
       qc.invalidateQueries({ queryKey: ['dashboard'] });
     },
@@ -138,4 +159,48 @@ export function useSubmitAssessment(sessionId: string) {
       invalidate();
     },
   });
+}
+
+// ---- memory & notes ----
+
+export const useMemory = () => {
+  const l = useL();
+  return useQuery({ queryKey: keys.memory(l), queryFn: api.memory });
+};
+
+export function useMemoryAction() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (a: { kind: 'toggle'; enabled: boolean } | { kind: 'edit'; id: string; text: string } | { kind: 'delete'; id: string } | { kind: 'deleteAll' }) => {
+      switch (a.kind) {
+        case 'toggle':
+          return api.setMemoryEnabled(a.enabled);
+        case 'edit':
+          return api.updateMemory(a.id, a.text);
+        case 'delete':
+          return api.deleteMemory(a.id);
+        default:
+          return api.deleteAllMemory();
+      }
+    },
+    onSuccess: (v: MemoryView) => qc.setQueryData(keys.memory(currentLocale()), v),
+  });
+}
+
+export const useNotes = () => {
+  const l = useL();
+  return useQuery({ queryKey: keys.notes(l), queryFn: api.notes, select: (d) => d.notes });
+};
+
+export function useSaveNote() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (b: { course: string; nodeId: string; artifact: Artifact }) => api.saveNote(b),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['notes'] }),
+  });
+}
+
+export function useDeleteNote() {
+  const qc = useQueryClient();
+  return useMutation({ mutationFn: api.deleteNote, onSuccess: () => qc.invalidateQueries({ queryKey: ['notes'] }) });
 }

@@ -23,21 +23,21 @@ export function FlashcardDeck({ cards, onSave, saving, saved }: { cards: Flashca
       <Pressable
         onPress={() => setFlipped((f) => !f)}
         accessibilityRole="button"
-        accessibilityLabel={`${flipped ? card.back : card.front}. ${t('helper.flip')}`}
+        accessibilityLabel={`${flipped ? card.back : card.front}. ${t('step.flip')}`}
         style={[styles.card, flipped && { backgroundColor: colors.accentSoft, borderColor: colors.accent }]}
       >
         <Eyebrow>{`${i + 1} / ${cards.length}`}</Eyebrow>
         <Text size={18} weight="medium" tight style={{ textAlign: 'center' }}>
           {flipped ? card.back : card.front}
         </Text>
-        <Eyebrow>{t('helper.flip')}</Eyebrow>
+        <Eyebrow>{t('step.flip')}</Eyebrow>
       </Pressable>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
         <PillButton label="‹" size="sm" variant="secondary" onPress={() => go(-1)} />
         <PillButton label="›" size="sm" variant="secondary" onPress={() => go(1)} />
         <View style={{ flex: 1 }} />
         <PillButton
-          label={saved ? t('helper.saved') : t('helper.saveAll')}
+          label={saved ? t('step.saved') : t('step.saveAll')}
           icon={saved ? 'check' : undefined}
           size="sm"
           loading={saving}

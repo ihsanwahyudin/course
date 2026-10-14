@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 # End-to-end check of the learning loop over HTTP, against a throwaway
 # database and the deterministic mock tutor:
-#   sign up → onboarding profile → roadmap → lesson material + AI helper (question, quiz, videos)
-#   → flashcards saved and reviewed → failing final quiz (no unlock) → passing final quiz → unlock → second user sees none of it → API restart →
-#   log in again → progress still there.
+#   sign up → onboarding profile (shown in the tutor's memory) → roadmap → lesson steps one at a time
+#   (Ask AI, 2 hints, give up, one similar question, cheat sheet saved to notes) → flashcards saved and
+#   reviewed → checkpoint blocked until the steps are done → failing checkpoint (no unlock) → passing
+#   checkpoint → summary + mistake flashcards → unlock → second user sees none of it → API restart →
+#   log in again → progress, flashcards and notes still there.
 # Requires: docker compose db running (infra/docker-compose.yml), Go, python3.
 set -euo pipefail
 

@@ -18,7 +18,7 @@ import { useDashboard } from '@/lib/queries';
 import { colors, radius } from '@/theme/tokens';
 
 
-// 4 weeks × 7 days of activity, darker = more replies/attempts that day.
+// 4 weeks × 7 days of activity, darker = more lesson steps/attempts that day.
 function ActivityGrid({ days, cell }: { days: Dashboard['activity']; cell: number }) {
   const t = useT();
   const max = Math.max(1, ...days.map((d) => d.count));
@@ -160,7 +160,7 @@ export default function DashboardScreen() {
       </View>
       <View style={{ gap: 8 }}>
         {[
-          [t('dashboard.replies7d'), data.weekly.messages],
+          [t('dashboard.steps7d'), data.weekly.steps],
           [t('dashboard.assessments7d'), data.weekly.attempts],
         ].map(([k, v]) => (
           <View key={k as string} style={[styles.row, { justifyContent: 'space-between' }]}>

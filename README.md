@@ -89,13 +89,13 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 ## How progression works
 
 - **Courses are fixed data.** At startup the Go API validates every course in `packages/courses` (see Courses below). The AI never changes a roadmap.
-- **The material teaches; the AI helps; the server decides.**
-  - A lesson is written material (sections with examples, tips and quick checks) plus an AI helper beside it.
-  - The final quiz can be taken at any time while `LEARNING`, and passing it moves the lesson to `MASTERED`.
-  - The helper never decides mastery.
+- **The tutor guides; the server decides.**
+  - A lesson is a thread of steps shown one at a time (see *Step-by-step lessons* below). The AI writes the steps for each learner from the lesson's curated material, and Go validates them.
+  - The checkpoint opens once every step is done, and passing it moves the lesson to `MASTERED`.
+  - The tutor never decides mastery.
 - **Assessment is objective-based.** The evaluator returns per-objective scores. Go validates them (every objective present, 0–100), computes the mean, and applies the threshold (80). Malformed output or a provider failure returns a retryable 502 and saves nothing.
 - **Answers that exactly match a reference answer are scored locally.** Only the remaining items go to the AI evaluator, and if every answer matches, the AI isn't called at all.
-- **Mastery happens exactly once.** Completion runs in one transaction under row locks, and repeated submissions return the existing result. A failed attempt keeps the lesson open; the weak objectives are shown and passed to the helper.
+- **Mastery happens exactly once.** Completion runs in one transaction under row locks, and repeated submissions return the existing result. A failed attempt keeps the lesson open and shows the weak objectives.
 - **Locked status is derived** from prerequisites and is never stored.
 
 ## API
@@ -113,9 +113,18 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 | GET | `/api/v1/courses/{course}/progress` | required | Mastered skills, attempts, open lessons in that course |
 | GET | `/api/v1/dashboard` | required | Courses, streak, activity, open lessons, recent scores |
 | POST | `/api/v1/sessions` | required | Start or resume a lesson `{course, nodeId}` (auto-enrolls) |
-| GET | `/api/v1/sessions/{id}` | required | Session state, messages, assessment items (owner only) |
-| POST | `/api/v1/sessions/{id}/messages` | required | Ask the helper `{content}` or a quick action `{intent: simpler\|quiz\|flashcards\|examples\|video\|image}` |
-| POST | `/api/v1/sessions/{id}/assessment` | required | Submit the final quiz `{answers:[{itemId,answer}]}` |
+| GET | `/api/v1/sessions/{id}` | required | Session state: steps so far, checkpoint items, summary (owner only) |
+| POST | `/api/v1/sessions/{id}/steps/{n}/next` | required | Move past step `n` (a question must be answered or given up first) |
+| POST | `/api/v1/sessions/{id}/steps/{n}/answer` | required | Answer `{choice}` or `{tokens}` (`similar: true` for the similar question) |
+| POST | `/api/v1/sessions/{id}/steps/{n}/hint` · `/reveal` | required | A hint (max 2) · give up after both hints (`{similar: true}` optional) |
+| POST | `/api/v1/sessions/{id}/steps/{n}/similar` | required | One similar question, only after a wrong answer or giving up |
+| POST | `/api/v1/sessions/{id}/steps/{n}/ask` | required | Ask the tutor about this step `{content}` |
+| POST | `/api/v1/sessions/{id}/assessment` | required | Submit the checkpoint `{answers:[{itemId,answer}]}` |
+| GET | `/api/v1/tts?text=` | required | MP3 of an English sentence (≤300 chars, cached); 501 without a voice provider |
+| POST | `/api/v1/transcribe` | required | Raw `audio/*` body (≤2 MB) → `{text}` |
+| GET · PATCH · DELETE | `/api/v1/me/memory` | required | What the tutor remembers · `{enabled}` · delete all |
+| PATCH · DELETE | `/api/v1/me/memory/{id}` | required | Edit `{text}` · delete one note |
+| GET · POST · DELETE | `/api/v1/notes` · `/api/v1/notes/{id}` | required | Saved cheat sheets ("My notes") |
 | POST | `/api/v1/flashcards` | required | Save cards `{course, nodeId, cards:[{front,back}]}` (max 20 per call, 1,000 per learner) |
 | GET | `/api/v1/flashcards/due?course=` | required | Cards due for review |
 | POST · DELETE | `/api/v1/flashcards/{id}/review` · `/api/v1/flashcards/{id}` | required | Grade a card `{grade: again\|good\|easy}` · delete it |
@@ -142,8 +151,8 @@ scripts/e2e.sh
 cd apps/mobile && npx tsc --noEmit && npx expo lint
 ```
 
-- **Go tests** cover the course validator, status derivation, phase rules, tutor-reply parsing, and scoring with malformed evaluator output. The DB integration tests cover the full loop, a failed attempt not unlocking anything, locked and coming-soon nodes, provider failures, a concurrent double-submit mastering once, all 7 lessons end to end, user isolation, the dashboard and streak, the v1 → v2 migration, and the auth flow (register, login, logout, expiry, validation, CSRF guard). Each test runs in its own schema.
-- **`e2e.sh`** builds the API and runs it against a throwaway database with the mock tutor. It checks that anonymous users can't start lessons, then signs up two users. User A masters every ready lesson over HTTP (with a failing attempt first), and user B must see none of it. It then restarts the API, logs in again, and checks that the progress persisted.
+- **Go tests** cover the course validator, status derivation, the lesson-plan validator (and the fallback plan for every lesson), leaking hints, tutor-reply parsing, and scoring with malformed evaluator output. The DB integration tests cover the step rules (answers hidden until answered, no moving on before answering, 2 hints, giving up, one similar question), Ask AI scope and memory, the lesson summary and mistake flashcards, memory and notes CRUD, speech limits and caching, the full loop, a failed attempt not unlocking anything, locked and coming-soon nodes, provider failures, a concurrent double-submit mastering once, all 7 lessons end to end, user isolation, the dashboard and streak, the v1 → v2 migration, and the auth flow (register, login, logout, expiry, validation, CSRF guard). Each test runs in its own schema.
+- **`e2e.sh`** builds the API and runs it against a throwaway database with the mock tutor. It checks that anonymous users can't start lessons, then signs up two users. User A walks every ready lesson's steps and masters it over HTTP (with a failing checkpoint first), and user B must see none of it. It then restarts the API, logs in again, and checks that progress, flashcards and notes persisted.
 
 ## Languages (EN & ID)
 
@@ -157,33 +166,30 @@ The whole app works in **English and Bahasa Indonesia**.
 - **Course content:** the client sends `Accept-Language`, and the API returns course titles, levels, and roadmap node titles/summaries/objectives in that language. Translations live in `i18n` blocks inside the course files. A course that lists `"languages": ["en","id"]` must be fully translated, or the API refuses to start.
 - **Tutor:** follows the language a lesson started in (`learning_sessions.locale`). With ID it explains and gives feedback mainly in Indonesian, while exercises and answers stay in English (`tutor.languagePolicy` in `course.json`). Switching the UI language mid-lesson doesn't change that lesson's tutor language.
 
-## Lessons and the AI helper
+## Step-by-step lessons
 
-- **Material:**
-  - Each ready lesson has `material` sections in its lesson file. Block types: `text` (with `**bold**` and `` `code` ``), `examples` (English + Indonesian gloss), `tip` and `check` (an ungraded multiple-choice question).
-  - Each lesson also has `suggestedQuestions`, hand-picked `resources` and starter `flashcards`, all with Indonesian text.
-  - Every resource URL was checked by hand. The validator requires https, and videos must be YouTube links.
+- **One thread per lesson.** A lesson shows one step at a time; finished steps fold into a row and can be reopened. The dashboard and roadmap stay the way in.
+- **The plan:**
+  - On the first visit the AI writes a plan of 4–12 steps from the lesson's curated material, objectives, the learner's onboarding answers and memory. Step kinds: `concept` (card with word tiles), `examples` (with audio), `question` (multiple choice or word order), `timeline`, `flashcards`, `artifact` (cheat sheet) and `resources` (curated links only).
+  - Go validates it: step kinds and count, every objective has a question, answer indexes in range, word-order tokens that rebuild the solution, text limits. An invalid plan is retried once, then a plan built from the material is used (also what the mock provider returns).
+  - Plans are cached for 7 days per lesson, course version, language, goal and memory.
+- **Questions:** pick, then **Hint** (max 2, written by the AI; hints that contain the answer are rejected) or **Answer** (graded on the server). After both hints the learner may give up. After a wrong answer they choose **one similar question** ("3b", same rules, doesn't add to the step count) or continue. Answers and explanations stay on the server until a question is answered or given up.
+- **Ask AI** opens inside explanation steps. The tutor answers questions about this lesson in full, answers questions about another lesson briefly and points to it, and politely declines anything outside English.
+- **Checkpoint:** after the last step, one question at a time, typed or spoken, no hints. Passing writes a lesson summary (mastered · worth reviewing), saves the learner's mistakes as flashcards for Review, saves learning-pattern notes to memory, and prepares the next lesson's opening line. The next lesson starts with a chip of where the last one left off.
+- **Memory** (Account → "What the tutor remembers about you"): onboarding answers, learning patterns and personal notes the tutor picked up from questions. Learners can edit or delete each note, delete all, or switch off new memories.
+- **My notes:** cheat sheets saved from lessons. They can also be turned into flashcards.
+- **Voice:** examples play with OpenAI text-to-speech (cached on disk per sentence; the device voice via `expo-speech` when the server has none). The mic in Ask AI and the checkpoint records with `expo-audio` and sends the clip to `/api/v1/transcribe`. Browsers only allow the mic on https or localhost.
 - **Layout:**
-  - Wide screens show the course outline, the material and the helper in three columns.
-  - Tablets show the material and the helper.
-  - Phones show the material full-screen, with an **Ask AI** button and a bottom bar (previous · final quiz · next).
-- **Helper quick actions:**
-  - *Explain simpler.*
-  - *Quiz me*: a practice quiz checked on the device. It doesn't count towards mastery.
-  - *Flashcards*: a deck that can be saved for review.
-  - *Real-life examples* and *Videos*: curated links first. A second request searches the web with OpenAI's `web_search` tool, and only URLs the tool actually cited are shown. Video searches are limited to youtube.com, and videos play inline on the web.
-  - *Pictures*: freely licensed images from Wikimedia Commons, shown with author and licence.
+  - Wide screens: lesson outline by level · the thread · cheat sheet or full material in a side panel.
+  - Tablets: the thread with the panel beside it.
+  - Phones: a compact header with step progress; cheat sheets and the material open as a sheet.
 - **Flashcards:** saved cards follow a simple spaced-repetition schedule. *Again* brings a card back in 10 minutes; *Good* and *Easy* grow its interval by ×2.5 and ×3.5. They are reviewed on the **Review** page, and the dashboard shows how many are due.
 
-### Keeping AI costs down
+### AI usage
 
-- **Prompt caching:** the prompt starts with a fixed prefix (policy → language → lesson material → response rules → learner profile), and requests carry `prompt_cache_key = course:node:language`. OpenAI then bills the repeated prefix as cached input. In testing, about 80% of input tokens were cached from the second message on.
-- **Trimmed history:** only the last 8 messages are sent. Long replies are cut, and earlier quizzes and cards are replaced by short markers.
-- **Per-intent output caps:** 350–700 tokens.
-- **Shared cache:** quick actions without typed text (a quiz, a deck, a search) are cached for 7 days across learners in `ai_cache`. Empty search results are cached for a day. A learner who asks again in the same lesson gets a new round.
-- **Exact-match grading:** answers that exactly match a reference answer skip the evaluator (see above).
-- **Daily budget:** usage (input, cached, output) is logged for every call and summed per learner per day in `ai_usage`. `AI_DAILY_TOKENS_PER_USER` (default 60,000; cached input doesn't count) caps it. Over the cap, the helper returns `ai_quota`, while the material, quick checks, flashcards and exact-match grading keep working.
-- **Settings:** `WEB_SEARCH=off` disables web search and `IMAGE_SEARCH=off` disables Wikimedia Commons.
+- **Prompt caching:** every lesson call starts with the same prefix (policy → language → lesson material → scope rules → about the learner) and carries `prompt_cache_key = course:node:language`, so OpenAI bills the repeated prefix as cached input.
+- **Exact-match grading:** checkpoint answers that exactly match a reference answer skip the evaluator, and practice questions are graded in Go without the AI.
+- **Daily budget:** usage is logged for every call in `ai_usage`, and `AI_DAILY_TOKENS_PER_USER` (default 60,000; cached input doesn't count) caps it per learner per day. Over the cap, plans fall back to the material's plan and hints to built-in ones; Ask AI returns `ai_quota`.
 
 ## Personalization (onboarding)
 
@@ -210,7 +216,7 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 - **Tutor:**
   - The tutor prompt gains an "About the learner" section with the chosen options' hints. The learner's free text is quoted there as data, not instructions.
   - The evaluator gets the goal only to phrase feedback; scoring rules don't change.
-  - The mock tutor shows personalization only through the intro line. The full effect needs the OpenAI provider.
+  - The mock provider's plans don't change with the profile. The full effect needs the OpenAI provider.
 
 ## Courses
 
@@ -226,14 +232,14 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 
 - **No email verification or password reset yet.** Accounts work, but there's no "forgot password" flow and emails aren't verified.
 - **Scores are not certification.** AI scores are a learning signal, not a CEFR certification, and model judgements can be wrong.
-- **Voice is not implemented.** Push-to-talk and TTS (P1) are on the backlog, and there is no pronunciation scoring.
-- **Search results vary.** Web search quality depends on OpenAI's `web_search` tool, and cited links can still be off-topic. Curated links always come first.
+- **No pronunciation scoring or voice roleplay yet.** Voice covers listening (TTS) and spoken answers (transcription).
+- **AI plans vary.** Each learner's steps are written by the model; Go checks their structure, not their pedagogy, so an example can occasionally give away a later question.
 - **Native video embeds:** on iOS/Android, videos open in YouTube rather than playing inline.
 - **Android is only partly tested.** Web and the iOS simulator (Expo Go) were checked manually. Android needs an emulator/AVD, which wasn't available on the build machine.
 
 ## Next steps
 
-1. Push-to-talk transcription (`expo-audio` → `/api/v1/audio/transcribe`), then optional tutor TTS.
+1. Voice roleplay and more widgets (slider, chart).
 2. Password reset and email verification.
 3. More ready lessons (self-introduction, daily routines, everyday conversation).
 4. Spaced repetition and a placement test.

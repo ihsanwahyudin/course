@@ -4,22 +4,21 @@ import { Image, Platform, Pressable, StyleSheet, View } from 'react-native';
 import { Icon } from '@/components/ui/Icon';
 import { Eyebrow, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
-import type { CuratedResource, ResourceItem } from '@/lib/api';
+import type { CuratedResource } from '@/lib/api';
 import { openExternal } from '@/lib/links';
 import { colors, radius } from '@/theme/tokens';
 
-type Item = (CuratedResource & { videoId?: string }) | ResourceItem;
+type Item = CuratedResource & { videoId?: string };
 
 const youTubeId = (url: string) => url.match(/(?:v=|youtu\.be\/|\/shorts\/|\/embed\/)([A-Za-z0-9_-]{11})/)?.[1];
 
 // A real-world link: YouTube videos play inline on web (privacy-enhanced
-// embed) and open YouTube on phones; pictures show their credit line.
+// embed) and open YouTube on phones.
 export function ResourceCard({ item, compact }: { item: Item; compact?: boolean }) {
   const t = useT();
   const [playing, setPlaying] = useState(false);
   const [hovered, setHovered] = useState(false);
   const videoId = item.kind === 'video' ? (item.videoId ?? youTubeId(item.url)) : undefined;
-  const r = item as ResourceItem;
 
   const media = videoId ? (
     playing && Platform.OS === 'web' ? (
@@ -45,10 +44,6 @@ export function ResourceCard({ item, compact }: { item: Item; compact?: boolean 
         </View>
       </Pressable>
     )
-  ) : item.kind === 'image' && r.thumb ? (
-    <Pressable onPress={() => openExternal(item.url)} accessibilityRole="link" accessibilityLabel={item.title} style={styles.media}>
-      <Image source={{ uri: r.thumb }} style={StyleSheet.absoluteFill} resizeMode="cover" accessibilityIgnoresInvertColors />
-    </Pressable>
   ) : null;
 
   return (
@@ -71,11 +66,6 @@ export function ResourceCard({ item, compact }: { item: Item; compact?: boolean 
           {item.note ? (
             <Text size={13} color={colors.muted} numberOfLines={2}>
               {item.note}
-            </Text>
-          ) : null}
-          {item.kind === 'image' && r.author ? (
-            <Text size={11} color={colors.muted} numberOfLines={1}>
-              {t('lesson.imageCredit', { author: r.author, license: r.license ?? '' })}
             </Text>
           ) : null}
         </View>

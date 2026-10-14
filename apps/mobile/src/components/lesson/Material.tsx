@@ -155,7 +155,7 @@ export function MaterialView({
             </Text>
           </View>
           <PillButton
-            label={cardsSaved ? t('helper.saved') : t('lesson.saveCards')}
+            label={cardsSaved ? t('step.saved') : t('lesson.saveCards')}
             icon={cardsSaved ? 'check' : undefined}
             variant="secondary"
             size="sm"

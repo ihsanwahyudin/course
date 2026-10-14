@@ -37,7 +37,14 @@
         }
       ],
       "expo-secure-store",
-      "expo-localization"
+      "expo-localization",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to hear your spoken answers.",
+          "enableBackgroundPlayback": false
+        }
+      ]
     ],
     "scheme": "fluentpath",
     "experiments": {

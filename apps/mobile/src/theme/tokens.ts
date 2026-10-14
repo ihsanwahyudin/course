@@ -25,6 +25,9 @@ export const colors = {
   emerald: '#00bb7f',
   emeraldDeep: '#009767',
   danger: '#d6453d',
+  // Hints: a pale amber so they read as help, not as an error.
+  amber: '#9a6400',
+  amberSoft: '#fdf6e3',
   white: '#ffffff',
 } as const;
 

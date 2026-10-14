@@ -32,7 +32,6 @@ export const API_URL = resolveApiUrl(process.env.EXPO_PUBLIC_API_URL || fallback
 export type Level = string;
 export type NodeStatus = 'mastered' | 'in_progress' | 'available' | 'locked' | 'coming_soon';
 export type Phase = 'LEARNING' | 'MASTERED';
-export type Intent = 'ask' | 'simpler' | 'quiz' | 'flashcards' | 'examples' | 'video' | 'image';
 export type Tone = 'default' | 'lavender' | 'peach' | 'mint' | 'sky';
 
 export type Objective = { id: string; text: string };
@@ -53,7 +52,7 @@ export type RoadmapNode = {
   recommended: boolean;
 };
 
-export type User = { id: string; email: string; displayName: string; nativeLanguage: string; locale: 'en' | 'id'; createdAt: string };
+export type User = { id: string; email: string; displayName: string; nativeLanguage: string; locale: 'en' | 'id'; createdAt: string; memoryEnabled: boolean };
 
 export type CourseProgress = {
   percent: number;
@@ -145,15 +144,6 @@ export type NodeDetail = RoadmapNode & {
   keyPoints: string[];
 };
 
-export type Message = {
-  id: string;
-  role: 'user' | 'assistant' | 'system';
-  content: string;
-  phase: Phase;
-  metadata: { kind?: string; intent?: Intent; quiz?: QuizQuestion[]; flashcards?: Flashcard[]; resources?: ResourceItem[]; cached?: boolean };
-  createdAt: string;
-};
-
 export type Attempt = {
   id: string;
   sessionId: string;
@@ -179,19 +169,83 @@ export type CuratedResource = { kind: 'video' | 'article' | 'image'; title: stri
 export type Flashcard = { front: string; back: string };
 export type Material = { lead: string; sections: Section[]; suggestedQuestions: string[]; resources: CuratedResource[]; flashcards: Flashcard[] };
 
-export type QuizQuestion = { prompt: string; options: string[]; answer: number; explain: string };
-export type ResourceItem = {
-  kind: 'video' | 'article' | 'image';
-  title: string;
-  url: string;
-  source: string;
-  note?: string;
-  videoId?: string;
-  thumb?: string;
-  author?: string;
-  license?: string;
-  curated: boolean;
+// ---- step-by-step lessons ----
+
+export type StepKind = 'concept' | 'examples' | 'question' | 'timeline' | 'flashcards' | 'artifact' | 'resources';
+export type Pair = { en: string; id: string };
+export type Artifact = { title: string; intro: string; headers: string[]; rows: string[][]; tips: string[]; examples: Pair[] };
+export type Timeline = { title: string; caption: string; marks: { label: string; kind: 'past' | 'now' | 'future' }[] };
+
+export type QuestionView = {
+  type: 'mcq' | 'word_order';
+  objectiveId: string;
+  prompt: string;
+  options: string[];
+  tokens: string[];
+  hints: string[];
+  hintsLeft: number;
+  choice: number | null;
+  picked: string[] | null;
+  answered: boolean;
+  correct: boolean;
+  revealed: boolean;
+  /** Only once answered or revealed. */
+  answer: number | null;
+  solution: string;
+  explanation: string;
 };
+
+export type CuratedLink = { kind: 'video' | 'article' | 'image'; title: string; url: string; source: string; note?: string; videoId?: string };
+export type AskEntry = { question: string; answer: string; scope: 'in' | 'other_lesson' | 'off_topic'; otherLesson?: string };
+
+export type StepView = {
+  index: number;
+  kind: StepKind;
+  title: string;
+  text: string;
+  body: string;
+  pairs: Pair[] | null;
+  examples: Pair[] | null;
+  timeline: Timeline | null;
+  flashcards: Flashcard[] | null;
+  artifact: Artifact | null;
+  resources: CuratedLink[] | null;
+  question: QuestionView | null;
+  similar: QuestionView | null;
+  asks: AskEntry[];
+  done: boolean;
+};
+
+export type LessonSummary = {
+  mastered: string[];
+  review: string[];
+  remembered: string[];
+  flashcardsAdded: number;
+  nextOpening: string;
+  next: RoadmapNode | null;
+};
+
+export type Lesson = {
+  greeting: string;
+  steps: StepView[];
+  stepIndex: number;
+  totalSteps: number;
+  /** Every step done: the checkpoint is next. */
+  checkpoint: boolean;
+  memoryChip: { from: string; strong: string; weak: string } | null;
+  summary: LessonSummary | null;
+};
+
+export type AnswerInput = { choice?: number; tokens?: string[]; similar?: boolean };
+
+export type MemoryItem = { id: string; courseSlug: string; kind: 'pattern' | 'personal'; text: string; sourceNode: string; sourceTitle: string; createdAt: string };
+export type MemoryView = {
+  enabled: boolean;
+  profile: { course: string; courseTitle: string; question: string; answer: string }[];
+  items: MemoryItem[];
+};
+
+export type Note = { id: string; courseSlug: string; nodeId: string; title: string; content: Artifact; createdAt: string; nodeTitle: string; courseTitle: string };
 
 export type Session = {
   id: string;
@@ -203,9 +257,9 @@ export type Session = {
   endedAt: string | null;
   course: CourseRef;
   node: RoadmapNode;
+  stepIndex: number;
   material: Material | null;
-  greeting: string;
-  messages: Message[];
+  lesson: Lesson | null;
   canChat: boolean;
   assessment: { id: string; objectiveId: string; prompt: string }[];
   lastAttempt: Attempt | null;
@@ -217,7 +271,7 @@ export type SavedFlashcard = Flashcard & {
   id: string;
   courseSlug: string;
   nodeId: string;
-  source: 'lesson' | 'ai';
+  source: 'lesson' | 'ai' | 'mistake';
   dueAt: string;
   intervalDays: number;
   reps: number;
@@ -255,7 +309,7 @@ export type Dashboard = {
   explore: Course[];
   openSessions: OpenSession[];
   recentAttempts: AttemptItem[];
-  weekly: { messages: number; attempts: number; mastered: number };
+  weekly: { steps: number; attempts: number; mastered: number };
   streak: { current: number; activeToday: boolean };
   activity: { date: string; count: number }[];
   totalMastered: number;
@@ -282,6 +336,14 @@ export function setAuthToken(token: string | null) {
 }
 export function setUnauthorizedHandler(fn: (() => void) | null) {
   onUnauthorized = fn;
+}
+
+/** Headers for requests made outside request() (audio downloads). */
+export function authHeaders(): Record<string, string> {
+  const h: Record<string, string> = { 'Accept-Language': currentLocale() };
+  if (Platform.OS !== 'web') h['X-FluentPath-Client'] = 'native';
+  if (bearerToken) h.Authorization = `Bearer ${bearerToken}`;
+  return h;
 }
 
 async function request<T>(path: string, init?: RequestInit & { timeoutMs?: number; skipAuthRedirect?: boolean }): Promise<T> {
@@ -335,9 +397,25 @@ export const api = {
   courseProgress: (course: string) => request<CourseProgressView>(`/api/v1/courses/${enc(course)}/progress`),
   dashboard: () => request<Dashboard>('/api/v1/dashboard'),
   // lessons
-  startSession: (course: string, nodeId: string) => request<Session>('/api/v1/sessions', post({ course, nodeId })),
+  // The first visit writes the lesson plan with the AI, which can take a while.
+  startSession: (course: string, nodeId: string) => request<Session>('/api/v1/sessions', { ...post({ course, nodeId }), timeoutMs: 170000 }),
   session: (id: string) => request<Session>(`/api/v1/sessions/${enc(id)}`),
-  sendMessage: (id: string, b: { content?: string; intent?: Intent }) => request<Session>(`/api/v1/sessions/${enc(id)}/messages`, { ...post(b), timeoutMs: 95000 }),
+  step: (id: string, n: number, action: 'next' | 'hint' | 'reveal' | 'similar', b?: { similar?: boolean }) =>
+    request<Session>(`/api/v1/sessions/${enc(id)}/steps/${n}/${action}`, { ...post(b), timeoutMs: 95000 }),
+  answer: (id: string, n: number, b: AnswerInput) => request<Session>(`/api/v1/sessions/${enc(id)}/steps/${n}/answer`, post(b)),
+  ask: (id: string, n: number, content: string) => request<Session>(`/api/v1/sessions/${enc(id)}/steps/${n}/ask`, { ...post({ content }), timeoutMs: 95000 }),
+  // speech
+  transcribe: (audio: Blob, type: string) =>
+    request<{ text: string }>('/api/v1/transcribe', { method: 'POST', body: audio, headers: { 'Content-Type': type }, timeoutMs: 60000 }),
+  // memory & notes
+  memory: () => request<MemoryView>('/api/v1/me/memory'),
+  setMemoryEnabled: (enabled: boolean) => request<MemoryView>('/api/v1/me/memory', { method: 'PATCH', body: JSON.stringify({ enabled }) }),
+  updateMemory: (id: string, text: string) => request<MemoryView>(`/api/v1/me/memory/${enc(id)}`, { method: 'PATCH', body: JSON.stringify({ text }) }),
+  deleteMemory: (id: string) => request<MemoryView>(`/api/v1/me/memory/${enc(id)}`, { method: 'DELETE' }),
+  deleteAllMemory: () => request<MemoryView>('/api/v1/me/memory', { method: 'DELETE' }),
+  notes: () => request<{ notes: Note[] }>('/api/v1/notes'),
+  saveNote: (b: { course: string; nodeId: string; artifact: Artifact }) => request<Note>('/api/v1/notes', post(b)),
+  deleteNote: (id: string) => request<{ ok: boolean }>(`/api/v1/notes/${enc(id)}`, { method: 'DELETE' }),
   submitAssessment: (id: string, answers: { itemId: string; answer: string }[]) =>
     request<AssessmentResult>(`/api/v1/sessions/${enc(id)}/assessment`, { ...post({ answers }), timeoutMs: 95000 }),
   // flashcards
