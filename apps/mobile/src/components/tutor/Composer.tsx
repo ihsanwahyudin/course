@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Platform, StyleSheet, TextInput, View, type NativeSyntheticEvent, type TextInputKeyPressEventData } from 'react-native';
 
 import { Chip } from '@/components/ui/Bits';
+import { useT } from '@/i18n';
 import { IconButton } from '@/components/ui/PillButton';
 import { Eyebrow } from '@/components/ui/Text';
 import { colors, fonts, shadow } from '@/theme/tokens';
@@ -23,6 +24,7 @@ export function Composer({
   disabled?: boolean;
   suggestions?: string[];
 }) {
+  const t = useT();
   const [focused, setFocused] = useState(false);
   const trimmed = value.trim();
   const canSend = !disabled && trimmed.length > 0 && value.length <= MAX;
@@ -49,16 +51,16 @@ export function Composer({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onKeyPress={onKeyPress}
-          placeholder="Reply to your tutor…"
+          placeholder={t('lesson.placeholder')}
           placeholderTextColor={colors.muted}
           multiline
           maxLength={MAX + 200}
           editable={!disabled}
-          accessibilityLabel="Message to tutor"
+          accessibilityLabel={t('lesson.messageLabel')}
           style={styles.input}
         />
         <View style={{ opacity: canSend ? 1 : 0.4 }}>
-          <IconButton icon="send" label="Send message" variant="accent" onPress={send} size={42} />
+          <IconButton icon="send" label={t('lesson.send')} variant="accent" onPress={send} size={42} />
         </View>
       </View>
       {value.length > MAX - 200 ? (

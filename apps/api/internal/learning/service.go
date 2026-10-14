@@ -216,7 +216,7 @@ func courseCard(st state) CourseCard {
 	sum := summary(st)
 	text := c.Text(st.lang)
 	card := CourseCard{
-		Slug: c.Slug, Title: text.Title, Tagline: text.Tagline, Description: text.Description, Category: c.Category,
+		Slug: c.Slug, Title: text.Title, Tagline: text.Tagline, Description: text.Description, Category: text.Category,
 		Tone: c.Tone, Status: c.Status, TargetLevel: c.TargetLevel, Levels: c.LevelIDs,
 		TotalNodes: sum.TotalNodes, ReadyNodes: sum.ReadyNodes, Enrolled: st.enrolled,
 	}
@@ -533,7 +533,8 @@ func (s *Service) SendMessage(ctx context.Context, userID, sessionID, content st
 		Locale:         sess.Locale,
 		LanguagePolicy: cur.Tutor.LanguagePolicy[sess.Locale],
 		CurrentLevel:   st.enrollment.CurrentLevel, TargetLevel: st.enrollment.TargetLevel,
-		Node: n, Lesson: lesson, Phase: phase, NextPhase: tutor.NextOf(phase),
+		// Objectives in the lesson's language; exercises stay as written.
+		Node: cur.LocalNode(n.ID, sess.Locale), Lesson: lesson, Phase: phase, NextPhase: tutor.NextOf(phase),
 		TurnsInPhase: sess.PhaseTurns + 1,
 	}
 	for _, m := range history {

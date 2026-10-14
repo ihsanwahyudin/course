@@ -129,6 +129,7 @@ type CourseText struct {
 	Title       string `json:"title"`
 	Tagline     string `json:"tagline"`
 	Description string `json:"description"`
+	Category    string `json:"category,omitempty"`
 }
 
 // Course is the metadata in <course>/course.json.
@@ -603,9 +604,12 @@ func (c *Curriculum) LocalLevels(lang string) []LevelInfo {
 // Text returns the course title, tagline and description in lang.
 func (c *Curriculum) Text(lang string) CourseText {
 	if t, ok := c.I18n[c.Lang(lang)]; ok {
+		if t.Category == "" {
+			t.Category = c.Category
+		}
 		return t
 	}
-	return CourseText{c.Title, c.Tagline, c.Description}
+	return CourseText{c.Title, c.Tagline, c.Description, c.Category}
 }
 
 var slugRe = regexp.MustCompile(`^[a-z0-9][a-z0-9-]{0,39}$`)

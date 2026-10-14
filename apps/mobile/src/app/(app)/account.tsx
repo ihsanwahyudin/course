@@ -10,6 +10,8 @@ import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
+import { LanguageToggle } from '@/components/ui/LanguageToggle';
+import { useFormatDate, useT } from '@/i18n';
 import { useAuth } from '@/lib/auth';
 import { useDashboard } from '@/lib/queries';
 import { colors, fonts } from '@/theme/tokens';
@@ -21,18 +23,20 @@ export default function AccountScreen() {
   const { data } = useDashboard();
   const { wide } = useLayout();
   const [busy, setBusy] = useState(false);
+  const t = useT();
+  const formatDate = useFormatDate();
   if (!user) return null;
 
   const rows: [string, string][] = [
-    ['Email', user.email],
-    ['Member since', new Date(user.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })],
-    ['Courses', String(data?.courses.length ?? '–')],
-    ['Skills mastered', String(data?.totalMastered ?? '–')],
+    [t('account.email'), user.email],
+    [t('account.memberSince'), formatDate(user.createdAt, { day: 'numeric', month: 'long', year: 'numeric' })],
+    [t('account.courses'), String(data?.courses.length ?? '–')],
+    [t('account.skillsMastered'), String(data?.totalMastered ?? '–')],
   ];
 
   return (
     <Screen maxWidth={760}>
-      <PageHeader label="Account" title={wide ? 'Your account' : 'Account'} />
+      <PageHeader label={t('account.title')} title={wide ? t('account.titleWide') : t('account.title')} />
       <View style={{ gap: wide ? 16 : 12 }}>
         <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 24 }} decoration={<MeshBlob color={colors.lavender} size={260} style={{ right: -110, top: -120 }} />}>
           <View style={styles.row}>
@@ -52,13 +56,20 @@ export default function AccountScreen() {
           </View>
         </Card>
         <Card reveal={1} style={{ gap: 14 }}>
+          <View style={[styles.row, { justifyContent: 'space-between' }]}>
+            <Eyebrow>{t('common.language')}</Eyebrow>
+            <LanguageToggle />
+          </View>
+          <Text color={colors.muted}>{t('account.languageText')}</Text>
+        </Card>
+        <Card reveal={2} style={{ gap: 14 }}>
           <View style={styles.row}>
             <Icon name="logout" size={18} color={colors.muted} />
-            <Eyebrow>Session</Eyebrow>
+            <Eyebrow>{t('account.session')}</Eyebrow>
           </View>
-          <Text color={colors.muted}>Log out of FluentPath on this device. Your progress stays saved to your account.</Text>
+          <Text color={colors.muted}>{t('account.logoutText')}</Text>
           <PillButton
-            label="Log out"
+            label={t('account.logout')}
             variant="secondary"
             loading={busy}
             onPress={async () => {

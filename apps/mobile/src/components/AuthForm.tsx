@@ -11,6 +11,9 @@ import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import { TextField } from '@/components/ui/TextField';
 import { ApiError } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
+import { useT } from '@/i18n';
+import { useErrorText } from '@/lib/errors';
+import { LanguageToggle } from '@/components/ui/LanguageToggle';
 import { colors, fonts } from '@/theme/tokens';
 
 // Only allow in-app return paths (no open redirects via ?next=).
@@ -34,12 +37,14 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
   const emailRef = useRef<TextInput>(null);
   const passwordRef = useRef<TextInput>(null);
   const isRegister = mode === 'register';
+  const t = useT();
+  const errorText = useErrorText();
 
   const submit = async () => {
     setError(undefined);
-    if (isRegister && !name.trim()) return setError({ field: 'name', message: 'Tell us what to call you.' });
-    if (!email.trim()) return setError({ field: 'email', message: 'Enter your email.' });
-    if (password.length < (isRegister ? 8 : 1)) return setError({ field: 'password', message: isRegister ? 'Use at least 8 characters.' : 'Enter your password.' });
+    if (isRegister && !name.trim()) return setError({ field: 'name', message: t('auth.needName') });
+    if (!email.trim()) return setError({ field: 'email', message: t('auth.needEmail') });
+    if (password.length < (isRegister ? 8 : 1)) return setError({ field: 'password', message: isRegister ? t('auth.needPasswordNew') : t('auth.needPassword') });
     setBusy(true);
     try {
       if (isRegister) await register(name.trim(), email.trim(), password);
@@ -48,13 +53,15 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
     } catch (e) {
       const err = e instanceof ApiError ? e : undefined;
       const field = err?.code === 'invalid_email' || err?.code === 'email_taken' ? 'email' : err?.code === 'invalid_password' ? 'password' : err?.code === 'invalid_name' ? 'name' : undefined;
-      setError({ field, message: err?.message ?? 'Something went wrong. Please try again.' });
+      setError({ field, message: errorText(e) });
     } finally {
       setBusy(false);
     }
   };
 
-  const other = isRegister ? { label: 'Log in', href: '/login', prompt: 'Already have an account?' } : { label: 'Create one', href: '/register', prompt: 'New to FluentPath?' };
+  const other = isRegister
+    ? { label: t('common.logIn'), href: '/login', prompt: t('auth.haveAccount') }
+    : { label: t('auth.createOne'), href: '/register', prompt: t('auth.newHere') };
 
   return (
     <View style={styles.root}>
@@ -63,29 +70,32 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
         <ScrollView contentContainerStyle={[styles.scroll, { paddingTop: insets.top + 112, paddingBottom: insets.bottom + 40 }]} keyboardShouldPersistTaps="handled">
           <Card reveal={0} padding={28} spotlight={false} style={styles.card} decoration={<MeshBlob color={colors.lavender} size={280} style={{ right: -120, top: -140 }} />}>
             <View style={{ gap: 18 }}>
-              <GradientRing size={48} />
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                <GradientRing size={48} />
+                <LanguageToggle compact />
+              </View>
               <View style={{ gap: 8 }}>
-                <Eyebrow>{isRegister ? 'Create account' : 'Welcome back'}</Eyebrow>
+                <Eyebrow>{isRegister ? t('auth.createAccount') : t('auth.welcomeBack')}</Eyebrow>
                 <Heading size={34}>
-                  {isRegister ? 'Start your ' : 'Continue your '}
+                  {isRegister ? t('auth.startYour') : t('auth.continueYour')}
                   {Platform.OS === 'web' ? (
-                    <GradientText style={{ fontFamily: fonts.semibold, fontSize: 34, lineHeight: 35, letterSpacing: -1.5 }}>roadmap.</GradientText>
+                    <GradientText style={{ fontFamily: fonts.semibold, fontSize: 34, lineHeight: 35, letterSpacing: -1.5 }}>{t('auth.roadmapWord')}</GradientText>
                   ) : (
-                    'roadmap.'
+                    t('auth.roadmapWord')
                   )}
                 </Heading>
                 <Text color={colors.muted}>
-                  {isRegister ? 'Free account. Your progress is saved to your dashboard across devices.' : 'Log in to pick up your lessons where you left off.'}
+                  {isRegister ? t('auth.registerIntro') : t('auth.loginIntro')}
                 </Text>
               </View>
             </View>
             <View style={{ gap: 14 }}>
               {isRegister ? (
                 <TextField
-                  label="Name"
+                  label={t('auth.name')}
                   value={name}
                   onChangeText={setName}
-                  placeholder="Rina"
+                  placeholder={t('auth.namePlaceholder')}
                   autoComplete="name"
                   textContentType="name"
                   returnKeyType="next"
@@ -95,10 +105,10 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
               ) : null}
               <TextField
                 ref={emailRef}
-                label="Email"
+                label={t('auth.email')}
                 value={email}
                 onChangeText={setEmail}
-                placeholder="you@example.com"
+                placeholder={t('auth.emailPlaceholder')}
                 autoCapitalize="none"
                 autoCorrect={false}
                 keyboardType="email-address"
@@ -110,10 +120,10 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
               />
               <TextField
                 ref={passwordRef}
-                label="Password"
+                label={t('auth.password')}
                 value={password}
                 onChangeText={setPassword}
-                placeholder={isRegister ? 'At least 8 characters' : 'Your password'}
+                placeholder={isRegister ? t('auth.passwordNew') : t('auth.passwordCurrent')}
                 secureTextEntry
                 autoComplete={isRegister ? 'new-password' : 'current-password'}
                 textContentType={isRegister ? 'newPassword' : 'password'}
@@ -127,7 +137,7 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
                 </View>
               ) : null}
             </View>
-            <PillButton label={isRegister ? 'Create account' : 'Log in'} icon="arrowUpRight" onPress={submit} loading={busy} style={{ alignSelf: 'stretch' }} />
+            <PillButton label={isRegister ? t('auth.submitRegister') : t('auth.submitLogin')} icon="arrowUpRight" onPress={submit} loading={busy} style={{ alignSelf: 'stretch' }} />
             <Text size={14} color={colors.muted} style={{ textAlign: 'center' }}>
               {other.prompt}{' '}
               <Link href={{ pathname: other.href as '/login', params: next ? { next } : {} }} replace style={{ color: colors.accent, fontFamily: fonts.medium }}>

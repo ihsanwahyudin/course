@@ -137,6 +137,18 @@ cd apps/mobile && npx tsc --noEmit && npx expo lint
 - **Go tests** cover the course validator, status derivation, phase rules, tutor-reply parsing, and scoring with malformed evaluator output. The DB integration tests cover the full loop, a failed attempt not unlocking anything, locked and coming-soon nodes, provider failures, a concurrent double-submit mastering once, all 7 lessons end to end, user isolation, the dashboard and streak, the v1 → v2 migration, and the auth flow (register, login, logout, expiry, validation, CSRF guard). Each test runs in its own schema.
 - **`e2e.sh`** builds the API and runs it against a throwaway database with the mock tutor. It checks that anonymous users can't start lessons, then signs up two users. User A masters every ready lesson over HTTP (with a failing attempt first), and user B must see none of it. It then restarts the API, logs in again, and checks that the progress persisted.
 
+## Languages (EN & ID)
+
+The whole app works in **English and Bahasa Indonesia**.
+
+- **Choosing a language:**
+  - The first visit follows the device/browser language.
+  - The **ID | EN** toggle is in the top nav, on the login/sign-up pages and on the Account page.
+  - Once logged in, the choice is saved to the account (`users.locale`, via `PATCH /api/v1/auth/me`) and follows the user across devices.
+- **UI text:** lives in `apps/mobile/src/i18n/en.ts` and `id.ts`. `id.ts` must have exactly the same keys as `en.ts`, so `tsc` fails if one is missing. API errors are translated from their `code`.
+- **Course content:** the client sends `Accept-Language`, and the API returns course titles, levels, and roadmap node titles/summaries/objectives in that language. Translations live in `i18n` blocks inside the course files. A course that lists `"languages": ["en","id"]` must be fully translated, or the API refuses to start.
+- **Tutor:** follows the language a lesson started in (`learning_sessions.locale`). With ID it explains and gives feedback mainly in Indonesian, while exercises and answers stay in English (`tutor.languagePolicy` in `course.json`). Switching the UI language mid-lesson doesn't change that lesson's tutor language.
+
 ## Courses
 
 - Each course lives in `packages/courses/<slug>/`:

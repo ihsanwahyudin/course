@@ -8,7 +8,9 @@ import { GradientText } from '@/components/ui/GradientText';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
+import { useT } from '@/i18n';
 import { useAuth } from '@/lib/auth';
+import { useErrorText } from '@/lib/errors';
 import { useNode } from '@/lib/queries';
 import { colors, fonts } from '@/theme/tokens';
 
@@ -18,23 +20,25 @@ export default function NodeScreen() {
   const authed = useAuth((s) => s.status === 'authenticated');
   const { data: node, isPending, isError, error, refetch } = useNode(course, nodeId);
   const { wide, gap, contentWidth } = useLayout();
+  const t = useT();
+  const errorText = useErrorText();
 
   if (isPending) {
     return (
       <Screen>
-        <LoadingState label="Loading lesson" />
+        <LoadingState label={t('node.loading')} />
       </Screen>
     );
   }
   if (isError) {
     return (
       <Screen>
-        <ErrorState title={error.message.includes('No roadmap node') ? 'Lesson not found' : "Can't load this lesson"} message={error.message} onRetry={refetch} />
+        <ErrorState title={'code' in error && error.code === 'node_not_found' ? t('node.notFound') : t('node.loadError')} message={errorText(error)} onRetry={refetch} />
       </Screen>
     );
   }
 
-  const label = node.status === 'mastered' ? 'Practise again' : node.openSessionId || node.status === 'in_progress' ? 'Continue lesson' : 'Start lesson';
+  const label = node.status === 'mastered' ? t('node.practiseAgain') : node.openSessionId || node.status === 'in_progress' ? t('node.continueLesson') : t('node.startLesson');
   const mainW = wide ? span(contentWidth, gap, 3, 2) : contentWidth;
   const sideW = wide ? span(contentWidth, gap, 3, 1) : contentWidth;
 
@@ -56,19 +60,19 @@ export default function NodeScreen() {
           {node.canStart && !authed ? (
             <>
               <PillButton
-                label="Log in to start"
+                label={t('node.logInToStart')}
                 icon="arrowUpRight"
                 onPress={() => router.push({ pathname: '/login', params: { next: `/courses/${node.course.slug}/${node.id}` } })}
               />
               <Text size={13} color={colors.muted}>
-                Lessons and progress need a free account.
+                {t('node.needsAccount')}
               </Text>
             </>
           ) : node.canStart ? (
             <PillButton label={label} icon="arrowUpRight" onPress={() => router.push(`/learn/${node.course.slug}/${node.id}`)} />
           ) : (
             <>
-              <PillButton label={node.status === 'coming_soon' ? 'Coming soon' : 'Locked'} icon={node.status === 'locked' ? 'lock' : undefined} disabled />
+              <PillButton label={node.status === 'coming_soon' ? t('common.comingSoon') : t('node.lockedButton')} icon={node.status === 'locked' ? 'lock' : undefined} disabled />
               <Text size={13} color={colors.muted}>
                 {node.blockedReason}
               </Text>
@@ -78,7 +82,7 @@ export default function NodeScreen() {
       </Card>
 
       <Card reveal={1} padding={wide ? 32 : 24} style={{ gap: 20 }}>
-        <Eyebrow>What you&apos;ll be able to do</Eyebrow>
+        <Eyebrow>{t('node.willDo')}</Eyebrow>
         {node.objectives.map((o, i) => (
           <View key={o.id} style={[styles.objective, i > 0 && styles.divider]}>
             <Text size={13} color={colors.accent} style={{ fontFamily: fonts.mono, width: 28, marginTop: 2 }}>
@@ -93,8 +97,8 @@ export default function NodeScreen() {
 
       <View style={{ flexDirection: wide ? 'row' : 'column', gap }}>
         {[
-          { title: 'Prerequisites', items: node.prerequisites, empty: 'None — this is a starting point.' },
-          { title: 'Unlocks', items: node.successors, empty: 'This is the end of this branch for now.' },
+          { title: t('node.prerequisites'), items: node.prerequisites, empty: t('node.noPrereq') },
+          { title: t('node.unlocks'), items: node.successors, empty: t('node.noUnlocks') },
         ].map((g, i) => (
           <Card key={g.title} reveal={2 + i} style={{ flex: wide ? 1 : undefined, gap: 14 }}>
             <Eyebrow>{g.title}</Eyebrow>
@@ -124,7 +128,7 @@ export default function NodeScreen() {
         style={{ gap: 28 }}
         decoration={<MeshBlob color="rgba(91,76,245,0.5)" size={240} style={{ right: -70, top: -70 }} />}
       >
-        <Eyebrow color="rgba(255,255,255,0.6)">Mastery</Eyebrow>
+        <Eyebrow color="rgba(255,255,255,0.6)">{t('node.mastery')}</Eyebrow>
         <View>
           <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
             <Heading size={72} color={colors.white} tabular>
@@ -135,14 +139,14 @@ export default function NodeScreen() {
             </GradientText>
           </View>
           <Text color="rgba(255,255,255,0.7)" style={{ marginTop: 8 }}>
-            Score needed in the assessment to master this skill and unlock what comes next.
+            {t('node.masteryText')}
           </Text>
         </View>
         <View style={{ borderTopWidth: 1, borderTopColor: 'rgba(255,255,255,0.1)' }}>
           {[
-            ['Objectives', pad2(node.objectives.length)],
-            ['Key ideas', pad2(node.keyPoints.length)],
-            ['Your best score', node.masteryScore != null ? String(node.masteryScore) : '—'],
+            [t('node.objectives'), pad2(node.objectives.length)],
+            [t('node.keyIdeas'), pad2(node.keyPoints.length)],
+            [t('node.bestScore'), node.masteryScore != null ? String(node.masteryScore) : '—'],
           ].map(([k, v]) => (
             <View key={k} style={styles.inkRow}>
               <Text size={14} color={colors.white}>
@@ -158,7 +162,7 @@ export default function NodeScreen() {
       {node.keyPoints.length > 0 ? (
         <Card tone="lavender" reveal={wide ? 2 : 5} style={{ gap: 16 }}>
           <View style={[styles.row, { justifyContent: 'space-between' }]}>
-            <Eyebrow color="rgba(17,17,19,0.6)">Key ideas</Eyebrow>
+            <Eyebrow color="rgba(17,17,19,0.6)">{t('node.keyIdeas')}</Eyebrow>
             <GradientRing size={32} />
           </View>
           <DotList items={node.keyPoints} />

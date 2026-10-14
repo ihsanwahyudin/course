@@ -7,18 +7,20 @@ import { Card } from '@/components/ui/Card';
 import { Icon } from '@/components/ui/Icon';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import type { LevelSummary, RoadmapNode } from '@/lib/api';
+import { useT } from '@/i18n';
 import { colors, radius } from '@/theme/tokens';
 
 function Row({ course, node }: { course: string; node: RoadmapNode }) {
   const router = useRouter();
   const [hovered, setHovered] = useState(false);
+  const t = useT();
   return (
     <Pressable
       onPress={() => router.push(`/courses/${course}/${node.id}`)}
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
-      accessibilityLabel={`${node.title}, ${node.status.replace('_', ' ')}`}
+      accessibilityLabel={`${node.title}, ${t(`status.${node.status}`)}`}
       style={[styles.row, hovered && { backgroundColor: colors.canvas }]}
     >
       <View style={{ flex: 1, gap: 4 }}>

@@ -1,5 +1,7 @@
 import { Platform } from 'react-native';
 
+import { currentLocale } from '@/i18n';
+
 // Public, non-secret base URL of the Go API. AI keys live only on the server.
 // Android emulators reach the host machine at 10.0.2.2; physical devices need
 // EXPO_PUBLIC_API_URL set to the host's LAN IP or a tunnel.
@@ -48,7 +50,7 @@ export type RoadmapNode = {
   successorIds: string[];
 };
 
-export type User = { id: string; email: string; displayName: string; nativeLanguage: string; createdAt: string };
+export type User = { id: string; email: string; displayName: string; nativeLanguage: string; locale: 'en' | 'id'; createdAt: string };
 
 export type CourseProgress = {
   percent: number;
@@ -210,7 +212,8 @@ export function setUnauthorizedHandler(fn: (() => void) | null) {
 async function request<T>(path: string, init?: RequestInit & { timeoutMs?: number; skipAuthRedirect?: boolean }): Promise<T> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), init?.timeoutMs ?? 20000);
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  // The server localizes roadmap text and tutor messages from this header.
+  const headers: Record<string, string> = { 'Content-Type': 'application/json', 'Accept-Language': currentLocale() };
   if (Platform.OS !== 'web') headers['X-FluentPath-Client'] = 'native';
   if (bearerToken) headers.Authorization = `Bearer ${bearerToken}`;
   let res: Response;
@@ -246,6 +249,7 @@ export const api = {
     request<{ user: User; token?: string }>('/api/v1/auth/register', { ...post(b), skipAuthRedirect: true }),
   login: (b: { email: string; password: string }) => request<{ user: User; token?: string }>('/api/v1/auth/login', { ...post(b), skipAuthRedirect: true }),
   logout: () => request<{ ok: boolean }>('/api/v1/auth/logout', { ...post(), skipAuthRedirect: true }),
+  updateMe: (b: { locale: 'en' | 'id' }) => request<{ user: User }>('/api/v1/auth/me', { method: 'PATCH', body: JSON.stringify(b) }),
   // courses
   courses: () => request<{ courses: Course[] }>('/api/v1/courses'),
   roadmap: (course: string) => request<Roadmap>(`/api/v1/courses/${enc(course)}/roadmap`),
@@ -259,14 +263,4 @@ export const api = {
   sendMessage: (id: string, content: string) => request<Session>(`/api/v1/sessions/${enc(id)}/messages`, { ...post({ content }), timeoutMs: 95000 }),
   submitAssessment: (id: string, answers: { itemId: string; answer: string }[]) =>
     request<AssessmentResult>(`/api/v1/sessions/${enc(id)}/assessment`, { ...post({ answers }), timeoutMs: 95000 }),
-};
-
-export const phaseLabel: Record<Phase, string> = {
-  INTRODUCTION: 'Intro',
-  EXPLANATION: 'Explain',
-  GUIDED_PRACTICE: 'Guided',
-  INDEPENDENT_PRACTICE: 'Solo',
-  ASSESSMENT: 'Assess',
-  REVIEW: 'Review',
-  MASTERED: 'Mastered',
 };

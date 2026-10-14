@@ -8,6 +8,7 @@ import { Icon } from '@/components/ui/Icon';
 import { ArrowBadge } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import type { Course } from '@/lib/api';
+import { useT } from '@/i18n';
 import { colors, radius, toneBg, type Tone } from '@/theme/tokens';
 
 const blobFor: Record<string, string> = {
@@ -21,13 +22,14 @@ const blobFor: Record<string, string> = {
 // course's tone, title, tagline, size, and progress once enrolled.
 export function CourseCard({ course, reveal, style }: { course: Course; reveal?: number; style?: StyleProp<ViewStyle> }) {
   const router = useRouter();
+  const t = useT();
   const p = course.progress;
   const levels = course.levels.length ? `${course.levels[0]}–${course.levels[course.levels.length - 1]}` : '';
   return (
     <Card
       reveal={reveal}
       onPress={() => router.push(`/courses/${course.slug}`)}
-      accessibilityLabel={`${course.title} course`}
+      accessibilityLabel={t('catalog.courseLabel', { title: course.title })}
       style={[{ gap: 20, minHeight: 240, justifyContent: 'space-between' }, style]}
       decoration={<MeshBlob color={blobFor[course.tone] ?? colors.lavender} size={280} style={{ right: -110, top: -120 }} />}
     >
@@ -45,7 +47,7 @@ export function CourseCard({ course, reveal, style }: { course: Course; reveal?:
         <View style={{ gap: 8 }}>
           <View style={[styles.row, { justifyContent: 'space-between' }]}>
             <Text size={13} weight="medium">
-              Level {p.currentLevel} · {p.percent}% to {p.targetLevel}
+              {t('catalog.levelProgress', { level: p.currentLevel, pct: p.percent, target: p.targetLevel })}
             </Text>
             <Text size={12} color={colors.muted} tabular>
               {p.mastered}/{p.targetNodes}
@@ -54,15 +56,15 @@ export function CourseCard({ course, reveal, style }: { course: Course; reveal?:
           <ProgressBar value={p.percent} />
           {p.nextNode ? (
             <Text size={13} color={colors.muted} numberOfLines={1}>
-              Next: {p.nextNode.title}
+              {t('catalog.next', { title: p.nextNode.title })}
             </Text>
           ) : null}
         </View>
       ) : (
         <View style={[styles.row, { flexWrap: 'wrap', gap: 6 }]}>
-          <Meta icon="book" label={`${course.readyNodes} lessons ready`} />
-          <Meta icon="route" label={`${course.totalNodes} skills`} />
-          <Meta icon="target" label={`Goal ${course.targetLevel}`} />
+          <Meta icon="book" label={t('common.lessonsReady', { n: course.readyNodes })} />
+          <Meta icon="route" label={t('common.skills', { n: course.totalNodes })} />
+          <Meta icon="target" label={t('catalog.goal', { level: course.targetLevel })} />
         </View>
       )}
     </Card>
@@ -82,14 +84,15 @@ function Meta({ icon, label }: { icon: 'book' | 'route' | 'target'; label: strin
 
 // Placeholder tile so the catalog reads as a platform with more to come.
 export function ComingSoonCard({ style, tone = 'default' }: { style?: StyleProp<ViewStyle>; tone?: Tone }) {
+  const t = useT();
   return (
     <View style={[styles.soon, { backgroundColor: tone === 'default' ? 'rgba(255,255,255,0.5)' : toneBg[tone] }, style]}>
-      <Eyebrow>Coming soon</Eyebrow>
+      <Eyebrow>{t('common.comingSoon')}</Eyebrow>
       <Heading size={24} color={colors.muted}>
-        More courses
+        {t('catalog.moreTitle')}
       </Heading>
       <Text size={13} color={colors.muted}>
-        New roadmaps will appear here. English is the first course on FluentPath.
+        {t('catalog.moreText')}
       </Text>
     </View>
   );

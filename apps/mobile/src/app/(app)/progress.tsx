@@ -11,7 +11,8 @@ import { MeshBlob } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
-import { phaseLabel } from '@/lib/api';
+import { useFormatDate, useT } from '@/i18n';
+import { useErrorText } from '@/lib/errors';
 import { useCourseProgress, useDashboard } from '@/lib/queries';
 import { colors, fonts, radius } from '@/theme/tokens';
 
@@ -25,15 +26,18 @@ export default function ProgressScreen() {
   const isPending = dashboard.isPending || (!!course && progressPending);
   const weekly = dashboard.data?.weekly ?? { messages: 0, attempts: 0, mastered: 0 };
   const { wide, gap, contentWidth } = useLayout();
+  const t = useT();
+  const errorText = useErrorText();
+  const formatDate = useFormatDate();
   const left = wide ? span(contentWidth, gap, 3, 1) : contentWidth;
   const right = wide ? span(contentWidth, gap, 3, 2) : contentWidth;
 
   return (
     <Screen onRefresh={refetch} refreshing={isRefetching}>
       <PageHeader
-        label="Progress"
-        title={wide ? <Headline size={60} before="What you've" gradient="mastered" after=" so far." /> : 'Progress'}
-        description="Mastery comes from assessments scored against each lesson's objectives — not from streaks or time spent."
+        label={t('progress.title')}
+        title={wide ? <Headline size={60} before={t('progress.before')} gradient={t('progress.gradient')} after={t('progress.after')} /> : t('progress.title')}
+        description={t('progress.description')}
       />
       {enrolled.length > 1 ? (
         <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginBottom: 16 }}>
@@ -43,23 +47,23 @@ export default function ProgressScreen() {
         </View>
       ) : null}
       {isPending ? (
-        <LoadingState label="Loading progress" />
+        <LoadingState label={t('progress.loading')} />
       ) : dashboard.isError ? (
-        <ErrorState title="Can't load progress" message={dashboard.error.message} onRetry={dashboard.refetch} />
+        <ErrorState title={t('progress.loadError')} message={errorText(dashboard.error)} onRetry={dashboard.refetch} />
       ) : !course || !data ? (
         <Card tone="sky" style={{ gap: 12 }}>
-          <Eyebrow color="rgba(17,17,19,0.6)">Nothing yet</Eyebrow>
-          <Heading size={28}>Start a course to track progress</Heading>
-          <Text color="rgba(17,17,19,0.7)">Mastered skills, assessment scores and open lessons will appear here.</Text>
-          <PillButton label="Browse courses" icon="arrowUpRight" onPress={() => router.push('/courses')} />
+          <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.nothingYet')}</Eyebrow>
+          <Heading size={28}>{t('progress.startToTrack')}</Heading>
+          <Text color="rgba(17,17,19,0.7)">{t('progress.startToTrackText')}</Text>
+          <PillButton label={t('common.browseCourses')} icon="arrowUpRight" onPress={() => router.push('/courses')} />
         </Card>
       ) : isError ? (
-        <ErrorState title="Can't load progress" message={error.message} onRetry={refetch} />
+        <ErrorState title={t('progress.loadError')} message={errorText(error)} onRetry={refetch} />
       ) : (
         <View style={{ flexDirection: wide ? 'row' : 'column', gap, alignItems: 'flex-start' }}>
           <View style={{ width: left, gap }}>
             <Card tone="ink" reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }} decoration={<MeshBlob color="rgba(91,76,245,0.5)" size={240} style={{ right: -70, top: -70 }} />}>
-              <Eyebrow color="rgba(255,255,255,0.6)">Skills mastered</Eyebrow>
+              <Eyebrow color="rgba(255,255,255,0.6)">{t('progress.skillsMastered')}</Eyebrow>
               <View>
                 <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
                   <Heading size={72} color={colors.white} tabular>
@@ -70,13 +74,13 @@ export default function ProgressScreen() {
                   </GradientText>
                 </View>
                 <Text color="rgba(255,255,255,0.7)" style={{ marginTop: 8 }}>
-                  {data.course.title} · on the way to {data.course.progress?.targetLevel} · now at {data.course.progress?.currentLevel}
+                  {t('progress.onTheWay', { course: data.course.title, target: data.course.progress?.targetLevel ?? '', level: data.course.progress?.currentLevel ?? '' })}
                 </Text>
               </View>
               <View style={{ borderTopWidth: 1, borderTopColor: 'rgba(255,255,255,0.1)' }}>
                 {data.mastered.length === 0 ? (
                   <Text size={14} color="rgba(255,255,255,0.6)" style={{ paddingTop: 14 }}>
-                    Nothing yet — your first mastered skill will appear here.
+                    {t('progress.noneMastered')}
                   </Text>
                 ) : (
                   data.mastered.map((m) => (
@@ -86,7 +90,7 @@ export default function ProgressScreen() {
                           {m.title}
                         </Text>
                         <Text size={12} color="rgba(255,255,255,0.5)">
-                          {m.level} · {new Date(m.masteredAt).toLocaleDateString()}
+                          {m.level} · {formatDate(m.masteredAt)}
                         </Text>
                       </View>
                       <Text size={12} color="rgba(255,255,255,0.5)" style={{ fontFamily: fonts.mono }}>
@@ -98,12 +102,12 @@ export default function ProgressScreen() {
               </View>
             </Card>
             <Card tone="lavender" reveal={1} style={{ gap: 16 }}>
-              <Eyebrow color="rgba(17,17,19,0.6)">Last 7 days</Eyebrow>
+              <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.last7')}</Eyebrow>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 {[
-                  ['Replies', weekly.messages],
-                  ['Attempts', weekly.attempts],
-                  ['Mastered', weekly.mastered],
+                  [t('progress.replies'), weekly.messages],
+                  [t('progress.attempts'), weekly.attempts],
+                  [t('progress.masteredShort'), weekly.mastered],
                 ].map(([k, v]) => (
                   <View key={k}>
                     <Heading size={40} tabular>
@@ -121,16 +125,16 @@ export default function ProgressScreen() {
           <View style={{ width: right, gap }}>
             {data.openSessions.length > 0 ? (
               <Card reveal={1} style={{ gap: 14 }}>
-                <Eyebrow>Pick up where you left off</Eyebrow>
+                <Eyebrow>{t('dashboard.pickUp')}</Eyebrow>
                 {data.openSessions.map((o, i) => (
                   <View key={o.sessionId} style={[styles.row, i > 0 && styles.divider]}>
                     <View style={{ flex: 1 }}>
                       <Text weight="medium" tight>
                         {o.title}
                       </Text>
-                      <Eyebrow>{phaseLabel[o.phase]}</Eyebrow>
+                      <Eyebrow>{t(`phase.${o.phase}`)}</Eyebrow>
                     </View>
-                    <PillButton label="Continue" size="sm" icon="arrowUpRight" onPress={() => router.push(`/learn/${o.courseSlug}/${o.nodeId}`)} />
+                    <PillButton label={t('common.continue')} size="sm" icon="arrowUpRight" onPress={() => router.push(`/learn/${o.courseSlug}/${o.nodeId}`)} />
                   </View>
                 ))}
               </Card>
@@ -138,11 +142,11 @@ export default function ProgressScreen() {
 
             <Card reveal={2} padding={wide ? 32 : 24} style={{ gap: 16 }}>
               <View style={[styles.row, { justifyContent: 'space-between' }]}>
-                <Eyebrow>Assessment history</Eyebrow>
-                <Eyebrow>{pad2(data.recentAttempts.length)} recent</Eyebrow>
+                <Eyebrow>{t('progress.history')}</Eyebrow>
+                <Eyebrow>{t('common.recent', { n: pad2(data.recentAttempts.length) })}</Eyebrow>
               </View>
               {data.recentAttempts.length === 0 ? (
-                <Text color={colors.muted}>No assessments yet. Each lesson ends with a short assessment; your scores and feedback will be listed here.</Text>
+                <Text color={colors.muted}>{t('progress.noHistory')}</Text>
               ) : (
                 data.recentAttempts.map((a, i) => (
                   <View key={a.id} style={[{ gap: 10 }, i > 0 && styles.divider]}>
@@ -157,7 +161,7 @@ export default function ProgressScreen() {
                           {a.title}
                         </Text>
                         <Eyebrow>
-                          {a.passed ? 'Passed' : 'Below ' + a.threshold} · {new Date(a.createdAt).toLocaleString()}
+                          {a.passed ? t('progress.passed') : t('progress.below', { n: a.threshold })} · {formatDate(a.createdAt, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
                         </Eyebrow>
                       </View>
                     </View>
@@ -188,7 +192,7 @@ export default function ProgressScreen() {
             </Card>
 
             <Card tone="sky" reveal={3} style={{ gap: 14 }}>
-              <Eyebrow color="rgba(17,17,19,0.6)">By level</Eyebrow>
+              <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.byLevel')}</Eyebrow>
               {data.summary.levels.map((l) => (
                 <View key={l.level} style={[styles.row, { gap: 12 }]}>
                   <View style={styles.levelPill}>
@@ -200,7 +204,7 @@ export default function ProgressScreen() {
                     <ProgressBar value={l.total ? (l.mastered / l.total) * 100 : 0} color={colors.accent} track="rgba(17,17,19,0.08)" />
                   </View>
                   <Text size={12} tabular color="rgba(17,17,19,0.7)">
-                    {l.mastered}/{l.total} · {l.ready} ready
+                    {t('progress.levelLine', { done: l.mastered, total: l.total, ready: l.ready })}
                   </Text>
                 </View>
               ))}

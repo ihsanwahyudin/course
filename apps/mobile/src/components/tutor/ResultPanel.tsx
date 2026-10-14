@@ -11,6 +11,7 @@ import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import type { AssessmentResult } from '@/lib/api';
+import { useT } from '@/i18n';
 import { colors, fonts, radius } from '@/theme/tokens';
 
 function WhitePill({ label, onPress }: { label: string; onPress: () => void }) {
@@ -46,6 +47,7 @@ export function ResultPanel({
   onNext: (nodeId: string) => void;
   onRoadmap: () => void;
 }) {
+  const t = useT();
   const { attempt, passed, unlocked, session } = result;
   const objectives = session.node.objectives;
   const ink = passed;
@@ -56,7 +58,7 @@ export function ResultPanel({
     <Modal transparent animationType="fade" onRequestClose={onClose} visible>
       <View style={StyleSheet.absoluteFill}>
         <BlurView intensity={20} tint="dark" style={StyleSheet.absoluteFill} />
-        <Pressable style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(17,17,19,0.35)' }]} onPress={onClose} accessibilityLabel="Close result" />
+        <Pressable style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(17,17,19,0.35)' }]} onPress={onClose} accessibilityLabel={t('result.closeResult')} />
         <ScrollView contentContainerStyle={styles.scroll} pointerEvents="box-none">
           <Card
             tone={ink ? 'ink' : 'peach'}
@@ -76,12 +78,12 @@ export function ResultPanel({
               )
             }
           >
-            <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel="Close" style={[styles.close, { backgroundColor: ink ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.7)' }]}>
+            <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel={t('common.close')} style={[styles.close, { backgroundColor: ink ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.7)' }]}>
               <Icon name="close" size={16} color={fg} />
             </Pressable>
             <View style={[styles.eyebrowPill, { borderColor: ink ? 'rgba(255,255,255,0.15)' : colors.line, backgroundColor: ink ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.6)' }]}>
               <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: ink ? colors.white : colors.orange }} />
-              <Eyebrow color={soft}>{passed ? (result.alreadyCompleted ? 'Already mastered' : 'Mastered') : 'Review needed'}</Eyebrow>
+              <Eyebrow color={soft}>{passed ? (result.alreadyCompleted ? t('result.alreadyMastered') : t('result.mastered')) : t('result.reviewNeeded')}</Eyebrow>
             </View>
             <View>
               <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
@@ -99,7 +101,7 @@ export function ResultPanel({
                 )}
               </View>
               <Heading size={28} color={fg} style={{ marginTop: 12 }}>
-                {passed ? `You mastered ${session.node.title}.` : `Almost there — you need ${attempt.threshold}.`}
+                {passed ? t('result.youMastered', { title: session.node.title }) : t('result.almost', { threshold: attempt.threshold })}
               </Heading>
               <Text color={soft} style={{ marginTop: 10 }}>
                 {attempt.feedback}
@@ -146,7 +148,7 @@ export function ResultPanel({
 
             {passed && unlocked.length > 0 ? (
               <View style={{ gap: 8 }}>
-                <Eyebrow color="rgba(255,255,255,0.6)">Unlocked</Eyebrow>
+                <Eyebrow color="rgba(255,255,255,0.6)">{t('result.unlocked')}</Eyebrow>
                 <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
                   {unlocked.map((n) => (
                     <View key={n.id} style={styles.inkChip}>
@@ -162,19 +164,19 @@ export function ResultPanel({
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
               {passed ? (
                 <>
-                  {unlocked[0] ? <WhitePill label={`Next: ${unlocked[0].title}`} onPress={() => onNext(unlocked[0].id)} /> : <WhitePill label="Back to roadmap" onPress={onRoadmap} />}
+                  {unlocked[0] ? <WhitePill label={t('result.next', { title: unlocked[0].title })} onPress={() => onNext(unlocked[0].id)} /> : <WhitePill label={t('common.backToRoadmap')} onPress={onRoadmap} />}
                   {unlocked[0] ? (
                     <Pressable onPress={onRoadmap} accessibilityRole="button" style={styles.ghost}>
                       <Text size={14} color={colors.white} style={{ fontFamily: fonts.mono }}>
-                        View roadmap
+                        {t('result.viewRoadmap')}
                       </Text>
                     </Pressable>
                   ) : null}
                 </>
               ) : (
                 <>
-                  <PillButton label="Review with tutor" icon="arrowUpRight" onPress={onClose} />
-                  <PillButton label="Back to roadmap" variant="secondary" onPress={onRoadmap} />
+                  <PillButton label={t('result.reviewWithTutor')} icon="arrowUpRight" onPress={onClose} />
+                  <PillButton label={t('common.backToRoadmap')} variant="secondary" onPress={onRoadmap} />
                 </>
               )}
             </View>

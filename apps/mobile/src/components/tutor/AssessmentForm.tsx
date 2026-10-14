@@ -1,6 +1,7 @@
 import { Platform, StyleSheet, TextInput, View } from 'react-native';
 
 import { pad2 } from '@/components/ui/Bits';
+import { useT } from '@/i18n';
 import { Card } from '@/components/ui/Card';
 import { MeshBlob } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
@@ -10,6 +11,7 @@ import { useUI } from '@/lib/store';
 import { colors, fonts, radius } from '@/theme/tokens';
 
 export function AssessmentForm({ session, onSubmit, submitting, error }: { session: Session; onSubmit: (answers: { itemId: string; answer: string }[]) => void; submitting: boolean; error?: string }) {
+  const t = useT();
   const drafts = useUI((s) => s.drafts[session.id]) ?? {};
   const setDraft = useUI((s) => s.setDraft);
   const items = session.assessment;
@@ -20,15 +22,11 @@ export function AssessmentForm({ session, onSubmit, submitting, error }: { sessi
     <Card padding={24} style={{ gap: 22 }} decoration={<MeshBlob color={colors.lavender} size={260} style={{ right: -110, top: -120 }} />}>
       <View style={{ gap: 10 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Eyebrow color={colors.accent}>Assessment</Eyebrow>
-          <Eyebrow>
-            {pad2(answered)} / {pad2(items.length)} answered
-          </Eyebrow>
+          <Eyebrow color={colors.accent}>{t('assessment.title')}</Eyebrow>
+          <Eyebrow>{t('assessment.answered', { done: pad2(answered), total: pad2(items.length) })}</Eyebrow>
         </View>
-        <Heading size={30}>Show what you can do</Heading>
-        <Text color={colors.muted}>
-          Answer on your own — no hints. You need {session.node.masteryThreshold}/100 to master {session.node.title}.
-        </Text>
+        <Heading size={30}>{t('assessment.heading')}</Heading>
+        <Text color={colors.muted}>{t('assessment.intro', { threshold: session.node.masteryThreshold, title: session.node.title })}</Text>
       </View>
       {items.map((it, i) => (
         <View key={it.id} style={[{ gap: 10 }, i > 0 && styles.divider]}>
@@ -47,9 +45,9 @@ export function AssessmentForm({ session, onSubmit, submitting, error }: { sessi
             value={drafts[it.id] ?? ''}
             onChangeText={(v) => setDraft(session.id, it.id, v)}
             editable={!submitting}
-            placeholder="Your answer"
+            placeholder={t('assessment.yourAnswer')}
             placeholderTextColor={colors.muted}
-            accessibilityLabel={`Answer ${i + 1}: ${it.prompt}`}
+            accessibilityLabel={t('assessment.answerLabel', { n: i + 1, prompt: it.prompt })}
             maxLength={1000}
             multiline
             style={styles.input}
@@ -62,12 +60,12 @@ export function AssessmentForm({ session, onSubmit, submitting, error }: { sessi
         </View>
       ) : null}
       <PillButton
-        label={submitting ? 'Scoring your answers…' : 'Submit answers'}
+        label={submitting ? t('assessment.scoring') : t('assessment.submit')}
         icon="arrowUpRight"
         loading={submitting}
         disabled={answered < items.length}
         onPress={() => onSubmit(items.map((it) => ({ itemId: it.id, answer: (drafts[it.id] ?? '').trim() })))}
-        accessibilityHint="Scores your answers against the lesson objectives"
+        accessibilityHint={t('assessment.hint')}
       />
     </Card>
   );

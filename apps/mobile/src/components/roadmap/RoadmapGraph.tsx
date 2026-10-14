@@ -7,6 +7,7 @@ import { PulseDot } from '@/components/ui/Decor';
 import { Icon } from '@/components/ui/Icon';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import type { LevelSummary, RoadmapNode } from '@/lib/api';
+import { useT } from '@/i18n';
 import { colors, radius, shadow } from '@/theme/tokens';
 import { edgePath, layoutRoadmap, type Box } from './layout';
 
@@ -15,6 +16,7 @@ const unlocked = (n: RoadmapNode) => n.status === 'available' || n.status === 'i
 function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNode; box: Box; next: boolean }) {
   const router = useRouter();
   const [hovered, setHovered] = useState(false);
+  const t = useT();
   const s = node.status;
   const bg = s === 'mastered' ? colors.mint : s === 'in_progress' ? colors.lavender : s === 'coming_soon' ? 'rgba(255,255,255,0.55)' : colors.card;
   return (
@@ -23,7 +25,7 @@ function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNo
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
-      accessibilityLabel={`${node.title}, ${node.level}, ${s.replace('_', ' ')}`}
+      accessibilityLabel={`${node.title}, ${node.level}, ${t(`status.${s}`)}`}
       style={[
         styles.node,
         {
@@ -44,7 +46,7 @@ function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNo
     >
       <View style={styles.nodeTop}>
         <Eyebrow color={s === 'mastered' ? colors.emeraldDeep : s === 'available' || s === 'in_progress' ? colors.accent : colors.muted}>
-          {node.level} · {s === 'coming_soon' ? 'Soon' : s === 'in_progress' ? 'In progress' : s}
+          {node.level} · {s === 'coming_soon' ? t('status.soon') : t(`status.${s}`)}
         </Eyebrow>
         {s === 'mastered' ? (
           <View style={styles.check}>
@@ -68,6 +70,7 @@ function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNo
 
 // Shared SVG node-and-edge roadmap (works on Android, iOS and Web).
 export function RoadmapGraph({ course, nodes, levels, width, wide, nextNodeId }: { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; width: number; wide: boolean; nextNodeId: string | null }) {
+  const t = useT();
   const layout = useMemo(() => layoutRoadmap(nodes, levels, width, wide), [nodes, levels, width, wide]);
   const byId = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
 
@@ -104,9 +107,7 @@ export function RoadmapGraph({ course, nodes, levels, width, wide, nextNodeId }:
             </Text>
           </View>
           <Heading size={wide ? 22 : 18}>{h.title}</Heading>
-          <Eyebrow style={{ marginLeft: 'auto' }}>
-            {h.mastered}/{h.total} mastered
-          </Eyebrow>
+          <Eyebrow style={{ marginLeft: 'auto' }}>{t('course.levelMastered', { done: h.mastered, total: h.total })}</Eyebrow>
         </View>
       ))}
       {nodes.map((n) => (

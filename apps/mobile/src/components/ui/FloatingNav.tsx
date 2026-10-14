@@ -7,19 +7,21 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useAuth } from '@/lib/auth';
 import { useDashboard } from '@/lib/queries';
+import { useT, type TKey } from '@/i18n';
+import { LanguageToggle } from './LanguageToggle';
 import { colors, gradient, radius, shadow } from '@/theme/tokens';
 import { GradientRing } from './Decor';
 import { useLayout } from './Screen';
 import { Text } from './Text';
 
-type Item = { href: Href; label: string; match: (p: string) => boolean };
+type Item = { href: Href; label: TKey; match: (p: string) => boolean };
 
 const signedInItems: Item[] = [
-  { href: '/dashboard', label: 'Dashboard', match: (p) => p === '/dashboard' },
-  { href: '/courses', label: 'Courses', match: (p) => p.startsWith('/courses') },
-  { href: '/progress', label: 'Progress', match: (p) => p.startsWith('/progress') },
+  { href: '/dashboard', label: 'nav.dashboard', match: (p) => p === '/dashboard' },
+  { href: '/courses', label: 'nav.courses', match: (p) => p.startsWith('/courses') },
+  { href: '/progress', label: 'nav.progress', match: (p) => p.startsWith('/progress') },
 ];
-const publicItems: Item[] = [{ href: '/courses', label: 'Courses', match: (p) => p.startsWith('/courses') }];
+const publicItems: Item[] = [{ href: '/courses', label: 'nav.courses', match: (p) => p.startsWith('/courses') }];
 
 function NavLink({ label, active, onPress }: { label: string; active: boolean; onPress: () => void }) {
   const [hovered, setHovered] = useState(false);
@@ -78,6 +80,7 @@ export function FloatingNav() {
   const insets = useSafeAreaInsets();
   const { wide } = useLayout();
   const { status, user } = useAuth();
+  const t = useT();
   const authed = status === 'authenticated';
   const { data } = useDashboard(authed);
   const items = authed ? signedInItems : publicItems;
@@ -90,25 +93,36 @@ export function FloatingNav() {
       <View style={[styles.shell, { boxShadow: shadow.card }]}>
         <BlurView intensity={40} tint="light" style={StyleSheet.absoluteFill} />
         <View style={[StyleSheet.absoluteFill, { backgroundColor: Platform.OS === 'android' ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.75)' }]} />
-        <Pressable onPress={() => router.navigate(authed ? '/dashboard' : '/')} accessibilityRole="link" accessibilityLabel="FluentPath home">
+        <Pressable onPress={() => router.navigate(authed ? '/dashboard' : '/')} accessibilityRole="link" accessibilityLabel={t('nav.homeLabel')}>
           <GradientRing size={36} />
         </Pressable>
         {wide ? (
           <View style={styles.links}>
             {items.map((it) => (
-              <NavLink key={it.label} label={it.label} active={it.match(pathname)} onPress={() => router.navigate(it.href)} />
+              <NavLink key={it.label} label={t(it.label)} active={it.match(pathname)} onPress={() => router.navigate(it.href)} />
             ))}
           </View>
         ) : (
-          <Text weight="medium" tight style={{ marginLeft: 4, marginRight: 'auto' }}>
-            FluentPath
-          </Text>
+          <View style={{ marginLeft: 4, marginRight: 'auto' }}>
+            {authed ? (
+              <Text weight="medium" tight>
+                FluentPath
+              </Text>
+            ) : (
+              <LanguageToggle compact />
+            )}
+          </View>
         )}
+        {wide ? (
+          <View style={{ marginLeft: 4 }}>
+            <LanguageToggle compact />
+          </View>
+        ) : null}
         {authed && user ? (
           <>
             {resume || nextCourse ? (
               <AccentPill
-                label="Continue"
+                label={t('common.continue')}
                 onPress={() =>
                   resume
                     ? router.push(`/learn/${resume.courseSlug}/${resume.nodeId}`)
@@ -116,14 +130,14 @@ export function FloatingNav() {
                 }
               />
             ) : null}
-            <Pressable onPress={() => router.navigate('/account')} accessibilityRole="link" accessibilityLabel="Account" style={{ marginLeft: 4 }}>
+            <Pressable onPress={() => router.navigate('/account')} accessibilityRole="link" accessibilityLabel={t('nav.account')} style={{ marginLeft: 4 }}>
               <Avatar name={user.displayName} />
             </Pressable>
           </>
         ) : !onAuthPage ? (
           <>
-            <NavLink label="Log in" active={false} onPress={() => router.push('/login')} />
-            <AccentPill label="Sign up" onPress={() => router.push('/register')} />
+            <NavLink label={t('common.logIn')} active={false} onPress={() => router.push('/login')} />
+            <AccentPill label={t('common.signUp')} onPress={() => router.push('/register')} />
           </>
         ) : null}
       </View>

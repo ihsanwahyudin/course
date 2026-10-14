@@ -3,16 +3,17 @@ import { Platform, Pressable, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useDashboard } from '@/lib/queries';
+import { useT, type TKey } from '@/i18n';
 import { colors, fonts, radius } from '@/theme/tokens';
 import { BOTTOM_TAB_HEIGHT } from './chrome';
 import { Icon, type IconName } from './Icon';
 import { Text } from './Text';
 
-const tabs: { href: Href; label: string; icon: IconName; match: (p: string) => boolean }[] = [
-  { href: '/dashboard', label: 'Home', icon: 'home', match: (p) => p === '/dashboard' },
-  { href: '/courses', label: 'Courses', icon: 'book', match: (p) => p.startsWith('/courses') },
-  { href: '/progress', label: 'Progress', icon: 'chart', match: (p) => p.startsWith('/progress') },
-  { href: '/account', label: 'Account', icon: 'user', match: (p) => p.startsWith('/account') },
+const tabs: { href: Href; label: TKey; icon: IconName; match: (p: string) => boolean }[] = [
+  { href: '/dashboard', label: 'nav.home', icon: 'home', match: (p) => p === '/dashboard' },
+  { href: '/courses', label: 'nav.courses', icon: 'book', match: (p) => p.startsWith('/courses') },
+  { href: '/progress', label: 'nav.progress', icon: 'chart', match: (p) => p.startsWith('/progress') },
+  { href: '/account', label: 'nav.account', icon: 'user', match: (p) => p.startsWith('/account') },
 ];
 
 function Tab({ label, icon, active, onPress }: { label: string; icon: IconName; active: boolean; onPress: () => void }) {
@@ -33,6 +34,7 @@ export function BottomTabs() {
   const pathname = usePathname();
   const insets = useSafeAreaInsets();
   const { data } = useDashboard();
+  const t = useT();
 
   const resume = () => {
     const open = data?.openSessions[0];
@@ -45,15 +47,15 @@ export function BottomTabs() {
 
   return (
     <View style={[styles.bar, { paddingBottom: Math.max(insets.bottom, 8) }]} accessibilityRole="tablist">
-      <Tab {...tabs[0]} active={tabs[0].match(pathname)} onPress={() => router.navigate(tabs[0].href)} />
-      <Tab {...tabs[1]} active={tabs[1].match(pathname)} onPress={() => router.navigate(tabs[1].href)} />
+      <Tab {...tabs[0]} label={t(tabs[0].label)} active={tabs[0].match(pathname)} onPress={() => router.navigate(tabs[0].href)} />
+      <Tab {...tabs[1]} label={t(tabs[1].label)} active={tabs[1].match(pathname)} onPress={() => router.navigate(tabs[1].href)} />
       <View style={styles.tab}>
-        <Pressable onPress={resume} accessibilityRole="button" accessibilityLabel="Continue learning" style={({ pressed }) => [styles.fab, pressed && { transform: [{ scale: 0.94 }] }]}>
+        <Pressable onPress={resume} accessibilityRole="button" accessibilityLabel={t('nav.continueLearning')} style={({ pressed }) => [styles.fab, pressed && { transform: [{ scale: 0.94 }] }]}>
           <Icon name="play" size={20} color={colors.white} strokeWidth={2} />
         </Pressable>
       </View>
-      <Tab {...tabs[2]} active={tabs[2].match(pathname)} onPress={() => router.navigate(tabs[2].href)} />
-      <Tab {...tabs[3]} active={tabs[3].match(pathname)} onPress={() => router.navigate(tabs[3].href)} />
+      <Tab {...tabs[2]} label={t(tabs[2].label)} active={tabs[2].match(pathname)} onPress={() => router.navigate(tabs[2].href)} />
+      <Tab {...tabs[3]} label={t(tabs[3].label)} active={tabs[3].match(pathname)} onPress={() => router.navigate(tabs[3].href)} />
     </View>
   );
 }

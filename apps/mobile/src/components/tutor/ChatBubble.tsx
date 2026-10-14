@@ -3,7 +3,8 @@ import { Animated, Easing, Platform, StyleSheet, View } from 'react-native';
 
 import { GradientRing } from '@/components/ui/Decor';
 import { Eyebrow, Text } from '@/components/ui/Text';
-import { phaseLabel, type Message, type Phase } from '@/lib/api';
+import { useT } from '@/i18n';
+import type { Message, Phase } from '@/lib/api';
 import { colors, radius, shadow } from '@/theme/tokens';
 
 const kindBg: Record<string, string> = {
@@ -13,6 +14,7 @@ const kindBg: Record<string, string> = {
 };
 
 export function ChatBubble({ message, showAvatar, pending }: { message: Pick<Message, 'role' | 'content' | 'metadata'>; showAvatar: boolean; pending?: boolean }) {
+  const t = useT();
   const mine = message.role === 'user';
   const special = message.metadata?.kind ? kindBg[message.metadata.kind] : undefined;
   return (
@@ -32,7 +34,7 @@ export function ChatBubble({ message, showAvatar, pending }: { message: Pick<Mes
         </Text>
         {!mine && message.metadata?.action === 'ask_retry' ? (
           <Eyebrow color={colors.accent} style={{ marginTop: 8 }}>
-            Try again ↺
+            {t('lesson.tryAgainTag')}
           </Eyebrow>
         ) : null}
       </View>
@@ -41,12 +43,13 @@ export function ChatBubble({ message, showAvatar, pending }: { message: Pick<Mes
 }
 
 export function PhaseDivider({ phase }: { phase: Phase }) {
+  const t = useT();
   return (
     <View style={styles.divider} accessibilityRole="header">
       <View style={styles.dividerLine} />
       <View style={styles.dividerPill}>
         <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: colors.accent }} />
-        <Eyebrow>{phase === 'GUIDED_PRACTICE' ? 'Guided practice' : phase === 'INDEPENDENT_PRACTICE' ? 'Independent practice' : phaseLabel[phase]}</Eyebrow>
+        <Eyebrow>{phase === 'GUIDED_PRACTICE' ? t('phase.guidedLong') : phase === 'INDEPENDENT_PRACTICE' ? t('phase.independentLong') : t(`phase.${phase}`)}</Eyebrow>
       </View>
       <View style={styles.dividerLine} />
     </View>
@@ -70,8 +73,9 @@ function Dot({ delay }: { delay: number }) {
 }
 
 export function TypingBubble() {
+  const t = useT();
   return (
-    <View style={styles.row} accessibilityLabel="Tutor is typing" accessibilityLiveRegion="polite">
+    <View style={styles.row} accessibilityLabel={t('lesson.typing')} accessibilityLiveRegion="polite">
       <View style={styles.avatar}>
         <GradientRing size={30} />
       </View>

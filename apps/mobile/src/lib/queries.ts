@@ -1,5 +1,7 @@
 import { QueryClient, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 
+import { useLocale, currentLocale } from '@/i18n';
+
 import { ApiError, api, type Session } from './api';
 
 export const queryClient = new QueryClient({
@@ -11,21 +13,43 @@ export const queryClient = new QueryClient({
   },
 });
 
+// Server text is localized, so every key carries the UI language: switching
+// language shows cached text for that language or refetches it.
 export const keys = {
-  courses: ['courses'] as const,
-  roadmap: (course: string) => ['roadmap', course] as const,
-  node: (course: string, id: string) => ['node', course, id] as const,
-  progress: (course: string) => ['progress', course] as const,
-  dashboard: ['dashboard'] as const,
-  session: (id: string) => ['session', id] as const,
+  courses: (l: string) => ['courses', l] as const,
+  roadmap: (course: string, l: string) => ['roadmap', course, l] as const,
+  node: (course: string, id: string, l: string) => ['node', course, id, l] as const,
+  progress: (course: string, l: string) => ['progress', course, l] as const,
+  dashboard: (l: string) => ['dashboard', l] as const,
+  session: (id: string, l: string) => ['session', id, l] as const,
 };
 
-export const useCourses = () => useQuery({ queryKey: keys.courses, queryFn: api.courses, select: (d) => d.courses });
-export const useRoadmap = (course: string) => useQuery({ queryKey: keys.roadmap(course), queryFn: () => api.roadmap(course), enabled: !!course });
-export const useNode = (course: string, id: string) => useQuery({ queryKey: keys.node(course, id), queryFn: () => api.node(course, id), enabled: !!course && !!id });
-export const useCourseProgress = (course: string | undefined) =>
-  useQuery({ queryKey: keys.progress(course ?? ''), queryFn: () => api.courseProgress(course!), enabled: !!course });
-export const useDashboard = (enabled = true) => useQuery({ queryKey: keys.dashboard, queryFn: api.dashboard, enabled });
+const useL = () => useLocale((s) => s.locale);
+
+export const useCourses = () => {
+  const l = useL();
+  return useQuery({ queryKey: keys.courses(l), queryFn: api.courses, select: (d) => d.courses });
+};
+export const useRoadmap = (course: string) => {
+  const l = useL();
+  return useQuery({ queryKey: keys.roadmap(course, l), queryFn: () => api.roadmap(course), enabled: !!course });
+};
+export const useNode = (course: string, id: string) => {
+  const l = useL();
+  return useQuery({ queryKey: keys.node(course, id, l), queryFn: () => api.node(course, id), enabled: !!course && !!id });
+};
+export const useCourseProgress = (course: string | undefined) => {
+  const l = useL();
+  return useQuery({ queryKey: keys.progress(course ?? '', l), queryFn: () => api.courseProgress(course!), enabled: !!course });
+};
+export const useDashboard = (enabled = true) => {
+  const l = useL();
+  return useQuery({ queryKey: keys.dashboard(l), queryFn: api.dashboard, enabled });
+};
+export const useSession = (id: string | undefined) => {
+  const l = useL();
+  return useQuery({ queryKey: keys.session(id ?? '', l), queryFn: () => api.session(id!), enabled: !!id });
+};
 
 // Anything that changes progress invalidates every progress-derived view.
 function useInvalidateProgress() {
@@ -48,7 +72,7 @@ export function useStartSession() {
   return useMutation({
     mutationFn: ({ course, nodeId }: { course: string; nodeId: string }) => api.startSession(course, nodeId),
     onSuccess: (s: Session) => {
-      qc.setQueryData(keys.session(s.id), s);
+      qc.setQueryData(keys.session(s.id, currentLocale()), s);
       invalidate();
     },
   });
@@ -59,8 +83,8 @@ export function useSendMessage(sessionId: string) {
   return useMutation({
     mutationFn: (content: string) => api.sendMessage(sessionId, content),
     onSuccess: (s) => {
-      qc.setQueryData(keys.session(s.id), s);
-      qc.invalidateQueries({ queryKey: keys.dashboard });
+      qc.setQueryData(keys.session(s.id, currentLocale()), s);
+      qc.invalidateQueries({ queryKey: ['dashboard'] });
     },
   });
 }
@@ -71,7 +95,7 @@ export function useSubmitAssessment(sessionId: string) {
   return useMutation({
     mutationFn: (answers: { itemId: string; answer: string }[]) => api.submitAssessment(sessionId, answers),
     onSuccess: (r) => {
-      qc.setQueryData(keys.session(r.session.id), r.session);
+      qc.setQueryData(keys.session(r.session.id, currentLocale()), r.session);
       invalidate();
     },
   });

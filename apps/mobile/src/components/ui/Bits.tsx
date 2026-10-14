@@ -3,22 +3,25 @@ import { useState, type ReactNode } from 'react';
 import { ActivityIndicator, Platform, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
 import type { NodeStatus } from '@/lib/api';
+import { useT } from '@/i18n';
 import { colors, radius } from '@/theme/tokens';
 import { Card } from './Card';
 import { Icon, type IconName } from './Icon';
 import { PillButton } from './PillButton';
 import { Eyebrow, Heading, Text } from './Text';
 
-export const statusMeta: Record<NodeStatus, { label: string; bg: string; fg: string; dot: string }> = {
-  mastered: { label: 'Mastered', bg: colors.mint, fg: colors.emeraldDeep, dot: colors.emerald },
-  in_progress: { label: 'In progress', bg: colors.lavender, fg: colors.accent, dot: colors.accent },
-  available: { label: 'Available', bg: colors.accentSoft, fg: colors.accent, dot: colors.accent },
-  locked: { label: 'Locked', bg: colors.inkSoft, fg: colors.muted, dot: colors.muted },
-  coming_soon: { label: 'Coming soon', bg: 'transparent', fg: colors.muted, dot: colors.lineStrong },
+export const statusMeta: Record<NodeStatus, { bg: string; fg: string; dot: string }> = {
+  mastered: { bg: colors.mint, fg: colors.emeraldDeep, dot: colors.emerald },
+  in_progress: { bg: colors.lavender, fg: colors.accent, dot: colors.accent },
+  available: { bg: colors.accentSoft, fg: colors.accent, dot: colors.accent },
+  locked: { bg: colors.inkSoft, fg: colors.muted, dot: colors.muted },
+  coming_soon: { bg: 'transparent', fg: colors.muted, dot: colors.lineStrong },
 };
 
 export function StatusChip({ status, style }: { status: NodeStatus; style?: StyleProp<ViewStyle> }) {
   const m = statusMeta[status];
+  const t = useT();
+  const label = t(`status.${status}`);
   return (
     <View
       style={[
@@ -27,10 +30,10 @@ export function StatusChip({ status, style }: { status: NodeStatus; style?: Styl
         status === 'coming_soon' && { borderWidth: 1, borderStyle: 'dashed', borderColor: colors.lineStrong },
         style,
       ]}
-      accessibilityLabel={`Status: ${m.label}`}
+      accessibilityLabel={label}
     >
       <View style={[styles.chipDot, { backgroundColor: m.dot }]} />
-      <Eyebrow color={m.fg}>{m.label}</Eyebrow>
+      <Eyebrow color={m.fg}>{label}</Eyebrow>
     </View>
   );
 }
@@ -96,22 +99,24 @@ export function ProgressBar({ value, color = colors.accent, track = colors.inkSo
   );
 }
 
-export function LoadingState({ label = 'Loading' }: { label?: string }) {
+export function LoadingState({ label }: { label?: string }) {
+  const t = useT();
   return (
     <View style={styles.center}>
       <ActivityIndicator color={colors.accent} />
-      <Eyebrow style={{ marginTop: 12 }}>{label}</Eyebrow>
+      <Eyebrow style={{ marginTop: 12 }}>{label ?? t('common.loading')}</Eyebrow>
     </View>
   );
 }
 
-export function ErrorState({ title = 'Something went wrong', message, onRetry }: { title?: string; message?: string; onRetry?: () => void }) {
+export function ErrorState({ title, message, onRetry }: { title?: string; message?: string; onRetry?: () => void }) {
+  const t = useT();
   return (
     <Card tone="peach" style={{ gap: 12 }}>
-      <Eyebrow color="rgba(17,17,19,0.6)">Connection</Eyebrow>
-      <Heading size={24}>{title}</Heading>
+      <Eyebrow color="rgba(17,17,19,0.6)">{t('common.connection')}</Eyebrow>
+      <Heading size={24}>{title ?? t('common.somethingWrong')}</Heading>
       {message ? <Text color="rgba(17,17,19,0.7)">{message}</Text> : null}
-      {onRetry ? <PillButton label="Try again" icon="refresh" onPress={onRetry} /> : null}
+      {onRetry ? <PillButton label={t('common.tryAgain')} icon="refresh" onPress={onRetry} /> : null}
     </Card>
   );
 }
