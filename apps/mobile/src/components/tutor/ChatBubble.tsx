@@ -2,19 +2,17 @@ import { useEffect, useState } from 'react';
 import { Animated, Easing, Platform, StyleSheet, View } from 'react-native';
 
 import { GradientRing } from '@/components/ui/Decor';
-import { Eyebrow, Text } from '@/components/ui/Text';
+import { Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
-import type { Message, Phase } from '@/lib/api';
-import { colors, radius, shadow } from '@/theme/tokens';
+import type { Message } from '@/lib/api';
+import { colors, shadow } from '@/theme/tokens';
 
 const kindBg: Record<string, string> = {
-  assessment_intro: colors.lavender,
   review_intro: colors.peach,
   result: colors.mint,
 };
 
 export function ChatBubble({ message, showAvatar, pending }: { message: Pick<Message, 'role' | 'content' | 'metadata'>; showAvatar: boolean; pending?: boolean }) {
-  const t = useT();
   const mine = message.role === 'user';
   const special = message.metadata?.kind ? kindBg[message.metadata.kind] : undefined;
   return (
@@ -32,26 +30,7 @@ export function ChatBubble({ message, showAvatar, pending }: { message: Pick<Mes
         <Text size={15} color={mine ? colors.white : colors.ink} style={{ lineHeight: 23 }} selectable>
           {message.content}
         </Text>
-        {!mine && message.metadata?.action === 'ask_retry' ? (
-          <Eyebrow color={colors.accent} style={{ marginTop: 8 }}>
-            {t('lesson.tryAgainTag')}
-          </Eyebrow>
-        ) : null}
       </View>
-    </View>
-  );
-}
-
-export function PhaseDivider({ phase }: { phase: Phase }) {
-  const t = useT();
-  return (
-    <View style={styles.divider} accessibilityRole="header">
-      <View style={styles.dividerLine} />
-      <View style={styles.dividerPill}>
-        <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: colors.accent }} />
-        <Eyebrow>{phase === 'GUIDED_PRACTICE' ? t('phase.guidedLong') : phase === 'INDEPENDENT_PRACTICE' ? t('phase.independentLong') : t(`phase.${phase}`)}</Eyebrow>
-      </View>
-      <View style={styles.dividerLine} />
     </View>
   );
 }
@@ -92,19 +71,6 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'flex-start', gap: 10, maxWidth: '100%' },
   rowMine: { justifyContent: 'flex-end' },
   avatar: { width: 30 },
-  bubble: { maxWidth: '82%', borderRadius: 20, paddingHorizontal: 16, paddingVertical: 12 },
-  divider: { flexDirection: 'row', alignItems: 'center', gap: 10, marginVertical: 8 },
-  dividerLine: { flex: 1, height: 1, backgroundColor: colors.line },
-  dividerPill: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    borderWidth: 1,
-    borderColor: colors.line,
-    backgroundColor: colors.card,
-    borderRadius: radius.pill,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-  },
+  bubble: { maxWidth: '88%', borderRadius: 20, paddingHorizontal: 16, paddingVertical: 12 },
   typingDot: { width: 7, height: 7, borderRadius: 4, backgroundColor: colors.accent },
 });

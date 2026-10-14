@@ -218,7 +218,7 @@ export default function DashboardScreen() {
   );
 
   const attemptsTile = (
-    <Card reveal={6} style={{ width: w(wide ? 3 : 2), gap: 14 }} padding={wide ? 28 : 20}>
+    <Card reveal={6} style={{ width: w(2), gap: 14 }} padding={wide ? 28 : 20}>
       <View style={[styles.row, { justifyContent: 'space-between' }]}>
         <Eyebrow>{t('dashboard.recentAssessments')}</Eyebrow>
         <PillButton label={t('dashboard.allProgress')} size="sm" variant="secondary" onPress={() => router.push('/progress')} />
@@ -245,6 +245,29 @@ export default function DashboardScreen() {
           </View>
         ))
       )}
+    </Card>
+  );
+
+  const flashcardTile = (
+    <Card
+      reveal={7}
+      onPress={() => router.push('/review')}
+      accessibilityLabel={t('review.reviewNow')}
+      style={{ width: w(wide ? 1 : 2), minHeight: 180, justifyContent: 'space-between', gap: 12 }}
+    >
+      <View style={[styles.row, { justifyContent: 'space-between' }]}>
+        <Eyebrow>{t('review.tile')}</Eyebrow>
+        <Icon name="book" size={18} color={data.flashcards.due ? colors.accent : colors.muted} />
+      </View>
+      <View style={{ gap: 4 }}>
+        <Heading size={wide ? 44 : 40} tabular>
+          {data.flashcards.due}
+        </Heading>
+        <Text size={13} color={colors.muted}>
+          {data.flashcards.due ? t('review.dueToday', { n: data.flashcards.due }) : t('review.noneDue')} · {t('review.total', { n: data.flashcards.total })}
+        </Text>
+      </View>
+      {data.flashcards.due ? <PillButton label={t('review.reviewNow')} size="sm" icon="arrowUpRight" onPress={() => router.push('/review')} style={{ alignSelf: 'flex-start' }} /> : null}
     </Card>
   );
 
@@ -285,6 +308,7 @@ export default function DashboardScreen() {
           </View>
           <View style={[styles.row, { gap, alignItems: 'stretch' }]}>
             {attemptsTile}
+            {flashcardTile}
             {exploreTile}
           </View>
         </View>
@@ -297,6 +321,7 @@ export default function DashboardScreen() {
           </View>
           {coursesBlock}
           {openTile}
+          {flashcardTile}
           {activityTile}
           {attemptsTile}
           {exploreTile}

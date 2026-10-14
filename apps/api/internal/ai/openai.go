@@ -96,10 +96,14 @@ func (o *OpenAI) WebSearch(ctx context.Context, in SearchInput) ([]Link, Usage, 
 	}
 	prompt := fmt.Sprintf("Find up to 4 %s for an English learner studying %q. Search for: %s. "+
 		"Prefer well-known educational sources. Cite every result you mention.", what, in.LessonTitle, in.Query)
+	tool := map[string]any{"type": "web_search", "search_context_size": "low"}
+	if in.Kind == "video" {
+		tool["filters"] = map[string]any{"allowed_domains": []string{"youtube.com"}}
+	}
 	body := map[string]any{
 		"model":             o.TutorModel,
 		"input":             prompt,
-		"tools":             []map[string]any{{"type": "web_search", "search_context_size": "low"}},
+		"tools":             []map[string]any{tool},
 		"max_output_tokens": 400,
 		"store":             false,
 	}

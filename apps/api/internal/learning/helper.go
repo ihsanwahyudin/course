@@ -239,7 +239,9 @@ func (s *Service) SendMessage(ctx context.Context, userID, sessionID string, in 
 		if query == "" {
 			query = n.Title
 		}
-		meta.Resources = s.findResources(ctx, userID, cur, n, kind, query, lang)
+		// Curated links first; the (costly) web search only when the learner
+		// asks again for more, or the lesson has fewer than two of that kind.
+		meta.Resources = s.findResources(ctx, userID, cur, n, kind, query, lang, round > 0)
 	}
 
 	err = pgx.BeginFunc(ctx, s.Store.Pool, func(tx pgx.Tx) error {
@@ -278,8 +280,9 @@ func (s *Service) weakObjectives(ctx context.Context, sess storage.Session, cur 
 
 // findResources returns curated links of a kind first, then fresh ones:
 // pictures from Wikimedia Commons, videos/articles from the provider's web
-// search. Search results are cached; failures fall back to curated links.
-func (s *Service) findResources(ctx context.Context, userID string, cur *curriculum.Curriculum, n *curriculum.Node, kind, query, lang string) []ResourceItem {
+// search (only when more is asked for, or curated links are scarce). Search
+// results are cached; failures fall back to curated links.
+func (s *Service) findResources(ctx context.Context, userID string, cur *curriculum.Curriculum, n *curriculum.Node, kind, query, lang string, more bool) []ResourceItem {
 	var out []ResourceItem
 	seen := map[string]bool{}
 	add := func(r ResourceItem) {
@@ -299,6 +302,9 @@ func (s *Service) findResources(ctx context.Context, userID string, cur *curricu
 		}
 	}
 
+	if kind != tutor.KindImage && !more && len(out) >= 2 {
+		return out
+	}
 	norm := strings.Join(strings.Fields(strings.ToLower(query)), " ")
 	key := fmt.Sprintf("search:v1:%s:%s", kind, norm)
 	var found []ResourceItem
@@ -338,8 +344,14 @@ func (s *Service) findResources(ctx context.Context, userID string, cur *curricu
 			found = append(found, ResourceItem{Kind: kind, Title: l.Title, URL: l.URL, Source: l.Source})
 		}
 	}
-	if raw, err := json.Marshal(found); err == nil && len(found) > 0 {
-		if err := storage.PutCache(ctx, s.Store.Pool, key, raw, cacheTTL); err != nil {
+	// Cache empty results too (for a day), so a search that finds nothing
+	// isn't paid for again by the next learner.
+	ttl := cacheTTL
+	if len(found) == 0 {
+		found, ttl = []ResourceItem{}, 24*time.Hour
+	}
+	if raw, err := json.Marshal(found); err == nil {
+		if err := storage.PutCache(ctx, s.Store.Pool, key, raw, ttl); err != nil {
 			slog.Warn("cache search results", "err", err)
 		}
 	}

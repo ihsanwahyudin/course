@@ -157,6 +157,29 @@ func TestExactAnswersSkipTheEvaluator(t *testing.T) {
 	}
 }
 
+func TestWebSearchOnlyWhenAskedForMore(t *testing.T) {
+	mock := &ai.Mock{}
+	s := newService(t, mock)
+	ctx := context.Background()
+	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true)); err != nil {
+		t.Fatal(err)
+	}
+	// Pronouns has two curated videos: the first request shows just those.
+	sess, _ = s.StartSession(ctx, learnerID, course, "a0-pronouns")
+	v, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Intent: "video"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(lastMeta(t, v).Resources) != 2 || mock.Calls.Search != 0 {
+		t.Fatalf("first video request: %d links, %d searches", len(lastMeta(t, v).Resources), mock.Calls.Search)
+	}
+	// Asking again searches the web for more.
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Intent: "video"}); err != nil || mock.Calls.Search != 1 {
+		t.Fatalf("second request should search: %d %v", mock.Calls.Search, err)
+	}
+}
+
 func TestResourcesCuratedAndImages(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		_, _ = io.WriteString(w, `{"query":{"pages":[{"index":1,"title":"File:Alphabet.jpg","imageinfo":[{"thumburl":"https://upload.wikimedia.org/a.jpg","thumbwidth":480,"thumbheight":320,

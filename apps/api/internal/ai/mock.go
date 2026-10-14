@@ -20,7 +20,7 @@ type Mock struct {
 	TutorFunc func(TutorInput) (json.RawMessage, error)
 	EvalFunc  func(EvalInput) (json.RawMessage, error)
 	// Calls counts provider calls (tests check caching and pre-grading).
-	Calls struct{ Tutor, Eval int }
+	Calls struct{ Tutor, Eval, Search int }
 }
 
 func (m *Mock) Name() string { return "mock" }
@@ -42,6 +42,7 @@ func (m *Mock) TutorReply(ctx context.Context, in TutorInput) (Result, error) {
 }
 
 func (m *Mock) WebSearch(ctx context.Context, in SearchInput) ([]Link, Usage, error) {
+	m.Calls.Search++
 	return nil, Usage{}, ErrNoSearch
 }
 

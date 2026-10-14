@@ -31,7 +31,8 @@ export const API_URL = resolveApiUrl(process.env.EXPO_PUBLIC_API_URL || fallback
 // Levels are course data (course.json); English uses CEFR-style A0–C2.
 export type Level = string;
 export type NodeStatus = 'mastered' | 'in_progress' | 'available' | 'locked' | 'coming_soon';
-export type Phase = 'INTRODUCTION' | 'EXPLANATION' | 'GUIDED_PRACTICE' | 'INDEPENDENT_PRACTICE' | 'ASSESSMENT' | 'REVIEW' | 'MASTERED';
+export type Phase = 'LEARNING' | 'MASTERED';
+export type Intent = 'ask' | 'simpler' | 'quiz' | 'flashcards' | 'examples' | 'video' | 'image';
 export type Tone = 'default' | 'lavender' | 'peach' | 'mint' | 'sky';
 
 export type Objective = { id: string; text: string };
@@ -149,7 +150,7 @@ export type Message = {
   role: 'user' | 'assistant' | 'system';
   content: string;
   phase: Phase;
-  metadata: { kind?: string; action?: string; observedMistakes?: string[]; advancedTo?: Phase };
+  metadata: { kind?: string; intent?: Intent; quiz?: QuizQuestion[]; flashcards?: Flashcard[]; resources?: ResourceItem[]; cached?: boolean };
   createdAt: string;
 };
 
@@ -167,23 +168,65 @@ export type Attempt = {
   createdAt: string;
 };
 
+// Lesson reading material (course data, localized by the server).
+export type ExampleRow = { en: string; id: string; note?: string };
+export type Block =
+  | { type: 'text' | 'tip'; text: string }
+  | { type: 'examples'; rows: ExampleRow[] }
+  | { type: 'check'; prompt: string; options: string[]; answer: number; explain?: string };
+export type Section = { id: string; title: string; blocks: Block[] };
+export type CuratedResource = { kind: 'video' | 'article' | 'image'; title: string; url: string; source: string; note?: string };
+export type Flashcard = { front: string; back: string };
+export type Material = { lead: string; sections: Section[]; suggestedQuestions: string[]; resources: CuratedResource[]; flashcards: Flashcard[] };
+
+export type QuizQuestion = { prompt: string; options: string[]; answer: number; explain: string };
+export type ResourceItem = {
+  kind: 'video' | 'article' | 'image';
+  title: string;
+  url: string;
+  source: string;
+  note?: string;
+  videoId?: string;
+  thumb?: string;
+  author?: string;
+  license?: string;
+  curated: boolean;
+};
+
 export type Session = {
   id: string;
   courseSlug: string;
   nodeId: string;
   phase: Phase;
-  phaseTurns: number;
   startedAt: string;
   updatedAt: string;
   endedAt: string | null;
   course: CourseRef;
   node: RoadmapNode;
+  material: Material | null;
+  greeting: string;
   messages: Message[];
-  steps: Phase[];
   canChat: boolean;
   assessment: { id: string; objectiveId: string; prompt: string }[];
   lastAttempt: Attempt | null;
+  prev: RoadmapNode | null;
+  next: RoadmapNode | null;
 };
+
+export type SavedFlashcard = Flashcard & {
+  id: string;
+  courseSlug: string;
+  nodeId: string;
+  source: 'lesson' | 'ai';
+  dueAt: string;
+  intervalDays: number;
+  reps: number;
+  lapses: number;
+  nodeTitle: string;
+  courseTitle: string;
+};
+export type ReviewQueue = { cards: SavedFlashcard[]; due: number; total: number };
+export type ReviewGrade = 'again' | 'good' | 'easy';
 
 export type AssessmentResult = {
   attempt: Attempt;
@@ -216,6 +259,7 @@ export type Dashboard = {
   streak: { current: number; activeToday: boolean };
   activity: { date: string; count: number }[];
   totalMastered: number;
+  flashcards: { due: number; total: number };
 };
 
 export class ApiError extends Error {
@@ -293,7 +337,12 @@ export const api = {
   // lessons
   startSession: (course: string, nodeId: string) => request<Session>('/api/v1/sessions', post({ course, nodeId })),
   session: (id: string) => request<Session>(`/api/v1/sessions/${enc(id)}`),
-  sendMessage: (id: string, content: string) => request<Session>(`/api/v1/sessions/${enc(id)}/messages`, { ...post({ content }), timeoutMs: 95000 }),
+  sendMessage: (id: string, b: { content?: string; intent?: Intent }) => request<Session>(`/api/v1/sessions/${enc(id)}/messages`, { ...post(b), timeoutMs: 95000 }),
   submitAssessment: (id: string, answers: { itemId: string; answer: string }[]) =>
     request<AssessmentResult>(`/api/v1/sessions/${enc(id)}/assessment`, { ...post({ answers }), timeoutMs: 95000 }),
+  // flashcards
+  saveFlashcards: (b: { course: string; nodeId: string; cards: Flashcard[] }) =>
+    request<{ added: number; total: number; due: number }>('/api/v1/flashcards', post(b)),
+  dueFlashcards: (course?: string) => request<ReviewQueue>(`/api/v1/flashcards/due${course ? `?course=${enc(course)}` : ''}`),
+  reviewFlashcard: (id: string, grade: ReviewGrade) => request<SavedFlashcard>(`/api/v1/flashcards/${enc(id)}/review`, post({ grade })),
 };

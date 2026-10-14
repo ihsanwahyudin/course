@@ -2,7 +2,7 @@ import { QueryClient, useMutation, useQuery, useQueryClient } from '@tanstack/re
 
 import { useLocale, currentLocale } from '@/i18n';
 
-import { ApiError, api, type ProfileInput, type Session } from './api';
+import { ApiError, api, type Intent, type ProfileInput, type ReviewGrade, type Session } from './api';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,6 +23,7 @@ export const keys = {
   dashboard: (l: string) => ['dashboard', l] as const,
   session: (id: string, l: string) => ['session', id, l] as const,
   profile: (course: string, l: string) => ['profile', course, l] as const,
+  flashcards: (l: string) => ['flashcards', l] as const,
 };
 
 const useL = () => useLocale((s) => s.locale);
@@ -60,7 +61,7 @@ export const useSession = (id: string | undefined) => {
 function useInvalidateProgress() {
   const qc = useQueryClient();
   return () => {
-    for (const k of [['courses'], ['roadmap'], ['node'], ['progress'], ['dashboard'], ['profile']]) {
+    for (const k of [['courses'], ['roadmap'], ['node'], ['progress'], ['dashboard'], ['profile'], ['flashcards']]) {
       qc.invalidateQueries({ queryKey: k });
     }
   };
@@ -69,6 +70,31 @@ function useInvalidateProgress() {
 export function useEnroll() {
   const invalidate = useInvalidateProgress();
   return useMutation({ mutationFn: api.enroll, onSuccess: invalidate });
+}
+
+export const useDueFlashcards = () => {
+  const l = useL();
+  // Keep the queue stable while reviewing; refetch when the screen opens.
+  return useQuery({ queryKey: keys.flashcards(l), queryFn: () => api.dueFlashcards(), staleTime: Infinity, refetchOnMount: 'always' });
+};
+
+export function useSaveFlashcards() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: api.saveFlashcards,
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['flashcards'] });
+      qc.invalidateQueries({ queryKey: ['dashboard'] });
+    },
+  });
+}
+
+export function useReviewFlashcard() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ id, grade }: { id: string; grade: ReviewGrade }) => api.reviewFlashcard(id, grade),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['dashboard'] }),
+  });
 }
 
 export function useSaveProfile() {
@@ -94,7 +120,7 @@ export function useStartSession() {
 export function useSendMessage(sessionId: string) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (content: string) => api.sendMessage(sessionId, content),
+    mutationFn: (b: { content?: string; intent?: Intent }) => api.sendMessage(sessionId, b),
     onSuccess: (s) => {
       qc.setQueryData(keys.session(s.id, currentLocale()), s);
       qc.invalidateQueries({ queryKey: ['dashboard'] });
