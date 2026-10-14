@@ -37,6 +37,26 @@ export function StatusChip({ status, style }: { status: NodeStatus; style?: Styl
   );
 }
 
+// Marks a roadmap node tagged for the learner's onboarding goal. Compact
+// shows just the icon (graph cards); otherwise a small labelled pill.
+export function GoalBadge({ compact }: { compact?: boolean }) {
+  const t = useT();
+  const label = t('onboarding.recommended');
+  if (compact) {
+    return (
+      <View style={styles.goalDot} accessibilityLabel={label}>
+        <Icon name="target" size={12} color={colors.accent} strokeWidth={2} />
+      </View>
+    );
+  }
+  return (
+    <View style={[styles.chip, { backgroundColor: colors.accentSoft, alignSelf: 'flex-start' }]} accessibilityLabel={label}>
+      <Icon name="target" size={12} color={colors.accent} strokeWidth={2} />
+      <Eyebrow color={colors.accent}>{label}</Eyebrow>
+    </View>
+  );
+}
+
 // Bordered white pill used for tags (the site's tech-stack chips).
 export function Chip({ label, onPress, icon, active }: { label: string; onPress?: () => void; icon?: IconName; active?: boolean }) {
   const [hovered, setHovered] = useState(false);
@@ -121,6 +141,7 @@ export function ErrorState({ title, message, onRetry }: { title?: string; messag
 }
 
 const styles = StyleSheet.create({
+  goalDot: { width: 20, height: 20, borderRadius: radius.pill, backgroundColor: colors.accentSoft, alignItems: 'center', justifyContent: 'center' },
   chip: {
     flexDirection: 'row',
     alignItems: 'center',

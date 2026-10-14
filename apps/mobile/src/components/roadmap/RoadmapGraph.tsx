@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { Platform, Pressable, StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
+import { GoalBadge } from '@/components/ui/Bits';
 import { PulseDot } from '@/components/ui/Decor';
 import { Icon } from '@/components/ui/Icon';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -25,7 +26,7 @@ function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNo
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
-      accessibilityLabel={`${node.title}, ${node.level}, ${t(`status.${s}`)}`}
+      accessibilityLabel={`${node.title}, ${node.level}, ${t(`status.${s}`)}${node.recommended ? `, ${t('onboarding.recommended')}` : ''}`}
       style={[
         styles.node,
         {
@@ -48,13 +49,16 @@ function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNo
         <Eyebrow color={s === 'mastered' ? colors.emeraldDeep : s === 'available' || s === 'in_progress' ? colors.accent : colors.muted}>
           {node.level} · {s === 'coming_soon' ? t('status.soon') : t(`status.${s}`)}
         </Eyebrow>
-        {s === 'mastered' ? (
-          <View style={styles.check}>
-            <Icon name="check" size={12} color={colors.white} strokeWidth={2.5} />
-          </View>
-        ) : s === 'locked' ? (
-          <Icon name="lock" size={14} color={colors.muted} />
-        ) : null}
+        <View style={styles.icons}>
+          {node.recommended && s !== 'mastered' ? <GoalBadge compact /> : null}
+          {s === 'mastered' ? (
+            <View style={styles.check}>
+              <Icon name="check" size={12} color={colors.white} strokeWidth={2.5} />
+            </View>
+          ) : s === 'locked' ? (
+            <Icon name="lock" size={14} color={colors.muted} />
+          ) : null}
+        </View>
       </View>
       <Text size={14} weight="medium" tight numberOfLines={2} color={s === 'coming_soon' ? colors.muted : colors.ink}>
         {node.title}
@@ -125,6 +129,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   nodeTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 6 },
+  icons: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   check: { width: 18, height: 18, borderRadius: 9, backgroundColor: colors.emerald, alignItems: 'center', justifyContent: 'center' },
   pulse: { position: 'absolute', right: -10, top: -10 },
   header: { position: 'absolute', left: 0, right: 0, height: 40, flexDirection: 'row', alignItems: 'center', gap: 10 },

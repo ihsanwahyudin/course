@@ -2,7 +2,7 @@ import { QueryClient, useMutation, useQuery, useQueryClient } from '@tanstack/re
 
 import { useLocale, currentLocale } from '@/i18n';
 
-import { ApiError, api, type Session } from './api';
+import { ApiError, api, type ProfileInput, type Session } from './api';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,6 +22,7 @@ export const keys = {
   progress: (course: string, l: string) => ['progress', course, l] as const,
   dashboard: (l: string) => ['dashboard', l] as const,
   session: (id: string, l: string) => ['session', id, l] as const,
+  profile: (course: string, l: string) => ['profile', course, l] as const,
 };
 
 const useL = () => useLocale((s) => s.locale);
@@ -46,6 +47,10 @@ export const useDashboard = (enabled = true) => {
   const l = useL();
   return useQuery({ queryKey: keys.dashboard(l), queryFn: api.dashboard, enabled });
 };
+export const useProfile = (course: string) => {
+  const l = useL();
+  return useQuery({ queryKey: keys.profile(course, l), queryFn: () => api.profile(course), enabled: !!course });
+};
 export const useSession = (id: string | undefined) => {
   const l = useL();
   return useQuery({ queryKey: keys.session(id ?? '', l), queryFn: () => api.session(id!), enabled: !!id });
@@ -55,7 +60,7 @@ export const useSession = (id: string | undefined) => {
 function useInvalidateProgress() {
   const qc = useQueryClient();
   return () => {
-    for (const k of [['courses'], ['roadmap'], ['node'], ['progress'], ['dashboard']]) {
+    for (const k of [['courses'], ['roadmap'], ['node'], ['progress'], ['dashboard'], ['profile']]) {
       qc.invalidateQueries({ queryKey: k });
     }
   };
@@ -64,6 +69,14 @@ function useInvalidateProgress() {
 export function useEnroll() {
   const invalidate = useInvalidateProgress();
   return useMutation({ mutationFn: api.enroll, onSuccess: invalidate });
+}
+
+export function useSaveProfile() {
+  const invalidate = useInvalidateProgress();
+  return useMutation({
+    mutationFn: ({ course, input }: { course: string; input: ProfileInput }) => api.saveProfile(course, input),
+    onSuccess: invalidate,
+  });
 }
 
 export function useStartSession() {

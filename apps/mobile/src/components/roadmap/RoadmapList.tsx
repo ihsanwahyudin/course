@@ -2,7 +2,7 @@ import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
-import { ProgressBar, StatusChip } from '@/components/ui/Bits';
+import { GoalBadge, ProgressBar, StatusChip } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
 import { Icon } from '@/components/ui/Icon';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -20,7 +20,7 @@ function Row({ course, node }: { course: string; node: RoadmapNode }) {
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
-      accessibilityLabel={`${node.title}, ${t(`status.${node.status}`)}`}
+      accessibilityLabel={`${node.title}, ${t(`status.${node.status}`)}${node.recommended ? `, ${t('onboarding.recommended')}` : ''}`}
       style={[styles.row, hovered && { backgroundColor: colors.canvas }]}
     >
       <View style={{ flex: 1, gap: 4 }}>
@@ -30,6 +30,7 @@ function Row({ course, node }: { course: string; node: RoadmapNode }) {
         <Text size={13} color={colors.muted} numberOfLines={1}>
           {node.summary}
         </Text>
+        {node.recommended && node.status !== 'mastered' ? <GoalBadge /> : null}
       </View>
       <StatusChip status={node.status} />
       <Icon name="chevronRight" size={16} color={colors.muted} />

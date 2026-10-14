@@ -3,7 +3,8 @@ import { StyleSheet, View } from 'react-native';
 
 import { RoadmapGraph } from '@/components/roadmap/RoadmapGraph';
 import { RoadmapList } from '@/components/roadmap/RoadmapList';
-import { ErrorState, LoadingState, ProgressBar, SegmentedPill, StatusChip } from '@/components/ui/Bits';
+import { ErrorState, GoalBadge, LoadingState, ProgressBar, SegmentedPill, StatusChip } from '@/components/ui/Bits';
+import { Icon } from '@/components/ui/Icon';
 import { Card } from '@/components/ui/Card';
 import { GradientRing } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
@@ -11,7 +12,7 @@ import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Span, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
 import { useErrorText } from '@/lib/errors';
-import { useEnroll, useRoadmap } from '@/lib/queries';
+import { useEnroll, useRoadmap, useSaveProfile } from '@/lib/queries';
 import { useUI } from '@/lib/store';
 import { colors } from '@/theme/tokens';
 
@@ -20,6 +21,7 @@ export default function CourseScreen() {
   const router = useRouter();
   const { data, isPending, isError, error, refetch, isRefetching } = useRoadmap(slug);
   const enroll = useEnroll();
+  const saveProfile = useSaveProfile();
   const { wide, gap, contentWidth } = useLayout();
   const view = useUI((s) => s.roadmapView);
   const setView = useUI((s) => s.setRoadmapView);
@@ -42,7 +44,7 @@ export default function CourseScreen() {
     );
   }
 
-  const { course, summary, enrollment } = data;
+  const { course, summary, enrollment, profile } = data;
   const next = data.nodes.find((n) => n.id === data.nextNodeId);
   const here = `/courses/${course.slug}`;
 
@@ -52,7 +54,13 @@ export default function CourseScreen() {
       <PillButton label={t('common.logIn')} variant="secondary" onPress={() => router.push({ pathname: '/login', params: { next: here } })} />
     </>
   ) : !data.enrolled ? (
-    <PillButton label={t('course.start')} icon="arrowUpRight" loading={enroll.isPending} onPress={() => enroll.mutate(course.slug)} />
+    <PillButton
+      label={t('course.start')}
+      icon="arrowUpRight"
+      loading={enroll.isPending}
+      // Courses with onboarding ask a few questions first (which also enrols).
+      onPress={() => (profile.available ? router.push(`/onboarding/${course.slug}`) : enroll.mutate(course.slug))}
+    />
   ) : next ? (
     <PillButton label={next.status === 'in_progress' ? t('course.continueTitle', { title: next.title }) : t('course.nextTitle', { title: next.title })} icon="arrowUpRight" onPress={() => router.push(`/learn/${course.slug}/${next.id}`)} />
   ) : (
@@ -83,6 +91,16 @@ export default function CourseScreen() {
         </Text>
       </View>
       <View style={[styles.row, { flexWrap: 'wrap', gap: 8 }]}>{primary}</View>
+      {data.enrolled && profile.completed && profile.goal ? (
+        <View style={[styles.row, styles.profileLine]}>
+          <Icon name="target" size={16} color={colors.accent} strokeWidth={2} />
+          <Text size={14} color={colors.muted} style={{ flex: 1 }}>
+            {t('onboarding.goalLine', { goal: profile.goal.label })}
+            {profile.background ? ` · ${t('onboarding.backgroundLine', { background: profile.background.label })}` : ''}
+          </Text>
+          <PillButton label={t('onboarding.edit')} size="sm" variant="secondary" onPress={() => router.push(`/onboarding/${course.slug}`)} />
+        </View>
+      ) : null}
       {enroll.isError ? (
         <Text size={13} color={colors.danger}>
           {errorText(enroll.error)}
@@ -125,6 +143,34 @@ export default function CourseScreen() {
         {progressTile}
       </View>
 
+      {data.enrolled && profile.available && !profile.completed ? (
+        <Card reveal={2} style={{ marginTop: gap, gap: 12 }}>
+          <View style={styles.row}>
+            <View style={styles.bannerIcon}>
+              <Icon name="target" size={18} color={colors.accent} strokeWidth={2} />
+            </View>
+            <View style={{ flex: 1, gap: 2 }}>
+              <Text weight="medium" size={17} tight>
+                {t('onboarding.bannerTitle')}
+              </Text>
+              <Text size={14} color={colors.muted}>
+                {t('onboarding.bannerText')}
+              </Text>
+            </View>
+          </View>
+          <View style={[styles.row, { flexWrap: 'wrap', gap: 8 }]}>
+            <PillButton label={t('onboarding.bannerCta')} icon="arrowUpRight" size="sm" onPress={() => router.push(`/onboarding/${course.slug}`)} />
+            <PillButton
+              label={t('onboarding.bannerLater')}
+              size="sm"
+              variant="secondary"
+              loading={saveProfile.isPending}
+              onPress={() => saveProfile.mutate({ course: course.slug, input: { skip: true } })}
+            />
+          </View>
+        </Card>
+      ) : null}
+
       <View style={[styles.row, { justifyContent: 'space-between', flexWrap: 'wrap', marginTop: wide ? 56 : 36, marginBottom: 16, gap: 12 }]}>
         <View>
           <Eyebrow>{t('course.roadmap')}</Eyebrow>
@@ -143,6 +189,7 @@ export default function CourseScreen() {
         {(['mastered', 'in_progress', 'available', 'locked', 'coming_soon'] as const).map((s) => (
           <StatusChip key={s} status={s} />
         ))}
+        {data.nodes.some((n) => n.recommended) ? <GoalBadge /> : null}
       </View>
       {view === 'graph' ? (
         <Card padding={pad} spotlight={false}>
@@ -157,4 +204,6 @@ export default function CourseScreen() {
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  profileLine: { gap: 10, borderTopWidth: 1, borderTopColor: colors.line, paddingTop: 16 },
+  bannerIcon: { width: 40, height: 40, borderRadius: 20, backgroundColor: colors.accentSoft, alignItems: 'center', justifyContent: 'center' },
 });

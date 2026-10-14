@@ -3,13 +3,14 @@ import { StyleSheet, View } from 'react-native';
 
 import { Chip, DotList, ErrorState, LoadingState, pad2, StatusChip } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
+import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
 import { useAuth } from '@/lib/auth';
 import { useErrorText } from '@/lib/errors';
-import { useNode } from '@/lib/queries';
+import { useNode, useRoadmap } from '@/lib/queries';
 import { colors, fonts } from '@/theme/tokens';
 
 export default function NodeScreen() {
@@ -17,6 +18,8 @@ export default function NodeScreen() {
   const router = useRouter();
   const authed = useAuth((s) => s.status === 'authenticated');
   const { data: node, isPending, isError, error, refetch } = useNode(course, nodeId);
+  // Usually cached from the course page; only used for the goal's label.
+  const goal = useRoadmap(course).data?.profile.goal;
   const { wide, gap, contentWidth } = useLayout();
   const t = useT();
   const errorText = useErrorText();
@@ -50,6 +53,14 @@ export default function NodeScreen() {
         <View style={{ gap: 14 }}>
           <StatusChip status={node.status} />
           <Heading size={wide ? 52 : 38}>{node.title}</Heading>
+          {node.recommended ? (
+            <View style={styles.row}>
+              <Icon name="target" size={16} color={colors.accent} strokeWidth={2} />
+              <Text size={14} color={colors.accent}>
+                {goal ? t('onboarding.relevantFor', { goal: goal.label }) : t('onboarding.recommended')}
+              </Text>
+            </View>
+          ) : null}
           <Text color={colors.muted} size={wide ? 18 : 15} style={{ maxWidth: 520 }}>
             {node.summary}
           </Text>

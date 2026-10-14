@@ -48,6 +48,8 @@ export type RoadmapNode = {
   status: NodeStatus;
   masteryScore: number | null;
   successorIds: string[];
+  /** Tagged for the learner's onboarding goal. */
+  recommended: boolean;
 };
 
 export type User = { id: string; email: string; displayName: string; nativeLanguage: string; locale: 'en' | 'id'; createdAt: string };
@@ -60,7 +62,35 @@ export type CourseProgress = {
   targetLevel: Level;
   nextNode: RoadmapNode | null;
   lastActivityAt: string;
+  goal: Choice | null;
 };
+
+/** An onboarding answer as shown to the learner. */
+export type Choice = { id: string; label: string };
+
+export type ProfileSummary = {
+  /** The course has onboarding questions. */
+  available: boolean;
+  /** Answered or skipped. */
+  completed: boolean;
+  goal: Choice | null;
+  background: Choice | null;
+};
+
+export type OnboardingOption = { id: string; label: string; description?: string; targetLevel?: Level; freeText?: boolean };
+export type OnboardingQuestion = { id: string; title: string; help?: string; required?: boolean; options: OnboardingOption[] };
+
+export type ProfileView = {
+  course: CourseRef;
+  questions: OnboardingQuestion[];
+  /** question id -> option id, plus "<question>_text" for free text. */
+  answers: Record<string, string>;
+  completed: boolean;
+  targetLevel: Level;
+  levels: Level[];
+};
+
+export type ProfileInput = { answers?: Record<string, string>; targetLevel?: Level; skip?: boolean };
 
 export type Course = {
   slug: string;
@@ -101,6 +131,7 @@ export type Roadmap = {
   nodes: RoadmapNode[];
   nextNodeId: string | null;
   summary: Summary;
+  profile: ProfileSummary;
 };
 
 export type NodeDetail = RoadmapNode & {
@@ -255,6 +286,8 @@ export const api = {
   roadmap: (course: string) => request<Roadmap>(`/api/v1/courses/${enc(course)}/roadmap`),
   node: (course: string, id: string) => request<NodeDetail>(`/api/v1/courses/${enc(course)}/nodes/${enc(id)}`),
   enroll: (course: string) => request<Roadmap>(`/api/v1/courses/${enc(course)}/enroll`, post()),
+  profile: (course: string) => request<ProfileView>(`/api/v1/courses/${enc(course)}/profile`),
+  saveProfile: (course: string, b: ProfileInput) => request<Roadmap>(`/api/v1/courses/${enc(course)}/profile`, { method: 'PUT', body: JSON.stringify(b) }),
   courseProgress: (course: string) => request<CourseProgressView>(`/api/v1/courses/${enc(course)}/progress`),
   dashboard: () => request<Dashboard>('/api/v1/dashboard'),
   // lessons

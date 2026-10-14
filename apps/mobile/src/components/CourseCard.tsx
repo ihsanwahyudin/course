@@ -45,6 +45,14 @@ export function CourseCard({ course, reveal, style }: { course: Course; reveal?:
             </Text>
           </View>
           <ProgressBar value={p.percent} />
+          {p.goal ? (
+            <View style={styles.row}>
+              <Icon name="target" size={13} color={colors.accent} strokeWidth={2} />
+              <Text size={13} color={colors.accent} numberOfLines={1}>
+                {t('onboarding.focusLine', { goal: p.goal.label })}
+              </Text>
+            </View>
+          ) : null}
           {p.nextNode ? (
             <Text size={13} color={colors.muted} numberOfLines={1}>
               {t('catalog.next', { title: p.nextNode.title })}
