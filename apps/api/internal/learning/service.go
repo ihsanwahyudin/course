@@ -607,7 +607,8 @@ type MasteredItem struct {
 
 type AttemptItem struct {
 	storage.Attempt
-	Title string `json:"title"`
+	Title      string                 `json:"title"`
+	Objectives []curriculum.Objective `json:"objectives"`
 }
 
 type OpenSessionItem struct {
@@ -660,11 +661,11 @@ func (s *Service) Progress(ctx context.Context) (ProgressView, error) {
 		return v, err
 	}
 	for _, a := range attempts {
-		title := a.NodeID
+		item := AttemptItem{Attempt: a, Title: a.NodeID, Objectives: []curriculum.Objective{}}
 		if n, ok := s.Cur.Node(a.NodeID); ok {
-			title = n.Title
+			item.Title, item.Objectives = n.Title, n.Objectives
 		}
-		v.Attempts = append(v.Attempts, AttemptItem{a, title})
+		v.Attempts = append(v.Attempts, item)
 	}
 	open, err := storage.OpenSessions(ctx, db, s.LearnerID)
 	if err != nil {

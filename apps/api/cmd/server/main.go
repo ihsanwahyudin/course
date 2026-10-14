@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"strconv"
 	"strings"
 	"syscall"
 	"time"
@@ -71,6 +72,8 @@ func run() error {
 		Svc: svc, Cur: cur,
 		CORSOrigins: strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),
 		Ping:        store.Pool.Ping,
+		RateLimit:   envInt("RATE_LIMIT_PER_MIN", 0),
+		AIRateLimit: envInt("AI_RATE_LIMIT_PER_MIN", 0),
 	}
 	httpSrv := &http.Server{
 		Addr:              ":" + env("PORT", "8080"),
@@ -113,6 +116,13 @@ func newProvider() (ai.Provider, error) {
 
 func env(key, def string) string {
 	if v := os.Getenv(key); v != "" {
+		return v
+	}
+	return def
+}
+
+func envInt(key string, def int) int {
+	if v, err := strconv.Atoi(os.Getenv(key)); err == nil {
 		return v
 	}
 	return def

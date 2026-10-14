@@ -7,7 +7,7 @@ import (
 	"fluentpath/api/internal/curriculum"
 )
 
-var node = &curriculum.Node{ID: "n", MasteryThreshold: 80, Objectives: []curriculum.Objective{{"a", "A"}, {"b", "B"}}}
+var node = &curriculum.Node{ID: "n", MasteryThreshold: 80, Objectives: []curriculum.Objective{{ID: "a", Text: "A"}, {ID: "b", Text: "B"}}}
 
 func TestScorePass(t *testing.T) {
 	r, err := Score([]byte(`{"objectiveScores":{"a":90,"b":82},"evidence":["ok"],"feedback":"Good."}`), node)

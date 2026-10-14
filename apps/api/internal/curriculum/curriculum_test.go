@@ -88,7 +88,7 @@ func TestValidatorRequiresLessonForReadyNode(t *testing.T) {
 
 func TestValidatorRequiresAssessmentCoverage(t *testing.T) {
 	l := readyLesson("a", "o1")
-	err := build([]Node{{ID: "a", Title: "A", Objectives: []Objective{{"o1", "one"}, {"o2", "two"}}, ContentStatus: ContentReady}},
+	err := build([]Node{{ID: "a", Title: "A", Objectives: []Objective{{ID: "o1", Text: "one"}, {ID: "o2", Text: "two"}}, ContentStatus: ContentReady}},
 		map[string]*Lesson{"a": l})
 	wantErr(t, err, `objective "o2" has no assessment item`)
 }

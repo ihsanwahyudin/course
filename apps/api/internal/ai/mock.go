@@ -65,26 +65,48 @@ func (m *Mock) TutorReply(ctx context.Context, in TutorInput) (json.RawMessage, 
 		} else if in.Phase == tutor.PhaseReview {
 			next = tutor.PhaseAssessment
 		}
-		answered := prompts[(t-1)%len(prompts)]
-		var fb string
-		if Matches(last, answered.Expected) {
-			fb = "Correct, well done!"
-		} else {
-			fb = fmt.Sprintf("Not quite. Hint: %s A good answer is: %q.", answered.Hint, answered.Expected[0])
+		// Work out which prompt the learner is answering from the tutor's
+		// previous message, so a wrong answer is re-asked rather than skipped.
+		idx := currentPrompt(in.Messages, prompts)
+		if idx < 0 {
+			r.Message = "Let's practise. " + prompts[0].Prompt
+			break
+		}
+		answered := prompts[idx]
+		if !Matches(last, answered.Expected) {
+			r.Message = fmt.Sprintf("Not quite. Hint: %s Try again: %s", answered.Hint, answered.Prompt)
 			r.Action = string(tutor.ActionAskRetry)
 			r.ObservedMistakes = []string{answered.ObjectiveID}
+			break
 		}
-		if t >= len(prompts) && t >= 2 {
-			r.Message = fb + " " + enterPhase(l, next)
+		if idx+1 >= len(prompts) && t >= 2 {
+			r.Message = "Correct, well done! " + enterPhase(l, next)
 			r.Action = string(tutor.ActionAdvancePhase)
 		} else {
-			r.Message = fb + " Next: " + prompts[t%len(prompts)].Prompt
+			r.Message = "Correct, well done! Next: " + prompts[(idx+1)%len(prompts)].Prompt
 		}
 
 	default:
 		r.Message = "Let's keep going."
 	}
 	return json.Marshal(r)
+}
+
+// currentPrompt finds the practice prompt quoted in the tutor's last message.
+func currentPrompt(msgs []ChatMessage, prompts []curriculum.PracticePrompt) int {
+	for i := len(msgs) - 1; i >= 0; i-- {
+		if msgs[i].Role != "assistant" {
+			continue
+		}
+		best, at := -1, -1
+		for j, p := range prompts {
+			if k := strings.LastIndex(msgs[i].Content, p.Prompt); k > at {
+				best, at = j, k
+			}
+		}
+		return best
+	}
+	return -1
 }
 
 // enterPhase is the bridge text the tutor says when moving into a phase.
@@ -154,7 +176,15 @@ func (m *Mock) Evaluate(ctx context.Context, in EvalInput) (json.RawMessage, err
 	}
 	feedback := "Excellent work — every answer met the objective."
 	if len(misses) > 0 {
-		feedback = "Review these objectives and try again: " + strings.Join(unique(misses), ", ") + "."
+		var texts []string
+		for _, id := range unique(misses) {
+			for _, o := range in.Node.Objectives {
+				if o.ID == id {
+					texts = append(texts, strings.ToLower(o.Text[:1])+o.Text[1:])
+				}
+			}
+		}
+		feedback = "Review and try again: " + strings.Join(texts, "; ") + "."
 	}
 	if evidence == nil {
 		evidence = []string{"No fully correct answers yet."}

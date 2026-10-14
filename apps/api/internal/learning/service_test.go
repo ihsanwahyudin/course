@@ -72,13 +72,16 @@ func driveToAssessment(t *testing.T, s *Service, sess SessionView) SessionView {
 	t.Helper()
 	ctx := context.Background()
 	lesson, _ := s.Cur.Lesson(sess.NodeID)
+	prompts := append(append([]curriculum.PracticePrompt{}, lesson.GuidedPractice...), lesson.IndependentPrompt...)
 	for i := 0; i < 40 && sess.Phase != string(tutor.PhaseAssessment); i++ {
+		// Answer whichever practice prompt the tutor asked last, like a learner would.
 		answer := "ready"
-		switch tutor.Phase(sess.Phase) {
-		case tutor.PhaseGuidedPractice, tutor.PhaseReview:
-			answer = lesson.GuidedPractice[sess.PhaseTurns%len(lesson.GuidedPractice)].Expected[0]
-		case tutor.PhaseIndependentPractice:
-			answer = lesson.IndependentPrompt[sess.PhaseTurns%len(lesson.IndependentPrompt)].Expected[0]
+		last := sess.Messages[len(sess.Messages)-1].Content
+		at := -1
+		for _, p := range prompts {
+			if k := strings.LastIndex(last, p.Prompt); k > at {
+				answer, at = p.Expected[0], k
+			}
 		}
 		var err error
 		sess, err = s.SendMessage(ctx, sess.ID, answer)
@@ -274,10 +277,16 @@ func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 	sess = driveToAssessment(t, s, view)
 
 	for name, fn := range map[string]func(ai.EvalInput) (json.RawMessage, error){
-		"timeout":           func(ai.EvalInput) (json.RawMessage, error) { return nil, fmt.Errorf("%w: deadline", ai.ErrUnavailable) },
-		"malformed":         func(ai.EvalInput) (json.RawMessage, error) { return json.RawMessage(`{"objectiveScores": "great"}`), nil },
-		"missing objective": func(ai.EvalInput) (json.RawMessage, error) { return json.RawMessage(`{"objectiveScores":{"vowels":100},"evidence":[],"feedback":"x"}`), nil },
-		"inflated score":    func(ai.EvalInput) (json.RawMessage, error) { return json.RawMessage(`{"objectiveScores":{"letter-names":500,"vowels":100,"spelling":100},"evidence":[],"feedback":"x"}`), nil },
+		"timeout": func(ai.EvalInput) (json.RawMessage, error) { return nil, fmt.Errorf("%w: deadline", ai.ErrUnavailable) },
+		"malformed": func(ai.EvalInput) (json.RawMessage, error) {
+			return json.RawMessage(`{"objectiveScores": "great"}`), nil
+		},
+		"missing objective": func(ai.EvalInput) (json.RawMessage, error) {
+			return json.RawMessage(`{"objectiveScores":{"vowels":100},"evidence":[],"feedback":"x"}`), nil
+		},
+		"inflated score": func(ai.EvalInput) (json.RawMessage, error) {
+			return json.RawMessage(`{"objectiveScores":{"letter-names":500,"vowels":100,"spelling":100},"evidence":[],"feedback":"x"}`), nil
+		},
 	} {
 		mock.EvalFunc = fn
 		_, err := s.SubmitAssessment(ctx, sess.ID, answers(s, "a0-alphabet-sounds", true))

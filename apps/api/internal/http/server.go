@@ -26,6 +26,24 @@ type Server struct {
 	Cur         *curriculum.Curriculum
 	CORSOrigins []string
 	Ping        func(context.Context) error
+	// Requests per minute per IP; zero means the defaults below.
+	RateLimit   int
+	AIRateLimit int
+}
+
+func (s *Server) limits() (all, ai int) {
+	all, ai = 240, 30
+	if s.RateLimit > 0 {
+		all = s.RateLimit
+	}
+	if s.AIRateLimit > 0 {
+		ai = s.AIRateLimit
+	}
+	return all, ai
+}
+
+func limitExceeded(w http.ResponseWriter, r *http.Request) {
+	writeErr(w, &learning.Error{Status: 429, Code: "rate_limited", Message: "Too many requests. Please wait a moment and try again.", Retryable: true})
 }
 
 func (s *Server) Router() http.Handler {
@@ -42,11 +60,12 @@ func (s *Server) Router() http.Handler {
 	}))
 
 	r.Get("/healthz", s.health)
+	allLimit, aiLimit := s.limits()
 
 	r.Route("/api/v1", func(r chi.Router) {
 		// AI-backed endpoints can take a while; everything else is fast.
 		r.Use(middleware.Timeout(90 * time.Second))
-		r.Use(httprate.LimitByIP(240, time.Minute))
+		r.Use(httprate.Limit(allLimit, time.Minute, httprate.WithKeyFuncs(httprate.KeyByIP), httprate.WithLimitHandler(limitExceeded)))
 		r.Get("/curriculum", s.curriculum)
 		r.Get("/roadmap", s.roadmap)
 		r.Get("/progress", s.progress)
@@ -55,7 +74,7 @@ func (s *Server) Router() http.Handler {
 		r.Get("/sessions/{sessionId}", s.getSession)
 		r.Group(func(r chi.Router) {
 			// Tighter limit on calls that spend AI budget.
-			r.Use(httprate.LimitByIP(30, time.Minute))
+			r.Use(httprate.Limit(aiLimit, time.Minute, httprate.WithKeyFuncs(httprate.KeyByIP), httprate.WithLimitHandler(limitExceeded)))
 			r.Post("/sessions/{sessionId}/messages", s.sendMessage)
 			r.Post("/sessions/{sessionId}/assessment", s.submitAssessment)
 		})
