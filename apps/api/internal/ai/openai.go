@@ -114,15 +114,20 @@ func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
 func (o *OpenAI) Speech(ctx context.Context, text string) ([]byte, error) {
 	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
 	defer cancel()
-	body, _ := json.Marshal(map[string]any{"model": o.TTSModel, "voice": o.TTSVoice, "input": text, "response_format": "mp3",
-		"instructions": "Speak clearly and a little slowly, like an English teacher for beginners."})
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost, o.BaseURL+"/audio/speech", bytes.NewReader(body))
+	req := map[string]any{"model": o.TTSModel, "voice": o.TTSVoice, "input": text, "response_format": "mp3"}
+	// tts-1 and tts-1-hd (billed per character, cheaper for short words)
+	// don't take speaking instructions.
+	if !strings.HasPrefix(o.TTSModel, "tts-1") {
+		req["instructions"] = "Speak clearly and a little slowly, like an English teacher for beginners."
+	}
+	body, _ := json.Marshal(req)
+	hreq, err := http.NewRequestWithContext(ctx, http.MethodPost, o.BaseURL+"/audio/speech", bytes.NewReader(body))
 	if err != nil {
 		return nil, err
 	}
-	req.Header.Set("Authorization", "Bearer "+o.APIKey)
-	req.Header.Set("Content-Type", "application/json")
-	resp, err := o.HTTP.Do(req)
+	hreq.Header.Set("Authorization", "Bearer "+o.APIKey)
+	hreq.Header.Set("Content-Type", "application/json")
+	resp, err := o.HTTP.Do(hreq)
 	if err != nil {
 		return nil, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}

@@ -48,12 +48,14 @@ func TestOpenAILessonCallAndUsage(t *testing.T) {
 
 func TestOpenAISpeechAndTranscription(t *testing.T) {
 	var gotModel, gotFile string
+	var gotInstructions bool
 	o := fakeOpenAI(t, func(w http.ResponseWriter, r *http.Request) {
 		switch r.URL.Path {
 		case "/audio/speech":
 			var b map[string]any
 			_ = json.NewDecoder(r.Body).Decode(&b)
 			gotModel = b["model"].(string)
+			_, gotInstructions = b["instructions"]
 			w.Header().Set("Content-Type", "audio/mpeg")
 			_, _ = w.Write([]byte("ID3fake"))
 		case "/audio/transcriptions":
@@ -67,9 +69,15 @@ func TestOpenAISpeechAndTranscription(t *testing.T) {
 		}
 	})
 	audio, err := o.Speech(context.Background(), "Hello")
-	if err != nil || string(audio) != "ID3fake" || gotModel != "gpt-4o-mini-tts" {
-		t.Fatalf("speech: %q %v %s", audio, err, gotModel)
+	if err != nil || string(audio) != "ID3fake" || gotModel != "gpt-4o-mini-tts" || !gotInstructions {
+		t.Fatalf("speech: %q %v %s instructions=%v", audio, err, gotModel, gotInstructions)
 	}
+	// tts-1 is billed per character and doesn't take instructions.
+	o.TTSModel = "tts-1"
+	if _, err := o.Speech(context.Background(), "Hello"); err != nil || gotModel != "tts-1" || gotInstructions {
+		t.Fatalf("tts-1: %v %s instructions=%v", err, gotModel, gotInstructions)
+	}
+	o.TTSModel = "gpt-4o-mini-tts"
 	text, err := o.Transcribe(context.Background(), []byte("webm"), "answer.webm")
 	if err != nil || text != "They work in marketing." || gotModel != "gpt-4o-mini-transcribe" || gotFile != "answer.webm" {
 		t.Fatalf("transcribe: %q %v %s %s", text, err, gotModel, gotFile)
