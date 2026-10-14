@@ -143,9 +143,303 @@
       "rubric": "Correct: It is hot. Accept just 'It'."
     }
   ],
+  "material": [
+    {
+      "id": "subject",
+      "title": "Subject pronouns",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A subject pronoun replaces the person or thing **doing** something, at the start of a sentence. Indonesian *dia* becomes **he** (a man or boy) or **she** (a woman or girl). Things and animals are **it**.",
+          "i18n": {
+            "id": {
+              "text": "Kata ganti subjek menggantikan orang atau benda yang **melakukan** sesuatu, di awal kalimat. *Dia* dalam bahasa Indonesia menjadi **he** (laki-laki) atau **she** (perempuan). Benda dan hewan memakai **it**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I",
+              "id": "saya / aku"
+            },
+            {
+              "en": "you",
+              "id": "kamu / Anda / kalian"
+            },
+            {
+              "en": "he",
+              "id": "dia (laki-laki)"
+            },
+            {
+              "en": "she",
+              "id": "dia (perempuan)"
+            },
+            {
+              "en": "it",
+              "id": "dia / itu (benda, hewan)"
+            },
+            {
+              "en": "we",
+              "id": "kami / kita"
+            },
+            {
+              "en": "they",
+              "id": "mereka"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Rina is a doctor. ___ works at a hospital.",
+          "options": [
+            "He",
+            "She",
+            "It"
+          ],
+          "answer": 1,
+          "explain": "Rina is a woman, so we use she.",
+          "i18n": {
+            "id": {
+              "explain": "Rina perempuan, jadi pakai she."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata ganti subjek"
+        }
+      }
+    },
+    {
+      "id": "possessive",
+      "title": "Possessive adjectives: my, your, his, her…",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To show who owns something, put a possessive **before** the noun. Indonesian puts the owner after the noun (*tas saya*); English puts it first (**my bag**).",
+          "i18n": {
+            "id": {
+              "text": "Untuk menunjukkan pemilik, letakkan kata kepemilikan **sebelum** kata benda. Bahasa Indonesia menaruh pemilik di belakang (*tas saya*); bahasa Inggris di depan (**my bag**)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I → my: This is my bag.",
+              "id": "Ini tas saya."
+            },
+            {
+              "en": "he → his: His car is red.",
+              "id": "Mobilnya (laki-laki) merah."
+            },
+            {
+              "en": "she → her: Her name is Dewi.",
+              "id": "Namanya (perempuan) Dewi."
+            },
+            {
+              "en": "we → our: Our house is small.",
+              "id": "Rumah kami kecil."
+            },
+            {
+              "en": "they → their: Their cat is black.",
+              "id": "Kucing mereka hitam."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Budi loves ___ mother.",
+          "options": [
+            "he",
+            "his",
+            "him"
+          ],
+          "answer": 1,
+          "explain": "Before a noun (mother) we need the possessive: his.",
+          "i18n": {
+            "id": {
+              "explain": "Sebelum kata benda (mother) dibutuhkan bentuk kepemilikan: his."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata ganti kepemilikan: my, your, his, her…"
+        }
+      }
+    },
+    {
+      "id": "replacing",
+      "title": "Replacing nouns",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Don't repeat the same noun in every sentence. After you name it once, switch to a pronoun: one man → **he**, one woman → **she**, one thing → **it**, more than one → **they**, you and me → **we**.",
+          "i18n": {
+            "id": {
+              "text": "Jangan mengulang kata benda yang sama di setiap kalimat. Setelah disebut sekali, ganti dengan kata ganti: satu laki-laki → **he**, satu perempuan → **she**, satu benda → **it**, lebih dari satu → **they**, kamu dan saya → **we**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "The laptop is new. It is fast.",
+              "id": "Laptopnya baru. Laptopnya cepat."
+            },
+            {
+              "en": "My parents are at home. They are happy.",
+              "id": "Orang tua saya di rumah. Mereka senang."
+            },
+            {
+              "en": "Andi and I are friends. We play futsal.",
+              "id": "Andi dan saya berteman. Kami main futsal."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "The shoes are too small. ___ are size 38.",
+          "options": [
+            "It",
+            "They",
+            "We"
+          ],
+          "answer": 1,
+          "explain": "Shoes = more than one thing, so they.",
+          "i18n": {
+            "id": {
+              "explain": "Shoes = lebih dari satu benda, jadi they."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengganti kata benda"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "In real conversations",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "At work you often talk about colleagues who aren't there: *She is in a meeting. He works in marketing.* If you don't know if someone is a man or a woman (for example in an email), English speakers often use **they** for one person.",
+          "i18n": {
+            "id": {
+              "text": "Di kantor kamu sering membicarakan rekan yang tidak ada di tempat: *She is in a meeting. He works in marketing.* Kalau tidak tahu apakah seseorang laki-laki atau perempuan (misalnya di email), penutur bahasa Inggris sering memakai **they** untuk satu orang."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Mixing up he and she is the most common mistake for Indonesian speakers. Before you speak, picture the person.",
+          "i18n": {
+            "id": {
+              "text": "Tertukar he dan she adalah kesalahan paling umum penutur bahasa Indonesia. Sebelum bicara, bayangkan orangnya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Dalam percakapan nyata"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "When do I use he and when she?",
+    "What's the difference between he and his?",
+    "Why does English use 'it' for things?",
+    "How do I say 'dia' if I don't know if it's a man or a woman?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "Subject Pronouns in English — I, You, He, She, It, We, They",
+      "url": "https://www.youtube.com/watch?v=PEGZNSNTzns",
+      "source": "Woodward English",
+      "note": "A clear first lesson with pictures for each pronoun.",
+      "i18n": {
+        "id": {
+          "note": "Pelajaran pertama yang jelas dengan gambar untuk tiap kata ganti."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Subject Pronouns — Learn English with Jennifer (Lesson 18)",
+      "url": "https://www.youtube.com/watch?v=49fFtDu_I0o",
+      "source": "English with Jennifer",
+      "note": "Watch pronouns used in short real conversations.",
+      "i18n": {
+        "id": {
+          "note": "Lihat kata ganti dipakai dalam percakapan pendek sungguhan."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Pronouns: personal (I, me, you, him, it, they)",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/pronouns-personal-i-me-you-him-it-they-etc",
+      "source": "Cambridge Dictionary",
+      "note": "A reference table of subject, object and possessive forms.",
+      "i18n": {
+        "id": {
+          "note": "Tabel referensi bentuk subjek, objek dan kepemilikan."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "dia (laki-laki)",
+      "back": "he"
+    },
+    {
+      "front": "dia (perempuan)",
+      "back": "she"
+    },
+    {
+      "front": "mereka",
+      "back": "they"
+    },
+    {
+      "front": "kami / kita",
+      "back": "we"
+    },
+    {
+      "front": "his or her? Sari loves ___ job.",
+      "back": "her"
+    },
+    {
+      "front": "his or her? Budi washes ___ car.",
+      "back": "his"
+    },
+    {
+      "front": "Replace: The coffee is hot.",
+      "back": "It is hot."
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Selamat datang kembali! Pelajaran hari ini tentang kata ganti — kata pendek seperti I, you, he, she dan they untuk menggantikan nama, plus my, your dan her untuk benda milik seseorang. Bahasa Indonesia memakai 'dia' untuk laki-laki maupun perempuan, jadi bahasa Inggris perlu sedikit lebih teliti. Pemanasan: kata apa yang kamu pakai dalam bahasa Inggris untuk menyebut dirimu sendiri?"
+      "intro": "Selamat datang kembali! Pelajaran hari ini tentang kata ganti — kata pendek seperti I, you, he, she dan they untuk menggantikan nama, plus my, your dan her untuk benda milik seseorang. Bahasa Indonesia memakai 'dia' untuk laki-laki maupun perempuan, jadi bahasa Inggris perlu sedikit lebih teliti. Pemanasan: kata apa yang kamu pakai dalam bahasa Inggris untuk menyebut dirimu sendiri?",
+      "suggestedQuestions": [
+        "Kapan pakai he dan kapan she?",
+        "Apa bedanya he dan his?",
+        "Kenapa bahasa Inggris memakai 'it' untuk benda?",
+        "Bagaimana bilang 'dia' kalau tidak tahu laki-laki atau perempuan?"
+      ]
     }
   }
 }

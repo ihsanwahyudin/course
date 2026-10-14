@@ -147,9 +147,293 @@
       "rubric": "Correct: (a) black cat. 'cat black' = 30 (word order)."
     }
   ],
+  "material": [
+    {
+      "id": "nouns",
+      "title": "Everyday nouns",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Start with words you use every day: **people**, **places** and **things**. Learn each one with *a* or *an* so you remember how to use it.",
+          "i18n": {
+            "id": {
+              "text": "Mulailah dari kata yang kamu pakai setiap hari: **orang**, **tempat** dan **benda**. Pelajari bersama *a* atau *an* supaya ingat cara memakainya."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "a mother, a father, a friend, a teacher",
+              "id": "ibu, ayah, teman, guru"
+            },
+            {
+              "en": "a house, a school, an office, a market",
+              "id": "rumah, sekolah, kantor, pasar"
+            },
+            {
+              "en": "a phone, a book, a table, a bottle of water",
+              "id": "telepon, buku, meja, sebotol air"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "What is 'kantor' in English?",
+          "options": [
+            "market",
+            "office",
+            "house"
+          ],
+          "answer": 1,
+          "explain": "kantor = office (an office).",
+          "i18n": {
+            "id": {
+              "explain": "kantor = office (an office)."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata benda sehari-hari"
+        }
+      }
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers 1–20",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "One to twelve have their own names. **Thirteen to nineteen** end in **-teen**. Twenty is **twenty**. Put the stress on *-TEEN* (thir-TEEN) so people don't hear *THIR-ty* (30).",
+          "i18n": {
+            "id": {
+              "text": "Satu sampai dua belas punya nama sendiri. **Thirteen sampai nineteen** berakhiran **-teen**. Dua puluh adalah **twenty**. Beri tekanan pada *-TEEN* (thir-TEEN) supaya tidak terdengar *THIR-ty* (30)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "1 one · 2 two · 3 three · 4 four · 5 five",
+              "id": "satu sampai lima"
+            },
+            {
+              "en": "6 six · 7 seven · 8 eight · 9 nine · 10 ten",
+              "id": "enam sampai sepuluh"
+            },
+            {
+              "en": "11 eleven · 12 twelve",
+              "id": "sebelas, dua belas"
+            },
+            {
+              "en": "13 thirteen · 15 fifteen · 18 eighteen",
+              "id": "tiga belas, lima belas, delapan belas",
+              "note": "not 'threeteen' or 'fiveteen'"
+            },
+            {
+              "en": "20 twenty",
+              "id": "dua puluh"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "How do you write 15 in words?",
+          "options": [
+            "fiveteen",
+            "fifteen",
+            "fifty"
+          ],
+          "answer": 1,
+          "explain": "15 = fifteen (fif-, not five-). Fifty is 50.",
+          "i18n": {
+            "id": {
+              "explain": "15 = fifteen (fif-, bukan five-). Fifty itu 50."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Angka 1–20"
+        }
+      }
+    },
+    {
+      "id": "colours",
+      "title": "Colours and adjectives go first",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian says *mobil merah*; English says **a red car**. Colours (red, blue, green, yellow, black, white) and other adjectives (big, small, new, old, hot, cold) come **before** the noun and never take -s.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia bilang *mobil merah*; bahasa Inggris bilang **a red car**. Warna (red, blue, green, yellow, black, white) dan kata sifat lain (big, small, new, old, hot, cold) diletakkan **sebelum** kata benda dan tidak pernah ditambah -s."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "a big house",
+              "id": "rumah besar"
+            },
+            {
+              "en": "a black cat",
+              "id": "kucing hitam"
+            },
+            {
+              "en": "two new phones",
+              "id": "dua telepon baru",
+              "note": "not 'news phones'"
+            },
+            {
+              "en": "hot coffee, cold water",
+              "id": "kopi panas, air dingin"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Translate: 'tas biru'",
+          "options": [
+            "a bag blue",
+            "a blue bag",
+            "a blues bag"
+          ],
+          "answer": 1,
+          "explain": "Colour first, then the noun: a blue bag.",
+          "i18n": {
+            "id": {
+              "explain": "Warna dulu, baru kata benda: a blue bag."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Warna dan sifat diletakkan di depan"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Where you will use it",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "These words appear everywhere: prices in a shop (*twelve dollars*), phone numbers read digit by digit (*oh-eight-one-two…*), and describing what you want (*the black one, the big one*).",
+          "i18n": {
+            "id": {
+              "text": "Kata-kata ini muncul di mana-mana: harga di toko (*twelve dollars*), nomor telepon yang dibaca per angka (*oh-eight-one-two…*), dan menjelaskan barang yang kamu mau (*the black one, the big one*)."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "In phone numbers, English speakers often say 0 as 'oh'.",
+          "i18n": {
+            "id": {
+              "text": "Dalam nomor telepon, penutur bahasa Inggris sering menyebut 0 sebagai 'oh'."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Di mana kamu akan memakainya"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "How do I remember 13 vs 30?",
+    "Why do colours go before the noun?",
+    "Which everyday words should I learn first?",
+    "How do I say prices in English?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "Numbers 1–20 in English",
+      "url": "https://www.youtube.com/watch?v=DNcnKzZ11v0",
+      "source": "English with Al",
+      "note": "Listen and repeat the numbers with correct stress.",
+      "i18n": {
+        "id": {
+          "note": "Dengarkan dan tirukan angka dengan tekanan yang benar."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Colours / colors in English",
+      "url": "https://www.youtube.com/watch?v=9p7BI_HNmHo",
+      "source": "Tio English",
+      "note": "The common colour words with pictures.",
+      "i18n": {
+        "id": {
+          "note": "Kata warna yang umum dengan gambar."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "English numerals",
+      "url": "https://en.wikipedia.org/wiki/English_numerals",
+      "source": "Wikipedia",
+      "note": "How English numbers are built, from one to very large numbers.",
+      "i18n": {
+        "id": {
+          "note": "Cara angka bahasa Inggris dibentuk, dari satu sampai angka besar."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "guru",
+      "back": "teacher"
+    },
+    {
+      "front": "meja",
+      "back": "table"
+    },
+    {
+      "front": "kantor",
+      "back": "office"
+    },
+    {
+      "front": "18 in words",
+      "back": "eighteen"
+    },
+    {
+      "front": "15 in words",
+      "back": "fifteen"
+    },
+    {
+      "front": "kucing hitam",
+      "back": "a black cat"
+    },
+    {
+      "front": "rumah besar",
+      "back": "a big house"
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Hai lagi! Pelajaran ini membangun kosakata pertamamu yang berguna: benda dan orang sehari-hari, angka 1 sampai 20, serta warna dan kata sifat sederhana. Pemanasan: sebutkan satu benda yang bisa kamu lihat di dekatmu sekarang — dalam bahasa Inggris, kalau bisa!"
+      "intro": "Hai lagi! Pelajaran ini membangun kosakata pertamamu yang berguna: benda dan orang sehari-hari, angka 1 sampai 20, serta warna dan kata sifat sederhana. Pemanasan: sebutkan satu benda yang bisa kamu lihat di dekatmu sekarang — dalam bahasa Inggris, kalau bisa!",
+      "suggestedQuestions": [
+        "Bagaimana mengingat 13 dan 30?",
+        "Kenapa warna diletakkan sebelum kata benda?",
+        "Kata sehari-hari apa yang sebaiknya dipelajari dulu?",
+        "Bagaimana menyebut harga dalam bahasa Inggris?"
+      ]
     }
   }
 }

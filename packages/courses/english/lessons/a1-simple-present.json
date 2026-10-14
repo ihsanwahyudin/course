@@ -164,9 +164,308 @@
       "rubric": "Any correct simple present sentence about an evening routine scores 100. Third-person or tense errors reduce the score."
     }
   ],
+  "material": [
+    {
+      "id": "use",
+      "title": "What it's for",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Use the simple present for **habits**, **routines** and **facts**: things that are generally true, not just right now. Time words like *every day*, *usually* and *on Mondays* are a good sign.",
+          "i18n": {
+            "id": {
+              "text": "Simple present dipakai untuk **kebiasaan**, **rutinitas** dan **fakta**: hal yang umumnya benar, bukan hanya saat ini. Kata waktu seperti *every day*, *usually* dan *on Mondays* adalah tandanya."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I get up at six.",
+              "id": "Saya bangun jam enam."
+            },
+            {
+              "en": "Water boils at 100 °C.",
+              "id": "Air mendidih pada 100 °C."
+            },
+            {
+              "en": "We go to the gym on Mondays.",
+              "id": "Kami ke gym setiap Senin."
+            }
+          ]
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kegunaannya"
+        }
+      }
+    },
+    {
+      "id": "he-she-it",
+      "title": "he / she / it + -s",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "With I, you, we and they, use the base verb. With **he, she, it** (one person or thing), add **-s**: *she works*. Add **-es** after s, sh, ch, x and o: *he watches, she goes*. Consonant + y → **-ies**: *study → studies*.",
+          "i18n": {
+            "id": {
+              "text": "Dengan I, you, we dan they, pakai kata kerja dasar. Dengan **he, she, it** (satu orang atau benda), tambahkan **-s**: *she works*. Tambahkan **-es** setelah s, sh, ch, x dan o: *he watches, she goes*. Konsonan + y → **-ies**: *study → studies*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "My father works in a bank.",
+              "id": "Ayah saya bekerja di bank."
+            },
+            {
+              "en": "She goes to school by bus.",
+              "id": "Dia ke sekolah naik bus."
+            },
+            {
+              "en": "He studies at night.",
+              "id": "Dia belajar di malam hari."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "My sister ___ TV every evening.",
+          "options": [
+            "watch",
+            "watchs",
+            "watches"
+          ],
+          "answer": 2,
+          "explain": "Watch ends in ch, so he/she adds -es: watches.",
+          "i18n": {
+            "id": {
+              "explain": "Watch berakhiran ch, jadi untuk he/she ditambah -es: watches."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "he / she / it + -s"
+        }
+      }
+    },
+    {
+      "id": "negative",
+      "title": "Negatives: don't / doesn't",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Use **don't** + base verb with I/you/we/they and **doesn't** + base verb with he/she/it. The -s moves to *does*, so the main verb has **no -s**: *She doesn't like rain*.",
+          "i18n": {
+            "id": {
+              "text": "Pakai **don't** + kata kerja dasar untuk I/you/we/they dan **doesn't** + kata kerja dasar untuk he/she/it. Huruf -s pindah ke *does*, jadi kata kerja utama **tanpa -s**: *She doesn't like rain*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I don't drink coffee.",
+              "id": "Saya tidak minum kopi."
+            },
+            {
+              "en": "She doesn't like rain.",
+              "id": "Dia tidak suka hujan."
+            },
+            {
+              "en": "They don't work on Sundays.",
+              "id": "Mereka tidak bekerja hari Minggu."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "He ___ meat.",
+          "options": [
+            "don't eat",
+            "doesn't eat",
+            "doesn't eats"
+          ],
+          "answer": 1,
+          "explain": "He → doesn't, and the verb stays in the base form: eat.",
+          "i18n": {
+            "id": {
+              "explain": "He → doesn't, dan kata kerjanya tetap bentuk dasar: eat."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat negatif: don't / doesn't"
+        }
+      }
+    },
+    {
+      "id": "questions",
+      "title": "Questions with do / does",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Start with **Do** or **Does**, then the subject, then the base verb: *Do you speak English? Does he live here?* Short answers: **Yes, I do. / No, he doesn't.**",
+          "i18n": {
+            "id": {
+              "text": "Mulai dengan **Do** atau **Does**, lalu subjek, lalu kata kerja dasar: *Do you speak English? Does he live here?* Jawaban singkat: **Yes, I do. / No, he doesn't.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Do you speak English? — Yes, I do.",
+              "id": "Apakah kamu bisa berbahasa Inggris? — Ya."
+            },
+            {
+              "en": "What time does she start work?",
+              "id": "Jam berapa dia mulai kerja?"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "___ your brother play football?",
+          "options": [
+            "Do",
+            "Does",
+            "Is"
+          ],
+          "answer": 1,
+          "explain": "Your brother = he → Does.",
+          "i18n": {
+            "id": {
+              "explain": "Your brother = he → Does."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan dengan do / does"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Describing your day",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Talking about your routine is one of the first real conversations you'll have: *I start work at nine. I usually have lunch at twelve. In the evening I cook and watch TV.* It's also the tense of instructions and documentation: *The app saves your work automatically.*",
+          "i18n": {
+            "id": {
+              "text": "Menceritakan rutinitas adalah salah satu percakapan nyata pertama yang akan kamu alami: *I start work at nine. I usually have lunch at twelve. In the evening I cook and watch TV.* Ini juga tense untuk instruksi dan dokumentasi: *The app saves your work automatically.*"
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Most mistakes are the missing -s with he/she/it. Check every he/she/it sentence once.",
+          "i18n": {
+            "id": {
+              "text": "Kesalahan paling sering adalah lupa -s untuk he/she/it. Periksa setiap kalimat he/she/it sekali lagi."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menceritakan harimu"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why do we add -s with he/she/it?",
+    "When is it -es and when -s?",
+    "Why is it 'doesn't like', not 'doesn't likes'?",
+    "How is this different from am/is/are?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "Present Simple Explained",
+      "url": "https://www.youtube.com/watch?v=uoz0hIHy7ns",
+      "source": "LingoVia English",
+      "note": "A beginner-friendly explanation with many examples.",
+      "i18n": {
+        "id": {
+          "note": "Penjelasan ramah pemula dengan banyak contoh."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Present Simple and Present Continuous — 6 Minute Grammar",
+      "url": "https://www.youtube.com/watch?v=xFsYrTIndhI",
+      "source": "BBC Learning English",
+      "note": "When to use the simple present vs. what's happening now.",
+      "i18n": {
+        "id": {
+          "note": "Kapan memakai simple present dibanding hal yang sedang terjadi."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Present simple (I work)",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/present-simple-i-work",
+      "source": "Cambridge Dictionary",
+      "note": "Forms, spelling rules and uses.",
+      "i18n": {
+        "id": {
+          "note": "Bentuk, aturan ejaan dan kegunaan."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "she + go",
+      "back": "she goes"
+    },
+    {
+      "front": "he + study",
+      "back": "he studies"
+    },
+    {
+      "front": "Negative: She likes tea.",
+      "back": "She doesn't like tea."
+    },
+    {
+      "front": "Question: You speak English.",
+      "back": "Do you speak English?"
+    },
+    {
+      "front": "Short answer: Does he work here? (yes)",
+      "back": "Yes, he does."
+    },
+    {
+      "front": "Saya bangun jam enam.",
+      "back": "I get up at six."
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Halo! Di pelajaran ini kamu akan belajar simple present — tense untuk kebiasaan, rutinitas dan fakta, seperti 'I work in an office' atau 'She drinks coffee every morning'. Bagian yang menantang adalah tambahan -s untuk he/she/it, serta do/does untuk pertanyaan dan kalimat negatif. Pemanasan: apa yang kamu lakukan setiap pagi?"
+      "intro": "Halo! Di pelajaran ini kamu akan belajar simple present — tense untuk kebiasaan, rutinitas dan fakta, seperti 'I work in an office' atau 'She drinks coffee every morning'. Bagian yang menantang adalah tambahan -s untuk he/she/it, serta do/does untuk pertanyaan dan kalimat negatif. Pemanasan: apa yang kamu lakukan setiap pagi?",
+      "suggestedQuestions": [
+        "Kenapa ditambah -s untuk he/she/it?",
+        "Kapan -es dan kapan -s?",
+        "Kenapa 'doesn't like', bukan 'doesn't likes'?",
+        "Apa bedanya dengan am/is/are?"
+      ]
     }
   }
 }

@@ -145,9 +145,312 @@
       "rubric": "Correct: How old are you? 'How old you are' = 40."
     }
   ],
+  "material": [
+    {
+      "id": "words",
+      "title": "Question words",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Each question word asks for a different kind of information. **How** has extra uses: *How old?* (age), *How much?* (price), *How many?* (number).",
+          "i18n": {
+            "id": {
+              "text": "Setiap kata tanya menanyakan informasi yang berbeda. **How** punya kegunaan tambahan: *How old?* (umur), *How much?* (harga), *How many?* (jumlah)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "What is your name?",
+              "id": "what = apa · Siapa namamu?"
+            },
+            {
+              "en": "Where is the station?",
+              "id": "where = di mana · Stasiunnya di mana?"
+            },
+            {
+              "en": "Who is your teacher?",
+              "id": "who = siapa · Siapa gurumu?"
+            },
+            {
+              "en": "When is the meeting?",
+              "id": "when = kapan · Rapatnya kapan?"
+            },
+            {
+              "en": "Why are you late?",
+              "id": "why = kenapa · Kenapa kamu terlambat?"
+            },
+            {
+              "en": "How do you go to work?",
+              "id": "how = bagaimana · Kamu ke kantor naik apa?"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "___ is the meeting? — At 10 a.m.",
+          "options": [
+            "Where",
+            "When",
+            "Who"
+          ],
+          "answer": 1,
+          "explain": "The answer is a time, so When.",
+          "i18n": {
+            "id": {
+              "explain": "Jawabannya waktu, jadi When."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata tanya"
+        }
+      }
+    },
+    {
+      "id": "order-be",
+      "title": "Word order with be",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "With am/is/are, the question word comes first, then **be**, then the subject: **Where are you** from? Don't keep statement order (*Where you are from?*).",
+          "i18n": {
+            "id": {
+              "text": "Dengan am/is/are, kata tanya di depan, lalu **be**, lalu subjek: **Where are you** from? Jangan memakai urutan kalimat biasa (*Where you are from?*)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Where is the bathroom?",
+              "id": "Kamar mandinya di mana?"
+            },
+            {
+              "en": "How old are you?",
+              "id": "Umurmu berapa?"
+            },
+            {
+              "en": "Who is that man?",
+              "id": "Siapa laki-laki itu?"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Choose the correct question.",
+          "options": [
+            "What your name is?",
+            "What is your name?",
+            "What name you are?"
+          ],
+          "answer": 1,
+          "explain": "Question word + is + subject: What is your name?",
+          "i18n": {
+            "id": {
+              "explain": "Kata tanya + is + subjek: What is your name?"
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Urutan kata dengan be"
+        }
+      }
+    },
+    {
+      "id": "order-do",
+      "title": "Word order with do / does",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "With other verbs, add **do** or **does**: question word + do/does + subject + base verb. *Where do you live? What does he do?* (*What does he do?* asks about someone's job.)",
+          "i18n": {
+            "id": {
+              "text": "Dengan kata kerja lain, tambahkan **do** atau **does**: kata tanya + do/does + subjek + kata kerja dasar. *Where do you live? What does he do?* (*What does he do?* menanyakan pekerjaan seseorang.)"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Where do you live?",
+              "id": "Kamu tinggal di mana?"
+            },
+            {
+              "en": "What does she do? — She's a nurse.",
+              "id": "Apa pekerjaannya? — Perawat."
+            },
+            {
+              "en": "When do you start work?",
+              "id": "Kapan kamu mulai kerja?"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Where ___ your brother work?",
+          "options": [
+            "do",
+            "does",
+            "is"
+          ],
+          "answer": 1,
+          "explain": "Your brother = he → does.",
+          "i18n": {
+            "id": {
+              "explain": "Your brother = he → does."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Urutan kata dengan do / does"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Getting to know someone",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "These questions are the core of small talk at work, on a trip or online: *What's your name? Where are you from? What do you do? Where do you work?* Answer with a full short sentence, then ask back: *And you?*",
+          "i18n": {
+            "id": {
+              "text": "Pertanyaan-pertanyaan ini inti dari basa-basi di kantor, saat bepergian atau online: *What's your name? Where are you from? What do you do? Where do you work?* Jawab dengan kalimat pendek yang lengkap, lalu tanya balik: *And you?*"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Where are you from? — I'm from Medan. And you?",
+              "id": "Kamu dari mana? — Saya dari Medan. Kamu?"
+            },
+            {
+              "en": "What do you do? — I'm a designer.",
+              "id": "Apa pekerjaanmu? — Saya desainer."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "'What do you do?' is about your job, not what you're doing now.",
+          "i18n": {
+            "id": {
+              "text": "'What do you do?' menanyakan pekerjaan, bukan apa yang sedang kamu lakukan sekarang."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Berkenalan"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "When do I use do/does in a question and when is/are?",
+    "What's the difference between what and which?",
+    "How do I ask about someone's job politely?",
+    "Why is it 'Where are you from?' and not 'Where you are from?'"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "'WH' Question Words",
+      "url": "https://www.youtube.com/watch?v=_MEjzlTwVUs",
+      "source": "Lauren's English Corner",
+      "note": "Each question word with clear examples.",
+      "i18n": {
+        "id": {
+          "note": "Setiap kata tanya dengan contoh yang jelas."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "English for Beginners #13: Wh Questions Part 1",
+      "url": "https://www.youtube.com/watch?v=cvil1vEuM2g",
+      "source": "Easy English at Home",
+      "note": "Forming questions with be for beginners.",
+      "i18n": {
+        "id": {
+          "note": "Membuat pertanyaan dengan be untuk pemula."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Questions: wh- questions",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/questions-wh-questions",
+      "source": "Cambridge Dictionary",
+      "note": "Reference for wh- question word order.",
+      "i18n": {
+        "id": {
+          "note": "Referensi urutan kata pertanyaan wh-."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Questions: yes-no questions",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/questions-yes-no-questions",
+      "source": "Cambridge Dictionary",
+      "note": "How yes/no questions are formed.",
+      "i18n": {
+        "id": {
+          "note": "Cara membentuk pertanyaan ya/tidak."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "di mana",
+      "back": "where"
+    },
+    {
+      "front": "kapan",
+      "back": "when"
+    },
+    {
+      "front": "siapa",
+      "back": "who"
+    },
+    {
+      "front": "Ask someone's age",
+      "back": "How old are you?"
+    },
+    {
+      "front": "Ask someone's job",
+      "back": "What do you do?"
+    },
+    {
+      "front": "Fix: Where you are from?",
+      "back": "Where are you from?"
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Selamat datang! Sekarang kamu sudah tahu 'to be' dan simple present, ayo ajukan pertanyaan sungguhan: what, where, who, when dan how. Kamu akan memakainya untuk bertanya tentang diri orang lain — pas untuk berkenalan. Pemanasan: pertanyaan apa yang kamu ajukan untuk mengetahui nama seseorang?"
+      "intro": "Selamat datang! Sekarang kamu sudah tahu 'to be' dan simple present, ayo ajukan pertanyaan sungguhan: what, where, who, when dan how. Kamu akan memakainya untuk bertanya tentang diri orang lain — pas untuk berkenalan. Pemanasan: pertanyaan apa yang kamu ajukan untuk mengetahui nama seseorang?",
+      "suggestedQuestions": [
+        "Kapan pakai do/does dalam pertanyaan dan kapan is/are?",
+        "Apa bedanya what dan which?",
+        "Bagaimana menanyakan pekerjaan seseorang dengan sopan?",
+        "Kenapa 'Where are you from?' bukan 'Where you are from?'"
+      ]
     }
   }
 }

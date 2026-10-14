@@ -145,9 +145,293 @@
       "rubric": "Correct: watches. 'watchs' = 40."
     }
   ],
+  "material": [
+    {
+      "id": "order",
+      "title": "Subject + Verb + Object",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Most English sentences follow the same order: **who** (subject) → **does what** (verb) → **to what** (object). Unlike Indonesian, you can't drop the subject: *Makan nasi* must be **I eat rice**.",
+          "i18n": {
+            "id": {
+              "text": "Sebagian besar kalimat bahasa Inggris mengikuti urutan yang sama: **siapa** (subjek) → **melakukan apa** (kata kerja) → **terhadap apa** (objek). Berbeda dari bahasa Indonesia, subjek tidak boleh dihilangkan: *Makan nasi* harus menjadi **I eat rice**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I drink tea.",
+              "id": "Saya minum teh."
+            },
+            {
+              "en": "We play football.",
+              "id": "Kami bermain sepak bola."
+            },
+            {
+              "en": "They read books.",
+              "id": "Mereka membaca buku."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "Tea I drink.",
+            "I drink tea.",
+            "Drink tea."
+          ],
+          "answer": 1,
+          "explain": "Subject (I) + verb (drink) + object (tea).",
+          "i18n": {
+            "id": {
+              "explain": "Subjek (I) + kata kerja (drink) + objek (tea)."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Subjek + Kata kerja + Objek"
+        }
+      }
+    },
+    {
+      "id": "articles",
+      "title": "a or an",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Use **a** or **an** before **one** countable thing when you first mention it. The choice depends on the **sound**, not the letter: **an** before a vowel sound (*an apple, an hour*), **a** before a consonant sound (*a book, a university*).",
+          "i18n": {
+            "id": {
+              "text": "Gunakan **a** atau **an** sebelum **satu** benda yang bisa dihitung saat pertama disebut. Pilihannya bergantung pada **bunyi**, bukan huruf: **an** sebelum bunyi vokal (*an apple, an hour*), **a** sebelum bunyi konsonan (*a book, a university*)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I have an apple.",
+              "id": "Saya punya sebuah apel."
+            },
+            {
+              "en": "She is a nurse.",
+              "id": "Dia seorang perawat."
+            },
+            {
+              "en": "It's an hour away.",
+              "id": "Jaraknya satu jam.",
+              "note": "h is silent: 'our'"
+            },
+            {
+              "en": "He goes to a university.",
+              "id": "Dia kuliah di universitas.",
+              "note": "u sounds like 'you'"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "I need ___ egg.",
+          "options": [
+            "a",
+            "an"
+          ],
+          "answer": 1,
+          "explain": "Egg starts with a vowel sound, so an egg.",
+          "i18n": {
+            "id": {
+              "explain": "Egg diawali bunyi vokal, jadi an egg."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "a atau an"
+        }
+      }
+    },
+    {
+      "id": "plurals",
+      "title": "Plurals with -s and -es",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "For more than one, add **-s**: *book → books*. Add **-es** after s, x, ch and sh: *box → boxes, watch → watches*. Don't repeat the word like Indonesian *buku-buku*, and keep the -s even after a number: **two books**.",
+          "i18n": {
+            "id": {
+              "text": "Untuk lebih dari satu, tambahkan **-s**: *book → books*. Tambahkan **-es** setelah s, x, ch dan sh: *box → boxes, watch → watches*. Jangan mengulang kata seperti *buku-buku*, dan walaupun sudah ada angka, -s tetap dipakai: **two books**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "two books",
+              "id": "dua buku",
+              "note": "not 'two book'"
+            },
+            {
+              "en": "three boxes",
+              "id": "tiga kotak"
+            },
+            {
+              "en": "many classes",
+              "id": "banyak kelas"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "One bus, two ___.",
+          "options": [
+            "bus",
+            "buss",
+            "buses"
+          ],
+          "answer": 2,
+          "explain": "Bus ends in s, so add -es: buses.",
+          "i18n": {
+            "id": {
+              "explain": "Bus berakhiran s, jadi tambah -es: buses."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk jamak dengan -s dan -es"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Putting it together",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Short, complete sentences are what you need for messages and forms: *I need a room. We have two bags. She is an engineer.* Check three things: a subject, a verb, and a/an or -s on the noun.",
+          "i18n": {
+            "id": {
+              "text": "Kalimat pendek yang lengkap adalah yang kamu butuhkan untuk pesan dan formulir: *I need a room. We have two bags. She is an engineer.* Cek tiga hal: ada subjek, ada kata kerja, dan a/an atau -s pada kata benda."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Read your sentence and ask: who? does what? one or many?",
+          "i18n": {
+            "id": {
+              "text": "Baca kalimatmu dan tanyakan: siapa? melakukan apa? satu atau banyak?"
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menggabungkan semuanya"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why do I always need a subject?",
+    "Is it 'a hour' or 'an hour'?",
+    "When do I add -es instead of -s?",
+    "Why don't we say 'buku-buku' in English?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "When to use A or AN",
+      "url": "https://www.youtube.com/watch?v=kSTklYyku8k",
+      "source": "Sparkle English",
+      "note": "A short lesson on choosing a or an by sound.",
+      "i18n": {
+        "id": {
+          "note": "Pelajaran singkat memilih a atau an berdasarkan bunyi."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Basic Grammar: Articles (a, an, the) for beginners",
+      "url": "https://www.youtube.com/watch?v=PQHGldz8OBw",
+      "source": "Extra English Practice",
+      "note": "Two teachers explain a, an and the with everyday examples.",
+      "i18n": {
+        "id": {
+          "note": "Dua guru menjelaskan a, an dan the dengan contoh sehari-hari."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "A/an and the",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/a-an-and-the",
+      "source": "Cambridge Dictionary",
+      "note": "Reference rules and examples for articles.",
+      "i18n": {
+        "id": {
+          "note": "Aturan dan contoh artikel sebagai referensi."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "English plurals",
+      "url": "https://en.wikipedia.org/wiki/English_plurals",
+      "source": "Wikipedia",
+      "note": "Regular and irregular plural forms.",
+      "i18n": {
+        "id": {
+          "note": "Bentuk jamak beraturan dan tidak beraturan."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "a or an? ___ orange",
+      "back": "an orange"
+    },
+    {
+      "front": "a or an? ___ car",
+      "back": "a car"
+    },
+    {
+      "front": "a or an? ___ hour",
+      "back": "an hour (h is silent)"
+    },
+    {
+      "front": "Plural of watch",
+      "back": "watches"
+    },
+    {
+      "front": "Plural of box",
+      "back": "boxes"
+    },
+    {
+      "front": "Saya membaca buku.",
+      "back": "I read a book."
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Kemajuan yang bagus! Sekarang kita susun kata menjadi kalimat sungguhan. Kamu akan berlatih urutan kata bahasa Inggris (Subjek + Kata Kerja + Objek), memakai 'a' dan 'an', dan membuat bentuk jamak seperti books dan boxes. Pemanasan: coba buat satu kalimat pendek tentang sesuatu yang kamu suka — misalnya 'I like coffee.'"
+      "intro": "Kemajuan yang bagus! Sekarang kita susun kata menjadi kalimat sungguhan. Kamu akan berlatih urutan kata bahasa Inggris (Subjek + Kata Kerja + Objek), memakai 'a' dan 'an', dan membuat bentuk jamak seperti books dan boxes. Pemanasan: coba buat satu kalimat pendek tentang sesuatu yang kamu suka — misalnya 'I like coffee.'",
+      "suggestedQuestions": [
+        "Kenapa subjek selalu dibutuhkan?",
+        "'a hour' atau 'an hour'?",
+        "Kapan menambah -es, bukan -s?",
+        "Kenapa tidak ada pengulangan kata seperti 'buku-buku'?"
+      ]
     }
   }
 }

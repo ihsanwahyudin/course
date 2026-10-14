@@ -41,7 +41,16 @@ func obj(id string) []Objective { return []Objective{{ID: id, Text: id}} }
 func readyLesson(nodeID, objID string) *Lesson {
 	p := []PracticePrompt{{ObjectiveID: objID, Prompt: "p", Expected: []string{"x"}}}
 	return &Lesson{NodeID: nodeID, Intro: "hi", GuidedPractice: p, IndependentPrompt: p,
-		Assessment: []AssessmentItem{{ID: nodeID + "-1", ObjectiveID: objID, Prompt: "q", AcceptableAnswers: []string{"x"}}}}
+		Assessment: []AssessmentItem{{ID: nodeID + "-1", ObjectiveID: objID, Prompt: "q", AcceptableAnswers: []string{"x"}}},
+		Material:   testMaterial()}
+}
+
+func testMaterial() []Section {
+	text := func(id string) Section {
+		return Section{ID: id, Title: id, Blocks: []Block{{Type: BlockText, Text: "t", I18n: map[string]BlockI18n{"id": {Text: "t"}}}},
+			I18n: map[string]SectionText{"id": {Title: id}}}
+	}
+	return []Section{text("one"), text("two"), text("three")}
 }
 
 var testCourse = Course{

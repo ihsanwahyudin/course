@@ -48,9 +48,7 @@ func TestValidatorRequiresOnboardingTranslations(t *testing.T) {
 	node := Node{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentReady,
 		I18n: map[string]NodeText{"id": {Title: "A", Summary: "s", Objectives: map[string]string{"o": "o"}}}}
 	l := readyLesson("a", "o")
-	l.I18n = map[string]struct {
-		Intro string `json:"intro"`
-	}{"id": {Intro: "hai"}}
+	l.I18n = map[string]LessonText{"id": {Intro: "hai"}}
 	_, err := Build(course, []levelFile{{Version: "1", Level: "A0", Nodes: []Node{node}, I18n: map[string]LevelText{"id": {Title: "Dasar"}}}}, map[string]*Lesson{"a": l})
 	wantErr(t, err, `question "goal": missing "id" title`)
 	wantErr(t, err, `option "goal"."work": missing "id" text`)

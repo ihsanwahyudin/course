@@ -159,9 +159,291 @@
       "rubric": "Correct: No, I'm not. 'No' alone = 40."
     }
   ],
+  "material": [
+    {
+      "id": "forms",
+      "title": "am, is, are",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian often has no verb in sentences like *Saya pelajar*. English **always** needs one: the verb **be**. Use **am** with I, **is** with he/she/it (and one person or thing), **are** with you/we/they.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia sering tidak memakai kata kerja dalam kalimat seperti *Saya pelajar*. Bahasa Inggris **selalu** butuh satu: kata kerja **be**. Pakai **am** untuk I, **is** untuk he/she/it (dan satu orang atau benda), **are** untuk you/we/they."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I am a student. (I'm)",
+              "id": "Saya pelajar."
+            },
+            {
+              "en": "She is at work. (She's)",
+              "id": "Dia di kantor."
+            },
+            {
+              "en": "They are happy. (They're)",
+              "id": "Mereka senang."
+            },
+            {
+              "en": "The coffee is hot.",
+              "id": "Kopinya panas."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "My parents ___ in Surabaya.",
+          "options": [
+            "is",
+            "am",
+            "are"
+          ],
+          "answer": 2,
+          "explain": "My parents = they, so are.",
+          "i18n": {
+            "id": {
+              "explain": "My parents = they, jadi are."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "am, is, are"
+        }
+      }
+    },
+    {
+      "id": "negative",
+      "title": "Negatives: not",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Put **not** after am/is/are. In speech, use the short forms: **I'm not**, **he isn't**, **they aren't**. There is no 'amn't'.",
+          "i18n": {
+            "id": {
+              "text": "Letakkan **not** setelah am/is/are. Dalam percakapan, pakai bentuk singkat: **I'm not**, **he isn't**, **they aren't**. Tidak ada bentuk 'amn't'."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I'm not tired.",
+              "id": "Saya tidak lelah."
+            },
+            {
+              "en": "She isn't at home.",
+              "id": "Dia tidak di rumah."
+            },
+            {
+              "en": "We aren't late.",
+              "id": "Kami tidak terlambat."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "The museum ___ open on Monday.",
+          "options": [
+            "isn't",
+            "aren't",
+            "not"
+          ],
+          "answer": 0,
+          "explain": "The museum = it → is → isn't.",
+          "i18n": {
+            "id": {
+              "explain": "The museum = it → is → isn't."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat negatif: not"
+        }
+      }
+    },
+    {
+      "id": "questions",
+      "title": "Questions and short answers",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To ask, move am/is/are **in front of** the subject: *You are tired → **Are you** tired?* Answer with a short form that repeats be: **Yes, I am.** / **No, I'm not.** Don't answer just 'Yes' or 'No' in polite conversation.",
+          "i18n": {
+            "id": {
+              "text": "Untuk bertanya, pindahkan am/is/are **ke depan** subjek: *You are tired → **Are you** tired?* Jawab dengan bentuk singkat yang mengulang be: **Yes, I am.** / **No, I'm not.** Dalam percakapan sopan, jangan hanya menjawab 'Yes' atau 'No'."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Is he a doctor? — Yes, he is.",
+              "id": "Apakah dia dokter? — Ya."
+            },
+            {
+              "en": "Are they students? — No, they aren't.",
+              "id": "Apakah mereka pelajar? — Bukan."
+            },
+            {
+              "en": "Is it far? — No, it isn't.",
+              "id": "Apakah jauh? — Tidak."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "In a 'Yes' short answer, don't contract: say **Yes, I am**, not 'Yes, I'm'.",
+          "i18n": {
+            "id": {
+              "text": "Untuk jawaban singkat 'Yes', jangan disingkat: ucapkan **Yes, I am**, bukan 'Yes, I'm'."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "___ your sister a teacher?",
+          "options": [
+            "Are",
+            "Is",
+            "Am"
+          ],
+          "answer": 1,
+          "explain": "Your sister = she → Is.",
+          "i18n": {
+            "id": {
+              "explain": "Your sister = she → Is."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan dan jawaban singkat"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Where you will use it",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Be is the verb of introductions and small talk: *I'm Dewi. I'm from Bandung. I'm a designer. Are you new here?* It's also how you describe how things are: *The meeting is at ten. The room isn't ready.*",
+          "i18n": {
+            "id": {
+              "text": "Be adalah kata kerja untuk berkenalan dan basa-basi: *I'm Dewi. I'm from Bandung. I'm a designer. Are you new here?* Juga untuk menjelaskan keadaan: *The meeting is at ten. The room isn't ready.*"
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Di mana kamu akan memakainya"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why does English need 'am/is/are' when Indonesian doesn't?",
+    "When can I use I'm, he's, they're?",
+    "How do I answer 'Are you…?' questions?",
+    "What's the difference between isn't and aren't?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "TO BE verb — AM / IS / ARE",
+      "url": "https://www.youtube.com/watch?v=b3L4pLSUwig",
+      "source": "Learn English Lab",
+      "note": "A short, clear overview of am, is and are.",
+      "i18n": {
+        "id": {
+          "note": "Ringkasan singkat dan jelas tentang am, is dan are."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Very, very beginner lesson 1: the verb 'to be'",
+      "url": "https://www.youtube.com/watch?v=rC6bmDuHsWE",
+      "source": "Dave's ESL Lessons",
+      "note": "A slow lesson for complete beginners.",
+      "i18n": {
+        "id": {
+          "note": "Pelajaran pelan untuk pemula total."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Present simple: 'to be'",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple-be",
+      "source": "British Council LearnEnglish",
+      "note": "Explanation plus online exercises.",
+      "i18n": {
+        "id": {
+          "note": "Penjelasan beserta latihan online."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Be",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/be",
+      "source": "Cambridge Dictionary",
+      "note": "Reference for every form of be.",
+      "i18n": {
+        "id": {
+          "note": "Referensi semua bentuk be."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "I ___ (be)",
+      "back": "am"
+    },
+    {
+      "front": "she / he / it ___ (be)",
+      "back": "is"
+    },
+    {
+      "front": "you / we / they ___ (be)",
+      "back": "are"
+    },
+    {
+      "front": "Negative of 'He is late.'",
+      "back": "He isn't late."
+    },
+    {
+      "front": "Question: They are ready.",
+      "back": "Are they ready?"
+    },
+    {
+      "front": "Short answer: Are you busy? (no)",
+      "back": "No, I'm not."
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Selamat datang di A1! Pelajaran ini tentang kata kerja terpenting dalam bahasa Inggris: 'to be' — am, is dan are. Bahasa Indonesia sering tidak butuh kata kerja di sini ('Saya guru'), tapi bahasa Inggris butuh ('I am a teacher'). Kita akan berlatih kalimat positif, negatif dan pertanyaan. Pemanasan: ceritakan satu kalimat tentang dirimu, misalnya 'I am from Jakarta.'"
+      "intro": "Selamat datang di A1! Pelajaran ini tentang kata kerja terpenting dalam bahasa Inggris: 'to be' — am, is dan are. Bahasa Indonesia sering tidak butuh kata kerja di sini ('Saya guru'), tapi bahasa Inggris butuh ('I am a teacher'). Kita akan berlatih kalimat positif, negatif dan pertanyaan. Pemanasan: ceritakan satu kalimat tentang dirimu, misalnya 'I am from Jakarta.'",
+      "suggestedQuestions": [
+        "Kenapa bahasa Inggris butuh 'am/is/are' padahal bahasa Indonesia tidak?",
+        "Kapan boleh pakai I'm, he's, they're?",
+        "Bagaimana menjawab pertanyaan 'Are you…?'",
+        "Apa bedanya isn't dan aren't?"
+      ]
     }
   }
 }

@@ -147,9 +147,313 @@
       "rubric": "Correct: G-R-E-E-N. 'double E' is acceptable."
     }
   ],
+  "material": [
+    {
+      "id": "names",
+      "title": "Letter names are not Indonesian letter names",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "English uses the same 26 letters as Indonesian, but most of them have **different names**. When someone asks you to spell your name, they expect the English names.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Inggris memakai 26 huruf yang sama dengan bahasa Indonesia, tetapi kebanyakan **namanya berbeda**. Saat seseorang memintamu mengeja nama, yang dipakai adalah nama huruf versi Inggris."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "A — 'ay' (like day)",
+              "id": "A dibaca 'ei'"
+            },
+            {
+              "en": "E — 'ee' (like see)",
+              "id": "E dibaca 'i'"
+            },
+            {
+              "en": "I — 'eye'",
+              "id": "I dibaca 'ai'"
+            },
+            {
+              "en": "G — 'jee'",
+              "id": "G dibaca 'ji'"
+            },
+            {
+              "en": "J — 'jay'",
+              "id": "J dibaca 'jei'"
+            },
+            {
+              "en": "R — 'ar'",
+              "id": "R dibaca 'ar'"
+            },
+            {
+              "en": "Y — 'why'",
+              "id": "Y dibaca 'wai'"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "The pairs that confuse Indonesian speakers most are **E/I**, **G/J** and **A/R**. Say them slowly in pairs: E–I, G–J, A–R.",
+          "i18n": {
+            "id": {
+              "text": "Pasangan yang paling sering tertukar bagi penutur bahasa Indonesia adalah **E/I**, **G/J** dan **A/R**. Ucapkan pelan-pelan berpasangan: E–I, G–J, A–R."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which letter's name sounds like the word 'why'?",
+          "options": [
+            "W",
+            "Y",
+            "I"
+          ],
+          "answer": 1,
+          "explain": "Y is said 'why'. W is 'double-you' and I is 'eye'.",
+          "i18n": {
+            "id": {
+              "explain": "Y dibaca 'wai', seperti 'why'. W dibaca 'dabel-yu' dan I dibaca 'ai'."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nama huruf berbeda dari bahasa Indonesia"
+        }
+      }
+    },
+    {
+      "id": "vowels",
+      "title": "The five vowels",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The vowel letters are **A, E, I, O, U**. All the other letters are consonants. **Y** sometimes works like a vowel, as in *my* or *happy*.",
+          "i18n": {
+            "id": {
+              "text": "Huruf vokal adalah **A, E, I, O, U**. Huruf lainnya konsonan. **Y** kadang berperan seperti vokal, misalnya di *my* atau *happy*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "c-**a**-t → one vowel: A",
+              "id": "cat = kucing"
+            },
+            {
+              "en": "b-**oo**-k → two vowels: O, O",
+              "id": "book = buku"
+            },
+            {
+              "en": "h-**o**-m-**e** → two vowels: O, E",
+              "id": "home = rumah"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "How many vowel letters are in the word 'phone'?",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "answer": 1,
+          "explain": "p-h-O-n-E: the vowels are O and E.",
+          "i18n": {
+            "id": {
+              "explain": "p-h-O-n-E: vokalnya O dan E."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Lima huruf vokal"
+        }
+      }
+    },
+    {
+      "id": "spelling",
+      "title": "Spelling aloud",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To spell a word, say each **letter name** in order with a short pause. For two of the same letter together, you can say **double**: *book* is 'B, double O, K'.",
+          "i18n": {
+            "id": {
+              "text": "Untuk mengeja, sebutkan **nama tiap huruf** berurutan dengan jeda singkat. Untuk dua huruf sama yang berdampingan, boleh pakai **double**: *book* dieja 'B, double O, K'."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "How do you spell 'dog'? — D-O-G.",
+              "id": "Bagaimana mengeja 'dog'? — D-O-G."
+            },
+            {
+              "en": "My name is Sari: S-A-R-I.",
+              "id": "Nama saya Sari: S-A-R-I."
+            },
+            {
+              "en": "'Coffee' is C-O-double F-double E.",
+              "id": "'Coffee' dieja C-O-double F-double E."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Someone says: 'B, double E'. Which word is it?",
+          "options": [
+            "bee",
+            "be",
+            "bed"
+          ],
+          "answer": 0,
+          "explain": "B + double E = B-E-E = bee.",
+          "i18n": {
+            "id": {
+              "explain": "B + double E = B-E-E = bee (lebah)."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengeja dengan suara"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Where you will use it",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Spelling aloud is a daily skill: giving your name at a hotel, your **email address** at work, or a code on the phone. On calls people often add a word for each letter so it isn't misheard: 'S as in Sugar'. Pilots and call centres use a fixed list called the **NATO alphabet** (Alfa, Bravo, Charlie…).",
+          "i18n": {
+            "id": {
+              "text": "Mengeja dengan suara dipakai setiap hari: menyebut nama di hotel, **alamat email** di kantor, atau kode lewat telepon. Saat menelepon orang sering menambah satu kata per huruf supaya tidak salah dengar: 'S as in Sugar'. Pilot dan call center memakai daftar tetap bernama **alfabet NATO** (Alfa, Bravo, Charlie…)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "My email is rina at mail dot com: R-I-N-A.",
+              "id": "Email saya rina@mail.com: R-I-N-A."
+            },
+            {
+              "en": "That's B as in Bravo, not D as in Delta.",
+              "id": "Itu B seperti Bravo, bukan D seperti Delta."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Practise with your own name and email address until you can say them without stopping.",
+          "i18n": {
+            "id": {
+              "text": "Latih dengan nama dan alamat email-mu sendiri sampai bisa mengucapkannya tanpa tersendat."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Di mana kamu akan memakainya"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why does the letter I sound like 'eye'?",
+    "How do I spell a word with double letters?",
+    "Which letters are vowels?",
+    "How do people spell names on the phone?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "Alphabet Song (British 'zed' version)",
+      "url": "https://www.youtube.com/watch?v=wlbQLBhLk_4",
+      "source": "Natural English",
+      "note": "Hear every letter name; British English says 'zed' for Z.",
+      "i18n": {
+        "id": {
+          "note": "Dengarkan semua nama huruf; bahasa Inggris British menyebut Z sebagai 'zed'."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "NATO phonetic alphabet",
+      "url": "https://en.wikipedia.org/wiki/NATO_phonetic_alphabet",
+      "source": "Wikipedia",
+      "note": "The word list used on the phone, in aviation and in call centres to spell clearly.",
+      "i18n": {
+        "id": {
+          "note": "Daftar kata yang dipakai di telepon, penerbangan dan call center supaya ejaan jelas."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "English alphabet",
+      "url": "https://en.wikipedia.org/wiki/English_alphabet",
+      "source": "Wikipedia",
+      "note": "Letter names with pronunciation for each of the 26 letters.",
+      "i18n": {
+        "id": {
+          "note": "Nama dan cara baca ke-26 huruf."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Letter name of I",
+      "back": "'eye' (dibaca ai)"
+    },
+    {
+      "front": "Letter name of E",
+      "back": "'ee' (dibaca i)"
+    },
+    {
+      "front": "Letter name of G",
+      "back": "'jee' (dibaca ji)"
+    },
+    {
+      "front": "Letter name of J",
+      "back": "'jay' (dibaca jei)"
+    },
+    {
+      "front": "The five vowels",
+      "back": "A, E, I, O, U"
+    },
+    {
+      "front": "Spell 'book' aloud",
+      "back": "B, double O, K"
+    }
+  ],
   "i18n": {
     "id": {
-      "intro": "Hai, selamat datang di FluentPath! Di pelajaran pertama ini kita akan belajar nama huruf dalam bahasa Inggris, mengenali huruf vokal, dan mengeja kata dengan lantang — berguna setiap kali kamu menyebut nama atau email. Pemanasan: coba tulis nama depanmu huruf demi huruf, dengan tanda strip di antara hurufnya. (Contoh: B-U-D-I)"
+      "intro": "Hai, selamat datang di FluentPath! Di pelajaran pertama ini kita akan belajar nama huruf dalam bahasa Inggris, mengenali huruf vokal, dan mengeja kata dengan lantang — berguna setiap kali kamu menyebut nama atau email. Pemanasan: coba tulis nama depanmu huruf demi huruf, dengan tanda strip di antara hurufnya. (Contoh: B-U-D-I)",
+      "suggestedQuestions": [
+        "Kenapa huruf I dibaca seperti 'eye'?",
+        "Bagaimana mengeja kata dengan huruf dobel?",
+        "Huruf mana saja yang vokal?",
+        "Bagaimana orang mengeja nama lewat telepon?"
+      ]
     }
   }
 }

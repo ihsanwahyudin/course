@@ -107,9 +107,12 @@ type Lesson struct {
 	GuidedPractice    []PracticePrompt `json:"guidedPractice"`
 	IndependentPrompt []PracticePrompt `json:"independentPractice"`
 	Assessment        []AssessmentItem `json:"assessment"`
-	I18n              map[string]struct {
-		Intro string `json:"intro"`
-	} `json:"i18n,omitempty"`
+	// Reading material shown on the lesson page, with the AI helper beside it.
+	Material           []Section             `json:"material"`
+	SuggestedQuestions []string              `json:"suggestedQuestions,omitempty"`
+	Resources          []Resource            `json:"resources,omitempty"`
+	Flashcards         []Flashcard           `json:"flashcards,omitempty"`
+	I18n               map[string]LessonText `json:"i18n,omitempty"`
 }
 
 // IntroIn returns the lesson's opening message in a language (English fallback).
@@ -367,6 +370,7 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 	errs = append(errs, validateLessons(c)...)
 	errs = append(errs, validateTranslations(c)...)
 	errs = append(errs, validateOnboarding(c)...)
+	errs = append(errs, validateMaterial(c)...)
 
 	if len(errs) == 0 {
 		sorted, err := topoSort(ordered, c.byID)
