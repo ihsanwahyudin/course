@@ -1,6 +1,6 @@
 """HTTP driver for scripts/e2e.sh. Uses only the standard library.
 
-  e2e_driver.py learn  <api> <course_dir>   sign up, master every ready lesson
+  e2e_driver.py learn  <api> <course_dir>   sign up, onboard, master every ready lesson
   e2e_driver.py verify <api> <course_dir>   log in again, check progress survived
 """
 import glob
@@ -116,6 +116,28 @@ def drive(api, node_id, lesson):
     print(f"  ✓ {node_id}: {r['attempt']['score']}/100, unlocked {unlocked or '—'}")
 
 
+def onboard(api):
+    status, p = call(api, "GET", f"/api/v1/courses/{COURSE}/profile")
+    if status != 200 or p["completed"] or not p["questions"]:
+        fail(f"fresh profile: {status} {p}")
+    status, body = call(api, "PUT", f"/api/v1/courses/{COURSE}/profile", {"answers": {"goal": "moon"}})
+    if status != 400 or body["error"]["code"] != "invalid_profile":
+        fail(f"bad onboarding answer should be rejected: {status} {body}")
+    status, rm = call(api, "PUT", f"/api/v1/courses/{COURSE}/profile",
+                      {"answers": {"goal": "tech", "background": "other", "background_text": "Data analyst"}})
+    if status != 200 or not rm["enrolled"] or not rm["profile"]["completed"]:
+        fail(f"save profile: {status} {rm}")
+    if rm["enrollment"]["targetLevel"] != "B1":
+        fail(f"tech goal should target B1, got {rm['enrollment']['targetLevel']}")
+    rec = {n["id"] for n in rm["nodes"] if n["recommended"]}
+    if "a1-simple-present" not in rec or "a0-alphabet-sounds" in rec:
+        fail(f"recommended nodes wrong: {sorted(rec)}")
+    status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": "a0-alphabet-sounds"})
+    if status != 200 or "technical English" not in s["messages"][0]["content"]:
+        fail(f"lesson intro should mention the goal: {status} {s.get('messages', [{}])[0]}")
+    print(f"  ✓ onboarding: goal tech → target B1, {len(rec)} recommended skills, personal intro")
+
+
 def learn(api, curriculum):
     # Anonymous visitors can browse but not learn.
     status, _ = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap")
@@ -126,6 +148,7 @@ def learn(api, curriculum):
         fail(f"anonymous start should be 401, got {status}")
     sign_in(api, EMAIL_B, register=True)
     sign_in(api, EMAIL_A, register=True)
+    onboard(api)
     ls = lessons(curriculum)
     for _ in range(len(ls) + 1):
         statuses, _ = roadmap_statuses(api)

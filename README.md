@@ -105,6 +105,7 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 | GET | `/api/v1/courses/{course}/roadmap` | optional | Roadmap with your statuses (a new learner's when anonymous) |
 | GET | `/api/v1/courses/{course}/nodes/{nodeId}` | optional | Node detail, objectives, prerequisites, `canStart` |
 | POST | `/api/v1/courses/{course}/enroll` | required | Add the course to your dashboard (idempotent) |
+| GET · PUT | `/api/v1/courses/{course}/profile` | required | Onboarding questions and your answers · save `{answers, targetLevel?}` or `{skip: true}` (enrolls) |
 | GET | `/api/v1/courses/{course}/progress` | required | Mastered skills, attempts, open lessons in that course |
 | GET | `/api/v1/dashboard` | required | Courses, streak, activity, open lessons, recent scores |
 | POST | `/api/v1/sessions` | required | Start or resume a lesson `{course, nodeId}` (auto-enrolls) |
@@ -112,7 +113,7 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 | POST | `/api/v1/sessions/{id}/messages` | required | Learner reply → tutor reply `{content}` |
 | POST | `/api/v1/sessions/{id}/assessment` | required | Submit `{answers:[{itemId,answer}]}` |
 
-Errors have the shape `{"error":{"code","message","retryable"}}`. Request bodies are capped at 32 KB and messages at 2,000 characters. POSTs must be JSON, which together with SameSite=Lax cookies blocks cross-site form CSRF. Rate limits are per IP: `RATE_LIMIT_PER_MIN`, `AI_RATE_LIMIT_PER_MIN` and `AUTH_RATE_LIMIT_PER_MIN`.
+Errors have the shape `{"error":{"code","message","retryable"}}`. Request bodies are capped at 32 KB and messages at 2,000 characters. POST/PUT/PATCH bodies must be JSON, which together with SameSite=Lax cookies blocks cross-site form CSRF. Rate limits are per IP: `RATE_LIMIT_PER_MIN`, `AI_RATE_LIMIT_PER_MIN` and `AUTH_RATE_LIMIT_PER_MIN`.
 
 ### Accounts and security
 
@@ -148,6 +149,33 @@ The whole app works in **English and Bahasa Indonesia**.
 - **UI text:** lives in `apps/mobile/src/i18n/en.ts` and `id.ts`. `id.ts` must have exactly the same keys as `en.ts`, so `tsc` fails if one is missing. API errors are translated from their `code`.
 - **Course content:** the client sends `Accept-Language`, and the API returns course titles, levels, and roadmap node titles/summaries/objectives in that language. Translations live in `i18n` blocks inside the course files. A course that lists `"languages": ["en","id"]` must be fully translated, or the API refuses to start.
 - **Tutor:** follows the language a lesson started in (`learning_sessions.locale`). With ID it explains and gives feedback mainly in Indonesian, while exercises and answers stay in English (`tutor.languagePolicy` in `course.json`). Switching the UI language mid-lesson doesn't change that lesson's tutor language.
+
+## Personalization (onboarding)
+
+Every learner gets the same lessons, objectives, assessments and pass mark. Onboarding only changes how the tutor teaches and which skills the roadmap highlights.
+
+- **Questions:**
+  - Each course defines its own in the `onboarding` block of `course.json`.
+  - English asks about goal (required), background (with a free-text "something else"), self-reported level and learning style.
+  - Each option carries:
+    - Indonesian text;
+    - an optional `targetLevel` (goal options);
+    - an author-written `tutorHint` for the AI;
+    - an optional `introLine` added to lesson intros.
+- **Flow:**
+  - "Start this course" opens `/onboarding/<course>`, which also enrols the learner.
+  - Learners who enrolled earlier see a "Personalise your learning" card on the course page.
+  - Skipping is recorded, so the card doesn't keep coming back.
+  - Answers can be edited later from the course page.
+- **Storage:** answers live on the enrollment (`enrollments.profile`, `onboarded_at`). They are read through `GET` and written through `PUT /api/v1/courses/{course}/profile`, and validated against the course's questions. Free text is capped at 80 characters and flattened to one line.
+- **Roadmap:**
+  - The goal sets the target level, and the learner can change it on the summary step.
+  - Nodes list the goals they matter for in `focus` (in the level files). Matching nodes get a **For your goal** badge.
+  - The next-lesson suggestion prefers them over other available nodes. Prerequisites still apply.
+- **Tutor:**
+  - The tutor prompt gains an "About the learner" section with the chosen options' hints. The learner's free text is quoted there as data, not instructions.
+  - The evaluator gets the goal only to phrase feedback; scoring rules don't change.
+  - The mock tutor shows personalization only through the intro line. The full effect needs the OpenAI provider.
 
 ## Courses
 

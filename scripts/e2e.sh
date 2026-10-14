@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # End-to-end check of the learning loop over HTTP, against a throwaway
 # database and the deterministic mock tutor:
-#   sign up → roadmap → lesson chat → failing attempt (no unlock) → review →
+#   sign up → onboarding profile → roadmap → lesson chat → failing attempt (no unlock) → review →
 #   passing attempt → unlock → second user sees none of it → API restart →
 #   log in again → progress still there.
 # Requires: docker compose db running (infra/docker-compose.yml), Go, python3.
