@@ -259,3 +259,35 @@ func TestLocalizedResponsesAndSavedLocale(t *testing.T) {
 		t.Fatalf("new saved locale should apply: %v", body["courses"])
 	}
 }
+
+func TestProfileEndpoints(t *testing.T) {
+	h, _ := dbRouter(t)
+	if rec, body := do(h, call{method: "GET", path: "/api/v1/courses/english/profile"}); rec.Code != 401 {
+		t.Fatalf("profile needs login: %d %v", rec.Code, body)
+	}
+	if rec, _ := do(h, call{method: "PUT", path: "/api/v1/courses/english/profile", body: `{"answers":{"goal":"travel"}}`}); rec.Code != 401 {
+		t.Fatalf("saving a profile needs login: %d", rec.Code)
+	}
+	rec, _ := do(h, call{method: "POST", path: "/api/v1/auth/register", body: `{"email":"p@example.com","password":"longenough","displayName":"P"}`})
+	c := sessionCookie(rec)
+
+	rec, body := do(h, call{method: "GET", path: "/api/v1/courses/english/profile", cookie: c})
+	if rec.Code != 200 || body["completed"] != false || len(body["questions"].([]any)) == 0 {
+		t.Fatalf("get profile: %d %v", rec.Code, body)
+	}
+	if rec, body = do(h, call{method: "PUT", path: "/api/v1/courses/english/profile", body: `{"answers":{"goal":"moon"}}`, cookie: c}); rec.Code != 400 || errCode(body) != "invalid_profile" {
+		t.Fatalf("bad answer: %d %v", rec.Code, body)
+	}
+	if rec, body = do(h, call{method: "PUT", path: "/api/v1/courses/english/profile", body: `{"answers":{"goal":"travel"},"extra":1}`, cookie: c}); rec.Code != 400 {
+		t.Fatalf("unknown fields are rejected: %d %v", rec.Code, body)
+	}
+	rec, body = do(h, call{method: "PUT", path: "/api/v1/courses/english/profile", body: `{"answers":{"goal":"travel"}}`, cookie: c})
+	if rec.Code != 200 || body["enrolled"] != true {
+		t.Fatalf("save profile: %d %v", rec.Code, body)
+	}
+	profile := body["profile"].(map[string]any)
+	enrollment := body["enrollment"].(map[string]any)
+	if profile["completed"] != true || profile["goal"].(map[string]any)["id"] != "travel" || enrollment["targetLevel"] != "A2" {
+		t.Fatalf("profile not applied: %v %v", profile, enrollment)
+	}
+}

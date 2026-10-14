@@ -36,6 +36,10 @@ type TutorInput struct {
 	Messages           []ChatMessage
 	MasteredNodeTitles []string
 	ObservedWeaknesses []string
+	// LearnerProfile holds author-written hints chosen by the learner's
+	// onboarding answers; LearnerNotes is what they typed themselves (data).
+	LearnerProfile []string
+	LearnerNotes   []string
 }
 
 type EvalInput struct {
@@ -46,6 +50,9 @@ type EvalInput struct {
 	Node           *curriculum.Node
 	Items          []curriculum.AssessmentItem
 	Answers        map[string]string // item id -> learner answer
+	// GoalHint is the learner's goal, for relating feedback to it. It must
+	// not affect scores.
+	GoalHint string
 }
 
 type Provider interface {

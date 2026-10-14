@@ -64,6 +64,8 @@ type NodeView struct {
 	Status       progress.Status `json:"status"`
 	MasteryScore *int            `json:"masteryScore"`
 	SuccessorIDs []string        `json:"successorIds"`
+	// Recommended: tagged for the learner's onboarding goal.
+	Recommended bool `json:"recommended"`
 }
 
 type LevelSummary struct {
@@ -93,6 +95,22 @@ type CourseProgress struct {
 	TargetLevel    string    `json:"targetLevel"`
 	NextNode       *NodeView `json:"nextNode"`
 	LastActivityAt time.Time `json:"lastActivityAt"`
+	Goal           *Choice   `json:"goal"`
+}
+
+// Choice is an onboarding answer as shown to the learner.
+type Choice struct {
+	ID    string `json:"id"`
+	Label string `json:"label"`
+}
+
+// ProfileSummary tells the client whether to offer onboarding and what the
+// learner chose.
+type ProfileSummary struct {
+	Available  bool    `json:"available"` // the course has onboarding questions
+	Completed  bool    `json:"completed"` // answered or skipped
+	Goal       *Choice `json:"goal"`
+	Background *Choice `json:"background"`
 }
 
 // CourseCard is a course as shown in the catalog and on the dashboard.
@@ -126,6 +144,7 @@ type RoadmapView struct {
 	Nodes         []NodeView     `json:"nodes"`
 	NextNodeID    *string        `json:"nextNodeId"`
 	Summary       Summary        `json:"summary"`
+	Profile       ProfileSummary `json:"profile"`
 }
 
 // state is one user's view of one course. userID "" is an anonymous
@@ -136,6 +155,7 @@ type state struct {
 	userID     string
 	enrolled   bool
 	enrollment storage.Enrollment
+	profile    curriculum.Profile
 	stored     map[string]progress.Stored
 	statuses   map[string]progress.Status
 }
@@ -149,7 +169,7 @@ func (s *Service) load(ctx context.Context, db storage.DB, userID string, cur *c
 		e, err := storage.GetEnrollment(ctx, db, userID, cur.Slug)
 		switch {
 		case err == nil:
-			st.enrolled, st.enrollment = true, e
+			st.enrolled, st.enrollment, st.profile = true, e, e.Profile
 		case !errors.Is(err, storage.ErrNotFound):
 			return st, err
 		}
@@ -171,7 +191,40 @@ func nodeView(st state, n *curriculum.Node) NodeView {
 	if succ == nil {
 		succ = []string{}
 	}
-	return NodeView{Node: n, Status: st.statuses[n.ID], MasteryScore: st.stored[n.ID].MasteryScore, SuccessorIDs: succ}
+	return NodeView{Node: n, Status: st.statuses[n.ID], MasteryScore: st.stored[n.ID].MasteryScore, SuccessorIDs: succ,
+		Recommended: st.cur.Recommended(st.profile, n)}
+}
+
+// prefer favours nodes tagged for the learner's goal when suggesting what
+// to learn next (nil without a goal).
+func (st state) prefer() func(*curriculum.Node) bool {
+	if st.profile[curriculum.GoalQuestion] == "" {
+		return nil
+	}
+	return func(n *curriculum.Node) bool { return st.cur.Recommended(st.profile, n) }
+}
+
+// choice is the learner-facing label of an onboarding answer; a free-text
+// answer shows the learner's own words.
+func (st state) choice(qid string) *Choice {
+	o := st.cur.Option(st.profile, qid)
+	if o == nil {
+		return nil
+	}
+	label := st.cur.LocalOption(o, st.lang).Label
+	if text := st.profile[curriculum.FreeTextKey(qid)]; o.FreeText && text != "" {
+		label = text
+	}
+	return &Choice{ID: o.ID, Label: label}
+}
+
+func profileSummary(st state) ProfileSummary {
+	return ProfileSummary{
+		Available:  st.cur.Onboarding != nil,
+		Completed:  st.enrollment.OnboardedAt != nil,
+		Goal:       st.choice(curriculum.GoalQuestion),
+		Background: st.choice("background"),
+	}
 }
 
 func summary(st state) Summary {
@@ -224,9 +277,9 @@ func courseCard(st state) CourseCard {
 		p := &CourseProgress{
 			Percent: sum.Percent, Mastered: sum.MasteredNodes, TargetNodes: sum.TargetNodes,
 			CurrentLevel: st.enrollment.CurrentLevel, TargetLevel: st.enrollment.TargetLevel,
-			LastActivityAt: st.enrollment.LastActivityAt,
+			LastActivityAt: st.enrollment.LastActivityAt, Goal: st.choice(curriculum.GoalQuestion),
 		}
-		if next := progress.NextSuggested(c, st.statuses); next != nil {
+		if next := progress.NextSuggested(c, st.statuses, st.prefer()); next != nil {
 			nv := nodeView(st, next)
 			p.NextNode = &nv
 		}
@@ -260,12 +313,12 @@ func (s *Service) Roadmap(ctx context.Context, userID, courseSlug string) (Roadm
 	v := RoadmapView{
 		Course: courseCard(st), Authenticated: userID != "", Enrolled: st.enrolled,
 		Enrollment: EnrollmentView{st.enrollment.CurrentLevel, st.enrollment.TargetLevel},
-		Version:    cur.Version, Summary: summary(st),
+		Version:    cur.Version, Summary: summary(st), Profile: profileSummary(st),
 	}
 	for _, n := range cur.Nodes {
 		v.Nodes = append(v.Nodes, nodeView(st, n))
 	}
-	if next := progress.NextSuggested(cur, st.statuses); next != nil {
+	if next := progress.NextSuggested(cur, st.statuses, st.prefer()); next != nil {
 		v.NextNodeID = &next.ID
 	}
 	return v, nil
@@ -460,7 +513,7 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 			if err != nil {
 				return err
 			}
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", lesson.IntroIn(locale), sess.Phase, map[string]any{"kind": "intro"}); err != nil {
+			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", intro(st, lesson, locale), sess.Phase, map[string]any{"kind": "intro"}); err != nil {
 				return err
 			}
 			if err := storage.MarkInProgress(ctx, tx, userID, cur.Slug, n.ID); err != nil {
@@ -537,6 +590,7 @@ func (s *Service) SendMessage(ctx context.Context, userID, sessionID, content st
 		Node: cur.LocalNode(n.ID, sess.Locale), Lesson: lesson, Phase: phase, NextPhase: tutor.NextOf(phase),
 		TurnsInPhase: sess.PhaseTurns + 1,
 	}
+	in.LearnerProfile, in.LearnerNotes = cur.TutorHints(st.profile)
 	for _, m := range history {
 		if m.Role == "user" || m.Role == "assistant" {
 			in.Messages = append(in.Messages, ai.ChatMessage{Role: m.Role, Content: m.Content})
@@ -662,6 +716,7 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 	raw, err := s.AI.Evaluate(ctx, ai.EvalInput{
 		Policy: cur.Tutor.EvaluatorPolicy, Locale: sess.Locale, LanguagePolicy: cur.Tutor.LanguagePolicy[sess.Locale],
 		TargetLevel: st.enrollment.TargetLevel, Node: cur.LocalNode(n.ID, sess.Locale), Items: lesson.Assessment, Answers: clean,
+		GoalHint: goalHint(cur, st.profile),
 	})
 	if err != nil {
 		slog.Warn("evaluator call failed", "provider", s.AI.Name(), "session", sess.ID, "err", err)

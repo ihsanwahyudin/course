@@ -215,13 +215,17 @@ type Enrollment struct {
 	TargetLevel    string    `json:"targetLevel"`
 	EnrolledAt     time.Time `json:"enrolledAt"`
 	LastActivityAt time.Time `json:"lastActivityAt"`
+	// Onboarding answers (question id -> option id); see curriculum.Profile.
+	Profile        map[string]string `json:"profile"`
+	ProfileVersion int               `json:"profileVersion"`
+	OnboardedAt    *time.Time        `json:"onboardedAt"` // nil until answered or skipped
 }
 
-const enrollmentCols = `course_slug, current_level, target_level, enrolled_at, last_activity_at`
+const enrollmentCols = `course_slug, current_level, target_level, enrolled_at, last_activity_at, profile, profile_version, onboarded_at`
 
 func scanEnrollment(row pgx.Row) (Enrollment, error) {
 	var e Enrollment
-	err := row.Scan(&e.CourseSlug, &e.CurrentLevel, &e.TargetLevel, &e.EnrolledAt, &e.LastActivityAt)
+	err := row.Scan(&e.CourseSlug, &e.CurrentLevel, &e.TargetLevel, &e.EnrolledAt, &e.LastActivityAt, &e.Profile, &e.ProfileVersion, &e.OnboardedAt)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return e, ErrNotFound
 	}
@@ -251,6 +255,17 @@ func ListEnrollments(ctx context.Context, db DB, userID string) ([]Enrollment, e
 
 func SetEnrollmentLevel(ctx context.Context, db DB, userID, course, level string) error {
 	_, err := db.Exec(ctx, `UPDATE enrollments SET current_level=$3 WHERE user_id=$1 AND course_slug=$2`, userID, course, level)
+	return err
+}
+
+// SaveProfile stores onboarding answers (an empty profile records a skip)
+// and the target level they imply, marking onboarding done.
+func SaveProfile(ctx context.Context, db DB, userID, course string, profile map[string]string, version int, targetLevel string) error {
+	if profile == nil {
+		profile = map[string]string{}
+	}
+	_, err := db.Exec(ctx, `UPDATE enrollments SET profile=$3, profile_version=$4, target_level=$5, onboarded_at=NOW()
+		WHERE user_id=$1 AND course_slug=$2`, userID, course, profile, version, targetLevel)
 	return err
 }
 

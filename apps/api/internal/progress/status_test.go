@@ -27,7 +27,7 @@ func TestDeriveFreshLearner(t *testing.T) {
 	if st["c2-stylistic-nuance"] != StatusComingSoon {
 		t.Errorf("unbuilt node should be coming soon, got %s", st["c2-stylistic-nuance"])
 	}
-	if n := NextSuggested(c, st); n == nil || n.ID != "a0-alphabet-sounds" {
+	if n := NextSuggested(c, st, nil); n == nil || n.ID != "a0-alphabet-sounds" {
 		t.Errorf("next suggested = %v", n)
 	}
 }
@@ -61,5 +61,25 @@ func TestCurrentLevel(t *testing.T) {
 	}
 	if lvl := CurrentLevel(c, Derive(c, stored)); lvl != "A1" {
 		t.Errorf("current level = %s, want A1", lvl)
+	}
+}
+
+func TestNextSuggestedPrefersGoalNodes(t *testing.T) {
+	c := testCurriculum(t)
+	st := Derive(c, map[string]Stored{"a0-alphabet-sounds": {Status: "mastered"}})
+	vocab := func(n *curriculum.Node) bool { return n.ID == "a0-common-vocabulary" }
+	if n := NextSuggested(c, st, nil); n == nil || n.ID != "a0-pronouns" {
+		t.Fatalf("without a preference, curriculum order: got %v", n)
+	}
+	if n := NextSuggested(c, st, vocab); n == nil || n.ID != "a0-common-vocabulary" {
+		t.Fatalf("preferred available node first: got %v", n)
+	}
+	locked := func(n *curriculum.Node) bool { return n.ID == "a1-to-be" }
+	if n := NextSuggested(c, st, locked); n == nil || n.ID != "a0-pronouns" {
+		t.Fatalf("a preferred but locked node must not be suggested: got %v", n)
+	}
+	st = Derive(c, map[string]Stored{"a0-alphabet-sounds": {Status: "mastered"}, "a0-pronouns": {Status: "in_progress"}})
+	if n := NextSuggested(c, st, vocab); n == nil || n.ID != "a0-pronouns" {
+		t.Fatalf("an in-progress node still comes first: got %v", n)
 	}
 }

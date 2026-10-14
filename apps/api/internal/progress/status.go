@@ -56,22 +56,33 @@ func CanStart(st Status) bool {
 }
 
 // NextSuggested picks the first in-progress node, else the first available
-// node, in curriculum (topological) order.
-func NextSuggested(c *curriculum.Curriculum, statuses map[string]Status) *curriculum.Node {
-	for _, want := range []Status{StatusInProgress, StatusAvailable} {
+// node that prefer accepts (e.g. one tagged for the learner's goal), else the
+// first available node, in curriculum (topological) order. prefer may be nil.
+// Only startable nodes are ever suggested, so prerequisites still hold.
+func NextSuggested(c *curriculum.Curriculum, statuses map[string]Status, prefer func(*curriculum.Node) bool) *curriculum.Node {
+	pick := func(want Status, ok func(*curriculum.Node) bool) *curriculum.Node {
 		for _, n := range c.Nodes {
-			if statuses[n.ID] == want {
+			if statuses[n.ID] == want && (ok == nil || ok(n)) {
 				return n
 			}
 		}
+		return nil
 	}
-	return nil
+	if n := pick(StatusInProgress, nil); n != nil {
+		return n
+	}
+	if prefer != nil {
+		if n := pick(StatusAvailable, prefer); n != nil {
+			return n
+		}
+	}
+	return pick(StatusAvailable, nil)
 }
 
 // CurrentLevel is the level of the suggested next node; if nothing is left to
 // start, it is the highest level with a mastered node (or the first level).
 func CurrentLevel(c *curriculum.Curriculum, statuses map[string]Status) string {
-	if n := NextSuggested(c, statuses); n != nil {
+	if n := NextSuggested(c, statuses, nil); n != nil {
 		return n.Level
 	}
 	best := c.LevelIDs[0]

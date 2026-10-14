@@ -80,7 +80,7 @@ func (s *Server) Router() http.Handler {
 	r.Use(middleware.Recoverer)
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   s.CORSOrigins,
-		AllowedMethods:   []string{"GET", "POST", "PATCH", "OPTIONS"},
+		AllowedMethods:   []string{"GET", "POST", "PUT", "PATCH", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type", "Authorization", "Accept-Language", nativeClientHeader},
 		AllowCredentials: true,
 		MaxAge:           600,
@@ -113,6 +113,8 @@ func (s *Server) Router() http.Handler {
 		r.Group(func(r chi.Router) {
 			r.Use(requireUser)
 			r.Post("/courses/{course}/enroll", s.enroll)
+			r.Get("/courses/{course}/profile", s.getProfile)
+			r.Put("/courses/{course}/profile", s.saveProfile)
 			r.Get("/courses/{course}/progress", s.courseProgress)
 			r.Get("/dashboard", s.dashboard)
 			r.Post("/sessions", s.startSession)
@@ -397,6 +399,28 @@ func (s *Server) enroll(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	v, err := s.Svc.Enroll(r.Context(), userID(r), course)
+	respond(w, v, err)
+}
+
+func (s *Server) getProfile(w http.ResponseWriter, r *http.Request) {
+	course, ok := courseParam(w, r)
+	if !ok {
+		return
+	}
+	v, err := s.Svc.GetProfile(r.Context(), userID(r), course)
+	respond(w, v, err)
+}
+
+func (s *Server) saveProfile(w http.ResponseWriter, r *http.Request) {
+	course, ok := courseParam(w, r)
+	if !ok {
+		return
+	}
+	var body learning.ProfileInput
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.SaveProfile(r.Context(), userID(r), course, body)
 	respond(w, v, err)
 }
 
