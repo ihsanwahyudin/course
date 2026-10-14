@@ -12,6 +12,7 @@ import (
 	"math"
 	"sort"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/jackc/pgx/v5"
@@ -48,6 +49,14 @@ type Service struct {
 	DailyTokens int
 	// SpeechCacheDir stores synthesised audio (default: a temp folder).
 	SpeechCacheDir string
+	// WarmSpeech makes the audio for a lesson's words and examples as soon
+	// as its plan is written, so "listen" plays without waiting. Only useful
+	// with a provider that can speak.
+	WarmSpeech bool
+
+	speechMu       sync.Mutex
+	speechInflight map[string]*speechCall
+	warm           sync.WaitGroup // background speech warming (tests wait on it)
 }
 
 func (s *Service) course(slug string) (*curriculum.Curriculum, error) {

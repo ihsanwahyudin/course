@@ -65,7 +65,9 @@ func run() error {
 	go cleanExpiredSessions(ctx, store)
 
 	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta"),
-		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000)}
+		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000),
+		// Pre-make lesson audio when the provider has a voice (WARM_SPEECH=off to disable).
+		WarmSpeech: provider.Name() != "mock" && env("WARM_SPEECH", "on") != "off"}
 	srv := &apihttp.Server{
 		Svc: svc, Auth: &auth.Service{Store: store}, Catalog: catalog,
 		CORSOrigins:   strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),

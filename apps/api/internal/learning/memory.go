@@ -10,6 +10,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
+	"time"
 	"unicode/utf8"
 
 	"fluentpath/api/internal/ai"
@@ -203,45 +205,159 @@ func (s *Service) DeleteNote(ctx context.Context, userID, id string) error {
 const (
 	maxSpeechRunes = 300
 	MaxAudioBytes  = 2 << 20
+	// The provider's speech endpoint is usually quick but sometimes takes
+	// tens of seconds; a call is allowed this long to finish and be cached.
+	speechTimeout = 90 * time.Second
+	warmMaxTexts  = 40
+	warmParallel  = 3
 )
 
 var errNoAudio = errf(501, "speech_unavailable", false, "Speech isn't available on this server; the app will use the device's voice.")
 
-// Speech returns MP3 audio for an English sentence, cached on disk so each
-// sentence is only synthesised once.
-func (s *Service) Speech(ctx context.Context, userID, text string) ([]byte, error) {
-	text = strings.Join(strings.Fields(text), " ")
-	if text == "" || utf8.RuneCountInString(text) > maxSpeechRunes {
-		return nil, errf(400, "invalid_text", false, "Text must be 1–%d characters.", maxSpeechRunes)
-	}
+type speechCall struct {
+	done  chan struct{}
+	audio []byte
+	err   error
+}
+
+func speechText(text string) string { return strings.Join(strings.Fields(text), " ") }
+
+func (s *Service) speechPath(text string) string {
 	h := sha256.Sum256([]byte(s.AI.Name() + "\x00" + text))
 	dir := s.SpeechCacheDir
 	if dir == "" {
 		dir = filepath.Join(os.TempDir(), "fluentpath-tts")
 	}
-	path := filepath.Join(dir, hex.EncodeToString(h[:])+".mp3")
+	return filepath.Join(dir, hex.EncodeToString(h[:])+".mp3")
+}
+
+// Speech returns MP3 audio for an English sentence, cached on disk so each
+// sentence is only synthesised once.
+func (s *Service) Speech(ctx context.Context, userID, text string) ([]byte, error) {
+	text = speechText(text)
+	if text == "" || utf8.RuneCountInString(text) > maxSpeechRunes {
+		return nil, errf(400, "invalid_text", false, "Text must be 1–%d characters.", maxSpeechRunes)
+	}
+	path := s.speechPath(text)
 	if b, err := os.ReadFile(path); err == nil {
 		return b, nil
 	}
 	if err := s.checkQuota(ctx, userID); err != nil {
 		return nil, err
 	}
-	audio, err := s.AI.Speech(ctx, text)
-	if errors.Is(err, ai.ErrNoAudio) {
-		return nil, errNoAudio
-	}
-	if err != nil {
-		slog.Warn("speech failed", "err", err)
+	c := s.synthesize(ctx, userID, text, path)
+	select {
+	case <-c.done:
+	case <-ctx.Done():
+		// The audio still gets made and cached for next time.
 		return nil, errf(502, "speech_failed", true, "Couldn't make the audio right now.")
 	}
-	// Count speech roughly as output tokens (about 4 characters per token).
-	s.recordUsage(ctx, userID, "speech", ai.Usage{Output: utf8.RuneCountInString(text)/4 + 1})
-	if err := os.MkdirAll(dir, 0o755); err == nil {
-		if err := os.WriteFile(path, audio, 0o644); err != nil {
-			slog.Warn("cache speech", "err", err)
+	if errors.Is(c.err, ai.ErrNoAudio) {
+		return nil, errNoAudio
+	}
+	if c.err != nil {
+		slog.Warn("speech failed", "err", c.err)
+		return nil, errf(502, "speech_failed", true, "Couldn't make the audio right now.")
+	}
+	return c.audio, nil
+}
+
+// synthesize starts (or joins) the provider call for one sentence. Concurrent
+// requests share one call, and the call finishes and is cached even if the
+// requester goes away.
+func (s *Service) synthesize(ctx context.Context, userID, text, path string) *speechCall {
+	s.speechMu.Lock()
+	defer s.speechMu.Unlock()
+	if c, ok := s.speechInflight[path]; ok {
+		return c
+	}
+	if s.speechInflight == nil {
+		s.speechInflight = map[string]*speechCall{}
+	}
+	c := &speechCall{done: make(chan struct{})}
+	s.speechInflight[path] = c
+	go func() {
+		defer func() {
+			s.speechMu.Lock()
+			delete(s.speechInflight, path)
+			s.speechMu.Unlock()
+			close(c.done)
+		}()
+		cctx, cancel := context.WithTimeout(context.WithoutCancel(ctx), speechTimeout)
+		defer cancel()
+		c.audio, c.err = s.AI.Speech(cctx, text)
+		if c.err != nil {
+			return
+		}
+		// Count speech roughly as output tokens (about 4 characters per token).
+		s.recordUsage(cctx, userID, "speech", ai.Usage{Output: utf8.RuneCountInString(text)/4 + 1})
+		if err := os.MkdirAll(filepath.Dir(path), 0o755); err == nil {
+			if err := os.WriteFile(path, c.audio, 0o644); err != nil {
+				slog.Warn("cache speech", "err", err)
+			}
+		}
+	}()
+	return c
+}
+
+// speechTexts lists the English a lesson plan reads aloud: word tiles,
+// example sentences and cheat-sheet examples.
+func speechTexts(p tutor.Plan) []string {
+	seen := map[string]bool{}
+	var out []string
+	add := func(t string) {
+		t = speechText(t)
+		if t == "" || seen[t] || utf8.RuneCountInString(t) > maxSpeechRunes || len(out) >= warmMaxTexts {
+			return
+		}
+		seen[t] = true
+		out = append(out, t)
+	}
+	for _, st := range p.Steps {
+		for _, x := range st.Pairs {
+			add(x.EN)
+		}
+		for _, x := range st.Examples {
+			add(x.EN)
+		}
+		if st.Artifact != nil {
+			for _, x := range st.Artifact.Examples {
+				add(x.EN)
+			}
 		}
 	}
-	return audio, nil
+	return out
+}
+
+// warmSpeech makes a new plan's audio in the background.
+func (s *Service) warmSpeech(userID string, p tutor.Plan) {
+	if !s.WarmSpeech {
+		return
+	}
+	texts := speechTexts(p)
+	if len(texts) == 0 {
+		return
+	}
+	s.warm.Add(1)
+	go func() {
+		defer s.warm.Done()
+		ctx, cancel := context.WithTimeout(context.Background(), 3*time.Minute)
+		defer cancel()
+		sem := make(chan struct{}, warmParallel)
+		var wg sync.WaitGroup
+		for _, t := range texts {
+			wg.Add(1)
+			sem <- struct{}{}
+			go func() {
+				defer wg.Done()
+				defer func() { <-sem }()
+				if _, err := s.Speech(ctx, userID, t); err != nil {
+					slog.Debug("warm speech", "err", err)
+				}
+			}()
+		}
+		wg.Wait()
+	}()
 }
 
 // Transcribe turns a short recording of the learner into text.

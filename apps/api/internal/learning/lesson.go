@@ -264,6 +264,7 @@ func (s *Service) ensurePlan(ctx context.Context, st state, n *curriculum.Node, 
 		return err
 	}
 	sess.Plan, sess.StepIndex, sess.StepState = raw, 0, json.RawMessage(`[]`)
+	s.warmSpeech(st.userID, plan)
 	return nil
 }
 

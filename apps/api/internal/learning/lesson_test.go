@@ -6,7 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+	"sync"
+	"sync/atomic"
 	"testing"
+	"time"
 
 	"fluentpath/api/internal/ai"
 	"fluentpath/api/internal/storage"
@@ -417,19 +420,26 @@ func TestNotes(t *testing.T) {
 	}
 }
 
-// audioMock is the offline provider plus fake speech.
+// audioMock is the offline provider plus fake speech. delay, when set,
+// makes each speech call wait (like a slow provider).
 type audioMock struct {
 	*ai.Mock
-	speech, transcribe int
+	delay              time.Duration
+	speech, transcribe atomic.Int32
 }
 
 func (m *audioMock) Speech(ctx context.Context, text string) ([]byte, error) {
-	m.speech++
+	m.speech.Add(1)
+	select {
+	case <-time.After(m.delay):
+	case <-ctx.Done():
+		return nil, ctx.Err()
+	}
 	return []byte("mp3:" + text), nil
 }
 
 func (m *audioMock) Transcribe(ctx context.Context, audio []byte, filename string) (string, error) {
-	m.transcribe++
+	m.transcribe.Add(1)
 	return "I am a nurse.", nil
 }
 
@@ -462,10 +472,78 @@ func TestSpeechAndTranscription(t *testing.T) {
 			t.Fatalf("speech: %q %v", b, err)
 		}
 	}
-	if am.speech != 1 {
-		t.Fatalf("speech is cached: %d calls", am.speech)
+	if am.speech.Load() != 1 {
+		t.Fatalf("speech is cached: %d calls", am.speech.Load())
 	}
 	if txt, err := s.Transcribe(ctx, learnerID, []byte("audio"), "a.m4a"); err != nil || txt != "I am a nurse." {
 		t.Fatalf("transcribe: %q %v", txt, err)
+	}
+}
+
+func TestSlowSpeechIsSharedAndStillCached(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	s.SpeechCacheDir = t.TempDir()
+	am := &audioMock{Mock: &ai.Mock{}, delay: 300 * time.Millisecond}
+	s.AI = am
+
+	// Three requests for the same sentence at once make one provider call.
+	var wg sync.WaitGroup
+	for range 3 {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			if b, err := s.Speech(context.Background(), learnerID, "They work remotely."); err != nil || string(b) != "mp3:They work remotely." {
+				t.Errorf("speech: %q %v", b, err)
+			}
+		}()
+	}
+	wg.Wait()
+	if n := am.speech.Load(); n != 1 {
+		t.Fatalf("concurrent requests should share one call, got %d", n)
+	}
+
+	// A requester that gives up doesn't waste the call: it finishes and is cached.
+	ctx, cancel := context.WithTimeout(context.Background(), 50*time.Millisecond)
+	defer cancel()
+	if _, err := s.Speech(ctx, learnerID, "Her report is on the drive."); code(err) != "speech_failed" {
+		t.Fatalf("a requester that left: %v", err)
+	}
+	time.Sleep(400 * time.Millisecond)
+	start := time.Now()
+	if b, err := s.Speech(context.Background(), learnerID, "Her report is on the drive."); err != nil || string(b) != "mp3:Her report is on the drive." || time.Since(start) > 100*time.Millisecond {
+		t.Fatalf("the finished audio should come from the cache: %q %v %s", b, err, time.Since(start))
+	}
+	if n := am.speech.Load(); n != 2 {
+		t.Fatalf("provider calls = %d, want 2", n)
+	}
+}
+
+func TestLessonAudioIsMadeAhead(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	s.SpeechCacheDir = t.TempDir()
+	am := &audioMock{Mock: &ai.Mock{}}
+	s.AI = am
+	s.WarmSpeech = true
+	ctx := context.Background()
+	sess, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil {
+		t.Fatal(err)
+	}
+	s.warm.Wait()
+	texts := speechTexts(planOf(t, s, sess.ID))
+	if len(texts) == 0 || int(am.speech.Load()) != len(texts) {
+		t.Fatalf("every word and example should be made ahead: %d texts, %d calls", len(texts), am.speech.Load())
+	}
+	before := am.speech.Load()
+	if _, err := s.Speech(ctx, learnerID, texts[0]); err != nil || am.speech.Load() != before {
+		t.Fatalf("listening later should hit the cache: %v, %d calls", err, am.speech.Load())
+	}
+	// Resuming the lesson doesn't make it again.
+	if _, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds"); err != nil {
+		t.Fatal(err)
+	}
+	s.warm.Wait()
+	if am.speech.Load() != before {
+		t.Fatalf("resume re-made audio: %d calls", am.speech.Load())
 	}
 }

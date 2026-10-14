@@ -15,6 +15,8 @@ let current: { stop: () => void } | null = null;
 // Bumped whenever playback starts or stops, so a stale queue knows to quit.
 let generation = 0;
 
+const SERVER_WAIT_MS = 4000;
+
 const ttsUrl = (text: string) => `${API_URL}/api/v1/tts?text=${encodeURIComponent(text)}`;
 const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -54,7 +56,10 @@ function deviceVoice(text: string, onDone: () => void) {
 async function serverAudio(text: string, onDone: () => void, gen: number): Promise<boolean> {
   if (serverVoice === false) return false;
   if (Platform.OS === 'web') {
-    const url = await webAudioUrl(text);
+    // The server's voice is sometimes slow to make a new sentence. Don't stall
+    // the lesson: use the device's voice this time; the server still finishes
+    // and caches the audio for next time.
+    const url = await Promise.race([webAudioUrl(text), pause(SERVER_WAIT_MS).then(() => undefined)]);
     if (!url) return false;
     if (gen !== generation) return (onDone(), true);
     const el = new window.Audio(url);
