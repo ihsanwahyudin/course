@@ -11,7 +11,9 @@ RUN adduser -D -u 10001 app
 WORKDIR /app
 COPY --from=build /out/server /app/server
 COPY packages/courses /app/courses
+# Lesson audio cache; mount a volume here so it survives new containers.
+RUN mkdir -p /app/data/tts && chown -R app:app /app/data
 USER app
-ENV COURSES_DIR=/app/courses PORT=8080
+ENV COURSES_DIR=/app/courses PORT=8080 SPEECH_CACHE_DIR=/app/data/tts
 EXPOSE 8080
 ENTRYPOINT ["/app/server"]

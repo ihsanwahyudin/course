@@ -49,6 +49,8 @@ cd apps/mobile && npm install && npx expo start
 
 Press `w` for web, `a` for Android, or `i` for iOS. Migrations run automatically. Create an account from the app's Sign up page.
 
+To run the API in Docker too: `docker compose -f infra/docker-compose.yml --profile api up -d --build`. The database (`pgdata`) and the lesson audio cache (`tts`, mounted at `/app/data/tts`) live in named volumes, so restarts and rebuilds keep them. Only `docker compose down -v` deletes them.
+
 ### Pointing the app at the API
 
 The app reads `EXPO_PUBLIC_API_URL` from `apps/mobile/.env`. This value is public and not secret.

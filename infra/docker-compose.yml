@@ -29,12 +29,19 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-}
       OPENAI_EVAL_MODEL: ${OPENAI_EVAL_MODEL:-}
+      OPENAI_TTS_MODEL: ${OPENAI_TTS_MODEL:-}
+      OPENAI_TTS_VOICE: ${OPENAI_TTS_VOICE:-}
+      OPENAI_TRANSCRIBE_MODEL: ${OPENAI_TRANSCRIBE_MODEL:-}
       CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8081}
     ports:
       - "8080:8080"
+    volumes:
+      # Lesson audio is made once and kept across restarts and rebuilds.
+      - tts:/app/data/tts
     depends_on:
       db:
         condition: service_healthy
 
 volumes:
   pgdata:
+  tts:
