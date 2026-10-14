@@ -131,15 +131,16 @@ type User struct {
 	Email          string    `json:"email"`
 	DisplayName    string    `json:"displayName"`
 	NativeLanguage string    `json:"nativeLanguage"`
+	Locale         string    `json:"locale"` // UI language: en | id
 	CreatedAt      time.Time `json:"createdAt"`
 	PasswordHash   string    `json:"-"`
 }
 
-const userCols = `id, COALESCE(email, ''), display_name, native_language, created_at, COALESCE(password_hash, '')`
+const userCols = `id, COALESCE(email, ''), display_name, native_language, locale, created_at, COALESCE(password_hash, '')`
 
 func scanUser(row pgx.Row) (User, error) {
 	var u User
-	err := row.Scan(&u.ID, &u.Email, &u.DisplayName, &u.NativeLanguage, &u.CreatedAt, &u.PasswordHash)
+	err := row.Scan(&u.ID, &u.Email, &u.DisplayName, &u.NativeLanguage, &u.Locale, &u.CreatedAt, &u.PasswordHash)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return u, ErrNotFound
 	}
@@ -147,9 +148,12 @@ func scanUser(row pgx.Row) (User, error) {
 }
 
 // CreateUser returns ErrConflict when the email is already registered.
-func CreateUser(ctx context.Context, db DB, email, passwordHash, displayName string) (User, error) {
-	u, err := scanUser(db.QueryRow(ctx, `INSERT INTO users (id, email, password_hash, display_name)
-		VALUES (gen_random_uuid(), $1, $2, $3) RETURNING `+userCols, email, passwordHash, displayName))
+func CreateUser(ctx context.Context, db DB, email, passwordHash, displayName, locale string) (User, error) {
+	if locale == "" {
+		locale = "en"
+	}
+	u, err := scanUser(db.QueryRow(ctx, `INSERT INTO users (id, email, password_hash, display_name, locale)
+		VALUES (gen_random_uuid(), $1, $2, $3, $4) RETURNING `+userCols, email, passwordHash, displayName, locale))
 	if isUniqueViolation(err) {
 		return u, ErrConflict
 	}
@@ -162,6 +166,10 @@ func GetUser(ctx context.Context, db DB, id string) (User, error) {
 
 func GetUserByEmail(ctx context.Context, db DB, email string) (User, error) {
 	return scanUser(db.QueryRow(ctx, `SELECT `+userCols+` FROM users WHERE email=$1`, email))
+}
+
+func SetUserLocale(ctx context.Context, db DB, id, locale string) (User, error) {
+	return scanUser(db.QueryRow(ctx, `UPDATE users SET locale=$2 WHERE id=$1 RETURNING `+userCols, id, locale))
 }
 
 // ---- login sessions ----
@@ -178,7 +186,7 @@ func CreateAuthSession(ctx context.Context, db DB, userID, tokenHash, userAgent 
 // UserForToken returns the user behind an unexpired session token hash and
 // slides the expiry forward (at most once a minute, to limit writes).
 func UserForToken(ctx context.Context, db DB, tokenHash string, ttl time.Duration) (User, error) {
-	u, err := scanUser(db.QueryRow(ctx, `SELECT u.id, COALESCE(u.email, ''), u.display_name, u.native_language, u.created_at, ''
+	u, err := scanUser(db.QueryRow(ctx, `SELECT u.id, COALESCE(u.email, ''), u.display_name, u.native_language, u.locale, u.created_at, ''
 		FROM auth_sessions a JOIN users u ON u.id = a.user_id
 		WHERE a.token_hash=$1 AND a.expires_at > NOW()`, tokenHash))
 	if err != nil {
@@ -317,6 +325,7 @@ type Session struct {
 	UserID     string     `json:"-"`
 	CourseSlug string     `json:"courseSlug"`
 	NodeID     string     `json:"nodeId"`
+	Locale     string     `json:"locale"` // language the lesson runs in
 	Phase      string     `json:"phase"`
 	PhaseTurns int        `json:"phaseTurns"`
 	StartedAt  time.Time  `json:"startedAt"`
@@ -324,11 +333,11 @@ type Session struct {
 	EndedAt    *time.Time `json:"endedAt"`
 }
 
-const sessionCols = `id, user_id, course_slug, node_id, phase, phase_turns, started_at, updated_at, ended_at`
+const sessionCols = `id, user_id, course_slug, node_id, locale, phase, phase_turns, started_at, updated_at, ended_at`
 
 func scanSession(row pgx.Row) (Session, error) {
 	var s Session
-	err := row.Scan(&s.ID, &s.UserID, &s.CourseSlug, &s.NodeID, &s.Phase, &s.PhaseTurns, &s.StartedAt, &s.UpdatedAt, &s.EndedAt)
+	err := row.Scan(&s.ID, &s.UserID, &s.CourseSlug, &s.NodeID, &s.Locale, &s.Phase, &s.PhaseTurns, &s.StartedAt, &s.UpdatedAt, &s.EndedAt)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return s, ErrNotFound
 	}
@@ -342,9 +351,9 @@ func FindOpenSession(ctx context.Context, db DB, userID, course, nodeID string) 
 
 // CreateSession inserts a new open session. Returns ErrConflict if another
 // open session for the node was created concurrently.
-func CreateSession(ctx context.Context, db DB, userID, course, nodeID, phase string) (Session, error) {
-	s, err := scanSession(db.QueryRow(ctx, `INSERT INTO learning_sessions (user_id, course_slug, node_id, phase)
-		VALUES ($1, $2, $3, $4) RETURNING `+sessionCols, userID, course, nodeID, phase))
+func CreateSession(ctx context.Context, db DB, userID, course, nodeID, locale, phase string) (Session, error) {
+	s, err := scanSession(db.QueryRow(ctx, `INSERT INTO learning_sessions (user_id, course_slug, node_id, locale, phase)
+		VALUES ($1, $2, $3, $4, $5) RETURNING `+sessionCols, userID, course, nodeID, locale, phase))
 	if isUniqueViolation(err) {
 		return s, ErrConflict
 	}

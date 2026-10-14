@@ -132,6 +132,7 @@ type RoadmapView struct {
 // visitor, who sees the statuses of a brand-new learner.
 type state struct {
 	cur        *curriculum.Curriculum
+	lang       string // UI language for this view (course-supported)
 	userID     string
 	enrolled   bool
 	enrollment storage.Enrollment
@@ -141,7 +142,7 @@ type state struct {
 
 func (s *Service) load(ctx context.Context, db storage.DB, userID string, cur *curriculum.Curriculum) (state, error) {
 	st := state{
-		cur: cur, userID: userID, stored: map[string]progress.Stored{},
+		cur: cur, lang: cur.Lang(langFrom(ctx)), userID: userID, stored: map[string]progress.Stored{},
 		enrollment: storage.Enrollment{CourseSlug: cur.Slug, CurrentLevel: cur.LevelIDs[0], TargetLevel: cur.TargetLevel},
 	}
 	if userID != "" {
@@ -165,6 +166,7 @@ func (s *Service) load(ctx context.Context, db storage.DB, userID string, cur *c
 }
 
 func nodeView(st state, n *curriculum.Node) NodeView {
+	n = st.cur.LocalNode(n.ID, st.lang)
 	succ := st.cur.Successors(n.ID)
 	if succ == nil {
 		succ = []string{}
@@ -176,7 +178,8 @@ func summary(st state) Summary {
 	sum := Summary{}
 	target := st.cur.LevelIndex(st.enrollment.TargetLevel)
 	byLevel := map[string]*LevelSummary{}
-	for _, li := range st.cur.Levels {
+	levels := st.cur.LocalLevels(st.lang)
+	for _, li := range levels {
 		byLevel[li.Level] = &LevelSummary{Level: li.Level, Title: li.Title, Description: li.Description}
 	}
 	for _, n := range st.cur.Nodes {
@@ -199,7 +202,7 @@ func summary(st state) Summary {
 			}
 		}
 	}
-	for _, li := range st.cur.Levels {
+	for _, li := range levels {
 		sum.Levels = append(sum.Levels, *byLevel[li.Level])
 	}
 	if sum.TargetNodes > 0 {
@@ -211,8 +214,9 @@ func summary(st state) Summary {
 func courseCard(st state) CourseCard {
 	c := st.cur
 	sum := summary(st)
+	text := c.Text(st.lang)
 	card := CourseCard{
-		Slug: c.Slug, Title: c.Title, Tagline: c.Tagline, Description: c.Description, Category: c.Category,
+		Slug: c.Slug, Title: text.Title, Tagline: text.Tagline, Description: text.Description, Category: c.Category,
 		Tone: c.Tone, Status: c.Status, TargetLevel: c.TargetLevel, Levels: c.LevelIDs,
 		TotalNodes: sum.TotalNodes, ReadyNodes: sum.ReadyNodes, Enrolled: st.enrolled,
 	}
@@ -311,7 +315,7 @@ func (s *Service) Node(ctx context.Context, userID, courseSlug, id string) (Node
 	if err != nil {
 		return NodeDetail{}, err
 	}
-	d := NodeDetail{NodeView: nodeView(st, n), Course: CourseRef{cur.Slug, cur.Title}, Prerequisites: []NodeView{}, Successors: []NodeView{}, KeyPoints: []string{}}
+	d := NodeDetail{NodeView: nodeView(st, n), Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Prerequisites: []NodeView{}, Successors: []NodeView{}, KeyPoints: []string{}}
 	for _, p := range n.PrerequisiteIDs {
 		pn, _ := cur.Node(p)
 		d.Prerequisites = append(d.Prerequisites, nodeView(st, pn))
@@ -339,16 +343,15 @@ func (s *Service) Node(ctx context.Context, userID, courseSlug, id string) (Node
 func startable(st state, n *curriculum.Node) (bool, string) {
 	switch st.statuses[n.ID] {
 	case progress.StatusComingSoon:
-		return false, "This lesson is coming soon."
+		return false, tr(st.lang, "coming_soon")
 	case progress.StatusLocked:
 		var missing []string
 		for _, p := range n.PrerequisiteIDs {
 			if st.statuses[p] != progress.StatusMastered {
-				pn, _ := st.cur.Node(p)
-				missing = append(missing, pn.Title)
+				missing = append(missing, st.cur.LocalNode(p, st.lang).Title)
 			}
 		}
-		return false, "Master first: " + strings.Join(missing, ", ") + "."
+		return false, tr(st.lang, "master_first", strings.Join(missing, ", "))
 	}
 	return true, ""
 }
@@ -398,7 +401,7 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 		return SessionView{}, err
 	}
 	v := SessionView{
-		Session: sess, Course: CourseRef{cur.Slug, cur.Title}, Node: nodeView(st, n), Messages: msgs, Steps: tutor.Steps,
+		Session: sess, Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Node: nodeView(st, n), Messages: msgs, Steps: tutor.Steps,
 		CanChat:    sess.EndedAt == nil && tutor.Phase(sess.Phase).AcceptsChat(),
 		Assessment: []AssessmentItemView{},
 	}
@@ -444,6 +447,7 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 	}
 	lesson, _ := cur.Lesson(n.ID)
 
+	locale := cur.Lang(langFrom(ctx))
 	sess, err := storage.FindOpenSession(ctx, s.Store.Pool, userID, cur.Slug, n.ID)
 	if errors.Is(err, storage.ErrNotFound) {
 		err = pgx.BeginFunc(ctx, s.Store.Pool, func(tx pgx.Tx) error {
@@ -451,11 +455,12 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 				return err
 			}
 			var err error
-			sess, err = storage.CreateSession(ctx, tx, userID, cur.Slug, n.ID, string(tutor.PhaseIntroduction))
+			// The lesson keeps the language it started in.
+			sess, err = storage.CreateSession(ctx, tx, userID, cur.Slug, n.ID, locale, string(tutor.PhaseIntroduction))
 			if err != nil {
 				return err
 			}
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", lesson.Intro, sess.Phase, map[string]any{"kind": "intro"}); err != nil {
+			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", lesson.IntroIn(locale), sess.Phase, map[string]any{"kind": "intro"}); err != nil {
 				return err
 			}
 			if err := storage.MarkInProgress(ctx, tx, userID, cur.Slug, n.ID); err != nil {
@@ -489,9 +494,6 @@ func (s *Service) GetSession(ctx context.Context, userID, id string) (SessionVie
 	}
 	return s.sessionView(ctx, s.Store.Pool, sess)
 }
-
-const assessmentIntro = "Time for your assessment. Answer each question on your own — there are no hints here. " +
-	"Your answers are scored against this lesson's objectives, and you need %d/100 to master it."
 
 // SendMessage records a learner reply, asks the tutor for a response and
 // applies the phase rules. Nothing is stored unless the tutor reply is valid,
@@ -527,8 +529,10 @@ func (s *Service) SendMessage(ctx context.Context, userID, sessionID, content st
 		return SessionView{}, err
 	}
 	in := ai.TutorInput{
-		Policy:       cur.Tutor.Policy,
-		CurrentLevel: st.enrollment.CurrentLevel, TargetLevel: st.enrollment.TargetLevel,
+		Policy:         cur.Tutor.Policy,
+		Locale:         sess.Locale,
+		LanguagePolicy: cur.Tutor.LanguagePolicy[sess.Locale],
+		CurrentLevel:   st.enrollment.CurrentLevel, TargetLevel: st.enrollment.TargetLevel,
 		Node: n, Lesson: lesson, Phase: phase, NextPhase: tutor.NextOf(phase),
 		TurnsInPhase: sess.PhaseTurns + 1,
 	}
@@ -580,7 +584,7 @@ func (s *Service) SendMessage(ctx context.Context, userID, sessionID, content st
 			return err
 		}
 		if next == tutor.PhaseAssessment {
-			msg := fmt.Sprintf(assessmentIntro, n.MasteryThreshold)
+			msg := tr(sess.Locale, "assessment_intro", n.MasteryThreshold)
 			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(next), map[string]any{"kind": "assessment_intro"}); err != nil {
 				return err
 			}
@@ -654,7 +658,10 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 	if err != nil {
 		return AssessmentResult{}, err
 	}
-	raw, err := s.AI.Evaluate(ctx, ai.EvalInput{Policy: cur.Tutor.EvaluatorPolicy, TargetLevel: st.enrollment.TargetLevel, Node: n, Items: lesson.Assessment, Answers: clean})
+	raw, err := s.AI.Evaluate(ctx, ai.EvalInput{
+		Policy: cur.Tutor.EvaluatorPolicy, Locale: sess.Locale, LanguagePolicy: cur.Tutor.LanguagePolicy[sess.Locale],
+		TargetLevel: st.enrollment.TargetLevel, Node: cur.LocalNode(n.ID, sess.Locale), Items: lesson.Assessment, Answers: clean,
+	})
 	if err != nil {
 		slog.Warn("evaluator call failed", "provider", s.AI.Name(), "session", sess.ID, "err", err)
 		return AssessmentResult{}, errf(502, "evaluator_unavailable", true, "Your answers couldn't be scored right now. Nothing was saved — please submit again.")
@@ -702,7 +709,7 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 			if err := storage.EndSession(ctx, tx, sess.ID, string(tutor.PhaseMastered)); err != nil {
 				return err
 			}
-			msg := fmt.Sprintf("You scored %d/100 and mastered %q. %s", res.Score, n.Title, res.Feedback)
+			msg := tr(sess.Locale, "mastered", res.Score, cur.LocalNode(n.ID, sess.Locale).Title, res.Feedback)
 			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(tutor.PhaseMastered), map[string]any{"kind": "result"}); err != nil {
 				return err
 			}
@@ -711,13 +718,12 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 				return err
 			}
 			var weak []string
-			for _, o := range n.Objectives {
+			for _, o := range cur.LocalNode(n.ID, sess.Locale).Objectives {
 				if res.ObjectiveScores[o.ID] < res.Threshold {
-					weak = append(weak, strings.ToLower(o.Text[:1])+o.Text[1:])
+					weak = append(weak, lowerFirst(o.Text))
 				}
 			}
-			msg := fmt.Sprintf("You scored %d/100 — you need %d to master this lesson. %s Let's review: %s. Send a message when you're ready to practise.",
-				res.Score, res.Threshold, res.Feedback, strings.Join(weak, "; "))
+			msg := tr(sess.Locale, "review", res.Score, res.Threshold, res.Feedback, strings.Join(weak, "; "))
 			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(tutor.PhaseReview), map[string]any{"kind": "review_intro"}); err != nil {
 				return err
 			}
@@ -803,13 +809,14 @@ type ProgressView struct {
 	OpenSessions []OpenSessionItem `json:"openSessions"`
 }
 
-func (s *Service) attemptItems(attempts []storage.Attempt) []AttemptItem {
+func (s *Service) attemptItems(lang string, attempts []storage.Attempt) []AttemptItem {
 	out := make([]AttemptItem, 0, len(attempts))
 	for _, a := range attempts {
 		item := AttemptItem{Attempt: a, Title: a.NodeID, CourseTitle: a.CourseSlug, Objectives: []curriculum.Objective{}}
 		if cur, ok := s.Catalog.Course(a.CourseSlug); ok {
-			item.CourseTitle = cur.Title
-			if n, ok := cur.Node(a.NodeID); ok {
+			item.CourseTitle = cur.Text(lang).Title
+			if _, ok := cur.Node(a.NodeID); ok {
+				n := cur.LocalNode(a.NodeID, lang)
 				item.Title, item.Objectives = n.Title, n.Objectives
 			}
 		}
@@ -818,7 +825,7 @@ func (s *Service) attemptItems(attempts []storage.Attempt) []AttemptItem {
 	return out
 }
 
-func (s *Service) openSessionItems(sessions []storage.Session, onlyCourse string) []OpenSessionItem {
+func (s *Service) openSessionItems(lang string, sessions []storage.Session, onlyCourse string) []OpenSessionItem {
 	out := []OpenSessionItem{}
 	for _, o := range sessions {
 		if onlyCourse != "" && o.CourseSlug != onlyCourse {
@@ -828,8 +835,9 @@ func (s *Service) openSessionItems(sessions []storage.Session, onlyCourse string
 		if !ok {
 			continue
 		}
-		if n, ok := cur.Node(o.NodeID); ok {
-			out = append(out, OpenSessionItem{o.ID, cur.Slug, cur.Title, n.ID, n.Title, o.Phase, o.UpdatedAt})
+		if _, ok := cur.Node(o.NodeID); ok {
+			n := cur.LocalNode(o.NodeID, lang)
+			out = append(out, OpenSessionItem{o.ID, cur.Slug, cur.Text(lang).Title, n.ID, n.Title, o.Phase, o.UpdatedAt})
 		}
 	}
 	return out
@@ -851,7 +859,8 @@ func (s *Service) CourseProgress(ctx context.Context, userID, courseSlug string)
 		return v, err
 	}
 	for _, r := range rows {
-		n, ok := cur.Node(r.NodeID)
+		_, ok := cur.Node(r.NodeID)
+		n := cur.LocalNode(r.NodeID, st.lang)
 		if ok && r.Status == string(progress.StatusMastered) && r.MasteredAt != nil {
 			v.Mastered = append(v.Mastered, MasteredItem{n.ID, n.Title, n.Level, r.MasteryScore, *r.MasteredAt})
 		}
@@ -861,12 +870,12 @@ func (s *Service) CourseProgress(ctx context.Context, userID, courseSlug string)
 	if err != nil {
 		return v, err
 	}
-	v.Attempts = s.attemptItems(attempts)
+	v.Attempts = s.attemptItems(st.lang, attempts)
 	open, err := storage.OpenSessions(ctx, db, userID)
 	if err != nil {
 		return v, err
 	}
-	v.OpenSessions = s.openSessionItems(open, cur.Slug)
+	v.OpenSessions = s.openSessionItems(st.lang, open, cur.Slug)
 	return v, nil
 }
 
@@ -929,12 +938,13 @@ func (s *Service) Dashboard(ctx context.Context, user storage.User) (DashboardVi
 	if err != nil {
 		return v, err
 	}
-	v.OpenSessions = s.openSessionItems(open, "")
+	lang := langFrom(ctx)
+	v.OpenSessions = s.openSessionItems(lang, open, "")
 	attempts, err := storage.RecentAttempts(ctx, db, user.ID, "", 6)
 	if err != nil {
 		return v, err
 	}
-	v.RecentAttempts = s.attemptItems(attempts)
+	v.RecentAttempts = s.attemptItems(lang, attempts)
 	if v.Weekly.Messages, v.Weekly.Attempts, v.Weekly.Mastered, err = storage.WeeklyActivity(ctx, db, user.ID); err != nil {
 		return v, err
 	}
@@ -971,4 +981,12 @@ func activity(days map[string]int, now time.Time) ([]DayActivity, Streak) {
 		d = d.AddDate(0, 0, -1)
 	}
 	return grid, st
+}
+
+func lowerFirst(s string) string {
+	r := []rune(s)
+	if len(r) == 0 {
+		return s
+	}
+	return strings.ToLower(string(r[0])) + string(r[1:])
 }

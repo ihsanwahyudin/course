@@ -64,7 +64,7 @@ func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (json.RawMessage, e
 	ctx, cancel := context.WithTimeout(ctx, o.EvalBudget)
 	defer cancel()
 	input := []map[string]string{
-		{"role": "system", "content": in.Policy},
+		{"role": "system", "content": evalSystemPrompt(in)},
 		{"role": "user", "content": evalUserPrompt(in)},
 	}
 	return o.respond(ctx, o.EvalModel, input, "assessment_result", evalSchema(in), 1200)

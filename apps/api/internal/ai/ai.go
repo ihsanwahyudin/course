@@ -24,6 +24,8 @@ type ChatMessage struct {
 
 type TutorInput struct {
 	Policy             string // course.json tutor.policy
+	Locale             string // UI language the lesson runs in (en | id)
+	LanguagePolicy     string // course.json tutor.languagePolicy[Locale]
 	CurrentLevel       string
 	TargetLevel        string
 	Node               *curriculum.Node
@@ -37,11 +39,13 @@ type TutorInput struct {
 }
 
 type EvalInput struct {
-	Policy      string // course.json tutor.evaluatorPolicy
-	TargetLevel string
-	Node        *curriculum.Node
-	Items       []curriculum.AssessmentItem
-	Answers     map[string]string // item id -> learner answer
+	Policy         string // course.json tutor.evaluatorPolicy
+	Locale         string // language for feedback and evidence
+	LanguagePolicy string
+	TargetLevel    string
+	Node           *curriculum.Node
+	Items          []curriculum.AssessmentItem
+	Answers        map[string]string // item id -> learner answer
 }
 
 type Provider interface {

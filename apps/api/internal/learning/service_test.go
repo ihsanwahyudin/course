@@ -63,7 +63,7 @@ func newService(t *testing.T, provider ai.Provider) *Service {
 
 func newUser(t *testing.T, s *Service, email string) string {
 	t.Helper()
-	u, err := storage.CreateUser(context.Background(), s.Store.Pool, email, "x", "Test")
+	u, err := storage.CreateUser(context.Background(), s.Store.Pool, email, "x", "Test", "en")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -505,5 +505,46 @@ func TestStreak(t *testing.T) {
 	}
 	if _, st = activity(map[string]int{"2026-10-11": 1}, now); st.Current != 0 {
 		t.Fatalf("broken streak should be 0: %+v", st)
+	}
+}
+
+func TestLessonLanguageIsFixedAtStart(t *testing.T) {
+	var seen []ai.TutorInput
+	mock := &ai.Mock{}
+	s := newService(t, mock)
+	idCtx := WithLang(context.Background(), "id")
+	sess, err := s.StartSession(idCtx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sess.Locale != "id" || !strings.HasPrefix(sess.Messages[0].Content, "Hai, selamat datang") {
+		t.Fatalf("lesson should start in Indonesian: %s / %q", sess.Locale, sess.Messages[0].Content)
+	}
+	if sess.Node.Title != "Alfabet & Bunyi" || sess.Course.Title != "Bahasa Inggris" {
+		t.Fatalf("views should be localized: %q %q", sess.Node.Title, sess.Course.Title)
+	}
+
+	// Switching the UI to English later doesn't change the tutor's language.
+	inner := &ai.Mock{}
+	mock.TutorFunc = func(in ai.TutorInput) (json.RawMessage, error) {
+		seen = append(seen, in)
+		return inner.TutorReply(context.Background(), in)
+	}
+	enCtx := WithLang(context.Background(), "en")
+	if _, err := s.SendMessage(enCtx, learnerID, sess.ID, "S-A-R-I"); err != nil {
+		t.Fatal(err)
+	}
+	if len(seen) != 1 || seen[0].Locale != "id" || !strings.Contains(seen[0].LanguagePolicy, "Indonesian") {
+		t.Fatalf("tutor should keep the session language: %+v", seen)
+	}
+	mock.TutorFunc = nil
+	view := driveToAssessment(t, s, sess)
+	res, err := s.SubmitAssessment(enCtx, learnerID, view.ID, answers(s, "a0-alphabet-sounds", false))
+	if err != nil {
+		t.Fatal(err)
+	}
+	last := res.Session.Messages[len(res.Session.Messages)-1].Content
+	if !strings.HasPrefix(last, "Nilaimu") || !strings.Contains(last, "Ayo ulas") {
+		t.Fatalf("review message should be Indonesian: %q", last)
 	}
 }

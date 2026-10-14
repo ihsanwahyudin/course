@@ -22,6 +22,7 @@ type Registration struct {
 	Email       string
 	Password    string
 	DisplayName string
+	Locale      string // UI language at sign-up: en | id
 }
 
 func NormalizeEmail(s string) string { return strings.ToLower(strings.TrimSpace(s)) }
@@ -51,7 +52,10 @@ func (s *Service) Register(ctx context.Context, r Registration, userAgent string
 	if err != nil {
 		return storage.User{}, "", err
 	}
-	u, err := storage.CreateUser(ctx, s.Store.Pool, r.Email, hash, r.DisplayName)
+	if r.Locale != "id" {
+		r.Locale = "en"
+	}
+	u, err := storage.CreateUser(ctx, s.Store.Pool, r.Email, hash, r.DisplayName, r.Locale)
 	if errors.Is(err, storage.ErrConflict) {
 		return u, "", apperr.New(409, "email_taken", false, "An account with this email already exists. Try logging in.")
 	}
@@ -100,6 +104,14 @@ func (s *Service) Authenticate(ctx context.Context, token string) (storage.User,
 		return u, apperr.Unauthorized
 	}
 	return u, err
+}
+
+// SetLocale saves the user's UI language.
+func (s *Service) SetLocale(ctx context.Context, userID, locale string) (storage.User, error) {
+	if locale != "en" && locale != "id" {
+		return storage.User{}, apperr.New(400, "invalid_locale", false, "Language must be \"en\" or \"id\".")
+	}
+	return storage.SetUserLocale(ctx, s.Store.Pool, userID, locale)
 }
 
 func (s *Service) Logout(ctx context.Context, token string) error {

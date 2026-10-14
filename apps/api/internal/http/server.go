@@ -80,8 +80,8 @@ func (s *Server) Router() http.Handler {
 	r.Use(middleware.Recoverer)
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   s.CORSOrigins,
-		AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
-		AllowedHeaders:   []string{"Content-Type", "Authorization", nativeClientHeader},
+		AllowedMethods:   []string{"GET", "POST", "PATCH", "OPTIONS"},
+		AllowedHeaders:   []string{"Content-Type", "Authorization", "Accept-Language", nativeClientHeader},
 		AllowCredentials: true,
 		MaxAge:           600,
 	}))
@@ -95,12 +95,14 @@ func (s *Server) Router() http.Handler {
 		// JSON-only POSTs: with SameSite=Lax cookies this blocks cross-site form CSRF.
 		r.Use(middleware.AllowContentType("application/json"))
 		r.Use(s.identify)
+		r.Use(withLocale)
 
 		r.Route("/auth", func(r chi.Router) {
 			r.With(perIP(authLimit)).Post("/register", s.register)
 			r.With(perIP(authLimit)).Post("/login", s.login)
 			r.Post("/logout", s.logout)
 			r.With(requireUser).Get("/me", s.me)
+			r.With(requireUser).Patch("/me", s.updateMe)
 		})
 
 		// Public (optional auth): catalog and course roadmaps.
@@ -231,6 +233,38 @@ func requireUser(next http.Handler) http.Handler {
 	})
 }
 
+// requestLang picks "id" or "en" from Accept-Language (first tag wins);
+// "" when the header names neither.
+func requestLang(header string) string {
+	first := strings.ToLower(strings.TrimSpace(strings.Split(header, ",")[0]))
+	first = strings.TrimSpace(strings.Split(first, ";")[0])
+	switch {
+	case strings.HasPrefix(first, "id"), strings.HasPrefix(first, "in"):
+		return "id"
+	case strings.HasPrefix(first, "en"):
+		return "en"
+	}
+	return ""
+}
+
+// withLocale sets the UI language for the request: Accept-Language first,
+// then the signed-in user's saved preference, then English.
+func withLocale(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		lang := requestLang(r.Header.Get("Accept-Language"))
+		if lang == "" {
+			if u, ok := currentUser(r); ok {
+				lang = u.Locale
+			}
+		}
+		if lang == "" {
+			lang = "en"
+		}
+		w.Header().Set("Content-Language", lang)
+		next.ServeHTTP(w, r.WithContext(learning.WithLang(r.Context(), lang)))
+	})
+}
+
 func secureRequest(r *http.Request) bool {
 	return r.TLS != nil || strings.EqualFold(r.Header.Get("X-Forwarded-Proto"), "https")
 }
@@ -269,7 +303,8 @@ func (s *Server) register(w http.ResponseWriter, r *http.Request) {
 	if !decode(w, r, &body) {
 		return
 	}
-	u, token, err := s.Auth.Register(r.Context(), auth.Registration{Email: body.Email, Password: body.Password, DisplayName: body.DisplayName}, r.UserAgent())
+	reg := auth.Registration{Email: body.Email, Password: body.Password, DisplayName: body.DisplayName, Locale: requestLang(r.Header.Get("Accept-Language"))}
+	u, token, err := s.Auth.Register(r.Context(), reg, r.UserAgent())
 	s.finishLogin(w, r, u, token, err)
 }
 
@@ -296,6 +331,21 @@ func (s *Server) logout(w http.ResponseWriter, r *http.Request) {
 
 func (s *Server) me(w http.ResponseWriter, r *http.Request) {
 	u, _ := currentUser(r)
+	writeJSON(w, 200, authResponse{User: u})
+}
+
+func (s *Server) updateMe(w http.ResponseWriter, r *http.Request) {
+	var body struct {
+		Locale string `json:"locale"`
+	}
+	if !decode(w, r, &body) {
+		return
+	}
+	u, err := s.Auth.SetLocale(r.Context(), userID(r), body.Locale)
+	if err != nil {
+		writeErr(w, err)
+		return
+	}
 	writeJSON(w, 200, authResponse{User: u})
 }
 

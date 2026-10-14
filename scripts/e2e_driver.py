@@ -16,9 +16,11 @@ EMAIL_A, EMAIL_B, PASSWORD = "e2e-a@example.com", "e2e-b@example.com", "e2e-pass
 TOKEN = {"value": ""}
 
 
-def call(api, method, path, body=None):
+def call(api, method, path, body=None, lang=None):
     data = json.dumps(body).encode() if body is not None else None
     headers = {"Content-Type": "application/json", "X-FluentPath-Client": "native"}
+    if lang:
+        headers["Accept-Language"] = lang
     if TOKEN["value"]:
         headers["Authorization"] = "Bearer " + TOKEN["value"]
     req = urllib.request.Request(api + path, data=data, method=method, headers=headers)
@@ -155,6 +157,11 @@ def verify(api, curriculum):
     missing = [n for n in ls if statuses.get(n) != "mastered"]
     if missing:
         fail(f"progress lost after restart: {missing}")
+    _, rm_id = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap", lang="id")
+    first = rm_id["nodes"][0]
+    if first["title"] != "Alfabet & Bunyi" or rm_id["course"]["title"] != "Bahasa Inggris":
+        fail(f"Indonesian roadmap not localized: {first['title']!r} / {rm_id['course']['title']!r}")
+    print(f"  ✓ Accept-Language id → {rm_id['course']['title']}: {first['title']}")
     _, d = call(api, "GET", "/api/v1/dashboard")
     c = d["courses"][0]["progress"]
     print(f"  ✓ after restart and fresh login: {d['totalMastered']} mastered, level {c['currentLevel']}, "

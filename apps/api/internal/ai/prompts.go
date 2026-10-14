@@ -29,6 +29,10 @@ func tutorSystemPrompt(in TutorInput) string {
 	var b strings.Builder
 	// The teaching contract is course data (course.json → tutor.policy).
 	b.WriteString(in.Policy)
+	if in.LanguagePolicy != "" {
+		b.WriteString("\n\n## Language\n")
+		b.WriteString(in.LanguagePolicy)
+	}
 	b.WriteString("\n\n## Lesson context\n")
 	fmt.Fprintf(&b, "Learner level: %s. Target level: %s.\n", in.CurrentLevel, in.TargetLevel)
 	fmt.Fprintf(&b, "Lesson: %s (%s, node %s)\n", in.Node.Title, in.Node.Level, in.Node.ID)
@@ -158,4 +162,11 @@ func evalSchema(in EvalInput) map[string]any {
 		"required":             []string{"objectiveScores", "evidence", "feedback"},
 		"additionalProperties": false,
 	}
+}
+
+func evalSystemPrompt(in EvalInput) string {
+	if in.LanguagePolicy == "" {
+		return in.Policy
+	}
+	return in.Policy + "\n\nWrite the feedback and evidence for the learner following this language rule: " + in.LanguagePolicy
 }

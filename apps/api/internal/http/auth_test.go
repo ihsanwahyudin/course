@@ -208,3 +208,54 @@ func TestPublicCatalogAndPerUserData(t *testing.T) {
 		t.Fatalf("user B should have no courses: %v", body["courses"])
 	}
 }
+
+func doLang(h http.Handler, c call, lang string) (*httptest.ResponseRecorder, map[string]any) {
+	req := httptest.NewRequest(c.method, c.path, strings.NewReader(c.body))
+	req.Header.Set("Content-Type", "application/json")
+	if lang != "" {
+		req.Header.Set("Accept-Language", lang)
+	}
+	if c.cookie != nil {
+		req.AddCookie(c.cookie)
+	}
+	rec := httptest.NewRecorder()
+	h.ServeHTTP(rec, req)
+	var body map[string]any
+	_ = json.Unmarshal(rec.Body.Bytes(), &body)
+	return rec, body
+}
+
+func TestLocalizedResponsesAndSavedLocale(t *testing.T) {
+	h, _ := dbRouter(t)
+	path := "/api/v1/courses/english/nodes/a0-pronouns"
+	if _, body := doLang(h, call{method: "GET", path: path}, "id-ID,id;q=0.9"); body["title"] != "Kata Ganti Orang" {
+		t.Fatalf("Accept-Language id should give Indonesian, got %v", body["title"])
+	}
+	if _, body := doLang(h, call{method: "GET", path: path}, "en-US"); body["title"] != "Personal Pronouns" {
+		t.Fatalf("en should give English, got %v", body["title"])
+	}
+	if _, body := doLang(h, call{method: "GET", path: path}, ""); body["title"] != "Personal Pronouns" {
+		t.Fatalf("default should be English, got %v", body["title"])
+	}
+
+	// Registering from an Indonesian browser saves "id"; requests without a
+	// header then fall back to the saved preference.
+	rec, body := doLang(h, call{method: "POST", path: "/api/v1/auth/register", body: `{"email":"sari@example.com","password":"longenough","displayName":"Sari"}`}, "id")
+	if u := body["user"].(map[string]any); u["locale"] != "id" {
+		t.Fatalf("locale at sign-up should be saved: %v", u["locale"])
+	}
+	ck := sessionCookie(rec)
+	if _, body = doLang(h, call{method: "GET", path: "/api/v1/courses", cookie: ck}, ""); body["courses"].([]any)[0].(map[string]any)["title"] != "Bahasa Inggris" {
+		t.Fatalf("saved locale should apply without a header: %v", body["courses"])
+	}
+
+	if _, body = doLang(h, call{method: "PATCH", path: "/api/v1/auth/me", body: `{"locale":"fr"}`, cookie: ck}, ""); errCode(body) != "invalid_locale" {
+		t.Fatalf("unsupported locale must be rejected: %v", body)
+	}
+	if _, body = doLang(h, call{method: "PATCH", path: "/api/v1/auth/me", body: `{"locale":"en"}`, cookie: ck}, ""); body["user"].(map[string]any)["locale"] != "en" {
+		t.Fatalf("PATCH /me should save locale: %v", body)
+	}
+	if _, body = doLang(h, call{method: "GET", path: "/api/v1/courses", cookie: ck}, ""); body["courses"].([]any)[0].(map[string]any)["title"] != "English" {
+		t.Fatalf("new saved locale should apply: %v", body["courses"])
+	}
+}

@@ -46,14 +46,14 @@ func (m *Mock) TutorReply(ctx context.Context, in TutorInput) (json.RawMessage, 
 
 	switch in.Phase {
 	case tutor.PhaseIntroduction:
-		r.Message = "Great to have you here! In this lesson we will practise: " + objectiveList(in.Node) + ". " + enterPhase(l, tutor.PhaseExplanation)
+		r.Message = say(in, "welcome") + objectiveList(in.Node) + ". " + enterPhase(in, l, tutor.PhaseExplanation)
 		r.Action = string(tutor.ActionAdvancePhase)
 
 	case tutor.PhaseExplanation:
 		if t < len(l.KeyPoints) {
-			r.Message = "Good. Next idea — " + keyPoint(l.KeyPoints[t])
+			r.Message = say(in, "next_idea") + keyPoint(in, l.KeyPoints[t])
 		} else {
-			r.Message = "You have the main ideas. " + enterPhase(l, tutor.PhaseGuidedPractice)
+			r.Message = say(in, "main_ideas") + enterPhase(in, l, tutor.PhaseGuidedPractice)
 			r.Action = string(tutor.ActionAdvancePhase)
 		}
 
@@ -69,25 +69,25 @@ func (m *Mock) TutorReply(ctx context.Context, in TutorInput) (json.RawMessage, 
 		// previous message, so a wrong answer is re-asked rather than skipped.
 		idx := currentPrompt(in.Messages, prompts)
 		if idx < 0 {
-			r.Message = "Let's practise. " + prompts[0].Prompt
+			r.Message = say(in, "lets_practise") + prompts[0].Prompt
 			break
 		}
 		answered := prompts[idx]
 		if !Matches(last, answered.Expected) {
-			r.Message = fmt.Sprintf("Not quite. Hint: %s Try again: %s", answered.Hint, answered.Prompt)
+			r.Message = fmt.Sprintf(say(in, "not_quite"), answered.Hint, answered.Prompt)
 			r.Action = string(tutor.ActionAskRetry)
 			r.ObservedMistakes = []string{answered.ObjectiveID}
 			break
 		}
 		if idx+1 >= len(prompts) && t >= 2 {
-			r.Message = "Correct, well done! " + enterPhase(l, next)
+			r.Message = say(in, "correct") + enterPhase(in, l, next)
 			r.Action = string(tutor.ActionAdvancePhase)
 		} else {
-			r.Message = "Correct, well done! Next: " + prompts[(idx+1)%len(prompts)].Prompt
+			r.Message = say(in, "correct") + say(in, "next") + prompts[(idx+1)%len(prompts)].Prompt
 		}
 
 	default:
-		r.Message = "Let's keep going."
+		r.Message = say(in, "keep_going")
 	}
 	return json.Marshal(r)
 }
@@ -110,28 +110,60 @@ func currentPrompt(msgs []ChatMessage, prompts []curriculum.PracticePrompt) int 
 }
 
 // enterPhase is the bridge text the tutor says when moving into a phase.
-func enterPhase(l *curriculum.Lesson, p tutor.Phase) string {
+func enterPhase(in TutorInput, l *curriculum.Lesson, p tutor.Phase) string {
 	switch p {
 	case tutor.PhaseExplanation:
 		if len(l.KeyPoints) > 0 {
-			return "First idea — " + keyPoint(l.KeyPoints[0])
+			return say(in, "first_idea") + keyPoint(in, l.KeyPoints[0])
 		}
 	case tutor.PhaseGuidedPractice:
-		return "Let's practise together. " + l.GuidedPractice[0].Prompt
+		return say(in, "practise_together") + l.GuidedPractice[0].Prompt
 	case tutor.PhaseIndependentPractice:
-		return "Now try on your own. " + l.IndependentPrompt[0].Prompt
+		return say(in, "on_your_own") + l.IndependentPrompt[0].Prompt
 	case tutor.PhaseAssessment:
-		return "Great practice — you're ready for the assessment."
+		return say(in, "ready_assessment")
 	}
 	return ""
 }
 
-func keyPoint(k curriculum.KeyPoint) string {
+func keyPoint(in TutorInput, k curriculum.KeyPoint) string {
 	s := k.Title + ": " + k.Explanation
 	if len(k.Examples) > 0 {
-		s += fmt.Sprintf(" Example: %q (%s).", k.Examples[0].EN, k.Examples[0].ID)
+		s += fmt.Sprintf(say(in, "example"), k.Examples[0].EN, k.Examples[0].ID)
 	}
-	return s + " Reply when you're ready to continue."
+	return s + say(in, "reply_ready")
+}
+
+// Mock phrasing per UI language. Lesson content (key points, prompts) stays
+// as written in the course files.
+var mockText = map[string]map[string]string{
+	"en": {
+		"welcome": "Great to have you here! In this lesson we will practise: ", "next_idea": "Good. Next idea — ",
+		"main_ideas": "You have the main ideas. ", "lets_practise": "Let's practise. ", "not_quite": "Not quite. Hint: %s Try again: %s",
+		"correct": "Correct, well done! ", "next": "Next: ", "keep_going": "Let's keep going.", "first_idea": "First idea — ",
+		"practise_together": "Let's practise together. ", "on_your_own": "Now try on your own. ",
+		"ready_assessment": "Great practice — you're ready for the assessment.", "example": " Example: %q (%s).",
+		"reply_ready": " Reply when you're ready to continue.", "all_correct": "Excellent work — every answer met the objective.",
+		"review": "Review and try again: %s.", "correct_answer": "Correct: %q", "none_correct": "No fully correct answers yet.",
+	},
+	"id": {
+		"welcome": "Senang kamu di sini! Di pelajaran ini kita akan berlatih: ", "next_idea": "Bagus. Ide berikutnya — ",
+		"main_ideas": "Kamu sudah paham ide utamanya. ", "lets_practise": "Ayo berlatih. ", "not_quite": "Belum tepat. Petunjuk: %s Coba lagi: %s",
+		"correct": "Benar, bagus sekali! ", "next": "Berikutnya: ", "keep_going": "Ayo lanjutkan.", "first_idea": "Ide pertama — ",
+		"practise_together": "Ayo berlatih bersama. ", "on_your_own": "Sekarang coba sendiri. ",
+		"ready_assessment": "Latihan yang bagus — kamu siap untuk asesmen.", "example": " Contoh: %q (%s).",
+		"reply_ready": " Balas kalau kamu siap lanjut.", "all_correct": "Kerja bagus — semua jawaban memenuhi tujuan pelajaran.",
+		"review": "Ulas lagi lalu coba kembali: %s.", "correct_answer": "Benar: %q", "none_correct": "Belum ada jawaban yang sepenuhnya benar.",
+	},
+}
+
+func say(in TutorInput, key string) string { return phrase(in.Locale, key) }
+
+func phrase(locale, key string) string {
+	if m, ok := mockText[locale]; ok {
+		return m[key]
+	}
+	return mockText["en"][key]
 }
 
 func objectiveList(n *curriculum.Node) string {
@@ -158,7 +190,7 @@ func (m *Mock) Evaluate(ctx context.Context, in EvalInput) (json.RawMessage, err
 		switch {
 		case Matches(ans, it.AcceptableAnswers):
 			score = 100
-			evidence = append(evidence, fmt.Sprintf("Correct: %q", strings.TrimSpace(ans)))
+			evidence = append(evidence, fmt.Sprintf(phrase(in.Locale, "correct_answer"), strings.TrimSpace(ans)))
 		case strings.TrimSpace(ans) != "":
 			score = 40
 			misses = append(misses, it.ObjectiveID)
@@ -174,7 +206,7 @@ func (m *Mock) Evaluate(ctx context.Context, in EvalInput) (json.RawMessage, err
 			scores[o.ID] = sum[o.ID] / count[o.ID]
 		}
 	}
-	feedback := "Excellent work — every answer met the objective."
+	feedback := phrase(in.Locale, "all_correct")
 	if len(misses) > 0 {
 		var texts []string
 		for _, id := range unique(misses) {
@@ -184,10 +216,10 @@ func (m *Mock) Evaluate(ctx context.Context, in EvalInput) (json.RawMessage, err
 				}
 			}
 		}
-		feedback = "Review and try again: " + strings.Join(texts, "; ") + "."
+		feedback = fmt.Sprintf(phrase(in.Locale, "review"), strings.Join(texts, "; "))
 	}
 	if evidence == nil {
-		evidence = []string{"No fully correct answers yet."}
+		evidence = []string{phrase(in.Locale, "none_correct")}
 	}
 	return json.Marshal(map[string]any{"objectiveScores": scores, "evidence": evidence, "feedback": feedback})
 }
