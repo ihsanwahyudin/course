@@ -5,7 +5,7 @@ import { RoadmapGraph } from '@/components/roadmap/RoadmapGraph';
 import { RoadmapList } from '@/components/roadmap/RoadmapList';
 import { ErrorState, LoadingState, ProgressBar, SegmentedPill, StatusChip } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
-import { DotPattern, GradientRing, MeshBlob } from '@/components/ui/Decor';
+import { GradientRing } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Span, Text } from '@/components/ui/Text';
@@ -64,7 +64,6 @@ export default function CourseScreen() {
       reveal={0}
       padding={wide ? 32 : 24}
       style={{ width: wide ? span(contentWidth, gap, 3, 2) : contentWidth, gap: 24 }}
-      decoration={<MeshBlob color={colors.lavender} size={320} style={{ right: -120, top: -140 }} />}
     >
       <View style={styles.row}>
         <GradientRing size={44} />
@@ -93,7 +92,7 @@ export default function CourseScreen() {
   );
 
   const progressTile = (
-    <Card tone={data.enrolled ? 'mint' : 'sky'} reveal={1} style={{ width: wide ? span(contentWidth, gap, 3, 1) : contentWidth, gap: 16, justifyContent: 'space-between' }}>
+    <Card reveal={1} style={{ width: wide ? span(contentWidth, gap, 3, 1) : contentWidth, gap: 16, justifyContent: 'space-between' }}>
       <Eyebrow color="rgba(17,17,19,0.6)">{data.enrolled ? t('course.yourProgress') : t('course.theGoal')}</Eyebrow>
       {data.enrolled ? (
         <>
@@ -146,7 +145,7 @@ export default function CourseScreen() {
         ))}
       </View>
       {view === 'graph' ? (
-        <Card padding={pad} spotlight={false} decoration={<DotPattern size={16} r={1.2} color="rgba(17,17,19,0.10)" />}>
+        <Card padding={pad} spotlight={false}>
           <RoadmapGraph course={course.slug} nodes={data.nodes} levels={summary.levels} width={contentWidth - pad * 2 - 2} wide={wide} nextNodeId={data.nextNodeId} />
         </Card>
       ) : (

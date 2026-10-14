@@ -5,7 +5,7 @@ import { ComingSoonCard, CourseCard } from '@/components/CourseCard';
 import { Headline } from '@/components/Headline';
 import { ErrorState, LoadingState, pad2, SectionHeader } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
-import { DotPattern, GradientRing, LiveDot, MeshBlob, PulseDot } from '@/components/ui/Decor';
+import { GradientRing, PulseDot } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Span, Text } from '@/components/ui/Text';
@@ -42,12 +42,6 @@ export default function Landing() {
       reveal={0}
       padding={wide ? 32 : 24}
       style={{ width: w(2), minHeight: wide ? rowH! * 2 + gap : undefined, justifyContent: 'space-between', gap: 40 }}
-      decoration={
-        <>
-          <MeshBlob color={colors.lavender} size={340} style={{ right: -110, top: -110 }} />
-          <MeshBlob color={colors.peach} size={280} style={{ right: 20, bottom: -130 }} delay={2500} />
-        </>
-      }
     >
       <View style={styles.row}>
         <GradientRing size={48} />
@@ -59,7 +53,7 @@ export default function Landing() {
         </View>
       </View>
       <View>
-        <Headline size={wide ? (width >= 1024 ? 60 : 52) : 42} before={t('landing.before')} gradient={t('landing.gradient')} after={t('landing.after')} />
+        <Headline size={wide ? (width >= 1024 ? 60 : 52) : 42} before={t('landing.before')} highlight={t('landing.gradient')} after={t('landing.after')} />
         <Text color={colors.muted} size={wide ? 18 : 15} style={{ marginTop: 20, maxWidth: 440 }}>
           {t('landing.intro')}
         </Text>
@@ -72,8 +66,8 @@ export default function Landing() {
   );
 
   const coursesTile = (
-    <Card tone="lavender" reveal={1} style={{ width: w(1), height: rowH, minHeight: wide ? undefined : 170, justifyContent: 'space-between' }}>
-      <Eyebrow color="rgba(17,17,19,0.6)">{t('landing.coursesTile')}</Eyebrow>
+    <Card reveal={1} style={{ width: w(1), height: rowH, minHeight: wide ? undefined : 170, justifyContent: 'space-between' }}>
+      <Eyebrow>{t('landing.coursesTile')}</Eyebrow>
       <Heading size={wide ? 72 : 52} tabular>
         {pad2(list.length)}
         <Span color={colors.accent}>+</Span>
@@ -85,11 +79,8 @@ export default function Landing() {
   );
 
   const liveTile = (
-    <Card tone="mint" reveal={3} style={{ width: w(1), height: rowH, minHeight: wide ? undefined : 170, justifyContent: 'space-between' }}>
-      <View style={styles.row}>
-        <LiveDot />
-        <Eyebrow color="rgba(17,17,19,0.6)">{t('landing.readyTile')}</Eyebrow>
-      </View>
+    <Card reveal={3} style={{ width: w(1), height: rowH, minHeight: wide ? undefined : 170, justifyContent: 'space-between' }}>
+      <Eyebrow>{t('landing.readyTile')}</Eyebrow>
       <View>
         <Heading size={wide ? 44 : 26} tabular>
           {t('landing.lessonsCount', { n: pad2(lessons) })}
@@ -107,7 +98,6 @@ export default function Landing() {
       onPress={() => router.push(list[0] ? `/courses/${list[0].slug}` : '/courses')}
       accessibilityLabel={t('landing.seeRoadmap')}
       style={{ width: w(wide ? 1 : 2), height: wide ? rowH! * 2 + gap : 260, justifyContent: 'space-between' }}
-      decoration={<DotPattern size={16} r={1.5} color="rgba(17,17,19,0.16)" style={{ opacity: 0.55 }} />}
     >
       <Eyebrow>{t('landing.pathTile')}</Eyebrow>
       <View style={{ alignItems: 'center' }}>
@@ -148,7 +138,7 @@ export default function Landing() {
         <SectionHeader
           wide={wide}
           label={t('nav.courses')}
-          title={<Headline size={wide ? 60 : 36} before={t('landing.chooseBefore')} gradient={t('landing.chooseGradient')} after="." />}
+          title={<Headline size={wide ? 60 : 36} before={t('landing.chooseBefore')} highlight={t('landing.chooseGradient')} after="." />}
           description={t('landing.chooseDescription')}
         />
         {courses.isPending ? (
@@ -182,13 +172,6 @@ export default function Landing() {
         padding={wide ? 56 : 28}
         spotlight={false}
         style={{ marginTop: wide ? 96 : 64, alignItems: 'center' }}
-        decoration={
-          <>
-            <MeshBlob color="rgba(91,76,245,0.6)" size={420} style={{ left: -80, top: -130 }} />
-            <MeshBlob color="rgba(192,76,245,0.4)" size={440} style={{ right: -40, bottom: -180 }} delay={2000} />
-            <MeshBlob color="rgba(245,132,76,0.3)" size={280} style={{ left: '35%', bottom: -90 }} delay={4000} />
-          </>
-        }
       >
         <View style={styles.inkPill}>
           <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: colors.white }} />

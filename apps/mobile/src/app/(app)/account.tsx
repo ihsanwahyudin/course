@@ -4,7 +4,6 @@ import { StyleSheet, View } from 'react-native';
 
 import { PageHeader } from '@/components/PageHeader';
 import { Card } from '@/components/ui/Card';
-import { MeshBlob } from '@/components/ui/Decor';
 import { Avatar } from '@/components/ui/FloatingNav';
 import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
@@ -38,7 +37,7 @@ export default function AccountScreen() {
     <Screen maxWidth={760}>
       <PageHeader label={t('account.title')} title={wide ? t('account.titleWide') : t('account.title')} />
       <View style={{ gap: wide ? 16 : 12 }}>
-        <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 24 }} decoration={<MeshBlob color={colors.lavender} size={260} style={{ right: -110, top: -120 }} />}>
+        <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 24 }}>
           <View style={styles.row}>
             <Avatar name={user.displayName} size={64} />
             <View style={{ flex: 1 }}>

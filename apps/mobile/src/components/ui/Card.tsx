@@ -20,8 +20,8 @@ type Props = {
   spotlight?: boolean;
 };
 
-// Entrance like the site's hero cards: rise 48px, scale from .96, fade in,
-// expo-out over 1.2s, staggered by 70ms.
+// Gentle entrance: rise 12px and fade in, expo-out over 0.6s, staggered by
+// 50ms. Kept small so pages settle quickly.
 function useReveal(index?: number) {
   const v = useState(() => new Animated.Value(index === undefined ? 1 : 0))[0];
   useEffect(() => {
@@ -34,8 +34,8 @@ function useReveal(index?: number) {
         if (reduce) return v.setValue(1);
         Animated.timing(v, {
           toValue: 1,
-          duration: 1200,
-          delay: 60 + index * 70,
+          duration: 600,
+          delay: 40 + index * 50,
           easing: Easing.bezier(...easeOutExpo),
           useNativeDriver: Platform.OS !== 'web',
         }).start();
@@ -47,7 +47,7 @@ function useReveal(index?: number) {
   if (index === undefined) return null;
   return {
     opacity: v,
-    transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [48, 0] }) }, { scale: v.interpolate({ inputRange: [0, 1], outputRange: [0.96, 1] }) }],
+    transform: [{ translateY: v.interpolate({ inputRange: [0, 1], outputRange: [12, 0] }) }],
   };
 }
 
@@ -99,7 +99,7 @@ export function Card({ tone = 'default', children, style, padding, onPress, acce
             pointerEvents: 'none',
             opacity: hovered ? 1 : 0,
             transition: 'opacity 500ms',
-            background: `radial-gradient(420px circle at var(--spot-x, 50%) var(--spot-y, 50%), ${tone === 'ink' ? 'rgba(255,255,255,0.08)' : 'rgba(91,76,245,0.08)'}, transparent 45%)`,
+            background: `radial-gradient(420px circle at var(--spot-x, 50%) var(--spot-y, 50%), ${tone === 'ink' ? 'rgba(255,255,255,0.08)' : 'rgba(91,76,245,0.05)'}, transparent 45%)`,
           },
         })
       : null;

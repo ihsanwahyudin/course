@@ -1,5 +1,4 @@
 import { BlurView } from 'expo-blur';
-import { LinearGradient } from 'expo-linear-gradient';
 import { usePathname, useRouter, type Href } from 'expo-router';
 import { useState } from 'react';
 import { Platform, Pressable, StyleSheet, View } from 'react-native';
@@ -9,7 +8,7 @@ import { useAuth } from '@/lib/auth';
 import { useDashboard } from '@/lib/queries';
 import { useT, type TKey } from '@/i18n';
 import { LanguageToggle } from './LanguageToggle';
-import { colors, gradient, radius, shadow } from '@/theme/tokens';
+import { colors, radius, shadow } from '@/theme/tokens';
 import { GradientRing } from './Decor';
 import { useLayout } from './Screen';
 import { Text } from './Text';
@@ -58,16 +57,14 @@ function AccentPill({ label, onPress }: { label: string; onPress: () => void }) 
   );
 }
 
-// Initial in a gradient ring, like the site's CodeMark.
+// The user's initial on a soft accent disc.
 export function Avatar({ name, size = 36 }: { name: string; size?: number }) {
   return (
-    <LinearGradient colors={[...gradient]} start={{ x: 0, y: 1 }} end={{ x: 1, y: 0 }} style={{ width: size, height: size, borderRadius: radius.pill, padding: 2 }}>
-      <View style={{ flex: 1, borderRadius: radius.pill, backgroundColor: colors.card, alignItems: 'center', justifyContent: 'center' }}>
-        <Text size={size * 0.4} weight="semibold" color={colors.accent}>
-          {(name.trim()[0] ?? '?').toUpperCase()}
-        </Text>
-      </View>
-    </LinearGradient>
+    <View style={{ width: size, height: size, borderRadius: radius.pill, backgroundColor: colors.accentSoft, alignItems: 'center', justifyContent: 'center' }}>
+      <Text size={size * 0.4} weight="semibold" color={colors.accent}>
+        {(name.trim()[0] ?? '?').toUpperCase()}
+      </Text>
+    </View>
   );
 }
 

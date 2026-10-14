@@ -3,7 +3,6 @@ import { Platform, StyleSheet, TextInput, View } from 'react-native';
 import { pad2 } from '@/components/ui/Bits';
 import { useT } from '@/i18n';
 import { Card } from '@/components/ui/Card';
-import { MeshBlob } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import type { Session } from '@/lib/api';
@@ -19,7 +18,7 @@ export function AssessmentForm({ session, onSubmit, submitting, error }: { sessi
   const objective = (id: string) => session.node.objectives.find((o) => o.id === id)?.text;
 
   return (
-    <Card padding={24} style={{ gap: 22 }} decoration={<MeshBlob color={colors.lavender} size={260} style={{ right: -110, top: -120 }} />}>
+    <Card padding={24} style={{ gap: 22 }}>
       <View style={{ gap: 10 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <Eyebrow color={colors.accent}>{t('assessment.title')}</Eyebrow>

@@ -1,12 +1,9 @@
 import { BlurView } from 'expo-blur';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { Modal, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 
 import { ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
-import { MeshBlob } from '@/components/ui/Decor';
-import { GradientText } from '@/components/ui/GradientText';
 import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -34,8 +31,8 @@ function WhitePill({ label, onPress }: { label: string; onPress: () => void }) {
   );
 }
 
-// Assessment result dialog. A pass uses the site's ink "contact" card with
-// violet/magenta/orange mesh; a fail uses a calm peach card with a retry path.
+// Assessment result dialog. A pass uses the plain ink card; a fail uses a
+// soft peach card with a retry path.
 export function ResultPanel({
   result,
   onClose,
@@ -66,17 +63,6 @@ export function ResultPanel({
             reveal={0}
             spotlight={false}
             style={{ width: '100%', maxWidth: 560, gap: 24 }}
-            decoration={
-              ink ? (
-                <>
-                  <MeshBlob color="rgba(91,76,245,0.6)" size={360} style={{ left: -90, top: -140 }} />
-                  <MeshBlob color="rgba(192,76,245,0.4)" size={380} style={{ right: -120, bottom: -180 }} delay={2000} />
-                  <MeshBlob color="rgba(245,132,76,0.3)" size={240} style={{ left: 120, bottom: -100 }} delay={4000} />
-                </>
-              ) : (
-                <MeshBlob color="rgba(255,255,255,0.7)" size={300} style={{ right: -100, top: -120 }} />
-              )
-            }
           >
             <Pressable onPress={onClose} accessibilityRole="button" accessibilityLabel={t('common.close')} style={[styles.close, { backgroundColor: ink ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.7)' }]}>
               <Icon name="close" size={16} color={fg} />
@@ -90,15 +76,9 @@ export function ResultPanel({
                 <Heading size={88} color={fg} tabular>
                   {attempt.score}
                 </Heading>
-                {ink ? (
-                  <GradientText animated={false} style={{ fontFamily: fonts.semibold, fontSize: 36, lineHeight: 48, letterSpacing: -1.6 }}>
-                    /100
-                  </GradientText>
-                ) : (
-                  <Heading size={36} color="rgba(17,17,19,0.45)" style={{ marginBottom: 6 }}>
-                    /100
-                  </Heading>
-                )}
+                <Heading size={36} color={ink ? 'rgba(255,255,255,0.45)' : 'rgba(17,17,19,0.45)'} style={{ marginBottom: 6 }}>
+                  /100
+                </Heading>
               </View>
               <Heading size={28} color={fg} style={{ marginTop: 12 }}>
                 {passed ? t('result.youMastered', { title: session.node.title }) : t('result.almost', { threshold: attempt.threshold })}
@@ -121,13 +101,12 @@ export function ResultPanel({
                         {v}
                       </Text>
                     </View>
-                    {ink ? (
-                      <View style={{ height: 5, borderRadius: 3, backgroundColor: 'rgba(255,255,255,0.1)', overflow: 'hidden' }}>
-                        <LinearGradient colors={[colors.accent, colors.magenta, colors.orange]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={{ width: `${v}%`, height: '100%' }} />
-                      </View>
-                    ) : (
-                      <ProgressBar value={v} color={v >= attempt.threshold ? colors.emerald : colors.ink} track="rgba(17,17,19,0.1)" height={5} />
-                    )}
+                    <ProgressBar
+                      value={v}
+                      color={v >= attempt.threshold ? colors.emerald : ink ? colors.white : colors.ink}
+                      track={ink ? 'rgba(255,255,255,0.1)' : 'rgba(17,17,19,0.1)'}
+                      height={5}
+                    />
                   </View>
                 );
               })}

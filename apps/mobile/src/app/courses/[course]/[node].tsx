@@ -3,8 +3,6 @@ import { StyleSheet, View } from 'react-native';
 
 import { Chip, DotList, ErrorState, LoadingState, pad2, StatusChip } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
-import { GradientRing, MeshBlob } from '@/components/ui/Decor';
-import { GradientText } from '@/components/ui/GradientText';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -44,7 +42,7 @@ export default function NodeScreen() {
 
   const main = (
     <View style={{ width: mainW, gap }}>
-      <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }} decoration={<MeshBlob color={colors.lavender} size={300} style={{ right: -120, top: -140 }} />}>
+      <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }}>
         <View style={styles.row}>
           <Crumb onPress={() => router.push(`/courses/${node.course.slug}`)} label={node.course.title} />
           <Eyebrow>/ {node.level}</Eyebrow>
@@ -126,7 +124,6 @@ export default function NodeScreen() {
         reveal={wide ? 1 : 4}
         padding={wide ? 32 : 24}
         style={{ gap: 28 }}
-        decoration={<MeshBlob color="rgba(91,76,245,0.5)" size={240} style={{ right: -70, top: -70 }} />}
       >
         <Eyebrow color="rgba(255,255,255,0.6)">{t('node.mastery')}</Eyebrow>
         <View>
@@ -134,9 +131,9 @@ export default function NodeScreen() {
             <Heading size={72} color={colors.white} tabular>
               {node.masteryThreshold}
             </Heading>
-            <GradientText animated={false} style={{ fontFamily: fonts.semibold, fontSize: 32, lineHeight: 40, letterSpacing: -1.4 }}>
+            <Heading size={32} color="rgba(255,255,255,0.45)" style={{ marginBottom: 6 }}>
               /100
-            </GradientText>
+            </Heading>
           </View>
           <Text color="rgba(255,255,255,0.7)" style={{ marginTop: 8 }}>
             {t('node.masteryText')}
@@ -160,11 +157,8 @@ export default function NodeScreen() {
         </View>
       </Card>
       {node.keyPoints.length > 0 ? (
-        <Card tone="lavender" reveal={wide ? 2 : 5} style={{ gap: 16 }}>
-          <View style={[styles.row, { justifyContent: 'space-between' }]}>
-            <Eyebrow color="rgba(17,17,19,0.6)">{t('node.keyIdeas')}</Eyebrow>
-            <GradientRing size={32} />
-          </View>
+        <Card reveal={wide ? 2 : 5} style={{ gap: 16 }}>
+          <Eyebrow>{t('node.keyIdeas')}</Eyebrow>
           <DotList items={node.keyPoints} />
         </Card>
       ) : null}

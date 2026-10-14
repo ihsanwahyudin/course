@@ -7,7 +7,6 @@ import { PageHeader } from '@/components/PageHeader';
 import { Avatar } from '@/components/ui/FloatingNav';
 import { ErrorState, LoadingState, pad2, ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
-import { DotPattern, LiveDot, MeshBlob } from '@/components/ui/Decor';
 import { Icon } from '@/components/ui/Icon';
 import { ArrowBadge, PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
@@ -81,12 +80,6 @@ export default function DashboardScreen() {
       reveal={0}
       padding={wide ? 32 : 24}
       style={{ width: w(2), ...(wide ? { height: rowH! * 2 + gap } : {}), justifyContent: 'space-between', gap: 28 }}
-      decoration={
-        <>
-          <MeshBlob color={colors.lavender} size={320} style={{ right: -110, top: -110 }} />
-          <MeshBlob color={colors.peach} size={260} style={{ right: 20, bottom: -130 }} delay={2500} />
-        </>
-      }
     >
       {wide ? (
         // Phones already show name and date in the app header above.
@@ -112,7 +105,7 @@ export default function DashboardScreen() {
                 ? t('dashboard.pickBeforeWide', { name: first })
                 : t('dashboard.pickBefore')
           }
-          gradient={data.courses.length ? t('dashboard.keepGradient') : t('dashboard.pickGradient')}
+          highlight={data.courses.length ? t('dashboard.keepGradient') : t('dashboard.pickGradient')}
           after={data.courses.length ? t('dashboard.keepAfter') : t('dashboard.pickAfter')}
         />
         <Text color={colors.muted} size={wide ? 17 : 15} style={{ marginTop: 16, maxWidth: 440 }}>
@@ -127,7 +120,7 @@ export default function DashboardScreen() {
   );
 
   const streakTile = (
-    <Card tone="lavender" reveal={1} style={{ width: w(1), ...h(rowH ?? 168), justifyContent: 'space-between', gap: 12 }}>
+    <Card reveal={1} style={{ width: w(1), ...h(rowH ?? 168), justifyContent: 'space-between', gap: 12 }}>
       <View style={[styles.row, { justifyContent: 'space-between' }]}>
         <Eyebrow color="rgba(17,17,19,0.6)">{t('dashboard.streak')}</Eyebrow>
         <Icon name="flame" size={18} color={data.streak.current ? colors.orange : 'rgba(17,17,19,0.35)'} />
@@ -143,11 +136,8 @@ export default function DashboardScreen() {
   );
 
   const masteredTile = (
-    <Card tone="mint" reveal={3} style={{ width: w(1), ...h(rowH ?? 168), justifyContent: 'space-between', gap: 12 }}>
-      <View style={styles.row}>
-        <LiveDot />
-        <Eyebrow color="rgba(17,17,19,0.6)">{t('dashboard.mastered')}</Eyebrow>
-      </View>
+    <Card reveal={3} style={{ width: w(1), ...h(rowH ?? 168), justifyContent: 'space-between', gap: 12 }}>
+      <Eyebrow>{t('dashboard.mastered')}</Eyebrow>
       <View>
         <Heading size={wide ? 64 : 48} tabular>
           {pad2(data.totalMastered)}
@@ -163,7 +153,6 @@ export default function DashboardScreen() {
     <Card
       reveal={2}
       style={{ width: w(wide ? 1 : 2), ...(wide ? { height: rowH! * 2 + gap } : {}), justifyContent: 'space-between', gap: 20 }}
-      decoration={<DotPattern size={16} r={1.5} color="rgba(17,17,19,0.12)" style={{ opacity: 0.5 }} />}
     >
       <Eyebrow>{t('dashboard.last4Weeks')}</Eyebrow>
       <View style={{ alignItems: wide ? 'center' : 'flex-start' }}>
@@ -191,7 +180,7 @@ export default function DashboardScreen() {
   const coursesBlock = data.courses.length ? (
     data.courses.map((c, i) => <CourseCard key={c.slug} course={c} reveal={4 + i} style={{ width: coursesW }} />)
   ) : (
-    <Card tone="sky" reveal={4} style={{ width: w(2), gap: 12 }}>
+    <Card reveal={4} style={{ width: w(2), gap: 12 }}>
       <Eyebrow color="rgba(17,17,19,0.6)">{t('dashboard.yourCourses')}</Eyebrow>
       <Heading size={28}>{t('dashboard.noCourses')}</Heading>
       <Text color="rgba(17,17,19,0.7)">{t('dashboard.noCoursesText')}</Text>
@@ -263,7 +252,7 @@ export default function DashboardScreen() {
     data.explore.length > 0 ? (
       <CourseCard course={data.explore[0]} reveal={7} style={{ width: w(wide ? 1 : 2) }} />
     ) : (
-      <Card tone="peach" reveal={7} onPress={() => router.push('/courses')} accessibilityLabel={t('dashboard.exploreLabel')} style={{ width: w(wide ? 1 : 2), minHeight: 180, justifyContent: 'space-between' }}>
+      <Card reveal={7} onPress={() => router.push('/courses')} accessibilityLabel={t('dashboard.exploreLabel')} style={{ width: w(wide ? 1 : 2), minHeight: 180, justifyContent: 'space-between' }}>
         <View style={[styles.row, { justifyContent: 'space-between' }]}>
           <Eyebrow color="rgba(17,17,19,0.6)">{t('dashboard.explore')}</Eyebrow>
           <ArrowBadge size={34} />

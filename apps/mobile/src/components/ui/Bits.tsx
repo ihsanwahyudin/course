@@ -1,4 +1,3 @@
-import { LinearGradient } from 'expo-linear-gradient';
 import { useState, type ReactNode } from 'react';
 import { ActivityIndicator, Platform, Pressable, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
@@ -211,14 +210,14 @@ export function DotList({ items, color = 'rgba(17,17,19,0.75)' }: { items: React
   );
 }
 
-// Pagination dots: the active one is a wide gradient pill (the site's
-// carousel indicator). Used for the lesson phase stepper.
+// Pagination dots: the active one is a wide accent pill. Used for the
+// lesson phase stepper.
 export function PageDots({ count, active, done = active }: { count: number; active: number; done?: number }) {
   return (
     <View style={{ flexDirection: 'row', gap: 6, alignItems: 'center' }}>
       {Array.from({ length: count }, (_, i) =>
         i === active ? (
-          <LinearGradient key={i} colors={[colors.accent, colors.magenta, colors.orange]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={{ width: 24, height: 6, borderRadius: 3 }} />
+          <View key={i} style={{ width: 24, height: 6, borderRadius: 3, backgroundColor: colors.accent }} />
         ) : (
           <View key={i} style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: i < done ? colors.accent : 'rgba(17,17,19,0.2)' }} />
         ),
