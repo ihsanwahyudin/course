@@ -1,14 +1,17 @@
 import { Geist_400Regular, Geist_500Medium, Geist_600SemiBold, useFonts } from '@expo-google-fonts/geist';
 import { GeistMono_400Regular, GeistMono_500Medium } from '@expo-google-fonts/geist-mono';
 import { QueryClientProvider } from '@tanstack/react-query';
-import { Stack, usePathname } from 'expo-router';
+import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { Platform, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { BottomTabs } from '@/components/ui/BottomTabs';
+import { useChrome } from '@/components/ui/chrome';
 import { FloatingNav } from '@/components/ui/FloatingNav';
+import { useAuth } from '@/lib/auth';
 import { queryClient } from '@/lib/queries';
 import { colors } from '@/theme/tokens';
 
@@ -20,18 +23,31 @@ if (Platform.OS === 'web') {
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
+function Chrome() {
+  const { topNav, bottomTabs } = useChrome();
+  return (
+    <>
+      {topNav ? <FloatingNav /> : null}
+      {bottomTabs ? <BottomTabs /> : null}
+    </>
+  );
+}
+
 export default function RootLayout() {
-  const [loaded, error] = useFonts({ Geist_400Regular, Geist_500Medium, Geist_600SemiBold, GeistMono_400Regular, GeistMono_500Medium });
-  const pathname = usePathname();
+  const [fontsLoaded, fontError] = useFonts({ Geist_400Regular, Geist_500Medium, Geist_600SemiBold, GeistMono_400Regular, GeistMono_500Medium });
+  const authStatus = useAuth((s) => s.status);
+  const init = useAuth((s) => s.init);
 
   useEffect(() => {
-    if (loaded || error) SplashScreen.hideAsync().catch(() => {});
-  }, [loaded, error]);
+    void init();
+  }, [init]);
 
-  if (!loaded && !error) return null;
+  const ready = (fontsLoaded || !!fontError) && authStatus !== 'loading';
+  useEffect(() => {
+    if (ready) SplashScreen.hideAsync().catch(() => {});
+  }, [ready]);
 
-  // The lesson screen is a focused, full-height chat with its own header.
-  const showNav = !pathname.startsWith('/learn');
+  if (!ready) return null;
 
   return (
     <SafeAreaProvider>
@@ -39,7 +55,7 @@ export default function RootLayout() {
         <StatusBar style="dark" />
         <View style={{ flex: 1, backgroundColor: colors.canvas }}>
           <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.canvas }, animation: 'fade' }} />
-          {showNav ? <FloatingNav /> : null}
+          <Chrome />
         </View>
       </QueryClientProvider>
     </SafeAreaProvider>

@@ -1,8 +1,10 @@
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { Headline } from '@/components/Headline';
-import { ErrorState, LoadingState, pad2, ProgressBar, SectionHeader } from '@/components/ui/Bits';
+import { PageHeader } from '@/components/PageHeader';
+import { Chip, ErrorState, LoadingState, pad2, ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
 import { GradientText } from '@/components/ui/GradientText';
 import { MeshBlob } from '@/components/ui/Decor';
@@ -10,26 +12,47 @@ import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import { phaseLabel } from '@/lib/api';
-import { useProgress } from '@/lib/queries';
+import { useCourseProgress, useDashboard } from '@/lib/queries';
 import { colors, fonts, radius } from '@/theme/tokens';
 
 export default function ProgressScreen() {
   const router = useRouter();
-  const { data, isPending, isError, error, refetch, isRefetching } = useProgress();
+  const dashboard = useDashboard();
+  const enrolled = dashboard.data?.courses ?? [];
+  const [picked, setPicked] = useState<string>();
+  const course = picked ?? enrolled[0]?.slug;
+  const { data, isPending: progressPending, isError, error, refetch, isRefetching } = useCourseProgress(course);
+  const isPending = dashboard.isPending || (!!course && progressPending);
+  const weekly = dashboard.data?.weekly ?? { messages: 0, attempts: 0, mastered: 0 };
   const { wide, gap, contentWidth } = useLayout();
   const left = wide ? span(contentWidth, gap, 3, 1) : contentWidth;
   const right = wide ? span(contentWidth, gap, 3, 2) : contentWidth;
 
   return (
     <Screen onRefresh={refetch} refreshing={isRefetching}>
-      <SectionHeader
-        wide={wide}
+      <PageHeader
         label="Progress"
-        title={<Headline size={wide ? 60 : 36} before="What you've" gradient="mastered" after=" so far." />}
+        title={wide ? <Headline size={60} before="What you've" gradient="mastered" after=" so far." /> : 'Progress'}
         description="Mastery comes from assessments scored against each lesson's objectives — not from streaks or time spent."
       />
+      {enrolled.length > 1 ? (
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginBottom: 16 }}>
+          {enrolled.map((c) => (
+            <Chip key={c.slug} label={c.title} active={c.slug === course} onPress={() => setPicked(c.slug)} />
+          ))}
+        </View>
+      ) : null}
       {isPending ? (
         <LoadingState label="Loading progress" />
+      ) : dashboard.isError ? (
+        <ErrorState title="Can't load progress" message={dashboard.error.message} onRetry={dashboard.refetch} />
+      ) : !course || !data ? (
+        <Card tone="sky" style={{ gap: 12 }}>
+          <Eyebrow color="rgba(17,17,19,0.6)">Nothing yet</Eyebrow>
+          <Heading size={28}>Start a course to track progress</Heading>
+          <Text color="rgba(17,17,19,0.7)">Mastered skills, assessment scores and open lessons will appear here.</Text>
+          <PillButton label="Browse courses" icon="arrowUpRight" onPress={() => router.push('/courses')} />
+        </Card>
       ) : isError ? (
         <ErrorState title="Can't load progress" message={error.message} onRetry={refetch} />
       ) : (
@@ -47,7 +70,7 @@ export default function ProgressScreen() {
                   </GradientText>
                 </View>
                 <Text color="rgba(255,255,255,0.7)" style={{ marginTop: 8 }}>
-                  on the way to {data.learner.targetLevel} · now at {data.learner.currentLevel}
+                  {data.course.title} · on the way to {data.course.progress?.targetLevel} · now at {data.course.progress?.currentLevel}
                 </Text>
               </View>
               <View style={{ borderTopWidth: 1, borderTopColor: 'rgba(255,255,255,0.1)' }}>
@@ -78,9 +101,9 @@ export default function ProgressScreen() {
               <Eyebrow color="rgba(17,17,19,0.6)">Last 7 days</Eyebrow>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 {[
-                  ['Replies', data.weekly.messages],
-                  ['Attempts', data.weekly.attempts],
-                  ['Mastered', data.weekly.mastered],
+                  ['Replies', weekly.messages],
+                  ['Attempts', weekly.attempts],
+                  ['Mastered', weekly.mastered],
                 ].map(([k, v]) => (
                   <View key={k}>
                     <Heading size={40} tabular>
@@ -107,7 +130,7 @@ export default function ProgressScreen() {
                       </Text>
                       <Eyebrow>{phaseLabel[o.phase]}</Eyebrow>
                     </View>
-                    <PillButton label="Continue" size="sm" icon="arrowUpRight" onPress={() => router.push(`/learn/${o.nodeId}`)} />
+                    <PillButton label="Continue" size="sm" icon="arrowUpRight" onPress={() => router.push(`/learn/${o.courseSlug}/${o.nodeId}`)} />
                   </View>
                 ))}
               </Card>

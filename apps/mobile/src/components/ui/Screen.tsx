@@ -3,6 +3,7 @@ import { RefreshControl, ScrollView, StyleSheet, useWindowDimensions, View } fro
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { colors, layout } from '@/theme/tokens';
+import { BOTTOM_TAB_HEIGHT, useChrome } from './chrome';
 import { DotPattern } from './Decor';
 
 export function useLayout() {
@@ -24,13 +25,16 @@ export function span(contentWidth: number, gap: number, cols: number, n: number)
 export function Screen({ children, onRefresh, refreshing = false, maxWidth = layout.maxWidth }: { children: ReactNode; onRefresh?: () => void; refreshing?: boolean; maxWidth?: number }) {
   const insets = useSafeAreaInsets();
   const { wide, gutter } = useLayout();
+  const chrome = useChrome();
   return (
     <View style={styles.root}>
       <DotPattern />
       <ScrollView
         contentContainerStyle={{
-          paddingTop: insets.top + (wide ? layout.navClearanceWide : layout.navClearance),
-          paddingBottom: insets.bottom + 48,
+          // Clear whichever chrome is on screen: the floating top nav, or the
+          // bottom tab bar (phones, logged in) where the page has its own header.
+          paddingTop: insets.top + (chrome.topNav ? (wide ? layout.navClearanceWide : layout.navClearance) : 20),
+          paddingBottom: chrome.bottomTabs ? Math.max(insets.bottom, 8) + BOTTOM_TAB_HEIGHT + 28 : insets.bottom + 48,
           paddingHorizontal: gutter,
           alignItems: 'center',
         }}

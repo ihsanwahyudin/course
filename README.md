@@ -1,8 +1,10 @@
 # FluentPath
 
-A roadmap-first English learning app with an AI tutor. Learners see every skill from A0 to C2. Each skill is taught in a short interactive chat lesson, proven in a rubric-scored assessment, and saved as durable progress that unlocks the next skills.
+A roadmap-first learning platform in the spirit of roadmap.sh. Each course is a roadmap of skills. You learn each skill in a short chat lesson with an AI tutor, prove it in a rubric-scored assessment, and your progress is saved to your own dashboard. **English** (A0 → B2, with optional C1–C2) is the first course; the platform is built for more.
 
-The core loop is **roadmap → lesson → assessment → saved mastery → next node unlocked**.
+- **Public:** a landing page, the course catalog, and each course's roadmap and lesson details.
+- **With a free account** (email + password): learning, assessments, a personal dashboard (courses, streak, 4-week activity, open lessons, scores), and progress.
+- **Phones:** after login, the app uses a native-style bottom tab bar (Home · Courses · ▶ continue · Progress · Account). Desktop and logged-out visitors get the floating pill nav from [ihsan.my.id](https://ihsan.my.id).
 
 | Layer | Tech |
 |---|---|
@@ -18,7 +20,7 @@ The visual design follows [ihsan.my.id](https://ihsan.my.id) (`../portofolio-web
 ```
 apps/mobile/            Expo app (routes in src/app, UI kit in src/components/ui)
 apps/api/               Go API (cmd/server, internal/*, migrations/)
-packages/curriculum/    Versioned curriculum: a0…c2.json skeleton + lessons/<nodeId>.json
+packages/courses/<slug>/  One folder per course: course.json, <level>.json roadmap files, lessons/<nodeId>.json
 infra/docker-compose.yml  PostgreSQL (+ optional api service)
 scripts/e2e.sh          HTTP end-to-end check of the learning loop
 ```
@@ -45,7 +47,7 @@ In a second terminal:
 cd apps/mobile && npm install && npx expo start
 ```
 
-Press `w` for web, `a` for Android, or `i` for iOS. Migrations run automatically, and a single demo learner is seeded.
+Press `w` for web, `a` for Android, or `i` for iOS. Migrations run automatically. Create an account from the app's Sign up page.
 
 ### Pointing the app at the API
 
@@ -86,7 +88,7 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 
 ## How progression works
 
-- **The curriculum is fixed data.** At startup, the Go API validates `packages/curriculum`: unique IDs, valid prerequisites, no cycles, a ready root, and every objective of a ready node covered by an assessment item. The API refuses to start if any check fails.
+- **Courses are fixed data.** At startup the Go API validates every course in `packages/courses` (see Courses below). The AI never changes a roadmap.
 - **The tutor teaches; the server decides.** Each lesson runs through `INTRODUCTION → EXPLANATION → GUIDED_PRACTICE → INDEPENDENT_PRACTICE → ASSESSMENT`. The model may suggest `advance_phase`, but the server only honours it after a minimum number of learner replies per phase. It also advances on its own after a maximum, so a learner can't get stuck.
 - **Assessment is objective-based.** The evaluator returns per-objective scores. Go validates them (every objective present, 0–100), computes the mean, and applies the threshold (80). Malformed output or a provider failure returns a retryable 502 and saves nothing.
 - **Mastery happens exactly once.** Completion runs in one transaction under row locks, and repeated submissions return the existing result. A failed attempt moves the session to `REVIEW` with targeted practice, then back to assessment.
@@ -94,19 +96,29 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 
 ## API
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/healthz` | Health and DB status |
-| GET | `/api/v1/curriculum` | Nodes and prerequisites |
-| GET | `/api/v1/roadmap` | Curriculum with learner statuses and summary |
-| GET | `/api/v1/nodes/{nodeId}` | Detail, objectives, prerequisites/successors, `canStart` |
-| POST | `/api/v1/sessions` | Start or resume a lesson `{nodeId}` |
-| GET | `/api/v1/sessions/{id}` | Session state, messages, assessment items |
-| POST | `/api/v1/sessions/{id}/messages` | Learner reply → tutor reply `{content}` |
-| POST | `/api/v1/sessions/{id}/assessment` | Submit `{answers:[{itemId,answer}]}` |
-| GET | `/api/v1/progress` | Mastered skills, attempts, open sessions, weekly summary |
+| Method | Endpoint | Auth | Purpose |
+|---|---|---|---|
+| GET | `/healthz` | – | Health and DB status |
+| POST | `/api/v1/auth/register` · `/login` · `/logout` | – | Accounts. Sets an HttpOnly `fp_session` cookie (web); native clients send `X-FluentPath-Client: native` and get a bearer token |
+| GET | `/api/v1/auth/me` | required | Current user |
+| GET | `/api/v1/courses` | optional | Catalog; with login, enrolled courses include progress |
+| GET | `/api/v1/courses/{course}/roadmap` | optional | Roadmap with your statuses (a new learner's when anonymous) |
+| GET | `/api/v1/courses/{course}/nodes/{nodeId}` | optional | Node detail, objectives, prerequisites, `canStart` |
+| POST | `/api/v1/courses/{course}/enroll` | required | Add the course to your dashboard (idempotent) |
+| GET | `/api/v1/courses/{course}/progress` | required | Mastered skills, attempts, open lessons in that course |
+| GET | `/api/v1/dashboard` | required | Courses, streak, activity, open lessons, recent scores |
+| POST | `/api/v1/sessions` | required | Start or resume a lesson `{course, nodeId}` (auto-enrolls) |
+| GET | `/api/v1/sessions/{id}` | required | Session state, messages, assessment items (owner only) |
+| POST | `/api/v1/sessions/{id}/messages` | required | Learner reply → tutor reply `{content}` |
+| POST | `/api/v1/sessions/{id}/assessment` | required | Submit `{answers:[{itemId,answer}]}` |
 
-Errors have the shape `{"error":{"code","message","retryable"}}`. Request bodies are capped at 32 KB and messages at 2,000 characters. Rate limits are per IP (`RATE_LIMIT_PER_MIN`, `AI_RATE_LIMIT_PER_MIN`).
+Errors have the shape `{"error":{"code","message","retryable"}}`. Request bodies are capped at 32 KB and messages at 2,000 characters. POSTs must be JSON, which together with SameSite=Lax cookies blocks cross-site form CSRF. Rate limits are per IP: `RATE_LIMIT_PER_MIN`, `AI_RATE_LIMIT_PER_MIN` and `AUTH_RATE_LIMIT_PER_MIN`.
+
+### Accounts and security
+
+- Passwords are hashed with argon2id. Session tokens are 32 random bytes; the database stores only their SHA-256. They last 30 days with a sliding expiry, and expired sessions are cleaned up hourly.
+- A wrong password and an unknown email give the same error and take about the same time.
+- Every lesson, attempt and progress query is scoped to the logged-in user. Another user's session ID returns 404.
 
 ## Tests
 
@@ -122,20 +134,22 @@ scripts/e2e.sh
 cd apps/mobile && npx tsc --noEmit && npx expo lint
 ```
 
-- **Go tests** cover the curriculum validator, status derivation, phase rules, tutor-reply parsing, and scoring with malformed evaluator output. The DB integration tests cover the full loop, a failed attempt not unlocking anything, locked and coming-soon nodes, provider failures, a concurrent double-submit mastering once, and all 7 lessons end to end. Each test runs in its own schema.
-- **`e2e.sh`** builds the API and runs it against a throwaway database with the mock tutor. It masters every ready lesson over HTTP (with a failing attempt first), restarts the API, and checks that the progress persisted.
+- **Go tests** cover the course validator, status derivation, phase rules, tutor-reply parsing, and scoring with malformed evaluator output. The DB integration tests cover the full loop, a failed attempt not unlocking anything, locked and coming-soon nodes, provider failures, a concurrent double-submit mastering once, all 7 lessons end to end, user isolation, the dashboard and streak, the v1 → v2 migration, and the auth flow (register, login, logout, expiry, validation, CSRF guard). Each test runs in its own schema.
+- **`e2e.sh`** builds the API and runs it against a throwaway database with the mock tutor. It checks that anonymous users can't start lessons, then signs up two users. User A masters every ready lesson over HTTP (with a failing attempt first), and user B must see none of it. It then restarts the API, logs in again, and checks that the progress persisted.
 
-## Curriculum
+## Courses
 
-- 59 nodes across A0–C2, of which 7 have full lesson content: alphabet & sounds, pronouns, common vocabulary, basic sentences, *to be*, simple present, and questions. The rest are labelled **Coming soon** and can't be started.
-- To add a lesson:
-  1. Write `packages/curriculum/lessons/<nodeId>.json` (intro, key points with Indonesian glosses, guided/independent practice, and assessment items for every objective).
-  2. Set the node's `contentStatus` to `ready`.
-  3. Run the Go tests. The validator will tell you what's missing.
+- Each course lives in `packages/courses/<slug>/`:
+  - `course.json`: title, tagline, category, tone, levels, target level, and the tutor/evaluator prompt policies.
+  - `<level>.json`: the roadmap nodes for each level.
+  - `lessons/<nodeId>.json`: content for every node marked `ready`.
+- At startup the API validates every course: unique slugs and IDs, valid prerequisites, no cycles, a ready root, and assessment coverage for every objective. It refuses to start if a course is broken.
+- English has 59 nodes across A0–C2. Seven have full lessons: alphabet & sounds, pronouns, common vocabulary, basic sentences, *to be*, simple present, and questions. The rest show as **Coming soon**.
+- **Adding a course:** copy the `english` folder structure, write `course.json` and the level files, and run the Go tests. The new course then appears in the catalog automatically.
 
 ## Known limitations
 
-- **Single demo learner, no authentication.** Keep the API private. Add real auth and per-user authorization before exposing write endpoints.
+- **No email verification or password reset yet.** Accounts work, but there's no "forgot password" flow and emails aren't verified.
 - **Scores are not certification.** AI scores are a learning signal, not a CEFR certification, and model judgements can be wrong.
 - **Voice is not implemented.** Push-to-talk and TTS (P1) are on the backlog, and there is no pronunciation scoring.
 - **Android is only partly tested.** Web and the iOS simulator (Expo Go) were checked manually. Android needs an emulator/AVD, which wasn't available on the build machine.
@@ -143,7 +157,7 @@ cd apps/mobile && npx tsc --noEmit && npx expo lint
 ## Next steps
 
 1. Push-to-talk transcription (`expo-audio` → `/api/v1/audio/transcribe`), then optional tutor TTS.
-2. Authentication and per-user data.
+2. Password reset and email verification.
 3. More ready lessons (self-introduction, daily routines, everyday conversation).
 4. Spaced repetition and a placement test.
 5. Deploy: Go API + managed Postgres, and the Expo Web export (`npx expo export -p web`).

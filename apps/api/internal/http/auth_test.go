@@ -153,10 +153,10 @@ func TestAuthFlow(t *testing.T) {
 func TestRegisterValidation(t *testing.T) {
 	h, _ := dbRouter(t)
 	for body, want := range map[string]string{
-		`{"email":"not-an-email","password":"longenough","displayName":"A"}`:     "invalid_email",
-		`{"email":"a@b","password":"longenough","displayName":"A"}`:              "invalid_email",
-		`{"email":"a@b.co","password":"short","displayName":"A"}`:                "invalid_password",
-		`{"email":"a@b.co","password":"longenough","displayName":"   "}`:         "invalid_name",
+		`{"email":"not-an-email","password":"longenough","displayName":"A"}`:    "invalid_email",
+		`{"email":"a@b","password":"longenough","displayName":"A"}`:             "invalid_email",
+		`{"email":"a@b.co","password":"short","displayName":"A"}`:               "invalid_password",
+		`{"email":"a@b.co","password":"longenough","displayName":"   "}`:        "invalid_name",
 		`{"email":"Name <a@b.co>","password":"longenough","displayName":"Ann"}`: "invalid_email",
 	} {
 		if _, got := do(h, call{method: "POST", path: "/api/v1/auth/register", body: body}); errCode(got) != want {

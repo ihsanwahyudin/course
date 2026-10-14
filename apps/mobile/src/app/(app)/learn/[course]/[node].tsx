@@ -31,7 +31,7 @@ function stepIndex(session: Session) {
 }
 
 export default function LearnScreen() {
-  const { id: nodeId } = useLocalSearchParams<{ id: string }>();
+  const { course, node: nodeId } = useLocalSearchParams<{ course: string; node: string }>();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const start = useStartSession();
@@ -45,9 +45,9 @@ export default function LearnScreen() {
   // Start or resume this node's session (the server makes this idempotent).
   const { mutate: startSession } = start;
   useEffect(() => {
-    if (nodeId) startSession(nodeId);
-  }, [nodeId, startSession]);
-  const sessionId = start.variables === nodeId ? start.data?.id : undefined;
+    if (course && nodeId) startSession({ course, nodeId });
+  }, [course, nodeId, startSession]);
+  const sessionId = start.variables?.course === course && start.variables?.nodeId === nodeId ? start.data?.id : undefined;
 
   const session = useQuery({ queryKey: keys.session(sessionId ?? ''), queryFn: () => api.session(sessionId!), enabled: !!sessionId });
   const send = useSendMessage(sessionId ?? '');
@@ -84,9 +84,9 @@ export default function LearnScreen() {
   const header = (
     <View style={[styles.header, { paddingTop: insets.top + 12 }]}>
       <View style={styles.headerRow}>
-        <IconButton icon="arrowLeft" label="Back to lesson details" variant="soft" onPress={() => (router.canGoBack() ? router.back() : router.replace(`/nodes/${nodeId}`))} />
+        <IconButton icon="arrowLeft" label="Back to lesson details" variant="soft" onPress={() => (router.canGoBack() ? router.back() : router.replace(`/courses/${course}/${nodeId}`))} />
         <View style={{ flex: 1 }}>
-          <Eyebrow>{s ? `${s.node.level} · Lesson` : 'Lesson'}</Eyebrow>
+          <Eyebrow>{s ? `${s.course.title} · ${s.node.level}` : 'Lesson'}</Eyebrow>
           <Text weight="medium" tight size={16} numberOfLines={1}>
             {s?.node.title ?? '…'}
           </Text>
@@ -112,9 +112,9 @@ export default function LearnScreen() {
         <ErrorState
           title={blocked ? 'This lesson isn’t open yet' : "Couldn't start the lesson"}
           message={e.message}
-          onRetry={blocked ? undefined : () => startSession(nodeId)}
+          onRetry={blocked ? undefined : () => startSession({ course, nodeId })}
         />
-        {blocked ? <PillButton label="Back to roadmap" variant="secondary" onPress={() => router.replace('/roadmap')} style={{ marginTop: 12 }} /> : null}
+        {blocked ? <PillButton label="Back to roadmap" variant="secondary" onPress={() => router.replace(`/courses/${course}`)} style={{ marginTop: 12 }} /> : null}
       </View>
     );
   } else if (!s) {
@@ -153,7 +153,7 @@ export default function LearnScreen() {
             <Text weight="medium" size={18} tight>
               {s.node.title} is mastered{s.lastAttempt ? ` with ${s.lastAttempt.score}/100` : ''}.
             </Text>
-            <PillButton label="Back to roadmap" icon="arrowUpRight" onPress={() => router.replace('/roadmap')} />
+            <PillButton label="Back to roadmap" icon="arrowUpRight" onPress={() => router.replace(`/courses/${course}`)} />
           </Card>
         ) : null}
       </ScrollView>
@@ -180,11 +180,11 @@ export default function LearnScreen() {
           onClose={() => setResult(undefined)}
           onRoadmap={() => {
             setResult(undefined);
-            router.replace('/roadmap');
+            router.replace(`/courses/${course}`);
           }}
           onNext={(id) => {
             setResult(undefined);
-            router.replace(`/nodes/${id}`);
+            router.replace(`/courses/${course}/${id}`);
           }}
         />
       ) : null}

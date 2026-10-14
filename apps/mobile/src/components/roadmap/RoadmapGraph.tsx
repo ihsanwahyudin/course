@@ -12,14 +12,14 @@ import { edgePath, layoutRoadmap, type Box } from './layout';
 
 const unlocked = (n: RoadmapNode) => n.status === 'available' || n.status === 'in_progress' || n.status === 'mastered';
 
-function NodeCard({ node, box, next }: { node: RoadmapNode; box: Box; next: boolean }) {
+function NodeCard({ course, node, box, next }: { course: string; node: RoadmapNode; box: Box; next: boolean }) {
   const router = useRouter();
   const [hovered, setHovered] = useState(false);
   const s = node.status;
   const bg = s === 'mastered' ? colors.mint : s === 'in_progress' ? colors.lavender : s === 'coming_soon' ? 'rgba(255,255,255,0.55)' : colors.card;
   return (
     <Pressable
-      onPress={() => router.push(`/nodes/${node.id}`)}
+      onPress={() => router.push(`/courses/${course}/${node.id}`)}
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
@@ -67,7 +67,7 @@ function NodeCard({ node, box, next }: { node: RoadmapNode; box: Box; next: bool
 }
 
 // Shared SVG node-and-edge roadmap (works on Android, iOS and Web).
-export function RoadmapGraph({ nodes, levels, width, wide, nextNodeId }: { nodes: RoadmapNode[]; levels: LevelSummary[]; width: number; wide: boolean; nextNodeId: string | null }) {
+export function RoadmapGraph({ course, nodes, levels, width, wide, nextNodeId }: { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; width: number; wide: boolean; nextNodeId: string | null }) {
   const layout = useMemo(() => layoutRoadmap(nodes, levels, width, wide), [nodes, levels, width, wide]);
   const byId = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
 
@@ -110,7 +110,7 @@ export function RoadmapGraph({ nodes, levels, width, wide, nextNodeId }: { nodes
         </View>
       ))}
       {nodes.map((n) => (
-        <NodeCard key={n.id} node={n} box={layout.boxes[n.id]} next={n.id === nextNodeId} />
+        <NodeCard key={n.id} course={course} node={n} box={layout.boxes[n.id]} next={n.id === nextNodeId} />
       ))}
     </View>
   );

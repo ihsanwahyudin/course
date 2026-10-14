@@ -1,0 +1,79 @@
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+
+import { PageHeader } from '@/components/PageHeader';
+import { Card } from '@/components/ui/Card';
+import { MeshBlob } from '@/components/ui/Decor';
+import { Avatar } from '@/components/ui/FloatingNav';
+import { Icon } from '@/components/ui/Icon';
+import { PillButton } from '@/components/ui/PillButton';
+import { Screen, useLayout } from '@/components/ui/Screen';
+import { Eyebrow, Heading, Text } from '@/components/ui/Text';
+import { useAuth } from '@/lib/auth';
+import { useDashboard } from '@/lib/queries';
+import { colors, fonts } from '@/theme/tokens';
+
+export default function AccountScreen() {
+  const router = useRouter();
+  const user = useAuth((s) => s.user);
+  const logout = useAuth((s) => s.logout);
+  const { data } = useDashboard();
+  const { wide } = useLayout();
+  const [busy, setBusy] = useState(false);
+  if (!user) return null;
+
+  const rows: [string, string][] = [
+    ['Email', user.email],
+    ['Member since', new Date(user.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })],
+    ['Courses', String(data?.courses.length ?? '–')],
+    ['Skills mastered', String(data?.totalMastered ?? '–')],
+  ];
+
+  return (
+    <Screen maxWidth={760}>
+      <PageHeader label="Account" title={wide ? 'Your account' : 'Account'} />
+      <View style={{ gap: wide ? 16 : 12 }}>
+        <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 24 }} decoration={<MeshBlob color={colors.lavender} size={260} style={{ right: -110, top: -120 }} />}>
+          <View style={styles.row}>
+            <Avatar name={user.displayName} size={64} />
+            <View style={{ flex: 1 }}>
+              <Heading size={30}>{user.displayName}</Heading>
+              <Text color={colors.muted}>{user.email}</Text>
+            </View>
+          </View>
+          <View style={{ borderTopWidth: 1, borderTopColor: colors.line }}>
+            {rows.map(([k, v]) => (
+              <View key={k} style={styles.item}>
+                <Text color={colors.muted}>{k}</Text>
+                <Text style={{ fontFamily: fonts.mono, fontSize: 13 }}>{v}</Text>
+              </View>
+            ))}
+          </View>
+        </Card>
+        <Card reveal={1} style={{ gap: 14 }}>
+          <View style={styles.row}>
+            <Icon name="logout" size={18} color={colors.muted} />
+            <Eyebrow>Session</Eyebrow>
+          </View>
+          <Text color={colors.muted}>Log out of FluentPath on this device. Your progress stays saved to your account.</Text>
+          <PillButton
+            label="Log out"
+            variant="secondary"
+            loading={busy}
+            onPress={async () => {
+              setBusy(true);
+              await logout();
+              router.replace('/');
+            }}
+          />
+        </Card>
+      </View>
+    </Screen>
+  );
+}
+
+const styles = StyleSheet.create({
+  row: { flexDirection: 'row', alignItems: 'center', gap: 14 },
+  item: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: colors.line },
+});

@@ -9,12 +9,12 @@ import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import type { LevelSummary, RoadmapNode } from '@/lib/api';
 import { colors, radius } from '@/theme/tokens';
 
-function Row({ node }: { node: RoadmapNode }) {
+function Row({ course, node }: { course: string; node: RoadmapNode }) {
   const router = useRouter();
   const [hovered, setHovered] = useState(false);
   return (
     <Pressable
-      onPress={() => router.push(`/nodes/${node.id}`)}
+      onPress={() => router.push(`/courses/${course}/${node.id}`)}
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
@@ -36,7 +36,7 @@ function Row({ node }: { node: RoadmapNode }) {
 }
 
 // Accessible list alternative to the graph, grouped by level.
-export function RoadmapList({ nodes, levels }: { nodes: RoadmapNode[]; levels: LevelSummary[] }) {
+export function RoadmapList({ course, nodes, levels }: { course: string; nodes: RoadmapNode[]; levels: LevelSummary[] }) {
   return (
     <View style={{ gap: 12 }}>
       {levels.map((l, i) => (
@@ -63,7 +63,7 @@ export function RoadmapList({ nodes, levels }: { nodes: RoadmapNode[]; levels: L
           {nodes
             .filter((n) => n.level === l.level)
             .map((n) => (
-              <Row key={n.id} node={n} />
+              <Row key={n.id} course={course} node={n} />
             ))}
         </Card>
       ))}

@@ -26,9 +26,11 @@ function resolveApiUrl(configured: string) {
 
 export const API_URL = resolveApiUrl(process.env.EXPO_PUBLIC_API_URL || fallback).replace(/\/$/, '');
 
-export type Level = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+// Levels are course data (course.json); English uses CEFR-style A0–C2.
+export type Level = string;
 export type NodeStatus = 'mastered' | 'in_progress' | 'available' | 'locked' | 'coming_soon';
 export type Phase = 'INTRODUCTION' | 'EXPLANATION' | 'GUIDED_PRACTICE' | 'INDEPENDENT_PRACTICE' | 'ASSESSMENT' | 'REVIEW' | 'MASTERED';
+export type Tone = 'default' | 'lavender' | 'peach' | 'mint' | 'sky';
 
 export type Objective = { id: string; text: string };
 
@@ -46,14 +48,35 @@ export type RoadmapNode = {
   successorIds: string[];
 };
 
-export type Learner = {
-  id: string;
-  displayName: string;
-  nativeLanguage: string;
+export type User = { id: string; email: string; displayName: string; nativeLanguage: string; createdAt: string };
+
+export type CourseProgress = {
+  percent: number;
+  mastered: number;
+  targetNodes: number;
   currentLevel: Level;
   targetLevel: Level;
-  createdAt: string;
+  nextNode: RoadmapNode | null;
+  lastActivityAt: string;
 };
+
+export type Course = {
+  slug: string;
+  title: string;
+  tagline: string;
+  description: string;
+  category: string;
+  tone: Tone;
+  status: 'published' | 'coming_soon';
+  targetLevel: Level;
+  levels: Level[];
+  totalNodes: number;
+  readyNodes: number;
+  enrolled: boolean;
+  progress: CourseProgress | null;
+};
+
+export type CourseRef = { slug: string; title: string };
 
 export type LevelSummary = { level: Level; title: string; description: string; total: number; ready: number; mastered: number };
 
@@ -63,18 +86,23 @@ export type Summary = {
   masteredNodes: number;
   targetNodes: number;
   targetMastered: number;
+  percent: number;
   levels: LevelSummary[];
 };
 
 export type Roadmap = {
+  course: Course;
+  authenticated: boolean;
+  enrolled: boolean;
+  enrollment: { currentLevel: Level; targetLevel: Level };
   version: string;
-  learner: Learner;
   nodes: RoadmapNode[];
   nextNodeId: string | null;
   summary: Summary;
 };
 
 export type NodeDetail = RoadmapNode & {
+  course: CourseRef;
   prerequisites: RoadmapNode[];
   successors: RoadmapNode[];
   canStart: boolean;
@@ -95,6 +123,7 @@ export type Message = {
 export type Attempt = {
   id: string;
   sessionId: string;
+  courseSlug?: string;
   nodeId?: string;
   score: number;
   threshold: number;
@@ -107,12 +136,14 @@ export type Attempt = {
 
 export type Session = {
   id: string;
+  courseSlug: string;
   nodeId: string;
   phase: Phase;
   phaseTurns: number;
   startedAt: string;
   updatedAt: string;
   endedAt: string | null;
+  course: CourseRef;
   node: RoadmapNode;
   messages: Message[];
   steps: Phase[];
@@ -130,14 +161,28 @@ export type AssessmentResult = {
   session: Session;
 };
 
-export type Progress = {
-  learner: Learner;
+export type AttemptItem = Attempt & { title: string; courseTitle: string; objectives: Objective[] };
+
+export type OpenSession = { sessionId: string; courseSlug: string; courseTitle: string; nodeId: string; title: string; phase: Phase; updatedAt: string };
+
+export type CourseProgressView = {
+  course: Course;
   summary: Summary;
-  nextNode: RoadmapNode | null;
   mastered: { nodeId: string; title: string; level: Level; score: number | null; masteredAt: string }[];
-  recentAttempts: (Attempt & { title: string; objectives: Objective[] })[];
-  openSessions: { sessionId: string; nodeId: string; title: string; phase: Phase }[];
+  recentAttempts: AttemptItem[];
+  openSessions: OpenSession[];
+};
+
+export type Dashboard = {
+  user: User;
+  courses: Course[];
+  explore: Course[];
+  openSessions: OpenSession[];
+  recentAttempts: AttemptItem[];
   weekly: { messages: number; attempts: number; mastered: number };
+  streak: { current: number; activeToday: boolean };
+  activity: { date: string; count: number }[];
+  totalMastered: number;
 };
 
 export class ApiError extends Error {
@@ -151,15 +196,30 @@ export class ApiError extends Error {
   }
 }
 
-async function request<T>(path: string, init?: RequestInit & { timeoutMs?: number }): Promise<T> {
+// Auth wiring, set by lib/auth: the bearer token (native only — web uses an
+// HttpOnly cookie) and what to do when the server says the session is gone.
+let bearerToken: string | null = null;
+let onUnauthorized: (() => void) | null = null;
+export function setAuthToken(token: string | null) {
+  bearerToken = token;
+}
+export function setUnauthorizedHandler(fn: (() => void) | null) {
+  onUnauthorized = fn;
+}
+
+async function request<T>(path: string, init?: RequestInit & { timeoutMs?: number; skipAuthRedirect?: boolean }): Promise<T> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), init?.timeoutMs ?? 20000);
+  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+  if (Platform.OS !== 'web') headers['X-FluentPath-Client'] = 'native';
+  if (bearerToken) headers.Authorization = `Bearer ${bearerToken}`;
   let res: Response;
   try {
     res = await fetch(API_URL + path, {
       ...init,
+      credentials: 'include',
       signal: controller.signal,
-      headers: { 'Content-Type': 'application/json', ...(init?.headers ?? {}) },
+      headers: { ...headers, ...((init?.headers as Record<string, string>) ?? {}) },
     });
   } catch (e) {
     const aborted = (e as Error)?.name === 'AbortError';
@@ -170,21 +230,35 @@ async function request<T>(path: string, init?: RequestInit & { timeoutMs?: numbe
   const body = await res.json().catch(() => null);
   if (!res.ok) {
     const err = body?.error;
+    if (res.status === 401 && !init?.skipAuthRedirect) onUnauthorized?.();
     throw new ApiError(res.status, err?.code ?? 'http_error', err?.message ?? `Request failed (${res.status}).`, err?.retryable ?? res.status >= 500);
   }
   return body as T;
 }
 
+const post = (body?: unknown) => ({ method: 'POST', body: body === undefined ? undefined : JSON.stringify(body) });
+const enc = encodeURIComponent;
+
 export const api = {
-  roadmap: () => request<Roadmap>('/api/v1/roadmap'),
-  progress: () => request<Progress>('/api/v1/progress'),
-  node: (id: string) => request<NodeDetail>(`/api/v1/nodes/${encodeURIComponent(id)}`),
-  startSession: (nodeId: string) => request<Session>('/api/v1/sessions', { method: 'POST', body: JSON.stringify({ nodeId }) }),
-  session: (id: string) => request<Session>(`/api/v1/sessions/${encodeURIComponent(id)}`),
-  sendMessage: (id: string, content: string) =>
-    request<Session>(`/api/v1/sessions/${encodeURIComponent(id)}/messages`, { method: 'POST', body: JSON.stringify({ content }), timeoutMs: 95000 }),
+  // auth
+  me: () => request<{ user: User }>('/api/v1/auth/me', { skipAuthRedirect: true }),
+  register: (b: { email: string; password: string; displayName: string }) =>
+    request<{ user: User; token?: string }>('/api/v1/auth/register', { ...post(b), skipAuthRedirect: true }),
+  login: (b: { email: string; password: string }) => request<{ user: User; token?: string }>('/api/v1/auth/login', { ...post(b), skipAuthRedirect: true }),
+  logout: () => request<{ ok: boolean }>('/api/v1/auth/logout', { ...post(), skipAuthRedirect: true }),
+  // courses
+  courses: () => request<{ courses: Course[] }>('/api/v1/courses'),
+  roadmap: (course: string) => request<Roadmap>(`/api/v1/courses/${enc(course)}/roadmap`),
+  node: (course: string, id: string) => request<NodeDetail>(`/api/v1/courses/${enc(course)}/nodes/${enc(id)}`),
+  enroll: (course: string) => request<Roadmap>(`/api/v1/courses/${enc(course)}/enroll`, post()),
+  courseProgress: (course: string) => request<CourseProgressView>(`/api/v1/courses/${enc(course)}/progress`),
+  dashboard: () => request<Dashboard>('/api/v1/dashboard'),
+  // lessons
+  startSession: (course: string, nodeId: string) => request<Session>('/api/v1/sessions', post({ course, nodeId })),
+  session: (id: string) => request<Session>(`/api/v1/sessions/${enc(id)}`),
+  sendMessage: (id: string, content: string) => request<Session>(`/api/v1/sessions/${enc(id)}/messages`, { ...post({ content }), timeoutMs: 95000 }),
   submitAssessment: (id: string, answers: { itemId: string; answer: string }[]) =>
-    request<AssessmentResult>(`/api/v1/sessions/${encodeURIComponent(id)}/assessment`, { method: 'POST', body: JSON.stringify({ answers }), timeoutMs: 95000 }),
+    request<AssessmentResult>(`/api/v1/sessions/${enc(id)}/assessment`, { ...post({ answers }), timeoutMs: 95000 }),
 };
 
 export const phaseLabel: Record<Phase, string> = {

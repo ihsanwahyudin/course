@@ -8,13 +8,15 @@ import { GradientText } from '@/components/ui/GradientText';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
+import { useAuth } from '@/lib/auth';
 import { useNode } from '@/lib/queries';
 import { colors, fonts } from '@/theme/tokens';
 
 export default function NodeScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { course, node: nodeId } = useLocalSearchParams<{ course: string; node: string }>();
   const router = useRouter();
-  const { data: node, isPending, isError, error, refetch } = useNode(id);
+  const authed = useAuth((s) => s.status === 'authenticated');
+  const { data: node, isPending, isError, error, refetch } = useNode(course, nodeId);
   const { wide, gap, contentWidth } = useLayout();
 
   if (isPending) {
@@ -40,7 +42,7 @@ export default function NodeScreen() {
     <View style={{ width: mainW, gap }}>
       <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }} decoration={<MeshBlob color={colors.lavender} size={300} style={{ right: -120, top: -140 }} />}>
         <View style={styles.row}>
-          <Crumb onPress={() => router.push('/roadmap')} label="Roadmap" />
+          <Crumb onPress={() => router.push(`/courses/${node.course.slug}`)} label={node.course.title} />
           <Eyebrow>/ {node.level}</Eyebrow>
         </View>
         <View style={{ gap: 14 }}>
@@ -51,8 +53,19 @@ export default function NodeScreen() {
           </Text>
         </View>
         <View style={{ gap: 10 }}>
-          {node.canStart ? (
-            <PillButton label={label} icon="arrowUpRight" onPress={() => router.push(`/learn/${node.id}`)} />
+          {node.canStart && !authed ? (
+            <>
+              <PillButton
+                label="Log in to start"
+                icon="arrowUpRight"
+                onPress={() => router.push({ pathname: '/login', params: { next: `/courses/${node.course.slug}/${node.id}` } })}
+              />
+              <Text size={13} color={colors.muted}>
+                Lessons and progress need a free account.
+              </Text>
+            </>
+          ) : node.canStart ? (
+            <PillButton label={label} icon="arrowUpRight" onPress={() => router.push(`/learn/${node.course.slug}/${node.id}`)} />
           ) : (
             <>
               <PillButton label={node.status === 'coming_soon' ? 'Coming soon' : 'Locked'} icon={node.status === 'locked' ? 'lock' : undefined} disabled />
@@ -92,7 +105,7 @@ export default function NodeScreen() {
             ) : (
               <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
                 {g.items.map((n) => (
-                  <Chip key={n.id} label={`${n.level} · ${n.title}`} icon={n.status === 'mastered' ? 'check' : n.status === 'locked' ? 'lock' : undefined} onPress={() => router.push(`/nodes/${n.id}`)} />
+                  <Chip key={n.id} label={`${n.level} · ${n.title}`} icon={n.status === 'mastered' ? 'check' : n.status === 'locked' ? 'lock' : undefined} onPress={() => router.push(`/courses/${node.course.slug}/${n.id}`)} />
                 ))}
               </View>
             )}
