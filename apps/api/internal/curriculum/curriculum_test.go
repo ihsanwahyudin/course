@@ -6,7 +6,7 @@ import (
 )
 
 func TestLoadRepositoryCurriculum(t *testing.T) {
-	c, err := Load("../../../../packages/curriculum")
+	c, err := LoadCourse("../../../../packages/courses/english")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -19,8 +19,8 @@ func TestLoadRepositoryCurriculum(t *testing.T) {
 	if ready < 5 {
 		t.Fatalf("want at least 5 ready lessons, got %d", ready)
 	}
-	if len(c.Levels) != len(Levels) {
-		t.Fatalf("want %d levels, got %d", len(Levels), len(c.Levels))
+	if len(c.Levels) != len(c.LevelIDs) || c.Slug != "english" || c.Tutor.Policy == "" {
+		t.Fatalf("course metadata not loaded: %+v", c.Course)
 	}
 	// Topological order: every prerequisite appears before its dependant.
 	pos := map[string]int{}
@@ -44,8 +44,13 @@ func readyLesson(nodeID, objID string) *Lesson {
 		Assessment: []AssessmentItem{{ID: nodeID + "-1", ObjectiveID: objID, Prompt: "q", AcceptableAnswers: []string{"x"}}}}
 }
 
+var testCourse = Course{
+	Slug: "test", Title: "Test", Status: CoursePublished, TargetLevel: "A0", LevelIDs: []string{"A0"},
+	Tutor: TutorPolicy{Policy: "teach", EvaluatorPolicy: "grade"},
+}
+
 func build(nodes []Node, lessons map[string]*Lesson) error {
-	_, err := Build([]levelFile{{Version: "1", Level: "A0", Nodes: nodes}}, lessons)
+	_, err := Build(testCourse, []levelFile{{Version: "1", Level: "A0", Nodes: nodes}}, lessons)
 	return err
 }
 
@@ -96,4 +101,27 @@ func TestValidatorRequiresAssessmentCoverage(t *testing.T) {
 func TestValidatorRequiresReadyRoot(t *testing.T) {
 	err := build([]Node{{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentComingSoon}}, nil)
 	wantErr(t, err, "no ready root node")
+}
+
+func TestValidatorRejectsBadCourseMetadata(t *testing.T) {
+	bad := testCourse
+	bad.Slug, bad.TargetLevel, bad.Tutor.Policy = "Bad Slug", "Z9", ""
+	_, err := Build(bad, []levelFile{{Version: "1", Level: "A0", Nodes: []Node{{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentReady}}}},
+		map[string]*Lesson{"a": readyLesson("a", "o")})
+	for _, want := range []string{"course slug", "targetLevel", "tutor.policy"} {
+		wantErr(t, err, want)
+	}
+}
+
+func TestLoadCatalog(t *testing.T) {
+	cat, err := LoadCatalog("../../../../packages/courses")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if _, ok := cat.Course("english"); !ok || len(cat.Courses) == 0 {
+		t.Fatalf("english course missing from catalog")
+	}
+	if _, err := LoadCatalog(t.TempDir()); err == nil {
+		t.Fatal("empty courses dir should fail")
+	}
 }

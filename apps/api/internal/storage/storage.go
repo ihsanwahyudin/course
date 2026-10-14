@@ -1,5 +1,5 @@
-// Package storage persists learners, progress, sessions, messages and
-// assessment attempts in PostgreSQL via pgx.
+// Package storage persists users, login sessions, enrollments, progress,
+// lesson sessions, messages and assessment attempts in PostgreSQL via pgx.
 package storage
 
 import (
@@ -75,7 +75,10 @@ func (s *Store) Close() { s.Pool.Close() }
 
 // Migrate applies embedded migrations in filename order under an advisory
 // lock so concurrent API instances don't race.
-func (s *Store) Migrate(ctx context.Context) error {
+func (s *Store) Migrate(ctx context.Context) error { return s.MigrateUpTo(ctx, "") }
+
+// MigrateUpTo applies migrations up to and including `last` ("" = all).
+func (s *Store) MigrateUpTo(ctx context.Context, last string) error {
 	return pgx.BeginFunc(ctx, s.Pool, func(tx pgx.Tx) error {
 		if _, err := tx.Exec(ctx, `SELECT pg_advisory_xact_lock(724100)`); err != nil {
 			return err
@@ -90,6 +93,9 @@ func (s *Store) Migrate(ctx context.Context) error {
 		}
 		sort.Strings(names)
 		for _, name := range names {
+			if last != "" && name > last {
+				break
+			}
 			var exists bool
 			if err := tx.QueryRow(ctx, `SELECT EXISTS (SELECT 1 FROM schema_migrations WHERE version=$1)`, name).Scan(&exists); err != nil {
 				return err
@@ -113,34 +119,135 @@ func (s *Store) Migrate(ctx context.Context) error {
 	})
 }
 
-// ---- learners ----
-
-type Learner struct {
-	ID             string    `json:"id"`
-	DisplayName    string    `json:"displayName"`
-	NativeLanguage string    `json:"nativeLanguage"`
-	CurrentLevel   string    `json:"currentLevel"`
-	TargetLevel    string    `json:"targetLevel"`
-	CreatedAt      time.Time `json:"createdAt"`
+func isUniqueViolation(err error) bool {
+	var pgErr *pgconn.PgError
+	return errors.As(err, &pgErr) && pgErr.Code == "23505"
 }
 
-func (s *Store) EnsureLearner(ctx context.Context, id, name string) error {
-	_, err := s.Pool.Exec(ctx, `INSERT INTO learners (id, display_name) VALUES ($1, $2) ON CONFLICT (id) DO NOTHING`, id, name)
+// ---- users ----
+
+type User struct {
+	ID             string    `json:"id"`
+	Email          string    `json:"email"`
+	DisplayName    string    `json:"displayName"`
+	NativeLanguage string    `json:"nativeLanguage"`
+	CreatedAt      time.Time `json:"createdAt"`
+	PasswordHash   string    `json:"-"`
+}
+
+const userCols = `id, COALESCE(email, ''), display_name, native_language, created_at, COALESCE(password_hash, '')`
+
+func scanUser(row pgx.Row) (User, error) {
+	var u User
+	err := row.Scan(&u.ID, &u.Email, &u.DisplayName, &u.NativeLanguage, &u.CreatedAt, &u.PasswordHash)
+	if errors.Is(err, pgx.ErrNoRows) {
+		return u, ErrNotFound
+	}
+	return u, err
+}
+
+// CreateUser returns ErrConflict when the email is already registered.
+func CreateUser(ctx context.Context, db DB, email, passwordHash, displayName string) (User, error) {
+	u, err := scanUser(db.QueryRow(ctx, `INSERT INTO users (id, email, password_hash, display_name)
+		VALUES (gen_random_uuid(), $1, $2, $3) RETURNING `+userCols, email, passwordHash, displayName))
+	if isUniqueViolation(err) {
+		return u, ErrConflict
+	}
+	return u, err
+}
+
+func GetUser(ctx context.Context, db DB, id string) (User, error) {
+	return scanUser(db.QueryRow(ctx, `SELECT `+userCols+` FROM users WHERE id=$1`, id))
+}
+
+func GetUserByEmail(ctx context.Context, db DB, email string) (User, error) {
+	return scanUser(db.QueryRow(ctx, `SELECT `+userCols+` FROM users WHERE email=$1`, email))
+}
+
+// ---- login sessions ----
+
+func CreateAuthSession(ctx context.Context, db DB, userID, tokenHash, userAgent string, expires time.Time) error {
+	if len(userAgent) > 300 {
+		userAgent = userAgent[:300]
+	}
+	_, err := db.Exec(ctx, `INSERT INTO auth_sessions (user_id, token_hash, user_agent, expires_at) VALUES ($1,$2,$3,$4)`,
+		userID, tokenHash, userAgent, expires)
 	return err
 }
 
-func GetLearner(ctx context.Context, db DB, id string) (Learner, error) {
-	var l Learner
-	err := db.QueryRow(ctx, `SELECT id, display_name, native_language, current_level, target_level, created_at
-		FROM learners WHERE id=$1`, id).Scan(&l.ID, &l.DisplayName, &l.NativeLanguage, &l.CurrentLevel, &l.TargetLevel, &l.CreatedAt)
-	if errors.Is(err, pgx.ErrNoRows) {
-		return l, ErrNotFound
+// UserForToken returns the user behind an unexpired session token hash and
+// slides the expiry forward (at most once a minute, to limit writes).
+func UserForToken(ctx context.Context, db DB, tokenHash string, ttl time.Duration) (User, error) {
+	u, err := scanUser(db.QueryRow(ctx, `SELECT u.id, COALESCE(u.email, ''), u.display_name, u.native_language, u.created_at, ''
+		FROM auth_sessions a JOIN users u ON u.id = a.user_id
+		WHERE a.token_hash=$1 AND a.expires_at > NOW()`, tokenHash))
+	if err != nil {
+		return u, err
 	}
-	return l, err
+	_, err = db.Exec(ctx, `UPDATE auth_sessions SET last_seen_at=NOW(), expires_at=NOW() + $2::interval
+		WHERE token_hash=$1 AND last_seen_at < NOW() - INTERVAL '1 minute'`, tokenHash, fmt.Sprintf("%d seconds", int(ttl.Seconds())))
+	return u, err
 }
 
-func SetLearnerLevel(ctx context.Context, db DB, id, level string) error {
-	_, err := db.Exec(ctx, `UPDATE learners SET current_level=$2 WHERE id=$1`, id, level)
+func DeleteAuthSession(ctx context.Context, db DB, tokenHash string) error {
+	_, err := db.Exec(ctx, `DELETE FROM auth_sessions WHERE token_hash=$1`, tokenHash)
+	return err
+}
+
+func DeleteExpiredAuthSessions(ctx context.Context, db DB) (int64, error) {
+	tag, err := db.Exec(ctx, `DELETE FROM auth_sessions WHERE expires_at <= NOW()`)
+	return tag.RowsAffected(), err
+}
+
+// ---- enrollments ----
+
+type Enrollment struct {
+	CourseSlug     string    `json:"courseSlug"`
+	CurrentLevel   string    `json:"currentLevel"`
+	TargetLevel    string    `json:"targetLevel"`
+	EnrolledAt     time.Time `json:"enrolledAt"`
+	LastActivityAt time.Time `json:"lastActivityAt"`
+}
+
+const enrollmentCols = `course_slug, current_level, target_level, enrolled_at, last_activity_at`
+
+func scanEnrollment(row pgx.Row) (Enrollment, error) {
+	var e Enrollment
+	err := row.Scan(&e.CourseSlug, &e.CurrentLevel, &e.TargetLevel, &e.EnrolledAt, &e.LastActivityAt)
+	if errors.Is(err, pgx.ErrNoRows) {
+		return e, ErrNotFound
+	}
+	return e, err
+}
+
+func GetEnrollment(ctx context.Context, db DB, userID, course string) (Enrollment, error) {
+	return scanEnrollment(db.QueryRow(ctx, `SELECT `+enrollmentCols+` FROM enrollments WHERE user_id=$1 AND course_slug=$2`, userID, course))
+}
+
+// EnsureEnrollment enrols the user if they aren't already (idempotent).
+func EnsureEnrollment(ctx context.Context, db DB, userID, course, currentLevel, targetLevel string) (Enrollment, error) {
+	if _, err := db.Exec(ctx, `INSERT INTO enrollments (user_id, course_slug, current_level, target_level)
+		VALUES ($1,$2,$3,$4) ON CONFLICT DO NOTHING`, userID, course, currentLevel, targetLevel); err != nil {
+		return Enrollment{}, err
+	}
+	return GetEnrollment(ctx, db, userID, course)
+}
+
+func ListEnrollments(ctx context.Context, db DB, userID string) ([]Enrollment, error) {
+	rows, err := db.Query(ctx, `SELECT `+enrollmentCols+` FROM enrollments WHERE user_id=$1 ORDER BY last_activity_at DESC`, userID)
+	if err != nil {
+		return nil, err
+	}
+	return pgx.CollectRows(rows, func(r pgx.CollectableRow) (Enrollment, error) { return scanEnrollment(r) })
+}
+
+func SetEnrollmentLevel(ctx context.Context, db DB, userID, course, level string) error {
+	_, err := db.Exec(ctx, `UPDATE enrollments SET current_level=$3 WHERE user_id=$1 AND course_slug=$2`, userID, course, level)
+	return err
+}
+
+func TouchEnrollment(ctx context.Context, db DB, userID, course string) error {
+	_, err := db.Exec(ctx, `UPDATE enrollments SET last_activity_at=NOW() WHERE user_id=$1 AND course_slug=$2`, userID, course)
 	return err
 }
 
@@ -154,9 +261,9 @@ type NodeProgress struct {
 	UpdatedAt    time.Time
 }
 
-func ListProgress(ctx context.Context, db DB, learnerID string) ([]NodeProgress, error) {
+func ListProgress(ctx context.Context, db DB, userID, course string) ([]NodeProgress, error) {
 	rows, err := db.Query(ctx, `SELECT node_id, status, mastery_score, mastered_at, updated_at
-		FROM node_progress WHERE learner_id=$1`, learnerID)
+		FROM node_progress WHERE user_id=$1 AND course_slug=$2`, userID, course)
 	if err != nil {
 		return nil, err
 	}
@@ -173,40 +280,42 @@ func ListProgress(ctx context.Context, db DB, learnerID string) ([]NodeProgress,
 }
 
 // MarkInProgress records that a lesson was started, never downgrading mastery.
-func MarkInProgress(ctx context.Context, db DB, learnerID, nodeID string) error {
-	_, err := db.Exec(ctx, `INSERT INTO node_progress (learner_id, node_id, status) VALUES ($1, $2, 'in_progress')
-		ON CONFLICT (learner_id, node_id) DO UPDATE SET status='in_progress', updated_at=NOW()
-		WHERE node_progress.status <> 'mastered'`, learnerID, nodeID)
+func MarkInProgress(ctx context.Context, db DB, userID, course, nodeID string) error {
+	_, err := db.Exec(ctx, `INSERT INTO node_progress (user_id, course_slug, node_id, status) VALUES ($1, $2, $3, 'in_progress')
+		ON CONFLICT (user_id, course_slug, node_id) DO UPDATE SET status='in_progress', updated_at=NOW()
+		WHERE node_progress.status <> 'mastered'`, userID, course, nodeID)
 	return err
 }
 
-// LockProgress takes a row lock on the learner's progress for a node (creating
+// LockProgress takes a row lock on the user's progress for a node (creating
 // the row if needed) so completion is serialized. Returns the current status.
-func LockProgress(ctx context.Context, tx pgx.Tx, learnerID, nodeID string) (string, error) {
-	if _, err := tx.Exec(ctx, `INSERT INTO node_progress (learner_id, node_id, status) VALUES ($1, $2, 'in_progress')
-		ON CONFLICT DO NOTHING`, learnerID, nodeID); err != nil {
+func LockProgress(ctx context.Context, tx pgx.Tx, userID, course, nodeID string) (string, error) {
+	if _, err := tx.Exec(ctx, `INSERT INTO node_progress (user_id, course_slug, node_id, status) VALUES ($1, $2, $3, 'in_progress')
+		ON CONFLICT DO NOTHING`, userID, course, nodeID); err != nil {
 		return "", err
 	}
 	var status string
-	err := tx.QueryRow(ctx, `SELECT status FROM node_progress WHERE learner_id=$1 AND node_id=$2 FOR UPDATE`, learnerID, nodeID).Scan(&status)
+	err := tx.QueryRow(ctx, `SELECT status FROM node_progress WHERE user_id=$1 AND course_slug=$2 AND node_id=$3 FOR UPDATE`,
+		userID, course, nodeID).Scan(&status)
 	return status, err
 }
 
 // MarkMastered sets mastery exactly once; returns false if it was already mastered.
-func MarkMastered(ctx context.Context, tx pgx.Tx, learnerID, nodeID string, score int) (bool, error) {
-	tag, err := tx.Exec(ctx, `UPDATE node_progress SET status='mastered', mastery_score=$3, mastered_at=NOW(), updated_at=NOW()
-		WHERE learner_id=$1 AND node_id=$2 AND status <> 'mastered'`, learnerID, nodeID, score)
+func MarkMastered(ctx context.Context, tx pgx.Tx, userID, course, nodeID string, score int) (bool, error) {
+	tag, err := tx.Exec(ctx, `UPDATE node_progress SET status='mastered', mastery_score=$4, mastered_at=NOW(), updated_at=NOW()
+		WHERE user_id=$1 AND course_slug=$2 AND node_id=$3 AND status <> 'mastered'`, userID, course, nodeID, score)
 	if err != nil {
 		return false, err
 	}
 	return tag.RowsAffected() == 1, nil
 }
 
-// ---- sessions ----
+// ---- lesson sessions ----
 
 type Session struct {
 	ID         string     `json:"id"`
-	LearnerID  string     `json:"-"`
+	UserID     string     `json:"-"`
+	CourseSlug string     `json:"courseSlug"`
 	NodeID     string     `json:"nodeId"`
 	Phase      string     `json:"phase"`
 	PhaseTurns int        `json:"phaseTurns"`
@@ -215,40 +324,40 @@ type Session struct {
 	EndedAt    *time.Time `json:"endedAt"`
 }
 
-const sessionCols = `id, learner_id, node_id, phase, phase_turns, started_at, updated_at, ended_at`
+const sessionCols = `id, user_id, course_slug, node_id, phase, phase_turns, started_at, updated_at, ended_at`
 
 func scanSession(row pgx.Row) (Session, error) {
 	var s Session
-	err := row.Scan(&s.ID, &s.LearnerID, &s.NodeID, &s.Phase, &s.PhaseTurns, &s.StartedAt, &s.UpdatedAt, &s.EndedAt)
+	err := row.Scan(&s.ID, &s.UserID, &s.CourseSlug, &s.NodeID, &s.Phase, &s.PhaseTurns, &s.StartedAt, &s.UpdatedAt, &s.EndedAt)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return s, ErrNotFound
 	}
 	return s, err
 }
 
-func FindOpenSession(ctx context.Context, db DB, learnerID, nodeID string) (Session, error) {
+func FindOpenSession(ctx context.Context, db DB, userID, course, nodeID string) (Session, error) {
 	return scanSession(db.QueryRow(ctx, `SELECT `+sessionCols+` FROM learning_sessions
-		WHERE learner_id=$1 AND node_id=$2 AND ended_at IS NULL`, learnerID, nodeID))
+		WHERE user_id=$1 AND course_slug=$2 AND node_id=$3 AND ended_at IS NULL`, userID, course, nodeID))
 }
 
 // CreateSession inserts a new open session. Returns ErrConflict if another
 // open session for the node was created concurrently.
-func CreateSession(ctx context.Context, db DB, learnerID, nodeID, phase string) (Session, error) {
-	s, err := scanSession(db.QueryRow(ctx, `INSERT INTO learning_sessions (learner_id, node_id, phase)
-		VALUES ($1, $2, $3) RETURNING `+sessionCols, learnerID, nodeID, phase))
-	var pgErr *pgconn.PgError
-	if errors.As(err, &pgErr) && pgErr.Code == "23505" {
+func CreateSession(ctx context.Context, db DB, userID, course, nodeID, phase string) (Session, error) {
+	s, err := scanSession(db.QueryRow(ctx, `INSERT INTO learning_sessions (user_id, course_slug, node_id, phase)
+		VALUES ($1, $2, $3, $4) RETURNING `+sessionCols, userID, course, nodeID, phase))
+	if isUniqueViolation(err) {
 		return s, ErrConflict
 	}
 	return s, err
 }
 
-func GetSession(ctx context.Context, db DB, id, learnerID string) (Session, error) {
-	return scanSession(db.QueryRow(ctx, `SELECT `+sessionCols+` FROM learning_sessions WHERE id=$1 AND learner_id=$2`, id, learnerID))
+// GetSession only returns sessions owned by userID; others are ErrNotFound.
+func GetSession(ctx context.Context, db DB, id, userID string) (Session, error) {
+	return scanSession(db.QueryRow(ctx, `SELECT `+sessionCols+` FROM learning_sessions WHERE id=$1 AND user_id=$2`, id, userID))
 }
 
-func LockSession(ctx context.Context, tx pgx.Tx, id, learnerID string) (Session, error) {
-	return scanSession(tx.QueryRow(ctx, `SELECT `+sessionCols+` FROM learning_sessions WHERE id=$1 AND learner_id=$2 FOR UPDATE`, id, learnerID))
+func LockSession(ctx context.Context, tx pgx.Tx, id, userID string) (Session, error) {
+	return scanSession(tx.QueryRow(ctx, `SELECT `+sessionCols+` FROM learning_sessions WHERE id=$1 AND user_id=$2 FOR UPDATE`, id, userID))
 }
 
 // AdvanceSession moves a session to a new phase/turn count, but only if it is
@@ -273,6 +382,16 @@ func EndSession(ctx context.Context, db DB, id, phase string) error {
 func SetSessionPhase(ctx context.Context, db DB, id, phase string) error {
 	_, err := db.Exec(ctx, `UPDATE learning_sessions SET phase=$2, phase_turns=0, updated_at=NOW() WHERE id=$1`, id, phase)
 	return err
+}
+
+// OpenSessions lists the user's unfinished sessions across courses, newest first.
+func OpenSessions(ctx context.Context, db DB, userID string) ([]Session, error) {
+	rows, err := db.Query(ctx, `SELECT `+sessionCols+` FROM learning_sessions
+		WHERE user_id=$1 AND ended_at IS NULL ORDER BY updated_at DESC LIMIT 20`, userID)
+	if err != nil {
+		return nil, err
+	}
+	return pgx.CollectRows(rows, func(r pgx.CollectableRow) (Session, error) { return scanSession(r) })
 }
 
 // ---- messages ----
@@ -315,14 +434,14 @@ func ListMessages(ctx context.Context, db DB, sessionID string) ([]Message, erro
 }
 
 // RecentMistakes returns the most frequent mistake tags the tutor observed for
-// this learner recently, most common first.
-func RecentMistakes(ctx context.Context, db DB, learnerID string, limit int) ([]string, error) {
+// this user in a course recently, most common first.
+func RecentMistakes(ctx context.Context, db DB, userID, course string, limit int) ([]string, error) {
 	rows, err := db.Query(ctx, `SELECT tag FROM (
 			SELECT jsonb_array_elements_text(m.metadata->'observedMistakes') AS tag
 			FROM session_messages m JOIN learning_sessions s ON s.id = m.session_id
-			WHERE s.learner_id=$1 AND m.role='assistant' AND m.metadata ? 'observedMistakes'
+			WHERE s.user_id=$1 AND s.course_slug=$2 AND m.role='assistant' AND m.metadata ? 'observedMistakes'
 			ORDER BY m.created_at DESC LIMIT 200) t
-		GROUP BY tag ORDER BY COUNT(*) DESC, tag LIMIT $2`, learnerID, limit)
+		GROUP BY tag ORDER BY COUNT(*) DESC, tag LIMIT $3`, userID, course, limit)
 	if err != nil {
 		return nil, err
 	}
@@ -334,6 +453,7 @@ func RecentMistakes(ctx context.Context, db DB, learnerID string, limit int) ([]
 type Attempt struct {
 	ID              string          `json:"id"`
 	SessionID       string          `json:"sessionId"`
+	CourseSlug      string          `json:"courseSlug,omitempty"`
 	NodeID          string          `json:"nodeId,omitempty"`
 	Score           int             `json:"score"`
 	Threshold       int             `json:"threshold"`
@@ -399,12 +519,12 @@ func LatestAttempt(ctx context.Context, db DB, sessionID string) (Attempt, error
 		WHERE session_id=$1 ORDER BY created_at DESC LIMIT 1`, sessionID))
 }
 
-// RecentAttempts lists the learner's latest attempts across all sessions.
-func RecentAttempts(ctx context.Context, db DB, learnerID string, limit int) ([]Attempt, error) {
-	rows, err := db.Query(ctx, `SELECT a.id, a.session_id, s.node_id, a.score, a.threshold, a.passed,
+// RecentAttempts lists the user's latest attempts; course "" means all courses.
+func RecentAttempts(ctx context.Context, db DB, userID, course string, limit int) ([]Attempt, error) {
+	rows, err := db.Query(ctx, `SELECT a.id, a.session_id, s.course_slug, s.node_id, a.score, a.threshold, a.passed,
 			a.objective_scores, a.evidence, a.feedback, a.answers, a.created_at
 		FROM assessment_attempts a JOIN learning_sessions s ON s.id = a.session_id
-		WHERE s.learner_id=$1 ORDER BY a.created_at DESC LIMIT $2`, learnerID, limit)
+		WHERE s.user_id=$1 AND ($2 = '' OR s.course_slug = $2) ORDER BY a.created_at DESC LIMIT $3`, userID, course, limit)
 	if err != nil {
 		return nil, err
 	}
@@ -412,7 +532,7 @@ func RecentAttempts(ctx context.Context, db DB, learnerID string, limit int) ([]
 		var a Attempt
 		var score, threshold int16
 		var scores, evidence []byte
-		if err := r.Scan(&a.ID, &a.SessionID, &a.NodeID, &score, &threshold, &a.Passed, &scores, &evidence, &a.Feedback, &a.Answers, &a.CreatedAt); err != nil {
+		if err := r.Scan(&a.ID, &a.SessionID, &a.CourseSlug, &a.NodeID, &score, &threshold, &a.Passed, &scores, &evidence, &a.Feedback, &a.Answers, &a.CreatedAt); err != nil {
 			return a, err
 		}
 		a.Score, a.Threshold = int(score), int(threshold)
@@ -422,24 +542,43 @@ func RecentAttempts(ctx context.Context, db DB, learnerID string, limit int) ([]
 	})
 }
 
-// OpenSessions lists the learner's unfinished sessions, newest first.
-func OpenSessions(ctx context.Context, db DB, learnerID string) ([]Session, error) {
-	rows, err := db.Query(ctx, `SELECT `+sessionCols+` FROM learning_sessions
-		WHERE learner_id=$1 AND ended_at IS NULL ORDER BY updated_at DESC`, learnerID)
+// ---- activity ----
+
+// WeeklyActivity counts the user's replies, attempts and new masteries in the
+// last 7 days (all courses).
+func WeeklyActivity(ctx context.Context, db DB, userID string) (messages, attempts, mastered int, err error) {
+	err = db.QueryRow(ctx, `SELECT
+		(SELECT COUNT(*) FROM session_messages m JOIN learning_sessions s ON s.id=m.session_id
+			WHERE s.user_id=$1 AND m.role='user' AND m.created_at > NOW() - INTERVAL '7 days'),
+		(SELECT COUNT(*) FROM assessment_attempts a JOIN learning_sessions s ON s.id=a.session_id
+			WHERE s.user_id=$1 AND a.created_at > NOW() - INTERVAL '7 days'),
+		(SELECT COUNT(*) FROM node_progress WHERE user_id=$1 AND mastered_at > NOW() - INTERVAL '7 days')`,
+		userID).Scan(&messages, &attempts, &mastered)
+	return
+}
+
+// DailyActivity returns learner actions (replies + attempts) per local day
+// for the last `days` days, keyed "2006-01-02" in the given time zone.
+func DailyActivity(ctx context.Context, db DB, userID, tz string, days int) (map[string]int, error) {
+	rows, err := db.Query(ctx, `SELECT to_char((t.at AT TIME ZONE $2)::date, 'YYYY-MM-DD'), COUNT(*) FROM (
+			SELECT m.created_at AS at FROM session_messages m JOIN learning_sessions s ON s.id=m.session_id
+				WHERE s.user_id=$1 AND m.role='user' AND m.created_at > NOW() - make_interval(days => $3)
+			UNION ALL
+			SELECT a.created_at FROM assessment_attempts a JOIN learning_sessions s ON s.id=a.session_id
+				WHERE s.user_id=$1 AND a.created_at > NOW() - make_interval(days => $3)
+		) t GROUP BY 1`, userID, tz, days)
 	if err != nil {
 		return nil, err
 	}
-	return pgx.CollectRows(rows, func(r pgx.CollectableRow) (Session, error) { return scanSession(r) })
-}
-
-// WeeklyActivity counts learner messages and attempts in the last 7 days.
-func WeeklyActivity(ctx context.Context, db DB, learnerID string) (messages, attempts, mastered int, err error) {
-	err = db.QueryRow(ctx, `SELECT
-		(SELECT COUNT(*) FROM session_messages m JOIN learning_sessions s ON s.id=m.session_id
-			WHERE s.learner_id=$1 AND m.role='user' AND m.created_at > NOW() - INTERVAL '7 days'),
-		(SELECT COUNT(*) FROM assessment_attempts a JOIN learning_sessions s ON s.id=a.session_id
-			WHERE s.learner_id=$1 AND a.created_at > NOW() - INTERVAL '7 days'),
-		(SELECT COUNT(*) FROM node_progress WHERE learner_id=$1 AND mastered_at > NOW() - INTERVAL '7 days')`,
-		learnerID).Scan(&messages, &attempts, &mastered)
-	return
+	out := map[string]int{}
+	for rows.Next() {
+		var day string
+		var n int
+		if err := rows.Scan(&day, &n); err != nil {
+			rows.Close()
+			return nil, err
+		}
+		out[day] = n
+	}
+	return out, rows.Err()
 }

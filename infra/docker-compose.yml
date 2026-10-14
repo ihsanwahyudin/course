@@ -24,7 +24,7 @@ services:
       dockerfile: apps/api/Dockerfile
     environment:
       DATABASE_URL: postgres://fluentpath:fluentpath@db:5432/fluentpath?sslmode=disable
-      CURRICULUM_DIR: /app/curriculum
+      COURSES_DIR: /app/courses
       AI_PROVIDER: ${AI_PROVIDER:-mock}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-}

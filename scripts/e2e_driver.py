@@ -1,7 +1,7 @@
 """HTTP driver for scripts/e2e.sh. Uses only the standard library.
 
-  e2e_driver.py learn  <api> <curriculum_dir>   master every ready lesson
-  e2e_driver.py verify <api> <curriculum_dir>   check progress survived a restart
+  e2e_driver.py learn  <api> <course_dir>   sign up, master every ready lesson
+  e2e_driver.py verify <api> <course_dir>   log in again, check progress survived
 """
 import glob
 import json
@@ -11,9 +11,17 @@ import urllib.error
 import urllib.request
 
 
+COURSE = "english"
+EMAIL_A, EMAIL_B, PASSWORD = "e2e-a@example.com", "e2e-b@example.com", "e2e-password-123"
+TOKEN = {"value": ""}
+
+
 def call(api, method, path, body=None):
     data = json.dumps(body).encode() if body is not None else None
-    req = urllib.request.Request(api + path, data=data, method=method, headers={"Content-Type": "application/json"})
+    headers = {"Content-Type": "application/json", "X-FluentPath-Client": "native"}
+    if TOKEN["value"]:
+        headers["Authorization"] = "Bearer " + TOKEN["value"]
+    req = urllib.request.Request(api + path, data=data, method=method, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             return r.status, json.load(r)
@@ -39,13 +47,25 @@ def fail(msg):
     sys.exit(1)
 
 
+def sign_in(api, email, register):
+    TOKEN["value"] = ""
+    path = "/api/v1/auth/register" if register else "/api/v1/auth/login"
+    body = {"email": email, "password": PASSWORD}
+    if register:
+        body["displayName"] = email.split("@")[0]
+    status, r = call(api, "POST", path, body)
+    if status != 200 or not r.get("token"):
+        fail(f"{path} for {email}: {status} {r}")
+    TOKEN["value"] = r["token"]
+
+
 def roadmap_statuses(api):
-    _, rm = call(api, "GET", "/api/v1/roadmap")
+    _, rm = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap")
     return {n["id"]: n["status"] for n in rm["nodes"]}, rm
 
 
 def drive(api, node_id, lesson):
-    status, s = call(api, "POST", "/api/v1/sessions", {"nodeId": node_id})
+    status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": node_id})
     if status != 200:
         fail(f"start {node_id}: {status} {s}")
     prompts = lesson["guidedPractice"] + lesson["independentPractice"]
@@ -95,6 +115,15 @@ def drive(api, node_id, lesson):
 
 
 def learn(api, curriculum):
+    # Anonymous visitors can browse but not learn.
+    status, _ = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap")
+    if status != 200:
+        fail(f"public roadmap: {status}")
+    status, _ = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": "a0-alphabet-sounds"})
+    if status != 401:
+        fail(f"anonymous start should be 401, got {status}")
+    sign_in(api, EMAIL_B, register=True)
+    sign_in(api, EMAIL_A, register=True)
     ls = lessons(curriculum)
     for _ in range(len(ls) + 1):
         statuses, _ = roadmap_statuses(api)
@@ -108,20 +137,28 @@ def learn(api, curriculum):
         fail(f"not mastered: {not_done}")
     # Locked / coming-soon nodes refuse to start.
     for nid, want in (("a2-past-simple-regular", "node_coming_soon"), ("a1-self-introduction", "node_coming_soon")):
-        status, body = call(api, "POST", "/api/v1/sessions", {"nodeId": nid})
+        status, body = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": nid})
         if status != 409:
             fail(f"{nid} should not start: {status} {body}")
-    print(f"  ✓ all {len(ls)} ready lessons mastered")
+    print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A}")
+    sign_in(api, EMAIL_B, register=False)
+    _, d = call(api, "GET", "/api/v1/dashboard")
+    if d["courses"] or d["openSessions"] or d["totalMastered"]:
+        fail(f"{EMAIL_B} sees someone else's progress: {d}")
+    print(f"  ✓ {EMAIL_B} sees none of it")
 
 
 def verify(api, curriculum):
+    sign_in(api, EMAIL_A, register=False)
     statuses, rm = roadmap_statuses(api)
     ls = lessons(curriculum)
     missing = [n for n in ls if statuses.get(n) != "mastered"]
     if missing:
         fail(f"progress lost after restart: {missing}")
-    _, p = call(api, "GET", "/api/v1/progress")
-    print(f"  ✓ after restart: {len(p['mastered'])} mastered, level {p['learner']['currentLevel']}, {len(p['recentAttempts'])} attempts on record")
+    _, d = call(api, "GET", "/api/v1/dashboard")
+    c = d["courses"][0]["progress"]
+    print(f"  ✓ after restart and fresh login: {d['totalMastered']} mastered, level {c['currentLevel']}, "
+          f"{c['percent']}% to {c['targetLevel']}, streak {d['streak']['current']} day(s)")
 
 
 if __name__ == "__main__":

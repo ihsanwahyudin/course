@@ -23,6 +23,7 @@ type ChatMessage struct {
 }
 
 type TutorInput struct {
+	Policy             string // course.json tutor.policy
 	CurrentLevel       string
 	TargetLevel        string
 	Node               *curriculum.Node
@@ -36,6 +37,7 @@ type TutorInput struct {
 }
 
 type EvalInput struct {
+	Policy      string // course.json tutor.evaluatorPolicy
 	TargetLevel string
 	Node        *curriculum.Node
 	Items       []curriculum.AssessmentItem

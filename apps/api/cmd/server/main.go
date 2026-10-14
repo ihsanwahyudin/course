@@ -15,15 +15,12 @@ import (
 	"time"
 
 	"fluentpath/api/internal/ai"
+	"fluentpath/api/internal/auth"
 	"fluentpath/api/internal/curriculum"
 	apihttp "fluentpath/api/internal/http"
 	"fluentpath/api/internal/learning"
 	"fluentpath/api/internal/storage"
 )
-
-// DemoLearnerID is the single seeded learner for the personal MVP. Keep the
-// API private until real authentication exists.
-const DemoLearnerID = "00000000-0000-4000-8000-000000000001"
 
 func main() {
 	slog.SetDefault(slog.New(slog.NewTextHandler(os.Stdout, nil)))
@@ -38,11 +35,13 @@ func run() error {
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 
-	cur, err := curriculum.Load(env("CURRICULUM_DIR", "../../packages/curriculum"))
+	catalog, err := curriculum.LoadCatalog(env("COURSES_DIR", "../../packages/courses"))
 	if err != nil {
 		return err
 	}
-	slog.Info("curriculum loaded", "version", cur.Version, "nodes", len(cur.Nodes))
+	for _, c := range catalog.Courses {
+		slog.Info("course loaded", "slug", c.Slug, "version", c.Version, "nodes", len(c.Nodes), "status", c.Status)
+	}
 
 	provider, err := newProvider()
 	if err != nil {
@@ -63,18 +62,17 @@ func run() error {
 	if err := store.Migrate(ctx); err != nil {
 		return fmt.Errorf("migrate: %w", err)
 	}
-	if err := store.EnsureLearner(ctx, DemoLearnerID, env("LEARNER_NAME", "Learner")); err != nil {
-		return err
-	}
+	go cleanExpiredSessions(ctx, store)
 
-	svc := &learning.Service{Store: store, Cur: cur, AI: provider, LearnerID: DemoLearnerID}
+	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta")}
 	srv := &apihttp.Server{
-		Svc: svc, Cur: cur,
-		CORSOrigins: strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),
-		Ping:        store.Pool.Ping,
-		RateLimit:   envInt("RATE_LIMIT_PER_MIN", 0),
-		AIRateLimit: envInt("AI_RATE_LIMIT_PER_MIN", 0),
-		WebDir:      os.Getenv("WEB_DIR"),
+		Svc: svc, Auth: &auth.Service{Store: store}, Catalog: catalog,
+		CORSOrigins:   strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),
+		Ping:          store.Pool.Ping,
+		RateLimit:     envInt("RATE_LIMIT_PER_MIN", 0),
+		AIRateLimit:   envInt("AI_RATE_LIMIT_PER_MIN", 0),
+		AuthRateLimit: envInt("AUTH_RATE_LIMIT_PER_MIN", 0),
+		WebDir:        os.Getenv("WEB_DIR"),
 	}
 	if srv.WebDir != "" {
 		if _, err := os.Stat(srv.WebDir + "/index.html"); err != nil {
@@ -103,6 +101,24 @@ func run() error {
 	shutdownCtx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	return httpSrv.Shutdown(shutdownCtx)
+}
+
+// cleanExpiredSessions removes expired login sessions once an hour.
+func cleanExpiredSessions(ctx context.Context, store *storage.Store) {
+	t := time.NewTicker(time.Hour)
+	defer t.Stop()
+	for {
+		if n, err := storage.DeleteExpiredAuthSessions(ctx, store.Pool); err != nil && ctx.Err() == nil {
+			slog.Warn("cleaning expired sessions failed", "err", err)
+		} else if n > 0 {
+			slog.Info("removed expired sessions", "count", n)
+		}
+		select {
+		case <-ctx.Done():
+			return
+		case <-t.C:
+		}
+	}
 }
 
 func newProvider() (ai.Provider, error) {

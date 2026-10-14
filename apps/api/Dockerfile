@@ -10,8 +10,8 @@ FROM alpine:3.22
 RUN adduser -D -u 10001 app
 WORKDIR /app
 COPY --from=build /out/server /app/server
-COPY packages/curriculum /app/curriculum
+COPY packages/courses /app/courses
 USER app
-ENV CURRICULUM_DIR=/app/curriculum PORT=8080
+ENV COURSES_DIR=/app/courses PORT=8080
 EXPOSE 8080
 ENTRYPOINT ["/app/server"]

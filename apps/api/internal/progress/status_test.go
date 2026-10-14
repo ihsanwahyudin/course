@@ -8,7 +8,7 @@ import (
 
 func testCurriculum(t *testing.T) *curriculum.Curriculum {
 	t.Helper()
-	c, err := curriculum.Load("../../../../packages/curriculum")
+	c, err := curriculum.LoadCourse("../../../../packages/courses/english")
 	if err != nil {
 		t.Fatal(err)
 	}

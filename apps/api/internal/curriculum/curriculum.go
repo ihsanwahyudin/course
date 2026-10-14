@@ -10,13 +10,10 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 )
-
-// Levels lists the roadmap bands in order. A0 is an app-specific foundation
-// track; A1–C2 follow CEFR-inspired can-do descriptors.
-var Levels = []string{"A0", "A1", "A2", "B1", "B2", "C1", "C2"}
 
 const (
 	ContentReady      = "ready"
@@ -94,8 +91,34 @@ type Lesson struct {
 	Assessment        []AssessmentItem `json:"assessment"`
 }
 
-// Curriculum is an immutable, validated roadmap.
+// TutorPolicy is the course-specific teaching contract given to the AI.
+type TutorPolicy struct {
+	Policy          string `json:"policy"`
+	EvaluatorPolicy string `json:"evaluatorPolicy"`
+}
+
+// Course is the metadata in <course>/course.json.
+type Course struct {
+	Slug        string      `json:"slug"`
+	Title       string      `json:"title"`
+	Tagline     string      `json:"tagline"`
+	Description string      `json:"description"`
+	Category    string      `json:"category"`
+	Tone        string      `json:"tone"`
+	Status      string      `json:"status"` // published | coming_soon
+	TargetLevel string      `json:"targetLevel"`
+	LevelIDs    []string    `json:"levels"` // ordered bands; each has <id>.json
+	Tutor       TutorPolicy `json:"tutor"`
+}
+
+const (
+	CoursePublished  = "published"
+	CourseComingSoon = "coming_soon"
+)
+
+// Curriculum is an immutable, validated course roadmap.
 type Curriculum struct {
+	Course
 	Version string
 	Levels  []LevelInfo
 	Nodes   []*Node // topologically sorted (stable: level, then file order)
@@ -117,11 +140,30 @@ func (c *Curriculum) Lesson(nodeID string) (*Lesson, bool) {
 
 func (c *Curriculum) Successors(id string) []string { return c.successors[id] }
 
-// Load reads <dir>/<level>.json for every level plus <dir>/lessons/*.json and
-// validates the result.
-func Load(dir string) (*Curriculum, error) {
+// LevelIndex returns the position of a level in this course's bands, or -1.
+func (c *Curriculum) LevelIndex(level string) int {
+	for i, l := range c.LevelIDs {
+		if l == level {
+			return i
+		}
+	}
+	return -1
+}
+
+// LoadCourse reads <dir>/course.json, <dir>/<level>.json for every level and
+// <dir>/lessons/*.json, and validates the result.
+func LoadCourse(dir string) (*Curriculum, error) {
+	var course Course
+	coursePath := filepath.Join(dir, "course.json")
+	raw, err := os.ReadFile(coursePath)
+	if err != nil {
+		return nil, fmt.Errorf("read %s: %w", coursePath, err)
+	}
+	if err := decodeStrict(raw, &course); err != nil {
+		return nil, fmt.Errorf("parse %s: %w", coursePath, err)
+	}
 	var files []levelFile
-	for _, lvl := range Levels {
+	for _, lvl := range course.LevelIDs {
 		path := filepath.Join(dir, strings.ToLower(lvl)+".json")
 		raw, err := os.ReadFile(path)
 		if err != nil {
@@ -156,7 +198,11 @@ func Load(dir string) (*Curriculum, error) {
 		}
 		lessons[l.NodeID] = &l
 	}
-	return Build(files, lessons)
+	c, err := Build(course, files, lessons)
+	if err != nil {
+		return nil, fmt.Errorf("course %q: %w", course.Slug, err)
+	}
+	return c, nil
 }
 
 func decodeStrict(raw []byte, v any) error {
@@ -166,11 +212,12 @@ func decodeStrict(raw []byte, v any) error {
 }
 
 // Build assembles and validates a curriculum from already-parsed parts.
-func Build(files []levelFile, lessons map[string]*Lesson) (*Curriculum, error) {
-	c := &Curriculum{byID: map[string]*Node{}, lessons: lessons, successors: map[string][]string{}}
+func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curriculum, error) {
+	c := &Curriculum{Course: course, byID: map[string]*Node{}, lessons: lessons, successors: map[string][]string{}}
 	var errs []error
+	errs = append(errs, validateCourse(course)...)
 	levelRank := map[string]int{}
-	for i, l := range Levels {
+	for i, l := range course.LevelIDs {
 		levelRank[l] = i
 	}
 
@@ -403,12 +450,86 @@ func (e *ValidationError) Error() string {
 	return fmt.Sprintf("curriculum invalid (%d problems):\n%s", len(e.Errs), strings.Join(msgs, "\n"))
 }
 
-// LevelIndex returns the position of a level in Levels, or -1.
-func LevelIndex(level string) int {
-	for i, l := range Levels {
-		if l == level {
-			return i
-		}
+var slugRe = regexp.MustCompile(`^[a-z0-9][a-z0-9-]{0,39}$`)
+
+func validateCourse(c Course) []error {
+	var errs []error
+	if !slugRe.MatchString(c.Slug) {
+		errs = append(errs, fmt.Errorf("course slug %q must be lowercase letters, digits and dashes", c.Slug))
 	}
-	return -1
+	if strings.TrimSpace(c.Title) == "" {
+		errs = append(errs, errors.New("course needs a title"))
+	}
+	if c.Status != CoursePublished && c.Status != CourseComingSoon {
+		errs = append(errs, fmt.Errorf("course status must be %q or %q", CoursePublished, CourseComingSoon))
+	}
+	if len(c.LevelIDs) == 0 {
+		errs = append(errs, errors.New("course needs at least one level"))
+	}
+	seen := map[string]bool{}
+	target := false
+	for _, l := range c.LevelIDs {
+		if l == "" || seen[l] {
+			errs = append(errs, fmt.Errorf("level ids must be unique and non-empty (got %q)", l))
+		}
+		seen[l] = true
+		target = target || l == c.TargetLevel
+	}
+	if !target {
+		errs = append(errs, fmt.Errorf("targetLevel %q is not one of the course levels", c.TargetLevel))
+	}
+	if strings.TrimSpace(c.Tutor.Policy) == "" || strings.TrimSpace(c.Tutor.EvaluatorPolicy) == "" {
+		errs = append(errs, errors.New("course needs tutor.policy and tutor.evaluatorPolicy"))
+	}
+	return errs
+}
+
+// Catalog is every course under the courses directory, in title order.
+type Catalog struct {
+	Courses []*Curriculum
+	bySlug  map[string]*Curriculum
+}
+
+func (c *Catalog) Course(slug string) (*Curriculum, bool) {
+	cur, ok := c.bySlug[slug]
+	return cur, ok
+}
+
+// LoadCatalog loads and validates every <root>/<slug>/course.json.
+func LoadCatalog(root string) (*Catalog, error) {
+	dirs, err := filepath.Glob(filepath.Join(root, "*", "course.json"))
+	if err != nil {
+		return nil, err
+	}
+	if len(dirs) == 0 {
+		return nil, fmt.Errorf("no courses found in %s (expected <slug>/course.json)", root)
+	}
+	cat := &Catalog{bySlug: map[string]*Curriculum{}}
+	for _, p := range dirs {
+		dir := filepath.Dir(p)
+		c, err := LoadCourse(dir)
+		if err != nil {
+			return nil, err
+		}
+		if filepath.Base(dir) != c.Slug {
+			return nil, fmt.Errorf("course in folder %q has slug %q; they must match", filepath.Base(dir), c.Slug)
+		}
+		if cat.bySlug[c.Slug] != nil {
+			return nil, fmt.Errorf("duplicate course slug %q", c.Slug)
+		}
+		cat.bySlug[c.Slug] = c
+		cat.Courses = append(cat.Courses, c)
+	}
+	sort.Slice(cat.Courses, func(i, j int) bool { return cat.Courses[i].Title < cat.Courses[j].Title })
+	return cat, nil
+}
+
+// NewCatalog builds a catalog from already-loaded courses (tests).
+func NewCatalog(courses ...*Curriculum) *Catalog {
+	cat := &Catalog{bySlug: map[string]*Curriculum{}}
+	for _, c := range courses {
+		cat.bySlug[c.Slug] = c
+		cat.Courses = append(cat.Courses, c)
+	}
+	return cat
 }

@@ -69,14 +69,14 @@ func NextSuggested(c *curriculum.Curriculum, statuses map[string]Status) *curric
 }
 
 // CurrentLevel is the level of the suggested next node; if nothing is left to
-// start, it is the highest level with a mastered node (or A0).
+// start, it is the highest level with a mastered node (or the first level).
 func CurrentLevel(c *curriculum.Curriculum, statuses map[string]Status) string {
 	if n := NextSuggested(c, statuses); n != nil {
 		return n.Level
 	}
-	best := "A0"
+	best := c.LevelIDs[0]
 	for _, n := range c.Nodes {
-		if statuses[n.ID] == StatusMastered && curriculum.LevelIndex(n.Level) > curriculum.LevelIndex(best) {
+		if statuses[n.ID] == StatusMastered && c.LevelIndex(n.Level) > c.LevelIndex(best) {
 			best = n.Level
 		}
 	}
