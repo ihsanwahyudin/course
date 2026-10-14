@@ -36,6 +36,9 @@ type Node struct {
 	Objectives       []Objective `json:"objectives"`
 	MasteryThreshold int         `json:"masteryThreshold"`
 	ContentStatus    string      `json:"contentStatus"`
+	// Focus lists the onboarding goals (goal option ids) this node matters
+	// most for; untagged nodes are core for everyone.
+	Focus []string `json:"focus,omitempty"`
 	// Translations keyed by language; never sent to clients (views use
 	// the localized copy from Curriculum.LocalNode).
 	I18n map[string]NodeText `json:"i18n,omitempty"`
@@ -144,6 +147,7 @@ type Course struct {
 	TargetLevel string      `json:"targetLevel"`
 	LevelIDs    []string    `json:"levels"` // ordered bands; each has <id>.json
 	Tutor       TutorPolicy `json:"tutor"`
+	Onboarding  *Onboarding `json:"onboarding,omitempty"`
 	// Languages the course content is available in; "en" is the base and
 	// every other listed language must be fully translated.
 	Languages []string              `json:"languages,omitempty"`
@@ -362,6 +366,7 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 
 	errs = append(errs, validateLessons(c)...)
 	errs = append(errs, validateTranslations(c)...)
+	errs = append(errs, validateOnboarding(c)...)
 
 	if len(errs) == 0 {
 		sorted, err := topoSort(ordered, c.byID)

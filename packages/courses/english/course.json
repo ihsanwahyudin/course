@@ -24,6 +24,257 @@
       "id": "The learner chose Indonesian as their app language. Write explanations, hints and feedback mainly in Indonesian (Bahasa Indonesia), but keep every English example, exercise, target sentence and expected answer in English. Encourage the learner to answer in English."
     }
   },
+  "onboarding": {
+    "version": 1,
+    "questions": [
+      {
+        "id": "goal",
+        "title": "What do you want English for?",
+        "help": "This sets your target level and the skills we highlight on your roadmap.",
+        "required": true,
+        "options": [
+          {
+            "id": "career",
+            "label": "Work & job interviews",
+            "description": "Meetings, emails, interviews",
+            "targetLevel": "B2",
+            "tutorHint": "Goal: English for work and job interviews. Prefer workplace contexts: meetings, emails, stand-ups, interviews and small talk with colleagues.",
+            "introLine": "Your goal is work, so I'll use office situations in our examples.",
+            "i18n": {
+              "id": {
+                "label": "Kerja & interview kerja",
+                "description": "Rapat, email, interview",
+                "introLine": "Tujuanmu untuk kerja, jadi contoh-contohnya akan pakai situasi kantor."
+              }
+            }
+          },
+          {
+            "id": "study",
+            "label": "Study abroad or IELTS",
+            "description": "Lectures, essays, exams",
+            "targetLevel": "C1",
+            "tutorHint": "Goal: academic study and exams such as IELTS. Prefer campus and academic contexts: lectures, essays, presentations, describing data and giving reasons for opinions.",
+            "introLine": "Your goal is study, so I'll use campus and exam situations in our examples.",
+            "i18n": {
+              "id": {
+                "label": "Kuliah di luar negeri / IELTS",
+                "description": "Kuliah, esai, ujian",
+                "introLine": "Tujuanmu untuk kuliah, jadi contoh-contohnya akan pakai situasi kampus dan ujian."
+              }
+            }
+          },
+          {
+            "id": "travel",
+            "label": "Travel",
+            "description": "Airports, hotels, directions",
+            "targetLevel": "A2",
+            "tutorHint": "Goal: travelling abroad. Prefer travel contexts: airports, hotels, directions, ordering food, shopping and asking for help.",
+            "introLine": "Your goal is travel, so I'll use airports, hotels and cafés in our examples.",
+            "i18n": {
+              "id": {
+                "label": "Traveling",
+                "description": "Bandara, hotel, arah jalan",
+                "introLine": "Tujuanmu untuk traveling, jadi contoh-contohnya akan pakai bandara, hotel dan kafe."
+              }
+            }
+          },
+          {
+            "id": "daily",
+            "label": "Everyday conversation",
+            "description": "Friends, hobbies, daily life",
+            "targetLevel": "B1",
+            "tutorHint": "Goal: everyday conversation and making friends. Prefer daily-life contexts: hobbies, family, weekend plans, social media and chatting with friends.",
+            "introLine": "Your goal is everyday conversation, so I'll use daily-life situations in our examples.",
+            "i18n": {
+              "id": {
+                "label": "Ngobrol sehari-hari",
+                "description": "Teman, hobi, keseharian",
+                "introLine": "Tujuanmu untuk ngobrol sehari-hari, jadi contoh-contohnya akan pakai situasi sehari-hari."
+              }
+            }
+          },
+          {
+            "id": "tech",
+            "label": "Reading technical docs",
+            "description": "Docs, tickets, code reviews",
+            "targetLevel": "B1",
+            "tutorHint": "Goal: reading and writing technical English. Prefer technical contexts: documentation, error messages, pull requests, tickets and issue reports.",
+            "introLine": "Your goal is technical English, so I'll use docs, tickets and code reviews in our examples.",
+            "i18n": {
+              "id": {
+                "label": "Membaca dokumentasi teknis",
+                "description": "Dokumentasi, tiket, code review",
+                "introLine": "Tujuanmu bahasa Inggris teknis, jadi contoh-contohnya akan pakai dokumentasi, tiket dan code review."
+              }
+            }
+          }
+        ],
+        "i18n": {
+          "id": {
+            "title": "Untuk apa kamu belajar bahasa Inggris?",
+            "help": "Ini menentukan target level dan skill yang kami tandai di roadmap-mu."
+          }
+        }
+      },
+      {
+        "id": "background",
+        "title": "What's your background?",
+        "help": "We use it to pick examples that feel familiar.",
+        "options": [
+          {
+            "id": "it",
+            "label": "IT / software",
+            "tutorHint": "Background: works in IT or software. Examples from software teams fit well (code, bugs, deploys, stand-ups).",
+            "i18n": {
+              "id": {
+                "label": "IT / software"
+              }
+            }
+          },
+          {
+            "id": "student",
+            "label": "Student",
+            "tutorHint": "Background: a student. Examples from school and campus life fit well.",
+            "i18n": {
+              "id": {
+                "label": "Pelajar / mahasiswa"
+              }
+            }
+          },
+          {
+            "id": "office",
+            "label": "Office / business",
+            "tutorHint": "Background: works in an office or business role. Examples about clients, reports, sales and teamwork fit well.",
+            "i18n": {
+              "id": {
+                "label": "Kantor / bisnis"
+              }
+            }
+          },
+          {
+            "id": "health",
+            "label": "Healthcare",
+            "tutorHint": "Background: works in healthcare. Examples about patients, clinics, appointments and care fit well.",
+            "i18n": {
+              "id": {
+                "label": "Kesehatan"
+              }
+            }
+          },
+          {
+            "id": "hospitality",
+            "label": "Tourism & hospitality",
+            "tutorHint": "Background: works in tourism or hospitality. Examples about guests, bookings, reception and service fit well.",
+            "i18n": {
+              "id": {
+                "label": "Pariwisata & layanan"
+              }
+            }
+          },
+          {
+            "id": "other",
+            "label": "Something else",
+            "freeText": true,
+            "i18n": {
+              "id": {
+                "label": "Lainnya"
+              }
+            }
+          }
+        ],
+        "i18n": {
+          "id": {
+            "title": "Apa latar belakangmu?",
+            "help": "Kami pakai untuk memilih contoh yang terasa dekat denganmu."
+          }
+        }
+      },
+      {
+        "id": "selfLevel",
+        "title": "How would you describe your English now?",
+        "help": "This only sets the tutor's pace. Every skill is still proven in its assessment.",
+        "options": [
+          {
+            "id": "none",
+            "label": "Complete beginner",
+            "tutorHint": "Self-reported level: complete beginner. Go slowly, use very simple English and check understanding often.",
+            "i18n": {
+              "id": {
+                "label": "Benar-benar dari nol"
+              }
+            }
+          },
+          {
+            "id": "basic",
+            "label": "I know some basics",
+            "tutorHint": "Self-reported level: knows some basics. Keep a steady pace and briefly recap points they may already know.",
+            "i18n": {
+              "id": {
+                "label": "Tahu dasar-dasarnya"
+              }
+            }
+          },
+          {
+            "id": "conversational",
+            "label": "I can hold a simple conversation",
+            "tutorHint": "Self-reported level: can hold a simple conversation. Move quickly through points they answer correctly and spend the time on gaps.",
+            "i18n": {
+              "id": {
+                "label": "Bisa percakapan sederhana"
+              }
+            }
+          },
+          {
+            "id": "fluent",
+            "label": "Fairly fluent, want to polish",
+            "tutorHint": "Self-reported level: fairly fluent. Keep explanations brief and focus on accuracy and natural phrasing.",
+            "i18n": {
+              "id": {
+                "label": "Cukup lancar, mau merapikan"
+              }
+            }
+          }
+        ],
+        "i18n": {
+          "id": {
+            "title": "Seberapa jauh bahasa Inggrismu sekarang?",
+            "help": "Ini hanya mengatur tempo tutor. Setiap skill tetap dibuktikan lewat asesmen."
+          }
+        }
+      },
+      {
+        "id": "style",
+        "title": "How do you like to learn?",
+        "options": [
+          {
+            "id": "examples",
+            "label": "Show me examples first",
+            "tutorHint": "Learning preference: examples first. Show two or three short examples before asking them to try.",
+            "i18n": {
+              "id": {
+                "label": "Banyak contoh dulu"
+              }
+            }
+          },
+          {
+            "id": "practice",
+            "label": "Let me practise right away",
+            "tutorHint": "Learning preference: practice first. Keep explanations very short and get them answering quickly.",
+            "i18n": {
+              "id": {
+                "label": "Langsung latihan"
+              }
+            }
+          }
+        ],
+        "i18n": {
+          "id": {
+            "title": "Kamu lebih suka belajar dengan cara apa?"
+          }
+        }
+      }
+    ]
+  },
   "languages": [
     "en",
     "id"
