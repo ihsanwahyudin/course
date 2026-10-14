@@ -1,0 +1,612 @@
+{
+  "en": {
+    "greeting": "Hi! Today we'll learn the most useful verb in English: am, is and are. We'll go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "am, is, are",
+        "text": "In Indonesian you can say 'Saya pelajar' with no verb. English always needs one here.",
+        "body": "The verb **be** has three forms in the present: **am** with I, **is** with he/she/it (one person or thing), and **are** with you/we/they. So 'Saya pelajar' is **I am a student**, never 'I a student'.",
+        "pairs": [
+          {
+            "en": "I am",
+            "id": "saya"
+          },
+          {
+            "en": "you are",
+            "id": "kamu / Anda"
+          },
+          {
+            "en": "he is",
+            "id": "dia (laki-laki)"
+          },
+          {
+            "en": "she is",
+            "id": "dia (perempuan)"
+          },
+          {
+            "en": "it is",
+            "id": "itu (benda / hewan)"
+          },
+          {
+            "en": "we are",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they are",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In real sentences",
+        "text": "Here is be in everyday sentences. Look at who the subject is, then at the verb.",
+        "body": "In speech we often use short forms: **I'm, you're, he's, she's, it's, we're, they're**.",
+        "examples": [
+          {
+            "en": "I am a student.",
+            "id": "Saya pelajar."
+          },
+          {
+            "en": "My father is at the office.",
+            "id": "Ayah saya di kantor."
+          },
+          {
+            "en": "The coffee is hot.",
+            "id": "Kopinya panas."
+          },
+          {
+            "en": "You're early today.",
+            "id": "Kamu datang lebih awal hari ini."
+          },
+          {
+            "en": "They are happy.",
+            "id": "Mereka senang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Two people, one verb. Which one fits?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-affirmative",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "answer": 1,
+          "prompt": "Rina and Budi ___ my classmates.",
+          "explanation": "**Rina and Budi** are two people, so they = **they**, and they takes **are**. Use **is** only for one person or thing."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Saying no: add not",
+        "text": "Now let's make negatives. It's easy: just add **not** after the verb.",
+        "body": "**am not → I'm not**, **is not → isn't**, **are not → aren't**. There is no 'amn't', and you can't drop be: 'I not tired' is wrong.",
+        "examples": [
+          {
+            "en": "I'm not tired.",
+            "id": "Saya tidak lelah."
+          },
+          {
+            "en": "She isn't at home.",
+            "id": "Dia tidak di rumah."
+          },
+          {
+            "en": "We aren't late.",
+            "id": "Kami tidak terlambat."
+          },
+          {
+            "en": "The bus isn't full.",
+            "id": "Busnya tidak penuh."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Your friend says, \"Let's go!\" but you need five more minutes.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-negative",
+          "options": [
+            "I amn't ready.",
+            "I'm not ready.",
+            "I not ready."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence is correct?",
+          "explanation": "The negative of **I am** is **I am not** or **I'm not**. 'Amn't' doesn't exist, and 'I not ready' is missing the verb be."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking questions",
+        "text": "To ask a yes/no question, we just move the verb.",
+        "body": "Put **am/is/are in front of** the subject: You are tired → **Are you tired?** Answer with a short form that repeats be: **Yes, I am.** / **No, she isn't.** In a **Yes** answer, don't use the short form: say **Yes, I am**, not 'Yes, I'm'.",
+        "pairs": [
+          {
+            "en": "Are you…?",
+            "id": "Apakah kamu…?"
+          },
+          {
+            "en": "Is she…?",
+            "id": "Apakah dia (perempuan)…?"
+          },
+          {
+            "en": "Is it…?",
+            "id": "Apakah itu…?"
+          },
+          {
+            "en": "Are they…?",
+            "id": "Apakah mereka…?"
+          },
+          {
+            "en": "Yes, I am.",
+            "id": "Ya."
+          },
+          {
+            "en": "No, she isn't.",
+            "id": "Tidak. / Bukan."
+          },
+          {
+            "en": "Yes, they are.",
+            "id": "Ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You're calling a friend and want to know if their parents are home.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "be-questions",
+          "tokens": [
+            "home",
+            "parents",
+            "at",
+            "Are",
+            "your"
+          ],
+          "solution": "Are your parents at home?",
+          "prompt": "Arrange the words: Apakah orang tuamu di rumah?",
+          "explanation": "**Your parents** = they, so the verb is **are**. In a question, **are** goes before the subject: **Are your parents** at home?"
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Short answers",
+        "text": "Now answer a question with a short answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-questions",
+          "options": [
+            "he's",
+            "is he",
+            "he is"
+          ],
+          "answer": 2,
+          "prompt": "Is your brother at work? — Yes, ___.",
+          "explanation": "A short answer repeats the subject and be: **Yes, he is.** In a **Yes** answer we don't use the short form 'he's', and 'is he' is question order."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in the forms.",
+        "flashcards": [
+          {
+            "front": "I ___",
+            "back": "am · I'm (saya)"
+          },
+          {
+            "front": "he / she / it ___",
+            "back": "is · he's, she's, it's (dia / itu)"
+          },
+          {
+            "front": "you / we / they ___",
+            "back": "are · you're, we're, they're (kamu, kami/kita, mereka)"
+          },
+          {
+            "front": "Negative: He is late.",
+            "back": "He isn't late. (Dia tidak terlambat.)"
+          },
+          {
+            "front": "Question: They are ready.",
+            "back": "Are they ready? (Apakah mereka siap?)"
+          },
+          {
+            "front": "Short answer (no): Is it far?",
+            "back": "No, it isn't. (Tidak.)"
+          },
+          {
+            "front": "Translate: Saya senang.",
+            "back": "I am happy. / I'm happy."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · to be",
+          "intro": "am, is and are in positive sentences, negatives and questions.",
+          "headers": [
+            "Subject",
+            "Positive",
+            "Negative",
+            "Question"
+          ],
+          "rows": [
+            [
+              "I",
+              "I am (I'm)",
+              "I'm not",
+              "Am I…?"
+            ],
+            [
+              "you",
+              "you are (you're)",
+              "you aren't",
+              "Are you…?"
+            ],
+            [
+              "he / she / it",
+              "he is (he's)",
+              "he isn't",
+              "Is he…?"
+            ],
+            [
+              "we",
+              "we are (we're)",
+              "we aren't",
+              "Are we…?"
+            ],
+            [
+              "they",
+              "they are (they're)",
+              "they aren't",
+              "Are they…?"
+            ]
+          ],
+          "tips": [
+            "Indonesian often has no verb here ('Saya guru'), but English always needs **am/is/are**: **I am a teacher**.",
+            "There is no 'amn't'. Say **I'm not**.",
+            "Short **Yes** answers use the full form: **Yes, I am**, not 'Yes, I'm'."
+          ],
+          "examples": [
+            {
+              "en": "She is at work.",
+              "id": "Dia di kantor."
+            },
+            {
+              "en": "We aren't late.",
+              "id": "Kami tidak terlambat."
+            },
+            {
+              "en": "Is it far? — No, it isn't.",
+              "id": "Apakah jauh? — Tidak."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These videos and pages explain am, is and are in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kita belajar kata kerja paling penting dalam bahasa Inggris: am, is dan are. Kita pelan-pelan saja, ya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "am, is, are",
+        "text": "Dalam bahasa Indonesia kamu bisa bilang 'Saya pelajar' tanpa kata kerja. Bahasa Inggris selalu butuh satu di sini.",
+        "body": "Kata kerja **be** punya tiga bentuk di masa sekarang: **am** untuk I, **is** untuk he/she/it (satu orang atau benda), dan **are** untuk you/we/they. Jadi 'Saya pelajar' adalah **I am a student**, bukan 'I a student'.",
+        "pairs": [
+          {
+            "en": "I am",
+            "id": "saya"
+          },
+          {
+            "en": "you are",
+            "id": "kamu / Anda"
+          },
+          {
+            "en": "he is",
+            "id": "dia (laki-laki)"
+          },
+          {
+            "en": "she is",
+            "id": "dia (perempuan)"
+          },
+          {
+            "en": "it is",
+            "id": "itu (benda / hewan)"
+          },
+          {
+            "en": "we are",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they are",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dalam kalimat nyata",
+        "text": "Ini contoh be dalam kalimat sehari-hari. Lihat dulu subjeknya, lalu kata kerjanya.",
+        "body": "Dalam percakapan, kita sering pakai bentuk singkat: **I'm, you're, he's, she's, it's, we're, they're**.",
+        "examples": [
+          {
+            "en": "I am a student.",
+            "id": "Saya pelajar."
+          },
+          {
+            "en": "My father is at the office.",
+            "id": "Ayah saya di kantor."
+          },
+          {
+            "en": "The coffee is hot.",
+            "id": "Kopinya panas."
+          },
+          {
+            "en": "You're early today.",
+            "id": "Kamu datang lebih awal hari ini."
+          },
+          {
+            "en": "They are happy.",
+            "id": "Mereka senang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dua orang, satu kata kerja. Mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-affirmative",
+          "options": [
+            "is",
+            "are",
+            "am"
+          ],
+          "answer": 1,
+          "prompt": "Rina and Budi ___ my classmates.",
+          "explanation": "**Rina and Budi** itu dua orang, jadi sama dengan **they**, dan they memakai **are**. **is** hanya untuk satu orang atau benda."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Kalimat negatif: tambah not",
+        "text": "Sekarang kita buat kalimat negatif. Gampang: tinggal tambah **not** setelah kata kerjanya.",
+        "body": "**am not → I'm not**, **is not → isn't**, **are not → aren't**. Tidak ada bentuk 'amn't', dan be tidak boleh dihilangkan: 'I not tired' itu salah.",
+        "examples": [
+          {
+            "en": "I'm not tired.",
+            "id": "Saya tidak lelah."
+          },
+          {
+            "en": "She isn't at home.",
+            "id": "Dia tidak di rumah."
+          },
+          {
+            "en": "We aren't late.",
+            "id": "Kami tidak terlambat."
+          },
+          {
+            "en": "The bus isn't full.",
+            "id": "Busnya tidak penuh."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Temanmu bilang, \"Let's go!\" tapi kamu masih butuh lima menit lagi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-negative",
+          "options": [
+            "I amn't ready.",
+            "I'm not ready.",
+            "I not ready."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang benar?",
+          "explanation": "Bentuk negatif dari **I am** adalah **I am not** atau **I'm not**. 'Amn't' tidak ada, dan 'I not ready' tidak punya kata kerja be."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membuat pertanyaan",
+        "text": "Untuk pertanyaan ya/tidak, kita cukup memindahkan kata kerjanya.",
+        "body": "Letakkan **am/is/are di depan** subjek: You are tired → **Are you tired?** Jawab dengan bentuk singkat yang mengulang be: **Yes, I am.** / **No, she isn't.** Untuk jawaban **Yes**, jangan disingkat: ucapkan **Yes, I am**, bukan 'Yes, I'm'.",
+        "pairs": [
+          {
+            "en": "Are you…?",
+            "id": "Apakah kamu…?"
+          },
+          {
+            "en": "Is she…?",
+            "id": "Apakah dia (perempuan)…?"
+          },
+          {
+            "en": "Is it…?",
+            "id": "Apakah itu…?"
+          },
+          {
+            "en": "Are they…?",
+            "id": "Apakah mereka…?"
+          },
+          {
+            "en": "Yes, I am.",
+            "id": "Ya."
+          },
+          {
+            "en": "No, she isn't.",
+            "id": "Tidak. / Bukan."
+          },
+          {
+            "en": "Yes, they are.",
+            "id": "Ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu menelepon teman dan ingin tahu apakah orang tuanya ada di rumah.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "be-questions",
+          "tokens": [
+            "home",
+            "parents",
+            "at",
+            "Are",
+            "your"
+          ],
+          "solution": "Are your parents at home?",
+          "prompt": "Susun kata-katanya: Apakah orang tuamu di rumah?",
+          "explanation": "**Your parents** = they, jadi kata kerjanya **are**. Dalam pertanyaan, **are** diletakkan sebelum subjek: **Are your parents** at home?"
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jawaban singkat",
+        "text": "Sekarang jawab pertanyaan dengan jawaban singkat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-questions",
+          "options": [
+            "he's",
+            "is he",
+            "he is"
+          ],
+          "answer": 2,
+          "prompt": "Is your brother at work? — Yes, ___.",
+          "explanation": "Jawaban singkat mengulang subjek dan be: **Yes, he is.** Untuk jawaban **Yes**, kita tidak memakai bentuk singkat 'he's', dan 'is he' adalah urutan pertanyaan."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini supaya bentuknya makin nempel.",
+        "flashcards": [
+          {
+            "front": "I ___",
+            "back": "am · I'm (saya)"
+          },
+          {
+            "front": "he / she / it ___",
+            "back": "is · he's, she's, it's (dia / itu)"
+          },
+          {
+            "front": "you / we / they ___",
+            "back": "are · you're, we're, they're (kamu, kami/kita, mereka)"
+          },
+          {
+            "front": "Negatif: He is late.",
+            "back": "He isn't late. (Dia tidak terlambat.)"
+          },
+          {
+            "front": "Pertanyaan: They are ready.",
+            "back": "Are they ready? (Apakah mereka siap?)"
+          },
+          {
+            "front": "Jawaban singkat (tidak): Is it far?",
+            "back": "No, it isn't. (Tidak.)"
+          },
+          {
+            "front": "Terjemahkan: Saya senang.",
+            "back": "I am happy. / I'm happy."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · to be",
+          "intro": "am, is dan are dalam kalimat positif, negatif dan pertanyaan.",
+          "headers": [
+            "Subjek",
+            "Positif",
+            "Negatif",
+            "Pertanyaan"
+          ],
+          "rows": [
+            [
+              "I",
+              "I am (I'm)",
+              "I'm not",
+              "Am I…?"
+            ],
+            [
+              "you",
+              "you are (you're)",
+              "you aren't",
+              "Are you…?"
+            ],
+            [
+              "he / she / it",
+              "he is (he's)",
+              "he isn't",
+              "Is he…?"
+            ],
+            [
+              "we",
+              "we are (we're)",
+              "we aren't",
+              "Are we…?"
+            ],
+            [
+              "they",
+              "they are (they're)",
+              "they aren't",
+              "Are they…?"
+            ]
+          ],
+          "tips": [
+            "Bahasa Indonesia sering tanpa kata kerja ('Saya guru'), tapi bahasa Inggris selalu butuh **am/is/are**: **I am a teacher**.",
+            "Tidak ada 'amn't'. Ucapkan **I'm not**.",
+            "Jawaban singkat **Yes** memakai bentuk lengkap: **Yes, I am**, bukan 'Yes, I'm'."
+          ],
+          "examples": [
+            {
+              "en": "She is at work.",
+              "id": "Dia di kantor."
+            },
+            {
+              "en": "We aren't late.",
+              "id": "Kami tidak terlambat."
+            },
+            {
+              "en": "Is it far? — No, it isn't.",
+              "id": "Apakah jauh? — Tidak."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video dan halaman ini menjelaskan am, is dan are dengan cara lain."
+      }
+    ]
+  }
+}

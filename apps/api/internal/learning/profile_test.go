@@ -61,6 +61,7 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 		return r.Raw, err
 	}
 	s := newService(t, mock)
+	withoutAuthoredPlans(s) // personalised plans are AI-written
 	ctx := context.Background()
 
 	rm, err := s.SaveProfile(WithLang(ctx, "id"), learnerID, course, ProfileInput{Answers: map[string]string{

@@ -479,7 +479,8 @@ func TestLessonKeepsItsLanguage(t *testing.T) {
 	if sess.Node.Title != "Alfabet & Bunyi" || sess.Course.Title != "Bahasa Inggris" || sess.Material.Sections[0].Title != "Nama huruf berbeda dari bahasa Indonesia" {
 		t.Fatalf("views should be localized: %q %q", sess.Node.Title, sess.Course.Title)
 	}
-	if sess.Lesson.Steps[0].Title != "Nama huruf berbeda dari bahasa Indonesia" {
+	cur, _ := s.Catalog.Course(course)
+	if want, _, _ := tutor.AuthoredPlan(cur, "a0-alphabet-sounds", "id"); sess.Lesson.Steps[0].Title != want.Steps[0].Title {
 		t.Fatalf("the plan should be in the lesson's language: %q", sess.Lesson.Steps[0].Title)
 	}
 	// Switching the UI language later doesn't switch a lesson mid-way.

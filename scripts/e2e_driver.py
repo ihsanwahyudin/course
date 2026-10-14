@@ -1,6 +1,6 @@
 """HTTP driver for scripts/e2e.sh. Uses only the standard library.
 
-  e2e_driver.py learn  <api> <course_dir>   sign up, onboard, walk every lesson's steps and master it
+  e2e_driver.py learn  <api> <course_dir>   sign up, enrol, walk every lesson's steps and master it
   e2e_driver.py verify <api> <course_dir>   log in again, check progress survived
 """
 import glob
@@ -137,7 +137,7 @@ def drive(api, node_id, lesson, helper=False):
     status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": node_id})
     if status != 200:
         fail(f"start {node_id}: {status} {s}")
-    if s["phase"] != "LEARNING" or not s["lesson"] or len(s["lesson"]["steps"]) != 1 or not s["assessment"]:
+    if s["phase"] != "LEARNING" or not s["lesson"] or len(s["lesson"]["steps"]) != 1 or not s["assessment"] or not s["lesson"]["greeting"]:
         fail(f"{node_id}: lesson should open on its first step with the checkpoint ahead: {s.get('phase')}")
     right = [{"itemId": it["id"], "answer": it["acceptableAnswers"][0]} for it in lesson["assessment"]]
     status, body = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": right})
@@ -185,26 +185,17 @@ def drive(api, node_id, lesson, helper=False):
     print(f"  ✓ {node_id}: {r['attempt']['score']}/100, unlocked {unlocked or '—'}{extra}")
 
 
-def onboard(api):
-    status, p = call(api, "GET", f"/api/v1/courses/{COURSE}/profile")
-    if status != 200 or p["completed"] or not p["questions"]:
-        fail(f"fresh profile: {status} {p}")
-    status, body = call(api, "PUT", f"/api/v1/courses/{COURSE}/profile", {"answers": {"goal": "moon"}})
-    if status != 400 or body["error"]["code"] != "invalid_profile":
-        fail(f"bad onboarding answer should be rejected: {status} {body}")
-    status, rm = call(api, "PUT", f"/api/v1/courses/{COURSE}/profile",
-                      {"answers": {"goal": "tech", "background": "other", "background_text": "Data analyst"}})
-    if status != 200 or not rm["enrolled"] or not rm["profile"]["completed"]:
-        fail(f"save profile: {status} {rm}")
-    if rm["enrollment"]["targetLevel"] != "B1":
-        fail(f"tech goal should target B1, got {rm['enrollment']['targetLevel']}")
-    rec = {n["id"] for n in rm["nodes"] if n["recommended"]}
-    if "a1-simple-present" not in rec or "a0-alphabet-sounds" in rec:
-        fail(f"recommended nodes wrong: {sorted(rec)}")
-    _, mem = call(api, "GET", "/api/v1/me/memory")
-    if not mem["enabled"] or not any(f["answer"] == "Data analyst" for f in mem["profile"]):
-        fail(f"memory should list the onboarding answers: {mem}")
-    print(f"  ✓ onboarding: goal tech → target B1, {len(rec)} recommended skills, shown in the tutor's memory")
+def enroll(api):
+    # Personalisation is off for now: no onboarding questions, the course page enrols directly.
+    status, rm = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap")
+    if status != 200 or rm["profile"]["available"]:
+        fail(f"onboarding should be off: {status} {rm.get('profile')}")
+    status, rm = call(api, "POST", f"/api/v1/courses/{COURSE}/enroll")
+    if status != 200 or not rm["enrolled"] or rm["enrollment"]["targetLevel"] != "B2":
+        fail(f"enroll: {status} {rm}")
+    if any(n["recommended"] for n in rm["nodes"]):
+        fail("no goal badges while personalisation is off")
+    print("  ✓ enrolled without onboarding (personalisation off), target B2")
 
 
 def learn(api, curriculum):
@@ -217,7 +208,7 @@ def learn(api, curriculum):
         fail(f"anonymous start should be 401, got {status}")
     sign_in(api, EMAIL_B, register=True)
     sign_in(api, EMAIL_A, register=True)
-    onboard(api)
+    enroll(api)
     ls = lessons(curriculum)
     for _ in range(len(ls) + 1):
         statuses, _ = roadmap_statuses(api)

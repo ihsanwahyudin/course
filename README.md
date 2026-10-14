@@ -169,10 +169,9 @@ The whole app works in **English and Bahasa Indonesia**.
 ## Step-by-step lessons
 
 - **One thread per lesson.** A lesson shows one step at a time; finished steps fold into a row and can be reopened. The dashboard and roadmap stay the way in.
-- **The plan:**
-  - On the first visit the AI writes a plan of 4–12 steps from the lesson's curated material, objectives, the learner's onboarding answers and memory. Step kinds: `concept` (card with word tiles), `examples` (with audio), `question` (multiple choice or word order), `timeline`, `flashcards`, `artifact` (cheat sheet) and `resources` (curated links only).
-  - Go validates it: step kinds and count, every objective has a question, answer indexes in range, word-order tokens that rebuild the solution, text limits. An invalid plan is retried once, then a plan built from the material is used (also what the mock provider returns).
-  - Plans are cached for 7 days per lesson, course version, language, goal and memory.
+- **The steps are hand-written.** Every ready lesson has `packages/courses/<course>/plans/<nodeId>.json` with its steps in English and Indonesian (`{"en": {...}, "id": {...}}`), so a lesson opens instantly and every learner gets the same reviewed lesson. Step kinds: `concept` (card with word tiles), `examples` (with audio), `question` (multiple choice or word order), `timeline`, `flashcards`, `artifact` (cheat sheet) and `resources` (the lesson's curated links).
+- **Checked at startup** (the API refuses to start otherwise): step kinds and count, every objective has a question, answer indexes in range, word-order tokens that rebuild the solution and come shuffled, no practice question repeats a checkpoint item, and the two languages match step for step with identical questions and answers. `ONLY_NODE=<id> go test ./internal/tutor -run TestAuthoredPlans` checks one lesson while writing it.
+- **AI-written plans** remain as a fallback for lessons without hand-written steps (and for personalisation later): the AI writes 4–12 steps from the material, Go validates them (one retry), and otherwise a plan built from the material is used. These are cached for 7 days per lesson, course version, language, goal and memory.
 - **Questions:** pick, then **Hint** (max 2, written by the AI; hints that contain the answer are rejected) or **Answer** (graded on the server). After both hints the learner may give up. After a wrong answer they choose **one similar question** ("3b", same rules, doesn't add to the step count) or continue. Answers and explanations stay on the server until a question is answered or given up.
 - **Ask AI** opens inside explanation steps. The tutor answers questions about this lesson in full, answers questions about another lesson briefly and points to it, and politely declines anything outside English.
 - **Checkpoint:** after the last step, one question at a time, typed or spoken, no hints. Passing writes a lesson summary (mastered · worth reviewing), saves the learner's mistakes as flashcards for Review, saves learning-pattern notes to memory, and prepares the next lesson's opening line. The next lesson starts with a chip of where the last one left off.
@@ -191,7 +190,9 @@ The whole app works in **English and Bahasa Indonesia**.
 - **Exact-match grading:** checkpoint answers that exactly match a reference answer skip the evaluator, and practice questions are graded in Go without the AI.
 - **Daily budget:** usage is logged for every call in `ai_usage`, and `AI_DAILY_TOKENS_PER_USER` (default 60,000; cached input doesn't count) caps it per learner per day. Over the cap, plans fall back to the material's plan and hints to built-in ones; Ask AI returns `ai_quota`.
 
-## Personalization (onboarding)
+## Personalization (onboarding) — switched off for now
+
+> **Off by default.** Personalisation is paused while every lesson ships with hand-written steps. With it off there are no onboarding questions, goal badges, goal-based targets or tutor hints, and "Start this course" enrols directly. The code, course data and stored answers are kept: set `PERSONALIZATION=on` to bring it back (lessons then still use their hand-written steps; call `DropAuthoredPlans` to let the AI write personalised plans again).
 
 Every learner gets the same lessons, objectives, assessments and pass mark. Onboarding only changes how the tutor teaches and which skills the roadmap highlights.
 

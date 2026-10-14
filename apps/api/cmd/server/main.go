@@ -20,6 +20,7 @@ import (
 	apihttp "fluentpath/api/internal/http"
 	"fluentpath/api/internal/learning"
 	"fluentpath/api/internal/storage"
+	"fluentpath/api/internal/tutor"
 )
 
 func main() {
@@ -40,7 +41,16 @@ func run() error {
 		return err
 	}
 	for _, c := range catalog.Courses {
+		// Every ready lesson ships with reviewed, hand-written steps.
+		if err := tutor.ValidateAuthored(c); err != nil {
+			return fmt.Errorf("course %q lesson steps: %w", c.Slug, err)
+		}
 		slog.Info("course loaded", "slug", c.Slug, "version", c.Version, "nodes", len(c.Nodes), "status", c.Status)
+	}
+	// Personalisation (onboarding questions, goal badges and targets, tutor
+	// hints) is switched off for now; PERSONALIZATION=on brings it back.
+	if env("PERSONALIZATION", "off") != "on" {
+		catalog.DisableOnboarding()
 	}
 
 	provider, err := newProvider()

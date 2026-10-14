@@ -178,6 +178,29 @@ type Curriculum struct {
 	localLevels map[string][]LevelInfo
 	// successors maps a node to nodes that list it as a prerequisite.
 	successors map[string][]string
+	// plans holds the hand-written lesson steps: node -> language -> plan
+	// JSON (validated by the tutor package, which owns the format).
+	plans map[string]map[string]json.RawMessage
+}
+
+// AuthoredPlan returns the hand-written steps of a lesson in a language.
+func (c *Curriculum) AuthoredPlan(nodeID, lang string) (json.RawMessage, bool) {
+	raw, ok := c.plans[nodeID][lang]
+	return raw, ok
+}
+
+// DropAuthoredPlans makes the AI write each learner's plan instead of using
+// the hand-written steps (for when personalisation comes back, and tests).
+func (c *Curriculum) DropAuthoredPlans() { c.plans = nil }
+
+// PlanLanguages lists the languages a lesson has hand-written steps in.
+func (c *Curriculum) PlanLanguages(nodeID string) []string {
+	var out []string
+	for l := range c.plans[nodeID] {
+		out = append(out, l)
+	}
+	sort.Strings(out)
+	return out
 }
 
 func (c *Curriculum) Node(id string) (*Node, bool) {
@@ -254,7 +277,53 @@ func LoadCourse(dir string) (*Curriculum, error) {
 	if err != nil {
 		return nil, fmt.Errorf("course %q: %w", course.Slug, err)
 	}
+	if c.plans, err = loadPlans(c, dir); err != nil {
+		return nil, fmt.Errorf("course %q: %w", course.Slug, err)
+	}
 	return c, nil
+}
+
+// loadPlans reads plans/<nodeId>.json: {"en": {...}, "id": {...}}.
+func loadPlans(c *Curriculum, dir string) (map[string]map[string]json.RawMessage, error) {
+	paths, err := filepath.Glob(filepath.Join(dir, "plans", "*.json"))
+	if err != nil {
+		return nil, err
+	}
+	langs := map[string]bool{BaseLanguage: true}
+	for _, l := range c.Languages {
+		langs[l] = true
+	}
+	out := map[string]map[string]json.RawMessage{}
+	for _, path := range paths {
+		id := strings.TrimSuffix(filepath.Base(path), ".json")
+		if _, ok := c.Lesson(id); !ok {
+			return nil, fmt.Errorf("%s: no lesson %q", path, id)
+		}
+		raw, err := os.ReadFile(path)
+		if err != nil {
+			return nil, fmt.Errorf("read %s: %w", path, err)
+		}
+		var byLang map[string]json.RawMessage
+		if err := json.Unmarshal(raw, &byLang); err != nil {
+			return nil, fmt.Errorf("parse %s: %w", path, err)
+		}
+		for l := range byLang {
+			if !langs[l] {
+				return nil, fmt.Errorf("%s: language %q isn't one of the course's", path, l)
+			}
+		}
+		out[id] = byLang
+	}
+	return out, nil
+}
+
+// DisableOnboarding turns personalisation off for every course: no
+// onboarding questions, goal badges, goal-based targets or tutor hints.
+// The course files and stored answers are kept for when it comes back.
+func (c *Catalog) DisableOnboarding() {
+	for _, cur := range c.Courses {
+		cur.Onboarding = nil
+	}
 }
 
 func decodeStrict(raw []byte, v any) error {

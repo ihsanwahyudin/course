@@ -1,0 +1,318 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to ask real questions in English — perfect for meeting new people. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Question words",
+        "text": "Every question word asks for a different kind of information. Let's meet them first.",
+        "body": "**What** asks about a thing, **where** about a place, **who** about a person, **when** about a time and **why** about a reason. **How** asks about the way you do something, and it has extra uses: **How old?** (age), **How much?** (price), **How many?** (number).",
+        "pairs": [
+          {"en": "what", "id": "apa"},
+          {"en": "where", "id": "di mana"},
+          {"en": "who", "id": "siapa"},
+          {"en": "when", "id": "kapan"},
+          {"en": "why", "id": "kenapa"},
+          {"en": "how", "id": "bagaimana"},
+          {"en": "how old", "id": "berapa umur"},
+          {"en": "how much", "id": "berapa harganya"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look at the answer first — it tells you which question word you need.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "wh-words",
+          "prompt": "___ is your English class? — On Monday.",
+          "options": ["Who", "When", "Where"],
+          "answer": 1,
+          "explanation": "The answer **On Monday** is a time, so we ask with **When**. **Who** asks about a person and **Where** about a place."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Question word order",
+        "text": "In Indonesian you can say 'Kamu tinggal di mana?' — same order as a statement. English questions need a special order.",
+        "body": "With **am/is/are**: question word + **be** + subject. 'Where is the station?'\nWith other verbs, add **do** or **does**: question word + **do/does** + subject + base verb. 'Where do you live?'\nUse **does** for he, she, it (one person or thing), and keep the verb in its base form: 'does she work', not 'does she works'.",
+        "pairs": [
+          {"en": "Wh- + am/is/are + subject?", "id": "kata tanya + am/is/are + subjek?"},
+          {"en": "Wh- + do/does + subject + verb?", "id": "kata tanya + do/does + subjek + kata kerja?"},
+          {"en": "do → I, you, we, they", "id": "do untuk I, you, we, they"},
+          {"en": "does → he, she, it", "id": "does untuk he, she, it"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Questions in action",
+        "text": "Here are both patterns in everyday questions. Notice where **be** and **do/does** go.",
+        "body": "Not 'Where you live?' or 'Who that man is?' — the helper word always comes before the subject.",
+        "examples": [
+          {"en": "Where is the bathroom?", "id": "Kamar mandinya di mana?"},
+          {"en": "Who is that man?", "id": "Siapa laki-laki itu?"},
+          {"en": "Where do you live?", "id": "Kamu tinggal di mana?"},
+          {"en": "When do you start work?", "id": "Kapan kamu mulai kerja?"},
+          {"en": "What does she do? — She's a nurse.", "id": "Apa pekerjaannya? — Dia perawat."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build a question",
+        "text": "Now build a question with **be**. Remember: question word first, then **is**, then the subject.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "question-order",
+          "prompt": "Arrange the words: Kantor barumu di mana?",
+          "tokens": ["office", "your", "Where", "new", "is"],
+          "solution": "Where is your new office?",
+          "explanation": "Question word + **is** + subject: **Where is** your new office? In Indonesian 'di mana' comes at the end, but in English it comes first."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Do or does?",
+        "text": "This one uses a normal verb, so you need **do** or **does**. Which question is correct?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-order",
+          "prompt": "Choose the correct question.",
+          "options": ["When the bank opens?", "When does the bank opens?", "When does the bank open?"],
+          "answer": 2,
+          "explanation": "The bank = it, so we use **does**. After does, the verb stays in its base form: **open**, not 'opens'. Without does, it's just statement order."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Getting to know someone",
+        "text": "These questions are the heart of small talk — at work, on a trip or online.",
+        "body": "Answer with a short full sentence, then ask back with **And you?**\n'Where are you from? — I'm from Medan. And you?'\nCareful: **What do you do?** asks about your job, not what you are doing right now.",
+        "pairs": [
+          {"en": "What's your name?", "id": "Siapa namamu?"},
+          {"en": "Where are you from?", "id": "Kamu dari mana?"},
+          {"en": "What do you do?", "id": "Apa pekerjaanmu?"},
+          {"en": "Where do you live?", "id": "Kamu tinggal di mana?"},
+          {"en": "How old are you?", "id": "Umurmu berapa?"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ask for a number",
+        "text": "A new friend wants to stay in touch. Ask for their phone number.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "personal-info",
+          "prompt": "Arrange the words: Nomor teleponmu berapa?",
+          "tokens": ["number", "your", "is", "phone", "What"],
+          "solution": "What is your phone number?",
+          "explanation": "In English we ask for a number with **What**, not 'How much': **What is your phone number?** The order is question word + **is** + subject."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards to review the key words and questions.",
+        "flashcards": [
+          {"front": "where", "back": "di mana"},
+          {"front": "when", "back": "kapan"},
+          {"front": "who", "back": "siapa"},
+          {"front": "how old", "back": "berapa umur"},
+          {"front": "What do you do?", "back": "Apa pekerjaanmu? (pekerjaan)"},
+          {"front": "Where do you live?", "back": "Kamu tinggal di mana?"},
+          {"front": "does", "back": "untuk he, she, it dalam pertanyaan"}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's a cheat sheet to keep. Use it when you meet someone new!",
+        "artifact": {
+          "title": "Cheat sheet · Asking questions",
+          "intro": "Question word first, then the helper word (am/is/are or do/does), then the subject.",
+          "headers": ["Question word", "Asks about", "Example"],
+          "rows": [
+            ["What", "a thing (apa)", "What is your name?"],
+            ["Where", "a place (di mana)", "Where is the station?"],
+            ["Who", "a person (siapa)", "Who is your teacher?"],
+            ["When", "a time (kapan)", "When is the meeting?"],
+            ["Why", "a reason (kenapa)", "Why are you late?"],
+            ["How", "the way (bagaimana)", "How do you go to work?"],
+            ["How old", "age (berapa umur)", "How old is your son?"]
+          ],
+          "tips": [
+            "With am/is/are: **Wh- + be + subject**. With other verbs: **Wh- + do/does + subject + verb**.",
+            "Use **does** for he, she, it — and the verb stays in its base form ('does she work').",
+            "**What do you do?** = What is your job?"
+          ],
+          "examples": [
+            {"en": "Where do you work? — I work at a bank.", "id": "Kamu kerja di mana? — Saya kerja di bank."},
+            {"en": "What's your name? — I'm Dewi. And you?", "id": "Siapa namamu? — Saya Dewi. Kamu?"}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These videos and articles explain question words and word order."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan belajar mengajukan pertanyaan sungguhan dalam bahasa Inggris — pas untuk berkenalan dengan orang baru. Yuk mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata tanya",
+        "text": "Setiap kata tanya menanyakan jenis informasi yang berbeda. Kenalan dulu, yuk.",
+        "body": "**What** menanyakan benda, **where** tempat, **who** orang, **when** waktu, dan **why** alasan. **How** menanyakan cara, dan punya kegunaan tambahan: **How old?** (umur), **How much?** (harga), **How many?** (jumlah).",
+        "pairs": [
+          {"en": "what", "id": "apa"},
+          {"en": "where", "id": "di mana"},
+          {"en": "who", "id": "siapa"},
+          {"en": "when", "id": "kapan"},
+          {"en": "why", "id": "kenapa"},
+          {"en": "how", "id": "bagaimana"},
+          {"en": "how old", "id": "berapa umur"},
+          {"en": "how much", "id": "berapa harganya"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Lihat jawabannya dulu — dari situ kamu tahu kata tanya mana yang dibutuhkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "wh-words",
+          "prompt": "___ is your English class? — On Monday.",
+          "options": ["Who", "When", "Where"],
+          "answer": 1,
+          "explanation": "Jawaban **On Monday** adalah waktu, jadi kita bertanya dengan **When**. **Who** menanyakan orang dan **Where** menanyakan tempat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Urutan kata dalam pertanyaan",
+        "text": "Dalam bahasa Indonesia kamu bisa bilang 'Kamu tinggal di mana?' — urutannya sama dengan kalimat biasa. Pertanyaan bahasa Inggris butuh urutan khusus.",
+        "body": "Dengan **am/is/are**: kata tanya + **be** + subjek. 'Where is the station?'\nDengan kata kerja lain, tambahkan **do** atau **does**: kata tanya + **do/does** + subjek + kata kerja dasar. 'Where do you live?'\nPakai **does** untuk he, she, it (satu orang atau benda), dan kata kerjanya tetap bentuk dasar: 'does she work', bukan 'does she works'.",
+        "pairs": [
+          {"en": "Wh- + am/is/are + subject?", "id": "kata tanya + am/is/are + subjek?"},
+          {"en": "Wh- + do/does + subject + verb?", "id": "kata tanya + do/does + subjek + kata kerja?"},
+          {"en": "do → I, you, we, they", "id": "do untuk I, you, we, they"},
+          {"en": "does → he, she, it", "id": "does untuk he, she, it"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Contoh pertanyaan",
+        "text": "Ini kedua pola dalam pertanyaan sehari-hari. Perhatikan posisi **be** dan **do/does**.",
+        "body": "Bukan 'Where you live?' atau 'Who that man is?' — kata bantunya selalu datang sebelum subjek.",
+        "examples": [
+          {"en": "Where is the bathroom?", "id": "Kamar mandinya di mana?"},
+          {"en": "Who is that man?", "id": "Siapa laki-laki itu?"},
+          {"en": "Where do you live?", "id": "Kamu tinggal di mana?"},
+          {"en": "When do you start work?", "id": "Kapan kamu mulai kerja?"},
+          {"en": "What does she do? — She's a nurse.", "id": "Apa pekerjaannya? — Dia perawat."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaan",
+        "text": "Sekarang susun pertanyaan dengan **be**. Ingat: kata tanya dulu, lalu **is**, lalu subjek.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "question-order",
+          "prompt": "Susun kata-katanya: Kantor barumu di mana?",
+          "tokens": ["office", "your", "Where", "new", "is"],
+          "solution": "Where is your new office?",
+          "explanation": "Kata tanya + **is** + subjek: **Where is** your new office? Dalam bahasa Indonesia 'di mana' ada di akhir, tapi dalam bahasa Inggris kata tanya ada di depan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Do atau does?",
+        "text": "Kalimat ini pakai kata kerja biasa, jadi kamu butuh **do** atau **does**. Pertanyaan mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-order",
+          "prompt": "Pilih pertanyaan yang benar.",
+          "options": ["When the bank opens?", "When does the bank opens?", "When does the bank open?"],
+          "answer": 2,
+          "explanation": "The bank = it, jadi kita pakai **does**. Setelah does, kata kerjanya tetap bentuk dasar: **open**, bukan 'opens'. Tanpa does, itu masih urutan kalimat biasa."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Berkenalan",
+        "text": "Pertanyaan-pertanyaan ini inti dari basa-basi — di kantor, saat bepergian, atau online.",
+        "body": "Jawab dengan kalimat pendek yang lengkap, lalu tanya balik dengan **And you?**\n'Where are you from? — I'm from Medan. And you?'\nHati-hati: **What do you do?** menanyakan pekerjaan, bukan apa yang sedang kamu lakukan sekarang.",
+        "pairs": [
+          {"en": "What's your name?", "id": "Siapa namamu?"},
+          {"en": "Where are you from?", "id": "Kamu dari mana?"},
+          {"en": "What do you do?", "id": "Apa pekerjaanmu?"},
+          {"en": "Where do you live?", "id": "Kamu tinggal di mana?"},
+          {"en": "How old are you?", "id": "Umurmu berapa?"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Minta nomor telepon",
+        "text": "Teman barumu ingin tetap berhubungan. Tanyakan nomor teleponnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "personal-info",
+          "prompt": "Susun kata-katanya: Nomor teleponmu berapa?",
+          "tokens": ["number", "your", "is", "phone", "What"],
+          "solution": "What is your phone number?",
+          "explanation": "Dalam bahasa Inggris, kita menanyakan nomor dengan **What**, bukan 'How much': **What is your phone number?** Urutannya kata tanya + **is** + subjek."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartunya untuk mengulang kata dan pertanyaan penting.",
+        "flashcards": [
+          {"front": "where", "back": "di mana"},
+          {"front": "when", "back": "kapan"},
+          {"front": "who", "back": "siapa"},
+          {"front": "how old", "back": "berapa umur"},
+          {"front": "What do you do?", "back": "Apa pekerjaanmu? (pekerjaan)"},
+          {"front": "Where do you live?", "back": "Kamu tinggal di mana?"},
+          {"front": "does", "back": "untuk he, she, it dalam pertanyaan"}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan untuk kamu simpan. Pakai saat berkenalan dengan orang baru!",
+        "artifact": {
+          "title": "Ringkasan · Bertanya",
+          "intro": "Kata tanya di depan, lalu kata bantu (am/is/are atau do/does), lalu subjek.",
+          "headers": ["Kata tanya", "Menanyakan", "Contoh"],
+          "rows": [
+            ["What", "benda (apa)", "What is your name?"],
+            ["Where", "tempat (di mana)", "Where is the station?"],
+            ["Who", "orang (siapa)", "Who is your teacher?"],
+            ["When", "waktu (kapan)", "When is the meeting?"],
+            ["Why", "alasan (kenapa)", "Why are you late?"],
+            ["How", "cara (bagaimana)", "How do you go to work?"],
+            ["How old", "umur (berapa umur)", "How old is your son?"]
+          ],
+          "tips": [
+            "Dengan am/is/are: **Wh- + be + subjek**. Dengan kata kerja lain: **Wh- + do/does + subjek + kata kerja**.",
+            "Pakai **does** untuk he, she, it — dan kata kerjanya tetap bentuk dasar ('does she work').",
+            "**What do you do?** = Apa pekerjaanmu?"
+          ],
+          "examples": [
+            {"en": "Where do you work? — I work at a bank.", "id": "Kamu kerja di mana? — Saya kerja di bank."},
+            {"en": "What's your name? — I'm Dewi. And you?", "id": "Siapa namamu? — Saya Dewi. Kamu?"}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video dan artikel ini menjelaskan kata tanya dan urutan kata."
+      }
+    ]
+  }
+}

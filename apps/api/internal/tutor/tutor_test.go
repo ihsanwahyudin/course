@@ -3,6 +3,7 @@ package tutor
 import (
 	"encoding/json"
 	"errors"
+	"os"
 	"strings"
 	"testing"
 
@@ -111,5 +112,22 @@ func TestFallbackPlanIsValidForEveryLesson(t *testing.T) {
 				t.Errorf("%s/%s: %v", n.ID, lang, err)
 			}
 		}
+	}
+}
+
+// Every ready lesson ships with hand-written steps. ONLY_NODE=<id> checks one.
+func TestAuthoredPlans(t *testing.T) {
+	c, err := curriculum.LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if id := os.Getenv("ONLY_NODE"); id != "" {
+		if err := ValidateLessonSteps(c, id); err != nil {
+			t.Fatal(err)
+		}
+		return
+	}
+	if err := ValidateAuthored(c); err != nil {
+		t.Fatal(err)
 	}
 }

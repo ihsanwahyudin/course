@@ -213,8 +213,9 @@ func objectiveIDs(n *curriculum.Node) []string {
 }
 
 // ensurePlan writes the lesson plan the first time a session needs one: the
-// AI's plan if it validates (one retry), otherwise one built from the
-// material. Plans are cached per lesson, language, goal and memory.
+// lesson's hand-written steps when it has them; otherwise the AI's plan if
+// it validates (one retry, cached per lesson, language, goal and memory),
+// or else one built from the material.
 func (s *Service) ensurePlan(ctx context.Context, st state, n *curriculum.Node, sess *storage.Session) error {
 	if len(sess.Plan) > 0 {
 		return nil
@@ -226,7 +227,13 @@ func (s *Service) ensurePlan(ctx context.Context, st state, n *curriculum.Node, 
 	objs := objectiveIDs(n)
 	var plan tutor.Plan
 	got := false
-	if raw, ok, err := storage.GetCache(ctx, s.Store.Pool, key); err == nil && ok {
+	// Hand-written steps come first: no AI call, no wait.
+	if p, ok, err := tutor.AuthoredPlan(st.cur, n.ID, lang); ok {
+		if err != nil {
+			return fmt.Errorf("steps for %s: %w", n.ID, err)
+		}
+		plan, got = p, true
+	} else if raw, ok, err := storage.GetCache(ctx, s.Store.Pool, key); err == nil && ok {
 		if p, err := tutor.ParsePlan(raw, objs); err == nil {
 			plan, got = p, true
 		}

@@ -296,11 +296,69 @@ func TestAskScopeAndMemory(t *testing.T) {
 	}
 }
 
+// withoutAuthoredPlans makes the AI write plans, as with personalisation on.
+func withoutAuthoredPlans(s *Service) {
+	cur, _ := s.Catalog.Course(course)
+	cur.DropAuthoredPlans()
+}
+
+func TestHandWrittenStepsNeedNoAI(t *testing.T) {
+	mock := &ai.Mock{}
+	s := newService(t, mock)
+	ctx := context.Background()
+	for _, lang := range []string{"en", "id"} {
+		other := newUser(t, s, lang+"@example.com")
+		sess, err := s.StartSession(WithLang(ctx, lang), other, course, "a0-alphabet-sounds")
+		if err != nil {
+			t.Fatal(err)
+		}
+		cur, _ := s.Catalog.Course(course)
+		want, ok, err := tutor.AuthoredPlan(cur, "a0-alphabet-sounds", lang)
+		if !ok || err != nil {
+			t.Fatalf("%s: authored plan: %v %v", lang, ok, err)
+		}
+		if sess.Lesson.TotalSteps != len(want.Steps) || sess.Lesson.Steps[0].Title != want.Steps[0].Title || sess.Lesson.Greeting != want.Greeting {
+			t.Fatalf("%s: the lesson should use its hand-written steps: %+v", lang, sess.Lesson.Steps[0])
+		}
+	}
+	if mock.Calls.Plan != 0 {
+		t.Fatalf("hand-written lessons must not call the AI for a plan: %d calls", mock.Calls.Plan)
+	}
+}
+
+func TestPersonalisationOff(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	s.Catalog.DisableOnboarding()
+	ctx := context.Background()
+	rm, err := s.Roadmap(ctx, learnerID, course)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if rm.Profile.Available {
+		t.Fatal("onboarding should be off")
+	}
+	if p, err := s.GetProfile(ctx, learnerID, course); err != nil || len(p.Questions) != 0 {
+		t.Fatalf("no onboarding questions: %+v %v", p.Questions, err)
+	}
+	if rm, err = s.Enroll(ctx, learnerID, course); err != nil || !rm.Enrolled || rm.Enrollment.TargetLevel != "B2" {
+		t.Fatalf("enrolling works without onboarding: %+v %v", rm.Enrollment, err)
+	}
+	for _, n := range rm.Nodes {
+		if n.Recommended {
+			t.Fatalf("no goal badges while personalisation is off: %s", n.ID)
+		}
+	}
+	if mem, _ := s.Memory(ctx, learnerID); len(mem.Profile) != 0 {
+		t.Fatalf("no onboarding answers in memory: %+v", mem.Profile)
+	}
+}
+
 func TestPlanFallbackAndCache(t *testing.T) {
 	mock := &ai.Mock{PlanFunc: func(ai.LessonInput) (json.RawMessage, error) {
 		return json.RawMessage(`{"greeting":"hi","steps":[]}`), nil
 	}}
 	s := newService(t, mock)
+	withoutAuthoredPlans(s)
 	ctx := context.Background()
 	sess, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
 	if err != nil {

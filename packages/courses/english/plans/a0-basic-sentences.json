@@ -1,0 +1,334 @@
+{
+  "en": {
+    "greeting": "Hi! Today we turn words into real sentences. Short and simple, one step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Who + does what + what",
+        "text": "Let's start with the order of words in an English sentence.",
+        "body": "Most English sentences go **who** (subject) → **does what** (verb) → **what** (object): `I drink tea.` This is like Indonesian, so good news! But English **always needs a subject**. In Indonesian you can say 'Minum teh', but in English you must say who: **I** drink tea, **We** drink tea.",
+        "pairs": [
+          {"en": "I", "id": "saya / aku"},
+          {"en": "you", "id": "kamu / kalian"},
+          {"en": "we", "id": "kami / kita"},
+          {"en": "they", "id": "mereka"},
+          {"en": "drink", "id": "minum"},
+          {"en": "like", "id": "suka"},
+          {"en": "play", "id": "bermain"},
+          {"en": "speak", "id": "berbicara"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Sentences in order",
+        "text": "Look at the order in each one: who, then the action, then the thing.",
+        "body": "Every sentence starts with a subject. None of them starts with the verb.",
+        "examples": [
+          {"en": "I drink tea.", "id": "Saya minum teh."},
+          {"en": "We play football.", "id": "Kami bermain sepak bola."},
+          {"en": "You speak English.", "id": "Kamu berbicara bahasa Inggris."},
+          {"en": "They like coffee.", "id": "Mereka suka kopi."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's check the order. Which one is a good English sentence?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-order",
+          "prompt": "Saya suka musik. Choose the correct English sentence.",
+          "options": ["Like music.", "Music I like.", "I like music."],
+          "answer": 2,
+          "explanation": "English needs a subject first: **I** (who) + **like** (verb) + **music** (what). 'Like music.' has no subject, and 'Music I like.' has the wrong order."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "a or an",
+        "text": "Now a small word Indonesian doesn't have: **a** / **an**.",
+        "body": "Use **a** or **an** before **one** thing you can count: `a book`, `an apple`. Choose by the **sound**, not the letter. **an** goes before a vowel sound (a, e, i, o, u sounds): `an egg`, `an hour` (the h is silent). **a** goes before a consonant sound: `a car`, `a university` (u sounds like 'yu'). Don't drop it: 'She is nurse' → **She is a nurse.**",
+        "pairs": [
+          {"en": "a book", "id": "sebuah buku"},
+          {"en": "a car", "id": "sebuah mobil"},
+          {"en": "a nurse", "id": "seorang perawat"},
+          {"en": "an apple", "id": "sebuah apel"},
+          {"en": "an egg", "id": "sebutir telur"},
+          {"en": "an hour", "id": "satu jam (h tidak dibunyikan)"},
+          {"en": "a university", "id": "sebuah universitas (dibaca 'yu')"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Listen to the first sound of the word in your head, then choose.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "articles",
+          "prompt": "This is my friend Rina. She is ___.",
+          "options": ["a engineer", "an engineer", "engineer"],
+          "answer": 1,
+          "explanation": "'Engineer' starts with a vowel sound, so we use **an**: an engineer. We can't drop it, because English needs a/an before one job or thing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "More than one: -s / -es",
+        "text": "Last rule: how to say more than one thing.",
+        "body": "Add **-s**: `book → books`, `pen → pens`. Add **-es** after **s, x, ch, sh**: `box → boxes`, `class → classes`. Don't repeat the word like 'buku-buku'. And keep the -s after a number: **two books**, not 'two book'.",
+        "pairs": [
+          {"en": "book → books", "id": "buku"},
+          {"en": "pen → pens", "id": "pulpen"},
+          {"en": "bag → bags", "id": "tas"},
+          {"en": "box → boxes", "id": "kotak"},
+          {"en": "class → classes", "id": "kelas"},
+          {"en": "bus → buses", "id": "bus"},
+          {"en": "sandwich → sandwiches", "id": "roti isi"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look at the last letters of the word before you choose.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "plurals",
+          "prompt": "After dinner, we wash five ___.",
+          "options": ["dishes", "dish", "dishs"],
+          "answer": 0,
+          "explanation": "'Dish' ends in **sh**, so we add **-es**: dishes. After a number like five, English still needs the plural ending."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build a sentence",
+        "text": "Now put it all together: a subject, a verb and **a/an** before one thing.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "word-order",
+          "prompt": "Arrange the words: Saya butuh sebuah tiket.",
+          "tokens": ["ticket", "need", "a", "I"],
+          "solution": "I need a ticket.",
+          "explanation": "Who (**I**) + does what (**need**) + what (**a ticket**). 'Ticket' starts with a consonant sound, so we use **a**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip these cards to practise. Say the answer before you flip!",
+        "flashcards": [
+          {"front": "a or an? ___ orange", "back": "an orange (sebuah jeruk)"},
+          {"front": "a or an? ___ car", "back": "a car (sebuah mobil)"},
+          {"front": "a or an? ___ hour", "back": "an hour (satu jam, h tidak dibunyikan)"},
+          {"front": "Plural of box", "back": "boxes (kotak)"},
+          {"front": "Plural of class", "back": "classes (kelas)"},
+          {"front": "two ___ (book)", "back": "two books (dua buku)"},
+          {"front": "Saya minum teh.", "back": "I drink tea."}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is everything from this lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Basic sentences",
+          "intro": "Three checks for every short sentence: a subject, a verb, and a/an or -s on the noun.",
+          "headers": ["Rule", "Example", "Meaning"],
+          "rows": [
+            ["Subject + Verb + Object", "I drink tea.", "Saya minum teh."],
+            ["Always use a subject", "We play football.", "Kami bermain sepak bola."],
+            ["a + consonant sound", "a book, a car", "sebuah buku, sebuah mobil"],
+            ["a + 'yu' sound", "a university", "sebuah universitas"],
+            ["an + vowel sound", "an apple, an egg", "sebuah apel, sebutir telur"],
+            ["an + silent h", "an hour", "satu jam"],
+            ["Plural: add -s", "book → books", "buku"],
+            ["Plural: -es after s, x, ch, sh", "box → boxes, class → classes", "kotak, kelas"],
+            ["Number + plural", "two books", "dua buku"]
+          ],
+          "tips": [
+            "Ask yourself: **who?** does **what?** **one or many?**",
+            "Choose a/an by the **sound**, not the letter: an hour, a university.",
+            "Don't repeat the word for plurals: **books**, not 'book-book'."
+          ],
+          "examples": [
+            {"en": "I need a room.", "id": "Saya butuh sebuah kamar."},
+            {"en": "We have two bags.", "id": "Kami punya dua tas."},
+            {"en": "She is an engineer.", "id": "Dia seorang insinyur."},
+            {"en": "They like apples.", "id": "Mereka suka apel."}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These videos and pages explain a/an and plurals in other ways."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kita ubah kata-kata menjadi kalimat sungguhan. Pendek dan sederhana, satu langkah demi satu langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Siapa + melakukan apa + apa",
+        "text": "Kita mulai dari urutan kata dalam kalimat bahasa Inggris.",
+        "body": "Kebanyakan kalimat bahasa Inggris berurutan **siapa** (subjek) → **melakukan apa** (kata kerja) → **apa** (objek): `I drink tea.` Urutannya mirip bahasa Indonesia, jadi ini kabar baik! Tapi bahasa Inggris **selalu butuh subjek**. Dalam bahasa Indonesia kamu bisa bilang 'Minum teh', tapi dalam bahasa Inggris kamu harus menyebut siapa: **I** drink tea, **We** drink tea.",
+        "pairs": [
+          {"en": "I", "id": "saya / aku"},
+          {"en": "you", "id": "kamu / kalian"},
+          {"en": "we", "id": "kami / kita"},
+          {"en": "they", "id": "mereka"},
+          {"en": "drink", "id": "minum"},
+          {"en": "like", "id": "suka"},
+          {"en": "play", "id": "bermain"},
+          {"en": "speak", "id": "berbicara"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kalimat yang urut",
+        "text": "Perhatikan urutan di setiap kalimat: siapa, lalu kegiatannya, lalu bendanya.",
+        "body": "Setiap kalimat diawali subjek. Tidak ada yang diawali kata kerja.",
+        "examples": [
+          {"en": "I drink tea.", "id": "Saya minum teh."},
+          {"en": "We play football.", "id": "Kami bermain sepak bola."},
+          {"en": "You speak English.", "id": "Kamu berbicara bahasa Inggris."},
+          {"en": "They like coffee.", "id": "Mereka suka kopi."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Yuk cek urutannya. Mana kalimat bahasa Inggris yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-order",
+          "prompt": "Saya suka musik. Pilih kalimat bahasa Inggris yang benar.",
+          "options": ["Like music.", "Music I like.", "I like music."],
+          "answer": 2,
+          "explanation": "Bahasa Inggris butuh subjek di depan: **I** (siapa) + **like** (kata kerja) + **music** (apa). 'Like music.' tidak punya subjek, dan 'Music I like.' urutannya salah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "a atau an",
+        "text": "Sekarang kata kecil yang tidak ada dalam bahasa Indonesia: **a** / **an**.",
+        "body": "Pakai **a** atau **an** sebelum **satu** benda yang bisa dihitung: `a book`, `an apple`. Pilih berdasarkan **bunyi**, bukan huruf. **an** dipakai sebelum bunyi vokal (bunyi a, e, i, o, u): `an egg`, `an hour` (h tidak dibunyikan). **a** dipakai sebelum bunyi konsonan: `a car`, `a university` (u dibaca 'yu'). Jangan dihilangkan: 'She is nurse' → **She is a nurse.**",
+        "pairs": [
+          {"en": "a book", "id": "sebuah buku"},
+          {"en": "a car", "id": "sebuah mobil"},
+          {"en": "a nurse", "id": "seorang perawat"},
+          {"en": "an apple", "id": "sebuah apel"},
+          {"en": "an egg", "id": "sebutir telur"},
+          {"en": "an hour", "id": "satu jam (h tidak dibunyikan)"},
+          {"en": "a university", "id": "sebuah universitas (dibaca 'yu')"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ucapkan bunyi pertama katanya dalam hati, lalu pilih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "articles",
+          "prompt": "This is my friend Rina. She is ___.",
+          "options": ["a engineer", "an engineer", "engineer"],
+          "answer": 1,
+          "explanation": "'Engineer' diawali bunyi vokal, jadi pakai **an**: an engineer. Tidak boleh dihilangkan, karena bahasa Inggris butuh a/an sebelum satu pekerjaan atau benda."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Lebih dari satu: -s / -es",
+        "text": "Aturan terakhir: cara menyebut lebih dari satu benda.",
+        "body": "Tambahkan **-s**: `book → books`, `pen → pens`. Tambahkan **-es** setelah **s, x, ch, sh**: `box → boxes`, `class → classes`. Jangan mengulang kata seperti 'buku-buku'. Dan walaupun sudah ada angka, -s tetap dipakai: **two books**, bukan 'two book'.",
+        "pairs": [
+          {"en": "book → books", "id": "buku"},
+          {"en": "pen → pens", "id": "pulpen"},
+          {"en": "bag → bags", "id": "tas"},
+          {"en": "box → boxes", "id": "kotak"},
+          {"en": "class → classes", "id": "kelas"},
+          {"en": "bus → buses", "id": "bus"},
+          {"en": "sandwich → sandwiches", "id": "roti isi"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Lihat huruf terakhir katanya sebelum memilih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "plurals",
+          "prompt": "After dinner, we wash five ___.",
+          "options": ["dishes", "dish", "dishs"],
+          "answer": 0,
+          "explanation": "'Dish' berakhiran **sh**, jadi tambah **-es**: dishes. Setelah angka seperti five, bahasa Inggris tetap butuh akhiran jamak."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Sekarang gabungkan semuanya: subjek, kata kerja, dan **a/an** sebelum satu benda.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "word-order",
+          "prompt": "Susun kata-katanya: Saya butuh sebuah tiket.",
+          "tokens": ["ticket", "need", "a", "I"],
+          "solution": "I need a ticket.",
+          "explanation": "Siapa (**I**) + melakukan apa (**need**) + apa (**a ticket**). 'Ticket' diawali bunyi konsonan, jadi pakai **a**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartu-kartu ini untuk berlatih. Ucapkan jawabannya dulu sebelum membalik!",
+        "flashcards": [
+          {"front": "a or an? ___ orange", "back": "an orange (sebuah jeruk)"},
+          {"front": "a or an? ___ car", "back": "a car (sebuah mobil)"},
+          {"front": "a or an? ___ hour", "back": "an hour (satu jam, h tidak dibunyikan)"},
+          {"front": "Plural of box", "back": "boxes (kotak)"},
+          {"front": "Plural of class", "back": "classes (kelas)"},
+          {"front": "two ___ (book)", "back": "two books (dua buku)"},
+          {"front": "Saya minum teh.", "back": "I drink tea."}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semua isi pelajaran dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · Kalimat dasar",
+          "intro": "Tiga hal yang dicek di setiap kalimat pendek: ada subjek, ada kata kerja, dan a/an atau -s pada kata benda.",
+          "headers": ["Aturan", "Contoh", "Arti"],
+          "rows": [
+            ["Subjek + Kata kerja + Objek", "I drink tea.", "Saya minum teh."],
+            ["Selalu pakai subjek", "We play football.", "Kami bermain sepak bola."],
+            ["a + bunyi konsonan", "a book, a car", "sebuah buku, sebuah mobil"],
+            ["a + bunyi 'yu'", "a university", "sebuah universitas"],
+            ["an + bunyi vokal", "an apple, an egg", "sebuah apel, sebutir telur"],
+            ["an + h tidak dibunyikan", "an hour", "satu jam"],
+            ["Jamak: tambah -s", "book → books", "buku"],
+            ["Jamak: -es setelah s, x, ch, sh", "box → boxes, class → classes", "kotak, kelas"],
+            ["Angka + jamak", "two books", "dua buku"]
+          ],
+          "tips": [
+            "Tanyakan pada dirimu: **siapa?** melakukan **apa?** **satu atau banyak?**",
+            "Pilih a/an berdasarkan **bunyi**, bukan huruf: an hour, a university.",
+            "Jangan mengulang kata untuk jamak: **books**, bukan 'book-book'."
+          ],
+          "examples": [
+            {"en": "I need a room.", "id": "Saya butuh sebuah kamar."},
+            {"en": "We have two bags.", "id": "Kami punya dua tas."},
+            {"en": "She is an engineer.", "id": "Dia seorang insinyur."},
+            {"en": "They like apples.", "id": "Mereka suka apel."}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video dan halaman ini menjelaskan a/an dan bentuk jamak dengan cara lain."
+      }
+    ]
+  }
+}

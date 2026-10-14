@@ -1,0 +1,352 @@
+{
+  "en": {
+    "greeting": "Hi again! Today we build your first word bank: everyday people, places and things, numbers from 1 to 20, and simple colours and adjectives. Small groups of words, one step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Everyday nouns",
+        "text": "Let's start with words you use every day: people, places and things.",
+        "body": "**People:** mother, father, friend, teacher. **Places:** house, school, office, market. **Things:** phone, book, table, water.\n\nLearn each word with **a** or **an**: a book, a house, but **an** office (because office starts with a vowel sound).",
+        "pairs": [
+          {"en": "mother", "id": "ibu"},
+          {"en": "father", "id": "ayah"},
+          {"en": "friend", "id": "teman"},
+          {"en": "house", "id": "rumah"},
+          {"en": "school", "id": "sekolah"},
+          {"en": "office", "id": "kantor"},
+          {"en": "market", "id": "pasar"},
+          {"en": "phone", "id": "telepon"},
+          {"en": "book", "id": "buku"},
+          {"en": "water", "id": "air"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Quick check on places. Pick the right word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "everyday-nouns",
+          "prompt": "My mother buys vegetables at the ___. (pasar)",
+          "options": ["market", "office", "school"],
+          "answer": 0,
+          "explanation": "**pasar** = **market**. An office is kantor and a school is sekolah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Numbers 1–20",
+        "text": "Now numbers. You need them for prices, ages and phone numbers.",
+        "body": "**1–10:** one, two, three, four, five, six, seven, eight, nine, ten. **11** eleven and **12** twelve have their own names.\n\n**13–19** end in **-teen**. Watch the spelling: **thir**teen (not 'threeteen'), **fif**teen (not 'fiveteen'). **20** is twenty.\n\nStress the end: thir-**TEEN** (13). If you say **THIR**-ty, people hear 30.",
+        "pairs": [
+          {"en": "eleven", "id": "sebelas"},
+          {"en": "twelve", "id": "dua belas"},
+          {"en": "thirteen", "id": "tiga belas"},
+          {"en": "fourteen", "id": "empat belas"},
+          {"en": "fifteen", "id": "lima belas"},
+          {"en": "sixteen", "id": "enam belas"},
+          {"en": "seventeen", "id": "tujuh belas"},
+          {"en": "twenty", "id": "dua puluh"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Use the -teen rule for this one.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "numbers",
+          "prompt": "There are 19 students in my class. How do you write 19 in words?",
+          "options": ["ninety", "nineteen", "nineten"],
+          "answer": 1,
+          "explanation": "13–19 end in **-teen**, so 19 = **nineteen**. Ninety is 90, and nineten is a spelling mistake."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Colours and adjectives go first",
+        "text": "Here is the big difference from Indonesian: the describing word comes first.",
+        "body": "Indonesian says 'mobil merah'; English says **a red car**. Colours and other adjectives come **before** the noun.\n\nThey also never take **-s**: 'two new phones', not 'two news phones'.",
+        "pairs": [
+          {"en": "red", "id": "merah"},
+          {"en": "blue", "id": "biru"},
+          {"en": "green", "id": "hijau"},
+          {"en": "yellow", "id": "kuning"},
+          {"en": "white", "id": "putih"},
+          {"en": "big", "id": "besar"},
+          {"en": "small", "id": "kecil"},
+          {"en": "new", "id": "baru"},
+          {"en": "old", "id": "tua / lama"},
+          {"en": "hot", "id": "panas"},
+          {"en": "cold", "id": "dingin"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In real life",
+        "text": "Here's how these words work together at the shop, at school and on the phone.",
+        "body": "In phone numbers, English speakers often say 0 as **oh**.",
+        "examples": [
+          {"en": "The blue bag is twelve dollars.", "id": "Tas biru itu dua belas dolar."},
+          {"en": "I want the big one, please.", "id": "Saya mau yang besar, ya."},
+          {"en": "Our school has a green door.", "id": "Sekolah kami punya pintu hijau."},
+          {"en": "My friend is sixteen.", "id": "Temanku berumur enam belas tahun."},
+          {"en": "My number is oh-eight-one-two…", "id": "Nomorku nol-delapan-satu-dua…"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in order. Remember where the adjective goes.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "colours-adjectives",
+          "prompt": "Arrange the words: Ayahku punya telepon baru.",
+          "tokens": ["phone", "has", "My", "new", "a", "father"],
+          "solution": "My father has a new phone.",
+          "explanation": "The adjective **new** comes **before** the noun: a new phone (Indonesian: telepon baru)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "One more about word order and -s.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "colours-adjectives",
+          "prompt": "At a café you want 'teh panas'. What do you say? \"___, please.\"",
+          "options": ["Tea hot", "Hots tea", "Hot tea"],
+          "answer": 2,
+          "explanation": "The adjective goes first and never takes -s: **hot tea**. 'Tea hot' follows Indonesian order."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip through these to review. Say each one out loud.",
+        "flashcards": [
+          {"front": "office", "back": "kantor"},
+          {"front": "market", "back": "pasar"},
+          {"front": "friend", "back": "teman"},
+          {"front": "13", "back": "thirteen (tiga belas)"},
+          {"front": "15", "back": "fifteen (lima belas)"},
+          {"front": "a red car", "back": "mobil merah"},
+          {"front": "a big house", "back": "rumah besar"},
+          {"front": "cold water", "back": "air dingin"}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything from today on one page. Keep it handy.",
+        "artifact": {
+          "title": "Cheat sheet · Common vocabulary",
+          "intro": "Everyday nouns, numbers 1–20, and colours and adjectives.",
+          "headers": ["Group", "English", "Indonesian"],
+          "rows": [
+            ["People", "mother, father, friend, teacher", "ibu, ayah, teman, guru"],
+            ["Places", "house, school, office, market", "rumah, sekolah, kantor, pasar"],
+            ["Things", "phone, book, table, water", "telepon, buku, meja, air"],
+            ["1–5", "one, two, three, four, five", "satu sampai lima"],
+            ["6–10", "six, seven, eight, nine, ten", "enam sampai sepuluh"],
+            ["11–12", "eleven, twelve", "sebelas, dua belas"],
+            ["13–19", "thirteen, fourteen, fifteen … nineteen", "tiga belas sampai sembilan belas"],
+            ["20", "twenty", "dua puluh"],
+            ["Colours", "red, blue, green, yellow, black, white", "merah, biru, hijau, kuning, hitam, putih"],
+            ["Adjectives", "big, small, new, old, hot, cold", "besar, kecil, baru, tua/lama, panas, dingin"]
+          ],
+          "tips": [
+            "Adjective **before** the noun: a red car, not a car red.",
+            "Stress **-TEEN**: thir-**TEEN** (13) vs **THIR**-ty (30).",
+            "Adjectives never take -s: two new phones."
+          ],
+          "examples": [
+            {"en": "a friend, a book, an office", "id": "teman, buku, kantor"},
+            {"en": "The blue bag is twelve dollars.", "id": "Tas biru itu dua belas dolar."},
+            {"en": "a small yellow house", "id": "rumah kuning kecil"}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These videos help with numbers and colours."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai lagi! Hari ini kita membangun kosakata pertamamu: orang, tempat dan benda sehari-hari, angka 1 sampai 20, serta warna dan kata sifat sederhana. Sedikit demi sedikit, satu langkah sekali jalan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata benda sehari-hari",
+        "text": "Kita mulai dari kata yang kamu pakai setiap hari: orang, tempat dan benda.",
+        "body": "**Orang:** mother, father, friend, teacher. **Tempat:** house, school, office, market. **Benda:** phone, book, table, water.\n\nPelajari setiap kata bersama **a** atau **an**: a book, a house, tapi **an** office (karena office diawali bunyi vokal).",
+        "pairs": [
+          {"en": "mother", "id": "ibu"},
+          {"en": "father", "id": "ayah"},
+          {"en": "friend", "id": "teman"},
+          {"en": "house", "id": "rumah"},
+          {"en": "school", "id": "sekolah"},
+          {"en": "office", "id": "kantor"},
+          {"en": "market", "id": "pasar"},
+          {"en": "phone", "id": "telepon"},
+          {"en": "book", "id": "buku"},
+          {"en": "water", "id": "air"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cek cepat soal tempat. Pilih kata yang tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "everyday-nouns",
+          "prompt": "Lengkapi: My mother buys vegetables at the ___. (pasar)",
+          "options": ["market", "office", "school"],
+          "answer": 0,
+          "explanation": "**pasar** = **market**. Office itu kantor, dan school itu sekolah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Angka 1–20",
+        "text": "Sekarang angka. Kamu butuh ini untuk harga, umur dan nomor telepon.",
+        "body": "**1–10:** one, two, three, four, five, six, seven, eight, nine, ten. **11** eleven dan **12** twelve punya nama sendiri.\n\n**13–19** berakhiran **-teen**. Perhatikan ejaannya: **thir**teen (bukan 'threeteen'), **fif**teen (bukan 'fiveteen'). **20** adalah twenty.\n\nTekan bagian akhirnya: thir-**TEEN** (13). Kalau kamu bilang **THIR**-ty, orang mendengar 30.",
+        "pairs": [
+          {"en": "eleven", "id": "sebelas"},
+          {"en": "twelve", "id": "dua belas"},
+          {"en": "thirteen", "id": "tiga belas"},
+          {"en": "fourteen", "id": "empat belas"},
+          {"en": "fifteen", "id": "lima belas"},
+          {"en": "sixteen", "id": "enam belas"},
+          {"en": "seventeen", "id": "tujuh belas"},
+          {"en": "twenty", "id": "dua puluh"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pakai aturan -teen untuk soal ini.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "numbers",
+          "prompt": "There are 19 students in my class. Bagaimana menulis 19 dengan huruf?",
+          "options": ["ninety", "nineteen", "nineten"],
+          "answer": 1,
+          "explanation": "13–19 berakhiran **-teen**, jadi 19 = **nineteen**. Ninety itu 90, dan nineten salah ejaan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Warna dan sifat di depan",
+        "text": "Ini bedanya yang paling besar dengan bahasa Indonesia: kata sifatnya ada di depan.",
+        "body": "Bahasa Indonesia bilang 'mobil merah'; bahasa Inggris bilang **a red car**. Warna dan kata sifat lain diletakkan **sebelum** kata benda.\n\nKata sifat juga tidak pernah ditambah **-s**: 'two new phones', bukan 'two news phones'.",
+        "pairs": [
+          {"en": "red", "id": "merah"},
+          {"en": "blue", "id": "biru"},
+          {"en": "green", "id": "hijau"},
+          {"en": "yellow", "id": "kuning"},
+          {"en": "white", "id": "putih"},
+          {"en": "big", "id": "besar"},
+          {"en": "small", "id": "kecil"},
+          {"en": "new", "id": "baru"},
+          {"en": "old", "id": "tua / lama"},
+          {"en": "hot", "id": "panas"},
+          {"en": "cold", "id": "dingin"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dalam kehidupan nyata",
+        "text": "Begini kata-kata ini dipakai bersama di toko, di sekolah dan di telepon.",
+        "body": "Dalam nomor telepon, penutur bahasa Inggris sering menyebut 0 sebagai **oh**.",
+        "examples": [
+          {"en": "The blue bag is twelve dollars.", "id": "Tas biru itu dua belas dolar."},
+          {"en": "I want the big one, please.", "id": "Saya mau yang besar, ya."},
+          {"en": "Our school has a green door.", "id": "Sekolah kami punya pintu hijau."},
+          {"en": "My friend is sixteen.", "id": "Temanku berumur enam belas tahun."},
+          {"en": "My number is oh-eight-one-two…", "id": "Nomorku nol-delapan-satu-dua…"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Urutkan kata-katanya. Ingat di mana kata sifat diletakkan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "colours-adjectives",
+          "prompt": "Susun kata-katanya: Ayahku punya telepon baru.",
+          "tokens": ["phone", "has", "My", "new", "a", "father"],
+          "solution": "My father has a new phone.",
+          "explanation": "Kata sifat **new** diletakkan **sebelum** kata benda: a new phone (bahasa Indonesia: telepon baru)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Satu lagi soal urutan kata dan -s.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "colours-adjectives",
+          "prompt": "Di kafe kamu mau 'teh panas'. Apa yang kamu ucapkan? \"___, please.\"",
+          "options": ["Tea hot", "Hots tea", "Hot tea"],
+          "answer": 2,
+          "explanation": "Kata sifat diletakkan di depan dan tidak pernah ditambah -s: **hot tea**. 'Tea hot' mengikuti urutan bahasa Indonesia."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartu-kartu ini untuk mengulang. Ucapkan masing-masing dengan suara keras.",
+        "flashcards": [
+          {"front": "office", "back": "kantor"},
+          {"front": "market", "back": "pasar"},
+          {"front": "friend", "back": "teman"},
+          {"front": "13", "back": "thirteen (tiga belas)"},
+          {"front": "15", "back": "fifteen (lima belas)"},
+          {"front": "a red car", "back": "mobil merah"},
+          {"front": "a big house", "back": "rumah besar"},
+          {"front": "cold water", "back": "air dingin"}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semua materi hari ini dalam satu halaman. Simpan untuk dilihat lagi.",
+        "artifact": {
+          "title": "Ringkasan · Kosakata umum",
+          "intro": "Kata benda sehari-hari, angka 1–20, serta warna dan kata sifat.",
+          "headers": ["Kelompok", "Bahasa Inggris", "Bahasa Indonesia"],
+          "rows": [
+            ["Orang", "mother, father, friend, teacher", "ibu, ayah, teman, guru"],
+            ["Tempat", "house, school, office, market", "rumah, sekolah, kantor, pasar"],
+            ["Benda", "phone, book, table, water", "telepon, buku, meja, air"],
+            ["1–5", "one, two, three, four, five", "satu sampai lima"],
+            ["6–10", "six, seven, eight, nine, ten", "enam sampai sepuluh"],
+            ["11–12", "eleven, twelve", "sebelas, dua belas"],
+            ["13–19", "thirteen, fourteen, fifteen … nineteen", "tiga belas sampai sembilan belas"],
+            ["20", "twenty", "dua puluh"],
+            ["Warna", "red, blue, green, yellow, black, white", "merah, biru, hijau, kuning, hitam, putih"],
+            ["Kata sifat", "big, small, new, old, hot, cold", "besar, kecil, baru, tua/lama, panas, dingin"]
+          ],
+          "tips": [
+            "Kata sifat **sebelum** kata benda: a red car, bukan a car red.",
+            "Tekan **-TEEN**: thir-**TEEN** (13) vs **THIR**-ty (30).",
+            "Kata sifat tidak pernah ditambah -s: two new phones."
+          ],
+          "examples": [
+            {"en": "a friend, a book, an office", "id": "teman, buku, kantor"},
+            {"en": "The blue bag is twelve dollars.", "id": "Tas biru itu dua belas dolar."},
+            {"en": "a small yellow house", "id": "rumah kuning kecil"}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video-video ini membantu untuk angka dan warna."
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # End-to-end check of the learning loop over HTTP, against a throwaway
 # database and the deterministic mock tutor:
-#   sign up → onboarding profile (shown in the tutor's memory) → roadmap → lesson steps one at a time
+#   sign up → enrol (personalisation off) → roadmap → hand-written lesson steps one at a time
 #   (Ask AI, 2 hints, give up, one similar question, cheat sheet saved to notes) → flashcards saved and
 #   reviewed → checkpoint blocked until the steps are done → failing checkpoint (no unlock) → passing
 #   checkpoint → summary + mistake flashcards → unlock → second user sees none of it → API restart →

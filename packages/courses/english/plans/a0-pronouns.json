@@ -1,0 +1,634 @@
+{
+  "en": {
+    "greeting": "Hi, welcome back! Today we learn small but very useful words: I, you, he, she, it, we, they, and my, your, his, her. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Words that replace names",
+        "text": "Let's start with the words we use instead of a name.",
+        "body": "A **subject pronoun** replaces the person or thing doing something, at the start of a sentence. Indonesian 'dia' becomes **he** for a man or boy and **she** for a woman or girl. Things and animals are **it**. More than one person or thing is **they**.",
+        "pairs": [
+          {
+            "en": "I",
+            "id": "saya / aku"
+          },
+          {
+            "en": "you",
+            "id": "kamu / Anda / kalian"
+          },
+          {
+            "en": "he",
+            "id": "dia (laki-laki)"
+          },
+          {
+            "en": "she",
+            "id": "dia (perempuan)"
+          },
+          {
+            "en": "it",
+            "id": "dia / itu (benda, hewan)"
+          },
+          {
+            "en": "we",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Think about the person first. Man or woman?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "subject-pronouns",
+          "options": [
+            "He",
+            "It",
+            "She"
+          ],
+          "answer": 2,
+          "prompt": "Bu Sinta is our new teacher. ___ is from Medan.",
+          "explanation": "Bu Sinta is a woman, so we use **she**. **He** is only for a man or boy, and **it** is for things and animals."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Whose is it? my, your, his, her",
+        "text": "Now let's show who owns something.",
+        "body": "Use a **possessive** to show the owner. It goes **before** the noun. Indonesian puts the owner after the noun ('tas saya'), but English puts it first: **my bag**, not 'bag my'. Man → **his**, woman → **her**.",
+        "pairs": [
+          {
+            "en": "my",
+            "id": "saya / -ku (milik saya)"
+          },
+          {
+            "en": "your",
+            "id": "kamu / -mu (milikmu)"
+          },
+          {
+            "en": "his",
+            "id": "-nya (milik laki-laki)"
+          },
+          {
+            "en": "her",
+            "id": "-nya (milik perempuan)"
+          },
+          {
+            "en": "its",
+            "id": "-nya (milik benda / hewan)"
+          },
+          {
+            "en": "our",
+            "id": "kami / kita (milik kami)"
+          },
+          {
+            "en": "their",
+            "id": "mereka (milik mereka)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Possessives in sentences",
+        "text": "Look where the possessive sits: always right before the thing.",
+        "body": "The owner word comes first, then the noun: **my** phone, **her** office.",
+        "examples": [
+          {
+            "en": "This is my phone.",
+            "id": "Ini ponsel saya."
+          },
+          {
+            "en": "His name is Andi.",
+            "id": "Namanya (laki-laki) Andi."
+          },
+          {
+            "en": "Her office is on the second floor.",
+            "id": "Kantornya (perempuan) di lantai dua."
+          },
+          {
+            "en": "Our teacher is kind.",
+            "id": "Guru kami baik hati."
+          },
+          {
+            "en": "Their house is near the market.",
+            "id": "Rumah mereka dekat pasar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A word comes before a noun here. Which form do you need?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "possessives",
+          "options": [
+            "He",
+            "His",
+            "Her"
+          ],
+          "answer": 1,
+          "prompt": "Pak Hasan is my neighbour. ___ car is white.",
+          "explanation": "Before a noun (car) we need a possessive, not **he**. Pak Hasan is a man, so it is **his**, not **her**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in English order. Remember: owner first, then the thing.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "possessives",
+          "tokens": [
+            "room",
+            "big",
+            "Their",
+            "is"
+          ],
+          "solution": "Their room is big.",
+          "prompt": "Arrange the words: Kamar mereka besar.",
+          "explanation": "In English the possessive comes before the noun: **Their room**, then **is big**. Indonesian 'kamar mereka' puts the owner last, English puts it first."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Don't repeat the noun",
+        "text": "Once you name someone or something, you can switch to a pronoun.",
+        "body": "After you say the noun once, use a pronoun: one man → **he**, one woman → **she**, one thing → **it**, more than one → **they**, you and me → **we**.",
+        "examples": [
+          {
+            "en": "The laptop is new. It is fast.",
+            "id": "Laptopnya baru. Laptopnya cepat."
+          },
+          {
+            "en": "Bu Rina is in a meeting. She is busy.",
+            "id": "Bu Rina sedang rapat. Dia (perempuan) sibuk."
+          },
+          {
+            "en": "My parents are at home. They are happy.",
+            "id": "Orang tua saya di rumah. Mereka senang."
+          },
+          {
+            "en": "Andi and I are friends. We play futsal.",
+            "id": "Andi dan saya berteman. Kami main futsal."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Who is in the first sentence? Count the people.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pronoun-reference",
+          "options": [
+            "We",
+            "They",
+            "I"
+          ],
+          "answer": 0,
+          "prompt": "My mother and I are at the market. ___ need rice.",
+          "explanation": "'My mother and I' means another person plus me, so the pronoun is **we**. **They** does not include you, and **I** is only one person."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards and say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "he",
+            "back": "dia (laki-laki)"
+          },
+          {
+            "front": "she",
+            "back": "dia (perempuan)"
+          },
+          {
+            "front": "it",
+            "back": "dia / itu (benda, hewan)"
+          },
+          {
+            "front": "we",
+            "back": "kami / kita"
+          },
+          {
+            "front": "they",
+            "back": "mereka"
+          },
+          {
+            "front": "his",
+            "back": "-nya (milik laki-laki)"
+          },
+          {
+            "front": "her",
+            "back": "-nya (milik perempuan)"
+          },
+          {
+            "front": "their",
+            "back": "mereka (milik mereka)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet you can keep and look back at.",
+        "artifact": {
+          "title": "Cheat sheet · Personal pronouns",
+          "intro": "Subject pronouns start the sentence. Possessives show the owner and go before the noun.",
+          "headers": [
+            "Subject",
+            "Possessive",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "I",
+              "my",
+              "saya / -ku"
+            ],
+            [
+              "you",
+              "your",
+              "kamu, Anda / -mu"
+            ],
+            [
+              "he",
+              "his",
+              "dia (laki-laki) / -nya"
+            ],
+            [
+              "she",
+              "her",
+              "dia (perempuan) / -nya"
+            ],
+            [
+              "it",
+              "its",
+              "itu (benda, hewan) / -nya"
+            ],
+            [
+              "we",
+              "our",
+              "kami, kita"
+            ],
+            [
+              "they",
+              "their",
+              "mereka"
+            ]
+          ],
+          "tips": [
+            "Picture the person before you speak: man → **he / his**, woman → **she / her**.",
+            "The possessive goes **before** the noun: **my bag**, not 'bag my'.",
+            "Name it once, then switch to a pronoun: one thing → **it**, many → **they**."
+          ],
+          "examples": [
+            {
+              "en": "She is in a meeting.",
+              "id": "Dia (perempuan) sedang rapat."
+            },
+            {
+              "en": "His car is red.",
+              "id": "Mobilnya (laki-laki) merah."
+            },
+            {
+              "en": "Our house is small.",
+              "id": "Rumah kami kecil."
+            },
+            {
+              "en": "The phone is new. It is black.",
+              "id": "Teleponnya baru. Warnanya hitam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These short videos and a reference page help."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang kembali! Hari ini kita belajar kata-kata kecil tapi sangat berguna: I, you, he, she, it, we, they, serta my, your, his, her. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata pengganti nama",
+        "text": "Kita mulai dari kata yang dipakai untuk menggantikan nama.",
+        "body": "**Kata ganti subjek** menggantikan orang atau benda yang melakukan sesuatu, di awal kalimat. 'Dia' dalam bahasa Indonesia menjadi **he** untuk laki-laki dan **she** untuk perempuan. Benda dan hewan memakai **it**. Lebih dari satu orang atau benda memakai **they**.",
+        "pairs": [
+          {
+            "en": "I",
+            "id": "saya / aku"
+          },
+          {
+            "en": "you",
+            "id": "kamu / Anda / kalian"
+          },
+          {
+            "en": "he",
+            "id": "dia (laki-laki)"
+          },
+          {
+            "en": "she",
+            "id": "dia (perempuan)"
+          },
+          {
+            "en": "it",
+            "id": "dia / itu (benda, hewan)"
+          },
+          {
+            "en": "we",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bayangkan orangnya dulu. Laki-laki atau perempuan?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "subject-pronouns",
+          "options": [
+            "He",
+            "It",
+            "She"
+          ],
+          "answer": 2,
+          "prompt": "Bu Sinta is our new teacher. ___ is from Medan.",
+          "explanation": "Bu Sinta perempuan, jadi pakai **she**. **He** hanya untuk laki-laki, dan **it** untuk benda dan hewan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Milik siapa? my, your, his, her",
+        "text": "Sekarang kita tunjukkan siapa pemilik sesuatu.",
+        "body": "Pakai **kata kepemilikan** untuk menunjukkan pemilik. Letaknya **sebelum** kata benda. Bahasa Indonesia menaruh pemilik di belakang ('tas saya'), tapi bahasa Inggris di depan: **my bag**, bukan 'bag my'. Laki-laki → **his**, perempuan → **her**.",
+        "pairs": [
+          {
+            "en": "my",
+            "id": "saya / -ku (milik saya)"
+          },
+          {
+            "en": "your",
+            "id": "kamu / -mu (milikmu)"
+          },
+          {
+            "en": "his",
+            "id": "-nya (milik laki-laki)"
+          },
+          {
+            "en": "her",
+            "id": "-nya (milik perempuan)"
+          },
+          {
+            "en": "its",
+            "id": "-nya (milik benda / hewan)"
+          },
+          {
+            "en": "our",
+            "id": "kami / kita (milik kami)"
+          },
+          {
+            "en": "their",
+            "id": "mereka (milik mereka)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata kepemilikan dalam kalimat",
+        "text": "Perhatikan posisinya: selalu tepat sebelum bendanya.",
+        "body": "Pemilik dulu, baru kata bendanya: **my** phone, **her** office.",
+        "examples": [
+          {
+            "en": "This is my phone.",
+            "id": "Ini ponsel saya."
+          },
+          {
+            "en": "His name is Andi.",
+            "id": "Namanya (laki-laki) Andi."
+          },
+          {
+            "en": "Her office is on the second floor.",
+            "id": "Kantornya (perempuan) di lantai dua."
+          },
+          {
+            "en": "Our teacher is kind.",
+            "id": "Guru kami baik hati."
+          },
+          {
+            "en": "Their house is near the market.",
+            "id": "Rumah mereka dekat pasar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Di sini ada kata sebelum kata benda. Bentuk mana yang kamu perlukan?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "possessives",
+          "options": [
+            "He",
+            "His",
+            "Her"
+          ],
+          "answer": 1,
+          "prompt": "Pak Hasan is my neighbour. ___ car is white.",
+          "explanation": "Sebelum kata benda (car) dibutuhkan kata kepemilikan, bukan **he**. Pak Hasan laki-laki, jadi **his**, bukan **her**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kata-katanya dalam urutan bahasa Inggris. Ingat: pemilik dulu, baru bendanya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "possessives",
+          "tokens": [
+            "room",
+            "big",
+            "Their",
+            "is"
+          ],
+          "solution": "Their room is big.",
+          "prompt": "Susun kata-katanya: Kamar mereka besar.",
+          "explanation": "Dalam bahasa Inggris kata kepemilikan ada sebelum kata benda: **Their room**, lalu **is big**. 'Kamar mereka' menaruh pemilik di belakang, bahasa Inggris di depan."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Jangan ulang kata bendanya",
+        "text": "Setelah menyebut seseorang atau sesuatu, kamu bisa ganti dengan kata ganti.",
+        "body": "Setelah kata benda disebut sekali, pakai kata ganti: satu laki-laki → **he**, satu perempuan → **she**, satu benda → **it**, lebih dari satu → **they**, kamu dan saya → **we**.",
+        "examples": [
+          {
+            "en": "The laptop is new. It is fast.",
+            "id": "Laptopnya baru. Laptopnya cepat."
+          },
+          {
+            "en": "Bu Rina is in a meeting. She is busy.",
+            "id": "Bu Rina sedang rapat. Dia (perempuan) sibuk."
+          },
+          {
+            "en": "My parents are at home. They are happy.",
+            "id": "Orang tua saya di rumah. Mereka senang."
+          },
+          {
+            "en": "Andi and I are friends. We play futsal.",
+            "id": "Andi dan saya berteman. Kami main futsal."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Siapa saja di kalimat pertama? Hitung orangnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pronoun-reference",
+          "options": [
+            "We",
+            "They",
+            "I"
+          ],
+          "answer": 0,
+          "prompt": "My mother and I are at the market. ___ need rice.",
+          "explanation": "'My mother and I' artinya orang lain ditambah saya, jadi kata gantinya **we** (kami). **They** tidak termasuk dirimu, dan **I** hanya satu orang."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartunya dan sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "he",
+            "back": "dia (laki-laki)"
+          },
+          {
+            "front": "she",
+            "back": "dia (perempuan)"
+          },
+          {
+            "front": "it",
+            "back": "dia / itu (benda, hewan)"
+          },
+          {
+            "front": "we",
+            "back": "kami / kita"
+          },
+          {
+            "front": "they",
+            "back": "mereka"
+          },
+          {
+            "front": "his",
+            "back": "-nya (milik laki-laki)"
+          },
+          {
+            "front": "her",
+            "back": "-nya (milik perempuan)"
+          },
+          {
+            "front": "their",
+            "back": "mereka (milik mereka)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan yang bisa kamu simpan dan buka lagi kapan saja.",
+        "artifact": {
+          "title": "Ringkasan · Kata ganti orang",
+          "intro": "Kata ganti subjek ada di awal kalimat. Kata kepemilikan menunjukkan pemilik dan ada sebelum kata benda.",
+          "headers": [
+            "Subjek",
+            "Kepemilikan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "I",
+              "my",
+              "saya / -ku"
+            ],
+            [
+              "you",
+              "your",
+              "kamu, Anda / -mu"
+            ],
+            [
+              "he",
+              "his",
+              "dia (laki-laki) / -nya"
+            ],
+            [
+              "she",
+              "her",
+              "dia (perempuan) / -nya"
+            ],
+            [
+              "it",
+              "its",
+              "itu (benda, hewan) / -nya"
+            ],
+            [
+              "we",
+              "our",
+              "kami, kita"
+            ],
+            [
+              "they",
+              "their",
+              "mereka"
+            ]
+          ],
+          "tips": [
+            "Bayangkan orangnya sebelum bicara: laki-laki → **he / his**, perempuan → **she / her**.",
+            "Kata kepemilikan ada **sebelum** kata benda: **my bag**, bukan 'bag my'.",
+            "Sebut sekali, lalu ganti dengan kata ganti: satu benda → **it**, banyak → **they**."
+          ],
+          "examples": [
+            {
+              "en": "She is in a meeting.",
+              "id": "Dia (perempuan) sedang rapat."
+            },
+            {
+              "en": "His car is red.",
+              "id": "Mobilnya (laki-laki) merah."
+            },
+            {
+              "en": "Our house is small.",
+              "id": "Rumah kami kecil."
+            },
+            {
+              "en": "The phone is new. It is black.",
+              "id": "Teleponnya baru. Warnanya hitam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video pendek dan halaman referensi ini bisa membantu."
+      }
+    ]
+  }
+}

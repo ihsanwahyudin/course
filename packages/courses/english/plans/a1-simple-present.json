@@ -1,0 +1,344 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn the simple present, the tense for habits, facts and daily routines. Let's take it one small step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Habits and the -s",
+        "text": "We use the simple present for things we do again and again. The big rule is a small letter: **-s**.",
+        "body": "Use the simple present for **habits**, **routines** and **facts**, often with `every day`, `usually` or `on Mondays`. With **I, you, we, they** use the base verb: I work. With **he, she, it** add **-s**: she works. Add **-es** after s, sh, ch, x and o: he watches, she goes. Consonant + y becomes **-ies**: study → studies. And **have → has**.",
+        "pairs": [
+          {"en": "work → works", "id": "bekerja"},
+          {"en": "live → lives", "id": "tinggal"},
+          {"en": "go → goes", "id": "pergi"},
+          {"en": "watch → watches", "id": "menonton"},
+          {"en": "study → studies", "id": "belajar"},
+          {"en": "have → has", "id": "punya / makan (sarapan dll.)"},
+          {"en": "every day", "id": "setiap hari"},
+          {"en": "usually", "id": "biasanya"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Everyday habits",
+        "text": "Here are some real sentences. Look at the verb after he, she or it.",
+        "body": "Indonesian verbs never change, so the -s is easy to forget. Check every he/she/it sentence once.",
+        "examples": [
+          {"en": "I get up at six.", "id": "Saya bangun jam enam."},
+          {"en": "My father works in a bank.", "id": "Ayah saya bekerja di bank."},
+          {"en": "He watches football on Sundays.", "id": "Dia menonton sepak bola setiap hari Minggu."},
+          {"en": "Dimas studies at night.", "id": "Dimas belajar di malam hari."},
+          {"en": "The app saves your work automatically.", "id": "Aplikasi itu menyimpan pekerjaanmu secara otomatis."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's try one. Who is the subject here?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "affirmative",
+          "prompt": "My mother ___ coffee every morning.",
+          "options": ["drink", "is drink", "drinks"],
+          "answer": 2,
+          "explanation": "My mother = she, so the verb takes **-s**: drinks. Don't put is/am/are before a normal verb."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Negatives: don't / doesn't",
+        "text": "Now let's say what we don't do. English needs a helper word here.",
+        "body": "Use **don't** + base verb with I, you, we, they: I don't drink coffee. Use **doesn't** + base verb with he, she, it: She doesn't like rain. The -s moves to **does**, so the main verb has **no -s**. Never say `doesn't likes`.",
+        "pairs": [
+          {"en": "don't (= do not)", "id": "tidak (I / you / we / they)"},
+          {"en": "doesn't (= does not)", "id": "tidak (he / she / it)"},
+          {"en": "I don't drink", "id": "saya tidak minum"},
+          {"en": "she doesn't like", "id": "dia tidak suka"},
+          {"en": "they don't work", "id": "mereka tidak bekerja"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pick the correct negative. Watch the -s!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "negative",
+          "prompt": "Andi is an office worker. He ___ on Saturdays.",
+          "options": ["doesn't works", "doesn't work", "don't work"],
+          "answer": 1,
+          "explanation": "He → **doesn't**, and after doesn't the verb stays in the base form: work, not works."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Questions with do / does",
+        "text": "To ask about habits, we put **Do** or **Does** at the start.",
+        "body": "Question = **Do / Does** + subject + base verb. Use **Do** with I, you, we, they and **Does** with he, she, it: Do you speak English? Does she live here? Short answers repeat do/does: **Yes, I do. / No, I don't.** **Yes, she does. / No, she doesn't.**",
+        "pairs": [
+          {"en": "Do you ...?", "id": "Apakah kamu ...?"},
+          {"en": "Does she ...?", "id": "Apakah dia ...?"},
+          {"en": "Yes, I do.", "id": "Ya."},
+          {"en": "No, I don't.", "id": "Tidak."},
+          {"en": "Yes, she does.", "id": "Ya."},
+          {"en": "No, she doesn't.", "id": "Tidak."},
+          {"en": "What time ...?", "id": "Jam berapa ...?"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Finish the short answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "questions",
+          "prompt": "Does your brother live in Jakarta? — No, he ___.",
+          "options": ["doesn't", "don't", "isn't"],
+          "answer": 0,
+          "explanation": "The question uses ***does***, so the short answer uses does too. Your brother = he, so: No, he **doesn't**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Describing your day",
+        "text": "Talking about your routine is one of your first real conversations in English. Here is a typical day.",
+        "body": "Time words like `at nine`, `in the evening` and `usually` make your routine clear.",
+        "examples": [
+          {"en": "I usually have lunch at twelve.", "id": "Saya biasanya makan siang jam dua belas."},
+          {"en": "In the evening I cook and watch TV.", "id": "Di malam hari saya memasak dan menonton TV."},
+          {"en": "My father goes to bed at ten.", "id": "Ayah saya tidur jam sepuluh."},
+          {"en": "Do you have breakfast at home? — Yes, I do.", "id": "Apakah kamu sarapan di rumah? — Ya."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build a sentence",
+        "text": "Now build a routine sentence about Rina.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "daily-routines",
+          "prompt": "Arrange the words: Rina mulai kerja jam delapan.",
+          "tokens": ["work", "at", "Rina", "eight", "starts"],
+          "solution": "Rina starts work at eight.",
+          "explanation": "Subject + verb + rest: Rina **starts** work at eight. Rina = she, so start takes **-s**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip these cards to review the key forms.",
+        "flashcards": [
+          {"front": "she + go", "back": "she goes (dia pergi)"},
+          {"front": "he + study", "back": "he studies (dia belajar)"},
+          {"front": "she + have", "back": "she has (dia punya)"},
+          {"front": "Negative: She likes tea.", "back": "She doesn't like tea. (Dia tidak suka teh.)"},
+          {"front": "Question: You speak English.", "back": "Do you speak English? (Apakah kamu bisa berbahasa Inggris?)"},
+          {"front": "Short answer: Does he work here? (yes)", "back": "Yes, he does. (Ya.)"},
+          {"front": "I get up at six.", "back": "Saya bangun jam enam."}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Simple present",
+          "intro": "Use the simple present for habits, routines and facts. The only change is with he, she, it.",
+          "headers": ["Form", "I / you / we / they", "he / she / it"],
+          "rows": [
+            ["Positive", "I work.", "She works."],
+            ["Negative", "I don't work.", "She doesn't work."],
+            ["Question", "Do you work?", "Does she work?"],
+            ["Short answer", "Yes, I do. / No, I don't.", "Yes, she does. / No, she doesn't."],
+            ["Spelling", "go, watch, study, have", "goes, watches, studies, has"]
+          ],
+          "tips": [
+            "Check every he/she/it sentence for the **-s**.",
+            "After **doesn't** or ***does***, the verb has no -s: `doesn't like`, `Does he live`."
+          ],
+          "examples": [
+            {"en": "I start work at nine.", "id": "Saya mulai kerja jam sembilan."},
+            {"en": "She doesn't like rain.", "id": "Dia tidak suka hujan."},
+            {"en": "What time does she start work?", "id": "Jam berapa dia mulai kerja?"}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These videos and this article explain the simple present with lots of examples."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar simple present, tense untuk kebiasaan, fakta dan rutinitas harian. Kita pelajari pelan-pelan, satu langkah kecil setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kebiasaan dan huruf -s",
+        "text": "Simple present dipakai untuk hal yang kita lakukan berulang-ulang. Aturan utamanya cuma satu huruf kecil: **-s**.",
+        "body": "Pakai simple present untuk **kebiasaan**, **rutinitas** dan **fakta**, sering dengan `every day`, `usually` atau `on Mondays`. Dengan **I, you, we, they** pakai kata kerja dasar: I work. Dengan **he, she, it** tambahkan **-s**: she works. Tambahkan **-es** setelah s, sh, ch, x dan o: he watches, she goes. Konsonan + y menjadi **-ies**: study → studies. Dan **have → has**.",
+        "pairs": [
+          {"en": "work → works", "id": "bekerja"},
+          {"en": "live → lives", "id": "tinggal"},
+          {"en": "go → goes", "id": "pergi"},
+          {"en": "watch → watches", "id": "menonton"},
+          {"en": "study → studies", "id": "belajar"},
+          {"en": "have → has", "id": "punya / makan (sarapan dll.)"},
+          {"en": "every day", "id": "setiap hari"},
+          {"en": "usually", "id": "biasanya"}
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kebiasaan sehari-hari",
+        "text": "Ini beberapa kalimat nyata. Perhatikan kata kerja setelah he, she atau it.",
+        "body": "Kata kerja bahasa Indonesia tidak pernah berubah, jadi -s mudah terlupa. Periksa setiap kalimat he/she/it sekali lagi.",
+        "examples": [
+          {"en": "I get up at six.", "id": "Saya bangun jam enam."},
+          {"en": "My father works in a bank.", "id": "Ayah saya bekerja di bank."},
+          {"en": "He watches football on Sundays.", "id": "Dia menonton sepak bola setiap hari Minggu."},
+          {"en": "Dimas studies at night.", "id": "Dimas belajar di malam hari."},
+          {"en": "The app saves your work automatically.", "id": "Aplikasi itu menyimpan pekerjaanmu secara otomatis."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Yuk coba satu. Siapa subjeknya di sini?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "affirmative",
+          "prompt": "Lengkapi: My mother ___ coffee every morning.",
+          "options": ["drink", "is drink", "drinks"],
+          "answer": 2,
+          "explanation": "My mother = she, jadi kata kerjanya ditambah **-s**: drinks. Jangan pakai is/am/are sebelum kata kerja biasa."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kalimat negatif: don't / doesn't",
+        "text": "Sekarang kita bilang apa yang tidak kita lakukan. Bahasa Inggris butuh kata bantu di sini.",
+        "body": "Pakai **don't** + kata kerja dasar untuk I, you, we, they: I don't drink coffee. Pakai **doesn't** + kata kerja dasar untuk he, she, it: She doesn't like rain. Huruf -s pindah ke **does**, jadi kata kerja utama **tanpa -s**. Jangan bilang `doesn't likes`.",
+        "pairs": [
+          {"en": "don't (= do not)", "id": "tidak (I / you / we / they)"},
+          {"en": "doesn't (= does not)", "id": "tidak (he / she / it)"},
+          {"en": "I don't drink", "id": "saya tidak minum"},
+          {"en": "she doesn't like", "id": "dia tidak suka"},
+          {"en": "they don't work", "id": "mereka tidak bekerja"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pilih bentuk negatif yang benar. Hati-hati dengan -s!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "negative",
+          "prompt": "Lengkapi: Andi is an office worker. He ___ on Saturdays.",
+          "options": ["doesn't works", "doesn't work", "don't work"],
+          "answer": 1,
+          "explanation": "He → **doesn't**, dan setelah doesn't kata kerjanya tetap bentuk dasar: work, bukan works."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pertanyaan dengan do / does",
+        "text": "Untuk bertanya tentang kebiasaan, taruh **Do** atau **Does** di awal kalimat.",
+        "body": "Pertanyaan = **Do / Does** + subjek + kata kerja dasar. Pakai **Do** untuk I, you, we, they dan **Does** untuk he, she, it: Do you speak English? Does she live here? Jawaban singkat mengulang do/does: **Yes, I do. / No, I don't.** **Yes, she does. / No, she doesn't.**",
+        "pairs": [
+          {"en": "Do you ...?", "id": "Apakah kamu ...?"},
+          {"en": "Does she ...?", "id": "Apakah dia ...?"},
+          {"en": "Yes, I do.", "id": "Ya."},
+          {"en": "No, I don't.", "id": "Tidak."},
+          {"en": "Yes, she does.", "id": "Ya."},
+          {"en": "No, she doesn't.", "id": "Tidak."},
+          {"en": "What time ...?", "id": "Jam berapa ...?"}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Lengkapi jawaban singkatnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "questions",
+          "prompt": "Lengkapi: Does your brother live in Jakarta? — No, he ___.",
+          "options": ["doesn't", "don't", "isn't"],
+          "answer": 0,
+          "explanation": "Pertanyaannya memakai ***does***, jadi jawaban singkatnya juga memakai does. Your brother = he, jadi: No, he **doesn't**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Menceritakan harimu",
+        "text": "Menceritakan rutinitas adalah salah satu percakapan nyata pertamamu dalam bahasa Inggris. Ini contoh hari yang biasa.",
+        "body": "Kata waktu seperti `at nine`, `in the evening` dan `usually` membuat rutinitasmu jelas.",
+        "examples": [
+          {"en": "I usually have lunch at twelve.", "id": "Saya biasanya makan siang jam dua belas."},
+          {"en": "In the evening I cook and watch TV.", "id": "Di malam hari saya memasak dan menonton TV."},
+          {"en": "My father goes to bed at ten.", "id": "Ayah saya tidur jam sepuluh."},
+          {"en": "Do you have breakfast at home? — Yes, I do.", "id": "Apakah kamu sarapan di rumah? — Ya."}
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Sekarang susun kalimat rutinitas tentang Rina.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "daily-routines",
+          "prompt": "Susun kata-katanya: Rina mulai kerja jam delapan.",
+          "tokens": ["work", "at", "Rina", "eight", "starts"],
+          "solution": "Rina starts work at eight.",
+          "explanation": "Subjek + kata kerja + keterangan: Rina **starts** work at eight. Rina = she, jadi start ditambah **-s**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartu-kartu ini untuk mengulang bentuk-bentuk pentingnya.",
+        "flashcards": [
+          {"front": "she + go", "back": "she goes (dia pergi)"},
+          {"front": "he + study", "back": "he studies (dia belajar)"},
+          {"front": "she + have", "back": "she has (dia punya)"},
+          {"front": "Negative: She likes tea.", "back": "She doesn't like tea. (Dia tidak suka teh.)"},
+          {"front": "Question: You speak English.", "back": "Do you speak English? (Apakah kamu bisa berbahasa Inggris?)"},
+          {"front": "Short answer: Does he work here? (yes)", "back": "Yes, he does. (Ya.)"},
+          {"front": "I get up at six.", "back": "Saya bangun jam enam."}
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · Simple present",
+          "intro": "Simple present dipakai untuk kebiasaan, rutinitas dan fakta. Perubahannya hanya untuk he, she, it.",
+          "headers": ["Bentuk", "I / you / we / they", "he / she / it"],
+          "rows": [
+            ["Positif", "I work.", "She works."],
+            ["Negatif", "I don't work.", "She doesn't work."],
+            ["Pertanyaan", "Do you work?", "Does she work?"],
+            ["Jawaban singkat", "Yes, I do. / No, I don't.", "Yes, she does. / No, she doesn't."],
+            ["Ejaan", "go, watch, study, have", "goes, watches, studies, has"]
+          ],
+          "tips": [
+            "Periksa setiap kalimat he/she/it: sudah ada **-s** belum?",
+            "Setelah **doesn't** atau ***does***, kata kerjanya tanpa -s: `doesn't like`, `Does he live`."
+          ],
+          "examples": [
+            {"en": "I start work at nine.", "id": "Saya mulai kerja jam sembilan."},
+            {"en": "She doesn't like rain.", "id": "Dia tidak suka hujan."},
+            {"en": "What time does she start work?", "id": "Jam berapa dia mulai kerja?"}
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video dan artikel ini menjelaskan simple present dengan banyak contoh."
+      }
+    ]
+  }
+}
