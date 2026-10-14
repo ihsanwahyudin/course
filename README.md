@@ -89,9 +89,13 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 ## How progression works
 
 - **Courses are fixed data.** At startup the Go API validates every course in `packages/courses` (see Courses below). The AI never changes a roadmap.
-- **The tutor teaches; the server decides.** Each lesson runs through `INTRODUCTION → EXPLANATION → GUIDED_PRACTICE → INDEPENDENT_PRACTICE → ASSESSMENT`. The model may suggest `advance_phase`, but the server only honours it after a minimum number of learner replies per phase. It also advances on its own after a maximum, so a learner can't get stuck.
+- **The material teaches; the AI helps; the server decides.**
+  - A lesson is written material (sections with examples, tips and quick checks) plus an AI helper beside it.
+  - The final quiz can be taken at any time while `LEARNING`, and passing it moves the lesson to `MASTERED`.
+  - The helper never decides mastery.
 - **Assessment is objective-based.** The evaluator returns per-objective scores. Go validates them (every objective present, 0–100), computes the mean, and applies the threshold (80). Malformed output or a provider failure returns a retryable 502 and saves nothing.
-- **Mastery happens exactly once.** Completion runs in one transaction under row locks, and repeated submissions return the existing result. A failed attempt moves the session to `REVIEW` with targeted practice, then back to assessment.
+- **Answers that exactly match a reference answer are scored locally.** Only the remaining items go to the AI evaluator, and if every answer matches, the AI isn't called at all.
+- **Mastery happens exactly once.** Completion runs in one transaction under row locks, and repeated submissions return the existing result. A failed attempt keeps the lesson open; the weak objectives are shown and passed to the helper.
 - **Locked status is derived** from prerequisites and is never stored.
 
 ## API
@@ -110,8 +114,11 @@ Check model IDs and prices at https://developers.openai.com/api/docs/models befo
 | GET | `/api/v1/dashboard` | required | Courses, streak, activity, open lessons, recent scores |
 | POST | `/api/v1/sessions` | required | Start or resume a lesson `{course, nodeId}` (auto-enrolls) |
 | GET | `/api/v1/sessions/{id}` | required | Session state, messages, assessment items (owner only) |
-| POST | `/api/v1/sessions/{id}/messages` | required | Learner reply → tutor reply `{content}` |
-| POST | `/api/v1/sessions/{id}/assessment` | required | Submit `{answers:[{itemId,answer}]}` |
+| POST | `/api/v1/sessions/{id}/messages` | required | Ask the helper `{content}` or a quick action `{intent: simpler\|quiz\|flashcards\|examples\|video\|image}` |
+| POST | `/api/v1/sessions/{id}/assessment` | required | Submit the final quiz `{answers:[{itemId,answer}]}` |
+| POST | `/api/v1/flashcards` | required | Save cards `{course, nodeId, cards:[{front,back}]}` (max 20 per call, 1,000 per learner) |
+| GET | `/api/v1/flashcards/due?course=` | required | Cards due for review |
+| POST · DELETE | `/api/v1/flashcards/{id}/review` · `/api/v1/flashcards/{id}` | required | Grade a card `{grade: again\|good\|easy}` · delete it |
 
 Errors have the shape `{"error":{"code","message","retryable"}}`. Request bodies are capped at 32 KB and messages at 2,000 characters. POST/PUT/PATCH bodies must be JSON, which together with SameSite=Lax cookies blocks cross-site form CSRF. Rate limits are per IP: `RATE_LIMIT_PER_MIN`, `AI_RATE_LIMIT_PER_MIN` and `AUTH_RATE_LIMIT_PER_MIN`.
 
@@ -149,6 +156,34 @@ The whole app works in **English and Bahasa Indonesia**.
 - **UI text:** lives in `apps/mobile/src/i18n/en.ts` and `id.ts`. `id.ts` must have exactly the same keys as `en.ts`, so `tsc` fails if one is missing. API errors are translated from their `code`.
 - **Course content:** the client sends `Accept-Language`, and the API returns course titles, levels, and roadmap node titles/summaries/objectives in that language. Translations live in `i18n` blocks inside the course files. A course that lists `"languages": ["en","id"]` must be fully translated, or the API refuses to start.
 - **Tutor:** follows the language a lesson started in (`learning_sessions.locale`). With ID it explains and gives feedback mainly in Indonesian, while exercises and answers stay in English (`tutor.languagePolicy` in `course.json`). Switching the UI language mid-lesson doesn't change that lesson's tutor language.
+
+## Lessons and the AI helper
+
+- **Material:**
+  - Each ready lesson has `material` sections in its lesson file. Block types: `text` (with `**bold**` and `` `code` ``), `examples` (English + Indonesian gloss), `tip` and `check` (an ungraded multiple-choice question).
+  - Each lesson also has `suggestedQuestions`, hand-picked `resources` and starter `flashcards`, all with Indonesian text.
+  - Every resource URL was checked by hand. The validator requires https, and videos must be YouTube links.
+- **Layout:**
+  - Wide screens show the course outline, the material and the helper in three columns.
+  - Tablets show the material and the helper.
+  - Phones show the material full-screen, with an **Ask AI** button and a bottom bar (previous · final quiz · next).
+- **Helper quick actions:**
+  - *Explain simpler.*
+  - *Quiz me*: a practice quiz checked on the device. It doesn't count towards mastery.
+  - *Flashcards*: a deck that can be saved for review.
+  - *Real-life examples* and *Videos*: curated links first. A second request searches the web with OpenAI's `web_search` tool, and only URLs the tool actually cited are shown. Video searches are limited to youtube.com, and videos play inline on the web.
+  - *Pictures*: freely licensed images from Wikimedia Commons, shown with author and licence.
+- **Flashcards:** saved cards follow a simple spaced-repetition schedule. *Again* brings a card back in 10 minutes; *Good* and *Easy* grow its interval by ×2.5 and ×3.5. They are reviewed on the **Review** page, and the dashboard shows how many are due.
+
+### Keeping AI costs down
+
+- **Prompt caching:** the prompt starts with a fixed prefix (policy → language → lesson material → response rules → learner profile), and requests carry `prompt_cache_key = course:node:language`. OpenAI then bills the repeated prefix as cached input. In testing, about 80% of input tokens were cached from the second message on.
+- **Trimmed history:** only the last 8 messages are sent. Long replies are cut, and earlier quizzes and cards are replaced by short markers.
+- **Per-intent output caps:** 350–700 tokens.
+- **Shared cache:** quick actions without typed text (a quiz, a deck, a search) are cached for 7 days across learners in `ai_cache`. Empty search results are cached for a day. A learner who asks again in the same lesson gets a new round.
+- **Exact-match grading:** answers that exactly match a reference answer skip the evaluator (see above).
+- **Daily budget:** usage (input, cached, output) is logged for every call and summed per learner per day in `ai_usage`. `AI_DAILY_TOKENS_PER_USER` (default 60,000; cached input doesn't count) caps it. Over the cap, the helper returns `ai_quota`, while the material, quick checks, flashcards and exact-match grading keep working.
+- **Settings:** `WEB_SEARCH=off` disables web search and `IMAGE_SEARCH=off` disables Wikimedia Commons.
 
 ## Personalization (onboarding)
 
@@ -192,6 +227,8 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 - **No email verification or password reset yet.** Accounts work, but there's no "forgot password" flow and emails aren't verified.
 - **Scores are not certification.** AI scores are a learning signal, not a CEFR certification, and model judgements can be wrong.
 - **Voice is not implemented.** Push-to-talk and TTS (P1) are on the backlog, and there is no pronunciation scoring.
+- **Search results vary.** Web search quality depends on OpenAI's `web_search` tool, and cited links can still be off-topic. Curated links always come first.
+- **Native video embeds:** on iOS/Android, videos open in YouTube rather than playing inline.
 - **Android is only partly tested.** Web and the iOS simulator (Expo Go) were checked manually. Android needs an emulator/AVD, which wasn't available on the build machine.
 
 ## Next steps

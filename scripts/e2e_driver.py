@@ -66,44 +66,44 @@ def roadmap_statuses(api):
     return {n["id"]: n["status"] for n in rm["nodes"]}, rm
 
 
-def drive(api, node_id, lesson):
+def drive(api, node_id, lesson, helper=False):
     status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": node_id})
     if status != 200:
         fail(f"start {node_id}: {status} {s}")
-    prompts = lesson["guidedPractice"] + lesson["independentPractice"]
-    for _ in range(40):
-        if s["phase"] == "ASSESSMENT":
-            break
-        last = s["messages"][-1]["content"]
-        answer, at = "ready", -1
-        for p in prompts:
-            k = last.rfind(p["prompt"])
-            if k > at:
-                answer, at = p["expected"][0], k
-        status, s = call(api, "POST", f"/api/v1/sessions/{s['id']}/messages", {"content": answer})
-        if status != 200:
-            fail(f"message {node_id}: {status} {s}")
-    else:
-        fail(f"{node_id} never reached ASSESSMENT")
+    if s["phase"] != "LEARNING" or not s["material"] or len(s["material"]["sections"]) < 3 or not s["assessment"]:
+        fail(f"{node_id}: lesson should open on its material with the final quiz available: {s.get('phase')}")
+    if helper:
+        # The AI helper (mock): a question, a practice quiz and the lesson's videos.
+        status, s = call(api, "POST", f"/api/v1/sessions/{s['id']}/messages", {"content": "Can you explain this again?"})
+        if status != 200 or s["messages"][-1]["role"] != "assistant":
+            fail(f"{node_id}: helper question: {status} {s}")
+        status, s = call(api, "POST", f"/api/v1/sessions/{s['id']}/messages", {"intent": "quiz"})
+        if status != 200 or len(s["messages"][-1]["metadata"].get("quiz", [])) < 2:
+            fail(f"{node_id}: helper quiz: {status} {s['messages'][-1]}")
+        status, s = call(api, "POST", f"/api/v1/sessions/{s['id']}/messages", {"intent": "video"})
+        if status != 200 or not s["messages"][-1]["metadata"].get("resources"):
+            fail(f"{node_id}: helper videos: {status} {s['messages'][-1]}")
+        # Save the lesson's starter flashcards and review one.
+        cards = s["material"]["flashcards"]
+        status, r = call(api, "POST", "/api/v1/flashcards", {"course": COURSE, "nodeId": node_id, "cards": cards})
+        if status != 200 or r["added"] != len(cards):
+            fail(f"{node_id}: save flashcards: {status} {r}")
+        status, q = call(api, "GET", "/api/v1/flashcards/due")
+        if status != 200 or len(q["cards"]) != len(cards):
+            fail(f"{node_id}: due flashcards: {status} {q}")
+        status, c = call(api, "POST", f"/api/v1/flashcards/{q['cards'][0]['id']}/review", {"grade": "good"})
+        if status != 200 or c["intervalDays"] != 1:
+            fail(f"{node_id}: review flashcard: {status} {c}")
+        print(f"  ✓ {node_id}: helper answered, made a quiz, showed videos; {len(cards)} flashcards saved, one reviewed")
 
-    # A failing attempt first: must not unlock anything.
+    # A failing attempt first: must not unlock anything, and the lesson stays open.
     wrong = [{"itemId": it["id"], "answer": "zzz"} for it in lesson["assessment"]]
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": wrong})
     if status != 200 or r["passed"] or r["unlocked"]:
         fail(f"{node_id}: failing attempt misbehaved: {status} {r}")
-    if r["session"]["phase"] != "REVIEW":
-        fail(f"{node_id}: expected REVIEW after failing, got {r['session']['phase']}")
+    if r["session"]["phase"] != "LEARNING" or not r["session"]["canChat"]:
+        fail(f"{node_id}: expected the lesson to stay open after failing, got {r['session']['phase']}")
     s = r["session"]
-    for _ in range(40):
-        if s["phase"] == "ASSESSMENT":
-            break
-        last = s["messages"][-1]["content"]
-        answer, at = "ready", -1
-        for p in prompts:
-            k = last.rfind(p["prompt"])
-            if k > at:
-                answer, at = p["expected"][0], k
-        status, s = call(api, "POST", f"/api/v1/sessions/{s['id']}/messages", {"content": answer})
     right = [{"itemId": it["id"], "answer": it["acceptableAnswers"][0]} for it in lesson["assessment"]]
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": right})
     if status != 200 or not r["passed"]:
@@ -133,9 +133,9 @@ def onboard(api):
     if "a1-simple-present" not in rec or "a0-alphabet-sounds" in rec:
         fail(f"recommended nodes wrong: {sorted(rec)}")
     status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": "a0-alphabet-sounds"})
-    if status != 200 or "technical English" not in s["messages"][0]["content"]:
-        fail(f"lesson intro should mention the goal: {status} {s.get('messages', [{}])[0]}")
-    print(f"  ✓ onboarding: goal tech → target B1, {len(rec)} recommended skills, personal intro")
+    if status != 200 or "technical English" not in s["greeting"]:
+        fail(f"the helper should greet with the goal: {status} {s.get('greeting')}")
+    print(f"  ✓ onboarding: goal tech → target B1, {len(rec)} recommended skills, personal greeting")
 
 
 def learn(api, curriculum):
@@ -155,7 +155,7 @@ def learn(api, curriculum):
         todo = [n for n in ls if statuses.get(n) in ("available", "in_progress")]
         if not todo:
             break
-        drive(api, todo[0], ls[todo[0]])
+        drive(api, todo[0], ls[todo[0]], helper=todo[0] == "a0-alphabet-sounds")
     statuses, _ = roadmap_statuses(api)
     not_done = [n for n in ls if statuses.get(n) != "mastered"]
     if not_done:
@@ -186,6 +186,9 @@ def verify(api, curriculum):
         fail(f"Indonesian roadmap not localized: {first['title']!r} / {rm_id['course']['title']!r}")
     print(f"  ✓ Accept-Language id → {rm_id['course']['title']}: {first['title']}")
     _, d = call(api, "GET", "/api/v1/dashboard")
+    if d["flashcards"]["total"] == 0:
+        fail(f"flashcards lost after restart: {d['flashcards']}")
+    print(f"  ✓ flashcards kept: {d['flashcards']['total']} saved, {d['flashcards']['due']} due")
     c = d["courses"][0]["progress"]
     print(f"  ✓ after restart and fresh login: {d['totalMastered']} mastered, level {c['currentLevel']}, "
           f"{c['percent']}% to {c['targetLevel']}, streak {d['streak']['current']} day(s)")
