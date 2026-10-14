@@ -1,0 +1,52 @@
+{
+  "nodeId": "a1-questions",
+  "intro": "Welcome! Now that you know 'to be' and the simple present, let's ask real questions: what, where, who, when and how. You'll use them to ask people about themselves — perfect for meeting someone new. Warm-up: what question do you ask to learn someone's name?",
+  "teachingNotes": [
+    "Indonesian questions often keep statement order ('Kamu tinggal di mana?'); English needs Wh-word + auxiliary + subject + verb.",
+    "With be: Where are you from? With other verbs: Where do you live? / Where does she work?",
+    "what = apa, where = di mana, who = siapa, when = kapan, how = bagaimana, how old = berapa umur.",
+    "Practise personal information: name, origin, job, age, address, hobbies."
+  ],
+  "keyPoints": [
+    {
+      "title": "Question words",
+      "explanation": "what (apa), where (di mana), who (siapa), when (kapan), how (bagaimana). How old? asks about age.",
+      "examples": [
+        { "en": "Where is the station?", "id": "Di mana stasiunnya?" },
+        { "en": "Who is your teacher?", "id": "Siapa gurumu?" }
+      ]
+    },
+    {
+      "title": "Question word order",
+      "explanation": "Wh-word + am/is/are + subject? or Wh-word + do/does + subject + verb? Don't keep statement order.",
+      "examples": [
+        { "en": "Where do you live?", "id": "Kamu tinggal di mana?" },
+        { "en": "What does he do?", "id": "Apa pekerjaannya?" }
+      ]
+    },
+    {
+      "title": "Asking for personal information",
+      "explanation": "What's your name? Where are you from? What do you do? How old are you? What's your phone number?",
+      "examples": [
+        { "en": "What do you do? — I'm a designer.", "id": "Apa pekerjaanmu? — Saya desainer." },
+        { "en": "Where are you from? — I'm from Medan.", "id": "Kamu dari mana? — Saya dari Medan." }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    { "objectiveId": "wh-words", "prompt": "Which question word? ___ is your birthday? — It's in May.", "expected": ["when"], "hint": "The answer is a time." },
+    { "objectiveId": "question-order", "prompt": "Put in order: you / where / live / do", "expected": ["where do you live"], "hint": "Wh-word + do + you + verb." },
+    { "objectiveId": "personal-info", "prompt": "Ask someone about their job (one question).", "expected": ["what do you do", "what is your job", "what's your job"], "hint": "What do you ...?" }
+  ],
+  "independentPractice": [
+    { "objectiveId": "wh-words", "prompt": "Which question word? ___ is that man? — He's my uncle.", "expected": ["who"], "hint": "The answer is a person." },
+    { "objectiveId": "personal-info", "prompt": "Ask someone where they come from.", "expected": ["where are you from", "where do you come from"], "hint": "Where are you ...?" }
+  ],
+  "assessment": [
+    { "id": "q-1", "objectiveId": "wh-words", "prompt": "Which question word? ___ do you go to work? — By train.", "acceptableAnswers": ["how"], "rubric": "Correct: How." },
+    { "id": "q-2", "objectiveId": "wh-words", "prompt": "Which question word? ___ is your bag? — It's under the table.", "acceptableAnswers": ["where"], "rubric": "Correct: Where." },
+    { "id": "q-3", "objectiveId": "question-order", "prompt": "Put in order: does / work / she / where", "acceptableAnswers": ["where does she work"], "rubric": "Correct: Where does she work?" },
+    { "id": "q-4", "objectiveId": "question-order", "prompt": "Correct the question: Where you are from?", "acceptableAnswers": ["where are you from"], "rubric": "Correct: Where are you from?" },
+    { "id": "q-5", "objectiveId": "personal-info", "prompt": "Write a question to ask someone's age.", "acceptableAnswers": ["how old are you"], "rubric": "Correct: How old are you? 'How old you are' = 40." }
+  ]
+}

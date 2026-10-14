@@ -1,0 +1,52 @@
+{
+  "nodeId": "a0-basic-sentences",
+  "intro": "Great progress! Now we put words together into real sentences. You'll practise English word order (Subject + Verb + Object), using 'a' and 'an', and making plurals like books and boxes. Warm-up: try one short sentence about what you like — for example, 'I like coffee.'",
+  "teachingNotes": [
+    "Word order is usually the same as Indonesian (S-V-O), which helps; stress that English almost always needs a subject (no 'Like coffee').",
+    "Indonesian has no articles: learners drop 'a/an'. 'an' goes before vowel SOUNDS (an apple, an hour, a university).",
+    "Indonesian plurals repeat the word (buku-buku); English adds -s/-es. After numbers, English still needs -s (two books).",
+    "Use only simple present with I/you/we/they to avoid third-person -s (that comes in A1)."
+  ],
+  "keyPoints": [
+    {
+      "title": "Subject + Verb + Object",
+      "explanation": "Most English sentences start with who does the action, then the action, then the thing. Always include the subject.",
+      "examples": [
+        { "en": "I drink tea.", "id": "Saya minum teh." },
+        { "en": "We play football.", "id": "Kami bermain sepak bola." }
+      ]
+    },
+    {
+      "title": "a or an",
+      "explanation": "Use a/an before one countable thing. Use 'an' before a vowel sound (an apple, an egg), 'a' before a consonant sound (a book, a car).",
+      "examples": [
+        { "en": "I have an apple.", "id": "Saya punya sebuah apel." },
+        { "en": "She is a nurse.", "id": "Dia seorang perawat." }
+      ]
+    },
+    {
+      "title": "Plurals with -s / -es",
+      "explanation": "Add -s for more than one: book → books. Add -es after s, x, ch, sh: box → boxes, watch → watches. Don't repeat the word like in Indonesian.",
+      "examples": [
+        { "en": "two books", "id": "dua buku (bukan buku-buku)" },
+        { "en": "three boxes", "id": "tiga kotak" }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    { "objectiveId": "word-order", "prompt": "Put the words in order: coffee / I / like", "expected": ["i like coffee"], "hint": "Subject first, then verb, then object." },
+    { "objectiveId": "articles", "prompt": "a or an? I eat ___ egg every morning.", "expected": ["an"], "hint": "'egg' starts with a vowel sound." },
+    { "objectiveId": "plurals", "prompt": "Make it plural: one box → two ___", "expected": ["boxes"], "hint": "Words ending in x add -es." }
+  ],
+  "independentPractice": [
+    { "objectiveId": "word-order", "prompt": "Put the words in order: English / we / study", "expected": ["we study english"], "hint": "Who? Do what? What?" },
+    { "objectiveId": "plurals", "prompt": "Make it plural: one cat → three ___", "expected": ["cats"], "hint": "Just add -s." }
+  ],
+  "assessment": [
+    { "id": "sent-1", "objectiveId": "word-order", "prompt": "Put the words in order: rice / they / eat", "acceptableAnswers": ["they eat rice"], "rubric": "Correct: They eat rice. Any other order = 0–30." },
+    { "id": "sent-2", "objectiveId": "word-order", "prompt": "Translate into English: Saya membaca buku.", "acceptableAnswers": ["i read a book", "i read books", "i am reading a book", "i read the book"], "rubric": "Must have subject I + read + book with an article or plural. Missing article = 70." },
+    { "id": "sent-3", "objectiveId": "articles", "prompt": "a or an? She has ___ umbrella.", "acceptableAnswers": ["an"], "rubric": "Correct: an." },
+    { "id": "sent-4", "objectiveId": "articles", "prompt": "a or an? My father is ___ driver.", "acceptableAnswers": ["a"], "rubric": "Correct: a." },
+    { "id": "sent-5", "objectiveId": "plurals", "prompt": "Make it plural: one watch → two ___", "acceptableAnswers": ["watches"], "rubric": "Correct: watches. 'watchs' = 40." }
+  ]
+}

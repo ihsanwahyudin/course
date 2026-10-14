@@ -1,0 +1,66 @@
+package http
+
+import (
+	"context"
+	"net/http"
+	"net/http/httptest"
+	"strings"
+	"testing"
+
+	"fluentpath/api/internal/curriculum"
+)
+
+func testRouter(t *testing.T) http.Handler {
+	t.Helper()
+	cur, err := curriculum.Load("../../../../packages/curriculum")
+	if err != nil {
+		t.Fatal(err)
+	}
+	// Svc is nil: these requests must be rejected before reaching it.
+	s := &Server{Cur: cur, CORSOrigins: []string{"http://localhost:8081"}, Ping: func(context.Context) error { return nil }}
+	return s.Router()
+}
+
+func TestInputValidation(t *testing.T) {
+	h := testRouter(t)
+	cases := []struct {
+		method, path, body string
+		status             int
+		code               string
+	}{
+		{"POST", "/api/v1/sessions", `not json`, 400, "invalid_json"},
+		{"POST", "/api/v1/sessions", `{"nodeId":"../etc"}`, 400, "invalid_node_id"},
+		{"POST", "/api/v1/sessions", `{"nodeId":"a0-alphabet-sounds","extra":1}`, 400, "invalid_json"},
+		{"POST", "/api/v1/sessions", `{"nodeId":"` + strings.Repeat("a", 40<<10) + `"}`, 413, "body_too_large"},
+		{"POST", "/api/v1/sessions/not-a-uuid/messages", `{"content":"hi"}`, 404, "session_not_found"},
+		{"GET", "/api/v1/nodes/BAD_ID", ``, 404, "node_not_found"},
+		{"GET", "/api/v1/nope", ``, 404, "not_found"},
+	}
+	for _, c := range cases {
+		req := httptest.NewRequest(c.method, c.path, strings.NewReader(c.body))
+		rec := httptest.NewRecorder()
+		h.ServeHTTP(rec, req)
+		if rec.Code != c.status || !strings.Contains(rec.Body.String(), `"code":"`+c.code+`"`) {
+			t.Errorf("%s %s: got %d %s, want %d %s", c.method, c.path, rec.Code, rec.Body.String(), c.status, c.code)
+		}
+	}
+}
+
+func TestHealthAndCurriculum(t *testing.T) {
+	h := testRouter(t)
+	for _, path := range []string{"/healthz", "/api/v1/curriculum"} {
+		rec := httptest.NewRecorder()
+		h.ServeHTTP(rec, httptest.NewRequest("GET", path, nil))
+		if rec.Code != 200 {
+			t.Errorf("%s: %d", path, rec.Code)
+		}
+	}
+	rec := httptest.NewRecorder()
+	req := httptest.NewRequest("OPTIONS", "/api/v1/roadmap", nil)
+	req.Header.Set("Origin", "http://localhost:8081")
+	req.Header.Set("Access-Control-Request-Method", "GET")
+	h.ServeHTTP(rec, req)
+	if rec.Header().Get("Access-Control-Allow-Origin") != "http://localhost:8081" {
+		t.Errorf("CORS preflight missing allow-origin: %v", rec.Header())
+	}
+}

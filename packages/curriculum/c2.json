@@ -1,0 +1,99 @@
+{
+  "version": "2026.10.1",
+  "level": "C2",
+  "title": "Proficient",
+  "description": "Optional mastery track: nuance, style and implied meaning.",
+  "nodes": [
+    {
+      "id": "c2-idiomatic-mastery",
+      "level": "C2",
+      "title": "Idiomatic Mastery",
+      "summary": "Idioms, fixed expressions and natural phrasing.",
+      "prerequisiteIds": [
+        "c1-register"
+      ],
+      "objectives": [
+        {
+          "id": "use-idiomatic-expressions",
+          "text": "Use idiomatic expressions accurately and naturally"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "c2-rhetoric",
+      "level": "C2",
+      "title": "Rhetoric & Persuasion",
+      "summary": "Structure, emphasis and rhetorical devices.",
+      "prerequisiteIds": [
+        "c1-inversion",
+        "c1-academic-writing"
+      ],
+      "objectives": [
+        {
+          "id": "use-rhetorical-devices",
+          "text": "Use rhetorical devices for effect"
+        },
+        {
+          "id": "build-a-persuasive",
+          "text": "Build a persuasive case"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "c2-implied-meaning",
+      "level": "C2",
+      "title": "Implied Meaning",
+      "summary": "Irony, understatement and subtext.",
+      "prerequisiteIds": [
+        "c1-register"
+      ],
+      "objectives": [
+        {
+          "id": "interpret-and-convey",
+          "text": "Interpret and convey implied meaning"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "c2-critical-review",
+      "level": "C2",
+      "title": "Critical Reviews",
+      "summary": "Evaluate texts and ideas in writing.",
+      "prerequisiteIds": [
+        "c2-rhetoric"
+      ],
+      "objectives": [
+        {
+          "id": "write-a-balanced",
+          "text": "Write a balanced critical review"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "c2-stylistic-nuance",
+      "level": "C2",
+      "title": "Stylistic Nuance",
+      "summary": "Precision, rhythm and voice.",
+      "prerequisiteIds": [
+        "c2-idiomatic-mastery",
+        "c2-implied-meaning"
+      ],
+      "objectives": [
+        {
+          "id": "adjust-style-and",
+          "text": "Adjust style and tone with precision"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    }
+  ]
+}

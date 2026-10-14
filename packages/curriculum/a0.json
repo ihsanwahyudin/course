@@ -1,0 +1,149 @@
+{
+  "version": "2026.10.1",
+  "level": "A0",
+  "title": "Foundation",
+  "description": "Sounds, words and first sentences — the groundwork before CEFR A1.",
+  "nodes": [
+    {
+      "id": "a0-alphabet-sounds",
+      "level": "A0",
+      "title": "Alphabet & Sounds",
+      "summary": "Name the 26 letters, hear the vowels and spell simple words aloud.",
+      "prerequisiteIds": [],
+      "objectives": [
+        {
+          "id": "letter-names",
+          "text": "Say and recognise the names of English letters"
+        },
+        {
+          "id": "vowels",
+          "text": "Identify the five vowel letters and their basic sounds"
+        },
+        {
+          "id": "spelling",
+          "text": "Spell short words and names letter by letter"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a0-pronouns",
+      "level": "A0",
+      "title": "Personal Pronouns",
+      "summary": "Use I, you, he, she, it, we, they and my, your, his, her.",
+      "prerequisiteIds": [
+        "a0-alphabet-sounds"
+      ],
+      "objectives": [
+        {
+          "id": "subject-pronouns",
+          "text": "Choose the right subject pronoun for people and things"
+        },
+        {
+          "id": "possessives",
+          "text": "Use possessive adjectives: my, your, his, her, its, our, their"
+        },
+        {
+          "id": "pronoun-reference",
+          "text": "Replace a noun with the correct pronoun"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a0-common-vocabulary",
+      "level": "A0",
+      "title": "Common Vocabulary",
+      "summary": "Everyday nouns, numbers 1–20 and basic colours.",
+      "prerequisiteIds": [
+        "a0-alphabet-sounds"
+      ],
+      "objectives": [
+        {
+          "id": "everyday-nouns",
+          "text": "Name common people, places and objects"
+        },
+        {
+          "id": "numbers",
+          "text": "Say and write numbers from 1 to 20"
+        },
+        {
+          "id": "colours-adjectives",
+          "text": "Describe things with basic colours and adjectives"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a0-basic-sentences",
+      "level": "A0",
+      "title": "Basic Sentences",
+      "summary": "Build Subject + Verb + Object sentences with a/an and plurals.",
+      "prerequisiteIds": [
+        "a0-pronouns",
+        "a0-common-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "word-order",
+          "text": "Build sentences in Subject + Verb + Object order"
+        },
+        {
+          "id": "articles",
+          "text": "Use a and an correctly before nouns"
+        },
+        {
+          "id": "plurals",
+          "text": "Make regular plural nouns with -s / -es"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a0-greetings",
+      "level": "A0",
+      "title": "Greetings & Politeness",
+      "summary": "Hello, goodbye, please, thank you and sorry.",
+      "prerequisiteIds": [
+        "a0-alphabet-sounds"
+      ],
+      "objectives": [
+        {
+          "id": "greet-people-and",
+          "text": "Greet people and say goodbye at different times of day"
+        },
+        {
+          "id": "use-please-thank",
+          "text": "Use please, thank you and sorry naturally"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "a0-classroom-language",
+      "level": "A0",
+      "title": "Classroom Language",
+      "summary": "Ask for help, repetition and meaning.",
+      "prerequisiteIds": [
+        "a0-greetings"
+      ],
+      "objectives": [
+        {
+          "id": "ask-someone-to",
+          "text": "Ask someone to repeat or speak slowly"
+        },
+        {
+          "id": "ask-what-a",
+          "text": "Ask what a word means and how to spell it"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    }
+  ]
+}

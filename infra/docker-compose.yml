@@ -1,0 +1,40 @@
+name: fluentpath
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: fluentpath
+      POSTGRES_PASSWORD: fluentpath
+      POSTGRES_DB: fluentpath
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fluentpath"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+  api:
+    profiles: ["api"]
+    build:
+      context: ..
+      dockerfile: apps/api/Dockerfile
+    environment:
+      DATABASE_URL: postgres://fluentpath:fluentpath@db:5432/fluentpath?sslmode=disable
+      CURRICULUM_DIR: /app/curriculum
+      AI_PROVIDER: ${AI_PROVIDER:-mock}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
+      OPENAI_EVAL_MODEL: ${OPENAI_EVAL_MODEL:-}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8081}
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

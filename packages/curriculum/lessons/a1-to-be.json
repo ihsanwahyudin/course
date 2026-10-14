@@ -1,0 +1,53 @@
+{
+  "nodeId": "a1-to-be",
+  "intro": "Welcome to A1! This lesson is about the most important verb in English: 'to be' — am, is and are. Indonesian often doesn't need a verb here ('Saya guru'), but English does ('I am a teacher'). We'll practise statements, negatives and questions. Warm-up: tell me one sentence about yourself, like 'I am from Jakarta.'",
+  "teachingNotes": [
+    "Key Indonesian interference: dropping 'be' entirely (*'I happy', *'She a doctor').",
+    "I → am, he/she/it → is, you/we/they → are. Contractions: I'm, he's, they're, isn't, aren't.",
+    "Negative: add 'not' after be. There is no *'amn't'; use 'I'm not'.",
+    "Questions: move be to the front (Is she a teacher?). Short answers: Yes, she is. / No, she isn't."
+  ],
+  "keyPoints": [
+    {
+      "title": "am / is / are",
+      "explanation": "I am. He, she, it is. You, we, they are. English needs this verb even when Indonesian has none.",
+      "examples": [
+        { "en": "I am a student.", "id": "Saya (adalah) seorang pelajar." },
+        { "en": "They are happy.", "id": "Mereka senang." }
+      ]
+    },
+    {
+      "title": "Negative: be + not",
+      "explanation": "Put 'not' after am/is/are: I'm not, he isn't, they aren't.",
+      "examples": [
+        { "en": "She isn't at home.", "id": "Dia tidak di rumah." },
+        { "en": "We aren't late.", "id": "Kami tidak terlambat." }
+      ]
+    },
+    {
+      "title": "Questions and short answers",
+      "explanation": "Move am/is/are before the subject: Are you tired? Short answers repeat be: Yes, I am. / No, I'm not.",
+      "examples": [
+        { "en": "Is he a doctor? — Yes, he is.", "id": "Apakah dia dokter? — Ya." },
+        { "en": "Are they students? — No, they aren't.", "id": "Apakah mereka pelajar? — Bukan." }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    { "objectiveId": "be-affirmative", "prompt": "Complete: My sister ___ a nurse.", "expected": ["is"], "hint": "My sister = she." },
+    { "objectiveId": "be-negative", "prompt": "Make it negative: They are at school.", "expected": ["they aren't at school", "they are not at school", "they're not at school"], "hint": "Add 'not' after 'are'." },
+    { "objectiveId": "be-questions", "prompt": "Make a question: You are tired.", "expected": ["are you tired"], "hint": "Move 'are' to the front." }
+  ],
+  "independentPractice": [
+    { "objectiveId": "be-affirmative", "prompt": "Translate: Saya senang.", "expected": ["i am happy", "i'm happy"], "hint": "Don't forget the verb!" },
+    { "objectiveId": "be-questions", "prompt": "Answer with a short answer (yes): Is she a teacher?", "expected": ["yes she is"], "hint": "Yes, + she + is." }
+  ],
+  "assessment": [
+    { "id": "be-1", "objectiveId": "be-affirmative", "prompt": "Complete: We ___ from Indonesia.", "acceptableAnswers": ["are"], "rubric": "Correct: are." },
+    { "id": "be-2", "objectiveId": "be-affirmative", "prompt": "Translate: Dia (laki-laki) seorang insinyur.", "acceptableAnswers": ["he is an engineer", "he's an engineer"], "rubric": "Must include 'is'. Missing 'is' = 30. 'a engineer' = 80." },
+    { "id": "be-3", "objectiveId": "be-negative", "prompt": "Make it negative: I am hungry.", "acceptableAnswers": ["i am not hungry", "i'm not hungry"], "rubric": "Correct: I'm not / I am not hungry. *'I amn't' = 30." },
+    { "id": "be-4", "objectiveId": "be-negative", "prompt": "Make it negative: The shop is open.", "acceptableAnswers": ["the shop isn't open", "the shop is not open", "the shop's not open"], "rubric": "Correct: The shop isn't / is not open." },
+    { "id": "be-5", "objectiveId": "be-questions", "prompt": "Make a question: They are your friends.", "acceptableAnswers": ["are they your friends"], "rubric": "Correct: Are they your friends? Missing question mark is fine." },
+    { "id": "be-6", "objectiveId": "be-questions", "prompt": "Give a short NEGATIVE answer: Are you a student?", "acceptableAnswers": ["no i'm not", "no i am not"], "rubric": "Correct: No, I'm not. 'No' alone = 40." }
+  ]
+}

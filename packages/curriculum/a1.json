@@ -1,0 +1,225 @@
+{
+  "version": "2026.10.1",
+  "level": "A1",
+  "title": "Beginner",
+  "description": "Introduce yourself, talk about routines and handle simple everyday exchanges.",
+  "nodes": [
+    {
+      "id": "a1-to-be",
+      "level": "A1",
+      "title": "The Verb “To Be”",
+      "summary": "am / is / are in statements, negatives and questions.",
+      "prerequisiteIds": [
+        "a0-basic-sentences"
+      ],
+      "objectives": [
+        {
+          "id": "be-affirmative",
+          "text": "Use am, is and are in affirmative sentences"
+        },
+        {
+          "id": "be-negative",
+          "text": "Make negative sentences with am not, isn't and aren't"
+        },
+        {
+          "id": "be-questions",
+          "text": "Ask and answer yes/no questions with to be"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a1-simple-present",
+      "level": "A1",
+      "title": "Simple Present Tense",
+      "summary": "Talk about habits, facts and daily routines.",
+      "prerequisiteIds": [
+        "a0-basic-sentences",
+        "a0-pronouns"
+      ],
+      "objectives": [
+        {
+          "id": "affirmative",
+          "text": "Form basic affirmative sentences (including he/she/it + -s)"
+        },
+        {
+          "id": "negative",
+          "text": "Form basic negative sentences with don't / doesn't"
+        },
+        {
+          "id": "questions",
+          "text": "Ask and answer simple present questions with do / does"
+        },
+        {
+          "id": "daily-routines",
+          "text": "Describe daily routines"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a1-questions",
+      "level": "A1",
+      "title": "Asking Questions",
+      "summary": "What, where, who, when, how — plus yes/no questions.",
+      "prerequisiteIds": [
+        "a1-to-be",
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "wh-words",
+          "text": "Choose the right question word (what, where, who, when, how)"
+        },
+        {
+          "id": "question-order",
+          "text": "Put words in the right order in questions"
+        },
+        {
+          "id": "personal-info",
+          "text": "Ask for and give basic personal information"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "ready"
+    },
+    {
+      "id": "a1-self-introduction",
+      "level": "A1",
+      "title": "Introducing Yourself",
+      "summary": "Name, origin, job and interests in a few sentences.",
+      "prerequisiteIds": [
+        "a1-questions"
+      ],
+      "objectives": [
+        {
+          "id": "introduce-yourself-with",
+          "text": "Introduce yourself with name, origin and job"
+        },
+        {
+          "id": "talk-about-your",
+          "text": "Talk about your likes and interests"
+        },
+        {
+          "id": "respond-when-someone",
+          "text": "Respond when someone introduces themselves"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "a1-daily-routines",
+      "level": "A1",
+      "title": "Daily Routines",
+      "summary": "Describe your day with time expressions.",
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "describe-a-typical",
+          "text": "Describe a typical day in order"
+        },
+        {
+          "id": "use-time-expressions",
+          "text": "Use time expressions like at 7, in the morning, every day"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "a1-there-is-are",
+      "level": "A1",
+      "title": "There Is / There Are",
+      "summary": "Describe places and what they contain.",
+      "prerequisiteIds": [
+        "a1-to-be"
+      ],
+      "objectives": [
+        {
+          "id": "describe-a-room",
+          "text": "Describe a room or place with there is / there are"
+        },
+        {
+          "id": "ask-questions-with",
+          "text": "Ask questions with is there / are there"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "a1-present-continuous",
+      "level": "A1",
+      "title": "Present Continuous",
+      "summary": "Talk about what is happening now.",
+      "prerequisiteIds": [
+        "a1-to-be",
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "form-present-continuous",
+          "text": "Form present continuous sentences"
+        },
+        {
+          "id": "contrast-now-with",
+          "text": "Contrast now with routines"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "a1-can-ability",
+      "level": "A1",
+      "title": "Can for Ability",
+      "summary": "Say what you can and can't do.",
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "talk-about-abilities",
+          "text": "Talk about abilities with can / can't"
+        },
+        {
+          "id": "ask-polite-requests",
+          "text": "Ask polite requests with can"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    },
+    {
+      "id": "a1-everyday-conversation",
+      "level": "A1",
+      "title": "Everyday Conversation",
+      "summary": "Short exchanges in shops, cafés and the street.",
+      "prerequisiteIds": [
+        "a1-self-introduction",
+        "a1-can-ability"
+      ],
+      "objectives": [
+        {
+          "id": "order-food-and",
+          "text": "Order food and drinks"
+        },
+        {
+          "id": "ask-for-prices",
+          "text": "Ask for prices and directions"
+        },
+        {
+          "id": "keep-a-short",
+          "text": "Keep a short conversation going"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon"
+    }
+  ]
+}

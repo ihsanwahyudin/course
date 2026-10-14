@@ -1,0 +1,54 @@
+{
+  "nodeId": "a1-simple-present",
+  "intro": "Hello! In this lesson you'll learn the simple present — the tense for habits, routines and facts, like 'I work in an office' or 'She drinks coffee every morning'. The tricky part is the -s for he/she/it, and using do/does for questions and negatives. Warm-up: what do you do every morning?",
+  "teachingNotes": [
+    "Indonesian verbs don't change, so third-person -s is the #1 error (*'She work').",
+    "Negatives: don't + base verb (I/you/we/they), doesn't + base verb (he/she/it). Never *'doesn't works'.",
+    "Questions: Do/Does + subject + base verb. Short answers: Yes, I do / No, she doesn't.",
+    "Spelling: go → goes, watch → watches, study → studies, have → has.",
+    "Tie practice to daily routines: get up, have breakfast, go to work, start, finish."
+  ],
+  "keyPoints": [
+    {
+      "title": "Affirmative and the he/she/it -s",
+      "explanation": "Use the base verb with I, you, we, they. Add -s or -es with he, she, it: I work → she works, I go → he goes.",
+      "examples": [
+        { "en": "I get up at six.", "id": "Saya bangun jam enam." },
+        { "en": "My father works in a bank.", "id": "Ayah saya bekerja di bank." }
+      ]
+    },
+    {
+      "title": "Negatives with don't / doesn't",
+      "explanation": "don't + base verb for I/you/we/they; doesn't + base verb for he/she/it. The -s moves to 'does', so the main verb has no -s.",
+      "examples": [
+        { "en": "I don't drink coffee.", "id": "Saya tidak minum kopi." },
+        { "en": "She doesn't like rain.", "id": "Dia tidak suka hujan." }
+      ]
+    },
+    {
+      "title": "Questions with do / does",
+      "explanation": "Do/Does + subject + base verb: Do you play football? Does he live here? Answer: Yes, I do. / No, he doesn't.",
+      "examples": [
+        { "en": "Do you speak English? — Yes, I do.", "id": "Apakah kamu berbicara bahasa Inggris?" },
+        { "en": "What time does she start work?", "id": "Jam berapa dia mulai bekerja?" }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    { "objectiveId": "affirmative", "prompt": "Complete with 'work': She ___ in a hospital.", "expected": ["works"], "hint": "She → add -s." },
+    { "objectiveId": "negative", "prompt": "Make it negative: He plays tennis.", "expected": ["he doesn't play tennis", "he does not play tennis"], "hint": "doesn't + base verb (no -s)." },
+    { "objectiveId": "questions", "prompt": "Make a question: You like music.", "expected": ["do you like music"], "hint": "Start with 'Do'." },
+    { "objectiveId": "daily-routines", "prompt": "Complete: I ___ breakfast at seven. (have)", "expected": ["have"], "hint": "With 'I' use the base verb." }
+  ],
+  "independentPractice": [
+    { "objectiveId": "daily-routines", "prompt": "Write one sentence about what time you get up.", "expected": ["i get up at", "i wake up at"], "hint": "I get up at ..." },
+    { "objectiveId": "questions", "prompt": "Make a question about Rina: (live) in Surabaya?", "expected": ["does rina live in surabaya"], "hint": "Does + Rina + base verb." }
+  ],
+  "assessment": [
+    { "id": "sp-1", "objectiveId": "affirmative", "prompt": "Complete with 'go': My brother ___ to school by bus.", "acceptableAnswers": ["goes"], "rubric": "Correct: goes. 'go' = 30, 'gos' = 50." },
+    { "id": "sp-2", "objectiveId": "negative", "prompt": "Make it negative: We eat meat.", "acceptableAnswers": ["we don't eat meat", "we do not eat meat"], "rubric": "Correct: We don't eat meat." },
+    { "id": "sp-3", "objectiveId": "negative", "prompt": "Make it negative: She watches TV.", "acceptableAnswers": ["she doesn't watch tv", "she does not watch tv"], "rubric": "Correct: She doesn't watch TV. 'doesn't watches' = 50." },
+    { "id": "sp-4", "objectiveId": "questions", "prompt": "Make a question: He speaks Japanese.", "acceptableAnswers": ["does he speak japanese"], "rubric": "Correct: Does he speak Japanese? 'Does he speaks' = 50." },
+    { "id": "sp-5", "objectiveId": "daily-routines", "prompt": "Write one sentence about what you do in the evening (use the simple present).", "acceptableAnswers": ["in the evening i", "i watch", "i cook", "i read", "i study", "i have dinner", "i eat dinner", "i go to bed", "i relax", "i play"], "rubric": "Any correct simple present sentence about an evening routine scores 100. Third-person or tense errors reduce the score." }
+  ]
+}
