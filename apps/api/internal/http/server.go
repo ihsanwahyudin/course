@@ -7,7 +7,11 @@ import (
 	"errors"
 	"log/slog"
 	"net/http"
+	"os"
+	"path"
+	"path/filepath"
 	"regexp"
+	"strings"
 	"time"
 
 	"github.com/go-chi/chi/v5"
@@ -29,6 +33,9 @@ type Server struct {
 	// Requests per minute per IP; zero means the defaults below.
 	RateLimit   int
 	AIRateLimit int
+	// WebDir, when set, is an `expo export -p web` build served at / so the
+	// app and API share one origin (no CORS or local-network prompts).
+	WebDir string
 }
 
 func (s *Server) limits() (all, ai int) {
@@ -80,9 +87,30 @@ func (s *Server) Router() http.Handler {
 		})
 	})
 	r.NotFound(func(w http.ResponseWriter, r *http.Request) {
+		if s.WebDir != "" && r.Method == http.MethodGet && !strings.HasPrefix(r.URL.Path, "/api/") {
+			s.serveWeb(w, r)
+			return
+		}
 		writeErr(w, &learning.Error{Status: 404, Code: "not_found", Message: "No such endpoint."})
 	})
 	return r
+}
+
+// serveWeb serves static files from WebDir, falling back to index.html so
+// client-side routes like /roadmap or /nodes/x load the single-page app.
+func (s *Server) serveWeb(w http.ResponseWriter, r *http.Request) {
+	rel := path.Clean("/" + r.URL.Path)
+	full := filepath.Join(s.WebDir, filepath.FromSlash(rel))
+	if info, err := os.Stat(full); err == nil && !info.IsDir() {
+		if strings.HasPrefix(rel, "/_expo/") {
+			// Hashed bundle names; safe to cache.
+			w.Header().Set("Cache-Control", "public, max-age=31536000, immutable")
+		}
+		http.ServeFile(w, r, full)
+		return
+	}
+	w.Header().Set("Cache-Control", "no-cache")
+	http.ServeFile(w, r, filepath.Join(s.WebDir, "index.html"))
 }
 
 func requestLogger(next http.Handler) http.Handler {

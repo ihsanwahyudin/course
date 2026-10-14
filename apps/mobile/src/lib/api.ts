@@ -4,7 +4,27 @@ import { Platform } from 'react-native';
 // Android emulators reach the host machine at 10.0.2.2; physical devices need
 // EXPO_PUBLIC_API_URL set to the host's LAN IP or a tunnel.
 const fallback = Platform.OS === 'android' ? 'http://10.0.2.2:8080' : 'http://localhost:8080';
-export const API_URL = (process.env.EXPO_PUBLIC_API_URL || fallback).replace(/\/$/, '');
+
+// On web, a localhost API URL only works on the dev machine itself. When the
+// page is opened from another device on the LAN (e.g. http://192.168.x.x:8081),
+// call the API on that same host instead.
+function resolveApiUrl(configured: string) {
+  if (Platform.OS !== 'web' || typeof window === 'undefined') return configured;
+  const pageHost = window.location.hostname;
+  try {
+    const url = new URL(configured);
+    const local = ['localhost', '127.0.0.1', '[::1]'];
+    if (local.includes(url.hostname) && !local.includes(pageHost)) {
+      url.hostname = pageHost;
+      return url.toString();
+    }
+  } catch {
+    // keep the configured value
+  }
+  return configured;
+}
+
+export const API_URL = resolveApiUrl(process.env.EXPO_PUBLIC_API_URL || fallback).replace(/\/$/, '');
 
 export type Level = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
 export type NodeStatus = 'mastered' | 'in_progress' | 'available' | 'locked' | 'coming_soon';

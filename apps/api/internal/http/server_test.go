@@ -4,6 +4,8 @@ import (
 	"context"
 	"net/http"
 	"net/http/httptest"
+	"os"
+	"path/filepath"
 	"strings"
 	"testing"
 
@@ -62,5 +64,38 @@ func TestHealthAndCurriculum(t *testing.T) {
 	h.ServeHTTP(rec, req)
 	if rec.Header().Get("Access-Control-Allow-Origin") != "http://localhost:8081" {
 		t.Errorf("CORS preflight missing allow-origin: %v", rec.Header())
+	}
+}
+
+func TestServesWebAppWithSPAFallback(t *testing.T) {
+	dir := t.TempDir()
+	if err := os.WriteFile(filepath.Join(dir, "index.html"), []byte("<html>app</html>"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(filepath.Join(dir, "_expo"), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(dir, "_expo", "a.js"), []byte("js"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	cur, _ := curriculum.Load("../../../../packages/curriculum")
+	h := (&Server{Cur: cur, WebDir: dir, Ping: func(context.Context) error { return nil }}).Router()
+	for path, want := range map[string]string{"/": "app", "/roadmap": "app", "/nodes/a0-pronouns": "app", "/_expo/a.js": "js"} {
+		rec := httptest.NewRecorder()
+		h.ServeHTTP(rec, httptest.NewRequest("GET", path, nil))
+		if rec.Code != 200 || !strings.Contains(rec.Body.String(), want) {
+			t.Errorf("%s: %d %q", path, rec.Code, rec.Body.String())
+		}
+	}
+	// Path traversal never reads outside WebDir.
+	rec := httptest.NewRecorder()
+	h.ServeHTTP(rec, httptest.NewRequest("GET", "/../../etc/passwd", nil))
+	if strings.Contains(rec.Body.String(), "root:") {
+		t.Errorf("path traversal leaked a file outside WebDir")
+	}
+	rec = httptest.NewRecorder()
+	h.ServeHTTP(rec, httptest.NewRequest("GET", "/api/v1/nope", nil))
+	if rec.Code != 404 || !strings.Contains(rec.Body.String(), "not_found") {
+		t.Errorf("unknown API path should stay a JSON 404: %d %s", rec.Code, rec.Body.String())
 	}
 }

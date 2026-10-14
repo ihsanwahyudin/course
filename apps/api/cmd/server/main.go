@@ -74,6 +74,13 @@ func run() error {
 		Ping:        store.Pool.Ping,
 		RateLimit:   envInt("RATE_LIMIT_PER_MIN", 0),
 		AIRateLimit: envInt("AI_RATE_LIMIT_PER_MIN", 0),
+		WebDir:      os.Getenv("WEB_DIR"),
+	}
+	if srv.WebDir != "" {
+		if _, err := os.Stat(srv.WebDir + "/index.html"); err != nil {
+			return fmt.Errorf("WEB_DIR %q has no index.html (run `npx expo export -p web` in apps/mobile): %w", srv.WebDir, err)
+		}
+		slog.Info("serving web app", "dir", srv.WebDir)
 	}
 	httpSrv := &http.Server{
 		Addr:              ":" + env("PORT", "8080"),

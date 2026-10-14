@@ -59,6 +59,18 @@ The app reads `EXPO_PUBLIC_API_URL` from `apps/mobile/.env`. This value is publi
 
 When serving web from another origin, add it to `CORS_ORIGINS` in `apps/api/.env`.
 
+### Opening it on your phone (same Wi-Fi)
+
+The Go API can also serve the built web app, so your phone loads everything from one address. This avoids CORS and the browser's local-network restrictions.
+
+```bash
+cd apps/mobile && npx expo export -p web
+```
+
+Add `WEB_DIR=../mobile/dist` to `apps/api/.env`, restart the API, and open `http://<your-LAN-IP>:8080` on the phone. Find the IP with `ipconfig getifaddr en0`. Re-run the export after changing app code.
+
+The API has no authentication, so anyone on the same network can use it while it's running.
+
 ### Using the real AI tutor
 
 Set these in `apps/api/.env`. Never put keys in the Expo app or in `EXPO_PUBLIC_*` variables.
