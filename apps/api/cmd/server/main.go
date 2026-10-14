@@ -19,6 +19,7 @@ import (
 	"fluentpath/api/internal/curriculum"
 	apihttp "fluentpath/api/internal/http"
 	"fluentpath/api/internal/learning"
+	"fluentpath/api/internal/resources"
 	"fluentpath/api/internal/storage"
 )
 
@@ -64,7 +65,11 @@ func run() error {
 	}
 	go cleanExpiredSessions(ctx, store)
 
-	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta")}
+	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta"),
+		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000)}
+	if env("IMAGE_SEARCH", "on") != "off" {
+		svc.Commons = resources.NewCommons(env("CONTACT_URL", "https://github.com/fluentpath"))
+	}
 	srv := &apihttp.Server{
 		Svc: svc, Auth: &auth.Service{Store: store}, Catalog: catalog,
 		CORSOrigins:   strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),
@@ -103,7 +108,8 @@ func run() error {
 	return httpSrv.Shutdown(shutdownCtx)
 }
 
-// cleanExpiredSessions removes expired login sessions once an hour.
+// cleanExpiredSessions removes expired login sessions and AI cache entries
+// once an hour.
 func cleanExpiredSessions(ctx context.Context, store *storage.Store) {
 	t := time.NewTicker(time.Hour)
 	defer t.Stop()
@@ -112,6 +118,11 @@ func cleanExpiredSessions(ctx context.Context, store *storage.Store) {
 			slog.Warn("cleaning expired sessions failed", "err", err)
 		} else if n > 0 {
 			slog.Info("removed expired sessions", "count", n)
+		}
+		if n, err := storage.DeleteExpiredCache(ctx, store.Pool); err != nil && ctx.Err() == nil {
+			slog.Warn("cleaning the AI cache failed", "err", err)
+		} else if n > 0 {
+			slog.Info("removed expired AI cache entries", "count", n)
 		}
 		select {
 		case <-ctx.Done():
@@ -131,7 +142,9 @@ func newProvider() (ai.Provider, error) {
 		if key == "" || model == "" {
 			return nil, errors.New("AI_PROVIDER=openai needs OPENAI_API_KEY and OPENAI_MODEL")
 		}
-		return ai.NewOpenAI(key, model, os.Getenv("OPENAI_EVAL_MODEL"), os.Getenv("OPENAI_BASE_URL")), nil
+		o := ai.NewOpenAI(key, model, os.Getenv("OPENAI_EVAL_MODEL"), os.Getenv("OPENAI_BASE_URL"))
+		o.DisableSearch = env("WEB_SEARCH", "on") == "off"
+		return o, nil
 	default:
 		return nil, fmt.Errorf("unknown AI_PROVIDER %q (want openai or mock)", p)
 	}

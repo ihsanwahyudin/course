@@ -84,35 +84,6 @@ func code(err error) string {
 	return ""
 }
 
-// driveToAssessment answers practice prompts correctly until the session
-// reaches ASSESSMENT.
-func driveToAssessment(t *testing.T, s *Service, sess SessionView) SessionView {
-	t.Helper()
-	ctx := context.Background()
-	lesson := lessonOf(s, sess.NodeID)
-	prompts := append(append([]curriculum.PracticePrompt{}, lesson.GuidedPractice...), lesson.IndependentPrompt...)
-	for i := 0; i < 40 && sess.Phase != string(tutor.PhaseAssessment); i++ {
-		// Answer whichever practice prompt the tutor asked last, like a learner would.
-		answer := "ready"
-		last := sess.Messages[len(sess.Messages)-1].Content
-		at := -1
-		for _, p := range prompts {
-			if k := strings.LastIndex(last, p.Prompt); k > at {
-				answer, at = p.Expected[0], k
-			}
-		}
-		var err error
-		sess, err = s.SendMessage(ctx, learnerID, sess.ID, answer)
-		if err != nil {
-			t.Fatalf("send message in %s: %v", sess.Phase, err)
-		}
-	}
-	if sess.Phase != string(tutor.PhaseAssessment) {
-		t.Fatalf("never reached assessment, stuck in %s", sess.Phase)
-	}
-	return sess
-}
-
 func answers(s *Service, nodeID string, correct bool) map[string]string {
 	lesson := lessonOf(s, nodeID)
 	out := map[string]string{}
@@ -134,17 +105,15 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(sess.Messages) != 1 || sess.Messages[0].Role != "assistant" {
-		t.Fatalf("expected the intro message, got %+v", sess.Messages)
+	if len(sess.Messages) != 0 || sess.Material == nil || len(sess.Material.Sections) < 3 || len(sess.Assessment) == 0 || sess.Phase != string(tutor.PhaseLearning) {
+		t.Fatalf("a new lesson opens on its material with the final quiz available: %+v", sess)
+	}
+	if sess.Prev != nil || sess.Next == nil || sess.Next.ID != "a0-pronouns" {
+		t.Fatalf("lesson navigation: prev %v next %v", sess.Prev, sess.Next)
 	}
 	again, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
 	if err != nil || again.ID != sess.ID {
 		t.Fatalf("starting twice should resume the same session: %v %s vs %s", err, again.ID, sess.ID)
-	}
-
-	sess = driveToAssessment(t, s, sess)
-	if len(sess.Assessment) == 0 {
-		t.Fatal("assessment items should be exposed in ASSESSMENT")
 	}
 
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true))
@@ -204,7 +173,6 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
 	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
-	sess = driveToAssessment(t, s, sess)
 
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", false))
 	if err != nil {
@@ -213,11 +181,11 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 	if res.Passed || res.NewlyMastered || len(res.Unlocked) != 0 || res.Attempt.Score >= 80 {
 		t.Fatalf("expected failing result: %+v", res)
 	}
-	if res.Session.Phase != string(tutor.PhaseReview) {
-		t.Fatalf("phase = %s, want REVIEW", res.Session.Phase)
+	if res.Session.Phase != string(tutor.PhaseLearning) || !res.Session.CanChat || len(res.Session.Assessment) == 0 {
+		t.Fatalf("a failed quiz keeps the lesson open for more learning: %+v", res.Session)
 	}
-	if !res.Session.CanChat {
-		t.Fatal("learner should be able to chat during review")
+	if last := res.Session.Messages[len(res.Session.Messages)-1]; !strings.Contains(last.Content, "Review:") {
+		t.Fatalf("review message expected: %q", last.Content)
 	}
 	if res.Session.Node.Status != progress.StatusInProgress {
 		t.Fatalf("node status = %s", res.Session.Node.Status)
@@ -226,8 +194,8 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 		t.Fatalf("successor must stay locked, got %v", err)
 	}
 
-	// Review leads back to a retake, which can pass.
-	sess = driveToAssessment(t, s, res.Session)
+	// The final quiz can be retaken straight away.
+	sess = res.Session
 	res, err = s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true))
 	if err != nil || !res.Passed || !res.NewlyMastered {
 		t.Fatalf("retake should pass: %+v %v", res, err)
@@ -257,17 +225,23 @@ func TestMessageValidation(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
 	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, "   "); code(err) != "empty_message" {
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "   "}); code(err) != "empty_message" {
 		t.Fatalf("empty: %v", err)
 	}
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, strings.Repeat("a", MaxMessageRunes+1)); code(err) != "message_too_long" {
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: strings.Repeat("a", MaxMessageRunes+1)}); code(err) != "message_too_long" {
 		t.Fatalf("long: %v", err)
 	}
-	if _, err := s.SendMessage(ctx, learnerID, "00000000-0000-4000-8000-00000000ffff", "hi"); code(err) != "session_not_found" {
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Intent: "dance"}); code(err) != "invalid_intent" {
+		t.Fatalf("intent: %v", err)
+	}
+	if _, err := s.SendMessage(ctx, learnerID, "00000000-0000-4000-8000-00000000ffff", MessageInput{Content: "hi"}); code(err) != "session_not_found" {
 		t.Fatalf("missing session: %v", err)
 	}
-	if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true)); code(err) != "wrong_phase" {
-		t.Fatalf("assessment before ready: %v", err)
+	if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true)); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "hi"}); code(err) != "lesson_closed" {
+		t.Fatalf("a mastered lesson is closed: %v", err)
 	}
 }
 
@@ -279,20 +253,20 @@ func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 
 	// Tutor unavailable: nothing stored, retry works.
 	mock.TutorFunc = func(ai.TutorInput) (json.RawMessage, error) { return nil, ai.ErrUnavailable }
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, "hello"); code(err) != "tutor_unavailable" {
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "hello"}); code(err) != "tutor_unavailable" {
 		t.Fatalf("got %v", err)
 	}
 	// Malformed tutor output: also rejected.
 	mock.TutorFunc = func(ai.TutorInput) (json.RawMessage, error) { return json.RawMessage(`{"message":""}`), nil }
-	if _, err := s.SendMessage(ctx, learnerID, sess.ID, "hello"); code(err) != "tutor_unavailable" {
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "hello"}); code(err) != "tutor_unavailable" {
 		t.Fatalf("got %v", err)
 	}
 	view, _ := s.GetSession(ctx, learnerID, sess.ID)
-	if len(view.Messages) != 1 || view.PhaseTurns != 0 {
-		t.Fatalf("failed turns must not be stored: %d messages, %d turns", len(view.Messages), view.PhaseTurns)
+	if len(view.Messages) != 0 {
+		t.Fatalf("failed turns must not be stored: %d messages", len(view.Messages))
 	}
 	mock.TutorFunc = nil
-	sess = driveToAssessment(t, s, view)
+	sess = view
 
 	for name, fn := range map[string]func(ai.EvalInput) (json.RawMessage, error){
 		"timeout": func(ai.EvalInput) (json.RawMessage, error) { return nil, fmt.Errorf("%w: deadline", ai.ErrUnavailable) },
@@ -307,7 +281,8 @@ func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 		},
 	} {
 		mock.EvalFunc = fn
-		_, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true))
+		// Wrong answers, so the evaluator is consulted (exact matches aren't).
+		_, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", false))
 		var le *Error
 		if !errors.As(err, &le) || le.Status != 502 || !le.Retryable {
 			t.Fatalf("%s: want retryable 502, got %v", name, err)
@@ -315,7 +290,7 @@ func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 	}
 	assertAttempts(t, s, sess.ID, 0)
 	view, _ = s.GetSession(ctx, learnerID, sess.ID)
-	if view.Phase != string(tutor.PhaseAssessment) || view.Node.Status == progress.StatusMastered {
+	if view.Phase != string(tutor.PhaseLearning) || view.Node.Status == progress.StatusMastered {
 		t.Fatalf("failures must not change progress: %s %s", view.Phase, view.Node.Status)
 	}
 }
@@ -324,7 +299,6 @@ func TestConcurrentSubmissionsMasterOnce(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
 	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
-	sess = driveToAssessment(t, s, sess)
 
 	const n = 5
 	var wg sync.WaitGroup
@@ -361,7 +335,6 @@ func TestFiveLessonsEndToEnd(t *testing.T) {
 		if err != nil {
 			t.Fatalf("%s: %v", id, err)
 		}
-		sess = driveToAssessment(t, s, sess)
 		res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, id, true))
 		if err != nil || !res.NewlyMastered {
 			t.Fatalf("%s: %+v %v", id, res, err)
@@ -395,7 +368,7 @@ func TestUsersAreIsolated(t *testing.T) {
 	if _, err := s.GetSession(ctx, other, sess.ID); code(err) != "session_not_found" {
 		t.Fatalf("other user read the session: %v", err)
 	}
-	if _, err := s.SendMessage(ctx, other, sess.ID, "hi"); code(err) != "session_not_found" {
+	if _, err := s.SendMessage(ctx, other, sess.ID, MessageInput{Content: "hi"}); code(err) != "session_not_found" {
 		t.Fatalf("other user wrote to the session: %v", err)
 	}
 	if _, err := s.SubmitAssessment(ctx, other, sess.ID, nil); code(err) != "session_not_found" {
@@ -508,7 +481,7 @@ func TestStreak(t *testing.T) {
 	}
 }
 
-func TestLessonLanguageIsFixedAtStart(t *testing.T) {
+func TestHelperFollowsTheUILanguage(t *testing.T) {
 	var seen []ai.TutorInput
 	mock := &ai.Mock{}
 	s := newService(t, mock)
@@ -517,34 +490,31 @@ func TestLessonLanguageIsFixedAtStart(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if sess.Locale != "id" || !strings.HasPrefix(sess.Messages[0].Content, "Hai, selamat datang") {
-		t.Fatalf("lesson should start in Indonesian: %s / %q", sess.Locale, sess.Messages[0].Content)
-	}
-	if sess.Node.Title != "Alfabet & Bunyi" || sess.Course.Title != "Bahasa Inggris" {
+	if sess.Node.Title != "Alfabet & Bunyi" || sess.Course.Title != "Bahasa Inggris" || sess.Material.Sections[0].Title != "Nama huruf berbeda dari bahasa Indonesia" {
 		t.Fatalf("views should be localized: %q %q", sess.Node.Title, sess.Course.Title)
 	}
-
-	// Switching the UI to English later doesn't change the tutor's language.
 	inner := &ai.Mock{}
 	mock.TutorFunc = func(in ai.TutorInput) (json.RawMessage, error) {
 		seen = append(seen, in)
-		return inner.TutorReply(context.Background(), in)
+		r, err := inner.TutorReply(context.Background(), in)
+		return r.Raw, err
 	}
-	enCtx := WithLang(context.Background(), "en")
-	if _, err := s.SendMessage(enCtx, learnerID, sess.ID, "S-A-R-I"); err != nil {
+	if _, err := s.SendMessage(idCtx, learnerID, sess.ID, MessageInput{Content: "Kenapa I dibaca ai?"}); err != nil {
 		t.Fatal(err)
 	}
-	if len(seen) != 1 || seen[0].Locale != "id" || !strings.Contains(seen[0].LanguagePolicy, "Indonesian") {
-		t.Fatalf("tutor should keep the session language: %+v", seen)
+	enCtx := WithLang(context.Background(), "en")
+	if _, err := s.SendMessage(enCtx, learnerID, sess.ID, MessageInput{Content: "Why?"}); err != nil {
+		t.Fatal(err)
 	}
-	mock.TutorFunc = nil
-	view := driveToAssessment(t, s, sess)
-	res, err := s.SubmitAssessment(enCtx, learnerID, view.ID, answers(s, "a0-alphabet-sounds", false))
+	if len(seen) != 2 || seen[0].Locale != "id" || !strings.Contains(seen[0].LanguagePolicy, "Indonesian") || seen[1].Locale != "en" {
+		t.Fatalf("helper should follow the current UI language: %+v", seen)
+	}
+	res, err := s.SubmitAssessment(idCtx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", false))
 	if err != nil {
 		t.Fatal(err)
 	}
 	last := res.Session.Messages[len(res.Session.Messages)-1].Content
-	if !strings.HasPrefix(last, "Nilaimu") || !strings.Contains(last, "Ayo ulas") {
+	if !strings.HasPrefix(last, "Nilaimu") || !strings.Contains(last, "Ulas lagi") {
 		t.Fatalf("review message should be Indonesian: %q", last)
 	}
 }

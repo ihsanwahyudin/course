@@ -80,7 +80,7 @@ func (s *Server) Router() http.Handler {
 	r.Use(middleware.Recoverer)
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   s.CORSOrigins,
-		AllowedMethods:   []string{"GET", "POST", "PUT", "PATCH", "OPTIONS"},
+		AllowedMethods:   []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type", "Authorization", "Accept-Language", nativeClientHeader},
 		AllowCredentials: true,
 		MaxAge:           600,
@@ -119,6 +119,10 @@ func (s *Server) Router() http.Handler {
 			r.Get("/dashboard", s.dashboard)
 			r.Post("/sessions", s.startSession)
 			r.Get("/sessions/{sessionId}", s.getSession)
+			r.Post("/flashcards", s.saveFlashcards)
+			r.Get("/flashcards/due", s.dueFlashcards)
+			r.Post("/flashcards/{cardId}/review", s.reviewFlashcard)
+			r.Delete("/flashcards/{cardId}", s.deleteFlashcard)
 			r.Group(func(r chi.Router) {
 				// Tighter limit on calls that spend AI budget.
 				r.Use(perIP(aiLimit))
@@ -480,14 +484,65 @@ func (s *Server) sendMessage(w http.ResponseWriter, r *http.Request) {
 	if !ok {
 		return
 	}
+	var body learning.MessageInput
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.SendMessage(r.Context(), userID(r), id, body)
+	respond(w, v, err)
+}
+
+// ---- flashcards ----
+
+func (s *Server) saveFlashcards(w http.ResponseWriter, r *http.Request) {
+	var body learning.FlashcardInput
+	if !decode(w, r, &body) {
+		return
+	}
+	v, err := s.Svc.SaveFlashcards(r.Context(), userID(r), body)
+	respond(w, v, err)
+}
+
+func (s *Server) dueFlashcards(w http.ResponseWriter, r *http.Request) {
+	course := r.URL.Query().Get("course")
+	if course != "" && !idRe.MatchString(course) {
+		writeErr(w, &apperr.Error{Status: 400, Code: "invalid_course", Message: "Invalid course."})
+		return
+	}
+	v, err := s.Svc.DueFlashcards(r.Context(), userID(r), course)
+	respond(w, v, err)
+}
+
+func flashcardID(w http.ResponseWriter, r *http.Request) (string, bool) {
+	id := chi.URLParam(r, "cardId")
+	if !uuidRe.MatchString(id) {
+		writeErr(w, &apperr.Error{Status: 404, Code: "flashcard_not_found", Message: "Flashcard not found."})
+		return "", false
+	}
+	return id, true
+}
+
+func (s *Server) reviewFlashcard(w http.ResponseWriter, r *http.Request) {
+	id, ok := flashcardID(w, r)
+	if !ok {
+		return
+	}
 	var body struct {
-		Content string `json:"content"`
+		Grade string `json:"grade"`
 	}
 	if !decode(w, r, &body) {
 		return
 	}
-	v, err := s.Svc.SendMessage(r.Context(), userID(r), id, body.Content)
+	v, err := s.Svc.ReviewFlashcard(r.Context(), userID(r), id, body.Grade)
 	respond(w, v, err)
+}
+
+func (s *Server) deleteFlashcard(w http.ResponseWriter, r *http.Request) {
+	id, ok := flashcardID(w, r)
+	if !ok {
+		return
+	}
+	respond(w, map[string]bool{"ok": true}, s.Svc.DeleteFlashcard(r.Context(), userID(r), id))
 }
 
 func (s *Server) submitAssessment(w http.ResponseWriter, r *http.Request) {

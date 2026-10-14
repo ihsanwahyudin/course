@@ -98,15 +98,36 @@ func (s *Service) SaveProfile(ctx context.Context, userID, courseSlug string, in
 	return s.Roadmap(ctx, userID, courseSlug)
 }
 
-// intro is a lesson's opening message, plus the goal's personal line.
-func intro(st state, l *curriculum.Lesson, lang string) string {
-	text := l.IntroIn(lang)
+// greeting is the goal's personal line shown when the helper opens.
+func greeting(st state, lang string) string {
 	if o := st.cur.Option(st.profile, curriculum.GoalQuestion); o != nil {
-		if line := st.cur.LocalOption(o, lang).IntroLine; line != "" {
-			text += "\n\n" + line
+		return st.cur.LocalOption(o, lang).IntroLine
+	}
+	return ""
+}
+
+// neighbours are the previous and next lessons with content, in roadmap order.
+func neighbours(st state, n *curriculum.Node) (prev, next *NodeView) {
+	var ready []*curriculum.Node
+	for _, c := range st.cur.Nodes {
+		if c.Ready() {
+			ready = append(ready, c)
 		}
 	}
-	return text
+	for i, c := range ready {
+		if c.ID != n.ID {
+			continue
+		}
+		if i > 0 {
+			v := nodeView(st, ready[i-1])
+			prev = &v
+		}
+		if i+1 < len(ready) {
+			v := nodeView(st, ready[i+1])
+			next = &v
+		}
+	}
+	return prev, next
 }
 
 // goalHint lets the evaluator relate feedback to the learner's goal. It is

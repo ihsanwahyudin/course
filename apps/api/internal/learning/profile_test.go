@@ -52,11 +52,13 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 	inner := &ai.Mock{}
 	mock.TutorFunc = func(in ai.TutorInput) (json.RawMessage, error) {
 		seenTutor = append(seenTutor, in)
-		return inner.TutorReply(context.Background(), in)
+		r, err := inner.TutorReply(context.Background(), in)
+		return r.Raw, err
 	}
 	mock.EvalFunc = func(in ai.EvalInput) (json.RawMessage, error) {
 		seenEval = append(seenEval, in)
-		return inner.Evaluate(context.Background(), in)
+		r, err := inner.Evaluate(context.Background(), in)
+		return r.Raw, err
 	}
 	s := newService(t, mock)
 	ctx := context.Background()
@@ -97,34 +99,35 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 		t.Fatalf("stored answers wrong: %+v", p)
 	}
 
-	// The lesson intro gains the goal's line, in the lesson's language.
+	// The helper greets with the goal's line, in the UI language.
 	sess, err := s.StartSession(WithLang(ctx, "id"), learnerID, course, "a0-alphabet-sounds")
 	if err != nil {
 		t.Fatal(err)
 	}
-	if !strings.HasSuffix(sess.Messages[0].Content, "Tujuanmu untuk kerja, jadi contoh-contohnya akan pakai situasi kantor.") {
-		t.Fatalf("intro should be personalised: %q", sess.Messages[0].Content)
+	if sess.Greeting != "Tujuanmu untuk kerja, jadi contoh-contohnya akan pakai situasi kantor." {
+		t.Fatalf("greeting should be personalised: %q", sess.Greeting)
 	}
 
-	// The tutor and evaluator get the profile.
-	view := driveToAssessment(t, s, sess)
-	if len(seenTutor) == 0 {
-		t.Fatal("tutor was not called")
+	// The helper and evaluator get the profile.
+	if _, err := s.SendMessage(ctx, learnerID, sess.ID, MessageInput{Content: "What is a vowel?"}); err != nil {
+		t.Fatal(err)
 	}
 	in := seenTutor[0]
 	if len(in.LearnerProfile) != 2 || !strings.Contains(in.LearnerProfile[0], "work and job interviews") || !strings.Contains(in.LearnerProfile[1], "practice first") {
 		t.Fatalf("tutor profile hints wrong: %v", in.LearnerProfile)
 	}
-	res, err := s.SubmitAssessment(ctx, learnerID, view.ID, answers(s, "a0-alphabet-sounds", true))
+	// One wrong answer, so the evaluator is consulted for that item only.
+	ans := answers(s, "a0-alphabet-sounds", true)
+	ans["alpha-5"] = "g-r-e-n"
+	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, ans)
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(seenEval) != 1 || !strings.Contains(seenEval[0].GoalHint, "work") {
-		t.Fatalf("evaluator should get the goal hint: %+v", seenEval)
+	if len(seenEval) != 1 || !strings.Contains(seenEval[0].GoalHint, "work") || len(seenEval[0].Items) != 1 {
+		t.Fatalf("evaluator should get the goal hint and only the unmatched item: %+v", seenEval)
 	}
-	// Same answers, same score as without a profile: mastery rules don't move.
-	if !res.Passed || res.Attempt.Score != 100 || res.Attempt.Threshold != 80 {
-		t.Fatalf("profile must not change scoring: %+v", res.Attempt)
+	if res.Attempt.Threshold != 80 {
+		t.Fatalf("profile must not change the pass mark: %+v", res.Attempt)
 	}
 }
 
@@ -137,8 +140,7 @@ func TestNextNodePrefersGoal(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		view := driveToAssessment(t, s, sess)
-		if res, err := s.SubmitAssessment(ctx, learnerID, view.ID, answers(s, node, true)); err != nil || !res.Passed {
+		if res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, node, true)); err != nil || !res.Passed {
 			t.Fatalf("master %s: %v", node, err)
 		}
 	}

@@ -8,13 +8,11 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"log/slog"
 	"math"
 	"sort"
 	"strings"
 	"time"
-	"unicode/utf8"
 
 	"github.com/jackc/pgx/v5"
 
@@ -23,6 +21,7 @@ import (
 	"fluentpath/api/internal/assessment"
 	"fluentpath/api/internal/curriculum"
 	"fluentpath/api/internal/progress"
+	"fluentpath/api/internal/resources"
 	"fluentpath/api/internal/storage"
 	"fluentpath/api/internal/tutor"
 )
@@ -38,15 +37,18 @@ func errf(status int, code string, retryable bool, format string, args ...any) *
 
 var (
 	errAIUnavailable = errf(502, "tutor_unavailable", true, "The tutor is not responding right now. Please try again.")
-	errBusy          = errf(409, "session_busy", true, "This lesson was updated in another tab. Please retry.")
 )
 
 type Service struct {
 	Store   *storage.Store
 	Catalog *curriculum.Catalog
 	AI      ai.Provider
-	// TimeZone decides where a "day" starts for streaks (IANA name).
+	// Commons finds pictures for the helper (nil disables image search).
+	Commons *resources.Commons
+	// TimeZone decides where a "day" starts for streaks and AI budgets.
 	TimeZone string
+	// DailyTokens caps each learner's AI tokens per day (0 = no cap).
+	DailyTokens int
 }
 
 func (s *Service) course(slug string) (*curriculum.Curriculum, error) {
@@ -419,13 +421,16 @@ type AssessmentItemView struct {
 
 type SessionView struct {
 	storage.Session
-	Course      CourseRef            `json:"course"`
-	Node        NodeView             `json:"node"`
-	Messages    []storage.Message    `json:"messages"`
-	Steps       []tutor.Phase        `json:"steps"`
-	CanChat     bool                 `json:"canChat"`
-	Assessment  []AssessmentItemView `json:"assessment"`
-	LastAttempt *storage.Attempt     `json:"lastAttempt"`
+	Course      CourseRef                `json:"course"`
+	Node        NodeView                 `json:"node"`
+	Material    *curriculum.MaterialView `json:"material"`
+	Greeting    string                   `json:"greeting"` // personal line from onboarding, if any
+	Messages    []storage.Message        `json:"messages"`
+	CanChat     bool                     `json:"canChat"`
+	Assessment  []AssessmentItemView     `json:"assessment"`
+	LastAttempt *storage.Attempt         `json:"lastAttempt"`
+	Prev        *NodeView                `json:"prev"`
+	Next        *NodeView                `json:"next"`
 }
 
 func (s *Service) sessionCourse(sess storage.Session) (*curriculum.Curriculum, *curriculum.Node, error) {
@@ -454,17 +459,19 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 		return SessionView{}, err
 	}
 	v := SessionView{
-		Session: sess, Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Node: nodeView(st, n), Messages: msgs, Steps: tutor.Steps,
-		CanChat:    sess.EndedAt == nil && tutor.Phase(sess.Phase).AcceptsChat(),
-		Assessment: []AssessmentItemView{},
+		Session: sess, Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Node: nodeView(st, n), Messages: msgs,
+		Material: cur.MaterialIn(n.ID, st.lang), Greeting: greeting(st, st.lang),
+		CanChat: sess.EndedAt == nil, Assessment: []AssessmentItemView{},
 	}
-	if sess.Phase == string(tutor.PhaseAssessment) {
+	// The final quiz is always available while learning (answers stay on the server).
+	if sess.EndedAt == nil {
 		if l, ok := cur.Lesson(n.ID); ok {
 			for _, it := range l.Assessment {
 				v.Assessment = append(v.Assessment, AssessmentItemView{it.ID, it.ObjectiveID, it.Prompt})
 			}
 		}
 	}
+	v.Prev, v.Next = neighbours(st, n)
 	if a, err := storage.LatestAttempt(ctx, db, sess.ID); err == nil {
 		v.LastAttempt = &a
 	} else if !errors.Is(err, storage.ErrNotFound) {
@@ -498,8 +505,6 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 		}
 		return SessionView{}, errf(409, code, false, "%s", reason)
 	}
-	lesson, _ := cur.Lesson(n.ID)
-
 	locale := cur.Lang(langFrom(ctx))
 	sess, err := storage.FindOpenSession(ctx, s.Store.Pool, userID, cur.Slug, n.ID)
 	if errors.Is(err, storage.ErrNotFound) {
@@ -509,11 +514,8 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 			}
 			var err error
 			// The lesson keeps the language it started in.
-			sess, err = storage.CreateSession(ctx, tx, userID, cur.Slug, n.ID, locale, string(tutor.PhaseIntroduction))
+			sess, err = storage.CreateSession(ctx, tx, userID, cur.Slug, n.ID, locale, string(tutor.PhaseLearning))
 			if err != nil {
-				return err
-			}
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", intro(st, lesson, locale), sess.Phase, map[string]any{"kind": "intro"}); err != nil {
 				return err
 			}
 			if err := storage.MarkInProgress(ctx, tx, userID, cur.Slug, n.ID); err != nil {
@@ -548,132 +550,6 @@ func (s *Service) GetSession(ctx context.Context, userID, id string) (SessionVie
 	return s.sessionView(ctx, s.Store.Pool, sess)
 }
 
-// SendMessage records a learner reply, asks the tutor for a response and
-// applies the phase rules. Nothing is stored unless the tutor reply is valid,
-// so a failed call can simply be retried with the same text.
-func (s *Service) SendMessage(ctx context.Context, userID, sessionID, content string) (SessionView, error) {
-	content = strings.TrimSpace(content)
-	if content == "" {
-		return SessionView{}, errf(400, "empty_message", false, "Message cannot be empty.")
-	}
-	if utf8.RuneCountInString(content) > MaxMessageRunes {
-		return SessionView{}, errf(400, "message_too_long", false, "Message is too long (max %d characters).", MaxMessageRunes)
-	}
-	sess, err := s.getOwnSession(ctx, userID, sessionID)
-	if err != nil {
-		return SessionView{}, err
-	}
-	phase := tutor.Phase(sess.Phase)
-	if sess.EndedAt != nil || !phase.AcceptsChat() {
-		return SessionView{}, errf(409, "wrong_phase", false, "This lesson is in %s and doesn't accept chat messages.", phase)
-	}
-	cur, n, err := s.sessionCourse(sess)
-	if err != nil {
-		return SessionView{}, err
-	}
-	lesson, _ := cur.Lesson(n.ID)
-
-	st, err := s.load(ctx, s.Store.Pool, userID, cur)
-	if err != nil {
-		return SessionView{}, err
-	}
-	history, err := storage.ListMessages(ctx, s.Store.Pool, sess.ID)
-	if err != nil {
-		return SessionView{}, err
-	}
-	in := ai.TutorInput{
-		Policy:         cur.Tutor.Policy,
-		Locale:         sess.Locale,
-		LanguagePolicy: cur.Tutor.LanguagePolicy[sess.Locale],
-		CurrentLevel:   st.enrollment.CurrentLevel, TargetLevel: st.enrollment.TargetLevel,
-		// Objectives in the lesson's language; exercises stay as written.
-		Node: cur.LocalNode(n.ID, sess.Locale), Lesson: lesson, Phase: phase, NextPhase: tutor.NextOf(phase),
-		TurnsInPhase: sess.PhaseTurns + 1,
-	}
-	in.LearnerProfile, in.LearnerNotes = cur.TutorHints(st.profile)
-	for _, m := range history {
-		if m.Role == "user" || m.Role == "assistant" {
-			in.Messages = append(in.Messages, ai.ChatMessage{Role: m.Role, Content: m.Content})
-		}
-	}
-	in.Messages = append(in.Messages, ai.ChatMessage{Role: "user", Content: content})
-	for _, cn := range cur.Nodes {
-		if st.statuses[cn.ID] == progress.StatusMastered {
-			in.MasteredNodeTitles = append(in.MasteredNodeTitles, cn.Title)
-		}
-	}
-	in.ObservedWeaknesses, err = s.weaknesses(ctx, sess, n)
-	if err != nil {
-		return SessionView{}, err
-	}
-
-	raw, err := s.AI.TutorReply(ctx, in)
-	if err != nil {
-		slog.Warn("tutor call failed", "provider", s.AI.Name(), "session", sess.ID, "err", err)
-		return SessionView{}, errAIUnavailable
-	}
-	reply, err := tutor.ParseReply(raw)
-	if err != nil {
-		slog.Warn("tutor reply rejected", "provider", s.AI.Name(), "session", sess.ID, "err", err)
-		return SessionView{}, errAIUnavailable
-	}
-
-	turns := sess.PhaseTurns + 1
-	next, advanced := tutor.Transition(phase, turns, reply.Action)
-	nextTurns := turns
-	if advanced {
-		nextTurns = 0
-	}
-	err = pgx.BeginFunc(ctx, s.Store.Pool, func(tx pgx.Tx) error {
-		if err := storage.AdvanceSession(ctx, tx, sess.ID, sess.Phase, sess.PhaseTurns, string(next), nextTurns); err != nil {
-			return err
-		}
-		if _, err := storage.AddMessage(ctx, tx, sess.ID, "user", content, sess.Phase, nil); err != nil {
-			return err
-		}
-		meta := map[string]any{"action": reply.Action, "observedMistakes": reply.ObservedMistakes}
-		if advanced {
-			meta["advancedTo"] = next
-		}
-		if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", reply.Message, sess.Phase, meta); err != nil {
-			return err
-		}
-		if next == tutor.PhaseAssessment {
-			msg := tr(sess.Locale, "assessment_intro", n.MasteryThreshold)
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(next), map[string]any{"kind": "assessment_intro"}); err != nil {
-				return err
-			}
-		}
-		return storage.TouchEnrollment(ctx, tx, userID, cur.Slug)
-	})
-	if errors.Is(err, storage.ErrConflict) {
-		return SessionView{}, errBusy
-	}
-	if err != nil {
-		return SessionView{}, err
-	}
-	return s.GetSession(ctx, userID, sess.ID)
-}
-
-// weaknesses combines recent tutor-observed mistake tags with objectives that
-// scored low on this session's last attempt.
-func (s *Service) weaknesses(ctx context.Context, sess storage.Session, n *curriculum.Node) ([]string, error) {
-	tags, err := storage.RecentMistakes(ctx, s.Store.Pool, sess.UserID, sess.CourseSlug, 5)
-	if err != nil {
-		return nil, err
-	}
-	if a, err := storage.LatestAttempt(ctx, s.Store.Pool, sess.ID); err == nil && !a.Passed {
-		for _, o := range n.Objectives {
-			if a.ObjectiveScores[o.ID] < a.Threshold {
-				tags = append(tags, fmt.Sprintf("objective %q scored %d", o.Text, a.ObjectiveScores[o.ID]))
-			}
-		}
-	} else if err != nil && !errors.Is(err, storage.ErrNotFound) {
-		return nil, err
-	}
-	return tags, nil
-}
-
 // ---- assessment ----
 
 type AssessmentResult struct {
@@ -693,9 +569,6 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 	if sess.Phase == string(tutor.PhaseMastered) {
 		return s.completedResult(ctx, userID, sess)
 	}
-	if sess.Phase != string(tutor.PhaseAssessment) {
-		return AssessmentResult{}, errf(409, "wrong_phase", false, "This lesson isn't ready for assessment yet (current phase: %s).", sess.Phase)
-	}
 	cur, n, err := s.sessionCourse(sess)
 	if err != nil {
 		return AssessmentResult{}, err
@@ -713,14 +586,10 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 	if err != nil {
 		return AssessmentResult{}, err
 	}
-	raw, err := s.AI.Evaluate(ctx, ai.EvalInput{
-		Policy: cur.Tutor.EvaluatorPolicy, Locale: sess.Locale, LanguagePolicy: cur.Tutor.LanguagePolicy[sess.Locale],
-		TargetLevel: st.enrollment.TargetLevel, Node: cur.LocalNode(n.ID, sess.Locale), Items: lesson.Assessment, Answers: clean,
-		GoalHint: goalHint(cur, st.profile),
-	})
+	lang := st.lang
+	raw, evaluator, err := s.grade(ctx, userID, cur, n, lesson, st, lang, clean)
 	if err != nil {
-		slog.Warn("evaluator call failed", "provider", s.AI.Name(), "session", sess.ID, "err", err)
-		return AssessmentResult{}, errf(502, "evaluator_unavailable", true, "Your answers couldn't be scored right now. Nothing was saved — please submit again.")
+		return AssessmentResult{}, err
 	}
 	res, err := assessment.Score(raw, n)
 	if err != nil {
@@ -738,9 +607,6 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 			out.AlreadyCompleted = true
 			return nil
 		}
-		if locked.Phase != string(tutor.PhaseAssessment) {
-			return errf(409, "wrong_phase", false, "This assessment was already submitted.")
-		}
 		before, err := s.load(ctx, tx, userID, cur)
 		if err != nil {
 			return err
@@ -751,7 +617,7 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 		out.Attempt, err = storage.InsertAttempt(ctx, tx, storage.NewAttempt{
 			SessionID: sess.ID, Score: res.Score, Threshold: res.Threshold, Passed: res.Passed,
 			ObjectiveScores: res.ObjectiveScores, Evidence: res.Evidence, Feedback: res.Feedback,
-			Answers: clean, EvaluatorResponse: json.RawMessage(raw), Evaluator: s.AI.Name(),
+			Answers: clean, EvaluatorResponse: json.RawMessage(raw), Evaluator: evaluator,
 		})
 		if err != nil {
 			return err
@@ -765,22 +631,19 @@ func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string
 			if err := storage.EndSession(ctx, tx, sess.ID, string(tutor.PhaseMastered)); err != nil {
 				return err
 			}
-			msg := tr(sess.Locale, "mastered", res.Score, cur.LocalNode(n.ID, sess.Locale).Title, res.Feedback)
+			msg := tr(lang, "mastered", res.Score, cur.LocalNode(n.ID, lang).Title, res.Feedback)
 			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(tutor.PhaseMastered), map[string]any{"kind": "result"}); err != nil {
 				return err
 			}
 		} else {
-			if err := storage.SetSessionPhase(ctx, tx, sess.ID, string(tutor.PhaseReview)); err != nil {
-				return err
-			}
 			var weak []string
-			for _, o := range cur.LocalNode(n.ID, sess.Locale).Objectives {
+			for _, o := range cur.LocalNode(n.ID, lang).Objectives {
 				if res.ObjectiveScores[o.ID] < res.Threshold {
 					weak = append(weak, lowerFirst(o.Text))
 				}
 			}
-			msg := tr(sess.Locale, "review", res.Score, res.Threshold, res.Feedback, strings.Join(weak, "; "))
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(tutor.PhaseReview), map[string]any{"kind": "review_intro"}); err != nil {
+			msg := tr(lang, "review", res.Score, res.Threshold, res.Feedback, strings.Join(weak, "; "))
+			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, sess.Phase, map[string]any{"kind": "review_intro"}); err != nil {
 				return err
 			}
 		}
@@ -955,6 +818,12 @@ type DashboardView struct {
 	Streak         Streak            `json:"streak"`
 	Activity       []DayActivity     `json:"activity"` // last 28 days, oldest first
 	TotalMastered  int               `json:"totalMastered"`
+	Flashcards     FlashcardCounts   `json:"flashcards"`
+}
+
+type FlashcardCounts struct {
+	Due   int `json:"due"`
+	Total int `json:"total"`
 }
 
 const activityDays = 28
@@ -1001,6 +870,9 @@ func (s *Service) Dashboard(ctx context.Context, user storage.User) (DashboardVi
 		return v, err
 	}
 	v.RecentAttempts = s.attemptItems(lang, attempts)
+	if v.Flashcards.Total, v.Flashcards.Due, err = storage.CountFlashcards(ctx, db, user.ID); err != nil {
+		return v, err
+	}
 	if v.Weekly.Messages, v.Weekly.Attempts, v.Weekly.Mastered, err = storage.WeeklyActivity(ctx, db, user.ID); err != nil {
 		return v, err
 	}

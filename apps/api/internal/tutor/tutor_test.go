@@ -2,50 +2,45 @@ package tutor
 
 import (
 	"errors"
+	"strings"
 	"testing"
 )
 
-func TestTransition(t *testing.T) {
-	cases := []struct {
-		phase    Phase
-		turns    int
-		action   Action
-		want     Phase
-		advanced bool
-	}{
-		{PhaseIntroduction, 1, ActionAdvancePhase, PhaseExplanation, true},
-		{PhaseIntroduction, 1, ActionContinue, PhaseIntroduction, false},
-		{PhaseGuidedPractice, 1, ActionAdvancePhase, PhaseGuidedPractice, false}, // below minTurns
-		{PhaseGuidedPractice, 2, ActionAdvancePhase, PhaseIndependentPractice, true},
-		{PhaseGuidedPractice, 8, ActionAskRetry, PhaseIndependentPractice, true}, // maxTurns safety valve
-		{PhaseIndependentPractice, 2, ActionAdvancePhase, PhaseAssessment, true},
-		{PhaseReview, 2, ActionAdvancePhase, PhaseAssessment, true},
-		{PhaseAssessment, 5, ActionAdvancePhase, PhaseAssessment, false},
-		{PhaseMastered, 1, ActionAdvancePhase, PhaseMastered, false},
+func TestParseReplyKeepsValidParts(t *testing.T) {
+	raw := `{"message":" Here you go ","quiz":[
+		{"prompt":"She ___ a nurse.","options":["am","is","are"],"answer":1,"explain":"she → is"},
+		{"prompt":"bad answer","options":["a","b"],"answer":2,"explain":""},
+		{"prompt":"one option","options":["a"],"answer":0,"explain":""}],
+	"flashcards":[{"front":"I","back":"am"},{"front":"","back":"x"},{"front":"` + strings.Repeat("x", 200) + `","back":"y"}],
+	"search":{"kind":"video","query":"verb to be"}}`
+	r, err := ParseReply([]byte(raw))
+	if err != nil {
+		t.Fatal(err)
 	}
-	for _, c := range cases {
-		got, adv := Transition(c.phase, c.turns, c.action)
-		if got != c.want || adv != c.advanced {
-			t.Errorf("Transition(%s,%d,%s) = %s,%v; want %s,%v", c.phase, c.turns, c.action, got, adv, c.want, c.advanced)
+	if r.Message != "Here you go" || len(r.Quiz) != 1 || r.Quiz[0].Answer != 1 || len(r.Flashcards) != 1 || r.Search.Kind != "video" {
+		t.Fatalf("got %+v", r)
+	}
+}
+
+func TestParseReplyLimitsAndRejects(t *testing.T) {
+	q := `{"prompt":"p","options":["a","b"],"answer":0,"explain":""}`
+	raw := `{"message":"m","quiz":[` + strings.Repeat(q+",", 7) + q + `],"flashcards":[],"search":{"kind":"podcast","query":"x"}}`
+	r, err := ParseReply([]byte(raw))
+	if err != nil || len(r.Quiz) != MaxQuiz || r.Search.Kind != "" {
+		t.Fatalf("limits: %+v %v", r, err)
+	}
+	for _, bad := range []string{`{"message":"  "}`, `not json`, `{"message":"` + strings.Repeat("x", 2001) + `"}`} {
+		if _, err := ParseReply([]byte(bad)); !errors.Is(err, ErrMalformed) {
+			t.Errorf("%q should be malformed, got %v", bad, err)
 		}
 	}
 }
 
-func TestParseReply(t *testing.T) {
-	r, err := ParseReply([]byte(`{"message":"  Try again! ","action":"ask_retry","observedMistakes":["verb-form","BAD TAG!!",""]}`))
-	if err != nil {
-		t.Fatal(err)
+func TestIntents(t *testing.T) {
+	if !IntentQuiz.Valid() || Intent("dance").Valid() || IntentVideo.SearchKind() != KindVideo || IntentAsk.SearchKind() != "" {
+		t.Fatal("intent helpers wrong")
 	}
-	if r.Message != "Try again!" || r.Action != ActionAskRetry || len(r.ObservedMistakes) != 1 || r.ObservedMistakes[0] != "verb-form" {
-		t.Fatalf("unexpected reply %+v", r)
-	}
-	for _, bad := range []string{
-		`not json`,
-		`{"message":"","action":"continue","observedMistakes":[]}`,
-		`{"message":"hi","action":"mark_mastered","observedMistakes":[]}`,
-	} {
-		if _, err := ParseReply([]byte(bad)); !errors.Is(err, ErrMalformed) {
-			t.Errorf("ParseReply(%q) err = %v, want ErrMalformed", bad, err)
-		}
+	if IntentQuiz.MaxOutputTokens() <= IntentAsk.MaxOutputTokens() {
+		t.Fatal("quizzes need more output room than plain answers")
 	}
 }

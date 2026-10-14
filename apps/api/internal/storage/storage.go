@@ -384,27 +384,8 @@ func LockSession(ctx context.Context, tx pgx.Tx, id, userID string) (Session, er
 	return scanSession(tx.QueryRow(ctx, `SELECT `+sessionCols+` FROM learning_sessions WHERE id=$1 AND user_id=$2 FOR UPDATE`, id, userID))
 }
 
-// AdvanceSession moves a session to a new phase/turn count, but only if it is
-// still in the expected state (optimistic concurrency).
-func AdvanceSession(ctx context.Context, db DB, id, fromPhase string, fromTurns int, toPhase string, toTurns int) error {
-	tag, err := db.Exec(ctx, `UPDATE learning_sessions SET phase=$4, phase_turns=$5, updated_at=NOW()
-		WHERE id=$1 AND phase=$2 AND phase_turns=$3 AND ended_at IS NULL`, id, fromPhase, fromTurns, toPhase, toTurns)
-	if err != nil {
-		return err
-	}
-	if tag.RowsAffected() != 1 {
-		return ErrConflict
-	}
-	return nil
-}
-
 func EndSession(ctx context.Context, db DB, id, phase string) error {
 	_, err := db.Exec(ctx, `UPDATE learning_sessions SET phase=$2, phase_turns=0, ended_at=NOW(), updated_at=NOW() WHERE id=$1`, id, phase)
-	return err
-}
-
-func SetSessionPhase(ctx context.Context, db DB, id, phase string) error {
-	_, err := db.Exec(ctx, `UPDATE learning_sessions SET phase=$2, phase_turns=0, updated_at=NOW() WHERE id=$1`, id, phase)
 	return err
 }
 
@@ -455,21 +436,6 @@ func ListMessages(ctx context.Context, db DB, sessionID string) ([]Message, erro
 		err := r.Scan(&m.ID, &m.Role, &m.Content, &m.Phase, &m.Metadata, &m.CreatedAt)
 		return m, err
 	})
-}
-
-// RecentMistakes returns the most frequent mistake tags the tutor observed for
-// this user in a course recently, most common first.
-func RecentMistakes(ctx context.Context, db DB, userID, course string, limit int) ([]string, error) {
-	rows, err := db.Query(ctx, `SELECT tag FROM (
-			SELECT jsonb_array_elements_text(m.metadata->'observedMistakes') AS tag
-			FROM session_messages m JOIN learning_sessions s ON s.id = m.session_id
-			WHERE s.user_id=$1 AND s.course_slug=$2 AND m.role='assistant' AND m.metadata ? 'observedMistakes'
-			ORDER BY m.created_at DESC LIMIT 200) t
-		GROUP BY tag ORDER BY COUNT(*) DESC, tag LIMIT $3`, userID, course, limit)
-	if err != nil {
-		return nil, err
-	}
-	return pgx.CollectRows(rows, pgx.RowTo[string])
 }
 
 // ---- assessment attempts ----
