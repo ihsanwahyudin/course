@@ -21,14 +21,21 @@ export function WidgetCard({ eyebrow, title, children, tone }: { eyebrow?: strin
   );
 }
 
+type Speech = ReturnType<typeof useSpeak>;
+
+// Which item of a list is being read: by itself, or as part of "listen to all".
+function playingIndex(sp: Speech, texts: string[]) {
+  if (sp.speaking === null) return -1;
+  if (sp.speaking === texts.join('\n') && texts.length > 1) return sp.index ?? -1;
+  return texts.indexOf(sp.speaking);
+}
+
 // Round speaker button for one English sentence.
-export function SpeakButton({ text, size = 32 }: { text: string; size?: number }) {
+function SpeakButton({ text, on, onPress, size = 32 }: { text: string; on: boolean; onPress: () => void; size?: number }) {
   const t = useT();
-  const { speak, stop, speaking } = useSpeak();
-  const on = speaking === text;
   return (
     <Pressable
-      onPress={() => (on ? stop() : speak(text))}
+      onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={on ? t('step.stop') : t('step.listen', { text })}
       hitSlop={6}
@@ -39,14 +46,12 @@ export function SpeakButton({ text, size = 32 }: { text: string; size?: number }
   );
 }
 
-function ListenAll({ texts }: { texts: string[] }) {
+function ListenAll({ texts, sp }: { texts: string[]; sp: Speech }) {
   const t = useT();
-  const { speak, stop, speaking } = useSpeak();
-  const text = texts.join('. ');
-  const on = speaking === text;
-  if (!texts.length) return null;
+  const on = texts.length > 1 && sp.speaking === texts.join('\n');
+  if (texts.length < 2) return null;
   return (
-    <Pressable onPress={() => (on ? stop() : speak(text))} accessibilityRole="button" style={styles.listenAll}>
+    <Pressable onPress={() => (on ? sp.stop() : sp.speakAll(texts))} accessibilityRole="button" style={styles.listenAll}>
       <Icon name={on ? 'stop' : 'volume'} size={16} color={colors.accent} />
       <Text size={14} weight="medium" color={colors.accent}>
         {on ? t('step.stop') : t('step.listenAll')}
@@ -55,49 +60,70 @@ function ListenAll({ texts }: { texts: string[] }) {
   );
 }
 
-// Kartu konsep: explanation plus word tiles (English over its meaning).
+// Kartu konsep: explanation plus word tiles (English over its meaning). Tap a
+// tile to hear it; "listen to all" reads them in turn and highlights each.
 export function ConceptCard({ step }: { step: StepView }) {
   const t = useT();
+  const sp = useSpeak();
   const pairs = step.pairs ?? [];
+  const texts = pairs.map((p) => p.en);
+  const playing = playingIndex(sp, texts);
   return (
     <WidgetCard eyebrow={t('step.conceptCard')} title={step.title}>
       {step.body ? <RichText size={15} color={colors.muted}>{step.body}</RichText> : null}
       {pairs.length ? (
         <View style={styles.tiles}>
-          {pairs.map((p, i) => (
-            <View key={i} style={styles.tile}>
-              <Text size={16} weight="semibold" tight selectable>
-                {p.en}
-              </Text>
-              <Text size={12} color={colors.muted}>
-                {p.id}
-              </Text>
-            </View>
-          ))}
+          {pairs.map((p, i) => {
+            const on = i === playing;
+            return (
+              <Pressable
+                key={i}
+                onPress={() => (on ? sp.stop() : sp.speak(p.en))}
+                accessibilityRole="button"
+                accessibilityLabel={on ? t('step.stop') : t('step.listen', { text: p.en })}
+                accessibilityState={{ selected: on }}
+                style={[styles.tile, on && styles.tileOn]}
+              >
+                <Text size={16} weight="semibold" tight color={on ? colors.accent : colors.ink}>
+                  {p.en}
+                </Text>
+                <Text size={12} color={on ? colors.accent : colors.muted}>
+                  {p.id}
+                </Text>
+              </Pressable>
+            );
+          })}
         </View>
       ) : null}
-      <ListenAll texts={pairs.map((p) => p.en)} />
+      <ListenAll texts={texts} sp={sp} />
     </WidgetCard>
   );
 }
 
-// Example sentences with audio.
+// Example sentences with audio; the row being read is highlighted.
 export function ExampleList({ examples }: { examples: Pair[] }) {
+  const sp = useSpeak();
+  const texts = examples.map((e) => e.en);
+  const playing = playingIndex(sp, texts);
   return (
     <View style={{ gap: 4 }}>
-      {examples.map((e, i) => (
-        <View key={i} style={[styles.example, i > 0 && { borderTopWidth: 1, borderTopColor: colors.line }]}>
-          <SpeakButton text={e.en} />
-          <View style={{ flex: 1, gap: 1 }}>
-            <Text size={16} weight="medium" tight selectable>
-              {e.en}
-            </Text>
-            <Text size={13} color={colors.muted} selectable>
-              {e.id}
-            </Text>
+      {examples.map((e, i) => {
+        const on = i === playing;
+        return (
+          <View key={i} style={[styles.example, i > 0 && { borderTopColor: colors.line }, on && styles.exampleOn]}>
+            <SpeakButton text={e.en} on={on} onPress={() => (on ? sp.stop() : sp.speak(e.en))} />
+            <View style={{ flex: 1, gap: 1 }}>
+              <Text size={16} weight="medium" tight selectable color={on ? colors.accent : colors.ink}>
+                {e.en}
+              </Text>
+              <Text size={13} color={colors.muted} selectable>
+                {e.id}
+              </Text>
+            </View>
           </View>
-        </View>
-      ))}
+        );
+      })}
+      <ListenAll texts={texts} sp={sp} />
     </View>
   );
 }
@@ -248,10 +274,12 @@ export function artifactCards(a: Artifact) {
 const styles = StyleSheet.create({
   card: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.line, borderRadius: 24, padding: 20, gap: 14 },
   tiles: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  tile: { backgroundColor: colors.canvas, borderRadius: radius.xl, paddingHorizontal: 14, paddingVertical: 10, gap: 2, minWidth: 56 },
+  tile: { backgroundColor: colors.canvas, borderWidth: 1.5, borderColor: 'transparent', borderRadius: radius.xl, paddingHorizontal: 14, paddingVertical: 10, gap: 2, minWidth: 56 },
+  tileOn: { backgroundColor: colors.accentSoft, borderColor: colors.accent },
   listenAll: { flexDirection: 'row', alignItems: 'center', gap: 8, alignSelf: 'flex-start', paddingVertical: 4 },
   speak: { backgroundColor: colors.accentSoft, alignItems: 'center', justifyContent: 'center' },
-  example: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10 },
+  example: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10, paddingHorizontal: 8, marginHorizontal: -8, borderRadius: radius.xl, borderTopWidth: 1, borderTopColor: 'transparent' },
+  exampleOn: { backgroundColor: colors.accentSoft },
   timeline: { flexDirection: 'row', justifyContent: 'space-between', paddingTop: 8, paddingBottom: 4 },
   timelineLine: { position: 'absolute', left: 16, right: 16, top: 15, height: 2, backgroundColor: colors.line },
   mark: { flex: 1, alignItems: 'center', gap: 8 },

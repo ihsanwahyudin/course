@@ -10,30 +10,53 @@ import { API_URL, ApiError, api, authHeaders } from './api';
 // null = not known yet; false = the server has no voice (offline provider),
 // so the device's own voice is used for the rest of the visit.
 let serverVoice: boolean | null = null;
-const webCache = new Map<string, string>();
+const webCache = new Map<string, Promise<string | null>>();
 let current: { stop: () => void } | null = null;
+// Bumped whenever playback starts or stops, so a stale queue knows to quit.
+let generation = 0;
 
 const ttsUrl = (text: string) => `${API_URL}/api/v1/tts?text=${encodeURIComponent(text)}`;
+const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+// Web: the sentence's audio as a blob URL (fetched once), or null without a server voice.
+function webAudioUrl(text: string): Promise<string | null> {
+  let p = webCache.get(text);
+  if (!p) {
+    p = fetch(ttsUrl(text), { credentials: 'include', headers: authHeaders() })
+      .then(async (res) => {
+        if (!res.ok) {
+          if (res.status === 501) serverVoice = false;
+          webCache.delete(text);
+          return null;
+        }
+        serverVoice = true;
+        return URL.createObjectURL(await res.blob());
+      })
+      .catch(() => {
+        webCache.delete(text);
+        return null;
+      });
+    webCache.set(text, p);
+  }
+  return p;
+}
+
+// Start fetching a sentence of a queue before its turn.
+function prefetch(text: string) {
+  if (Platform.OS === 'web' && serverVoice !== false) void webAudioUrl(text);
+}
 
 function deviceVoice(text: string, onDone: () => void) {
   Speech.speak(text, { language: 'en-US', rate: 0.95, onDone, onStopped: onDone, onError: onDone });
   current = { stop: () => void Speech.stop() };
 }
 
-async function serverAudio(text: string, onDone: () => void): Promise<boolean> {
+async function serverAudio(text: string, onDone: () => void, gen: number): Promise<boolean> {
   if (serverVoice === false) return false;
   if (Platform.OS === 'web') {
-    let url = webCache.get(text);
-    if (!url) {
-      const res = await fetch(ttsUrl(text), { credentials: 'include', headers: authHeaders() });
-      if (!res.ok) {
-        if (res.status === 501) serverVoice = false;
-        return false;
-      }
-      url = URL.createObjectURL(await res.blob());
-      webCache.set(text, url);
-    }
-    serverVoice = true;
+    const url = await webAudioUrl(text);
+    if (!url) return false;
+    if (gen !== generation) return (onDone(), true);
     const el = new window.Audio(url);
     el.onended = onDone;
     el.onerror = onDone;
@@ -47,6 +70,7 @@ async function serverAudio(text: string, onDone: () => void): Promise<boolean> {
     serverVoice = res.ok;
     if (!res.ok) return false;
   }
+  if (gen !== generation) return (onDone(), true);
   const player: AudioPlayer = createAudioPlayer({ uri: ttsUrl(text), headers: authHeaders() });
   const sub = player.addListener('playbackStatusUpdate', (st) => {
     if (st.didJustFinish) {
@@ -66,9 +90,40 @@ async function serverAudio(text: string, onDone: () => void): Promise<boolean> {
   return true;
 }
 
-/** Plays English text: the server's voice when available, else the device's. */
+// Plays one sentence; resolves when it ends or is stopped.
+function playOnce(text: string, gen: number): Promise<void> {
+  return new Promise((resolve) => {
+    let settled = false;
+    const done = () => {
+      if (!settled) {
+        settled = true;
+        resolve();
+      }
+    };
+    serverAudio(text, done, gen)
+      .then((ok) => {
+        if (!ok && gen === generation) deviceVoice(text, done);
+        else if (!ok) done();
+      })
+      .catch(() => (gen === generation ? deviceVoice(text, done) : done()));
+  });
+}
+
+function stopAll() {
+  generation++;
+  current?.stop();
+  current = null;
+}
+
+type Active = { key: string; index: number; gen: number };
+
+/**
+ * Plays English text: the server's voice when available, else the device's.
+ * `speakAll` reads a list one item at a time and reports which one is
+ * playing (`index`), so the UI can highlight it.
+ */
 export function useSpeak() {
-  const [speaking, setSpeaking] = useState<string | null>(null);
+  const [active, setActive] = useState<Active | null>(null);
   const mounted = useRef(true);
   useEffect(
     () => () => {
@@ -76,24 +131,27 @@ export function useSpeak() {
     },
     [],
   );
-  const speak = useCallback(async (text: string) => {
-    current?.stop();
-    current = null;
-    const done = () => mounted.current && setSpeaking((s) => (s === text ? null : s));
-    setSpeaking(text);
-    try {
-      if (await serverAudio(text, done)) return;
-    } catch {
-      // fall through to the device voice
+  const run = useCallback(async (texts: string[], key: string) => {
+    stopAll();
+    const gen = ++generation;
+    const clear = () => mounted.current && setActive((a) => (a?.gen === gen ? null : a));
+    // Fetch the whole list up front so the items follow each other without gaps.
+    texts.slice(1).forEach(prefetch);
+    for (let i = 0; i < texts.length; i++) {
+      if (gen !== generation) return clear();
+      if (mounted.current) setActive({ key, index: i, gen });
+      await playOnce(texts[i], gen);
+      if (i + 1 < texts.length && gen === generation) await pause(300);
     }
-    deviceVoice(text, done);
+    clear();
   }, []);
+  const speak = useCallback((text: string) => run([text], text), [run]);
+  const speakAll = useCallback((texts: string[]) => run(texts, texts.join('\n')), [run]);
   const stop = useCallback(() => {
-    current?.stop();
-    current = null;
-    setSpeaking(null);
+    stopAll();
+    setActive(null);
   }, []);
-  return { speak, stop, speaking };
+  return { speak, speakAll, stop, speaking: active?.key ?? null, index: active?.index ?? null };
 }
 
 // ---- recording + transcription ----
