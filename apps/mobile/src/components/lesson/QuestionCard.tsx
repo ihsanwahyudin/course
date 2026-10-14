@@ -46,7 +46,9 @@ function Hint({ n, text }: { n: number; text: string }) {
       <Icon name="bulb" size={16} color={colors.amber} />
       <View style={{ flex: 1, gap: 2 }}>
         <Eyebrow color={colors.amber}>{t('step.hintOf', { n, total: 2 })}</Eyebrow>
-        <Text size={15}>{text}</Text>
+        <RichText size={15} lineHeight={1.5}>
+          {text}
+        </RichText>
       </View>
     </View>
   );
@@ -147,9 +149,9 @@ export function QuestionCard({ q, eyebrow, busy, readOnly, onAnswer, onHint, onR
     <View style={{ gap: 12 }}>
       <View style={styles.card}>
         <Eyebrow color={colors.accent}>{eyebrow}</Eyebrow>
-        <Text size={18} weight="medium" tight style={{ lineHeight: 27 }}>
+        <RichText size={18} weight="medium" lineHeight={1.5}>
           {q.prompt}
-        </Text>
+        </RichText>
         {q.type === 'mcq' ? (
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }} accessibilityRole="radiogroup">
             {q.options.map((o, i) => (

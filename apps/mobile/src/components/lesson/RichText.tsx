@@ -3,14 +3,14 @@ import { Text as RNText } from 'react-native';
 import { Text } from '@/components/ui/Text';
 import { colors, fonts } from '@/theme/tokens';
 
-type Props = { children: string; size?: number; color?: string };
+type Props = { children: string; size?: number; color?: string; weight?: 'regular' | 'medium'; lineHeight?: number };
 
 // Course text supports **bold** and `code`; everything else is plain text
 // (no HTML or links), so content can't inject markup.
-export function RichText({ children, size = 16, color = colors.ink }: Props) {
+export function RichText({ children, size = 16, color = colors.ink, weight = 'regular', lineHeight = 1.65 }: Props) {
   const parts = children.split(/(\*\*[^*]+\*\*|`[^`]+`|\*[^*]+\*)/g).filter(Boolean);
   return (
-    <Text size={size} color={color} style={{ lineHeight: Math.round(size * 1.65) }}>
+    <Text size={size} color={color} weight={weight} style={{ lineHeight: Math.round(size * lineHeight) }}>
       {parts.map((p, i) => {
         if (p.startsWith('**') && p.endsWith('**')) {
           return (

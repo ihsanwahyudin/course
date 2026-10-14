@@ -78,7 +78,9 @@ func hintTask(in HintInput) string {
 	}
 	return fmt.Sprintf(`The learner asked for hint %d of 2 for this question: %s
 The correct answer is %q. Give a hint that nudges them towards it WITHOUT stating, spelling or quoting the answer.
-The second hint can be more specific than the first. Earlier hints: %s. One or two sentences, following the language rule.`,
+The second hint can be more specific than the first. Earlier hints: %s. One or two sentences.
+Write the whole hint in the learner's language from the language rule (Indonesian for an Indonesian learner): English appears only
+as the specific words or sentences being discussed, never as the sentence around them. You may use **bold** for key words.`,
 		len(in.Previous)+1, q, answerText(in.Question), prev)
 }
 
@@ -86,7 +88,12 @@ func similarTask(in SimilarInput) string {
 	q, _ := json.Marshal(in.Question)
 	return fmt.Sprintf(`The learner got this practice question wrong: %s
 Write ONE new question of the same type, testing the same objective (%s) with a different sentence from the learner's context.
-Include a short explanation.`, q, in.Question.ObjectiveID)
+- Mirror the original prompt's style: the instruction to the learner (like "Lengkapi:" or "Kata mana yang dimaksud?") is in the
+  learner's language from the language rule; only the English being practised (the sentence, word or spelling) is in English.
+- Every option (or the word-order solution) is real, natural English that a learner would actually meet; no made-up words.
+- Exactly one option is correct; the others are mistakes this learner could plausibly make.
+- Same level and length as the original.
+Include a short explanation in the learner's language.`, q, in.Question.ObjectiveID)
 }
 
 func askTask(in AskInput) string {
