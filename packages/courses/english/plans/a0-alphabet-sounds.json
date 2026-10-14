@@ -1,146 +1,243 @@
 {
   "en": {
-    "greeting": "Hi, welcome to FluentPath! Let's start with the English alphabet — the letter names you need every time you spell a name or an email.",
+    "greeting": "Welcome to FluentPath! We start with the English alphabet: the letter names you need whenever you spell a name or an email.",
     "steps": [
       {
         "kind": "concept",
-        "title": "Same letters, new names",
-        "text": "English uses the same 26 letters as Indonesian, but most of them have different names. Let's meet the tricky ones.",
-        "body": "When someone asks you to spell something, they expect the **English letter names**. A sounds like 'ay', E like 'ee', I like 'eye'. The pairs Indonesian speakers mix up most are **E/I**, **G/J** and **A/R** — say them slowly in pairs: E–I, G–J, A–R.",
+        "title": "All 26 letters",
+        "text": "English uses the same 26 letters as Indonesian, but most of their names are different. Tap a letter to hear its name and an example word, or listen to them all.",
+        "body": "When you spell a word, you say each letter's **English name**: A is 'ay', E is 'ee', I is 'eye'. Watch the pairs Indonesian speakers mix up most: **E/I** ('ee' vs 'eye'), **G/J** ('jee' vs 'jay') and **A/R** ('ay' vs 'ar').",
         "pairs": [
           {
-            "en": "A — 'ay' (like day)",
-            "id": "dibaca 'ei', bukan 'a'"
+            "en": "A",
+            "id": "dibaca ei · apple"
           },
           {
-            "en": "E — 'ee' (like see)",
-            "id": "dibaca 'i', bukan 'e'"
+            "en": "B",
+            "id": "dibaca bi · ball"
           },
           {
-            "en": "I — 'eye'",
-            "id": "dibaca 'ai', bukan 'i'"
+            "en": "C",
+            "id": "dibaca si · cat"
           },
           {
-            "en": "G — 'jee'",
-            "id": "dibaca 'ji'"
+            "en": "D",
+            "id": "dibaca di · dog"
           },
           {
-            "en": "J — 'jay'",
-            "id": "dibaca 'jei'"
+            "en": "E",
+            "id": "dibaca i · egg"
           },
           {
-            "en": "R — 'ar'",
-            "id": "dibaca 'ar'"
+            "en": "F",
+            "id": "dibaca ef · fish"
           },
           {
-            "en": "Y — 'why'",
-            "id": "dibaca 'wai'"
+            "en": "G",
+            "id": "dibaca ji · goat"
           },
           {
-            "en": "W — 'double-you'",
-            "id": "dibaca 'dabel-yu'"
+            "en": "H",
+            "id": "dibaca eic · hat"
+          },
+          {
+            "en": "I",
+            "id": "dibaca ai · ink"
+          },
+          {
+            "en": "J",
+            "id": "dibaca jei · jam"
+          },
+          {
+            "en": "K",
+            "id": "dibaca kei · kite"
+          },
+          {
+            "en": "L",
+            "id": "dibaca el · lion"
+          },
+          {
+            "en": "M",
+            "id": "dibaca em · moon"
+          },
+          {
+            "en": "N",
+            "id": "dibaca en · nose"
+          },
+          {
+            "en": "O",
+            "id": "dibaca ou · orange"
+          },
+          {
+            "en": "P",
+            "id": "dibaca pi · pen"
+          },
+          {
+            "en": "Q",
+            "id": "dibaca kyu · queen"
+          },
+          {
+            "en": "R",
+            "id": "dibaca ar · rain"
+          },
+          {
+            "en": "S",
+            "id": "dibaca es · sun"
+          },
+          {
+            "en": "T",
+            "id": "dibaca ti · tree"
+          },
+          {
+            "en": "U",
+            "id": "dibaca yu · umbrella"
+          },
+          {
+            "en": "V",
+            "id": "dibaca vi · van"
+          },
+          {
+            "en": "W",
+            "id": "dibaca dabel-yu · water"
+          },
+          {
+            "en": "X",
+            "id": "dibaca eks · box"
+          },
+          {
+            "en": "Y",
+            "id": "dibaca wai · yellow"
+          },
+          {
+            "en": "Z",
+            "id": "dibaca zed / zi · zoo"
           }
         ]
       },
       {
         "kind": "question",
         "title": "Your turn",
-        "text": "Let's try one of the tricky pairs.",
+        "text": "G or J? Say both names out loud first.",
         "question": {
           "type": "mcq",
           "objectiveId": "letter-names",
-          "prompt": "On the phone, someone spells a name and says the letter 'jee'. Which letter do you write?",
           "options": [
             "J",
             "G",
             "Z"
           ],
           "answer": 1,
-          "explanation": "G is said 'jee'. J is said 'jay' — these two are easy to mix up. Z is 'zed' (or 'zee' in American English)."
+          "prompt": "On the phone, someone spells a name and says the letter 'jee'. Which letter do you write?",
+          "explanation": "'Jee' is the name of **G**. J is 'jay', and Z is 'zed' or 'zee'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "One more",
+        "text": "Now the other pair that's easy to swap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letter-names",
+          "options": [
+            "I",
+            "E",
+            "A"
+          ],
+          "answer": 1,
+          "prompt": "Someone spells their name and says 'ee'. Which letter is it?",
+          "explanation": "'Ee' is the name of **E**. In English, I is 'eye' and A is 'ay', so don't be fooled by how they sound in Indonesian."
         }
       },
       {
         "kind": "concept",
-        "title": "The five vowels",
-        "text": "Now let's find the vowels. There are only five vowel letters.",
-        "body": "The vowel letters are **A, E, I, O, U**. All the other letters are consonants. A silent E at the end of a word still counts as a vowel letter: h-O-m-E has two. **Y** sometimes works like a vowel, as in 'my'.",
+        "title": "Vowels and consonants",
+        "text": "The 26 letters come in two groups.",
+        "body": "**Vowels** are the five letters **A, E, I, O, U**. The other **21 letters** are **consonants**: B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Y, Z. Almost every English word has at least one vowel.",
         "pairs": [
           {
-            "en": "A — 'ay'",
-            "id": "vokal, dibaca 'ei'"
+            "en": "cat",
+            "id": "c, t konsonan · a vokal"
           },
           {
-            "en": "E — 'ee'",
-            "id": "vokal, dibaca 'i'"
+            "en": "dog",
+            "id": "d, g konsonan · o vokal"
           },
           {
-            "en": "I — 'eye'",
-            "id": "vokal, dibaca 'ai'"
+            "en": "bus",
+            "id": "b, s konsonan · u vokal"
           },
           {
-            "en": "O — 'oh'",
-            "id": "vokal, dibaca 'ou'"
+            "en": "milk",
+            "id": "m, l, k konsonan · i vokal"
           },
           {
-            "en": "U — 'you'",
-            "id": "vokal, dibaca 'yu'"
-          },
-          {
-            "en": "c-A-t",
-            "id": "cat = kucing (1 vokal: A)"
-          },
-          {
-            "en": "h-O-m-E",
-            "id": "home = rumah (2 vokal: O, E)"
+            "en": "pen",
+            "id": "p, n konsonan · e vokal"
           }
         ]
       },
       {
         "kind": "question",
         "title": "Find the vowels",
-        "text": "Look at each letter and check: is it A, E, I, O or U?",
+        "text": "Look at every letter, even the last one.",
         "question": {
           "type": "mcq",
           "objectiveId": "vowels",
-          "prompt": "Which letters are the vowels in the word 'bike'?",
           "options": [
             "I and E",
             "I only",
             "B and K"
           ],
           "answer": 0,
-          "explanation": "b-I-k-E: the vowels are I and E. The E at the end is silent, but it is still a vowel letter. B and K are consonants."
+          "prompt": "Which letters are the vowels in the word 'bike'?",
+          "explanation": "B-I-K-E has two vowels: **I** and the final **E**. The E is silent when you say 'bike', but it's still a vowel letter."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Find the consonants",
+        "text": "Now the other group.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "vowels",
+          "options": [
+            "D, S and K",
+            "D, E and K",
+            "E only"
+          ],
+          "answer": 0,
+          "prompt": "Which letters are the consonants in the word 'desk'?",
+          "explanation": "D-E-S-K: **E** is the only vowel, so **D, S and K** are consonants."
         }
       },
       {
         "kind": "concept",
-        "title": "Spelling aloud",
-        "text": "Spelling a word means saying each letter name in order.",
-        "body": "Say each **letter name** with a short pause: 'dog' is D-O-G. When the same letter comes twice together, you can say **double**: 'book' is 'B, double O, K'.",
+        "title": "Spelling out loud",
+        "text": "People often ask you to spell your name or email. Here's how.",
+        "body": "Say each letter's English name, one by one. When the same letter comes twice in a row, say **double**: 'book' is B, double O, K.",
         "pairs": [
           {
             "en": "D-O-G",
-            "id": "dog = anjing"
+            "id": "dog (anjing)"
+          },
+          {
+            "en": "C-A-T",
+            "id": "cat (kucing)"
           },
           {
             "en": "B, double O, K",
-            "id": "book = buku (B-O-O-K)"
+            "id": "book (buku): dua O berdampingan"
           },
           {
-            "en": "C-O, double F, double E",
-            "id": "coffee = kopi"
-          },
-          {
-            "en": "double",
-            "id": "dua huruf sama berdampingan"
+            "en": "S-A-R-I",
+            "id": "nama Sari"
           }
         ]
       },
       {
         "kind": "examples",
         "title": "Spelling in real life",
-        "text": "You'll spell things at a hotel, at work and on the phone. Here's how it sounds.",
-        "body": "On the phone people add a word for each letter so it isn't misheard. Pilots and call centres use the **NATO alphabet** (Alfa, Bravo, Charlie…).",
+        "text": "Listen to how spelling sounds in a real conversation.",
         "examples": [
           {
             "en": "My name is Sari: S-A-R-I.",
@@ -151,128 +248,93 @@
             "id": "Bisa dieja, tolong?"
           },
           {
-            "en": "My email is rina at mail dot com: R-I-N-A.",
-            "id": "Email saya rina@mail.com: R-I-N-A."
+            "en": "Sure. It's B, double O, K.",
+            "id": "Tentu. B, double O, K."
           },
           {
-            "en": "That's B as in Bravo, not D as in Delta.",
-            "id": "Itu B seperti Bravo, bukan D seperti Delta."
+            "en": "My email is rina at mail dot com.",
+            "id": "Email saya rina@mail.com."
           }
         ]
       },
       {
         "kind": "question",
-        "title": "Build the question",
-        "text": "Here's a very useful question to ask a new colleague.",
-        "question": {
-          "type": "word_order",
-          "objectiveId": "spelling",
-          "prompt": "Arrange the words: Bagaimana mengeja namamu?",
-          "tokens": [
-            "spell",
-            "name",
-            "How",
-            "your",
-            "do",
-            "you"
-          ],
-          "solution": "How do you spell your name?",
-          "explanation": "Questions with 'do' follow this order: **How + do + you + verb**. 'How do you spell…?' is the polite, normal way to ask for spelling."
-        }
-      },
-      {
-        "kind": "question",
         "title": "Double letters",
-        "text": "One more — watch the double letter.",
+        "text": "Spell it in your head first: how many P's?",
         "question": {
           "type": "mcq",
           "objectiveId": "spelling",
-          "prompt": "How do you spell the word 'apple' aloud?",
           "options": [
             "E, double P, L, E",
             "A, P, L, E",
             "A, double P, L, E"
           ],
           "answer": 2,
-          "explanation": "a-p-p-l-e: the first letter is **A** ('ay'), not E, and the two P's together are said **double P**."
+          "prompt": "How do you spell the word 'apple' out loud?",
+          "explanation": "A-P-P-L-E has two P's next to each other, so you say **A, double P, L, E**."
         }
       },
       {
         "kind": "flashcards",
         "title": "Quick review",
-        "text": "Flip these cards and say each letter name out loud.",
+        "text": "Flip each card and say the letter's name out loud.",
         "flashcards": [
           {
-            "front": "Letter name of I",
-            "back": "'eye' (dibaca ai)"
-          },
-          {
-            "front": "Letter name of E",
+            "front": "Letter E",
             "back": "'ee' (dibaca i)"
           },
           {
-            "front": "Letter name of G",
+            "front": "Letter I",
+            "back": "'eye' (dibaca ai)"
+          },
+          {
+            "front": "Letter G",
             "back": "'jee' (dibaca ji)"
           },
           {
-            "front": "Letter name of J",
+            "front": "Letter J",
             "back": "'jay' (dibaca jei)"
           },
           {
-            "front": "Letter name of Y",
+            "front": "Letter A",
+            "back": "'ay' (dibaca ei)"
+          },
+          {
+            "front": "Letter R",
+            "back": "'ar' (dibaca ar)"
+          },
+          {
+            "front": "Letter W",
+            "back": "'double-you' (dibaca dabel-yu)"
+          },
+          {
+            "front": "Letter Y",
             "back": "'why' (dibaca wai)"
-          },
-          {
-            "front": "The five vowels",
-            "back": "A, E, I, O, U (huruf vokal)"
-          },
-          {
-            "front": "Spell 'book' aloud",
-            "back": "B, double O, K (buku)"
-          },
-          {
-            "front": "Can you spell that, please?",
-            "back": "Bisa dieja, tolong?"
           }
         ]
       },
       {
         "kind": "artifact",
         "title": "Cheat sheet",
-        "text": "Here's a cheat sheet you can keep for spelling names and emails.",
+        "text": "The whole alphabet on one page, to keep.",
         "artifact": {
-          "title": "Cheat sheet · Alphabet & sounds",
-          "intro": "The English names of the letters that sound different from Indonesian, plus the five vowels.",
+          "title": "Cheat sheet · The alphabet",
+          "intro": "Every letter with its English name and how to say it.",
           "headers": [
             "Letter",
-            "Sounds like",
-            "Indonesian hint"
+            "English name",
+            "Say it like"
           ],
           "rows": [
             [
               "A",
-              "ay (day)",
+              "ay",
               "ei"
             ],
             [
-              "E",
-              "ee (see)",
-              "i"
-            ],
-            [
-              "I",
-              "eye",
-              "ai"
-            ],
-            [
-              "O",
-              "oh",
-              "ou"
-            ],
-            [
-              "U",
-              "you",
-              "yu"
+              "B",
+              "bee",
+              "bi"
             ],
             [
               "C",
@@ -280,9 +342,34 @@
               "si"
             ],
             [
+              "D",
+              "dee",
+              "di"
+            ],
+            [
+              "E",
+              "ee",
+              "i"
+            ],
+            [
+              "F",
+              "ef",
+              "ef"
+            ],
+            [
               "G",
               "jee",
               "ji"
+            ],
+            [
+              "H",
+              "aitch",
+              "eic"
+            ],
+            [
+              "I",
+              "eye",
+              "ai"
             ],
             [
               "J",
@@ -290,14 +377,74 @@
               "jei"
             ],
             [
+              "K",
+              "kay",
+              "kei"
+            ],
+            [
+              "L",
+              "el",
+              "el"
+            ],
+            [
+              "M",
+              "em",
+              "em"
+            ],
+            [
+              "N",
+              "en",
+              "en"
+            ],
+            [
+              "O",
+              "oh",
+              "ou"
+            ],
+            [
+              "P",
+              "pee",
+              "pi"
+            ],
+            [
+              "Q",
+              "cue",
+              "kyu"
+            ],
+            [
               "R",
               "ar",
               "ar"
             ],
             [
+              "S",
+              "es",
+              "es"
+            ],
+            [
+              "T",
+              "tee",
+              "ti"
+            ],
+            [
+              "U",
+              "you",
+              "yu"
+            ],
+            [
+              "V",
+              "vee",
+              "vi"
+            ],
+            [
               "W",
               "double-you",
               "dabel-yu"
+            ],
+            [
+              "X",
+              "ex",
+              "eks"
             ],
             [
               "Y",
@@ -306,27 +453,27 @@
             ],
             [
               "Z",
-              "zed (UK) / zee (US)",
+              "zed / zee",
               "zed / zi"
             ]
           ],
           "tips": [
-            "Vowels are **A, E, I, O, U**; all other letters are consonants.",
-            "Two of the same letter together? Say **double**: B, double O, K.",
-            "Practise spelling your own name and email until you can say them without stopping."
+            "Vowels: **A, E, I, O, U**. The other 21 letters are consonants.",
+            "Most mixed-up pairs: **E/I**, **G/J**, **A/R**.",
+            "Two of the same letter together? Say **double**: B, double O, K."
           ],
           "examples": [
             {
-              "en": "How do you spell 'dog'? — D-O-G.",
-              "id": "Bagaimana mengeja 'dog'? — D-O-G."
-            },
-            {
-              "en": "'Coffee' is C-O, double F, double E.",
-              "id": "'Coffee' dieja C-O, double F, double E."
-            },
-            {
               "en": "My name is Sari: S-A-R-I.",
               "id": "Nama saya Sari: S-A-R-I."
+            },
+            {
+              "en": "Can you spell that, please?",
+              "id": "Bisa dieja, tolong?"
+            },
+            {
+              "en": "Sure. It's B, double O, K.",
+              "id": "Tentu. B, double O, K."
             }
           ]
         }
@@ -334,152 +481,249 @@
       {
         "kind": "resources",
         "title": "Listen and learn more",
-        "text": "Want to hear every letter name? These links help with sounds and phone spelling."
+        "text": "Short videos and pages to practise the letter names."
       }
     ]
   },
   "id": {
-    "greeting": "Hai, selamat datang di FluentPath! Kita mulai dari alfabet bahasa Inggris — nama huruf yang kamu perlukan setiap kali mengeja nama atau email.",
+    "greeting": "Hai, selamat datang di FluentPath! Kita mulai dari alfabet bahasa Inggris: nama huruf yang kamu perlukan setiap kali mengeja nama atau email.",
     "steps": [
       {
         "kind": "concept",
-        "title": "Huruf sama, nama berbeda",
-        "text": "Bahasa Inggris memakai 26 huruf yang sama dengan bahasa Indonesia, tapi kebanyakan namanya berbeda. Yuk kenalan dengan yang paling sering bikin bingung.",
-        "body": "Saat seseorang memintamu mengeja, yang dipakai adalah **nama huruf versi Inggris**. A dibaca 'ei', E dibaca 'i', I dibaca 'ai'. Pasangan yang paling sering tertukar bagi penutur bahasa Indonesia adalah **E/I**, **G/J** dan **A/R** — ucapkan pelan-pelan berpasangan: E–I, G–J, A–R.",
+        "title": "26 huruf alfabet",
+        "text": "Bahasa Inggris memakai 26 huruf yang sama dengan bahasa Indonesia, tapi kebanyakan namanya berbeda. Ketuk huruf untuk mendengar namanya dan contoh katanya, atau dengar semuanya.",
+        "body": "Saat mengeja, kamu menyebut **nama huruf versi Inggris**: A dibaca 'ei', E dibaca 'i', I dibaca 'ai'. Hati-hati dengan pasangan yang paling sering tertukar: **E/I** ('i' vs 'ai'), **G/J** ('ji' vs 'jei') dan **A/R** ('ei' vs 'ar').",
         "pairs": [
           {
-            "en": "A — 'ay' (like day)",
-            "id": "dibaca 'ei', bukan 'a'"
+            "en": "A",
+            "id": "dibaca ei · apple"
           },
           {
-            "en": "E — 'ee' (like see)",
-            "id": "dibaca 'i', bukan 'e'"
+            "en": "B",
+            "id": "dibaca bi · ball"
           },
           {
-            "en": "I — 'eye'",
-            "id": "dibaca 'ai', bukan 'i'"
+            "en": "C",
+            "id": "dibaca si · cat"
           },
           {
-            "en": "G — 'jee'",
-            "id": "dibaca 'ji'"
+            "en": "D",
+            "id": "dibaca di · dog"
           },
           {
-            "en": "J — 'jay'",
-            "id": "dibaca 'jei'"
+            "en": "E",
+            "id": "dibaca i · egg"
           },
           {
-            "en": "R — 'ar'",
-            "id": "dibaca 'ar'"
+            "en": "F",
+            "id": "dibaca ef · fish"
           },
           {
-            "en": "Y — 'why'",
-            "id": "dibaca 'wai'"
+            "en": "G",
+            "id": "dibaca ji · goat"
           },
           {
-            "en": "W — 'double-you'",
-            "id": "dibaca 'dabel-yu'"
+            "en": "H",
+            "id": "dibaca eic · hat"
+          },
+          {
+            "en": "I",
+            "id": "dibaca ai · ink"
+          },
+          {
+            "en": "J",
+            "id": "dibaca jei · jam"
+          },
+          {
+            "en": "K",
+            "id": "dibaca kei · kite"
+          },
+          {
+            "en": "L",
+            "id": "dibaca el · lion"
+          },
+          {
+            "en": "M",
+            "id": "dibaca em · moon"
+          },
+          {
+            "en": "N",
+            "id": "dibaca en · nose"
+          },
+          {
+            "en": "O",
+            "id": "dibaca ou · orange"
+          },
+          {
+            "en": "P",
+            "id": "dibaca pi · pen"
+          },
+          {
+            "en": "Q",
+            "id": "dibaca kyu · queen"
+          },
+          {
+            "en": "R",
+            "id": "dibaca ar · rain"
+          },
+          {
+            "en": "S",
+            "id": "dibaca es · sun"
+          },
+          {
+            "en": "T",
+            "id": "dibaca ti · tree"
+          },
+          {
+            "en": "U",
+            "id": "dibaca yu · umbrella"
+          },
+          {
+            "en": "V",
+            "id": "dibaca vi · van"
+          },
+          {
+            "en": "W",
+            "id": "dibaca dabel-yu · water"
+          },
+          {
+            "en": "X",
+            "id": "dibaca eks · box"
+          },
+          {
+            "en": "Y",
+            "id": "dibaca wai · yellow"
+          },
+          {
+            "en": "Z",
+            "id": "dibaca zed / zi · zoo"
           }
         ]
       },
       {
         "kind": "question",
         "title": "Giliranmu",
-        "text": "Coba satu pasangan yang sering tertukar.",
+        "text": "G atau J? Ucapkan dulu kedua namanya.",
         "question": {
           "type": "mcq",
           "objectiveId": "letter-names",
-          "prompt": "Di telepon, seseorang mengeja nama dan menyebut huruf 'jee'. Huruf apa yang kamu tulis?",
           "options": [
             "J",
             "G",
             "Z"
           ],
           "answer": 1,
-          "explanation": "G dibaca 'ji'. J dibaca 'jei' — dua huruf ini mudah tertukar. Z dibaca 'zed' (atau 'zi' dalam bahasa Inggris Amerika)."
+          "prompt": "Di telepon, seseorang mengeja nama dan menyebut huruf 'jee'. Huruf apa yang kamu tulis?",
+          "explanation": "'Jee' (dibaca ji) adalah nama huruf **G**. J dibaca 'jay' (jei), dan Z dibaca 'zed' atau 'zee'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Satu lagi",
+        "text": "Sekarang pasangan lain yang mudah tertukar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letter-names",
+          "options": [
+            "I",
+            "E",
+            "A"
+          ],
+          "answer": 1,
+          "prompt": "Seseorang mengeja namanya dan menyebut 'ee'. Huruf apa itu?",
+          "explanation": "'Ee' (dibaca i) adalah nama huruf **E**. Dalam bahasa Inggris, I dibaca 'eye' (ai) dan A dibaca 'ay' (ei), jadi jangan terkecoh bunyi bahasa Indonesia."
         }
       },
       {
         "kind": "concept",
-        "title": "Lima huruf vokal",
-        "text": "Sekarang kita cari huruf vokal. Hanya ada lima.",
-        "body": "Huruf vokal adalah **A, E, I, O, U**. Huruf lainnya konsonan. E di akhir kata yang tidak dibaca tetap dihitung sebagai huruf vokal: h-O-m-E punya dua. **Y** kadang berperan seperti vokal, misalnya di 'my'.",
+        "title": "Vokal dan konsonan",
+        "text": "26 huruf itu terbagi jadi dua kelompok.",
+        "body": "**Huruf vokal** ada lima: **A, E, I, O, U**. **21 huruf** lainnya adalah **konsonan**: B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Y, Z. Hampir setiap kata bahasa Inggris punya minimal satu vokal.",
         "pairs": [
           {
-            "en": "A — 'ay'",
-            "id": "vokal, dibaca 'ei'"
+            "en": "cat",
+            "id": "c, t konsonan · a vokal"
           },
           {
-            "en": "E — 'ee'",
-            "id": "vokal, dibaca 'i'"
+            "en": "dog",
+            "id": "d, g konsonan · o vokal"
           },
           {
-            "en": "I — 'eye'",
-            "id": "vokal, dibaca 'ai'"
+            "en": "bus",
+            "id": "b, s konsonan · u vokal"
           },
           {
-            "en": "O — 'oh'",
-            "id": "vokal, dibaca 'ou'"
+            "en": "milk",
+            "id": "m, l, k konsonan · i vokal"
           },
           {
-            "en": "U — 'you'",
-            "id": "vokal, dibaca 'yu'"
-          },
-          {
-            "en": "c-A-t",
-            "id": "cat = kucing (1 vokal: A)"
-          },
-          {
-            "en": "h-O-m-E",
-            "id": "home = rumah (2 vokal: O, E)"
+            "en": "pen",
+            "id": "p, n konsonan · e vokal"
           }
         ]
       },
       {
         "kind": "question",
         "title": "Cari vokalnya",
-        "text": "Lihat setiap huruf dan cek: apakah A, E, I, O atau U?",
+        "text": "Perhatikan setiap huruf, termasuk huruf terakhir.",
         "question": {
           "type": "mcq",
           "objectiveId": "vowels",
-          "prompt": "Huruf mana yang vokal dalam kata 'bike'?",
           "options": [
             "I and E",
             "I only",
             "B and K"
           ],
           "answer": 0,
-          "explanation": "b-I-k-E: vokalnya I dan E. E di akhir tidak dibaca, tapi tetap huruf vokal. B dan K adalah konsonan."
+          "prompt": "Huruf mana yang vokal dalam kata 'bike'?",
+          "explanation": "B-I-K-E punya dua vokal: **I** dan **E** di akhir. Huruf E tidak dibunyikan saat mengucapkan 'bike', tapi tetap huruf vokal."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Cari konsonannya",
+        "text": "Sekarang kelompok yang lain.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "vowels",
+          "options": [
+            "D, S and K",
+            "D, E and K",
+            "E only"
+          ],
+          "answer": 0,
+          "prompt": "Huruf mana yang konsonan dalam kata 'desk'?",
+          "explanation": "D-E-S-K: **E** satu-satunya vokal, jadi **D, S dan K** adalah konsonan."
         }
       },
       {
         "kind": "concept",
         "title": "Mengeja dengan suara",
-        "text": "Mengeja artinya menyebutkan nama tiap huruf secara berurutan.",
-        "body": "Sebutkan **nama tiap huruf** dengan jeda singkat: 'dog' dieja D-O-G. Kalau ada dua huruf sama berdampingan, boleh pakai **double**: 'book' dieja 'B, double O, K'.",
+        "text": "Orang sering memintamu mengeja nama atau email. Begini caranya.",
+        "body": "Sebutkan nama huruf versi Inggris satu per satu. Kalau ada dua huruf sama berdampingan, sebut **double**: 'book' dieja B, double O, K.",
         "pairs": [
           {
             "en": "D-O-G",
-            "id": "dog = anjing"
+            "id": "dog (anjing)"
+          },
+          {
+            "en": "C-A-T",
+            "id": "cat (kucing)"
           },
           {
             "en": "B, double O, K",
-            "id": "book = buku (B-O-O-K)"
+            "id": "book (buku): dua O berdampingan"
           },
           {
-            "en": "C-O, double F, double E",
-            "id": "coffee = kopi"
-          },
-          {
-            "en": "double",
-            "id": "dua huruf sama berdampingan"
+            "en": "S-A-R-I",
+            "id": "nama Sari"
           }
         ]
       },
       {
         "kind": "examples",
         "title": "Mengeja di kehidupan nyata",
-        "text": "Kamu akan mengeja di hotel, di kantor, dan lewat telepon. Begini contohnya.",
-        "body": "Saat menelepon, orang sering menambah satu kata per huruf supaya tidak salah dengar. Pilot dan call center memakai **alfabet NATO** (Alfa, Bravo, Charlie…).",
+        "text": "Dengarkan bagaimana mengeja terdengar dalam percakapan nyata.",
         "examples": [
           {
             "en": "My name is Sari: S-A-R-I.",
@@ -490,128 +734,93 @@
             "id": "Bisa dieja, tolong?"
           },
           {
-            "en": "My email is rina at mail dot com: R-I-N-A.",
-            "id": "Email saya rina@mail.com: R-I-N-A."
+            "en": "Sure. It's B, double O, K.",
+            "id": "Tentu. B, double O, K."
           },
           {
-            "en": "That's B as in Bravo, not D as in Delta.",
-            "id": "Itu B seperti Bravo, bukan D seperti Delta."
+            "en": "My email is rina at mail dot com.",
+            "id": "Email saya rina@mail.com."
           }
         ]
       },
       {
         "kind": "question",
-        "title": "Susun pertanyaannya",
-        "text": "Ini pertanyaan yang sangat berguna untuk rekan kerja baru.",
-        "question": {
-          "type": "word_order",
-          "objectiveId": "spelling",
-          "prompt": "Susun kata-katanya: Bagaimana mengeja namamu?",
-          "tokens": [
-            "spell",
-            "name",
-            "How",
-            "your",
-            "do",
-            "you"
-          ],
-          "solution": "How do you spell your name?",
-          "explanation": "Pertanyaan dengan 'do' mengikuti urutan **How + do + you + kata kerja**. 'How do you spell…?' adalah cara yang sopan dan umum untuk meminta ejaan."
-        }
-      },
-      {
-        "kind": "question",
         "title": "Huruf dobel",
-        "text": "Satu lagi — perhatikan huruf dobelnya.",
+        "text": "Eja dulu di kepalamu: ada berapa huruf P?",
         "question": {
           "type": "mcq",
           "objectiveId": "spelling",
-          "prompt": "Bagaimana mengeja kata 'apple' dengan suara?",
           "options": [
             "E, double P, L, E",
             "A, P, L, E",
             "A, double P, L, E"
           ],
           "answer": 2,
-          "explanation": "a-p-p-l-e: huruf pertamanya **A** (dibaca 'ei'), bukan E, dan dua P berdampingan disebut **double P**."
+          "prompt": "Bagaimana mengeja kata 'apple' dengan suara?",
+          "explanation": "A-P-P-L-E punya dua P berdampingan, jadi disebut **A, double P, L, E**."
         }
       },
       {
         "kind": "flashcards",
         "title": "Ulasan cepat",
-        "text": "Balik kartu-kartu ini dan ucapkan setiap nama huruf dengan suara.",
+        "text": "Balik setiap kartu dan ucapkan nama hurufnya dengan suara.",
         "flashcards": [
           {
-            "front": "Nama huruf I",
-            "back": "'eye' (dibaca ai)"
-          },
-          {
-            "front": "Nama huruf E",
+            "front": "Huruf E",
             "back": "'ee' (dibaca i)"
           },
           {
-            "front": "Nama huruf G",
+            "front": "Huruf I",
+            "back": "'eye' (dibaca ai)"
+          },
+          {
+            "front": "Huruf G",
             "back": "'jee' (dibaca ji)"
           },
           {
-            "front": "Nama huruf J",
+            "front": "Huruf J",
             "back": "'jay' (dibaca jei)"
           },
           {
-            "front": "Nama huruf Y",
+            "front": "Huruf A",
+            "back": "'ay' (dibaca ei)"
+          },
+          {
+            "front": "Huruf R",
+            "back": "'ar' (dibaca ar)"
+          },
+          {
+            "front": "Huruf W",
+            "back": "'double-you' (dibaca dabel-yu)"
+          },
+          {
+            "front": "Huruf Y",
             "back": "'why' (dibaca wai)"
-          },
-          {
-            "front": "Lima huruf vokal",
-            "back": "A, E, I, O, U (huruf vokal)"
-          },
-          {
-            "front": "Eja 'book' dengan suara",
-            "back": "B, double O, K (buku)"
-          },
-          {
-            "front": "Can you spell that, please?",
-            "back": "Bisa dieja, tolong?"
           }
         ]
       },
       {
         "kind": "artifact",
         "title": "Contekan",
-        "text": "Ini contekan yang bisa kamu simpan untuk mengeja nama dan email.",
+        "text": "Seluruh alfabet dalam satu halaman, bisa kamu simpan.",
         "artifact": {
-          "title": "Contekan · Alfabet & bunyi",
-          "intro": "Nama huruf dalam bahasa Inggris yang bunyinya berbeda dari bahasa Indonesia, plus lima huruf vokal.",
+          "title": "Contekan · Alfabet",
+          "intro": "Setiap huruf dengan nama Inggrisnya dan cara membacanya.",
           "headers": [
             "Huruf",
-            "Bunyinya seperti",
-            "Petunjuk"
+            "Nama Inggris",
+            "Dibaca"
           ],
           "rows": [
             [
               "A",
-              "ay (day)",
+              "ay",
               "ei"
             ],
             [
-              "E",
-              "ee (see)",
-              "i"
-            ],
-            [
-              "I",
-              "eye",
-              "ai"
-            ],
-            [
-              "O",
-              "oh",
-              "ou"
-            ],
-            [
-              "U",
-              "you",
-              "yu"
+              "B",
+              "bee",
+              "bi"
             ],
             [
               "C",
@@ -619,9 +828,34 @@
               "si"
             ],
             [
+              "D",
+              "dee",
+              "di"
+            ],
+            [
+              "E",
+              "ee",
+              "i"
+            ],
+            [
+              "F",
+              "ef",
+              "ef"
+            ],
+            [
               "G",
               "jee",
               "ji"
+            ],
+            [
+              "H",
+              "aitch",
+              "eic"
+            ],
+            [
+              "I",
+              "eye",
+              "ai"
             ],
             [
               "J",
@@ -629,14 +863,74 @@
               "jei"
             ],
             [
+              "K",
+              "kay",
+              "kei"
+            ],
+            [
+              "L",
+              "el",
+              "el"
+            ],
+            [
+              "M",
+              "em",
+              "em"
+            ],
+            [
+              "N",
+              "en",
+              "en"
+            ],
+            [
+              "O",
+              "oh",
+              "ou"
+            ],
+            [
+              "P",
+              "pee",
+              "pi"
+            ],
+            [
+              "Q",
+              "cue",
+              "kyu"
+            ],
+            [
               "R",
               "ar",
               "ar"
             ],
             [
+              "S",
+              "es",
+              "es"
+            ],
+            [
+              "T",
+              "tee",
+              "ti"
+            ],
+            [
+              "U",
+              "you",
+              "yu"
+            ],
+            [
+              "V",
+              "vee",
+              "vi"
+            ],
+            [
               "W",
               "double-you",
               "dabel-yu"
+            ],
+            [
+              "X",
+              "ex",
+              "eks"
             ],
             [
               "Y",
@@ -645,27 +939,27 @@
             ],
             [
               "Z",
-              "zed (UK) / zee (US)",
+              "zed / zee",
               "zed / zi"
             ]
           ],
           "tips": [
-            "Huruf vokal: **A, E, I, O, U**; huruf lainnya konsonan.",
-            "Dua huruf sama berdampingan? Sebut **double**: B, double O, K.",
-            "Latih mengeja nama dan email-mu sendiri sampai lancar tanpa tersendat."
+            "Vokal: **A, E, I, O, U**. 21 huruf lainnya konsonan.",
+            "Pasangan yang paling sering tertukar: **E/I**, **G/J**, **A/R**.",
+            "Dua huruf sama berdampingan? Sebut **double**: B, double O, K."
           ],
           "examples": [
             {
-              "en": "How do you spell 'dog'? — D-O-G.",
-              "id": "Bagaimana mengeja 'dog'? — D-O-G."
-            },
-            {
-              "en": "'Coffee' is C-O, double F, double E.",
-              "id": "'Coffee' dieja C-O, double F, double E."
-            },
-            {
               "en": "My name is Sari: S-A-R-I.",
               "id": "Nama saya Sari: S-A-R-I."
+            },
+            {
+              "en": "Can you spell that, please?",
+              "id": "Bisa dieja, tolong?"
+            },
+            {
+              "en": "Sure. It's B, double O, K.",
+              "id": "Tentu. B, double O, K."
             }
           ]
         }
@@ -673,7 +967,7 @@
       {
         "kind": "resources",
         "title": "Dengar dan pelajari lagi",
-        "text": "Mau mendengar semua nama huruf? Tautan ini membantu soal bunyi dan mengeja lewat telepon."
+        "text": "Video pendek dan halaman untuk melatih nama-nama huruf."
       }
     ]
   }

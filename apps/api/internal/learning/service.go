@@ -5,6 +5,7 @@
 package learning
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"errors"
@@ -53,6 +54,11 @@ type Service struct {
 	// as its plan is written, so "listen" plays without waiting. Only useful
 	// with a provider that can speak.
 	WarmSpeech bool
+	// LiveSpeech lets the server ask the provider for audio it doesn't have
+	// yet. Off: only recorded (repo) or cached audio is served, and anything
+	// else gets 501 so the app uses the device's voice. Lesson audio is then
+	// made only on purpose, with `bundle-audio`, after the content is reviewed.
+	LiveSpeech bool
 
 	speechMu       sync.Mutex
 	speechInflight map[string]*speechCall
@@ -517,6 +523,13 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 	}
 	locale := cur.Lang(langFrom(ctx))
 	sess, err := storage.FindOpenSession(ctx, s.Store.Pool, userID, cur.Slug, n.ID)
+	if err == nil && s.lessonRewritten(cur, n, sess) {
+		// The lesson's steps were rewritten since this session began: keep the
+		// old session (with its questions to the tutor) and start the new version.
+		if err = storage.EndSession(ctx, s.Store.Pool, sess.ID, sess.Phase); err == nil {
+			err = storage.ErrNotFound
+		}
+	}
 	if errors.Is(err, storage.ErrNotFound) {
 		err = pgx.BeginFunc(ctx, s.Store.Pool, func(tx pgx.Tx) error {
 			if _, err := storage.EnsureEnrollment(ctx, tx, userID, cur.Slug, cur.LevelIDs[0], cur.TargetLevel); err != nil {
@@ -547,6 +560,25 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 		}
 	}
 	return s.sessionView(ctx, s.Store.Pool, sess)
+}
+
+// lessonRewritten reports whether an open session's steps differ from the
+// lesson's current hand-written steps.
+func (s *Service) lessonRewritten(cur *curriculum.Curriculum, n *curriculum.Node, sess storage.Session) bool {
+	if len(sess.Plan) == 0 {
+		return false
+	}
+	p, ok, err := tutor.AuthoredPlan(cur, n.ID, cur.Lang(sess.Locale))
+	if !ok || err != nil {
+		return false
+	}
+	var stored tutor.Plan
+	if json.Unmarshal(sess.Plan, &stored) != nil {
+		return true
+	}
+	a, _ := json.Marshal(stored)
+	b, _ := json.Marshal(p)
+	return !bytes.Equal(a, b)
 }
 
 func (s *Service) getOwnSession(ctx context.Context, userID, id string) (storage.Session, error) {

@@ -504,6 +504,7 @@ func (m *audioMock) Transcribe(ctx context.Context, audio []byte, filename strin
 
 func TestSpeechAndTranscription(t *testing.T) {
 	s := newService(t, &ai.Mock{})
+	s.LiveSpeech = true
 	s.SpeechCacheDir = t.TempDir()
 	ctx := context.Background()
 	for _, txt := range []string{" ", strings.Repeat("a", maxSpeechRunes+1)} {
@@ -541,6 +542,7 @@ func TestSpeechAndTranscription(t *testing.T) {
 
 func TestSlowSpeechIsSharedAndStillCached(t *testing.T) {
 	s := newService(t, &ai.Mock{})
+	s.LiveSpeech = true
 	s.SpeechCacheDir = t.TempDir()
 	am := &audioMock{Mock: &ai.Mock{}, delay: 300 * time.Millisecond}
 	s.AI = am
@@ -586,6 +588,7 @@ func withoutRecordedAudio(t *testing.T, s *Service) {
 func TestLessonAudioIsMadeAhead(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	withoutRecordedAudio(t, s)
+	s.LiveSpeech = true
 	s.SpeechCacheDir = t.TempDir()
 	am := &audioMock{Mock: &ai.Mock{}}
 	s.AI = am
@@ -617,6 +620,7 @@ func TestLessonAudioIsMadeAhead(t *testing.T) {
 func TestMissingLessonAudioIsMadeAtStartup(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	withoutRecordedAudio(t, s)
+	s.LiveSpeech = true
 	s.SpeechCacheDir = t.TempDir()
 	am := &audioMock{Mock: &ai.Mock{}}
 	s.AI = am
@@ -645,6 +649,7 @@ func TestMissingLessonAudioIsMadeAtStartup(t *testing.T) {
 
 func TestRecordedLessonAudioNeedsNoProvider(t *testing.T) {
 	s := newService(t, &ai.Mock{})
+	s.LiveSpeech = true
 	s.SpeechCacheDir = t.TempDir()
 	am := &audioMock{Mock: &ai.Mock{}}
 	s.AI = am
@@ -680,5 +685,58 @@ func TestRecordedLessonAudioNeedsNoProvider(t *testing.T) {
 	before := am.speech.Load()
 	if written, _ = s.BundleLessonAudio(ctx, true); written != len(tutor.LessonSpeechTexts(cur)) || int(am.speech.Load()-before) != written {
 		t.Fatalf("fresh bundle: %d written, %d provider calls", written, am.speech.Load()-before)
+	}
+}
+
+func TestRewrittenLessonStartsTheNewVersion(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	ctx := context.Background()
+	sess, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if _, err := s.AskStep(ctx, learnerID, sess.ID, 0, AskInput{Content: "Why is A read 'ei'?"}); err != nil {
+		t.Fatal(err)
+	}
+	// Same steps: resuming keeps the session.
+	if again, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds"); again.ID != sess.ID {
+		t.Fatal("an unchanged lesson should resume")
+	}
+	// The session holds an older version of the lesson.
+	old := planOf(t, s, sess.ID)
+	old.Steps[0].Title = "An older title"
+	raw, _ := json.Marshal(old)
+	if err := storage.SetSessionPlan(ctx, s.Store.Pool, sess.ID, raw); err != nil {
+		t.Fatal(err)
+	}
+	fresh, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil || fresh.ID == sess.ID || fresh.Lesson.Steps[0].Title == "An older title" {
+		t.Fatalf("a rewritten lesson should start its new version: %v", err)
+	}
+	// The old session and its question are kept.
+	kept, err := s.GetSession(ctx, learnerID, sess.ID)
+	if err != nil || kept.EndedAt == nil {
+		t.Fatalf("old session should be closed but kept: %v", err)
+	}
+}
+
+func TestNoAudioIsMadeUnlessAskedFor(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	withoutRecordedAudio(t, s)
+	s.SpeechCacheDir = t.TempDir()
+	am := &audioMock{Mock: &ai.Mock{}}
+	s.AI = am
+	s.WarmSpeech = true // even if warming is on, LiveSpeech off makes nothing
+	ctx := context.Background()
+	s.WarmAllLessons()
+	if _, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds"); err != nil {
+		t.Fatal(err)
+	}
+	s.warm.Wait()
+	if _, err := s.Speech(ctx, learnerID, "They work remotely."); code(err) != "speech_unavailable" {
+		t.Fatalf("missing audio should fall back to the device voice: %v", err)
+	}
+	if n := am.speech.Load(); n != 0 {
+		t.Fatalf("no audio may be made without bundle-audio: %d provider calls", n)
 	}
 }

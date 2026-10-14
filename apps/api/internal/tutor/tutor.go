@@ -117,10 +117,10 @@ const (
 	MaxSteps      = 12
 	maxText       = 1200
 	maxShort      = 200
-	maxPairs      = 12
+	maxPairs      = 26 // a whole alphabet fits on one card
 	maxExamples   = 8
 	maxCards      = 8
-	maxRows       = 14
+	maxRows       = 26
 	maxTokens     = 12
 	MaxHints      = 2
 	maxHintRunes  = 400

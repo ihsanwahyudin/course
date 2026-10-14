@@ -222,6 +222,30 @@ type speechCall struct {
 
 func speechText(text string) string { return curriculum.SpeechKey(text) }
 
+// say asks the provider for a sentence's audio.
+func (s *Service) say(ctx context.Context, text string) ([]byte, error) {
+	return s.AI.Speech(ctx, speakable(text))
+}
+
+// letterWords gives each letter a common word, so a lone letter is read as
+// "A, as in apple." The voice garbles a bare letter (a clipped "uh" for A),
+// and this is how letters are spelled out loud anyway.
+var letterWords = map[byte]string{
+	'A': "apple", 'B': "ball", 'C': "cat", 'D': "dog", 'E': "egg", 'F': "fish", 'G': "goat", 'H': "hat", 'I': "ink",
+	'J': "jam", 'K': "kite", 'L': "lion", 'M': "moon", 'N': "nose", 'O': "orange", 'P': "pen", 'Q': "queen", 'R': "rain",
+	'S': "sun", 'T': "tree", 'U': "umbrella", 'V': "van", 'W': "water", 'X': "box", 'Y': "yellow", 'Z': "zoo",
+}
+
+// speakable is what the voice is given for a sentence.
+func speakable(text string) string {
+	if len(text) == 1 {
+		if w, ok := letterWords[text[0]]; ok {
+			return text + ", as in " + w + "."
+		}
+	}
+	return text
+}
+
 // bundledAudio returns a sentence's audio from a course folder (lesson
 // audio is committed to the repo), if any.
 func (s *Service) bundledAudio(text string) ([]byte, bool) {
@@ -259,6 +283,9 @@ func (s *Service) Speech(ctx context.Context, userID, text string) ([]byte, erro
 	path := s.speechPath(text)
 	if b, err := os.ReadFile(path); err == nil {
 		return b, nil
+	}
+	if !s.LiveSpeech {
+		return nil, errNoAudio
 	}
 	if err := s.checkQuota(ctx, userID); err != nil {
 		return nil, err
@@ -303,7 +330,7 @@ func (s *Service) synthesize(ctx context.Context, userID, text, path string) *sp
 		}()
 		cctx, cancel := context.WithTimeout(context.WithoutCancel(ctx), speechTimeout)
 		defer cancel()
-		c.audio, c.err = s.AI.Speech(cctx, text)
+		c.audio, c.err = s.say(cctx, text)
 		if c.err != nil {
 			return
 		}
@@ -320,7 +347,7 @@ func (s *Service) synthesize(ctx context.Context, userID, text, path string) *sp
 
 // warmSpeech makes a new plan's audio in the background.
 func (s *Service) warmSpeech(userID string, p tutor.Plan) {
-	if s.WarmSpeech {
+	if s.WarmSpeech && s.LiveSpeech {
 		s.warmTexts(userID, tutor.SpeechTexts(p, warmMaxTexts))
 	}
 }
@@ -346,7 +373,7 @@ func (s *Service) WarmAllLessons() {
 	if len(missing) > 0 {
 		slog.Warn("lesson sentences without recorded audio; run `go run ./cmd/server bundle-audio` and commit the files", "count", len(missing))
 	}
-	if !s.WarmSpeech {
+	if !s.WarmSpeech || !s.LiveSpeech {
 		return
 	}
 	// No learner: shared lesson audio doesn't count against anyone's budget.
@@ -374,7 +401,7 @@ func (s *Service) BundleLessonAudio(ctx context.Context, fresh bool) (written in
 				var err error
 				if fresh {
 					cctx, cancel := context.WithTimeout(ctx, speechTimeout)
-					b, err = s.AI.Speech(cctx, t)
+					b, err = s.say(cctx, t)
 					cancel()
 				} else {
 					b, err = s.Speech(ctx, "", t)
@@ -394,8 +421,29 @@ func (s *Service) BundleLessonAudio(ctx context.Context, fresh bool) (written in
 			todo = again
 		}
 		failed = append(failed, todo...)
+		pruneAudio(cur)
 	}
 	return written, failed
+}
+
+// pruneAudio removes recordings no lesson reads any more (after edits).
+func pruneAudio(cur *curriculum.Curriculum) {
+	keep := map[string]bool{}
+	for _, t := range tutor.LessonSpeechTexts(cur) {
+		keep[filepath.Base(cur.AudioPath(t))] = true
+	}
+	dir := filepath.Join(cur.Dir, "audio")
+	entries, err := os.ReadDir(dir)
+	if err != nil {
+		return
+	}
+	for _, e := range entries {
+		if strings.HasSuffix(e.Name(), ".mp3") && !keep[e.Name()] {
+			if err := os.Remove(filepath.Join(dir, e.Name())); err == nil {
+				slog.Info("removed unused lesson audio", "file", e.Name())
+			}
+		}
+	}
 }
 
 func (s *Service) warmTexts(userID string, texts []string) {

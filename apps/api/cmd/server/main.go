@@ -86,7 +86,11 @@ func run() error {
 	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta"),
 		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000),
 		// Pre-make lesson audio when the provider has a voice (WARM_SPEECH=off to disable).
-		WarmSpeech: provider.Name() != "mock" && env("WARM_SPEECH", "on") != "off",
+		// Audio is made only on purpose (bundle-audio, after review) unless
+		// LIVE_SPEECH=on lets the server make missing audio itself, and
+		// WARM_SPEECH=on makes it ahead of time.
+		LiveSpeech: provider.Name() != "mock" && env("LIVE_SPEECH", "off") == "on",
+		WarmSpeech: provider.Name() != "mock" && env("WARM_SPEECH", "off") == "on",
 		// Kept across restarts so lesson audio is only ever made once.
 		SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts")}
 	svc.WarmAllLessons()
@@ -228,7 +232,7 @@ func bundleAudio(fresh bool) error {
 	if err != nil {
 		return err
 	}
-	svc := &learning.Service{Catalog: catalog, AI: provider, SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts")}
+	svc := &learning.Service{Catalog: catalog, AI: provider, SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts"), LiveSpeech: true}
 	if fresh {
 		slog.Info("re-recording every lesson sentence", "provider", provider.Name(),
 			"model", env("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"), "voice", env("OPENAI_TTS_VOICE", "alloy"))
