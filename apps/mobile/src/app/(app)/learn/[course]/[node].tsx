@@ -7,7 +7,7 @@ import { AssessmentForm } from '@/components/tutor/AssessmentForm';
 import { ChatBubble, PhaseDivider, TypingBubble } from '@/components/tutor/ChatBubble';
 import { Composer } from '@/components/tutor/Composer';
 import { ResultPanel } from '@/components/tutor/ResultPanel';
-import { ErrorState, LoadingState, pad2, PageDots } from '@/components/ui/Bits';
+import { ErrorState, LoadingState, PageDots } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
 import { DotPattern } from '@/components/ui/Decor';
 import { IconButton, PillButton } from '@/components/ui/PillButton';
@@ -98,7 +98,7 @@ export default function LearnScreen() {
           <View style={{ alignItems: 'flex-end', gap: 6 }}>
             <PageDots count={s.steps.length} active={stepIndex(s)} />
             <Eyebrow color={s.phase === 'REVIEW' ? colors.orange : colors.muted}>
-              {s.phase === 'MASTERED' ? t('phase.complete') : `${pad2(Math.min(stepIndex(s) + 1, s.steps.length))}/${pad2(s.steps.length)} · ${t(`phase.${s.phase}`)}`}
+              {s.phase === 'MASTERED' ? t('phase.complete') : `${Math.min(stepIndex(s) + 1, s.steps.length)}/${s.steps.length} · ${t(`phase.${s.phase}`)}`}
             </Eyebrow>
           </View>
         ) : null}

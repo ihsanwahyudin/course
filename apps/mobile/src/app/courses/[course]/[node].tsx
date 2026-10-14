@@ -141,8 +141,8 @@ export default function NodeScreen() {
         </View>
         <View style={{ borderTopWidth: 1, borderTopColor: 'rgba(255,255,255,0.1)' }}>
           {[
-            [t('node.objectives'), pad2(node.objectives.length)],
-            [t('node.keyIdeas'), pad2(node.keyPoints.length)],
+            [t('node.objectives'), node.objectives.length],
+            [t('node.keyIdeas'), node.keyPoints.length],
             [t('node.bestScore'), node.masteryScore != null ? String(node.masteryScore) : '—'],
           ].map(([k, v]) => (
             <View key={k} style={styles.inkRow}>

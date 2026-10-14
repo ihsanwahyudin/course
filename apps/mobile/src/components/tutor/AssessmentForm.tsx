@@ -22,7 +22,7 @@ export function AssessmentForm({ session, onSubmit, submitting, error }: { sessi
       <View style={{ gap: 10 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <Eyebrow color={colors.accent}>{t('assessment.title')}</Eyebrow>
-          <Eyebrow>{t('assessment.answered', { done: pad2(answered), total: pad2(items.length) })}</Eyebrow>
+          <Eyebrow>{t('assessment.answered', { done: answered, total: items.length })}</Eyebrow>
         </View>
         <Heading size={30}>{t('assessment.heading')}</Heading>
         <Text color={colors.muted}>{t('assessment.intro', { threshold: session.node.masteryThreshold, title: session.node.title })}</Text>

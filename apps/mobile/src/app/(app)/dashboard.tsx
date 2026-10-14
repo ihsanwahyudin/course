@@ -5,7 +5,7 @@ import { ComingSoonCard, CourseCard } from '@/components/CourseCard';
 import { Headline } from '@/components/Headline';
 import { PageHeader } from '@/components/PageHeader';
 import { Avatar } from '@/components/ui/FloatingNav';
-import { ErrorState, LoadingState, pad2, ProgressBar } from '@/components/ui/Bits';
+import { ErrorState, LoadingState, ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
 import { Icon } from '@/components/ui/Icon';
 import { ArrowBadge, PillButton } from '@/components/ui/PillButton';
@@ -126,7 +126,7 @@ export default function DashboardScreen() {
         <Icon name="flame" size={18} color={data.streak.current ? colors.orange : 'rgba(17,17,19,0.35)'} />
       </View>
       <Heading size={wide ? 72 : 52} tabular>
-        {pad2(data.streak.current)}
+        {data.streak.current}
         <Span color={colors.accent}>{t('dashboard.dayUnit')}</Span>
       </Heading>
       <Text size={13} color="rgba(17,17,19,0.7)">
@@ -140,7 +140,7 @@ export default function DashboardScreen() {
       <Eyebrow>{t('dashboard.mastered')}</Eyebrow>
       <View>
         <Heading size={wide ? 64 : 48} tabular>
-          {pad2(data.totalMastered)}
+          {data.totalMastered}
         </Heading>
         <Text size={13} color="rgba(17,17,19,0.6)" style={{ marginTop: 6 }}>
           {t('dashboard.masteredSub', { week: data.weekly.mastered, courses: data.courses.length })}
@@ -192,7 +192,7 @@ export default function DashboardScreen() {
     <Card reveal={5} style={{ width: w(2), gap: 14 }}>
       <View style={[styles.row, { justifyContent: 'space-between' }]}>
         <Eyebrow>{t('dashboard.pickUp')}</Eyebrow>
-        <Eyebrow>{t('common.open', { n: pad2(data.openSessions.length) })}</Eyebrow>
+        <Eyebrow>{t('common.open', { n: data.openSessions.length })}</Eyebrow>
       </View>
       {data.openSessions.length === 0 ? (
         <Text color={colors.muted}>{t('dashboard.noOpen')}</Text>

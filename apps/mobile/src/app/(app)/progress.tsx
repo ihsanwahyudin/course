@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { Headline } from '@/components/Headline';
 import { PageHeader } from '@/components/PageHeader';
-import { Chip, ErrorState, LoadingState, pad2, ProgressBar } from '@/components/ui/Bits';
+import { Chip, ErrorState, LoadingState, ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
@@ -65,7 +65,7 @@ export default function ProgressScreen() {
               <View>
                 <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
                   <Heading size={72} color={colors.white} tabular>
-                    {pad2(data.mastered.length)}
+                    {data.mastered.length}
                   </Heading>
                   <Heading size={32} color="rgba(255,255,255,0.45)" style={{ marginBottom: 6 }}>
                     {`/${data.summary.targetNodes}`}
@@ -109,7 +109,7 @@ export default function ProgressScreen() {
                 ].map(([k, v]) => (
                   <View key={k}>
                     <Heading size={40} tabular>
-                      {pad2(v as number)}
+                      {v}
                     </Heading>
                     <Text size={13} color="rgba(17,17,19,0.7)" style={{ marginTop: 4 }}>
                       {k}
@@ -141,7 +141,7 @@ export default function ProgressScreen() {
             <Card reveal={2} padding={wide ? 32 : 24} style={{ gap: 16 }}>
               <View style={[styles.row, { justifyContent: 'space-between' }]}>
                 <Eyebrow>{t('progress.history')}</Eyebrow>
-                <Eyebrow>{t('common.recent', { n: pad2(data.recentAttempts.length) })}</Eyebrow>
+                <Eyebrow>{t('common.recent', { n: data.recentAttempts.length })}</Eyebrow>
               </View>
               {data.recentAttempts.length === 0 ? (
                 <Text color={colors.muted}>{t('progress.noHistory')}</Text>

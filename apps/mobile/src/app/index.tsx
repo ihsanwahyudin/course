@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { ComingSoonCard, CourseCard } from '@/components/CourseCard';
 import { Headline } from '@/components/Headline';
-import { ErrorState, LoadingState, pad2, SectionHeader } from '@/components/ui/Bits';
+import { ErrorState, LoadingState, SectionHeader } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
 import { GradientRing, PulseDot } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
@@ -69,7 +69,7 @@ export default function Landing() {
     <Card reveal={1} style={{ width: w(1), height: rowH, minHeight: wide ? undefined : 170, justifyContent: 'space-between' }}>
       <Eyebrow>{t('landing.coursesTile')}</Eyebrow>
       <Heading size={wide ? 72 : 52} tabular>
-        {pad2(list.length)}
+        {list.length}
         <Span color={colors.accent}>+</Span>
       </Heading>
       <Text size={13} color="rgba(17,17,19,0.7)">
@@ -83,7 +83,7 @@ export default function Landing() {
       <Eyebrow>{t('landing.readyTile')}</Eyebrow>
       <View>
         <Heading size={wide ? 44 : 26} tabular>
-          {t('landing.lessonsCount', { n: pad2(lessons) })}
+          {t('landing.lessonsCount', { n: lessons })}
         </Heading>
         <Text size={13} color="rgba(17,17,19,0.6)" style={{ marginTop: 6 }}>
           {t('landing.acrossSkills', { n: skills })}
