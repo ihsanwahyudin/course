@@ -111,6 +111,9 @@ func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
 }
 
 // Speech calls the text-to-speech endpoint and returns MP3 audio.
+// SpeechVoice names the model and voice, so cached audio changes with them.
+func (o *OpenAI) SpeechVoice() string { return o.TTSModel + "/" + o.TTSVoice }
+
 func (o *OpenAI) Speech(ctx context.Context, text string) ([]byte, error) {
 	ctx, cancel := context.WithTimeout(ctx, 60*time.Second)
 	defer cancel()

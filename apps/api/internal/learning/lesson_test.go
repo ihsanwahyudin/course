@@ -669,11 +669,16 @@ func TestRecordedLessonAudioNeedsNoProvider(t *testing.T) {
 
 	// Bundling writes every sentence once; a second run writes nothing.
 	cur.Dir = t.TempDir()
-	written, failed := s.BundleLessonAudio(ctx)
+	written, failed := s.BundleLessonAudio(ctx, false)
 	if len(failed) != 0 || written != len(tutor.LessonSpeechTexts(cur)) {
 		t.Fatalf("bundle: %d written, %d failed", written, len(failed))
 	}
-	if written, _ = s.BundleLessonAudio(ctx); written != 0 {
+	if written, _ = s.BundleLessonAudio(ctx, false); written != 0 {
 		t.Fatalf("second bundle wrote %d", written)
+	}
+	// -fresh re-records everything from the provider (new voice or model).
+	before := am.speech.Load()
+	if written, _ = s.BundleLessonAudio(ctx, true); written != len(tutor.LessonSpeechTexts(cur)) || int(am.speech.Load()-before) != written {
+		t.Fatalf("fresh bundle: %d written, %d provider calls", written, am.speech.Load()-before)
 	}
 }

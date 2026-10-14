@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"slices"
 	"strconv"
 	"strings"
 	"syscall"
@@ -27,7 +28,8 @@ func main() {
 	slog.SetDefault(slog.New(slog.NewTextHandler(os.Stdout, nil)))
 	loadDotEnv(".env")
 	if len(os.Args) > 1 && os.Args[1] == "bundle-audio" {
-		if err := bundleAudio(); err != nil {
+		// -fresh re-records everything (after changing OPENAI_TTS_VOICE/MODEL).
+		if err := bundleAudio(slices.Contains(os.Args[2:], "-fresh")); err != nil {
 			slog.Error("bundle-audio", "err", err)
 			os.Exit(1)
 		}
@@ -217,7 +219,7 @@ func loadDotEnv(path string) {
 // so it can be committed: deployments then serve lesson audio from the repo
 // and never call the speech API for it. Only new sentences are synthesised
 // (from the local speech cache when possible). No database needed.
-func bundleAudio() error {
+func bundleAudio(fresh bool) error {
 	catalog, err := curriculum.LoadCatalog(env("COURSES_DIR", "../../packages/courses"))
 	if err != nil {
 		return err
@@ -227,7 +229,11 @@ func bundleAudio() error {
 		return err
 	}
 	svc := &learning.Service{Catalog: catalog, AI: provider, SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts")}
-	written, failed := svc.BundleLessonAudio(context.Background())
+	if fresh {
+		slog.Info("re-recording every lesson sentence", "provider", provider.Name(),
+			"model", env("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"), "voice", env("OPENAI_TTS_VOICE", "alloy"))
+	}
+	written, failed := svc.BundleLessonAudio(context.Background(), fresh)
 	for _, t := range failed {
 		slog.Warn("no audio", "sentence", t)
 	}

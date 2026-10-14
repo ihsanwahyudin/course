@@ -234,7 +234,11 @@ func (s *Service) bundledAudio(text string) ([]byte, bool) {
 }
 
 func (s *Service) speechPath(text string) string {
-	h := sha256.Sum256([]byte(s.AI.Name() + "\x00" + text))
+	voice := s.AI.Name()
+	if v, ok := s.AI.(interface{ SpeechVoice() string }); ok {
+		voice += "/" + v.SpeechVoice()
+	}
+	h := sha256.Sum256([]byte(voice + "\x00" + text))
 	dir := s.SpeechCacheDir
 	if dir == "" {
 		dir = filepath.Join(os.TempDir(), "fluentpath-tts")
@@ -353,18 +357,28 @@ func (s *Service) WarmAllLessons() {
 // course's audio folder (for committing to the repo). Sentences that already
 // have a file are skipped; the speech cache is used before the provider.
 // It returns how many files were written and the sentences that failed.
-func (s *Service) BundleLessonAudio(ctx context.Context) (written int, failed []string) {
+// fresh re-records every sentence straight from the provider (after
+// changing the voice or model), ignoring existing files and the cache.
+func (s *Service) BundleLessonAudio(ctx context.Context, fresh bool) (written int, failed []string) {
 	for _, cur := range s.Catalog.Courses {
 		var todo []string
 		for _, t := range tutor.LessonSpeechTexts(cur) {
-			if _, err := os.Stat(cur.AudioPath(t)); err != nil {
+			if _, err := os.Stat(cur.AudioPath(t)); fresh || err != nil {
 				todo = append(todo, t)
 			}
 		}
 		for round := 0; round < 3 && len(todo) > 0; round++ {
 			var again []string
 			for _, t := range todo {
-				b, err := s.Speech(ctx, "", t)
+				var b []byte
+				var err error
+				if fresh {
+					cctx, cancel := context.WithTimeout(ctx, speechTimeout)
+					b, err = s.AI.Speech(cctx, t)
+					cancel()
+				} else {
+					b, err = s.Speech(ctx, "", t)
+				}
 				if err == nil {
 					err = os.MkdirAll(filepath.Dir(cur.AudioPath(t)), 0o755)
 				}
