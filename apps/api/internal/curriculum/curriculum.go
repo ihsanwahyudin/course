@@ -36,6 +36,15 @@ type Node struct {
 	Objectives       []Objective `json:"objectives"`
 	MasteryThreshold int         `json:"masteryThreshold"`
 	ContentStatus    string      `json:"contentStatus"`
+	// Translations keyed by language; never sent to clients (views use
+	// the localized copy from Curriculum.LocalNode).
+	I18n map[string]NodeText `json:"i18n,omitempty"`
+}
+
+type NodeText struct {
+	Title      string            `json:"title"`
+	Summary    string            `json:"summary"`
+	Objectives map[string]string `json:"objectives"` // objective id -> text
 }
 
 func (n *Node) Ready() bool { return n.ContentStatus == ContentReady }
@@ -46,12 +55,18 @@ type LevelInfo struct {
 	Description string `json:"description"`
 }
 
-type levelFile struct {
-	Version     string `json:"version"`
-	Level       string `json:"level"`
+type LevelText struct {
 	Title       string `json:"title"`
 	Description string `json:"description"`
-	Nodes       []Node `json:"nodes"`
+}
+
+type levelFile struct {
+	Version     string               `json:"version"`
+	Level       string               `json:"level"`
+	Title       string               `json:"title"`
+	Description string               `json:"description"`
+	I18n        map[string]LevelText `json:"i18n,omitempty"`
+	Nodes       []Node               `json:"nodes"`
 }
 
 type Example struct {
@@ -89,12 +104,31 @@ type Lesson struct {
 	GuidedPractice    []PracticePrompt `json:"guidedPractice"`
 	IndependentPrompt []PracticePrompt `json:"independentPractice"`
 	Assessment        []AssessmentItem `json:"assessment"`
+	I18n              map[string]struct {
+		Intro string `json:"intro"`
+	} `json:"i18n,omitempty"`
+}
+
+// IntroIn returns the lesson's opening message in a language (English fallback).
+func (l *Lesson) IntroIn(lang string) string {
+	if t, ok := l.I18n[lang]; ok && strings.TrimSpace(t.Intro) != "" {
+		return t.Intro
+	}
+	return l.Intro
 }
 
 // TutorPolicy is the course-specific teaching contract given to the AI.
 type TutorPolicy struct {
 	Policy          string `json:"policy"`
 	EvaluatorPolicy string `json:"evaluatorPolicy"`
+	// LanguagePolicy adds per-UI-language guidance, e.g. "explain mainly in Indonesian".
+	LanguagePolicy map[string]string `json:"languagePolicy,omitempty"`
+}
+
+type CourseText struct {
+	Title       string `json:"title"`
+	Tagline     string `json:"tagline"`
+	Description string `json:"description"`
 }
 
 // Course is the metadata in <course>/course.json.
@@ -109,7 +143,14 @@ type Course struct {
 	TargetLevel string      `json:"targetLevel"`
 	LevelIDs    []string    `json:"levels"` // ordered bands; each has <id>.json
 	Tutor       TutorPolicy `json:"tutor"`
+	// Languages the course content is available in; "en" is the base and
+	// every other listed language must be fully translated.
+	Languages []string              `json:"languages,omitempty"`
+	I18n      map[string]CourseText `json:"i18n,omitempty"`
 }
+
+// BaseLanguage is the language course files are written in.
+const BaseLanguage = "en"
 
 const (
 	CoursePublished  = "published"
@@ -124,6 +165,9 @@ type Curriculum struct {
 	Nodes   []*Node // topologically sorted (stable: level, then file order)
 	byID    map[string]*Node
 	lessons map[string]*Lesson
+	// Per-language copies of nodes and levels with text swapped in.
+	localNodes  map[string]map[string]*Node
+	localLevels map[string][]LevelInfo
 	// successors maps a node to nodes that list it as a prerequisite.
 	successors map[string][]string
 }
@@ -229,6 +273,19 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 			errs = append(errs, fmt.Errorf("level %s has version %q, others have %q", f.Level, f.Version, c.Version))
 		}
 		c.Levels = append(c.Levels, LevelInfo{Level: f.Level, Title: f.Title, Description: f.Description})
+		for _, lang := range course.Languages {
+			if lang == BaseLanguage {
+				continue
+			}
+			t := f.I18n[lang]
+			if strings.TrimSpace(t.Title) == "" {
+				errs = append(errs, fmt.Errorf("level %s: missing %q title", f.Level, lang))
+			}
+			if c.localLevels == nil {
+				c.localLevels = map[string][]LevelInfo{}
+			}
+			c.localLevels[lang] = append(c.localLevels[lang], LevelInfo{Level: f.Level, Title: t.Title, Description: t.Description})
+		}
 		for i := range f.Nodes {
 			n := &f.Nodes[i]
 			if n.Level == "" {
@@ -303,6 +360,7 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 	}
 
 	errs = append(errs, validateLessons(c)...)
+	errs = append(errs, validateTranslations(c)...)
 
 	if len(errs) == 0 {
 		sorted, err := topoSort(ordered, c.byID)
@@ -319,6 +377,7 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 	if len(errs) > 0 {
 		return nil, &ValidationError{Errs: errs}
 	}
+	c.buildLocalized()
 	return c, nil
 }
 
@@ -448,6 +507,105 @@ func (e *ValidationError) Error() string {
 		msgs[i] = "  - " + err.Error()
 	}
 	return fmt.Sprintf("curriculum invalid (%d problems):\n%s", len(e.Errs), strings.Join(msgs, "\n"))
+}
+
+// validateTranslations requires every non-base language a course declares
+// to be complete, so a learner never sees a half-translated roadmap.
+func validateTranslations(c *Curriculum) []error {
+	var errs []error
+	hasBase := len(c.Languages) == 0
+	for _, lang := range c.Languages {
+		if lang == BaseLanguage {
+			hasBase = true
+			continue
+		}
+		ct := c.I18n[lang]
+		if strings.TrimSpace(ct.Title) == "" || strings.TrimSpace(ct.Tagline) == "" || strings.TrimSpace(ct.Description) == "" {
+			errs = append(errs, fmt.Errorf("course: missing %q title, tagline or description", lang))
+		}
+		if strings.TrimSpace(c.Tutor.LanguagePolicy[lang]) == "" {
+			errs = append(errs, fmt.Errorf("course: missing tutor.languagePolicy for %q", lang))
+		}
+		for _, n := range c.byID {
+			t, ok := n.I18n[lang]
+			if !ok || strings.TrimSpace(t.Title) == "" || strings.TrimSpace(t.Summary) == "" {
+				errs = append(errs, fmt.Errorf("node %q: missing %q title or summary", n.ID, lang))
+				continue
+			}
+			for _, o := range n.Objectives {
+				if strings.TrimSpace(t.Objectives[o.ID]) == "" {
+					errs = append(errs, fmt.Errorf("node %q: missing %q text for objective %q", n.ID, lang, o.ID))
+				}
+			}
+		}
+		for id, l := range c.lessons {
+			if strings.TrimSpace(l.I18n[lang].Intro) == "" {
+				errs = append(errs, fmt.Errorf("lesson %q: missing %q intro", id, lang))
+			}
+		}
+	}
+	if !hasBase {
+		errs = append(errs, fmt.Errorf("course languages must include %q", BaseLanguage))
+	}
+	sort.Slice(errs, func(i, j int) bool { return errs[i].Error() < errs[j].Error() })
+	return errs
+}
+
+// buildLocalized precomputes per-language node copies (and base copies
+// without the i18n payload) so views never mutate shared nodes.
+func (c *Curriculum) buildLocalized() {
+	c.localNodes = map[string]map[string]*Node{}
+	langs := append([]string{BaseLanguage}, c.Languages...)
+	for _, lang := range langs {
+		if c.localNodes[lang] != nil {
+			continue
+		}
+		m := map[string]*Node{}
+		for _, n := range c.Nodes {
+			cp := *n
+			cp.I18n = nil
+			if t, ok := n.I18n[lang]; ok && lang != BaseLanguage {
+				cp.Title, cp.Summary = t.Title, t.Summary
+				cp.Objectives = make([]Objective, len(n.Objectives))
+				for i, o := range n.Objectives {
+					cp.Objectives[i] = Objective{ID: o.ID, Text: t.Objectives[o.ID]}
+				}
+			}
+			m[n.ID] = &cp
+		}
+		c.localNodes[lang] = m
+	}
+}
+
+// Lang returns lang if the course supports it, otherwise the base language.
+func (c *Curriculum) Lang(lang string) string {
+	for _, l := range c.Languages {
+		if l == lang {
+			return lang
+		}
+	}
+	return BaseLanguage
+}
+
+// LocalNode returns the node with titles, summary and objectives in lang.
+func (c *Curriculum) LocalNode(id, lang string) *Node {
+	return c.localNodes[c.Lang(lang)][id]
+}
+
+// LocalLevels returns level titles and descriptions in lang.
+func (c *Curriculum) LocalLevels(lang string) []LevelInfo {
+	if l, ok := c.localLevels[c.Lang(lang)]; ok {
+		return l
+	}
+	return c.Levels
+}
+
+// Text returns the course title, tagline and description in lang.
+func (c *Curriculum) Text(lang string) CourseText {
+	if t, ok := c.I18n[c.Lang(lang)]; ok {
+		return t
+	}
+	return CourseText{c.Title, c.Tagline, c.Description}
 }
 
 var slugRe = regexp.MustCompile(`^[a-z0-9][a-z0-9-]{0,39}$`)

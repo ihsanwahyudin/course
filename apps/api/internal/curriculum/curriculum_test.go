@@ -125,3 +125,43 @@ func TestLoadCatalog(t *testing.T) {
 		t.Fatal("empty courses dir should fail")
 	}
 }
+
+func TestValidatorRequiresCompleteTranslations(t *testing.T) {
+	course := testCourse
+	course.Languages = []string{"en", "id"}
+	course.I18n = map[string]CourseText{"id": {Title: "Tes", Tagline: "t", Description: "d"}}
+	course.Tutor.LanguagePolicy = map[string]string{"id": "Jelaskan dalam Bahasa Indonesia."}
+	node := Node{ID: "a", Title: "A", Objectives: []Objective{{ID: "o1", Text: "one"}, {ID: "o2", Text: "two"}}, ContentStatus: ContentReady,
+		I18n: map[string]NodeText{"id": {Title: "A-id", Summary: "ringkas", Objectives: map[string]string{"o1": "satu"}}}}
+	l := readyLesson("a", "o1")
+	l.Assessment = append(l.Assessment, AssessmentItem{ID: "a-2", ObjectiveID: "o2", Prompt: "q", AcceptableAnswers: []string{"x"}})
+	_, err := Build(course, []levelFile{{Version: "1", Level: "A0", Nodes: []Node{node}}}, map[string]*Lesson{"a": l})
+	for _, want := range []string{`level A0: missing "id" title`, `node "a": missing "id" text for objective "o2"`, `lesson "a": missing "id" intro`} {
+		wantErr(t, err, want)
+	}
+}
+
+func TestLocalizedViews(t *testing.T) {
+	c, err := LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	id := c.LocalNode("a0-pronouns", "id")
+	en := c.LocalNode("a0-pronouns", "en")
+	if id.Title != "Kata Ganti Orang" || en.Title != "Personal Pronouns" || id.I18n != nil || en.I18n != nil {
+		t.Fatalf("localized nodes wrong: %q %q", id.Title, en.Title)
+	}
+	if id.Objectives[0].ID != en.Objectives[0].ID || id.Objectives[0].Text == en.Objectives[0].Text {
+		t.Fatalf("objective ids must stay, text must change: %+v", id.Objectives[0])
+	}
+	if c.LocalNode("a0-pronouns", "fr").Title != "Personal Pronouns" || c.Lang("fr") != "en" {
+		t.Fatal("unsupported languages fall back to English")
+	}
+	if c.Text("id").Title != "Bahasa Inggris" || c.LocalLevels("id")[0].Title != "Dasar" {
+		t.Fatal("course/level text not localized")
+	}
+	l, _ := c.Lesson("a0-pronouns")
+	if l.IntroIn("id") == l.Intro || l.IntroIn("fr") != l.Intro {
+		t.Fatal("lesson intro localization wrong")
+	}
+}

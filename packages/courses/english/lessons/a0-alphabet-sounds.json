@@ -12,41 +12,144 @@
       "title": "Letter names are different from Indonesian",
       "explanation": "English letter names sound different. A sounds like 'ay' (as in 'day'), E like 'ee' (as in 'see'), I like 'eye', G like 'jee', J like 'jay'.",
       "examples": [
-        { "en": "A — 'ay', like the end of 'day'", "id": "A dibaca 'ei', bukan 'a'" },
-        { "en": "I — sounds like 'eye'", "id": "I dibaca 'ai', bukan 'i'" }
+        {
+          "en": "A — 'ay', like the end of 'day'",
+          "id": "A dibaca 'ei', bukan 'a'"
+        },
+        {
+          "en": "I — sounds like 'eye'",
+          "id": "I dibaca 'ai', bukan 'i'"
+        }
       ]
     },
     {
       "title": "Five vowels",
       "explanation": "The vowel letters are A, E, I, O and U. Every other letter is a consonant. (Y sometimes acts like a vowel, as in 'my'.)",
       "examples": [
-        { "en": "c-A-t has one vowel: A", "id": "Huruf vokal: A, E, I, O, U" },
-        { "en": "b-O-O-k has two vowels: O and O", "id": "book = buku" }
+        {
+          "en": "c-A-t has one vowel: A",
+          "id": "Huruf vokal: A, E, I, O, U"
+        },
+        {
+          "en": "b-O-O-k has two vowels: O and O",
+          "id": "book = buku"
+        }
       ]
     },
     {
       "title": "Spelling aloud",
       "explanation": "To spell a word, say each letter name in order. For double letters you can say 'double': B-O-O-K is 'B, double O, K'.",
       "examples": [
-        { "en": "How do you spell 'dog'? D-O-G.", "id": "Bagaimana mengeja 'dog'?" },
-        { "en": "My name is Sari: S-A-R-I.", "id": "Nama saya Sari: S-A-R-I." }
+        {
+          "en": "How do you spell 'dog'? D-O-G.",
+          "id": "Bagaimana mengeja 'dog'?"
+        },
+        {
+          "en": "My name is Sari: S-A-R-I.",
+          "id": "Nama saya Sari: S-A-R-I."
+        }
       ]
     }
   ],
   "guidedPractice": [
-    { "objectiveId": "letter-names", "prompt": "Which letter's name sounds like the word 'see'?", "expected": ["c"], "hint": "It is the third letter of the alphabet." },
-    { "objectiveId": "vowels", "prompt": "Which of these letters are vowels: b, e, k, o?", "expected": ["e and o", "e o", "o and e", "o e"], "hint": "The vowels are A, E, I, O, U." },
-    { "objectiveId": "spelling", "prompt": "Spell the word 'cat' with dashes between the letters.", "expected": ["c a t"], "hint": "Three letters: the first sounds like 'see'." }
+    {
+      "objectiveId": "letter-names",
+      "prompt": "Which letter's name sounds like the word 'see'?",
+      "expected": [
+        "c"
+      ],
+      "hint": "It is the third letter of the alphabet."
+    },
+    {
+      "objectiveId": "vowels",
+      "prompt": "Which of these letters are vowels: b, e, k, o?",
+      "expected": [
+        "e and o",
+        "e o",
+        "o and e",
+        "o e"
+      ],
+      "hint": "The vowels are A, E, I, O, U."
+    },
+    {
+      "objectiveId": "spelling",
+      "prompt": "Spell the word 'cat' with dashes between the letters.",
+      "expected": [
+        "c a t"
+      ],
+      "hint": "Three letters: the first sounds like 'see'."
+    }
   ],
   "independentPractice": [
-    { "objectiveId": "letter-names", "prompt": "Which letter's name sounds like the word 'why'?", "expected": ["y"], "hint": "It is the second-to-last letter." },
-    { "objectiveId": "spelling", "prompt": "Spell the word 'book' with dashes.", "expected": ["b o o k"], "hint": "It has a double letter in the middle." }
+    {
+      "objectiveId": "letter-names",
+      "prompt": "Which letter's name sounds like the word 'why'?",
+      "expected": [
+        "y"
+      ],
+      "hint": "It is the second-to-last letter."
+    },
+    {
+      "objectiveId": "spelling",
+      "prompt": "Spell the word 'book' with dashes.",
+      "expected": [
+        "b o o k"
+      ],
+      "hint": "It has a double letter in the middle."
+    }
   ],
   "assessment": [
-    { "id": "alpha-1", "objectiveId": "letter-names", "prompt": "Which letter's name sounds like the word 'eye'?", "acceptableAnswers": ["i"], "rubric": "Correct answer: I. Accept 'I' or 'the letter I'." },
-    { "id": "alpha-2", "objectiveId": "letter-names", "prompt": "Which letter's name sounds like the word 'you'?", "acceptableAnswers": ["u"], "rubric": "Correct answer: U." },
-    { "id": "alpha-3", "objectiveId": "vowels", "prompt": "Write the vowel letters in the word 'table'.", "acceptableAnswers": ["a e", "a and e", "a, e"], "rubric": "Correct: A and E (in any order). Missing one vowel = 50." },
-    { "id": "alpha-4", "objectiveId": "spelling", "prompt": "Spell the word 'house' with dashes between the letters.", "acceptableAnswers": ["h o u s e"], "rubric": "Correct: H-O-U-S-E. One wrong or missing letter = 50." },
-    { "id": "alpha-5", "objectiveId": "spelling", "prompt": "Spell the word 'green' with dashes between the letters.", "acceptableAnswers": ["g r e e n"], "rubric": "Correct: G-R-E-E-N. 'double E' is acceptable." }
-  ]
+    {
+      "id": "alpha-1",
+      "objectiveId": "letter-names",
+      "prompt": "Which letter's name sounds like the word 'eye'?",
+      "acceptableAnswers": [
+        "i"
+      ],
+      "rubric": "Correct answer: I. Accept 'I' or 'the letter I'."
+    },
+    {
+      "id": "alpha-2",
+      "objectiveId": "letter-names",
+      "prompt": "Which letter's name sounds like the word 'you'?",
+      "acceptableAnswers": [
+        "u"
+      ],
+      "rubric": "Correct answer: U."
+    },
+    {
+      "id": "alpha-3",
+      "objectiveId": "vowels",
+      "prompt": "Write the vowel letters in the word 'table'.",
+      "acceptableAnswers": [
+        "a e",
+        "a and e",
+        "a, e"
+      ],
+      "rubric": "Correct: A and E (in any order). Missing one vowel = 50."
+    },
+    {
+      "id": "alpha-4",
+      "objectiveId": "spelling",
+      "prompt": "Spell the word 'house' with dashes between the letters.",
+      "acceptableAnswers": [
+        "h o u s e"
+      ],
+      "rubric": "Correct: H-O-U-S-E. One wrong or missing letter = 50."
+    },
+    {
+      "id": "alpha-5",
+      "objectiveId": "spelling",
+      "prompt": "Spell the word 'green' with dashes between the letters.",
+      "acceptableAnswers": [
+        "g r e e n"
+      ],
+      "rubric": "Correct: G-R-E-E-N. 'double E' is acceptable."
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Hai, selamat datang di FluentPath! Di pelajaran pertama ini kita akan belajar nama huruf dalam bahasa Inggris, mengenali huruf vokal, dan mengeja kata dengan lantang — berguna setiap kali kamu menyebut nama atau email. Pemanasan: coba tulis nama depanmu huruf demi huruf, dengan tanda strip di antara hurufnya. (Contoh: B-U-D-I)"
+    }
+  }
 }

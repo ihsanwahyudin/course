@@ -12,41 +12,144 @@
       "title": "Everyday nouns",
       "explanation": "People: mother, father, friend, teacher. Places: house, school, office, market. Things: phone, book, table, water.",
       "examples": [
-        { "en": "a friend, a teacher, a house", "id": "teman, guru, rumah" },
-        { "en": "a phone, a book, a table", "id": "telepon, buku, meja" }
+        {
+          "en": "a friend, a teacher, a house",
+          "id": "teman, guru, rumah"
+        },
+        {
+          "en": "a phone, a book, a table",
+          "id": "telepon, buku, meja"
+        }
       ]
     },
     {
       "title": "Numbers 1–20",
       "explanation": "one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, then thirteen to nineteen with -teen, and twenty.",
       "examples": [
-        { "en": "13 = thirteen, 15 = fifteen", "id": "tiga belas, lima belas" },
-        { "en": "20 = twenty", "id": "dua puluh" }
+        {
+          "en": "13 = thirteen, 15 = fifteen",
+          "id": "tiga belas, lima belas"
+        },
+        {
+          "en": "20 = twenty",
+          "id": "dua puluh"
+        }
       ]
     },
     {
       "title": "Colours and adjectives go before the noun",
       "explanation": "Colours: red, blue, green, yellow, black, white. Adjectives: big, small, new, old, hot, cold. Say 'a red car', not 'a car red'.",
       "examples": [
-        { "en": "a big house", "id": "rumah besar" },
-        { "en": "a black cat", "id": "kucing hitam" }
+        {
+          "en": "a big house",
+          "id": "rumah besar"
+        },
+        {
+          "en": "a black cat",
+          "id": "kucing hitam"
+        }
       ]
     }
   ],
   "guidedPractice": [
-    { "objectiveId": "everyday-nouns", "prompt": "What is 'buku' in English?", "expected": ["book"], "hint": "You read it." },
-    { "objectiveId": "numbers", "prompt": "Write the number 15 in words.", "expected": ["fifteen"], "hint": "It ends in -teen." },
-    { "objectiveId": "colours-adjectives", "prompt": "Translate 'mobil merah' into English.", "expected": ["red car", "a red car"], "hint": "The colour comes first in English." }
+    {
+      "objectiveId": "everyday-nouns",
+      "prompt": "What is 'buku' in English?",
+      "expected": [
+        "book"
+      ],
+      "hint": "You read it."
+    },
+    {
+      "objectiveId": "numbers",
+      "prompt": "Write the number 15 in words.",
+      "expected": [
+        "fifteen"
+      ],
+      "hint": "It ends in -teen."
+    },
+    {
+      "objectiveId": "colours-adjectives",
+      "prompt": "Translate 'mobil merah' into English.",
+      "expected": [
+        "red car",
+        "a red car"
+      ],
+      "hint": "The colour comes first in English."
+    }
   ],
   "independentPractice": [
-    { "objectiveId": "numbers", "prompt": "Write the number 12 in words.", "expected": ["twelve"], "hint": "It comes after eleven." },
-    { "objectiveId": "colours-adjectives", "prompt": "Translate 'rumah besar' into English.", "expected": ["big house", "a big house", "large house"], "hint": "Adjective first, then the noun." }
+    {
+      "objectiveId": "numbers",
+      "prompt": "Write the number 12 in words.",
+      "expected": [
+        "twelve"
+      ],
+      "hint": "It comes after eleven."
+    },
+    {
+      "objectiveId": "colours-adjectives",
+      "prompt": "Translate 'rumah besar' into English.",
+      "expected": [
+        "big house",
+        "a big house",
+        "large house"
+      ],
+      "hint": "Adjective first, then the noun."
+    }
   ],
   "assessment": [
-    { "id": "vocab-1", "objectiveId": "everyday-nouns", "prompt": "What is 'guru' in English?", "acceptableAnswers": ["teacher"], "rubric": "Correct: teacher." },
-    { "id": "vocab-2", "objectiveId": "everyday-nouns", "prompt": "What is 'meja' in English?", "acceptableAnswers": ["table", "desk"], "rubric": "Correct: table (desk also acceptable)." },
-    { "id": "vocab-3", "objectiveId": "numbers", "prompt": "Write the number 18 in words.", "acceptableAnswers": ["eighteen"], "rubric": "Correct: eighteen. 'eighty' = 0; minor misspelling = 70." },
-    { "id": "vocab-4", "objectiveId": "numbers", "prompt": "Write the number 20 in words.", "acceptableAnswers": ["twenty"], "rubric": "Correct: twenty." },
-    { "id": "vocab-5", "objectiveId": "colours-adjectives", "prompt": "Translate 'kucing hitam' into English.", "acceptableAnswers": ["black cat", "a black cat"], "rubric": "Correct: (a) black cat. 'cat black' = 30 (word order)." }
-  ]
+    {
+      "id": "vocab-1",
+      "objectiveId": "everyday-nouns",
+      "prompt": "What is 'guru' in English?",
+      "acceptableAnswers": [
+        "teacher"
+      ],
+      "rubric": "Correct: teacher."
+    },
+    {
+      "id": "vocab-2",
+      "objectiveId": "everyday-nouns",
+      "prompt": "What is 'meja' in English?",
+      "acceptableAnswers": [
+        "table",
+        "desk"
+      ],
+      "rubric": "Correct: table (desk also acceptable)."
+    },
+    {
+      "id": "vocab-3",
+      "objectiveId": "numbers",
+      "prompt": "Write the number 18 in words.",
+      "acceptableAnswers": [
+        "eighteen"
+      ],
+      "rubric": "Correct: eighteen. 'eighty' = 0; minor misspelling = 70."
+    },
+    {
+      "id": "vocab-4",
+      "objectiveId": "numbers",
+      "prompt": "Write the number 20 in words.",
+      "acceptableAnswers": [
+        "twenty"
+      ],
+      "rubric": "Correct: twenty."
+    },
+    {
+      "id": "vocab-5",
+      "objectiveId": "colours-adjectives",
+      "prompt": "Translate 'kucing hitam' into English.",
+      "acceptableAnswers": [
+        "black cat",
+        "a black cat"
+      ],
+      "rubric": "Correct: (a) black cat. 'cat black' = 30 (word order)."
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Hai lagi! Pelajaran ini membangun kosakata pertamamu yang berguna: benda dan orang sehari-hari, angka 1 sampai 20, serta warna dan kata sifat sederhana. Pemanasan: sebutkan satu benda yang bisa kamu lihat di dekatmu sekarang — dalam bahasa Inggris, kalau bisa!"
+    }
+  }
 }

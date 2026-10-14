@@ -12,41 +12,140 @@
       "title": "Subject pronouns",
       "explanation": "I, you, he (a man/boy), she (a woman/girl), it (a thing or animal), we, they. Use them in place of a name at the start of a sentence.",
       "examples": [
-        { "en": "Andi is my friend. He is tall.", "id": "Andi teman saya. Dia (laki-laki) tinggi." },
-        { "en": "Rina is a doctor. She is kind.", "id": "Rina seorang dokter. Dia (perempuan) baik." }
+        {
+          "en": "Andi is my friend. He is tall.",
+          "id": "Andi teman saya. Dia (laki-laki) tinggi."
+        },
+        {
+          "en": "Rina is a doctor. She is kind.",
+          "id": "Rina seorang dokter. Dia (perempuan) baik."
+        }
       ]
     },
     {
       "title": "Possessive adjectives",
       "explanation": "my, your, his, her, its, our, their show who owns something. They go BEFORE the noun.",
       "examples": [
-        { "en": "This is my bag.", "id": "Ini tas saya." },
-        { "en": "Budi and Sari love their cat.", "id": "Budi dan Sari menyayangi kucing mereka." }
+        {
+          "en": "This is my bag.",
+          "id": "Ini tas saya."
+        },
+        {
+          "en": "Budi and Sari love their cat.",
+          "id": "Budi dan Sari menyayangi kucing mereka."
+        }
       ]
     },
     {
       "title": "Replacing nouns",
       "explanation": "One person: he or she. One thing: it. Two or more people or things: they. You + me: we.",
       "examples": [
-        { "en": "The phone is new. It is black.", "id": "Teleponnya baru. Warnanya hitam." },
-        { "en": "My parents are at home. They are happy.", "id": "Orang tua saya di rumah. Mereka senang." }
+        {
+          "en": "The phone is new. It is black.",
+          "id": "Teleponnya baru. Warnanya hitam."
+        },
+        {
+          "en": "My parents are at home. They are happy.",
+          "id": "Orang tua saya di rumah. Mereka senang."
+        }
       ]
     }
   ],
   "guidedPractice": [
-    { "objectiveId": "subject-pronouns", "prompt": "Rina is a teacher. ___ is friendly. (Which pronoun?)", "expected": ["she"], "hint": "Rina is a woman." },
-    { "objectiveId": "possessives", "prompt": "Complete: I have a car. This is ___ car.", "expected": ["my"], "hint": "The car belongs to 'I'." },
-    { "objectiveId": "pronoun-reference", "prompt": "Replace the words in capitals with a pronoun: THE BOOKS are on the table.", "expected": ["they"], "hint": "More than one thing." }
+    {
+      "objectiveId": "subject-pronouns",
+      "prompt": "Rina is a teacher. ___ is friendly. (Which pronoun?)",
+      "expected": [
+        "she"
+      ],
+      "hint": "Rina is a woman."
+    },
+    {
+      "objectiveId": "possessives",
+      "prompt": "Complete: I have a car. This is ___ car.",
+      "expected": [
+        "my"
+      ],
+      "hint": "The car belongs to 'I'."
+    },
+    {
+      "objectiveId": "pronoun-reference",
+      "prompt": "Replace the words in capitals with a pronoun: THE BOOKS are on the table.",
+      "expected": [
+        "they"
+      ],
+      "hint": "More than one thing."
+    }
   ],
   "independentPractice": [
-    { "objectiveId": "subject-pronouns", "prompt": "Andi and I are students. ___ are in class. (Which pronoun?)", "expected": ["we"], "hint": "Andi + me." },
-    { "objectiveId": "possessives", "prompt": "Complete: Budi has a dog. ___ dog is small.", "expected": ["his"], "hint": "The dog belongs to a man." }
+    {
+      "objectiveId": "subject-pronouns",
+      "prompt": "Andi and I are students. ___ are in class. (Which pronoun?)",
+      "expected": [
+        "we"
+      ],
+      "hint": "Andi + me."
+    },
+    {
+      "objectiveId": "possessives",
+      "prompt": "Complete: Budi has a dog. ___ dog is small.",
+      "expected": [
+        "his"
+      ],
+      "hint": "The dog belongs to a man."
+    }
   ],
   "assessment": [
-    { "id": "pron-1", "objectiveId": "subject-pronouns", "prompt": "My brother is 20. ___ is a student. (Write the pronoun.)", "acceptableAnswers": ["he"], "rubric": "Correct: He. 'She' or 'It' = 0." },
-    { "id": "pron-2", "objectiveId": "subject-pronouns", "prompt": "Sari and Dewi are sisters. ___ live in Bandung.", "acceptableAnswers": ["they"], "rubric": "Correct: They." },
-    { "id": "pron-3", "objectiveId": "possessives", "prompt": "Complete: Mrs. Lee loves ___ garden.", "acceptableAnswers": ["her"], "rubric": "Correct: her. 'she' = 20 (wrong form)." },
-    { "id": "pron-4", "objectiveId": "possessives", "prompt": "Complete: We have a new house. ___ house is big.", "acceptableAnswers": ["our"], "rubric": "Correct: Our." },
-    { "id": "pron-5", "objectiveId": "pronoun-reference", "prompt": "Rewrite with a pronoun for the words in capitals: THE COFFEE is hot.", "acceptableAnswers": ["it is hot", "it"], "rubric": "Correct: It is hot. Accept just 'It'." }
-  ]
+    {
+      "id": "pron-1",
+      "objectiveId": "subject-pronouns",
+      "prompt": "My brother is 20. ___ is a student. (Write the pronoun.)",
+      "acceptableAnswers": [
+        "he"
+      ],
+      "rubric": "Correct: He. 'She' or 'It' = 0."
+    },
+    {
+      "id": "pron-2",
+      "objectiveId": "subject-pronouns",
+      "prompt": "Sari and Dewi are sisters. ___ live in Bandung.",
+      "acceptableAnswers": [
+        "they"
+      ],
+      "rubric": "Correct: They."
+    },
+    {
+      "id": "pron-3",
+      "objectiveId": "possessives",
+      "prompt": "Complete: Mrs. Lee loves ___ garden.",
+      "acceptableAnswers": [
+        "her"
+      ],
+      "rubric": "Correct: her. 'she' = 20 (wrong form)."
+    },
+    {
+      "id": "pron-4",
+      "objectiveId": "possessives",
+      "prompt": "Complete: We have a new house. ___ house is big.",
+      "acceptableAnswers": [
+        "our"
+      ],
+      "rubric": "Correct: Our."
+    },
+    {
+      "id": "pron-5",
+      "objectiveId": "pronoun-reference",
+      "prompt": "Rewrite with a pronoun for the words in capitals: THE COFFEE is hot.",
+      "acceptableAnswers": [
+        "it is hot",
+        "it"
+      ],
+      "rubric": "Correct: It is hot. Accept just 'It'."
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Selamat datang kembali! Pelajaran hari ini tentang kata ganti — kata pendek seperti I, you, he, she dan they untuk menggantikan nama, plus my, your dan her untuk benda milik seseorang. Bahasa Indonesia memakai 'dia' untuk laki-laki maupun perempuan, jadi bahasa Inggris perlu sedikit lebih teliti. Pemanasan: kata apa yang kamu pakai dalam bahasa Inggris untuk menyebut dirimu sendiri?"
+    }
+  }
 }
