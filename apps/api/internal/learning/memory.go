@@ -220,7 +220,18 @@ type speechCall struct {
 	err   error
 }
 
-func speechText(text string) string { return strings.Join(strings.Fields(text), " ") }
+func speechText(text string) string { return curriculum.SpeechKey(text) }
+
+// bundledAudio returns a sentence's audio from a course folder (lesson
+// audio is committed to the repo), if any.
+func (s *Service) bundledAudio(text string) ([]byte, bool) {
+	for _, cur := range s.Catalog.Courses {
+		if b, err := os.ReadFile(cur.AudioPath(text)); err == nil {
+			return b, true
+		}
+	}
+	return nil, false
+}
 
 func (s *Service) speechPath(text string) string {
 	h := sha256.Sum256([]byte(s.AI.Name() + "\x00" + text))
@@ -237,6 +248,9 @@ func (s *Service) Speech(ctx context.Context, userID, text string) ([]byte, erro
 	text = speechText(text)
 	if text == "" || utf8.RuneCountInString(text) > maxSpeechRunes {
 		return nil, errf(400, "invalid_text", false, "Text must be 1–%d characters.", maxSpeechRunes)
+	}
+	if b, ok := s.bundledAudio(text); ok {
+		return b, nil
 	}
 	path := s.speechPath(text)
 	if b, err := os.ReadFile(path); err == nil {
@@ -300,76 +314,74 @@ func (s *Service) synthesize(ctx context.Context, userID, text, path string) *sp
 	return c
 }
 
-// speechTexts lists the English a lesson plan reads aloud: word tiles,
-// example sentences and cheat-sheet examples.
-func speechTexts(p tutor.Plan) []string {
-	seen := map[string]bool{}
-	var out []string
-	add := func(t string) {
-		t = speechText(t)
-		if t == "" || seen[t] || utf8.RuneCountInString(t) > maxSpeechRunes || len(out) >= warmMaxTexts {
-			return
-		}
-		seen[t] = true
-		out = append(out, t)
-	}
-	for _, st := range p.Steps {
-		for _, x := range st.Pairs {
-			add(x.EN)
-		}
-		for _, x := range st.Examples {
-			add(x.EN)
-		}
-		if st.Artifact != nil {
-			for _, x := range st.Artifact.Examples {
-				add(x.EN)
-			}
-		}
-	}
-	return out
-}
-
 // warmSpeech makes a new plan's audio in the background.
 func (s *Service) warmSpeech(userID string, p tutor.Plan) {
 	if s.WarmSpeech {
-		s.warmTexts(userID, speechTexts(p))
+		s.warmTexts(userID, tutor.SpeechTexts(p, warmMaxTexts))
 	}
 }
 
-// WarmAllLessons makes the audio for every hand-written lesson in the
-// background (sentences already cached are skipped), so listening never
-// waits for the provider. Run once at startup.
+// WarmAllLessons makes, in the background, the audio of any lesson sentence
+// that has no recording in the repo yet (normally none: run
+// `go run ./cmd/server bundle-audio` after changing lessons). Run at startup.
 func (s *Service) WarmAllLessons() {
-	if !s.WarmSpeech {
-		return
-	}
-	seen := map[string]bool{}
-	var texts []string
+	var missing []string
+	total := 0
 	for _, cur := range s.Catalog.Courses {
-		for _, n := range cur.Nodes {
-			for _, lang := range cur.PlanLanguages(n.ID) {
-				p, ok, err := tutor.AuthoredPlan(cur, n.ID, lang)
-				if !ok || err != nil {
-					continue
-				}
-				for _, t := range speechTexts(p) {
-					if !seen[t] {
-						seen[t] = true
-						texts = append(texts, t)
-					}
-				}
+		for _, t := range tutor.LessonSpeechTexts(cur) {
+			total++
+			if _, ok := s.bundledAudio(t); ok {
+				continue
+			}
+			if _, err := os.Stat(s.speechPath(t)); err != nil {
+				missing = append(missing, t)
 			}
 		}
 	}
-	var todo []string
-	for _, t := range texts {
-		if _, err := os.Stat(s.speechPath(t)); err != nil {
-			todo = append(todo, t)
-		}
+	slog.Info("lesson audio", "sentences", total, "missing", len(missing))
+	if len(missing) > 0 {
+		slog.Warn("lesson sentences without recorded audio; run `go run ./cmd/server bundle-audio` and commit the files", "count", len(missing))
 	}
-	slog.Info("lesson audio", "sentences", len(texts), "to_make", len(todo))
+	if !s.WarmSpeech {
+		return
+	}
 	// No learner: shared lesson audio doesn't count against anyone's budget.
-	s.warmTexts("", todo)
+	s.warmTexts("", missing)
+}
+
+// BundleLessonAudio writes the audio of every lesson sentence into its
+// course's audio folder (for committing to the repo). Sentences that already
+// have a file are skipped; the speech cache is used before the provider.
+// It returns how many files were written and the sentences that failed.
+func (s *Service) BundleLessonAudio(ctx context.Context) (written int, failed []string) {
+	for _, cur := range s.Catalog.Courses {
+		var todo []string
+		for _, t := range tutor.LessonSpeechTexts(cur) {
+			if _, err := os.Stat(cur.AudioPath(t)); err != nil {
+				todo = append(todo, t)
+			}
+		}
+		for round := 0; round < 3 && len(todo) > 0; round++ {
+			var again []string
+			for _, t := range todo {
+				b, err := s.Speech(ctx, "", t)
+				if err == nil {
+					err = os.MkdirAll(filepath.Dir(cur.AudioPath(t)), 0o755)
+				}
+				if err == nil {
+					err = os.WriteFile(cur.AudioPath(t), b, 0o644)
+				}
+				if err != nil {
+					again = append(again, t)
+					continue
+				}
+				written++
+			}
+			todo = again
+		}
+		failed = append(failed, todo...)
+	}
+	return written, failed
 }
 
 func (s *Service) warmTexts(userID string, texts []string) {

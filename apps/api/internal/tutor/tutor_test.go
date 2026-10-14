@@ -131,3 +131,21 @@ func TestAuthoredPlans(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
+// Lesson audio is committed to the repo, so deployments never make it again.
+// After changing lessons: go run ./cmd/server bundle-audio, then commit.
+func TestEveryLessonSentenceHasRecordedAudio(t *testing.T) {
+	c, err := curriculum.LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	texts := LessonSpeechTexts(c)
+	if len(texts) < 100 {
+		t.Fatalf("expected the lessons' sentences, got %d", len(texts))
+	}
+	for _, s := range texts {
+		if _, err := os.Stat(c.AudioPath(s)); err != nil {
+			t.Errorf("no recorded audio for %q (run `go run ./cmd/server bundle-audio`)", s)
+		}
+	}
+}

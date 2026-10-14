@@ -130,3 +130,57 @@ func sameQuestion(a, b Question) bool {
 	return a.Type == b.Type && a.ObjectiveID == b.ObjectiveID && slices.Equal(a.Options, b.Options) &&
 		a.Answer == b.Answer && slices.Equal(a.Tokens, b.Tokens) && a.Solution == b.Solution
 }
+
+// SpeechTexts lists the English a plan reads aloud: word tiles, example
+// sentences and cheat-sheet examples (deduplicated, at most limit).
+func SpeechTexts(p Plan, limit int) []string {
+	seen := map[string]bool{}
+	var out []string
+	add := func(t string) {
+		t = curriculum.SpeechKey(t)
+		if t == "" || seen[t] || runes(t) > MaxSpeechRunes || len(out) >= limit {
+			return
+		}
+		seen[t] = true
+		out = append(out, t)
+	}
+	for _, st := range p.Steps {
+		for _, x := range st.Pairs {
+			add(x.EN)
+		}
+		for _, x := range st.Examples {
+			add(x.EN)
+		}
+		if st.Artifact != nil {
+			for _, x := range st.Artifact.Examples {
+				add(x.EN)
+			}
+		}
+	}
+	return out
+}
+
+// MaxSpeechRunes is the longest sentence the speech endpoint reads.
+const MaxSpeechRunes = 300
+
+// LessonSpeechTexts lists every sentence the course's hand-written lessons
+// read aloud, in all languages, deduplicated.
+func LessonSpeechTexts(c *curriculum.Curriculum) []string {
+	seen := map[string]bool{}
+	var out []string
+	for _, n := range c.Nodes {
+		for _, lang := range c.PlanLanguages(n.ID) {
+			p, ok, err := AuthoredPlan(c, n.ID, lang)
+			if !ok || err != nil {
+				continue
+			}
+			for _, t := range SpeechTexts(p, 1000) {
+				if !seen[t] {
+					seen[t] = true
+					out = append(out, t)
+				}
+			}
+		}
+	}
+	return out
+}

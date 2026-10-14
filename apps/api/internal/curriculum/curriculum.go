@@ -5,6 +5,8 @@
 package curriculum
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -178,6 +180,8 @@ type Curriculum struct {
 	localLevels map[string][]LevelInfo
 	// successors maps a node to nodes that list it as a prerequisite.
 	successors map[string][]string
+	// Dir is the course folder (packages/courses/<slug>).
+	Dir string
 	// plans holds the hand-written lesson steps: node -> language -> plan
 	// JSON (validated by the tutor package, which owns the format).
 	plans map[string]map[string]json.RawMessage
@@ -187,6 +191,17 @@ type Curriculum struct {
 func (c *Curriculum) AuthoredPlan(nodeID, lang string) (json.RawMessage, bool) {
 	raw, ok := c.plans[nodeID][lang]
 	return raw, ok
+}
+
+// SpeechKey is the normalised form of a sentence that audio is stored under.
+func SpeechKey(text string) string { return strings.Join(strings.Fields(text), " ") }
+
+// AudioPath is where a sentence's recorded audio lives in the course folder
+// (audio/<sha256 of the sentence>.mp3). Lesson audio is kept in the repo so
+// a deployment never has to make it again.
+func (c *Curriculum) AudioPath(text string) string {
+	h := sha256.Sum256([]byte(SpeechKey(text)))
+	return filepath.Join(c.Dir, "audio", hex.EncodeToString(h[:])+".mp3")
 }
 
 // DropAuthoredPlans makes the AI write each learner's plan instead of using
@@ -277,6 +292,7 @@ func LoadCourse(dir string) (*Curriculum, error) {
 	if err != nil {
 		return nil, fmt.Errorf("course %q: %w", course.Slug, err)
 	}
+	c.Dir = dir
 	if c.plans, err = loadPlans(c, dir); err != nil {
 		return nil, fmt.Errorf("course %q: %w", course.Slug, err)
 	}

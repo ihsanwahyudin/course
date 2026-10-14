@@ -26,6 +26,13 @@ import (
 func main() {
 	slog.SetDefault(slog.New(slog.NewTextHandler(os.Stdout, nil)))
 	loadDotEnv(".env")
+	if len(os.Args) > 1 && os.Args[1] == "bundle-audio" {
+		if err := bundleAudio(); err != nil {
+			slog.Error("bundle-audio", "err", err)
+			os.Exit(1)
+		}
+		return
+	}
 	if err := run(); err != nil {
 		slog.Error("fatal", "err", err)
 		os.Exit(1)
@@ -204,4 +211,29 @@ func loadDotEnv(path string) {
 			os.Setenv(k, v)
 		}
 	}
+}
+
+// bundleAudio records every lesson sentence into packages/courses/<course>/audio
+// so it can be committed: deployments then serve lesson audio from the repo
+// and never call the speech API for it. Only new sentences are synthesised
+// (from the local speech cache when possible). No database needed.
+func bundleAudio() error {
+	catalog, err := curriculum.LoadCatalog(env("COURSES_DIR", "../../packages/courses"))
+	if err != nil {
+		return err
+	}
+	provider, err := newProvider()
+	if err != nil {
+		return err
+	}
+	svc := &learning.Service{Catalog: catalog, AI: provider, SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts")}
+	written, failed := svc.BundleLessonAudio(context.Background())
+	for _, t := range failed {
+		slog.Warn("no audio", "sentence", t)
+	}
+	slog.Info("lesson audio bundled", "written", written, "failed", len(failed))
+	if len(failed) > 0 {
+		return fmt.Errorf("%d sentences have no audio; run again", len(failed))
+	}
+	return nil
 }

@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"os"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -576,8 +577,15 @@ func TestSlowSpeechIsSharedAndStillCached(t *testing.T) {
 	}
 }
 
+// withoutRecordedAudio hides the course's committed lesson audio.
+func withoutRecordedAudio(t *testing.T, s *Service) {
+	cur, _ := s.Catalog.Course(course)
+	cur.Dir = t.TempDir()
+}
+
 func TestLessonAudioIsMadeAhead(t *testing.T) {
 	s := newService(t, &ai.Mock{})
+	withoutRecordedAudio(t, s)
 	s.SpeechCacheDir = t.TempDir()
 	am := &audioMock{Mock: &ai.Mock{}}
 	s.AI = am
@@ -588,7 +596,7 @@ func TestLessonAudioIsMadeAhead(t *testing.T) {
 		t.Fatal(err)
 	}
 	s.warm.Wait()
-	texts := speechTexts(planOf(t, s, sess.ID))
+	texts := tutor.SpeechTexts(planOf(t, s, sess.ID), warmMaxTexts)
 	if len(texts) == 0 || int(am.speech.Load()) != len(texts) {
 		t.Fatalf("every word and example should be made ahead: %d texts, %d calls", len(texts), am.speech.Load())
 	}
@@ -606,8 +614,9 @@ func TestLessonAudioIsMadeAhead(t *testing.T) {
 	}
 }
 
-func TestAllLessonAudioIsMadeAtStartup(t *testing.T) {
+func TestMissingLessonAudioIsMadeAtStartup(t *testing.T) {
 	s := newService(t, &ai.Mock{})
+	withoutRecordedAudio(t, s)
 	s.SpeechCacheDir = t.TempDir()
 	am := &audioMock{Mock: &ai.Mock{}}
 	s.AI = am
@@ -631,5 +640,40 @@ func TestAllLessonAudioIsMadeAtStartup(t *testing.T) {
 	// Shared lesson audio isn't charged to a learner.
 	if u, _ := storage.UsageOn(context.Background(), s.Store.Pool, learnerID, s.day()); u.Output != 0 {
 		t.Fatalf("learner charged for shared audio: %+v", u)
+	}
+}
+
+func TestRecordedLessonAudioNeedsNoProvider(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	s.SpeechCacheDir = t.TempDir()
+	am := &audioMock{Mock: &ai.Mock{}}
+	s.AI = am
+	s.WarmSpeech = true
+	ctx := context.Background()
+	s.WarmAllLessons()
+	sess, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil {
+		t.Fatal(err)
+	}
+	s.warm.Wait()
+	text := sess.Lesson.Steps[0].Pairs[0].EN
+	cur, _ := s.Catalog.Course(course)
+	want, _ := os.ReadFile(cur.AudioPath(text))
+	b, err := s.Speech(ctx, learnerID, text)
+	if err != nil || len(b) == 0 || !bytes.Equal(b, want) {
+		t.Fatalf("lesson audio should come from the repo: %d bytes, %v", len(b), err)
+	}
+	if n := am.speech.Load(); n != 0 {
+		t.Fatalf("the provider was called %d times for recorded lesson audio", n)
+	}
+
+	// Bundling writes every sentence once; a second run writes nothing.
+	cur.Dir = t.TempDir()
+	written, failed := s.BundleLessonAudio(ctx)
+	if len(failed) != 0 || written != len(tutor.LessonSpeechTexts(cur)) {
+		t.Fatalf("bundle: %d written, %d failed", written, len(failed))
+	}
+	if written, _ = s.BundleLessonAudio(ctx); written != 0 {
+		t.Fatalf("second bundle wrote %d", written)
 	}
 }
