@@ -112,7 +112,7 @@ func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
 
 // Speech calls the text-to-speech endpoint and returns MP3 audio.
 func (o *OpenAI) Speech(ctx context.Context, text string) ([]byte, error) {
-	ctx, cancel := context.WithTimeout(ctx, 30*time.Second)
+	ctx, cancel := context.WithTimeout(ctx, 60*time.Second)
 	defer cancel()
 	req := map[string]any{"model": o.TTSModel, "voice": o.TTSVoice, "input": text, "response_format": "mp3"}
 	// tts-1 and tts-1-hd (billed per character, cheaper for short words)

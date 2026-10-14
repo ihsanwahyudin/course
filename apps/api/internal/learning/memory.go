@@ -208,7 +208,7 @@ const (
 	// The provider's speech endpoint is usually quick but sometimes takes
 	// tens of seconds; a call is allowed this long to finish and be cached.
 	speechTimeout = 90 * time.Second
-	warmMaxTexts  = 40
+	warmMaxTexts  = 60
 	warmParallel  = 3
 )
 
@@ -331,33 +331,88 @@ func speechTexts(p tutor.Plan) []string {
 
 // warmSpeech makes a new plan's audio in the background.
 func (s *Service) warmSpeech(userID string, p tutor.Plan) {
+	if s.WarmSpeech {
+		s.warmTexts(userID, speechTexts(p))
+	}
+}
+
+// WarmAllLessons makes the audio for every hand-written lesson in the
+// background (sentences already cached are skipped), so listening never
+// waits for the provider. Run once at startup.
+func (s *Service) WarmAllLessons() {
 	if !s.WarmSpeech {
 		return
 	}
-	texts := speechTexts(p)
+	seen := map[string]bool{}
+	var texts []string
+	for _, cur := range s.Catalog.Courses {
+		for _, n := range cur.Nodes {
+			for _, lang := range cur.PlanLanguages(n.ID) {
+				p, ok, err := tutor.AuthoredPlan(cur, n.ID, lang)
+				if !ok || err != nil {
+					continue
+				}
+				for _, t := range speechTexts(p) {
+					if !seen[t] {
+						seen[t] = true
+						texts = append(texts, t)
+					}
+				}
+			}
+		}
+	}
+	var todo []string
+	for _, t := range texts {
+		if _, err := os.Stat(s.speechPath(t)); err != nil {
+			todo = append(todo, t)
+		}
+	}
+	slog.Info("lesson audio", "sentences", len(texts), "to_make", len(todo))
+	// No learner: shared lesson audio doesn't count against anyone's budget.
+	s.warmTexts("", todo)
+}
+
+func (s *Service) warmTexts(userID string, texts []string) {
 	if len(texts) == 0 {
 		return
 	}
 	s.warm.Add(1)
 	go func() {
 		defer s.warm.Done()
-		ctx, cancel := context.WithTimeout(context.Background(), 3*time.Minute)
+		ctx, cancel := context.WithTimeout(context.Background(), 15*time.Minute)
 		defer cancel()
-		sem := make(chan struct{}, warmParallel)
-		var wg sync.WaitGroup
-		for _, t := range texts {
-			wg.Add(1)
-			sem <- struct{}{}
-			go func() {
-				defer wg.Done()
-				defer func() { <-sem }()
-				if _, err := s.Speech(ctx, userID, t); err != nil {
-					slog.Debug("warm speech", "err", err)
-				}
-			}()
+		// The provider sometimes times out; whatever failed gets two more rounds.
+		todo := texts
+		for round := 0; round < 3 && len(todo) > 0 && ctx.Err() == nil; round++ {
+			todo = s.speakAll(ctx, userID, todo)
 		}
-		wg.Wait()
+		if userID == "" {
+			slog.Info("lesson audio ready", "made", len(texts)-len(todo), "failed", len(todo))
+		}
 	}()
+}
+
+// speakAll makes audio for texts a few at a time and returns the ones that failed.
+func (s *Service) speakAll(ctx context.Context, userID string, texts []string) []string {
+	sem := make(chan struct{}, warmParallel)
+	var wg sync.WaitGroup
+	var mu sync.Mutex
+	var failed []string
+	for _, t := range texts {
+		wg.Add(1)
+		sem <- struct{}{}
+		go func() {
+			defer wg.Done()
+			defer func() { <-sem }()
+			if _, err := s.Speech(ctx, userID, t); err != nil {
+				mu.Lock()
+				failed = append(failed, t)
+				mu.Unlock()
+			}
+		}()
+	}
+	wg.Wait()
+	return failed
 }
 
 // Transcribe turns a short recording of the learner into text.

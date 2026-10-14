@@ -605,3 +605,31 @@ func TestLessonAudioIsMadeAhead(t *testing.T) {
 		t.Fatalf("resume re-made audio: %d calls", am.speech.Load())
 	}
 }
+
+func TestAllLessonAudioIsMadeAtStartup(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	s.SpeechCacheDir = t.TempDir()
+	am := &audioMock{Mock: &ai.Mock{}}
+	s.AI = am
+	s.WarmSpeech = true
+	s.WarmAllLessons()
+	s.warm.Wait()
+	made := am.speech.Load()
+	if made < 100 {
+		t.Fatalf("every lesson's sentences should be made: %d", made)
+	}
+	// Already cached: a restart makes nothing new, and opening a lesson plays from the cache.
+	s.WarmAllLessons()
+	s.warm.Wait()
+	if _, err := s.StartSession(context.Background(), learnerID, course, "a0-alphabet-sounds"); err != nil {
+		t.Fatal(err)
+	}
+	s.warm.Wait()
+	if am.speech.Load() != made {
+		t.Fatalf("cached audio was made again: %d → %d", made, am.speech.Load())
+	}
+	// Shared lesson audio isn't charged to a learner.
+	if u, _ := storage.UsageOn(context.Background(), s.Store.Pool, learnerID, s.day()); u.Output != 0 {
+		t.Fatalf("learner charged for shared audio: %+v", u)
+	}
+}

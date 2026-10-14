@@ -77,7 +77,10 @@ func run() error {
 	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta"),
 		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000),
 		// Pre-make lesson audio when the provider has a voice (WARM_SPEECH=off to disable).
-		WarmSpeech: provider.Name() != "mock" && env("WARM_SPEECH", "on") != "off"}
+		WarmSpeech: provider.Name() != "mock" && env("WARM_SPEECH", "on") != "off",
+		// Kept across restarts so lesson audio is only ever made once.
+		SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts")}
+	svc.WarmAllLessons()
 	srv := &apihttp.Server{
 		Svc: svc, Auth: &auth.Service{Store: store}, Catalog: catalog,
 		CORSOrigins:   strings.Split(env("CORS_ORIGINS", "http://localhost:8081,http://localhost:19006"), ","),
