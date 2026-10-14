@@ -341,7 +341,7 @@ func (s *Service) lessonView(ctx context.Context, db storage.DB, st state, lc *l
 // stepAction locks the session, loads its plan and runs fn on step n.
 // fn may call the AI; it runs inside the transaction so two tabs can't
 // double-spend hints or answer twice.
-func (s *Service) stepAction(ctx context.Context, userID, sessionID string, n int, fn func(lc *lessonCtx, st state, lang string) error) (SessionView, error) {
+func (s *Service) stepAction(ctx context.Context, userID, sessionID string, n int, kind string, fn func(lc *lessonCtx, st state, lang string) error) (SessionView, error) {
 	sess, err := s.getOwnSession(ctx, userID, sessionID)
 	if err != nil {
 		return SessionView{}, err
@@ -383,6 +383,9 @@ func (s *Service) stepAction(ctx context.Context, userID, sessionID string, n in
 		if err := storage.SaveSteps(ctx, tx, sess.ID, lc.sess.StepIndex, raw); err != nil {
 			return err
 		}
+		if err := storage.AddActivity(ctx, tx, userID, sess.ID, kind); err != nil {
+			return err
+		}
 		return storage.TouchEnrollment(ctx, tx, userID, cur.Slug)
 	})
 	if err != nil {
@@ -393,7 +396,7 @@ func (s *Service) stepAction(ctx context.Context, userID, sessionID string, n in
 
 // Next moves past step n. A question must be answered (or given up) first.
 func (s *Service) NextStep(ctx context.Context, userID, sessionID string, n int) (SessionView, error) {
-	return s.stepAction(ctx, userID, sessionID, n, func(lc *lessonCtx, st state, lang string) error {
+	return s.stepAction(ctx, userID, sessionID, n, "next", func(lc *lessonCtx, st state, lang string) error {
 		if n != lc.sess.StepIndex {
 			return errf(409, "step_done", false, "You've already moved past this step.")
 		}
@@ -430,7 +433,7 @@ func target(lc *lessonCtx, n int, similar bool) (*tutor.Question, *qState, error
 }
 
 func (s *Service) AnswerStep(ctx context.Context, userID, sessionID string, n int, in AnswerInput) (SessionView, error) {
-	return s.stepAction(ctx, userID, sessionID, n, func(lc *lessonCtx, st state, lang string) error {
+	return s.stepAction(ctx, userID, sessionID, n, "answer", func(lc *lessonCtx, st state, lang string) error {
 		q, qs, err := target(lc, n, in.Similar)
 		if err != nil {
 			return err
@@ -468,7 +471,7 @@ var fallbackHints = map[string][2]string{
 }
 
 func (s *Service) HintStep(ctx context.Context, userID, sessionID string, n int, similar bool) (SessionView, error) {
-	return s.stepAction(ctx, userID, sessionID, n, func(lc *lessonCtx, st state, lang string) error {
+	return s.stepAction(ctx, userID, sessionID, n, "hint", func(lc *lessonCtx, st state, lang string) error {
 		q, qs, err := target(lc, n, similar)
 		if err != nil {
 			return err
@@ -510,7 +513,7 @@ func (s *Service) HintStep(ctx context.Context, userID, sessionID string, n int,
 
 // RevealStep shows the answer after both hints were used ("I give up").
 func (s *Service) RevealStep(ctx context.Context, userID, sessionID string, n int, similar bool) (SessionView, error) {
-	return s.stepAction(ctx, userID, sessionID, n, func(lc *lessonCtx, st state, lang string) error {
+	return s.stepAction(ctx, userID, sessionID, n, "reveal", func(lc *lessonCtx, st state, lang string) error {
 		_, qs, err := target(lc, n, similar)
 		if err != nil {
 			return err
@@ -528,7 +531,7 @@ func (s *Service) RevealStep(ctx context.Context, userID, sessionID string, n in
 
 // SimilarStep adds one similar question (step "3b") after a wrong answer.
 func (s *Service) SimilarStep(ctx context.Context, userID, sessionID string, n int) (SessionView, error) {
-	return s.stepAction(ctx, userID, sessionID, n, func(lc *lessonCtx, st state, lang string) error {
+	return s.stepAction(ctx, userID, sessionID, n, "similar", func(lc *lessonCtx, st state, lang string) error {
 		q := lc.plan.Steps[n].Question
 		ss := lc.state(n)
 		if q == nil {
@@ -592,7 +595,7 @@ func (s *Service) AskStep(ctx context.Context, userID, sessionID string, n int, 
 	if utf8.RuneCountInString(content) > MaxMessageRunes {
 		return SessionView{}, errf(400, "message_too_long", false, "Message is too long (max %d characters).", MaxMessageRunes)
 	}
-	return s.stepAction(ctx, userID, sessionID, n, func(lc *lessonCtx, st state, lang string) error {
+	return s.stepAction(ctx, userID, sessionID, n, "ask", func(lc *lessonCtx, st state, lang string) error {
 		ss := lc.state(n)
 		if len(ss.Asks) >= maxAsksPerStep {
 			return errf(429, "too_many_questions", false, "That's a lot of questions for one step — try moving on.")

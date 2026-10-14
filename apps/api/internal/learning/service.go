@@ -731,7 +731,7 @@ type OpenSessionItem struct {
 }
 
 type Weekly struct {
-	Messages int `json:"messages"`
+	Steps    int `json:"steps"` // lesson steps worked through
 	Attempts int `json:"attempts"`
 	Mastered int `json:"mastered"`
 }
@@ -889,7 +889,7 @@ func (s *Service) Dashboard(ctx context.Context, user storage.User) (DashboardVi
 	if v.Flashcards.Total, v.Flashcards.Due, err = storage.CountFlashcards(ctx, db, user.ID); err != nil {
 		return v, err
 	}
-	if v.Weekly.Messages, v.Weekly.Attempts, v.Weekly.Mastered, err = storage.WeeklyActivity(ctx, db, user.ID); err != nil {
+	if v.Weekly.Steps, v.Weekly.Attempts, v.Weekly.Mastered, err = storage.WeeklyActivity(ctx, db, user.ID); err != nil {
 		return v, err
 	}
 

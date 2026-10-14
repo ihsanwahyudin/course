@@ -547,25 +547,34 @@ func RecentAttempts(ctx context.Context, db DB, userID, course string, limit int
 
 // ---- activity ----
 
-// WeeklyActivity counts the user's replies, attempts and new masteries in the
-// last 7 days (all courses).
-func WeeklyActivity(ctx context.Context, db DB, userID string) (messages, attempts, mastered int, err error) {
+// AddActivity records one lesson step action.
+func AddActivity(ctx context.Context, db DB, userID, sessionID, kind string) error {
+	_, err := db.Exec(ctx, `INSERT INTO lesson_activity (user_id, session_id, kind) VALUES ($1, $2, $3)`, userID, sessionID, kind)
+	return err
+}
+
+// WeeklyActivity counts the user's lesson steps (and older chat replies),
+// attempts and new masteries in the last 7 days (all courses).
+func WeeklyActivity(ctx context.Context, db DB, userID string) (steps, attempts, mastered int, err error) {
 	err = db.QueryRow(ctx, `SELECT
 		(SELECT COUNT(*) FROM session_messages m JOIN learning_sessions s ON s.id=m.session_id
-			WHERE s.user_id=$1 AND m.role='user' AND m.created_at > NOW() - INTERVAL '7 days'),
+			WHERE s.user_id=$1 AND m.role='user' AND m.created_at > NOW() - INTERVAL '7 days')
+		+ (SELECT COUNT(*) FROM lesson_activity WHERE user_id=$1 AND created_at > NOW() - INTERVAL '7 days'),
 		(SELECT COUNT(*) FROM assessment_attempts a JOIN learning_sessions s ON s.id=a.session_id
 			WHERE s.user_id=$1 AND a.created_at > NOW() - INTERVAL '7 days'),
 		(SELECT COUNT(*) FROM node_progress WHERE user_id=$1 AND mastered_at > NOW() - INTERVAL '7 days')`,
-		userID).Scan(&messages, &attempts, &mastered)
+		userID).Scan(&steps, &attempts, &mastered)
 	return
 }
 
-// DailyActivity returns learner actions (replies + attempts) per local day
+// DailyActivity returns learner actions (steps, replies, attempts) per local day
 // for the last `days` days, keyed "2006-01-02" in the given time zone.
 func DailyActivity(ctx context.Context, db DB, userID, tz string, days int) (map[string]int, error) {
 	rows, err := db.Query(ctx, `SELECT to_char((t.at AT TIME ZONE $2)::date, 'YYYY-MM-DD'), COUNT(*) FROM (
 			SELECT m.created_at AS at FROM session_messages m JOIN learning_sessions s ON s.id=m.session_id
 				WHERE s.user_id=$1 AND m.role='user' AND m.created_at > NOW() - make_interval(days => $3)
+			UNION ALL
+			SELECT created_at FROM lesson_activity WHERE user_id=$1 AND created_at > NOW() - make_interval(days => $3)
 			UNION ALL
 			SELECT a.created_at FROM assessment_attempts a JOIN learning_sessions s ON s.id=a.session_id
 				WHERE s.user_id=$1 AND a.created_at > NOW() - make_interval(days => $3)

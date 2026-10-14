@@ -29,10 +29,16 @@ type ProfileFact struct {
 	Answer      string `json:"answer"`
 }
 
+// MemoryItemView is a memory note with the lesson it came from.
+type MemoryItemView struct {
+	storage.MemoryItem
+	SourceTitle string `json:"sourceTitle"`
+}
+
 type MemoryView struct {
-	Enabled bool                 `json:"enabled"`
-	Profile []ProfileFact        `json:"profile"`
-	Items   []storage.MemoryItem `json:"items"`
+	Enabled bool             `json:"enabled"`
+	Profile []ProfileFact    `json:"profile"`
+	Items   []MemoryItemView `json:"items"`
 }
 
 func (s *Service) Memory(ctx context.Context, userID string) (MemoryView, error) {
@@ -40,7 +46,7 @@ func (s *Service) Memory(ctx context.Context, userID string) (MemoryView, error)
 	if err != nil {
 		return MemoryView{}, err
 	}
-	v := MemoryView{Enabled: u.MemoryEnabled, Profile: []ProfileFact{}, Items: []storage.MemoryItem{}}
+	v := MemoryView{Enabled: u.MemoryEnabled, Profile: []ProfileFact{}, Items: []MemoryItemView{}}
 	lang := langFrom(ctx)
 	enrollments, err := storage.ListEnrollments(ctx, s.Store.Pool, userID)
 	if err != nil {
@@ -67,8 +73,14 @@ func (s *Service) Memory(ctx context.Context, userID string) (MemoryView, error)
 	if err != nil {
 		return v, err
 	}
-	if items != nil {
-		v.Items = items
+	for _, m := range items {
+		iv := MemoryItemView{MemoryItem: m}
+		if cur, ok := s.Catalog.Course(m.CourseSlug); ok {
+			if n := cur.LocalNode(m.SourceNode, lang); n != nil {
+				iv.SourceTitle = n.Title
+			}
+		}
+		v.Items = append(v.Items, iv)
 	}
 	return v, nil
 }

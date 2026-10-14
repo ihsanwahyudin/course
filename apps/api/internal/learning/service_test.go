@@ -328,7 +328,7 @@ func TestFiveLessonsEndToEnd(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(d.Courses) != 1 || d.TotalMastered != 7 || d.Streak.Current != 1 || !d.Streak.ActiveToday || len(d.Activity) != 28 {
+	if len(d.Courses) != 1 || d.TotalMastered != 7 || d.Weekly.Steps == 0 || d.Streak.Current != 1 || !d.Streak.ActiveToday || len(d.Activity) != 28 {
 		t.Fatalf("dashboard: %+v", d)
 	}
 }
