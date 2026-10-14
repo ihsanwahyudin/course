@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "FluentPath",
+    "slug": "fluentpath",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#f3f2ee",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#f3f2ee",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 120
+        }
+      ]
+    ],
+    "scheme": "fluentpath",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "backgroundColor": "#f3f2ee"
+  }
+}
