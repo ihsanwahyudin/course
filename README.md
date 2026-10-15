@@ -237,7 +237,7 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 
 ## Deploy (Render)
 
-`render.yaml` is a Render Blueprint: one Docker web service built from the root `Dockerfile` (the Go API plus the Expo web
+`render.yaml` is a Render Blueprint: one Docker web service built from `apps/api/Dockerfile` (the Go API plus the Expo web
 export, served from the same origin, with the committed lesson audio) and a managed Postgres. In the Render dashboard choose
 **New → Blueprint**, pick this repository, and paste `OPENAI_API_KEY` when Render asks for it (it is never stored in the repo).
 Migrations run at startup; `/healthz` is the health check. The web app calls the API on its own origin, so no

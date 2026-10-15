@@ -21,7 +21,7 @@ services:
     profiles: ["api"]
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: apps/api/Dockerfile
     environment:
       DATABASE_URL: postgres://fluentpath:fluentpath@db:5432/fluentpath?sslmode=disable
       COURSES_DIR: /app/courses
