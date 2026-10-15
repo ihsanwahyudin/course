@@ -8,7 +8,7 @@ services:
     runtime: docker
     dockerfilePath: ./apps/api/Dockerfile
     dockerContext: .
-    plan: starter
+    plan: free
     region: singapore
     healthCheckPath: /healthz
     envVars:
@@ -35,5 +35,5 @@ databases:
   - name: fluentpath-db
     databaseName: fluentpath
     user: fluentpath
-    plan: basic-256mb
+    plan: free
     region: singapore
