@@ -65,7 +65,16 @@ function PastStep({ step, ctx }: { step: StepView; ctx: Ctx }) {
     <DoneStep n={step.index + 1} kind={step.kind} title={step.question?.prompt ?? step.title}>
       {step.text ? <TutorLine>{step.text}</TutorLine> : null}
       {step.question ? (
-        <QuestionCard q={step.question} eyebrow={t('step.practice')} busy={null} readOnly onAnswer={noop} onHint={noop} onReveal={noop} />
+        <QuestionCard
+          q={step.question}
+          eyebrow={t('step.practice')}
+          listenPath={`/api/v1/sessions/${ctx.session.id}/steps/${step.index}/listen`}
+          busy={null}
+          readOnly
+          onAnswer={noop}
+          onHint={noop}
+          onReveal={noop}
+        />
       ) : (
         <Widget step={step} ctx={ctx} />
       )}
@@ -99,6 +108,7 @@ function ActiveStep({ step, total, ctx, greeting }: { step: StepView; total: num
       key={`${n}-${similar}`}
       q={q}
       eyebrow={eyebrow}
+      listenPath={`/api/v1/sessions/${ctx.session.id}/steps/${n}/listen`}
       busy={busyFor(similar)}
       onAnswer={(input: AnswerInput) => run({ action: 'answer', step: n, input: { ...input, similar } })}
       onHint={() => run({ action: 'hint', step: n, similar })}
@@ -115,7 +125,8 @@ function ActiveStep({ step, total, ctx, greeting }: { step: StepView; total: num
     const q = step.question;
     let after = null;
     if (settled(q)) {
-      if (!missed(q)) {
+      if (!missed(q) || q.hasAudio) {
+        // Listening questions are recorded with the lesson, so there's no similar one.
         after = <ActionRow>{next}</ActionRow>;
       } else if (!step.similar) {
         after = (

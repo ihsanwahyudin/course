@@ -159,6 +159,61 @@ export function useSpeak() {
   return { speak, speakAll, stop, speaking: active?.key ?? null, index: active?.index ?? null };
 }
 
+// ---- listening questions ----
+
+/**
+ * Plays a listening question's audio from the server (the text stays hidden).
+ * Without a recording the server sends the text, read by the device's voice.
+ */
+export function useListen() {
+  const [playing, setPlaying] = useState(false);
+  const play = useCallback(async (path: string) => {
+    stopAll();
+    const gen = ++generation;
+    setPlaying(true);
+    const done = () => {
+      if (gen === generation) setPlaying(false);
+    };
+    try {
+      const url = API_URL + path;
+      const res = await fetch(url, { credentials: 'include', headers: authHeaders() });
+      if (!res.ok) return done();
+      if ((res.headers.get('content-type') ?? '').includes('application/json')) {
+        const { text } = await res.json();
+        if (gen === generation) deviceVoice(text, done);
+        return;
+      }
+      if (Platform.OS === 'web') {
+        const el = new window.Audio(URL.createObjectURL(await res.blob()));
+        el.onended = done;
+        el.onerror = done;
+        current = { stop: () => (el.pause(), done()) };
+        await el.play();
+        return;
+      }
+      const player: AudioPlayer = createAudioPlayer({ uri: url, headers: authHeaders() });
+      const sub = player.addListener('playbackStatusUpdate', (st) => {
+        if (st.didJustFinish) {
+          sub.remove();
+          player.remove();
+          done();
+        }
+      });
+      current = {
+        stop: () => {
+          sub.remove();
+          player.remove();
+          done();
+        },
+      };
+      player.play();
+    } catch {
+      done();
+    }
+  }, []);
+  return { play, playing };
+}
+
 // ---- recording + transcription ----
 
 const MAX_MS = 60_000;

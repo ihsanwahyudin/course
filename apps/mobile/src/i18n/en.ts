@@ -419,6 +419,9 @@ export const en = {
     transcribing: 'Turning your voice into text…',
     speak: 'Answer by speaking',
     stopRecording: 'Stop recording',
+    playAudio: 'Play the audio',
+    playAgain: 'Play again',
+    youHeard: 'You heard: {text}',
   },
   checkpoint: {
     eyebrow: 'Checkpoint',

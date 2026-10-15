@@ -127,7 +127,7 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 // sameQuestion compares what's graded: type, objective, options, answer,
 // tokens and solution (prompts and explanations may be translated).
 func sameQuestion(a, b Question) bool {
-	return a.Type == b.Type && a.ObjectiveID == b.ObjectiveID && slices.Equal(a.Options, b.Options) &&
+	return a.Type == b.Type && a.ObjectiveID == b.ObjectiveID && a.Listen == b.Listen && slices.Equal(a.Options, b.Options) &&
 		a.Answer == b.Answer && slices.Equal(a.Tokens, b.Tokens) && a.Solution == b.Solution
 }
 
@@ -145,6 +145,9 @@ func SpeechTexts(p Plan, limit int) []string {
 		out = append(out, t)
 	}
 	for _, st := range p.Steps {
+		if st.Question != nil {
+			add(st.Question.Listen)
+		}
 		for _, x := range st.Pairs {
 			add(x.EN)
 		}
@@ -164,11 +167,24 @@ func SpeechTexts(p Plan, limit int) []string {
 const MaxSpeechRunes = 300
 
 // LessonSpeechTexts lists every sentence the course's hand-written lessons
-// read aloud, in all languages, deduplicated.
+// read aloud (steps and checkpoint listening items), in all languages,
+// deduplicated. Lessons whose audio is waiting for content review
+// (audio/pending.json) are left out.
 func LessonSpeechTexts(c *curriculum.Curriculum) []string {
 	seen := map[string]bool{}
 	var out []string
 	for _, n := range c.Nodes {
+		if c.AudioPending(n.ID) {
+			continue
+		}
+		if l, ok := c.Lesson(n.ID); ok {
+			for _, it := range l.Assessment {
+				if t := curriculum.SpeechKey(it.Listen); t != "" && !seen[t] {
+					seen[t] = true
+					out = append(out, t)
+				}
+			}
+		}
 		for _, lang := range c.PlanLanguages(n.ID) {
 			p, ok, err := AuthoredPlan(c, n.ID, lang)
 			if !ok || err != nil {

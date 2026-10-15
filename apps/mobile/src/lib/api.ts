@@ -208,6 +208,10 @@ export type QuestionView = {
   answer: number | null;
   solution: string;
   explanation: string;
+  /** A listening question: play it from the step's listen endpoint. */
+  hasAudio: boolean;
+  /** What was played, once answered or revealed. */
+  transcript: string;
 };
 
 export type CuratedLink = { kind: 'video' | 'article' | 'image'; title: string; url: string; source: string; note?: string; videoId?: string };
@@ -276,7 +280,7 @@ export type Session = {
   material: Material | null;
   lesson: Lesson | null;
   canChat: boolean;
-  assessment: { id: string; objectiveId: string; prompt: string }[];
+  assessment: { id: string; objectiveId: string; prompt: string; hasAudio: boolean }[];
   lastAttempt: Attempt | null;
   prev: RoadmapNode | null;
   next: RoadmapNode | null;

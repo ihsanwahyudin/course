@@ -123,6 +123,8 @@ func (s *Server) Router() http.Handler {
 			r.Get("/dashboard", s.dashboard)
 			r.Post("/sessions", s.startSession)
 			r.Get("/sessions/{sessionId}", s.getSession)
+			r.Get("/sessions/{sessionId}/steps/{step}/listen", s.stepListen)
+			r.Get("/sessions/{sessionId}/assessment/{itemId}/listen", s.itemListen)
 			r.Get("/me/memory", s.memory)
 			r.Patch("/me/memory", s.setMemory)
 			r.Delete("/me/memory", s.deleteAllMemory)
@@ -612,6 +614,41 @@ func (s *Server) askStep(w http.ResponseWriter, r *http.Request) {
 }
 
 // ---- speech ----
+
+// writeListen sends a listening question's audio, or (no recording yet) its
+// text as JSON for the device's voice.
+func writeListen(w http.ResponseWriter, a learning.ListenAudio, err error) {
+	if err != nil {
+		writeErr(w, err)
+		return
+	}
+	if a.Audio == nil {
+		w.Header().Set("X-Speech-Fallback", "device")
+		respond(w, map[string]string{"text": a.Text}, nil)
+		return
+	}
+	w.Header().Set("Content-Type", "audio/mpeg")
+	w.Header().Set("Cache-Control", "private, max-age=604800")
+	_, _ = w.Write(a.Audio)
+}
+
+func (s *Server) stepListen(w http.ResponseWriter, r *http.Request) {
+	id, n, ok := stepParams(w, r)
+	if !ok {
+		return
+	}
+	a, err := s.Svc.StepListen(r.Context(), userID(r), id, n)
+	writeListen(w, a, err)
+}
+
+func (s *Server) itemListen(w http.ResponseWriter, r *http.Request) {
+	id, ok := sessionID(w, r)
+	if !ok {
+		return
+	}
+	a, err := s.Svc.ItemListen(r.Context(), userID(r), id, chi.URLParam(r, "itemId"))
+	writeListen(w, a, err)
+}
 
 func (s *Server) speech(w http.ResponseWriter, r *http.Request) {
 	audio, err := s.Svc.Speech(r.Context(), userID(r), r.URL.Query().Get("text"))

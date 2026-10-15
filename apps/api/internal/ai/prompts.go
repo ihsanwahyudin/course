@@ -125,7 +125,12 @@ Follow the language rule.`, in.Passed, scores, strings.Join(in.Mistakes, " | "),
 
 // publicQuestion hides the answer, solution and explanation.
 func publicQuestion(q tutor.Question) map[string]any {
-	return map[string]any{"type": q.Type, "objectiveId": q.ObjectiveID, "prompt": q.Prompt, "options": q.Options, "tokens": q.Tokens}
+	m := map[string]any{"type": q.Type, "objectiveId": q.ObjectiveID, "prompt": q.Prompt, "options": q.Options, "tokens": q.Tokens}
+	if q.Listen != "" {
+		// The learner hears this but can't read it; hints may refer to sounds, not quote it.
+		m["audioTheLearnerHears"] = q.Listen
+	}
+	return m
 }
 
 func publicStep(s tutor.Step) tutor.Step {
@@ -207,6 +212,7 @@ func evalUserPrompt(in EvalInput) string {
 		Prompt      string   `json:"prompt"`
 		Reference   []string `json:"referenceAnswers"`
 		Rubric      string   `json:"rubric,omitempty"`
+		Heard       string   `json:"audioTheLearnerHeard,omitempty"`
 		Answer      string   `json:"learnerAnswer"`
 	}
 	objectives := make([]map[string]string, 0, len(in.Node.Objectives))
@@ -215,7 +221,7 @@ func evalUserPrompt(in EvalInput) string {
 	}
 	items := make([]item, 0, len(in.Items))
 	for _, it := range in.Items {
-		items = append(items, item{it.ID, it.ObjectiveID, it.Prompt, it.AcceptableAnswers, it.Rubric, in.Answers[it.ID]})
+		items = append(items, item{it.ID, it.ObjectiveID, it.Prompt, it.AcceptableAnswers, it.Rubric, it.Listen, in.Answers[it.ID]})
 	}
 	payload, _ := json.MarshalIndent(map[string]any{
 		"lesson":      in.Node.Title,

@@ -11,6 +11,7 @@ import { useSubmitAssessment } from '@/lib/queries';
 import { useUI } from '@/lib/store';
 import { colors, fonts, radius } from '@/theme/tokens';
 import { MicButton } from './AskBox';
+import { ListenButton } from './QuestionCard';
 import { Indented, TutorLine } from './StepParts';
 
 // The checkpoint: the only way to master a lesson. One question at a time,
@@ -121,6 +122,7 @@ export function Checkpoint({ session, onResult, onOpenMaterial, onProgress }: { 
               <Text size={19} weight="medium" tight style={{ lineHeight: 28 }}>
                 {item.prompt}
               </Text>
+              {item.hasAudio ? <ListenButton key={item.id} path={`/api/v1/sessions/${session.id}/assessment/${item.id}/listen`} /> : null}
               {objective(item.objectiveId) ? (
                 <Text size={13} color={colors.muted}>
                   {t('checkpoint.objective', { text: objective(item.objectiveId)! })}

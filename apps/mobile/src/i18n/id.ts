@@ -420,6 +420,9 @@ export const id: Dict = {
     transcribing: 'Mengubah suaramu jadi teks…',
     speak: 'Jawab dengan suara',
     stopRecording: 'Hentikan rekaman',
+    playAudio: 'Putar audio',
+    playAgain: 'Putar lagi',
+    youHeard: 'Yang kamu dengar: {text}',
   },
   checkpoint: {
     eyebrow: 'Checkpoint',

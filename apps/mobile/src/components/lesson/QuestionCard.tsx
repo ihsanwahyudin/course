@@ -6,6 +6,7 @@ import { PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
 import type { AnswerInput, QuestionView } from '@/lib/api';
+import { useListen } from '@/lib/audio';
 import { colors, radius } from '@/theme/tokens';
 import { ActionRow, LinkButton } from './StepParts';
 import { RichText } from './RichText';
@@ -39,6 +40,29 @@ function Option({ label, state, onPress, disabled }: { label: string; state: 'id
   );
 }
 
+// Big play button for listening questions (the text stays hidden).
+export function ListenButton({ path }: { path: string }) {
+  const t = useT();
+  const { play, playing } = useListen();
+  const [played, setPlayed] = useState(false);
+  return (
+    <Pressable
+      onPress={() => {
+        setPlayed(true);
+        void play(path);
+      }}
+      accessibilityRole="button"
+      accessibilityLabel={played ? t('step.playAgain') : t('step.playAudio')}
+      style={[styles.listen, playing && { backgroundColor: colors.accent }]}
+    >
+      <Icon name={playing ? 'volume' : 'play'} size={18} color={playing ? colors.white : colors.accent} />
+      <Text size={15} weight="medium" color={playing ? colors.white : colors.accent}>
+        {played ? t('step.playAgain') : t('step.playAudio')}
+      </Text>
+    </Pressable>
+  );
+}
+
 function Hint({ n, text }: { n: number; text: string }) {
   const t = useT();
   return (
@@ -67,6 +91,11 @@ function Result({ q }: { q: QuestionView }) {
           {title}
         </Text>
       </View>
+      {q.transcript ? (
+        <Text size={14} color={colors.muted}>
+          {t('step.youHeard', { text: q.transcript })}
+        </Text>
+      ) : null}
       {q.explanation ? <RichText size={14}>{q.explanation}</RichText> : null}
     </View>
   );
@@ -120,6 +149,8 @@ function WordOrder({ q, picked, setPicked, locked }: { q: QuestionView; picked: 
 type Props = {
   q: QuestionView;
   eyebrow: string;
+  /** Where to play a listening question from. */
+  listenPath?: string;
   busy: QuestionBusy;
   /** Read-only (a finished step shown again). */
   readOnly?: boolean;
@@ -131,7 +162,7 @@ type Props = {
 // A practice question: pick, then Hint (max 2) or Answer; after both hints
 // the learner may give up. The answer only arrives from the server once
 // answered or revealed.
-export function QuestionCard({ q, eyebrow, busy, readOnly, onAnswer, onHint, onReveal }: Props) {
+export function QuestionCard({ q, eyebrow, listenPath, busy, readOnly, onAnswer, onHint, onReveal }: Props) {
   const t = useT();
   const [choice, setChoice] = useState<number | null>(null);
   const [picked, setPicked] = useState<number[]>([]);
@@ -152,6 +183,7 @@ export function QuestionCard({ q, eyebrow, busy, readOnly, onAnswer, onHint, onR
         <RichText size={18} weight="medium" lineHeight={1.5}>
           {q.prompt}
         </RichText>
+        {q.hasAudio && listenPath ? <ListenButton path={listenPath} /> : null}
         {q.type === 'mcq' ? (
           <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }} accessibilityRole="radiogroup">
             {q.options.map((o, i) => (
@@ -192,6 +224,7 @@ const styles = StyleSheet.create({
   card: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.line, borderRadius: 24, padding: 20, gap: 16 },
   option: { flexDirection: 'row', alignItems: 'center', gap: 6, borderWidth: 1.5, borderRadius: radius.pill, paddingHorizontal: 18, paddingVertical: 9, minHeight: 44 },
   hint: { flexDirection: 'row', gap: 10, backgroundColor: colors.amberSoft, borderRadius: radius.xxl, padding: 14 },
+  listen: { flexDirection: 'row', alignItems: 'center', gap: 10, alignSelf: 'flex-start', backgroundColor: colors.accentSoft, borderRadius: radius.pill, paddingHorizontal: 18, paddingVertical: 12 },
   result: { borderRadius: radius.xxl, padding: 16, gap: 8 },
   sentence: {
     flexDirection: 'row',

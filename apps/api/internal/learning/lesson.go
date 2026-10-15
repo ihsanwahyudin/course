@@ -71,6 +71,10 @@ type QuestionView struct {
 	Answer      *int     `json:"answer"`
 	Solution    string   `json:"solution"`
 	Explanation string   `json:"explanation"`
+	// HasAudio: a listening question; play it from …/steps/{n}/listen.
+	HasAudio bool `json:"hasAudio"`
+	// Transcript is what was played, shown once answered or revealed.
+	Transcript string `json:"transcript"`
 }
 
 type CuratedLink struct {
@@ -139,12 +143,13 @@ func questionView(q tutor.Question, st qState) *QuestionView {
 	if v.Tokens == nil {
 		v.Tokens = []string{}
 	}
+	v.HasAudio = q.Listen != ""
 	if st.Answered || st.Revealed {
 		if q.Type == tutor.QuestionMCQ {
 			a := q.Answer
 			v.Answer = &a
 		}
-		v.Solution, v.Explanation = q.Solution, q.Explanation
+		v.Solution, v.Explanation, v.Transcript = q.Solution, q.Explanation, q.Listen
 	}
 	return v
 }
@@ -551,6 +556,10 @@ func (s *Service) SimilarStep(ctx context.Context, userID, sessionID string, n i
 		if ss.Similar != nil {
 			return errf(409, "similar_used", false, "There's already a similar question for this step.")
 		}
+		if q.Listen != "" {
+			// Listening questions are recorded with the lesson; a new one would have no audio.
+			return errf(409, "similar_not_for_listening", false, "Listening questions don't have a similar question.")
+		}
 		objs := map[string]bool{q.ObjectiveID: true}
 		var got *tutor.Question
 		if s.checkQuota(ctx, userID) == nil {
@@ -763,4 +772,64 @@ var errStepsFirst = errf(409, "finish_steps_first", false, "Finish the lesson's 
 func ErrIs(err error, code string) bool {
 	var le *Error
 	return errors.As(err, &le) && le.Code == code
+}
+
+// ---- listening audio ----
+
+// ListenAudio is a listening question's (or checkpoint item's) audio, or,
+// when there's no recording, the text for the device's voice.
+type ListenAudio struct {
+	Audio []byte
+	Text  string
+}
+
+func (s *Service) listenAudio(ctx context.Context, userID, text string) (ListenAudio, error) {
+	if text == "" {
+		return ListenAudio{}, errf(404, "no_audio", false, "This question has nothing to listen to.")
+	}
+	b, err := s.Speech(ctx, userID, text)
+	if ErrIs(err, "speech_unavailable") {
+		return ListenAudio{Text: text}, nil
+	}
+	return ListenAudio{Audio: b}, err
+}
+
+// StepListen plays a listening question of an open step.
+func (s *Service) StepListen(ctx context.Context, userID, sessionID string, n int) (ListenAudio, error) {
+	sess, err := s.getOwnSession(ctx, userID, sessionID)
+	if err != nil {
+		return ListenAudio{}, err
+	}
+	cur, node, err := s.sessionCourse(sess)
+	if err != nil {
+		return ListenAudio{}, err
+	}
+	lc, err := decodeLesson(cur, node, sess)
+	if err != nil {
+		return ListenAudio{}, err
+	}
+	if n < 0 || n >= len(lc.plan.Steps) || n > sess.StepIndex || lc.plan.Steps[n].Question == nil {
+		return ListenAudio{}, errf(409, "step_not_open", false, "That step isn't open yet.")
+	}
+	return s.listenAudio(ctx, userID, lc.plan.Steps[n].Question.Listen)
+}
+
+// ItemListen plays a checkpoint listening item.
+func (s *Service) ItemListen(ctx context.Context, userID, sessionID, itemID string) (ListenAudio, error) {
+	sess, err := s.getOwnSession(ctx, userID, sessionID)
+	if err != nil {
+		return ListenAudio{}, err
+	}
+	cur, node, err := s.sessionCourse(sess)
+	if err != nil {
+		return ListenAudio{}, err
+	}
+	if l, ok := cur.Lesson(node.ID); ok {
+		for _, it := range l.Assessment {
+			if it.ID == itemID {
+				return s.listenAudio(ctx, userID, it.Listen)
+			}
+		}
+	}
+	return ListenAudio{}, errf(404, "item_not_found", false, "No such checkpoint question.")
 }

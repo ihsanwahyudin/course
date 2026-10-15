@@ -63,6 +63,9 @@ type Question struct {
 	Tokens      []string `json:"tokens"`   // word_order: words shown, shuffled
 	Solution    string   `json:"solution"` // word_order: the correct sentence
 	Explanation string   `json:"explanation"`
+	// Listen is English the learner hears (and doesn't see) before answering:
+	// listening and pronunciation questions. Shown after answering.
+	Listen string `json:"listen,omitempty"`
 }
 
 type Mark struct {
@@ -158,6 +161,13 @@ func ValidateQuestion(q Question, objectives map[string]bool) (Question, error) 
 	}
 	if !objectives[q.ObjectiveID] {
 		return q, fmt.Errorf("question targets unknown objective %q", q.ObjectiveID)
+	}
+	q.Listen = clean(q.Listen)
+	if runes(q.Listen) > 300 {
+		return q, fmt.Errorf("listen text must be at most 300 characters")
+	}
+	if q.Listen != "" && strings.Contains(NormalizeWords(q.Prompt), NormalizeWords(q.Listen)) {
+		return q, fmt.Errorf("the prompt must not show what the learner should hear")
 	}
 	switch q.Type {
 	case QuestionMCQ:

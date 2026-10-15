@@ -776,3 +776,45 @@ func TestRelatedTracksAndFoundations(t *testing.T) {
 		t.Fatalf("foundations: %+v %v", d.Foundations, err)
 	}
 }
+
+func TestListeningQuestions(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	ctx := context.Background()
+	sess, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	plan := planOf(t, s, sess.ID)
+	qi := firstQuestion(t, plan)
+	plan.Steps[qi].Question.Listen = "The parcel arrives on Thursday."
+	raw, _ := json.Marshal(plan)
+	if err := storage.SetSessionPlan(ctx, s.Store.Pool, sess.ID, raw); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := s.StepListen(ctx, learnerID, sess.ID, qi); code(err) != "step_not_open" {
+		t.Fatalf("a closed step can't be played: %v", err)
+	}
+	sess, _ = s.GetSession(ctx, learnerID, sess.ID)
+	sess = openStep(t, s, sess, qi)
+	qv := sess.Lesson.Steps[qi].Question
+	if !qv.HasAudio || qv.Transcript != "" {
+		t.Fatalf("listening question before answering: %+v", qv)
+	}
+	raw, _ = json.Marshal(sess)
+	if bytes.Contains(raw, []byte("parcel arrives")) {
+		t.Fatal("the listening text leaked into the session")
+	}
+	// No recording (offline provider): the text comes back for the device's voice.
+	a, err := s.StepListen(ctx, learnerID, sess.ID, qi)
+	if err != nil || a.Audio != nil || a.Text != "The parcel arrives on Thursday." {
+		t.Fatalf("listen fallback: %+v %v", a, err)
+	}
+	other := newUser(t, s, "other@example.com")
+	if _, err := s.StepListen(ctx, other, sess.ID, qi); code(err) != "session_not_found" {
+		t.Fatalf("another user played the audio: %v", err)
+	}
+	sess, err = s.AnswerStep(ctx, learnerID, sess.ID, qi, wrongAnswer(*plan.Steps[qi].Question))
+	if err != nil || sess.Lesson.Steps[qi].Question.Transcript == "" {
+		t.Fatalf("the transcript shows after answering: %v", err)
+	}
+	if _, err := s.SimilarStep(ctx, learnerID, sess.ID, qi); code(err) != "similar_not_for_listening" {
+		t.Fatalf("listening questions have no similar question: %v", err)
+	}
+}

@@ -491,6 +491,8 @@ type AssessmentItemView struct {
 	ID          string `json:"id"`
 	ObjectiveID string `json:"objectiveId"`
 	Prompt      string `json:"prompt"`
+	// HasAudio: a listening item; play it from …/assessment/{itemId}/listen.
+	HasAudio bool `json:"hasAudio"`
 }
 
 type SessionView struct {
@@ -543,7 +545,7 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 	if sess.EndedAt == nil {
 		if l, ok := cur.Lesson(n.ID); ok {
 			for _, it := range l.Assessment {
-				v.Assessment = append(v.Assessment, AssessmentItemView{it.ID, it.ObjectiveID, it.Prompt})
+				v.Assessment = append(v.Assessment, AssessmentItemView{it.ID, it.ObjectiveID, it.Prompt, it.Listen != ""})
 			}
 		}
 	}

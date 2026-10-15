@@ -123,6 +123,8 @@ type AssessmentItem struct {
 	Prompt            string   `json:"prompt"`
 	AcceptableAnswers []string `json:"acceptableAnswers"`
 	Rubric            string   `json:"rubric"`
+	// Listen is English played to the learner (not shown) for listening items.
+	Listen string `json:"listen,omitempty"`
 }
 
 // Lesson is the teachable content for a ready node.
@@ -228,7 +230,13 @@ type Curriculum struct {
 	// plans holds the hand-written lesson steps: node -> language -> plan
 	// JSON (validated by the tutor package, which owns the format).
 	plans map[string]map[string]json.RawMessage
+	// audioPending lists lessons whose audio waits for content review
+	// (audio/pending.json); their sentences aren't recorded yet.
+	audioPending map[string]bool
 }
+
+// AudioPending reports whether a lesson's audio is waiting for review.
+func (c *Curriculum) AudioPending(nodeID string) bool { return c.audioPending[nodeID] }
 
 // AuthoredPlan returns the hand-written steps of a lesson in a language.
 func (c *Curriculum) AuthoredPlan(nodeID, lang string) (json.RawMessage, bool) {
@@ -338,6 +346,21 @@ func LoadCourse(dir string) (*Curriculum, error) {
 	c.Dir = dir
 	if c.plans, err = loadPlans(c, dir); err != nil {
 		return nil, fmt.Errorf("course %q: %w", course.Slug, err)
+	}
+	if raw, err := os.ReadFile(filepath.Join(dir, "audio", "pending.json")); err == nil {
+		var p struct {
+			Nodes []string `json:"nodes"`
+		}
+		if err := json.Unmarshal(raw, &p); err != nil {
+			return nil, fmt.Errorf("course %q: audio/pending.json: %w", course.Slug, err)
+		}
+		c.audioPending = map[string]bool{}
+		for _, id := range p.Nodes {
+			if _, ok := c.Node(id); !ok {
+				return nil, fmt.Errorf("course %q: audio/pending.json: unknown node %q", course.Slug, id)
+			}
+			c.audioPending[id] = true
+		}
 	}
 	return c, nil
 }
@@ -565,6 +588,9 @@ func validateLessons(c *Curriculum) []error {
 			}
 			if len(it.AcceptableAnswers) == 0 {
 				errs = append(errs, fmt.Errorf("lesson %q: item %q needs at least one acceptable answer", id, it.ID))
+			}
+			if len([]rune(it.Listen)) > 300 {
+				errs = append(errs, fmt.Errorf("lesson %q: item %q listen text must be at most 300 characters", id, it.ID))
 			}
 			covered[it.ObjectiveID] = true
 		}
