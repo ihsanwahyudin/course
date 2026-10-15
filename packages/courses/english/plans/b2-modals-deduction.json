@@ -1,0 +1,682 @@
+{
+  "en": {
+    "greeting": "Hi, detective! Last time you made guesses about now. Today you go back in time: what happened before you arrived? Let's look at the evidence.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Guessing about the past",
+        "text": "Quick recap: about **now** you say *must be* (pasti), *might be* (mungkin), *can't be* (tidak mungkin). Today the guess is about the **past**.",
+        "body": "Same helper words, plus **have + the third form** (bentuk ketiga / V3, like in the present perfect: *gone, seen, eaten*):\n**must have** + V3 = *pasti sudah*\n**might / may / could have** + V3 = *mungkin*\n**can't / couldn't have** + V3 = *tidak mungkin*\nNow vs past: *He must **be** at home* (now) → *He must **have gone** home* (earlier).\nIndonesian has no tense, but English shows the past here with **have + V3**, not on must: not 'He must went home'.",
+        "pairs": [
+          {
+            "en": "must have gone",
+            "id": "pasti sudah pergi"
+          },
+          {
+            "en": "might have forgotten",
+            "id": "mungkin lupa"
+          },
+          {
+            "en": "may have / could have",
+            "id": "mungkin juga (sama dengan might have)"
+          },
+          {
+            "en": "can't have seen",
+            "id": "tidak mungkin melihat (tadi)"
+          },
+          {
+            "en": "couldn't have",
+            "id": "tidak mungkin (sama dengan can't have)"
+          },
+          {
+            "en": "the third form (V3)",
+            "id": "bentuk ketiga: gone, seen, eaten"
+          },
+          {
+            "en": "to oversleep",
+            "id": "kesiangan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Guesses about what happened",
+        "text": "Look at the evidence first, then the guess about the past.",
+        "body": "**have never changes** (not 'can't has seen') and the verb is the **third** form (not 'must have went'). With be: **must have been** + adjective, not 'must have tired'.",
+        "examples": [
+          {
+            "en": "Budi's desk is empty and his bag is gone. He must have gone home.",
+            "id": "Meja Budi kosong dan tasnya tidak ada. Dia pasti sudah pulang."
+          },
+          {
+            "en": "Sari isn't here yet. She might have overslept.",
+            "id": "Sari belum datang. Dia mungkin kesiangan."
+          },
+          {
+            "en": "They can't have seen us. They were looking the other way.",
+            "id": "Mereka tidak mungkin melihat kita. Mereka sedang melihat ke arah lain."
+          },
+          {
+            "en": "You worked until midnight. You must have been tired.",
+            "id": "Kamu kerja sampai tengah malam. Kamu pasti capek (waktu itu)."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The empty box",
+        "text": "This morning there was a box of chocolate martabak in the office fridge. Now the box is empty, and Dimas has chocolate on his shirt.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-modal-forms",
+          "prompt": "Complete: He ___ it.",
+          "options": [
+            "must ate",
+            "must have eaten",
+            "must has eaten"
+          ],
+          "answer": 1,
+          "explanation": "A guess about the past = must + **have** + the third form: **must have eaten**. 'must ate' puts the past on the wrong word, and after a modal *have* never changes to *has*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How sure? The past scale",
+        "text": "The evidence you see **now** points back to what happened **before**. How strong is it?",
+        "body": "Strong evidence, or only one sensible explanation → **must have**.\nOne small clue, or many possible reasons → **might / may / could have**.\nThe evidence makes it impossible → **can't / couldn't have**.\nNot 'mustn't have': *mustn't* = dilarang. And *mungkin tidak* = **might not have**, but *tidak mungkin* = **can't have**.\nIf you know what happened, don't guess: use the past simple (*It rained*).",
+        "pairs": [
+          {
+            "en": "did (a fact)",
+            "id": "fakta: ya"
+          },
+          {
+            "en": "must have done",
+            "id": "hampir pasti ya"
+          },
+          {
+            "en": "might / may / could have done",
+            "id": "tidak yakin"
+          },
+          {
+            "en": "might not have done",
+            "id": "mungkin tidak / mungkin belum"
+          },
+          {
+            "en": "can't / couldn't have done",
+            "id": "hampir pasti tidak"
+          },
+          {
+            "en": "didn't do (a fact)",
+            "id": "fakta: tidak"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The 7:00 KRL",
+        "text": "Dimas says Sari took the 7:00 KRL to Bogor this morning. But Sari was in a meeting with you in Jakarta from 6:30 to 9:00.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-deductions-about-2",
+          "prompt": "What's the best conclusion?",
+          "options": [
+            "She must have taken the 7:00 KRL.",
+            "She might have taken the 7:00 KRL.",
+            "She can't have taken the 7:00 KRL."
+          ],
+          "answer": 2,
+          "explanation": "She was with you in Jakarta at 7:00, so it's impossible → **can't have taken**. *might have* would mean you're not sure, and *must have* says the opposite of the evidence."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ternyata tidak perlu",
+        "text": "Now a subtle pair. Both mean *something wasn't necessary* in the past. The question is: **did it happen?**",
+        "body": "**needn't have + V3** = you **did** it, but it turned out unnecessary → *ternyata tidak perlu (padahal sudah)*.\n**didn't need to + base verb** = it wasn't necessary, so **usually you didn't do it** → *tidak perlu (jadi tidak)*. It means the same as *didn't have to*.\nTraps: **needn't have brought** (not 'needn't have bring'), **didn't need to bring** (not 'didn't need to brought').\nNot the same as *shouldn't have* (seharusnya tidak = a mistake): that's for the lesson on regrets.",
+        "pairs": [
+          {
+            "en": "needn't have + V3",
+            "id": "ternyata tidak perlu (padahal sudah)"
+          },
+          {
+            "en": "didn't need to + verb",
+            "id": "tidak perlu (jadi tidak)"
+          },
+          {
+            "en": "didn't have to + verb",
+            "id": "tidak perlu (sama dengan didn't need to)"
+          },
+          {
+            "en": "shouldn't have + V3",
+            "id": "seharusnya tidak (kesalahan)"
+          },
+          {
+            "en": "to hurry",
+            "id": "buru-buru"
+          },
+          {
+            "en": "to queue",
+            "id": "antre"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Did it happen?",
+        "text": "Check each sentence: did the person do it or not?",
+        "body": "*needn't have* is more British and a bit formal; Americans often say *I didn't need to … after all*.",
+        "examples": [
+          {
+            "en": "I needn't have brought an umbrella. It didn't rain all day.",
+            "id": "Ternyata aku tidak perlu bawa payung (padahal sudah bawa). Seharian tidak hujan."
+          },
+          {
+            "en": "We needn't have hurried. The train was 30 minutes late.",
+            "id": "Ternyata kita tidak perlu buru-buru (padahal sudah). Keretanya terlambat 30 menit."
+          },
+          {
+            "en": "I didn't need to bring an umbrella. The event was indoors.",
+            "id": "Aku tidak perlu bawa payung (jadi tidak bawa). Acaranya di dalam ruangan."
+          },
+          {
+            "en": "Budi didn't need to queue. He had booked his ticket online.",
+            "id": "Budi tidak perlu antre (jadi tidak antre). Dia sudah pesan tiket online."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Online after all",
+        "text": "Bu Ani was going to drive from Jakarta to Bandung for a meeting. The night before, the meeting was moved online, so she stayed in Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "neednt-have-didnt-need",
+          "prompt": "Which sentence is right?",
+          "options": [
+            "She needn't have driven to Bandung.",
+            "She didn't need to drive to Bandung.",
+            "She didn't need to drove to Bandung."
+          ],
+          "answer": 1,
+          "explanation": "She stayed in Jakarta: it wasn't necessary, and she didn't go → **didn't need to drive**. *needn't have driven* would mean she DID drive there. After *to* comes the base verb, so not 'to drove'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Too early at the airport",
+        "text": "Your flight from Soekarno-Hatta was at 9 am, but you were worried about traffic, so you left home at 4 am. The roads were empty and you waited at the gate for hours.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "neednt-have-didnt-need",
+          "prompt": "Arrange the words: Ternyata aku tidak perlu berangkat sepagi itu.",
+          "tokens": [
+            "so",
+            "needn't",
+            "I",
+            "early",
+            "left",
+            "have"
+          ],
+          "solution": "I needn't have left so early.",
+          "explanation": "You DID leave early, and it turned out unnecessary → **needn't have** + the third form (*left*)."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Quick review: say the English, then flip the card.",
+        "flashcards": [
+          {
+            "front": "pasti sudah … (dugaan, masa lalu)",
+            "back": "must have + third form"
+          },
+          {
+            "front": "mungkin (tadi / sudah) …",
+            "back": "might / may / could have + third form"
+          },
+          {
+            "front": "tidak mungkin (tadi / sudah) …",
+            "back": "can't / couldn't have + third form"
+          },
+          {
+            "front": "ternyata tidak perlu (padahal sudah)",
+            "back": "needn't have + third form"
+          },
+          {
+            "front": "tidak perlu (jadi tidak)",
+            "back": "didn't need to + base verb"
+          },
+          {
+            "front": "Correct it: She can't has seen it.",
+            "back": "She can't have seen it."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next case, detective!",
+        "artifact": {
+          "title": "Cheat sheet · must have, might have, can't have, needn't have",
+          "intro": "A guess about the past = modal + have + the third form. The modal shows how sure you are. needn't have and didn't need to tell you whether something unnecessary happened.",
+          "headers": [
+            "Meaning",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "100% yes (a fact)",
+              "past simple",
+              "It rained last night. I heard it."
+            ],
+            [
+              "Almost sure: yes (pasti sudah)",
+              "must have + V3",
+              "The floor is wet. It must have rained."
+            ],
+            [
+              "Not sure (mungkin)",
+              "might / may / could have + V3",
+              "Sari isn't here yet. She might have overslept."
+            ],
+            [
+              "Not sure, maybe not (mungkin tidak)",
+              "might not / may not have + V3",
+              "Rina might not have read my email. She's on leave."
+            ],
+            [
+              "Almost sure: no (tidak mungkin)",
+              "can't / couldn't have + V3",
+              "Dimas can't have cooked this. He can't cook."
+            ],
+            [
+              "100% no (a fact)",
+              "didn't + verb",
+              "It didn't rain. The ground is dry."
+            ],
+            [
+              "With be",
+              "must have been + adjective / -ing",
+              "You must have been tired."
+            ],
+            [
+              "Did it, but not necessary (ternyata tidak perlu)",
+              "needn't have + V3",
+              "I needn't have brought an umbrella."
+            ],
+            [
+              "Not necessary, so didn't (tidak perlu, jadi tidak)",
+              "didn't need to + verb",
+              "I didn't need to bring an umbrella."
+            ]
+          ],
+          "tips": [
+            "have never changes and the verb is the third form: not 'must went', 'can't has seen' or 'needn't have bring'.",
+            "Not mustn't have (mustn't = dilarang): for tidak mungkin use **can't have**.",
+            "needn't have = you did it. didn't need to = usually you didn't."
+          ],
+          "examples": [
+            {
+              "en": "Budi's desk is empty and his bag is gone. He must have gone home.",
+              "id": "Meja Budi kosong dan tasnya tidak ada. Dia pasti sudah pulang."
+            },
+            {
+              "en": "They can't have seen us. They were looking the other way.",
+              "id": "Mereka tidak mungkin melihat kita. Mereka sedang melihat ke arah lain."
+            },
+            {
+              "en": "We needn't have hurried. The train was 30 minutes late.",
+              "id": "Ternyata kita tidak perlu buru-buru (padahal sudah). Keretanya terlambat 30 menit."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read",
+        "text": "Want more? Read the British Council page on past deductions (with two practice tests), and watch BBC Learning English explain needn't have vs didn't need to."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, detektif! Terakhir kali kamu menduga tentang sekarang. Hari ini kita mundur ke masa lalu: apa yang terjadi sebelum kamu datang? Yuk, lihat buktinya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menduga tentang masa lalu",
+        "text": "Ulasan singkat: tentang **sekarang** kamu bilang *must be* (pasti), *might be* (mungkin), *can't be* (tidak mungkin). Hari ini dugaannya tentang **masa lalu**.",
+        "body": "Kata bantunya sama, ditambah **have + bentuk ketiga** (V3, seperti di present perfect: *gone, seen, eaten*):\n**must have** + V3 = *pasti sudah*\n**might / may / could have** + V3 = *mungkin*\n**can't / couldn't have** + V3 = *tidak mungkin*\nSekarang vs masa lalu: *He must **be** at home* (sekarang) → *He must **have gone** home* (tadi).\nBahasa Indonesia tidak punya tense, tapi bahasa Inggris menunjukkan masa lalu di sini dengan **have + V3**, bukan di must: bukan 'He must went home'.",
+        "pairs": [
+          {
+            "en": "must have gone",
+            "id": "pasti sudah pergi"
+          },
+          {
+            "en": "might have forgotten",
+            "id": "mungkin lupa"
+          },
+          {
+            "en": "may have / could have",
+            "id": "mungkin juga (sama dengan might have)"
+          },
+          {
+            "en": "can't have seen",
+            "id": "tidak mungkin melihat (tadi)"
+          },
+          {
+            "en": "couldn't have",
+            "id": "tidak mungkin (sama dengan can't have)"
+          },
+          {
+            "en": "the third form (V3)",
+            "id": "bentuk ketiga: gone, seen, eaten"
+          },
+          {
+            "en": "to oversleep",
+            "id": "kesiangan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dugaan tentang apa yang terjadi",
+        "text": "Lihat buktinya dulu, lalu dugaannya tentang masa lalu.",
+        "body": "**have tidak pernah berubah** (bukan 'can't has seen') dan kata kerjanya **bentuk ketiga** (bukan 'must have went'). Dengan be: **must have been** + kata sifat, bukan 'must have tired'.",
+        "examples": [
+          {
+            "en": "Budi's desk is empty and his bag is gone. He must have gone home.",
+            "id": "Meja Budi kosong dan tasnya tidak ada. Dia pasti sudah pulang."
+          },
+          {
+            "en": "Sari isn't here yet. She might have overslept.",
+            "id": "Sari belum datang. Dia mungkin kesiangan."
+          },
+          {
+            "en": "They can't have seen us. They were looking the other way.",
+            "id": "Mereka tidak mungkin melihat kita. Mereka sedang melihat ke arah lain."
+          },
+          {
+            "en": "You worked until midnight. You must have been tired.",
+            "id": "Kamu kerja sampai tengah malam. Kamu pasti capek (waktu itu)."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kotak yang kosong",
+        "text": "Tadi pagi ada sekotak martabak cokelat di kulkas kantor. Sekarang kotaknya kosong, dan ada noda cokelat di kemeja Dimas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-modal-forms",
+          "prompt": "Lengkapi: He ___ it.",
+          "options": [
+            "must ate",
+            "must have eaten",
+            "must has eaten"
+          ],
+          "answer": 1,
+          "explanation": "Dugaan tentang masa lalu = must + **have** + bentuk ketiga: **must have eaten**. 'must ate' menaruh masa lalu di kata yang salah, dan sesudah kata bantu, *have* tidak pernah berubah jadi *has*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Seberapa yakin? Skala masa lalu",
+        "text": "Bukti yang kamu lihat **sekarang** menunjuk ke apa yang terjadi **sebelumnya**. Seberapa kuat buktinya?",
+        "body": "Bukti kuat, atau hanya satu penjelasan yang masuk akal → **must have**.\nSatu petunjuk kecil, atau banyak kemungkinan alasan → **might / may / could have**.\nBuktinya membuat hal itu mustahil → **can't / couldn't have**.\nBukan 'mustn't have': *mustn't* = dilarang. Dan *mungkin tidak* = **might not have**, tapi *tidak mungkin* = **can't have**.\nKalau kamu tahu apa yang terjadi, jangan menduga: pakai past simple (*It rained*).",
+        "pairs": [
+          {
+            "en": "did (a fact)",
+            "id": "fakta: ya"
+          },
+          {
+            "en": "must have done",
+            "id": "hampir pasti ya"
+          },
+          {
+            "en": "might / may / could have done",
+            "id": "tidak yakin"
+          },
+          {
+            "en": "might not have done",
+            "id": "mungkin tidak / mungkin belum"
+          },
+          {
+            "en": "can't / couldn't have done",
+            "id": "hampir pasti tidak"
+          },
+          {
+            "en": "didn't do (a fact)",
+            "id": "fakta: tidak"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "KRL jam 7",
+        "text": "Dimas bilang Sari naik KRL jam 7:00 ke Bogor tadi pagi. Tapi Sari rapat bersamamu di Jakarta dari jam 6:30 sampai 9:00.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-deductions-about-2",
+          "prompt": "Apa kesimpulan yang paling tepat?",
+          "options": [
+            "She must have taken the 7:00 KRL.",
+            "She might have taken the 7:00 KRL.",
+            "She can't have taken the 7:00 KRL."
+          ],
+          "answer": 2,
+          "explanation": "Jam 7:00 dia bersamamu di Jakarta, jadi mustahil → **can't have taken**. *might have* berarti kamu tidak yakin, dan *must have* berlawanan dengan buktinya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ternyata tidak perlu",
+        "text": "Sekarang pasangan yang halus bedanya. Keduanya berarti *sesuatu tidak perlu* di masa lalu. Pertanyaannya: **apakah itu terjadi?**",
+        "body": "**needn't have + V3** = kamu **sudah** melakukannya, tapi ternyata tidak perlu → *ternyata tidak perlu (padahal sudah)*.\n**didn't need to + kata kerja dasar** = tidak perlu, jadi **biasanya kamu tidak melakukannya** → *tidak perlu (jadi tidak)*. Artinya sama dengan *didn't have to*.\nJebakan: **needn't have brought** (bukan 'needn't have bring'), **didn't need to bring** (bukan 'didn't need to brought').\nBeda dengan *shouldn't have* (seharusnya tidak = kesalahan): itu untuk pelajaran tentang penyesalan.",
+        "pairs": [
+          {
+            "en": "needn't have + V3",
+            "id": "ternyata tidak perlu (padahal sudah)"
+          },
+          {
+            "en": "didn't need to + verb",
+            "id": "tidak perlu (jadi tidak)"
+          },
+          {
+            "en": "didn't have to + verb",
+            "id": "tidak perlu (sama dengan didn't need to)"
+          },
+          {
+            "en": "shouldn't have + V3",
+            "id": "seharusnya tidak (kesalahan)"
+          },
+          {
+            "en": "to hurry",
+            "id": "buru-buru"
+          },
+          {
+            "en": "to queue",
+            "id": "antre"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Apakah itu terjadi?",
+        "text": "Cek setiap kalimat: orangnya melakukannya atau tidak?",
+        "body": "*needn't have* lebih British dan agak formal; orang Amerika sering bilang *I didn't need to … after all*.",
+        "examples": [
+          {
+            "en": "I needn't have brought an umbrella. It didn't rain all day.",
+            "id": "Ternyata aku tidak perlu bawa payung (padahal sudah bawa). Seharian tidak hujan."
+          },
+          {
+            "en": "We needn't have hurried. The train was 30 minutes late.",
+            "id": "Ternyata kita tidak perlu buru-buru (padahal sudah). Keretanya terlambat 30 menit."
+          },
+          {
+            "en": "I didn't need to bring an umbrella. The event was indoors.",
+            "id": "Aku tidak perlu bawa payung (jadi tidak bawa). Acaranya di dalam ruangan."
+          },
+          {
+            "en": "Budi didn't need to queue. He had booked his ticket online.",
+            "id": "Budi tidak perlu antre (jadi tidak antre). Dia sudah pesan tiket online."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ternyata online",
+        "text": "Bu Ani berencana menyetir dari Jakarta ke Bandung untuk rapat. Malam sebelumnya, rapatnya dipindah ke online, jadi dia tetap di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "neednt-have-didnt-need",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "She needn't have driven to Bandung.",
+            "She didn't need to drive to Bandung.",
+            "She didn't need to drove to Bandung."
+          ],
+          "answer": 1,
+          "explanation": "Dia tetap di Jakarta: tidak perlu, dan dia tidak pergi → **didn't need to drive**. *needn't have driven* berarti dia SUDAH menyetir ke sana. Sesudah *to* datang kata kerja dasar, jadi bukan 'to drove'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Terlalu pagi di bandara",
+        "text": "Penerbanganmu dari Soekarno-Hatta jam 9 pagi, tapi kamu khawatir macet, jadi kamu berangkat dari rumah jam 4 pagi. Jalanan kosong dan kamu menunggu di gate berjam-jam.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "neednt-have-didnt-need",
+          "prompt": "Susun kata-katanya: Ternyata aku tidak perlu berangkat sepagi itu.",
+          "tokens": [
+            "so",
+            "needn't",
+            "I",
+            "early",
+            "left",
+            "have"
+          ],
+          "solution": "I needn't have left so early.",
+          "explanation": "Kamu SUDAH berangkat pagi sekali, dan ternyata tidak perlu → **needn't have** + bentuk ketiga (*left*)."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Ulasan cepat: ucapkan bahasa Inggrisnya, lalu balik kartunya.",
+        "flashcards": [
+          {
+            "front": "pasti sudah … (dugaan, masa lalu)",
+            "back": "must have + third form"
+          },
+          {
+            "front": "mungkin (tadi / sudah) …",
+            "back": "might / may / could have + third form"
+          },
+          {
+            "front": "tidak mungkin (tadi / sudah) …",
+            "back": "can't / couldn't have + third form"
+          },
+          {
+            "front": "ternyata tidak perlu (padahal sudah)",
+            "back": "needn't have + third form"
+          },
+          {
+            "front": "tidak perlu (jadi tidak)",
+            "back": "didn't need to + base verb"
+          },
+          {
+            "front": "Perbaiki: She can't has seen it.",
+            "back": "She can't have seen it."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk kasusmu berikutnya, detektif!",
+        "artifact": {
+          "title": "Ringkasan · must have, might have, can't have, needn't have",
+          "intro": "Dugaan tentang masa lalu = kata bantu + have + bentuk ketiga. Kata bantunya menunjukkan seberapa yakin kamu. needn't have dan didn't need to memberi tahu apakah hal yang tidak perlu itu terjadi.",
+          "headers": [
+            "Arti",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "100% ya (fakta)",
+              "past simple",
+              "It rained last night. I heard it."
+            ],
+            [
+              "Hampir pasti ya (pasti sudah)",
+              "must have + V3",
+              "The floor is wet. It must have rained."
+            ],
+            [
+              "Tidak yakin (mungkin)",
+              "might / may / could have + V3",
+              "Sari isn't here yet. She might have overslept."
+            ],
+            [
+              "Tidak yakin, mungkin tidak",
+              "might not / may not have + V3",
+              "Rina might not have read my email. She's on leave."
+            ],
+            [
+              "Hampir pasti tidak (tidak mungkin)",
+              "can't / couldn't have + V3",
+              "Dimas can't have cooked this. He can't cook."
+            ],
+            [
+              "100% tidak (fakta)",
+              "didn't + kata kerja",
+              "It didn't rain. The ground is dry."
+            ],
+            [
+              "Dengan be",
+              "must have been + kata sifat / -ing",
+              "You must have been tired."
+            ],
+            [
+              "Sudah dilakukan, ternyata tidak perlu",
+              "needn't have + V3",
+              "I needn't have brought an umbrella."
+            ],
+            [
+              "Tidak perlu, jadi tidak dilakukan",
+              "didn't need to + kata kerja",
+              "I didn't need to bring an umbrella."
+            ]
+          ],
+          "tips": [
+            "have tidak pernah berubah dan kata kerjanya bentuk ketiga: bukan 'must went', 'can't has seen' atau 'needn't have bring'.",
+            "Bukan mustn't have (mustn't = dilarang): untuk tidak mungkin pakai **can't have**.",
+            "needn't have = sudah dilakukan. didn't need to = biasanya tidak dilakukan."
+          ],
+          "examples": [
+            {
+              "en": "Budi's desk is empty and his bag is gone. He must have gone home.",
+              "id": "Meja Budi kosong dan tasnya tidak ada. Dia pasti sudah pulang."
+            },
+            {
+              "en": "They can't have seen us. They were looking the other way.",
+              "id": "Mereka tidak mungkin melihat kita. Mereka sedang melihat ke arah lain."
+            },
+            {
+              "en": "We needn't have hurried. The train was 30 minutes late.",
+              "id": "Ternyata kita tidak perlu buru-buru (padahal sudah). Keretanya terlambat 30 menit."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca",
+        "text": "Mau lebih? Baca halaman British Council tentang dugaan masa lalu (dengan dua tes latihan), dan tonton BBC Learning English menjelaskan needn't have vs didn't need to."
+      }
+    ]
+  }
+}

@@ -252,7 +252,7 @@ def learn(api, curriculum):
     if not_done:
         fail(f"not mastered: {not_done}")
     # Locked / coming-soon nodes refuse to start.
-    for nid, want in (("b2-narrative-tenses", "node_coming_soon"), ("c2-stylistic-nuance", "node_coming_soon")):
+    for nid, want in (("c1-inversion", "node_coming_soon"), ("c2-stylistic-nuance", "node_coming_soon")):
         status, body = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": nid})
         if status != 409:
             fail(f"{nid} should not start: {status} {body}")

@@ -1,0 +1,742 @@
+{
+  "en": {
+    "greeting": "Hi! Today we look at small changes after a verb that change the whole meaning: -ing or to, used to or I'm used to, and want someone to. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Same verb, new meaning: remember and forget",
+        "text": "In B1 you met verbs with -ing (enjoy) or to (want). Today: verbs that take both, but the meaning changes.",
+        "body": "**remember / forget + -ing** = a **memory**: the action happened first, and you remember it later. *I remember visiting Bali as a child.*\n**remember / forget + to** = a **task**: you remember first, then you do it (or you forget, so you don't). *Remember to call Bu Ani.*\nTrick: **-ing looks back, to looks forward.** Indonesian *lupa mengunci pintu* usually means you didn't lock it: **forgot to lock**. forget + -ing is mostly in **I'll never forget + -ing**.",
+        "pairs": [
+          {
+            "en": "I remember visiting …",
+            "id": "saya ingat pernah mengunjungi … (kenangan)"
+          },
+          {
+            "en": "Remember to call …",
+            "id": "jangan lupa menelepon … (tugas)"
+          },
+          {
+            "en": "I'll never forget seeing …",
+            "id": "saya tak akan lupa saat melihat … (kenangan)"
+          },
+          {
+            "en": "I forgot to bring …",
+            "id": "saya lupa membawa … (tidak dibawa)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Memory or task?",
+        "text": "Sari's housemate is going out. The electricity token at the kos is almost empty.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-vs-to-meaning",
+          "prompt": "Complete: Don't forget ___ a new electricity token on your way home.",
+          "options": [
+            "buying",
+            "to buy",
+            "buy"
+          ],
+          "answer": 1,
+          "explanation": "Buying the token is a **task for later**, so forget + **to**: *Don't forget to buy*. forget + -ing is for memories (*I'll never forget meeting her*), and 'forget buy' is missing to."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "stop and try",
+        "text": "Two more verbs where -ing or to changes the meaning, and here Indonesian can actually help you.",
+        "body": "**stop + -ing** = the activity ends: *He stopped smoking* (berhenti merokok: he quit).\n**stop + to** = stop one thing **in order to** do another: *He stopped to smoke* (berhenti **untuk** merokok: he took a break to smoke!). Indonesian *untuk* = English *to* here.\n**try + to** = make an effort, it's hard: *I'm trying to sleep.*\n**try + -ing** = an experiment, to see if it works: *Try drinking warm milk.*\nNote: **We regret to inform you …** is a formal phrase for bad news.",
+        "pairs": [
+          {
+            "en": "stop smoking",
+            "id": "berhenti merokok (tidak merokok lagi)"
+          },
+          {
+            "en": "stop to smoke",
+            "id": "berhenti untuk merokok"
+          },
+          {
+            "en": "try to sleep",
+            "id": "berusaha tidur (sulit)"
+          },
+          {
+            "en": "try drinking warm milk",
+            "id": "coba minum susu hangat (percobaan)"
+          },
+          {
+            "en": "We regret to inform you …",
+            "id": "Dengan menyesal kami sampaikan … (formal)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan is driving from Jakarta to Bandung on the toll road. He feels sleepy.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-vs-to-meaning",
+          "prompt": "Complete: He stopped at a rest area ___ a coffee.",
+          "options": [
+            "drinking",
+            "drink",
+            "to drink"
+          ],
+          "answer": 2,
+          "explanation": "He stopped driving **in order to** drink coffee (berhenti **untuk** minum kopi), so stop + **to**: *stopped to drink*. 'stopped drinking' would mean the drinking ended, and 'stopped drink' is not English."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "used to, be used to, get used to",
+        "text": "These three look almost the same, but they mean different things.",
+        "body": "**used to + verb** (B1) = dulu, not now: *I used to live in Bogor.*\n**be used to + -ing** = **sudah terbiasa** (it's normal now): *I'm used to working late.*\n**get used to + -ing** = **mulai terbiasa** (the change): *You'll get used to living alone.*\nIn be / get used to, **to** is a preposition, like in *look forward to*, so the verb takes **-ing** (or use a noun: *I'm used to the noise*). 'I'm used to wake up early' ✗ → **I'm used to waking up early.**",
+        "pairs": [
+          {
+            "en": "I used to live …",
+            "id": "dulu saya tinggal …"
+          },
+          {
+            "en": "I'm used to working late.",
+            "id": "Saya sudah terbiasa kerja sampai malam."
+          },
+          {
+            "en": "She's used to the noise.",
+            "id": "Dia (perempuan) sudah terbiasa dengan suara bising."
+          },
+          {
+            "en": "You'll get used to it.",
+            "id": "Nanti kamu akan terbiasa."
+          },
+          {
+            "en": "I've got used to …",
+            "id": "saya sudah jadi terbiasa … (British; Amerika: gotten)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Dimas hated the crowded KRL at first. A year later, it's normal for him.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "used-to-vs-be-used-to",
+          "prompt": "Arrange the words: Saya sudah terbiasa naik KRL ke kantor.",
+          "tokens": [
+            "KRL",
+            "used",
+            "work",
+            "I'm",
+            "to",
+            "the",
+            "taking",
+            "to"
+          ],
+          "solution": "I'm used to taking the KRL to work.",
+          "explanation": "sudah terbiasa = **be used to + -ing**: *I'm used to taking …*. Here *to* is a preposition, so the verb takes -ing (**taking**, not 'take'). Without *am* ('I used to take the KRL'), it would mean *dulu* — a different meaning."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "want someone to …",
+        "text": "Now: how to say what you want another person to do.",
+        "body": "Use **verb + object + to + verb**. The object = who receives the action: *me, him, her, us, them, Budi*.\n*My boss wants me to lead the meeting. Rina asked me to check her CV. The doctor told him to rest.* Also **would like, expect, need**. Negative: **not to** (*told me not to worry*).\nIndonesian trap: *Dia ingin agar saya datang* is not 'She wants that I come' but **She wants me to come**.\n**make / let** + object + verb **without to**: *They made us wait. Let me help.*",
+        "pairs": [
+          {
+            "en": "want someone to …",
+            "id": "ingin seseorang …"
+          },
+          {
+            "en": "ask someone to …",
+            "id": "meminta seseorang untuk …"
+          },
+          {
+            "en": "tell someone to …",
+            "id": "menyuruh seseorang …"
+          },
+          {
+            "en": "expect someone to …",
+            "id": "mengharapkan seseorang …"
+          },
+          {
+            "en": "need someone to …",
+            "id": "butuh seseorang untuk …"
+          },
+          {
+            "en": "make someone do …",
+            "id": "membuat / memaksa seseorang … (tanpa to)"
+          },
+          {
+            "en": "let someone do …",
+            "id": "membiarkan / mengizinkan seseorang … (tanpa to)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Who does what?",
+        "text": "Look at the person after the verb, and at the word that comes next.",
+        "body": "**to** after want / ask / tell / expect / need / would like; **no to** after make / let. For a negative, **not to**.",
+        "examples": [
+          {
+            "en": "I'd like you to meet my colleague, Sari.",
+            "id": "Saya ingin kamu berkenalan dengan rekan kerja saya, Sari."
+          },
+          {
+            "en": "The client expects us to reply within 24 hours.",
+            "id": "Klien mengharapkan kami membalas dalam 24 jam."
+          },
+          {
+            "en": "Bu Ani told the students not to use their phones.",
+            "id": "Bu Ani menyuruh para siswa untuk tidak memakai HP."
+          },
+          {
+            "en": "The traffic jam made us miss the first train.",
+            "id": "Kemacetan membuat kami ketinggalan kereta pertama."
+          },
+          {
+            "en": "Pak Hasan let his team go home early on Friday.",
+            "id": "Pak Hasan membolehkan timnya pulang lebih awal hari Jumat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari's manager said to her: 'Can you send me the sales report by Friday?' Sari tells a friend about it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-object-infinitive",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "My manager wants that I send her the report by Friday.",
+            "My manager wants me to send her the report by Friday.",
+            "My manager wants me send her the report by Friday."
+          ],
+          "answer": 1,
+          "explanation": "want + **object + to + verb**: *wants me to send*. English *want* doesn't take 'that I …' (the Indonesian *ingin agar saya …* trap), and you can't drop **to** (only make / let have no to)."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock it in.",
+        "flashcards": [
+          {
+            "front": "Saya ingat pernah bertemu dia (perempuan). (kenangan)",
+            "back": "I remember meeting her."
+          },
+          {
+            "front": "Jangan lupa matikan AC-nya! (tugas)",
+            "back": "Don't forget to turn off the AC!"
+          },
+          {
+            "front": "Dia berhenti merokok. (sudah tidak merokok)",
+            "back": "He stopped smoking."
+          },
+          {
+            "front": "Dia berhenti untuk merokok. (istirahat sebentar)",
+            "back": "He stopped to smoke."
+          },
+          {
+            "front": "Saya sedang berusaha konsentrasi. (sulit)",
+            "back": "I'm trying to concentrate."
+          },
+          {
+            "front": "Saya sudah terbiasa bangun pagi.",
+            "back": "I'm used to getting up early."
+          },
+          {
+            "front": "Dia ingin agar saya datang.",
+            "back": "She wants me to come."
+          },
+          {
+            "front": "Ibu tidak mengizinkan saya keluar malam.",
+            "back": "My mother doesn't let me go out at night."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Verb patterns that change meaning",
+          "intro": "The pattern after the verb changes the meaning. -ing looks back, to looks forward.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "remember + -ing",
+              "I remember meeting her.",
+              "ingat pernah … (kenangan)"
+            ],
+            [
+              "remember + to",
+              "Remember to call Bu Ani.",
+              "jangan lupa … (tugas)"
+            ],
+            [
+              "forget + to",
+              "I forgot to bring my laptop.",
+              "lupa … (tidak dilakukan)"
+            ],
+            [
+              "never forget + -ing",
+              "I'll never forget seeing Bromo.",
+              "tak akan lupa saat …"
+            ],
+            [
+              "stop + -ing",
+              "He stopped smoking.",
+              "berhenti … (tidak lagi)"
+            ],
+            [
+              "stop + to",
+              "He stopped to buy petrol.",
+              "berhenti untuk …"
+            ],
+            [
+              "try + to",
+              "I'm trying to sleep.",
+              "berusaha … (sulit)"
+            ],
+            [
+              "try + -ing",
+              "Try restarting it.",
+              "coba … (percobaan)"
+            ],
+            [
+              "used to + verb",
+              "I used to live in Bogor.",
+              "dulu …"
+            ],
+            [
+              "be used to + -ing",
+              "I'm used to working late.",
+              "sudah terbiasa …"
+            ],
+            [
+              "get used to + -ing",
+              "You'll get used to living alone.",
+              "mulai / jadi terbiasa …"
+            ],
+            [
+              "want / ask / tell + object + to",
+              "She wants me to come.",
+              "ingin / meminta / menyuruh seseorang …"
+            ],
+            [
+              "make / let + object + verb",
+              "They let us park here.",
+              "membuat / mengizinkan (tanpa to)"
+            ]
+          ],
+          "tips": [
+            "**stop + -ing** = berhenti melakukan; **stop + to** = berhenti **untuk**. 'I stopped to smoke last year' does not mean you quit!",
+            "**be / get used to + -ing** (sudah / mulai terbiasa): to is a preposition. Not 'I'm used to wake up'.",
+            "**want me to come**, not 'want that I come'. **make / let** + object + verb, **without to**."
+          ],
+          "examples": [
+            {
+              "en": "Don't forget to top up your e-money card.",
+              "id": "Jangan lupa isi saldo kartu e-money-mu."
+            },
+            {
+              "en": "We stopped at a petrol station to pray.",
+              "id": "Kami berhenti di pom bensin untuk salat."
+            },
+            {
+              "en": "After a year in Bandung, I'm used to the rain.",
+              "id": "Setelah setahun di Bandung, saya sudah terbiasa dengan hujan."
+            },
+            {
+              "en": "Rina asked me to check her CV.",
+              "id": "Rina meminta saya memeriksa CV-nya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These pages explain the same patterns another way, with tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membahas perubahan kecil sesudah kata kerja yang mengubah seluruh maknanya: -ing atau to, used to atau I'm used to, dan want someone to. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata kerja sama, makna baru: remember dan forget",
+        "text": "Di B1 kamu sudah kenal kata kerja dengan -ing (enjoy) atau to (want). Hari ini: kata kerja yang bisa diikuti keduanya, tapi maknanya berubah.",
+        "body": "**remember / forget + -ing** = **kenangan**: tindakannya terjadi dulu, lalu belakangan kamu mengingatnya. *I remember visiting Bali as a child.*\n**remember / forget + to** = **tugas**: kamu ingat dulu, baru melakukannya (atau lupa, jadi tidak dilakukan). *Remember to call Bu Ani.*\nTrik: **-ing melihat ke belakang, to melihat ke depan.** *Lupa mengunci pintu* biasanya berarti pintunya tidak dikunci: **forgot to lock**. forget + -ing kebanyakan dipakai dalam **I'll never forget + -ing**.",
+        "pairs": [
+          {
+            "en": "I remember visiting …",
+            "id": "saya ingat pernah mengunjungi … (kenangan)"
+          },
+          {
+            "en": "Remember to call …",
+            "id": "jangan lupa menelepon … (tugas)"
+          },
+          {
+            "en": "I'll never forget seeing …",
+            "id": "saya tak akan lupa saat melihat … (kenangan)"
+          },
+          {
+            "en": "I forgot to bring …",
+            "id": "saya lupa membawa … (tidak dibawa)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kenangan atau tugas?",
+        "text": "Teman kos Sari mau keluar. Token listrik di kos hampir habis.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-vs-to-meaning",
+          "prompt": "Lengkapi: Don't forget ___ a new electricity token on your way home.",
+          "options": [
+            "buying",
+            "to buy",
+            "buy"
+          ],
+          "answer": 1,
+          "explanation": "Membeli token adalah **tugas untuk nanti**, jadi forget + **to**: *Don't forget to buy*. forget + -ing untuk kenangan (*I'll never forget meeting her*), dan 'forget buy' tidak memakai to."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "stop dan try",
+        "text": "Dua kata kerja lagi yang maknanya berubah dengan -ing atau to, dan di sini bahasa Indonesia justru membantu.",
+        "body": "**stop + -ing** = kegiatannya berhenti: *He stopped smoking* (berhenti merokok: sudah tidak merokok).\n**stop + to** = berhenti dari satu hal **supaya bisa** melakukan hal lain: *He stopped to smoke* (berhenti **untuk** merokok: dia istirahat untuk merokok!). Kata *untuk* = *to* di sini.\n**try + to** = berusaha, karena sulit: *I'm trying to sleep.*\n**try + -ing** = percobaan, untuk melihat apakah berhasil: *Try drinking warm milk.*\nCatatan: **We regret to inform you …** adalah ungkapan formal untuk kabar buruk.",
+        "pairs": [
+          {
+            "en": "stop smoking",
+            "id": "berhenti merokok (tidak merokok lagi)"
+          },
+          {
+            "en": "stop to smoke",
+            "id": "berhenti untuk merokok"
+          },
+          {
+            "en": "try to sleep",
+            "id": "berusaha tidur (sulit)"
+          },
+          {
+            "en": "try drinking warm milk",
+            "id": "coba minum susu hangat (percobaan)"
+          },
+          {
+            "en": "We regret to inform you …",
+            "id": "Dengan menyesal kami sampaikan … (formal)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan menyetir dari Jakarta ke Bandung lewat jalan tol. Dia mengantuk.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-vs-to-meaning",
+          "prompt": "Lengkapi: He stopped at a rest area ___ a coffee.",
+          "options": [
+            "drinking",
+            "drink",
+            "to drink"
+          ],
+          "answer": 2,
+          "explanation": "Dia berhenti menyetir **supaya bisa** minum kopi (berhenti **untuk** minum kopi), jadi stop + **to**: *stopped to drink*. 'stopped drinking' berarti kegiatan minumnya yang berhenti, dan 'stopped drink' bukan bahasa Inggris yang benar."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "used to, be used to, get used to",
+        "text": "Ketiganya hampir sama bentuknya, tapi artinya berbeda.",
+        "body": "**used to + kata kerja** (B1) = dulu, sekarang tidak: *I used to live in Bogor.*\n**be used to + -ing** = **sudah terbiasa** (sekarang sudah biasa): *I'm used to working late.*\n**get used to + -ing** = **mulai terbiasa** (prosesnya): *You'll get used to living alone.*\nDalam be / get used to, **to** adalah preposisi, seperti dalam *look forward to*, jadi kata kerjanya pakai **-ing** (atau pakai kata benda: *I'm used to the noise*). 'I'm used to wake up early' ✗ → **I'm used to waking up early.**",
+        "pairs": [
+          {
+            "en": "I used to live …",
+            "id": "dulu saya tinggal …"
+          },
+          {
+            "en": "I'm used to working late.",
+            "id": "Saya sudah terbiasa kerja sampai malam."
+          },
+          {
+            "en": "She's used to the noise.",
+            "id": "Dia (perempuan) sudah terbiasa dengan suara bising."
+          },
+          {
+            "en": "You'll get used to it.",
+            "id": "Nanti kamu akan terbiasa."
+          },
+          {
+            "en": "I've got used to …",
+            "id": "saya sudah jadi terbiasa … (British; Amerika: gotten)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Awalnya Dimas benci KRL yang penuh sesak. Setahun kemudian, itu sudah biasa untuknya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "used-to-vs-be-used-to",
+          "prompt": "Susun kata-katanya: Saya sudah terbiasa naik KRL ke kantor.",
+          "tokens": [
+            "KRL",
+            "used",
+            "work",
+            "I'm",
+            "to",
+            "the",
+            "taking",
+            "to"
+          ],
+          "solution": "I'm used to taking the KRL to work.",
+          "explanation": "sudah terbiasa = **be used to + -ing**: *I'm used to taking …*. Di sini *to* adalah preposisi, jadi kata kerjanya pakai -ing (**taking**, bukan 'take'). Tanpa *am* ('I used to take the KRL'), artinya jadi *dulu* — makna yang berbeda."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "want someone to …",
+        "text": "Sekarang: cara mengatakan apa yang kamu ingin orang lain lakukan.",
+        "body": "Pakai **kata kerja + objek + to + kata kerja**. Objek = orang yang menerima tindakan: *me, him, her, us, them, Budi*.\n*My boss wants me to lead the meeting. Rina asked me to check her CV. The doctor told him to rest.* Juga **would like, expect, need**. Negatif: **not to** (*told me not to worry*).\nJebakan: *Dia ingin agar saya datang* bukan 'She wants that I come', tapi **She wants me to come**.\n**make / let** + objek + kata kerja **tanpa to**: *They made us wait. Let me help.*",
+        "pairs": [
+          {
+            "en": "want someone to …",
+            "id": "ingin seseorang …"
+          },
+          {
+            "en": "ask someone to …",
+            "id": "meminta seseorang untuk …"
+          },
+          {
+            "en": "tell someone to …",
+            "id": "menyuruh seseorang …"
+          },
+          {
+            "en": "expect someone to …",
+            "id": "mengharapkan seseorang …"
+          },
+          {
+            "en": "need someone to …",
+            "id": "butuh seseorang untuk …"
+          },
+          {
+            "en": "make someone do …",
+            "id": "membuat / memaksa seseorang … (tanpa to)"
+          },
+          {
+            "en": "let someone do …",
+            "id": "membiarkan / mengizinkan seseorang … (tanpa to)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Siapa melakukan apa?",
+        "text": "Perhatikan orang sesudah kata kerjanya, dan kata yang datang berikutnya.",
+        "body": "**to** sesudah want / ask / tell / expect / need / would like; **tanpa to** sesudah make / let. Untuk kalimat negatif, **not to**.",
+        "examples": [
+          {
+            "en": "I'd like you to meet my colleague, Sari.",
+            "id": "Saya ingin kamu berkenalan dengan rekan kerja saya, Sari."
+          },
+          {
+            "en": "The client expects us to reply within 24 hours.",
+            "id": "Klien mengharapkan kami membalas dalam 24 jam."
+          },
+          {
+            "en": "Bu Ani told the students not to use their phones.",
+            "id": "Bu Ani menyuruh para siswa untuk tidak memakai HP."
+          },
+          {
+            "en": "The traffic jam made us miss the first train.",
+            "id": "Kemacetan membuat kami ketinggalan kereta pertama."
+          },
+          {
+            "en": "Pak Hasan let his team go home early on Friday.",
+            "id": "Pak Hasan membolehkan timnya pulang lebih awal hari Jumat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Manajer Sari berkata kepadanya: 'Can you send me the sales report by Friday?' Sari menceritakannya ke temannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-object-infinitive",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "My manager wants that I send her the report by Friday.",
+            "My manager wants me to send her the report by Friday.",
+            "My manager wants me send her the report by Friday."
+          ],
+          "answer": 1,
+          "explanation": "want + **objek + to + kata kerja**: *wants me to send*. Dalam bahasa Inggris, *want* tidak diikuti 'that I …' (jebakan *ingin agar saya …*), dan **to** tidak boleh dihilangkan (hanya make / let yang tanpa to)."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini supaya makin nempel.",
+        "flashcards": [
+          {
+            "front": "Saya ingat pernah bertemu dia (perempuan). (kenangan)",
+            "back": "I remember meeting her."
+          },
+          {
+            "front": "Jangan lupa matikan AC-nya! (tugas)",
+            "back": "Don't forget to turn off the AC!"
+          },
+          {
+            "front": "Dia berhenti merokok. (sudah tidak merokok)",
+            "back": "He stopped smoking."
+          },
+          {
+            "front": "Dia berhenti untuk merokok. (istirahat sebentar)",
+            "back": "He stopped to smoke."
+          },
+          {
+            "front": "Saya sedang berusaha konsentrasi. (sulit)",
+            "back": "I'm trying to concentrate."
+          },
+          {
+            "front": "Saya sudah terbiasa bangun pagi.",
+            "back": "I'm used to getting up early."
+          },
+          {
+            "front": "Dia ingin agar saya datang.",
+            "back": "She wants me to come."
+          },
+          {
+            "front": "Ibu tidak mengizinkan saya keluar malam.",
+            "back": "My mother doesn't let me go out at night."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Pola kata kerja yang mengubah makna",
+          "intro": "Pola sesudah kata kerja mengubah maknanya. -ing melihat ke belakang, to melihat ke depan.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "remember + -ing",
+              "I remember meeting her.",
+              "ingat pernah … (kenangan)"
+            ],
+            [
+              "remember + to",
+              "Remember to call Bu Ani.",
+              "jangan lupa … (tugas)"
+            ],
+            [
+              "forget + to",
+              "I forgot to bring my laptop.",
+              "lupa … (tidak dilakukan)"
+            ],
+            [
+              "never forget + -ing",
+              "I'll never forget seeing Bromo.",
+              "tak akan lupa saat …"
+            ],
+            [
+              "stop + -ing",
+              "He stopped smoking.",
+              "berhenti … (tidak lagi)"
+            ],
+            [
+              "stop + to",
+              "He stopped to buy petrol.",
+              "berhenti untuk …"
+            ],
+            [
+              "try + to",
+              "I'm trying to sleep.",
+              "berusaha … (sulit)"
+            ],
+            [
+              "try + -ing",
+              "Try restarting it.",
+              "coba … (percobaan)"
+            ],
+            [
+              "used to + verb",
+              "I used to live in Bogor.",
+              "dulu …"
+            ],
+            [
+              "be used to + -ing",
+              "I'm used to working late.",
+              "sudah terbiasa …"
+            ],
+            [
+              "get used to + -ing",
+              "You'll get used to living alone.",
+              "mulai / jadi terbiasa …"
+            ],
+            [
+              "want / ask / tell + object + to",
+              "She wants me to come.",
+              "ingin / meminta / menyuruh seseorang …"
+            ],
+            [
+              "make / let + object + verb",
+              "They let us park here.",
+              "membuat / mengizinkan (tanpa to)"
+            ]
+          ],
+          "tips": [
+            "**stop + -ing** = berhenti melakukan; **stop + to** = berhenti **untuk**. 'I stopped to smoke last year' tidak berarti kamu sudah berhenti merokok!",
+            "**be / get used to + -ing** (sudah / mulai terbiasa): to di sini preposisi. Bukan 'I'm used to wake up'.",
+            "**want me to come**, bukan 'want that I come'. **make / let** + objek + kata kerja, **tanpa to**."
+          ],
+          "examples": [
+            {
+              "en": "Don't forget to top up your e-money card.",
+              "id": "Jangan lupa isi saldo kartu e-money-mu."
+            },
+            {
+              "en": "We stopped at a petrol station to pray.",
+              "id": "Kami berhenti di pom bensin untuk salat."
+            },
+            {
+              "en": "After a year in Bandung, I'm used to the rain.",
+              "id": "Setelah setahun di Bandung, saya sudah terbiasa dengan hujan."
+            },
+            {
+              "en": "Rina asked me to check her CV.",
+              "id": "Rina meminta saya memeriksa CV-nya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman-halaman ini menjelaskan pola yang sama dengan cara lain, lengkap dengan tes."
+      }
+    ]
+  }
+}

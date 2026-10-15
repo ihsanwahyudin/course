@@ -1,0 +1,744 @@
+{
+  "en": {
+    "greeting": "Hi! You know is cleaned and was built. Today the passive goes further: every tense, modals, the news style It is said that…, and the verbs that can never be passive. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One recipe, every tense",
+        "text": "Quick recap: passive = be + third form (is cleaned, was built), and by names the doer. Now let's take it into every tense.",
+        "body": "Put **be** into the tense you need, then add the **third form**, which never changes:\n- present perfect: **has/have been** + third form (*sudah di-*)\n- continuous: **am/is/are/was/were being** + third form (*sedang di-*)\n- future: **will be** + third form (*akan di-*)\nIndonesian adds a time word to the same *di-*; English shows the time with the helper (has, is, will), so never drop it. Trick: **been** after has/have/had, **being** for *sedang*.",
+        "pairs": [
+          {
+            "en": "has been sent",
+            "id": "sudah dikirim"
+          },
+          {
+            "en": "have been opened",
+            "id": "sudah dibuka (jamak)"
+          },
+          {
+            "en": "is being built",
+            "id": "sedang dibangun"
+          },
+          {
+            "en": "was being cleaned",
+            "id": "sedang dibersihkan (dulu)"
+          },
+          {
+            "en": "will be announced",
+            "id": "akan diumumkan"
+          },
+          {
+            "en": "had been sold",
+            "id": "sudah terjual (sebelumnya)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "The passive in every tense",
+        "text": "Look at the helper in each sentence: it shows the time. The last word is always the third form.",
+        "body": "Watch the third form: 'The email has been **send**' is a classic mistake → *has been **sent*** (send → sent → sent).",
+        "examples": [
+          {
+            "en": "Your order has been sent.",
+            "id": "Pesananmu sudah dikirim."
+          },
+          {
+            "en": "Three new branches have been opened this year.",
+            "id": "Tiga cabang baru sudah dibuka tahun ini."
+          },
+          {
+            "en": "A new bridge is being built over the river.",
+            "id": "Jembatan baru sedang dibangun di atas sungai."
+          },
+          {
+            "en": "When I got to the office, the floor was being cleaned.",
+            "id": "Waktu saya sampai di kantor, lantainya sedang dibersihkan."
+          },
+          {
+            "en": "The winners will be announced on Friday.",
+            "id": "Pemenangnya akan diumumkan hari Jumat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You get an email from your bank.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-the-passive",
+          "prompt": "Complete with the present perfect passive of 'pay': Your credit card bill ___ in full. Thank you!",
+          "options": [
+            "has been payed",
+            "has paid",
+            "has been paid"
+          ],
+          "answer": 2,
+          "explanation": "Present perfect passive = **has + been + third form**, and pay → paid → **paid** (not 'payed'). 'has paid' is active: it says the bill paid something."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Modals: must be done",
+        "text": "Harus diselesaikan, bisa dibayar, mungkin dibatalkan: how do you say these in English?",
+        "body": "After a **modal** (a helper that adds meaning: *must, should, can, could, may, might*, and *have to*), the passive is **modal + be + third form**: *The report **must be finished** today.*\n**The Indonesian trap:** the *di-* in *harus diselesaikan* is the part learners forget. 'must be **finish**' has no third form; 'must finished' has no be. Wherever Indonesian has *di-*, English needs **both**. Negative: *must not be used*. Question: *Can it be paid by QRIS?*",
+        "pairs": [
+          {
+            "en": "must be finished",
+            "id": "harus diselesaikan"
+          },
+          {
+            "en": "should be checked",
+            "id": "sebaiknya dicek"
+          },
+          {
+            "en": "can be paid",
+            "id": "bisa dibayar"
+          },
+          {
+            "en": "might be cancelled",
+            "id": "mungkin dibatalkan (US: canceled)"
+          },
+          {
+            "en": "has to be approved",
+            "id": "harus disetujui"
+          },
+          {
+            "en": "must not be used",
+            "id": "tidak boleh dipakai"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Budi wants to take leave next week. HR tells him what to do with the leave form.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "form-the-passive",
+          "prompt": "Arrange the words: Formulirnya harus ditandatangani oleh manajermu.",
+          "tokens": [
+            "signed",
+            "your",
+            "The",
+            "be",
+            "manager",
+            "must",
+            "by",
+            "form"
+          ],
+          "solution": "The form must be signed by your manager.",
+          "explanation": "The thing comes first: **The form**. Then modal + be + third form: **must be signed** (harus ditandatangani), and **by** (= oleh) + the doer at the end: **your manager**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "News style: It is said that…",
+        "text": "News loves konon, dikabarkan, diperkirakan. English has two passive patterns for them.",
+        "body": "**1. It + is said/believed/reported + that + full sentence:** *It is said that this house is haunted.*\n**2. Subject + is said/believed/thought/expected + to + verb:** *This house is said to be haunted.*\nIn pattern 2, use **to + base verb** for now or the future, and **to have + third form** for something **earlier**: *Pak Hasan is said to have moved to Bali.*\nDon't mix them ('He is said **that**…') and don't add *by people*.",
+        "pairs": [
+          {
+            "en": "It is said that…",
+            "id": "konon…"
+          },
+          {
+            "en": "It is reported that…",
+            "id": "dikabarkan…"
+          },
+          {
+            "en": "is expected to…",
+            "id": "diperkirakan akan…"
+          },
+          {
+            "en": "is believed to…",
+            "id": "diyakini…"
+          },
+          {
+            "en": "is thought to…",
+            "id": "diduga…"
+          },
+          {
+            "en": "is said to have moved",
+            "id": "konon sudah pindah"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In the news",
+        "text": "Here are both patterns in real news sentences. Notice to + verb (now/future) versus to have + third form (earlier).",
+        "body": "**be** shows when people said it: *It **was** reported that…* (the report was in the past).",
+        "examples": [
+          {
+            "en": "It was reported that twenty people were injured.",
+            "id": "Dikabarkan dua puluh orang terluka."
+          },
+          {
+            "en": "Fuel prices are expected to rise next month.",
+            "id": "Harga BBM diperkirakan naik bulan depan."
+          },
+          {
+            "en": "The singer is believed to be ill.",
+            "id": "Penyanyi itu diyakini sedang sakit."
+          },
+          {
+            "en": "The fire is thought to have started in the kitchen.",
+            "id": "Kebakarannya diduga berawal dari dapur."
+          },
+          {
+            "en": "It is estimated that 30% of the rice was lost.",
+            "id": "Diperkirakan 30% padinya hilang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A news report about a robbery in Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "passive-reporting",
+          "prompt": "Complete: The suspect ___ the country last week.",
+          "options": [
+            "is believed to leave",
+            "is believed to have left",
+            "is believed that he left"
+          ],
+          "answer": 1,
+          "explanation": "The leaving happened **earlier** (last week) → **to have + third form**: *is believed to have left*. 'to leave' is for now or the future, and 'is believed that he left' mixes the patterns: with *that*, start with **It**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "No passive, and choosing",
+        "text": "Two last things: some verbs can never be passive, and with the others you choose.",
+        "body": "Only verbs with an **object** (the thing that receives the action) can be passive. **happen, occur, take place, arrive, die, appear, disappear, rise** have none. **Trap:** *terjadi* and *diadakan* look passive, but say *The accident **happened*** (not 'was happened').\n**Passive:** the thing is the topic; the doer is unknown or obvious; formal style (news, notices, reports). **Active:** the doer matters; friendly chat; the doer is **you**.",
+        "pairs": [
+          {
+            "en": "happen / occur",
+            "id": "terjadi"
+          },
+          {
+            "en": "take place",
+            "id": "berlangsung, diadakan"
+          },
+          {
+            "en": "arrive",
+            "id": "tiba"
+          },
+          {
+            "en": "die",
+            "id": "meninggal"
+          },
+          {
+            "en": "disappear",
+            "id": "hilang"
+          },
+          {
+            "en": "rise",
+            "id": "naik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan's flight from Medan was two hours late.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-active-or",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "The flight was arrived at 10 p.m.",
+            "The flight arrived at 10 p.m.",
+            "The flight was arrive at 10 p.m."
+          ],
+          "answer": 1,
+          "explanation": "**arrive** (tiba) has no object: nobody 'arrives' a flight, so it has no passive. Use the active: *The flight **arrived** at 10 p.m.* The other two add a *was* that English doesn't use here."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · the passive (B2)",
+          "intro": "Passive = be in the tense you need + the third form, which never changes. Modals: modal + be + third form. News style: It is said that… / X is said to…",
+          "headers": [
+            "Form",
+            "Passive",
+            "Example",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "present simple",
+              "am/is/are + third form",
+              "Rooms are cleaned daily.",
+              "dibersihkan"
+            ],
+            [
+              "past simple",
+              "was/were + third form",
+              "It was built in 1990.",
+              "dibangun"
+            ],
+            [
+              "present perfect",
+              "has/have been + third form",
+              "Your order has been sent.",
+              "sudah dikirim"
+            ],
+            [
+              "present continuous",
+              "am/is/are being + third form",
+              "A bridge is being built.",
+              "sedang dibangun"
+            ],
+            [
+              "past continuous",
+              "was/were being + third form",
+              "The floor was being cleaned.",
+              "sedang dibersihkan (dulu)"
+            ],
+            [
+              "past perfect",
+              "had been + third form",
+              "The tickets had been sold.",
+              "sudah terjual (sebelumnya)"
+            ],
+            [
+              "future",
+              "will be + third form",
+              "The winners will be announced.",
+              "akan diumumkan"
+            ],
+            [
+              "modals",
+              "must/can/should/might + be + third form",
+              "The report must be finished.",
+              "harus diselesaikan"
+            ],
+            [
+              "news style 1",
+              "It is said/believed that + sentence",
+              "It is said that the house is haunted.",
+              "konon…"
+            ],
+            [
+              "news style 2",
+              "X is said to + verb / to have + third form",
+              "He is said to have moved to Bali.",
+              "konon sudah…"
+            ]
+          ],
+          "tips": [
+            "**been** after has/have/had, **being** for the continuous, **be** after will and modals. The last word is the third form: **has been sent**, **must be finished** (not 'send', 'finish').",
+            "No object, no passive: **happen, occur, take place, arrive, die, disappear, rise**. *The accident happened*, not 'was happened', even though *terjadi* looks passive.",
+            "Passive for the topic, an unknown or obvious doer and formal writing; active when the doer matters, in chat, and when the doer is **you**."
+          ],
+          "examples": [
+            {
+              "en": "Three new branches have been opened this year.",
+              "id": "Tiga cabang baru sudah dibuka tahun ini."
+            },
+            {
+              "en": "Phones must not be used during the exam.",
+              "id": "HP tidak boleh dipakai selama ujian."
+            },
+            {
+              "en": "Fuel prices are expected to rise next month.",
+              "id": "Harga BBM diperkirakan naik bulan depan."
+            },
+            {
+              "en": "The accident happened at 7 a.m.",
+              "id": "Kecelakaannya terjadi jam 7 pagi."
+            },
+            {
+              "en": "Applications are reviewed within five working days.",
+              "id": "Lamaran ditinjau dalam lima hari kerja."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Two British Council pages with practice tests: one on the passive in every tense, and a C1 page (a step above this lesson) on modal passives and the news-style patterns."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah kenal is cleaned dan was built. Hari ini passive melangkah lebih jauh: semua tense, modal, gaya berita It is said that…, dan kata kerja yang tidak pernah bisa pasif. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu resep, semua tense",
+        "text": "Ringkasan singkat: passive = be + bentuk ketiga (is cleaned, was built), dan by menyebut pelakunya. Sekarang kita bawa ke semua tense.",
+        "body": "Ubah **be** ke tense yang kamu perlukan, lalu tambahkan **bentuk ketiga**, yang tidak pernah berubah:\n- present perfect: **has/have been** + bentuk ketiga (*sudah di-*)\n- continuous: **am/is/are/was/were being** + bentuk ketiga (*sedang di-*)\n- future: **will be** + bentuk ketiga (*akan di-*)\nBahasa Indonesia menambah kata waktu ke *di-* yang sama; bahasa Inggris menunjukkan waktunya lewat kata bantu (has, is, will), jadi jangan dibuang. Triknya: **been** setelah has/have/had, **being** untuk *sedang*.",
+        "pairs": [
+          {
+            "en": "has been sent",
+            "id": "sudah dikirim"
+          },
+          {
+            "en": "have been opened",
+            "id": "sudah dibuka (jamak)"
+          },
+          {
+            "en": "is being built",
+            "id": "sedang dibangun"
+          },
+          {
+            "en": "was being cleaned",
+            "id": "sedang dibersihkan (dulu)"
+          },
+          {
+            "en": "will be announced",
+            "id": "akan diumumkan"
+          },
+          {
+            "en": "had been sold",
+            "id": "sudah terjual (sebelumnya)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Passive di semua tense",
+        "text": "Perhatikan kata bantu di setiap kalimat: kata itu menunjukkan waktunya. Kata terakhirnya selalu bentuk ketiga.",
+        "body": "Perhatikan bentuk ketiganya: 'The email has been **send**' adalah kesalahan klasik → *has been **sent*** (send → sent → sent).",
+        "examples": [
+          {
+            "en": "Your order has been sent.",
+            "id": "Pesananmu sudah dikirim."
+          },
+          {
+            "en": "Three new branches have been opened this year.",
+            "id": "Tiga cabang baru sudah dibuka tahun ini."
+          },
+          {
+            "en": "A new bridge is being built over the river.",
+            "id": "Jembatan baru sedang dibangun di atas sungai."
+          },
+          {
+            "en": "When I got to the office, the floor was being cleaned.",
+            "id": "Waktu saya sampai di kantor, lantainya sedang dibersihkan."
+          },
+          {
+            "en": "The winners will be announced on Friday.",
+            "id": "Pemenangnya akan diumumkan hari Jumat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu menerima email dari bankmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-the-passive",
+          "prompt": "Lengkapi dengan present perfect passive dari 'pay': Your credit card bill ___ in full. Thank you!",
+          "options": [
+            "has been payed",
+            "has paid",
+            "has been paid"
+          ],
+          "answer": 2,
+          "explanation": "Present perfect passive = **has + been + bentuk ketiga**, dan pay → paid → **paid** (bukan 'payed'). 'has paid' itu aktif: artinya tagihannya yang membayar sesuatu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Modal: must be done",
+        "text": "Harus diselesaikan, bisa dibayar, mungkin dibatalkan: bagaimana mengatakannya dalam bahasa Inggris?",
+        "body": "Setelah **modal** (kata bantu yang menambah makna: *must, should, can, could, may, might*, dan *have to*), passive-nya adalah **modal + be + bentuk ketiga**: *The report **must be finished** today.*\n**Jebakan bahasa Indonesia:** *di-* dalam *harus diselesaikan* adalah bagian yang sering dilupakan. 'must be **finish**' tidak punya bentuk ketiga; 'must finished' tidak punya be. Setiap ada *di-*, bahasa Inggris perlu **dua-duanya**. Negatif: *must not be used*. Tanya: *Can it be paid by QRIS?*",
+        "pairs": [
+          {
+            "en": "must be finished",
+            "id": "harus diselesaikan"
+          },
+          {
+            "en": "should be checked",
+            "id": "sebaiknya dicek"
+          },
+          {
+            "en": "can be paid",
+            "id": "bisa dibayar"
+          },
+          {
+            "en": "might be cancelled",
+            "id": "mungkin dibatalkan (US: canceled)"
+          },
+          {
+            "en": "has to be approved",
+            "id": "harus disetujui"
+          },
+          {
+            "en": "must not be used",
+            "id": "tidak boleh dipakai"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Budi mau cuti minggu depan. HRD menjelaskan apa yang harus dilakukan dengan formulir cutinya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "form-the-passive",
+          "prompt": "Susun kata-katanya: Formulirnya harus ditandatangani oleh manajermu.",
+          "tokens": [
+            "signed",
+            "your",
+            "The",
+            "be",
+            "manager",
+            "must",
+            "by",
+            "form"
+          ],
+          "solution": "The form must be signed by your manager.",
+          "explanation": "Bendanya di depan: **The form**. Lalu modal + be + bentuk ketiga: **must be signed** (harus ditandatangani), dan **by** (= oleh) + pelakunya di akhir: **your manager**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Gaya berita: It is said that…",
+        "text": "Berita suka memakai konon, dikabarkan, diperkirakan. Bahasa Inggris punya dua pola passive untuk itu.",
+        "body": "**1. It + is said/believed/reported + that + kalimat lengkap:** *It is said that this house is haunted.*\n**2. Subjek + is said/believed/thought/expected + to + kata kerja:** *This house is said to be haunted.*\nDi pola 2, pakai **to + bentuk dasar** untuk sekarang atau nanti, dan **to have + bentuk ketiga** untuk sesuatu yang **lebih dulu**: *Pak Hasan is said to have moved to Bali.*\nJangan campur keduanya ('He is said **that**…') dan jangan tambah *by people*.",
+        "pairs": [
+          {
+            "en": "It is said that…",
+            "id": "konon…"
+          },
+          {
+            "en": "It is reported that…",
+            "id": "dikabarkan…"
+          },
+          {
+            "en": "is expected to…",
+            "id": "diperkirakan akan…"
+          },
+          {
+            "en": "is believed to…",
+            "id": "diyakini…"
+          },
+          {
+            "en": "is thought to…",
+            "id": "diduga…"
+          },
+          {
+            "en": "is said to have moved",
+            "id": "konon sudah pindah"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di berita",
+        "text": "Ini kedua pola dalam kalimat berita sungguhan. Perhatikan to + kata kerja (sekarang/nanti) dibandingkan to have + bentuk ketiga (lebih dulu).",
+        "body": "**be** menunjukkan kapan orang mengatakannya: *It **was** reported that…* (laporannya di masa lalu).",
+        "examples": [
+          {
+            "en": "It was reported that twenty people were injured.",
+            "id": "Dikabarkan dua puluh orang terluka."
+          },
+          {
+            "en": "Fuel prices are expected to rise next month.",
+            "id": "Harga BBM diperkirakan naik bulan depan."
+          },
+          {
+            "en": "The singer is believed to be ill.",
+            "id": "Penyanyi itu diyakini sedang sakit."
+          },
+          {
+            "en": "The fire is thought to have started in the kitchen.",
+            "id": "Kebakarannya diduga berawal dari dapur."
+          },
+          {
+            "en": "It is estimated that 30% of the rice was lost.",
+            "id": "Diperkirakan 30% padinya hilang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sebuah berita tentang perampokan di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "passive-reporting",
+          "prompt": "Lengkapi: The suspect ___ the country last week.",
+          "options": [
+            "is believed to leave",
+            "is believed to have left",
+            "is believed that he left"
+          ],
+          "answer": 1,
+          "explanation": "Kepergiannya terjadi **lebih dulu** (last week) → **to have + bentuk ketiga**: *is believed to have left*. 'to leave' untuk sekarang atau nanti, dan 'is believed that he left' mencampur kedua pola: kalau pakai *that*, mulai dengan **It**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tanpa pasif, dan memilih",
+        "text": "Dua hal terakhir: ada kata kerja yang tidak pernah bisa pasif, dan untuk yang lain kamu yang memilih.",
+        "body": "Hanya kata kerja yang punya **objek** (benda yang dikenai tindakan) yang bisa pasif. **happen, occur, take place, arrive, die, appear, disappear, rise** tidak punya objek. **Jebakan:** *terjadi* dan *diadakan* terlihat pasif, tapi bilang *The accident **happened*** (bukan 'was happened').\n**Passive:** bendanya jadi topik; pelakunya tidak diketahui atau sudah jelas; gaya formal (berita, pengumuman, laporan). **Aktif:** pelakunya penting; obrolan santai; pelakunya **kamu sendiri**.",
+        "pairs": [
+          {
+            "en": "happen / occur",
+            "id": "terjadi"
+          },
+          {
+            "en": "take place",
+            "id": "berlangsung, diadakan"
+          },
+          {
+            "en": "arrive",
+            "id": "tiba"
+          },
+          {
+            "en": "die",
+            "id": "meninggal"
+          },
+          {
+            "en": "disappear",
+            "id": "hilang"
+          },
+          {
+            "en": "rise",
+            "id": "naik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pesawat Pak Hasan dari Medan terlambat dua jam.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-active-or",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "The flight was arrived at 10 p.m.",
+            "The flight arrived at 10 p.m.",
+            "The flight was arrive at 10 p.m."
+          ],
+          "answer": 1,
+          "explanation": "**arrive** (tiba) tidak punya objek: tidak ada orang yang 'arrive' sebuah pesawat, jadi tidak ada bentuk pasifnya. Pakai bentuk aktif: *The flight **arrived** at 10 p.m.* Dua pilihan lainnya menambahkan *was* yang tidak dipakai di sini."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · passive (B2)",
+          "intro": "Passive = be dalam tense yang kamu perlukan + bentuk ketiga, yang tidak pernah berubah. Modal: modal + be + bentuk ketiga. Gaya berita: It is said that… / X is said to…",
+          "headers": [
+            "Bentuk",
+            "Passive",
+            "Contoh",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "present simple",
+              "am/is/are + bentuk ketiga",
+              "Rooms are cleaned daily.",
+              "dibersihkan"
+            ],
+            [
+              "past simple",
+              "was/were + bentuk ketiga",
+              "It was built in 1990.",
+              "dibangun"
+            ],
+            [
+              "present perfect",
+              "has/have been + bentuk ketiga",
+              "Your order has been sent.",
+              "sudah dikirim"
+            ],
+            [
+              "present continuous",
+              "am/is/are being + bentuk ketiga",
+              "A bridge is being built.",
+              "sedang dibangun"
+            ],
+            [
+              "past continuous",
+              "was/were being + bentuk ketiga",
+              "The floor was being cleaned.",
+              "sedang dibersihkan (dulu)"
+            ],
+            [
+              "past perfect",
+              "had been + bentuk ketiga",
+              "The tickets had been sold.",
+              "sudah terjual (sebelumnya)"
+            ],
+            [
+              "future",
+              "will be + bentuk ketiga",
+              "The winners will be announced.",
+              "akan diumumkan"
+            ],
+            [
+              "modal",
+              "must/can/should/might + be + bentuk ketiga",
+              "The report must be finished.",
+              "harus diselesaikan"
+            ],
+            [
+              "gaya berita 1",
+              "It is said/believed that + kalimat",
+              "It is said that the house is haunted.",
+              "konon…"
+            ],
+            [
+              "gaya berita 2",
+              "X is said to + kata kerja / to have + bentuk ketiga",
+              "He is said to have moved to Bali.",
+              "konon sudah…"
+            ]
+          ],
+          "tips": [
+            "**been** setelah has/have/had, **being** untuk continuous, **be** setelah will dan modal. Kata terakhirnya bentuk ketiga: **has been sent**, **must be finished** (bukan 'send', 'finish').",
+            "Tanpa objek, tanpa pasif: **happen, occur, take place, arrive, die, disappear, rise**. *The accident happened*, bukan 'was happened', walaupun *terjadi* terlihat pasif.",
+            "Passive untuk topik, pelaku yang tidak diketahui atau sudah jelas, dan tulisan formal; aktif kalau pelakunya penting, dalam obrolan, dan kalau pelakunya **kamu sendiri**."
+          ],
+          "examples": [
+            {
+              "en": "Three new branches have been opened this year.",
+              "id": "Tiga cabang baru sudah dibuka tahun ini."
+            },
+            {
+              "en": "Phones must not be used during the exam.",
+              "id": "HP tidak boleh dipakai selama ujian."
+            },
+            {
+              "en": "Fuel prices are expected to rise next month.",
+              "id": "Harga BBM diperkirakan naik bulan depan."
+            },
+            {
+              "en": "The accident happened at 7 a.m.",
+              "id": "Kecelakaannya terjadi jam 7 pagi."
+            },
+            {
+              "en": "Applications are reviewed within five working days.",
+              "id": "Lamaran ditinjau dalam lima hari kerja."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Dua halaman British Council dengan tes latihan: satu tentang passive di semua tense, dan satu halaman C1 (satu tingkat di atas pelajaran ini) tentang passive dengan modal dan pola gaya berita."
+      }
+    ]
+  }
+}

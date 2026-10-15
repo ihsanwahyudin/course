@@ -1,0 +1,624 @@
+{
+  "en": {
+    "greeting": "Hi! Today we travel to a moment in the future and describe it three ways: what you'll be doing then, what you'll have done by then, and how long you'll have been doing it. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Picture a moment in the future",
+        "text": "You already know will, going to and the present continuous for plans. Today we stand at one moment in the future and look around it.",
+        "body": "Quick recap: **will / going to / am + -ing** for decisions, plans and arrangements, and **no will** after *when, before, as soon as* (B1).\nNew today, three ways to describe a future moment:\n- **will be + -ing**: in the middle of it then (*sedang*)\n- **will have + past participle**: already done by then (*sudah*)\n- **will have been + -ing**: how long, up to then (*sudah … selama*)\nIndonesian just adds *sedang* or *sudah* to *besok* or *nanti*; English needs the right future form.",
+        "pairs": [
+          {
+            "en": "this time tomorrow",
+            "id": "besok jam segini"
+          },
+          {
+            "en": "this time next week",
+            "id": "minggu depan jam segini"
+          },
+          {
+            "en": "by Friday",
+            "id": "paling lambat hari Jumat"
+          },
+          {
+            "en": "by the time you get here",
+            "id": "saat kamu sampai nanti (… sudah …)"
+          },
+          {
+            "en": "for five years",
+            "id": "selama lima tahun"
+          },
+          {
+            "en": "past participle",
+            "id": "bentuk ke-3: finished, written, left"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Sari's future on one line",
+        "text": "Here's Sari's life on one line. She joined a startup in Jakarta in June 2022. Look at the three future moments.",
+        "timeline": {
+          "title": "Three ways to look at the future",
+          "caption": "Tomorrow at 10 Sari is in the air → she'll be flying to Bali (in the middle). Her report is due on Friday and she'll send it before → by Friday she'll have finished it (done). She started in June 2022 → in June 2027 she'll have been working there for five years (how long).",
+          "marks": [
+            {
+              "label": "June 2022 · Sari joins the startup",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            },
+            {
+              "label": "tomorrow 10:00 · in the air → she'll be flying",
+              "kind": "future"
+            },
+            {
+              "label": "by Friday · report done → she'll have finished it",
+              "kind": "future"
+            },
+            {
+              "label": "June 2027 · five years → she'll have been working there",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "will be + -ing: in the middle",
+        "text": "First form: what will be **happening** at a moment in the future.",
+        "body": "**will be + -ing** = in progress at a future moment. It starts before and goes on after: *This time tomorrow I'll be flying to Bali.* Clues: **this time tomorrow, at 8 tonight, at 10 on Monday**. Compare: *At 8 I'll call you* (the call starts at 8) and *At 8 I'll be driving* (I'm in the middle of it). Trap: *Besok jam segini saya **sedang** terbang* → not 'I will fly' but **I'll be flying**. Polite phrase to remember: *Will you be using the car tonight?* = a soft way to ask about plans.",
+        "pairs": [
+          {
+            "en": "I'll be working",
+            "id": "saya sedang bekerja (nanti)"
+          },
+          {
+            "en": "She won't be working",
+            "id": "dia (perempuan) tidak sedang bekerja (nanti)"
+          },
+          {
+            "en": "Will you be working?",
+            "id": "apakah kamu sedang bekerja (nanti)?"
+          },
+          {
+            "en": "This time tomorrow I'll be flying to Bali.",
+            "id": "Besok jam segini saya sedang terbang ke Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A call at 10?",
+        "text": "Pak Hasan wants to call you tomorrow morning.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "future-continuous",
+          "prompt": "Pak Hasan: 'Can I call you at 10 tomorrow morning?' You: 'Better not. My training session for new staff goes from 9 to 12, so at 10 I ___ it.'",
+          "options": [
+            "'ll run",
+            "'ll be running",
+            "'ll have run"
+          ],
+          "answer": 1,
+          "explanation": "At 10 the session is in the middle (it goes from 9 to 12), so use **will be + -ing**: **I'll be running it**. 'I'll run it' sounds like it starts at 10, and 'I'll have run it' means it's already finished by 10."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "will have + past participle: done",
+        "text": "Second form: what will be **finished** by a moment in the future.",
+        "body": "**will have + past participle** (the third form from the present perfect: *finished, written, left*) = done before a future moment: *By 2030 I'll have finished my degree.* **by** = paling lambat: *by Friday, by then, by the end of the year*. With a verb, **by the time** + present: *By the time you get here, the film will have started.* Trap: *Tahun 2030 saya **sudah** lulus* → not 'I already finish' or 'I have finished by 2030', but **I'll have finished**. And **by** isn't **until** (sampai, the whole time).",
+        "pairs": [
+          {
+            "en": "I'll have finished",
+            "id": "saya sudah selesai (nanti)"
+          },
+          {
+            "en": "She won't have left",
+            "id": "dia (perempuan) belum berangkat (nanti)"
+          },
+          {
+            "en": "by the end of the year",
+            "id": "paling lambat akhir tahun"
+          },
+          {
+            "en": "until 6",
+            "id": "sampai jam 6 (terus-menerus)"
+          },
+          {
+            "en": "By 2030 I'll have finished my degree.",
+            "id": "Paling lambat tahun 2030 kuliah saya sudah selesai."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Before the deadline",
+        "text": "The client is waiting for a contract.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "future-perfect",
+          "prompt": "The client needs the contract on Friday morning, and your manager looks worried. You: 'Don't worry. By Thursday evening I ___ it to them.'",
+          "options": [
+            "already send",
+            "'ll have sent",
+            "'ve sent"
+          ],
+          "answer": 1,
+          "explanation": "Done before a future moment (Thursday evening) → **will have + past participle**: **I'll have sent it** (send → sent). 'already send' is word-for-word Indonesian (*sudah kirim*) with no future, and 'I've sent' is the present perfect: up to now, not up to Thursday."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "will have been + -ing: how long",
+        "text": "Third form: **how long** something will have been going on at a future moment.",
+        "body": "**will have been + -ing** = a duration up to a future moment. It's the present perfect continuous (*I've been working here for four years*) moved into the future: *By June I'll have been working here for five years.* You need **for + a period** and the moment (**by June, next year, when …**). Same form for every subject. Trap: *Juni nanti **sudah** lima tahun saya kerja di sini* → not 'In June I work here five years'. With **live, work, study**, *will have worked* is also fine; with state verbs (know, be) use only the simple: *I'll have known her for ten years*.",
+        "pairs": [
+          {
+            "en": "will have been working",
+            "id": "sudah … bekerja (selama …), nanti"
+          },
+          {
+            "en": "By June I'll have been working here for five years.",
+            "id": "Juni nanti, sudah lima tahun saya bekerja di sini."
+          },
+          {
+            "en": "By the time the plane lands, we'll have been travelling for 20 hours.",
+            "id": "Saat pesawatnya mendarat nanti, kami sudah 20 jam dalam perjalanan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Twenty years at school",
+        "text": "Bu Ani is a teacher in Bandung. Say what will be true next year.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "future-perfect-continuous",
+          "prompt": "Bu Ani started teaching at SMA 3 Bandung in June 2007. What will be true in June 2027? Arrange the words: Saat itu, dia sudah dua puluh tahun mengajar.",
+          "tokens": [
+            "teaching",
+            "years",
+            "She'll",
+            "for",
+            "been",
+            "twenty",
+            "have"
+          ],
+          "solution": "She'll have been teaching for twenty years.",
+          "explanation": "A duration up to a future moment (June 2027) → **will have been + -ing** + **for** + the period: *She'll have been teaching for twenty years.* **have** stays *have* even with *she*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Still no will after when",
+        "text": "One rule from the B1 lesson still works with the new forms.",
+        "body": "After **when, after, before, as soon as, until** and **by the time**, there's **no will**, not even *will have* or *will be*. Use the present simple, or the present perfect to stress 'finished'. The **will** goes in the other part: *I'll call you when I've finished* (or *when I finish*), not 'when I will have finished'. Indonesian trap: *Kabari saya kalau **sudah** selesai* has *sudah*, but English says **when you've finished**. A question is different: *When will you have finished?* is correct.",
+        "pairs": [
+          {
+            "en": "when you've finished",
+            "id": "kalau kamu sudah selesai"
+          },
+          {
+            "en": "as soon as I've landed",
+            "id": "begitu saya sudah mendarat"
+          },
+          {
+            "en": "by the time you get here",
+            "id": "saat kamu sampai nanti"
+          },
+          {
+            "en": "I'll call you when I've finished.",
+            "id": "Nanti saya telepon kalau sudah selesai."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dimas and the contract",
+        "text": "Dimas's boss sends him a quick message.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "future-perfect",
+          "prompt": "Dimas is checking a contract. His boss writes: 'Send it to the client as soon as you ___ it.'",
+          "options": [
+            "will have checked",
+            "'ve checked",
+            "'ll be checking"
+          ],
+          "answer": 1,
+          "explanation": "After **as soon as** (like when, after, before, until, by the time) there's no will, even for the future. To stress 'finished', use the present perfect: **as soon as you've checked it** (*as soon as you check it* is also fine). 'will have checked' is the *kalau sudah* trap."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Future continuous & future perfect",
+          "intro": "Picture a moment in the future: what's happening then, what's done by then, and how long it's been going on. No will after when, as soon as or by the time.",
+          "headers": [
+            "Form",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "will be + -ing",
+              "in progress at a future moment (sedang … nanti)",
+              "This time tomorrow I'll be flying to Bali."
+            ],
+            [
+              "won't be + -ing / Will you be + -ing?",
+              "negative / question (also a polite question about plans)",
+              "Will you be using the car tonight?"
+            ],
+            [
+              "will have + past participle",
+              "done by a future moment (sudah … nanti)",
+              "By 2030 I'll have finished my degree."
+            ],
+            [
+              "won't have + past participle",
+              "not done yet at that moment (belum)",
+              "She won't have finished her shift by 9."
+            ],
+            [
+              "will have been + -ing + for …",
+              "how long, up to a future moment",
+              "By June I'll have been working here for five years."
+            ],
+            [
+              "by / by the time + present",
+              "deadline: paling lambat / saat … nanti",
+              "By the time we get there, the film will have started."
+            ],
+            [
+              "when / after / as soon as + present (perfect)",
+              "time clause: no will",
+              "I'll call you when I've finished."
+            ]
+          ],
+          "tips": [
+            "*sedang* + a future time → **will be + -ing**: 'This time tomorrow I will fly' → **I'll be flying**.",
+            "*sudah* + a future time → **will have + past participle**: 'By 2030 I already finish' → **I'll have finished**. **by** = deadline, **until** = the whole time.",
+            "No will in a time clause: 'when you will have finished' → **when you've finished**."
+          ],
+          "examples": [
+            {
+              "en": "Don't call me at 10. I'll be meeting a client.",
+              "id": "Jangan telepon saya jam 10. Saya sedang bertemu klien."
+            },
+            {
+              "en": "Don't worry, I'll have sent the invoice by Friday.",
+              "id": "Tenang, paling lambat Jumat tagihannya sudah saya kirim."
+            },
+            {
+              "en": "Next month Rina will have been learning English for three years.",
+              "id": "Bulan depan sudah tiga tahun Rina belajar bahasa Inggris."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This British Council page explains will be + -ing and will have + past participle, with two short tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita pergi ke satu saat di masa depan dan menggambarkannya dengan tiga cara: apa yang sedang kamu lakukan saat itu, apa yang sudah selesai saat itu, dan sudah berapa lama kamu melakukannya. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bayangkan satu saat di masa depan",
+        "text": "Kamu sudah kenal will, going to dan present continuous untuk rencana. Hari ini kita berdiri di satu saat di masa depan dan melihat sekelilingnya.",
+        "body": "Pengingat singkat: **will / going to / am + -ing** untuk keputusan, rencana dan janji yang sudah diatur, dan **tanpa will** setelah *when, before, as soon as* (B1).\nYang baru hari ini, tiga cara menggambarkan satu saat di masa depan:\n- **will be + -ing**: saat itu sedang di tengah kegiatan (*sedang*)\n- **will have + past participle**: saat itu sudah selesai (*sudah*)\n- **will have been + -ing**: sudah berapa lama, sampai saat itu (*sudah … selama*)\nBahasa Indonesia cukup menambah *sedang* atau *sudah* ke *besok* atau *nanti*; bahasa Inggris perlu bentuk masa depan yang tepat.",
+        "pairs": [
+          {
+            "en": "this time tomorrow",
+            "id": "besok jam segini"
+          },
+          {
+            "en": "this time next week",
+            "id": "minggu depan jam segini"
+          },
+          {
+            "en": "by Friday",
+            "id": "paling lambat hari Jumat"
+          },
+          {
+            "en": "by the time you get here",
+            "id": "saat kamu sampai nanti (… sudah …)"
+          },
+          {
+            "en": "for five years",
+            "id": "selama lima tahun"
+          },
+          {
+            "en": "past participle",
+            "id": "bentuk ke-3: finished, written, left"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Masa depan Sari dalam satu garis",
+        "text": "Ini hidup Sari dalam satu garis. Dia mulai bekerja di sebuah startup di Jakarta pada Juni 2022. Perhatikan tiga saat di masa depan.",
+        "timeline": {
+          "title": "Tiga cara melihat masa depan",
+          "caption": "Besok jam 10 Sari sedang di pesawat → she'll be flying to Bali (sedang di tengah kegiatan). Laporannya harus selesai hari Jumat dan dia akan mengirimnya sebelum itu → by Friday she'll have finished it (sudah selesai). Dia mulai bekerja Juni 2022 → in June 2027 she'll have been working there for five years (sudah berapa lama).",
+          "marks": [
+            {
+              "label": "Juni 2022 · Sari mulai di startup",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang",
+              "kind": "now"
+            },
+            {
+              "label": "besok 10:00 · di pesawat → she'll be flying",
+              "kind": "future"
+            },
+            {
+              "label": "paling lambat Jumat · laporan selesai → she'll have finished it",
+              "kind": "future"
+            },
+            {
+              "label": "Juni 2027 · lima tahun → she'll have been working there",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "will be + -ing: sedang di tengah",
+        "text": "Bentuk pertama: apa yang **sedang terjadi** pada saat tertentu di masa depan.",
+        "body": "**will be + -ing** = sedang berlangsung pada saat tertentu di masa depan. Kegiatannya mulai sebelum saat itu dan masih berjalan sesudahnya: *This time tomorrow I'll be flying to Bali.* Petunjuknya: **this time tomorrow, at 8 tonight, at 10 on Monday**. Bandingkan: *At 8 I'll call you* (teleponnya mulai jam 8) dan *At 8 I'll be driving* (jam 8 saya sedang menyetir). Jebakan: *Besok jam segini saya **sedang** terbang* → bukan 'I will fly' tetapi **I'll be flying**. Frasa sopan untuk diingat: *Will you be using the car tonight?* = cara halus menanyakan rencana orang.",
+        "pairs": [
+          {
+            "en": "I'll be working",
+            "id": "saya sedang bekerja (nanti)"
+          },
+          {
+            "en": "She won't be working",
+            "id": "dia (perempuan) tidak sedang bekerja (nanti)"
+          },
+          {
+            "en": "Will you be working?",
+            "id": "apakah kamu sedang bekerja (nanti)?"
+          },
+          {
+            "en": "This time tomorrow I'll be flying to Bali.",
+            "id": "Besok jam segini saya sedang terbang ke Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Telepon jam 10?",
+        "text": "Pak Hasan mau meneleponmu besok pagi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "future-continuous",
+          "prompt": "Pak Hasan: 'Can I call you at 10 tomorrow morning?' Kamu: 'Better not. My training session for new staff goes from 9 to 12, so at 10 I ___ it.' (Pelatihan untuk karyawan baru berlangsung jam 9 sampai 12.)",
+          "options": [
+            "'ll run",
+            "'ll be running",
+            "'ll have run"
+          ],
+          "answer": 1,
+          "explanation": "Jam 10 pelatihannya sedang berjalan (dari jam 9 sampai 12), jadi pakai **will be + -ing**: **I'll be running it**. 'I'll run it' terdengar seperti baru mulai jam 10, dan 'I'll have run it' berarti sudah selesai sebelum jam 10."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "will have + past participle: sudah selesai",
+        "text": "Bentuk kedua: apa yang **sudah selesai** pada saat tertentu di masa depan.",
+        "body": "**will have + past participle** (bentuk ketiga dari present perfect: *finished, written, left*) = sudah selesai sebelum saat tertentu di masa depan: *By 2030 I'll have finished my degree.* **by** = paling lambat: *by Friday, by then, by the end of the year*. Dengan kata kerja, **by the time** + present: *By the time you get here, the film will have started.* Jebakan: *Tahun 2030 saya **sudah** lulus* → bukan 'I already finish' atau 'I have finished by 2030', tetapi **I'll have finished**. Dan **by** tidak sama dengan **until** (sampai, terus-menerus).",
+        "pairs": [
+          {
+            "en": "I'll have finished",
+            "id": "saya sudah selesai (nanti)"
+          },
+          {
+            "en": "She won't have left",
+            "id": "dia (perempuan) belum berangkat (nanti)"
+          },
+          {
+            "en": "by the end of the year",
+            "id": "paling lambat akhir tahun"
+          },
+          {
+            "en": "until 6",
+            "id": "sampai jam 6 (terus-menerus)"
+          },
+          {
+            "en": "By 2030 I'll have finished my degree.",
+            "id": "Paling lambat tahun 2030 kuliah saya sudah selesai."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Sebelum tenggat",
+        "text": "Klien sedang menunggu kontrak.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "future-perfect",
+          "prompt": "Klien butuh kontraknya hari Jumat pagi, dan manajermu terlihat khawatir. Kamu: 'Don't worry. By Thursday evening I ___ it to them.'",
+          "options": [
+            "already send",
+            "'ll have sent",
+            "'ve sent"
+          ],
+          "answer": 1,
+          "explanation": "Sudah selesai sebelum saat tertentu di masa depan (Kamis malam) → **will have + past participle**: **I'll have sent it** (send → sent). 'already send' adalah terjemahan kata per kata dari *sudah kirim* tanpa bentuk masa depan, dan 'I've sent' adalah present perfect: sampai sekarang, bukan sampai hari Kamis."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "will have been + -ing: berapa lama",
+        "text": "Bentuk ketiga: **sudah berapa lama** sebuah kegiatan berjalan pada saat tertentu di masa depan.",
+        "body": "**will have been + -ing** = lamanya kegiatan sampai saat tertentu di masa depan. Ini present perfect continuous (*I've been working here for four years*) yang dipindah ke masa depan: *By June I'll have been working here for five years.* Kamu perlu **for + lamanya** dan saatnya (**by June, next year, when …**). Bentuknya sama untuk semua subjek. Jebakan: *Juni nanti **sudah** lima tahun saya kerja di sini* → bukan 'In June I work here five years'. Dengan **live, work, study**, *will have worked* juga benar; dengan kata kerja keadaan (know, be) pakai bentuk simple saja: *I'll have known her for ten years*.",
+        "pairs": [
+          {
+            "en": "will have been working",
+            "id": "sudah … bekerja (selama …), nanti"
+          },
+          {
+            "en": "By June I'll have been working here for five years.",
+            "id": "Juni nanti, sudah lima tahun saya bekerja di sini."
+          },
+          {
+            "en": "By the time the plane lands, we'll have been travelling for 20 hours.",
+            "id": "Saat pesawatnya mendarat nanti, kami sudah 20 jam dalam perjalanan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dua puluh tahun mengajar",
+        "text": "Bu Ani guru di Bandung. Katakan apa yang benar tahun depan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "future-perfect-continuous",
+          "prompt": "Bu Ani mulai mengajar di SMA 3 Bandung pada Juni 2007. Apa yang benar pada Juni 2027? Susun kata-katanya: Saat itu, dia sudah dua puluh tahun mengajar.",
+          "tokens": [
+            "teaching",
+            "years",
+            "She'll",
+            "for",
+            "been",
+            "twenty",
+            "have"
+          ],
+          "solution": "She'll have been teaching for twenty years.",
+          "explanation": "Lamanya sampai saat tertentu di masa depan (Juni 2027) → **will have been + -ing** + **for** + lamanya: *She'll have been teaching for twenty years.* **have** tetap *have* walaupun subjeknya *she*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tetap tanpa will setelah when",
+        "text": "Satu aturan dari pelajaran B1 tetap berlaku untuk bentuk-bentuk baru ini.",
+        "body": "Setelah **when, after, before, as soon as, until** dan **by the time**, **tidak ada will**, termasuk *will have* atau *will be*. Pakai present simple, atau present perfect untuk menekankan 'sudah selesai'. **will** ditaruh di bagian yang lain: *I'll call you when I've finished* (atau *when I finish*), bukan 'when I will have finished'. Jebakan bahasa Indonesia: *Kabari saya kalau **sudah** selesai* punya *sudah*, tapi bahasa Inggris bilang **when you've finished**. Pertanyaan berbeda: *When will you have finished?* benar.",
+        "pairs": [
+          {
+            "en": "when you've finished",
+            "id": "kalau kamu sudah selesai"
+          },
+          {
+            "en": "as soon as I've landed",
+            "id": "begitu saya sudah mendarat"
+          },
+          {
+            "en": "by the time you get here",
+            "id": "saat kamu sampai nanti"
+          },
+          {
+            "en": "I'll call you when I've finished.",
+            "id": "Nanti saya telepon kalau sudah selesai."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dimas dan kontraknya",
+        "text": "Atasan Dimas mengirim pesan singkat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "future-perfect",
+          "prompt": "Dimas sedang memeriksa kontrak. Atasannya menulis: 'Send it to the client as soon as you ___ it.'",
+          "options": [
+            "will have checked",
+            "'ve checked",
+            "'ll be checking"
+          ],
+          "answer": 1,
+          "explanation": "Setelah **as soon as** (seperti when, after, before, until, by the time) tidak ada will, walaupun membicarakan masa depan. Untuk menekankan 'sudah selesai', pakai present perfect: **as soon as you've checked it** (*as soon as you check it* juga benar). 'will have checked' adalah jebakan *kalau sudah*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Future continuous & future perfect",
+          "intro": "Bayangkan satu saat di masa depan: apa yang sedang terjadi saat itu, apa yang sudah selesai, dan sudah berapa lama kegiatannya berjalan. Tanpa will setelah when, as soon as atau by the time.",
+          "headers": [
+            "Bentuk",
+            "Fungsi",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "will be + -ing",
+              "sedang berlangsung pada saat tertentu di masa depan (sedang … nanti)",
+              "This time tomorrow I'll be flying to Bali."
+            ],
+            [
+              "won't be + -ing / Will you be + -ing?",
+              "negatif / pertanyaan (juga pertanyaan sopan tentang rencana)",
+              "Will you be using the car tonight?"
+            ],
+            [
+              "will have + past participle",
+              "sudah selesai pada saat tertentu di masa depan (sudah … nanti)",
+              "By 2030 I'll have finished my degree."
+            ],
+            [
+              "won't have + past participle",
+              "saat itu belum selesai",
+              "She won't have finished her shift by 9."
+            ],
+            [
+              "will have been + -ing + for …",
+              "sudah berapa lama, sampai saat tertentu di masa depan",
+              "By June I'll have been working here for five years."
+            ],
+            [
+              "by / by the time + present",
+              "tenggat: paling lambat / saat … nanti",
+              "By the time we get there, the film will have started."
+            ],
+            [
+              "when / after / as soon as + present (perfect)",
+              "time clause: tanpa will",
+              "I'll call you when I've finished."
+            ]
+          ],
+          "tips": [
+            "*sedang* + waktu masa depan → **will be + -ing**: 'This time tomorrow I will fly' → **I'll be flying**.",
+            "*sudah* + waktu masa depan → **will have + past participle**: 'By 2030 I already finish' → **I'll have finished**. **by** = tenggat, **until** = terus sampai saat itu.",
+            "Tanpa will di time clause: 'when you will have finished' → **when you've finished**."
+          ],
+          "examples": [
+            {
+              "en": "Don't call me at 10. I'll be meeting a client.",
+              "id": "Jangan telepon saya jam 10. Saya sedang bertemu klien."
+            },
+            {
+              "en": "Don't worry, I'll have sent the invoice by Friday.",
+              "id": "Tenang, paling lambat Jumat tagihannya sudah saya kirim."
+            },
+            {
+              "en": "Next month Rina will have been learning English for three years.",
+              "id": "Bulan depan sudah tiga tahun Rina belajar bahasa Inggris."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman British Council ini menjelaskan will be + -ing dan will have + past participle, dengan dua tes singkat."
+      }
+    ]
+  }
+}

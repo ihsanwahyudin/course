@@ -1,0 +1,718 @@
+{
+  "en": {
+    "greeting": "Hi! Today we travel back in time: we imagine a different past, and how it would change things then and now. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Imagine a different past",
+        "text": "Quick recap: **first** = real (*If it rains tomorrow, I'll stay home*), **second** = imagined now (*If I had more time, I would learn Japanese*). Now: an imagined **past**.",
+        "body": "To imagine a past that **didn't happen**, use the **third conditional**:\n**if + had + third form**, **would have + third form**\n*If I had known about the meeting, I would have come.* = I **didn't** know, and I **didn't** come.\nWhy *had known*, not *knew*? *If I knew* already means **now** (second conditional), so for the past the verb goes **one more step back**.\nIndonesian uses words (*seandainya dulu, kalau saja waktu itu*); English changes the **verb**.",
+        "pairs": [
+          {
+            "en": "If I had known, …",
+            "id": "Seandainya waktu itu saya tahu, …"
+          },
+          {
+            "en": "I would have come",
+            "id": "saya pasti datang (tapi tidak)"
+          },
+          {
+            "en": "hadn't + third form",
+            "id": "(seandainya) tidak … (masa lalu)"
+          },
+          {
+            "en": "wouldn't have + third form",
+            "id": "tidak akan … (masa lalu, khayalan)"
+          },
+          {
+            "en": "know → knew → known",
+            "id": "tahu"
+          },
+          {
+            "en": "see → saw → seen",
+            "id": "melihat"
+          },
+          {
+            "en": "hear → heard → heard",
+            "id": "mendengar"
+          },
+          {
+            "en": "What would you have done if …?",
+            "id": "Apa yang akan kamu lakukan seandainya waktu itu …?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "It didn't happen",
+        "text": "In every sentence, both parts are **untrue**: they're a different version of the past.",
+        "body": "Look for the past time and the two parts: **had + third form** after *if*, **would have + third form** in the result. Negative: **hadn't**, **wouldn't have**.",
+        "examples": [
+          {
+            "en": "If I had known about the meeting, I would have come.",
+            "id": "Seandainya waktu itu saya tahu soal rapatnya, saya pasti datang."
+          },
+          {
+            "en": "If we hadn't missed the bus, we wouldn't have been late.",
+            "id": "Kalau saja kami tidak ketinggalan bus, kami tidak akan terlambat."
+          },
+          {
+            "en": "If Pak Hasan had read the email, he would have sent the report on time.",
+            "id": "Seandainya Pak Hasan membaca emailnya, dia pasti mengirim laporannya tepat waktu."
+          },
+          {
+            "en": "What would you have done if you had lost your passport in Singapore?",
+            "id": "Apa yang akan kamu lakukan seandainya waktu itu paspormu hilang di Singapura?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A missed train",
+        "text": "Pak Hasan didn't hear his alarm this morning, so he missed the 7:00 KRL and was late for work.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-past",
+          "prompt": "Complete: If Pak Hasan ___ his alarm, he wouldn't have missed the train.",
+          "options": [
+            "heard",
+            "had heard",
+            "would have heard"
+          ],
+          "answer": 1,
+          "explanation": "This morning is the **past**, and it didn't happen, so the if-part needs **had + third form**: *had heard*. *heard* (past simple) would make it about now, and *would* never goes after *if*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Two traps, and could / might have",
+        "text": "Indonesian *seandainya dulu* has no tense, and *akan* covers will and would. That causes two typical mistakes.",
+        "body": "**1. No past simple in the if-part:** 'If I knew about it, I would have come' ✗ → **If I had known** ✓.\n**2. No would in the if-part:** 'If I would have studied harder' ✗ → **If I had studied harder** ✓. (Heard in casual American speech, but not standard.)\nAfter *have*, the **third form**: *would have gone*, not 'would have went'.\nIn the result you can also use **could have** (it was possible, *bisa*) or **might have** (maybe, *mungkin*).",
+        "pairs": [
+          {
+            "en": "would have + third form",
+            "id": "pasti / akan … (masa lalu, khayalan)"
+          },
+          {
+            "en": "could have + third form",
+            "id": "bisa … (waktu itu mungkin)"
+          },
+          {
+            "en": "might have + third form",
+            "id": "mungkin … (tidak pasti)"
+          },
+          {
+            "en": "go → went → gone",
+            "id": "pergi"
+          },
+          {
+            "en": "bring → brought → brought",
+            "id": "membawa / membawakan"
+          },
+          {
+            "en": "a present",
+            "id": "hadiah / kado"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A forgotten birthday",
+        "text": "Rina: 'It was my birthday yesterday!' You didn't know. You say: 'Oh no, sorry! If I had known, …'",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "talk-about-past",
+          "prompt": "Finish your reply. Arrange the words: saya pasti membawakanmu hadiah.",
+          "tokens": [
+            "brought",
+            "you",
+            "I",
+            "a",
+            "would",
+            "present",
+            "have"
+          ],
+          "solution": "I would have brought you a present.",
+          "explanation": "The result of an imagined past: **would have + third form** (*bring → brought → brought*). You didn't know, so you didn't bring a present."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "'d = had or would?",
+        "text": "In speech, **had** and **would** both become **'d**: *If I'd known, I'd have come.* Here's how to tell them apart.",
+        "body": "Look at the word **after** 'd:\n- **'d + third form** (*known, gone, been*) → **had**: *I'd known* = I had known\n- **'d + have + third form** → **would**: *I'd have come* = I would have come\n- **'d + base verb** → **would**: *I'd like*\nIn the **if-part**, 'd is always **had** (no would after if).\n*would have* is said fast: *would've* ('wud-ev'). Write **would have** or **would've**, never 'would of'.",
+        "pairs": [
+          {
+            "en": "I'd known",
+            "id": "I had known"
+          },
+          {
+            "en": "I'd have come",
+            "id": "I would have come"
+          },
+          {
+            "en": "would've",
+            "id": "would have (dibaca 'wud-ev')"
+          },
+          {
+            "en": "could've",
+            "id": "could have"
+          },
+          {
+            "en": "it was raining",
+            "id": "sedang hujan"
+          },
+          {
+            "en": "take the car",
+            "id": "bawa mobil"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen to Dimas",
+        "text": "Dimas got very wet on his motorbike yesterday. Listen to what he says.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-past",
+          "prompt": "Listen. Which sentence means the same as what Dimas says?",
+          "listen": "If I'd known it was raining, I'd have taken the car.",
+          "options": [
+            "If I had known it was raining, I would have taken the car.",
+            "If I would know it was raining, I had taken the car.",
+            "If I had known it was raining, I had taken the car."
+          ],
+          "answer": 0,
+          "explanation": "*I'd known*: 'd + third form, in the if-part → **had**. *I'd have taken*: 'd + have + third form → **would**. So: *If I had known …, I would have taken the car.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mixed: a different past, a different now",
+        "text": "Sometimes a past choice changes your life **now**. Then you mix the two conditionals.",
+        "body": "**if + had + third form** (imagined past), **would + base verb** (imagined now):\n*If I had studied IT, I would have a different job now.*\nFor something happening now: **would be + -ing**. Trap: 'I would be live in Jakarta now' ✗ → **would be living** or **would live** ✓.\nThe **time words** decide: *now, today, still* → **would + base verb**; *yesterday, last year, in 2019* → **would have + third form**.\nLess often, the other way round: *If I spoke Japanese, I would have applied for that job last year.*",
+        "pairs": [
+          {
+            "en": "now / today / still",
+            "id": "sekarang / hari ini / masih"
+          },
+          {
+            "en": "would + base verb",
+            "id": "akibat khayalan sekarang"
+          },
+          {
+            "en": "would be + -ing",
+            "id": "sedang … (khayalan, sekarang)"
+          },
+          {
+            "en": "yesterday / last year",
+            "id": "kemarin / tahun lalu"
+          },
+          {
+            "en": "would have + third form",
+            "id": "akibat khayalan di masa lalu"
+          },
+          {
+            "en": "a different job",
+            "id": "pekerjaan yang lain"
+          },
+          {
+            "en": "a tech startup",
+            "id": "perusahaan rintisan teknologi"
+          },
+          {
+            "en": "fluent",
+            "id": "lancar (berbahasa)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A lawyer who loves computers",
+        "text": "Dimas studied law, not IT. Now he's a lawyer in Jakarta, and he's bored. He has always loved computers.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-mixed-conditionals",
+          "prompt": "Complete: If Dimas had studied IT, he ___ at a tech startup now.",
+          "options": [
+            "would be work",
+            "would have worked",
+            "would be working"
+          ],
+          "answer": 2,
+          "explanation": "An imagined past (*had studied*) with a result **now** → a mixed conditional: **would be + -ing** (or *would work*). 'would be work' joins *be* and the base verb, and *would have worked* is a past result, which doesn't fit *now*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "The scholarship",
+        "text": "In 2020 Sari turned down a scholarship to study in the UK. Today her English still isn't very good.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-mixed-conditionals",
+          "prompt": "Complete: If Sari had accepted the scholarship, she ___ fluent in English now.",
+          "options": [
+            "would have been",
+            "will be",
+            "would be"
+          ],
+          "answer": 2,
+          "explanation": "The if-part is the past (2020), but **now** puts the result in the present → **would + base verb**: *would be*. *would have been* is a past result, and *will* doesn't fit an imagined situation."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for the next time you imagine a different past!",
+        "artifact": {
+          "title": "Cheat sheet · Third & mixed conditionals",
+          "intro": "Third conditional = if + had + third form, would have + third form, for an imagined past. Mixed = if + had + third form, would + base verb, for a past change with a result now.",
+          "headers": [
+            "Use",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Real possibility (first)",
+              "if + present, will + verb",
+              "If it rains tomorrow, I'll stay home."
+            ],
+            [
+              "Imagined now (second)",
+              "if + past, would + verb",
+              "If I had more time, I would learn Japanese."
+            ],
+            [
+              "Imagined past (third)",
+              "if + had + third form, would have + third form",
+              "If I had known about the meeting, I would have come."
+            ],
+            [
+              "Negative",
+              "hadn't / wouldn't have + third form",
+              "If we hadn't missed the bus, we wouldn't have been late."
+            ],
+            [
+              "Possible / maybe",
+              "could have / might have + third form",
+              "If she'd asked me, I could have helped her."
+            ],
+            [
+              "Question",
+              "What would you have done if …?",
+              "What would you have done if you had lost your passport?"
+            ],
+            [
+              "'d + third form",
+              "'d = had",
+              "If I'd known … = If I had known …"
+            ],
+            [
+              "'d + have + third form",
+              "'d = would",
+              "I'd have come = I would have come"
+            ],
+            [
+              "Past → now (mixed)",
+              "if + had + third form, would + verb",
+              "If I had studied IT, I would have a different job now."
+            ],
+            [
+              "Happening now (mixed)",
+              "would be + -ing",
+              "If I had taken that job, I would be living in Jakarta now."
+            ],
+            [
+              "Now → past (note)",
+              "if + past, would have + third form",
+              "If I spoke Japanese, I would have applied for that job last year."
+            ]
+          ],
+          "tips": [
+            "**No would after if**, and no past simple for the past: *If I had known*, not *If I knew* / *If I would have known*.",
+            "**Time words decide:** *yesterday, last year* → would have + third form; *now, today, still* → would + base verb.",
+            "*would be live* ✗ → **would be living** / **would live** ✓. Write *would have* / *would've*, never *would of*."
+          ],
+          "examples": [
+            {
+              "en": "If I had known about the meeting, I would have come.",
+              "id": "Seandainya waktu itu saya tahu soal rapatnya, saya pasti datang."
+            },
+            {
+              "en": "If she'd asked me, I could have helped her.",
+              "id": "Seandainya dulu dia minta tolong, saya bisa membantunya."
+            },
+            {
+              "en": "If I had studied IT, I would have a different job now.",
+              "id": "Seandainya dulu saya kuliah IT, sekarang pekerjaan saya pasti lain."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read",
+        "text": "Want more? Watch two short BBC videos, one on the third conditional and one on mixed conditionals, and read the British Council page with two grammar tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita kembali ke masa lalu: membayangkan masa lalu yang berbeda, dan bagaimana itu mengubah keadaan, dulu maupun sekarang. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Membayangkan masa lalu yang berbeda",
+        "text": "Ulasan singkat: **first** = nyata (*If it rains tomorrow, I'll stay home*), **second** = khayalan sekarang (*If I had more time, I would learn Japanese*). Sekarang: **masa lalu** khayalan.",
+        "body": "Untuk membayangkan masa lalu yang **tidak terjadi**, pakai **third conditional**:\n**if + had + bentuk ketiga**, **would have + bentuk ketiga**\n*If I had known about the meeting, I would have come.* = saya **tidak** tahu, dan saya **tidak** datang.\nKenapa *had known*, bukan *knew*? *If I knew* sudah berarti **sekarang** (second conditional), jadi untuk masa lalu kata kerjanya **mundur satu langkah lagi**.\nBahasa Indonesia memakai kata (*seandainya dulu, kalau saja waktu itu*); bahasa Inggris mengubah **kata kerjanya**.",
+        "pairs": [
+          {
+            "en": "If I had known, …",
+            "id": "Seandainya waktu itu saya tahu, …"
+          },
+          {
+            "en": "I would have come",
+            "id": "saya pasti datang (tapi tidak)"
+          },
+          {
+            "en": "hadn't + third form",
+            "id": "(seandainya) tidak … (masa lalu)"
+          },
+          {
+            "en": "wouldn't have + third form",
+            "id": "tidak akan … (masa lalu, khayalan)"
+          },
+          {
+            "en": "know → knew → known",
+            "id": "tahu"
+          },
+          {
+            "en": "see → saw → seen",
+            "id": "melihat"
+          },
+          {
+            "en": "hear → heard → heard",
+            "id": "mendengar"
+          },
+          {
+            "en": "What would you have done if …?",
+            "id": "Apa yang akan kamu lakukan seandainya waktu itu …?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kenyataannya tidak terjadi",
+        "text": "Di setiap kalimat, kedua bagiannya **tidak nyata**: ini versi lain dari masa lalu.",
+        "body": "Perhatikan waktu lampaunya dan kedua bagiannya: **had + bentuk ketiga** setelah *if*, **would have + bentuk ketiga** di bagian hasil. Negatif: **hadn't**, **wouldn't have**.",
+        "examples": [
+          {
+            "en": "If I had known about the meeting, I would have come.",
+            "id": "Seandainya waktu itu saya tahu soal rapatnya, saya pasti datang."
+          },
+          {
+            "en": "If we hadn't missed the bus, we wouldn't have been late.",
+            "id": "Kalau saja kami tidak ketinggalan bus, kami tidak akan terlambat."
+          },
+          {
+            "en": "If Pak Hasan had read the email, he would have sent the report on time.",
+            "id": "Seandainya Pak Hasan membaca emailnya, dia pasti mengirim laporannya tepat waktu."
+          },
+          {
+            "en": "What would you have done if you had lost your passport in Singapore?",
+            "id": "Apa yang akan kamu lakukan seandainya waktu itu paspormu hilang di Singapura?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ketinggalan kereta",
+        "text": "Pak Hasan tidak mendengar alarmnya tadi pagi, jadi dia ketinggalan KRL jam 7.00 dan terlambat ke kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-past",
+          "prompt": "Lengkapi: If Pak Hasan ___ his alarm, he wouldn't have missed the train.",
+          "options": [
+            "heard",
+            "had heard",
+            "would have heard"
+          ],
+          "answer": 1,
+          "explanation": "Tadi pagi itu **masa lalu**, dan kejadiannya tidak terjadi, jadi bagian if perlu **had + bentuk ketiga**: *had heard*. *heard* (past simple) membuatnya jadi tentang sekarang, dan *would* tidak pernah dipakai setelah *if*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dua jebakan, serta could / might have",
+        "text": "*Seandainya dulu* dalam bahasa Indonesia tidak punya tense, dan *akan* mencakup will dan would. Ini menyebabkan dua kesalahan yang sering terjadi.",
+        "body": "**1. Jangan pakai past simple di bagian if:** 'If I knew about it, I would have come' ✗ → **If I had known** ✓.\n**2. Jangan pakai would di bagian if:** 'If I would have studied harder' ✗ → **If I had studied harder** ✓. (Terdengar dalam bahasa Inggris Amerika yang santai, tapi tidak baku.)\nSetelah *have*, pakai **bentuk ketiga**: *would have gone*, bukan 'would have went'.\nDi bagian hasil kamu juga bisa pakai **could have** (waktu itu *bisa*) atau **might have** (*mungkin*).",
+        "pairs": [
+          {
+            "en": "would have + third form",
+            "id": "pasti / akan … (masa lalu, khayalan)"
+          },
+          {
+            "en": "could have + third form",
+            "id": "bisa … (waktu itu mungkin)"
+          },
+          {
+            "en": "might have + third form",
+            "id": "mungkin … (tidak pasti)"
+          },
+          {
+            "en": "go → went → gone",
+            "id": "pergi"
+          },
+          {
+            "en": "bring → brought → brought",
+            "id": "membawa / membawakan"
+          },
+          {
+            "en": "a present",
+            "id": "hadiah / kado"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Lupa ulang tahun",
+        "text": "Rina: 'It was my birthday yesterday!' Kamu tidak tahu. Kamu bilang: 'Oh no, sorry! If I had known, …'",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "talk-about-past",
+          "prompt": "Selesaikan jawabanmu. Susun kata-katanya: saya pasti membawakanmu hadiah.",
+          "tokens": [
+            "brought",
+            "you",
+            "I",
+            "a",
+            "would",
+            "present",
+            "have"
+          ],
+          "solution": "I would have brought you a present.",
+          "explanation": "Hasil dari masa lalu khayalan: **would have + bentuk ketiga** (*bring → brought → brought*). Kamu tidak tahu, jadi kamu tidak membawa hadiah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "'d = had atau would?",
+        "text": "Saat bicara, **had** dan **would** sama-sama jadi **'d**: *If I'd known, I'd have come.* Begini cara membedakannya.",
+        "body": "Lihat kata **setelah** 'd:\n- **'d + bentuk ketiga** (*known, gone, been*) → **had**: *I'd known* = I had known\n- **'d + have + bentuk ketiga** → **would**: *I'd have come* = I would have come\n- **'d + kata kerja dasar** → **would**: *I'd like*\nDi **bagian if**, 'd selalu **had** (tidak ada would setelah if).\n*would have* diucapkan cepat: *would've* ('wud-ev'). Tulis **would have** atau **would've**, jangan 'would of'.",
+        "pairs": [
+          {
+            "en": "I'd known",
+            "id": "I had known"
+          },
+          {
+            "en": "I'd have come",
+            "id": "I would have come"
+          },
+          {
+            "en": "would've",
+            "id": "would have (dibaca 'wud-ev')"
+          },
+          {
+            "en": "could've",
+            "id": "could have"
+          },
+          {
+            "en": "it was raining",
+            "id": "sedang hujan"
+          },
+          {
+            "en": "take the car",
+            "id": "bawa mobil"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan Dimas",
+        "text": "Kemarin Dimas basah kuyup naik motor. Dengarkan apa yang dia katakan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-past",
+          "prompt": "Dengarkan. Kalimat mana yang artinya sama dengan ucapan Dimas?",
+          "listen": "If I'd known it was raining, I'd have taken the car.",
+          "options": [
+            "If I had known it was raining, I would have taken the car.",
+            "If I would know it was raining, I had taken the car.",
+            "If I had known it was raining, I had taken the car."
+          ],
+          "answer": 0,
+          "explanation": "*I'd known*: 'd + bentuk ketiga, di bagian if → **had**. *I'd have taken*: 'd + have + bentuk ketiga → **would**. Jadi: *If I had known …, I would have taken the car.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mixed: masa lalu berbeda, masa kini berbeda",
+        "text": "Kadang pilihan di masa lalu mengubah hidupmu **sekarang**. Kalau begitu, kamu mencampur dua conditional.",
+        "body": "**if + had + bentuk ketiga** (masa lalu khayalan), **would + kata kerja dasar** (sekarang, khayalan):\n*If I had studied IT, I would have a different job now.*\nUntuk sesuatu yang sedang berlangsung sekarang: **would be + -ing**. Jebakan: 'I would be live in Jakarta now' ✗ → **would be living** atau **would live** ✓.\n**Kata waktu** yang menentukan: *now, today, still* → **would + kata kerja dasar**; *yesterday, last year, in 2019* → **would have + bentuk ketiga**.\nLebih jarang, kebalikannya: *If I spoke Japanese, I would have applied for that job last year.*",
+        "pairs": [
+          {
+            "en": "now / today / still",
+            "id": "sekarang / hari ini / masih"
+          },
+          {
+            "en": "would + base verb",
+            "id": "akibat khayalan sekarang"
+          },
+          {
+            "en": "would be + -ing",
+            "id": "sedang … (khayalan, sekarang)"
+          },
+          {
+            "en": "yesterday / last year",
+            "id": "kemarin / tahun lalu"
+          },
+          {
+            "en": "would have + third form",
+            "id": "akibat khayalan di masa lalu"
+          },
+          {
+            "en": "a different job",
+            "id": "pekerjaan yang lain"
+          },
+          {
+            "en": "a tech startup",
+            "id": "perusahaan rintisan teknologi"
+          },
+          {
+            "en": "fluent",
+            "id": "lancar (berbahasa)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pengacara yang suka komputer",
+        "text": "Dimas kuliah hukum, bukan IT. Sekarang dia pengacara di Jakarta, dan dia bosan. Dari dulu dia suka komputer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-mixed-conditionals",
+          "prompt": "Lengkapi: If Dimas had studied IT, he ___ at a tech startup now.",
+          "options": [
+            "would be work",
+            "would have worked",
+            "would be working"
+          ],
+          "answer": 2,
+          "explanation": "Masa lalu khayalan (*had studied*) dengan akibat **sekarang** → mixed conditional: **would be + -ing** (atau *would work*). 'would be work' menggabungkan *be* dengan kata kerja dasar, dan *would have worked* adalah akibat di masa lalu, tidak cocok dengan *now*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Beasiswa",
+        "text": "Tahun 2020 Sari menolak beasiswa kuliah di Inggris. Sekarang bahasa Inggrisnya masih belum terlalu bagus.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-mixed-conditionals",
+          "prompt": "Lengkapi: If Sari had accepted the scholarship, she ___ fluent in English now.",
+          "options": [
+            "would have been",
+            "will be",
+            "would be"
+          ],
+          "answer": 2,
+          "explanation": "Bagian if-nya masa lalu (2020), tapi **now** membuat akibatnya di masa kini → **would + kata kerja dasar**: *would be*. *would have been* adalah akibat di masa lalu, dan *will* tidak cocok untuk situasi khayalan."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk lain kali kamu membayangkan masa lalu yang berbeda!",
+        "artifact": {
+          "title": "Ringkasan · Third & mixed conditional",
+          "intro": "Third conditional = if + had + bentuk ketiga, would have + bentuk ketiga, untuk masa lalu khayalan. Mixed = if + had + bentuk ketiga, would + kata kerja dasar, untuk perubahan di masa lalu dengan akibat sekarang.",
+          "headers": [
+            "Fungsi",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Kemungkinan nyata (first)",
+              "if + present, will + verb",
+              "If it rains tomorrow, I'll stay home."
+            ],
+            [
+              "Khayalan sekarang (second)",
+              "if + past, would + verb",
+              "If I had more time, I would learn Japanese."
+            ],
+            [
+              "Khayalan masa lalu (third)",
+              "if + had + bentuk ketiga, would have + bentuk ketiga",
+              "If I had known about the meeting, I would have come."
+            ],
+            [
+              "Negatif",
+              "hadn't / wouldn't have + bentuk ketiga",
+              "If we hadn't missed the bus, we wouldn't have been late."
+            ],
+            [
+              "Bisa / mungkin",
+              "could have / might have + bentuk ketiga",
+              "If she'd asked me, I could have helped her."
+            ],
+            [
+              "Pertanyaan",
+              "What would you have done if …?",
+              "What would you have done if you had lost your passport?"
+            ],
+            [
+              "'d + bentuk ketiga",
+              "'d = had",
+              "If I'd known … = If I had known …"
+            ],
+            [
+              "'d + have + bentuk ketiga",
+              "'d = would",
+              "I'd have come = I would have come"
+            ],
+            [
+              "Masa lalu → sekarang (mixed)",
+              "if + had + bentuk ketiga, would + verb",
+              "If I had studied IT, I would have a different job now."
+            ],
+            [
+              "Sedang berlangsung sekarang (mixed)",
+              "would be + -ing",
+              "If I had taken that job, I would be living in Jakarta now."
+            ],
+            [
+              "Sekarang → masa lalu (catatan)",
+              "if + past, would have + bentuk ketiga",
+              "If I spoke Japanese, I would have applied for that job last year."
+            ]
+          ],
+          "tips": [
+            "**Tidak ada would setelah if**, dan jangan pakai past simple untuk masa lalu: *If I had known*, bukan *If I knew* / *If I would have known*.",
+            "**Kata waktu yang menentukan:** *yesterday, last year* → would have + bentuk ketiga; *now, today, still* → would + kata kerja dasar.",
+            "*would be live* ✗ → **would be living** / **would live** ✓. Tulis *would have* / *would've*, jangan *would of*."
+          ],
+          "examples": [
+            {
+              "en": "If I had known about the meeting, I would have come.",
+              "id": "Seandainya waktu itu saya tahu soal rapatnya, saya pasti datang."
+            },
+            {
+              "en": "If she'd asked me, I could have helped her.",
+              "id": "Seandainya dulu dia minta tolong, saya bisa membantunya."
+            },
+            {
+              "en": "If I had studied IT, I would have a different job now.",
+              "id": "Seandainya dulu saya kuliah IT, sekarang pekerjaan saya pasti lain."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca",
+        "text": "Mau belajar lebih? Tonton dua video singkat dari BBC, satu tentang third conditional dan satu tentang mixed conditional, lalu baca halaman British Council yang dilengkapi dua tes grammar."
+      }
+    ]
+  }
+}

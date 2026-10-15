@@ -1,0 +1,628 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll tell stories like a confident B2 speaker: choosing each past tense on purpose, adding had been + -ing, and talking about old habits. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Three tenses, three jobs",
+        "text": "You already know these three past tenses. At B2, you choose each one on purpose.",
+        "body": "**Past continuous** (was/were + -ing) = the scene: **in the middle** of something at that moment.\n**Past simple** = the events, in order, or something that happened at that exact moment.\n**Past perfect** (had + third form) = **already finished** before that moment.\nThe same verb tells three stories: the train **was leaving** (I saw it go), **left** (just as I arrived), **had left** (it was gone).\nIndonesian trap: *sedang* and *sudah* are often dropped, but English must choose: *sudah* in a past story → **had** (*the film had already started*, not *already started*).",
+        "pairs": [
+          {
+            "en": "When I got to the platform, the train was leaving.",
+            "id": "Waktu saya sampai di peron, keretanya sedang berangkat."
+          },
+          {
+            "en": "When I got to the platform, the train left.",
+            "id": "Waktu saya sampai di peron, keretanya (langsung) berangkat."
+          },
+          {
+            "en": "When I got to the platform, the train had left.",
+            "id": "Waktu saya sampai di peron, keretanya sudah berangkat."
+          },
+          {
+            "en": "It was raining, and people were pushing.",
+            "id": "Hujan turun, dan orang-orang saling dorong. (latar)"
+          },
+          {
+            "en": "I squeezed in and closed my eyes.",
+            "id": "Saya menyelip masuk lalu memejamkan mata. (kejadian)"
+          },
+          {
+            "en": "Suddenly I realised that I had left my laptop at the office.",
+            "id": "Tiba-tiba saya sadar laptop saya tertinggal di kantor. (mundur)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi's morning, minute by minute.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-tenses",
+          "prompt": "Budi walked into the kitchen at 8:00. His wife started making coffee at 7:55 and finished at 8:05. Complete: When Budi walked into the kitchen, his wife ___ coffee.",
+          "options": [
+            "made",
+            "was making",
+            "had made"
+          ],
+          "answer": 1,
+          "explanation": "At 8:00 she was **in the middle** of making coffee (7:55–8:05) → past continuous: **was making**. 'had made' would mean it was already finished before 8:00, and 'made' would mean she made it after he walked in."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "had been + -ing",
+        "text": "Now the new tense. It's the past version of I've been waiting.",
+        "body": "**Past perfect continuous = had been + -ing**, the same for every person (short form **'d been**). Use it for an activity that went on **for a while up to a moment in the past**:\n*I've been waiting for an hour* (up to now) → *I **had been waiting** for an hour **when** she called* (up to then).\nIt often comes with **for, since, all day, How long**.\nIndonesian trap: *Saya sudah menunggu dua jam waktu dia datang* → not *I waited* or *I was waiting for two hours when she came*, but **I had been waiting for two hours when she came**.",
+        "pairs": [
+          {
+            "en": "had been waiting",
+            "id": "sudah menunggu (sampai saat itu)"
+          },
+          {
+            "en": "I've been waiting for an hour.",
+            "id": "Saya sudah menunggu sejam. (sampai sekarang)"
+          },
+          {
+            "en": "I had been waiting for an hour when she called.",
+            "id": "Saya sudah menunggu sejam waktu dia menelepon. (sampai saat itu)"
+          },
+          {
+            "en": "We'd been driving since 5 a.m.",
+            "id": "Kami sudah menyetir sejak jam 5 pagi. ('d been = had been)"
+          },
+          {
+            "en": "How long had you been living there?",
+            "id": "Sudah berapa lama kamu tinggal di sana (waktu itu)?"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Up to a past moment",
+        "text": "Picture Rina at a café in Bandung. How long had she been waiting?",
+        "timeline": {
+          "title": "Rina had been waiting for two hours when Sari arrived.",
+          "caption": "Rina started waiting at 5:00 and kept waiting up to 7:00, the moment Sari arrived → had been waiting (for two hours). Sari's arrival is the past moment → past simple: arrived.",
+          "marks": [
+            {
+              "label": "5:00 · Rina started waiting",
+              "kind": "past"
+            },
+            {
+              "label": "5:00–7:00 · had been waiting",
+              "kind": "past"
+            },
+            {
+              "label": "7:00 · Sari arrived",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas had a bad day in March.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-perfect-continuous",
+          "prompt": "Complete: Dimas failed his driving test in March, even though he ___ for it since January.",
+          "options": [
+            "was practising",
+            "has been practising",
+            "had been practising"
+          ],
+          "answer": 2,
+          "explanation": "He practised from January **up to** the test in March, a past moment → **had been practising**. 'was practising' can't show how long (it doesn't go with since), and 'has been practising' means up to now. (American spelling: practicing.)"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "had done or had been doing?",
+        "text": "The same choice as I've read vs I've been reading, now moved into the past.",
+        "body": "**had been + -ing** = the **activity**: how long, or the reason for something you could **see** then: *The streets were wet. It **had been raining**.*\n**had + third form** = the **result**, how many: *By noon she **had answered** 40 emails* (not *had been answering 40 emails*).\nState verbs (know, like, have = own, be) stay simple: *I **had known** him for years* (not *had been knowing*).\nWith live, work, study + for/since, both forms are fine.",
+        "pairs": [
+          {
+            "en": "The streets were wet. It had been raining.",
+            "id": "Jalanannya basah. Habis hujan."
+          },
+          {
+            "en": "Dimas was out of breath because he had been running.",
+            "id": "Dimas terengah-engah karena habis lari."
+          },
+          {
+            "en": "By noon she had answered 40 emails.",
+            "id": "Sampai jam 12 siang dia sudah membalas 40 email."
+          },
+          {
+            "en": "I had known him for ten years.",
+            "id": "Saya sudah kenal dia selama sepuluh tahun."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "The kids come home after playing outside.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "past-perfect-continuous",
+          "prompt": "The kids came home with dirty clothes and muddy shoes. Arrange the words to say why (mereka habis main di lumpur).",
+          "tokens": [
+            "mud",
+            "been",
+            "They",
+            "the",
+            "playing",
+            "had",
+            "in"
+          ],
+          "solution": "They had been playing in the mud.",
+          "explanation": "The dirty clothes were the result you could see, and the playing had just stopped → **had been + -ing**: *They had been playing*, then where: *in the mud*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "would and used to",
+        "text": "Last part: old habits, the way people tell memories.",
+        "body": "**used to** + verb = past habits **and** states: *I used to have a bike. We used to live in Bogor.*\n**would** + verb = only **repeated actions** in a memory story, after the time is set: *Every Sunday my dad **would take** me to the market.* Here would = *dulu biasanya*, not *akan*.\n**Never would for states** (have, live, like, know, be): *I would have a bike* ✗ → **I used to have a bike** ✓.\nOne event → past simple. **'d** + base verb = would (*we'd play*).",
+        "pairs": [
+          {
+            "en": "I used to have a bike.",
+            "id": "Dulu saya punya sepeda. (keadaan)"
+          },
+          {
+            "en": "We used to live in Bogor.",
+            "id": "Dulu kami tinggal di Bogor. (keadaan)"
+          },
+          {
+            "en": "Every Sunday my dad would take me to the market.",
+            "id": "Setiap Minggu ayah dulu biasa mengajak saya ke pasar. (kegiatan berulang)"
+          },
+          {
+            "en": "After school, we'd play football until it got dark.",
+            "id": "Sepulang sekolah, kami dulu biasa main bola sampai gelap."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani tells you about growing up in Solo.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "would-used-to-habits",
+          "prompt": "Bu Ani is remembering her childhood in Solo. Which sentence is wrong?",
+          "options": [
+            "My grandfather used to have a big garden.",
+            "My grandfather would have a big garden.",
+            "Every Friday we would eat at the night market."
+          ],
+          "answer": 1,
+          "explanation": "have a garden = own it, a **state** → would is impossible here: **used to have** (or *had*). 'Every Friday we would eat …' is a repeated action with the time set first, so would is fine."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Back to the story",
+        "text": "One last choice of tense, at the office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-tenses",
+          "prompt": "Rina was late for the team meeting. Which sentence means she missed ALL of Pak Hasan's presentation?",
+          "options": [
+            "When Rina came in, Pak Hasan had given his presentation.",
+            "When Rina came in, Pak Hasan was giving his presentation.",
+            "When Rina came in, Pak Hasan gave his presentation."
+          ],
+          "answer": 0,
+          "explanation": "**had given** = the presentation was already finished before she came in, so she missed all of it. 'was giving' = he was in the middle of it (she missed only the start), and 'gave' = he gave it at the moment she came in or right after."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next story.",
+        "artifact": {
+          "title": "Cheat sheet · narrative tenses",
+          "intro": "Every verb in a story has a job. Choose the tense that does that job.",
+          "headers": [
+            "Form",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "was/were + -ing",
+              "the scene: in the middle at that moment",
+              "It was raining, and people were pushing."
+            ],
+            [
+              "past simple",
+              "the events, in order",
+              "I squeezed in and closed my eyes."
+            ],
+            [
+              "had + third form",
+              "already finished before that moment",
+              "I realised I had left my laptop at the office."
+            ],
+            [
+              "had been + -ing",
+              "going on for a while up to a past moment",
+              "I had been waiting for two hours when she arrived."
+            ],
+            [
+              "had been + -ing",
+              "the reason for something you could see",
+              "The streets were wet. It had been raining."
+            ],
+            [
+              "had + third form",
+              "a number or a finished result",
+              "By noon she had answered 40 emails."
+            ],
+            [
+              "used to + verb",
+              "past habits AND states",
+              "I used to have a bike."
+            ],
+            [
+              "would + verb",
+              "repeated actions only, after the time is set",
+              "Every Sunday my dad would take me to the market."
+            ]
+          ],
+          "tips": [
+            "**sudah** in a past story → **had**; a wait or activity **up to** a past moment → **had been + -ing**, not *I waited for two hours when …*",
+            "Counting finished things (40 emails) → had + third form. State verbs (know, have, like, be) → never had been + -ing.",
+            "**would** for old habits: actions only. *I would have a bike* ✗ → *I used to have a bike* ✓."
+          ],
+          "examples": [
+            {
+              "en": "When I got to the platform, the train had left.",
+              "id": "Waktu saya sampai di peron, keretanya sudah berangkat."
+            },
+            {
+              "en": "We'd been driving since 5 a.m., so we stopped at a rest area.",
+              "id": "Kami sudah menyetir sejak jam 5 pagi, jadi kami berhenti di rest area."
+            },
+            {
+              "en": "We used to live in a small house near the rice fields.",
+              "id": "Dulu kami tinggal di rumah kecil dekat sawah."
+            },
+            {
+              "en": "Every evening, my grandmother would tell us stories.",
+              "id": "Setiap malam, nenek dulu biasa mendongeng untuk kami."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A short BBC video on had been + -ing, and a British Council page with tests on used to and would."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar bercerita seperti pembicara B2 yang percaya diri: memilih setiap past tense dengan sengaja, menambahkan had been + -ing, dan bercerita tentang kebiasaan lama. Ayo kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Tiga tense, tiga tugas",
+        "text": "Kamu sudah kenal ketiga past tense ini. Di B2, kamu memilih masing-masing dengan sengaja.",
+        "body": "**Past continuous** (was/were + -ing) = latarnya: sesuatu yang **sedang berlangsung** pada saat itu.\n**Past simple** = kejadian-kejadiannya, sesuai urutan, atau sesuatu yang terjadi tepat pada saat itu.\n**Past perfect** (had + bentuk ketiga) = **sudah selesai** sebelum saat itu.\nKata kerja yang sama menceritakan tiga hal: the train **was leaving** (saya melihatnya pergi), **left** (persis waktu saya sampai), **had left** (keretanya sudah tidak ada).\nJebakan bahasa Indonesia: *sedang* dan *sudah* sering tidak diucapkan, tapi bahasa Inggris harus memilih: *sudah* dalam cerita lampau → **had** (*the film had already started*, bukan *already started*).",
+        "pairs": [
+          {
+            "en": "When I got to the platform, the train was leaving.",
+            "id": "Waktu saya sampai di peron, keretanya sedang berangkat."
+          },
+          {
+            "en": "When I got to the platform, the train left.",
+            "id": "Waktu saya sampai di peron, keretanya (langsung) berangkat."
+          },
+          {
+            "en": "When I got to the platform, the train had left.",
+            "id": "Waktu saya sampai di peron, keretanya sudah berangkat."
+          },
+          {
+            "en": "It was raining, and people were pushing.",
+            "id": "Hujan turun, dan orang-orang saling dorong. (latar)"
+          },
+          {
+            "en": "I squeezed in and closed my eyes.",
+            "id": "Saya menyelip masuk lalu memejamkan mata. (kejadian)"
+          },
+          {
+            "en": "Suddenly I realised that I had left my laptop at the office.",
+            "id": "Tiba-tiba saya sadar laptop saya tertinggal di kantor. (mundur)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pagi Budi, menit demi menit.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-tenses",
+          "prompt": "Budi masuk ke dapur jam 8.00. Istrinya mulai membuat kopi jam 7.55 dan selesai jam 8.05. Lengkapi: When Budi walked into the kitchen, his wife ___ coffee.",
+          "options": [
+            "made",
+            "was making",
+            "had made"
+          ],
+          "answer": 1,
+          "explanation": "Jam 8.00 istrinya **sedang** membuat kopi (7.55–8.05) → past continuous: **was making**. 'had made' berarti kopinya sudah selesai sebelum jam 8.00, dan 'made' berarti dia membuatnya setelah Budi masuk."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "had been + -ing",
+        "text": "Sekarang tense yang baru. Ini versi lampau dari I've been waiting.",
+        "body": "**Past perfect continuous = had been + -ing**, sama untuk semua orang (bentuk pendek **'d been**). Pakai untuk kegiatan yang sudah berlangsung **beberapa lama sampai suatu saat di masa lalu**:\n*I've been waiting for an hour* (sampai sekarang) → *I **had been waiting** for an hour **when** she called* (sampai saat itu).\nSering muncul dengan **for, since, all day, How long**.\nJebakan bahasa Indonesia: *Saya sudah menunggu dua jam waktu dia datang* → bukan *I waited* atau *I was waiting for two hours when she came*, tapi **I had been waiting for two hours when she came**.",
+        "pairs": [
+          {
+            "en": "had been waiting",
+            "id": "sudah menunggu (sampai saat itu)"
+          },
+          {
+            "en": "I've been waiting for an hour.",
+            "id": "Saya sudah menunggu sejam. (sampai sekarang)"
+          },
+          {
+            "en": "I had been waiting for an hour when she called.",
+            "id": "Saya sudah menunggu sejam waktu dia menelepon. (sampai saat itu)"
+          },
+          {
+            "en": "We'd been driving since 5 a.m.",
+            "id": "Kami sudah menyetir sejak jam 5 pagi. ('d been = had been)"
+          },
+          {
+            "en": "How long had you been living there?",
+            "id": "Sudah berapa lama kamu tinggal di sana (waktu itu)?"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Sampai suatu saat di masa lalu",
+        "text": "Bayangkan Rina di sebuah kafe di Bandung. Sudah berapa lama dia menunggu?",
+        "timeline": {
+          "title": "Rina had been waiting for two hours when Sari arrived.",
+          "caption": "Rina mulai menunggu jam 5.00 dan terus menunggu sampai jam 7.00, saat Sari datang → had been waiting (for two hours). Datangnya Sari adalah saat di masa lalu itu → past simple: arrived.",
+          "marks": [
+            {
+              "label": "5.00 · Rina mulai menunggu",
+              "kind": "past"
+            },
+            {
+              "label": "5.00–7.00 · had been waiting",
+              "kind": "past"
+            },
+            {
+              "label": "7.00 · Sari datang",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas mengalami hari yang buruk di bulan Maret.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-perfect-continuous",
+          "prompt": "Lengkapi: Dimas failed his driving test in March, even though he ___ for it since January.",
+          "options": [
+            "was practising",
+            "has been practising",
+            "had been practising"
+          ],
+          "answer": 2,
+          "explanation": "Dia berlatih dari Januari **sampai** ujiannya di bulan Maret, suatu saat di masa lalu → **had been practising**. 'was practising' tidak bisa menunjukkan berapa lama (tidak cocok dengan since), dan 'has been practising' berarti sampai sekarang. (Ejaan Amerika: practicing.)"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "had done atau had been doing?",
+        "text": "Pilihan yang sama seperti I've read dan I've been reading, sekarang dipindah ke masa lalu.",
+        "body": "**had been + -ing** = **kegiatannya**: berapa lama, atau alasan untuk sesuatu yang **terlihat** saat itu: *The streets were wet. It **had been raining**.*\n**had + bentuk ketiga** = **hasilnya**, berapa banyak: *By noon she **had answered** 40 emails* (bukan *had been answering 40 emails*).\nKata kerja keadaan (know, like, have = punya, be) tetap simple: *I **had known** him for years* (bukan *had been knowing*).\nDengan live, work, study + for/since, kedua bentuk benar.",
+        "pairs": [
+          {
+            "en": "The streets were wet. It had been raining.",
+            "id": "Jalanannya basah. Habis hujan."
+          },
+          {
+            "en": "Dimas was out of breath because he had been running.",
+            "id": "Dimas terengah-engah karena habis lari."
+          },
+          {
+            "en": "By noon she had answered 40 emails.",
+            "id": "Sampai jam 12 siang dia sudah membalas 40 email."
+          },
+          {
+            "en": "I had known him for ten years.",
+            "id": "Saya sudah kenal dia selama sepuluh tahun."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Anak-anak pulang setelah main di luar.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "past-perfect-continuous",
+          "prompt": "Anak-anak pulang dengan baju kotor dan sepatu penuh lumpur. Susun kata-katanya untuk menjelaskan alasannya (mereka habis main di lumpur).",
+          "tokens": [
+            "mud",
+            "been",
+            "They",
+            "the",
+            "playing",
+            "had",
+            "in"
+          ],
+          "solution": "They had been playing in the mud.",
+          "explanation": "Baju kotor adalah hasil yang terlihat, dan mainnya baru saja berhenti → **had been + -ing**: *They had been playing*, lalu di mana: *in the mud*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "would dan used to",
+        "text": "Bagian terakhir: kebiasaan lama, seperti orang bercerita tentang kenangan.",
+        "body": "**used to** + kata kerja = kebiasaan **dan** keadaan lampau: *I used to have a bike. We used to live in Bogor.*\n**would** + kata kerja = hanya **kegiatan yang berulang** dalam cerita kenangan, setelah waktunya disebut: *Every Sunday my dad **would take** me to the market.* Di sini would = *dulu biasanya*, bukan *akan*.\n**Jangan pakai would untuk keadaan** (have, live, like, know, be): *I would have a bike* ✗ → **I used to have a bike** ✓.\nSatu kejadian → past simple. **'d** + kata kerja dasar = would (*we'd play*).",
+        "pairs": [
+          {
+            "en": "I used to have a bike.",
+            "id": "Dulu saya punya sepeda. (keadaan)"
+          },
+          {
+            "en": "We used to live in Bogor.",
+            "id": "Dulu kami tinggal di Bogor. (keadaan)"
+          },
+          {
+            "en": "Every Sunday my dad would take me to the market.",
+            "id": "Setiap Minggu ayah dulu biasa mengajak saya ke pasar. (kegiatan berulang)"
+          },
+          {
+            "en": "After school, we'd play football until it got dark.",
+            "id": "Sepulang sekolah, kami dulu biasa main bola sampai gelap."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani bercerita tentang masa kecilnya di Solo.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "would-used-to-habits",
+          "prompt": "Bu Ani sedang mengenang masa kecilnya di Solo. Kalimat mana yang salah?",
+          "options": [
+            "My grandfather used to have a big garden.",
+            "My grandfather would have a big garden.",
+            "Every Friday we would eat at the night market."
+          ],
+          "answer": 1,
+          "explanation": "have a garden = punya kebun, sebuah **keadaan** → would tidak bisa dipakai di sini: **used to have** (atau *had*). 'Every Friday we would eat …' adalah kegiatan berulang dan waktunya sudah disebut dulu, jadi would boleh."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Kembali ke cerita",
+        "text": "Satu pilihan tense terakhir, di kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-tenses",
+          "prompt": "Rina terlambat datang ke rapat tim. Kalimat mana yang berarti dia ketinggalan SELURUH presentasi Pak Hasan?",
+          "options": [
+            "When Rina came in, Pak Hasan had given his presentation.",
+            "When Rina came in, Pak Hasan was giving his presentation.",
+            "When Rina came in, Pak Hasan gave his presentation."
+          ],
+          "answer": 0,
+          "explanation": "**had given** = presentasinya sudah selesai sebelum Rina masuk, jadi dia ketinggalan semuanya. 'was giving' = Pak Hasan sedang presentasi (Rina hanya ketinggalan awalnya), dan 'gave' = dia presentasi tepat saat Rina masuk atau sesudahnya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajarannya dalam satu halaman. Simpan untuk ceritamu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · narrative tenses",
+          "intro": "Setiap kata kerja dalam cerita punya tugas. Pilih tense yang menjalankan tugas itu.",
+          "headers": [
+            "Bentuk",
+            "Kegunaan",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "was/were + -ing",
+              "latar: sedang berlangsung saat itu",
+              "It was raining, and people were pushing."
+            ],
+            [
+              "past simple",
+              "kejadian-kejadiannya, sesuai urutan",
+              "I squeezed in and closed my eyes."
+            ],
+            [
+              "had + bentuk ketiga",
+              "sudah selesai sebelum saat itu",
+              "I realised I had left my laptop at the office."
+            ],
+            [
+              "had been + -ing",
+              "berlangsung beberapa lama sampai suatu saat di masa lalu",
+              "I had been waiting for two hours when she arrived."
+            ],
+            [
+              "had been + -ing",
+              "alasan untuk sesuatu yang terlihat",
+              "The streets were wet. It had been raining."
+            ],
+            [
+              "had + bentuk ketiga",
+              "jumlah atau hasil yang sudah selesai",
+              "By noon she had answered 40 emails."
+            ],
+            [
+              "used to + kata kerja",
+              "kebiasaan DAN keadaan lampau",
+              "I used to have a bike."
+            ],
+            [
+              "would + kata kerja",
+              "hanya kegiatan berulang, setelah waktunya disebut",
+              "Every Sunday my dad would take me to the market."
+            ]
+          ],
+          "tips": [
+            "**sudah** dalam cerita lampau → **had**; menunggu atau kegiatan **sampai** suatu saat di masa lalu → **had been + -ing**, bukan *I waited for two hours when …*",
+            "Menghitung hal yang sudah selesai (40 email) → had + bentuk ketiga. Kata kerja keadaan (know, have, like, be) → tidak pernah had been + -ing.",
+            "**would** untuk kebiasaan lama: hanya kegiatan. *I would have a bike* ✗ → *I used to have a bike* ✓."
+          ],
+          "examples": [
+            {
+              "en": "When I got to the platform, the train had left.",
+              "id": "Waktu saya sampai di peron, keretanya sudah berangkat."
+            },
+            {
+              "en": "We'd been driving since 5 a.m., so we stopped at a rest area.",
+              "id": "Kami sudah menyetir sejak jam 5 pagi, jadi kami berhenti di rest area."
+            },
+            {
+              "en": "We used to live in a small house near the rice fields.",
+              "id": "Dulu kami tinggal di rumah kecil dekat sawah."
+            },
+            {
+              "en": "Every evening, my grandmother would tell us stories.",
+              "id": "Setiap malam, nenek dulu biasa mendongeng untuk kami."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Video singkat BBC tentang had been + -ing, dan halaman British Council dengan tes tentang used to dan would."
+      }
+    ]
+  }
+}

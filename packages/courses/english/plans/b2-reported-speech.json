@@ -1,0 +1,714 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll go further with reported speech: questions, orders and requests, verbs like suggest, warn and admit, and when the tense really has to move back. Let's take it step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Every tense one step back",
+        "text": "Quick recap from B1: report later with **said** or **told** + person, move the verb one step back, and change *I, today, here* to your point of view. Now, every tense.",
+        "body": "When the moment is over, each tense moves one step back: **is working → was working**, **has sent → had sent**, **sent → had sent**. The past perfect can't go further back, so it stays; the past continuous usually stays too. **may → might**, **must → had to**. **would, could, should, might** never change. Indonesian *sedang* and *sudah* never change, so watch the helper verb: **is → was**, **has → had**.",
+        "pairs": [
+          {
+            "en": "is working → was working",
+            "id": "sedang bekerja (dilaporkan belakangan)"
+          },
+          {
+            "en": "has sent → had sent",
+            "id": "sudah mengirim → had + past participle"
+          },
+          {
+            "en": "sent → had sent",
+            "id": "past simple → had + past participle"
+          },
+          {
+            "en": "had sent → had sent",
+            "id": "past perfect: tetap"
+          },
+          {
+            "en": "may → might",
+            "id": "mungkin"
+          },
+          {
+            "en": "must → had to",
+            "id": "harus (must juga boleh tetap)"
+          },
+          {
+            "en": "would / could / should / might",
+            "id": "tidak berubah"
+          },
+          {
+            "en": "this week → that week",
+            "id": "minggu ini → minggu itu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina worked from home for a week last month. Now she's back at the office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "report-statements-with",
+          "options": [
+            "is working",
+            "was working",
+            "had working"
+          ],
+          "answer": 1,
+          "prompt": "Last month Rina said: 'I'm working from home this week.' Now she's back at the office. Complete: Rina said she ___ from home that week.",
+          "explanation": "The words were said a month ago and that week is over, so the present continuous moves back: **is working → was working**. *is working* sounds like she's still at home; *had working* isn't a verb form."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "When you can keep the tense",
+        "text": "Backshift isn't always needed. Here's when you can skip it.",
+        "body": "Keep the tense when the reporting verb is in the **present** (*says, has said*): the message is still happening, so backshift is **wrong** there. With **said**, you **may** keep the present if it's **still true** now (*the MRT doesn't run after midnight*). But when the situation is **over** (the trip has ended, *tomorrow* has passed), you **must** move back. Backshift after *said* is always safe.",
+        "pairs": [
+          {
+            "en": "Dimas says he's stuck in traffic.",
+            "id": "says (sekarang) → tense tidak berubah"
+          },
+          {
+            "en": "He said the MRT doesn't run after midnight.",
+            "id": "masih benar → boleh tetap (didn't juga benar)"
+          },
+          {
+            "en": "Rina said she's really tired.",
+            "id": "baru saja, masih capek → boleh tetap"
+          },
+          {
+            "en": "He said he was in Bali.",
+            "id": "sudah lewat → harus mundur"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Right now",
+        "text": "Budi is texting you at this moment, and your manager wants to know where he is.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "report-statements-with",
+          "options": [
+            "has missed",
+            "had missed",
+            "have missed"
+          ],
+          "answer": 0,
+          "prompt": "Budi is texting you right now: 'I've missed the train.' You tell your manager straight away: Budi says he ___ the train.",
+          "explanation": "The reporting verb is **says** (present): you're passing on the message while it's happening, so the tense doesn't change: **has missed**. *had missed* would need *said*; *have missed* doesn't go with *he*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Reported questions",
+        "text": "Now questions. Remember B1 indirect questions: *Could you tell me where the station is?* Same idea.",
+        "body": "Use **asked** (me) or **wanted to know**, then the question word and **statement order**: subject before verb, and **do / does / did disappear**. Add backshift too: *'Where do you live?'* → *She asked me **where I lived**.* Yes/no questions get **if** or **whether** (= apakah): *'Are you free?'* → *He asked **if I was** free.* No question mark. *asked me where do I live* ✗ is the classic mistake.",
+        "pairs": [
+          {
+            "en": "asked (me) + where / what / why…",
+            "id": "bertanya (kepadaku) + kata tanya"
+          },
+          {
+            "en": "where I lived",
+            "id": "di mana aku tinggal (bukan where did I live)"
+          },
+          {
+            "en": "what time the train left",
+            "id": "jam berapa keretanya berangkat (does hilang)"
+          },
+          {
+            "en": "if / whether",
+            "id": "apakah (pertanyaan ya/tidak)"
+          },
+          {
+            "en": "asked if I was free",
+            "id": "bertanya apakah aku sedang luang"
+          },
+          {
+            "en": "wanted to know",
+            "id": "ingin tahu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the report",
+        "text": "Sari left her job last month. In her exit interview, her manager asked her a question.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "report-questions-and",
+          "tokens": [
+            "wanted",
+            "Sari",
+            "why",
+            "Hasan",
+            "to",
+            "asked",
+            "she",
+            "Pak",
+            "leave"
+          ],
+          "solution": "Pak Hasan asked Sari why she wanted to leave.",
+          "prompt": "Last month, in Sari's exit interview, Pak Hasan asked her: 'Why do you want to leave?' Report his question. Arrange the words.",
+          "explanation": "Keep the question word **why**, then statement order: **she wanted** (subject + verb). *do* disappears and *want* moves back to **wanted**, because the interview is over. *you* becomes **she**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Orders and requests",
+        "text": "What about *Wait here* or *Please call me*? No tense change at all, just one pattern.",
+        "body": "**Orders and instructions → tell + person + to + base verb** (the basic form: *wait, call, be*): *'Wait here.'* → *He **told me to wait** there.* **Requests** (*Please…, Could you…?*) **→ ask + person + to**: *She **asked me to call** her.* **Negative → not to**: *'Don't be late.'* → *She told us **not to be** late.* Indonesian *jangan* tempts you to write *told us don't be late* ✗.",
+        "pairs": [
+          {
+            "en": "told me to wait",
+            "id": "menyuruhku menunggu (perintah)"
+          },
+          {
+            "en": "asked me to call her",
+            "id": "memintaku meneleponnya (permintaan)"
+          },
+          {
+            "en": "told us not to be late",
+            "id": "bilang ke kami jangan terlambat"
+          },
+          {
+            "en": "asked them not to smoke",
+            "id": "meminta mereka tidak merokok"
+          },
+          {
+            "en": "told us don't…",
+            "id": "✗ salah: pakai not to"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pass on the order",
+        "text": "Last Friday a security guard stopped you at the mall car park.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "report-questions-and",
+          "options": [
+            "don't park there.",
+            "to not parking there.",
+            "not to park there."
+          ],
+          "answer": 2,
+          "prompt": "Last Friday the security guard at the mall said to us: 'Don't park here.' Today you tell a friend: The guard told us ___",
+          "explanation": "An order → **told + person + not to + base verb**: *told us **not to park** there*. *don't park* copies the original words (the *jangan* trap), and after *to* you need the base verb, not *parking*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Reporting verbs",
+        "text": "Instead of *said* every time, use a verb that shows what kind of thing was said. Each one has its own pattern.",
+        "body": "**+ to**: *offered to help*, *refused to sign*, *promised to call*. **+ person + (not) to**: *warned us not to swim*, *reminded me to bring my ID*. **+ -ing**: *admitted forgetting*, *apologised for being late*, *suggested going*; and **deny** (= menyangkal) works the same way. **suggest** never takes person + to: *suggested me to go* ✗ (from *menyarankan saya untuk*) → *suggested going* or *suggested (that) I (should) go*.",
+        "pairs": [
+          {
+            "en": "offer / refuse / promise + to",
+            "id": "menawarkan diri / menolak / berjanji"
+          },
+          {
+            "en": "warn / remind + person + (not) to",
+            "id": "memperingatkan / mengingatkan seseorang"
+          },
+          {
+            "en": "deny + -ing",
+            "id": "menyangkal (melakukan)"
+          },
+          {
+            "en": "admit + -ing",
+            "id": "mengaku (melakukan)"
+          },
+          {
+            "en": "apologise for + -ing",
+            "id": "minta maaf karena"
+          },
+          {
+            "en": "suggest + -ing",
+            "id": "menyarankan (suggested going)"
+          },
+          {
+            "en": "suggest (that) I (should) go",
+            "id": "menyarankan agar aku pergi"
+          },
+          {
+            "en": "suggested me to go",
+            "id": "✗ salah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pick the pattern",
+        "text": "Your phone charger went missing at the office last week. You asked Sari about it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reporting-verbs",
+          "options": [
+            "to take",
+            "taking",
+            "take"
+          ],
+          "answer": 1,
+          "prompt": "Last week Sari said: 'I didn't take your charger!' Report it with deny: Sari denied ___ my charger.",
+          "explanation": "**deny + -ing**: *denied **taking** my charger*. *denied to take* is a common mistake (deny is never followed by *to* + verb), and *denied take* has no -ing. The -ing form already shows it was in the past."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · reported speech (B2)",
+          "intro": "Report later: tenses one step back, questions in statement order, orders with to, and each reporting verb with its pattern.",
+          "headers": [
+            "They said",
+            "You report it later",
+            "Pattern"
+          ],
+          "rows": [
+            [
+              "'I'm working late.'",
+              "She said she was working late.",
+              "is + -ing → was + -ing"
+            ],
+            [
+              "'I've booked the room.'",
+              "He said he had booked the room.",
+              "has + p.p. → had + p.p."
+            ],
+            [
+              "'We may be late.'",
+              "They said they might be late.",
+              "may → might"
+            ],
+            [
+              "'Where do you work?'",
+              "She asked me where I worked.",
+              "statement order, no do"
+            ],
+            [
+              "'Is it ready?'",
+              "He asked if it was ready.",
+              "yes/no → if / whether"
+            ],
+            [
+              "'Wait here.'",
+              "He told me to wait there.",
+              "tell + person + to"
+            ],
+            [
+              "'Please don't smoke.'",
+              "She asked us not to smoke.",
+              "ask + person + not to"
+            ],
+            [
+              "'I'll help you.'",
+              "He offered to help me.",
+              "offer / refuse / promise + to"
+            ],
+            [
+              "'Don't swim here.'",
+              "She warned us not to swim there.",
+              "warn / remind + person + (not) to"
+            ],
+            [
+              "'I lost the key.'",
+              "He admitted losing the key.",
+              "admit / deny + -ing"
+            ],
+            [
+              "'Let's take a taxi.'",
+              "She suggested taking a taxi.",
+              "suggest + -ing / that I (should)…"
+            ],
+            [
+              "'Sorry I'm late.'",
+              "He apologised for being late.",
+              "apologise for + -ing"
+            ]
+          ],
+          "tips": [
+            "**Keep the tense** after *says*, or after *said* when it's still true. When the situation is over, move it back.",
+            "Reported questions: no *do/does/did*, subject before verb, no question mark. *asked me where do I live* ✗.",
+            "*suggested me to* ✗ → *suggested going* / *suggested (that) I (should) go*. Negative orders: **not to**, never *don't*."
+          ],
+          "examples": [
+            {
+              "en": "She asked me if I could work on Saturday.",
+              "id": "Dia bertanya apakah aku bisa kerja hari Sabtu."
+            },
+            {
+              "en": "He reminded us not to forget our ID cards.",
+              "id": "Dia mengingatkan kami agar tidak lupa kartu identitas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here are two British Council pages with online tests: one on reported questions, one on reporting verbs."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu melangkah lebih jauh dengan reported speech: pertanyaan, perintah dan permintaan, kata kerja seperti suggest, warn dan admit, dan kapan tense benar-benar harus dimundurkan. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Semua tense mundur satu langkah",
+        "text": "Ulasan singkat dari B1: lapor belakangan dengan **said** atau **told** + orang, mundurkan kata kerjanya satu langkah, dan ubah *I, today, here* ke sudut pandangmu. Sekarang, semua tense.",
+        "body": "Kalau momennya sudah lewat, setiap tense mundur satu langkah: **is working → was working**, **has sent → had sent**, **sent → had sent**. Past perfect tidak bisa mundur lagi, jadi tetap; past continuous biasanya juga tetap. **may → might**, **must → had to**. **would, could, should, might** tidak pernah berubah. *sedang* dan *sudah* dalam bahasa Indonesia tidak pernah berubah, jadi perhatikan kata kerja bantunya: **is → was**, **has → had**.",
+        "pairs": [
+          {
+            "en": "is working → was working",
+            "id": "sedang bekerja (dilaporkan belakangan)"
+          },
+          {
+            "en": "has sent → had sent",
+            "id": "sudah mengirim → had + past participle"
+          },
+          {
+            "en": "sent → had sent",
+            "id": "past simple → had + past participle"
+          },
+          {
+            "en": "had sent → had sent",
+            "id": "past perfect: tetap"
+          },
+          {
+            "en": "may → might",
+            "id": "mungkin"
+          },
+          {
+            "en": "must → had to",
+            "id": "harus (must juga boleh tetap)"
+          },
+          {
+            "en": "would / could / should / might",
+            "id": "tidak berubah"
+          },
+          {
+            "en": "this week → that week",
+            "id": "minggu ini → minggu itu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bulan lalu Rina kerja dari rumah selama seminggu. Sekarang dia sudah kembali ke kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "report-statements-with",
+          "options": [
+            "is working",
+            "was working",
+            "had working"
+          ],
+          "answer": 1,
+          "prompt": "Bulan lalu Rina bilang: 'I'm working from home this week.' Sekarang dia sudah kembali ke kantor. Lengkapi: Rina said she ___ from home that week.",
+          "explanation": "Kata-katanya diucapkan sebulan lalu dan minggu itu sudah lewat, jadi present continuous mundur: **is working → was working**. *is working* terdengar seolah dia masih di rumah; *had working* bukan bentuk kata kerja yang benar."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kapan tense boleh tetap",
+        "text": "Backshift tidak selalu perlu. Ini saat-saat kamu boleh melewatinya.",
+        "body": "Tense tetap kalau kata kerja pelapornya bentuk **sekarang** (*says, has said*): pesannya masih berlangsung, jadi backshift justru **salah**. Dengan **said**, bentuk sekarang **boleh** dipertahankan kalau isinya **masih benar** sekarang (*the MRT doesn't run after midnight*). Tapi kalau situasinya sudah **lewat** (perjalanannya sudah selesai, *besok*-nya sudah lewat), kamu **harus** memundurkannya. Backshift setelah *said* selalu aman.",
+        "pairs": [
+          {
+            "en": "Dimas says he's stuck in traffic.",
+            "id": "says (sekarang) → tense tidak berubah"
+          },
+          {
+            "en": "He said the MRT doesn't run after midnight.",
+            "id": "masih benar → boleh tetap (didn't juga benar)"
+          },
+          {
+            "en": "Rina said she's really tired.",
+            "id": "baru saja, masih capek → boleh tetap"
+          },
+          {
+            "en": "He said he was in Bali.",
+            "id": "sudah lewat → harus mundur"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Saat ini juga",
+        "text": "Budi sedang mengirim pesan kepadamu, dan manajermu ingin tahu dia di mana.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "report-statements-with",
+          "options": [
+            "has missed",
+            "had missed",
+            "have missed"
+          ],
+          "answer": 0,
+          "prompt": "Budi sedang mengirim pesan kepadamu sekarang: 'I've missed the train.' Kamu langsung bilang ke manajermu. Lengkapi: Budi says he ___ the train.",
+          "explanation": "Kata kerja pelapornya **says** (bentuk sekarang): kamu menyampaikan pesan saat itu juga, jadi tense-nya tidak berubah: **has missed**. *had missed* butuh *said*; *have missed* tidak cocok dengan *he*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pertanyaan yang dilaporkan",
+        "text": "Sekarang pertanyaan. Ingat indirect questions di B1: *Could you tell me where the station is?* Idenya sama.",
+        "body": "Pakai **asked** (me) atau **wanted to know**, lalu kata tanya dan **susunan kalimat biasa**: subjek sebelum kata kerja, dan **do / does / did hilang**. Tambahkan backshift juga: *'Where do you live?'* → *She asked me **where I lived**.* Pertanyaan ya/tidak memakai **if** atau **whether** (= apakah): *'Are you free?'* → *He asked **if I was** free.* Tanpa tanda tanya. *asked me where do I live* ✗ adalah kesalahan klasiknya.",
+        "pairs": [
+          {
+            "en": "asked (me) + where / what / why…",
+            "id": "bertanya (kepadaku) + kata tanya"
+          },
+          {
+            "en": "where I lived",
+            "id": "di mana aku tinggal (bukan where did I live)"
+          },
+          {
+            "en": "what time the train left",
+            "id": "jam berapa keretanya berangkat (does hilang)"
+          },
+          {
+            "en": "if / whether",
+            "id": "apakah (pertanyaan ya/tidak)"
+          },
+          {
+            "en": "asked if I was free",
+            "id": "bertanya apakah aku sedang luang"
+          },
+          {
+            "en": "wanted to know",
+            "id": "ingin tahu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun laporannya",
+        "text": "Sari keluar dari pekerjaannya bulan lalu. Di exit interview, manajernya bertanya sesuatu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "report-questions-and",
+          "tokens": [
+            "wanted",
+            "Sari",
+            "why",
+            "Hasan",
+            "to",
+            "asked",
+            "she",
+            "Pak",
+            "leave"
+          ],
+          "solution": "Pak Hasan asked Sari why she wanted to leave.",
+          "prompt": "Bulan lalu, di exit interview Sari, Pak Hasan bertanya kepadanya: 'Why do you want to leave?' Laporkan pertanyaannya. Susun kata-katanya.",
+          "explanation": "Kata tanya **why** tetap, lalu susunan kalimat biasa: **she wanted** (subjek + kata kerja). *do* hilang dan *want* mundur jadi **wanted**, karena wawancaranya sudah lewat. *you* berubah jadi **she**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Perintah dan permintaan",
+        "text": "Bagaimana dengan *Wait here* atau *Please call me*? Tidak ada perubahan tense sama sekali, cukup satu pola.",
+        "body": "**Perintah dan instruksi → tell + orang + to + base verb** (bentuk dasar: *wait, call, be*): *'Wait here.'* → *He **told me to wait** there.* **Permintaan** (*Please…, Could you…?*) **→ ask + orang + to**: *She **asked me to call** her.* **Negatif → not to**: *'Don't be late.'* → *She told us **not to be** late.* Kata *jangan* membuat orang tergoda menulis *told us don't be late* ✗.",
+        "pairs": [
+          {
+            "en": "told me to wait",
+            "id": "menyuruhku menunggu (perintah)"
+          },
+          {
+            "en": "asked me to call her",
+            "id": "memintaku meneleponnya (permintaan)"
+          },
+          {
+            "en": "told us not to be late",
+            "id": "bilang ke kami jangan terlambat"
+          },
+          {
+            "en": "asked them not to smoke",
+            "id": "meminta mereka tidak merokok"
+          },
+          {
+            "en": "told us don't…",
+            "id": "✗ salah: pakai not to"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Sampaikan perintahnya",
+        "text": "Jumat lalu satpam menghentikanmu di parkiran mal.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "report-questions-and",
+          "options": [
+            "don't park there.",
+            "to not parking there.",
+            "not to park there."
+          ],
+          "answer": 2,
+          "prompt": "Jumat lalu satpam mal bilang ke kami: 'Don't park here.' Hari ini kamu cerita ke teman. Lengkapi: The guard told us ___",
+          "explanation": "Perintah → **told + orang + not to + base verb**: *told us **not to park** there*. *don't park* menyalin kata aslinya (jebakan *jangan*), dan setelah *to* harus bentuk dasar, bukan *parking*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Reporting verbs",
+        "text": "Daripada *said* terus, pakai kata kerja yang menunjukkan jenis ucapannya. Masing-masing punya pola sendiri.",
+        "body": "**+ to**: *offered to help*, *refused to sign*, *promised to call*. **+ orang + (not) to**: *warned us not to swim*, *reminded me to bring my ID*. **+ -ing**: *admitted forgetting*, *apologised for being late*, *suggested going*; dan **deny** (= menyangkal) juga begitu. **suggest** tidak pernah diikuti orang + to: *suggested me to go* ✗ (dari *menyarankan saya untuk*) → *suggested going* atau *suggested (that) I (should) go*.",
+        "pairs": [
+          {
+            "en": "offer / refuse / promise + to",
+            "id": "menawarkan diri / menolak / berjanji"
+          },
+          {
+            "en": "warn / remind + person + (not) to",
+            "id": "memperingatkan / mengingatkan seseorang"
+          },
+          {
+            "en": "deny + -ing",
+            "id": "menyangkal (melakukan)"
+          },
+          {
+            "en": "admit + -ing",
+            "id": "mengaku (melakukan)"
+          },
+          {
+            "en": "apologise for + -ing",
+            "id": "minta maaf karena"
+          },
+          {
+            "en": "suggest + -ing",
+            "id": "menyarankan (suggested going)"
+          },
+          {
+            "en": "suggest (that) I (should) go",
+            "id": "menyarankan agar aku pergi"
+          },
+          {
+            "en": "suggested me to go",
+            "id": "✗ salah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih polanya",
+        "text": "Charger HP-mu hilang di kantor minggu lalu. Kamu bertanya ke Sari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reporting-verbs",
+          "options": [
+            "to take",
+            "taking",
+            "take"
+          ],
+          "answer": 1,
+          "prompt": "Minggu lalu Sari bilang: 'I didn't take your charger!' Laporkan dengan deny. Lengkapi: Sari denied ___ my charger.",
+          "explanation": "**deny + -ing**: *denied **taking** my charger*. *denied to take* adalah kesalahan umum (deny tidak pernah diikuti *to* + kata kerja), dan *denied take* tidak memakai -ing. Bentuk -ing sudah menunjukkan kejadiannya di masa lalu."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajarannya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · reported speech (B2)",
+          "intro": "Melapor belakangan: tense mundur satu langkah, pertanyaan dengan susunan kalimat biasa, perintah dengan to, dan setiap reporting verb dengan polanya.",
+          "headers": [
+            "Mereka bilang",
+            "Kamu melapor belakangan",
+            "Pola"
+          ],
+          "rows": [
+            [
+              "'I'm working late.'",
+              "She said she was working late.",
+              "is + -ing → was + -ing"
+            ],
+            [
+              "'I've booked the room.'",
+              "He said he had booked the room.",
+              "has + p.p. → had + p.p."
+            ],
+            [
+              "'We may be late.'",
+              "They said they might be late.",
+              "may → might"
+            ],
+            [
+              "'Where do you work?'",
+              "She asked me where I worked.",
+              "statement order, no do"
+            ],
+            [
+              "'Is it ready?'",
+              "He asked if it was ready.",
+              "yes/no → if / whether"
+            ],
+            [
+              "'Wait here.'",
+              "He told me to wait there.",
+              "tell + orang + to"
+            ],
+            [
+              "'Please don't smoke.'",
+              "She asked us not to smoke.",
+              "ask + orang + not to"
+            ],
+            [
+              "'I'll help you.'",
+              "He offered to help me.",
+              "offer / refuse / promise + to"
+            ],
+            [
+              "'Don't swim here.'",
+              "She warned us not to swim there.",
+              "warn / remind + orang + (not) to"
+            ],
+            [
+              "'I lost the key.'",
+              "He admitted losing the key.",
+              "admit / deny + -ing"
+            ],
+            [
+              "'Let's take a taxi.'",
+              "She suggested taking a taxi.",
+              "suggest + -ing / that I (should)…"
+            ],
+            [
+              "'Sorry I'm late.'",
+              "He apologised for being late.",
+              "apologise for + -ing"
+            ]
+          ],
+          "tips": [
+            "**Tense boleh tetap** setelah *says*, atau setelah *said* kalau isinya masih benar. Kalau situasinya sudah lewat, mundurkan.",
+            "Pertanyaan yang dilaporkan: tanpa *do/does/did*, subjek sebelum kata kerja, tanpa tanda tanya. *asked me where do I live* ✗.",
+            "*suggested me to* ✗ → *suggested going* / *suggested (that) I (should) go*. Perintah negatif: **not to**, bukan *don't*."
+          ],
+          "examples": [
+            {
+              "en": "She asked me if I could work on Saturday.",
+              "id": "Dia bertanya apakah aku bisa kerja hari Sabtu."
+            },
+            {
+              "en": "He reminded us not to forget our ID cards.",
+              "id": "Dia mengingatkan kami agar tidak lupa kartu identitas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini dua halaman British Council dengan tes online: satu tentang pertanyaan yang dilaporkan, satu tentang reporting verbs."
+      }
+    ]
+  }
+}
