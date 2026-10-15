@@ -1,0 +1,802 @@
+{
+  "en": {
+    "greeting": "Hi! Today you listen for what people mean but don't say: understatement, irony, reluctance and polite refusals. Then you follow messy, unplanned talk in interviews and panels, and take lecture notes that keep what matters. Play each recording as often as you like.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Words vs. facts",
+        "text": "You already separate facts from opinions and know the real opinion comes after **however** or **that said**. Now the opinion is often not said at all: it's **implied** (hidden in how something is said).",
+        "body": "**Understatement:** soft words for a big problem. *not exactly* + a positive word = the opposite: *It wasn't exactly a success* = it failed. *I've had better days* = a bad day. *a bit of a problem* = a serious one. **Faint praise:** asked about something important, the speaker praises only something small: about his work, *Well, he's always on time* = his work isn't good. The method: compare the **words** with the **facts** around them; when they don't match, believe the facts. British *not bad* often means quite good.",
+        "pairs": [
+          {
+            "en": "It wasn't exactly a success.",
+            "id": "Bukan sukses juga sih. → gagal"
+          },
+          {
+            "en": "not exactly cheap",
+            "id": "tidak murah juga sih → mahal"
+          },
+          {
+            "en": "I've had better days.",
+            "id": "Pernah lebih baik. → hari ini buruk"
+          },
+          {
+            "en": "That could have gone better.",
+            "id": "Bisa lebih baik. → hasilnya buruk"
+          },
+          {
+            "en": "a bit of a problem",
+            "id": "sedikit masalah → masalah serius"
+          },
+          {
+            "en": "Well, he's always on time.",
+            "id": "Yah, dia selalu tepat waktu. → (tentang kerjanya) tidak ada yang bisa dipuji"
+          },
+          {
+            "en": "Not bad at all! (UK)",
+            "id": "Lumayan banget! → cukup bagus"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a founder looks back",
+        "text": "This is from a podcast interview with the founder of a Jakarta startup. Compare the words with the facts.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "attitude-implied-meaning",
+          "listen": "Our first year? Well, it wasn't exactly the dream start we'd hoped for. We spent most of our money on an office we hardly used, our first app had, let's say, a few problems, and two of my co-founders left. But we learnt a lot.",
+          "prompt": "The host asks about the company's first year. Listen to the founder's answer. How did the first year really go?",
+          "options": [
+            "It went very badly.",
+            "It went well, with a few small problems.",
+            "It was the dream start the founders wanted."
+          ],
+          "answer": 0,
+          "explanation": "**wasn't exactly the dream start** is understatement: *not exactly* + a positive phrase = the opposite. The facts confirm it: most of the money was wasted, the app had problems (*let's say, a few* softens it) and two co-founders left. 'A few small problems' takes the soft words literally."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Irony, reluctance and a polite no",
+        "text": "Three more patterns. Again, the words tell you; in real life tone helps too, but our audio is one calm voice.",
+        "body": "**Irony:** positive words + a clearly bad situation = the opposite. *Oh great, another meeting about meetings* = annoyed. **Reluctance:** yes, but unwillingly: *I suppose I could, if no one else is free*, *If I have to*, *Fine, I'll do it*. **Hedged refusal:** a polite no: *That's an interesting idea. Let me think about it*, *I'll see what I can do*, *Maybe next year*. Indonesian has the same habits (*nanti saya pikir-pikir dulu*, *lihat nanti ya*). The trap is to think English speakers always say exactly what they mean.",
+        "pairs": [
+          {
+            "en": "Oh great. Just what I needed.",
+            "id": "Wah bagus. Pas banget. → (ironi) kesal"
+          },
+          {
+            "en": "Perfect. The train's late again.",
+            "id": "Sempurna. Keretanya telat lagi. → (ironi) kesal"
+          },
+          {
+            "en": "I suppose I could…",
+            "id": "Ya, bisa sih… → enggan"
+          },
+          {
+            "en": "If I have to.",
+            "id": "Kalau memang harus. → terpaksa"
+          },
+          {
+            "en": "It wouldn't be my first choice.",
+            "id": "Bukan pilihan utamaku. → enggan"
+          },
+          {
+            "en": "Let me think about it.",
+            "id": "Aku pikir-pikir dulu. → sering berarti tidak"
+          },
+          {
+            "en": "I'll see what I can do.",
+            "id": "Nanti aku lihat bisa atau tidak. → kemungkinan tidak"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a new idea from staff",
+        "text": "This is from an online panel about remote work. The host asks Bu Wulan, an HR director, about an idea from her staff.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "attitude-implied-meaning",
+          "listen": "Letting staff work from Bali for a month? That's an interesting idea. Let me think about it. Of course, I'd need to talk to the board first, and to IT, and to our clients. So, maybe next year. Or the year after.",
+          "prompt": "Listen to Bu Wulan's answer. What does she really mean?",
+          "options": [
+            "She likes the idea and will try it soon.",
+            "She has already discussed it with the board.",
+            "She's politely saying that it probably won't happen."
+          ],
+          "answer": 2,
+          "explanation": "**That's an interesting idea. Let me think about it** is a hedged refusal: a polite no. The long list of people to ask and **maybe next year. Or the year after** push the idea far away. She says she would *need to* talk to the board, so she hasn't done it yet."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Messy talk: interviews and panels",
+        "text": "Interviews and panels aren't planned like lectures. Few signposts, lots of changes.",
+        "body": "Track four things. **Who holds which view:** *I'm with Sari on that* = I agree with Sari; *I'd push back on what Dimas said* = I disagree. Keep a list: NAME = VIEW. Careful: speakers often repeat a view in order to reject it. **Topic shifts:** *Anyway…*, *Oh, and…*, *Going back to…*. **Self-corrections:** after *sorry*, *I mean*, *or rather*, *well*, **the last version is the fact**: *about fifty, sorry, fifteen* = 15. **Asides:** *by the way*, *not that it matters*, *where was I?*: not the main point. Ignore fillers: *you know*, *sort of*.",
+        "pairs": [
+          {
+            "en": "I'm with you on that.",
+            "id": "Aku setuju denganmu soal itu."
+          },
+          {
+            "en": "I'd push back on that.",
+            "id": "Aku kurang setuju dengan itu."
+          },
+          {
+            "en": "…, sorry, … / …, I mean, …",
+            "id": "…, maaf, … / …, maksudku, … → versi baru = fakta"
+          },
+          {
+            "en": "…, or rather, …",
+            "id": "…, atau lebih tepatnya, … → versi baru = fakta"
+          },
+          {
+            "en": "Anyway, …",
+            "id": "Pokoknya / omong-omong… → ganti atau kembali ke topik"
+          },
+          {
+            "en": "Going back to…",
+            "id": "Kembali ke… → topik sebelumnya"
+          },
+          {
+            "en": "not that it matters",
+            "id": "bukan berarti itu penting → selingan"
+          },
+          {
+            "en": "Where was I?",
+            "id": "Tadi sampai mana? → kembali ke poin utama"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: plans that change",
+        "text": "Back to the startup podcast. The founder talks about new cities. Listen to the end of each sentence before you decide.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unstructured-speech",
+          "listen": "We're opening in Surabaya in May, well, June, realistically, because the licence always takes longer than you think. Makassar was on the plan for this year too, but honestly, that's next year now. Anyway, where was I? Oh yes, Surabaya first.",
+          "prompt": "Listen to the founder. When will the company open in Surabaya?",
+          "options": [
+            "In May",
+            "In June",
+            "Next year"
+          ],
+          "answer": 1,
+          "explanation": "**May, well, June, realistically** is a self-correction: the last version, **June**, is the fact. *Next year* is about Makassar, not Surabaya. **Anyway, where was I?** brings the speaker back to the main topic: Surabaya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: who thinks what?",
+        "text": "This is one panellist's turn in the online panel on remote work. Two other panellists, Dimas and Sari, spoke earlier.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unstructured-speech",
+          "listen": "I'd push back a little on what Dimas said. He thinks new graduates learn best at home, with online training. In my experience, they learn by sitting next to someone experienced. Sari's point about saving travel time is fair, though. I'm with her on that.",
+          "prompt": "Listen to the panellist. Which sentence matches the panellist's views?",
+          "options": [
+            "The panellist agrees with Dimas about online training.",
+            "The panellist disagrees with both Dimas and Sari.",
+            "The panellist disagrees with Dimas, but agrees with Sari about travel time."
+          ],
+          "answer": 2,
+          "explanation": "**I'd push back a little on what Dimas said** = I disagree with Dimas. The online-training view is Dimas's, repeated so the panellist can reject it. **Sari's point … is fair, though. I'm with her on that** = I agree with Sari."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Lecture notes: keep what matters",
+        "text": "Last skill: notes in a long lecture. You can't write everything, and you shouldn't.",
+        "body": "Listen for **'this is important' signals** and mark the note (**!!**, **NB**, *exam*): *The key point here is…*, *Let me stress…*, *This will come up again*, *Make a note of this*. Write numbers and names at once; after a correction, keep only the final version. **Skip** examples you already know, repetition (*In other words…*), jokes and asides. Use symbols: **↑ ↓ →**, and new: **∴** therefore, **≈** about, **vs** compared with. **Cornell** page: key words on the left, notes on the right, a 1–2 sentence summary at the bottom.",
+        "pairs": [
+          {
+            "en": "The key point here is…",
+            "id": "Poin kuncinya di sini… → catat + !!"
+          },
+          {
+            "en": "Let me stress…",
+            "id": "Saya tekankan… → catat + !!"
+          },
+          {
+            "en": "This will come up again.",
+            "id": "Ini akan muncul lagi. → tandai: exam"
+          },
+          {
+            "en": "Make a note of this.",
+            "id": "Catat ini. → catat!"
+          },
+          {
+            "en": "You all know…, so I'll skip that.",
+            "id": "Kalian semua tahu…, jadi saya lewati. → jangan dicatat"
+          },
+          {
+            "en": "therefore",
+            "id": "∴ maka, jadi"
+          },
+          {
+            "en": "about, roughly",
+            "id": "≈ kira-kira"
+          },
+          {
+            "en": "important (note well)",
+            "id": "NB penting"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the best note",
+        "text": "This is part of a lecture on urban transport at a university in Yogyakarta. Imagine your notes: what do you keep, what do you skip?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lecture-note-taking",
+          "listen": "Right, you all know Jalan Malioboro, so I won't describe it again. Let me stress this, because it'll come up again: when cities widen their roads, traffic doesn't go down. It goes up, because wider roads attract more cars. This is called induced demand.",
+          "prompt": "Listen to the lecture extract. Which note is the most useful?",
+          "options": [
+            "Malioboro: busy, famous street",
+            "wider roads → more cars ∴ traffic ↑ (induced demand) !! exam",
+            "wider roads → traffic ↓ (induced demand)"
+          ],
+          "answer": 1,
+          "explanation": "**Let me stress this, because it'll come up again** marks the key point: wider roads attract more cars, so traffic goes **up** (↑), not down. Malioboro is an example you already know: the lecturer even says so. The third note misses the **doesn't** in *traffic doesn't go down*."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Try to say the English before you look.",
+        "flashcards": [
+          {
+            "front": "Gagal (dikatakan dengan halus)",
+            "back": "It wasn't exactly a success."
+          },
+          {
+            "front": "Hari ini buruk (dikatakan dengan halus)",
+            "back": "I've had better days."
+          },
+          {
+            "front": "Kesal, lewat ironi",
+            "back": "Oh great. Just what I needed."
+          },
+          {
+            "front": "Mau, tapi enggan",
+            "back": "I suppose I could, if no one else is free."
+          },
+          {
+            "front": "Penolakan halus",
+            "back": "That's an interesting idea. Let me think about it."
+          },
+          {
+            "front": "Koreksi diri: mana faktanya? 'May, well, June'",
+            "back": "June: the last version is the fact."
+          },
+          {
+            "front": "Sinyal 'ini penting!' dari dosen",
+            "back": "Let me stress… / This will come up again."
+          },
+          {
+            "front": "∴  ≈  vs  NB",
+            "back": "therefore · about · compared with · important"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Implied meaning, messy talk and lecture notes on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Listening for implicit meaning",
+          "intro": "What you hear, what it really means, and what to do with it.",
+          "headers": [
+            "You hear",
+            "It really means",
+            "What to do"
+          ],
+          "rows": [
+            [
+              "It wasn't exactly a success. / not exactly cheap",
+              "gagal / mahal",
+              "understatement: not exactly + positive = the opposite"
+            ],
+            [
+              "I've had better days. / a bit of a problem",
+              "hari buruk / masalah serius",
+              "understatement: the problem is bigger than the words"
+            ],
+            [
+              "Oh great. / Perfect. / Just what I needed. (+ bad news)",
+              "kesal (ironi)",
+              "positive words + bad facts: believe the facts"
+            ],
+            [
+              "I suppose I could, if no one else is free.",
+              "mau, tapi enggan",
+              "reluctance: yes, unwillingly"
+            ],
+            [
+              "That's an interesting idea. Let me think about it.",
+              "kemungkinan besar tidak",
+              "hedged refusal: a polite no"
+            ],
+            [
+              "(about his work) Well, he's always on time.",
+              "kerjanya kurang bagus",
+              "faint praise: only small things are praised"
+            ],
+            [
+              "I'm with Sari on that. / I'd push back on…",
+              "setuju dengan Sari / kurang setuju dengan…",
+              "note NAME = VIEW"
+            ],
+            [
+              "May, well, June / fifty, sorry, fifteen",
+              "Juni / 15",
+              "self-correction: keep the last version"
+            ],
+            [
+              "Anyway… / Going back to… / Where was I?",
+              "ganti atau kembali ke topik",
+              "find the main topic again"
+            ],
+            [
+              "by the way / not that it matters",
+              "selingan",
+              "an aside: not the main point"
+            ],
+            [
+              "The key point here is… / Let me stress…",
+              "poin kuncinya… / saya tekankan…",
+              "write it and mark it: !!"
+            ],
+            [
+              "This will come up again. / Make a note of this.",
+              "akan muncul lagi / catat ini",
+              "mark it: exam"
+            ],
+            [
+              "You all know…, so I'll skip that.",
+              "kalian sudah tahu…",
+              "skip it"
+            ],
+            [
+              "↑ ↓ → ∴ ≈ vs NB",
+              "naik, turun, menyebabkan, maka, kira-kira, dibandingkan, penting",
+              "symbols for fast notes"
+            ]
+          ],
+          "tips": [
+            "Compare the words with the facts: when they don't match, the facts tell you what the speaker means.",
+            "In interviews and panels, wait for the end of the sentence: the last version of a number or date is the fact.",
+            "Cornell page: key words on the left, notes on the right, a 1–2 sentence summary at the bottom."
+          ],
+          "examples": [
+            {
+              "en": "Our launch wasn't exactly smooth.",
+              "id": "Peluncuran kami tidak mulus juga sih. (maksudnya: banyak masalah)"
+            },
+            {
+              "en": "Brilliant. The projector's broken again.",
+              "id": "Mantap. Proyektornya rusak lagi. (ironi: kesal)"
+            },
+            {
+              "en": "There were about thirty, no, closer to forty people there.",
+              "id": "Ada sekitar tiga puluh, eh, hampir empat puluh orang di sana. (faktanya: sekitar 40)"
+            },
+            {
+              "en": "Car use has gone up, so air quality has got worse.",
+              "id": "Penggunaan mobil naik, jadi kualitas udara memburuk. (Catatan: cars ↑ ∴ air quality ↓)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen more",
+        "text": "Two C1 recordings with transcripts: an interview with three voices and implied opinions, and a lecture to practise Cornell notes."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu menyimak hal yang dimaksud orang tapi tidak diucapkan: understatement, ironi, keengganan dan penolakan halus. Lalu kamu mengikuti obrolan yang tidak rapi di wawancara dan panel, dan membuat catatan kuliah yang menyimpan hal penting. Putar setiap rekaman sesering yang kamu mau.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata-kata vs. fakta",
+        "text": "Kamu sudah bisa memisahkan fakta dari opini dan tahu bahwa opini sebenarnya datang setelah **however** atau **that said**. Sekarang opininya sering tidak diucapkan sama sekali: opininya **tersirat** (implied).",
+        "body": "**Understatement** (mengecilkan): kata halus untuk masalah besar. *not exactly* + kata positif = kebalikannya: *It wasn't exactly a success* = gagal. *I've had better days* = hari yang buruk. *a bit of a problem* = masalah serius. **Pujian tipis** (faint praise): ditanya hal yang penting, pembicara hanya memuji hal kecil: tentang kerjanya, *Well, he's always on time* = kerjanya kurang bagus. Caranya: bandingkan **kata-katanya** dengan **fakta** di sekitarnya; kalau tidak cocok, percayai faktanya. *Not bad* gaya British sering berarti cukup bagus.",
+        "pairs": [
+          {
+            "en": "It wasn't exactly a success.",
+            "id": "Bukan sukses juga sih. → gagal"
+          },
+          {
+            "en": "not exactly cheap",
+            "id": "tidak murah juga sih → mahal"
+          },
+          {
+            "en": "I've had better days.",
+            "id": "Pernah lebih baik. → hari ini buruk"
+          },
+          {
+            "en": "That could have gone better.",
+            "id": "Bisa lebih baik. → hasilnya buruk"
+          },
+          {
+            "en": "a bit of a problem",
+            "id": "sedikit masalah → masalah serius"
+          },
+          {
+            "en": "Well, he's always on time.",
+            "id": "Yah, dia selalu tepat waktu. → (tentang kerjanya) tidak ada yang bisa dipuji"
+          },
+          {
+            "en": "Not bad at all! (UK)",
+            "id": "Lumayan banget! → cukup bagus"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: pendiri startup menengok ke belakang",
+        "text": "Ini dari wawancara podcast dengan pendiri sebuah startup di Jakarta. Bandingkan kata-katanya dengan faktanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "attitude-implied-meaning",
+          "listen": "Our first year? Well, it wasn't exactly the dream start we'd hoped for. We spent most of our money on an office we hardly used, our first app had, let's say, a few problems, and two of my co-founders left. But we learnt a lot.",
+          "prompt": "Pembawa acara bertanya tentang tahun pertama perusahaannya. Dengarkan jawaban si pendiri. Sebenarnya bagaimana tahun pertamanya?",
+          "options": [
+            "It went very badly.",
+            "It went well, with a few small problems.",
+            "It was the dream start the founders wanted."
+          ],
+          "answer": 0,
+          "explanation": "**wasn't exactly the dream start** (bukan awal impian juga sih) adalah understatement: *not exactly* + frasa positif = kebalikannya. Faktanya membuktikan: sebagian besar uang terbuang, aplikasinya bermasalah (*let's say, a few* melunakkannya) dan dua co-founder keluar. 'A few small problems' menelan kata-kata halusnya mentah-mentah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ironi, keengganan dan 'tidak' yang sopan",
+        "text": "Tiga pola lagi. Sekali lagi, kata-katanya yang memberitahumu; di dunia nyata nada suara juga membantu, tapi audio kita satu suara yang tenang.",
+        "body": "**Ironi:** kata positif + situasi yang jelas buruk = kebalikannya. *Oh great, another meeting about meetings* = kesal. **Keengganan:** mau, tapi terpaksa: *I suppose I could, if no one else is free*, *If I have to*, *Fine, I'll do it*. **Penolakan halus:** 'tidak' yang sopan: *That's an interesting idea. Let me think about it*, *I'll see what I can do*, *Maybe next year*. Bahasa Indonesia punya kebiasaan yang sama (*nanti saya pikir-pikir dulu*, *lihat nanti ya*). Jebakannya: mengira penutur bahasa Inggris selalu bicara apa adanya.",
+        "pairs": [
+          {
+            "en": "Oh great. Just what I needed.",
+            "id": "Wah bagus. Pas banget. → (ironi) kesal"
+          },
+          {
+            "en": "Perfect. The train's late again.",
+            "id": "Sempurna. Keretanya telat lagi. → (ironi) kesal"
+          },
+          {
+            "en": "I suppose I could…",
+            "id": "Ya, bisa sih… → enggan"
+          },
+          {
+            "en": "If I have to.",
+            "id": "Kalau memang harus. → terpaksa"
+          },
+          {
+            "en": "It wouldn't be my first choice.",
+            "id": "Bukan pilihan utamaku. → enggan"
+          },
+          {
+            "en": "Let me think about it.",
+            "id": "Aku pikir-pikir dulu. → sering berarti tidak"
+          },
+          {
+            "en": "I'll see what I can do.",
+            "id": "Nanti aku lihat bisa atau tidak. → kemungkinan tidak"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: ide baru dari karyawan",
+        "text": "Ini dari panel online tentang kerja jarak jauh. Pembawa acara bertanya kepada Bu Wulan, direktur HR, tentang ide dari karyawannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "attitude-implied-meaning",
+          "listen": "Letting staff work from Bali for a month? That's an interesting idea. Let me think about it. Of course, I'd need to talk to the board first, and to IT, and to our clients. So, maybe next year. Or the year after.",
+          "prompt": "Dengarkan jawaban Bu Wulan. Apa maksudnya yang sebenarnya?",
+          "options": [
+            "She likes the idea and will try it soon.",
+            "She has already discussed it with the board.",
+            "She's politely saying that it probably won't happen."
+          ],
+          "answer": 2,
+          "explanation": "**That's an interesting idea. Let me think about it** adalah penolakan halus: 'tidak' yang sopan. Daftar panjang orang yang harus ditanya dan **maybe next year. Or the year after** (mungkin tahun depan, atau tahun depannya lagi) mendorong idenya jauh-jauh. Ia bilang ia *perlu* bicara dengan direksi, jadi ia belum melakukannya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Obrolan tidak rapi: wawancara dan panel",
+        "text": "Wawancara dan panel tidak direncanakan seperti kuliah. Sedikit penanda, banyak perubahan.",
+        "body": "Ikuti empat hal. **Siapa berpendapat apa:** *I'm with Sari on that* = saya setuju dengan Sari; *I'd push back on what Dimas said* = saya kurang setuju. Buat daftar: NAMA = PENDAPAT. Hati-hati: pembicara sering mengulang pendapat orang lain untuk menolaknya. **Pindah topik:** *Anyway…*, *Oh, and…*, *Going back to…*. **Koreksi diri:** setelah *sorry*, *I mean*, *or rather*, *well*, **versi terakhir = fakta**: *about fifty, sorry, fifteen* = 15. **Selingan:** *by the way*, *not that it matters*, *where was I?*: bukan poin utama. Abaikan kata pengisi: *you know*, *sort of*.",
+        "pairs": [
+          {
+            "en": "I'm with you on that.",
+            "id": "Aku setuju denganmu soal itu."
+          },
+          {
+            "en": "I'd push back on that.",
+            "id": "Aku kurang setuju dengan itu."
+          },
+          {
+            "en": "…, sorry, … / …, I mean, …",
+            "id": "…, maaf, … / …, maksudku, … → versi baru = fakta"
+          },
+          {
+            "en": "…, or rather, …",
+            "id": "…, atau lebih tepatnya, … → versi baru = fakta"
+          },
+          {
+            "en": "Anyway, …",
+            "id": "Pokoknya / omong-omong… → ganti atau kembali ke topik"
+          },
+          {
+            "en": "Going back to…",
+            "id": "Kembali ke… → topik sebelumnya"
+          },
+          {
+            "en": "not that it matters",
+            "id": "bukan berarti itu penting → selingan"
+          },
+          {
+            "en": "Where was I?",
+            "id": "Tadi sampai mana? → kembali ke poin utama"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: rencana yang berubah",
+        "text": "Kembali ke podcast startup tadi. Si pendiri bicara tentang kota-kota baru. Dengarkan sampai akhir kalimat sebelum memutuskan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unstructured-speech",
+          "listen": "We're opening in Surabaya in May, well, June, realistically, because the licence always takes longer than you think. Makassar was on the plan for this year too, but honestly, that's next year now. Anyway, where was I? Oh yes, Surabaya first.",
+          "prompt": "Dengarkan si pendiri. Kapan perusahaannya buka di Surabaya?",
+          "options": [
+            "In May",
+            "In June",
+            "Next year"
+          ],
+          "answer": 1,
+          "explanation": "**May, well, June, realistically** (Mei, eh, Juni kalau realistis) adalah koreksi diri: versi terakhirnya, **June**, itulah faktanya. *Next year* tentang Makassar, bukan Surabaya. **Anyway, where was I?** (omong-omong, tadi sampai mana?) membawa pembicara kembali ke topik utama: Surabaya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: siapa berpendapat apa?",
+        "text": "Ini giliran bicara seorang panelis di panel online tentang kerja jarak jauh. Dua panelis lain, Dimas dan Sari, sudah bicara sebelumnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unstructured-speech",
+          "listen": "I'd push back a little on what Dimas said. He thinks new graduates learn best at home, with online training. In my experience, they learn by sitting next to someone experienced. Sari's point about saving travel time is fair, though. I'm with her on that.",
+          "prompt": "Dengarkan panelis itu. Kalimat mana yang cocok dengan pendapat panelis tersebut?",
+          "options": [
+            "The panellist agrees with Dimas about online training.",
+            "The panellist disagrees with both Dimas and Sari.",
+            "The panellist disagrees with Dimas, but agrees with Sari about travel time."
+          ],
+          "answer": 2,
+          "explanation": "**I'd push back a little on what Dimas said** = saya agak kurang setuju dengan Dimas. Pendapat soal pelatihan online itu milik Dimas, diulang supaya panelis bisa menolaknya. **Sari's point … is fair, though. I'm with her on that** = poin Sari masuk akal; saya setuju dengannya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Catatan kuliah: simpan yang penting",
+        "text": "Keterampilan terakhir: mencatat kuliah yang panjang. Kamu tidak bisa mencatat semuanya, dan memang tidak perlu.",
+        "body": "Dengarkan **sinyal 'ini penting'** lalu tandai catatannya (**!!**, **NB**, *exam*): *The key point here is…*, *Let me stress…*, *This will come up again*, *Make a note of this*. Tulis angka dan nama saat itu juga; setelah ada koreksi, simpan versi terakhirnya saja. **Lewati** contoh yang sudah kamu tahu, pengulangan (*In other words…*), lelucon dan selingan. Pakai simbol: **↑ ↓ →**, dan yang baru: **∴** maka, **≈** kira-kira, **vs** dibandingkan dengan. Halaman **Cornell**: kata kunci di kiri, catatan di kanan, ringkasan 1–2 kalimat di bawah.",
+        "pairs": [
+          {
+            "en": "The key point here is…",
+            "id": "Poin kuncinya di sini… → catat + !!"
+          },
+          {
+            "en": "Let me stress…",
+            "id": "Saya tekankan… → catat + !!"
+          },
+          {
+            "en": "This will come up again.",
+            "id": "Ini akan muncul lagi. → tandai: exam"
+          },
+          {
+            "en": "Make a note of this.",
+            "id": "Catat ini. → catat!"
+          },
+          {
+            "en": "You all know…, so I'll skip that.",
+            "id": "Kalian semua tahu…, jadi saya lewati. → jangan dicatat"
+          },
+          {
+            "en": "therefore",
+            "id": "∴ maka, jadi"
+          },
+          {
+            "en": "about, roughly",
+            "id": "≈ kira-kira"
+          },
+          {
+            "en": "important (note well)",
+            "id": "NB penting"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: catatan terbaik",
+        "text": "Ini bagian dari kuliah tentang transportasi kota di sebuah universitas di Yogyakarta. Bayangkan catatanmu: apa yang disimpan, apa yang dilewati?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lecture-note-taking",
+          "listen": "Right, you all know Jalan Malioboro, so I won't describe it again. Let me stress this, because it'll come up again: when cities widen their roads, traffic doesn't go down. It goes up, because wider roads attract more cars. This is called induced demand.",
+          "prompt": "Dengarkan cuplikan kuliahnya. Catatan mana yang paling berguna?",
+          "options": [
+            "Malioboro: busy, famous street",
+            "wider roads → more cars ∴ traffic ↑ (induced demand) !! exam",
+            "wider roads → traffic ↓ (induced demand)"
+          ],
+          "answer": 1,
+          "explanation": "**Let me stress this, because it'll come up again** (saya tekankan ini, karena akan muncul lagi) menandai poin kuncinya: jalan yang lebih lebar menarik lebih banyak mobil, jadi kemacetan **naik** (↑), bukan turun. Malioboro adalah contoh yang sudah kamu kenal: dosennya sendiri bilang begitu. Catatan ketiga melewatkan kata **doesn't** di *traffic doesn't go down*."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik setiap kartu. Coba ucapkan bahasa Inggrisnya sebelum melihat.",
+        "flashcards": [
+          {
+            "front": "Gagal (dikatakan dengan halus)",
+            "back": "It wasn't exactly a success."
+          },
+          {
+            "front": "Hari ini buruk (dikatakan dengan halus)",
+            "back": "I've had better days."
+          },
+          {
+            "front": "Kesal, lewat ironi",
+            "back": "Oh great. Just what I needed."
+          },
+          {
+            "front": "Mau, tapi enggan",
+            "back": "I suppose I could, if no one else is free."
+          },
+          {
+            "front": "Penolakan halus",
+            "back": "That's an interesting idea. Let me think about it."
+          },
+          {
+            "front": "Koreksi diri: mana faktanya? 'May, well, June'",
+            "back": "June: the last version is the fact."
+          },
+          {
+            "front": "Sinyal 'ini penting!' dari dosen",
+            "back": "Let me stress… / This will come up again."
+          },
+          {
+            "front": "∴  ≈  vs  NB",
+            "back": "therefore · about · compared with · important"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Makna tersirat, obrolan tidak rapi dan catatan kuliah dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Menyimak makna tersirat",
+          "intro": "Apa yang kamu dengar, apa maksud sebenarnya, dan apa yang harus dilakukan.",
+          "headers": [
+            "Yang kamu dengar",
+            "Maksud sebenarnya",
+            "Yang harus dilakukan"
+          ],
+          "rows": [
+            [
+              "It wasn't exactly a success. / not exactly cheap",
+              "gagal / mahal",
+              "understatement: not exactly + positif = kebalikannya"
+            ],
+            [
+              "I've had better days. / a bit of a problem",
+              "hari buruk / masalah serius",
+              "understatement: masalahnya lebih besar dari kata-katanya"
+            ],
+            [
+              "Oh great. / Perfect. / Just what I needed. (+ kabar buruk)",
+              "kesal (ironi)",
+              "kata positif + fakta buruk: percayai faktanya"
+            ],
+            [
+              "I suppose I could, if no one else is free.",
+              "mau, tapi enggan",
+              "keengganan: mau, tapi terpaksa"
+            ],
+            [
+              "That's an interesting idea. Let me think about it.",
+              "kemungkinan besar tidak",
+              "penolakan halus: 'tidak' yang sopan"
+            ],
+            [
+              "(tentang kerjanya) Well, he's always on time.",
+              "kerjanya kurang bagus",
+              "pujian tipis: hanya hal kecil yang dipuji"
+            ],
+            [
+              "I'm with Sari on that. / I'd push back on…",
+              "setuju dengan Sari / kurang setuju dengan…",
+              "catat NAMA = PENDAPAT"
+            ],
+            [
+              "May, well, June / fifty, sorry, fifteen",
+              "Juni / 15",
+              "koreksi diri: simpan versi terakhir"
+            ],
+            [
+              "Anyway… / Going back to… / Where was I?",
+              "ganti atau kembali ke topik",
+              "temukan lagi topik utamanya"
+            ],
+            [
+              "by the way / not that it matters",
+              "selingan",
+              "bukan poin utama"
+            ],
+            [
+              "The key point here is… / Let me stress…",
+              "poin kuncinya… / saya tekankan…",
+              "catat dan tandai: !!"
+            ],
+            [
+              "This will come up again. / Make a note of this.",
+              "akan muncul lagi / catat ini",
+              "tandai: exam"
+            ],
+            [
+              "You all know…, so I'll skip that.",
+              "kalian sudah tahu…",
+              "lewati"
+            ],
+            [
+              "↑ ↓ → ∴ ≈ vs NB",
+              "naik, turun, menyebabkan, maka, kira-kira, dibandingkan, penting",
+              "simbol untuk mencatat cepat"
+            ]
+          ],
+          "tips": [
+            "Bandingkan kata-katanya dengan faktanya: kalau tidak cocok, faktanya yang memberitahumu maksud pembicara.",
+            "Di wawancara dan panel, tunggu sampai kalimatnya selesai: versi terakhir sebuah angka atau tanggal itulah faktanya.",
+            "Halaman Cornell: kata kunci di kiri, catatan di kanan, ringkasan 1–2 kalimat di bawah."
+          ],
+          "examples": [
+            {
+              "en": "Our launch wasn't exactly smooth.",
+              "id": "Peluncuran kami tidak mulus juga sih. (maksudnya: banyak masalah)"
+            },
+            {
+              "en": "Brilliant. The projector's broken again.",
+              "id": "Mantap. Proyektornya rusak lagi. (ironi: kesal)"
+            },
+            {
+              "en": "There were about thirty, no, closer to forty people there.",
+              "id": "Ada sekitar tiga puluh, eh, hampir empat puluh orang di sana. (faktanya: sekitar 40)"
+            },
+            {
+              "en": "Car use has gone up, so air quality has got worse.",
+              "id": "Penggunaan mobil naik, jadi kualitas udara memburuk. (Catatan: cars ↑ ∴ air quality ↓)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Simak lebih banyak",
+        "text": "Dua rekaman C1 dengan transkrip: wawancara tiga suara dengan opini yang tersirat, dan sebuah kuliah untuk berlatih catatan Cornell."
+      }
+    ]
+  }
+}

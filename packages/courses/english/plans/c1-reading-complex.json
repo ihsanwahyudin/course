@@ -1,0 +1,792 @@
+{
+  "en": {
+    "greeting": "Hi, welcome to C1 reading! Today you read like a careful professional: academic abstracts, the small print in contracts, and arguments that try to persuade you. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Specialised texts have a map",
+        "text": "At B2 you skimmed for the gist, scanned for one fact and read between the lines. Specialised texts need all three, plus a map.",
+        "body": "**Academic paper**: read the **title** and the **abstract**, then the **conclusion**, then only the sections you need.\nAn **abstract** has four parts:\n- **Aim**: This study examines…\n- **Method**: We surveyed… / Data were collected from…\n- **Findings**: Results show… / We found that…\n- **Limitation**: However, the study only… / The results may not apply to…\nAn **executive summary** = a whole business report on one page, usually ending with **recommendations**. Read it first.",
+        "pairs": [
+          {
+            "en": "abstract",
+            "id": "abstrak (ringkasan di awal paper)"
+          },
+          {
+            "en": "aim",
+            "id": "tujuan"
+          },
+          {
+            "en": "method",
+            "id": "metode"
+          },
+          {
+            "en": "findings",
+            "id": "temuan"
+          },
+          {
+            "en": "limitation",
+            "id": "keterbatasan"
+          },
+          {
+            "en": "further research is needed",
+            "id": "perlu penelitian lebih lanjut"
+          },
+          {
+            "en": "executive summary",
+            "id": "ringkasan eksekutif"
+          },
+          {
+            "en": "recommendations",
+            "id": "rekomendasi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which part of the abstract?",
+        "text": "Here's an abstract from an education journal. Look for the signal words in each sentence.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "specialised-texts",
+          "options": [
+            "Method",
+            "Findings",
+            "Limitation"
+          ],
+          "answer": 1,
+          "prompt": "Read the abstract: '(1) This study investigates whether a vocabulary app helps first-year university students. (2) 240 students were split into two groups for one semester. (3) Students who used the app daily raised their vocabulary scores by 11%, compared with 4% in the other group. (4) However, the study lasted only one semester.' Which part is sentence (3)?",
+          "explanation": "Sentence (3) gives the **results**, with numbers (11% compared with 4%): that's the **findings**. Sentence (2) is the method (how the study was done), and sentence (4), after **However**, is the limitation."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Terms and conditions: the small print",
+        "text": "Now a text most people never read until it costs them money: the terms and conditions of an e-wallet or a phone contract.",
+        "body": "Scan for the **money** and the **dates** (fee, Rp, refund, cancel, renew, days), then read those clauses word by word.\n- **renews automatically unless you cancel** = if you do nothing, you pay again\n- **subject to** = only if a condition is met\n- **at our sole discretion** = only the company decides\n- **notwithstanding clause 4** = even though clause 4 says something else, this rule wins\n- **you agree to** = you accept it or promise it\n**Trap:** in T&Cs, **We may…** means *we have the right to* (berhak), not *mungkin*.",
+        "pairs": [
+          {
+            "en": "cancellation fee",
+            "id": "biaya pembatalan"
+          },
+          {
+            "en": "non-refundable",
+            "id": "tidak dapat dikembalikan"
+          },
+          {
+            "en": "renews automatically",
+            "id": "diperpanjang otomatis"
+          },
+          {
+            "en": "unless",
+            "id": "kecuali jika"
+          },
+          {
+            "en": "subject to",
+            "id": "dengan syarat, tergantung pada"
+          },
+          {
+            "en": "at our sole discretion",
+            "id": "sepenuhnya atas keputusan kami"
+          },
+          {
+            "en": "notwithstanding",
+            "id": "terlepas dari (aturan ini yang berlaku)"
+          },
+          {
+            "en": "you agree to",
+            "id": "kamu menyetujui / setuju untuk"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which clause wins?",
+        "text": "Here are two clauses from an e-wallet's terms. Read both before you answer: the second one changes the first.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "specialised-texts",
+          "options": [
+            "Yes, because she asked within 7 days.",
+            "No, because clause 5.4 wins over clause 5.1.",
+            "Yes, but only half of it."
+          ],
+          "answer": 1,
+          "prompt": "Read: '5.1 You can ask for a full refund of a top-up within 7 days. 5.4 Notwithstanding clause 5.1, top-ups made with a promo code are non-refundable.' Rina topped up Rp200,000 with a promo code three days ago. Can she get her money back?",
+          "explanation": "**Notwithstanding clause 5.1** means: even though 5.1 allows refunds within 7 days, this rule wins. Rina used a promo code, so her top-up is **non-refundable**. The 7 days in 5.1 is the trap, and nothing in the text mentions half a refund."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The shape of an argument",
+        "text": "At B2 you wrote arguments yourself. Now you take other writers' arguments apart and label each part.",
+        "body": "- **Claim**: the main point (I believe…, …should…)\n- **Reasons**: why (because, since, The main reason is…)\n- **Evidence**: facts, numbers, examples that show it's true (According to…, A survey of… found…, For example…)\n- **Counter-argument**: the other side (Some argue that…, Critics say…, Admittedly…)\n- **Rebuttal**: the writer's answer (However…, But this ignores…, Yet…)\n- **Conclusion**: the claim again (Therefore…, For these reasons…)\nA **reason** says why; **evidence** shows it's true. Don't take the counter-argument as the writer's view.",
+        "pairs": [
+          {
+            "en": "claim",
+            "id": "klaim, pokok pendapat"
+          },
+          {
+            "en": "reason",
+            "id": "alasan"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "counter-argument",
+            "id": "argumen tandingan (pendapat pihak lain)"
+          },
+          {
+            "en": "rebuttal",
+            "id": "bantahan"
+          },
+          {
+            "en": "signal word",
+            "id": "kata penanda"
+          },
+          {
+            "en": "Admittedly, …",
+            "id": "Memang, … (harus diakui)"
+          },
+          {
+            "en": "But this ignores…",
+            "id": "Tapi ini mengabaikan…"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Reason or evidence?",
+        "text": "Find the signal words, then decide: is the sentence saying why, or showing that it's true?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "argument-and-bias",
+          "options": [
+            "Reason",
+            "Evidence",
+            "Counter-argument"
+          ],
+          "answer": 1,
+          "prompt": "Read: '(A) Hospitals should shorten night shifts. (B) Tired nurses make more mistakes, because they get too little sleep. (C) At one hospital in Medan, night nurses made twice as many medicine errors as day nurses last year. (D) Critics say shorter shifts cost more.' Which part of the argument is sentence (C)?",
+          "explanation": "Sentence (C) gives a **fact with a number** from a real place: it shows that reason (B) is true, so it's **evidence**. (B) is the reason (it says **why**, with **because**), and (D), with **Critics say**, is the counter-argument."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Spotting bias",
+        "text": "A text can contain only true facts and still be biased. The bias is in the words and in the choice of facts.",
+        "body": "**Bias** = the writer leans to one side. Six signs:\n- **Loaded words**: a **reckless** plan (negative) / a **bold** plan (positive) / a new plan (neutral); slashed vs reduced; claims vs says\n- **One-sided evidence**: only the facts that help\n- **Who funded it**: a sugar company's study says sugar is safe\n- **Cherry-picked numbers**: only the best month\n- **Small samples**: we asked 15 users\n- **Appeal to authority**: a famous actor says it works; \"experts agree\" (which experts?)",
+        "pairs": [
+          {
+            "en": "bias",
+            "id": "keberpihakan, berat sebelah"
+          },
+          {
+            "en": "loaded word",
+            "id": "kata bermuatan (berisi penilaian)"
+          },
+          {
+            "en": "reckless",
+            "id": "nekat, ceroboh"
+          },
+          {
+            "en": "bold",
+            "id": "berani"
+          },
+          {
+            "en": "slashed",
+            "id": "dipangkas habis"
+          },
+          {
+            "en": "claims",
+            "id": "mengklaim (penulis ragu)"
+          },
+          {
+            "en": "cherry-picked",
+            "id": "dipilih-pilih yang menguntungkan"
+          },
+          {
+            "en": "funded by",
+            "id": "dibiayai oleh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Make it neutral",
+        "text": "Now rewrite a biased sentence in neutral words. Drop the judgement, keep the facts.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "argument-and-bias",
+          "tokens": [
+            "libraries",
+            "will",
+            "The",
+            "for",
+            "reduce",
+            "plan",
+            "funding"
+          ],
+          "solution": "The plan will reduce funding for libraries.",
+          "prompt": "Read: 'The reckless plan will slash funding for libraries.' Arrange the words to give the same facts in neutral words.",
+          "explanation": "**reckless** (a negative judgement) disappears, and **slash** (cut a lot, carelessly) becomes the neutral **reduce**. The facts stay the same: a plan, and less money for libraries."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Reading critically",
+        "text": "Last skill: does the evidence really support the claim? A critical reader asks questions before believing.",
+        "body": "- **Correlation ≠ causation**: umbrella sales and dengue cases both rise in the rainy season. Umbrellas don't cause dengue: the rain causes both.\n- **Sample**: how many people, and who? 15 friends ≠ all Indonesians.\n- **What's missing?** Compared with what? The other months? Side effects?\n- **Fact or opinion?** A fact can be checked; an opinion is a judgement.\nAsk: **Who wrote it? For whom? Who paid? What's left out?** \"A study shows…\" isn't proof: one study only suggests.",
+        "pairs": [
+          {
+            "en": "correlation",
+            "id": "korelasi (terjadi bersamaan)"
+          },
+          {
+            "en": "causation",
+            "id": "sebab-akibat"
+          },
+          {
+            "en": "sample size",
+            "id": "ukuran sampel"
+          },
+          {
+            "en": "assumption",
+            "id": "asumsi"
+          },
+          {
+            "en": "Compared with what?",
+            "id": "Dibandingkan dengan apa?"
+          },
+          {
+            "en": "What's left out?",
+            "id": "Apa yang tidak disebut?"
+          },
+          {
+            "en": "The evidence supports the claim.",
+            "id": "Buktinya mendukung klaimnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Is that the whole story?",
+        "text": "A city press release. Read the headline, then ask: is this number the whole story?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "critical-reading",
+          "options": [
+            "It uses only the best week, so the number may be cherry-picked.",
+            "40,000 passengers is too small a sample.",
+            "It confuses correlation and causation."
+          ],
+          "answer": 0,
+          "prompt": "Read: 'NEW BUS LINE A HUGE SUCCESS. In its best week, during the school holidays, Bandung's new Line 9 carried 40,000 passengers. The city had planned for 30,000 a week.' The city hasn't published the numbers for the other weeks. What is the main problem with the evidence?",
+          "explanation": "The writer chose **the best week**, in the holidays, and the other weeks are **missing**: a typical cherry-picked number. 40,000 passengers isn't a small sample, and the text doesn't say that one thing causes another."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's a cheat sheet to keep next to your next report, contract or opinion piece.",
+        "artifact": {
+          "title": "Cheat sheet · Complex & specialised texts",
+          "intro": "Use the map of specialised texts, label the argument, spot the bias and check the evidence.",
+          "headers": [
+            "Look for",
+            "What it tells you",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "This study examines… / The aim was to…",
+              "the aim of an abstract",
+              "tujuan"
+            ],
+            [
+              "We surveyed… / Data were collected from…",
+              "the method",
+              "metode"
+            ],
+            [
+              "Results show… / We found that…",
+              "the findings",
+              "temuan"
+            ],
+            [
+              "However, the study only… / may not apply to…",
+              "the limitation",
+              "keterbatasan"
+            ],
+            [
+              "renews automatically unless you cancel",
+              "if you do nothing, you pay again",
+              "diperpanjang otomatis kecuali kamu membatalkan"
+            ],
+            [
+              "subject to / at our sole discretion",
+              "only if a condition is met / only the company decides",
+              "dengan syarat / sepenuhnya keputusan perusahaan"
+            ],
+            [
+              "notwithstanding clause X",
+              "this rule wins over clause X",
+              "terlepas dari klausul X"
+            ],
+            [
+              "We may… (in T&Cs)",
+              "the company has the right to",
+              "berhak, bukan 'mungkin'"
+            ],
+            [
+              "because, since / According to…, a survey found…",
+              "a reason / evidence",
+              "alasan / bukti"
+            ],
+            [
+              "Some argue that… / However, …",
+              "counter-argument / rebuttal",
+              "argumen tandingan / bantahan"
+            ],
+            [
+              "reckless, slashed, claims",
+              "loaded words: the writer's judgement",
+              "kata bermuatan"
+            ],
+            [
+              "the best week only / 15 users / paid for by…",
+              "cherry-picking / a small sample / who funded it",
+              "angka pilihan / sampel kecil / pendana"
+            ],
+            [
+              "X and Y rise together",
+              "correlation, not necessarily causation",
+              "korelasi ≠ sebab-akibat"
+            ]
+          ],
+          "tips": [
+            "Read the abstract and the conclusion first; read the method only if you need it.",
+            "In T&Cs, scan for money and dates, then read those clauses word by word: watch **unless** and **notwithstanding**.",
+            "Ask every text: **Who wrote it? For whom? Who paid? What's left out?**"
+          ],
+          "examples": [
+            {
+              "en": "However, the results may not apply to older workers.",
+              "id": "Namun, hasilnya mungkin tidak berlaku untuk pekerja yang lebih tua. (keterbatasan)"
+            },
+            {
+              "en": "We may change these fees, subject to 30 days' notice.",
+              "id": "Kami berhak mengubah biaya ini, dengan syarat ada pemberitahuan 30 hari sebelumnya."
+            },
+            {
+              "en": "Some argue that the plan is too expensive. However, …",
+              "id": "Ada yang berpendapat rencana itu terlalu mahal. Namun, … (argumen tandingan → bantahan)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and watch more",
+        "text": "Want more practice? A C1 article from British Council LearnEnglish that asks whether the statistics support our view of the world, and a Crash Course video on telling strong evidence from weak."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang di membaca level C1! Hari ini kamu membaca seperti profesional yang teliti: abstrak akademik, tulisan kecil di kontrak, dan argumen yang mencoba meyakinkanmu. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Teks khusus punya peta",
+        "text": "Di B2 kamu sudah skimming untuk menangkap inti, scanning untuk satu fakta, dan membaca yang tersirat. Teks khusus butuh ketiganya, ditambah sebuah peta.",
+        "body": "**Paper akademik**: baca **judul** dan **abstrak**, lalu **kesimpulan**, lalu hanya bagian yang kamu perlukan.\n**Abstrak** punya empat bagian:\n- **Aim** (tujuan): This study examines…\n- **Method** (metode): We surveyed… / Data were collected from…\n- **Findings** (temuan): Results show… / We found that…\n- **Limitation** (keterbatasan): However, the study only… / The results may not apply to…\n**Executive summary** (ringkasan eksekutif) = seluruh laporan bisnis dalam satu halaman, biasanya diakhiri **recommendations** (rekomendasi). Baca ini dulu.",
+        "pairs": [
+          {
+            "en": "abstract",
+            "id": "abstrak (ringkasan di awal paper)"
+          },
+          {
+            "en": "aim",
+            "id": "tujuan"
+          },
+          {
+            "en": "method",
+            "id": "metode"
+          },
+          {
+            "en": "findings",
+            "id": "temuan"
+          },
+          {
+            "en": "limitation",
+            "id": "keterbatasan"
+          },
+          {
+            "en": "further research is needed",
+            "id": "perlu penelitian lebih lanjut"
+          },
+          {
+            "en": "executive summary",
+            "id": "ringkasan eksekutif"
+          },
+          {
+            "en": "recommendations",
+            "id": "rekomendasi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Bagian abstrak yang mana?",
+        "text": "Ini abstrak dari sebuah jurnal pendidikan. Cari kata penanda di setiap kalimat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "specialised-texts",
+          "options": [
+            "Method",
+            "Findings",
+            "Limitation"
+          ],
+          "answer": 1,
+          "prompt": "Baca abstraknya: '(1) This study investigates whether a vocabulary app helps first-year university students. (2) 240 students were split into two groups for one semester. (3) Students who used the app daily raised their vocabulary scores by 11%, compared with 4% in the other group. (4) However, the study lasted only one semester.' Kalimat (3) bagian yang mana?",
+          "explanation": "Kalimat (3) memberi **hasil**, dengan angka (11% dibandingkan 4%): itu **findings** (temuan). Kalimat (2) adalah metode (bagaimana penelitiannya dilakukan), dan kalimat (4), setelah **However**, adalah keterbatasan (limitation)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Syarat dan ketentuan: tulisan kecilnya",
+        "text": "Sekarang teks yang hampir tidak pernah dibaca orang sampai mereka rugi uang: syarat dan ketentuan dompet digital atau kontrak HP.",
+        "body": "Scan **uang** dan **tanggal**-nya (fee, Rp, refund, cancel, renew, days), lalu baca klausul itu kata demi kata.\n- **renews automatically unless you cancel** = kalau kamu diam saja, kamu bayar lagi\n- **subject to** = hanya kalau syaratnya dipenuhi\n- **at our sole discretion** = hanya perusahaan yang memutuskan\n- **notwithstanding clause 4** = walaupun klausul 4 berkata lain, aturan inilah yang berlaku\n- **you agree to** = kamu menerima atau menjanjikannya\n**Jebakan:** di S&K, **We may…** artinya *kami berhak*, bukan *mungkin*.",
+        "pairs": [
+          {
+            "en": "cancellation fee",
+            "id": "biaya pembatalan"
+          },
+          {
+            "en": "non-refundable",
+            "id": "tidak dapat dikembalikan"
+          },
+          {
+            "en": "renews automatically",
+            "id": "diperpanjang otomatis"
+          },
+          {
+            "en": "unless",
+            "id": "kecuali jika"
+          },
+          {
+            "en": "subject to",
+            "id": "dengan syarat, tergantung pada"
+          },
+          {
+            "en": "at our sole discretion",
+            "id": "sepenuhnya atas keputusan kami"
+          },
+          {
+            "en": "notwithstanding",
+            "id": "terlepas dari (aturan ini yang berlaku)"
+          },
+          {
+            "en": "you agree to",
+            "id": "kamu menyetujui / setuju untuk"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Klausul mana yang menang?",
+        "text": "Ini dua klausul dari syarat sebuah dompet digital. Baca keduanya sebelum menjawab: klausul kedua mengubah yang pertama.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "specialised-texts",
+          "options": [
+            "Yes, because she asked within 7 days.",
+            "No, because clause 5.4 wins over clause 5.1.",
+            "Yes, but only half of it."
+          ],
+          "answer": 1,
+          "prompt": "Baca: '5.1 You can ask for a full refund of a top-up within 7 days. 5.4 Notwithstanding clause 5.1, top-ups made with a promo code are non-refundable.' Tiga hari lalu Rina top-up Rp200.000 dengan kode promo. Bisakah uangnya kembali?",
+          "explanation": "**Notwithstanding clause 5.1** artinya: walaupun 5.1 membolehkan refund dalam 7 hari, aturan inilah yang berlaku. Rina memakai kode promo, jadi top-up-nya **non-refundable** (tidak dapat dikembalikan). Angka 7 hari di 5.1 adalah jebakannya, dan teksnya tidak menyebut refund setengah sama sekali."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bentuk sebuah argumen",
+        "text": "Di B2 kamu menulis argumen sendiri. Sekarang kamu membongkar argumen penulis lain dan memberi label pada setiap bagiannya.",
+        "body": "- **Claim** (klaim): poin utama (I believe…, …should…)\n- **Reasons** (alasan): mengapa (because, since, The main reason is…)\n- **Evidence** (bukti): fakta, angka, contoh yang menunjukkan bahwa itu benar (According to…, A survey of… found…, For example…)\n- **Counter-argument** (argumen tandingan): pendapat pihak lain (Some argue that…, Critics say…, Admittedly…)\n- **Rebuttal** (bantahan): jawaban penulis (However…, But this ignores…, Yet…)\n- **Conclusion** (kesimpulan): klaimnya lagi (Therefore…, For these reasons…)\n**Alasan** menjawab mengapa; **bukti** menunjukkan bahwa itu benar. Jangan anggap argumen tandingan sebagai pendapat penulis.",
+        "pairs": [
+          {
+            "en": "claim",
+            "id": "klaim, pokok pendapat"
+          },
+          {
+            "en": "reason",
+            "id": "alasan"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "counter-argument",
+            "id": "argumen tandingan (pendapat pihak lain)"
+          },
+          {
+            "en": "rebuttal",
+            "id": "bantahan"
+          },
+          {
+            "en": "signal word",
+            "id": "kata penanda"
+          },
+          {
+            "en": "Admittedly, …",
+            "id": "Memang, … (harus diakui)"
+          },
+          {
+            "en": "But this ignores…",
+            "id": "Tapi ini mengabaikan…"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Alasan atau bukti?",
+        "text": "Cari kata penandanya, lalu putuskan: apakah kalimat itu menjawab mengapa, atau menunjukkan bahwa itu benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "argument-and-bias",
+          "options": [
+            "Reason",
+            "Evidence",
+            "Counter-argument"
+          ],
+          "answer": 1,
+          "prompt": "Baca: '(A) Hospitals should shorten night shifts. (B) Tired nurses make more mistakes, because they get too little sleep. (C) At one hospital in Medan, night nurses made twice as many medicine errors as day nurses last year. (D) Critics say shorter shifts cost more.' Kalimat (C) bagian argumen yang mana?",
+          "explanation": "Kalimat (C) memberi **fakta dengan angka** dari tempat yang nyata: kalimat ini menunjukkan bahwa alasan (B) benar, jadi ini **evidence** (bukti). (B) adalah alasan (menjawab **mengapa**, dengan **because**), dan (D), dengan **Critics say**, adalah argumen tandingan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mengenali bias",
+        "text": "Sebuah teks bisa berisi fakta yang benar semua dan tetap bias. Biasnya ada di pilihan kata dan pilihan fakta.",
+        "body": "**Bias** = penulis condong ke satu sisi. Enam tandanya:\n- **Loaded words** (kata bermuatan): a **reckless** plan (nekat: negatif) / a **bold** plan (berani: positif) / a new plan (netral); slashed vs reduced; claims vs says\n- **Bukti sepihak**: hanya fakta yang membantu\n- **Siapa yang membiayai**: penelitian perusahaan gula bilang gula aman\n- **Angka yang dipilih-pilih** (cherry-picked): hanya bulan terbaik\n- **Sampel kecil**: kami bertanya ke 15 pengguna\n- **Berlindung di balik nama besar**: aktor terkenal bilang produknya manjur; \"experts agree\" (ahli yang mana?)",
+        "pairs": [
+          {
+            "en": "bias",
+            "id": "keberpihakan, berat sebelah"
+          },
+          {
+            "en": "loaded word",
+            "id": "kata bermuatan (berisi penilaian)"
+          },
+          {
+            "en": "reckless",
+            "id": "nekat, ceroboh"
+          },
+          {
+            "en": "bold",
+            "id": "berani"
+          },
+          {
+            "en": "slashed",
+            "id": "dipangkas habis"
+          },
+          {
+            "en": "claims",
+            "id": "mengklaim (penulis ragu)"
+          },
+          {
+            "en": "cherry-picked",
+            "id": "dipilih-pilih yang menguntungkan"
+          },
+          {
+            "en": "funded by",
+            "id": "dibiayai oleh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Buat jadi netral",
+        "text": "Sekarang tulis ulang kalimat yang bias dengan kata-kata netral. Buang penilaiannya, pertahankan faktanya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "argument-and-bias",
+          "tokens": [
+            "libraries",
+            "will",
+            "The",
+            "for",
+            "reduce",
+            "plan",
+            "funding"
+          ],
+          "solution": "The plan will reduce funding for libraries.",
+          "prompt": "Baca: 'The reckless plan will slash funding for libraries.' Susun kata-katanya untuk memberi fakta yang sama dengan kata-kata netral.",
+          "explanation": "**reckless** (penilaian negatif: nekat) hilang, dan **slash** (memangkas banyak, sembarangan) menjadi **reduce** (mengurangi) yang netral. Faktanya tetap sama: ada rencana, dan dana untuk perpustakaan berkurang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membaca kritis",
+        "text": "Keterampilan terakhir: apakah buktinya benar-benar mendukung klaimnya? Pembaca yang kritis bertanya dulu sebelum percaya.",
+        "body": "- **Korelasi ≠ sebab-akibat**: penjualan payung dan kasus DBD sama-sama naik di musim hujan. Payung tidak menyebabkan DBD: hujanlah penyebab keduanya.\n- **Sampel**: berapa orang, dan siapa? 15 teman ≠ semua orang Indonesia.\n- **Apa yang tidak ada?** Dibandingkan dengan apa? Bulan-bulan lainnya? Efek sampingnya?\n- **Fakta atau opini?** Fakta bisa dicek; opini adalah penilaian.\nTanyakan: **Siapa yang menulis? Untuk siapa? Siapa yang membayar? Apa yang tidak disebut?** \"A study shows…\" bukan bukti pasti: satu penelitian hanya mengindikasikan.",
+        "pairs": [
+          {
+            "en": "correlation",
+            "id": "korelasi (terjadi bersamaan)"
+          },
+          {
+            "en": "causation",
+            "id": "sebab-akibat"
+          },
+          {
+            "en": "sample size",
+            "id": "ukuran sampel"
+          },
+          {
+            "en": "assumption",
+            "id": "asumsi"
+          },
+          {
+            "en": "Compared with what?",
+            "id": "Dibandingkan dengan apa?"
+          },
+          {
+            "en": "What's left out?",
+            "id": "Apa yang tidak disebut?"
+          },
+          {
+            "en": "The evidence supports the claim.",
+            "id": "Buktinya mendukung klaimnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apakah itu cerita lengkapnya?",
+        "text": "Siaran pers dari pemerintah kota. Baca judulnya, lalu tanyakan: apakah angka ini cerita lengkapnya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "critical-reading",
+          "options": [
+            "It uses only the best week, so the number may be cherry-picked.",
+            "40,000 passengers is too small a sample.",
+            "It confuses correlation and causation."
+          ],
+          "answer": 0,
+          "prompt": "Baca: 'NEW BUS LINE A HUGE SUCCESS. In its best week, during the school holidays, Bandung's new Line 9 carried 40,000 passengers. The city had planned for 30,000 a week.' Pemerintah kota belum mengumumkan angka untuk minggu-minggu lainnya. Apa masalah utama dari buktinya?",
+          "explanation": "Penulis memilih **minggu terbaik**, saat liburan sekolah, dan minggu-minggu lainnya **tidak ada**: contoh khas angka yang dipilih-pilih (cherry-picked). 40.000 penumpang bukan sampel kecil, dan teksnya tidak bilang satu hal menyebabkan hal lain."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Rangkuman",
+        "text": "Ini rangkuman untuk disimpan di dekat laporan, kontrak atau artikel opini berikutnya yang kamu baca.",
+        "artifact": {
+          "title": "Rangkuman · Teks kompleks & khusus",
+          "intro": "Pakai peta teks khusus, beri label pada argumennya, kenali biasnya dan cek buktinya.",
+          "headers": [
+            "Cari ini",
+            "Artinya untukmu",
+            "Makna"
+          ],
+          "rows": [
+            [
+              "This study examines… / The aim was to…",
+              "tujuan (aim) di abstrak",
+              "tujuan"
+            ],
+            [
+              "We surveyed… / Data were collected from…",
+              "metode (method)",
+              "metode"
+            ],
+            [
+              "Results show… / We found that…",
+              "temuan (findings)",
+              "temuan"
+            ],
+            [
+              "However, the study only… / may not apply to…",
+              "keterbatasan (limitation)",
+              "keterbatasan"
+            ],
+            [
+              "renews automatically unless you cancel",
+              "kalau kamu diam saja, kamu bayar lagi",
+              "diperpanjang otomatis kecuali kamu membatalkan"
+            ],
+            [
+              "subject to / at our sole discretion",
+              "hanya kalau syaratnya dipenuhi / hanya perusahaan yang memutuskan",
+              "dengan syarat / sepenuhnya keputusan perusahaan"
+            ],
+            [
+              "notwithstanding clause X",
+              "aturan ini mengalahkan klausul X",
+              "terlepas dari klausul X"
+            ],
+            [
+              "We may… (in T&Cs)",
+              "perusahaan berhak",
+              "berhak, bukan 'mungkin'"
+            ],
+            [
+              "because, since / According to…, a survey found…",
+              "alasan / bukti",
+              "alasan / bukti"
+            ],
+            [
+              "Some argue that… / However, …",
+              "argumen tandingan / bantahan",
+              "argumen tandingan / bantahan"
+            ],
+            [
+              "reckless, slashed, claims",
+              "kata bermuatan: penilaian penulis",
+              "kata bermuatan"
+            ],
+            [
+              "the best week only / 15 users / paid for by…",
+              "angka yang dipilih-pilih / sampel kecil / siapa pendananya",
+              "angka pilihan / sampel kecil / pendana"
+            ],
+            [
+              "X and Y rise together",
+              "korelasi, belum tentu sebab-akibat",
+              "korelasi ≠ sebab-akibat"
+            ]
+          ],
+          "tips": [
+            "Baca abstrak dan kesimpulan dulu; baca metodenya hanya kalau perlu.",
+            "Di S&K, scan uang dan tanggal, lalu baca klausul itu kata demi kata: perhatikan **unless** dan **notwithstanding**.",
+            "Tanyakan pada setiap teks: **Siapa yang menulis? Untuk siapa? Siapa yang membayar? Apa yang tidak disebut?**"
+          ],
+          "examples": [
+            {
+              "en": "However, the results may not apply to older workers.",
+              "id": "Namun, hasilnya mungkin tidak berlaku untuk pekerja yang lebih tua. (keterbatasan)"
+            },
+            {
+              "en": "We may change these fees, subject to 30 days' notice.",
+              "id": "Kami berhak mengubah biaya ini, dengan syarat ada pemberitahuan 30 hari sebelumnya."
+            },
+            {
+              "en": "Some argue that the plan is too expensive. However, …",
+              "id": "Ada yang berpendapat rencana itu terlalu mahal. Namun, … (argumen tandingan → bantahan)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan tonton lagi",
+        "text": "Mau latihan lagi? Artikel C1 dari British Council LearnEnglish yang mempertanyakan apakah statistik mendukung pandangan kita tentang dunia, dan video Crash Course tentang cara membedakan bukti yang kuat dari yang lemah."
+      }
+    ]
+  }
+}

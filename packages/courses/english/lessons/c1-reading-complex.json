@@ -1,0 +1,942 @@
+{
+  "nodeId": "c1-reading-complex",
+  "intro": "Welcome to C1 reading! At B2 you skimmed, scanned and read between the lines. Now you take on specialised texts: academic abstracts, executive summaries and the small print of an e-wallet or phone contract. You'll also learn to see how an argument is built, where the writer's bias shows, and whether the evidence really supports the claim.",
+  "teachingNotes": [
+    "Build on b2-reading-strategies (skim for the gist, scan for one fact, inference from tone words, emphasis and what's left out, the writer's attitude, the map of a long report: summary → conclusion → headings) and b1-reading-articles (main idea vs details, fact vs opinion): recap in one line, don't re-teach. Texts are short invented extracts (60–150 words) from specialised genres: academic abstracts, executive summaries, the terms and conditions of an e-wallet or phone contract, opinion pieces, press releases and news reports. All companies, studies and outlets are invented (Selaras Mobile, LumbungPay, NusaNoodle, Teras Wallet); never name real brands, studies or news outlets. Every answer comes from the text, never from general knowledge.",
+    "Specialised texts. An abstract has four parts: aim (This study examines / investigates, The aim of this study was to), method (We surveyed, Data were collected from, 300 students took part), findings (Results show, We found that, rose by 8%) and limitation (However, the study only…, The results may not apply to…, Further research is needed). Read a paper in this order: title → abstract → conclusion → tables and figures → method only if needed. Learners know 'abstrak' from a skripsi. An executive summary = the whole report on one page, usually ending with recommendations. T&Cs: scan for the money and the dates (fee, Rp, refund, cancel, renew, days), then read those clauses word by word: cancellation / early termination fee, minimum term, auto-renewal (renews automatically unless you cancel at least X days before), non-refundable. Phrases to recognise, not to produce: subject to (only if a condition is met: subject to 30 days' notice, subject to availability), at our sole discretion (only the company decides and needn't explain), notwithstanding clause X (even though clause X says something else, this rule wins), you agree to (you accept / promise it), shall (= must). Common errors: reading 'may' in T&Cs as 'mungkin' (it means the company has the right to: berhak); grabbing the wrong number when a clause has several (the clause number, the notice period, the refund window); missing 'unless' or 'notwithstanding', which reverse or override a rule; reading T&Cs from the first word to the last instead of scanning for fees and dates.",
+    "Argument structure: claim (the main point: I believe, should), reasons (why: because, since, The main reason is), evidence (facts, numbers, examples, research that show a reason is true: According to, A survey of … found, For example, Figures show), counter-argument (the other side: Some argue that, Critics say, Admittedly, It is true that), rebuttal (the writer's answer: However, But this ignores, Yet), conclusion (Therefore, For these reasons, In short). Learners wrote these in b2-essay-writing; now they label them in other people's texts. Common errors: confusing reason and evidence (a reason says why; evidence shows it's true with data or an example); confusing counter-argument and rebuttal (the counter-argument is the other side's point; the rebuttal answers it); taking the counter-argument as the writer's own view. Indonesian bridge: Memang …, tetapi … = Admittedly …, but ….",
+    "Bias (keberpihakan, berat sebelah): loaded words (reckless vs bold, stubborn vs determined, slashed vs reduced, claims / admits vs says), one-sided evidence, who funded a study, cherry-picked numbers (the best month, a convenient start year), generalisations from small samples (we asked 15 users), appeal to authority (a famous person outside their field; 'experts agree' with no names or numbers). Bias isn't lying: a biased text can contain only true facts. Loaded words can be positive (bold, visionary, a breakthrough) as well as negative. Not every strong word is bias (The fire destroyed 40 homes is accurate). Every writer chooses words, so this is partly judgement: only test clear cases where one word clearly carries an opinion and the rest is neutral.",
+    "Critical reading: does the evidence support the claim? Correlation vs causation (two things happen together ≠ one causes the other: umbrella sales and dengue cases both rise in the rainy season; the rain causes both), sample size and who was asked, what's missing (a comparison, the other weeks, side effects, who wasn't asked), fact vs opinion, hidden assumptions. Questions to ask: Who wrote it? For whom? Who paid? How many people, and who? Compared with what? What's left out? Common errors: treating 'A study shows…' as proof; accepting a big number as strong evidence without asking what it was compared with; judging the topic from the learner's own opinion instead of judging the evidence in the text.",
+    "Limits: A0–B2 grammar only, and B2 hedging vocabulary only (may, might, suggests, tend to, many / most); hedging as a topic belongs to c1-hedging. No inversion, cleft sentences, subjunctive, impersonal passives ('It is believed that…') or advanced participle clauses in the texts; subject to, at our sole discretion, notwithstanding and shall are phrases to recognise in legal texts, not to use in emails. Don't teach statistics (p-values, confidence intervals), formal logic or the names of fallacies beyond this lesson's six signs of bias, and don't give legal advice: for a real contract, tell learners to ask the company or a lawyer. Typed answers: accept any wording with the same meaning and Indonesian number formats (Rp500.000); an answer in Indonesian shows understanding, but ask for the English word."
+  ],
+  "keyPoints": [
+    {
+      "title": "Specialised texts: abstracts, summaries and small print",
+      "explanation": "Read an academic paper in this order: title, abstract, conclusion, then only the sections you need. An abstract has four parts: aim, method, findings and limitation. An executive summary gives a whole report on one page, often with recommendations. In terms and conditions, scan for the money and the dates (fees, auto-renewal, cancellation), then read those clauses word by word. Recognise the legal phrases subject to, at our sole discretion, notwithstanding and you agree to; in T&Cs, 'may' means the company has the right to.",
+      "examples": [
+        {
+          "en": "This study examines how remote work affects sleep.",
+          "id": "Penelitian ini meneliti bagaimana kerja jarak jauh memengaruhi tidur. (aim = tujuan)"
+        },
+        {
+          "en": "Your plan renews automatically unless you cancel at least 7 days before the renewal date.",
+          "id": "Paketmu diperpanjang otomatis kecuali kamu membatalkan paling lambat 7 hari sebelum tanggal perpanjangan."
+        },
+        {
+          "en": "We may change these fees at our sole discretion.",
+          "id": "Kami berhak mengubah biaya ini sepenuhnya atas keputusan kami sendiri. (may = berhak, bukan mungkin)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Teks khusus: abstrak, ringkasan dan tulisan kecil",
+          "explanation": "Baca paper akademik dengan urutan ini: judul, abstrak, kesimpulan, lalu hanya bagian yang kamu perlukan. Abstrak punya empat bagian: aim (tujuan), method (metode), findings (temuan) dan limitation (keterbatasan). Executive summary (ringkasan eksekutif) memberi seluruh laporan dalam satu halaman, sering dengan rekomendasi. Di syarat dan ketentuan, scan uang dan tanggalnya (biaya, perpanjangan otomatis, pembatalan), lalu baca klausul itu kata demi kata. Kenali frasa hukum subject to (dengan syarat), at our sole discretion (sepenuhnya atas keputusan kami), notwithstanding (terlepas dari) dan you agree to (kamu menyetujui); di S&K, 'may' berarti perusahaan berhak, bukan 'mungkin'."
+        }
+      }
+    },
+    {
+      "title": "The shape of an argument and the writer's bias",
+      "explanation": "An argument has a claim (the main point), reasons (why), evidence (facts and numbers that show it's true), a counter-argument (the other side), a rebuttal (the writer's answer) and a conclusion. Signal words help: because, according to, Some argue that, However, Therefore. Bias shows in loaded words (a reckless plan vs a bold plan), one-sided evidence, cherry-picked numbers, small samples, who paid for a study, and appeals to authority.",
+      "examples": [
+        {
+          "en": "Some argue that the tax will hurt small businesses. However, …",
+          "id": "Ada yang berpendapat pajak itu akan merugikan usaha kecil. Namun, … (argumen tandingan → bantahan)"
+        },
+        {
+          "en": "a reckless plan / a bold plan / a new plan",
+          "id": "rencana yang nekat / rencana yang berani / rencana baru (negatif / positif / netral)"
+        },
+        {
+          "en": "The company claims the app is safe.",
+          "id": "Perusahaan itu mengklaim aplikasinya aman. (claims: penulis meragukannya)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk argumen dan bias penulis",
+          "explanation": "Argumen punya claim (klaim: poin utama), reasons (alasan: mengapa), evidence (bukti: fakta dan angka yang menunjukkan bahwa itu benar), counter-argument (argumen tandingan: pendapat pihak lain), rebuttal (bantahan: jawaban penulis) dan conclusion (kesimpulan). Kata penanda membantu: because, according to, Some argue that, However, Therefore. Bias (keberpihakan) terlihat dari kata bermuatan (a reckless plan = rencana yang nekat vs a bold plan = rencana yang berani), bukti sepihak, angka yang dipilih-pilih, sampel kecil, siapa yang membiayai penelitian, dan berlindung di balik nama besar."
+        }
+      }
+    },
+    {
+      "title": "Reading critically: does the evidence support the claim?",
+      "explanation": "Don't accept 'A study shows…' as proof. Ask: Who wrote it, for whom, and who paid? How many people, and who were they? Compared with what? What's left out? Two things that happen together don't always cause each other (correlation is not causation). Separate facts, which you can check, from opinions, and look for the assumptions behind a claim.",
+      "examples": [
+        {
+          "en": "Umbrella sales and dengue cases both rise in the rainy season.",
+          "id": "Penjualan payung dan kasus DBD sama-sama naik di musim hujan. (korelasi, bukan sebab-akibat: hujan penyebab keduanya)"
+        },
+        {
+          "en": "We asked 12 customers, and 11 loved it.",
+          "id": "Kami bertanya ke 12 pelanggan, dan 11 orang menyukainya. (sampel terlalu kecil)"
+        },
+        {
+          "en": "Who paid for this study?",
+          "id": "Siapa yang membiayai penelitian ini?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Membaca kritis: apakah buktinya mendukung klaimnya?",
+          "explanation": "Jangan terima 'A study shows…' (sebuah penelitian menunjukkan…) sebagai bukti pasti. Tanyakan: siapa yang menulis, untuk siapa, dan siapa yang membayar? Berapa orang, dan siapa saja? Dibandingkan dengan apa? Apa yang tidak disebut? Dua hal yang terjadi bersamaan belum tentu saling menyebabkan (korelasi bukan sebab-akibat). Pisahkan fakta, yang bisa dicek, dari opini, dan cari asumsi di balik sebuah klaim."
+        }
+      }
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "specialised-texts",
+      "prompt": "You find a 30-page research paper about remote work, and you have ten minutes. Apart from the title, which two parts do you read first to decide if it's useful?",
+      "expected": [
+        "the abstract and the conclusion",
+        "abstract and conclusion",
+        "the abstract and conclusion",
+        "abstract and the conclusion",
+        "the conclusion and the abstract",
+        "conclusion and abstract",
+        "abstract conclusion"
+      ],
+      "hint": "One is a short summary at the top; the other is at the end."
+    },
+    {
+      "objectiveId": "specialised-texts",
+      "prompt": "Read: 'Teras Wallet may close any account at its sole discretion.' Who decides if an account is closed? Write a few words.",
+      "expected": [
+        "teras wallet",
+        "the company",
+        "only teras wallet",
+        "teras wallet alone",
+        "only the company",
+        "the company alone",
+        "teras wallet decides",
+        "the company decides",
+        "the e wallet company"
+      ],
+      "hint": "sole = only one; discretion = the freedom to decide."
+    },
+    {
+      "objectiveId": "argument-and-bias",
+      "prompt": "Read: 'Admittedly, the new rule will cost companies money.' Is this sentence the counter-argument or the rebuttal? Write one.",
+      "expected": [
+        "counter argument",
+        "counterargument",
+        "the counter argument",
+        "the counterargument",
+        "a counter argument",
+        "it is the counter argument"
+      ],
+      "hint": "Admittedly = the writer accepts a point from the other side. The writer's answer usually comes next, after However or But."
+    },
+    {
+      "objectiveId": "critical-reading",
+      "prompt": "Read: 'Cities with more coffee shops have higher average salaries.' Does this prove that coffee shops make salaries higher? Write yes or no.",
+      "expected": [
+        "no",
+        "no it doesn't",
+        "no it does not",
+        "no it doesnt",
+        "no not really"
+      ],
+      "hint": "The two things happen together. Could something else, like a big, rich city, cause both?"
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "argument-and-bias",
+      "prompt": "Replace the loaded word with a neutral one: 'The government has slashed the education budget by 5%.' Write one word.",
+      "expected": [
+        "reduced",
+        "cut",
+        "lowered",
+        "decreased",
+        "reduce",
+        "lower"
+      ],
+      "hint": "Which word just says 'made smaller', with no drama?"
+    },
+    {
+      "objectiveId": "critical-reading",
+      "prompt": "An advert says: 'Doctors recommend VitaPlus vitamins.' Write one question a critical reader should ask.",
+      "expected": [
+        "which doctors",
+        "how many doctors",
+        "which doctors recommend it",
+        "how many doctors recommend it",
+        "who paid the doctors",
+        "were the doctors paid",
+        "who are the doctors",
+        "what evidence is there",
+        "who paid for the advert"
+      ],
+      "hint": "Think: who exactly, how many, and who paid?"
+    },
+    {
+      "objectiveId": "specialised-texts",
+      "prompt": "Your phone plan says: 'Your plan renews automatically unless you cancel at least 7 days before the end of the month.' You want to stop at the end of August (31 August). What is the last day you can cancel?",
+      "expected": [
+        "24 august",
+        "august 24",
+        "24th august",
+        "august 24th",
+        "the 24th",
+        "24",
+        "on 24 august",
+        "the 24th of august",
+        "24th"
+      ],
+      "hint": "Count 7 days back from 31 August."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "crt-1",
+      "objectiveId": "specialised-texts",
+      "prompt": "Read this abstract from a public health journal. 'This study examines whether free health checks at work change how often office workers visit a doctor. We collected data from 1,800 employees at 25 companies in Jakarta and Surabaya between 2023 and 2025. Employees who were offered free checks visited a doctor 30% more often than employees who were not, and they were twice as likely to find high blood pressure early.' An abstract usually has four parts: aim, method, findings and limitation. Which part is missing from this abstract? Write one word.",
+      "acceptableAnswers": [
+        "limitation",
+        "the limitation",
+        "limitations",
+        "the limitations",
+        "a limitation",
+        "limitation is missing",
+        "the limitation is missing"
+      ],
+      "rubric": "Correct: limitation: no sentence says what the study could not show (However…, only…, may not apply to…, further research is needed). 'aim' = 0 (the first sentence: This study examines…). 'method' = 0 (We collected data from 1,800 employees…). 'findings' = 0 (30% more often, twice as likely). 'keterbatasan' (the right idea, in Indonesian) = 70."
+    },
+    {
+      "id": "crt-2",
+      "objectiveId": "specialised-texts",
+      "prompt": "Read part of a phone contract. 'SELARAS MOBILE · 24-MONTH PLAN · 5.1 You may cancel this contract at any time in the app or at any Selaras store. 5.2 If you cancel within the first 12 months, you agree to pay an early termination fee of Rp1,200,000. 5.3 If you cancel in months 13 to 24, the fee is Rp500,000. 5.4 No fee applies after month 24. 5.5 The monthly price of Rp150,000 is subject to change with 30 days' notice.' Dimas signed this contract 15 months ago and wants to cancel now. How much is the fee? Write the amount.",
+      "acceptableAnswers": [
+        "rp500 000",
+        "rp 500 000",
+        "500 000",
+        "500000",
+        "rp500000",
+        "rp 500000",
+        "500 000 rupiah",
+        "500000 rupiah",
+        "rp500 thousand",
+        "rp 500 thousand",
+        "500 thousand",
+        "500 thousand rupiah",
+        "five hundred thousand",
+        "five hundred thousand rupiah",
+        "the fee is rp500 000"
+      ],
+      "rubric": "Correct: Rp500,000 in any format (Rp500.000 is fine): 15 months falls in months 13 to 24 (clause 5.3). 'Rp1,200,000' = 0 (only for the first 12 months, 5.2). 'Rp150,000' = 0 (the monthly price). 'nothing' / 'no fee' = 0 (only after month 24). '500' alone = 50 (the right clause, but the amount isn't clear)."
+    },
+    {
+      "id": "crt-3",
+      "objectiveId": "specialised-texts",
+      "prompt": "Read part of an e-wallet's terms of use. 'LUMBUNGPAY PREMIUM · 7.1 Premium costs Rp49,000 a month. 7.2 Your subscription renews automatically every month unless you turn off auto-renewal in Settings at least 5 days before the renewal date. 7.3 We may change the monthly fee at our sole discretion, subject to 30 days' notice by email. 7.4 You can ask for a refund within 14 days of your first payment. 7.5 Notwithstanding clause 7.4, renewal payments are non-refundable.' Sari doesn't want to pay for another month. Her renewal date is 20 March. At least how many days before 20 March must she turn off auto-renewal? Write the number.",
+      "acceptableAnswers": [
+        "5",
+        "five",
+        "5 days",
+        "five days",
+        "at least 5 days",
+        "at least five days",
+        "5 days before",
+        "five days before",
+        "15 march",
+        "march 15",
+        "by 15 march",
+        "by march 15",
+        "15th march",
+        "the 15th of march"
+      ],
+      "rubric": "Correct: 5 (clause 7.2: at least 5 days before the renewal date); the deadline as a date (15 March, or 'by 15 March') = 100 too. '30' = 0 (notice of a price change, 7.3). '14' = 0 (the refund window after the first payment, 7.4). '7' = 0 (the clause number). The right number written in Indonesian ('lima hari') = 80."
+    },
+    {
+      "id": "crt-4",
+      "objectiveId": "argument-and-bias",
+      "prompt": "Read this opinion piece. '(A) Jakarta should make the MRT free for school students. (B) Free travel would help low-income families, because transport takes a large part of their monthly budget. (C) In a survey of 900 parents in East Jakarta, 62% said transport was their biggest school cost. (D) Some argue that the city cannot afford it. (E) However, the cost would be less than 1% of the city's transport budget. (F) For these reasons, free student travel is fair and affordable.' Which part of the argument is sentence (E)? Choose one: claim, reason, evidence, counter-argument, rebuttal, conclusion.",
+      "acceptableAnswers": [
+        "rebuttal",
+        "the rebuttal",
+        "a rebuttal",
+        "rebuttal to the counter argument",
+        "it is the rebuttal",
+        "it's the rebuttal",
+        "e is the rebuttal"
+      ],
+      "rubric": "Correct: rebuttal: after the counter-argument in (D), However introduces the writer's answer to it. 'counter-argument' = 0 (that's D, the other side). 'evidence' = 40 (E contains a number, but its job here is to answer D). 'conclusion' = 0 (that's F: For these reasons). 'claim' = 0 (that's A). 'bantahan' (the right idea, in Indonesian) = 70."
+    },
+    {
+      "id": "crt-5",
+      "objectiveId": "argument-and-bias",
+      "prompt": "Read this news report. 'From June, parking in Bandung's city centre will cost Rp10,000 an hour, up from Rp4,000. The city council says the money will pay for 40 new electric buses. Shop owners in the area have until 15 May to send comments on this greedy plan.' One word in the report is a loaded word: it shows the writer's negative opinion of the plan. Write that word.",
+      "acceptableAnswers": [
+        "greedy",
+        "greedy plan",
+        "this greedy plan",
+        "the word greedy",
+        "it is greedy"
+      ],
+      "rubric": "Correct: greedy (a judgement: the writer suggests the council only wants money). The rest is neutral reporting: the prices, 'up from', 'says', the date. 'plan' = 0 (a neutral word). 'up' or 'says' = 0. 'serakah' (the right meaning, in Indonesian) = 50: the task asks for the word in the text."
+    },
+    {
+      "id": "crt-6",
+      "objectiveId": "critical-reading",
+      "prompt": "Read this post from a parenting website. 'Want better exam results? Buy your child a desk! In a survey of 3,000 high school students in Surabaya, students with their own study desk at home got higher exam marks than students without one. So a desk will improve your child's marks.' The sample is large and the numbers are correct. What is the main problem with the conclusion? Choose one and write it: small sample, cherry-picked numbers, correlation not causation.",
+      "acceptableAnswers": [
+        "correlation not causation",
+        "correlation is not causation",
+        "correlation",
+        "correlation and causation",
+        "correlation vs causation",
+        "correlation versus causation",
+        "correlation not cause",
+        "it is correlation not causation",
+        "it's correlation not causation",
+        "correlation doesn't mean causation",
+        "correlation does not mean causation",
+        "correlation does not equal causation",
+        "it's a correlation not causation",
+        "the desk may not be the cause"
+      ],
+      "rubric": "Correct: correlation not causation: desks and higher marks go together, but the survey doesn't show that the desk causes the higher marks (families who can buy a desk and give a child a quiet room may also pay for books or extra lessons). The same idea in the learner's own words ('the desk may not be the cause') = 100. 'small sample' = 0 (3,000 students is large, and the prompt says so). 'cherry-picked numbers' = 0 (nothing suggests the numbers were chosen selectively). 'korelasi bukan sebab-akibat' (the right idea, in Indonesian) = 70."
+    },
+    {
+      "id": "crt-7",
+      "objectiveId": "critical-reading",
+      "prompt": "Read this news report. 'INSTANT NOODLES ARE A HEALTHY EVERYDAY MEAL, SAYS NEW STUDY. Researchers asked 120 adults to eat instant noodles five times a week for four weeks. At the end, their weight had not changed. The study was paid for by NusaNoodle, a company that makes instant noodles.' The headline says the noodles are 'a healthy everyday meal', but the study measured only one thing. What did it measure? Write one word.",
+      "acceptableAnswers": [
+        "weight",
+        "their weight",
+        "body weight",
+        "the weight",
+        "weight change",
+        "people's weight",
+        "the participants' weight",
+        "the adults' weight",
+        "their body weight"
+      ],
+      "rubric": "Correct: weight: the only thing the study measured. A healthy meal is about much more (salt, blood pressure, nutrients), and four weeks is short, so the evidence doesn't support the headline; the funder (a noodle company) is a second reason to be careful. 'NusaNoodle' = 0 (that's who paid, not what was measured). 'health' = 20 (that's the headline's claim, not what was measured). 'noodles' = 0. 'berat badan' (the right idea, in Indonesian) = 70."
+    }
+  ],
+  "material": [
+    {
+      "id": "abstracts-summaries",
+      "title": "Abstracts and executive summaries",
+      "i18n": {
+        "id": {
+          "title": "Abstrak dan ringkasan eksekutif"
+        }
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "At B2 you learnt to **skim** (the gist), **scan** (one fact) and read **between the lines** (inference), and to use the map of a long report: summary → conclusion → headings. At C1 the texts get **specialised** (written for experts): academic papers, business reports, contracts. The good news: they have an even clearer map.\n\n**An academic paper** has a title, an **abstract** (a summary of about 150–250 words at the top), an introduction, the method, the results, a discussion and a conclusion. Read it in this order:\n- the **title** and the **abstract**: is this paper useful for you?\n- the **conclusion** (or the end of the discussion): what does it all mean?\n- the tables and figures;\n- the method and the detailed results only if you need them.\n\n**An abstract** usually has four parts, and each one has its own signal words:\n- **Aim**: *This study examines / investigates… The aim of this study was to…*\n- **Method**: *We surveyed… Data were collected from… 300 students took part.*\n- **Findings**: *Results show that… We found that… Sales rose by 8%.*\n- **Limitation**: *However, the study only… The results may not apply to… Further research is needed.*",
+          "i18n": {
+            "id": {
+              "text": "Di B2 kamu sudah belajar **skimming** (menangkap inti), **scanning** (mencari satu fakta) dan membaca **yang tersirat** (inferensi), serta memakai \"peta\" laporan panjang: ringkasan → kesimpulan → judul bagian. Di C1 teksnya menjadi **khusus** (specialised: ditulis untuk para ahli): paper akademik, laporan bisnis, kontrak. Kabar baiknya: peta teks seperti ini malah lebih jelas.\n\n**Paper akademik** punya judul, **abstract** (abstrak: ringkasan sekitar 150–250 kata di bagian atas), pendahuluan, metode, hasil, pembahasan (discussion) dan kesimpulan. Baca dengan urutan ini:\n- **judul** dan **abstrak**: apakah paper ini berguna untukmu?\n- **kesimpulan** (atau akhir pembahasan): apa arti semuanya?\n- tabel dan gambar;\n- metode dan hasil yang detail hanya kalau kamu membutuhkannya.\n\n**Abstrak** biasanya punya empat bagian, dan setiap bagian punya kata penandanya sendiri:\n- **Aim** (tujuan): *This study examines / investigates…* (penelitian ini meneliti…) *The aim of this study was to…* (tujuan penelitian ini adalah…)\n- **Method** (metode): *We surveyed…* (kami menyurvei…) *Data were collected from…* (data dikumpulkan dari…) *300 students took part* (300 mahasiswa ikut serta).\n- **Findings** (temuan): *Results show that…* (hasilnya menunjukkan bahwa…) *We found that…* (kami menemukan bahwa…) *Sales rose by 8%.*\n- **Limitation** (keterbatasan): *However, the study only…* (namun, penelitian ini hanya…) *The results may not apply to…* (hasilnya mungkin tidak berlaku untuk…) *Further research is needed* (perlu penelitian lebih lanjut)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "This study examines whether online tutoring improves maths scores in village schools.",
+              "id": "Penelitian ini meneliti apakah bimbingan belajar online meningkatkan nilai matematika di sekolah-sekolah desa.",
+              "note": "aim",
+              "i18n": {
+                "id": {
+                  "note": "tujuan"
+                }
+              }
+            },
+            {
+              "en": "We compared 600 students in 20 schools in East Java over one school year.",
+              "id": "Kami membandingkan 600 siswa di 20 sekolah di Jawa Timur selama satu tahun ajaran.",
+              "note": "method",
+              "i18n": {
+                "id": {
+                  "note": "metode"
+                }
+              }
+            },
+            {
+              "en": "Students with online tutoring scored 9% higher on the final test.",
+              "id": "Siswa yang mendapat bimbingan online mendapat nilai 9% lebih tinggi di ujian akhir.",
+              "note": "findings",
+              "i18n": {
+                "id": {
+                  "note": "temuan"
+                }
+              }
+            },
+            {
+              "en": "However, all the schools had good internet, so the results may not apply to schools without it.",
+              "id": "Namun, semua sekolah itu punya internet yang bagus, jadi hasilnya mungkin tidak berlaku untuk sekolah tanpa internet.",
+              "note": "limitation",
+              "i18n": {
+                "id": {
+                  "note": "keterbatasan"
+                }
+              }
+            },
+            {
+              "en": "The report recommends expanding the programme to 200 schools.",
+              "id": "Laporan itu merekomendasikan perluasan program ke 200 sekolah.",
+              "note": "a recommendation: typical of an executive summary",
+              "i18n": {
+                "id": {
+                  "note": "rekomendasi: khas ringkasan eksekutif"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Executive summary** = a whole business report on one page, for busy managers who may read nothing else. It usually gives the purpose, the key findings and the **recommendations** (what the company or ministry should do next). Read it first, then jump to the section you need.\n**Indonesian link:** you may know *abstrak* from a *skripsi* or a journal article: it's the same thing, with the same four parts.\n**The trap:** the **limitation** is easy to miss: it's short, it comes last, and it often starts with *However*. But it tells you how far you can trust the findings.",
+          "i18n": {
+            "id": {
+              "text": "**Executive summary** (ringkasan eksekutif) = seluruh laporan bisnis dalam satu halaman, untuk manajer sibuk yang mungkin tidak membaca bagian lain. Biasanya berisi tujuan, temuan utama dan **recommendations** (rekomendasi: apa yang sebaiknya dilakukan perusahaan atau kementerian selanjutnya). Baca ini dulu, lalu langsung lompat ke bagian yang kamu butuhkan.\n**Hubungannya dengan bahasa Indonesia:** kamu mungkin kenal *abstrak* dari *skripsi* atau artikel jurnal: sama persis, dengan empat bagian yang sama.\n**Jebakannya:** bagian **limitation** (keterbatasan) gampang terlewat: pendek, letaknya di akhir, dan sering diawali *However* (namun). Padahal bagian ini memberi tahu seberapa jauh kamu bisa memercayai temuannya."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Read this sentence from an abstract: 'Data were collected through interviews with 35 nurses at two hospitals in Surabaya.' Which part of the abstract is it?",
+          "options": [
+            "Aim",
+            "Method",
+            "Findings"
+          ],
+          "answer": 1,
+          "explain": "**Data were collected through interviews with 35 nurses** says **how** the study was done and with whom: that's the method. The aim would say what the study wants to find out (This study examines…), and the findings would give results (Results show…).",
+          "i18n": {
+            "id": {
+              "prompt": "Baca kalimat dari sebuah abstrak ini: 'Data were collected through interviews with 35 nurses at two hospitals in Surabaya.' Ini bagian abstrak yang mana?",
+              "explain": "**Data were collected through interviews with 35 nurses** (data dikumpulkan lewat wawancara dengan 35 perawat) menjelaskan **bagaimana** penelitian dilakukan dan dengan siapa: itu metode. Tujuan (aim) akan menyebut apa yang ingin diketahui (This study examines…), dan temuan (findings) akan memberi hasil (Results show…)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "small-print",
+      "title": "Terms and conditions: the small print",
+      "i18n": {
+        "id": {
+          "title": "Syarat dan ketentuan: tulisan kecilnya"
+        }
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Most people never read the **terms and conditions** (*T&Cs*) of an e-wallet or a phone contract… until a fee appears. You don't need to read every word. **Scan for the money and the dates**: *fee*, *charge*, *Rp*, *refund*, *cancel*, *renew*, *days*, *months*. Then read those **clauses** (the numbered paragraphs, like 5.2) slowly, word by word.\n\nWhat to find:\n- **Cancellation fee** or **early termination fee**: what you pay if you leave before the **minimum term** (the shortest time the contract lasts).\n- **Auto-renewal**: *Your plan renews automatically **unless** you cancel at least 5 days before the renewal date.* **Unless** = if you don't. So if you do nothing, you pay again.\n- **Non-refundable**: you won't get the money back.",
+          "i18n": {
+            "id": {
+              "text": "Kebanyakan orang tidak pernah membaca **syarat dan ketentuan** (terms and conditions, *T&Cs*, di Indonesia *S&K*) dompet digital atau kontrak HP… sampai muncul biaya. Kamu tidak perlu membaca setiap kata. **Scan uang dan tanggalnya**: *fee* (biaya), *charge* (tagihan), *Rp*, *refund* (pengembalian dana), *cancel* (batal), *renew* (perpanjang), *days*, *months*. Lalu baca **klausul** itu (clauses: paragraf bernomor, seperti 5.2) pelan-pelan, kata demi kata.\n\nYang perlu dicari:\n- **Cancellation fee** atau **early termination fee** (biaya pembatalan / penalti putus kontrak): yang kamu bayar kalau berhenti sebelum **minimum term** (masa kontrak minimum).\n- **Auto-renewal** (perpanjangan otomatis): *Your plan renews automatically **unless** you cancel at least 5 days before the renewal date* (paketmu diperpanjang otomatis kecuali kamu membatalkan paling lambat 5 hari sebelum tanggal perpanjangan). **Unless** = kecuali jika. Jadi kalau kamu diam saja, kamu bayar lagi.\n- **Non-refundable** (tidak dapat dikembalikan): uangnya tidak kembali."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "By using the app, you agree to these terms.",
+              "id": "Dengan memakai aplikasi ini, kamu menyetujui syarat-syarat ini.",
+              "note": "you agree to = you accept it, even if you never read it",
+              "i18n": {
+                "id": {
+                  "note": "you agree to = kamu menerimanya, walaupun tidak pernah membacanya"
+                }
+              }
+            },
+            {
+              "en": "You agree to pay all fees on time.",
+              "id": "Kamu setuju untuk membayar semua biaya tepat waktu.",
+              "note": "you agree to + verb = a promise you make",
+              "i18n": {
+                "id": {
+                  "note": "you agree to + kata kerja = janji yang kamu buat"
+                }
+              }
+            },
+            {
+              "en": "We may change the fees, subject to 30 days' notice.",
+              "id": "Kami berhak mengubah biaya, dengan syarat ada pemberitahuan 30 hari sebelumnya.",
+              "note": "subject to = only if this condition is met",
+              "i18n": {
+                "id": {
+                  "note": "subject to = hanya kalau syarat ini dipenuhi"
+                }
+              }
+            },
+            {
+              "en": "Free delivery, subject to availability.",
+              "id": "Gratis ongkir, selama tersedia.",
+              "note": "subject to availability = only if there is stock or space",
+              "i18n": {
+                "id": {
+                  "note": "subject to availability = hanya kalau stok atau tempatnya ada"
+                }
+              }
+            },
+            {
+              "en": "We may close your account at our sole discretion.",
+              "id": "Kami berhak menutup akunmu sepenuhnya atas keputusan kami sendiri.",
+              "note": "at our sole discretion = only we decide, and we don't have to explain",
+              "i18n": {
+                "id": {
+                  "note": "at our sole discretion = hanya kami yang memutuskan, tanpa harus menjelaskan"
+                }
+              }
+            },
+            {
+              "en": "Notwithstanding clause 4.1, promo top-ups are non-refundable.",
+              "id": "Terlepas dari klausul 4.1, top-up promo tidak dapat dikembalikan.",
+              "note": "notwithstanding clause 4.1 = even though 4.1 says something else, this rule wins",
+              "i18n": {
+                "id": {
+                  "note": "notwithstanding clause 4.1 = walaupun 4.1 berkata lain, aturan inilah yang berlaku"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Indonesian trap: *may* isn't *mungkin* here.** In T&Cs, *We may suspend your account* doesn't mean 'maybe we'll suspend it'. It means **we have the right to** (*kami berhak*). In the same way, *You shall pay* = you must pay (*wajib*).\n**Small words that change everything:** *unless*, *notwithstanding* (this rule beats another one), *only*, *not*, *within 14 days*, *at least*.\n**Phrases to recognise, not to use:** *subject to*, *at our sole discretion*, *notwithstanding* and *shall* belong to legal texts; in a normal email, write *depending on*, *we decide*, *even though*, *must*.\n**Reading practice, not legal advice:** for a real contract, ask the company or a lawyer when you're not sure.",
+          "i18n": {
+            "id": {
+              "text": "**Jebakan untuk orang Indonesia: *may* di sini bukan *mungkin*.** Di S&K, *We may suspend your account* bukan berarti 'mungkin kami akan membekukan akunmu'. Artinya **kami berhak** (we have the right to). Begitu juga *You shall pay* = kamu wajib membayar.\n**Kata kecil yang mengubah segalanya:** *unless* (kecuali jika), *notwithstanding* (aturan ini mengalahkan aturan lain), *only* (hanya), *not* (tidak), *within 14 days* (dalam 14 hari), *at least* (paling sedikit / paling lambat).\n**Frasa untuk dikenali, bukan untuk dipakai:** *subject to*, *at our sole discretion*, *notwithstanding* dan *shall* adalah bahasa dokumen hukum; di email biasa, tulis *depending on*, *we decide*, *even though*, *must*.\n**Ini latihan membaca, bukan nasihat hukum:** untuk kontrak sungguhan, tanyakan ke perusahaannya atau ke pengacara kalau kamu ragu."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Read: '6.1 You can cancel at any time. 6.2 If you cancel in the first 12 months, you agree to pay an early termination fee of Rp750,000. 6.3 After 12 months, no fee applies.' Budi signed the contract 18 months ago. How much does he pay to cancel?",
+          "options": [
+            "Rp750,000",
+            "Nothing",
+            "Half the fee: Rp375,000"
+          ],
+          "answer": 1,
+          "explain": "18 months is **after 12 months**, so clause 6.3 applies: **no fee**. Rp750,000 is only for the first 12 months (6.2), and nothing in the text mentions half a fee.",
+          "i18n": {
+            "id": {
+              "prompt": "Baca: '6.1 You can cancel at any time. 6.2 If you cancel in the first 12 months, you agree to pay an early termination fee of Rp750,000. 6.3 After 12 months, no fee applies.' Budi menandatangani kontraknya 18 bulan lalu. Berapa yang harus dia bayar untuk membatalkannya?",
+              "explain": "18 bulan itu **setelah 12 bulan**, jadi yang berlaku klausul 6.3: **tidak ada biaya**. Rp750.000 hanya untuk 12 bulan pertama (6.2), dan teksnya tidak menyebut setengah biaya sama sekali."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "argument-structure",
+      "title": "The shape of an argument",
+      "i18n": {
+        "id": {
+          "title": "Bentuk sebuah argumen"
+        }
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "At B2 you wrote essays with arguments and counter-arguments. Now you take other people's arguments apart. Most opinion articles, reports and proposals have six parts, and **signal words** show you which part you're reading:\n- **Claim**: the writer's main point. *I believe…, …should…, The truth is…*\n- **Reasons**: why the writer thinks so. *because, since, The main reason is…, Firstly,…*\n- **Evidence**: facts, numbers, examples or research that show a reason is true. *According to…, A survey of 2,000 drivers found…, For example,…, Figures show…*\n- **Counter-argument**: the other side. *Some argue that…, Critics say…, Admittedly,…, It is true that…*\n- **Rebuttal**: the writer's answer to the other side. *However,…, But this ignores…, Yet…*\n- **Conclusion**: the claim again, now with support. *Therefore,…, For these reasons,…, In short,…*",
+          "i18n": {
+            "id": {
+              "text": "Di B2 kamu sudah menulis esai dengan argumen dan argumen tandingan. Sekarang kamu membongkar argumen orang lain. Kebanyakan artikel opini, laporan dan proposal punya enam bagian, dan **kata penanda** (signal words) menunjukkan bagian mana yang sedang kamu baca:\n- **Claim** (klaim, pokok pendapat): poin utama penulis. *I believe…* (saya yakin…), *…should…* (…sebaiknya…), *The truth is…* (kenyataannya…)\n- **Reasons** (alasan): mengapa penulis berpendapat begitu. *because, since* (karena), *The main reason is…* (alasan utamanya…), *Firstly,…* (pertama,…)\n- **Evidence** (bukti): fakta, angka, contoh atau penelitian yang menunjukkan bahwa alasan itu benar. *According to…* (menurut…), *A survey of 2,000 drivers found…* (survei terhadap 2.000 pengemudi menemukan…), *For example,…*, *Figures show…* (angka-angka menunjukkan…)\n- **Counter-argument** (argumen tandingan): pendapat pihak lain. *Some argue that…* (ada yang berpendapat…), *Critics say…* (para pengkritik bilang…), *Admittedly,…* (memang, harus diakui…), *It is true that…* (memang benar bahwa…)\n- **Rebuttal** (bantahan): jawaban penulis terhadap pihak lain. *However,…* (namun), *But this ignores…* (tapi ini mengabaikan…), *Yet…* (akan tetapi)\n- **Conclusion** (kesimpulan): klaimnya lagi, sekarang dengan dukungan. *Therefore,…* (oleh karena itu), *For these reasons,…* (karena alasan-alasan ini), *In short,…* (singkatnya)"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Jakarta should ban plastic bags in all shops.",
+              "id": "Jakarta sebaiknya melarang kantong plastik di semua toko.",
+              "note": "claim",
+              "i18n": {
+                "id": {
+                  "note": "klaim"
+                }
+              }
+            },
+            {
+              "en": "Plastic bags block drains, and blocked drains make floods worse.",
+              "id": "Kantong plastik menyumbat saluran air, dan saluran yang tersumbat memperparah banjir.",
+              "note": "reason: why",
+              "i18n": {
+                "id": {
+                  "note": "alasan: mengapa"
+                }
+              }
+            },
+            {
+              "en": "In one district, a clean-up team found that 40% of the rubbish in the drains was plastic bags.",
+              "id": "Di satu kecamatan, tim kebersihan menemukan bahwa 40% sampah di saluran air adalah kantong plastik.",
+              "note": "evidence: a number that shows it",
+              "i18n": {
+                "id": {
+                  "note": "bukti: angka yang menunjukkannya"
+                }
+              }
+            },
+            {
+              "en": "Some argue that shoppers will find a ban inconvenient.",
+              "id": "Ada yang berpendapat bahwa pembeli akan merasa larangan itu merepotkan.",
+              "note": "counter-argument: the other side",
+              "i18n": {
+                "id": {
+                  "note": "argumen tandingan: pendapat pihak lain"
+                }
+              }
+            },
+            {
+              "en": "However, most people get used to bringing their own bag within a few weeks.",
+              "id": "Namun, kebanyakan orang terbiasa membawa tas sendiri dalam beberapa minggu.",
+              "note": "rebuttal: the writer's answer",
+              "i18n": {
+                "id": {
+                  "note": "bantahan: jawaban penulis"
+                }
+              }
+            },
+            {
+              "en": "For these reasons, a ban is a simple and effective step.",
+              "id": "Karena alasan-alasan ini, larangan adalah langkah yang sederhana dan efektif.",
+              "note": "conclusion",
+              "i18n": {
+                "id": {
+                  "note": "kesimpulan"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Two common mix-ups.**\n- **Reason or evidence?** A **reason** says *why*; **evidence** shows it's true with data, an example or research. *Plastic bags block drains* (reason) → *40% of the rubbish was plastic bags* (evidence).\n- **Counter-argument or rebuttal?** The **counter-argument** is the other side's point; the **rebuttal** is the writer's answer, usually right after it, with *However* or *But*.\n**The trap:** don't take the counter-argument as the writer's view. *Some argue that…* is someone else speaking. Indonesian works the same way: in *Memang…, tetapi…*, *memang* gives the other side and *tetapi* gives the writer's answer.",
+          "i18n": {
+            "id": {
+              "text": "**Dua hal yang sering tertukar.**\n- **Alasan atau bukti?** **Alasan** (reason) menjawab *mengapa*; **bukti** (evidence) menunjukkan bahwa itu benar dengan data, contoh atau penelitian. *Plastic bags block drains* (alasan) → *40% of the rubbish was plastic bags* (bukti).\n- **Argumen tandingan atau bantahan?** **Counter-argument** adalah poin pihak lain; **rebuttal** adalah jawaban penulis, biasanya tepat sesudahnya, dengan *However* atau *But*.\n**Jebakannya:** jangan anggap argumen tandingan sebagai pendapat penulis. *Some argue that…* adalah orang lain yang bicara. Bahasa Indonesia juga sama: dalam *Memang…, tetapi…*, *memang* memberi pendapat pihak lain dan *tetapi* memberi jawaban penulis."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Read: 'Critics say the new tax will force small cafés to close.' Which part of an argument is this?",
+          "options": [
+            "Evidence",
+            "Counter-argument",
+            "Conclusion"
+          ],
+          "answer": 1,
+          "explain": "**Critics say…** reports the other side's view: a counter-argument. It has no number, example or research, so it isn't evidence, and a conclusion would repeat the writer's own claim (Therefore…, For these reasons…).",
+          "i18n": {
+            "id": {
+              "prompt": "Baca: 'Critics say the new tax will force small cafés to close.' Ini bagian argumen yang mana?",
+              "explain": "**Critics say…** (para pengkritik bilang…) melaporkan pendapat pihak lain: argumen tandingan. Tidak ada angka, contoh atau penelitian, jadi bukan bukti, dan kesimpulan akan mengulang klaim penulis sendiri (Therefore…, For these reasons…)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "bias",
+      "title": "Spotting bias",
+      "i18n": {
+        "id": {
+          "title": "Mengenali bias"
+        }
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**Bias** = the writer leans to one side. A biased text can contain only true facts: the bias is in **which facts** the writer chooses and **which words** they use. Six signs:\n- **Loaded words**: words that carry a judgement. *a reckless plan* (negative) vs *a bold plan* (positive) vs *a new plan* (neutral). Also *slashed* vs *reduced*, *stubborn* vs *determined*, *claims* or *admits* vs *says*.\n- **One-sided evidence**: only the facts that help the writer's side; the other side gets no numbers.\n- **Who funded it**: *a study paid for by a sugar company* finds that sugar is safe. It isn't automatically wrong, but read it with care.\n- **Cherry-picked numbers**: only the best month, or a start year chosen to make a change look big.\n- **Generalisations from small samples**: *We asked 15 users, so Indonesians love our app.*\n- **Appeal to authority**: *A famous actor says this vitamin works* (an actor isn't a doctor); *Experts agree…* (which experts? how many?).",
+          "i18n": {
+            "id": {
+              "text": "**Bias** (keberpihakan, berat sebelah) = penulis condong ke satu sisi. Teks yang bias bisa saja hanya berisi fakta yang benar: biasnya ada pada **fakta mana** yang dipilih penulis dan **kata apa** yang dipakainya. Enam tandanya:\n- **Loaded words** (kata bermuatan): kata yang membawa penilaian. *a reckless plan* (rencana yang nekat: negatif) vs *a bold plan* (rencana yang berani: positif) vs *a new plan* (rencana baru: netral). Juga *slashed* (dipangkas habis) vs *reduced* (dikurangi), *stubborn* (keras kepala) vs *determined* (teguh), *claims* (mengklaim) atau *admits* (mengakui) vs *says* (mengatakan).\n- **One-sided evidence** (bukti sepihak): hanya fakta yang membantu pihak penulis; pihak lain tidak diberi angka.\n- **Who funded it** (siapa yang membiayai): *a study paid for by a sugar company* (penelitian yang dibiayai perusahaan gula) menemukan bahwa gula aman. Belum tentu salah, tapi bacalah dengan hati-hati.\n- **Cherry-picked numbers** (angka yang dipilih-pilih): hanya bulan terbaik, atau tahun awal yang dipilih supaya perubahannya terlihat besar.\n- **Generalisasi dari sampel kecil**: *We asked 15 users, so Indonesians love our app* (kami bertanya ke 15 pengguna, jadi orang Indonesia suka aplikasi kami).\n- **Appeal to authority** (berlindung di balik nama besar): *A famous actor says this vitamin works* (aktor bukan dokter); *Experts agree…* (para ahli sepakat… ahli yang mana? berapa orang?)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "The council has reduced the library budget.",
+              "id": "Dewan kota mengurangi anggaran perpustakaan.",
+              "note": "neutral",
+              "i18n": {
+                "id": {
+                  "note": "netral"
+                }
+              }
+            },
+            {
+              "en": "The council has slashed the library budget.",
+              "id": "Dewan kota memangkas habis anggaran perpustakaan.",
+              "note": "loaded: slashed = cut a lot, carelessly",
+              "i18n": {
+                "id": {
+                  "note": "bermuatan: slashed = dipotong banyak, sembarangan"
+                }
+              }
+            },
+            {
+              "en": "The company says the app is safe.",
+              "id": "Perusahaan itu mengatakan aplikasinya aman.",
+              "note": "neutral",
+              "i18n": {
+                "id": {
+                  "note": "netral"
+                }
+              }
+            },
+            {
+              "en": "The company claims the app is safe.",
+              "id": "Perusahaan itu mengklaim aplikasinya aman.",
+              "note": "claims: the writer has doubts",
+              "i18n": {
+                "id": {
+                  "note": "claims: penulis meragukannya"
+                }
+              }
+            },
+            {
+              "en": "Sales rose 40% in December.",
+              "id": "Penjualan naik 40% pada bulan Desember.",
+              "note": "maybe cherry-picked: what about the other eleven months?",
+              "i18n": {
+                "id": {
+                  "note": "mungkin dipilih-pilih: bagaimana dengan sebelas bulan lainnya?"
+                }
+              }
+            },
+            {
+              "en": "Experts agree that the new diet works.",
+              "id": "Para ahli sepakat bahwa diet baru itu berhasil.",
+              "note": "appeal to authority: which experts?",
+              "i18n": {
+                "id": {
+                  "note": "berlindung di balik nama besar: ahli yang mana?"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Loaded words can be positive too**: *bold*, *visionary*, *a breakthrough*. Press releases love them.\n**Not every strong word is bias.** *The fire destroyed 40 homes* is simply accurate. Ask: would a neutral reporter use this word for these facts?\n**Bias isn't lying.** A one-sided text can be completely true; it just doesn't show you the whole picture.\n**Indonesian link:** you know this from headlines: *pemerintah menggelontorkan dana* sounds bigger and more dramatic than *pemerintah menyediakan dana*.",
+          "i18n": {
+            "id": {
+              "text": "**Kata bermuatan bisa juga positif**: *bold* (berani), *visionary* (visioner), *a breakthrough* (terobosan). Siaran pers suka sekali kata-kata ini.\n**Tidak setiap kata yang kuat itu bias.** *The fire destroyed 40 homes* (kebakaran menghancurkan 40 rumah) memang akurat. Tanyakan: apakah wartawan yang netral akan memakai kata ini untuk fakta-fakta ini?\n**Bias bukan berbohong.** Teks yang sepihak bisa saja benar semua; teks itu hanya tidak menunjukkan gambaran lengkapnya.\n**Hubungannya dengan bahasa Indonesia:** kamu tahu ini dari judul berita: *pemerintah menggelontorkan dana* terdengar lebih besar dan lebih dramatis daripada *pemerintah menyediakan dana*."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which sentence is neutral?",
+          "options": [
+            "The mayor's stubborn plan will close Jalan Braga to cars.",
+            "The mayor's plan will close Jalan Braga to cars.",
+            "The mayor's bold plan will close Jalan Braga to cars."
+          ],
+          "answer": 1,
+          "explain": "Only the second sentence gives the facts without a judgement. **stubborn** is a negative loaded word and **bold** is a positive one: both show the writer's opinion of the plan.",
+          "i18n": {
+            "id": {
+              "prompt": "Kalimat mana yang netral?",
+              "explain": "Hanya kalimat kedua yang memberi fakta tanpa penilaian. **stubborn** (keras kepala) adalah kata bermuatan negatif dan **bold** (berani) bermuatan positif: keduanya menunjukkan pendapat penulis tentang rencana itu."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "critical-reading",
+      "title": "Reading critically: does the evidence support the claim?",
+      "i18n": {
+        "id": {
+          "title": "Membaca kritis: apakah buktinya mendukung klaimnya?"
+        }
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Reading critically doesn't mean being negative. It means checking that the **evidence** is strong enough for the **claim**. Four checks:\n- **Correlation is not causation.** Two things that happen together don't always cause each other. *Umbrella sales and dengue cases both rise in the rainy season*: umbrellas don't cause dengue; the rain causes both.\n- **Sample size and who was asked.** 15 people at a launch party can't speak for millions of Indonesians. Thousands of people chosen at random tell you much more.\n- **What's missing?** A comparison (*compared with what?*), the other months, the people who stopped using it, the side effects.\n- **Fact or opinion?** A fact can be checked (*The fee is Rp49,000*). An opinion is a judgement (*The fee is fair*). Also look for **assumptions**: beliefs the writer doesn't say but needs. *We only hire graduates of top universities because they make the best employees* assumes that a university's name shows how good someone is at a job.",
+          "i18n": {
+            "id": {
+              "text": "Membaca kritis bukan berarti bersikap negatif. Artinya mengecek apakah **bukti** (evidence) cukup kuat untuk **klaim**-nya. Empat pengecekan:\n- **Correlation is not causation** (korelasi bukan sebab-akibat). Dua hal yang terjadi bersamaan belum tentu saling menyebabkan. *Umbrella sales and dengue cases both rise in the rainy season* (penjualan payung dan kasus DBD sama-sama naik di musim hujan): payung tidak menyebabkan DBD; hujanlah penyebab keduanya.\n- **Ukuran sampel dan siapa yang ditanya.** 15 orang di acara peluncuran tidak bisa mewakili jutaan orang Indonesia. Ribuan orang yang dipilih secara acak memberi tahu jauh lebih banyak.\n- **Apa yang tidak ada?** Pembanding (*compared with what?* = dibandingkan dengan apa?), bulan-bulan lainnya, orang yang berhenti memakainya, efek sampingnya.\n- **Fakta atau opini?** Fakta bisa dicek (*The fee is Rp49,000*). Opini adalah penilaian (*The fee is fair* = biayanya wajar). Cari juga **asumsi** (assumptions): keyakinan yang tidak ditulis penulis tetapi dibutuhkan argumennya. *We only hire graduates of top universities because they make the best employees* (kami hanya merekrut lulusan kampus top karena mereka karyawan terbaik) berasumsi bahwa nama kampus menunjukkan seberapa bagus seseorang bekerja."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Cities with more gyms have less heart disease.",
+              "id": "Kota yang punya lebih banyak tempat fitnes punya lebih sedikit penyakit jantung.",
+              "note": "correlation: richer cities may have both",
+              "i18n": {
+                "id": {
+                  "note": "korelasi: kota yang lebih kaya mungkin punya keduanya"
+                }
+              }
+            },
+            {
+              "en": "We asked 12 customers, and 11 loved it.",
+              "id": "Kami bertanya ke 12 pelanggan, dan 11 orang menyukainya.",
+              "note": "the sample is too small",
+              "i18n": {
+                "id": {
+                  "note": "sampelnya terlalu kecil"
+                }
+              }
+            },
+            {
+              "en": "Our students' scores rose 20% after the new course.",
+              "id": "Nilai siswa kami naik 20% setelah kursus baru itu.",
+              "note": "compared with what? Did other students' scores rise too?",
+              "i18n": {
+                "id": {
+                  "note": "dibandingkan dengan apa? Apakah nilai siswa lain juga naik?"
+                }
+              }
+            },
+            {
+              "en": "The fee is Rp49,000 a month.",
+              "id": "Biayanya Rp49.000 per bulan.",
+              "note": "fact: you can check it",
+              "i18n": {
+                "id": {
+                  "note": "fakta: bisa dicek"
+                }
+              }
+            },
+            {
+              "en": "The fee is fair for what you get.",
+              "id": "Biayanya wajar untuk apa yang kamu dapat.",
+              "note": "opinion: a judgement",
+              "i18n": {
+                "id": {
+                  "note": "opini: sebuah penilaian"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Six questions to ask any text:** Who wrote it? For whom? Who paid? How many people, and who were they? Compared with what? What's left out?\n**The trap:** *A study shows…* isn't proof. One study **suggests**; many good studies together make a strong case. Also watch for a jump from *may* in the study to *will* in the headline.\n**Good habit:** before you share a news story in a WhatsApp group, ask the six questions. It takes one minute.",
+          "i18n": {
+            "id": {
+              "text": "**Enam pertanyaan untuk setiap teks:** Who wrote it? (siapa yang menulis?) For whom? (untuk siapa?) Who paid? (siapa yang membayar?) How many people, and who were they? (berapa orang, dan siapa saja?) Compared with what? (dibandingkan dengan apa?) What's left out? (apa yang tidak disebut?)\n**Jebakannya:** *A study shows…* (sebuah penelitian menunjukkan…) bukan bukti pasti. Satu penelitian hanya **mengindikasikan** (suggests); banyak penelitian yang bagus bersama-sama baru membuat argumen yang kuat. Perhatikan juga loncatan dari *may* (mungkin) di penelitian menjadi *will* (pasti akan) di judul berita.\n**Kebiasaan baik:** sebelum membagikan berita di grup WhatsApp, ajukan enam pertanyaan itu. Cuma butuh satu menit."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "An advert says: 'Our students' scores rose 20% after our new course!' Which question matters most?",
+          "options": [
+            "Compared with what? Did students without the course improve too?",
+            "Is 20% a big number?",
+            "Is the advert written in good English?"
+          ],
+          "answer": 0,
+          "explain": "A rise means little without a **comparison**: if students without the course also improved by 20%, the course did nothing special. Whether 20% sounds big, or how well the advert is written, doesn't tell you if the evidence supports the claim.",
+          "i18n": {
+            "id": {
+              "prompt": "Sebuah iklan berkata: 'Our students' scores rose 20% after our new course!' Pertanyaan mana yang paling penting?",
+              "explain": "Kenaikan tidak banyak artinya tanpa **pembanding**: kalau siswa yang tidak ikut kursus juga naik 20%, kursus itu tidak istimewa. Apakah 20% terdengar besar, atau seberapa bagus bahasa iklannya, tidak memberi tahu apakah buktinya mendukung klaimnya."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "suggestedQuestions": [
+    "What should I read first in an academic paper?",
+    "What does 'notwithstanding' mean in a contract?",
+    "What's the difference between a counter-argument and a rebuttal?",
+    "How can I tell if the evidence in a study is strong enough?"
+  ],
+  "flashcards": [
+    {
+      "front": "empat bagian abstrak",
+      "back": "aim · method · findings · limitation"
+    },
+    {
+      "front": "sepenuhnya atas keputusan kami (di S&K)",
+      "back": "at our sole discretion"
+    },
+    {
+      "front": "dengan syarat / tergantung pada (di S&K)",
+      "back": "subject to (subject to 30 days' notice)"
+    },
+    {
+      "front": "terlepas dari klausul X (aturan ini yang berlaku)",
+      "back": "notwithstanding clause X"
+    },
+    {
+      "front": "diperpanjang otomatis kecuali kamu membatalkan",
+      "back": "renews automatically unless you cancel"
+    },
+    {
+      "front": "argumen tandingan → bantahan",
+      "back": "counter-argument (Some argue that…) → rebuttal (However, …)"
+    },
+    {
+      "front": "kata bermuatan: nekat / berani / netral",
+      "back": "loaded words: a reckless plan / a bold plan / a new plan"
+    },
+    {
+      "front": "korelasi bukan sebab-akibat",
+      "back": "correlation is not causation"
+    }
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "The state of the world (C1 reading)",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/c1/state-world",
+      "source": "British Council LearnEnglish",
+      "note": "A C1 reading text that asks whether the statistics really support the gloomy picture of the world in the news (population, poverty, violence), with comprehension tasks and a worksheet. Good practice in checking a claim against evidence.",
+      "i18n": {
+        "id": {
+          "note": "Teks bacaan C1 yang mempertanyakan apakah statistik benar-benar mendukung gambaran dunia yang suram di berita (jumlah penduduk, kemiskinan, kekerasan), dengan soal pemahaman dan lembar kerja. Latihan yang bagus untuk mengecek klaim terhadap buktinya."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Evaluating Evidence: Crash Course Navigating Digital Information #6",
+      "url": "https://www.youtube.com/watch?v=hxhbOvR2TGk",
+      "source": "CrashCourse (YouTube)",
+      "note": "How to tell strong evidence from weak evidence online, and why evidence that looks convincing may still not support the claim. Fast, native-speaker English for a general audience: turn on the captions if you need them.",
+      "i18n": {
+        "id": {
+          "note": "Cara membedakan bukti yang kuat dan yang lemah di internet, dan mengapa bukti yang terlihat meyakinkan belum tentu mendukung klaimnya. Bahasa Inggris penutur asli yang cepat untuk penonton umum: nyalakan teks (captions) kalau perlu."
+        }
+      }
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Selamat datang di membaca level C1! Di B2 kamu sudah skimming, scanning dan membaca yang tersirat. Sekarang kamu menghadapi teks khusus: abstrak akademik, ringkasan eksekutif, dan tulisan kecil di syarat dan ketentuan dompet digital atau kontrak HP. Kamu juga belajar melihat bagaimana sebuah argumen dibangun, di mana bias penulis terlihat, dan apakah buktinya benar-benar mendukung klaimnya.",
+      "suggestedQuestions": [
+        "Apa yang sebaiknya kubaca pertama di paper akademik?",
+        "Apa arti 'notwithstanding' di sebuah kontrak?",
+        "Apa bedanya counter-argument dan rebuttal?",
+        "Bagaimana aku tahu apakah bukti di sebuah penelitian cukup kuat?"
+      ],
+      "assessment": {
+        "crt-1": "Baca abstrak dari sebuah jurnal kesehatan masyarakat ini. 'This study examines whether free health checks at work change how often office workers visit a doctor. We collected data from 1,800 employees at 25 companies in Jakarta and Surabaya between 2023 and 2025. Employees who were offered free checks visited a doctor 30% more often than employees who were not, and they were twice as likely to find high blood pressure early.' Abstrak biasanya punya empat bagian: aim, method, findings dan limitation. Bagian mana yang tidak ada di abstrak ini? Tulis satu kata dalam bahasa Inggris.",
+        "crt-2": "Baca bagian kontrak HP ini. 'SELARAS MOBILE · 24-MONTH PLAN · 5.1 You may cancel this contract at any time in the app or at any Selaras store. 5.2 If you cancel within the first 12 months, you agree to pay an early termination fee of Rp1,200,000. 5.3 If you cancel in months 13 to 24, the fee is Rp500,000. 5.4 No fee applies after month 24. 5.5 The monthly price of Rp150,000 is subject to change with 30 days' notice.' Dimas menandatangani kontrak ini 15 bulan lalu dan ingin membatalkannya sekarang. Berapa biayanya? Tulis jumlahnya.",
+        "crt-3": "Baca bagian syarat penggunaan sebuah dompet digital. 'LUMBUNGPAY PREMIUM · 7.1 Premium costs Rp49,000 a month. 7.2 Your subscription renews automatically every month unless you turn off auto-renewal in Settings at least 5 days before the renewal date. 7.3 We may change the monthly fee at our sole discretion, subject to 30 days' notice by email. 7.4 You can ask for a refund within 14 days of your first payment. 7.5 Notwithstanding clause 7.4, renewal payments are non-refundable.' Sari tidak mau membayar untuk bulan berikutnya. Tanggal perpanjangannya 20 Maret. Paling sedikit berapa hari sebelum 20 Maret dia harus mematikan perpanjangan otomatis? Tulis angkanya.",
+        "crt-4": "Baca artikel opini ini. '(A) Jakarta should make the MRT free for school students. (B) Free travel would help low-income families, because transport takes a large part of their monthly budget. (C) In a survey of 900 parents in East Jakarta, 62% said transport was their biggest school cost. (D) Some argue that the city cannot afford it. (E) However, the cost would be less than 1% of the city's transport budget. (F) For these reasons, free student travel is fair and affordable.' Kalimat (E) bagian argumen yang mana? Pilih satu dan tulis dalam bahasa Inggris: claim, reason, evidence, counter-argument, rebuttal, conclusion.",
+        "crt-5": "Baca laporan berita ini. 'From June, parking in Bandung's city centre will cost Rp10,000 an hour, up from Rp4,000. The city council says the money will pay for 40 new electric buses. Shop owners in the area have until 15 May to send comments on this greedy plan.' Satu kata di laporan ini adalah kata bermuatan (loaded word): kata itu menunjukkan pendapat negatif penulis tentang rencana tersebut. Tulis kata itu.",
+        "crt-6": "Baca unggahan dari sebuah situs parenting ini. 'Want better exam results? Buy your child a desk! In a survey of 3,000 high school students in Surabaya, students with their own study desk at home got higher exam marks than students without one. So a desk will improve your child's marks.' Sampelnya besar dan angkanya benar. Apa masalah utama dari kesimpulannya? Pilih satu dan tulis dalam bahasa Inggris: small sample, cherry-picked numbers, correlation not causation.",
+        "crt-7": "Baca laporan berita ini. 'INSTANT NOODLES ARE A HEALTHY EVERYDAY MEAL, SAYS NEW STUDY. Researchers asked 120 adults to eat instant noodles five times a week for four weeks. At the end, their weight had not changed. The study was paid for by NusaNoodle, a company that makes instant noodles.' Judulnya bilang mi itu 'a healthy everyday meal' (makanan sehat untuk sehari-hari), tetapi penelitiannya hanya mengukur satu hal. Apa yang diukur? Tulis satu kata dalam bahasa Inggris."
+      }
+    }
+  }
+}
