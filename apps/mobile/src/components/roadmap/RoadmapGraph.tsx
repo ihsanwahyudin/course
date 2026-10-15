@@ -78,12 +78,19 @@ export function RoadmapGraph({ course, nodes, levels, width, wide, nextNodeId }:
   const layout = useMemo(() => layoutRoadmap(nodes, levels, width, wide), [nodes, levels, width, wide]);
   const byId = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
 
+  // Keep the map readable with ~200 nodes: draw links inside a level, links
+  // across levels only between ready lessons, and none into checkpoints
+  // (they close their level). Every prerequisite is listed on the node page.
   const edges = nodes.flatMap((n) =>
-    n.prerequisiteIds.map((p) => {
-      const from = byId.get(p)!;
-      const active = from.status === 'mastered' && unlocked(n);
-      return { key: `${p}->${n.id}`, d: edgePath(layout.boxes[p], layout.boxes[n.id]), active, soon: n.status === 'coming_soon' };
-    }),
+    n.strand === 'CK'
+      ? []
+      : n.prerequisiteIds
+          .map((p) => byId.get(p)!)
+          .filter((from) => from.level === n.level || (from.status !== 'coming_soon' && n.status !== 'coming_soon'))
+          .map((from) => {
+            const active = from.status === 'mastered' && unlocked(n);
+            return { key: `${from.id}->${n.id}`, d: edgePath(layout.boxes[from.id], layout.boxes[n.id]), active, soon: n.status === 'coming_soon' };
+          }),
   );
 
   return (

@@ -228,7 +228,9 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
   - `<level>.json`: the roadmap nodes for each level.
   - `lessons/<nodeId>.json`: content for every node marked `ready`.
 - At startup the API validates every course: unique slugs and IDs, valid prerequisites, no cycles, a ready root, and assessment coverage for every objective. It refuses to start if a course is broken.
-- English has 59 nodes across A0–C2. Seven have full lessons: alphabet & sounds, pronouns, common vocabulary, basic sentences, *to be*, simple present, and questions. The rest show as **Coming soon**.
+- English follows a reviewed CEFR roadmap (version 2026.11.0): **194 nodes** across A0–C2, each with a skill **strand** (GR grammar, VO vocabulary, PR pronunciation, LI listening, RE reading, SP speaking, WR writing, FN real-life situations, ME mediation, CK checkpoint), a CEFR-style **can-do** statement, an estimated study time and, for grammar/vocabulary/pronunciation, the **common mistakes** of Indonesian learners (shown on the node page and given to the tutor). Each level ends with a checkpoint node. References: CEFR + Companion Volume 2020, British Council–EAQUALS Core Inventory, English Grammar/Vocabulary Profile, Oxford 3000/5000, Academic Word List, Cambridge English Qualifications and IELTS.
+- Seven nodes have full lessons: alphabet & sounds, pronouns, common vocabulary, basic sentences, *to be*, simple present, and questions. The rest show as **Coming soon**. Basic Sentences keeps its old prerequisites until *First Sentences with Be* is written, so no ready lesson waits behind an unwritten one.
+- **Test-prep tracks** (TOEFL ITP, TOEIC, IELTS, TOEFL iBT) are separate coming-soon courses whose roadmaps follow each test's current official format (see each course's README for sources). The English roadmap ends with a "Continue with these tracks" box, and track lessons link to the English lessons they build on.
 - **Adding a course:** copy the `english` folder structure, write `course.json` and the level files, and run the Go tests. The new course then appears in the catalog automatically.
 
 ## Known limitations

@@ -50,7 +50,16 @@ export type RoadmapNode = {
   successorIds: string[];
   /** Tagged for the learner's onboarding goal. */
   recommended: boolean;
+  /** Skill the node trains: GR, VO, PR, LI, RE, SP, WR, FN, ME, CK. */
+  strand?: Strand;
+  /** CEFR-style "Can …" statement. */
+  canDo?: string;
+  estimatedMinutes?: number;
+  /** Typical mistakes of Indonesian learners. */
+  commonErrors?: { wrong: string; right: string }[];
 };
+
+export type Strand = 'GR' | 'VO' | 'PR' | 'LI' | 'RE' | 'SP' | 'WR' | 'FN' | 'ME' | 'CK';
 
 export type User = { id: string; email: string; displayName: string; nativeLanguage: string; locale: 'en' | 'id'; createdAt: string; memoryEnabled: boolean };
 

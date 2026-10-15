@@ -1,36 +1,65 @@
 {
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "level": "C1",
   "title": "Advanced",
-  "description": "Optional advanced track: flexible, precise language for complex topics.",
+  "description": "Understand long, demanding texts and their implied meaning, express yourself fluently and flexibly for social, academic and professional purposes, and write well-structured text on complex topics.",
+  "i18n": {
+    "id": {
+      "title": "Mahir",
+      "description": "Memahami teks panjang yang menantang beserta makna tersiratnya, berekspresi lancar dan fleksibel untuk keperluan sosial, akademik dan profesional, serta menulis teks terstruktur tentang topik kompleks."
+    }
+  },
   "nodes": [
     {
       "id": "c1-inversion",
       "level": "C1",
       "title": "Inversion for Emphasis",
-      "summary": "Never have I…, Not only… but also.",
+      "summary": "Use negative inversion (Never have I…, Not only… but also) and inverted conditionals (Had I known…, Should you need…) for emphasis.",
+      "strand": "GR",
+      "canDo": "Can use inversion after negative expressions and in conditionals to add emphasis and formality.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "b2-third-conditional"
       ],
       "objectives": [
         {
           "id": "use-negative-inversion",
-          "text": "Use negative inversion for emphasis"
+          "text": "Use negative inversion for emphasis (Never have I…, Not only… but also…, Rarely do we…)"
         },
         {
           "id": "use-inverted-conditionals",
-          "text": "Use inverted conditionals"
+          "text": "Use inverted conditionals (Had I known…, Should you need…, Were it not for…)"
+        },
+        {
+          "id": "choose-when-to-invert",
+          "text": "Recognise when inversion suits the context (formal writing, speeches) and when it sounds unnatural"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Never I have seen such a mess.",
+          "right": "Never have I seen such a mess."
+        },
+        {
+          "wrong": "Not only she speaks French, but also Spanish.",
+          "right": "Not only does she speak French, but she also speaks Spanish."
+        },
+        {
+          "wrong": "If had I known, I would have come.",
+          "right": "Had I known, I would have come."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Inversi untuk Penekanan",
-          "summary": "Never have I…, Not only… but also.",
+          "summary": "Memakai inversi negatif (Never have I…, Not only… but also) dan conditional dengan inversi (Had I known…, Should you need…) untuk penekanan.",
+          "canDo": "Bisa memakai inversi setelah ungkapan negatif dan dalam conditional untuk memberi penekanan dan kesan formal.",
           "objectives": {
-            "use-negative-inversion": "Menggunakan inversi negatif untuk penekanan",
-            "use-inverted-conditionals": "Menggunakan conditional dengan inversi"
+            "use-negative-inversion": "Memakai inversi negatif untuk penekanan (Never have I…, Not only… but also…, Rarely do we…)",
+            "use-inverted-conditionals": "Memakai conditional dengan inversi (Had I known…, Should you need…, Were it not for…)",
+            "choose-when-to-invert": "Mengenali kapan inversi cocok (tulisan formal, pidato) dan kapan terdengar tidak alami"
           }
         }
       }
@@ -39,24 +68,729 @@
       "id": "c1-cleft-sentences",
       "level": "C1",
       "title": "Cleft Sentences",
-      "summary": "What I need is…, It was… that…",
+      "summary": "Highlight key information with what-clefts, it-clefts and all/the thing that… structures.",
+      "strand": "GR",
+      "canDo": "Can use cleft sentences to highlight key information and to correct misunderstandings.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-passive-voice",
+        "b2-relative-clauses-advanced"
+      ],
+      "objectives": [
+        {
+          "id": "what-cleft",
+          "text": "Use what-clefts to focus information (What I need is more time.)"
+        },
+        {
+          "id": "it-cleft",
+          "text": "Use it-clefts to highlight a person, thing or time (It was Sari who called.)"
+        },
+        {
+          "id": "all-thing-cleft",
+          "text": "Use all/the thing that… clefts (All I want is…, The thing that worries me is…)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "What I need it is more time.",
+          "right": "What I need is more time."
+        },
+        {
+          "wrong": "It was Sari she called me.",
+          "right": "It was Sari who called me."
+        },
+        {
+          "wrong": "All what I want is some peace.",
+          "right": "All I want is some peace."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Cleft Sentences",
+          "summary": "Menonjolkan informasi penting dengan what-cleft, it-cleft dan struktur all/the thing that….",
+          "canDo": "Bisa memakai cleft sentence untuk menonjolkan informasi penting dan meluruskan salah paham.",
+          "objectives": {
+            "what-cleft": "Memakai what-cleft untuk memfokuskan informasi (What I need is more time.)",
+            "it-cleft": "Memakai it-cleft untuk menonjolkan orang, benda atau waktu (It was Sari who called.)",
+            "all-thing-cleft": "Memakai cleft dengan all/the thing that… (All I want is…, The thing that worries me is…)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-nominalisation",
+      "level": "C1",
+      "title": "Nominalisation & Noun Phrases",
+      "summary": "Turn verbs and adjectives into nouns and build complex noun phrases for a formal, academic style.",
+      "strand": "GR",
+      "canDo": "Can use nominalisation and complex noun phrases to write in a concise, formal and academic style.",
+      "estimatedMinutes": 210,
+      "prerequisiteIds": [
+        "b2-word-formation",
+        "b2-formal-writing"
+      ],
+      "objectives": [
+        {
+          "id": "verbs-adjectives-to-nouns",
+          "text": "Turn verbs and adjectives into nouns (decide → the decision to…, important → the importance of…)"
+        },
+        {
+          "id": "complex-noun-phrases",
+          "text": "Build complex noun phrases (a significant increase in online sales)"
+        },
+        {
+          "id": "formal-academic-style",
+          "text": "Rewrite everyday sentences in a formal, academic style using nominalisation"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "The decide to close the office was difficult.",
+          "right": "The decision to close the office was difficult."
+        },
+        {
+          "wrong": "There was a significant increase of sales.",
+          "right": "There was a significant increase in sales."
+        },
+        {
+          "wrong": "The increasing of prices worries people.",
+          "right": "The increase in prices worries people."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nominalisasi & Frasa Kata Benda",
+          "summary": "Mengubah kata kerja dan kata sifat menjadi kata benda serta menyusun frasa kata benda yang kompleks untuk gaya formal dan akademik.",
+          "canDo": "Bisa memakai nominalisasi dan frasa kata benda kompleks untuk menulis dengan gaya ringkas, formal dan akademik.",
+          "objectives": {
+            "verbs-adjectives-to-nouns": "Mengubah kata kerja dan kata sifat menjadi kata benda (decide → the decision to…, important → the importance of…)",
+            "complex-noun-phrases": "Menyusun frasa kata benda yang kompleks (a significant increase in online sales)",
+            "formal-academic-style": "Menulis ulang kalimat sehari-hari dengan gaya formal dan akademik memakai nominalisasi"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-impersonal-structures",
+      "level": "C1",
+      "title": "Impersonal & Advanced Passive",
+      "summary": "Report views and claims impersonally: It is thought that…, He is said to have…, There is believed to be….",
+      "strand": "GR",
+      "canDo": "Can report opinions, beliefs and claims impersonally, keeping a formal and objective tone.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "b2-passive-voice"
       ],
       "objectives": [
         {
-          "id": "highlight-information-with",
-          "text": "Highlight information with cleft sentences"
+          "id": "it-is-thought-that",
+          "text": "Use impersonal it-structures (It is thought/believed/reported that…)"
+        },
+        {
+          "id": "subject-passive-infinitive",
+          "text": "Use subject + passive reporting verb + to-infinitive, including perfect forms (He is said to have left.)"
+        },
+        {
+          "id": "there-is-believed",
+          "text": "Use there + passive reporting verb + to be (There is believed to be…)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "He is said that he left the company.",
+          "right": "He is said to have left the company. / It is said that he left the company."
+        },
+        {
+          "wrong": "There is believed to have a problem with the system.",
+          "right": "There is believed to be a problem with the system."
+        },
+        {
+          "wrong": "The minister is reported resign yesterday.",
+          "right": "The minister is reported to have resigned yesterday."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Cleft Sentences",
-          "summary": "What I need is…, It was… that…",
+          "title": "Struktur Impersonal & Passive Lanjutan",
+          "summary": "Melaporkan pendapat dan klaim secara impersonal: It is thought that…, He is said to have…, There is believed to be….",
+          "canDo": "Bisa melaporkan pendapat, keyakinan dan klaim secara impersonal dengan nada formal dan objektif.",
           "objectives": {
-            "highlight-information-with": "Menonjolkan informasi dengan cleft sentence"
+            "it-is-thought-that": "Memakai struktur impersonal dengan it (It is thought/believed/reported that…)",
+            "subject-passive-infinitive": "Memakai subjek + kata kerja pelaporan bentuk passive + to-infinitive, termasuk bentuk perfect (He is said to have left.)",
+            "there-is-believed": "Memakai there + kata kerja pelaporan bentuk passive + to be (There is believed to be…)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-ellipsis-substitution",
+      "level": "C1",
+      "title": "Ellipsis & Substitution",
+      "summary": "Avoid repetition with so/not, do so, one/ones and by leaving out repeated words (I'd like to, but I can't).",
+      "strand": "GR",
+      "canDo": "Can avoid unnecessary repetition by substituting or leaving out words, so speech and writing sound natural.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "b2-linking-words"
+      ],
+      "objectives": [
+        {
+          "id": "so-not-substitution",
+          "text": "Use so and not to replace a clause (I think so, I hope not, I'm afraid not)"
+        },
+        {
+          "id": "do-so-one-ones",
+          "text": "Use do so and one/ones to avoid repeating verbs and nouns"
+        },
+        {
+          "id": "ellipsis",
+          "text": "Leave out repeated words naturally (I'd like to, but I can't.)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "A: Is the shop open? B: I think yes.",
+          "right": "A: Is the shop open? B: I think so."
+        },
+        {
+          "wrong": "A: Will it rain tomorrow? B: I don't hope so.",
+          "right": "A: Will it rain tomorrow? B: I hope not."
+        },
+        {
+          "wrong": "I wanted to help, but I couldn't do.",
+          "right": "I wanted to help, but I couldn't."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Elipsis & Substitusi",
+          "summary": "Menghindari pengulangan dengan so/not, do so, one/ones dan menghilangkan kata yang berulang (I'd like to, but I can't).",
+          "canDo": "Bisa menghindari pengulangan yang tidak perlu dengan mengganti atau menghilangkan kata, sehingga ucapan dan tulisan terdengar alami.",
+          "objectives": {
+            "so-not-substitution": "Memakai so dan not untuk menggantikan klausa (I think so, I hope not, I'm afraid not)",
+            "do-so-one-ones": "Memakai do so dan one/ones agar tidak mengulang kata kerja dan kata benda",
+            "ellipsis": "Menghilangkan kata yang berulang secara alami (I'd like to, but I can't.)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-participle-advanced",
+      "level": "C1",
+      "title": "Advanced Participle Clauses",
+      "summary": "Use perfect and passive participle clauses and with + noun + -ing, and avoid dangling participles.",
+      "strand": "GR",
+      "canDo": "Can use advanced participle clauses to write compact, well-connected sentences without dangling participles.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-participle-clauses"
+      ],
+      "objectives": [
+        {
+          "id": "perfect-passive-participles",
+          "text": "Use perfect and passive participle clauses (Having finished…, Having been told…, Built in 1920, …)"
+        },
+        {
+          "id": "with-noun-ing",
+          "text": "Use with + noun + -ing/-ed to add background information (With prices rising, …)"
+        },
+        {
+          "id": "avoid-dangling-participles",
+          "text": "Spot and fix dangling participles"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Arriving late, the meeting had already started.",
+          "right": "Arriving late, I found that the meeting had already started."
+        },
+        {
+          "wrong": "Having told the news, she started to cry.",
+          "right": "Having been told the news, she started to cry."
+        },
+        {
+          "wrong": "With the prices rise, people buy less.",
+          "right": "With prices rising, people are buying less."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Participle Clause Lanjutan",
+          "summary": "Memakai participle clause bentuk perfect dan passive, with + kata benda + -ing, serta menghindari dangling participle.",
+          "canDo": "Bisa memakai participle clause lanjutan untuk menulis kalimat yang padat dan runtut tanpa dangling participle.",
+          "objectives": {
+            "perfect-passive-participles": "Memakai participle clause bentuk perfect dan passive (Having finished…, Having been told…, Built in 1920, …)",
+            "with-noun-ing": "Memakai with + kata benda + -ing/-ed untuk menambah informasi latar (With prices rising, …)",
+            "avoid-dangling-participles": "Mengenali dan memperbaiki dangling participle"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-subjunctive-formal",
+      "level": "C1",
+      "title": "Subjunctive & Formal Structures",
+      "summary": "Use the subjunctive (It's essential that he be…, I suggest she attend), were-subjunctive and formal should.",
+      "strand": "GR",
+      "canDo": "Can use the subjunctive and other formal structures to make requirements, recommendations and polite offers.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-wish-regrets"
+      ],
+      "objectives": [
+        {
+          "id": "mandative-subjunctive",
+          "text": "Use the subjunctive after essential/vital/important that… (It's essential that he be on time.)"
+        },
+        {
+          "id": "suggest-recommend-that",
+          "text": "Use suggest/recommend/insist (that) + base verb (I recommend (that) she attend.)"
+        },
+        {
+          "id": "were-and-formal-should",
+          "text": "Use the were-subjunctive (If I were…, as it were) and formal should (Should you have any questions, …)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I suggest her to attend the meeting.",
+          "right": "I suggest (that) she attend the meeting."
+        },
+        {
+          "wrong": "It's essential that he will be on time.",
+          "right": "It's essential that he be on time."
+        },
+        {
+          "wrong": "Should you needed any help, please call me.",
+          "right": "Should you need any help, please call me."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Subjunctive & Struktur Formal",
+          "summary": "Memakai subjunctive (It's essential that he be…, I suggest she attend), were-subjunctive dan should formal.",
+          "canDo": "Bisa memakai subjunctive dan struktur formal lain untuk menyampaikan syarat, rekomendasi dan tawaran yang sopan.",
+          "objectives": {
+            "mandative-subjunctive": "Memakai subjunctive setelah essential/vital/important that… (It's essential that he be on time.)",
+            "suggest-recommend-that": "Memakai suggest/recommend/insist (that) + kata kerja bentuk dasar (I recommend (that) she attend.)",
+            "were-and-formal-should": "Memakai were-subjunctive (If I were…, as it were) dan should formal (Should you have any questions, …)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-modal-nuance",
+      "level": "C1",
+      "title": "Modal Nuance",
+      "summary": "Express fine shades of certainty and obligation: will for assumptions, be bound/likely/supposed to, and past modals.",
+      "strand": "GR",
+      "canDo": "Can use modals and semi-modals precisely to express assumptions, likelihood, expectations and past possibilities.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-modals-deduction"
+      ],
+      "objectives": [
+        {
+          "id": "will-for-assumptions",
+          "text": "Use will/won't for confident assumptions (That'll be the courier.)"
+        },
+        {
+          "id": "bound-likely-supposed",
+          "text": "Use be bound to, be likely to and be supposed to with the right meaning"
+        },
+        {
+          "id": "past-modal-nuance",
+          "text": "Distinguish could have, would have, needn't have and didn't need to"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "He is bound to coming late.",
+          "right": "He is bound to come late."
+        },
+        {
+          "wrong": "I needn't have to bring an umbrella.",
+          "right": "I needn't have brought an umbrella."
+        },
+        {
+          "wrong": "We are supposed to finished by Friday.",
+          "right": "We are supposed to finish by Friday."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nuansa Modal",
+          "summary": "Menyatakan tingkat kepastian dan kewajiban dengan halus: will untuk asumsi, be bound/likely/supposed to, dan modal lampau.",
+          "canDo": "Bisa memakai modal dan semi-modal secara tepat untuk menyatakan asumsi, kemungkinan, harapan dan kemungkinan di masa lalu.",
+          "objectives": {
+            "will-for-assumptions": "Memakai will/won't untuk asumsi yang yakin (That'll be the courier.)",
+            "bound-likely-supposed": "Memakai be bound to, be likely to dan be supposed to dengan makna yang tepat",
+            "past-modal-nuance": "Membedakan could have, would have, needn't have dan didn't need to"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-emphasis-fronting",
+      "level": "C1",
+      "title": "Emphasis & Fronting",
+      "summary": "Add emphasis with auxiliary do, fronting (Much as I like it, …) and so/such … that, including Such was… that.",
+      "strand": "GR",
+      "canDo": "Can add emphasis and contrast by using emphatic do, fronting and so/such structures.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "c1-cleft-sentences"
+      ],
+      "objectives": [
+        {
+          "id": "emphatic-do",
+          "text": "Use auxiliary do for emphasis and contrast (I do understand, but…)"
+        },
+        {
+          "id": "fronting",
+          "text": "Front words or clauses for emphasis or contrast (Much as I like it, …; Strange as it may seem, …)"
+        },
+        {
+          "id": "so-such-emphasis",
+          "text": "Use so/such … that for emphasis, including fronted forms (Such was the demand that…)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I do understood your point.",
+          "right": "I do understand your point. / I did understand your point."
+        },
+        {
+          "wrong": "Much as I like it, but I can't afford it.",
+          "right": "Much as I like it, I can't afford it."
+        },
+        {
+          "wrong": "It was so a good film that I watched it twice.",
+          "right": "It was such a good film that I watched it twice."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Penekanan & Fronting",
+          "summary": "Memberi penekanan dengan auxiliary do, fronting (Much as I like it, …) dan so/such … that, termasuk Such was… that.",
+          "canDo": "Bisa memberi penekanan dan kontras dengan do penegas, fronting dan struktur so/such.",
+          "objectives": {
+            "emphatic-do": "Memakai auxiliary do untuk penekanan dan kontras (I do understand, but…)",
+            "fronting": "Memindahkan kata atau klausa ke depan untuk penekanan atau kontras (Much as I like it, …; Strange as it may seem, …)",
+            "so-such-emphasis": "Memakai so/such … that untuk penekanan, termasuk bentuk yang dipindah ke depan (Such was the demand that…)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-cohesion",
+      "level": "C1",
+      "title": "Advanced Cohesion & Discourse Markers",
+      "summary": "Connect ideas in long texts with formal markers (albeit, notwithstanding), clear reference and signposting.",
+      "strand": "GR",
+      "canDo": "Can produce clear, well-organised long texts using formal connectors, reference words and signposting.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-linking-words"
+      ],
+      "objectives": [
+        {
+          "id": "formal-connectors",
+          "text": "Use formal connectors such as albeit, notwithstanding and insofar as"
+        },
+        {
+          "id": "reference-devices",
+          "text": "Refer back clearly with the former/the latter, this approach, such a view"
+        },
+        {
+          "id": "signposting",
+          "text": "Signpost the structure of long texts (Turning now to…, As outlined above, …)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Although the plan is risky, but it is worth trying.",
+          "right": "Although the plan is risky, it is worth trying."
+        },
+        {
+          "wrong": "The plan was effective, albeit it was expensive.",
+          "right": "The plan was effective, albeit expensive."
+        },
+        {
+          "wrong": "Notwithstanding of the costs, we continued.",
+          "right": "Notwithstanding the costs, we continued."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kohesi & Penanda Wacana Lanjutan",
+          "summary": "Menghubungkan ide dalam teks panjang dengan penanda formal (albeit, notwithstanding), rujukan yang jelas dan signposting.",
+          "canDo": "Bisa menghasilkan teks panjang yang jelas dan tertata dengan kata penghubung formal, kata rujukan dan signposting.",
+          "objectives": {
+            "formal-connectors": "Memakai kata penghubung formal seperti albeit, notwithstanding dan insofar as",
+            "reference-devices": "Merujuk kembali dengan jelas memakai the former/the latter, this approach, such a view",
+            "signposting": "Memberi penanda struktur dalam teks panjang (Turning now to…, As outlined above, …)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-collocations",
+      "level": "C1",
+      "title": "Advanced Collocations",
+      "summary": "Use strong and academic collocations and delexical verbs, and avoid word-for-word translations from Indonesian.",
+      "strand": "VO",
+      "canDo": "Can use a wide range of natural collocations, including academic ones, instead of literal translations.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-collocations"
+      ],
+      "objectives": [
+        {
+          "id": "use-strong-verbnoun",
+          "text": "Use strong and academic collocations (pose a threat, conduct research, a heavy burden)"
+        },
+        {
+          "id": "delexical-verbs",
+          "text": "Use delexical verbs naturally (make a decision, take a step, have an impact, give a presentation)"
+        },
+        {
+          "id": "avoid-direct-translation",
+          "text": "Avoid collocations translated word for word from Indonesian"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "The project gives a big impact to the community.",
+          "right": "The project has a big impact on the community."
+        },
+        {
+          "wrong": "We did a research about air pollution.",
+          "right": "We conducted research into air pollution."
+        },
+        {
+          "wrong": "Climate change raises a serious threat.",
+          "right": "Climate change poses a serious threat."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kolokasi Lanjutan",
+          "summary": "Memakai kolokasi yang kuat dan akademik serta delexical verb, dan menghindari terjemahan kata per kata dari bahasa Indonesia.",
+          "canDo": "Bisa memakai beragam kolokasi yang alami, termasuk kolokasi akademik, bukan terjemahan harfiah.",
+          "objectives": {
+            "use-strong-verbnoun": "Memakai kolokasi yang kuat dan akademik (pose a threat, conduct research, a heavy burden)",
+            "delexical-verbs": "Memakai delexical verb secara alami (make a decision, take a step, have an impact, give a presentation)",
+            "avoid-direct-translation": "Menghindari kolokasi hasil terjemahan kata per kata dari bahasa Indonesia"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-academic-vocabulary",
+      "level": "C1",
+      "title": "Academic Word List",
+      "summary": "Learn the Academic Word List sublist by sublist, precise reporting verbs (assert, imply, demonstrate) and word families.",
+      "strand": "VO",
+      "canDo": "Can use a broad range of academic vocabulary accurately in study and professional texts.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "b2-word-formation"
+      ],
+      "objectives": [
+        {
+          "id": "awl-sublists",
+          "text": "Learn and use words from the Academic Word List, sublist by sublist"
+        },
+        {
+          "id": "precise-reporting-verbs",
+          "text": "Use precise reporting verbs (assert, imply, demonstrate, argue)"
+        },
+        {
+          "id": "academic-word-families",
+          "text": "Use academic word families correctly (analyse – analysis – analytical)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "This analyse shows a clear trend.",
+          "right": "This analysis shows a clear trend."
+        },
+        {
+          "wrong": "The author infers that prices will rise.",
+          "right": "The author implies that prices will rise."
+        },
+        {
+          "wrong": "The study demonstrates about the effect of sleep.",
+          "right": "The study demonstrates the effect of sleep."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Academic Word List",
+          "summary": "Mempelajari Academic Word List per sublist, kata kerja pelaporan yang presisi (assert, imply, demonstrate) dan keluarga kata.",
+          "canDo": "Bisa memakai beragam kosakata akademik dengan tepat dalam teks studi dan profesional.",
+          "objectives": {
+            "awl-sublists": "Mempelajari dan memakai kata dari Academic Word List, sublist demi sublist",
+            "precise-reporting-verbs": "Memakai kata kerja pelaporan yang presisi (assert, imply, demonstrate, argue)",
+            "academic-word-families": "Memakai keluarga kata akademik dengan benar (analyse – analysis – analytical)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-idioms",
+      "level": "C1",
+      "title": "Idioms & Fixed Expressions",
+      "summary": "Use idioms for work, conflict and success, binomials such as pros and cons, and judge when an idiom fits.",
+      "strand": "VO",
+      "canDo": "Can understand and use common idioms and fixed expressions appropriately in work and everyday conversation.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-phrasal-verbs-idioms"
+      ],
+      "objectives": [
+        {
+          "id": "themed-idioms",
+          "text": "Understand and use idioms about work, conflict and success (cut corners, clear the air, pay off)"
+        },
+        {
+          "id": "binomials",
+          "text": "Use binomials and fixed pairs (pros and cons, by and large, sooner or later)"
+        },
+        {
+          "id": "use-idioms-appropriately",
+          "text": "Judge when an idiom fits the situation and tone, and when plain language is better"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Let's look at the cons and pros.",
+          "right": "Let's look at the pros and cons."
+        },
+        {
+          "wrong": "The exam was a piece of cakes.",
+          "right": "The exam was a piece of cake."
+        },
+        {
+          "wrong": "We played a game to break ice.",
+          "right": "We played a game to break the ice."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Idiom & Ungkapan Tetap",
+          "summary": "Memakai idiom seputar kerja, konflik dan kesuksesan, binomial seperti pros and cons, dan menilai kapan idiom cocok dipakai.",
+          "canDo": "Bisa memahami dan memakai idiom serta ungkapan tetap yang umum secara tepat dalam percakapan kerja dan sehari-hari.",
+          "objectives": {
+            "themed-idioms": "Memahami dan memakai idiom seputar kerja, konflik dan kesuksesan (cut corners, clear the air, pay off)",
+            "binomials": "Memakai binomial dan pasangan kata tetap (pros and cons, by and large, sooner or later)",
+            "use-idioms-appropriately": "Menilai kapan idiom cocok dengan situasi dan nada, dan kapan bahasa biasa lebih baik"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-connotation",
+      "level": "C1",
+      "title": "Precision & Connotation",
+      "summary": "Choose between synonyms with different connotations, replace general words with precise ones and match word choice to tone.",
+      "strand": "VO",
+      "canDo": "Can choose words precisely, taking connotation and tone into account.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "b2-formal-informal-vocab"
+      ],
+      "objectives": [
+        {
+          "id": "connotation-synonyms",
+          "text": "Distinguish synonyms with different connotations (slim/skinny, firm/stubborn, thrifty/stingy)"
+        },
+        {
+          "id": "precise-words",
+          "text": "Replace general words with precise ones (good → effective, reliable, valuable)"
+        },
+        {
+          "id": "match-word-to-tone",
+          "text": "Choose words that match the tone and purpose of a text"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Your grandmother looks skinny and beautiful.",
+          "right": "Your grandmother looks slim and beautiful."
+        },
+        {
+          "wrong": "Our manager is stubborn, which really helps the team.",
+          "right": "Our manager is firm, which really helps the team."
+        },
+        {
+          "wrong": "The new method is very good.",
+          "right": "The new method is highly effective."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Ketepatan & Konotasi",
+          "summary": "Memilih sinonim dengan konotasi yang berbeda, mengganti kata umum dengan kata yang presisi, dan menyesuaikan pilihan kata dengan nada.",
+          "canDo": "Bisa memilih kata dengan tepat sambil memperhatikan konotasi dan nada.",
+          "objectives": {
+            "connotation-synonyms": "Membedakan sinonim dengan konotasi berbeda (slim/skinny, firm/stubborn, thrifty/stingy)",
+            "precise-words": "Mengganti kata umum dengan kata yang presisi (good → effective, reliable, valuable)",
+            "match-word-to-tone": "Memilih kata yang sesuai dengan nada dan tujuan teks"
           }
         }
       }
@@ -65,82 +799,174 @@
       "id": "c1-hedging",
       "level": "C1",
       "title": "Hedging & Softening",
-      "summary": "tend to, it would appear, arguably.",
+      "summary": "Soften claims and show how certain you are: tend to, it would appear, arguably.",
+      "strand": "VO",
+      "canDo": "Can soften claims and express exactly how certain they are, as expected in academic and professional English.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
         "b2-modals-deduction"
       ],
       "objectives": [
         {
           "id": "soften-claims-with",
-          "text": "Soften claims with hedging language"
+          "text": "Soften claims with hedging language (tend to, it would appear, arguably)"
         },
         {
           "id": "express-degrees-of",
-          "text": "Express degrees of certainty"
+          "text": "Express degrees of certainty (almost certainly, it is likely that, there is little evidence that)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
       "focus": [
         "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "This proves that social media causes depression.",
+          "right": "This suggests that social media may contribute to depression."
+        },
+        {
+          "wrong": "It may possibly perhaps be true.",
+          "right": "It may be true."
+        }
       ],
       "i18n": {
         "id": {
           "title": "Hedging & Pelunakan",
-          "summary": "tend to, it would appear, arguably.",
+          "summary": "Melunakkan klaim dan menunjukkan seberapa yakin kamu: tend to, it would appear, arguably.",
+          "canDo": "Bisa melunakkan klaim dan menyatakan tingkat kepastian secara tepat, seperti yang diharapkan dalam bahasa Inggris akademik dan profesional.",
           "objectives": {
-            "soften-claims-with": "Melunakkan klaim dengan bahasa hedging",
-            "express-degrees-of": "Menyatakan tingkat kepastian"
+            "soften-claims-with": "Melunakkan klaim dengan bahasa hedging (tend to, it would appear, arguably)",
+            "express-degrees-of": "Menyatakan tingkat kepastian (almost certainly, it is likely that, there is little evidence that)"
           }
         }
       }
     },
     {
-      "id": "c1-collocations",
+      "id": "c1-pron-prosody",
       "level": "C1",
-      "title": "Collocations",
-      "summary": "Natural word partnerships.",
+      "title": "Prosody for Emphasis & Persuasion",
+      "summary": "Use pitch range, pauses and sentence stress to emphasise, persuade and change meaning in long sentences.",
+      "strand": "PR",
+      "canDo": "Can vary pitch, pausing and stress to emphasise key points and sound persuasive.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
-        "b2-formal-writing"
+        "b2-pron-intonation-attitude"
       ],
       "objectives": [
         {
-          "id": "use-strong-verbnoun",
-          "text": "Use strong verb–noun and adjective–noun collocations"
-        }
-      ],
-      "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
-      "focus": [
-        "study"
-      ],
-      "i18n": {
-        "id": {
-          "title": "Kolokasi",
-          "summary": "Pasangan kata yang alami.",
-          "objectives": {
-            "use-strong-verbnoun": "Menggunakan kolokasi kata kerja–kata benda dan kata sifat–kata benda yang kuat"
-          }
-        }
-      }
-    },
-    {
-      "id": "c1-academic-writing",
-      "level": "C1",
-      "title": "Academic Writing",
-      "summary": "Argue, cite and conclude.",
-      "prerequisiteIds": [
-        "c1-hedging",
-        "c1-collocations"
-      ],
-      "objectives": [
-        {
-          "id": "build-a-coherent",
-          "text": "Build a coherent argument"
+          "id": "pitch-range",
+          "text": "Widen pitch range to highlight key words and contrasts"
         },
         {
-          "id": "paraphrase-and-reference",
-          "text": "Paraphrase and reference sources"
+          "id": "pausing-for-effect",
+          "text": "Use pauses for effect and to group ideas into clear chunks"
+        },
+        {
+          "id": "meaning-changing-stress",
+          "text": "Move sentence stress to change meaning in long sentences (I didn't say HE took it.)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Every word said at the same pitch and volume (flat delivery)",
+          "right": "Key words raised in pitch and lengthened, other words reduced"
+        },
+        {
+          "wrong": "Pausing in the middle of a phrase: a significant | increase in sales",
+          "right": "Pausing between thought groups: a significant increase in sales | over the last year"
+        },
+        {
+          "wrong": "Stressing every word equally, so the contrast is lost",
+          "right": "Stressing the contrast word: I said TUESDAY, not Thursday"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Prosodi untuk Penekanan & Persuasi",
+          "summary": "Memakai rentang nada, jeda dan tekanan kalimat untuk menekankan, meyakinkan dan mengubah makna dalam kalimat panjang.",
+          "canDo": "Bisa mengatur nada, jeda dan tekanan untuk menekankan poin penting dan terdengar meyakinkan.",
+          "objectives": {
+            "pitch-range": "Memperlebar rentang nada untuk menonjolkan kata kunci dan kontras",
+            "pausing-for-effect": "Memakai jeda untuk efek dan untuk mengelompokkan ide menjadi potongan yang jelas",
+            "meaning-changing-stress": "Memindahkan tekanan kalimat untuk mengubah makna dalam kalimat panjang (I didn't say HE took it.)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-world-englishes",
+      "level": "C1",
+      "title": "Varieties of English",
+      "summary": "Understand UK, US, Australian, Indian, Singaporean and Nigerian English, and communicate in English as a lingua franca.",
+      "strand": "LI",
+      "canDo": "Can understand speakers of different varieties of English and communicate effectively with other non-native speakers.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-listening-extended"
+      ],
+      "objectives": [
+        {
+          "id": "understand-accents",
+          "text": "Understand speakers of UK, US, Australian, Indian, Singaporean and Nigerian English"
+        },
+        {
+          "id": "variety-features",
+          "text": "Recognise key pronunciation features of each variety (e.g. whether r after a vowel is pronounced)"
+        },
+        {
+          "id": "english-lingua-franca",
+          "text": "Communicate clearly when English is a lingua franca between non-native speakers"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "travel"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Ragam Bahasa Inggris",
+          "summary": "Memahami bahasa Inggris ragam Inggris, Amerika, Australia, India, Singapura dan Nigeria, serta berkomunikasi dengan bahasa Inggris sebagai lingua franca.",
+          "canDo": "Bisa memahami penutur berbagai ragam bahasa Inggris dan berkomunikasi efektif dengan sesama penutur non-native.",
+          "objectives": {
+            "understand-accents": "Memahami penutur bahasa Inggris ragam Inggris, Amerika, Australia, India, Singapura dan Nigeria",
+            "variety-features": "Mengenali ciri pelafalan utama tiap ragam (misalnya apakah r setelah vokal diucapkan)",
+            "english-lingua-franca": "Berkomunikasi dengan jelas saat bahasa Inggris menjadi lingua franca antar-penutur non-native"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-listening-implicit",
+      "level": "C1",
+      "title": "Listening for Implicit Meaning",
+      "summary": "Pick up attitudes and implied meaning, follow unstructured talk such as panels and interviews, and take lecture notes.",
+      "strand": "LI",
+      "canDo": "Can follow extended, unstructured speech and understand attitudes and meaning that are only implied.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-listening-extended"
+      ],
+      "objectives": [
+        {
+          "id": "attitude-implied-meaning",
+          "text": "Infer speakers' attitudes and implied meaning (irony, understatement, reluctance)"
+        },
+        {
+          "id": "unstructured-speech",
+          "text": "Follow unstructured speech such as panel discussions and interviews"
+        },
+        {
+          "id": "lecture-note-taking",
+          "text": "Take useful notes during lectures"
         }
       ],
       "masteryThreshold": 80,
@@ -150,11 +976,189 @@
       ],
       "i18n": {
         "id": {
-          "title": "Menulis Akademik",
-          "summary": "Berargumen, mengutip dan menyimpulkan.",
+          "title": "Menyimak Makna Tersirat",
+          "summary": "Menangkap sikap dan maksud tersirat, mengikuti pembicaraan tidak terstruktur seperti panel dan wawancara, serta mencatat kuliah.",
+          "canDo": "Bisa mengikuti pembicaraan panjang yang tidak terstruktur dan memahami sikap serta makna yang hanya tersirat.",
           "objectives": {
-            "build-a-coherent": "Membangun argumen yang koheren",
-            "paraphrase-and-reference": "Memparafrasekan dan merujuk sumber"
+            "attitude-implied-meaning": "Menangkap sikap dan maksud tersirat pembicara (ironi, understatement, keengganan)",
+            "unstructured-speech": "Mengikuti pembicaraan tidak terstruktur seperti diskusi panel dan wawancara",
+            "lecture-note-taking": "Membuat catatan yang berguna saat kuliah"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-reading-complex",
+      "level": "C1",
+      "title": "Complex & Specialised Texts",
+      "summary": "Read academic papers, reports and terms and conditions, analyse argument structure and bias, and read critically.",
+      "strand": "RE",
+      "canDo": "Can understand long, complex and specialised texts in detail and evaluate them critically.",
+      "estimatedMinutes": 210,
+      "prerequisiteIds": [
+        "b2-reading-strategies"
+      ],
+      "objectives": [
+        {
+          "id": "specialised-texts",
+          "text": "Read academic papers, reports and terms and conditions in detail"
+        },
+        {
+          "id": "argument-and-bias",
+          "text": "Identify the structure of an argument and the writer's bias"
+        },
+        {
+          "id": "critical-reading",
+          "text": "Read critically: evaluate evidence, claims and assumptions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "tech"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Teks Kompleks & Khusus",
+          "summary": "Membaca paper akademik, laporan dan syarat & ketentuan, menganalisis struktur argumen dan bias, serta membaca secara kritis.",
+          "canDo": "Bisa memahami teks panjang, kompleks dan khusus secara detail serta menilainya secara kritis.",
+          "objectives": {
+            "specialised-texts": "Membaca paper akademik, laporan dan syarat & ketentuan secara detail",
+            "argument-and-bias": "Mengenali struktur argumen dan bias penulis",
+            "critical-reading": "Membaca secara kritis: menilai bukti, klaim dan asumsi"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-debate",
+      "level": "C1",
+      "title": "Debate & Argumentation",
+      "summary": "Build and rebut arguments, respond to challenges on the spot, and concede a point before countering it.",
+      "strand": "SP",
+      "canDo": "Can build and defend a complex argument, respond spontaneously to challenges and counter opposing views.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-discussion",
+        "c1-hedging"
+      ],
+      "objectives": [
+        {
+          "id": "build-rebut-arguments",
+          "text": "Build arguments and rebut opposing ones"
+        },
+        {
+          "id": "respond-spontaneously",
+          "text": "Respond spontaneously to challenges and follow-up questions"
+        },
+        {
+          "id": "concede-and-counter",
+          "text": "Concede a point and then counter it (That's a fair point, but…)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Debat & Argumentasi",
+          "summary": "Membangun dan membantah argumen, menanggapi tantangan secara spontan, serta mengakui poin lawan sebelum membalasnya.",
+          "canDo": "Bisa membangun dan mempertahankan argumen yang kompleks, menanggapi tantangan secara spontan dan membalas pandangan yang berbeda.",
+          "objectives": {
+            "build-rebut-arguments": "Membangun argumen dan membantah argumen lawan",
+            "respond-spontaneously": "Menanggapi tantangan dan pertanyaan lanjutan secara spontan",
+            "concede-and-counter": "Mengakui satu poin lalu membalasnya (That's a fair point, but…)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-presentations-advanced",
+      "level": "C1",
+      "title": "Persuasive Presentations",
+      "summary": "Give persuasive presentations with storytelling, speak without a script and handle difficult questions.",
+      "strand": "SP",
+      "canDo": "Can give a clear, persuasive presentation without a script and handle difficult questions with confidence.",
+      "estimatedMinutes": 210,
+      "prerequisiteIds": [
+        "b2-presentations",
+        "c1-pron-prosody"
+      ],
+      "objectives": [
+        {
+          "id": "storytelling",
+          "text": "Use storytelling to engage and persuade an audience"
+        },
+        {
+          "id": "present-without-script",
+          "text": "Present from brief notes, without reading a script"
+        },
+        {
+          "id": "handle-tough-questions",
+          "text": "Handle difficult questions calmly and diplomatically"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Presentasi Persuasif",
+          "summary": "Membawakan presentasi persuasif dengan storytelling, berbicara tanpa naskah dan menghadapi pertanyaan sulit.",
+          "canDo": "Bisa membawakan presentasi yang jelas dan persuasif tanpa naskah serta menghadapi pertanyaan sulit dengan percaya diri.",
+          "objectives": {
+            "storytelling": "Memakai storytelling untuk menarik perhatian dan meyakinkan audiens",
+            "present-without-script": "Presentasi dengan catatan singkat, tanpa membaca naskah",
+            "handle-tough-questions": "Menghadapi pertanyaan sulit dengan tenang dan diplomatis"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-leading-meetings",
+      "level": "C1",
+      "title": "Leading Meetings",
+      "summary": "Open a meeting and set the agenda, manage discussion and conflict, and steer the group towards a decision.",
+      "strand": "FN",
+      "canDo": "Can chair a meeting effectively, keeping discussion on track, handling disagreement and reaching decisions.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-meetings"
+      ],
+      "objectives": [
+        {
+          "id": "open-and-set-agenda",
+          "text": "Open a meeting and set the agenda"
+        },
+        {
+          "id": "manage-discussion-conflict",
+          "text": "Manage the discussion and handle conflict"
+        },
+        {
+          "id": "steer-to-decision",
+          "text": "Steer the discussion towards a decision and agree next steps"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Memimpin Rapat",
+          "summary": "Membuka rapat dan mengatur agenda, mengelola diskusi dan konflik, serta mengarahkan kelompok ke sebuah keputusan.",
+          "canDo": "Bisa memimpin rapat dengan efektif: menjaga diskusi tetap fokus, menangani perbedaan pendapat dan mencapai keputusan.",
+          "objectives": {
+            "open-and-set-agenda": "Membuka rapat dan mengatur agenda",
+            "manage-discussion-conflict": "Mengelola diskusi dan menangani konflik",
+            "steer-to-decision": "Mengarahkan diskusi ke sebuah keputusan dan menyepakati langkah berikutnya"
           }
         }
       }
@@ -163,9 +1167,12 @@
       "id": "c1-negotiation",
       "level": "C1",
       "title": "Negotiation",
-      "summary": "Propose, concede and close.",
+      "summary": "Make and respond to proposals, concede and bargain diplomatically, and close the deal.",
+      "strand": "FN",
+      "canDo": "Can negotiate diplomatically, making and responding to proposals, bargaining and reaching an agreement.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "b2-job-interviews",
+        "b2-meetings",
         "c1-hedging"
       ],
       "objectives": [
@@ -176,6 +1183,10 @@
         {
           "id": "concede-and-bargain",
           "text": "Concede and bargain diplomatically"
+        },
+        {
+          "id": "close-the-deal",
+          "text": "Close a deal and confirm what has been agreed"
         }
       ],
       "masteryThreshold": 80,
@@ -186,10 +1197,114 @@
       "i18n": {
         "id": {
           "title": "Negosiasi",
-          "summary": "Mengusulkan, mengalah dan menutup kesepakatan.",
+          "summary": "Membuat dan menanggapi usulan, mengalah dan menawar secara diplomatis, lalu menutup kesepakatan.",
+          "canDo": "Bisa bernegosiasi secara diplomatis: membuat dan menanggapi usulan, menawar dan mencapai kesepakatan.",
           "objectives": {
             "make-and-respond": "Membuat dan menanggapi usulan",
-            "concede-and-bargain": "Mengalah dan menawar secara diplomatis"
+            "concede-and-bargain": "Mengalah dan menawar secara diplomatis",
+            "close-the-deal": "Menutup kesepakatan dan menegaskan apa yang sudah disepakati"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-academic-writing",
+      "level": "C1",
+      "title": "Academic Writing",
+      "summary": "Build a coherent argument, paraphrase and reference sources, and write argumentative essays at IELTS Task 2 band 7+.",
+      "strand": "WR",
+      "canDo": "Can write clear, well-structured academic texts that develop an argument and use sources appropriately.",
+      "estimatedMinutes": 300,
+      "prerequisiteIds": [
+        "c1-hedging",
+        "c1-collocations",
+        "c1-nominalisation"
+      ],
+      "objectives": [
+        {
+          "id": "build-a-coherent",
+          "text": "Build a coherent argument"
+        },
+        {
+          "id": "paraphrase-and-reference",
+          "text": "Paraphrase and reference sources"
+        },
+        {
+          "id": "argumentative-essay",
+          "text": "Write an argumentative essay of at least 250 words that meets IELTS Writing Task 2 band 7+ criteria"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Copying a sentence from a source without quotation marks or a reference",
+          "right": "Paraphrase the idea in your own words and cite the source (Author, year)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menulis Akademik",
+          "summary": "Membangun argumen yang koheren, memparafrasekan dan merujuk sumber, serta menulis essay argumentatif setara IELTS Task 2 band 7+.",
+          "canDo": "Bisa menulis teks akademik yang jelas dan terstruktur, mengembangkan argumen dan memakai sumber dengan tepat.",
+          "objectives": {
+            "build-a-coherent": "Membangun argumen yang koheren",
+            "paraphrase-and-reference": "Memparafrasekan dan merujuk sumber",
+            "argumentative-essay": "Menulis essay argumentatif minimal 250 kata yang memenuhi kriteria IELTS Writing Task 2 band 7+"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-professional-writing",
+      "level": "C1",
+      "title": "Proposals & Reports",
+      "summary": "Structure proposals and reports, write executive summaries and recommendations, and keep business writing concise.",
+      "strand": "WR",
+      "canDo": "Can write well-structured proposals and reports with a clear executive summary and recommendations.",
+      "estimatedMinutes": 270,
+      "prerequisiteIds": [
+        "b2-formal-writing",
+        "c1-nominalisation"
+      ],
+      "objectives": [
+        {
+          "id": "proposal-structure",
+          "text": "Structure a proposal (background, objectives, plan, budget, timeline)"
+        },
+        {
+          "id": "executive-summary",
+          "text": "Write an executive summary and clear recommendations"
+        },
+        {
+          "id": "concise-business-writing",
+          "text": "Write concise business text by cutting filler and wordy phrases"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "In order to be able to make a decision regarding the matter of the budget…",
+          "right": "To decide on the budget…"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Proposal & Laporan",
+          "summary": "Menyusun proposal dan laporan, menulis executive summary dan rekomendasi, serta menulis bisnis secara ringkas.",
+          "canDo": "Bisa menulis proposal dan laporan yang terstruktur dengan executive summary dan rekomendasi yang jelas.",
+          "objectives": {
+            "proposal-structure": "Menyusun struktur proposal (latar belakang, tujuan, rencana, anggaran, jadwal)",
+            "executive-summary": "Menulis executive summary dan rekomendasi yang jelas",
+            "concise-business-writing": "Menulis teks bisnis yang ringkas dengan membuang kata pengisi dan frasa bertele-tele"
           }
         }
       }
@@ -198,7 +1313,10 @@
       "id": "c1-register",
       "level": "C1",
       "title": "Register Shifting",
-      "summary": "Move between formal, neutral and informal.",
+      "summary": "Move between formal, neutral and informal English to suit the audience and the channel.",
+      "strand": "WR",
+      "canDo": "Can adjust register to suit the audience, purpose and channel, from formal reports to casual messages.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "c1-cleft-sentences",
         "c1-collocations"
@@ -207,6 +1325,10 @@
         {
           "id": "adapt-register-to",
           "text": "Adapt register to audience and channel"
+        },
+        {
+          "id": "rewrite-across-registers",
+          "text": "Rewrite the same message in formal, neutral and informal register"
         }
       ],
       "masteryThreshold": 80,
@@ -214,21 +1336,133 @@
       "focus": [
         "career"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Hey Mr Tan, wanna catch up about the contract?",
+          "right": "Dear Mr Tan, would you be available to discuss the contract?"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Pergeseran Register",
-          "summary": "Berpindah antara formal, netral dan informal.",
+          "summary": "Berpindah antara bahasa Inggris formal, netral dan informal sesuai audiens dan media.",
+          "canDo": "Bisa menyesuaikan register dengan audiens, tujuan dan media, dari laporan formal sampai pesan santai.",
           "objectives": {
-            "adapt-register-to": "Menyesuaikan register dengan audiens dan media"
+            "adapt-register-to": "Menyesuaikan register dengan audiens dan media",
+            "rewrite-across-registers": "Menulis ulang pesan yang sama dalam register formal, netral dan informal"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-mediation-synthesis",
+      "level": "C1",
+      "title": "Synthesising Sources & Mediating",
+      "summary": "Combine Indonesian and English sources into one summary, mediate disagreements and explain cultural concepts.",
+      "strand": "ME",
+      "canDo": "Can synthesise information from several sources, mediate between people with different views and explain cultural nuances.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-reading-complex",
+        "b2-mediation-data-texts"
+      ],
+      "objectives": [
+        {
+          "id": "synthesise-sources",
+          "text": "Synthesise several sources (Indonesian and English) into one English summary"
+        },
+        {
+          "id": "mediate-disagreement",
+          "text": "Mediate differences of opinion within a team"
+        },
+        {
+          "id": "explain-cultural-concepts",
+          "text": "Convey nuance and cultural concepts such as gotong royong and sungkan in English"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyintesis Sumber & Mediasi",
+          "summary": "Menggabungkan sumber berbahasa Indonesia dan Inggris jadi satu ringkasan, memediasi perbedaan pendapat dan menjelaskan konsep budaya.",
+          "canDo": "Bisa menyintesis informasi dari beberapa sumber, menjembatani orang dengan pandangan berbeda dan menjelaskan nuansa budaya.",
+          "objectives": {
+            "synthesise-sources": "Menyintesis beberapa sumber (bahasa Indonesia dan Inggris) menjadi satu ringkasan berbahasa Inggris",
+            "mediate-disagreement": "Memediasi perbedaan pendapat dalam tim",
+            "explain-cultural-concepts": "Menyampaikan nuansa dan konsep budaya seperti gotong royong dan sungkan dalam bahasa Inggris"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1-checkpoint",
+      "level": "C1",
+      "title": "C1 Checkpoint",
+      "summary": "A mixed test of every C1 strand in a format similar to C1 Advanced and IELTS band 7+.",
+      "strand": "CK",
+      "canDo": "Can show C1-level skills across grammar, vocabulary, listening, reading, speaking, writing and mediation.",
+      "estimatedMinutes": 90,
+      "prerequisiteIds": [
+        "c1-inversion",
+        "c1-impersonal-structures",
+        "c1-ellipsis-substitution",
+        "c1-participle-advanced",
+        "c1-subjunctive-formal",
+        "c1-modal-nuance",
+        "c1-emphasis-fronting",
+        "c1-cohesion",
+        "c1-academic-vocabulary",
+        "c1-idioms",
+        "c1-connotation",
+        "c1-world-englishes",
+        "c1-listening-implicit",
+        "c1-debate",
+        "c1-presentations-advanced",
+        "c1-leading-meetings",
+        "c1-negotiation",
+        "c1-academic-writing",
+        "c1-professional-writing",
+        "c1-register",
+        "c1-mediation-synthesis"
+      ],
+      "objectives": [
+        {
+          "id": "grammar-vocabulary",
+          "text": "Grammar and vocabulary: inversion, clefts, nominalisation, collocations and hedging in context"
+        },
+        {
+          "id": "reading-listening",
+          "text": "Reading and listening: long, complex texts and unscripted speech, including implied meaning"
+        },
+        {
+          "id": "writing-speaking",
+          "text": "Writing and speaking: an essay or report and a spoken discussion, scored with a rubric"
+        },
+        {
+          "id": "mediation",
+          "text": "Mediation: summarise information from several sources for a given audience"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Checkpoint C1",
+          "summary": "Tes campuran semua strand C1 dengan format mirip C1 Advanced dan IELTS band 7+.",
+          "canDo": "Bisa menunjukkan kemampuan level C1 dalam grammar, kosakata, listening, reading, speaking, writing dan mediasi.",
+          "objectives": {
+            "grammar-vocabulary": "Grammar dan kosakata: inversi, cleft sentence, nominalisasi, kolokasi dan hedging dalam konteks",
+            "reading-listening": "Reading dan listening: teks panjang yang kompleks dan ucapan tanpa naskah, termasuk makna tersirat",
+            "writing-speaking": "Writing dan speaking: essay atau laporan dan diskusi lisan, dinilai dengan rubrik",
+            "mediation": "Mediasi: meringkas informasi dari beberapa sumber untuk audiens tertentu"
           }
         }
       }
     }
-  ],
-  "i18n": {
-    "id": {
-      "title": "Mahir",
-      "description": "Jalur lanjutan opsional: bahasa yang luwes dan tepat untuk topik yang kompleks."
-    }
-  }
+  ]
 }

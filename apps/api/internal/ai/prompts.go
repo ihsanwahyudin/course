@@ -26,6 +26,12 @@ func lessonPrefix(in LessonInput) string {
 	for _, o := range in.Node.Objectives {
 		fmt.Fprintf(&b, "- [%s] %s\n", o.ID, o.Text)
 	}
+	if len(in.Node.CommonErrors) > 0 {
+		b.WriteString("Typical mistakes of Indonesian learners in this lesson (point them out when they happen):\n")
+		for _, e := range in.Node.CommonErrors {
+			fmt.Fprintf(&b, "- %s → %s\n", e.Wrong, e.Right)
+		}
+	}
 	if l := in.Lesson; l != nil {
 		if m := l.MaterialText(); m != "" {
 			b.WriteString("\nCurated material (ground everything in this; do not contradict it):\n")

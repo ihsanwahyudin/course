@@ -42,6 +42,17 @@ type Node struct {
 	// Focus lists the onboarding goals (goal option ids) this node matters
 	// most for; untagged nodes are core for everyone.
 	Focus []string `json:"focus,omitempty"`
+	// Strand is the skill a node trains (GR grammar, VO vocabulary, PR
+	// pronunciation, LI listening, RE reading, SP speaking, WR writing, FN
+	// functions, ME mediation, CK checkpoint).
+	Strand string `json:"strand,omitempty"`
+	// CanDo is the CEFR-style "Can …" statement the node leads to.
+	CanDo string `json:"canDo,omitempty"`
+	// EstimatedMinutes is the rough study time for the node.
+	EstimatedMinutes int `json:"estimatedMinutes,omitempty"`
+	// CommonErrors are typical mistakes of Indonesian learners (shown on
+	// the node and given to the tutor).
+	CommonErrors []CommonError `json:"commonErrors,omitempty"`
 	// Foundations are lessons of other courses this node builds on (for
 	// test-prep tracks: the grammar and skills from the core roadmap).
 	Foundations []NodeRef `json:"foundations,omitempty"`
@@ -50,9 +61,19 @@ type Node struct {
 	I18n map[string]NodeText `json:"i18n,omitempty"`
 }
 
+// CommonError is a typical learner mistake and its correction.
+type CommonError struct {
+	Wrong string `json:"wrong"`
+	Right string `json:"right"`
+}
+
+// Strands are the skills a node can train.
+var Strands = map[string]bool{"GR": true, "VO": true, "PR": true, "LI": true, "RE": true, "SP": true, "WR": true, "FN": true, "ME": true, "CK": true}
+
 type NodeText struct {
 	Title      string            `json:"title"`
 	Summary    string            `json:"summary"`
+	CanDo      string            `json:"canDo,omitempty"`
 	Objectives map[string]string `json:"objectives"` // objective id -> text
 }
 
@@ -442,6 +463,17 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 			errs = append(errs, fmt.Errorf("node %q: needs at least one objective", n.ID))
 		}
 		seenObj := map[string]bool{}
+		if n.Strand != "" && !Strands[n.Strand] {
+			errs = append(errs, fmt.Errorf("node %q: unknown strand %q", n.ID, n.Strand))
+		}
+		if n.EstimatedMinutes < 0 || n.EstimatedMinutes > 600 {
+			errs = append(errs, fmt.Errorf("node %q: estimatedMinutes must be 0–600", n.ID))
+		}
+		for _, e := range n.CommonErrors {
+			if strings.TrimSpace(e.Wrong) == "" || strings.TrimSpace(e.Right) == "" {
+				errs = append(errs, fmt.Errorf("node %q: a common error needs wrong and right", n.ID))
+			}
+		}
 		for _, o := range n.Objectives {
 			if o.ID == "" || strings.TrimSpace(o.Text) == "" {
 				errs = append(errs, fmt.Errorf("node %q: objective needs id and text", n.ID))
@@ -656,6 +688,9 @@ func validateTranslations(c *Curriculum) []error {
 					errs = append(errs, fmt.Errorf("node %q: missing %q text for objective %q", n.ID, lang, o.ID))
 				}
 			}
+			if n.CanDo != "" && strings.TrimSpace(t.CanDo) == "" {
+				errs = append(errs, fmt.Errorf("node %q: missing %q can-do statement", n.ID, lang))
+			}
 		}
 		for id, l := range c.lessons {
 			if strings.TrimSpace(l.I18n[lang].Intro) == "" {
@@ -685,6 +720,9 @@ func (c *Curriculum) buildLocalized() {
 			cp.I18n = nil
 			if t, ok := n.I18n[lang]; ok && lang != BaseLanguage {
 				cp.Title, cp.Summary = t.Title, t.Summary
+				if t.CanDo != "" {
+					cp.CanDo = t.CanDo
+				}
 				cp.Objectives = make([]Objective, len(n.Objectives))
 				for i, o := range n.Objectives {
 					cp.Objectives[i] = Objective{ID: o.ID, Text: t.Objectives[o.ID]}

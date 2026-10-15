@@ -52,7 +52,7 @@ func objIDs(in LessonInput) []string {
 func TestLessonPrefix(t *testing.T) {
 	in, c := lessonInput(t, "a0-pronouns", "id")
 	p := lessonPrefix(in)
-	for _, want := range []string{"## Language", "in Indonesian (Bahasa Indonesia)", "Curated material", "## Scope", "[subject-pronouns]"} {
+	for _, want := range []string{"## Language", "in Indonesian (Bahasa Indonesia)", "Curated material", "## Scope", "[subject-pronouns]", "Typical mistakes of Indonesian learners", in.Node.CommonErrors[0].Right} {
 		if !strings.Contains(p, want) {
 			t.Fatalf("prefix missing %q", want)
 		}

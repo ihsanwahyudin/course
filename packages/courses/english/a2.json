@@ -1,36 +1,61 @@
 {
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "level": "A2",
   "title": "Elementary",
-  "description": "Talk about the past and plans, compare things and handle routine tasks.",
+  "description": "Understand common sentences about familiar things, handle routine tasks, and talk about the past, plans and simple needs.",
+  "i18n": {
+    "id": {
+      "title": "Dasar Lanjut",
+      "description": "Memahami kalimat umum tentang hal yang dekat, menyelesaikan tugas rutin, serta menceritakan masa lalu, rencana dan kebutuhan sederhana."
+    }
+  },
   "nodes": [
     {
       "id": "a2-past-simple-regular",
       "level": "A2",
       "title": "Past Simple (Regular)",
-      "summary": "Talk about finished actions with -ed verbs.",
+      "summary": "Talk about finished actions with regular -ed verbs, their spelling and past time markers.",
+      "strand": "GR",
+      "canDo": "Can talk about finished actions and events in the past using regular verbs and time expressions.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "a1-simple-present"
+        "a1-simple-present",
+        "a1-past-be"
       ],
       "objectives": [
         {
           "id": "form-regular-past",
-          "text": "Form regular past simple verbs"
+          "text": "Form regular past simple verbs and spell them correctly (stopped, studied)"
         },
         {
           "id": "use-time-markers",
-          "text": "Use time markers like yesterday and last week"
+          "text": "Use time markers like yesterday, last week and ago"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Yesterday I walk to work.",
+          "right": "Yesterday I walked to work."
+        },
+        {
+          "wrong": "I studyed hard for the test.",
+          "right": "I studied hard for the test."
+        },
+        {
+          "wrong": "I visited Bali two years before.",
+          "right": "I visited Bali two years ago."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Past Simple (Beraturan)",
-          "summary": "Membicarakan kejadian yang sudah selesai dengan kata kerja -ed.",
+          "summary": "Membicarakan kejadian yang sudah selesai dengan kata kerja -ed, ejaannya, dan penanda waktu lampau.",
+          "canDo": "Bisa menceritakan kegiatan dan kejadian yang sudah selesai di masa lalu dengan kata kerja beraturan dan keterangan waktu.",
           "objectives": {
-            "form-regular-past": "Membentuk kata kerja past simple beraturan",
-            "use-time-markers": "Menggunakan penanda waktu seperti yesterday dan last week"
+            "form-regular-past": "Membentuk kata kerja past simple beraturan dengan ejaan yang benar (stopped, studied)",
+            "use-time-markers": "Memakai penanda waktu seperti yesterday, last week dan ago"
           }
         }
       }
@@ -39,18 +64,21 @@
       "id": "a2-past-simple-irregular",
       "level": "A2",
       "title": "Past Simple (Irregular)",
-      "summary": "Common irregular verbs: went, had, saw, made.",
+      "summary": "Common irregular past forms (went, had, saw, made) plus negatives and questions with did.",
+      "strand": "GR",
+      "canDo": "Can describe past events and ask and answer simple questions about them, using common irregular verbs.",
+      "estimatedMinutes": 210,
       "prerequisiteIds": [
         "a2-past-simple-regular"
       ],
       "objectives": [
         {
           "id": "use-common-irregular",
-          "text": "Use common irregular past forms"
+          "text": "Use common irregular past forms (went, had, saw, made)"
         },
         {
-          "id": "ask-and-answer",
-          "text": "Ask and answer questions with did"
+          "id": "did-negatives-questions",
+          "text": "Make negatives and questions with did + base verb (didn't go, not didn't went)"
         }
       ],
       "masteryThreshold": 80,
@@ -58,13 +86,136 @@
       "focus": [
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Yesterday I go to the market.",
+          "right": "Yesterday I went to the market."
+        },
+        {
+          "wrong": "I didn't went to school.",
+          "right": "I didn't go to school."
+        },
+        {
+          "wrong": "Did you saw the film?",
+          "right": "Did you see the film?"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Past Simple (Tidak Beraturan)",
-          "summary": "Kata kerja tidak beraturan umum: went, had, saw, made.",
+          "summary": "Bentuk lampau tidak beraturan yang umum (went, had, saw, made), serta kalimat negatif dan pertanyaan dengan did.",
+          "canDo": "Bisa menceritakan kejadian di masa lalu serta bertanya dan menjawab tentangnya dengan kata kerja tidak beraturan yang umum.",
           "objectives": {
-            "use-common-irregular": "Menggunakan bentuk lampau tidak beraturan yang umum",
-            "ask-and-answer": "Bertanya dan menjawab dengan did"
+            "use-common-irregular": "Memakai bentuk lampau tidak beraturan yang umum (went, had, saw, made)",
+            "did-negatives-questions": "Membuat kalimat negatif dan pertanyaan dengan did + kata kerja dasar (didn't go, bukan didn't went)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-past-continuous-intro",
+      "level": "A2",
+      "title": "Past Continuous (Intro)",
+      "summary": "Use was/were + -ing to say what was happening at a particular time in the past.",
+      "strand": "GR",
+      "canDo": "Can say what they and other people were doing at a particular time in the past.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a2-past-simple-irregular",
+        "a1-present-continuous"
+      ],
+      "objectives": [
+        {
+          "id": "form-past-continuous",
+          "text": "Form the past continuous with was/were + -ing"
+        },
+        {
+          "id": "action-in-progress",
+          "text": "Describe an action in progress at a past time (At 8 I was having dinner)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "They was watching TV.",
+          "right": "They were watching TV."
+        },
+        {
+          "wrong": "At 8 I was have dinner.",
+          "right": "At 8 I was having dinner."
+        },
+        {
+          "wrong": "At 8 last night I am cooking.",
+          "right": "At 8 last night I was cooking."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Past Continuous (Pengenalan)",
+          "summary": "Memakai was/were + -ing untuk menyatakan kegiatan yang sedang berlangsung pada waktu tertentu di masa lalu.",
+          "canDo": "Bisa menyampaikan apa yang sedang kamu dan orang lain lakukan pada waktu tertentu di masa lalu.",
+          "objectives": {
+            "form-past-continuous": "Membentuk past continuous dengan was/were + -ing",
+            "action-in-progress": "Menjelaskan kegiatan yang sedang berlangsung pada waktu tertentu di masa lalu (At 8 I was having dinner)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-can-could",
+      "level": "A2",
+      "title": "Could & Polite Requests",
+      "summary": "Use could/couldn't for past ability, and Could you …? / Could I …? for polite requests and permission.",
+      "strand": "GR",
+      "canDo": "Can say what they could or couldn't do in the past and make polite requests and ask for permission.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-can-ability",
+        "a2-past-simple-regular"
+      ],
+      "objectives": [
+        {
+          "id": "past-ability",
+          "text": "Use could/couldn't for past ability"
+        },
+        {
+          "id": "polite-requests",
+          "text": "Make polite requests with Could you …?"
+        },
+        {
+          "id": "ask-permission",
+          "text": "Ask for permission with Could I …?"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "When I was five, I can swim.",
+          "right": "When I was five, I could swim."
+        },
+        {
+          "wrong": "Could you to help me?",
+          "right": "Could you help me?"
+        },
+        {
+          "wrong": "I couldn't went to the party.",
+          "right": "I couldn't go to the party."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Could & Permintaan Sopan",
+          "summary": "Memakai could/couldn't untuk kemampuan di masa lalu, serta Could you …? / Could I …? untuk permintaan sopan dan izin.",
+          "canDo": "Bisa menyampaikan apa yang dulu bisa atau tidak bisa kamu lakukan, serta meminta tolong dan meminta izin dengan sopan.",
+          "objectives": {
+            "past-ability": "Memakai could/couldn't untuk kemampuan di masa lalu",
+            "polite-requests": "Meminta tolong dengan sopan memakai Could you …?",
+            "ask-permission": "Meminta izin dengan Could I …?"
           }
         }
       }
@@ -73,7 +224,10 @@
       "id": "a2-future-going-to",
       "level": "A2",
       "title": "Future with Going To",
-      "summary": "Plans and predictions from evidence.",
+      "summary": "Plans and predictions from evidence with going to, plus the present continuous for fixed arrangements.",
+      "strand": "GR",
+      "canDo": "Can talk about their plans and arrangements and make predictions based on what they can see.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a1-present-continuous"
       ],
@@ -84,18 +238,149 @@
         },
         {
           "id": "make-predictions-from",
-          "text": "Make predictions from what you see"
+          "text": "Make predictions from what you see (Look at the clouds! It's going to rain.)"
+        },
+        {
+          "id": "fixed-arrangements",
+          "text": "Use the present continuous for fixed arrangements (I'm meeting Sari on Friday)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I going to visit my grandma.",
+          "right": "I'm going to visit my grandma."
+        },
+        {
+          "wrong": "She is going to buys a car.",
+          "right": "She is going to buy a car."
+        },
+        {
+          "wrong": "Tomorrow I meet Sari at the cafe at 5.",
+          "right": "Tomorrow I'm meeting Sari at the cafe at 5."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Masa Depan dengan Going To",
-          "summary": "Rencana dan prediksi berdasarkan bukti.",
+          "summary": "Rencana dan prediksi berdasarkan bukti dengan going to, serta present continuous untuk janji yang sudah terjadwal.",
+          "canDo": "Bisa membicarakan rencana dan janji temu, serta membuat prediksi berdasarkan apa yang kamu lihat.",
           "objectives": {
             "talk-about-plans": "Membicarakan rencana dengan going to",
-            "make-predictions-from": "Membuat prediksi dari apa yang kamu lihat"
+            "make-predictions-from": "Membuat prediksi dari apa yang kamu lihat (Look at the clouds! It's going to rain.)",
+            "fixed-arrangements": "Memakai present continuous untuk janji yang sudah terjadwal (I'm meeting Sari on Friday)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-will",
+      "level": "A2",
+      "title": "Will",
+      "summary": "Use will for predictions, offers, promises and decisions made at the moment of speaking.",
+      "strand": "GR",
+      "canDo": "Can make simple predictions, offers and promises, and say what they decide to do on the spot.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a2-future-going-to"
+      ],
+      "objectives": [
+        {
+          "id": "predictions",
+          "text": "Make predictions with will (I think it will rain)"
+        },
+        {
+          "id": "offers-promises",
+          "text": "Make offers and promises with will (I'll help you)"
+        },
+        {
+          "id": "spontaneous-decisions",
+          "text": "Use will for decisions made at the moment of speaking"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I will to call you tonight.",
+          "right": "I'll call you tonight."
+        },
+        {
+          "wrong": "I think it will raining.",
+          "right": "I think it will rain."
+        },
+        {
+          "wrong": "The phone's ringing. I answer it.",
+          "right": "The phone's ringing. I'll answer it."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Will",
+          "summary": "Memakai will untuk prediksi, tawaran, janji, dan keputusan yang diambil saat itu juga.",
+          "canDo": "Bisa membuat prediksi sederhana, menawarkan bantuan, berjanji, dan menyampaikan keputusan yang diambil saat itu juga.",
+          "objectives": {
+            "predictions": "Membuat prediksi dengan will (I think it will rain)",
+            "offers-promises": "Menawarkan bantuan dan berjanji dengan will (I'll help you)",
+            "spontaneous-decisions": "Memakai will untuk keputusan spontan saat berbicara"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-present-perfect-intro",
+      "level": "A2",
+      "title": "Present Perfect (Intro)",
+      "summary": "Form have/has + past participle and use it for experiences (ever/never) and recent news (just/already/yet).",
+      "strand": "GR",
+      "canDo": "Can talk about their experiences and about things that have or haven't happened recently.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "a2-past-simple-irregular"
+      ],
+      "objectives": [
+        {
+          "id": "form-present-perfect",
+          "text": "Form the present perfect with have/has + past participle"
+        },
+        {
+          "id": "experiences-ever-never",
+          "text": "Talk about experiences with ever and never"
+        },
+        {
+          "id": "just-already-yet",
+          "text": "Use just, already and yet"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I have saw that film.",
+          "right": "I have seen that film."
+        },
+        {
+          "wrong": "Have you ever went to Japan?",
+          "right": "Have you ever been to Japan?"
+        },
+        {
+          "wrong": "I already finish my homework.",
+          "right": "I've already finished my homework."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Present Perfect (Pengenalan)",
+          "summary": "Membentuk have/has + past participle untuk pengalaman (ever/never) dan kabar terbaru (just/already/yet).",
+          "canDo": "Bisa menceritakan pengalaman dan hal yang sudah atau belum terjadi baru-baru ini.",
+          "objectives": {
+            "form-present-perfect": "Membentuk present perfect dengan have/has + past participle",
+            "experiences-ever-never": "Membicarakan pengalaman dengan ever dan never",
+            "just-already-yet": "Memakai just, already dan yet"
           }
         }
       }
@@ -104,18 +389,25 @@
       "id": "a2-comparatives",
       "level": "A2",
       "title": "Comparatives & Superlatives",
-      "summary": "bigger, more expensive, the best.",
+      "summary": "Compare things with bigger, more expensive, the best and as … as / not as … as.",
+      "strand": "GR",
+      "canDo": "Can compare people, places and things in simple terms.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "a1-to-be"
+        "a1-adjectives"
       ],
       "objectives": [
         {
           "id": "compare-two-things",
-          "text": "Compare two things with comparatives"
+          "text": "Compare two things with comparatives (bigger, more expensive)"
         },
         {
           "id": "describe-extremes-with",
-          "text": "Describe extremes with superlatives"
+          "text": "Describe extremes with superlatives (the best, the most expensive)"
+        },
+        {
+          "id": "as-as",
+          "text": "Compare with as … as and not as … as"
         }
       ],
       "masteryThreshold": 80,
@@ -123,13 +415,83 @@
       "focus": [
         "travel"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Jakarta is more big than Bandung.",
+          "right": "Jakarta is bigger than Bandung."
+        },
+        {
+          "wrong": "Bali is smaller from Java.",
+          "right": "Bali is smaller than Java."
+        },
+        {
+          "wrong": "This is the most cheap hotel.",
+          "right": "This is the cheapest hotel."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Perbandingan & Superlatif",
-          "summary": "bigger, more expensive, the best.",
+          "summary": "Membandingkan dengan bigger, more expensive, the best, dan as … as / not as … as.",
+          "canDo": "Bisa membandingkan orang, tempat, dan benda secara sederhana.",
           "objectives": {
-            "compare-two-things": "Membandingkan dua hal dengan comparative",
-            "describe-extremes-with": "Mendeskripsikan yang paling dengan superlative"
+            "compare-two-things": "Membandingkan dua hal dengan comparative (bigger, more expensive)",
+            "describe-extremes-with": "Menyatakan yang paling dengan superlative (the best, the most expensive)",
+            "as-as": "Membandingkan dengan as … as dan not as … as"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-adverbs-manner",
+      "level": "A2",
+      "title": "Adverbs of Manner & Degree",
+      "summary": "Say how people do things with -ly and irregular adverbs, and make words stronger with quite, really and very.",
+      "strand": "GR",
+      "canDo": "Can describe how people do things and make descriptions stronger or weaker.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-adjectives"
+      ],
+      "objectives": [
+        {
+          "id": "form-adverbs",
+          "text": "Form adverbs with -ly and use irregular ones (fast, well, hard)"
+        },
+        {
+          "id": "adjective-vs-adverb",
+          "text": "Choose between an adjective and an adverb (a good driver / drives well)"
+        },
+        {
+          "id": "degree-words",
+          "text": "Use quite, really and very to change how strong a word is"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "He drives very good.",
+          "right": "He drives very well."
+        },
+        {
+          "wrong": "She speaks English fluent.",
+          "right": "She speaks English fluently."
+        },
+        {
+          "wrong": "I very like it.",
+          "right": "I really like it."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Adverb Cara & Tingkat",
+          "summary": "Menyatakan cara melakukan sesuatu dengan adverb -ly dan tidak beraturan, serta menguatkan kata dengan quite, really dan very.",
+          "canDo": "Bisa menjelaskan bagaimana orang melakukan sesuatu dan menguatkan atau melemahkan deskripsi.",
+          "objectives": {
+            "form-adverbs": "Membentuk adverb dengan -ly dan memakai adverb tidak beraturan (fast, well, hard)",
+            "adjective-vs-adverb": "Memilih antara kata sifat dan adverb (a good driver / drives well)",
+            "degree-words": "Memakai quite, really dan very untuk mengatur kuat-lemahnya kata"
           }
         }
       }
@@ -137,19 +499,26 @@
     {
       "id": "a2-countable-uncountable",
       "level": "A2",
-      "title": "Countable & Uncountable",
-      "summary": "some, any, much, many, a lot of.",
+      "title": "Quantifiers",
+      "summary": "Talk about amounts with much, many, a lot of, a few, a little, too much and too many.",
+      "strand": "GR",
+      "canDo": "Can talk about quantities of things, including when there is too much or too many.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
-        "a1-there-is-are"
+        "a1-countable-some-any"
       ],
       "objectives": [
         {
-          "id": "distinguish-countable-and",
-          "text": "Distinguish countable and uncountable nouns"
+          "id": "much-many-a-lot-of",
+          "text": "Use much, many and a lot of with countable and uncountable nouns"
         },
         {
-          "id": "use-some-any",
-          "text": "Use some, any, much and many correctly"
+          "id": "a-few-a-little",
+          "text": "Use a few and a little"
+        },
+        {
+          "id": "too-much-too-many",
+          "text": "Say there is too much or too many of something"
         }
       ],
       "masteryThreshold": 80,
@@ -157,67 +526,323 @@
       "focus": [
         "travel"
       ],
+      "commonErrors": [
+        {
+          "wrong": "How much people came?",
+          "right": "How many people came?"
+        },
+        {
+          "wrong": "I have a few money.",
+          "right": "I have a little money."
+        },
+        {
+          "wrong": "There are too much cars in Jakarta.",
+          "right": "There are too many cars in Jakarta."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Dapat & Tak Dapat Dihitung",
-          "summary": "some, any, much, many, a lot of.",
+          "title": "Kata Penunjuk Jumlah",
+          "summary": "Menyatakan jumlah dengan much, many, a lot of, a few, a little, too much dan too many.",
+          "canDo": "Bisa membicarakan jumlah sesuatu, termasuk saat jumlahnya terlalu banyak.",
           "objectives": {
-            "distinguish-countable-and": "Membedakan kata benda yang dapat dan tidak dapat dihitung",
-            "use-some-any": "Menggunakan some, any, much dan many dengan benar"
+            "much-many-a-lot-of": "Memakai much, many dan a lot of dengan kata benda yang dapat dan tidak dapat dihitung",
+            "a-few-a-little": "Memakai a few dan a little",
+            "too-much-too-many": "Menyatakan sesuatu terlalu banyak dengan too much atau too many"
           }
         }
       }
     },
     {
-      "id": "a2-prepositions",
+      "id": "a2-modals-obligation",
       "level": "A2",
-      "title": "Prepositions of Time & Place",
-      "summary": "in, on, at for time and place.",
+      "title": "Should, Have To & Must",
+      "summary": "Give advice with should and talk about rules and obligations with have to, must, mustn't and don't have to.",
+      "strand": "GR",
+      "canDo": "Can give simple advice and explain what is necessary, not necessary or not allowed.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "a1-there-is-are"
+        "a1-can-ability"
       ],
       "objectives": [
         {
-          "id": "use-in-on",
-          "text": "Use in, on, at with times and dates"
+          "id": "advice-should",
+          "text": "Give advice with should and shouldn't"
         },
         {
-          "id": "use-prepositions-to",
-          "text": "Use prepositions to describe location"
+          "id": "obligation-have-to-must",
+          "text": "Talk about obligation with have to and must"
+        },
+        {
+          "id": "mustnt-vs-dont-have-to",
+          "text": "Tell the difference between mustn't and don't have to"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
-      "focus": [
-        "travel"
+      "commonErrors": [
+        {
+          "wrong": "You should to rest.",
+          "right": "You should rest."
+        },
+        {
+          "wrong": "She have to work on Saturday.",
+          "right": "She has to work on Saturday."
+        },
+        {
+          "wrong": "It's a holiday tomorrow, so you mustn't come to work.",
+          "right": "It's a holiday tomorrow, so you don't have to come to work."
+        }
       ],
       "i18n": {
         "id": {
-          "title": "Preposisi Waktu & Tempat",
-          "summary": "in, on, at untuk waktu dan tempat.",
+          "title": "Should, Have To & Must",
+          "summary": "Memberi saran dengan should, serta membicarakan aturan dan kewajiban dengan have to, must, mustn't dan don't have to.",
+          "canDo": "Bisa memberi saran sederhana dan menjelaskan apa yang wajib, tidak wajib, atau dilarang.",
           "objectives": {
-            "use-in-on": "Menggunakan in, on, at untuk waktu dan tanggal",
-            "use-prepositions-to": "Menggunakan preposisi untuk mendeskripsikan lokasi"
+            "advice-should": "Memberi saran dengan should dan shouldn't",
+            "obligation-have-to-must": "Membicarakan kewajiban dengan have to dan must",
+            "mustnt-vs-dont-have-to": "Membedakan mustn't (dilarang) dan don't have to (tidak wajib)"
           }
         }
       }
     },
     {
-      "id": "a2-adverbs-frequency",
+      "id": "a2-possessive-pronouns",
       "level": "A2",
-      "title": "Adverbs of Frequency",
-      "summary": "always, usually, sometimes, never.",
+      "title": "Possessive Pronouns",
+      "summary": "Say who things belong to with mine, yours, theirs, Whose …? and 's / s'.",
+      "strand": "GR",
+      "canDo": "Can ask and say who things belong to.",
+      "estimatedMinutes": 120,
       "prerequisiteIds": [
-        "a1-daily-routines"
+        "a1-possessives"
       ],
       "objectives": [
         {
-          "id": "use-adverbs-of",
-          "text": "Use adverbs of frequency in the right position"
+          "id": "possessive-pronouns",
+          "text": "Use mine, yours, his, hers, ours and theirs"
         },
         {
-          "id": "ask-how-often",
-          "text": "Ask how often questions"
+          "id": "whose-questions",
+          "text": "Ask and answer with Whose …? (Whose is this? It's mine.)"
+        },
+        {
+          "id": "apostrophe-s",
+          "text": "Use 's and s' correctly (my sister's room, my parents' house)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "This bag is my.",
+          "right": "This bag is mine."
+        },
+        {
+          "wrong": "That's the book of my friend.",
+          "right": "That's my friend's book."
+        },
+        {
+          "wrong": "my parent's house (for both parents)",
+          "right": "my parents' house"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata Ganti Kepemilikan",
+          "summary": "Menyatakan pemilik sesuatu dengan mine, yours, theirs, Whose …? serta 's / s'.",
+          "canDo": "Bisa menanyakan dan menyatakan milik siapa suatu benda.",
+          "objectives": {
+            "possessive-pronouns": "Memakai mine, yours, his, hers, ours dan theirs",
+            "whose-questions": "Bertanya dan menjawab dengan Whose …? (Whose is this? It's mine.)",
+            "apostrophe-s": "Memakai 's dan s' dengan benar (my sister's room, my parents' house)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-verb-patterns",
+      "level": "A2",
+      "title": "Verb + -ing / To-Infinitive",
+      "summary": "Which verbs take to (want, decide) and which take -ing (enjoy, finish), plus to for purpose.",
+      "strand": "GR",
+      "canDo": "Can talk about wants, plans and likes using the right verb pattern, and explain why they did something.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-like-would-like"
+      ],
+      "objectives": [
+        {
+          "id": "verb-to-infinitive",
+          "text": "Use want, need, hope and decide + to-infinitive"
+        },
+        {
+          "id": "verb-ing",
+          "text": "Use enjoy, finish and mind + -ing"
+        },
+        {
+          "id": "to-for-purpose",
+          "text": "Use to to explain purpose (I went to the bank to get money)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I want go home.",
+          "right": "I want to go home."
+        },
+        {
+          "wrong": "I enjoy to swim.",
+          "right": "I enjoy swimming."
+        },
+        {
+          "wrong": "I went to the bank for get money.",
+          "right": "I went to the bank to get money."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata Kerja + -ing / To-Infinitive",
+          "summary": "Kata kerja yang diikuti to (want, decide) dan yang diikuti -ing (enjoy, finish), serta to untuk menyatakan tujuan.",
+          "canDo": "Bisa menyampaikan keinginan, rencana dan kesukaan dengan pola kata kerja yang tepat, serta menjelaskan tujuan melakukan sesuatu.",
+          "objectives": {
+            "verb-to-infinitive": "Memakai want, need, hope dan decide + to-infinitive",
+            "verb-ing": "Memakai enjoy, finish dan mind + -ing",
+            "to-for-purpose": "Memakai to untuk menyatakan tujuan (I went to the bank to get money)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-zero-first-conditional",
+      "level": "A2",
+      "title": "Zero & First Conditional (Intro)",
+      "summary": "Talk about general facts and real future possibilities with if, and know when to use when instead.",
+      "strand": "GR",
+      "canDo": "Can talk about general facts and real possibilities in the future and their results.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a2-will"
+      ],
+      "objectives": [
+        {
+          "id": "zero-conditional",
+          "text": "Use the zero conditional for general facts (If you heat ice, it melts)"
+        },
+        {
+          "id": "first-conditional",
+          "text": "Use the first conditional for real possibilities (If it rains, I'll stay home)"
+        },
+        {
+          "id": "if-vs-when",
+          "text": "Choose between if (maybe) and when (sure to happen)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "If it will rain, I'll stay home.",
+          "right": "If it rains, I'll stay home."
+        },
+        {
+          "wrong": "If you heat ice, it will melts.",
+          "right": "If you heat ice, it melts."
+        },
+        {
+          "wrong": "If I get home tonight, I'll call you. (it is certain)",
+          "right": "When I get home tonight, I'll call you."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Zero & First Conditional (Pengenalan)",
+          "summary": "Membicarakan fakta umum dan kemungkinan nyata di masa depan dengan if, serta kapan memakai when.",
+          "canDo": "Bisa membicarakan fakta umum dan kemungkinan nyata di masa depan beserta akibatnya.",
+          "objectives": {
+            "zero-conditional": "Memakai zero conditional untuk fakta umum (If you heat ice, it melts)",
+            "first-conditional": "Memakai first conditional untuk kemungkinan nyata (If it rains, I'll stay home)",
+            "if-vs-when": "Memilih antara if (mungkin terjadi) dan when (pasti terjadi)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-linkers-sequence",
+      "level": "A2",
+      "title": "Linking Words for Stories",
+      "summary": "Put events in order with first, then, next, finally, before, after and when, and show results with so.",
+      "strand": "GR",
+      "canDo": "Can tell a simple story or describe a sequence of events using basic linking words.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a2-past-simple-irregular",
+        "a1-conjunctions"
+      ],
+      "objectives": [
+        {
+          "id": "sequence-words",
+          "text": "Order events with first, then, next and finally"
+        },
+        {
+          "id": "before-after-when",
+          "text": "Link events with before, after and when"
+        },
+        {
+          "id": "so-for-result",
+          "text": "Show a result with so"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Because it rained, so I stayed home.",
+          "right": "It rained, so I stayed home."
+        },
+        {
+          "wrong": "After I finished work, then I went home.",
+          "right": "After I finished work, I went home."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata Penghubung untuk Bercerita",
+          "summary": "Mengurutkan kejadian dengan first, then, next, finally, before, after dan when, serta menyatakan akibat dengan so.",
+          "canDo": "Bisa bercerita sederhana atau menjelaskan urutan kejadian dengan kata penghubung dasar.",
+          "objectives": {
+            "sequence-words": "Mengurutkan kejadian dengan first, then, next dan finally",
+            "before-after-when": "Menghubungkan kejadian dengan before, after dan when",
+            "so-for-result": "Menyatakan akibat dengan so"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-phrasal-verbs-common",
+      "level": "A2",
+      "title": "Common Phrasal Verbs",
+      "summary": "Everyday phrasal verbs like get up, turn on/off, look for and put on, in context and in your routine.",
+      "strand": "VO",
+      "canDo": "Can understand and use common everyday phrasal verbs, for example when describing a daily routine.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "everyday-phrasal-verbs",
+          "text": "Use everyday phrasal verbs (get up, turn on/off, look for, put on)"
+        },
+        {
+          "id": "meaning-from-context",
+          "text": "Understand the meaning of phrasal verbs from context"
+        },
+        {
+          "id": "describe-routine",
+          "text": "Use phrasal verbs to describe your routine"
         }
       ],
       "masteryThreshold": 80,
@@ -225,13 +850,202 @@
       "focus": [
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Please open the light.",
+          "right": "Please turn on the light."
+        },
+        {
+          "wrong": "I'm looking my keys.",
+          "right": "I'm looking for my keys."
+        },
+        {
+          "wrong": "It's cold. Put on it.",
+          "right": "It's cold. Put it on."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Kata Keterangan Frekuensi",
-          "summary": "always, usually, sometimes, never.",
+          "title": "Phrasal Verb Umum",
+          "summary": "Phrasal verb sehari-hari seperti get up, turn on/off, look for dan put on, dalam konteks dan rutinitasmu.",
+          "canDo": "Bisa memahami dan memakai phrasal verb sehari-hari, misalnya saat menceritakan rutinitas.",
           "objectives": {
-            "use-adverbs-of": "Menempatkan kata keterangan frekuensi di posisi yang benar",
-            "ask-how-often": "Bertanya dengan how often"
+            "everyday-phrasal-verbs": "Memakai phrasal verb sehari-hari (get up, turn on/off, look for, put on)",
+            "meaning-from-context": "Memahami arti phrasal verb dari konteks",
+            "describe-routine": "Memakai phrasal verb untuk menceritakan rutinitasmu"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-vocab-travel",
+      "level": "A2",
+      "title": "Travel & Holidays",
+      "summary": "Words for airports, hotels and tickets, prepositions of movement and holiday activities.",
+      "strand": "VO",
+      "canDo": "Can talk about travel arrangements, describe a route and say what they do on holiday.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-vocab-town-transport"
+      ],
+      "objectives": [
+        {
+          "id": "airport-hotel-tickets",
+          "text": "Use words for airports, hotels and tickets"
+        },
+        {
+          "id": "prepositions-of-movement",
+          "text": "Use prepositions of movement (into, across, along, past)"
+        },
+        {
+          "id": "holiday-activities",
+          "text": "Talk about holiday activities"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "We go to holiday in Lombok.",
+          "right": "We go on holiday in Lombok."
+        },
+        {
+          "wrong": "Walk pass the bank and turn left.",
+          "right": "Walk past the bank and turn left."
+        },
+        {
+          "wrong": "We went into the bus.",
+          "right": "We got on the bus."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Perjalanan & Liburan",
+          "summary": "Kosakata bandara, hotel dan tiket, preposisi gerak, serta kegiatan liburan.",
+          "canDo": "Bisa membicarakan persiapan perjalanan, menjelaskan rute, dan menceritakan kegiatan saat liburan.",
+          "objectives": {
+            "airport-hotel-tickets": "Memakai kosakata bandara, hotel dan tiket",
+            "prepositions-of-movement": "Memakai preposisi gerak (into, across, along, past)",
+            "holiday-activities": "Membicarakan kegiatan liburan"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-vocab-health",
+      "level": "A2",
+      "title": "Health & Feelings",
+      "summary": "Common symptoms and illnesses, words for the doctor's and the pharmacy, and basic feelings.",
+      "strand": "VO",
+      "canDo": "Can say how they feel, physically and emotionally, and describe common health problems.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-vocab-daily-life"
+      ],
+      "objectives": [
+        {
+          "id": "symptoms-illnesses",
+          "text": "Name common symptoms and illnesses (headache, fever)"
+        },
+        {
+          "id": "doctor-pharmacy",
+          "text": "Use key words at the doctor's and the pharmacy"
+        },
+        {
+          "id": "basic-feelings",
+          "text": "Describe basic feelings (worried, happy, angry)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I am headache.",
+          "right": "I have a headache."
+        },
+        {
+          "wrong": "My body is hot.",
+          "right": "I have a fever."
+        },
+        {
+          "wrong": "I'm boring at home.",
+          "right": "I'm bored at home."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kesehatan & Perasaan",
+          "summary": "Gejala dan penyakit umum, kosakata di dokter dan apotek, serta perasaan dasar.",
+          "canDo": "Bisa menyampaikan kondisi tubuh dan perasaanmu, serta menjelaskan masalah kesehatan yang umum.",
+          "objectives": {
+            "symptoms-illnesses": "Menyebutkan gejala dan penyakit umum (headache, fever)",
+            "doctor-pharmacy": "Memakai kosakata penting di dokter dan apotek",
+            "basic-feelings": "Mendeskripsikan perasaan dasar (worried, happy, angry)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-vocab-work-study",
+      "level": "A2",
+      "title": "Work, Study & Technology",
+      "summary": "Words for jobs and workplaces, school and university, and basic technology (email, app, download, password).",
+      "strand": "VO",
+      "canDo": "Can talk simply about their work or studies and the technology they use every day.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-vocab-jobs-hobbies"
+      ],
+      "objectives": [
+        {
+          "id": "workplace-tasks",
+          "text": "Talk about tasks and places at work"
+        },
+        {
+          "id": "school-university",
+          "text": "Use words for school and university"
+        },
+        {
+          "id": "basic-technology",
+          "text": "Use basic technology words (email, app, download, password)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "study",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I work as accountant.",
+          "right": "I work as an accountant."
+        },
+        {
+          "wrong": "I have many homeworks.",
+          "right": "I have a lot of homework."
+        },
+        {
+          "wrong": "I forgot my password, so I can't login.",
+          "right": "I forgot my password, so I can't log in."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kerja, Studi & Teknologi",
+          "summary": "Kosakata pekerjaan dan tempat kerja, sekolah dan kuliah, serta teknologi dasar (email, app, download, password).",
+          "canDo": "Bisa membicarakan pekerjaan atau studimu dan teknologi yang kamu pakai sehari-hari secara sederhana.",
+          "objectives": {
+            "workplace-tasks": "Membicarakan tugas dan tempat di lingkungan kerja",
+            "school-university": "Memakai kosakata sekolah dan kuliah",
+            "basic-technology": "Memakai kosakata teknologi dasar (email, app, download, password)"
           }
         }
       }
@@ -240,8 +1054,13 @@
       "id": "a2-describing-people",
       "level": "A2",
       "title": "Describing People",
-      "summary": "Appearance and personality.",
+      "summary": "Describe appearance and personality, and compare people.",
+      "strand": "VO",
+      "canDo": "Can describe what people look like and what they are like, and compare them.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
+        "a1-have-got",
+        "a1-adjectives",
         "a2-comparatives"
       ],
       "objectives": [
@@ -252,6 +1071,10 @@
         {
           "id": "describe-personality-with",
           "text": "Describe personality with suitable adjectives"
+        },
+        {
+          "id": "compare-people",
+          "text": "Compare people (My brother is taller than me)"
         }
       ],
       "masteryThreshold": 80,
@@ -259,13 +1082,272 @@
       "focus": [
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "She has long black hairs.",
+          "right": "She has long black hair."
+        },
+        {
+          "wrong": "She has hair long.",
+          "right": "She has long hair."
+        },
+        {
+          "wrong": "He is very friendly person.",
+          "right": "He is a very friendly person."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Mendeskripsikan Orang",
-          "summary": "Penampilan dan kepribadian.",
+          "summary": "Mendeskripsikan penampilan dan kepribadian, serta membandingkan orang.",
+          "canDo": "Bisa menjelaskan penampilan dan sifat seseorang, serta membandingkan orang.",
           "objectives": {
             "describe-appearance": "Mendeskripsikan penampilan",
-            "describe-personality-with": "Mendeskripsikan kepribadian dengan kata sifat yang tepat"
+            "describe-personality-with": "Mendeskripsikan kepribadian dengan kata sifat yang tepat",
+            "compare-people": "Membandingkan orang (My brother is taller than me)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-pron-ed-weak-forms",
+      "level": "A2",
+      "title": "-ed Endings & Weak Forms",
+      "summary": "Say -ed endings as /t/, /d/ or /ɪd/, and use and hear schwa weak forms of was, can, to and of.",
+      "strand": "PR",
+      "canDo": "Can pronounce past -ed endings clearly and recognise weak forms in natural speech.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a2-past-simple-regular",
+        "a1-pron-word-stress"
+      ],
+      "objectives": [
+        {
+          "id": "ed-endings",
+          "text": "Say -ed endings as /t/, /d/ or /ɪd/ (worked, played, wanted)"
+        },
+        {
+          "id": "schwa-weak-forms",
+          "text": "Use schwa and the weak forms of was, can, to and of"
+        },
+        {
+          "id": "hear-weak-forms",
+          "text": "Recognise weak forms in spoken sentences"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "worked said as 'work-ed' with an extra /ɪd/ syllable",
+          "right": "worked as one syllable ending in /t/ /wɜːkt/"
+        },
+        {
+          "wrong": "played said as 'play', with the final /d/ dropped",
+          "right": "played with a clear final /d/ /pleɪd/"
+        },
+        {
+          "wrong": "can and to always said in full: /kæn/, /tuː/",
+          "right": "weak forms in sentences: I can go /aɪ kən ɡəʊ/, want to /wɒnt tə/"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Akhiran -ed & Weak Forms",
+          "summary": "Mengucapkan akhiran -ed sebagai /t/, /d/ atau /ɪd/, serta memakai dan mengenali weak form was, can, to dan of.",
+          "canDo": "Bisa mengucapkan akhiran -ed dengan jelas dan mengenali weak forms dalam ucapan alami.",
+          "objectives": {
+            "ed-endings": "Mengucapkan akhiran -ed sebagai /t/, /d/ atau /ɪd/ (worked, played, wanted)",
+            "schwa-weak-forms": "Memakai schwa dan weak form dari was, can, to dan of",
+            "hear-weak-forms": "Mengenali weak forms dalam kalimat lisan"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-pron-stress-linking",
+      "level": "A2",
+      "title": "Sentence Stress & Linking",
+      "summary": "Stress the content words, link consonants to vowels (turn_off, an_apple) and keep a natural rhythm.",
+      "strand": "PR",
+      "canDo": "Can speak short sentences with clear stress, linking and a natural rhythm.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a2-pron-ed-weak-forms"
+      ],
+      "objectives": [
+        {
+          "id": "content-word-stress",
+          "text": "Stress the content words in a sentence"
+        },
+        {
+          "id": "consonant-vowel-linking",
+          "text": "Link a final consonant to the next vowel (turn_off, an_apple)"
+        },
+        {
+          "id": "short-sentence-rhythm",
+          "text": "Keep a natural rhythm in short sentences"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "every word stressed equally: I WANT TO GO TO THE SHOP",
+          "right": "stress the content words: I WANT to GO to the SHOP"
+        },
+        {
+          "wrong": "turn off said as two separate words with a pause",
+          "right": "turn_off linked smoothly: 'tur-noff'"
+        },
+        {
+          "wrong": "an apple with a stop between the words: 'an | apple'",
+          "right": "an_apple linked: 'a-napple'"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Tekanan Kalimat & Linking",
+          "summary": "Menekan kata isi, menyambung konsonan ke vokal (turn_off, an_apple), dan menjaga ritme yang alami.",
+          "canDo": "Bisa mengucapkan kalimat pendek dengan tekanan, sambungan bunyi, dan ritme yang alami.",
+          "objectives": {
+            "content-word-stress": "Memberi tekanan pada kata isi dalam kalimat",
+            "consonant-vowel-linking": "Menyambung konsonan akhir ke vokal berikutnya (turn_off, an_apple)",
+            "short-sentence-rhythm": "Menjaga ritme alami dalam kalimat pendek"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-listening-practical",
+      "level": "A2",
+      "title": "Practical Listening",
+      "summary": "Catch key information in announcements, directions, instructions and short conversations.",
+      "strand": "LI",
+      "canDo": "Can understand simple announcements, directions and the main point of short, clear conversations.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-listening-everyday"
+      ],
+      "objectives": [
+        {
+          "id": "announcements",
+          "text": "Understand key information in airport and station announcements"
+        },
+        {
+          "id": "directions-instructions",
+          "text": "Follow directions and simple instructions"
+        },
+        {
+          "id": "main-points",
+          "text": "Catch the main point of short conversations"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyimak Praktis",
+          "summary": "Menangkap informasi penting dari pengumuman, petunjuk arah, instruksi, dan percakapan pendek.",
+          "canDo": "Bisa memahami pengumuman sederhana, petunjuk arah, dan poin utama percakapan pendek yang jelas.",
+          "objectives": {
+            "announcements": "Memahami informasi penting dari pengumuman di bandara dan stasiun",
+            "directions-instructions": "Mengikuti petunjuk arah dan instruksi sederhana",
+            "main-points": "Menangkap poin utama percakapan pendek"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-reading-everyday",
+      "level": "A2",
+      "title": "Everyday Reading",
+      "summary": "Read short emails, messages, simple articles and stories, and guess new words from context.",
+      "strand": "RE",
+      "canDo": "Can understand short, simple everyday texts such as emails, messages and simple stories.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-reading-short-texts",
+        "a2-past-simple-irregular"
+      ],
+      "objectives": [
+        {
+          "id": "emails-messages",
+          "text": "Understand short emails and messages"
+        },
+        {
+          "id": "articles-stories",
+          "text": "Understand simple articles and stories"
+        },
+        {
+          "id": "guess-from-context",
+          "text": "Guess the meaning of new words from context"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Membaca Sehari-hari",
+          "summary": "Membaca email, pesan pendek, artikel dan cerita sederhana, serta menebak arti kata baru dari konteks.",
+          "canDo": "Bisa memahami teks sehari-hari yang pendek dan sederhana, seperti email, pesan, dan cerita sederhana.",
+          "objectives": {
+            "emails-messages": "Memahami email dan pesan pendek",
+            "articles-stories": "Memahami artikel dan cerita sederhana",
+            "guess-from-context": "Menebak arti kata baru dari konteks"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-speaking-past-plans",
+      "level": "A2",
+      "title": "Talking About Past & Plans",
+      "summary": "Tell someone about your weekend or holiday, share your plans and answer follow-up questions.",
+      "strand": "SP",
+      "canDo": "Can describe past activities and future plans in simple terms and answer follow-up questions.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a2-past-simple-irregular",
+        "a2-future-going-to"
+      ],
+      "objectives": [
+        {
+          "id": "tell-weekend-holiday",
+          "text": "Tell someone about your weekend or holiday"
+        },
+        {
+          "id": "share-plans",
+          "text": "Talk about your plans"
+        },
+        {
+          "id": "follow-up-questions",
+          "text": "Answer follow-up questions with extra detail"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Last weekend I go to the beach with my family.",
+          "right": "Last weekend I went to the beach with my family."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bercerita tentang Masa Lalu & Rencana",
+          "summary": "Menceritakan akhir pekan atau liburanmu, menyampaikan rencana, dan menjawab pertanyaan lanjutan.",
+          "canDo": "Bisa menceritakan kegiatan di masa lalu dan rencana ke depan secara sederhana serta menjawab pertanyaan lanjutan.",
+          "objectives": {
+            "tell-weekend-holiday": "Menceritakan akhir pekan atau liburanmu",
+            "share-plans": "Menyampaikan rencanamu",
+            "follow-up-questions": "Menjawab pertanyaan lanjutan dengan detail tambahan"
           }
         }
       }
@@ -274,15 +1356,23 @@
       "id": "a2-making-plans",
       "level": "A2",
       "title": "Making Plans",
-      "summary": "Invite, accept, decline and arrange to meet.",
+      "summary": "Invite people, accept or decline politely, and agree on a time and place to meet.",
+      "strand": "FN",
+      "canDo": "Can make, accept and decline invitations and arrange when and where to meet.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
         "a2-future-going-to",
+        "a2-will",
         "a1-everyday-conversation"
       ],
       "objectives": [
         {
           "id": "make-and-respond",
-          "text": "Make and respond to invitations"
+          "text": "Make and respond to invitations (Would you like to …?, How about …?)"
+        },
+        {
+          "id": "accept-decline-politely",
+          "text": "Accept or decline politely"
         },
         {
           "id": "arrange-a-time",
@@ -296,13 +1386,66 @@
         "travel",
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "How about go to the cinema?",
+          "right": "How about going to the cinema?"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Membuat Rencana",
-          "summary": "Mengajak, menerima, menolak dan mengatur pertemuan.",
+          "summary": "Mengajak orang, menerima atau menolak dengan sopan, dan menyepakati waktu serta tempat bertemu.",
+          "canDo": "Bisa mengajak, menerima dan menolak ajakan, serta mengatur kapan dan di mana bertemu.",
           "objectives": {
-            "make-and-respond": "Membuat dan menanggapi ajakan",
+            "make-and-respond": "Membuat dan menanggapi ajakan (Would you like to …?, How about …?)",
+            "accept-decline-politely": "Menerima atau menolak dengan sopan",
             "arrange-a-time": "Menentukan waktu dan tempat"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-routine-transactions",
+      "level": "A2",
+      "title": "Hotel, Shop & Doctor",
+      "summary": "Handle routine situations: checking in at a hotel, buying and returning things, and seeing a doctor.",
+      "strand": "FN",
+      "canDo": "Can deal with routine situations at a hotel, in a shop and at the doctor's.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a2-vocab-travel",
+        "a2-vocab-health",
+        "a2-can-could"
+      ],
+      "objectives": [
+        {
+          "id": "hotel-check-in",
+          "text": "Check in and ask for help at a hotel"
+        },
+        {
+          "id": "shop-exchange-complain",
+          "text": "Buy and exchange things and make a simple complaint in a shop"
+        },
+        {
+          "id": "explain-symptoms",
+          "text": "Explain your symptoms to a doctor"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Hotel, Toko & Dokter",
+          "summary": "Menangani situasi rutin: check-in di hotel, membeli dan menukar barang, serta berobat ke dokter.",
+          "canDo": "Bisa menangani situasi rutin di hotel, di toko, dan di dokter.",
+          "objectives": {
+            "hotel-check-in": "Check-in dan meminta bantuan di hotel",
+            "shop-exchange-complain": "Membeli dan menukar barang serta menyampaikan komplain sederhana di toko",
+            "explain-symptoms": "Menjelaskan gejala yang kamu rasakan ke dokter"
           }
         }
       }
@@ -311,7 +1454,10 @@
       "id": "a2-short-messages",
       "level": "A2",
       "title": "Writing Short Messages",
-      "summary": "Texts, notes and simple emails.",
+      "summary": "Write short texts, notes and simple emails with news and questions, and a short story of 35–50 words.",
+      "strand": "WR",
+      "canDo": "Can write short, simple messages and emails with news and questions, and a short story about past events.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a2-past-simple-irregular",
         "a2-making-plans"
@@ -324,6 +1470,10 @@
         {
           "id": "give-simple-news",
           "text": "Give simple news and ask questions in writing"
+        },
+        {
+          "id": "short-story",
+          "text": "Write a short story of 35–50 words"
         }
       ],
       "masteryThreshold": 80,
@@ -335,19 +1485,118 @@
       "i18n": {
         "id": {
           "title": "Menulis Pesan Singkat",
-          "summary": "Chat, catatan dan email sederhana.",
+          "summary": "Menulis chat, catatan dan email sederhana berisi kabar dan pertanyaan, serta cerita pendek 35–50 kata.",
+          "canDo": "Bisa menulis pesan dan email singkat berisi kabar dan pertanyaan, serta cerita pendek tentang kejadian di masa lalu.",
           "objectives": {
             "write-a-short": "Menulis pesan informal yang singkat",
-            "give-simple-news": "Menyampaikan kabar sederhana dan bertanya secara tertulis"
+            "give-simple-news": "Menyampaikan kabar sederhana dan bertanya secara tertulis",
+            "short-story": "Menulis cerita pendek 35–50 kata"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-mediation-messages",
+      "level": "A2",
+      "title": "Passing On Messages",
+      "summary": "Pass on simple messages and summarise key information from Indonesian notices or messages in English.",
+      "strand": "ME",
+      "canDo": "Can pass on simple messages and give the key points of an Indonesian announcement or message in English.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-mediation-basic",
+        "a2-past-simple-irregular"
+      ],
+      "objectives": [
+        {
+          "id": "pass-on-messages",
+          "text": "Pass on a simple message to someone else (Sari called. She can't come.)"
+        },
+        {
+          "id": "summarise-from-indonesian",
+          "text": "Summarise key information from an Indonesian announcement or message in English"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "travel"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Meneruskan Pesan",
+          "summary": "Meneruskan pesan sederhana dan meringkas info penting dari pengumuman atau pesan berbahasa Indonesia ke bahasa Inggris.",
+          "canDo": "Bisa meneruskan pesan sederhana dan menyampaikan poin penting pengumuman atau pesan berbahasa Indonesia dalam bahasa Inggris.",
+          "objectives": {
+            "pass-on-messages": "Meneruskan pesan sederhana ke orang lain (Sari called. She can't come.)",
+            "summarise-from-indonesian": "Meringkas info penting dari pengumuman atau pesan berbahasa Indonesia ke bahasa Inggris"
+          }
+        }
+      }
+    },
+    {
+      "id": "a2-checkpoint",
+      "level": "A2",
+      "title": "A2 Checkpoint",
+      "summary": "A mixed test of every A2 strand in a format similar to Cambridge A2 Key.",
+      "strand": "CK",
+      "canDo": "Can show A2 (Elementary) level across grammar, vocabulary, listening, reading, writing and speaking.",
+      "estimatedMinutes": 90,
+      "prerequisiteIds": [
+        "a2-past-continuous-intro",
+        "a2-present-perfect-intro",
+        "a2-adverbs-manner",
+        "a2-countable-uncountable",
+        "a2-modals-obligation",
+        "a2-possessive-pronouns",
+        "a2-verb-patterns",
+        "a2-zero-first-conditional",
+        "a2-linkers-sequence",
+        "a2-phrasal-verbs-common",
+        "a2-vocab-work-study",
+        "a2-describing-people",
+        "a2-pron-stress-linking",
+        "a2-listening-practical",
+        "a2-reading-everyday",
+        "a2-speaking-past-plans",
+        "a2-routine-transactions",
+        "a2-short-messages",
+        "a2-mediation-messages"
+      ],
+      "objectives": [
+        {
+          "id": "grammar-vocabulary",
+          "text": "Use A2 grammar and vocabulary accurately in mixed tasks"
+        },
+        {
+          "id": "listening-reading",
+          "text": "Understand new everyday recordings and texts at A2 level"
+        },
+        {
+          "id": "writing",
+          "text": "Write a short email (25+ words) and a short story (35+ words)"
+        },
+        {
+          "id": "speaking",
+          "text": "Talk about past events and plans and handle routine situations"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Checkpoint A2",
+          "summary": "Tes campuran semua strand A2 dengan format mirip Cambridge A2 Key.",
+          "canDo": "Bisa menunjukkan kemampuan level A2 (Elementary) dalam grammar, kosakata, menyimak, membaca, menulis, dan berbicara.",
+          "objectives": {
+            "grammar-vocabulary": "Memakai grammar dan kosakata A2 dengan tepat dalam soal campuran",
+            "listening-reading": "Memahami rekaman dan teks sehari-hari yang baru di level A2",
+            "writing": "Menulis email singkat (25+ kata) dan cerita pendek (35+ kata)",
+            "speaking": "Bercerita tentang masa lalu dan rencana serta menangani situasi rutin"
           }
         }
       }
     }
-  ],
-  "i18n": {
-    "id": {
-      "title": "Dasar Lanjut",
-      "description": "Bercerita tentang masa lalu dan rencana, membandingkan hal, dan menangani urusan rutin."
-    }
-  }
+  ]
 }

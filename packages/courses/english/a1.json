@@ -1,14 +1,23 @@
 {
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "level": "A1",
   "title": "Beginner",
-  "description": "Introduce yourself, talk about routines and handle simple everyday exchanges.",
+  "description": "Understand and use very simple everyday expressions: introduce yourself, ask and answer personal questions, and handle simple exchanges when people speak slowly.",
+  "i18n": {
+    "id": {
+      "title": "Pemula",
+      "description": "Memahami dan memakai ungkapan sehari-hari yang sangat sederhana: memperkenalkan diri, bertanya dan menjawab hal pribadi, dan berinteraksi sederhana jika lawan bicara berbicara pelan."
+    }
+  },
   "nodes": [
     {
       "id": "a1-to-be",
       "level": "A1",
       "title": "The Verb “To Be”",
       "summary": "am / is / are in statements, negatives and questions.",
+      "strand": "GR",
+      "canDo": "Can say who people are and what they are like, using am, is and are in statements, negatives and yes/no questions.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a0-basic-sentences"
       ],
@@ -28,10 +37,25 @@
       ],
       "masteryThreshold": 80,
       "contentStatus": "ready",
+      "commonErrors": [
+        {
+          "wrong": "She teacher.",
+          "right": "She's a teacher."
+        },
+        {
+          "wrong": "I not tired.",
+          "right": "I'm not tired."
+        },
+        {
+          "wrong": "You are student?",
+          "right": "Are you a student?"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kata Kerja “To Be”",
           "summary": "am / is / are dalam kalimat positif, negatif dan pertanyaan.",
+          "canDo": "Bisa mengatakan siapa seseorang dan seperti apa dia, memakai am, is dan are dalam kalimat positif, negatif dan pertanyaan ya/tidak.",
           "objectives": {
             "be-affirmative": "Menggunakan am, is dan are dalam kalimat positif",
             "be-negative": "Membuat kalimat negatif dengan am not, isn't dan aren't",
@@ -41,10 +65,233 @@
       }
     },
     {
+      "id": "a1-articles-demonstratives",
+      "level": "A1",
+      "title": "a/an, the & this/that",
+      "summary": "When to use a/an and the, and how to point at things with this, that, these and those.",
+      "strand": "GR",
+      "canDo": "Can use a/an, the and this/that/these/those correctly to talk about everyday things.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-to-be"
+      ],
+      "objectives": [
+        {
+          "id": "use-the",
+          "text": "Use the for things already mentioned or unique (the sun, the door)"
+        },
+        {
+          "id": "demonstratives",
+          "text": "Use this, that, these and those for things near and far"
+        },
+        {
+          "id": "no-missing-article",
+          "text": "Keep a/an before singular countable nouns (I have a car)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I have car.",
+          "right": "I have a car."
+        },
+        {
+          "wrong": "She is a engineer.",
+          "right": "She is an engineer."
+        },
+        {
+          "wrong": "This books are mine.",
+          "right": "These books are mine."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "a/an, the & this/that",
+          "summary": "Kapan memakai a/an dan the, serta cara menunjuk benda dengan this, that, these dan those.",
+          "canDo": "Bisa memakai a/an, the dan this/that/these/those dengan benar untuk membicarakan benda sehari-hari.",
+          "objectives": {
+            "use-the": "Memakai the untuk hal yang sudah disebut atau yang hanya ada satu (the sun, the door)",
+            "demonstratives": "Memakai this, that, these dan those untuk benda yang dekat dan jauh",
+            "no-missing-article": "Tidak menghilangkan a/an sebelum kata benda tunggal yang bisa dihitung (I have a car)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-adjectives",
+      "level": "A1",
+      "title": "Adjectives & Very",
+      "summary": "Describe people and things with adjectives before nouns, after be, and with very or really.",
+      "strand": "GR",
+      "canDo": "Can describe people, places and things with simple adjectives.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-to-be"
+      ],
+      "objectives": [
+        {
+          "id": "adjective-before-noun",
+          "text": "Put adjectives before the noun (a red car)"
+        },
+        {
+          "id": "be-adjective",
+          "text": "Use be + adjective (She's tired)"
+        },
+        {
+          "id": "very-really",
+          "text": "Make adjectives stronger with very or really"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "a car red",
+          "right": "a red car"
+        },
+        {
+          "wrong": "She tired.",
+          "right": "She's tired."
+        },
+        {
+          "wrong": "I very like it.",
+          "right": "I really like it."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata Sifat & Very",
+          "summary": "Mendeskripsikan orang dan benda dengan kata sifat sebelum kata benda, setelah be, dan dengan very atau really.",
+          "canDo": "Bisa mendeskripsikan orang, tempat dan benda dengan kata sifat sederhana.",
+          "objectives": {
+            "adjective-before-noun": "Menaruh kata sifat sebelum kata benda (a red car)",
+            "be-adjective": "Memakai be + kata sifat (She's tired)",
+            "very-really": "Menguatkan kata sifat dengan very atau really"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-possessives",
+      "level": "A1",
+      "title": "Possessive 's & Object Pronouns",
+      "summary": "Show who owns something with 's and whose, and use object pronouns like me, him and them.",
+      "strand": "GR",
+      "canDo": "Can say who things belong to and refer to people with object pronouns.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a0-pronouns",
+        "a1-to-be"
+      ],
+      "objectives": [
+        {
+          "id": "possessive-s",
+          "text": "Use possessive 's (Rina's phone)"
+        },
+        {
+          "id": "object-pronouns",
+          "text": "Use the object pronouns me, you, him, her, it, us and them"
+        },
+        {
+          "id": "whose",
+          "text": "Ask and answer questions with Whose …?"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "phone Rina",
+          "right": "Rina's phone"
+        },
+        {
+          "wrong": "She loves he.",
+          "right": "She loves him."
+        },
+        {
+          "wrong": "Call to me later.",
+          "right": "Call me later."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Possessive 's & Object Pronoun",
+          "summary": "Menunjukkan pemilik sesuatu dengan 's dan whose, serta memakai object pronoun seperti me, him dan them.",
+          "canDo": "Bisa mengatakan milik siapa sebuah benda dan menyebut orang dengan object pronoun.",
+          "objectives": {
+            "possessive-s": "Memakai possessive 's (Rina's phone)",
+            "object-pronouns": "Memakai object pronoun me, you, him, her, it, us dan them",
+            "whose": "Bertanya dan menjawab dengan Whose …?"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-there-is-are",
+      "level": "A1",
+      "title": "There Is / There Are",
+      "summary": "Describe places and what they contain.",
+      "strand": "GR",
+      "canDo": "Can describe a room or place and ask what is in it, using there is / there are.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-articles-demonstratives"
+      ],
+      "objectives": [
+        {
+          "id": "describe-a-room",
+          "text": "Describe a room or place with there is / there are"
+        },
+        {
+          "id": "ask-questions-with",
+          "text": "Ask questions with is there / are there"
+        },
+        {
+          "id": "some-any",
+          "text": "Use some and any with there are"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "In my room have a bed.",
+          "right": "There is a bed in my room."
+        },
+        {
+          "wrong": "There is two chairs.",
+          "right": "There are two chairs."
+        },
+        {
+          "wrong": "Are there some shops near here?",
+          "right": "Are there any shops near here?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "There Is / There Are",
+          "summary": "Mendeskripsikan tempat dan isinya.",
+          "canDo": "Bisa mendeskripsikan ruangan atau tempat dan menanyakan isinya dengan there is / there are.",
+          "objectives": {
+            "describe-a-room": "Mendeskripsikan ruangan atau tempat dengan there is / there are",
+            "ask-questions-with": "Bertanya dengan is there / are there",
+            "some-any": "Memakai some dan any dengan there are"
+          }
+        }
+      }
+    },
+    {
       "id": "a1-simple-present",
       "level": "A1",
       "title": "Simple Present Tense",
-      "summary": "Talk about habits, facts and daily routines.",
+      "summary": "Talk about habits and facts in the simple present.",
+      "strand": "GR",
+      "canDo": "Can talk about habits, facts and things that are generally true, using the simple present in statements, negatives and questions.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
         "a0-basic-sentences",
         "a0-pronouns"
@@ -61,10 +308,6 @@
         {
           "id": "questions",
           "text": "Ask and answer simple present questions with do / does"
-        },
-        {
-          "id": "daily-routines",
-          "text": "Describe daily routines"
         }
       ],
       "masteryThreshold": 80,
@@ -72,15 +315,197 @@
       "focus": [
         "tech"
       ],
+      "commonErrors": [
+        {
+          "wrong": "He work in a bank.",
+          "right": "He works in a bank."
+        },
+        {
+          "wrong": "She doesn't likes coffee.",
+          "right": "She doesn't like coffee."
+        },
+        {
+          "wrong": "You like football?",
+          "right": "Do you like football?"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Simple Present Tense",
-          "summary": "Membicarakan kebiasaan, fakta dan rutinitas harian.",
+          "summary": "Membicarakan kebiasaan dan fakta dengan simple present.",
+          "canDo": "Bisa membicarakan kebiasaan, fakta dan hal yang umumnya benar dengan simple present dalam kalimat positif, negatif dan pertanyaan.",
           "objectives": {
             "affirmative": "Membentuk kalimat positif dasar (termasuk he/she/it + -s)",
             "negative": "Membentuk kalimat negatif dasar dengan don't / doesn't",
-            "questions": "Bertanya dan menjawab pertanyaan simple present dengan do / does",
-            "daily-routines": "Mendeskripsikan rutinitas harian"
+            "questions": "Bertanya dan menjawab pertanyaan simple present dengan do / does"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-have-got",
+      "level": "A1",
+      "title": "Have / Have Got",
+      "summary": "Talk about family, possessions and appearance with have and have got.",
+      "strand": "GR",
+      "canDo": "Can talk about family, things people own and what people look like, using have and have got.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "possession-family",
+          "text": "Talk about possessions and family (I have two sisters)"
+        },
+        {
+          "id": "appearance",
+          "text": "Describe appearance (She has long hair)"
+        },
+        {
+          "id": "negatives-questions",
+          "text": "Make negatives and questions (I don't have …, Have you got …?)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "She have two sisters.",
+          "right": "She has two sisters."
+        },
+        {
+          "wrong": "I haven't a car.",
+          "right": "I don't have a car. / I haven't got a car."
+        },
+        {
+          "wrong": "Do you have got a pen?",
+          "right": "Do you have a pen? / Have you got a pen?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Have / Have Got",
+          "summary": "Membicarakan keluarga, barang milik dan ciri fisik dengan have dan have got.",
+          "canDo": "Bisa membicarakan keluarga, barang yang dimiliki dan ciri fisik seseorang dengan have dan have got.",
+          "objectives": {
+            "possession-family": "Membicarakan barang milik dan keluarga (I have two sisters)",
+            "appearance": "Mendeskripsikan ciri fisik (She has long hair)",
+            "negatives-questions": "Membuat kalimat negatif dan pertanyaan (I don't have …, Have you got …?)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-adverbs-frequency",
+      "level": "A1",
+      "title": "Adverbs of Frequency",
+      "summary": "always, usually, sometimes, never — and asking How often …?",
+      "strand": "GR",
+      "canDo": "Can say how often they do things and ask others how often they do them.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "frequency-words",
+          "text": "Use always, usually, often, sometimes and never"
+        },
+        {
+          "id": "use-adverbs-of",
+          "text": "Use adverbs of frequency in the right position"
+        },
+        {
+          "id": "ask-how-often",
+          "text": "Ask how often questions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I go always to the gym.",
+          "right": "I always go to the gym."
+        },
+        {
+          "wrong": "She always is late.",
+          "right": "She is always late."
+        },
+        {
+          "wrong": "I don't never eat meat.",
+          "right": "I never eat meat."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata Keterangan Frekuensi",
+          "summary": "always, usually, sometimes, never — dan bertanya How often …?",
+          "canDo": "Bisa mengatakan seberapa sering kamu melakukan sesuatu dan menanyakannya ke orang lain.",
+          "objectives": {
+            "frequency-words": "Memakai always, usually, often, sometimes dan never",
+            "use-adverbs-of": "Menempatkan kata keterangan frekuensi di posisi yang benar (sebelum kata kerja utama, setelah be)",
+            "ask-how-often": "Bertanya dengan how often"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-prepositions",
+      "level": "A1",
+      "title": "Prepositions of Time & Place",
+      "summary": "in, on, at for time, and in, on, under, next to, between and behind for place.",
+      "strand": "GR",
+      "canDo": "Can say when things happen and where things are, using basic prepositions of time and place.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-there-is-are"
+      ],
+      "objectives": [
+        {
+          "id": "use-in-on",
+          "text": "Use in, on, at with times and dates"
+        },
+        {
+          "id": "use-prepositions-to",
+          "text": "Use prepositions to describe location"
+        },
+        {
+          "id": "time-expressions",
+          "text": "Use everyday time expressions (in the morning, at night, at the weekend)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "in Monday",
+          "right": "on Monday"
+        },
+        {
+          "wrong": "at May",
+          "right": "in May"
+        },
+        {
+          "wrong": "The bag is in under the table.",
+          "right": "The bag is under the table."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Preposisi Waktu & Tempat",
+          "summary": "in, on, at untuk waktu, serta in, on, under, next to, between dan behind untuk tempat.",
+          "canDo": "Bisa mengatakan kapan sesuatu terjadi dan di mana benda berada dengan preposisi waktu dan tempat dasar.",
+          "objectives": {
+            "use-in-on": "Menggunakan in, on, at untuk waktu dan tanggal (at 7, on Monday, in May)",
+            "use-prepositions-to": "Menggunakan preposisi untuk mendeskripsikan lokasi (in, on, under, next to, between, behind)",
+            "time-expressions": "Memakai ekspresi waktu sehari-hari (in the morning, at night, at the weekend)"
           }
         }
       }
@@ -90,6 +515,9 @@
       "level": "A1",
       "title": "Asking Questions",
       "summary": "What, where, who, when, how — plus yes/no questions.",
+      "strand": "GR",
+      "canDo": "Can ask and answer simple questions about personal details, such as where someone lives and what they do.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a1-to-be",
         "a1-simple-present"
@@ -113,10 +541,25 @@
       "focus": [
         "travel"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Where you live?",
+          "right": "Where do you live?"
+        },
+        {
+          "wrong": "What your name?",
+          "right": "What's your name?"
+        },
+        {
+          "wrong": "Where she works?",
+          "right": "Where does she work?"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Bertanya",
           "summary": "What, where, who, when, how — plus pertanyaan ya/tidak.",
+          "canDo": "Bisa bertanya dan menjawab pertanyaan sederhana tentang data pribadi, misalnya di mana seseorang tinggal dan apa pekerjaannya.",
           "objectives": {
             "wh-words": "Memilih kata tanya yang tepat (what, where, who, when, how)",
             "question-order": "Menyusun kata dengan urutan yang benar dalam pertanyaan",
@@ -126,12 +569,884 @@
       }
     },
     {
+      "id": "a1-countable-some-any",
+      "level": "A1",
+      "title": "Countable, Uncountable, Some & Any",
+      "summary": "Tell countable from uncountable nouns and use some, any, how much and how many.",
+      "strand": "GR",
+      "canDo": "Can talk about quantities of everyday things, using some, any, how much and how many.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-there-is-are"
+      ],
+      "objectives": [
+        {
+          "id": "countable-uncountable",
+          "text": "Tell common countable and uncountable nouns apart (an apple vs rice)"
+        },
+        {
+          "id": "some-any",
+          "text": "Use some in positive sentences and any in negatives and questions"
+        },
+        {
+          "id": "how-much-many",
+          "text": "Ask How much …? and How many …?"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "two rices",
+          "right": "two plates of rice"
+        },
+        {
+          "wrong": "How many water do you drink?",
+          "right": "How much water do you drink?"
+        },
+        {
+          "wrong": "I don't have some money.",
+          "right": "I don't have any money."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Countable, Uncountable, Some & Any",
+          "summary": "Membedakan kata benda yang bisa dan tidak bisa dihitung, serta memakai some, any, how much dan how many.",
+          "canDo": "Bisa membicarakan jumlah benda sehari-hari dengan some, any, how much dan how many.",
+          "objectives": {
+            "countable-uncountable": "Membedakan kata benda countable dan uncountable yang umum (an apple vs rice)",
+            "some-any": "Memakai some dalam kalimat positif dan any dalam kalimat negatif dan pertanyaan",
+            "how-much-many": "Bertanya dengan How much …? dan How many …?"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-present-continuous",
+      "level": "A1",
+      "title": "Present Continuous",
+      "summary": "Talk about what is happening now.",
+      "strand": "GR",
+      "canDo": "Can say what people are doing right now and tell this apart from what they usually do.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-to-be",
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "form-present-continuous",
+          "text": "Form present continuous sentences with am/is/are + -ing and spell -ing forms correctly (making, running)"
+        },
+        {
+          "id": "contrast-now-with",
+          "text": "Contrast now with routines"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I cooking now.",
+          "right": "I'm cooking now."
+        },
+        {
+          "wrong": "She is runing.",
+          "right": "She is running."
+        },
+        {
+          "wrong": "I am go to school every day.",
+          "right": "I go to school every day."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Present Continuous",
+          "summary": "Membicarakan apa yang sedang terjadi sekarang.",
+          "canDo": "Bisa mengatakan apa yang sedang dilakukan seseorang saat ini dan membedakannya dari kebiasaan.",
+          "objectives": {
+            "form-present-continuous": "Membentuk kalimat present continuous dengan am/is/are + -ing dan menulis ejaan -ing dengan benar (making, running)",
+            "contrast-now-with": "Membedakan kegiatan yang sedang terjadi dengan rutinitas"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-can-ability",
+      "level": "A1",
+      "title": "Can for Ability & Permission",
+      "summary": "Say what you can and can't do, ask for help and ask for permission with can.",
+      "strand": "GR",
+      "canDo": "Can say what they can and can't do, make simple requests and ask for permission with can.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "talk-about-abilities",
+          "text": "Talk about abilities with can / can't"
+        },
+        {
+          "id": "ask-polite-requests",
+          "text": "Make polite requests with Can you …?"
+        },
+        {
+          "id": "ask-permission",
+          "text": "Ask for and give permission with Can I …?"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I can to swim.",
+          "right": "I can swim."
+        },
+        {
+          "wrong": "She cans speak English.",
+          "right": "She can speak English."
+        },
+        {
+          "wrong": "Do you can help me?",
+          "right": "Can you help me?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Can untuk Kemampuan & Izin",
+          "summary": "Katakan apa yang bisa dan tidak bisa kamu lakukan, minta bantuan dan minta izin dengan can.",
+          "canDo": "Bisa mengatakan apa yang bisa dan tidak bisa dilakukan, mengajukan permintaan sederhana dan meminta izin dengan can.",
+          "objectives": {
+            "talk-about-abilities": "Membicarakan kemampuan dengan can / can't",
+            "ask-polite-requests": "Mengajukan permintaan sopan dengan Can you …?",
+            "ask-permission": "Meminta dan memberi izin dengan Can I …?"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-imperatives",
+      "level": "A1",
+      "title": "Imperatives & Let's",
+      "summary": "Give and follow simple instructions and directions, and make suggestions with Let's.",
+      "strand": "GR",
+      "canDo": "Can give and understand simple instructions and directions, and suggest doing something together with Let's.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [
+        "a0-basic-sentences"
+      ],
+      "objectives": [
+        {
+          "id": "imperatives",
+          "text": "Give positive and negative instructions (Turn left. Don't run.)"
+        },
+        {
+          "id": "lets",
+          "text": "Make suggestions with Let's …"
+        },
+        {
+          "id": "follow-instructions",
+          "text": "Understand simple instructions and directions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Not run!",
+          "right": "Don't run!"
+        },
+        {
+          "wrong": "Let's to go.",
+          "right": "Let's go."
+        },
+        {
+          "wrong": "You turn left.",
+          "right": "Turn left."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat Perintah & Let's",
+          "summary": "Memberi dan mengikuti instruksi serta arah sederhana, dan mengajak dengan Let's.",
+          "canDo": "Bisa memberi dan memahami instruksi serta arah sederhana, dan mengajak melakukan sesuatu bersama dengan Let's.",
+          "objectives": {
+            "imperatives": "Memberi perintah positif dan negatif (Turn left. Don't run.)",
+            "lets": "Mengajak dengan Let's …",
+            "follow-instructions": "Memahami instruksi dan arah sederhana"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-like-would-like",
+      "level": "A1",
+      "title": "Like + -ing & Would Like",
+      "summary": "Talk about likes with like/love/hate + -ing, and ask for things politely with would like.",
+      "strand": "GR",
+      "canDo": "Can say what they like and don't like, and ask for things politely with I'd like.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "like-ing",
+          "text": "Use like, love and hate + -ing or a noun"
+        },
+        {
+          "id": "would-like",
+          "text": "Ask for things politely with would like (I'd like a coffee)"
+        },
+        {
+          "id": "like-vs-would-like",
+          "text": "Tell I like from I'd like"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I like swim.",
+          "right": "I like swimming."
+        },
+        {
+          "wrong": "I like a coffee, please.",
+          "right": "I'd like a coffee, please."
+        },
+        {
+          "wrong": "Would you like drink?",
+          "right": "Would you like a drink?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Like + -ing & Would Like",
+          "summary": "Membicarakan kesukaan dengan like/love/hate + -ing, dan meminta sesuatu dengan sopan memakai would like.",
+          "canDo": "Bisa mengatakan apa yang disukai dan tidak disukai, serta meminta sesuatu dengan sopan memakai I'd like.",
+          "objectives": {
+            "like-ing": "Memakai like, love dan hate + -ing atau kata benda",
+            "would-like": "Meminta sesuatu dengan sopan memakai would like (I'd like a coffee)",
+            "like-vs-would-like": "Membedakan I like dan I'd like"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-past-be",
+      "level": "A1",
+      "title": "Past of To Be (was / were)",
+      "summary": "Use was and were to talk about where people were and how things were in the past.",
+      "strand": "GR",
+      "canDo": "Can talk about where people were and how things were in the past.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-to-be"
+      ],
+      "objectives": [
+        {
+          "id": "affirmative",
+          "text": "Use was/were in positive sentences"
+        },
+        {
+          "id": "negative",
+          "text": "Make negatives with wasn't/weren't"
+        },
+        {
+          "id": "questions",
+          "text": "Ask and answer Was/Were …? questions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Yesterday I am sick.",
+          "right": "Yesterday I was sick."
+        },
+        {
+          "wrong": "They was at home.",
+          "right": "They were at home."
+        },
+        {
+          "wrong": "You were at school yesterday?",
+          "right": "Were you at school yesterday?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk Lampau To Be (was / were)",
+          "summary": "Memakai was dan were untuk menceritakan keberadaan dan keadaan di masa lalu.",
+          "canDo": "Bisa menceritakan di mana seseorang berada dan bagaimana keadaan di masa lalu.",
+          "objectives": {
+            "affirmative": "Memakai was/were dalam kalimat positif",
+            "negative": "Membuat kalimat negatif dengan wasn't/weren't",
+            "questions": "Bertanya dan menjawab dengan Was/Were …?"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-conjunctions",
+      "level": "A1",
+      "title": "And, But, Or, Because",
+      "summary": "Join simple sentences with and, but and or, and give reasons with because.",
+      "strand": "GR",
+      "canDo": "Can link simple ideas with and, but, or and because.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "and-but-or",
+          "text": "Join sentences with and, but and or"
+        },
+        {
+          "id": "because",
+          "text": "Give reasons with because"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I stay at home. Because I'm sick.",
+          "right": "I stay at home because I'm sick."
+        },
+        {
+          "wrong": "I don't like tea and coffee.",
+          "right": "I don't like tea or coffee."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "And, But, Or, Because",
+          "summary": "Menggabungkan kalimat sederhana dengan and, but dan or, serta memberi alasan dengan because.",
+          "canDo": "Bisa menghubungkan ide sederhana dengan and, but, or dan because.",
+          "objectives": {
+            "and-but-or": "Menggabungkan kalimat dengan and, but dan or",
+            "because": "Memberi alasan dengan because"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-vocab-family-home",
+      "level": "A1",
+      "title": "Family & Home",
+      "summary": "Words for family members, rooms and furniture, and how to describe your home.",
+      "strand": "VO",
+      "canDo": "Can name family members and describe their home in simple terms.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-have-got"
+      ],
+      "objectives": [
+        {
+          "id": "family",
+          "text": "Name family members (parents, brother, aunt, cousin)"
+        },
+        {
+          "id": "rooms-furniture",
+          "text": "Name rooms and furniture (kitchen, bedroom, sofa, wardrobe)"
+        },
+        {
+          "id": "describe-home",
+          "text": "Describe your home in a few sentences"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I have three brothers: two boys and one girl.",
+          "right": "I have three siblings: two brothers and one sister."
+        },
+        {
+          "wrong": "my parent",
+          "right": "my parents"
+        },
+        {
+          "wrong": "There is a bed in the kitchen room.",
+          "right": "There is a bed in the bedroom."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Keluarga & Rumah",
+          "summary": "Kosakata anggota keluarga, ruangan dan perabot, serta cara mendeskripsikan rumahmu.",
+          "canDo": "Bisa menyebut anggota keluarga dan mendeskripsikan rumah dengan sederhana.",
+          "objectives": {
+            "family": "Menyebut anggota keluarga (parents, brother, aunt, cousin)",
+            "rooms-furniture": "Menyebut ruangan dan perabot (kitchen, bedroom, sofa, wardrobe)",
+            "describe-home": "Mendeskripsikan rumahmu dalam beberapa kalimat"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-vocab-food-shopping",
+      "level": "A1",
+      "title": "Food, Drinks & Shopping",
+      "summary": "Words for food, drinks, containers and quantities, shops and prices.",
+      "strand": "VO",
+      "canDo": "Can name common food and drink, ask for quantities and talk about shops and prices.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a0-numbers",
+        "a1-countable-some-any"
+      ],
+      "objectives": [
+        {
+          "id": "food-drinks",
+          "text": "Name common food and drinks"
+        },
+        {
+          "id": "containers-quantities",
+          "text": "Use containers and quantities (a bottle of, a kilo of)"
+        },
+        {
+          "id": "shops-prices",
+          "text": "Name shops and talk about prices"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel",
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "a bottle water",
+          "right": "a bottle of water"
+        },
+        {
+          "wrong": "How much the price?",
+          "right": "How much is it?"
+        },
+        {
+          "wrong": "two breads",
+          "right": "two loaves of bread"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Makanan, Minuman & Belanja",
+          "summary": "Kosakata makanan, minuman, wadah dan takaran, toko serta harga.",
+          "canDo": "Bisa menyebut makanan dan minuman umum, meminta jumlah tertentu, dan membicarakan toko serta harga.",
+          "objectives": {
+            "food-drinks": "Menyebut makanan dan minuman umum",
+            "containers-quantities": "Memakai wadah dan takaran (a bottle of, a kilo of)",
+            "shops-prices": "Menyebut jenis toko dan membicarakan harga"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-vocab-town-transport",
+      "level": "A1",
+      "title": "Town & Transport",
+      "summary": "Words for places in town, ways to travel and simple directions.",
+      "strand": "VO",
+      "canDo": "Can name places in town, say how they travel and understand simple directions.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-prepositions"
+      ],
+      "objectives": [
+        {
+          "id": "places-in-town",
+          "text": "Name places in town (bank, station, post office)"
+        },
+        {
+          "id": "transport",
+          "text": "Talk about transport (by bus, by train, on foot)"
+        },
+        {
+          "id": "direction-words",
+          "text": "Use direction words (left, right, straight on)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I go to work with bus.",
+          "right": "I go to work by bus."
+        },
+        {
+          "wrong": "by foot",
+          "right": "on foot"
+        },
+        {
+          "wrong": "Go straight and turn to left.",
+          "right": "Go straight on and turn left."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kota & Transportasi",
+          "summary": "Kosakata tempat di kota, jenis transportasi dan arah sederhana.",
+          "canDo": "Bisa menyebut tempat di kota, mengatakan cara bepergian dan memahami arah sederhana.",
+          "objectives": {
+            "places-in-town": "Menyebut tempat di kota (bank, station, post office)",
+            "transport": "Membicarakan transportasi (by bus, by train, on foot)",
+            "direction-words": "Memakai kata arah (left, right, straight on)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-vocab-jobs-hobbies",
+      "level": "A1",
+      "title": "Jobs & Free Time",
+      "summary": "Words for jobs and workplaces, hobbies and sports, and weekend activities.",
+      "strand": "VO",
+      "canDo": "Can say what people do for work and what they like doing in their free time.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-simple-present"
+      ],
+      "objectives": [
+        {
+          "id": "jobs-workplaces",
+          "text": "Name jobs and workplaces"
+        },
+        {
+          "id": "hobbies-sports",
+          "text": "Talk about hobbies and sports (play football, go swimming)"
+        },
+        {
+          "id": "weekend-activities",
+          "text": "Describe weekend activities"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I am teacher.",
+          "right": "I am a teacher."
+        },
+        {
+          "wrong": "I play swimming.",
+          "right": "I go swimming."
+        },
+        {
+          "wrong": "My hobby is play football.",
+          "right": "My hobby is playing football."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pekerjaan & Waktu Luang",
+          "summary": "Kosakata pekerjaan dan tempat kerja, hobi dan olahraga, serta kegiatan akhir pekan.",
+          "canDo": "Bisa mengatakan pekerjaan seseorang dan apa yang suka dilakukan di waktu luang.",
+          "objectives": {
+            "jobs-workplaces": "Menyebut pekerjaan dan tempat kerja",
+            "hobbies-sports": "Membicarakan hobi dan olahraga (play football, go swimming)",
+            "weekend-activities": "Menceritakan kegiatan akhir pekan"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-vocab-daily-life",
+      "level": "A1",
+      "title": "Clothes, Weather & Body",
+      "summary": "Words for clothes, the weather and parts of the body.",
+      "strand": "VO",
+      "canDo": "Can talk about clothes, describe the weather and name parts of the body.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-present-continuous"
+      ],
+      "objectives": [
+        {
+          "id": "clothes",
+          "text": "Name clothes and say what people are wearing"
+        },
+        {
+          "id": "weather",
+          "text": "Describe the weather (It's raining, It's hot)"
+        },
+        {
+          "id": "body-parts",
+          "text": "Name parts of the body"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Today is rain.",
+          "right": "It's raining today."
+        },
+        {
+          "wrong": "She is using a red dress.",
+          "right": "She is wearing a red dress."
+        },
+        {
+          "wrong": "My foots hurt.",
+          "right": "My feet hurt."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pakaian, Cuaca & Tubuh",
+          "summary": "Kosakata pakaian, cuaca dan bagian tubuh.",
+          "canDo": "Bisa membicarakan pakaian, mendeskripsikan cuaca dan menyebut bagian tubuh.",
+          "objectives": {
+            "clothes": "Menyebut pakaian dan mengatakan apa yang sedang dipakai seseorang",
+            "weather": "Mendeskripsikan cuaca (It's raining, It's hot)",
+            "body-parts": "Menyebut bagian tubuh"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-pron-endings",
+      "level": "A1",
+      "title": "-s Endings, Contractions & Intonation",
+      "summary": "Say -s endings correctly, use contractions and get the intonation of yes/no and wh- questions right.",
+      "strand": "PR",
+      "canDo": "Can pronounce -s endings and common contractions clearly and use the right intonation in simple questions.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-simple-present",
+        "a0-sounds-indonesian"
+      ],
+      "objectives": [
+        {
+          "id": "s-endings",
+          "text": "Pronounce -s endings as /s/, /z/ or /ɪz/ (works, plays, watches)"
+        },
+        {
+          "id": "contractions",
+          "text": "Say common contractions (I'm, isn't, don't)"
+        },
+        {
+          "id": "question-intonation",
+          "text": "Use rising intonation for yes/no questions and falling intonation for wh- questions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "works said as 'work' (final -s dropped)",
+          "right": "works with a clear final /s/"
+        },
+        {
+          "wrong": "watches said as 'watch-s' (one syllable)",
+          "right": "watches with an extra syllable /ɪz/: WATCH-iz"
+        },
+        {
+          "wrong": "Where do you live? said with rising intonation",
+          "right": "Where do you live? with falling intonation at the end"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Akhiran -s, Kontraksi & Intonasi",
+          "summary": "Mengucapkan akhiran -s dengan benar, memakai kontraksi, dan intonasi yang tepat untuk pertanyaan yes/no dan wh-.",
+          "canDo": "Bisa mengucapkan akhiran -s dan kontraksi umum dengan jelas serta memakai intonasi yang tepat dalam pertanyaan sederhana.",
+          "objectives": {
+            "s-endings": "Mengucapkan akhiran -s sebagai /s/, /z/ atau /ɪz/ (works, plays, watches)",
+            "contractions": "Mengucapkan kontraksi umum (I'm, isn't, don't)",
+            "question-intonation": "Memakai intonasi naik untuk pertanyaan yes/no dan intonasi turun untuk pertanyaan wh-"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-pron-word-stress",
+      "level": "A1",
+      "title": "Word Stress & Final Sounds",
+      "summary": "Stress common words on the right syllable, pronounce final consonants, and check stress in a dictionary.",
+      "strand": "PR",
+      "canDo": "Can stress common words correctly and pronounce final consonants clearly enough to be understood.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-pron-endings"
+      ],
+      "objectives": [
+        {
+          "id": "word-stress",
+          "text": "Stress common words on the right syllable (TEAcher, hoTEL)"
+        },
+        {
+          "id": "final-consonants",
+          "text": "Pronounce final consonants and simple clusters (desk, lunch)"
+        },
+        {
+          "id": "dictionary-stress",
+          "text": "Check word stress in a dictionary"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "hotel stressed as HO-tel",
+          "right": "hotel stressed as ho-TEL"
+        },
+        {
+          "wrong": "desk said as 'des' (final /k/ dropped)",
+          "right": "desk with a clear final /sk/"
+        },
+        {
+          "wrong": "teacher stressed as tea-CHER",
+          "right": "teacher stressed as TEA-cher"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Tekanan Kata & Bunyi Akhir",
+          "summary": "Memberi tekanan pada suku kata yang tepat, mengucapkan konsonan akhir, dan mengecek tekanan kata di kamus.",
+          "canDo": "Bisa memberi tekanan yang tepat pada kata umum dan mengucapkan konsonan akhir cukup jelas agar mudah dipahami.",
+          "objectives": {
+            "word-stress": "Memberi tekanan pada suku kata yang tepat di kata umum (TEAcher, hoTEL)",
+            "final-consonants": "Mengucapkan konsonan akhir dan gugus konsonan sederhana (desk, lunch)",
+            "dictionary-stress": "Mengecek tekanan kata di kamus"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-listening-everyday",
+      "level": "A1",
+      "title": "Everyday Listening",
+      "summary": "Catch personal details, numbers, prices, times and simple directions in slow, clear speech.",
+      "strand": "LI",
+      "canDo": "Can catch names, numbers, prices, times and simple directions when people speak slowly and clearly.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-questions",
+        "a0-time-dates"
+      ],
+      "objectives": [
+        {
+          "id": "catch-details",
+          "text": "Catch personal details, numbers, prices and times"
+        },
+        {
+          "id": "follow-directions",
+          "text": "Understand simple directions"
+        },
+        {
+          "id": "short-announcements",
+          "text": "Get the key information from short, slow announcements"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Hearing 'fifteen' as 'fifty'",
+          "right": "fifTEEN (stress at the end) vs FIFty (stress at the start)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyimak Sehari-hari",
+          "summary": "Menangkap info pribadi, angka, harga, jam dan arah sederhana dari ucapan yang pelan dan jelas.",
+          "canDo": "Bisa menangkap nama, angka, harga, jam dan arah sederhana jika orang berbicara pelan dan jelas.",
+          "objectives": {
+            "catch-details": "Menangkap info pribadi, angka, harga dan jam",
+            "follow-directions": "Memahami arah sederhana",
+            "short-announcements": "Menangkap info kunci dari pengumuman pendek yang diucapkan pelan"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-reading-short-texts",
+      "level": "A1",
+      "title": "Reading Short Texts",
+      "summary": "Read menus, signs, simple timetables, short messages and profiles, and scan them for information.",
+      "strand": "RE",
+      "canDo": "Can understand menus, signs, simple timetables and short messages, and find specific information in them.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a1-simple-present",
+        "a0-reading-first"
+      ],
+      "objectives": [
+        {
+          "id": "menus-signs-timetables",
+          "text": "Understand menus, signs and simple timetables"
+        },
+        {
+          "id": "messages-profiles",
+          "text": "Understand short messages and profiles"
+        },
+        {
+          "id": "scanning",
+          "text": "Scan a text for specific information"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Membaca Teks Pendek",
+          "summary": "Membaca menu, papan tanda, jadwal sederhana, pesan dan profil pendek, serta mencari info di dalamnya.",
+          "canDo": "Bisa memahami menu, papan tanda, jadwal sederhana dan pesan pendek, serta menemukan info spesifik di dalamnya.",
+          "objectives": {
+            "menus-signs-timetables": "Memahami menu, papan tanda dan jadwal sederhana",
+            "messages-profiles": "Memahami pesan dan profil pendek",
+            "scanning": "Mencari info spesifik dalam teks (scanning)"
+          }
+        }
+      }
+    },
+    {
       "id": "a1-self-introduction",
       "level": "A1",
       "title": "Introducing Yourself",
       "summary": "Name, origin, job and interests in a few sentences.",
+      "strand": "SP",
+      "canDo": "Can introduce themselves, talk briefly about their interests and respond when others introduce themselves.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
-        "a1-questions"
+        "a1-questions",
+        "a1-like-would-like"
       ],
       "objectives": [
         {
@@ -153,10 +1468,17 @@
         "career",
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "I am from Indonesian.",
+          "right": "I am from Indonesia. / I am Indonesian."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Memperkenalkan Diri",
           "summary": "Nama, asal, pekerjaan dan minat dalam beberapa kalimat.",
+          "canDo": "Bisa memperkenalkan diri, sedikit menceritakan minat, dan menanggapi perkenalan orang lain.",
           "objectives": {
             "introduce-yourself-with": "Memperkenalkan diri dengan nama, asal dan pekerjaan",
             "talk-about-your": "Membicarakan hal yang disukai dan minat",
@@ -168,15 +1490,20 @@
     {
       "id": "a1-daily-routines",
       "level": "A1",
-      "title": "Daily Routines",
-      "summary": "Describe your day with time expressions.",
+      "title": "Describing Your Day",
+      "summary": "Describe your day in order with time expressions.",
+      "strand": "SP",
+      "canDo": "Can describe a typical day in order, using simple time expressions.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
-        "a1-simple-present"
+        "a1-simple-present",
+        "a1-adverbs-frequency",
+        "a1-prepositions"
       ],
       "objectives": [
         {
           "id": "describe-a-typical",
-          "text": "Describe a typical day in order"
+          "text": "Describe a typical day in order (first, then, after that)"
         },
         {
           "id": "use-time-expressions",
@@ -188,113 +1515,68 @@
       "focus": [
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Every day I wake up at 5 and I am pray.",
+          "right": "Every day I wake up at 5 and pray."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Rutinitas Harian",
-          "summary": "Ceritakan harimu dengan keterangan waktu.",
+          "title": "Menceritakan Harimu",
+          "summary": "Ceritakan harimu secara berurutan dengan keterangan waktu.",
+          "canDo": "Bisa menceritakan hari biasa secara berurutan dengan keterangan waktu sederhana.",
           "objectives": {
-            "describe-a-typical": "Menceritakan hari biasa secara berurutan",
+            "describe-a-typical": "Menceritakan hari biasa secara berurutan (first, then, after that)",
             "use-time-expressions": "Menggunakan keterangan waktu seperti at 7, in the morning, every day"
           }
         }
       }
     },
     {
-      "id": "a1-there-is-are",
+      "id": "a1-writing-about-me",
       "level": "A1",
-      "title": "There Is / There Are",
-      "summary": "Describe places and what they contain.",
+      "title": "Writing About Yourself",
+      "summary": "Write simple sentences about yourself, your family and your routine, and a short message or postcard.",
+      "strand": "WR",
+      "canDo": "Can write simple sentences about themselves and a short message or postcard of 25–35 words.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "a1-to-be"
+        "a0-writing-basics",
+        "a1-simple-present",
+        "a1-conjunctions"
       ],
       "objectives": [
         {
-          "id": "describe-a-room",
-          "text": "Describe a room or place with there is / there are"
+          "id": "sentences-about-me",
+          "text": "Write simple sentences about yourself, your family and your routine"
         },
         {
-          "id": "ask-questions-with",
-          "text": "Ask questions with is there / are there"
+          "id": "short-message",
+          "text": "Write a short message or postcard of 25–35 words"
+        },
+        {
+          "id": "capitals-punctuation",
+          "text": "Use capital letters and punctuation correctly"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
-      "focus": [
-        "travel"
+      "commonErrors": [
+        {
+          "wrong": "i live in bandung.",
+          "right": "I live in Bandung."
+        }
       ],
       "i18n": {
         "id": {
-          "title": "There Is / There Are",
-          "summary": "Mendeskripsikan tempat dan isinya.",
+          "title": "Menulis tentang Diri Sendiri",
+          "summary": "Menulis kalimat sederhana tentang diri, keluarga dan rutinitas, serta pesan atau kartu pos pendek.",
+          "canDo": "Bisa menulis kalimat sederhana tentang diri sendiri serta pesan atau kartu pos pendek 25–35 kata.",
           "objectives": {
-            "describe-a-room": "Mendeskripsikan ruangan atau tempat dengan there is / there are",
-            "ask-questions-with": "Bertanya dengan is there / are there"
-          }
-        }
-      }
-    },
-    {
-      "id": "a1-present-continuous",
-      "level": "A1",
-      "title": "Present Continuous",
-      "summary": "Talk about what is happening now.",
-      "prerequisiteIds": [
-        "a1-to-be",
-        "a1-simple-present"
-      ],
-      "objectives": [
-        {
-          "id": "form-present-continuous",
-          "text": "Form present continuous sentences"
-        },
-        {
-          "id": "contrast-now-with",
-          "text": "Contrast now with routines"
-        }
-      ],
-      "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
-      "focus": [
-        "daily"
-      ],
-      "i18n": {
-        "id": {
-          "title": "Present Continuous",
-          "summary": "Membicarakan apa yang sedang terjadi sekarang.",
-          "objectives": {
-            "form-present-continuous": "Membentuk kalimat present continuous",
-            "contrast-now-with": "Membedakan kegiatan sekarang dengan rutinitas"
-          }
-        }
-      }
-    },
-    {
-      "id": "a1-can-ability",
-      "level": "A1",
-      "title": "Can for Ability",
-      "summary": "Say what you can and can't do.",
-      "prerequisiteIds": [
-        "a1-simple-present"
-      ],
-      "objectives": [
-        {
-          "id": "talk-about-abilities",
-          "text": "Talk about abilities with can / can't"
-        },
-        {
-          "id": "ask-polite-requests",
-          "text": "Ask polite requests with can"
-        }
-      ],
-      "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
-      "i18n": {
-        "id": {
-          "title": "Can untuk Kemampuan",
-          "summary": "Katakan apa yang bisa dan tidak bisa kamu lakukan.",
-          "objectives": {
-            "talk-about-abilities": "Membicarakan kemampuan dengan can / can't",
-            "ask-polite-requests": "Mengajukan permintaan sopan dengan can"
+            "sentences-about-me": "Menulis kalimat sederhana tentang diri, keluarga dan rutinitas",
+            "short-message": "Menulis pesan atau kartu pos pendek 25–35 kata",
+            "capitals-punctuation": "Memakai huruf kapital dan tanda baca dengan benar"
           }
         }
       }
@@ -304,14 +1586,19 @@
       "level": "A1",
       "title": "Everyday Conversation",
       "summary": "Short exchanges in shops, cafés and the street.",
+      "strand": "FN",
+      "canDo": "Can order food and drinks, ask for prices and directions, and keep a short, simple conversation going.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a1-self-introduction",
-        "a1-can-ability"
+        "a1-can-ability",
+        "a1-like-would-like",
+        "a1-vocab-food-shopping"
       ],
       "objectives": [
         {
           "id": "order-food-and",
-          "text": "Order food and drinks"
+          "text": "Order food and drinks (I'd like …)"
         },
         {
           "id": "ask-for-prices",
@@ -319,7 +1606,7 @@
         },
         {
           "id": "keep-a-short",
-          "text": "Keep a short conversation going"
+          "text": "Keep a short conversation going (Really? And you?)"
         }
       ],
       "masteryThreshold": 80,
@@ -328,23 +1615,123 @@
         "travel",
         "daily"
       ],
+      "commonErrors": [
+        {
+          "wrong": "I want coffee.",
+          "right": "I'd like a coffee, please."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Percakapan Sehari-hari",
           "summary": "Percakapan singkat di toko, kafe dan jalan.",
+          "canDo": "Bisa memesan makanan dan minuman, menanyakan harga dan arah, serta menjaga percakapan singkat tetap berjalan.",
           "objectives": {
-            "order-food-and": "Memesan makanan dan minuman",
+            "order-food-and": "Memesan makanan dan minuman (I'd like …)",
             "ask-for-prices": "Menanyakan harga dan arah",
-            "keep-a-short": "Menjaga percakapan singkat tetap berjalan"
+            "keep-a-short": "Menjaga percakapan singkat tetap berjalan (Really? And you?)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-mediation-basic",
+      "level": "A1",
+      "title": "Relaying Simple Information",
+      "summary": "Pass on names, numbers, times and prices from Indonesian sources to someone in English.",
+      "strand": "ME",
+      "canDo": "Can pass on simple information such as names, numbers, times and prices from Indonesian into English.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [
+        "a1-questions",
+        "a0-time-dates"
+      ],
+      "objectives": [
+        {
+          "id": "relay-from-indonesian",
+          "text": "Pass on names, numbers, times and prices from an Indonesian source in English"
+        },
+        {
+          "id": "pass-on-information",
+          "text": "Pass simple information on to another person"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Rp 50.000 said as 'fifty point zero zero zero rupiah'",
+          "right": "Rp 50.000 said as 'fifty thousand rupiah'"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyampaikan Info Sederhana",
+          "summary": "Menyampaikan nama, angka, jam dan harga dari sumber berbahasa Indonesia ke orang lain dalam bahasa Inggris.",
+          "canDo": "Bisa menyampaikan info sederhana seperti nama, angka, jam dan harga dari bahasa Indonesia ke bahasa Inggris.",
+          "objectives": {
+            "relay-from-indonesian": "Menyampaikan nama, angka, jam dan harga dari sumber berbahasa Indonesia ke dalam bahasa Inggris",
+            "pass-on-information": "Meneruskan info sederhana ke orang lain"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1-checkpoint",
+      "level": "A1",
+      "title": "A1 Checkpoint",
+      "summary": "A mixed test of every A1 strand: listening, reading, grammar and vocabulary, plus a spoken and a written introduction.",
+      "strand": "CK",
+      "canDo": "Can show A1 skills across grammar, vocabulary, listening, reading, speaking and writing in one mixed test.",
+      "estimatedMinutes": 90,
+      "prerequisiteIds": [
+        "a1-adjectives",
+        "a1-possessives",
+        "a1-imperatives",
+        "a1-past-be",
+        "a1-vocab-family-home",
+        "a1-vocab-town-transport",
+        "a1-vocab-jobs-hobbies",
+        "a1-vocab-daily-life",
+        "a1-pron-word-stress",
+        "a1-listening-everyday",
+        "a1-reading-short-texts",
+        "a1-daily-routines",
+        "a1-writing-about-me",
+        "a1-everyday-conversation",
+        "a1-mediation-basic"
+      ],
+      "objectives": [
+        {
+          "id": "receptive",
+          "text": "Answer grammar, vocabulary, listening and reading questions at A1 level"
+        },
+        {
+          "id": "spoken-introduction",
+          "text": "Introduce yourself in speech"
+        },
+        {
+          "id": "written-introduction",
+          "text": "Write an introduction of 25–35 words"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Checkpoint A1",
+          "summary": "Tes campuran semua strand A1: listening, reading, grammar dan kosakata, plus perkenalan diri lisan dan tulisan.",
+          "canDo": "Bisa menunjukkan kemampuan A1 di grammar, kosakata, listening, reading, speaking dan writing dalam satu tes campuran.",
+          "objectives": {
+            "receptive": "Menjawab soal grammar, kosakata, listening dan reading tingkat A1",
+            "spoken-introduction": "Memperkenalkan diri secara lisan",
+            "written-introduction": "Menulis perkenalan diri 25–35 kata"
           }
         }
       }
     }
-  ],
-  "i18n": {
-    "id": {
-      "title": "Pemula",
-      "description": "Memperkenalkan diri, membicarakan rutinitas, dan menangani percakapan sehari-hari yang sederhana."
-    }
-  }
+  ]
 }

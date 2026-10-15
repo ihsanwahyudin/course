@@ -1,68 +1,123 @@
 {
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "level": "B2",
   "title": "Upper Intermediate",
-  "description": "Practical professional fluency: discuss, argue, present and write clearly. The default goal.",
+  "description": "Understand the main ideas of complex texts, interact fluently and spontaneously, and write clear, detailed text explaining a viewpoint with its pros and cons.",
+  "i18n": {
+    "id": {
+      "title": "Menengah Atas",
+      "description": "Memahami ide utama teks kompleks, berinteraksi dengan lancar dan spontan, serta menulis teks yang jelas dan rinci sambil menjelaskan sudut pandang beserta kelebihan dan kekurangannya."
+    }
+  },
   "nodes": [
     {
-      "id": "b2-second-conditional",
+      "id": "b2-narrative-tenses",
       "level": "B2",
-      "title": "Second Conditional",
-      "summary": "Hypothetical present and future.",
+      "title": "Narrative Tenses & Past Perfect Continuous",
+      "summary": "Tell stories that mix past simple, past continuous, past perfect and past perfect continuous, plus would and used to for past habits.",
+      "strand": "GR",
+      "canDo": "Can tell a detailed story about past events, making the order of actions and background situations clear.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
-        "b1-first-conditional"
+        "b1-past-perfect",
+        "b1-present-perfect-continuous"
       ],
       "objectives": [
         {
-          "id": "talk-about-hypothetical",
-          "text": "Talk about hypothetical situations"
+          "id": "combine-past-tenses",
+          "text": "Combine past simple, past continuous and past perfect in one story"
         },
         {
-          "id": "give-advice-with",
-          "text": "Give advice with if I were you"
+          "id": "past-perfect-continuous",
+          "text": "Use the past perfect continuous for actions in progress before a past moment (had been waiting)"
+        },
+        {
+          "id": "would-used-to-habits",
+          "text": "Use would and used to for past habits, and used to for past states"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "When I arrived, the film already started.",
+          "right": "When I arrived, the film had already started."
+        },
+        {
+          "wrong": "I waited for two hours when she finally came.",
+          "right": "I had been waiting for two hours when she finally came."
+        },
+        {
+          "wrong": "When I was a child, I would have a bike.",
+          "right": "When I was a child, I used to have a bike."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Second Conditional",
-          "summary": "Pengandaian di masa kini dan masa depan.",
+          "title": "Narrative Tenses & Past Perfect Continuous",
+          "summary": "Bercerita dengan memadukan past simple, past continuous, past perfect dan past perfect continuous, plus would dan used to untuk kebiasaan lampau.",
+          "canDo": "Bisa menceritakan kejadian masa lalu secara rinci, dengan urutan kejadian dan latar yang jelas.",
           "objectives": {
-            "talk-about-hypothetical": "Membicarakan situasi pengandaian",
-            "give-advice-with": "Memberi saran dengan if I were you"
+            "combine-past-tenses": "Memadukan past simple, past continuous dan past perfect dalam satu cerita",
+            "past-perfect-continuous": "Memakai past perfect continuous untuk kegiatan yang sedang berlangsung sebelum suatu waktu di masa lalu (had been waiting)",
+            "would-used-to-habits": "Memakai would dan used to untuk kebiasaan lampau, serta used to untuk keadaan lampau"
           }
         }
       }
     },
     {
-      "id": "b2-third-conditional",
+      "id": "b2-future-perfect-continuous",
       "level": "B2",
-      "title": "Third & Mixed Conditionals",
-      "summary": "Regrets and alternative pasts.",
+      "title": "Future Continuous & Future Perfect",
+      "summary": "Talk about actions in progress at a future time and actions that will be finished by a future deadline.",
+      "strand": "GR",
+      "canDo": "Can describe future plans precisely, saying what will be happening at a given time and what will have been done by then.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "b2-second-conditional",
-        "b1-present-perfect"
+        "b1-future-forms"
       ],
       "objectives": [
         {
-          "id": "talk-about-past",
-          "text": "Talk about past hypotheticals"
+          "id": "future-continuous",
+          "text": "Use the future continuous for actions in progress at a future time (This time tomorrow I'll be flying)"
         },
         {
-          "id": "use-mixed-conditionals",
-          "text": "Use mixed conditionals for present results"
+          "id": "future-perfect",
+          "text": "Use the future perfect for actions completed by a future time (By 2030 I'll have finished)"
+        },
+        {
+          "id": "future-perfect-continuous",
+          "text": "Use the future perfect continuous for duration up to a future point (By June I'll have been working here for five years)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "This time tomorrow I will fly to Bali.",
+          "right": "This time tomorrow I'll be flying to Bali."
+        },
+        {
+          "wrong": "By 2030 I will finish my degree.",
+          "right": "By 2030 I'll have finished my degree."
+        },
+        {
+          "wrong": "Call me when you will have finished.",
+          "right": "Call me when you have finished."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Third & Mixed Conditional",
-          "summary": "Penyesalan dan masa lalu alternatif.",
+          "title": "Future Continuous & Future Perfect",
+          "summary": "Membicarakan kegiatan yang sedang berlangsung di masa depan dan hal yang sudah selesai sebelum tenggat tertentu.",
+          "canDo": "Bisa menjelaskan rencana ke depan dengan tepat: apa yang sedang kamu lakukan pada waktu tertentu dan apa yang sudah selesai saat itu.",
           "objectives": {
-            "talk-about-past": "Membicarakan pengandaian di masa lalu",
-            "use-mixed-conditionals": "Menggunakan mixed conditional untuk akibat di masa kini"
+            "future-continuous": "Memakai future continuous untuk kegiatan yang sedang berlangsung di masa depan (This time tomorrow I'll be flying)",
+            "future-perfect": "Memakai future perfect untuk hal yang sudah selesai sebelum waktu tertentu di masa depan (By 2030 I'll have finished)",
+            "future-perfect-continuous": "Memakai future perfect continuous untuk durasi sampai titik tertentu di masa depan (By June I'll have been working here for five years)"
           }
         }
       }
@@ -71,14 +126,21 @@
       "id": "b2-passive-voice",
       "level": "B2",
       "title": "Passive Voice",
-      "summary": "Focus on the action, not the doer.",
+      "summary": "Focus on the action, not the doer: the passive in all common tenses and with modals, plus passive reporting structures.",
+      "strand": "GR",
+      "canDo": "Can use the passive across tenses and in reporting structures to write clear, objective texts.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
-        "b1-present-perfect"
+        "b1-passive-intro"
       ],
       "objectives": [
         {
           "id": "form-the-passive",
-          "text": "Form the passive in common tenses"
+          "text": "Form the passive in common tenses and with modals (has been sent, must be done)"
+        },
+        {
+          "id": "passive-reporting",
+          "text": "Use passive reporting structures (It is said that …, He is believed to …)"
         },
         {
           "id": "choose-active-or",
@@ -91,13 +153,83 @@
         "study",
         "tech"
       ],
+      "commonErrors": [
+        {
+          "wrong": "The email has been send.",
+          "right": "The email has been sent."
+        },
+        {
+          "wrong": "The accident was happened yesterday.",
+          "right": "The accident happened yesterday."
+        },
+        {
+          "wrong": "The report must be finish today.",
+          "right": "The report must be finished today."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kalimat Pasif",
-          "summary": "Fokus pada tindakan, bukan pelakunya.",
+          "summary": "Fokus pada tindakan, bukan pelakunya: kalimat pasif di semua tense umum dan dengan modal, plus pola passive reporting.",
+          "canDo": "Bisa memakai kalimat pasif di berbagai tense dan pola pelaporan untuk menulis teks yang jelas dan objektif.",
           "objectives": {
-            "form-the-passive": "Membentuk kalimat pasif dalam tense yang umum",
+            "form-the-passive": "Membentuk kalimat pasif dalam tense yang umum dan dengan modal (has been sent, must be done)",
+            "passive-reporting": "Memakai pola passive reporting (It is said that …, He is believed to …)",
             "choose-active-or": "Memilih kalimat aktif atau pasif dengan tepat"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-causative",
+      "level": "B2",
+      "title": "Causative Have / Get",
+      "summary": "Say that someone else does something for you: have/get something done for services like repairs and haircuts.",
+      "strand": "GR",
+      "canDo": "Can talk about services and arrangements where someone else does the work, such as repairs, deliveries and appointments.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "b2-passive-voice"
+      ],
+      "objectives": [
+        {
+          "id": "have-something-done",
+          "text": "Use have something done to talk about services (I had my hair cut)"
+        },
+        {
+          "id": "get-something-done",
+          "text": "Use get + object + past participle in informal speech (I need to get it fixed)"
+        },
+        {
+          "id": "talk-about-services",
+          "text": "Talk about everyday services and bad experiences (I had my phone stolen)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I cut my hair at the barber's yesterday.",
+          "right": "I had my hair cut at the barber's yesterday."
+        },
+        {
+          "wrong": "I got my laptop fix.",
+          "right": "I got my laptop fixed."
+        },
+        {
+          "wrong": "I had repaired my car last week.",
+          "right": "I had my car repaired last week."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat Kausatif Have / Get",
+          "summary": "Menyatakan bahwa orang lain mengerjakan sesuatu untukmu: have/get something done untuk layanan seperti servis dan potong rambut.",
+          "canDo": "Bisa membicarakan layanan dan urusan yang dikerjakan orang lain untukmu, seperti servis, pengiriman dan janji temu.",
+          "objectives": {
+            "have-something-done": "Memakai have something done untuk membicarakan layanan (I had my hair cut)",
+            "get-something-done": "Memakai get + objek + V3 dalam percakapan santai (I need to get it fixed)",
+            "talk-about-services": "Membicarakan layanan sehari-hari dan pengalaman buruk (I had my phone stolen)"
           }
         }
       }
@@ -106,18 +238,25 @@
       "id": "b2-reported-speech",
       "level": "B2",
       "title": "Reported Speech",
-      "summary": "Report statements, questions and requests.",
+      "summary": "Report questions and commands, use reporting verbs with the right pattern, and apply tense changes correctly.",
+      "strand": "GR",
+      "canDo": "Can accurately report what others said, asked or advised, choosing a suitable reporting verb.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
-        "b1-telling-stories"
+        "b1-reported-speech-intro"
       ],
       "objectives": [
         {
-          "id": "report-statements-with",
-          "text": "Report statements with tense backshift"
+          "id": "report-questions-and",
+          "text": "Report questions and commands (She asked where I lived; He told me to wait)"
         },
         {
-          "id": "report-questions-and",
-          "text": "Report questions and requests"
+          "id": "reporting-verbs",
+          "text": "Use reporting verbs with their patterns (suggest, warn, deny, admit, promise)"
+        },
+        {
+          "id": "report-statements-with",
+          "text": "Report statements with full tense backshift, and know when it is optional"
         }
       ],
       "masteryThreshold": 80,
@@ -125,44 +264,133 @@
       "focus": [
         "study"
       ],
+      "commonErrors": [
+        {
+          "wrong": "She asked me where do I live.",
+          "right": "She asked me where I lived."
+        },
+        {
+          "wrong": "He suggested me to take a break.",
+          "right": "He suggested taking a break. / He suggested that I take a break."
+        },
+        {
+          "wrong": "She told that she was tired.",
+          "right": "She said that she was tired. / She told me that she was tired."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kalimat Tidak Langsung",
-          "summary": "Melaporkan pernyataan, pertanyaan dan permintaan.",
+          "summary": "Melaporkan pertanyaan dan perintah, memakai reporting verbs dengan pola yang benar, dan mengubah tense dengan tepat.",
+          "canDo": "Bisa melaporkan dengan akurat apa yang dikatakan, ditanyakan atau disarankan orang lain, dengan reporting verb yang sesuai.",
           "objectives": {
-            "report-statements-with": "Melaporkan pernyataan dengan perubahan tense",
-            "report-questions-and": "Melaporkan pertanyaan dan permintaan"
+            "report-questions-and": "Melaporkan pertanyaan dan perintah (She asked where I lived; He told me to wait)",
+            "reporting-verbs": "Memakai reporting verbs beserta polanya (suggest, warn, deny, admit, promise)",
+            "report-statements-with": "Melaporkan pernyataan dengan perubahan tense lengkap, dan tahu kapan perubahan itu boleh tidak dilakukan"
           }
         }
       }
     },
     {
-      "id": "b2-perfect-continuous",
+      "id": "b2-third-conditional",
       "level": "B2",
-      "title": "Perfect Continuous Tenses",
-      "summary": "Duration up to now or up to a past point.",
+      "title": "Third & Mixed Conditionals",
+      "summary": "Regrets and alternative pasts: imagine a different past and its results, then and now.",
+      "strand": "GR",
+      "canDo": "Can speculate about how things could have been different and how past events affect the present.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "b1-present-perfect"
+        "b1-second-conditional",
+        "b1-past-perfect"
       ],
       "objectives": [
         {
-          "id": "use-present-perfect",
-          "text": "Use present perfect continuous for duration"
+          "id": "talk-about-past",
+          "text": "Talk about past hypotheticals (If I had known, I would have come)"
         },
         {
-          "id": "contrast-perfect-simple",
-          "text": "Contrast perfect simple and continuous"
+          "id": "use-mixed-conditionals",
+          "text": "Use mixed conditionals for present results (If I had studied IT, I would have a different job now)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "If I knew about the meeting, I would have come.",
+          "right": "If I had known about the meeting, I would have come."
+        },
+        {
+          "wrong": "If I would have studied harder, I would have passed.",
+          "right": "If I had studied harder, I would have passed."
+        },
+        {
+          "wrong": "If I had taken that job, I would be live in Jakarta now.",
+          "right": "If I had taken that job, I would be living in Jakarta now."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Perfect Continuous",
-          "summary": "Durasi sampai sekarang atau sampai titik di masa lalu.",
+          "title": "Third & Mixed Conditional",
+          "summary": "Penyesalan dan masa lalu alternatif: membayangkan masa lalu yang berbeda dan akibatnya, dulu maupun sekarang.",
+          "canDo": "Bisa berandai-andai tentang bagaimana sesuatu bisa berbeda dan bagaimana masa lalu memengaruhi masa kini.",
           "objectives": {
-            "use-present-perfect": "Menggunakan present perfect continuous untuk durasi",
-            "contrast-perfect-simple": "Membedakan perfect simple dan continuous"
+            "talk-about-past": "Membicarakan pengandaian di masa lalu (If I had known, I would have come)",
+            "use-mixed-conditionals": "Menggunakan mixed conditional untuk akibat di masa kini (If I had studied IT, I would have a different job now)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-wish-regrets",
+      "level": "B2",
+      "title": "Wish, If Only & Regrets",
+      "summary": "Express wishes, regrets and criticism with wish, if only, should have, would rather and it's time.",
+      "strand": "GR",
+      "canDo": "Can express wishes, regrets and mild criticism about the present and the past.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-third-conditional"
+      ],
+      "objectives": [
+        {
+          "id": "wish-if-only",
+          "text": "Use wish / if only + past simple, past perfect or would"
+        },
+        {
+          "id": "should-have",
+          "text": "Use should have / shouldn't have to express regret and criticism"
+        },
+        {
+          "id": "would-rather-its-time",
+          "text": "Use would rather and it's time + past simple"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I wish I can speak Japanese.",
+          "right": "I wish I could speak Japanese."
+        },
+        {
+          "wrong": "You shouldn't came late.",
+          "right": "You shouldn't have come late."
+        },
+        {
+          "wrong": "It's time we go home.",
+          "right": "It's time we went home."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Wish, If Only & Penyesalan",
+          "summary": "Mengungkapkan harapan, penyesalan dan kritik dengan wish, if only, should have, would rather dan it's time.",
+          "canDo": "Bisa mengungkapkan harapan, penyesalan dan kritik halus tentang masa kini maupun masa lalu.",
+          "objectives": {
+            "wish-if-only": "Memakai wish / if only + past simple, past perfect atau would",
+            "should-have": "Memakai should have / shouldn't have untuk menyatakan penyesalan dan kritik",
+            "would-rather-its-time": "Memakai would rather dan it's time + past simple"
           }
         }
       }
@@ -170,15 +398,22 @@
     {
       "id": "b2-modals-deduction",
       "level": "B2",
-      "title": "Modals of Deduction",
-      "summary": "must be, might have, can't have.",
+      "title": "Modals of Deduction (Past)",
+      "summary": "Draw conclusions about past events with must have, might have and can't have, and contrast needn't have with didn't need to.",
+      "strand": "GR",
+      "canDo": "Can make logical guesses about what happened in the past and explain how certain they are.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "b1-modals-advice"
+        "b1-modals-deduction-present"
       ],
       "objectives": [
         {
-          "id": "make-deductions-about",
-          "text": "Make deductions about the present"
+          "id": "past-modal-forms",
+          "text": "Use must have / might have / can't have + past participle"
+        },
+        {
+          "id": "neednt-have-didnt-need",
+          "text": "Distinguish needn't have done from didn't need to do"
         },
         {
           "id": "make-deductions-about-2",
@@ -187,13 +422,257 @@
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "He must went home already.",
+          "right": "He must have gone home already."
+        },
+        {
+          "wrong": "She can't has seen it.",
+          "right": "She can't have seen it."
+        },
+        {
+          "wrong": "I needn't have bring an umbrella.",
+          "right": "I needn't have brought an umbrella."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Modal untuk Dugaan",
-          "summary": "must be, might have, can't have.",
+          "title": "Modal untuk Dugaan (Lampau)",
+          "summary": "Menarik kesimpulan tentang kejadian lampau dengan must have, might have dan can't have, serta membedakan needn't have dan didn't need to.",
+          "canDo": "Bisa membuat dugaan logis tentang apa yang terjadi di masa lalu dan menjelaskan seberapa yakin kamu.",
           "objectives": {
-            "make-deductions-about": "Membuat dugaan tentang masa kini",
+            "past-modal-forms": "Memakai must have / might have / can't have + V3",
+            "neednt-have-didnt-need": "Membedakan needn't have done dan didn't need to do",
             "make-deductions-about-2": "Membuat dugaan tentang masa lalu"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-relative-clauses-advanced",
+      "level": "B2",
+      "title": "Non-Defining & Reduced Relative Clauses",
+      "summary": "Add extra information with non-defining clauses, use whose, whom and sentence-level which, and shorten clauses.",
+      "strand": "GR",
+      "canDo": "Can add detail to sentences with a range of relative clauses, punctuating them correctly.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-relative-clauses"
+      ],
+      "objectives": [
+        {
+          "id": "non-defining-commas",
+          "text": "Use non-defining relative clauses with commas"
+        },
+        {
+          "id": "whose-whom-which",
+          "text": "Use whose and whom, and which to refer to a whole clause"
+        },
+        {
+          "id": "reduced-relatives",
+          "text": "Use reduced relative clauses (the man standing there)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "My father who lives in Bandung is a doctor.",
+          "right": "My father, who lives in Bandung, is a doctor."
+        },
+        {
+          "wrong": "The company, that I work for, is growing.",
+          "right": "The company, which I work for, is growing."
+        },
+        {
+          "wrong": "The man is standing there is my boss.",
+          "right": "The man standing there is my boss."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Klausa Relatif Non-Defining & Ringkas",
+          "summary": "Menambah informasi dengan non-defining clause, memakai whose, whom dan which untuk seluruh klausa, serta meringkas klausa.",
+          "canDo": "Bisa menambahkan detail ke kalimat dengan berbagai klausa relatif dan tanda baca yang benar.",
+          "objectives": {
+            "non-defining-commas": "Memakai non-defining relative clause dengan koma",
+            "whose-whom-which": "Memakai whose dan whom, serta which untuk merujuk seluruh klausa",
+            "reduced-relatives": "Memakai reduced relative clause (the man standing there)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-participle-clauses",
+      "level": "B2",
+      "title": "Participle Clauses",
+      "summary": "Write shorter, more fluent sentences with -ing, -ed and having + past participle clauses.",
+      "strand": "GR",
+      "canDo": "Can combine ideas concisely using participle clauses in writing and prepared speech.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-relative-clauses-advanced"
+      ],
+      "objectives": [
+        {
+          "id": "ing-clauses",
+          "text": "Use -ing clauses for simultaneous actions or reasons (Walking home, I saw …)"
+        },
+        {
+          "id": "ed-clauses",
+          "text": "Use -ed clauses with a passive meaning (Built in 1990, …)"
+        },
+        {
+          "id": "having-past-participle",
+          "text": "Use having + past participle for an earlier action (Having finished the report, I …)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Walking home, the rain started.",
+          "right": "Walking home, I got caught in the rain."
+        },
+        {
+          "wrong": "Build in 1990, the bridge is still strong.",
+          "right": "Built in 1990, the bridge is still strong."
+        },
+        {
+          "wrong": "After finish the report, I went home.",
+          "right": "After finishing the report, I went home. / Having finished the report, I went home."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Klausa Partisip",
+          "summary": "Menulis kalimat yang lebih ringkas dan lancar dengan klausa -ing, -ed dan having + V3.",
+          "canDo": "Bisa menggabungkan ide secara ringkas dengan klausa partisip dalam tulisan dan presentasi.",
+          "objectives": {
+            "ing-clauses": "Memakai klausa -ing untuk kegiatan yang bersamaan atau alasan (Walking home, I saw …)",
+            "ed-clauses": "Memakai klausa -ed yang bermakna pasif (Built in 1990, …)",
+            "having-past-participle": "Memakai having + V3 untuk kegiatan yang terjadi lebih dulu (Having finished the report, I …)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-verb-patterns-meaning",
+      "level": "B2",
+      "title": "Verb Patterns That Change Meaning",
+      "summary": "Learn verbs whose meaning changes with -ing or to, the difference between used to and be/get used to, and verb + object + to.",
+      "strand": "GR",
+      "canDo": "Can choose the right verb pattern so that the meaning is exactly what you intend.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-gerunds-infinitives",
+        "b1-used-to"
+      ],
+      "objectives": [
+        {
+          "id": "ing-vs-to-meaning",
+          "text": "Use remember, forget, stop and try + -ing vs + to with the right meaning"
+        },
+        {
+          "id": "used-to-vs-be-used-to",
+          "text": "Distinguish used to from be/get used to + -ing"
+        },
+        {
+          "id": "verb-object-infinitive",
+          "text": "Use verb + object + to-infinitive (want him to …, ask her to …)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "I'm used to wake up early.",
+          "right": "I'm used to waking up early."
+        },
+        {
+          "wrong": "She wants that I come to the party.",
+          "right": "She wants me to come to the party."
+        },
+        {
+          "wrong": "I stopped to smoke last year. (meaning I quit)",
+          "right": "I stopped smoking last year."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pola Kata Kerja yang Mengubah Makna",
+          "summary": "Mempelajari kata kerja yang maknanya berubah dengan -ing atau to, beda used to dan be/get used to, serta kata kerja + objek + to.",
+          "canDo": "Bisa memilih pola kata kerja yang tepat sehingga maknanya persis seperti yang kamu maksud.",
+          "objectives": {
+            "ing-vs-to-meaning": "Memakai remember, forget, stop dan try + -ing vs + to dengan makna yang tepat",
+            "used-to-vs-be-used-to": "Membedakan used to dan be/get used to + -ing",
+            "verb-object-infinitive": "Memakai kata kerja + objek + to-infinitive (want him to …, ask her to …)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-articles-quantifiers",
+      "level": "B2",
+      "title": "Articles & Quantifiers in Depth",
+      "summary": "Know when to use no article, the, and quantifiers like each, every, either, neither, both and none.",
+      "strand": "GR",
+      "canDo": "Can use articles and quantifiers accurately when talking about things in general and in particular.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a1-articles-demonstratives",
+        "a2-countable-uncountable"
+      ],
+      "objectives": [
+        {
+          "id": "zero-article-general",
+          "text": "Use no article for general meaning (Life is …, Children need …)"
+        },
+        {
+          "id": "the-specific-unique",
+          "text": "Use the for specific or unique things"
+        },
+        {
+          "id": "quantifiers",
+          "text": "Use each, every, either, neither, both and none correctly"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "The life is hard.",
+          "right": "Life is hard."
+        },
+        {
+          "wrong": "Every students has a laptop.",
+          "right": "Every student has a laptop."
+        },
+        {
+          "wrong": "Neither of my friends didn't come.",
+          "right": "Neither of my friends came."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Artikel & Quantifier Lebih Dalam",
+          "summary": "Tahu kapan tidak memakai artikel, kapan memakai the, dan quantifier seperti each, every, either, neither, both dan none.",
+          "canDo": "Bisa memakai artikel dan quantifier dengan akurat saat membicarakan hal secara umum maupun spesifik.",
+          "objectives": {
+            "zero-article-general": "Tidak memakai artikel untuk makna umum (Life is …, Children need …)",
+            "the-specific-unique": "Memakai the untuk hal yang spesifik atau unik",
+            "quantifiers": "Memakai each, every, either, neither, both dan none dengan benar"
           }
         }
       }
@@ -202,14 +681,18 @@
       "id": "b2-linking-words",
       "level": "B2",
       "title": "Linking & Discourse Markers",
-      "summary": "however, although, therefore, in addition.",
+      "summary": "Connect ideas with linkers like whereas, nevertheless, consequently and despite, and build clear paragraphs.",
+      "strand": "GR",
+      "canDo": "Can link ideas clearly in speech and writing to show contrast, cause, result and addition.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
+        "b1-linkers-contrast-purpose",
         "b1-emails"
       ],
       "objectives": [
         {
           "id": "connect-ideas-with",
-          "text": "Connect ideas with contrast and cause linkers"
+          "text": "Connect ideas with contrast, cause, result and addition linkers (whereas, nevertheless, consequently, despite)"
         },
         {
           "id": "organise-a-paragraph",
@@ -222,13 +705,681 @@
         "study",
         "tech"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Although it was raining, but we went out.",
+          "right": "Although it was raining, we went out."
+        },
+        {
+          "wrong": "Despite of the traffic, we arrived on time.",
+          "right": "Despite the traffic, we arrived on time."
+        },
+        {
+          "wrong": "Despite it rained, the event continued.",
+          "right": "Although it rained, the event continued. / Despite the rain, the event continued."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kata Penghubung & Penanda Wacana",
-          "summary": "however, although, therefore, in addition.",
+          "summary": "Menghubungkan ide dengan penghubung seperti whereas, nevertheless, consequently dan despite, serta menyusun paragraf yang jelas.",
+          "canDo": "Bisa menghubungkan ide dengan jelas secara lisan maupun tulisan untuk menunjukkan kontras, sebab, akibat dan tambahan.",
           "objectives": {
-            "connect-ideas-with": "Menghubungkan ide dengan penghubung kontras dan sebab-akibat",
+            "connect-ideas-with": "Menghubungkan ide dengan penghubung kontras, sebab, akibat dan tambahan (whereas, nevertheless, consequently, despite)",
             "organise-a-paragraph": "Menyusun paragraf dengan jelas"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-collocations",
+      "level": "B2",
+      "title": "Collocations",
+      "summary": "Use natural word partnerships: adjective + noun, verb + noun and adverb + adjective, especially at work.",
+      "strand": "VO",
+      "canDo": "Can use common collocations so that speech and writing sound natural, especially in work contexts.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-collocations-basic"
+      ],
+      "objectives": [
+        {
+          "id": "adjective-noun",
+          "text": "Use adjective + noun collocations (heavy traffic, strong coffee)"
+        },
+        {
+          "id": "verb-noun",
+          "text": "Use verb + noun collocations (meet a deadline, raise an issue)"
+        },
+        {
+          "id": "adverb-adjective",
+          "text": "Use adverb + adjective collocations (highly unlikely, fully aware)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "The traffic is very crowded today.",
+          "right": "The traffic is very heavy today."
+        },
+        {
+          "wrong": "We have to reach the deadline.",
+          "right": "We have to meet the deadline."
+        },
+        {
+          "wrong": "It's strongly unlikely.",
+          "right": "It's highly unlikely."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kolokasi",
+          "summary": "Memakai pasangan kata yang alami: kata sifat + kata benda, kata kerja + kata benda, dan adverb + kata sifat, terutama di dunia kerja.",
+          "canDo": "Bisa memakai kolokasi umum agar ucapan dan tulisan terdengar alami, terutama dalam konteks kerja.",
+          "objectives": {
+            "adjective-noun": "Memakai kolokasi kata sifat + kata benda (heavy traffic, strong coffee)",
+            "verb-noun": "Memakai kolokasi kata kerja + kata benda (meet a deadline, raise an issue)",
+            "adverb-adjective": "Memakai kolokasi adverb + kata sifat (highly unlikely, fully aware)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-word-formation",
+      "level": "B2",
+      "title": "Word Formation in Depth",
+      "summary": "Build new words with negative prefixes, noun/adjective/adverb suffixes and compounds.",
+      "strand": "VO",
+      "canDo": "Can build and recognise word families to expand vocabulary and understand new words.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-word-formation"
+      ],
+      "objectives": [
+        {
+          "id": "negative-prefixes",
+          "text": "Use negative prefixes correctly (im-, ir-, il-, in-, un-, dis-)"
+        },
+        {
+          "id": "suffixes",
+          "text": "Form nouns, adjectives and adverbs with suffixes (-ment, -ness, -ful, -ive, -ly)"
+        },
+        {
+          "id": "compound-words",
+          "text": "Understand and use compound words (deadline, user-friendly, workplace)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "It's unpossible.",
+          "right": "It's impossible."
+        },
+        {
+          "wrong": "That was very unresponsible.",
+          "right": "That was very irresponsible."
+        },
+        {
+          "wrong": "He is very success.",
+          "right": "He is very successful."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pembentukan Kata Lebih Dalam",
+          "summary": "Membentuk kata baru dengan prefix negatif, suffix kata benda/kata sifat/adverb, dan kata majemuk.",
+          "canDo": "Bisa membentuk dan mengenali keluarga kata untuk memperkaya kosakata dan memahami kata baru.",
+          "objectives": {
+            "negative-prefixes": "Memakai prefix negatif dengan benar (im-, ir-, il-, in-, un-, dis-)",
+            "suffixes": "Membentuk kata benda, kata sifat dan adverb dengan suffix (-ment, -ness, -ful, -ive, -ly)",
+            "compound-words": "Memahami dan memakai kata majemuk (deadline, user-friendly, workplace)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-phrasal-verbs-idioms",
+      "level": "B2",
+      "title": "Phrasal Verbs & Common Idioms",
+      "summary": "Use separable, inseparable and three-part phrasal verbs, plus common everyday idioms.",
+      "strand": "VO",
+      "canDo": "Can understand and use common phrasal verbs and idioms in everyday conversation.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-phrasal-verbs"
+      ],
+      "objectives": [
+        {
+          "id": "separable-inseparable",
+          "text": "Distinguish separable and inseparable phrasal verbs (pick it up, look after her)"
+        },
+        {
+          "id": "three-part",
+          "text": "Use three-part phrasal verbs (look forward to, come up with)"
+        },
+        {
+          "id": "common-idioms",
+          "text": "Understand and use common idioms (break the ice)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I look forward to meet you.",
+          "right": "I look forward to meeting you."
+        },
+        {
+          "wrong": "Can you pick up me at seven?",
+          "right": "Can you pick me up at seven?"
+        },
+        {
+          "wrong": "She came up a great idea.",
+          "right": "She came up with a great idea."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Phrasal Verb & Idiom Umum",
+          "summary": "Memakai phrasal verb yang bisa dipisah, tidak bisa dipisah dan tiga kata, plus idiom sehari-hari yang umum.",
+          "canDo": "Bisa memahami dan memakai phrasal verb dan idiom umum dalam percakapan sehari-hari.",
+          "objectives": {
+            "separable-inseparable": "Membedakan phrasal verb yang bisa dan tidak bisa dipisah (pick it up, look after her)",
+            "three-part": "Memakai phrasal verb tiga kata (look forward to, come up with)",
+            "common-idioms": "Memahami dan memakai idiom umum (break the ice)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-formal-informal-vocab",
+      "level": "B2",
+      "title": "Formal vs Informal Vocabulary",
+      "summary": "Choose between formal and informal words, such as phrasal verbs vs Latin-based verbs, to suit your reader.",
+      "strand": "VO",
+      "canDo": "Can adjust vocabulary to the reader and situation, switching between formal and informal register.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "b2-phrasal-verbs-idioms"
+      ],
+      "objectives": [
+        {
+          "id": "formal-equivalents",
+          "text": "Use formal equivalents of everyday words (get → obtain, ask → enquire)"
+        },
+        {
+          "id": "phrasal-vs-latin",
+          "text": "Choose between a phrasal verb and a Latin-based verb (find out → discover)"
+        },
+        {
+          "id": "match-the-reader",
+          "text": "Match word choice to the reader and situation"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Hi Sir, I wanna ask about the job.",
+          "right": "Dear Sir or Madam, I am writing to enquire about the position."
+        },
+        {
+          "wrong": "Dear Mr Budi, (surname is Santoso)",
+          "right": "Dear Mr Santoso,"
+        },
+        {
+          "wrong": "Thanks a lot, see ya!",
+          "right": "Thank you for your help. Kind regards,"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kosakata Formal vs Informal",
+          "summary": "Memilih kata formal atau informal, misalnya phrasal verb vs kata kerja Latin, sesuai dengan pembaca.",
+          "canDo": "Bisa menyesuaikan kosakata dengan pembaca dan situasi, berganti antara register formal dan informal.",
+          "objectives": {
+            "formal-equivalents": "Memakai padanan formal untuk kata sehari-hari (get → obtain, ask → enquire)",
+            "phrasal-vs-latin": "Memilih antara phrasal verb dan kata kerja Latin (find out → discover)",
+            "match-the-reader": "Menyesuaikan pilihan kata dengan pembaca dan situasi"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-vocab-work-business",
+      "level": "B2",
+      "title": "Work, Business & Money",
+      "summary": "Vocabulary for meetings, projects, deadlines, basic finance and how organisations are structured.",
+      "strand": "VO",
+      "canDo": "Can talk about projects, budgets and roles at work using precise business vocabulary.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-vocab-work-education"
+      ],
+      "objectives": [
+        {
+          "id": "meetings-projects-deadlines",
+          "text": "Talk about meetings, projects and deadlines"
+        },
+        {
+          "id": "basic-finance",
+          "text": "Use basic finance words (budget, revenue, cost, profit)"
+        },
+        {
+          "id": "roles-structure",
+          "text": "Describe roles and organisational structure (report to, department, team lead)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "We need to discuss about the budget.",
+          "right": "We need to discuss the budget."
+        },
+        {
+          "wrong": "The company got a big profit this year.",
+          "right": "The company made a big profit this year."
+        },
+        {
+          "wrong": "I am responsible to the marketing team.",
+          "right": "I am responsible for the marketing team."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kerja, Bisnis & Keuangan",
+          "summary": "Kosakata untuk rapat, proyek, tenggat, keuangan dasar dan struktur organisasi.",
+          "canDo": "Bisa membicarakan proyek, anggaran dan peran di tempat kerja dengan kosakata bisnis yang tepat.",
+          "objectives": {
+            "meetings-projects-deadlines": "Membicarakan rapat, proyek dan tenggat",
+            "basic-finance": "Memakai kosakata keuangan dasar (budget, revenue, cost, profit)",
+            "roles-structure": "Menjelaskan peran dan struktur organisasi (report to, department, team lead)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-vocab-science-society",
+      "level": "B2",
+      "title": "Science, Environment & Society",
+      "summary": "Vocabulary for science and innovation, climate change and energy, and discussing social issues neutrally.",
+      "strand": "VO",
+      "canDo": "Can discuss science, the environment and social issues with suitable vocabulary and a balanced tone.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-vocab-media-tech",
+        "b1-vocab-environment-travel"
+      ],
+      "objectives": [
+        {
+          "id": "science-innovation",
+          "text": "Talk about science, research and innovation"
+        },
+        {
+          "id": "climate-energy",
+          "text": "Talk about climate change and energy (emissions, renewable, carbon footprint)"
+        },
+        {
+          "id": "social-issues-neutral",
+          "text": "Discuss social issues in neutral, balanced language"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "The climate change is a big problem.",
+          "right": "Climate change is a big problem."
+        },
+        {
+          "wrong": "There are many researches about it.",
+          "right": "There is a lot of research on it."
+        },
+        {
+          "wrong": "Pollution makes the environment broken.",
+          "right": "Pollution damages the environment."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Sains, Lingkungan & Masyarakat",
+          "summary": "Kosakata untuk sains dan inovasi, perubahan iklim dan energi, serta membahas isu sosial secara netral.",
+          "canDo": "Bisa membahas sains, lingkungan dan isu sosial dengan kosakata yang tepat dan nada yang berimbang.",
+          "objectives": {
+            "science-innovation": "Membicarakan sains, riset dan inovasi",
+            "climate-energy": "Membicarakan perubahan iklim dan energi (emissions, renewable, carbon footprint)",
+            "social-issues-neutral": "Membahas isu sosial dengan bahasa yang netral dan berimbang"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-pron-connected-speech",
+      "level": "B2",
+      "title": "Connected Speech",
+      "summary": "Understand and use elision, assimilation and weak forms in fast speech, and recognise gonna, wanna and gotta.",
+      "strand": "PR",
+      "canDo": "Can follow fast, natural speech and link words smoothly when speaking.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "b1-pron-rhythm-intonation"
+      ],
+      "objectives": [
+        {
+          "id": "elision-assimilation",
+          "text": "Recognise and use elision and assimilation (next door, ten people)"
+        },
+        {
+          "id": "weak-forms-fast",
+          "text": "Use weak forms in fast speech (to, for, and, can)"
+        },
+        {
+          "id": "gonna-wanna-gotta",
+          "text": "Recognise gonna, wanna and gotta and know they are informal"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Every word said fully and separately: 'I – am – going – to – go'",
+          "right": "Linked with weak forms: 'I'm going tə go' /aɪm ˈɡəʊɪŋ tə ɡəʊ/"
+        },
+        {
+          "wrong": "Hearing 'gonna' and not recognising 'going to'",
+          "right": "gonna = going to, wanna = want to, gotta = have got to (informal speech only)"
+        },
+        {
+          "wrong": "Writing 'I wanna ask' in a work email",
+          "right": "Writing 'I would like to ask' (gonna/wanna/gotta are for speech)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Connected Speech",
+          "summary": "Memahami dan memakai elision, assimilation dan weak forms dalam ucapan cepat, serta mengenali gonna, wanna dan gotta.",
+          "canDo": "Bisa mengikuti ucapan alami yang cepat dan menyambung kata dengan lancar saat berbicara.",
+          "objectives": {
+            "elision-assimilation": "Mengenali dan memakai elision dan assimilation (next door, ten people)",
+            "weak-forms-fast": "Memakai weak forms dalam ucapan cepat (to, for, and, can)",
+            "gonna-wanna-gotta": "Mengenali gonna, wanna dan gotta serta tahu bahwa bentuk ini informal"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-pron-intonation-attitude",
+      "level": "B2",
+      "title": "Intonation, Contrastive Stress & Chunking",
+      "summary": "Use intonation to show attitude, stress words to correct or contrast, and pause in chunks when presenting.",
+      "strand": "PR",
+      "canDo": "Can use intonation, stress and pausing to show attitude and make key points clear to listeners.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "b2-pron-connected-speech"
+      ],
+      "objectives": [
+        {
+          "id": "intonation-attitude",
+          "text": "Use intonation to show attitude (doubtful, surprised, polite)"
+        },
+        {
+          "id": "contrastive-stress",
+          "text": "Use contrastive stress (I said TUESday, not THURSday)"
+        },
+        {
+          "id": "pausing-chunking",
+          "text": "Pause and chunk speech clearly when presenting"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Flat intonation everywhere, so 'Really?' sounds bored",
+          "right": "A wide rise on 'Really?' to sound genuinely surprised"
+        },
+        {
+          "wrong": "Equal stress on every word: 'I said Tuesday, not Thursday'",
+          "right": "Extra stress on the contrast: 'I said TUESday, not THURSday'"
+        },
+        {
+          "wrong": "Reading a slide in one long breath without pauses",
+          "right": "Pausing between chunks: 'Last year | our sales | rose by ten percent'"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Intonasi, Contrastive Stress & Chunking",
+          "summary": "Memakai intonasi untuk menunjukkan sikap, memberi tekanan untuk mengoreksi atau membandingkan, dan memberi jeda saat presentasi.",
+          "canDo": "Bisa memakai intonasi, tekanan dan jeda untuk menunjukkan sikap dan memperjelas poin penting bagi pendengar.",
+          "objectives": {
+            "intonation-attitude": "Memakai intonasi untuk menunjukkan sikap (ragu, terkejut, sopan)",
+            "contrastive-stress": "Memakai contrastive stress (I said TUESday, not THURSday)",
+            "pausing-chunking": "Memberi jeda dan memenggal ucapan (chunking) dengan jelas saat presentasi"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-listening-extended",
+      "level": "B2",
+      "title": "Extended Listening & Accents",
+      "summary": "Follow lectures, talks and podcasts, track arguments and attitude, handle UK/US/AU accents and take notes.",
+      "strand": "LI",
+      "canDo": "Can follow extended talks and lectures on familiar topics, including the speaker's argument and attitude, in common accents.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "b1-listening-main-points"
+      ],
+      "objectives": [
+        {
+          "id": "long-talks-podcasts",
+          "text": "Understand long lectures, talks and podcasts"
+        },
+        {
+          "id": "follow-argument-attitude",
+          "text": "Follow the speaker's argument and attitude"
+        },
+        {
+          "id": "uk-us-au-accents",
+          "text": "Understand UK, US and Australian accents"
+        },
+        {
+          "id": "note-taking",
+          "text": "Take useful notes while listening"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyimak Panjang & Aksen",
+          "summary": "Mengikuti kuliah, talk dan podcast, menangkap argumen dan sikap pembicara, memahami aksen UK/US/AU dan mencatat.",
+          "canDo": "Bisa mengikuti kuliah dan pembicaraan panjang tentang topik yang dikenal, termasuk argumen dan sikap pembicara, dalam aksen yang umum.",
+          "objectives": {
+            "long-talks-podcasts": "Memahami kuliah, talk dan podcast yang panjang",
+            "follow-argument-attitude": "Mengikuti argumen dan sikap pembicara",
+            "uk-us-au-accents": "Memahami aksen Inggris (UK), Amerika (US) dan Australia (AU)",
+            "note-taking": "Mencatat poin penting sambil menyimak"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-reading-strategies",
+      "level": "B2",
+      "title": "Reading Strategies & Inference",
+      "summary": "Skim and scan quickly, infer meaning and the writer's attitude, and read long reports and opinion articles.",
+      "strand": "RE",
+      "canDo": "Can read long, complex texts efficiently, understanding implied meaning and the writer's point of view.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "b1-reading-articles"
+      ],
+      "objectives": [
+        {
+          "id": "skim-scan",
+          "text": "Skim and scan texts quickly"
+        },
+        {
+          "id": "inference-attitude",
+          "text": "Infer implied meaning and the writer's attitude"
+        },
+        {
+          "id": "long-reports-opinion",
+          "text": "Read long reports and opinion articles"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "tech"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Strategi Membaca & Inferensi",
+          "summary": "Skimming dan scanning dengan cepat, menyimpulkan makna tersirat dan sikap penulis, serta membaca laporan dan artikel opini panjang.",
+          "canDo": "Bisa membaca teks panjang dan kompleks secara efisien, memahami makna tersirat dan sudut pandang penulis.",
+          "objectives": {
+            "skim-scan": "Skimming dan scanning teks dengan cepat",
+            "inference-attitude": "Menyimpulkan makna tersirat dan sikap penulis",
+            "long-reports-opinion": "Membaca laporan dan artikel opini yang panjang"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-discussion",
+      "level": "B2",
+      "title": "Discussions",
+      "summary": "Take part in spontaneous discussions: weigh pros and cons, speculate and take turns naturally.",
+      "strand": "SP",
+      "canDo": "Can take an active part in discussions, giving and weighing arguments and speculating about possibilities.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-giving-opinions"
+      ],
+      "objectives": [
+        {
+          "id": "spontaneous-discussion",
+          "text": "Take part in a spontaneous discussion"
+        },
+        {
+          "id": "pros-cons",
+          "text": "Weigh up pros and cons"
+        },
+        {
+          "id": "speculate",
+          "text": "Speculate about possibilities (I'd imagine …, It could be that …)"
+        },
+        {
+          "id": "turn-taking",
+          "text": "Take turns naturally and invite others to speak"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I am agree with you.",
+          "right": "I agree with you."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Diskusi",
+          "summary": "Ikut diskusi spontan: menimbang kelebihan dan kekurangan, berspekulasi dan bergiliran bicara dengan wajar.",
+          "canDo": "Bisa berperan aktif dalam diskusi, menyampaikan dan menimbang argumen, serta berspekulasi tentang kemungkinan.",
+          "objectives": {
+            "spontaneous-discussion": "Ikut serta dalam diskusi spontan",
+            "pros-cons": "Menimbang kelebihan dan kekurangan (pros & cons)",
+            "speculate": "Berspekulasi tentang kemungkinan (I'd imagine …, It could be that …)",
+            "turn-taking": "Bergiliran bicara dengan wajar dan mengajak orang lain berbicara"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-small-talk-networking",
+      "level": "B2",
+      "title": "Small Talk & Networking",
+      "summary": "Start and keep up conversations with colleagues and new contacts, pick safe topics and end conversations politely.",
+      "strand": "FN",
+      "canDo": "Can start, keep up and politely end small talk with colleagues and new professional contacts.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b1-giving-opinions",
+        "b1-indirect-questions-tags"
+      ],
+      "objectives": [
+        {
+          "id": "start-keep-conversation",
+          "text": "Start and keep up a conversation with colleagues and new contacts"
+        },
+        {
+          "id": "safe-sensitive-topics",
+          "text": "Tell safe topics from sensitive ones"
+        },
+        {
+          "id": "close-politely",
+          "text": "Close a conversation politely"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "So, how much is your salary?",
+          "right": "So, how long have you been working there?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Small Talk & Networking",
+          "summary": "Memulai dan menjaga obrolan dengan kolega dan kenalan baru, memilih topik aman, dan menutup percakapan dengan sopan.",
+          "canDo": "Bisa memulai, menjaga dan menutup small talk dengan sopan bersama kolega dan kenalan profesional baru.",
+          "objectives": {
+            "start-keep-conversation": "Memulai dan menjaga obrolan dengan kolega dan kenalan baru",
+            "safe-sensitive-topics": "Membedakan topik yang aman dan yang sensitif",
+            "close-politely": "Menutup percakapan dengan sopan"
           }
         }
       }
@@ -237,9 +1388,12 @@
       "id": "b2-meetings",
       "level": "B2",
       "title": "Participating in Meetings",
-      "summary": "Interrupt, clarify and summarise.",
+      "summary": "Interrupt, clarify and summarise politely, and give clear updates in meetings.",
+      "strand": "FN",
+      "canDo": "Can contribute effectively to meetings: interrupting politely, clarifying points and giving updates.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "b1-giving-opinions"
+        "b2-discussion"
       ],
       "objectives": [
         {
@@ -249,20 +1403,89 @@
         {
           "id": "clarify-and-summarise",
           "text": "Clarify and summarise points"
+        },
+        {
+          "id": "give-updates",
+          "text": "Give a clear progress update"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
       "focus": [
-        "career"
+        "career",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Sorry, I want to cut.",
+          "right": "Sorry to interrupt, but could I just add something?"
+        }
       ],
       "i18n": {
         "id": {
           "title": "Berpartisipasi dalam Rapat",
-          "summary": "Menyela, mengklarifikasi dan merangkum.",
+          "summary": "Menyela, mengklarifikasi dan merangkum dengan sopan, serta menyampaikan update yang jelas dalam rapat.",
+          "canDo": "Bisa berkontribusi secara efektif dalam rapat: menyela dengan sopan, mengklarifikasi poin dan menyampaikan update.",
           "objectives": {
             "interrupt-and-hold": "Menyela dan mempertahankan giliran bicara dengan sopan",
-            "clarify-and-summarise": "Mengklarifikasi dan merangkum poin"
+            "clarify-and-summarise": "Mengklarifikasi dan merangkum poin",
+            "give-updates": "Menyampaikan update perkembangan dengan jelas"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-describing-data",
+      "level": "B2",
+      "title": "Describing Graphs & Data",
+      "summary": "Describe trends and compare figures in graphs and charts, and write a graph report in IELTS Writing Task 1 style.",
+      "strand": "WR",
+      "canDo": "Can describe and compare the main trends in graphs and charts clearly in writing.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "b2-linking-words",
+        "a2-comparatives"
+      ],
+      "objectives": [
+        {
+          "id": "trend-vocabulary",
+          "text": "Use trend vocabulary (rise, fall, peak, fluctuate)"
+        },
+        {
+          "id": "compare-figures",
+          "text": "Compare figures accurately (twice as high, slightly lower than)"
+        },
+        {
+          "id": "graph-report",
+          "text": "Write a graph report in IELTS Writing Task 1 format (at least 150 words)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study",
+        "career",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Sales increased until 20%.",
+          "right": "Sales increased to 20%. / Sales increased by 20%."
+        },
+        {
+          "wrong": "The number of users was increase.",
+          "right": "The number of users increased."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mendeskripsikan Grafik & Data",
+          "summary": "Mendeskripsikan tren dan membandingkan angka dalam grafik dan diagram, serta menulis laporan grafik ala IELTS Writing Task 1.",
+          "canDo": "Bisa mendeskripsikan dan membandingkan tren utama dalam grafik dan diagram secara tertulis dengan jelas.",
+          "objectives": {
+            "trend-vocabulary": "Memakai kosakata tren (rise, fall, peak, fluctuate)",
+            "compare-figures": "Membandingkan angka dengan akurat (twice as high, slightly lower than)",
+            "graph-report": "Menulis laporan grafik dengan format IELTS Writing Task 1 (minimal 150 kata)"
           }
         }
       }
@@ -271,10 +1494,14 @@
       "id": "b2-presentations",
       "level": "B2",
       "title": "Giving Presentations",
-      "summary": "Signpost, explain data and handle questions.",
+      "summary": "Signpost the structure, explain data with visuals and handle audience questions.",
+      "strand": "FN",
+      "canDo": "Can give a clear, well-structured presentation with visuals and handle questions from the audience.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
-        "b2-linking-words",
-        "b2-meetings"
+        "b2-meetings",
+        "b2-describing-data",
+        "b2-pron-intonation-attitude"
       ],
       "objectives": [
         {
@@ -283,7 +1510,7 @@
         },
         {
           "id": "describe-trends-and",
-          "text": "Describe trends and data"
+          "text": "Explain data and trends using visuals"
         },
         {
           "id": "handle-audience-questions",
@@ -296,14 +1523,120 @@
         "career",
         "study"
       ],
+      "commonErrors": [
+        {
+          "wrong": "Okay, next. This is the graph.",
+          "right": "Let's move on to the results. As you can see in this graph, …"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Presentasi",
-          "summary": "Menandai struktur, menjelaskan data dan menjawab pertanyaan.",
+          "summary": "Menandai struktur, menjelaskan data dengan visual dan menjawab pertanyaan audiens.",
+          "canDo": "Bisa membawakan presentasi yang jelas dan terstruktur dengan visual, serta menjawab pertanyaan audiens.",
           "objectives": {
             "signpost-the-structure": "Menandai struktur sebuah presentasi",
-            "describe-trends-and": "Mendeskripsikan tren dan data",
+            "describe-trends-and": "Menjelaskan data dan tren dengan bantuan visual",
             "handle-audience-questions": "Menjawab pertanyaan dari audiens"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-job-interviews",
+      "level": "B2",
+      "title": "Job Interviews",
+      "summary": "Talk about experience with concrete examples, answer behavioural questions with STAR, and discuss strengths and goals.",
+      "strand": "FN",
+      "canDo": "Can present experience, strengths and career goals convincingly in a job interview.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "b2-presentations",
+        "b1-present-perfect-continuous"
+      ],
+      "objectives": [
+        {
+          "id": "describe-experience-with",
+          "text": "Describe experience with concrete examples"
+        },
+        {
+          "id": "answer-behavioural-questions",
+          "text": "Answer behavioural questions with the STAR method"
+        },
+        {
+          "id": "strengths-career-goals",
+          "text": "Talk about strengths and career goals"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I have worked here since three years.",
+          "right": "I have worked here for three years."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Wawancara Kerja",
+          "summary": "Menjelaskan pengalaman dengan contoh konkret, menjawab pertanyaan perilaku dengan STAR, dan membicarakan kekuatan serta tujuan.",
+          "canDo": "Bisa menyampaikan pengalaman, kekuatan dan tujuan karier secara meyakinkan dalam wawancara kerja.",
+          "objectives": {
+            "describe-experience-with": "Menjelaskan pengalaman dengan contoh konkret",
+            "answer-behavioural-questions": "Menjawab pertanyaan perilaku dengan metode STAR",
+            "strengths-career-goals": "Membicarakan kekuatan dan tujuan karier"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-essay-writing",
+      "level": "B2",
+      "title": "Opinion & Discursive Essays",
+      "summary": "Write well-organised opinion and discursive essays with arguments and counter-arguments, in B2 First and IELTS formats.",
+      "strand": "WR",
+      "canDo": "Can write a clear essay that develops an argument, giving reasons for and against a point of view.",
+      "estimatedMinutes": 300,
+      "prerequisiteIds": [
+        "b2-linking-words"
+      ],
+      "objectives": [
+        {
+          "id": "essay-structure",
+          "text": "Structure an essay with an introduction, body paragraphs and a conclusion"
+        },
+        {
+          "id": "argument-counterargument",
+          "text": "Develop arguments and respond to counter-arguments"
+        },
+        {
+          "id": "exam-essays",
+          "text": "Write exam essays to length: B2 First (140–190 words) and IELTS Writing Task 2 (at least 250 words)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "In my opinion, I think that …",
+          "right": "In my opinion, … / I believe that …"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Esai Opini & Diskursif",
+          "summary": "Menulis esai opini dan diskursif yang tertata dengan argumen dan kontra-argumen, dalam format B2 First dan IELTS.",
+          "canDo": "Bisa menulis esai yang jelas dan mengembangkan argumen, dengan alasan yang mendukung maupun menentang suatu pendapat.",
+          "objectives": {
+            "essay-structure": "Menyusun esai dengan pembuka, paragraf isi dan penutup",
+            "argument-counterargument": "Mengembangkan argumen dan menanggapi kontra-argumen",
+            "exam-essays": "Menulis esai ujian sesuai panjangnya: B2 First (140–190 kata) dan IELTS Writing Task 2 (minimal 250 kata)"
           }
         }
       }
@@ -311,11 +1644,15 @@
     {
       "id": "b2-formal-writing",
       "level": "B2",
-      "title": "Formal Writing",
-      "summary": "Reports and formal emails with appropriate register.",
+      "title": "Formal Emails & Reports",
+      "summary": "Write formal emails, letters and short reports with headings in an appropriate register.",
+      "strand": "WR",
+      "canDo": "Can write clear formal emails, letters and short reports in a suitable register.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
         "b2-linking-words",
-        "b2-passive-voice"
+        "b2-passive-voice",
+        "b2-formal-informal-vocab"
       ],
       "objectives": [
         {
@@ -323,8 +1660,12 @@
           "text": "Write in a formal register"
         },
         {
+          "id": "formal-emails-letters",
+          "text": "Write formal emails and letters (requests, complaints, applications)"
+        },
+        {
           "id": "structure-a-short",
-          "text": "Structure a short report"
+          "text": "Structure a short report with section headings"
         }
       ],
       "masteryThreshold": 80,
@@ -334,57 +1675,177 @@
         "study",
         "tech"
       ],
+      "commonErrors": [
+        {
+          "wrong": "I want to ask about the training schedule.",
+          "right": "I am writing to enquire about the training schedule."
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Menulis Formal",
-          "summary": "Laporan dan email formal dengan register yang tepat.",
+          "title": "Email & Laporan Formal",
+          "summary": "Menulis email, surat dan laporan singkat dengan judul bagian dalam register formal yang tepat.",
+          "canDo": "Bisa menulis email, surat dan laporan singkat yang jelas dengan register yang sesuai.",
           "objectives": {
             "write-in-a": "Menulis dengan register formal",
-            "structure-a-short": "Menyusun laporan singkat"
+            "formal-emails-letters": "Menulis email dan surat formal (permintaan, keluhan, lamaran)",
+            "structure-a-short": "Menyusun laporan singkat dengan judul di tiap bagian"
           }
         }
       }
     },
     {
-      "id": "b2-job-interviews",
+      "id": "b2-reviews-articles",
       "level": "B2",
-      "title": "Job Interviews",
-      "summary": "Talk about experience, strengths and goals.",
+      "title": "Reviews & Articles",
+      "summary": "Write reviews of films, products and apps with a recommendation, and articles with an engaging title and opening.",
+      "strand": "WR",
+      "canDo": "Can write engaging reviews and articles that describe, evaluate and recommend.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
-        "b2-presentations",
-        "b2-perfect-continuous"
+        "b1-writing-stories-articles"
       ],
       "objectives": [
         {
-          "id": "describe-experience-with",
-          "text": "Describe experience with concrete examples"
+          "id": "write-reviews",
+          "text": "Write a review (film, product, app) with a clear recommendation"
         },
         {
-          "id": "answer-behavioural-questions",
-          "text": "Answer behavioural questions with structure"
+          "id": "write-articles",
+          "text": "Write an article with an engaging title and opening"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
       "focus": [
-        "career"
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I recommend you to watch it.",
+          "right": "I recommend watching it. / I'd recommend that you watch it."
+        }
       ],
       "i18n": {
         "id": {
-          "title": "Wawancara Kerja",
-          "summary": "Membicarakan pengalaman, kekuatan dan tujuan.",
+          "title": "Review & Artikel",
+          "summary": "Menulis review film, produk dan aplikasi dengan rekomendasi, serta artikel dengan judul dan pembuka yang menarik.",
+          "canDo": "Bisa menulis review dan artikel menarik yang mendeskripsikan, menilai dan memberi rekomendasi.",
           "objectives": {
-            "describe-experience-with": "Menjelaskan pengalaman dengan contoh konkret",
-            "answer-behavioural-questions": "Menjawab pertanyaan perilaku secara terstruktur"
+            "write-reviews": "Menulis review (film, produk, aplikasi) dengan rekomendasi yang jelas",
+            "write-articles": "Menulis artikel dengan judul dan pembuka yang menarik"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-mediation-data-texts",
+      "level": "B2",
+      "title": "Explaining Data & Summarising Texts",
+      "summary": "Explain graphs and data aloud, summarise long articles (Indonesian or English) for a given audience, and help a group work together.",
+      "strand": "ME",
+      "canDo": "Can explain data and summarise long texts for a specific audience, and help a group work together towards a goal.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "b2-describing-data",
+        "b2-reading-strategies"
+      ],
+      "objectives": [
+        {
+          "id": "explain-data-orally",
+          "text": "Explain graphs and data orally"
+        },
+        {
+          "id": "summarise-for-audience",
+          "text": "Summarise a long article (Indonesian or English) for a specific audience"
+        },
+        {
+          "id": "facilitate-group-work",
+          "text": "Facilitate group work (invite views, keep the task on track)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menjelaskan Data & Meringkas Teks",
+          "summary": "Menjelaskan grafik dan data secara lisan, meringkas artikel panjang (ID/EN) untuk audiens tertentu, dan membantu kerja kelompok.",
+          "canDo": "Bisa menjelaskan data dan meringkas teks panjang untuk audiens tertentu, serta membantu kelompok bekerja sama mencapai tujuan.",
+          "objectives": {
+            "explain-data-orally": "Menjelaskan grafik dan data secara lisan",
+            "summarise-for-audience": "Meringkas artikel panjang (bahasa Indonesia atau Inggris) untuk audiens tertentu",
+            "facilitate-group-work": "Memfasilitasi kerja kelompok (mengajak semua berpendapat, menjaga tugas tetap terarah)"
+          }
+        }
+      }
+    },
+    {
+      "id": "b2-checkpoint",
+      "level": "B2",
+      "title": "B2 Checkpoint",
+      "summary": "A mixed test of all B2 strands in a format similar to B2 First and IELTS.",
+      "strand": "CK",
+      "canDo": "Can show B2-level skills across grammar, vocabulary, listening, reading, writing and speaking.",
+      "estimatedMinutes": 90,
+      "prerequisiteIds": [
+        "b2-narrative-tenses",
+        "b2-future-perfect-continuous",
+        "b2-causative",
+        "b2-reported-speech",
+        "b2-wish-regrets",
+        "b2-modals-deduction",
+        "b2-participle-clauses",
+        "b2-verb-patterns-meaning",
+        "b2-articles-quantifiers",
+        "b2-collocations",
+        "b2-word-formation",
+        "b2-vocab-work-business",
+        "b2-vocab-science-society",
+        "b2-listening-extended",
+        "b2-small-talk-networking",
+        "b2-job-interviews",
+        "b2-essay-writing",
+        "b2-formal-writing",
+        "b2-reviews-articles",
+        "b2-mediation-data-texts"
+      ],
+      "objectives": [
+        {
+          "id": "grammar-vocabulary",
+          "text": "Grammar and vocabulary: B2 structures, collocations and word formation"
+        },
+        {
+          "id": "listening-reading",
+          "text": "Listening and reading: new long texts, including inference and attitude"
+        },
+        {
+          "id": "writing",
+          "text": "Writing: an essay or formal text of the right length and register"
+        },
+        {
+          "id": "speaking",
+          "text": "Speaking: a discussion and a short talk (B2 First / IELTS style)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Checkpoint B2",
+          "summary": "Tes campuran semua strand B2 dengan format mirip B2 First dan IELTS.",
+          "canDo": "Bisa menunjukkan kemampuan level B2 di grammar, kosakata, listening, reading, writing dan speaking.",
+          "objectives": {
+            "grammar-vocabulary": "Grammar dan kosakata: struktur B2, kolokasi dan pembentukan kata",
+            "listening-reading": "Listening dan reading: teks panjang baru, termasuk inferensi dan sikap",
+            "writing": "Writing: esai atau teks formal dengan panjang dan register yang tepat",
+            "speaking": "Speaking: diskusi dan presentasi singkat (gaya B2 First / IELTS)"
           }
         }
       }
     }
-  ],
-  "i18n": {
-    "id": {
-      "title": "Menengah Atas",
-      "description": "Kefasihan profesional yang praktis: berdiskusi, berargumen, presentasi dan menulis dengan jelas. Target utama."
-    }
-  }
+  ]
 }

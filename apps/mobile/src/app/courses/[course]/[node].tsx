@@ -51,7 +51,18 @@ export default function NodeScreen() {
           <Eyebrow>/ {node.level}</Eyebrow>
         </View>
         <View style={{ gap: 14 }}>
-          <StatusChip status={node.status} />
+          <View style={[styles.row, { flexWrap: 'wrap', gap: 8 }]}>
+            <StatusChip status={node.status} />
+            {node.strand ? <Eyebrow>{t(`node.strand${node.strand}`)}</Eyebrow> : null}
+            {node.estimatedMinutes ? (
+              <Eyebrow>
+                ·{' '}
+                {node.estimatedMinutes >= 90
+                  ? t('node.hours', { n: Math.round(node.estimatedMinutes / 30) / 2 })
+                  : t('node.minutes', { n: node.estimatedMinutes })}
+              </Eyebrow>
+            ) : null}
+          </View>
           <Heading size={wide ? 52 : 38}>{node.title}</Heading>
           {node.recommended ? (
             <View style={styles.row}>
@@ -64,6 +75,15 @@ export default function NodeScreen() {
           <Text color={colors.muted} size={wide ? 18 : 15} style={{ maxWidth: 520 }}>
             {node.summary}
           </Text>
+          {node.canDo ? (
+            <View style={styles.canDo}>
+              <Icon name="check" size={16} color={colors.emeraldDeep} strokeWidth={2.25} />
+              <View style={{ flex: 1, gap: 2 }}>
+                <Eyebrow color={colors.emeraldDeep}>{t('node.canDo')}</Eyebrow>
+                <Text size={15}>{node.canDo}</Text>
+              </View>
+            </View>
+          ) : null}
         </View>
         <View style={{ gap: 10 }}>
           {node.canStart && !authed ? (
@@ -125,6 +145,32 @@ export default function NodeScreen() {
           </Card>
         ))}
       </View>
+      {node.commonErrors?.length ? (
+        <Card reveal={3} style={{ gap: 14 }}>
+          <View style={{ gap: 4 }}>
+            <Eyebrow>{t('node.commonErrors')}</Eyebrow>
+            <Text size={14} color={colors.muted}>
+              {t('node.commonErrorsText')}
+            </Text>
+          </View>
+          {node.commonErrors.map((e, i) => (
+            <View key={i} style={[styles.error, i > 0 && styles.divider]}>
+              <View style={styles.row}>
+                <Icon name="close" size={14} color={colors.danger} strokeWidth={2.25} />
+                <Text size={15} color={colors.danger} style={{ flex: 1, textDecorationLine: 'line-through' }}>
+                  {e.wrong}
+                </Text>
+              </View>
+              <View style={styles.row}>
+                <Icon name="check" size={14} color={colors.emeraldDeep} strokeWidth={2.25} />
+                <Text size={15} weight="medium" style={{ flex: 1 }}>
+                  {e.right}
+                </Text>
+              </View>
+            </View>
+          ))}
+        </Card>
+      ) : null}
       {node.foundations.length ? (
         <Card reveal={4} style={{ gap: 14 }}>
           <View style={{ gap: 4 }}>
@@ -215,6 +261,8 @@ function Crumb({ onPress, label }: { onPress: () => void; label: string }) {
 }
 
 const styles = StyleSheet.create({
+  canDo: { flexDirection: 'row', gap: 10, alignItems: 'flex-start', backgroundColor: colors.mint, borderRadius: 16, padding: 14, maxWidth: 560 },
+  error: { gap: 6 },
   row: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   objective: { flexDirection: 'row', gap: 12, paddingTop: 2 },
   divider: { borderTopWidth: 1, borderTopColor: colors.line, paddingTop: 18 },

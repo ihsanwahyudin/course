@@ -1,31 +1,473 @@
 {
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "level": "C2",
   "title": "Proficient",
-  "description": "Optional mastery track: nuance, style and implied meaning.",
+  "description": "Understand virtually everything, summarise and rebuild arguments from different sources, and express yourself spontaneously and precisely, with fine shades of meaning.",
+  "i18n": {
+    "id": {
+      "title": "Sangat Mahir",
+      "description": "Memahami hampir semua yang didengar dan dibaca, meringkas dan merekonstruksi argumen dari berbagai sumber, serta berekspresi spontan dan presisi termasuk nuansa makna yang halus."
+    }
+  },
   "nodes": [
+    {
+      "id": "c2-grammar-for-style",
+      "level": "C2",
+      "title": "Grammar for Style",
+      "summary": "Choose structures such as inversion, cleft sentences and fronting to control focus, emphasis and rhythm in real texts.",
+      "strand": "GR",
+      "canDo": "Can choose and vary sentence structures deliberately to control focus, emphasis and rhythm.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-emphasis-fronting",
+        "c1-inversion"
+      ],
+      "objectives": [
+        {
+          "id": "choose-for-focus",
+          "text": "Choose structures that put the focus and rhythm where you want them"
+        },
+        {
+          "id": "vary-sentences",
+          "text": "Vary sentence length and structure to avoid monotony"
+        },
+        {
+          "id": "inversion-cleft-fronting",
+          "text": "Use inversion, cleft sentences and fronting naturally in real contexts"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Never I have seen such a mess.",
+          "right": "Never have I seen such a mess."
+        },
+        {
+          "wrong": "Only when I read the report I understood the problem.",
+          "right": "Only when I read the report did I understand the problem."
+        },
+        {
+          "wrong": "What I need it is more time.",
+          "right": "What I need is more time."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Grammar untuk Gaya Bahasa",
+          "summary": "Memilih struktur seperti inversion, cleft sentence dan fronting untuk mengatur fokus, penekanan dan ritme dalam teks nyata.",
+          "canDo": "Bisa memilih dan memvariasikan struktur kalimat dengan sengaja untuk mengatur fokus, penekanan dan ritme.",
+          "objectives": {
+            "choose-for-focus": "Memilih struktur kalimat yang menempatkan fokus dan ritme sesuai tujuan",
+            "vary-sentences": "Memvariasikan panjang dan struktur kalimat agar tidak monoton",
+            "inversion-cleft-fronting": "Memakai inversion, cleft sentence dan fronting secara alami dalam konteks nyata"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-complex-sentences",
+      "level": "C2",
+      "title": "Complex Sentence Control",
+      "summary": "Write multi-clause sentences with parallel structure and long noun phrases that stay clear and unambiguous.",
+      "strand": "GR",
+      "canDo": "Can build long, complex sentences that stay clear, balanced and free of ambiguity.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-nominalisation",
+        "c1-participle-advanced"
+      ],
+      "objectives": [
+        {
+          "id": "multi-clause-parallelism",
+          "text": "Build multi-clause sentences with correct parallel structure"
+        },
+        {
+          "id": "clear-noun-phrases",
+          "text": "Write long noun phrases that are still easy to follow"
+        },
+        {
+          "id": "avoid-ambiguity",
+          "text": "Spot and fix ambiguity such as dangling modifiers and unclear references"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "The project aims to reduce costs, improving quality and to train staff.",
+          "right": "The project aims to reduce costs, improve quality and train staff."
+        },
+        {
+          "wrong": "Walking into the office, the computer was already on.",
+          "right": "Walking into the office, I saw that the computer was already on."
+        },
+        {
+          "wrong": "the government new rural school teacher training funding policy",
+          "right": "the government's new policy on funding teacher training in rural schools"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Penguasaan Kalimat Kompleks",
+          "summary": "Menulis kalimat bertingkat dengan struktur paralel dan noun phrase panjang yang tetap jelas dan tidak ambigu.",
+          "canDo": "Bisa menyusun kalimat panjang dan kompleks yang tetap jelas, seimbang dan tidak ambigu.",
+          "objectives": {
+            "multi-clause-parallelism": "Menyusun kalimat bertingkat dengan struktur paralel yang benar",
+            "clear-noun-phrases": "Menulis noun phrase panjang yang tetap mudah dipahami",
+            "avoid-ambiguity": "Menemukan dan memperbaiki ambiguitas, seperti dangling modifier dan rujukan yang tidak jelas"
+          }
+        }
+      }
+    },
     {
       "id": "c2-idiomatic-mastery",
       "level": "C2",
       "title": "Idiomatic Mastery",
-      "summary": "Idioms, fixed expressions and natural phrasing.",
+      "summary": "Idioms, fixed expressions and natural phrasing, including how speakers vary and play with them.",
+      "strand": "VO",
+      "canDo": "Can use idiomatic expressions accurately and naturally, and recognise when they are varied or played with.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "c1-register"
+        "c1-register",
+        "c1-idioms"
       ],
       "objectives": [
         {
           "id": "use-idiomatic-expressions",
           "text": "Use idiomatic expressions accurately and naturally"
+        },
+        {
+          "id": "idiom-variation-play",
+          "text": "Recognise and use variations and playful twists on idioms"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "It's not my cup of coffee.",
+          "right": "It's not my cup of tea."
+        },
+        {
+          "wrong": "We killed two birds with one rock.",
+          "right": "We killed two birds with one stone."
+        },
+        {
+          "wrong": "The board thought the quarterly results were a piece of cake. (formal report)",
+          "right": "The board found the quarterly results straightforward."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Penguasaan Idiom",
-          "summary": "Idiom, ungkapan baku dan frasa yang alami.",
+          "summary": "Idiom, ungkapan baku dan frasa yang alami, termasuk cara penutur memvariasikan dan memainkannya.",
+          "canDo": "Bisa memakai ungkapan idiomatis dengan tepat dan alami, serta mengenali saat idiom divariasikan atau dimainkan.",
           "objectives": {
-            "use-idiomatic-expressions": "Menggunakan ungkapan idiomatis dengan tepat dan alami"
+            "use-idiomatic-expressions": "Menggunakan ungkapan idiomatis dengan tepat dan alami",
+            "idiom-variation-play": "Mengenali dan memakai variasi serta permainan idiom"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-colloquial-slang",
+      "level": "C2",
+      "title": "Colloquial Language & Slang",
+      "summary": "Understand informal spoken English and slang, use them with care, and know key UK/US vocabulary differences.",
+      "strand": "VO",
+      "canDo": "Can understand colloquial language and slang and use informal vocabulary appropriately for the situation.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "c2-idiomatic-mastery"
+      ],
+      "objectives": [
+        {
+          "id": "informal-spoken",
+          "text": "Understand and use informal spoken English (e.g. gonna, kind of, reckon)"
+        },
+        {
+          "id": "slang-with-care",
+          "text": "Understand common slang and judge when it is safe to use it"
+        },
+        {
+          "id": "uk-us-vocabulary",
+          "text": "Recognise common UK/US vocabulary differences (e.g. flat/apartment, holiday/vacation)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I gonna call you later.",
+          "right": "I'm gonna call you later. (speech) / I'm going to call you later."
+        },
+        {
+          "wrong": "Dear Sir or Madam, I wanna ask about the job.",
+          "right": "Dear Sir or Madam, I would like to ask about the job."
+        },
+        {
+          "wrong": "\"I like your pants.\" meaning trousers, in the UK",
+          "right": "\"I like your trousers.\" (in British English, pants are underwear)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bahasa Kolokial & Slang",
+          "summary": "Memahami bahasa lisan informal dan slang, memakainya dengan hati-hati, dan mengenal perbedaan kosakata UK/US.",
+          "canDo": "Bisa memahami bahasa kolokial dan slang serta memakai kosakata informal sesuai situasi.",
+          "objectives": {
+            "informal-spoken": "Memahami dan memakai bahasa lisan informal (mis. gonna, kind of, reckon)",
+            "slang-with-care": "Memahami slang yang umum dan menilai kapan aman memakainya",
+            "uk-us-vocabulary": "Mengenali perbedaan kosakata UK/US yang umum (mis. flat/apartment, holiday/vacation)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-figurative-language",
+      "level": "C2",
+      "title": "Figurative Language & Wordplay",
+      "summary": "Metaphor, figurative language, humour, puns and cultural references in English.",
+      "strand": "VO",
+      "canDo": "Can understand and use metaphor, wordplay and cultural references, and appreciate the humour they create.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "c1-connotation"
+      ],
+      "objectives": [
+        {
+          "id": "metaphor-figurative",
+          "text": "Understand and use metaphor and other figurative language"
+        },
+        {
+          "id": "humour-wordplay",
+          "text": "Recognise humour and wordplay such as puns and double meanings"
+        },
+        {
+          "id": "cultural-references",
+          "text": "Understand common cultural references and allusions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "He is long-handed. (from \"panjang tangan\")",
+          "right": "He is light-fingered. / He steals things."
+        },
+        {
+          "wrong": "He's a land crocodile. (from \"buaya darat\")",
+          "right": "He's a player. / He's a womaniser."
+        },
+        {
+          "wrong": "We need to nip it in the bud before it snowballs out of the water.",
+          "right": "We need to nip it in the bud before it snowballs."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bahasa Kiasan & Permainan Kata",
+          "summary": "Metafora, bahasa kiasan, humor, permainan kata dan referensi budaya dalam bahasa Inggris.",
+          "canDo": "Bisa memahami dan memakai metafora, permainan kata dan referensi budaya, serta menangkap humornya.",
+          "objectives": {
+            "metaphor-figurative": "Memahami dan memakai metafora serta bahasa kiasan lainnya",
+            "humour-wordplay": "Mengenali humor dan permainan kata seperti pun dan makna ganda",
+            "cultural-references": "Memahami referensi dan kiasan budaya yang umum"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-implied-meaning",
+      "level": "C2",
+      "title": "Implied Meaning",
+      "summary": "Irony, understatement and subtext: understanding and conveying what people mean but don't say.",
+      "strand": "LI",
+      "canDo": "Can interpret irony, understatement and subtext, and convey meaning indirectly when it suits the situation.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "c1-register",
+        "c1-listening-implicit"
+      ],
+      "objectives": [
+        {
+          "id": "interpret-and-convey",
+          "text": "Interpret and convey implied meaning"
+        },
+        {
+          "id": "irony-understatement",
+          "text": "Recognise irony and understatement and what the speaker really means"
+        },
+        {
+          "id": "conversation-subtext",
+          "text": "Follow the subtext of a conversation: what is meant but not said"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Taking \"I'm not sure that's the best idea\" as real uncertainty",
+          "right": "It is often a polite way of saying \"I disagree\""
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Makna Tersirat",
+          "summary": "Ironi, understatement dan subteks: memahami dan menyampaikan maksud yang tidak diucapkan langsung.",
+          "canDo": "Bisa menafsirkan ironi, understatement dan subteks, serta menyampaikan maksud secara tidak langsung bila situasinya cocok.",
+          "objectives": {
+            "interpret-and-convey": "Menafsirkan dan menyampaikan makna tersirat",
+            "irony-understatement": "Mengenali ironi dan understatement serta maksud sebenarnya dari pembicara",
+            "conversation-subtext": "Menangkap subteks dalam percakapan: apa yang dimaksud tetapi tidak diucapkan"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-pron-natural",
+      "level": "C2",
+      "title": "Natural Prosody & Nuance",
+      "summary": "Use intonation and stress to convey sarcasm, doubt and subtle attitudes, and adapt your delivery to the audience.",
+      "strand": "PR",
+      "canDo": "Can vary intonation and stress to express subtle attitudes such as sarcasm or doubt, and adapt delivery to the audience.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "c1-pron-prosody"
+      ],
+      "objectives": [
+        {
+          "id": "attitude-intonation",
+          "text": "Convey sarcasm, doubt and subtle attitudes through intonation"
+        },
+        {
+          "id": "hear-attitude",
+          "text": "Recognise a speaker's attitude from their intonation and stress"
+        },
+        {
+          "id": "adapt-to-audience",
+          "text": "Adjust pace, volume and speaking style to suit the audience"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Saying \"Great.\" with the same flat tone for praise and for sarcasm",
+          "right": "Lively rise-fall for real praise; flat, low or drawn-out \"Gre-eat\" for sarcasm"
+        },
+        {
+          "wrong": "Equal stress on every word: \"I DIDN'T SAY SHE TOOK IT\"",
+          "right": "Stress the word that carries the contrast: \"I didn't say SHE took it\" (someone else did)"
+        },
+        {
+          "wrong": "A falling tone on a doubtful statement, so it sounds certain",
+          "right": "A fall-rise to show doubt or reservation: \"It MIGHT work...\""
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Prosodi Alami & Nuansa",
+          "summary": "Memakai intonasi dan tekanan kata untuk menyampaikan sarkasme, keraguan dan sikap halus, serta menyesuaikan gaya bicara dengan audiens.",
+          "canDo": "Bisa mengatur intonasi dan tekanan kata untuk menunjukkan sikap halus seperti sarkasme atau keraguan, dan menyesuaikan cara bicara dengan audiens.",
+          "objectives": {
+            "attitude-intonation": "Menyampaikan sarkasme, keraguan dan sikap halus lewat intonasi",
+            "hear-attitude": "Mengenali sikap pembicara dari intonasi dan tekanan katanya",
+            "adapt-to-audience": "Menyesuaikan tempo, volume dan gaya bicara dengan audiens"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-listening-native-speed",
+      "level": "C2",
+      "title": "Listening to Fast, Natural Speech",
+      "summary": "Follow fast, colloquial speech, overlapping conversations, films and comedy.",
+      "strand": "LI",
+      "canDo": "Can follow fast, colloquial speech and overlapping conversations, and understand films and much of their humour.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-listening-implicit",
+        "c1-world-englishes"
+      ],
+      "objectives": [
+        {
+          "id": "fast-colloquial",
+          "text": "Follow fast, colloquial speech with reduced forms and slang"
+        },
+        {
+          "id": "overlapping-talk",
+          "text": "Follow conversations where speakers interrupt and talk over each other"
+        },
+        {
+          "id": "film-comedy",
+          "text": "Understand films, TV series and stand-up comedy, including most of the jokes"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "daily"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyimak Ucapan Cepat & Alami",
+          "summary": "Memahami ucapan cepat dan kolokial, percakapan yang tumpang tindih, film dan komedi.",
+          "canDo": "Bisa mengikuti ucapan cepat dan kolokial serta percakapan yang tumpang tindih, dan memahami film beserta sebagian besar humornya.",
+          "objectives": {
+            "fast-colloquial": "Memahami ucapan cepat dan kolokial yang penuh bentuk ringkas dan slang",
+            "overlapping-talk": "Mengikuti percakapan saat pembicara saling memotong dan bicara tumpang tindih",
+            "film-comedy": "Memahami film, serial TV dan stand-up comedy, termasuk sebagian besar leluconnya"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-reading-literary",
+      "level": "C2",
+      "title": "Literary & Abstract Texts",
+      "summary": "Read literature, philosophical essays and ironic opinion columns, and interpret the writer's style.",
+      "strand": "RE",
+      "canDo": "Can read literary and abstract texts and interpret the author's style, tone and implied stance.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-reading-complex"
+      ],
+      "objectives": [
+        {
+          "id": "literature-essays",
+          "text": "Understand literary texts and philosophical essays"
+        },
+        {
+          "id": "ironic-columns",
+          "text": "Interpret ironic or satirical opinion columns"
+        },
+        {
+          "id": "author-style",
+          "text": "Explain how a writer's style creates meaning and tone"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Teks Sastra & Abstrak",
+          "summary": "Membaca karya sastra, esai filosofis dan kolom opini yang ironis, serta menafsirkan gaya penulisnya.",
+          "canDo": "Bisa membaca teks sastra dan abstrak serta menafsirkan gaya, nada dan sikap tersirat penulisnya.",
+          "objectives": {
+            "literature-essays": "Memahami teks sastra dan esai filosofis",
+            "ironic-columns": "Menafsirkan kolom opini yang ironis atau satir",
+            "author-style": "Menjelaskan bagaimana gaya penulis membangun makna dan nada"
           }
         }
       }
@@ -34,7 +476,10 @@
       "id": "c2-rhetoric",
       "level": "C2",
       "title": "Rhetoric & Persuasion",
-      "summary": "Structure, emphasis and rhetorical devices.",
+      "summary": "Structure, emphasis and rhetorical devices for persuasive writing.",
+      "strand": "WR",
+      "canDo": "Can use rhetorical devices and a clear structure to build a persuasive case in writing.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
         "c1-inversion",
         "c1-academic-writing"
@@ -54,7 +499,8 @@
       "i18n": {
         "id": {
           "title": "Retorika & Persuasi",
-          "summary": "Struktur, penekanan dan gaya bahasa retoris.",
+          "summary": "Struktur, penekanan dan gaya bahasa retoris untuk tulisan yang persuasif.",
+          "canDo": "Bisa memakai gaya bahasa retoris dan struktur yang jelas untuk membangun argumen tertulis yang persuasif.",
           "objectives": {
             "use-rhetorical-devices": "Menggunakan gaya bahasa retoris untuk efek tertentu",
             "build-a-persuasive": "Membangun argumen yang persuasif"
@@ -63,27 +509,91 @@
       }
     },
     {
-      "id": "c2-implied-meaning",
+      "id": "c2-reformulation",
       "level": "C2",
-      "title": "Implied Meaning",
-      "summary": "Irony, understatement and subtext.",
+      "title": "Precision & Reformulation",
+      "summary": "Express fine shades of meaning, rephrase smoothly when you get stuck, and emphasise or soften points precisely.",
+      "strand": "SP",
+      "canDo": "Can express fine shades of meaning precisely and reformulate so smoothly that listeners hardly notice.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
-        "c1-register"
+        "c1-debate"
       ],
       "objectives": [
         {
-          "id": "interpret-and-convey",
-          "text": "Interpret and convey implied meaning"
+          "id": "fine-nuance",
+          "text": "Express fine shades of meaning (e.g. concerned vs alarmed, likely vs bound to)"
+        },
+        {
+          "id": "reformulate-smoothly",
+          "text": "Reformulate smoothly when you get stuck for a word or idea"
+        },
+        {
+          "id": "emphasise-soften",
+          "text": "Emphasise or soften a point precisely (e.g. utterly, somewhat, arguably)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "Going silent or switching to Indonesian when a word is missing",
+          "right": "Paraphrase and keep going: \"What I mean is...\" / \"It's the kind of thing that...\""
+        }
+      ],
       "i18n": {
         "id": {
-          "title": "Makna Tersirat",
-          "summary": "Ironi, understatement dan subteks.",
+          "title": "Presisi & Reformulasi",
+          "summary": "Mengekspresikan nuansa makna yang halus, merumuskan ulang dengan mulus saat buntu, serta menekankan atau melunakkan secara presisi.",
+          "canDo": "Bisa mengungkapkan nuansa makna dengan presisi dan merumuskan ulang dengan begitu mulus sehingga pendengar hampir tidak menyadarinya.",
           "objectives": {
-            "interpret-and-convey": "Menafsirkan dan menyampaikan makna tersirat"
+            "fine-nuance": "Mengekspresikan nuansa makna yang halus (mis. concerned vs alarmed, likely vs bound to)",
+            "reformulate-smoothly": "Merumuskan ulang dengan mulus saat buntu mencari kata atau ide",
+            "emphasise-soften": "Menekankan atau melunakkan pendapat secara presisi (mis. utterly, somewhat, arguably)"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-public-speaking",
+      "level": "C2",
+      "title": "Public Speaking",
+      "summary": "Deliver keynote-style talks using spoken rhetorical devices, and adapt as you read the audience's reactions.",
+      "strand": "SP",
+      "canDo": "Can deliver a well-structured keynote-style talk with confident rhetoric and adapt it to the audience's reactions.",
+      "estimatedMinutes": 300,
+      "prerequisiteIds": [
+        "c2-rhetoric",
+        "c2-pron-natural"
+      ],
+      "objectives": [
+        {
+          "id": "keynote-talk",
+          "text": "Deliver a well-structured, keynote-style talk"
+        },
+        {
+          "id": "spoken-rhetoric",
+          "text": "Use spoken rhetorical devices such as the rule of three, pauses and rhetorical questions"
+        },
+        {
+          "id": "read-the-room",
+          "text": "Adapt content and delivery to the audience's reactions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Berbicara di Depan Umum",
+          "summary": "Menyampaikan pidato setara keynote dengan gaya retoris lisan, dan menyesuaikan diri dengan reaksi audiens.",
+          "canDo": "Bisa menyampaikan pidato setara keynote yang terstruktur dengan retorika yang meyakinkan, dan menyesuaikannya dengan reaksi audiens.",
+          "objectives": {
+            "keynote-talk": "Menyampaikan pidato setara keynote yang terstruktur dengan baik",
+            "spoken-rhetoric": "Memakai gaya retoris lisan seperti rule of three, jeda dan pertanyaan retoris",
+            "read-the-room": "Menyesuaikan isi dan cara penyampaian dengan reaksi audiens"
           }
         }
       }
@@ -92,7 +602,10 @@
       "id": "c2-critical-review",
       "level": "C2",
       "title": "Critical Reviews",
-      "summary": "Evaluate texts and ideas in writing.",
+      "summary": "Evaluate books, studies, films or ideas in a balanced, well-supported written review.",
+      "strand": "WR",
+      "canDo": "Can write a balanced critical review that weighs strengths and weaknesses and reaches a justified conclusion.",
+      "estimatedMinutes": 240,
       "prerequisiteIds": [
         "c2-rhetoric"
       ],
@@ -100,6 +613,14 @@
         {
           "id": "write-a-balanced",
           "text": "Write a balanced critical review"
+        },
+        {
+          "id": "evaluate-with-evidence",
+          "text": "Evaluate strengths and weaknesses with supporting evidence"
+        },
+        {
+          "id": "justified-verdict",
+          "text": "Reach a clear, justified overall judgement"
         }
       ],
       "masteryThreshold": 80,
@@ -110,9 +631,12 @@
       "i18n": {
         "id": {
           "title": "Ulasan Kritis",
-          "summary": "Mengevaluasi teks dan gagasan secara tertulis.",
+          "summary": "Mengevaluasi buku, penelitian, film atau gagasan dalam ulasan tertulis yang berimbang dan didukung bukti.",
+          "canDo": "Bisa menulis ulasan kritis yang berimbang, menimbang kelebihan dan kekurangan, dan sampai pada kesimpulan yang beralasan.",
           "objectives": {
-            "write-a-balanced": "Menulis ulasan kritis yang berimbang"
+            "write-a-balanced": "Menulis ulasan kritis yang berimbang",
+            "evaluate-with-evidence": "Menilai kelebihan dan kekurangan dengan bukti pendukung",
+            "justified-verdict": "Menyimpulkan penilaian akhir yang jelas dan beralasan"
           }
         }
       }
@@ -121,7 +645,10 @@
       "id": "c2-stylistic-nuance",
       "level": "C2",
       "title": "Stylistic Nuance",
-      "summary": "Precision, rhythm and voice.",
+      "summary": "Precision, rhythm and voice: adjusting style and tone to the reader and purpose.",
+      "strand": "WR",
+      "canDo": "Can adjust style and tone precisely and keep a consistent voice suited to the reader and purpose.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "c2-idiomatic-mastery",
         "c2-implied-meaning"
@@ -130,6 +657,14 @@
         {
           "id": "adjust-style-and",
           "text": "Adjust style and tone with precision"
+        },
+        {
+          "id": "rhythm-word-choice",
+          "text": "Control rhythm and word choice to keep a consistent voice"
+        },
+        {
+          "id": "rewrite-for-reader",
+          "text": "Rewrite the same message for different readers and purposes"
         }
       ],
       "masteryThreshold": 80,
@@ -137,18 +672,311 @@
       "i18n": {
         "id": {
           "title": "Nuansa Gaya",
-          "summary": "Ketepatan, ritme dan suara tulisan.",
+          "summary": "Ketepatan, ritme dan suara tulisan: menyesuaikan gaya dan nada dengan pembaca dan tujuan.",
+          "canDo": "Bisa menyesuaikan gaya dan nada dengan tepat dan menjaga suara tulisan yang konsisten sesuai pembaca dan tujuannya.",
           "objectives": {
-            "adjust-style-and": "Menyesuaikan gaya dan nada dengan tepat"
+            "adjust-style-and": "Menyesuaikan gaya dan nada dengan tepat",
+            "rhythm-word-choice": "Mengatur ritme dan pilihan kata agar suara tulisan tetap konsisten",
+            "rewrite-for-reader": "Menulis ulang pesan yang sama untuk pembaca dan tujuan yang berbeda"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-creative-writing",
+      "level": "C2",
+      "title": "Creative Writing & Voice",
+      "summary": "Write narrative and description in your own voice, with natural dialogue and the show, don't tell technique.",
+      "strand": "WR",
+      "canDo": "Can write engaging stories and descriptions in a distinctive voice, with natural dialogue.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c2-stylistic-nuance"
+      ],
+      "objectives": [
+        {
+          "id": "distinctive-voice",
+          "text": "Write narrative and description in a distinctive voice"
+        },
+        {
+          "id": "natural-dialogue",
+          "text": "Write dialogue that sounds natural"
+        },
+        {
+          "id": "show-dont-tell",
+          "text": "Use show, don't tell to reveal feelings and character"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "She was very sad.",
+          "right": "She stared at the unopened letter until her tea went cold."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menulis Kreatif & Suara Penulis",
+          "summary": "Menulis narasi dan deskripsi dengan suara khasmu, dialog yang alami, dan teknik show, don't tell.",
+          "canDo": "Bisa menulis cerita dan deskripsi yang menarik dengan suara yang khas dan dialog yang alami.",
+          "objectives": {
+            "distinctive-voice": "Menulis narasi dan deskripsi dengan suara yang khas",
+            "natural-dialogue": "Menulis dialog yang terdengar alami",
+            "show-dont-tell": "Memakai teknik show, don't tell untuk menampilkan perasaan dan karakter"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-editing",
+      "level": "C2",
+      "title": "Editing & Proofreading",
+      "summary": "Edit for concision and consistency, follow a style guide, and give useful feedback on other people's writing.",
+      "strand": "WR",
+      "canDo": "Can edit and proofread texts for concision, consistency and style, and give constructive feedback to other writers.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c2-complex-sentences"
+      ],
+      "objectives": [
+        {
+          "id": "concise-consistent",
+          "text": "Edit texts so they are concise and consistent"
+        },
+        {
+          "id": "style-guide",
+          "text": "Follow a style guide for spelling, punctuation, terminology and formatting"
+        },
+        {
+          "id": "give-feedback",
+          "text": "Give clear, constructive feedback on other people's writing"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career",
+        "tech"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "In order to be able to make a decision regarding the budget, we need more data.",
+          "right": "To decide on the budget, we need more data."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyunting & Proofreading",
+          "summary": "Menyunting agar ringkas dan konsisten, mengikuti style guide, dan memberi feedback yang berguna pada tulisan orang lain.",
+          "canDo": "Bisa menyunting dan memeriksa teks agar ringkas, konsisten dan sesuai gaya, serta memberi feedback yang membangun.",
+          "objectives": {
+            "concise-consistent": "Menyunting teks agar ringkas dan konsisten",
+            "style-guide": "Mengikuti style guide untuk ejaan, tanda baca, istilah dan format",
+            "give-feedback": "Memberi feedback yang jelas dan membangun pada tulisan orang lain"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-advanced-summary",
+      "level": "C2",
+      "title": "Summarising & Reconstructing Arguments",
+      "summary": "Summarise several complex sources, reconstruct their arguments coherently and write a concise précis.",
+      "strand": "ME",
+      "canDo": "Can summarise information from several complex sources, reconstructing their arguments in a coherent whole.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-mediation-synthesis"
+      ],
+      "objectives": [
+        {
+          "id": "summarise-sources",
+          "text": "Summarise several complex sources in one coherent text"
+        },
+        {
+          "id": "reconstruct-arguments",
+          "text": "Reconstruct each source's argument accurately and coherently"
+        },
+        {
+          "id": "write-precis",
+          "text": "Write a précis: a short, accurate summary in your own words"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "i18n": {
+        "id": {
+          "title": "Meringkas & Merekonstruksi Argumen",
+          "summary": "Meringkas banyak sumber kompleks, merekonstruksi argumennya secara koheren, dan menulis précis yang padat.",
+          "canDo": "Bisa meringkas informasi dari banyak sumber kompleks dan merekonstruksi argumennya menjadi satu kesatuan yang koheren.",
+          "objectives": {
+            "summarise-sources": "Meringkas banyak sumber kompleks dalam satu teks yang koheren",
+            "reconstruct-arguments": "Merekonstruksi argumen tiap sumber secara akurat dan koheren",
+            "write-precis": "Menulis précis: ringkasan pendek dan akurat dengan kata-kata sendiri"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-high-stakes-communication",
+      "level": "C2",
+      "title": "High-Stakes Communication",
+      "summary": "Deliver bad news, communicate in a crisis and disagree diplomatically with managers or clients.",
+      "strand": "FN",
+      "canDo": "Can handle sensitive, high-stakes conversations, such as giving bad news or disagreeing with a senior person, clearly and diplomatically.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-negotiation",
+        "c1-leading-meetings"
+      ],
+      "objectives": [
+        {
+          "id": "deliver-bad-news",
+          "text": "Deliver bad news clearly and with empathy"
+        },
+        {
+          "id": "crisis-communication",
+          "text": "Communicate clearly in a crisis: what happened, what you are doing, what comes next"
+        },
+        {
+          "id": "disagree-diplomatically",
+          "text": "Disagree diplomatically with a manager or client"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Maybe there is a little problem with the deadline, but it's okay.",
+          "right": "I'm afraid we won't meet the 15 March deadline. Here's what we can do instead."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Komunikasi Berisiko Tinggi",
+          "summary": "Menyampaikan kabar buruk, berkomunikasi saat krisis, dan tidak setuju secara diplomatis dengan atasan atau klien.",
+          "canDo": "Bisa menangani percakapan sensitif yang berisiko tinggi, seperti menyampaikan kabar buruk atau tidak setuju dengan atasan, secara jelas dan diplomatis.",
+          "objectives": {
+            "deliver-bad-news": "Menyampaikan kabar buruk dengan jelas dan empatik",
+            "crisis-communication": "Berkomunikasi dengan jelas saat krisis: apa yang terjadi, apa yang sedang dilakukan, dan langkah selanjutnya",
+            "disagree-diplomatically": "Menyatakan ketidaksetujuan secara diplomatis kepada atasan atau klien"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-cross-cultural-mediation",
+      "level": "C2",
+      "title": "Cross-Cultural Mediation",
+      "summary": "Explain cultural norms, handle direct and indirect politeness, and help people from different cultures understand each other.",
+      "strand": "ME",
+      "canDo": "Can mediate between people from different cultures, explaining norms and clarifying what each side really means.",
+      "estimatedMinutes": 240,
+      "prerequisiteIds": [
+        "c1-mediation-synthesis",
+        "c2-implied-meaning"
+      ],
+      "objectives": [
+        {
+          "id": "explain-norms",
+          "text": "Explain cultural norms and expectations to people from another culture"
+        },
+        {
+          "id": "politeness-strategies",
+          "text": "Compare direct and indirect politeness strategies and choose the right one"
+        },
+        {
+          "id": "bridge-meaning",
+          "text": "Bridge misunderstandings by clarifying what each side means"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "career"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Translating a polite \"iya, nanti kami pertimbangkan\" as a firm yes",
+          "right": "Explain that it may be a soft no, and check what the speaker really means"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mediasi Lintas Budaya",
+          "summary": "Menjelaskan norma budaya, memahami kesopanan langsung dan tidak langsung, serta membantu orang dari budaya berbeda saling memahami.",
+          "canDo": "Bisa menjadi penengah antara orang dari budaya berbeda, menjelaskan norma dan memperjelas maksud sebenarnya dari tiap pihak.",
+          "objectives": {
+            "explain-norms": "Menjelaskan norma dan harapan budaya kepada orang dari budaya lain",
+            "politeness-strategies": "Membandingkan strategi kesopanan langsung dan tidak langsung, lalu memilih yang tepat",
+            "bridge-meaning": "Menjembatani salah paham dengan memperjelas maksud tiap pihak"
+          }
+        }
+      }
+    },
+    {
+      "id": "c2-checkpoint",
+      "level": "C2",
+      "title": "C2 Checkpoint",
+      "summary": "Mixed test of all C2 strands (format similar to C2 Proficiency / IELTS 8.5+). Pass: 70+ in every strand, 80+ overall.",
+      "strand": "CK",
+      "canDo": "Can show C2-level proficiency across grammar, vocabulary, listening, reading, speaking, writing and mediation.",
+      "estimatedMinutes": 90,
+      "prerequisiteIds": [
+        "c2-grammar-for-style",
+        "c2-colloquial-slang",
+        "c2-figurative-language",
+        "c2-listening-native-speed",
+        "c2-reading-literary",
+        "c2-reformulation",
+        "c2-public-speaking",
+        "c2-critical-review",
+        "c2-creative-writing",
+        "c2-editing",
+        "c2-advanced-summary",
+        "c2-high-stakes-communication",
+        "c2-cross-cultural-mediation"
+      ],
+      "objectives": [
+        {
+          "id": "all-strands",
+          "text": "Complete a mixed test of every C2 strand, in a format similar to C2 Proficiency / IELTS 8.5+"
+        },
+        {
+          "id": "language-precision",
+          "text": "Use C2 grammar and vocabulary accurately and flexibly"
+        },
+        {
+          "id": "implicit-meaning",
+          "text": "Understand implied meaning in demanding texts and recordings"
+        },
+        {
+          "id": "productive-tasks",
+          "text": "Speak, write and mediate at length with precision and nuance"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Checkpoint C2",
+          "summary": "Tes campuran semua strand C2 (format mirip C2 Proficiency / IELTS 8.5+). Lulus: minimal 70 di tiap strand dan rata-rata 80.",
+          "canDo": "Bisa menunjukkan kemampuan setara C2 di grammar, kosakata, listening, reading, speaking, writing dan mediasi.",
+          "objectives": {
+            "all-strands": "Menyelesaikan tes campuran semua strand C2 dengan format mirip C2 Proficiency / IELTS 8.5+",
+            "language-precision": "Memakai grammar dan kosakata C2 dengan akurat dan luwes",
+            "implicit-meaning": "Memahami makna tersirat dalam teks dan rekaman yang menantang",
+            "productive-tasks": "Berbicara, menulis dan melakukan mediasi secara panjang dengan presisi dan nuansa"
           }
         }
       }
     }
-  ],
-  "i18n": {
-    "id": {
-      "title": "Sangat Mahir",
-      "description": "Jalur penguasaan opsional: nuansa, gaya bahasa dan makna tersirat."
-    }
-  }
+  ]
 }

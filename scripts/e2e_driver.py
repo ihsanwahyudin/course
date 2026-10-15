@@ -241,7 +241,7 @@ def verify(api, curriculum):
     if missing:
         fail(f"progress lost after restart: {missing}")
     _, rm_id = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap", lang="id")
-    first = rm_id["nodes"][0]
+    first = next(n for n in rm_id["nodes"] if n["id"] == "a0-alphabet-sounds")
     if first["title"] != "Alfabet & Bunyi" or rm_id["course"]["title"] != "Bahasa Inggris":
         fail(f"Indonesian roadmap not localized: {first['title']!r} / {rm_id['course']['title']!r}")
     print(f"  ✓ Accept-Language id → {rm_id['course']['title']}: {first['title']}")

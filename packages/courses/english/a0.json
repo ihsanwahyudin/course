@@ -1,14 +1,71 @@
 {
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "level": "A0",
   "title": "Foundation",
-  "description": "Sounds, words and first sentences — the groundwork before CEFR A1.",
+  "description": "Use memorised words and phrases for the most basic needs: greetings, numbers and personal details, with help from the other person.",
+  "i18n": {
+    "id": {
+      "title": "Dasar",
+      "description": "Memakai kata dan frasa hafalan untuk kebutuhan paling dasar: salam, angka dan data pribadi, dengan bantuan lawan bicara."
+    }
+  },
   "nodes": [
+    {
+      "id": "a0-greetings",
+      "level": "A0",
+      "title": "Greetings & Politeness",
+      "summary": "Say hello and goodbye at any time of day, use please, thank you, sorry and excuse me, and answer How are you?",
+      "strand": "FN",
+      "canDo": "Can greet people, say goodbye and use basic polite words in short everyday exchanges.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [],
+      "objectives": [
+        {
+          "id": "greet-people-and",
+          "text": "Greet people and say goodbye at different times of day (good morning, see you)"
+        },
+        {
+          "id": "use-please-thank",
+          "text": "Use please, thank you, sorry and excuse me naturally"
+        },
+        {
+          "id": "how-are-you",
+          "text": "Ask and answer How are you? (I'm fine, thanks. And you?)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel",
+        "daily"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "Good night! (said when arriving in the evening)",
+          "right": "Good evening! (Good night is only for leaving or going to bed)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Salam & Sopan Santun",
+          "summary": "Menyapa dan berpamitan di waktu yang berbeda, memakai please, thank you, sorry dan excuse me, serta menjawab How are you?",
+          "canDo": "Bisa menyapa, berpamitan, dan memakai kata-kata sopan dasar dalam percakapan singkat sehari-hari.",
+          "objectives": {
+            "greet-people-and": "Menyapa orang dan berpamitan sesuai waktu (good morning, see you)",
+            "use-please-thank": "Memakai please, thank you, sorry dan excuse me secara wajar",
+            "how-are-you": "Menanyakan dan menjawab How are you? (I'm fine, thanks. And you?)"
+          }
+        }
+      }
+    },
     {
       "id": "a0-alphabet-sounds",
       "level": "A0",
       "title": "Alphabet & Sounds",
       "summary": "Name the 26 letters, hear the vowels and spell simple words aloud.",
+      "strand": "PR",
+      "canDo": "Can say the English alphabet and spell names and short words aloud.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [],
       "objectives": [
         {
@@ -26,10 +83,25 @@
       ],
       "masteryThreshold": 80,
       "contentStatus": "ready",
+      "commonErrors": [
+        {
+          "wrong": "A said like Indonesian 'a' /a/",
+          "right": "A said /eɪ/ (like 'day')"
+        },
+        {
+          "wrong": "E said like Indonesian 'e' and I like Indonesian 'i'",
+          "right": "E said /iː/ (like 'see'), I said /aɪ/ (like 'my')"
+        },
+        {
+          "wrong": "G and J read the Indonesian way ('ge', 'je')",
+          "right": "G said /dʒiː/, J said /dʒeɪ/"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Alfabet & Bunyi",
           "summary": "Sebutkan 26 huruf, kenali huruf vokal, dan eja kata sederhana dengan lantang.",
+          "canDo": "Bisa menyebutkan alfabet bahasa Inggris serta mengeja nama dan kata pendek dengan lantang.",
           "objectives": {
             "letter-names": "Menyebut dan mengenali nama huruf dalam bahasa Inggris",
             "vowels": "Mengenali lima huruf vokal dan bunyi dasarnya",
@@ -39,10 +111,117 @@
       }
     },
     {
+      "id": "a0-sounds-indonesian",
+      "level": "A0",
+      "title": "English Sounds for Indonesian Speakers",
+      "summary": "Practise the English sounds Indonesian speakers find hardest: long vs short vowels, th, v, sh and final consonants.",
+      "strand": "PR",
+      "canDo": "Can say common English words clearly enough to be understood, including sounds that do not exist in Indonesian.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a0-alphabet-sounds"
+      ],
+      "objectives": [
+        {
+          "id": "short-long-vowels",
+          "text": "Hear and say the difference between short and long vowels (ship / sheep)"
+        },
+        {
+          "id": "th-v-sh",
+          "text": "Say the sounds /θ/, /ð/, /v/ and /ʃ/ clearly (think, this, very, she)"
+        },
+        {
+          "id": "final-consonants",
+          "text": "Pronounce final consonants clearly (cat, bed, bus)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "think said as 'tink' /t/, this said as 'dis' /d/",
+          "right": "think with /θ/ and this with /ð/ (tongue between the teeth)"
+        },
+        {
+          "wrong": "very said as 'fery' /f/",
+          "right": "very with /v/ (top teeth on the lower lip, with voice)"
+        },
+        {
+          "wrong": "ship and sheep said the same; final sounds dropped (ca' for cat)",
+          "right": "short /ɪ/ in ship, long /iː/ in sheep; finish the word: ca-t, be-d, bu-s"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bunyi Bahasa Inggris untuk Penutur Indonesia",
+          "summary": "Latih bunyi yang paling sulit bagi penutur Indonesia: vokal pendek vs panjang, th, v, sh dan konsonan akhir.",
+          "canDo": "Bisa mengucapkan kata-kata umum dengan cukup jelas untuk dipahami, termasuk bunyi yang tidak ada dalam bahasa Indonesia.",
+          "objectives": {
+            "short-long-vowels": "Mendengar dan mengucapkan perbedaan vokal pendek dan panjang (ship / sheep)",
+            "th-v-sh": "Mengucapkan bunyi /θ/, /ð/, /v/ dan /ʃ/ dengan jelas (think, this, very, she)",
+            "final-consonants": "Mengucapkan konsonan akhir dengan jelas (cat, bed, bus)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0-classroom-language",
+      "level": "A0",
+      "title": "Classroom Language",
+      "summary": "Ask for repetition, meaning and spelling, and follow simple classroom instructions.",
+      "strand": "FN",
+      "canDo": "Can ask for help with a word and follow simple instructions in class.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [
+        "a0-greetings",
+        "a0-alphabet-sounds"
+      ],
+      "objectives": [
+        {
+          "id": "ask-someone-to",
+          "text": "Ask someone to repeat or speak more slowly (Can you repeat that, please?)"
+        },
+        {
+          "id": "ask-what-a",
+          "text": "Ask what a word means and how to spell it (What does … mean? How do you spell …?)"
+        },
+        {
+          "id": "follow-instructions",
+          "text": "Understand simple classroom instructions (Listen. Repeat. Open your book.)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "study"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "How to spell your name?",
+          "right": "How do you spell your name?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bahasa di Kelas",
+          "summary": "Meminta pengulangan, arti dan ejaan kata, serta mengikuti instruksi kelas yang sederhana.",
+          "canDo": "Bisa meminta bantuan soal kata yang belum kamu pahami dan mengikuti instruksi sederhana di kelas.",
+          "objectives": {
+            "ask-someone-to": "Meminta seseorang mengulang atau berbicara lebih pelan (Can you repeat that, please?)",
+            "ask-what-a": "Menanyakan arti kata dan cara mengejanya (What does … mean? How do you spell …?)",
+            "follow-instructions": "Memahami instruksi kelas yang sederhana (Listen. Repeat. Open your book.)"
+          }
+        }
+      }
+    },
+    {
       "id": "a0-pronouns",
       "level": "A0",
       "title": "Personal Pronouns",
       "summary": "Use I, you, he, she, it, we, they and my, your, his, her.",
+      "strand": "GR",
+      "canDo": "Can talk about people and things with the right pronouns, keeping he and she apart.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
         "a0-alphabet-sounds"
       ],
@@ -62,13 +241,28 @@
       ],
       "masteryThreshold": 80,
       "contentStatus": "ready",
+      "commonErrors": [
+        {
+          "wrong": "My sister is a nurse. He works at a hospital.",
+          "right": "My sister is a nurse. She works at a hospital."
+        },
+        {
+          "wrong": "This is Budi. He name is Budi.",
+          "right": "This is Budi. His name is Budi."
+        },
+        {
+          "wrong": "This is Rina and she brother.",
+          "right": "This is Rina and her brother."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kata Ganti Orang",
           "summary": "Gunakan I, you, he, she, it, we, they serta my, your, his, her.",
+          "canDo": "Bisa membicarakan orang dan benda dengan kata ganti yang tepat, tanpa tertukar antara he dan she.",
           "objectives": {
             "subject-pronouns": "Memilih kata ganti subjek yang tepat untuk orang dan benda",
-            "possessives": "Menggunakan kata ganti kepemilikan: my, your, his, her, its, our, their",
+            "possessives": "Memakai kata sifat kepemilikan: my, your, his, her, its, our, their",
             "pronoun-reference": "Mengganti kata benda dengan kata ganti yang tepat"
           }
         }
@@ -79,6 +273,9 @@
       "level": "A0",
       "title": "Common Vocabulary",
       "summary": "Everyday nouns, numbers 1–20 and basic colours.",
+      "strand": "VO",
+      "canDo": "Can name everyday people, places and things, count to 20 and describe things with colours and simple adjectives.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a0-alphabet-sounds"
       ],
@@ -98,10 +295,25 @@
       ],
       "masteryThreshold": 80,
       "contentStatus": "ready",
+      "commonErrors": [
+        {
+          "wrong": "a car red",
+          "right": "a red car"
+        },
+        {
+          "wrong": "one people",
+          "right": "one person (two people)"
+        },
+        {
+          "wrong": "The bag is colour blue.",
+          "right": "The bag is blue."
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kosakata Umum",
           "summary": "Kata benda sehari-hari, angka 1–20 dan warna dasar.",
+          "canDo": "Bisa menyebut orang, tempat dan benda sehari-hari, berhitung sampai 20, serta mendeskripsikan benda dengan warna dan kata sifat sederhana.",
           "objectives": {
             "everyday-nouns": "Menyebut orang, tempat dan benda yang umum",
             "numbers": "Mengucapkan dan menulis angka 1 sampai 20",
@@ -111,10 +323,235 @@
       }
     },
     {
+      "id": "a0-numbers",
+      "level": "A0",
+      "title": "Numbers to 100 & Prices",
+      "summary": "Count from 21 to 100, give your age and phone number, and say prices in rupiah.",
+      "strand": "VO",
+      "canDo": "Can understand and say numbers, ages, phone numbers and simple prices.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a0-common-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "numbers-21-100",
+          "text": "Say and understand numbers from 21 to 100 (thirteen vs thirty)"
+        },
+        {
+          "id": "age-phone",
+          "text": "Give your age and phone number (I'm 25. My number is 0812 …)"
+        },
+        {
+          "id": "prices",
+          "text": "Say and understand prices, including thousands (It's 25,000 rupiah)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I have 25 years old.",
+          "right": "I'm 25 (years old)."
+        },
+        {
+          "wrong": "twenty-five thousands rupiah",
+          "right": "twenty-five thousand rupiah"
+        },
+        {
+          "wrong": "thirteen and thirty said the same way",
+          "right": "thirTEEN (stress at the end) vs THIRty (stress at the start)"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Angka sampai 100 & Harga",
+          "summary": "Berhitung dari 21 sampai 100, menyebut umur dan nomor telepon, serta menyebut harga dalam rupiah.",
+          "canDo": "Bisa memahami dan menyebut angka, umur, nomor telepon dan harga sederhana.",
+          "objectives": {
+            "numbers-21-100": "Mengucapkan dan memahami angka 21 sampai 100 (thirteen vs thirty)",
+            "age-phone": "Menyebut umur dan nomor telepon (I'm 25. My number is 0812 …)",
+            "prices": "Menyebut dan memahami harga, termasuk ribuan (It's 25,000 rupiah)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0-time-dates",
+      "level": "A0",
+      "title": "Days, Months & Time",
+      "summary": "Name the days and months, tell the time and say dates with ordinal numbers.",
+      "strand": "VO",
+      "canDo": "Can say and understand days, dates and clock times for simple plans.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a0-numbers"
+      ],
+      "objectives": [
+        {
+          "id": "days-months",
+          "text": "Name the days of the week and the months of the year"
+        },
+        {
+          "id": "telling-time",
+          "text": "Tell the time (seven o'clock, half past six, 7:15)"
+        },
+        {
+          "id": "ordinals-dates",
+          "text": "Use ordinal numbers to say dates (the first of May)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "half seven (meaning 6:30, from 'setengah tujuh')",
+          "right": "half past six (6:30)"
+        },
+        {
+          "wrong": "the one of May",
+          "right": "the first of May"
+        },
+        {
+          "wrong": "in Monday / on May",
+          "right": "on Monday / in May"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Hari, Bulan & Jam",
+          "summary": "Menyebut nama hari dan bulan, menyebut jam, dan menyebut tanggal dengan bilangan urutan.",
+          "canDo": "Bisa menyebut dan memahami hari, tanggal dan jam untuk rencana sederhana.",
+          "objectives": {
+            "days-months": "Menyebut nama hari dalam seminggu dan nama bulan dalam setahun",
+            "telling-time": "Menyebut jam (seven o'clock, half past six, 7:15)",
+            "ordinals-dates": "Memakai bilangan urutan untuk menyebut tanggal (the first of May)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0-personal-info",
+      "level": "A0",
+      "title": "Countries & Personal Information",
+      "summary": "Name countries and nationalities, give personal details and ask set questions like What's your name?",
+      "strand": "VO",
+      "canDo": "Can ask and answer simple questions about name, age, nationality, address and email.",
+      "estimatedMinutes": 150,
+      "prerequisiteIds": [
+        "a0-numbers"
+      ],
+      "objectives": [
+        {
+          "id": "countries-nationalities",
+          "text": "Name countries and nationalities (Indonesia / Indonesian)"
+        },
+        {
+          "id": "personal-details",
+          "text": "Give personal details: name, age, address and email"
+        },
+        {
+          "id": "set-questions",
+          "text": "Ask and answer fixed questions (What's your name? Where are you from?)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "focus": [
+        "travel"
+      ],
+      "commonErrors": [
+        {
+          "wrong": "I am Indonesia.",
+          "right": "I'm Indonesian. / I'm from Indonesia."
+        },
+        {
+          "wrong": "What your name?",
+          "right": "What's your name?"
+        },
+        {
+          "wrong": "My address in Jalan Merdeka 5.",
+          "right": "My address is Jalan Merdeka 5."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Negara & Data Pribadi",
+          "summary": "Menyebut negara dan kebangsaan, memberikan data pribadi, dan bertanya dengan frasa tetap seperti What's your name?",
+          "canDo": "Bisa menanyakan dan menjawab pertanyaan sederhana tentang nama, umur, kebangsaan, alamat dan email.",
+          "objectives": {
+            "countries-nationalities": "Menyebut negara dan kebangsaan (Indonesia / Indonesian)",
+            "personal-details": "Memberikan data pribadi: nama, umur, alamat dan email",
+            "set-questions": "Menanyakan dan menjawab pertanyaan tetap (What's your name? Where are you from?)"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0-to-be-basics",
+      "level": "A0",
+      "title": "First Sentences with Be",
+      "summary": "Introduce yourself with I'm …, talk about things with This is … and It's …, and never drop be.",
+      "strand": "GR",
+      "canDo": "Can introduce themselves and say what something is in short sentences with be.",
+      "estimatedMinutes": 180,
+      "prerequisiteIds": [
+        "a0-pronouns"
+      ],
+      "objectives": [
+        {
+          "id": "introduce-yourself",
+          "text": "Introduce yourself with I'm … and I'm from …"
+        },
+        {
+          "id": "this-is-its",
+          "text": "Use This is … and It's … to talk about things"
+        },
+        {
+          "id": "keep-be",
+          "text": "Keep be in the sentence (I'm a teacher, not I teacher)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "commonErrors": [
+        {
+          "wrong": "She teacher.",
+          "right": "She's a teacher."
+        },
+        {
+          "wrong": "I from Surabaya.",
+          "right": "I'm from Surabaya."
+        },
+        {
+          "wrong": "This my bag.",
+          "right": "This is my bag."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat Pertama dengan Be",
+          "summary": "Perkenalkan diri dengan I'm …, bicarakan benda dengan This is … dan It's …, dan jangan pernah menghilangkan be.",
+          "canDo": "Bisa memperkenalkan diri dan menyebut sesuatu itu apa dalam kalimat pendek dengan be.",
+          "objectives": {
+            "introduce-yourself": "Memperkenalkan diri dengan I'm … dan I'm from …",
+            "this-is-its": "Memakai This is … dan It's … untuk membicarakan benda",
+            "keep-be": "Tidak menghilangkan be dalam kalimat (I'm a teacher, bukan I teacher)"
+          }
+        }
+      }
+    },
+    {
       "id": "a0-basic-sentences",
       "level": "A0",
       "title": "Basic Sentences",
       "summary": "Build Subject + Verb + Object sentences with a/an and plurals.",
+      "strand": "GR",
+      "canDo": "Can make simple sentences about people and things using a/an and plural nouns.",
+      "estimatedMinutes": 180,
       "prerequisiteIds": [
         "a0-pronouns",
         "a0-common-vocabulary"
@@ -135,10 +572,25 @@
       ],
       "masteryThreshold": 80,
       "contentStatus": "ready",
+      "commonErrors": [
+        {
+          "wrong": "I have two book.",
+          "right": "I have two books."
+        },
+        {
+          "wrong": "I have car.",
+          "right": "I have a car."
+        },
+        {
+          "wrong": "a apple, a umbrella",
+          "right": "an apple, an umbrella"
+        }
+      ],
       "i18n": {
         "id": {
           "title": "Kalimat Dasar",
           "summary": "Susun kalimat Subjek + Kata Kerja + Objek dengan a/an dan bentuk jamak.",
+          "canDo": "Bisa membuat kalimat sederhana tentang orang dan benda dengan a/an dan kata benda jamak.",
           "objectives": {
             "word-order": "Menyusun kalimat dengan urutan Subjek + Kata Kerja + Objek",
             "articles": "Menggunakan a dan an dengan benar sebelum kata benda",
@@ -148,79 +600,176 @@
       }
     },
     {
-      "id": "a0-greetings",
+      "id": "a0-writing-basics",
       "level": "A0",
-      "title": "Greetings & Politeness",
-      "summary": "Hello, goodbye, please, thank you and sorry.",
+      "title": "Writing Basics",
+      "summary": "Use capital letters and basic punctuation, write your personal details and fill in a simple form.",
+      "strand": "WR",
+      "canDo": "Can write their name, address, phone number and email correctly and fill in a simple form.",
+      "estimatedMinutes": 150,
       "prerequisiteIds": [
-        "a0-alphabet-sounds"
+        "a0-alphabet-sounds",
+        "a0-personal-info"
       ],
       "objectives": [
         {
-          "id": "greet-people-and",
-          "text": "Greet people and say goodbye at different times of day"
+          "id": "capitals-punctuation",
+          "text": "Use capital letters (I, names, the start of a sentence) and basic punctuation"
         },
         {
-          "id": "use-please-thank",
-          "text": "Use please, thank you and sorry naturally"
+          "id": "write-details",
+          "text": "Write your name, address, phone number and email correctly"
+        },
+        {
+          "id": "fill-form",
+          "text": "Fill in a simple form (first name, surname, date of birth)"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
-      "focus": [
-        "travel",
-        "daily"
+      "commonErrors": [
+        {
+          "wrong": "my name is budi and i live in bandung",
+          "right": "My name is Budi and I live in Bandung."
+        }
       ],
       "i18n": {
         "id": {
-          "title": "Salam & Sopan Santun",
-          "summary": "Hello, goodbye, please, thank you dan sorry.",
+          "title": "Dasar Menulis",
+          "summary": "Memakai huruf kapital dan tanda baca dasar, menulis data pribadi, dan mengisi formulir sederhana.",
+          "canDo": "Bisa menulis nama, alamat, nomor telepon dan email dengan benar serta mengisi formulir sederhana.",
           "objectives": {
-            "greet-people-and": "Menyapa orang dan berpamitan di waktu yang berbeda",
-            "use-please-thank": "Menggunakan please, thank you dan sorry secara wajar"
+            "capitals-punctuation": "Memakai huruf kapital (I, nama, awal kalimat) dan tanda baca dasar",
+            "write-details": "Menulis nama, alamat, nomor telepon dan email dengan benar",
+            "fill-form": "Mengisi formulir sederhana (first name, surname, date of birth)"
           }
         }
       }
     },
     {
-      "id": "a0-classroom-language",
+      "id": "a0-listening-first",
       "level": "A0",
-      "title": "Classroom Language",
-      "summary": "Ask for help, repetition and meaning.",
+      "title": "First Listening",
+      "summary": "Catch letters, numbers and names spoken slowly, and understand greetings and classroom instructions.",
+      "strand": "LI",
+      "canDo": "Can recognise letters, numbers, names, greetings and simple instructions when people speak slowly and clearly.",
+      "estimatedMinutes": 120,
       "prerequisiteIds": [
+        "a0-numbers",
         "a0-greetings"
       ],
       "objectives": [
         {
-          "id": "ask-someone-to",
-          "text": "Ask someone to repeat or speak slowly"
+          "id": "letters-numbers-names",
+          "text": "Recognise letters, numbers and names spoken slowly"
         },
         {
-          "id": "ask-what-a",
-          "text": "Ask what a word means and how to spell it"
+          "id": "greetings-instructions",
+          "text": "Understand greetings and classroom instructions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Menyimak Pertama",
+          "summary": "Menangkap huruf, angka dan nama yang diucapkan pelan, serta memahami salam dan instruksi kelas.",
+          "canDo": "Bisa mengenali huruf, angka, nama, salam dan instruksi sederhana saat orang berbicara pelan dan jelas.",
+          "objectives": {
+            "letters-numbers-names": "Mengenali huruf, angka dan nama yang diucapkan pelan",
+            "greetings-instructions": "Memahami salam dan instruksi kelas"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0-reading-first",
+      "level": "A0",
+      "title": "First Reading",
+      "summary": "Read simple words and phrases, common signs, business cards and simple forms.",
+      "strand": "RE",
+      "canDo": "Can understand familiar words, common signs and the details on a business card or simple form.",
+      "estimatedMinutes": 120,
+      "prerequisiteIds": [
+        "a0-common-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "words-phrases",
+          "text": "Read simple words and short phrases"
+        },
+        {
+          "id": "signs",
+          "text": "Understand common signs (Open, Closed, Exit, Toilet)"
+        },
+        {
+          "id": "cards-forms",
+          "text": "Read business cards and simple forms"
         }
       ],
       "masteryThreshold": 80,
       "contentStatus": "coming_soon",
       "focus": [
-        "study"
+        "travel"
       ],
       "i18n": {
         "id": {
-          "title": "Bahasa di Kelas",
-          "summary": "Meminta bantuan, pengulangan dan arti kata.",
+          "title": "Membaca Pertama",
+          "summary": "Membaca kata dan frasa sederhana, papan tanda umum, kartu nama dan formulir sederhana.",
+          "canDo": "Bisa memahami kata yang sudah dikenal, papan tanda umum, serta data di kartu nama atau formulir sederhana.",
           "objectives": {
-            "ask-someone-to": "Meminta seseorang mengulang atau berbicara pelan",
-            "ask-what-a": "Menanyakan arti kata dan cara mengejanya"
+            "words-phrases": "Membaca kata dan frasa pendek yang sederhana",
+            "signs": "Memahami papan tanda umum (Open, Closed, Exit, Toilet)",
+            "cards-forms": "Membaca kartu nama dan formulir sederhana"
+          }
+        }
+      }
+    },
+    {
+      "id": "a0-checkpoint",
+      "level": "A0",
+      "title": "A0 Checkpoint",
+      "summary": "A mixed test of every A0 strand: listening, reading, grammar and vocabulary questions plus greeting, spelling and a form.",
+      "strand": "CK",
+      "canDo": "Can show all A0 skills together: greet someone, spell their name and fill in a simple form.",
+      "estimatedMinutes": 75,
+      "prerequisiteIds": [
+        "a0-sounds-indonesian",
+        "a0-classroom-language",
+        "a0-time-dates",
+        "a0-basic-sentences",
+        "a0-writing-basics",
+        "a0-listening-first",
+        "a0-reading-first"
+      ],
+      "objectives": [
+        {
+          "id": "receptive",
+          "text": "Answer listening, reading, grammar and vocabulary questions from all A0 nodes"
+        },
+        {
+          "id": "greet-and-spell",
+          "text": "Greet someone and spell your name aloud"
+        },
+        {
+          "id": "fill-form",
+          "text": "Fill in a simple form with your personal details"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "i18n": {
+        "id": {
+          "title": "Checkpoint A0",
+          "summary": "Tes campuran semua strand A0: soal menyimak, membaca, grammar dan kosakata, plus menyapa, mengeja nama dan mengisi formulir.",
+          "canDo": "Bisa menunjukkan semua kemampuan A0 sekaligus: menyapa, mengeja nama dan mengisi formulir sederhana.",
+          "objectives": {
+            "receptive": "Menjawab soal menyimak, membaca, grammar dan kosakata dari semua node A0",
+            "greet-and-spell": "Menyapa seseorang dan mengeja namamu dengan lantang",
+            "fill-form": "Mengisi formulir sederhana dengan data pribadimu"
           }
         }
       }
     }
-  ],
-  "i18n": {
-    "id": {
-      "title": "Dasar",
-      "description": "Bunyi, kata dan kalimat pertama — fondasi sebelum CEFR A1."
-    }
-  }
+  ]
 }

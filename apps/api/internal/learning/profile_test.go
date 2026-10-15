@@ -70,7 +70,7 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if rm.Enrollment.TargetLevel != "B1" || rm.Summary.TargetNodes == 0 {
+	if rm.Enrollment.TargetLevel != "B2" || rm.Summary.TargetNodes == 0 {
 		t.Fatalf("goal should set the target level: %+v", rm.Enrollment)
 	}
 	if !rm.Profile.Completed || rm.Profile.Goal == nil || rm.Profile.Goal.Label != "Membaca dokumentasi teknis" ||
