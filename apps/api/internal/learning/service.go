@@ -553,6 +553,13 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 	if err != nil {
 		return SessionView{}, err
 	}
+	// Corrected wording reaches lessons already under way, in place.
+	if fresh, c := s.authoredChange(cur, n, sess); c == planReworded {
+		if err := storage.SetSessionLanguage(ctx, db, sess.ID, sess.Locale, fresh); err != nil {
+			return SessionView{}, err
+		}
+		sess.Plan = fresh
+	}
 	// Hand-written lessons follow the learner's language switch.
 	if want := cur.Lang(langFrom(ctx)); want != cur.Lang(sess.Locale) {
 		if plan, ok := s.relocalized(cur, n, sess, want); ok {
@@ -662,8 +669,9 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 		}
 	}
 	if err == nil && s.lessonRewritten(cur, n, sess) {
-		// The lesson's steps were rewritten since this session began: keep the
-		// old session (with its questions to the tutor) and start the new version.
+		// The lesson's steps or questions changed since this session began: keep
+		// the old session (with its questions to the tutor) and start the new
+		// version. (New wording alone is applied in place by sessionView.)
 		if err = storage.EndSession(ctx, s.Store.Pool, sess.ID, sess.Phase); err == nil {
 			err = storage.ErrNotFound
 		}
@@ -705,23 +713,45 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 	return s.sessionView(ctx, s.Store.Pool, sess)
 }
 
-// lessonRewritten reports whether an open session's steps differ from the
-// lesson's current hand-written steps.
-func (s *Service) lessonRewritten(cur *curriculum.Curriculum, n *curriculum.Node, sess storage.Session) bool {
+type planChange int
+
+const (
+	planSame      planChange = iota
+	planReworded             // same steps and questions, new wording
+	planRewritten            // other steps or questions
+)
+
+// authoredChange compares a session's steps with the lesson's current
+// hand-written steps in the session's language. When only the wording
+// changed (a corrected explanation, say), it returns the current steps.
+func (s *Service) authoredChange(cur *curriculum.Curriculum, n *curriculum.Node, sess storage.Session) (json.RawMessage, planChange) {
 	if len(sess.Plan) == 0 {
-		return false
+		return nil, planSame
 	}
 	p, ok, err := tutor.AuthoredPlan(cur, n.ID, cur.Lang(sess.Locale))
 	if !ok || err != nil {
-		return false
+		return nil, planSame
 	}
 	var stored tutor.Plan
 	if json.Unmarshal(sess.Plan, &stored) != nil {
-		return true
+		return nil, planRewritten
 	}
 	a, _ := json.Marshal(stored)
 	b, _ := json.Marshal(p)
-	return !bytes.Equal(a, b)
+	switch {
+	case bytes.Equal(a, b):
+		return nil, planSame
+	case tutor.SameSteps(stored, p):
+		return b, planReworded
+	}
+	return nil, planRewritten
+}
+
+// lessonRewritten reports whether the lesson's steps or questions changed
+// since the session began (a new version to start over).
+func (s *Service) lessonRewritten(cur *curriculum.Curriculum, n *curriculum.Node, sess storage.Session) bool {
+	_, c := s.authoredChange(cur, n, sess)
+	return c == planRewritten
 }
 
 // relocalized returns a lesson's hand-written steps in lang when the session
@@ -729,7 +759,10 @@ func (s *Service) lessonRewritten(cur *curriculum.Curriculum, n *curriculum.Node
 // has the same steps and graded questions (ValidateAuthored), so the
 // learner's place and answers still fit; AI-written plans keep theirs.
 func (s *Service) relocalized(cur *curriculum.Curriculum, n *curriculum.Node, sess storage.Session, lang string) (json.RawMessage, bool) {
-	if len(sess.Plan) == 0 || s.lessonRewritten(cur, n, sess) {
+	if len(sess.Plan) == 0 {
+		return nil, false
+	}
+	if _, c := s.authoredChange(cur, n, sess); c != planSame {
 		return nil, false
 	}
 	if _, ok, err := tutor.AuthoredPlan(cur, n.ID, cur.Lang(sess.Locale)); !ok || err != nil {

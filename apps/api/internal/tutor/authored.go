@@ -124,6 +124,25 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 	return errors.Join(errs...)
 }
 
+// SameSteps reports whether two plans have the same steps and graded
+// questions, so a learner's place and answers in one fit the other (only
+// wording may differ: another language, or a corrected explanation).
+func SameSteps(a, b Plan) bool {
+	if len(a.Steps) != len(b.Steps) {
+		return false
+	}
+	for i := range a.Steps {
+		x, y := a.Steps[i], b.Steps[i]
+		if x.Kind != y.Kind || (x.Question == nil) != (y.Question == nil) {
+			return false
+		}
+		if x.Question != nil && !sameQuestion(*x.Question, *y.Question) {
+			return false
+		}
+	}
+	return true
+}
+
 // sameQuestion compares what's graded: type, objective, options, answer,
 // tokens and solution (prompts and explanations may be translated).
 func sameQuestion(a, b Question) bool {

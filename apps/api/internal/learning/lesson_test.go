@@ -366,6 +366,45 @@ func TestLessonFollowsLanguageSwitch(t *testing.T) {
 	}
 }
 
+func TestCorrectedWordingKeepsTheLearnersPlace(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	ctx := context.Background()
+	sess, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sess, err = s.NextStep(ctx, learnerID, sess.ID, 0); err != nil {
+		t.Fatal(err)
+	}
+	cur, _ := s.Catalog.Course(course)
+	current, _, _ := tutor.AuthoredPlan(cur, "a0-alphabet-sounds", "en")
+	setStored := func(p tutor.Plan) {
+		raw, _ := json.Marshal(p)
+		if err := storage.SetSessionLanguage(ctx, s.Store.Pool, sess.ID, "en", raw); err != nil {
+			t.Fatal(err)
+		}
+	}
+
+	// An older wording of the same steps: updated in place, same step.
+	old := current
+	old.Steps = append([]tutor.Step{}, current.Steps...)
+	old.Steps[0].Body = "An older explanation."
+	setStored(old)
+	got, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
+	if err != nil || got.ID != sess.ID || got.Lesson.StepIndex != 1 || got.Lesson.Steps[0].Body != current.Steps[0].Body {
+		t.Fatalf("new wording should apply in place: %v %s step %d %q", err, got.ID, got.Lesson.StepIndex, got.Lesson.Steps[0].Body)
+	}
+
+	// Different questions: a new version of the lesson.
+	q := *current.Steps[1].Question
+	q.Options = append([]string{"Z"}, q.Options[1:]...)
+	old.Steps[1].Question = &q
+	setStored(old)
+	if got, err = s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds"); err != nil || got.ID == sess.ID || got.Lesson.StepIndex != 0 {
+		t.Fatalf("changed questions start the new version: %v %s", err, got.ID)
+	}
+}
+
 func TestPersonalisationOff(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	s.Catalog.DisableOnboarding()
@@ -741,8 +780,9 @@ func TestRewrittenLessonStartsTheNewVersion(t *testing.T) {
 	if again, _ := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds"); again.ID != sess.ID {
 		t.Fatal("an unchanged lesson should resume")
 	}
-	// The session holds an older version of the lesson.
+	// The session holds an older version of the lesson, with other steps.
 	old := planOf(t, s, sess.ID)
+	old.Steps = old.Steps[:len(old.Steps)-1]
 	old.Steps[0].Title = "An older title"
 	raw, _ := json.Marshal(old)
 	if err := storage.SetSessionPlan(ctx, s.Store.Pool, sess.ID, raw); err != nil {
