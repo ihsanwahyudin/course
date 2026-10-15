@@ -6,7 +6,7 @@ services:
   - type: web
     name: fluentpath
     runtime: docker
-    dockerfilePath: ./apps/api/Dockerfile
+    dockerfilePath: ./Dockerfile
     dockerContext: .
     plan: starter
     region: singapore

@@ -1,4 +1,4 @@
-# Build from the repository root: docker build -f apps/api/Dockerfile .
+# Build from the repository root: docker build .
 # One image serves the API and the Expo web app (WEB_DIR), so the web app
 # calls the API on its own origin.
 FROM golang:1.27-alpine AS build
