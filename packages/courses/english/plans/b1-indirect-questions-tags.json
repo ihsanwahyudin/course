@@ -1,0 +1,676 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to ask questions politely, like a professional, and to check information in a friendly way with little tags like isn't it? and don't you?. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Polite questions",
+        "text": "Let's start with a polite way to ask strangers, receptionists or your boss.",
+        "body": "To ask politely, start with **Could you tell me…?**, **Do you know…?** or **I'd like to know…**. Then the question part becomes a **normal statement**: the **subject** (who or what you ask about) comes **before** the verb. *Where is the station?* → *Could you tell me where **the station is**?* Why? The opening is already the question, so the rest goes back to statement order. *Could you tell me where is the station?* is a very common mistake.",
+        "pairs": [
+          {
+            "en": "Could you tell me…?",
+            "id": "Bisa tolong beri tahu saya…?"
+          },
+          {
+            "en": "Do you know…?",
+            "id": "Anda / kamu tahu…?"
+          },
+          {
+            "en": "I'd like to know…",
+            "id": "Saya ingin tahu…"
+          },
+          {
+            "en": "if / whether",
+            "id": "apakah (untuk pertanyaan ya/tidak)"
+          },
+          {
+            "en": "Excuse me",
+            "id": "Permisi"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "From direct to polite",
+        "text": "Read these polite questions aloud. Look at the second part of each one.",
+        "body": "In the second part, **do/does/did disappear** and the verb takes its normal form (*starts, went*). The **Do** in *Do you know* stays: that's the real question. **Yes/no questions** (answered with yes or no) get **if** or **whether** (= apakah).",
+        "examples": [
+          {
+            "en": "Could you tell me where the station is?",
+            "id": "Bisa tolong beri tahu saya stasiunnya di mana? (Where is the station?)"
+          },
+          {
+            "en": "Do you know what time the film starts?",
+            "id": "Kamu tahu filmnya mulai jam berapa? (does hilang → starts)"
+          },
+          {
+            "en": "Do you know where Pak Hasan went?",
+            "id": "Kamu tahu Pak Hasan pergi ke mana? (did hilang → went)"
+          },
+          {
+            "en": "Could you tell me where I can buy a ticket?",
+            "id": "Bisa tolong beri tahu saya di mana saya bisa beli tiket? (can setelah I)"
+          },
+          {
+            "en": "Do you know if this bus stops at Sudirman?",
+            "id": "Kamu tahu apakah bus ini berhenti di Sudirman? (ya/tidak → if)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're a tourist in Jakarta. Ask a stranger politely.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "indirect-questions",
+          "prompt": "Excuse me, do you know ___?",
+          "options": [
+            "what time does the museum open",
+            "what time the museum open",
+            "what time the museum opens"
+          ],
+          "answer": 2,
+          "explanation": "After Do you know, the second part is a statement: **does** disappears and the verb gets its **-s** back: *what time the museum opens*. Keeping *does* is the common mistake, and *open* without -s doesn't match *the museum* (= it)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now a yes/no question. You want to know if the bank is open.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "indirect-questions",
+          "prompt": "Arrange the words to ask politely: Kamu tahu apakah banknya buka?",
+          "tokens": [
+            "the",
+            "open",
+            "know",
+            "if",
+            "Do",
+            "is",
+            "you",
+            "bank"
+          ],
+          "solution": "Do you know if the bank is open?",
+          "explanation": "*Is the bank open?* is a yes/no question, so it needs **if**. After *if* comes statement order: **the bank is** open."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Question tags",
+        "text": "Now the second tool: the little question at the end of a sentence.",
+        "body": "A **question tag** is a mini question at the end, like Indonesian **kan?** or **ya?**. But English has no one tag for everything: build it from the sentence. Take the **helper verb** (am/is/are, do/does/did, can, will; no helper → do/does/did), **flip** it (positive → negative, negative → positive) and add a **pronoun**: *Rina is a nurse, isn't she?* So *You're from Jakarta, isn't it?* is wrong: it's *aren't you?* Exception to remember: **I am → aren't I?**",
+        "pairs": [
+          {
+            "en": "isn't it?",
+            "id": "kan? (kalimat dengan it is)"
+          },
+          {
+            "en": "aren't you?",
+            "id": "kan? (kalimat dengan you are)"
+          },
+          {
+            "en": "don't you?",
+            "id": "kan? (you + kata kerja biasa)"
+          },
+          {
+            "en": "doesn't he?",
+            "id": "kan? (he + kata kerja biasa)"
+          },
+          {
+            "en": "didn't you?",
+            "id": "kan? (masa lampau)"
+          },
+          {
+            "en": "can't she?",
+            "id": "kan? (kalimat dengan can)"
+          },
+          {
+            "en": "won't it?",
+            "id": "kan? (won't = will not)"
+          },
+          {
+            "en": "aren't I?",
+            "id": "kan? (I am, pengecualian)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tags in real chats",
+        "text": "Here are tags with different helper verbs. Notice how each tag matches its sentence.",
+        "body": "A **negative** sentence gets a **positive** tag: *She doesn't…, does she?* With no helper (*went*), use **did**.",
+        "examples": [
+          {
+            "en": "You're from Jakarta, aren't you?",
+            "id": "Kamu dari Jakarta, kan?"
+          },
+          {
+            "en": "She doesn't eat meat, does she?",
+            "id": "Dia nggak makan daging, ya? (negatif → tag positif)"
+          },
+          {
+            "en": "You went to Bali last month, didn't you?",
+            "id": "Kamu ke Bali bulan lalu, kan? (went → did → didn't)"
+          },
+          {
+            "en": "Your brother can drive, can't he?",
+            "id": "Kakak/adikmu bisa nyetir, kan?"
+          },
+          {
+            "en": "It will rain later, won't it?",
+            "id": "Nanti bakal hujan, ya? (won't = will not)"
+          },
+          {
+            "en": "I'm late again, aren't I?",
+            "id": "Aku telat lagi, ya? (I am → aren't I)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're chatting with a colleague about your friend Sari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-tags",
+          "prompt": "Sari works at the bank, ___",
+          "options": [
+            "isn't it?",
+            "doesn't she?",
+            "don't she?"
+          ],
+          "answer": 1,
+          "explanation": "*works* has no helper, so use **does** (Sari = she). The sentence is positive, so the tag is negative: **doesn't she?** *isn't it?* is the 'kan?' trap, and *don't* doesn't go with *she*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Flip it",
+        "text": "This sentence is negative. Watch the tag.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-tags",
+          "prompt": "You didn't call Pak Hasan yesterday, ___",
+          "options": [
+            "didn't you?",
+            "do you?",
+            "did you?"
+          ],
+          "answer": 2,
+          "explanation": "The sentence is **negative** (*didn't*), so the tag is **positive**: **did you?** *didn't you?* isn't flipped, and *do* is present, but the sentence is about yesterday."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Polite and friendly",
+        "text": "When do you use each tool?",
+        "body": "**Indirect questions** are for strangers and formal moments: a hotel, an airport, a bank, a client. **Tags** are for checking what you think is true (*The meeting is at ten, isn't it?*) and for friendly small talk (*It's hot today, isn't it?*). Voice **down** on the tag = you're sure; voice **up** = you're really asking. Answer a tag with the facts: *You don't smoke, do you? — No, I don't.* (Not *Yes* like Indonesian 'iya'.)",
+        "pairs": [
+          {
+            "en": "small talk",
+            "id": "basa-basi, obrolan ringan"
+          },
+          {
+            "en": "Excuse me, do you know…?",
+            "id": "Permisi, Anda tahu…? (kepada orang asing)"
+          },
+          {
+            "en": "No, I don't.",
+            "id": "Iya, nggak. (menjawab 'You don't…, do you?')"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "At the airport",
+        "text": "You're at Soekarno-Hatta airport and you can't find your gate. You ask a staff member.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "polite-use",
+          "prompt": "Which is the best thing to say?",
+          "options": [
+            "Excuse me, could you tell me where gate 5 is?",
+            "Tell me where gate 5 is.",
+            "Excuse me, could you tell me where is gate 5?"
+          ],
+          "answer": 0,
+          "explanation": "With a stranger, use a polite opening and **statement order**: *where gate 5 is*. *Tell me…* sounds like an order, and *where is gate 5* after *could you tell me* is the classic word order mistake."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · indirect questions & question tags",
+          "intro": "Polite questions use statement order; question tags copy and flip the helper verb.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Remember"
+          ],
+          "rows": [
+            [
+              "Could you tell me + where + statement?",
+              "Could you tell me where the station is?",
+              "not: where is the station"
+            ],
+            [
+              "Do you know + what time + statement?",
+              "Do you know what time it starts?",
+              "does disappears → starts"
+            ],
+            [
+              "Do you know + where + past statement?",
+              "Do you know where she went?",
+              "did disappears → went"
+            ],
+            [
+              "Do you know if / whether + statement?",
+              "Do you know if the shop is open?",
+              "yes/no question → if"
+            ],
+            [
+              "I'd like to know + question word + statement.",
+              "I'd like to know when the office opens.",
+              "ends with a full stop"
+            ],
+            [
+              "positive sentence, negative tag",
+              "You're from Jakarta, aren't you?",
+              "are → aren't + you"
+            ],
+            [
+              "negative sentence, positive tag",
+              "She doesn't eat meat, does she?",
+              "doesn't → does + she"
+            ],
+            [
+              "no helper → do / does / did",
+              "You went to Bali, didn't you?",
+              "went → did → didn't"
+            ],
+            [
+              "can / will",
+              "He can drive, can't he? · It'll rain, won't it?",
+              "won't = will not"
+            ],
+            [
+              "I am → aren't I?",
+              "I'm late, aren't I?",
+              "exception: no 'amn't I'"
+            ]
+          ],
+          "tips": [
+            "After **Could you tell me / Do you know**, use statement order: **where the station is**, not *where is the station*.",
+            "**isn't it?** only fits sentences with *it is*. Indonesian *kan?* fits everything, English tags don't.",
+            "Answer a tag with the facts: *You don't eat meat, do you?* — **No, I don't.**"
+          ],
+          "examples": [
+            {
+              "en": "Excuse me, could you tell me where the lift is?",
+              "id": "Permisi, bisa tolong beri tahu saya liftnya di mana? (lift = Amerika: elevator)"
+            },
+            {
+              "en": "Do you know how much this jacket costs?",
+              "id": "Kamu tahu harga jaket ini berapa?"
+            },
+            {
+              "en": "It's really hot today, isn't it?",
+              "id": "Hari ini panas banget, ya?"
+            },
+            {
+              "en": "You don't eat meat, do you? — No, I don't.",
+              "id": "Kamu nggak makan daging, kan? — Iya, nggak."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This video and page explain indirect questions and question tags in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar bertanya dengan sopan, seperti seorang profesional, dan memastikan informasi dengan ramah memakai tag kecil seperti isn't it? dan don't you?. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Pertanyaan yang sopan",
+        "text": "Kita mulai dari cara bertanya yang sopan kepada orang asing, resepsionis, atau atasanmu.",
+        "body": "Untuk bertanya dengan sopan, mulai dengan **Could you tell me…?**, **Do you know…?** atau **I'd like to know…**. Lalu bagian pertanyaannya menjadi **kalimat biasa**: **subjek** (siapa atau apa yang ditanyakan) datang **sebelum** kata kerja. *Where is the station?* → *Could you tell me where **the station is**?* Kenapa? Pembukanya sudah berupa pertanyaan, jadi sisanya kembali ke urutan kalimat biasa. *Could you tell me where is the station?* adalah kesalahan yang sangat umum.",
+        "pairs": [
+          {
+            "en": "Could you tell me…?",
+            "id": "Bisa tolong beri tahu saya…?"
+          },
+          {
+            "en": "Do you know…?",
+            "id": "Anda / kamu tahu…?"
+          },
+          {
+            "en": "I'd like to know…",
+            "id": "Saya ingin tahu…"
+          },
+          {
+            "en": "if / whether",
+            "id": "apakah (untuk pertanyaan ya/tidak)"
+          },
+          {
+            "en": "Excuse me",
+            "id": "Permisi"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dari langsung ke sopan",
+        "text": "Baca pertanyaan sopan ini dengan suara keras. Perhatikan bagian keduanya.",
+        "body": "Di bagian kedua, **do/does/did hilang** dan kata kerjanya kembali ke bentuk biasa (*starts, went*). **Do** di *Do you know* tetap ada: itu pertanyaan yang sebenarnya. **Pertanyaan ya/tidak** (dijawab yes atau no) memakai **if** atau **whether** (= apakah).",
+        "examples": [
+          {
+            "en": "Could you tell me where the station is?",
+            "id": "Bisa tolong beri tahu saya stasiunnya di mana? (Where is the station?)"
+          },
+          {
+            "en": "Do you know what time the film starts?",
+            "id": "Kamu tahu filmnya mulai jam berapa? (does hilang → starts)"
+          },
+          {
+            "en": "Do you know where Pak Hasan went?",
+            "id": "Kamu tahu Pak Hasan pergi ke mana? (did hilang → went)"
+          },
+          {
+            "en": "Could you tell me where I can buy a ticket?",
+            "id": "Bisa tolong beri tahu saya di mana saya bisa beli tiket? (can setelah I)"
+          },
+          {
+            "en": "Do you know if this bus stops at Sudirman?",
+            "id": "Kamu tahu apakah bus ini berhenti di Sudirman? (ya/tidak → if)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu turis di Jakarta. Bertanyalah dengan sopan kepada orang yang tidak kamu kenal.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "indirect-questions",
+          "prompt": "Lengkapi: Excuse me, do you know ___?",
+          "options": [
+            "what time does the museum open",
+            "what time the museum open",
+            "what time the museum opens"
+          ],
+          "answer": 2,
+          "explanation": "Setelah Do you know, bagian kedua adalah kalimat biasa: **does** hilang dan kata kerjanya mendapat **-s** lagi: *what time the museum opens*. Tetap memakai *does* adalah kesalahan yang umum, dan *open* tanpa -s tidak cocok dengan *the museum* (= it)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang pertanyaan ya/tidak. Kamu ingin tahu apakah banknya buka.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "indirect-questions",
+          "prompt": "Susun kata-katanya untuk bertanya dengan sopan: Kamu tahu apakah banknya buka?",
+          "tokens": [
+            "the",
+            "open",
+            "know",
+            "if",
+            "Do",
+            "is",
+            "you",
+            "bank"
+          ],
+          "solution": "Do you know if the bank is open?",
+          "explanation": "*Is the bank open?* adalah pertanyaan ya/tidak, jadi butuh **if**. Setelah *if*, pakai urutan kalimat biasa: **the bank is** open."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Question tag",
+        "text": "Sekarang alat kedua: pertanyaan kecil di akhir kalimat.",
+        "body": "**Question tag** adalah pertanyaan mini di akhir kalimat, seperti **kan?** atau **ya?**. Tapi bahasa Inggris tidak punya satu tag untuk semua: tag dibentuk dari kalimatnya. Ambil **kata kerja bantunya** (am/is/are, do/does/did, can, will; tidak ada → do/does/did), **balik** (positif → negatif, negatif → positif) dan tambahkan **kata ganti**: *Rina is a nurse, isn't she?* Jadi *You're from Jakarta, isn't it?* salah: yang benar *aren't you?* Pengecualian: **I am → aren't I?**",
+        "pairs": [
+          {
+            "en": "isn't it?",
+            "id": "kan? (kalimat dengan it is)"
+          },
+          {
+            "en": "aren't you?",
+            "id": "kan? (kalimat dengan you are)"
+          },
+          {
+            "en": "don't you?",
+            "id": "kan? (you + kata kerja biasa)"
+          },
+          {
+            "en": "doesn't he?",
+            "id": "kan? (he + kata kerja biasa)"
+          },
+          {
+            "en": "didn't you?",
+            "id": "kan? (masa lampau)"
+          },
+          {
+            "en": "can't she?",
+            "id": "kan? (kalimat dengan can)"
+          },
+          {
+            "en": "won't it?",
+            "id": "kan? (won't = will not)"
+          },
+          {
+            "en": "aren't I?",
+            "id": "kan? (I am, pengecualian)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tag dalam obrolan nyata",
+        "text": "Ini tag dengan kata kerja bantu yang berbeda-beda. Perhatikan bagaimana setiap tag cocok dengan kalimatnya.",
+        "body": "Kalimat **negatif** mendapat tag **positif**: *She doesn't…, does she?* Kalau tidak ada kata bantu (*went*), pakai **did**.",
+        "examples": [
+          {
+            "en": "You're from Jakarta, aren't you?",
+            "id": "Kamu dari Jakarta, kan?"
+          },
+          {
+            "en": "She doesn't eat meat, does she?",
+            "id": "Dia nggak makan daging, ya? (negatif → tag positif)"
+          },
+          {
+            "en": "You went to Bali last month, didn't you?",
+            "id": "Kamu ke Bali bulan lalu, kan? (went → did → didn't)"
+          },
+          {
+            "en": "Your brother can drive, can't he?",
+            "id": "Kakak/adikmu bisa nyetir, kan?"
+          },
+          {
+            "en": "It will rain later, won't it?",
+            "id": "Nanti bakal hujan, ya? (won't = will not)"
+          },
+          {
+            "en": "I'm late again, aren't I?",
+            "id": "Aku telat lagi, ya? (I am → aren't I)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu mengobrol dengan rekan kerja tentang temanmu, Sari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-tags",
+          "prompt": "Pilih tag yang tepat: Sari works at the bank, ___",
+          "options": [
+            "isn't it?",
+            "doesn't she?",
+            "don't she?"
+          ],
+          "answer": 1,
+          "explanation": "*works* tidak punya kata bantu, jadi pakai **does** (Sari = she). Kalimatnya positif, jadi tagnya negatif: **doesn't she?** *isn't it?* adalah jebakan 'kan?', dan *don't* tidak dipakai dengan *she*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Balik tagnya",
+        "text": "Kalimat ini negatif. Perhatikan tagnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-tags",
+          "prompt": "Pilih tag yang tepat: You didn't call Pak Hasan yesterday, ___",
+          "options": [
+            "didn't you?",
+            "do you?",
+            "did you?"
+          ],
+          "answer": 2,
+          "explanation": "Kalimatnya **negatif** (*didn't*), jadi tagnya **positif**: **did you?** *didn't you?* tidak dibalik, dan *do* untuk masa sekarang, padahal kalimatnya tentang kemarin."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sopan dan ramah",
+        "text": "Kapan memakai masing-masing alat?",
+        "body": "**Indirect question** untuk orang asing dan situasi formal: hotel, bandara, bank, klien. **Tag** untuk memastikan sesuatu yang kamu kira benar (*The meeting is at ten, isn't it?*) dan untuk basa-basi yang ramah (*It's hot today, isn't it?*). Nada **turun** di tag = kamu yakin; nada **naik** = kamu benar-benar bertanya. Jawab tag sesuai fakta: *You don't smoke, do you? — No, I don't.* (Bukan *Yes* seperti 'iya' dalam bahasa Indonesia.)",
+        "pairs": [
+          {
+            "en": "small talk",
+            "id": "basa-basi, obrolan ringan"
+          },
+          {
+            "en": "Excuse me, do you know…?",
+            "id": "Permisi, Anda tahu…? (kepada orang asing)"
+          },
+          {
+            "en": "No, I don't.",
+            "id": "Iya, nggak. (menjawab 'You don't…, do you?')"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Di bandara",
+        "text": "Kamu di Bandara Soekarno-Hatta dan tidak menemukan gate-mu. Kamu bertanya kepada petugas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "polite-use",
+          "prompt": "Kalimat mana yang paling tepat?",
+          "options": [
+            "Excuse me, could you tell me where gate 5 is?",
+            "Tell me where gate 5 is.",
+            "Excuse me, could you tell me where is gate 5?"
+          ],
+          "answer": 0,
+          "explanation": "Kepada orang yang tidak dikenal, pakai pembuka sopan dan **urutan kalimat biasa**: *where gate 5 is*. *Tell me…* terdengar seperti perintah, dan *where is gate 5* setelah *could you tell me* adalah kesalahan urutan kata yang klasik."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · indirect question & question tag",
+          "intro": "Pertanyaan sopan memakai urutan kalimat biasa; question tag menyalin lalu membalik kata kerja bantunya.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Ingat"
+          ],
+          "rows": [
+            [
+              "Could you tell me + where + statement?",
+              "Could you tell me where the station is?",
+              "bukan: where is the station"
+            ],
+            [
+              "Do you know + what time + statement?",
+              "Do you know what time it starts?",
+              "does hilang → starts"
+            ],
+            [
+              "Do you know + where + past statement?",
+              "Do you know where she went?",
+              "did hilang → went"
+            ],
+            [
+              "Do you know if / whether + statement?",
+              "Do you know if the shop is open?",
+              "pertanyaan ya/tidak → if"
+            ],
+            [
+              "I'd like to know + question word + statement.",
+              "I'd like to know when the office opens.",
+              "diakhiri titik"
+            ],
+            [
+              "positive sentence, negative tag",
+              "You're from Jakarta, aren't you?",
+              "are → aren't + you"
+            ],
+            [
+              "negative sentence, positive tag",
+              "She doesn't eat meat, does she?",
+              "doesn't → does + she"
+            ],
+            [
+              "no helper → do / does / did",
+              "You went to Bali, didn't you?",
+              "went → did → didn't"
+            ],
+            [
+              "can / will",
+              "He can drive, can't he? · It'll rain, won't it?",
+              "won't = will not"
+            ],
+            [
+              "I am → aren't I?",
+              "I'm late, aren't I?",
+              "pengecualian: tidak ada 'amn't I'"
+            ]
+          ],
+          "tips": [
+            "Setelah **Could you tell me / Do you know**, pakai urutan kalimat biasa: **where the station is**, bukan *where is the station*.",
+            "**isn't it?** hanya cocok untuk kalimat dengan *it is*. *kan?* cocok untuk semua kalimat, tag bahasa Inggris tidak.",
+            "Jawab tag sesuai fakta: *You don't eat meat, do you?* — **No, I don't.**"
+          ],
+          "examples": [
+            {
+              "en": "Excuse me, could you tell me where the lift is?",
+              "id": "Permisi, bisa tolong beri tahu saya liftnya di mana? (lift = Amerika: elevator)"
+            },
+            {
+              "en": "Do you know how much this jacket costs?",
+              "id": "Kamu tahu harga jaket ini berapa?"
+            },
+            {
+              "en": "It's really hot today, isn't it?",
+              "id": "Hari ini panas banget, ya?"
+            },
+            {
+              "en": "You don't eat meat, do you? — No, I don't.",
+              "id": "Kamu nggak makan daging, kan? — Iya, nggak."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video dan halaman ini menjelaskan indirect question dan question tag dengan cara lain."
+      }
+    ]
+  }
+}

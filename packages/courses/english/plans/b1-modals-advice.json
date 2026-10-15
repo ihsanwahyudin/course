@@ -1,0 +1,750 @@
+{
+  "en": {
+    "greeting": "Hi! Today we go further with rules: must or have to, rules in the past and future, what you're allowed to do, and what might happen. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "must or have to?",
+        "text": "Quick recap: **have to / must** = harus, **mustn't** = dilarang, **don't have to** = tidak perlu. Now: which *harus* do you choose?",
+        "body": "Indonesian has one word, *harus*. English has a simple guide:\n**must** = you feel it's important yourself, or it's a **written rule** (signs, notices, laws): *I must call my grandmother. Visitors must sign in.*\n**have to** = the rule comes **from outside**: your boss, your company, a timetable, the situation: *I have to use the VPN at home.*\nOften both are fine, and **have to** is the safe choice when you speak.",
+        "pairs": [
+          {
+            "en": "must",
+            "id": "harus (perasaan sendiri, aturan tertulis)"
+          },
+          {
+            "en": "have to / has to",
+            "id": "harus (aturan dari luar)"
+          },
+          {
+            "en": "mustn't",
+            "id": "dilarang"
+          },
+          {
+            "en": "don't have to",
+            "id": "tidak perlu / tidak harus"
+          },
+          {
+            "en": "a notice",
+            "id": "pengumuman"
+          },
+          {
+            "en": "a law",
+            "id": "undang-undang / hukum"
+          },
+          {
+            "en": "a company rule",
+            "id": "aturan kantor"
+          },
+          {
+            "en": "my boss says",
+            "id": "kata bos saya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Who made the rule?",
+        "text": "Dimas works at a bank in Surabaya. He says: 'I have to wear a batik shirt every Friday.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "must-vs-have-to",
+          "prompt": "Who made this rule?",
+          "options": [
+            "Dimas himself: he loves batik.",
+            "His office: it's a company rule.",
+            "Nobody: it isn't necessary."
+          ],
+          "answer": 1,
+          "explanation": "**have to** = the obligation comes from outside: here his office. *I must* is more typical for his own feeling. 'It isn't necessary' would be **don't have to**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Past and future: had to, will have to",
+        "text": "*Kemarin saya harus lembur.* How do you say that? Careful: **must** has no past and no future form!",
+        "body": "Past: **had to** + base verb, the same for every subject. *Yesterday I must work late* is wrong → **Yesterday I had to work late.**\nFuture: **will have to** ('ll have to) + base verb. Never 'will must'.\nNot necessary: **didn't have to** (past), **won't have to** (future).\nThe verb after had to stays in the base form: *she had to go*, not 'had to went'. Indonesian doesn't change the verb, so look at the time words: *yesterday, last week, tomorrow, next month*.",
+        "pairs": [
+          {
+            "en": "had to",
+            "id": "harus (lampau)"
+          },
+          {
+            "en": "didn't have to",
+            "id": "tidak perlu (lampau)"
+          },
+          {
+            "en": "will have to",
+            "id": "harus (nanti)"
+          },
+          {
+            "en": "won't have to",
+            "id": "tidak perlu (nanti)"
+          },
+          {
+            "en": "work late",
+            "id": "lembur"
+          },
+          {
+            "en": "break down",
+            "id": "mogok / rusak"
+          },
+          {
+            "en": "last week",
+            "id": "minggu lalu"
+          },
+          {
+            "en": "next month",
+            "id": "bulan depan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Stuck on the KRL",
+        "text": "Yesterday the KRL broke down between two stations. Rina tells her boss what happened.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "had-to-will-have-to",
+          "prompt": "Arrange the words: Kami harus menunggu satu jam.",
+          "tokens": [
+            "an",
+            "wait",
+            "We",
+            "for",
+            "had",
+            "hour",
+            "to"
+          ],
+          "solution": "We had to wait for an hour.",
+          "explanation": "Past obligation = **had to** + base verb: **We had to wait** … must has no past form, and *wait* stays in the base form after had to."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "be allowed to: boleh and tidak boleh",
+        "text": "To talk about permission (*izin*), use **be allowed to**.",
+        "body": "**am / is / are allowed to** + base verb = *boleh, diizinkan*: *We're allowed to work from home on Fridays.*\n**am / is / are not allowed to** = *tidak boleh, dilarang*. Past: **was / were (not) allowed to**. Question: **Are we allowed to …?**\nThe trap: *Kami tidak diizinkan* has no to be, so learners say 'We not allowed' or 'We are not allow'. You need **are**, and **allowed** always ends in **-ed** (like *di-izinkan*: Indonesian adds di-, English adds -ed).",
+        "pairs": [
+          {
+            "en": "be allowed to",
+            "id": "boleh / diizinkan"
+          },
+          {
+            "en": "not allowed to",
+            "id": "tidak boleh / dilarang"
+          },
+          {
+            "en": "was / were allowed to",
+            "id": "dulu boleh"
+          },
+          {
+            "en": "Are we allowed to …?",
+            "id": "Apakah kita boleh …?"
+          },
+          {
+            "en": "smoke",
+            "id": "merokok"
+          },
+          {
+            "en": "staff",
+            "id": "karyawan / staf"
+          },
+          {
+            "en": "intern",
+            "id": "karyawan magang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Explain the sign",
+        "text": "There's a sign in your office: **NO SMOKING INSIDE THE BUILDING**. A new colleague asks you about it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-allowed-to",
+          "prompt": "Which sentence explains the rule?",
+          "options": [
+            "Staff are not allow to smoke inside.",
+            "Staff don't allowed to smoke inside.",
+            "Staff are not allowed to smoke inside."
+          ],
+          "answer": 2,
+          "explanation": "be + not + **allowed** to: **are not allowed to**. 'not allow' is missing the -ed, and 'don't allowed' uses do instead of are."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "may, might, could = mungkin",
+        "text": "When something is possible but you're not sure, English uses **may, might** or **could**.",
+        "body": "**may / might / could** + base verb = *mungkin*. **might** is the most common in speaking, **may** is a bit more formal, **could** = it's possible. Negative: **might not / may not** (*mungkin tidak*). No to, no -s.\nThe trap: *mungkin* is also **maybe**, a separate word at the start: *Maybe I'll come* or *I might come*, not 'I maybe come'.\nAnd don't drop **be**: *Servernya mungkin mati* → *The server **might be** down*.",
+        "pairs": [
+          {
+            "en": "might",
+            "id": "mungkin (paling umum)"
+          },
+          {
+            "en": "may",
+            "id": "mungkin (sedikit formal)"
+          },
+          {
+            "en": "could",
+            "id": "mungkin / bisa saja"
+          },
+          {
+            "en": "might not / may not",
+            "id": "mungkin tidak"
+          },
+          {
+            "en": "maybe",
+            "id": "mungkin (kata terpisah, di awal kalimat)"
+          },
+          {
+            "en": "be late",
+            "id": "terlambat"
+          },
+          {
+            "en": "traffic jam",
+            "id": "macet"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Not answering",
+        "text": "You call your colleague Sari three times, but she isn't answering her phone.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "may-might-could",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "She might be busy.",
+            "She maybe busy.",
+            "She might busy."
+          ],
+          "answer": 0,
+          "explanation": "**might + be + busy**: *busy* isn't a verb, so you need **be** after might. *maybe* is a separate word (Maybe she's busy), so 'She maybe busy' is wrong."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "could and may: other jobs",
+        "text": "Wait: you learnt **could** and **may** before, with a different meaning! The rule isn't broken: these words have more than one job.",
+        "body": "**could** = past ability (*dulu bisa*) or a polite request (*Could you …?*). **May I …?** = asking permission. **could / may** about now or the future when you're not sure = *mungkin*. The context tells you which job.",
+        "examples": [
+          {
+            "en": "When I was young, I could run 5 km.",
+            "id": "Waktu muda, saya bisa lari 5 km."
+          },
+          {
+            "en": "Could you send me the file, please?",
+            "id": "Bisa tolong kirim filenya ke saya?"
+          },
+          {
+            "en": "May I use your charger?",
+            "id": "Bolehkah saya pakai charger-mu?"
+          },
+          {
+            "en": "Check the address again. The map could be wrong.",
+            "id": "Cek alamatnya lagi. Petanya bisa saja salah."
+          },
+          {
+            "en": "The shop may be closed on Sunday.",
+            "id": "Tokonya mungkin tutup hari Minggu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which could is mungkin?",
+        "text": "Three sentences, three different jobs for **could**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "may-might-could",
+          "prompt": "Which sentence uses could for possibility (mungkin)?",
+          "options": [
+            "When I was a student, I could sleep for ten hours.",
+            "Could you close the door, please?",
+            "Take a jacket. It could be cold in Bandung tonight."
+          ],
+          "answer": 2,
+          "explanation": "*It could be cold tonight* = maybe it will be cold, you aren't sure: **possibility**. *When I was a student, I could …* is past ability (dulu bisa), and *Could you …?* is a polite request."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for the next time you explain a rule or make a plan!",
+        "artifact": {
+          "title": "Cheat sheet · must, have to, allowed, might",
+          "intro": "must / have to = necessary. had to = past, will have to = future. be allowed to = permission. may / might / could = possible (mungkin).",
+          "headers": [
+            "Meaning",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Harus: own feeling, written rule",
+              "must + verb",
+              "Visitors must sign in at reception."
+            ],
+            [
+              "Harus: rule from outside",
+              "have to / has to + verb",
+              "I have to use the VPN at home."
+            ],
+            [
+              "Not allowed (dilarang)",
+              "mustn't + verb",
+              "You mustn't touch the cables."
+            ],
+            [
+              "Not necessary (tidak perlu)",
+              "don't / doesn't have to + verb",
+              "You don't have to come if you're busy."
+            ],
+            [
+              "Harus, past",
+              "had to + verb",
+              "Yesterday I had to work late."
+            ],
+            [
+              "Not necessary, past",
+              "didn't have to + verb",
+              "We didn't have to go to the office."
+            ],
+            [
+              "Harus, future",
+              "will have to + verb",
+              "Next year you'll have to pay for the app."
+            ],
+            [
+              "Permission (boleh)",
+              "am / is / are allowed to + verb",
+              "We're allowed to work from home on Fridays."
+            ],
+            [
+              "Not allowed (tidak boleh)",
+              "am / is / are not allowed to + verb",
+              "Students aren't allowed to use phones in the exam."
+            ],
+            [
+              "Permission, past",
+              "was / were (not) allowed to + verb",
+              "I wasn't allowed to stay up late."
+            ],
+            [
+              "Possible (mungkin)",
+              "may / might / could + verb",
+              "It might rain later."
+            ],
+            [
+              "Possibly not (mungkin tidak)",
+              "might not / may not + verb",
+              "I might not come to the party."
+            ]
+          ],
+          "tips": [
+            "**must** = your own feeling or a written rule; **have to** = a rule from outside. Often both are fine: **have to** is safe in speaking.",
+            "**must has no past or future**: had to, will have to. Never 'Yesterday I must' or 'will must'.",
+            "**allowed** needs -ed and am / is / are. **might** goes before the verb; *maybe* is a separate word at the start."
+          ],
+          "examples": [
+            {
+              "en": "I must call my grandmother this weekend.",
+              "id": "Saya harus menelepon nenek akhir pekan ini."
+            },
+            {
+              "en": "Are we allowed to bring food into the cinema?",
+              "id": "Apakah kita boleh bawa makanan ke bioskop?"
+            },
+            {
+              "en": "The server may be down. Let me check.",
+              "id": "Servernya mungkin mati. Saya cek dulu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read",
+        "text": "Want more? Watch a short BBC video about have to and must, and read the British Council page on may and might."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar lebih jauh tentang aturan: must atau have to, aturan di masa lalu dan masa depan, apa yang boleh kamu lakukan, dan apa yang mungkin terjadi. Yuk, mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "must atau have to?",
+        "text": "Ulasan singkat: **have to / must** = harus, **mustn't** = dilarang, **don't have to** = tidak perlu. Sekarang: *harus* yang mana yang kamu pilih?",
+        "body": "Bahasa Indonesia hanya punya satu kata, *harus*. Bahasa Inggris punya panduan sederhana:\n**must** = kamu sendiri merasa itu penting, atau itu **aturan tertulis** (papan tanda, pengumuman, undang-undang): *I must call my grandmother. Visitors must sign in.*\n**have to** = aturannya datang **dari luar**: bosmu, kantormu, jadwal, keadaan: *I have to use the VPN at home.*\nSering keduanya benar, dan **have to** pilihan aman saat bicara.",
+        "pairs": [
+          {
+            "en": "must",
+            "id": "harus (perasaan sendiri, aturan tertulis)"
+          },
+          {
+            "en": "have to / has to",
+            "id": "harus (aturan dari luar)"
+          },
+          {
+            "en": "mustn't",
+            "id": "dilarang"
+          },
+          {
+            "en": "don't have to",
+            "id": "tidak perlu / tidak harus"
+          },
+          {
+            "en": "a notice",
+            "id": "pengumuman"
+          },
+          {
+            "en": "a law",
+            "id": "undang-undang / hukum"
+          },
+          {
+            "en": "a company rule",
+            "id": "aturan kantor"
+          },
+          {
+            "en": "my boss says",
+            "id": "kata bos saya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Siapa yang membuat aturannya?",
+        "text": "Dimas bekerja di sebuah bank di Surabaya. Dia berkata: 'I have to wear a batik shirt every Friday.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "must-vs-have-to",
+          "prompt": "Siapa yang membuat aturan ini?",
+          "options": [
+            "Dimas himself: he loves batik.",
+            "His office: it's a company rule.",
+            "Nobody: it isn't necessary."
+          ],
+          "answer": 1,
+          "explanation": "**have to** = kewajibannya datang dari luar: di sini dari kantornya. Kalau itu perasaannya sendiri, dia lebih mungkin bilang *I must*. 'Tidak perlu' itu **don't have to**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Lampau dan masa depan: had to, will have to",
+        "text": "*Kemarin saya harus lembur.* Apa bahasa Inggrisnya? Hati-hati: **must** tidak punya bentuk lampau dan masa depan!",
+        "body": "Lampau: **had to** + kata kerja dasar, sama untuk semua subjek. *Yesterday I must work late* itu salah → **Yesterday I had to work late.**\nMasa depan: **will have to** ('ll have to) + kata kerja dasar. Jangan 'will must'.\nTidak perlu: **didn't have to** (lampau), **won't have to** (nanti).\nKata kerja sesudah had to tetap bentuk dasar: *she had to go*, bukan 'had to went'. Bahasa Indonesia tidak mengubah kata kerja, jadi perhatikan kata waktunya: *yesterday, last week, tomorrow, next month*.",
+        "pairs": [
+          {
+            "en": "had to",
+            "id": "harus (lampau)"
+          },
+          {
+            "en": "didn't have to",
+            "id": "tidak perlu (lampau)"
+          },
+          {
+            "en": "will have to",
+            "id": "harus (nanti)"
+          },
+          {
+            "en": "won't have to",
+            "id": "tidak perlu (nanti)"
+          },
+          {
+            "en": "work late",
+            "id": "lembur"
+          },
+          {
+            "en": "break down",
+            "id": "mogok / rusak"
+          },
+          {
+            "en": "last week",
+            "id": "minggu lalu"
+          },
+          {
+            "en": "next month",
+            "id": "bulan depan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Terjebak di KRL",
+        "text": "Kemarin KRL mogok di antara dua stasiun. Rina menceritakan kejadiannya ke bosnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "had-to-will-have-to",
+          "prompt": "Susun kata-katanya: Kami harus menunggu satu jam.",
+          "tokens": [
+            "an",
+            "wait",
+            "We",
+            "for",
+            "had",
+            "hour",
+            "to"
+          ],
+          "solution": "We had to wait for an hour.",
+          "explanation": "Kewajiban di masa lalu = **had to** + kata kerja dasar: **We had to wait** … must tidak punya bentuk lampau, dan *wait* tetap bentuk dasar sesudah had to."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "be allowed to: boleh dan tidak boleh",
+        "text": "Untuk membicarakan *izin*, pakai **be allowed to**.",
+        "body": "**am / is / are allowed to** + kata kerja dasar = *boleh, diizinkan*: *We're allowed to work from home on Fridays.*\n**am / is / are not allowed to** = *tidak boleh, dilarang*. Lampau: **was / were (not) allowed to**. Pertanyaan: **Are we allowed to …?**\nJebakannya: *Kami tidak diizinkan* tidak punya to be, jadi orang sering bilang 'We not allowed' atau 'We are not allow'. Kamu perlu **are**, dan **allowed** selalu berakhiran **-ed** (mirip *di-izinkan*: bahasa Indonesia menambah di-, bahasa Inggris menambah -ed).",
+        "pairs": [
+          {
+            "en": "be allowed to",
+            "id": "boleh / diizinkan"
+          },
+          {
+            "en": "not allowed to",
+            "id": "tidak boleh / dilarang"
+          },
+          {
+            "en": "was / were allowed to",
+            "id": "dulu boleh"
+          },
+          {
+            "en": "Are we allowed to …?",
+            "id": "Apakah kita boleh …?"
+          },
+          {
+            "en": "smoke",
+            "id": "merokok"
+          },
+          {
+            "en": "staff",
+            "id": "karyawan / staf"
+          },
+          {
+            "en": "intern",
+            "id": "karyawan magang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Jelaskan papannya",
+        "text": "Ada papan di kantormu: **NO SMOKING INSIDE THE BUILDING**. Rekan kerja baru bertanya tentang papan itu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-allowed-to",
+          "prompt": "Kalimat mana yang menjelaskan aturannya?",
+          "options": [
+            "Staff are not allow to smoke inside.",
+            "Staff don't allowed to smoke inside.",
+            "Staff are not allowed to smoke inside."
+          ],
+          "answer": 2,
+          "explanation": "be + not + **allowed** to: **are not allowed to**. 'not allow' kehilangan -ed, dan 'don't allowed' memakai do, padahal seharusnya are."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "may, might, could = mungkin",
+        "text": "Kalau sesuatu bisa terjadi tapi kamu tidak yakin, bahasa Inggris memakai **may, might** atau **could**.",
+        "body": "**may / might / could** + kata kerja dasar = *mungkin*. **might** paling sering dipakai saat bicara, **may** sedikit lebih formal, **could** = bisa saja terjadi. Negatif: **might not / may not** (*mungkin tidak*). Tanpa to, tanpa -s.\nJebakannya: *mungkin* juga bisa **maybe**, kata terpisah di awal kalimat: *Maybe I'll come* atau *I might come*, bukan 'I maybe come'.\nDan jangan lupa **be**: *Servernya mungkin mati* → *The server **might be** down*.",
+        "pairs": [
+          {
+            "en": "might",
+            "id": "mungkin (paling umum)"
+          },
+          {
+            "en": "may",
+            "id": "mungkin (sedikit formal)"
+          },
+          {
+            "en": "could",
+            "id": "mungkin / bisa saja"
+          },
+          {
+            "en": "might not / may not",
+            "id": "mungkin tidak"
+          },
+          {
+            "en": "maybe",
+            "id": "mungkin (kata terpisah, di awal kalimat)"
+          },
+          {
+            "en": "be late",
+            "id": "terlambat"
+          },
+          {
+            "en": "traffic jam",
+            "id": "macet"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tidak diangkat",
+        "text": "Kamu menelepon rekan kerjamu Sari tiga kali, tapi dia tidak mengangkat teleponnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "may-might-could",
+          "prompt": "Pilih kalimat yang benar.",
+          "options": [
+            "She might be busy.",
+            "She maybe busy.",
+            "She might busy."
+          ],
+          "answer": 0,
+          "explanation": "**might + be + busy**: *busy* bukan kata kerja, jadi perlu **be** sesudah might. *maybe* adalah kata terpisah (Maybe she's busy), jadi 'She maybe busy' salah."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "could dan may: tugas lain",
+        "text": "Tunggu: kamu sudah belajar **could** dan **may** sebelumnya, dengan arti lain! Aturannya tidak rusak: kata-kata ini punya lebih dari satu tugas.",
+        "body": "**could** = kemampuan di masa lalu (*dulu bisa*) atau permintaan sopan (*Could you …?*). **May I …?** = minta izin. **could / may** tentang sekarang atau nanti saat kamu tidak yakin = *mungkin*. Konteksnya yang menunjukkan tugas mana.",
+        "examples": [
+          {
+            "en": "When I was young, I could run 5 km.",
+            "id": "Waktu muda, saya bisa lari 5 km."
+          },
+          {
+            "en": "Could you send me the file, please?",
+            "id": "Bisa tolong kirim filenya ke saya?"
+          },
+          {
+            "en": "May I use your charger?",
+            "id": "Bolehkah saya pakai charger-mu?"
+          },
+          {
+            "en": "Check the address again. The map could be wrong.",
+            "id": "Cek alamatnya lagi. Petanya bisa saja salah."
+          },
+          {
+            "en": "The shop may be closed on Sunday.",
+            "id": "Tokonya mungkin tutup hari Minggu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "could yang mana artinya mungkin?",
+        "text": "Tiga kalimat, tiga tugas berbeda untuk **could**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "may-might-could",
+          "prompt": "Kalimat mana yang memakai could untuk kemungkinan (mungkin)?",
+          "options": [
+            "When I was a student, I could sleep for ten hours.",
+            "Could you close the door, please?",
+            "Take a jacket. It could be cold in Bandung tonight."
+          ],
+          "answer": 2,
+          "explanation": "*It could be cold tonight* = mungkin nanti malam dingin, kamu tidak yakin: **kemungkinan**. *When I was a student, I could …* adalah kemampuan di masa lalu (dulu bisa), dan *Could you …?* adalah permintaan sopan."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti saat kamu menjelaskan aturan atau membuat rencana!",
+        "artifact": {
+          "title": "Ringkasan · must, have to, allowed, might",
+          "intro": "must / have to = harus. had to = lampau, will have to = masa depan. be allowed to = izin (boleh). may / might / could = mungkin.",
+          "headers": [
+            "Arti",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Harus: perasaan sendiri, aturan tertulis",
+              "must + verb",
+              "Visitors must sign in at reception."
+            ],
+            [
+              "Harus: aturan dari luar",
+              "have to / has to + verb",
+              "I have to use the VPN at home."
+            ],
+            [
+              "Dilarang",
+              "mustn't + verb",
+              "You mustn't touch the cables."
+            ],
+            [
+              "Tidak perlu",
+              "don't / doesn't have to + verb",
+              "You don't have to come if you're busy."
+            ],
+            [
+              "Harus, lampau",
+              "had to + verb",
+              "Yesterday I had to work late."
+            ],
+            [
+              "Tidak perlu, lampau",
+              "didn't have to + verb",
+              "We didn't have to go to the office."
+            ],
+            [
+              "Harus, masa depan",
+              "will have to + verb",
+              "Next year you'll have to pay for the app."
+            ],
+            [
+              "Izin (boleh)",
+              "am / is / are allowed to + verb",
+              "We're allowed to work from home on Fridays."
+            ],
+            [
+              "Tidak boleh",
+              "am / is / are not allowed to + verb",
+              "Students aren't allowed to use phones in the exam."
+            ],
+            [
+              "Izin, lampau",
+              "was / were (not) allowed to + verb",
+              "I wasn't allowed to stay up late."
+            ],
+            [
+              "Mungkin",
+              "may / might / could + verb",
+              "It might rain later."
+            ],
+            [
+              "Mungkin tidak",
+              "might not / may not + verb",
+              "I might not come to the party."
+            ]
+          ],
+          "tips": [
+            "**must** = perasaanmu sendiri atau aturan tertulis; **have to** = aturan dari luar. Sering keduanya benar: **have to** aman saat bicara.",
+            "**must tidak punya bentuk lampau atau masa depan**: had to, will have to. Jangan 'Yesterday I must' atau 'will must'.",
+            "**allowed** perlu -ed dan am / is / are. **might** diletakkan sebelum kata kerja; *maybe* kata terpisah di awal kalimat."
+          ],
+          "examples": [
+            {
+              "en": "I must call my grandmother this weekend.",
+              "id": "Saya harus menelepon nenek akhir pekan ini."
+            },
+            {
+              "en": "Are we allowed to bring food into the cinema?",
+              "id": "Apakah kita boleh bawa makanan ke bioskop?"
+            },
+            {
+              "en": "The server may be down. Let me check.",
+              "id": "Servernya mungkin mati. Saya cek dulu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca",
+        "text": "Mau belajar lebih? Tonton video singkat BBC tentang have to dan must, dan baca halaman British Council tentang may dan might."
+      }
+    ]
+  }
+}

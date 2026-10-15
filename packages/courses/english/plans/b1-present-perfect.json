@@ -1,0 +1,692 @@
+{
+  "en": {
+    "greeting": "Hi! You already know the present perfect for experiences and fresh news. Today you'll say how long something has been true, learn when to choose the past simple instead, and share news the English way. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "for and since",
+        "text": "Quick recap: the present perfect is have/has + the third form (I've seen, she has finished). Now let's use it to say how long.",
+        "body": "**The trap:** *Saya tinggal di sini sejak 2020* is not 'I live here since 2020' but **I've lived here since 2020**. Why? It **started in the past** and is **still true now**, and **have/has + third form** joins the past and now. **for** + a **length of time** (berapa lama?): *for three years*. **since** + a **starting point** (sejak kapan?): *since 2020, since Monday*. Not 'since three years': three years is a length → **for**. **been** is the third form of *be*: *She's been a nurse for ten years* (she's = she has) = sudah sepuluh tahun jadi perawat.",
+        "pairs": [
+          {
+            "en": "for three years",
+            "id": "selama tiga tahun"
+          },
+          {
+            "en": "for a long time",
+            "id": "sudah lama"
+          },
+          {
+            "en": "since 2020",
+            "id": "sejak 2020"
+          },
+          {
+            "en": "since Monday",
+            "id": "sejak hari Senin"
+          },
+          {
+            "en": "since 8 o'clock",
+            "id": "sejak jam 8"
+          },
+          {
+            "en": "I've lived here since 2020.",
+            "id": "Saya tinggal di sini sejak 2020."
+          },
+          {
+            "en": "She's been a nurse for ten years.",
+            "id": "Dia sudah sepuluh tahun jadi perawat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas moved into his kos in February. Now it's October.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "for-since",
+          "prompt": "Complete: Dimas has lived in his kos ___ eight months.",
+          "options": [
+            "since",
+            "for",
+            "ago"
+          ],
+          "answer": 1,
+          "explanation": "eight months is a **length of time** (berapa lama?), so **for**. **since** needs a starting point: *since February*. **ago** says when something happened and goes with the past simple: *He moved in eight months ago.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How long have you…?",
+        "text": "Now let's ask about it: Sudah berapa lama…?",
+        "body": "Ask: **How long + have/has + subject + third form?** (subject = who does it: you, she, Pak Hasan). Short answers: **For two years.** / **Since 2024.** **Trap:** *Sudah berapa lama kamu kerja di sini?* is not 'How long do you work here?' but **How long have you worked here?** It works with **know** (kenal: know → knew → **known**) and **have** (punya: *have had* looks odd, but the first have is the helper). **since** can take a past simple sentence: *since we were at university*. And *last year* alone → past simple, but **since last year** = from last year up to now → present perfect.",
+        "pairs": [
+          {
+            "en": "How long have you worked here?",
+            "id": "Sudah berapa lama kamu kerja di sini?"
+          },
+          {
+            "en": "For two years.",
+            "id": "Sudah dua tahun."
+          },
+          {
+            "en": "Since 2024.",
+            "id": "Sejak 2024."
+          },
+          {
+            "en": "How long have you known Rina?",
+            "id": "Sudah berapa lama kamu kenal Rina?"
+          },
+          {
+            "en": "Since we were at university.",
+            "id": "Sejak kita kuliah."
+          },
+          {
+            "en": "know → knew → known",
+            "id": "tahu, kenal"
+          },
+          {
+            "en": "I've worked here since last year.",
+            "id": "Saya kerja di sini sejak tahun lalu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Your friend's car looks very clean and new. You ask her about it.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "for-since",
+          "prompt": "Arrange the words: Sudah berapa lama kamu punya mobil ini?",
+          "tokens": [
+            "had",
+            "car",
+            "How",
+            "this",
+            "have",
+            "you",
+            "long"
+          ],
+          "solution": "How long have you had this car?",
+          "explanation": "Question order: **How long + have + you + third form**. punya = have, and its third form is **had** (have → had → had). *have had* looks strange, but the first have is the helper and had is the third form."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Finished time or up to now?",
+        "text": "Now the big question: present perfect or past simple?",
+        "body": "**Finished time** → **past simple**: *yesterday, last week, in 2019, … ago, when I was a child*, **When…?** **Up to now** (still true: for, since, How long) or **no time said** (experience, news) → **present perfect**. **Careful: for goes with both.** *I've lived in Bandung for five years* = I still live there. *I lived in Bandung for five years* = finished, I don't live there now. Indonesian *Saya tinggal di Bandung lima tahun* can mean both; English must choose: is it still true? Same fact, two ways: *I moved here three years ago* = *I've lived here for three years*.",
+        "pairs": [
+          {
+            "en": "I moved here three years ago.",
+            "id": "Saya pindah ke sini tiga tahun lalu."
+          },
+          {
+            "en": "I've lived here for three years.",
+            "id": "Saya sudah tiga tahun tinggal di sini."
+          },
+          {
+            "en": "I lived in Bandung for five years.",
+            "id": "Dulu saya tinggal di Bandung selama lima tahun."
+          },
+          {
+            "en": "When did you start this job?",
+            "id": "Kapan kamu mulai kerja di sini?"
+          },
+          {
+            "en": "I saw that film yesterday.",
+            "id": "Saya nonton film itu kemarin."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Budi's work story",
+        "text": "Look at Budi's jobs. Which parts are finished, and which part is still true now?",
+        "timeline": {
+          "title": "Past simple or present perfect?",
+          "caption": "2015–2019 is finished: Budi worked at a bank (past simple). In 2020 he started at a startup (past simple). He is still there now, so: he has worked at the startup since 2020 (present perfect).",
+          "marks": [
+            {
+              "label": "2015–2019: Budi worked at a bank",
+              "kind": "past"
+            },
+            {
+              "label": "2020: he started at a startup",
+              "kind": "past"
+            },
+            {
+              "label": "now: he has worked there since 2020",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari is telling you about her grandfather.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-present-perfect",
+          "prompt": "Complete: My grandfather ___ in Medan for ten years. Then he moved to Bandung in 1990.",
+          "options": [
+            "has lived",
+            "lived",
+            "lives"
+          ],
+          "answer": 1,
+          "explanation": "The ten years in Medan are **finished**: then he moved to Bandung. A finished period → **past simple**: **lived**, even with **for**. *has lived* would mean he still lives in Medan, and *lives* is about now."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Fresh news",
+        "text": "Indonesian says Kunci saya hilang! with no tense word. English uses the present perfect for news like this.",
+        "body": "**Fresh news** that matters **now**, with **no time word** → **have/has + third form**: *I've lost my keys!* (so I can't get in now). *The price of petrol has gone up* (it costs more now). **News first, details after:** when you add when, where or how, you talk about a finished moment, so switch to the **past simple**, even without a time word: *I've lost my keys! I think I dropped them on the KRL.* British vs American: Americans often say *I lost my keys!* and **gas** for petrol (bensin). Both are understood; this course uses the have/has form.",
+        "pairs": [
+          {
+            "en": "I've lost my keys!",
+            "id": "Kunci saya hilang!"
+          },
+          {
+            "en": "The price of petrol has gone up.",
+            "id": "Harga bensin naik."
+          },
+          {
+            "en": "We've won the futsal match!",
+            "id": "Kita menang pertandingan futsal!"
+          },
+          {
+            "en": "lose → lost → lost",
+            "id": "kehilangan"
+          },
+          {
+            "en": "find → found → found",
+            "id": "menemukan"
+          },
+          {
+            "en": "win → won → won",
+            "id": "menang"
+          },
+          {
+            "en": "go up → went up → gone up",
+            "id": "naik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Share the news",
+        "text": "Sari calls you, very happy: a new company wants her! You tell your colleagues the fresh news.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "recent-news",
+          "prompt": "Arrange the words: Sari baru saja dapat pekerjaan baru!",
+          "tokens": [
+            "found",
+            "job",
+            "Sari",
+            "new",
+            "just",
+            "a",
+            "has"
+          ],
+          "solution": "Sari has just found a new job.",
+          "explanation": "Fresh news → **has + third form** (find → found → found). Sari = she → **has**, and **just** (baru saja) goes between has and the third form."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's a dry year in a village in Central Java. A farmer talks to a reporter.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-present-perfect",
+          "prompt": "Complete: We ___ any rain since March, so the rice fields are very dry.",
+          "options": [
+            "didn't have",
+            "don't have",
+            "haven't had"
+          ],
+          "answer": 2,
+          "explanation": "**since March** = from March **up to now**, so the present perfect: **haven't had** (have → had → had). *didn't have* is for a finished time, and *don't have … since* is the Indonesian trap: with since, English needs have/has + third form."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · present perfect (B1)",
+          "intro": "have/has + third form joins the past and now. Use it for how long (for, since, How long…?) and for fresh news. A finished time → past simple.",
+          "headers": [
+            "When?",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "started in the past, still true now",
+              "present perfect",
+              "I've lived here since 2020."
+            ],
+            [
+              "a length of time (berapa lama?)",
+              "for",
+              "for three years, for a long time"
+            ],
+            [
+              "a starting point (sejak kapan?)",
+              "since",
+              "since 2020, since Monday, since I was a child"
+            ],
+            [
+              "asking how long",
+              "How long + have/has … + third form?",
+              "How long have you known Rina?"
+            ],
+            [
+              "finished time: yesterday, in 2019, … ago, When…?",
+              "past simple",
+              "I moved here three years ago."
+            ],
+            [
+              "a finished period (not true now)",
+              "past simple + for",
+              "I lived in Bandung for five years."
+            ],
+            [
+              "fresh news, no time word",
+              "present perfect",
+              "I've lost my keys!"
+            ],
+            [
+              "details of the news",
+              "past simple",
+              "I think I dropped them on the KRL."
+            ]
+          ],
+          "tips": [
+            "Indonesian *sejak* or *sudah … tahun* + still true now → **have/has + third form**: *I've worked here since 2022*, not 'I work here since 2022'.",
+            "**for** + a length (three years), **since** + a starting point (2020, Monday). Not 'since three years'.",
+            "A finished time → past simple: **I saw that film yesterday**, not 'I have seen that film yesterday'."
+          ],
+          "examples": [
+            {
+              "en": "How long have you worked here? — For two years.",
+              "id": "Sudah berapa lama kamu kerja di sini? — Sudah dua tahun."
+            },
+            {
+              "en": "I've known Sari since we were at university.",
+              "id": "Saya kenal Sari sejak kita kuliah."
+            },
+            {
+              "en": "Pak Hasan worked at a bank for twenty years. Now he has a warung.",
+              "id": "Pak Hasan dulu bekerja di bank selama dua puluh tahun. Sekarang dia punya warung."
+            },
+            {
+              "en": "The price of petrol has gone up again.",
+              "id": "Harga bensin naik lagi."
+            },
+            {
+              "en": "I've lost my phone! I think I left it in the ojek.",
+              "id": "HP saya hilang! Sepertinya ketinggalan di ojek."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Two short BBC videos (one on for and since, one on present perfect vs past simple) and a British Council page with practice tests. They speak at natural speed, so turn on the subtitles."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu present perfect untuk pengalaman dan kabar baru. Hari ini kamu belajar mengatakan sudah berapa lama sesuatu berlangsung, kapan harus memilih past simple, dan cara menyampaikan kabar dalam bahasa Inggris. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "for dan since",
+        "text": "Ulasan singkat: present perfect adalah have/has + bentuk ketiga (I've seen, she has finished). Sekarang kita pakai untuk mengatakan sudah berapa lama.",
+        "body": "**Jebakannya:** *Saya tinggal di sini sejak 2020* bukan 'I live here since 2020', tapi **I've lived here since 2020**. Kenapa? Tinggalnya **dimulai di masa lalu** dan **masih benar sampai sekarang**, dan **have/has + bentuk ketiga** menyambungkan masa lalu dengan sekarang. **for** + **lamanya waktu** (berapa lama?): *for three years*. **since** + **titik mulai** (sejak kapan?): *since 2020, since Monday*. Bukan 'since three years': three years adalah lamanya waktu → **for**. **been** adalah bentuk ketiga dari *be*: *She's been a nurse for ten years* (she's = she has) = sudah sepuluh tahun jadi perawat.",
+        "pairs": [
+          {
+            "en": "for three years",
+            "id": "selama tiga tahun"
+          },
+          {
+            "en": "for a long time",
+            "id": "sudah lama"
+          },
+          {
+            "en": "since 2020",
+            "id": "sejak 2020"
+          },
+          {
+            "en": "since Monday",
+            "id": "sejak hari Senin"
+          },
+          {
+            "en": "since 8 o'clock",
+            "id": "sejak jam 8"
+          },
+          {
+            "en": "I've lived here since 2020.",
+            "id": "Saya tinggal di sini sejak 2020."
+          },
+          {
+            "en": "She's been a nurse for ten years.",
+            "id": "Dia sudah sepuluh tahun jadi perawat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas pindah ke kosnya bulan Februari. Sekarang sudah bulan Oktober.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "for-since",
+          "prompt": "Lengkapi: Dimas has lived in his kos ___ eight months.",
+          "options": [
+            "since",
+            "for",
+            "ago"
+          ],
+          "answer": 1,
+          "explanation": "eight months adalah **lamanya waktu** (berapa lama?), jadi **for**. **since** perlu titik mulai: *since February*. **ago** menyebut kapan sesuatu terjadi dan dipakai dengan past simple: *He moved in eight months ago.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How long have you…?",
+        "text": "Sekarang kita bertanya: Sudah berapa lama…?",
+        "body": "Bertanya: **How long + have/has + subjek + bentuk ketiga?** (subjek = siapa yang melakukan: you, she, Pak Hasan). Jawaban singkat: **For two years.** / **Since 2024.** **Jebakan:** *Sudah berapa lama kamu kerja di sini?* bukan 'How long do you work here?', tapi **How long have you worked here?** Ini juga berlaku untuk **know** (kenal: know → knew → **known**) dan **have** (punya: *have had* kelihatan aneh, tapi have yang pertama adalah kata bantu). **since** bisa diikuti kalimat past simple: *since we were at university*. Dan *last year* saja → past simple, tapi **since last year** = dari tahun lalu sampai sekarang → present perfect.",
+        "pairs": [
+          {
+            "en": "How long have you worked here?",
+            "id": "Sudah berapa lama kamu kerja di sini?"
+          },
+          {
+            "en": "For two years.",
+            "id": "Sudah dua tahun."
+          },
+          {
+            "en": "Since 2024.",
+            "id": "Sejak 2024."
+          },
+          {
+            "en": "How long have you known Rina?",
+            "id": "Sudah berapa lama kamu kenal Rina?"
+          },
+          {
+            "en": "Since we were at university.",
+            "id": "Sejak kita kuliah."
+          },
+          {
+            "en": "know → knew → known",
+            "id": "tahu, kenal"
+          },
+          {
+            "en": "I've worked here since last year.",
+            "id": "Saya kerja di sini sejak tahun lalu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Mobil temanmu kelihatan sangat bersih dan baru. Kamu bertanya kepadanya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "for-since",
+          "prompt": "Susun kata-katanya: Sudah berapa lama kamu punya mobil ini?",
+          "tokens": [
+            "had",
+            "car",
+            "How",
+            "this",
+            "have",
+            "you",
+            "long"
+          ],
+          "solution": "How long have you had this car?",
+          "explanation": "Urutan pertanyaan: **How long + have + you + bentuk ketiga**. punya = have, dan bentuk ketiganya **had** (have → had → had). *have had* kelihatan aneh, tapi have yang pertama adalah kata bantu dan had adalah bentuk ketiga."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sudah selesai atau sampai sekarang?",
+        "text": "Sekarang pertanyaan besarnya: present perfect atau past simple?",
+        "body": "**Waktu yang sudah selesai** → **past simple**: *yesterday, last week, in 2019, … ago, when I was a child*, **When…?** **Sampai sekarang** (masih benar: for, since, How long) atau **tanpa keterangan waktu** (pengalaman, kabar) → **present perfect**. **Hati-hati: for bisa dipakai dengan keduanya.** *I've lived in Bandung for five years* = saya masih tinggal di sana. *I lived in Bandung for five years* = sudah selesai, sekarang tidak tinggal di sana lagi. *Saya tinggal di Bandung lima tahun* bisa berarti dua-duanya; bahasa Inggris harus memilih: apakah masih benar? Fakta yang sama, dua cara: *I moved here three years ago* = *I've lived here for three years*.",
+        "pairs": [
+          {
+            "en": "I moved here three years ago.",
+            "id": "Saya pindah ke sini tiga tahun lalu."
+          },
+          {
+            "en": "I've lived here for three years.",
+            "id": "Saya sudah tiga tahun tinggal di sini."
+          },
+          {
+            "en": "I lived in Bandung for five years.",
+            "id": "Dulu saya tinggal di Bandung selama lima tahun."
+          },
+          {
+            "en": "When did you start this job?",
+            "id": "Kapan kamu mulai kerja di sini?"
+          },
+          {
+            "en": "I saw that film yesterday.",
+            "id": "Saya nonton film itu kemarin."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Cerita kerja Budi",
+        "text": "Lihat pekerjaan Budi. Bagian mana yang sudah selesai, dan bagian mana yang masih benar sekarang?",
+        "timeline": {
+          "title": "Past simple atau present perfect?",
+          "caption": "2015–2019 sudah selesai: Budi worked at a bank (past simple). Tahun 2020 dia started at a startup (past simple). Sekarang dia masih di sana, jadi: he has worked at the startup since 2020 (present perfect).",
+          "marks": [
+            {
+              "label": "2015–2019: Budi worked at a bank",
+              "kind": "past"
+            },
+            {
+              "label": "2020: he started at a startup",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang: he has worked there since 2020",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari bercerita tentang kakeknya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-present-perfect",
+          "prompt": "Lengkapi: My grandfather ___ in Medan for ten years. Then he moved to Bandung in 1990.",
+          "options": [
+            "has lived",
+            "lived",
+            "lives"
+          ],
+          "answer": 1,
+          "explanation": "Sepuluh tahun di Medan itu **sudah selesai**: lalu dia pindah ke Bandung. Masa yang sudah selesai → **past simple**: **lived**, walaupun ada **for**. *has lived* berarti dia masih tinggal di Medan, dan *lives* tentang sekarang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kabar terbaru",
+        "text": "Bahasa Indonesia bilang Kunci saya hilang! tanpa penanda waktu. Bahasa Inggris memakai present perfect untuk kabar seperti ini.",
+        "body": "**Kabar baru** yang penting **sekarang**, **tanpa keterangan waktu** → **have/has + bentuk ketiga**: *I've lost my keys!* (jadi sekarang saya tidak bisa masuk). *The price of petrol has gone up* (sekarang harganya lebih mahal). **Kabar dulu, detail kemudian:** kalau kamu menambah kapan, di mana atau bagaimana, kamu membicarakan saat yang sudah selesai, jadi ganti ke **past simple**, walaupun tanpa keterangan waktu: *I've lost my keys! I think I dropped them on the KRL.* British vs Amerika: orang Amerika sering bilang *I lost my keys!* dan **gas** untuk petrol (bensin). Keduanya dimengerti; kursus ini memakai bentuk have/has.",
+        "pairs": [
+          {
+            "en": "I've lost my keys!",
+            "id": "Kunci saya hilang!"
+          },
+          {
+            "en": "The price of petrol has gone up.",
+            "id": "Harga bensin naik."
+          },
+          {
+            "en": "We've won the futsal match!",
+            "id": "Kita menang pertandingan futsal!"
+          },
+          {
+            "en": "lose → lost → lost",
+            "id": "kehilangan"
+          },
+          {
+            "en": "find → found → found",
+            "id": "menemukan"
+          },
+          {
+            "en": "win → won → won",
+            "id": "menang"
+          },
+          {
+            "en": "go up → went up → gone up",
+            "id": "naik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Sampaikan kabarnya",
+        "text": "Sari meneleponmu dengan sangat senang: sebuah perusahaan baru menerimanya! Kamu menyampaikan kabar baru ini ke rekan kerjamu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "recent-news",
+          "prompt": "Susun kata-katanya: Sari baru saja dapat pekerjaan baru!",
+          "tokens": [
+            "found",
+            "job",
+            "Sari",
+            "new",
+            "just",
+            "a",
+            "has"
+          ],
+          "solution": "Sari has just found a new job.",
+          "explanation": "Kabar baru → **has + bentuk ketiga** (find → found → found). Sari = she → **has**, dan **just** (baru saja) diletakkan di antara has dan bentuk ketiga."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tahun ini kering di sebuah desa di Jawa Tengah. Seorang petani berbicara kepada wartawan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-present-perfect",
+          "prompt": "Lengkapi: We ___ any rain since March, so the rice fields are very dry.",
+          "options": [
+            "didn't have",
+            "don't have",
+            "haven't had"
+          ],
+          "answer": 2,
+          "explanation": "**since March** = dari bulan Maret **sampai sekarang**, jadi present perfect: **haven't had** (have → had → had). *didn't have* untuk waktu yang sudah selesai, dan *don't have … since* adalah jebakan bahasa Indonesia: dengan since, bahasa Inggris perlu have/has + bentuk ketiga."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · present perfect (B1)",
+          "intro": "have/has + bentuk ketiga menyambungkan masa lalu dengan sekarang. Pakai untuk sudah berapa lama (for, since, How long…?) dan untuk kabar baru. Waktu yang sudah selesai → past simple.",
+          "headers": [
+            "Kapan?",
+            "Pakai",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "mulai di masa lalu, masih benar sekarang",
+              "present perfect",
+              "I've lived here since 2020."
+            ],
+            [
+              "lamanya waktu (berapa lama?)",
+              "for",
+              "for three years, for a long time"
+            ],
+            [
+              "titik mulai (sejak kapan?)",
+              "since",
+              "since 2020, since Monday, since I was a child"
+            ],
+            [
+              "bertanya sudah berapa lama",
+              "How long + have/has … + bentuk ketiga?",
+              "How long have you known Rina?"
+            ],
+            [
+              "waktu yang sudah selesai: yesterday, in 2019, … ago, When…?",
+              "past simple",
+              "I moved here three years ago."
+            ],
+            [
+              "masa yang sudah selesai (tidak benar lagi sekarang)",
+              "past simple + for",
+              "I lived in Bandung for five years."
+            ],
+            [
+              "kabar baru, tanpa keterangan waktu",
+              "present perfect",
+              "I've lost my keys!"
+            ],
+            [
+              "detail kabarnya",
+              "past simple",
+              "I think I dropped them on the KRL."
+            ]
+          ],
+          "tips": [
+            "*sejak* atau *sudah … tahun* + masih benar sekarang → **have/has + bentuk ketiga**: *I've worked here since 2022*, bukan 'I work here since 2022'.",
+            "**for** + lamanya waktu (three years), **since** + titik mulai (2020, Monday). Bukan 'since three years'.",
+            "Waktu yang sudah selesai → past simple: **I saw that film yesterday**, bukan 'I have seen that film yesterday'."
+          ],
+          "examples": [
+            {
+              "en": "How long have you worked here? — For two years.",
+              "id": "Sudah berapa lama kamu kerja di sini? — Sudah dua tahun."
+            },
+            {
+              "en": "I've known Sari since we were at university.",
+              "id": "Saya kenal Sari sejak kita kuliah."
+            },
+            {
+              "en": "Pak Hasan worked at a bank for twenty years. Now he has a warung.",
+              "id": "Pak Hasan dulu bekerja di bank selama dua puluh tahun. Sekarang dia punya warung."
+            },
+            {
+              "en": "The price of petrol has gone up again.",
+              "id": "Harga bensin naik lagi."
+            },
+            {
+              "en": "I've lost my phone! I think I left it in the ojek.",
+              "id": "HP saya hilang! Sepertinya ketinggalan di ojek."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Dua video pendek dari BBC (satu tentang for dan since, satu tentang present perfect vs past simple) dan satu halaman British Council dengan tes latihan. Mereka berbicara dengan kecepatan normal, jadi nyalakan subtitelnya."
+      }
+    ]
+  }
+}

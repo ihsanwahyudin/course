@@ -1,0 +1,658 @@
+{
+  "en": {
+    "greeting": "Hi! You already know three ways to talk about the future. Today we choose between them in real situations, add might and may, and fix a very common mistake after when. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Three futures, one choice",
+        "text": "Quick recap: you know three futures. Today the question is which one to use.",
+        "body": "- **will**: you decide **right now** (offer, promise, quick decision) or give your **opinion** (*I think…*).\n- **going to**: a **plan from before**, or a prediction you can **see** now.\n- **am/is/are + -ing** + a time: an **arrangement**, fixed with another person.\nIndonesian *akan* covers all three, and often there's no future word at all (*Besok saya ke Bandung*). So read the situation, not the Indonesian. And the simple present (*I go*) is for habits: *Tomorrow I'm going to Bandung*, not 'Tomorrow I go'.",
+        "pairs": [
+          {
+            "en": "I'll help you.",
+            "id": "Saya bantu, ya. (diputuskan sekarang)"
+          },
+          {
+            "en": "I think it will be busy.",
+            "id": "Saya rasa bakal ramai. (pendapat)"
+          },
+          {
+            "en": "I'm going to save money.",
+            "id": "Saya mau menabung. (rencana dari sebelumnya)"
+          },
+          {
+            "en": "It's going to rain.",
+            "id": "Bakal hujan. (buktinya terlihat)"
+          },
+          {
+            "en": "I'm seeing the doctor at 4.",
+            "id": "Jam 4 saya ke dokter. (sudah diatur)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Read the clue",
+        "text": "In real life, look for the clue: did you just hear about it? Is there proof of a plan? Is it in the calendar with someone?",
+        "body": "Problem heard just now → **will**. Paid, booked, already started → **going to**. Fixed with a bank, a client or a friend, with a time → **present continuous** (going to is also fine there). Proof you can see → **going to**.",
+        "examples": [
+          {
+            "en": "Guest: 'The AC in room 3 isn't working.' — 'I'm sorry. I'll send a technician now.'",
+            "id": "Tamu: 'AC di kamar 3 tidak jalan.' — 'Mohon maaf. Saya kirim teknisi sekarang.'"
+          },
+          {
+            "en": "I've paid for the course. I'm going to start IELTS classes in May.",
+            "id": "Kursusnya sudah saya bayar. Bulan Mei saya mulai kelas IELTS."
+          },
+          {
+            "en": "Dimas is having a job interview at a bank on Monday at 9.",
+            "id": "Senin jam 9 Dimas ada wawancara kerja di sebuah bank."
+          },
+          {
+            "en": "I think the new MRT line will help a lot.",
+            "id": "Saya rasa jalur MRT yang baru akan sangat membantu."
+          },
+          {
+            "en": "Look at that queue! We're going to wait for ages.",
+            "id": "Lihat antrean itu! Kita bakal lama sekali menunggu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "In the calendar",
+        "text": "Budi wants a meeting, but your calendar says something else.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-between-will",
+          "prompt": "Budi: 'Can we check the budget on Thursday afternoon?' You look at your calendar: 'Sorry, I ___ the new client at 2 on Thursday. Is Friday OK?'",
+          "options": [
+            "meet",
+            "'m meeting",
+            "'ll meet"
+          ],
+          "answer": 1,
+          "explanation": "It's fixed with another person, with a time, so use the present continuous: **I'm meeting**. 'I meet' is the simple present, for habits (the Indonesian *saya ketemu* trap), and 'I'll meet' sounds like you decide it just now, but it was arranged before."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "A problem right now",
+        "text": "Your colleague has a problem, and you decide to help on the spot.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-between-will",
+          "prompt": "Your colleague: 'Oh no! My laptop battery is dead, and my charger is at home.' You: 'No problem. ___ you mine.'",
+          "options": [
+            "I'll lend",
+            "I'm going to lend",
+            "I'm lending"
+          ],
+          "answer": 0,
+          "explanation": "You hear about the problem now and decide now, so use **will**: **I'll lend you mine.** 'going to' and 'I'm lending' mean the plan or arrangement was there before you heard about the problem."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Not sure? might and may",
+        "text": "**will** means you're sure. When you're **not sure**, use **might** or **may** = *mungkin*.",
+        "body": "**might / may + base form** (the verb as in the dictionary), the same for every **subject** (who does it): *It might rain later. Sari may be late.* **No to** ('might to rain' is wrong) and **no -s** ('he might comes' is wrong). Negative: **might not / may not**, with no *don't*. Indonesian *mungkin akan* has two words, but English uses one: not 'might will'. **Maybe** is a separate word with will: *Maybe it will rain* = *It might rain*. **may** is a little more formal.",
+        "pairs": [
+          {
+            "en": "might",
+            "id": "mungkin (+ bentuk dasar)"
+          },
+          {
+            "en": "may",
+            "id": "mungkin (sedikit lebih formal)"
+          },
+          {
+            "en": "might not",
+            "id": "mungkin tidak"
+          },
+          {
+            "en": "may not",
+            "id": "mungkin tidak (formal)"
+          },
+          {
+            "en": "maybe",
+            "id": "mungkin (kata terpisah, biasanya di awal)"
+          },
+          {
+            "en": "It might rain later.",
+            "id": "Nanti mungkin hujan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina has meetings all day. Say what might happen.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "might-may",
+          "prompt": "Arrange the words: Mungkin Rina tidak sempat makan siang.",
+          "tokens": [
+            "lunch",
+            "not",
+            "have",
+            "Rina",
+            "for",
+            "might",
+            "time"
+          ],
+          "solution": "Rina might not have time for lunch.",
+          "explanation": "**might not** + the base form **have**. Even with Rina (she), it's *have*, not *has*: after might the verb never changes, and there's no *to*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "when I arrive, not when I will arrive",
+        "text": "Now a very common mistake: the verb after **when, after, before, as soon as** and **until**.",
+        "body": "A **time clause** is the part that starts with **when, after, before, as soon as** or **until** and says *when*. For the future, **will** goes in the other part, and the time clause stays in the **present simple**: *I'll call you when I arrive*, not 'when I will arrive'. It's like **if** (*If it rains, I'll stay home*). Indonesian trap: *Nanti kalau sudah sampai* has *nanti* and *sudah*, but English says just *when I arrive*. Keep the **-s** with he/she/it. A question is different: *When will you arrive?* is correct.",
+        "pairs": [
+          {
+            "en": "when",
+            "id": "saat / kalau (pasti terjadi)"
+          },
+          {
+            "en": "after",
+            "id": "setelah"
+          },
+          {
+            "en": "before",
+            "id": "sebelum"
+          },
+          {
+            "en": "as soon as",
+            "id": "begitu / segera setelah"
+          },
+          {
+            "en": "until",
+            "id": "sampai"
+          },
+          {
+            "en": "I'll call you when I arrive.",
+            "id": "Nanti saya telepon kalau sudah sampai."
+          },
+          {
+            "en": "We won't start until Pak Hasan arrives.",
+            "id": "Kita baru mulai setelah Pak Hasan datang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A message for Mum",
+        "text": "You're taking the train to Jogja. Your mum wants news.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "time-clauses",
+          "prompt": "Your mum says in Indonesian: 'Nanti kalau sudah sampai di Jogja, kabari Ibu, ya!' You answer in English: 'OK, Mum. I'll message you when I ___ there.'",
+          "options": [
+            "will get",
+            "get",
+            "got"
+          ],
+          "answer": 1,
+          "explanation": "After **when**, use the present simple even for the future: **when I get there**. *nanti* and *sudah* don't become 'will': will is already in *I'll message you*. 'got' is the past."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Wait until…",
+        "text": "The client is still reading the contract.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "time-clauses",
+          "prompt": "Your colleague wants to go home, but the client is still reading the contract. Your manager: 'Please stay until the client ___ it.'",
+          "options": [
+            "will sign",
+            "is going to sign",
+            "signs"
+          ],
+          "answer": 2,
+          "explanation": "After **until** (sampai), use the present simple: **until the client signs it** (the client = he/she → -s). No will and no going to in a time clause."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards to lock in today's choices.",
+        "flashcards": [
+          {
+            "front": "Decided right now (an offer)",
+            "back": "will: Your bag's heavy? I'll carry it."
+          },
+          {
+            "front": "A plan from before, with proof",
+            "back": "going to: I've got the forms. I'm going to apply for the job."
+          },
+          {
+            "front": "Fixed with someone, with a time",
+            "back": "present continuous: We're having a meeting with the client at 10 on Monday."
+          },
+          {
+            "front": "Besok saya ke Bandung sama keluarga.",
+            "back": "Tomorrow I'm going to Bandung with my family. (not 'I go')"
+          },
+          {
+            "front": "Nanti mungkin hujan.",
+            "back": "It might rain later. (not 'might to rain')"
+          },
+          {
+            "front": "Dia (perempuan) mungkin tidak datang.",
+            "back": "She might not come. / She may not come."
+          },
+          {
+            "front": "Kabari saya begitu rapatnya selesai.",
+            "back": "Text me as soon as the meeting ends. (not 'will end')"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Future forms",
+          "intro": "Choose the future by the situation, use might/may when you're not sure, and keep the present after when, after, before, as soon as and until.",
+          "headers": [
+            "Form",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "will + base form",
+              "decided now: offer, promise, quick decision; opinion",
+              "Your bag looks heavy. I'll carry it."
+            ],
+            [
+              "am/is/are going to + base form",
+              "plan from before; prediction with proof",
+              "I've paid for the course. I'm going to start in May."
+            ],
+            [
+              "am/is/are + -ing + time",
+              "arrangement fixed with someone, with a time",
+              "We're having a meeting with the client at 10 on Monday."
+            ],
+            [
+              "might / may + base form",
+              "possible, not sure (mungkin)",
+              "It might rain later."
+            ],
+            [
+              "might not / may not",
+              "maybe not (mungkin tidak)",
+              "I might not come to the reunion."
+            ],
+            [
+              "when / after / before / as soon as / until + present",
+              "the 'when' part of a future sentence",
+              "I'll call you when I arrive."
+            ],
+            [
+              "When will …?",
+              "a question: will is fine",
+              "When will the results come out?"
+            ]
+          ],
+          "tips": [
+            "The simple present is for habits: 'Tomorrow I go to Bandung' → **Tomorrow I'm going to Bandung**.",
+            "After might/may: base form, **no to, no -s**: *It might rain*, not 'might to rain'.",
+            "No will after when, after, before, as soon as, until: **when I arrive**, not 'when I will arrive'."
+          ],
+          "examples": [
+            {
+              "en": "Sari may be late. The trains are slow this morning.",
+              "id": "Sari mungkin terlambat. Pagi ini keretanya lambat."
+            },
+            {
+              "en": "After I finish my shift, I'll go to the gym.",
+              "id": "Setelah shift saya selesai, saya ke gym."
+            },
+            {
+              "en": "Budi will stay in Jakarta until his contract ends.",
+              "id": "Budi akan tinggal di Jakarta sampai kontraknya selesai."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These two British Council pages explain future forms in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu tiga cara membicarakan masa depan. Hari ini kita memilih di antara ketiganya dalam situasi nyata, menambahkan might dan may, dan memperbaiki kesalahan yang sangat umum setelah when. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Tiga bentuk masa depan, satu pilihan",
+        "text": "Pengingat singkat: kamu sudah tahu tiga bentuk masa depan. Hari ini pertanyaannya: yang mana yang dipakai?",
+        "body": "- **will**: kamu memutuskan **saat itu juga** (menawarkan bantuan, berjanji, keputusan cepat) atau memberi **pendapat** (*I think…*).\n- **going to**: **rencana dari sebelumnya**, atau prediksi yang buktinya bisa kamu **lihat** sekarang.\n- **am/is/are + -ing** + kata waktu: **janji yang sudah diatur** dengan orang lain.\nKata *akan* mencakup ketiganya, dan sering tidak ada kata masa depan sama sekali (*Besok saya ke Bandung*). Jadi lihat situasinya, bukan kata Indonesianya. Present simple (*I go*) untuk kebiasaan: *Tomorrow I'm going to Bandung*, bukan 'Tomorrow I go'.",
+        "pairs": [
+          {
+            "en": "I'll help you.",
+            "id": "Saya bantu, ya. (diputuskan sekarang)"
+          },
+          {
+            "en": "I think it will be busy.",
+            "id": "Saya rasa bakal ramai. (pendapat)"
+          },
+          {
+            "en": "I'm going to save money.",
+            "id": "Saya mau menabung. (rencana dari sebelumnya)"
+          },
+          {
+            "en": "It's going to rain.",
+            "id": "Bakal hujan. (buktinya terlihat)"
+          },
+          {
+            "en": "I'm seeing the doctor at 4.",
+            "id": "Jam 4 saya ke dokter. (sudah diatur)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Lihat petunjuknya",
+        "text": "Dalam kehidupan nyata, cari petunjuknya: apakah kamu baru mendengarnya? Apakah ada bukti rencananya? Apakah sudah masuk kalender bersama orang lain?",
+        "body": "Masalah yang baru didengar → **will**. Sudah dibayar, dipesan, sudah mulai → **going to**. Sudah diatur dengan bank, klien atau teman, ada jamnya → **present continuous** (going to juga boleh di sini). Ada bukti yang terlihat → **going to**.",
+        "examples": [
+          {
+            "en": "Guest: 'The AC in room 3 isn't working.' — 'I'm sorry. I'll send a technician now.'",
+            "id": "Tamu: 'AC di kamar 3 tidak jalan.' — 'Mohon maaf. Saya kirim teknisi sekarang.'"
+          },
+          {
+            "en": "I've paid for the course. I'm going to start IELTS classes in May.",
+            "id": "Kursusnya sudah saya bayar. Bulan Mei saya mulai kelas IELTS."
+          },
+          {
+            "en": "Dimas is having a job interview at a bank on Monday at 9.",
+            "id": "Senin jam 9 Dimas ada wawancara kerja di sebuah bank."
+          },
+          {
+            "en": "I think the new MRT line will help a lot.",
+            "id": "Saya rasa jalur MRT yang baru akan sangat membantu."
+          },
+          {
+            "en": "Look at that queue! We're going to wait for ages.",
+            "id": "Lihat antrean itu! Kita bakal lama sekali menunggu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Sudah ada di kalender",
+        "text": "Budi mau mengajak rapat, tapi kalendermu berkata lain.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-between-will",
+          "prompt": "Budi: 'Can we check the budget on Thursday afternoon?' Kamu melihat kalendermu: 'Sorry, I ___ the new client at 2 on Thursday. Is Friday OK?'",
+          "options": [
+            "meet",
+            "'m meeting",
+            "'ll meet"
+          ],
+          "answer": 1,
+          "explanation": "Ini sudah diatur dengan orang lain dan ada jamnya, jadi pakai present continuous: **I'm meeting**. 'I meet' adalah present simple, untuk kebiasaan (jebakan *saya ketemu*), dan 'I'll meet' terdengar seperti baru kamu putuskan sekarang, padahal sudah diatur sebelumnya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Masalah saat ini juga",
+        "text": "Rekan kerjamu punya masalah, dan kamu langsung memutuskan untuk membantu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-between-will",
+          "prompt": "Rekan kerjamu: 'Oh no! My laptop battery is dead, and my charger is at home.' Kamu: 'No problem. ___ you mine.'",
+          "options": [
+            "I'll lend",
+            "I'm going to lend",
+            "I'm lending"
+          ],
+          "answer": 0,
+          "explanation": "Kamu baru mendengar masalahnya dan memutuskan sekarang, jadi pakai **will**: **I'll lend you mine.** 'going to' dan 'I'm lending' berarti rencananya sudah ada sebelum kamu mendengar masalah itu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tidak yakin? might dan may",
+        "text": "**will** berarti kamu yakin. Kalau kamu **tidak yakin**, pakai **might** atau **may** = *mungkin*.",
+        "body": "**might / may + bentuk dasar** (kata kerja seperti di kamus), sama untuk semua **subjek** (siapa yang melakukan): *It might rain later. Sari may be late.* **Tanpa to** ('might to rain' salah) dan **tanpa -s** ('he might comes' salah). Negatifnya: **might not / may not**, tanpa *don't*. *Mungkin akan* punya dua kata, tapi bahasa Inggris cukup satu: bukan 'might will'. **Maybe** adalah kata terpisah dan dipakai dengan will: *Maybe it will rain* = *It might rain*. **may** sedikit lebih formal.",
+        "pairs": [
+          {
+            "en": "might",
+            "id": "mungkin (+ bentuk dasar)"
+          },
+          {
+            "en": "may",
+            "id": "mungkin (sedikit lebih formal)"
+          },
+          {
+            "en": "might not",
+            "id": "mungkin tidak"
+          },
+          {
+            "en": "may not",
+            "id": "mungkin tidak (formal)"
+          },
+          {
+            "en": "maybe",
+            "id": "mungkin (kata terpisah, biasanya di awal)"
+          },
+          {
+            "en": "It might rain later.",
+            "id": "Nanti mungkin hujan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Rina ada rapat seharian. Katakan apa yang mungkin terjadi.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "might-may",
+          "prompt": "Susun kata-katanya: Mungkin Rina tidak sempat makan siang.",
+          "tokens": [
+            "lunch",
+            "not",
+            "have",
+            "Rina",
+            "for",
+            "might",
+            "time"
+          ],
+          "solution": "Rina might not have time for lunch.",
+          "explanation": "**might not** + bentuk dasar **have**. Walaupun subjeknya Rina (she), tetap *have*, bukan *has*: setelah might kata kerjanya tidak pernah berubah, dan tidak ada *to*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "when I arrive, bukan when I will arrive",
+        "text": "Sekarang kesalahan yang sangat umum: kata kerja setelah **when, after, before, as soon as** dan **until**.",
+        "body": "**Time clause** (anak kalimat waktu) adalah bagian yang diawali **when, after, before, as soon as** atau **until** dan menjelaskan *kapan*. Untuk masa depan, **will** ditaruh di bagian lain, dan time clause tetap **present simple**: *I'll call you when I arrive*, bukan 'when I will arrive'. Mirip dengan **if** (*If it rains, I'll stay home*). Jebakan: *Nanti kalau sudah sampai* punya *nanti* dan *sudah*, tapi bahasa Inggris cukup *when I arrive*. Tetap pakai **-s** untuk he/she/it. Pertanyaan berbeda: *When will you arrive?* itu benar.",
+        "pairs": [
+          {
+            "en": "when",
+            "id": "saat / kalau (pasti terjadi)"
+          },
+          {
+            "en": "after",
+            "id": "setelah"
+          },
+          {
+            "en": "before",
+            "id": "sebelum"
+          },
+          {
+            "en": "as soon as",
+            "id": "begitu / segera setelah"
+          },
+          {
+            "en": "until",
+            "id": "sampai"
+          },
+          {
+            "en": "I'll call you when I arrive.",
+            "id": "Nanti saya telepon kalau sudah sampai."
+          },
+          {
+            "en": "We won't start until Pak Hasan arrives.",
+            "id": "Kita baru mulai setelah Pak Hasan datang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pesan untuk Ibu",
+        "text": "Kamu naik kereta ke Jogja. Ibumu menunggu kabar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "time-clauses",
+          "prompt": "Ibumu bilang: 'Nanti kalau sudah sampai di Jogja, kabari Ibu, ya!' Kamu menjawab dalam bahasa Inggris: 'OK, Mum. I'll message you when I ___ there.'",
+          "options": [
+            "will get",
+            "get",
+            "got"
+          ],
+          "answer": 1,
+          "explanation": "Setelah **when**, pakai present simple walaupun untuk masa depan: **when I get there**. *nanti* dan *sudah* tidak menjadi 'will': will sudah ada di *I'll message you*. 'got' adalah bentuk lampau."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Tunggu sampai…",
+        "text": "Kliennya masih membaca kontrak.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "time-clauses",
+          "prompt": "Rekan kerjamu mau pulang, tapi kliennya masih membaca kontrak. Manajermu: 'Please stay until the client ___ it.'",
+          "options": [
+            "will sign",
+            "is going to sign",
+            "signs"
+          ],
+          "answer": 2,
+          "explanation": "Setelah **until** (sampai), pakai present simple: **until the client signs it** (the client = he/she → -s). Tidak ada will dan tidak ada going to di time clause."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan singkat",
+        "text": "Balik kartunya untuk mengunci pilihan hari ini.",
+        "flashcards": [
+          {
+            "front": "Diputuskan saat itu juga (menawarkan bantuan)",
+            "back": "will: Your bag's heavy? I'll carry it."
+          },
+          {
+            "front": "Rencana dari sebelumnya, ada buktinya",
+            "back": "going to: I've got the forms. I'm going to apply for the job."
+          },
+          {
+            "front": "Sudah diatur dengan seseorang, ada jamnya",
+            "back": "present continuous: We're having a meeting with the client at 10 on Monday."
+          },
+          {
+            "front": "Besok saya ke Bandung sama keluarga.",
+            "back": "Tomorrow I'm going to Bandung with my family. (not 'I go')"
+          },
+          {
+            "front": "Nanti mungkin hujan.",
+            "back": "It might rain later. (not 'might to rain')"
+          },
+          {
+            "front": "Dia (perempuan) mungkin tidak datang.",
+            "back": "She might not come. / She may not come."
+          },
+          {
+            "front": "Kabari saya begitu rapatnya selesai.",
+            "back": "Text me as soon as the meeting ends. (not 'will end')"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Bentuk masa depan",
+          "intro": "Pilih bentuk masa depan sesuai situasinya, pakai might/may kalau tidak yakin, dan tetap pakai present setelah when, after, before, as soon as dan until.",
+          "headers": [
+            "Bentuk",
+            "Kapan dipakai",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "will + base form",
+              "diputuskan sekarang: tawaran, janji, keputusan cepat; pendapat",
+              "Your bag looks heavy. I'll carry it."
+            ],
+            [
+              "am/is/are going to + base form",
+              "rencana dari sebelumnya; prediksi dengan bukti",
+              "I've paid for the course. I'm going to start in May."
+            ],
+            [
+              "am/is/are + -ing + time",
+              "janji yang sudah diatur dengan seseorang, ada jamnya",
+              "We're having a meeting with the client at 10 on Monday."
+            ],
+            [
+              "might / may + base form",
+              "mungkin, tidak yakin",
+              "It might rain later."
+            ],
+            [
+              "might not / may not",
+              "mungkin tidak",
+              "I might not come to the reunion."
+            ],
+            [
+              "when / after / before / as soon as / until + present",
+              "bagian 'kapan' dalam kalimat masa depan",
+              "I'll call you when I arrive."
+            ],
+            [
+              "When will …?",
+              "pertanyaan: will boleh dipakai",
+              "When will the results come out?"
+            ]
+          ],
+          "tips": [
+            "Present simple untuk kebiasaan: 'Tomorrow I go to Bandung' → **Tomorrow I'm going to Bandung**.",
+            "Setelah might/may: bentuk dasar, **tanpa to, tanpa -s**: *It might rain*, bukan 'might to rain'.",
+            "Tidak ada will setelah when, after, before, as soon as, until: **when I arrive**, bukan 'when I will arrive'."
+          ],
+          "examples": [
+            {
+              "en": "Sari may be late. The trains are slow this morning.",
+              "id": "Sari mungkin terlambat. Pagi ini keretanya lambat."
+            },
+            {
+              "en": "After I finish my shift, I'll go to the gym.",
+              "id": "Setelah shift saya selesai, saya ke gym."
+            },
+            {
+              "en": "Budi will stay in Jakarta until his contract ends.",
+              "id": "Budi akan tinggal di Jakarta sampai kontraknya selesai."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Dua halaman British Council ini menjelaskan bentuk masa depan dengan cara yang berbeda."
+      }
+    ]
+  }
+}

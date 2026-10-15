@@ -1,0 +1,648 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll tell stories in the past: what was happening, and what happened. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Background and main event",
+        "text": "You know was/were + -ing for something in progress at a past time. Now let's use it in a story.",
+        "body": "In a story, **was/were + -ing** is the **background** (*latar*): the longer action that was already happening. The **past simple** is the **main event** (*kejadian utama*): the short thing that happened in the middle of it. **I was cooking when the phone rang.** Indonesian changes neither verb (*Saya sedang memasak ketika telepon berbunyi*), so ask: which action was **long**, which was **short**? Only the long one takes -ing.",
+        "pairs": [
+          {
+            "en": "I was cooking.",
+            "id": "Saya sedang memasak. (latar, panjang)"
+          },
+          {
+            "en": "The phone rang.",
+            "id": "Telepon berbunyi. (kejadian, singkat)"
+          },
+          {
+            "en": "I was cooking when the phone rang.",
+            "id": "Saya sedang memasak ketika telepon berbunyi."
+          },
+          {
+            "en": "It was raining.",
+            "id": "Sedang hujan. (latar cerita)"
+          },
+          {
+            "en": "suddenly",
+            "id": "tiba-tiba"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "A long bar and a short point",
+        "text": "Picture the evening. Where does the phone call happen?",
+        "timeline": {
+          "title": "I was cooking when the phone rang.",
+          "caption": "The cooking is the long bar (7:00–7:45): was cooking. The call is a short point in the middle of it (7:20): rang. Long action → was/were + -ing; short event → past simple.",
+          "marks": [
+            {
+              "label": "7:00 · started cooking",
+              "kind": "past"
+            },
+            {
+              "label": "7:20 · the phone rang",
+              "kind": "past"
+            },
+            {
+              "label": "7:45 · finished cooking",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Lunch with friends. Which action is the short one?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-background-actions",
+          "options": [
+            "was starting",
+            "started",
+            "starts"
+          ],
+          "answer": 1,
+          "prompt": "Complete: We were having lunch at the warung when it suddenly ___ to rain.",
+          "explanation": "Having lunch is the long background action (were having). The rain starting is the short event in the middle of it → past simple: **started**. 'was starting' puts the short event in the continuous, and 'starts' is present."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "when or while?",
+        "text": "Indonesian says saat or ketika for both. English chooses by how long the action is.",
+        "body": "**when + past simple** → the **short** event: *… when the phone rang.* **while + was/were + -ing** → the **long** action: *While I was walking home, I saw Rina.* After while keep **was** and **-ing**: 'While I was walk' ✗. Never while + a short event: 'while the phone rang' ✗. Comma only when the when/while part comes first. (*When I was cooking, …* is also correct, but **while** is clearer for the long action.) **during** goes before a noun: *during the meeting*.",
+        "pairs": [
+          {
+            "en": "when the phone rang",
+            "id": "ketika telepon berbunyi (singkat)"
+          },
+          {
+            "en": "while I was walking home",
+            "id": "saat saya sedang berjalan pulang (panjang)"
+          },
+          {
+            "en": "While I was walking home, I saw Rina.",
+            "id": "Saat saya sedang berjalan pulang, saya melihat Rina."
+          },
+          {
+            "en": "We were having dinner when the lights went out.",
+            "id": "Kami sedang makan malam ketika lampu mati."
+          },
+          {
+            "en": "Sari fell asleep while she was watching the film.",
+            "id": "Sari tertidur saat sedang menonton film."
+          },
+          {
+            "en": "during the meeting",
+            "id": "selama rapat (during + kata benda)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A busy morning at the office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "when-while",
+          "options": [
+            "when",
+            "while",
+            "during"
+          ],
+          "answer": 0,
+          "prompt": "Complete: I was making coffee in the office kitchen ___ the fire alarm went off.",
+          "explanation": "'the fire alarm went off' is a short event in the past simple → **when**. **while** needs a long action with was/were + -ing, and **during** goes before a noun (*during the meeting*), not a sentence."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now put while first, with the long action.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "when-while",
+          "tokens": [
+            "phone",
+            "was",
+            "While",
+            "rang",
+            "I",
+            "my",
+            "waiting"
+          ],
+          "solution": "While I was waiting, my phone rang.",
+          "prompt": "Arrange the words. Start with While: Saat saya sedang menunggu, HP saya berbunyi.",
+          "explanation": "**While + was/were + -ing** for the long action (*I was waiting*), then the short event in the past simple (*my phone rang*). The while part comes first, so a comma follows it: **While I was waiting, my phone rang.**"
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Same time, or one after another?",
+        "text": "Two more patterns, and then a whole story.",
+        "body": "Two long actions **at the same time** → **while** + was/were + -ing in **both** parts. One event **after another** → past simple in both (*When the film ended, we went home* = first the film ended, then we went home). A story often starts with the **scene** (was/were + -ing), then tells the **events** (past simple), often with **suddenly** (*tiba-tiba*).",
+        "examples": [
+          {
+            "en": "While I was studying, my brother was playing games.",
+            "id": "Saat saya sedang belajar, saudara laki-lakiku sedang bermain game. (bersamaan)"
+          },
+          {
+            "en": "While the teacher was talking, the students were taking notes.",
+            "id": "Saat guru sedang berbicara, para murid sedang mencatat. (bersamaan)"
+          },
+          {
+            "en": "When the film ended, we went home.",
+            "id": "Ketika filmnya selesai, kami pulang. (berurutan)"
+          },
+          {
+            "en": "It was a rainy morning, and everyone was waiting for the KRL.",
+            "id": "Pagi itu hujan, dan semua orang sedang menunggu KRL. (latar)"
+          },
+          {
+            "en": "Suddenly the train stopped, and the lights went out.",
+            "id": "Tiba-tiba keretanya berhenti, dan lampunya mati. (kejadian)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Saturday morning: everyone at home was busy.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-continuous",
+          "options": [
+            "While Sari was clean the kitchen, Dimas was washing the car.",
+            "While Sari cleaning the kitchen, Dimas was washing the car.",
+            "While Sari was cleaning the kitchen, Dimas was washing the car."
+          ],
+          "answer": 2,
+          "prompt": "Sari and Dimas were busy at the same time. Choose the correct sentence.",
+          "explanation": "Two long actions at the same time → **while** + was/were + -ing in both parts: **was cleaning … was washing**. 'was clean' drops the -ing, and 'Sari cleaning' drops was."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen to the story",
+        "text": "Rina tells you about last night. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-continuous",
+          "listen": "Last night I was studying in my room, and my sister was watching TV. Suddenly our cat jumped onto my desk.",
+          "options": [
+            "Rina was studying in her room.",
+            "Her sister was watching TV.",
+            "The cat jumped onto Rina's desk."
+          ],
+          "answer": 2,
+          "prompt": "Listen to Rina's short story. What was the main event (the thing that happened)?",
+          "explanation": "Rina sets the scene with **was studying** and **was watching** (both background, at the same time). The main event is the short action in the past simple, after **suddenly**: **our cat jumped onto my desk**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards: long or short, when or while.",
+        "flashcards": [
+          {
+            "front": "Background (a long action in progress)",
+            "back": "was/were + -ing: I was cooking. (saya sedang memasak)"
+          },
+          {
+            "front": "Main event (short, finished)",
+            "back": "past simple: The phone rang. (telepon berbunyi)"
+          },
+          {
+            "front": "when + ?",
+            "back": "the short event, past simple: … when the phone rang. (ketika telepon berbunyi)"
+          },
+          {
+            "front": "while + ?",
+            "back": "the long action, was/were + -ing: while I was walking home (saat saya sedang berjalan pulang)"
+          },
+          {
+            "front": "Two long actions at the same time",
+            "back": "while + was/were + -ing in both: While I was studying, my brother was playing games."
+          },
+          {
+            "front": "I was watching TV when the phone was ringing. ✗",
+            "back": "I was watching TV when the phone rang. ✓"
+          },
+          {
+            "front": "While I was walk home, I saw Rina. ✗",
+            "back": "While I was walking home, I saw Rina. ✓"
+          },
+          {
+            "front": "Yesterday at 8 I watch TV. ✗",
+            "back": "Yesterday at 8 I was watching TV. ✓ (Kemarin jam 8 saya sedang menonton TV.)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · past simple & past continuous",
+          "intro": "Long action in progress → was/were + -ing. Short event → past simple.",
+          "headers": [
+            "Pattern",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "was/were + -ing",
+              "background: a long action in progress",
+              "I was cooking."
+            ],
+            [
+              "past simple",
+              "main event: short, finished",
+              "The phone rang."
+            ],
+            [
+              "long + when + short",
+              "a short event in the middle of a long action",
+              "I was cooking when the phone rang."
+            ],
+            [
+              "While + long, short",
+              "the long action first (comma)",
+              "While I was walking home, I saw Rina."
+            ],
+            [
+              "While + long, long",
+              "two actions at the same time",
+              "While I was studying, my brother was playing games."
+            ],
+            [
+              "When + short, short",
+              "one event after another",
+              "When the film ended, we went home."
+            ]
+          ],
+          "tips": [
+            "The short event stays in the past simple: 'when the phone was ringing' ✗ → **when the phone rang**.",
+            "After **while**: was/were + -ing. 'While I was walk' ✗ → **While I was walking**. **during** + a noun: *during the meeting*.",
+            "A story: the scene in was/were + -ing, then the events in the past simple (**suddenly**, **then**, **after that**)."
+          ],
+          "examples": [
+            {
+              "en": "Budi was driving to the office when his car broke down.",
+              "id": "Budi sedang menyetir ke kantor ketika mobilnya mogok."
+            },
+            {
+              "en": "While Pak Hasan was giving his presentation, his phone rang.",
+              "id": "Saat Pak Hasan sedang presentasi, HP-nya berbunyi."
+            },
+            {
+              "en": "When I got to the station, my friends were waiting for me.",
+              "id": "Ketika saya sampai di stasiun, teman-temanku sedang menungguku."
+            },
+            {
+              "en": "It was a rainy morning, and everyone was waiting for the KRL. Suddenly the train stopped.",
+              "id": "Pagi itu hujan, dan semua orang sedang menunggu KRL. Tiba-tiba keretanya berhenti."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? A short grammar page with two tests on when and while, and a video (the middle part fits this lesson)."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan bercerita tentang masa lalu: apa yang sedang terjadi, dan apa yang terjadi. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Latar dan kejadian utama",
+        "text": "Kamu sudah tahu was/were + -ing untuk kegiatan yang sedang berlangsung di masa lalu. Sekarang kita pakai dalam cerita.",
+        "body": "Dalam cerita, **was/were + -ing** adalah **latar**: kegiatan yang lebih panjang dan sudah sedang terjadi. **Past simple** adalah **kejadian utama**: hal singkat yang terjadi di tengah-tengahnya. **I was cooking when the phone rang.** Bahasa Indonesia tidak mengubah kedua kata kerjanya (*Saya sedang memasak ketika telepon berbunyi*), jadi tanyakan: kegiatan mana yang **panjang**, mana yang **singkat**? Hanya yang panjang yang memakai -ing.",
+        "pairs": [
+          {
+            "en": "I was cooking.",
+            "id": "Saya sedang memasak. (latar, panjang)"
+          },
+          {
+            "en": "The phone rang.",
+            "id": "Telepon berbunyi. (kejadian, singkat)"
+          },
+          {
+            "en": "I was cooking when the phone rang.",
+            "id": "Saya sedang memasak ketika telepon berbunyi."
+          },
+          {
+            "en": "It was raining.",
+            "id": "Sedang hujan. (latar cerita)"
+          },
+          {
+            "en": "suddenly",
+            "id": "tiba-tiba"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Garis panjang dan titik pendek",
+        "text": "Bayangkan malam itu. Telepon itu terjadi di mana?",
+        "timeline": {
+          "title": "I was cooking when the phone rang.",
+          "caption": "Memasak adalah garis panjang (7.00–7.45): was cooking. Telepon adalah titik pendek di tengahnya (7.20): rang. Kegiatan panjang → was/were + -ing; kejadian singkat → past simple.",
+          "marks": [
+            {
+              "label": "7:00 · started cooking",
+              "kind": "past"
+            },
+            {
+              "label": "7:20 · the phone rang",
+              "kind": "past"
+            },
+            {
+              "label": "7:45 · finished cooking",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Makan siang bersama teman. Kegiatan mana yang singkat?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-background-actions",
+          "options": [
+            "was starting",
+            "started",
+            "starts"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: We were having lunch at the warung when it suddenly ___ to rain.",
+          "explanation": "Makan siang adalah kegiatan latar yang panjang (were having). Hujan mulai turun adalah kejadian singkat di tengahnya → past simple: **started**. 'was starting' membuat kejadian singkat memakai bentuk continuous, dan 'starts' itu bentuk sekarang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "when atau while?",
+        "text": "Bahasa Indonesia bilang saat atau ketika untuk keduanya. Bahasa Inggris memilih berdasarkan panjang kegiatannya.",
+        "body": "**when + past simple** → kejadian **singkat**: *… when the phone rang.* **while + was/were + -ing** → kegiatan **panjang**: *While I was walking home, I saw Rina.* Setelah while tetap pakai **was** dan **-ing**: 'While I was walk' ✗. Jangan while + kejadian singkat: 'while the phone rang' ✗. Koma hanya kalau bagian when/while ada di depan. (*When I was cooking, …* juga benar, tapi **while** lebih jelas untuk kegiatan panjang.) **during** dipakai sebelum kata benda: *during the meeting* (selama rapat).",
+        "pairs": [
+          {
+            "en": "when the phone rang",
+            "id": "ketika telepon berbunyi (singkat)"
+          },
+          {
+            "en": "while I was walking home",
+            "id": "saat saya sedang berjalan pulang (panjang)"
+          },
+          {
+            "en": "While I was walking home, I saw Rina.",
+            "id": "Saat saya sedang berjalan pulang, saya melihat Rina."
+          },
+          {
+            "en": "We were having dinner when the lights went out.",
+            "id": "Kami sedang makan malam ketika lampu mati."
+          },
+          {
+            "en": "Sari fell asleep while she was watching the film.",
+            "id": "Sari tertidur saat sedang menonton film."
+          },
+          {
+            "en": "during the meeting",
+            "id": "selama rapat (during + kata benda)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pagi yang sibuk di kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "when-while",
+          "options": [
+            "when",
+            "while",
+            "during"
+          ],
+          "answer": 0,
+          "prompt": "Lengkapi: I was making coffee in the office kitchen ___ the fire alarm went off.",
+          "explanation": "'the fire alarm went off' (alarm kebakaran berbunyi) adalah kejadian singkat dalam past simple → **when**. **while** butuh kegiatan panjang dengan was/were + -ing, dan **during** dipakai sebelum kata benda (*during the meeting*), bukan sebelum kalimat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang taruh while di depan, dengan kegiatan panjangnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "when-while",
+          "tokens": [
+            "phone",
+            "was",
+            "While",
+            "rang",
+            "I",
+            "my",
+            "waiting"
+          ],
+          "solution": "While I was waiting, my phone rang.",
+          "prompt": "Susun kata-katanya. Mulai dengan While: Saat saya sedang menunggu, HP saya berbunyi.",
+          "explanation": "**While + was/were + -ing** untuk kegiatan panjang (*I was waiting*), lalu kejadian singkat dalam past simple (*my phone rang*). Bagian while ada di depan, jadi diikuti koma: **While I was waiting, my phone rang.**"
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Bersamaan, atau berurutan?",
+        "text": "Dua pola lagi, lalu sebuah cerita utuh.",
+        "body": "Dua kegiatan panjang **bersamaan** → **while** + was/were + -ing di **kedua** bagian. Satu kejadian **setelah** yang lain → past simple di keduanya (*When the film ended, we went home* = filmnya selesai dulu, lalu kami pulang). Cerita sering dimulai dengan **latar** (was/were + -ing), lalu menceritakan **kejadiannya** (past simple), sering dengan **suddenly** (tiba-tiba).",
+        "examples": [
+          {
+            "en": "While I was studying, my brother was playing games.",
+            "id": "Saat saya sedang belajar, saudara laki-lakiku sedang bermain game. (bersamaan)"
+          },
+          {
+            "en": "While the teacher was talking, the students were taking notes.",
+            "id": "Saat guru sedang berbicara, para murid sedang mencatat. (bersamaan)"
+          },
+          {
+            "en": "When the film ended, we went home.",
+            "id": "Ketika filmnya selesai, kami pulang. (berurutan)"
+          },
+          {
+            "en": "It was a rainy morning, and everyone was waiting for the KRL.",
+            "id": "Pagi itu hujan, dan semua orang sedang menunggu KRL. (latar)"
+          },
+          {
+            "en": "Suddenly the train stopped, and the lights went out.",
+            "id": "Tiba-tiba keretanya berhenti, dan lampunya mati. (kejadian)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sabtu pagi: semua orang di rumah sibuk.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-continuous",
+          "options": [
+            "While Sari was clean the kitchen, Dimas was washing the car.",
+            "While Sari cleaning the kitchen, Dimas was washing the car.",
+            "While Sari was cleaning the kitchen, Dimas was washing the car."
+          ],
+          "answer": 2,
+          "prompt": "Sari dan Dimas sibuk pada waktu yang sama. Pilih kalimat yang benar.",
+          "explanation": "Dua kegiatan panjang bersamaan → **while** + was/were + -ing di kedua bagian: **was cleaning … was washing**. 'was clean' kehilangan -ing, dan 'Sari cleaning' kehilangan was."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan ceritanya",
+        "text": "Rina bercerita tentang tadi malam. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "combine-past-continuous",
+          "listen": "Last night I was studying in my room, and my sister was watching TV. Suddenly our cat jumped onto my desk.",
+          "options": [
+            "Rina was studying in her room.",
+            "Her sister was watching TV.",
+            "The cat jumped onto Rina's desk."
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan cerita singkat Rina. Apa kejadian utamanya (hal yang terjadi)?",
+          "explanation": "Rina membangun latar dengan **was studying** dan **was watching** (keduanya latar, bersamaan). Kejadian utamanya adalah kegiatan singkat dalam past simple, setelah **suddenly**: **our cat jumped onto my desk**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini: panjang atau singkat, when atau while.",
+        "flashcards": [
+          {
+            "front": "Latar (kegiatan panjang yang sedang berlangsung)",
+            "back": "was/were + -ing: I was cooking. (saya sedang memasak)"
+          },
+          {
+            "front": "Kejadian utama (singkat, selesai)",
+            "back": "past simple: The phone rang. (telepon berbunyi)"
+          },
+          {
+            "front": "when + ?",
+            "back": "the short event, past simple: … when the phone rang. (ketika telepon berbunyi)"
+          },
+          {
+            "front": "while + ?",
+            "back": "the long action, was/were + -ing: while I was walking home (saat saya sedang berjalan pulang)"
+          },
+          {
+            "front": "Dua kegiatan panjang bersamaan",
+            "back": "while + was/were + -ing in both: While I was studying, my brother was playing games."
+          },
+          {
+            "front": "I was watching TV when the phone was ringing. ✗",
+            "back": "I was watching TV when the phone rang. ✓"
+          },
+          {
+            "front": "While I was walk home, I saw Rina. ✗",
+            "back": "While I was walking home, I saw Rina. ✓"
+          },
+          {
+            "front": "Yesterday at 8 I watch TV. ✗",
+            "back": "Yesterday at 8 I was watching TV. ✓ (Kemarin jam 8 saya sedang menonton TV.)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · past simple & past continuous",
+          "intro": "Kegiatan panjang yang sedang berlangsung → was/were + -ing. Kejadian singkat → past simple.",
+          "headers": [
+            "Pola",
+            "Kegunaan",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "was/were + -ing",
+              "latar: kegiatan panjang yang sedang berlangsung",
+              "I was cooking."
+            ],
+            [
+              "past simple",
+              "kejadian utama: singkat, selesai",
+              "The phone rang."
+            ],
+            [
+              "long + when + short",
+              "kejadian singkat di tengah kegiatan panjang",
+              "I was cooking when the phone rang."
+            ],
+            [
+              "While + long, short",
+              "kegiatan panjang di depan (pakai koma)",
+              "While I was walking home, I saw Rina."
+            ],
+            [
+              "While + long, long",
+              "dua kegiatan bersamaan",
+              "While I was studying, my brother was playing games."
+            ],
+            [
+              "When + short, short",
+              "satu kejadian setelah yang lain",
+              "When the film ended, we went home."
+            ]
+          ],
+          "tips": [
+            "Kejadian singkat tetap past simple: 'when the phone was ringing' ✗ → **when the phone rang**.",
+            "Setelah **while**: was/were + -ing. 'While I was walk' ✗ → **While I was walking**. **during** + kata benda: *during the meeting*.",
+            "Cerita: latar dengan was/were + -ing, lalu kejadian dengan past simple (**suddenly**, **then**, **after that**)."
+          ],
+          "examples": [
+            {
+              "en": "Budi was driving to the office when his car broke down.",
+              "id": "Budi sedang menyetir ke kantor ketika mobilnya mogok."
+            },
+            {
+              "en": "While Pak Hasan was giving his presentation, his phone rang.",
+              "id": "Saat Pak Hasan sedang presentasi, HP-nya berbunyi."
+            },
+            {
+              "en": "When I got to the station, my friends were waiting for me.",
+              "id": "Ketika saya sampai di stasiun, teman-temanku sedang menungguku."
+            },
+            {
+              "en": "It was a rainy morning, and everyone was waiting for the KRL. Suddenly the train stopped.",
+              "id": "Pagi itu hujan, dan semua orang sedang menunggu KRL. Tiba-tiba keretanya berhenti."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ada halaman tata bahasa singkat dengan dua tes tentang when dan while, dan sebuah video (bagian tengahnya cocok dengan pelajaran ini)."
+      }
+    ]
+  }
+}

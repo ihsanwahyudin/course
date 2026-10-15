@@ -1,0 +1,562 @@
+{
+  "en": {
+    "greeting": "Hi! Today you learn to join two ideas into one sentence with who, which, that and where, just like Indonesian 'yang'. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One sentence, two ideas",
+        "text": "You already do this in Indonesian with 'yang'. Let's see how English does it.",
+        "body": "*I have a friend. She works in a bank.* → *I have a friend **who works in a bank**.* The part after *friend* is a **relative clause**: it tells us **which** person, thing or place you mean. Indonesian uses **yang** for everything; English chooses: **who** for people, **which** for things and animals, **that** for both, **where** for places. **who** takes the place of **she**, so don't keep both.",
+        "pairs": [
+          {
+            "en": "who",
+            "id": "yang (untuk orang)"
+          },
+          {
+            "en": "which",
+            "id": "yang (untuk benda, hewan)"
+          },
+          {
+            "en": "that",
+            "id": "yang (orang atau benda)"
+          },
+          {
+            "en": "where",
+            "id": "tempat (di mana)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "People and things",
+        "text": "Read these out loud. Is it a person or a thing?",
+        "body": "For a person say **who** or **that**; for a thing **which** or **that**. Both are correct. **which** is never for people.",
+        "examples": [
+          {
+            "en": "I have a friend who works in a bank.",
+            "id": "Saya punya teman yang bekerja di bank."
+          },
+          {
+            "en": "The girl that sits next to me is from Medan.",
+            "id": "Cewek yang duduk di sebelah saya berasal dari Medan. (that juga bisa untuk orang)"
+          },
+          {
+            "en": "This is the bus which goes to the airport.",
+            "id": "Ini bus yang ke bandara."
+          },
+          {
+            "en": "Do you know a restaurant that sells good rendang?",
+            "id": "Kamu tahu restoran yang jual rendang enak?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A person or a thing?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-who-which",
+          "prompt": "The woman ___ cuts my hair has opened her own salon in Bandung.",
+          "options": [
+            "which",
+            "who",
+            "where"
+          ],
+          "answer": 1,
+          "explanation": "The woman is a **person**, so use **who** (that is also fine, but it isn't an option here). **which** is only for things and animals, and **where** is for places."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your company is looking for a new driver. Join the idea into one sentence.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "join-ideas-with",
+          "prompt": "Arrange the words: Kami butuh sopir yang kenal Jakarta.",
+          "tokens": [
+            "Jakarta",
+            "a",
+            "who",
+            "need",
+            "driver",
+            "We",
+            "knows"
+          ],
+          "solution": "We need a driver who knows Jakarta.",
+          "explanation": "A driver is a person, so **who** comes right after *a driver*. **who** replaces *he/she*: *We need a driver. He knows Jakarta.* → *We need a driver who knows Jakarta.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Places: where or which?",
+        "text": "Indonesian often says 'tempat' for a place: kantor tempat saya bekerja. English has a special word.",
+        "body": "Use **where** + person + verb: *the office **where I work***. *'the office which I work'* is a common mistake. **Trick:** make the small sentence with **there**. *I work there* ✓ → **where**. If the place itself does something or is the thing you visit or like, there is no 'there': *the mall **which** opened last month*, *the city **which** I visited*. (*the office which I work in* is also correct, but **where** is shorter.)",
+        "pairs": [
+          {
+            "en": "the office where I work",
+            "id": "kantor tempat saya bekerja (I work there)"
+          },
+          {
+            "en": "the school where my kids study",
+            "id": "sekolah tempat anak-anak saya belajar"
+          },
+          {
+            "en": "the mall which opened last month",
+            "id": "mal yang baru buka bulan lalu (mal itu yang buka)"
+          },
+          {
+            "en": "the city which I visited",
+            "id": "kota yang saya kunjungi (I visited it)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Try the 'there' trick.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-who-which",
+          "prompt": "This is the hotel ___ we stayed during our holiday in Bali.",
+          "options": [
+            "which",
+            "where",
+            "who"
+          ],
+          "answer": 1,
+          "explanation": "We stayed **there**, so use **where**. *'the hotel which we stayed'* is missing *in* at the end, and **who** is only for people."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Don't say it twice",
+        "text": "Here's a mistake many learners make, even at B1.",
+        "body": "Normally *bought* needs a thing after it: *I bought **it***. But in *the book **that** I bought*, **that** already means *the book*, so the place after *bought* stays empty. Indonesian is the same: *buku yang saya beli*, not *'buku yang saya beli buku itu'*. So no **it / him / her / them**: *'the book that I bought it'* ✗.",
+        "pairs": [
+          {
+            "en": "the email that Rina sent",
+            "id": "email yang dikirim Rina (bukan 'sent it')"
+          },
+          {
+            "en": "the food that we ordered",
+            "id": "makanan yang kami pesan (bukan 'ordered it')"
+          },
+          {
+            "en": "the people that we invited",
+            "id": "orang-orang yang kami undang (bukan 'invited them')"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Spot the correct one",
+        "text": "Only one sentence is right. Look at what comes after bought.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "join-ideas-with",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "The shoes that I bought them online are too small.",
+            "The shoes I bought them online are too small.",
+            "The shoes that I bought online are too small."
+          ],
+          "answer": 2,
+          "explanation": "**that** already means *the shoes*, so nothing comes after *bought*: *The shoes that I bought online are too small.* The other two repeat the shoes with **them**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Keep it or drop it?",
+        "text": "In English you can often leave out who, which or that. Look at the word right after it.",
+        "body": "A **person or thing + verb** comes next (*we ordered, you sang*): the word is the **object** (the thing that receives the action) → you **can** leave it out. A **verb** comes next (*took, work*): the word is the **subject** (the one who does it) → it **must** stay.",
+        "examples": [
+          {
+            "en": "The food we ordered was cold.",
+            "id": "Makanan yang kami pesan dingin. (setelahnya 'we' → that boleh hilang)"
+          },
+          {
+            "en": "The song you sang at the party was great.",
+            "id": "Lagu yang kamu nyanyikan di pesta itu bagus sekali. (setelahnya 'you' → boleh hilang)"
+          },
+          {
+            "en": "The driver who took me home was very kind.",
+            "id": "Sopir yang mengantar saya pulang sangat baik. (setelahnya 'took' → who wajib)"
+          },
+          {
+            "en": "The people who work here are friendly.",
+            "id": "Orang-orang yang bekerja di sini ramah. (setelahnya 'work' → who wajib)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look at the word after that in each sentence.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "omit-pronoun",
+          "prompt": "In which sentence can you leave out that?",
+          "options": [
+            "The man that fixed my motorbike was very friendly.",
+            "The motorbike that I bought last year uses a lot of petrol.",
+            "The app that shows the KRL times is free."
+          ],
+          "answer": 1,
+          "explanation": "In the motorbike sentence, **I** comes after that, so that is the object and can go: *The motorbike I bought last year…* In the other two, a verb (*fixed, shows*) comes next, so that must stay."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Relative clauses",
+          "intro": "Which word to use after the noun, and when you can leave it out.",
+          "headers": [
+            "Word",
+            "Use it for",
+            "Example"
+          ],
+          "rows": [
+            [
+              "who",
+              "people",
+              "the man who lives next door"
+            ],
+            [
+              "which",
+              "things, animals",
+              "the bus which goes to the airport"
+            ],
+            [
+              "that",
+              "people or things",
+              "the girl that sits next to me"
+            ],
+            [
+              "where",
+              "places (+ person + verb)",
+              "the office where I work"
+            ],
+            [
+              "which / that",
+              "a place that does something or that you visit",
+              "the mall which opened last month"
+            ],
+            [
+              "(nothing)",
+              "object: a person/thing comes next",
+              "the food we ordered"
+            ]
+          ],
+          "tips": [
+            "Don't say it twice: the book that I bought (not 'bought it'), the man who lives here (not 'who he lives').",
+            "The 'there' test: I work there → the office where I work. No 'there' → which or that.",
+            "Never which for people, never what for 'yang'."
+          ],
+          "examples": [
+            {
+              "en": "I have a friend who works in a bank.",
+              "id": "Saya punya teman yang bekerja di bank."
+            },
+            {
+              "en": "The email Rina sent was very long.",
+              "id": "Email yang dikirim Rina panjang sekali."
+            },
+            {
+              "en": "That's the office where I work.",
+              "id": "Itu kantor tempat saya bekerja."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These links explain the same ideas in other words."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar menggabungkan dua ide jadi satu kalimat dengan who, which, that dan where, persis seperti 'yang' dalam bahasa Indonesia. Yuk, kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu kalimat, dua ide",
+        "text": "Dalam bahasa Indonesia kamu sudah melakukannya dengan 'yang'. Yuk lihat caranya dalam bahasa Inggris.",
+        "body": "*I have a friend. She works in a bank.* → *I have a friend **who works in a bank**.* Bagian setelah *friend* disebut **relative clause**: bagian 'yang …' yang menjelaskan orang, benda atau tempat **yang mana** yang kamu maksud. Bahasa Indonesia memakai **yang** untuk semuanya; bahasa Inggris memilih: **who** untuk orang, **which** untuk benda dan hewan, **that** untuk keduanya, **where** untuk tempat. **who** menggantikan **she**, jadi jangan pakai keduanya.",
+        "pairs": [
+          {
+            "en": "who",
+            "id": "yang (untuk orang)"
+          },
+          {
+            "en": "which",
+            "id": "yang (untuk benda, hewan)"
+          },
+          {
+            "en": "that",
+            "id": "yang (orang atau benda)"
+          },
+          {
+            "en": "where",
+            "id": "tempat (di mana)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Orang dan benda",
+        "text": "Baca dengan suara keras. Orang atau benda?",
+        "body": "Untuk orang pakai **who** atau **that**; untuk benda **which** atau **that**. Keduanya benar. **which** tidak pernah dipakai untuk orang.",
+        "examples": [
+          {
+            "en": "I have a friend who works in a bank.",
+            "id": "Saya punya teman yang bekerja di bank."
+          },
+          {
+            "en": "The girl that sits next to me is from Medan.",
+            "id": "Cewek yang duduk di sebelah saya berasal dari Medan. (that juga bisa untuk orang)"
+          },
+          {
+            "en": "This is the bus which goes to the airport.",
+            "id": "Ini bus yang ke bandara."
+          },
+          {
+            "en": "Do you know a restaurant that sells good rendang?",
+            "id": "Kamu tahu restoran yang jual rendang enak?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Orang atau benda?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-who-which",
+          "prompt": "Lengkapi: The woman ___ cuts my hair has opened her own salon in Bandung.",
+          "options": [
+            "which",
+            "who",
+            "where"
+          ],
+          "answer": 1,
+          "explanation": "The woman adalah **orang**, jadi pakai **who** (that juga benar, tapi tidak ada di pilihan). **which** hanya untuk benda dan hewan, dan **where** untuk tempat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kantormu sedang mencari sopir baru. Gabungkan idenya jadi satu kalimat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "join-ideas-with",
+          "prompt": "Susun kata-katanya: Kami butuh sopir yang kenal Jakarta.",
+          "tokens": [
+            "Jakarta",
+            "a",
+            "who",
+            "need",
+            "driver",
+            "We",
+            "knows"
+          ],
+          "solution": "We need a driver who knows Jakarta.",
+          "explanation": "Sopir adalah orang, jadi **who** datang tepat setelah *a driver*. **who** menggantikan *he/she*: *We need a driver. He knows Jakarta.* → *We need a driver who knows Jakarta.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tempat: where atau which?",
+        "text": "Untuk tempat, bahasa Indonesia sering bilang 'tempat': kantor tempat saya bekerja. Bahasa Inggris punya kata khusus.",
+        "body": "Pakai **where** + orang + kata kerja: *the office **where I work***. *'the office which I work'* adalah kesalahan yang sering terjadi. **Trik:** buat kalimat kecilnya dengan **there** (di sana). *I work there* ✓ → **where**. Kalau tempat itu sendiri yang melakukan sesuatu, atau tempat itu yang kamu kunjungi atau sukai, tidak ada 'there': *the mall **which** opened last month*, *the city **which** I visited*. (*the office which I work in* juga benar, tapi **where** lebih pendek.)",
+        "pairs": [
+          {
+            "en": "the office where I work",
+            "id": "kantor tempat saya bekerja (I work there)"
+          },
+          {
+            "en": "the school where my kids study",
+            "id": "sekolah tempat anak-anak saya belajar"
+          },
+          {
+            "en": "the mall which opened last month",
+            "id": "mal yang baru buka bulan lalu (mal itu yang buka)"
+          },
+          {
+            "en": "the city which I visited",
+            "id": "kota yang saya kunjungi (I visited it)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Coba trik 'there'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-who-which",
+          "prompt": "Lengkapi: This is the hotel ___ we stayed during our holiday in Bali.",
+          "options": [
+            "which",
+            "where",
+            "who"
+          ],
+          "answer": 1,
+          "explanation": "Kami menginap **di sana** (we stayed there), jadi pakai **where**. *'the hotel which we stayed'* kurang kata *in* di akhir, dan **who** hanya untuk orang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jangan disebut dua kali",
+        "text": "Ini kesalahan yang sering dibuat, bahkan di level B1.",
+        "body": "Biasanya *bought* butuh benda setelahnya: *I bought **it***. Tapi di *the book **that** I bought*, **that** sudah berarti *the book*, jadi tempat setelah *bought* dibiarkan kosong. Bahasa Indonesia juga begitu: *buku yang saya beli*, bukan *'buku yang saya beli buku itu'*. Jadi jangan tambahkan **it / him / her / them**: *'the book that I bought it'* ✗.",
+        "pairs": [
+          {
+            "en": "the email that Rina sent",
+            "id": "email yang dikirim Rina (bukan 'sent it')"
+          },
+          {
+            "en": "the food that we ordered",
+            "id": "makanan yang kami pesan (bukan 'ordered it')"
+          },
+          {
+            "en": "the people that we invited",
+            "id": "orang-orang yang kami undang (bukan 'invited them')"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Mana yang benar?",
+        "text": "Hanya satu kalimat yang benar. Lihat apa yang ada setelah bought.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "join-ideas-with",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "The shoes that I bought them online are too small.",
+            "The shoes I bought them online are too small.",
+            "The shoes that I bought online are too small."
+          ],
+          "answer": 2,
+          "explanation": "**that** sudah berarti *the shoes*, jadi tidak ada apa-apa setelah *bought*: *The shoes that I bought online are too small.* Dua kalimat lainnya mengulang sepatunya dengan **them**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Dipakai atau dihilangkan?",
+        "text": "Dalam bahasa Inggris, who, which atau that sering boleh dihilangkan. Lihat kata tepat setelahnya.",
+        "body": "Kalau setelahnya ada **orang atau benda + kata kerja** (*we ordered, you sang*): kata itu adalah **objek** (yang dikenai pekerjaan) → **boleh** dihilangkan. Kalau setelahnya langsung **kata kerja** (*took, work*): kata itu adalah **subjek** (pelakunya) → **wajib** ada.",
+        "examples": [
+          {
+            "en": "The food we ordered was cold.",
+            "id": "Makanan yang kami pesan dingin. (setelahnya 'we' → that boleh hilang)"
+          },
+          {
+            "en": "The song you sang at the party was great.",
+            "id": "Lagu yang kamu nyanyikan di pesta itu bagus sekali. (setelahnya 'you' → boleh hilang)"
+          },
+          {
+            "en": "The driver who took me home was very kind.",
+            "id": "Sopir yang mengantar saya pulang sangat baik. (setelahnya 'took' → who wajib)"
+          },
+          {
+            "en": "The people who work here are friendly.",
+            "id": "Orang-orang yang bekerja di sini ramah. (setelahnya 'work' → who wajib)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Lihat kata setelah that di tiap kalimat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "omit-pronoun",
+          "prompt": "Di kalimat mana kamu boleh menghilangkan that?",
+          "options": [
+            "The man that fixed my motorbike was very friendly.",
+            "The motorbike that I bought last year uses a lot of petrol.",
+            "The app that shows the KRL times is free."
+          ],
+          "answer": 1,
+          "explanation": "Di kalimat motor, setelah that ada **I**, jadi that adalah objek dan boleh hilang: *The motorbike I bought last year…* Di dua kalimat lainnya, setelahnya langsung kata kerja (*fixed, shows*), jadi that wajib ada."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Relative clauses",
+          "intro": "Kata mana yang dipakai setelah kata benda, dan kapan boleh dihilangkan.",
+          "headers": [
+            "Kata",
+            "Dipakai untuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "who",
+              "orang",
+              "the man who lives next door"
+            ],
+            [
+              "which",
+              "benda, hewan",
+              "the bus which goes to the airport"
+            ],
+            [
+              "that",
+              "orang atau benda",
+              "the girl that sits next to me"
+            ],
+            [
+              "where",
+              "tempat (+ orang + kata kerja)",
+              "the office where I work"
+            ],
+            [
+              "which / that",
+              "tempat yang melakukan sesuatu atau yang kamu kunjungi",
+              "the mall which opened last month"
+            ],
+            [
+              "(tanpa kata)",
+              "objek: setelahnya ada orang/benda",
+              "the food we ordered"
+            ]
+          ],
+          "tips": [
+            "Jangan disebut dua kali: the book that I bought (bukan 'bought it'), the man who lives here (bukan 'who he lives').",
+            "Tes 'there': I work there → the office where I work. Tidak ada 'there' → which atau that.",
+            "which tidak pernah untuk orang, dan what tidak pernah dipakai untuk 'yang'."
+          ],
+          "examples": [
+            {
+              "en": "I have a friend who works in a bank.",
+              "id": "Saya punya teman yang bekerja di bank."
+            },
+            {
+              "en": "The email Rina sent was very long.",
+              "id": "Email yang dikirim Rina panjang sekali."
+            },
+            {
+              "en": "That's the office where I work.",
+              "id": "Itu kantor tempat saya bekerja."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Tautan ini menjelaskan hal yang sama dengan cara lain."
+      }
+    ]
+  }
+}

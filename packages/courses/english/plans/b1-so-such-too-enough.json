@@ -1,0 +1,648 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to say how much of a quality something has, and what happens because of it: so hot, such a good film, too tired, old enough. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "so + a describing word",
+        "text": "You know very, really and quite. Let's start with a word that adds feeling: so.",
+        "body": "**so** makes a word stronger, with feeling, like *banget*: *It's so hot today!* It goes before an **adjective** (a describing word: *hot, tired*) or an **adverb** (how: *fast, well*), with **no noun** after it.\n\nAdd **that** + what happened to show the **result** (*akibat*): *I was so tired that I fell asleep on the KRL.* Indonesian: *begitu … sehingga …*. This isn't *so* = *jadi* from linkers (*I was tired, so I went home*).",
+        "pairs": [
+          {
+            "en": "so hot",
+            "id": "panas banget"
+          },
+          {
+            "en": "so tired",
+            "id": "capek sekali"
+          },
+          {
+            "en": "so fast",
+            "id": "cepat sekali"
+          },
+          {
+            "en": "so well",
+            "id": "baik sekali"
+          },
+          {
+            "en": "so … that …",
+            "id": "begitu … sehingga …"
+          },
+          {
+            "en": "I was so tired that I fell asleep on the KRL.",
+            "id": "Saya begitu capek sehingga tertidur di KRL."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "such + a noun phrase",
+        "text": "Now, what if a noun comes at the end?",
+        "body": "If the phrase **ends with a noun** (a thing or person word: *film, beaches, weather*), use **such**. One countable thing → **such a/an**: *such a good film*. Plural or uncountable → **such** without a: *such long queues, such bad weather*.\n\nQuick test: look at the **last word**. Describing word → **so**; noun → **such**. Not `so a good film`.",
+        "examples": [
+          {
+            "en": "It was such a good film!",
+            "id": "Filmnya bagus banget!"
+          },
+          {
+            "en": "The film was so good!",
+            "id": "Filmnya bagus banget!"
+          },
+          {
+            "en": "Pak Hasan is such a patient boss.",
+            "id": "Pak Hasan atasan yang sabar sekali."
+          },
+          {
+            "en": "Bali has such beautiful beaches.",
+            "id": "Bali punya pantai-pantai yang indah sekali."
+          },
+          {
+            "en": "We had such bad weather in Puncak.",
+            "id": "Cuaca di Puncak jelek sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari's new colleagues help her every day. Look at the last word of the phrase.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-such-that",
+          "prompt": "Complete: They are ___ nice people.",
+          "options": [
+            "so",
+            "such a",
+            "such"
+          ],
+          "answer": 2,
+          "explanation": "The phrase ends with a noun (**people**), so use **such**. *people* is plural, so there's no *a*: **such nice people**. `so nice people` is wrong: so can't go before a noun phrase."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "There was a big storm in Bogor yesterday. Say what happened because of it.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "so-such-that",
+          "prompt": "Arrange the words: Hujannya begitu deras sehingga kami tinggal di rumah.",
+          "tokens": [
+            "that",
+            "stayed",
+            "so",
+            "It",
+            "home",
+            "hard",
+            "we",
+            "rained"
+          ],
+          "solution": "It rained so hard that we stayed home.",
+          "explanation": "**so** + adverb (*rain hard* = hujan deras), then **that** + the result: *we stayed home*. *begitu … sehingga* = **so … that**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "too = a problem",
+        "text": "Next: a word that always means there's a problem.",
+        "body": "**too** = *terlalu*: more than is OK. *This shirt is too small* (I can't wear it). Add **to + verb** for what you can't do: *He's too young to vote*, or **for** + a person: *too expensive for me*.\n\nBefore an adjective it's just **too**, not `too much expensive`: **too much** goes before uncountable nouns (*too much sugar*).\n\nTrap: *terlalu enak* can be praise in Indonesian, but English **too** never is. For praise use **so / really / very**.",
+        "pairs": [
+          {
+            "en": "too small",
+            "id": "terlalu kecil"
+          },
+          {
+            "en": "too expensive for me",
+            "id": "terlalu mahal untuk saya"
+          },
+          {
+            "en": "too young to vote",
+            "id": "terlalu muda untuk ikut pemilu"
+          },
+          {
+            "en": "too much sugar",
+            "id": "terlalu banyak gula"
+          },
+          {
+            "en": "It's very hot, but we can go out.",
+            "id": "Sangat panas, tapi kita bisa keluar."
+          },
+          {
+            "en": "It's too hot to go out.",
+            "id": "Terlalu panas untuk keluar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi worked at the office until 2 a.m. Can he drive home safely?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "too-adjective",
+          "prompt": "Complete: He was ___ tired to drive home, so he took an ojek.",
+          "options": [
+            "very",
+            "too",
+            "too much"
+          ],
+          "answer": 1,
+          "explanation": "There's a problem: he can't drive. **too** + adjective + **to** + verb: **too tired to drive**. *very* only describes, so it can't take *to drive* like this. *too much* goes before uncountable nouns (*too much work*), not before an adjective."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina tastes her mother's rendang. She loves it!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "too-adjective",
+          "prompt": "Which sentence is a compliment?",
+          "options": [
+            "This rendang is too delicious!",
+            "This rendang is so delicious!",
+            "This rendang is too much delicious!"
+          ],
+          "answer": 1,
+          "explanation": "**so** adds feeling and praise: **so delicious** = *enak banget*. **too** always means a problem, so *too delicious* sounds like a complaint, even if *terlalu enak* is praise in Indonesian. *too much* never goes before an adjective."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "enough: after describing words",
+        "text": "Last one: enough, and the trap in Indonesian cukup.",
+        "body": "**enough** (say 'i-NAF') = *cukup*, as much as you need. It goes **after** an adjective or adverb: *old enough to vote*. Negative: **not … enough**: *The bag isn't big enough.* Before a **noun** it comes first: *enough money*. Two patterns: after describing words, before thing words.\n\nTrap: *cukup besar* puts cukup first, so people say `enough big`. And *cukup* can mean **quite** (*lumayan*): *quite big* = lumayan besar; *big enough* = sesuai kebutuhan.",
+        "pairs": [
+          {
+            "en": "old enough to vote",
+            "id": "cukup umur untuk ikut pemilu"
+          },
+          {
+            "en": "not big enough",
+            "id": "kurang besar, tidak cukup besar"
+          },
+          {
+            "en": "enough money",
+            "id": "cukup uang"
+          },
+          {
+            "en": "enough time",
+            "id": "cukup waktu"
+          },
+          {
+            "en": "quite big",
+            "id": "lumayan besar"
+          },
+          {
+            "en": "big enough",
+            "id": "cukup besar (sesuai kebutuhan)"
+          },
+          {
+            "en": "too young = not old enough",
+            "id": "terlalu muda = belum cukup umur"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari's old laptop needs five minutes to open one file.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-enough",
+          "prompt": "Complete: It isn't ___ for her work.",
+          "options": [
+            "enough fast",
+            "fast enough",
+            "too fast"
+          ],
+          "answer": 1,
+          "explanation": "**enough** goes after the describing word: **fast enough**. `enough fast` copies the Indonesian order (*cukup cepat*). *too fast* would mean it's very fast, the opposite of her problem."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · so, such, too, enough",
+          "intro": "so / such = strong, with feeling (+ that = the result). too = more than is OK, a problem. enough = as much as you need.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "so + adjective / adverb",
+              "It's so hot! She drives so fast.",
+              "Panas banget! Dia menyetir cepat sekali."
+            ],
+            [
+              "such a/an + adjective + noun",
+              "It was such a good film!",
+              "Filmnya bagus banget!"
+            ],
+            [
+              "such + plural / uncountable noun",
+              "such nice people, such bad weather",
+              "orang-orang yang baik sekali, cuaca yang jelek sekali"
+            ],
+            [
+              "so many / so much + noun",
+              "There were so many people.",
+              "Ada banyak sekali orang."
+            ],
+            [
+              "so … that + result",
+              "It was so hot that we stayed inside.",
+              "Begitu panas sehingga kami tetap di dalam."
+            ],
+            [
+              "such … that + result",
+              "It was such a long meeting that I missed lunch.",
+              "Rapatnya begitu lama sehingga saya melewatkan makan siang."
+            ],
+            [
+              "too + adjective",
+              "This shirt is too small.",
+              "Kemeja ini terlalu kecil."
+            ],
+            [
+              "too + adjective + to + verb",
+              "He's too young to vote.",
+              "Dia terlalu muda untuk ikut pemilu."
+            ],
+            [
+              "too much + uncountable noun",
+              "too much sugar",
+              "terlalu banyak gula"
+            ],
+            [
+              "adjective + enough (+ to)",
+              "She's old enough to vote.",
+              "Dia sudah cukup umur untuk ikut pemilu."
+            ],
+            [
+              "not + adjective + enough",
+              "The table isn't big enough.",
+              "Mejanya kurang besar."
+            ],
+            [
+              "enough + noun",
+              "We don't have enough chairs.",
+              "Kursi kita tidak cukup."
+            ]
+          ],
+          "tips": [
+            "Last word of the phrase: describing word → **so**; noun → **such**. Not `so a good film`.",
+            "**too** is always a problem: praise with **so / really**, not `too delicious`. Not `too much expensive`.",
+            "**enough** after describing words, before nouns: **old enough**, **enough money**. *cukup* can also be **quite** (lumayan)."
+          ],
+          "examples": [
+            {
+              "en": "It was such a good film that I watched it twice.",
+              "id": "Filmnya begitu bagus sehingga saya menontonnya dua kali."
+            },
+            {
+              "en": "The rent is too expensive for us.",
+              "id": "Sewanya terlalu mahal untuk kami."
+            },
+            {
+              "en": "This table isn't big enough for eight people.",
+              "id": "Meja ini tidak cukup besar untuk delapan orang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These two British Council pages explain so and such, and where enough goes, with short tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar mengatakan seberapa kuat sebuah sifat, dan apa akibatnya: so hot, such a good film, too tired, old enough. Yuk kita pelajari langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "so + kata sifat",
+        "text": "Kamu sudah kenal very, really dan quite. Kita mulai dengan kata yang menambah perasaan: so.",
+        "body": "**so** membuat kata lebih kuat, dengan perasaan, mirip *banget*: *It's so hot today!* (Panas banget hari ini!) Letaknya sebelum **kata sifat** (adjective, kata yang menjelaskan: *hot, tired*) atau **adverb** (cara: *fast, well*), **tanpa kata benda** setelahnya.\n\nTambahkan **that** + apa yang terjadi untuk menunjukkan **akibat**: *I was so tired that I fell asleep on the KRL.* Dalam bahasa Indonesia: *begitu … sehingga …*. Ini bukan *so* = *jadi* dari kata penghubung (*I was tired, so I went home*).",
+        "pairs": [
+          {
+            "en": "so hot",
+            "id": "panas banget"
+          },
+          {
+            "en": "so tired",
+            "id": "capek sekali"
+          },
+          {
+            "en": "so fast",
+            "id": "cepat sekali"
+          },
+          {
+            "en": "so well",
+            "id": "baik sekali"
+          },
+          {
+            "en": "so … that …",
+            "id": "begitu … sehingga …"
+          },
+          {
+            "en": "I was so tired that I fell asleep on the KRL.",
+            "id": "Saya begitu capek sehingga tertidur di KRL."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "such + frasa kata benda",
+        "text": "Sekarang, bagaimana kalau ada kata benda di akhir?",
+        "body": "Kalau frasanya **berakhir dengan kata benda** (noun, kata untuk benda atau orang: *film, beaches, weather*), pakai **such**. Satu benda yang bisa dihitung → **such a/an**: *such a good film*. Jamak atau tak terhitung → **such** tanpa a: *such long queues, such bad weather*.\n\nTes cepat: lihat **kata terakhir**. Kata sifat → **so**; kata benda → **such**. Bukan `so a good film`.",
+        "examples": [
+          {
+            "en": "It was such a good film!",
+            "id": "Filmnya bagus banget!"
+          },
+          {
+            "en": "The film was so good!",
+            "id": "Filmnya bagus banget!"
+          },
+          {
+            "en": "Pak Hasan is such a patient boss.",
+            "id": "Pak Hasan atasan yang sabar sekali."
+          },
+          {
+            "en": "Bali has such beautiful beaches.",
+            "id": "Bali punya pantai-pantai yang indah sekali."
+          },
+          {
+            "en": "We had such bad weather in Puncak.",
+            "id": "Cuaca di Puncak jelek sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rekan kerja baru Sari membantunya setiap hari. Lihat kata terakhir frasanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-such-that",
+          "prompt": "Lengkapi: They are ___ nice people.",
+          "options": [
+            "so",
+            "such a",
+            "such"
+          ],
+          "answer": 2,
+          "explanation": "Frasanya berakhir dengan kata benda (**people**), jadi pakai **such**. *people* itu jamak, jadi tanpa *a*: **such nice people**. `so nice people` salah: so tidak bisa ada sebelum frasa kata benda."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Kemarin ada badai besar di Bogor. Ceritakan apa akibatnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "so-such-that",
+          "prompt": "Susun kata-katanya: Hujannya begitu deras sehingga kami tinggal di rumah.",
+          "tokens": [
+            "that",
+            "stayed",
+            "so",
+            "It",
+            "home",
+            "hard",
+            "we",
+            "rained"
+          ],
+          "solution": "It rained so hard that we stayed home.",
+          "explanation": "**so** + adverb (*rain hard* = hujan deras), lalu **that** + akibatnya: *we stayed home*. *begitu … sehingga* = **so … that**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "too = masalah",
+        "text": "Berikutnya: kata yang selalu berarti ada masalah.",
+        "body": "**too** = *terlalu*: lebih dari yang wajar. *This shirt is too small* (tidak bisa saya pakai). Tambahkan **to + kata kerja** untuk hal yang tidak bisa dilakukan: *He's too young to vote*, atau **for** + orang: *too expensive for me*.\n\nSebelum kata sifat cukup **too** saja, bukan `too much expensive`: **too much** dipakai sebelum kata benda tak terhitung (*too much sugar*).\n\nJebakan: *terlalu enak* bisa jadi pujian dalam bahasa Indonesia, tapi **too** dalam bahasa Inggris tidak pernah. Untuk memuji pakai **so / really / very**.",
+        "pairs": [
+          {
+            "en": "too small",
+            "id": "terlalu kecil"
+          },
+          {
+            "en": "too expensive for me",
+            "id": "terlalu mahal untuk saya"
+          },
+          {
+            "en": "too young to vote",
+            "id": "terlalu muda untuk ikut pemilu"
+          },
+          {
+            "en": "too much sugar",
+            "id": "terlalu banyak gula"
+          },
+          {
+            "en": "It's very hot, but we can go out.",
+            "id": "Sangat panas, tapi kita bisa keluar."
+          },
+          {
+            "en": "It's too hot to go out.",
+            "id": "Terlalu panas untuk keluar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi bekerja di kantor sampai jam 2 pagi. Bisakah dia menyetir pulang dengan aman?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "too-adjective",
+          "prompt": "Lengkapi: He was ___ tired to drive home, so he took an ojek.",
+          "options": [
+            "very",
+            "too",
+            "too much"
+          ],
+          "answer": 1,
+          "explanation": "Ada masalah: dia tidak bisa menyetir. **too** + kata sifat + **to** + kata kerja: **too tired to drive**. *very* hanya menjelaskan, jadi tidak bisa diikuti *to drive* seperti ini. *too much* dipakai sebelum kata benda tak terhitung (*too much work*), bukan sebelum kata sifat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina mencicipi rendang buatan ibunya. Dia suka sekali!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "too-adjective",
+          "prompt": "Kalimat mana yang merupakan pujian?",
+          "options": [
+            "This rendang is too delicious!",
+            "This rendang is so delicious!",
+            "This rendang is too much delicious!"
+          ],
+          "answer": 1,
+          "explanation": "**so** menambah perasaan dan pujian: **so delicious** = *enak banget*. **too** selalu berarti masalah, jadi *too delicious* terdengar seperti keluhan, walaupun *terlalu enak* bisa jadi pujian dalam bahasa Indonesia. *too much* tidak pernah ada sebelum kata sifat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "enough: setelah kata sifat",
+        "text": "Yang terakhir: enough, dan jebakan kata cukup.",
+        "body": "**enough** (dibaca 'i-NAF') = *cukup*, sebanyak yang dibutuhkan. Letaknya **setelah** kata sifat atau adverb: *old enough to vote*. Negatif: **not … enough**: *The bag isn't big enough.* Sebelum **kata benda**, enough di depan: *enough money*. Dua pola: setelah kata sifat, sebelum kata benda.\n\nJebakan: *cukup besar* menaruh cukup di depan, jadi orang bilang `enough big`. Dan *cukup* bisa berarti **quite** (*lumayan*): *quite big* = lumayan besar; *big enough* = sesuai kebutuhan.",
+        "pairs": [
+          {
+            "en": "old enough to vote",
+            "id": "cukup umur untuk ikut pemilu"
+          },
+          {
+            "en": "not big enough",
+            "id": "kurang besar, tidak cukup besar"
+          },
+          {
+            "en": "enough money",
+            "id": "cukup uang"
+          },
+          {
+            "en": "enough time",
+            "id": "cukup waktu"
+          },
+          {
+            "en": "quite big",
+            "id": "lumayan besar"
+          },
+          {
+            "en": "big enough",
+            "id": "cukup besar (sesuai kebutuhan)"
+          },
+          {
+            "en": "too young = not old enough",
+            "id": "terlalu muda = belum cukup umur"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Laptop lama Sari butuh lima menit untuk membuka satu file.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-enough",
+          "prompt": "Lengkapi: It isn't ___ for her work.",
+          "options": [
+            "enough fast",
+            "fast enough",
+            "too fast"
+          ],
+          "answer": 1,
+          "explanation": "**enough** ada setelah kata sifat: **fast enough**. `enough fast` meniru urutan bahasa Indonesia (*cukup cepat*). *too fast* berarti laptopnya sangat cepat, kebalikan dari masalahnya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · so, such, too, enough",
+          "intro": "so / such = kuat, dengan perasaan (+ that = akibatnya). too = lebih dari yang wajar, masalah. enough = sebanyak yang dibutuhkan.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "so + kata sifat / adverb",
+              "It's so hot! She drives so fast.",
+              "Panas banget! Dia menyetir cepat sekali."
+            ],
+            [
+              "such a/an + kata sifat + kata benda",
+              "It was such a good film!",
+              "Filmnya bagus banget!"
+            ],
+            [
+              "such + kata benda jamak / tak terhitung",
+              "such nice people, such bad weather",
+              "orang-orang yang baik sekali, cuaca yang jelek sekali"
+            ],
+            [
+              "so many / so much + kata benda",
+              "There were so many people.",
+              "Ada banyak sekali orang."
+            ],
+            [
+              "so … that + akibat",
+              "It was so hot that we stayed inside.",
+              "Begitu panas sehingga kami tetap di dalam."
+            ],
+            [
+              "such … that + akibat",
+              "It was such a long meeting that I missed lunch.",
+              "Rapatnya begitu lama sehingga saya melewatkan makan siang."
+            ],
+            [
+              "too + kata sifat",
+              "This shirt is too small.",
+              "Kemeja ini terlalu kecil."
+            ],
+            [
+              "too + kata sifat + to + kata kerja",
+              "He's too young to vote.",
+              "Dia terlalu muda untuk ikut pemilu."
+            ],
+            [
+              "too much + kata benda tak terhitung",
+              "too much sugar",
+              "terlalu banyak gula"
+            ],
+            [
+              "kata sifat + enough (+ to)",
+              "She's old enough to vote.",
+              "Dia sudah cukup umur untuk ikut pemilu."
+            ],
+            [
+              "not + kata sifat + enough",
+              "The table isn't big enough.",
+              "Mejanya kurang besar."
+            ],
+            [
+              "enough + kata benda",
+              "We don't have enough chairs.",
+              "Kursi kita tidak cukup."
+            ]
+          ],
+          "tips": [
+            "Kata terakhir frasanya: kata sifat → **so**; kata benda → **such**. Bukan `so a good film`.",
+            "**too** selalu berarti masalah: untuk memuji pakai **so / really**, bukan `too delicious`. Bukan `too much expensive`.",
+            "**enough** setelah kata sifat, sebelum kata benda: **old enough**, **enough money**. *cukup* juga bisa berarti **quite** (lumayan)."
+          ],
+          "examples": [
+            {
+              "en": "It was such a good film that I watched it twice.",
+              "id": "Filmnya begitu bagus sehingga saya menontonnya dua kali."
+            },
+            {
+              "en": "The rent is too expensive for us.",
+              "id": "Sewanya terlalu mahal untuk kami."
+            },
+            {
+              "en": "This table isn't big enough for eight people.",
+              "id": "Meja ini tidak cukup besar untuk delapan orang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau belajar lebih banyak? Dua halaman British Council ini menjelaskan so dan such, serta letak enough, dengan tes singkat."
+      }
+    ]
+  }
+}
