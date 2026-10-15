@@ -554,7 +554,7 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 	if sess.EndedAt == nil {
 		if l, ok := cur.Lesson(n.ID); ok {
 			for _, it := range l.Assessment {
-				v.Assessment = append(v.Assessment, AssessmentItemView{it.ID, it.ObjectiveID, it.Prompt, it.Listen != ""})
+				v.Assessment = append(v.Assessment, AssessmentItemView{it.ID, it.ObjectiveID, l.PromptIn(it, lang), it.Listen != ""})
 			}
 		}
 	}

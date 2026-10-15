@@ -84,6 +84,9 @@ type Flashcard struct {
 type LessonText struct {
 	Intro              string   `json:"intro"`
 	SuggestedQuestions []string `json:"suggestedQuestions,omitempty"`
+	// Assessment maps a checkpoint item's id to its prompt in this language.
+	// Answers and rubrics stay in English for grading.
+	Assessment map[string]string `json:"assessment,omitempty"`
 }
 
 // MaterialView is a lesson's reading material in one language.

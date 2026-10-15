@@ -360,6 +360,11 @@ func TestLessonFollowsLanguageSwitch(t *testing.T) {
 	if a := got.Lesson.Steps[1].Question; a == nil || !a.Answered || !a.Correct || a.Prompt != idPlan.Steps[1].Question.Prompt {
 		t.Fatalf("the answered question should carry over: %+v", a)
 	}
+	// The checkpoint asks its questions in Indonesian too; grading keeps the English items.
+	l, _ := cur.Lesson("a0-alphabet-sounds")
+	if len(got.Assessment) != len(l.Assessment) || got.Assessment[3].Prompt != l.I18n["id"].Assessment[l.Assessment[3].ID] || got.Assessment[3].Prompt == l.Assessment[3].Prompt {
+		t.Fatalf("checkpoint prompts should be in Indonesian: %+v", got.Assessment)
+	}
 	// And back, also through StartSession.
 	if back, err := s.StartSession(en, learnerID, course, "a0-alphabet-sounds"); err != nil || back.ID != sess.ID || back.Lesson.Steps[0].Title != enPlan.Steps[0].Title {
 		t.Fatalf("back to English: %v %s %q", err, back.ID, back.Lesson.Steps[0].Title)

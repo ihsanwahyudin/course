@@ -152,6 +152,14 @@ func (l *Lesson) IntroIn(lang string) string {
 	return l.Intro
 }
 
+// PromptIn returns a checkpoint item's prompt in a language (English fallback).
+func (l *Lesson) PromptIn(it AssessmentItem, lang string) string {
+	if p := strings.TrimSpace(l.I18n[lang].Assessment[it.ID]); p != "" {
+		return p
+	}
+	return it.Prompt
+}
+
 // TutorPolicy is the course-specific teaching contract given to the AI.
 type TutorPolicy struct {
 	Policy          string `json:"policy"`
@@ -721,6 +729,21 @@ func validateTranslations(c *Curriculum) []error {
 		for id, l := range c.lessons {
 			if strings.TrimSpace(l.I18n[lang].Intro) == "" {
 				errs = append(errs, fmt.Errorf("lesson %q: missing %q intro", id, lang))
+			}
+			if n := c.byID[id]; n == nil || n.ContentStatus != ContentReady {
+				continue
+			}
+			known := map[string]bool{}
+			for _, it := range l.Assessment {
+				known[it.ID] = true
+				if strings.TrimSpace(l.I18n[lang].Assessment[it.ID]) == "" {
+					errs = append(errs, fmt.Errorf("lesson %q: missing %q prompt for checkpoint item %q", id, lang, it.ID))
+				}
+			}
+			for itemID := range l.I18n[lang].Assessment {
+				if !known[itemID] {
+					errs = append(errs, fmt.Errorf("lesson %q: %q prompt for unknown checkpoint item %q", id, lang, itemID))
+				}
 			}
 		}
 	}
