@@ -1,0 +1,680 @@
+{
+  "en": {
+    "greeting": "Hi! Today we learn how to say 'ada' in English: there is and there are. You'll describe rooms and places, ask what's there and use some and any. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "There is, there are",
+        "text": "Let's start with the English for 'ada'.",
+        "body": "For one thing, say **there is** (short: **there's**). For two or more, say **there are**. Then add the place: *There is a bed in my room.* For *tidak ada*, say **there isn't a …**. Don't use **have** for *ada*: 'In my room have a bed' is wrong.",
+        "pairs": [
+          {
+            "en": "there is",
+            "id": "ada (satu benda)"
+          },
+          {
+            "en": "there's",
+            "id": "ada (bentuk pendek)"
+          },
+          {
+            "en": "there are",
+            "id": "ada (dua atau lebih)"
+          },
+          {
+            "en": "there isn't",
+            "id": "tidak ada (satu benda)"
+          },
+          {
+            "en": "room",
+            "id": "kamar / ruangan"
+          },
+          {
+            "en": "kitchen",
+            "id": "dapur"
+          },
+          {
+            "en": "fan",
+            "id": "kipas angin"
+          },
+          {
+            "en": "wardrobe",
+            "id": "lemari pakaian"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Around the house",
+        "text": "Here are some sentences about rooms and places. Look at is and are.",
+        "body": "Count first: **one** thing → **is**, **two or more** → **are**. The place usually comes at the end.",
+        "examples": [
+          {
+            "en": "There is a bed in my room.",
+            "id": "Ada tempat tidur di kamarku."
+          },
+          {
+            "en": "There's a big TV in the living room.",
+            "id": "Ada TV besar di ruang tamu."
+          },
+          {
+            "en": "There are two bathrooms in our house.",
+            "id": "Ada dua kamar mandi di rumah kami."
+          },
+          {
+            "en": "There are 30 students in my class.",
+            "id": "Ada 30 murid di kelasku."
+          },
+          {
+            "en": "There isn't a wardrobe in my kos room.",
+            "id": "Tidak ada lemari pakaian di kamar kosku."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Count the tables first.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-a-room",
+          "prompt": "Pak Hasan's warung is very small. Complete: There ___ only one table.",
+          "options": [
+            "are",
+            "is",
+            "has"
+          ],
+          "answer": 1,
+          "explanation": "One table = one thing, so **there is**. **Are** is for two or more, and we don't use **has** for 'ada'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now describe a room. Remember: there + is/are + thing + place.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-a-room",
+          "prompt": "Arrange the words: Ada kipas angin di kamarku.",
+          "tokens": [
+            "room",
+            "is",
+            "a",
+            "There",
+            "my",
+            "fan",
+            "in"
+          ],
+          "solution": "There is a fan in my room.",
+          "explanation": "Start with **There is** (one fan), then the thing, then the place: **There is a fan in my room.** Not 'In my room have a fan'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Is there …? Are there …?",
+        "text": "Now let's ask what is in a place. Very useful when you travel!",
+        "body": "Put **is** or **are** first: **Is there a …?** (one thing), **Are there …?** (two or more). Answer short with **there**: **Yes, there is. / No, there isn't.** **Yes, there are. / No, there aren't.** Not 'Yes, it is' or 'Yes, have'.",
+        "pairs": [
+          {
+            "en": "Is there …?",
+            "id": "Ada …? (satu benda)"
+          },
+          {
+            "en": "Are there …?",
+            "id": "Ada …? (dua atau lebih)"
+          },
+          {
+            "en": "near here",
+            "id": "di dekat sini"
+          },
+          {
+            "en": "Yes, there is.",
+            "id": "Ya, ada. (satu)"
+          },
+          {
+            "en": "No, there isn't.",
+            "id": "Tidak ada. (satu)"
+          },
+          {
+            "en": "Yes, there are.",
+            "id": "Ya, ada. (dua atau lebih)"
+          },
+          {
+            "en": "No, there aren't.",
+            "id": "Tidak ada. (dua atau lebih)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Your friend asks you a question. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-questions-with",
+          "prompt": "Listen to your friend's question. The answer is yes. Choose the short answer.",
+          "listen": "Is there a mosque near your office?",
+          "options": [
+            "Yes, it is.",
+            "Yes, there is.",
+            "Yes, there are."
+          ],
+          "answer": 1,
+          "explanation": "The question starts with **Is there** (one mosque), so the answer is **Yes, there is.** Don't answer with **it**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "some and any",
+        "text": "Last part: two small words for two or more things.",
+        "body": "Use **some** (= beberapa) in positive sentences: *There are some shops.* Use **any** in negatives and questions: *There aren't any shops.* *Are there any shops?* So 'Are there some shops near here?' is a common mistake. With one thing, use **a/an**.",
+        "pairs": [
+          {
+            "en": "some",
+            "id": "beberapa (kalimat positif)"
+          },
+          {
+            "en": "any",
+            "id": "(dalam kalimat negatif dan pertanyaan)"
+          },
+          {
+            "en": "There are some shops.",
+            "id": "Ada beberapa toko."
+          },
+          {
+            "en": "There aren't any shops.",
+            "id": "Tidak ada toko sama sekali."
+          },
+          {
+            "en": "Are there any shops?",
+            "id": "Ada toko?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's late at night. Which sentence is right?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "some-any",
+          "prompt": "It's 11 p.m. at the bus station in Jakarta. Which sentence is correct?",
+          "options": [
+            "There aren't some buses to Bogor now.",
+            "There are any buses to Bogor now.",
+            "There aren't any buses to Bogor now."
+          ],
+          "answer": 2,
+          "explanation": "It's a negative sentence with **aren't**, so use **any**: **There aren't any buses to Bogor now.** **Some** is for positive sentences, and **any** doesn't go in a positive sentence."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You're hungry and you're near the station. Ask a question.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-questions-with",
+          "prompt": "Arrange the words: Ada restoran di dekat stasiun?",
+          "tokens": [
+            "restaurants",
+            "there",
+            "the",
+            "Are",
+            "near",
+            "any",
+            "station"
+          ],
+          "solution": "Are there any restaurants near the station?",
+          "explanation": "Restaurants = two or more, so **Are there**. In a question, use **any**: **Are there any restaurants near the station?**"
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "there is / there's",
+            "back": "ada (satu benda)"
+          },
+          {
+            "front": "there are",
+            "back": "ada (dua atau lebih)"
+          },
+          {
+            "front": "there isn't a …",
+            "back": "tidak ada (satu benda)"
+          },
+          {
+            "front": "there aren't any …",
+            "back": "tidak ada (dua atau lebih)"
+          },
+          {
+            "front": "Is there a …?",
+            "back": "Ada …? (satu benda)"
+          },
+          {
+            "front": "Are there any …?",
+            "back": "Ada …? (dua atau lebih)"
+          },
+          {
+            "front": "some",
+            "back": "beberapa (kalimat positif)"
+          },
+          {
+            "front": "near here",
+            "back": "di dekat sini"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Use it when you describe a room or ask about a place.",
+        "artifact": {
+          "title": "Cheat sheet · There is / there are",
+          "intro": "One thing → is. Two or more → are.",
+          "headers": [
+            "Form",
+            "One thing",
+            "Two or more"
+          ],
+          "rows": [
+            [
+              "Positive",
+              "There is a bed.",
+              "There are two beds. / There are some beds."
+            ],
+            [
+              "Negative",
+              "There isn't a TV.",
+              "There aren't any cups."
+            ],
+            [
+              "Question",
+              "Is there a fan?",
+              "Are there any shops?"
+            ],
+            [
+              "Short answer: yes",
+              "Yes, there is.",
+              "Yes, there are."
+            ],
+            [
+              "Short answer: no",
+              "No, there isn't.",
+              "No, there aren't."
+            ]
+          ],
+          "tips": [
+            "Don't use **have** for *ada*: **There is a bed in my room.**",
+            "Count first: **There are two chairs**, not 'There is two chairs'.",
+            "Questions and negatives take **any**: **Are there any shops near here?**"
+          ],
+          "examples": [
+            {
+              "en": "There is a bed in my room.",
+              "id": "Ada tempat tidur di kamarku."
+            },
+            {
+              "en": "There are some nice beaches in Lombok.",
+              "id": "Ada beberapa pantai yang bagus di Lombok."
+            },
+            {
+              "en": "Is there an ATM near here? — Yes, there is.",
+              "id": "Ada ATM di dekat sini? — Ya, ada."
+            },
+            {
+              "en": "Are there any shops near here?",
+              "id": "Ada toko di dekat sini?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and practise",
+        "text": "Want more? Watch a short video and try the online tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar cara bilang 'ada' dalam bahasa Inggris: there is dan there are. Kamu akan mendeskripsikan ruangan dan tempat, menanyakan apa yang ada, dan memakai some dan any. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "There is, there are",
+        "text": "Kita mulai dari bahasa Inggrisnya 'ada'.",
+        "body": "Untuk satu benda, ucapkan **there is** (pendeknya: **there's**). Untuk dua atau lebih, ucapkan **there are**. Lalu tambahkan tempatnya: *There is a bed in my room.* Untuk *tidak ada*, ucapkan **there isn't a …**. Jangan pakai **have** untuk *ada*: 'In my room have a bed' salah.",
+        "pairs": [
+          {
+            "en": "there is",
+            "id": "ada (satu benda)"
+          },
+          {
+            "en": "there's",
+            "id": "ada (bentuk pendek)"
+          },
+          {
+            "en": "there are",
+            "id": "ada (dua atau lebih)"
+          },
+          {
+            "en": "there isn't",
+            "id": "tidak ada (satu benda)"
+          },
+          {
+            "en": "room",
+            "id": "kamar / ruangan"
+          },
+          {
+            "en": "kitchen",
+            "id": "dapur"
+          },
+          {
+            "en": "fan",
+            "id": "kipas angin"
+          },
+          {
+            "en": "wardrobe",
+            "id": "lemari pakaian"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di sekitar rumah",
+        "text": "Ini beberapa kalimat tentang ruangan dan tempat. Perhatikan is dan are.",
+        "body": "Hitung dulu: **satu** benda → **is**, **dua atau lebih** → **are**. Tempatnya biasanya di akhir kalimat.",
+        "examples": [
+          {
+            "en": "There is a bed in my room.",
+            "id": "Ada tempat tidur di kamarku."
+          },
+          {
+            "en": "There's a big TV in the living room.",
+            "id": "Ada TV besar di ruang tamu."
+          },
+          {
+            "en": "There are two bathrooms in our house.",
+            "id": "Ada dua kamar mandi di rumah kami."
+          },
+          {
+            "en": "There are 30 students in my class.",
+            "id": "Ada 30 murid di kelasku."
+          },
+          {
+            "en": "There isn't a wardrobe in my kos room.",
+            "id": "Tidak ada lemari pakaian di kamar kosku."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hitung dulu mejanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-a-room",
+          "prompt": "Warung Pak Hasan sangat kecil. Lengkapi: There ___ only one table.",
+          "options": [
+            "are",
+            "is",
+            "has"
+          ],
+          "answer": 1,
+          "explanation": "One table = satu benda, jadi **there is**. **Are** untuk dua atau lebih, dan kita tidak memakai **has** untuk 'ada'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang deskripsikan sebuah kamar. Ingat: there + is/are + benda + tempat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-a-room",
+          "prompt": "Susun kata-katanya: Ada kipas angin di kamarku.",
+          "tokens": [
+            "room",
+            "is",
+            "a",
+            "There",
+            "my",
+            "fan",
+            "in"
+          ],
+          "solution": "There is a fan in my room.",
+          "explanation": "Mulai dengan **There is** (satu kipas), lalu bendanya, lalu tempatnya: **There is a fan in my room.** Bukan 'In my room have a fan'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Is there …? Are there …?",
+        "text": "Sekarang kita bertanya apa yang ada di suatu tempat. Sangat berguna saat bepergian!",
+        "body": "Taruh **is** atau **are** di depan: **Is there a …?** (satu benda), **Are there …?** (dua atau lebih). Jawab singkat dengan **there**: **Yes, there is. / No, there isn't.** **Yes, there are. / No, there aren't.** Bukan 'Yes, it is' atau 'Yes, have'.",
+        "pairs": [
+          {
+            "en": "Is there …?",
+            "id": "Ada …? (satu benda)"
+          },
+          {
+            "en": "Are there …?",
+            "id": "Ada …? (dua atau lebih)"
+          },
+          {
+            "en": "near here",
+            "id": "di dekat sini"
+          },
+          {
+            "en": "Yes, there is.",
+            "id": "Ya, ada. (satu)"
+          },
+          {
+            "en": "No, there isn't.",
+            "id": "Tidak ada. (satu)"
+          },
+          {
+            "en": "Yes, there are.",
+            "id": "Ya, ada. (dua atau lebih)"
+          },
+          {
+            "en": "No, there aren't.",
+            "id": "Tidak ada. (dua atau lebih)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Temanmu bertanya sesuatu. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-questions-with",
+          "prompt": "Dengarkan pertanyaan temanmu. Jawabannya ya. Pilih jawaban singkatnya.",
+          "listen": "Is there a mosque near your office?",
+          "options": [
+            "Yes, it is.",
+            "Yes, there is.",
+            "Yes, there are."
+          ],
+          "answer": 1,
+          "explanation": "Pertanyaannya dimulai dengan **Is there** (satu masjid), jadi jawabannya **Yes, there is.** Jangan jawab dengan **it**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "some dan any",
+        "text": "Bagian terakhir: dua kata kecil untuk dua benda atau lebih.",
+        "body": "Pakai **some** (= beberapa) dalam kalimat positif: *There are some shops.* Pakai **any** dalam kalimat negatif dan pertanyaan: *There aren't any shops.* *Are there any shops?* Jadi 'Are there some shops near here?' adalah kesalahan yang umum. Untuk satu benda, pakai **a/an**.",
+        "pairs": [
+          {
+            "en": "some",
+            "id": "beberapa (kalimat positif)"
+          },
+          {
+            "en": "any",
+            "id": "(dalam kalimat negatif dan pertanyaan)"
+          },
+          {
+            "en": "There are some shops.",
+            "id": "Ada beberapa toko."
+          },
+          {
+            "en": "There aren't any shops.",
+            "id": "Tidak ada toko sama sekali."
+          },
+          {
+            "en": "Are there any shops?",
+            "id": "Ada toko?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sudah larut malam. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "some-any",
+          "prompt": "Jam 11 malam di terminal bus di Jakarta. Kalimat mana yang benar?",
+          "options": [
+            "There aren't some buses to Bogor now.",
+            "There are any buses to Bogor now.",
+            "There aren't any buses to Bogor now."
+          ],
+          "answer": 2,
+          "explanation": "Ini kalimat negatif dengan **aren't**, jadi pakai **any**: **There aren't any buses to Bogor now.** **Some** untuk kalimat positif, dan **any** tidak dipakai dalam kalimat positif."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu lapar dan sedang di dekat stasiun. Ajukan pertanyaan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-questions-with",
+          "prompt": "Susun kata-katanya: Ada restoran di dekat stasiun?",
+          "tokens": [
+            "restaurants",
+            "there",
+            "the",
+            "Are",
+            "near",
+            "any",
+            "station"
+          ],
+          "solution": "Are there any restaurants near the station?",
+          "explanation": "Restaurants = dua atau lebih, jadi **Are there**. Dalam pertanyaan, pakai **any**: **Are there any restaurants near the station?**"
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartunya. Sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "there is / there's",
+            "back": "ada (satu benda)"
+          },
+          {
+            "front": "there are",
+            "back": "ada (dua atau lebih)"
+          },
+          {
+            "front": "there isn't a …",
+            "back": "tidak ada (satu benda)"
+          },
+          {
+            "front": "there aren't any …",
+            "back": "tidak ada (dua atau lebih)"
+          },
+          {
+            "front": "Is there a …?",
+            "back": "Ada …? (satu benda)"
+          },
+          {
+            "front": "Are there any …?",
+            "back": "Ada …? (dua atau lebih)"
+          },
+          {
+            "front": "some",
+            "back": "beberapa (kalimat positif)"
+          },
+          {
+            "front": "near here",
+            "back": "di dekat sini"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini semuanya dalam satu halaman. Pakai saat kamu mendeskripsikan ruangan atau bertanya tentang suatu tempat.",
+        "artifact": {
+          "title": "Contekan · There is / there are",
+          "intro": "Satu benda → is. Dua atau lebih → are.",
+          "headers": [
+            "Bentuk",
+            "Satu benda",
+            "Dua atau lebih"
+          ],
+          "rows": [
+            [
+              "Positif",
+              "There is a bed.",
+              "There are two beds. / There are some beds."
+            ],
+            [
+              "Negatif",
+              "There isn't a TV.",
+              "There aren't any cups."
+            ],
+            [
+              "Pertanyaan",
+              "Is there a fan?",
+              "Are there any shops?"
+            ],
+            [
+              "Jawaban singkat: ya",
+              "Yes, there is.",
+              "Yes, there are."
+            ],
+            [
+              "Jawaban singkat: tidak",
+              "No, there isn't.",
+              "No, there aren't."
+            ]
+          ],
+          "tips": [
+            "Jangan pakai **have** untuk *ada*: **There is a bed in my room.**",
+            "Hitung dulu: **There are two chairs**, bukan 'There is two chairs'.",
+            "Pertanyaan dan kalimat negatif memakai **any**: **Are there any shops near here?**"
+          ],
+          "examples": [
+            {
+              "en": "There is a bed in my room.",
+              "id": "Ada tempat tidur di kamarku."
+            },
+            {
+              "en": "There are some nice beaches in Lombok.",
+              "id": "Ada beberapa pantai yang bagus di Lombok."
+            },
+            {
+              "en": "Is there an ATM near here? — Yes, there is.",
+              "id": "Ada ATM di dekat sini? — Ya, ada."
+            },
+            {
+              "en": "Are there any shops near here?",
+              "id": "Ada toko di dekat sini?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan berlatih",
+        "text": "Mau lebih? Tonton video pendek dan coba tes online-nya."
+      }
+    ]
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to join short sentences with and, but, or and because. Let's take it one small step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "And, but, or",
+        "text": "Let's start with three little words that join ideas.",
+        "pairs": [
+          {
+            "en": "and",
+            "id": "dan"
+          },
+          {
+            "en": "but",
+            "id": "tapi / tetapi"
+          },
+          {
+            "en": "or",
+            "id": "atau"
+          },
+          {
+            "en": "a brother and a sister",
+            "id": "saudara laki-laki dan perempuan"
+          },
+          {
+            "en": "slow, but cheap",
+            "id": "lambat, tapi murah"
+          },
+          {
+            "en": "tea or coffee?",
+            "id": "teh atau kopi?"
+          }
+        ],
+        "body": "Use **and** (dan) to add an idea: I have a brother **and** a sister. Use **but** (tapi) for a different or opposite idea: The bus is slow, **but** it's cheap. Use **or** (atau) for a choice: Tea **or** coffee? Put a comma before **but** when it joins two sentences. With **and**, don't repeat the same subject: Budi gets up **and** has a shower."
+      },
+      {
+        "kind": "examples",
+        "title": "Two ideas, one sentence",
+        "text": "Here are some real sentences. Look at the joining word in each one.",
+        "examples": [
+          {
+            "en": "I have a brother and a sister.",
+            "id": "Saya punya saudara laki-laki dan saudara perempuan."
+          },
+          {
+            "en": "Budi gets up and has a shower.",
+            "id": "Budi bangun lalu mandi."
+          },
+          {
+            "en": "The warung is small, but the food is great.",
+            "id": "Warungnya kecil, tapi makanannya enak sekali."
+          },
+          {
+            "en": "The bus is slow, but it's cheap.",
+            "id": "Busnya lambat, tapi murah."
+          },
+          {
+            "en": "Is Budi at home or at the office?",
+            "id": "Budi di rumah atau di kantor?"
+          }
+        ],
+        "body": "Same idea → **and**. Different idea → **but**. A choice → **or**."
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your turn. Build a sentence with two different ideas.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "and-but-or",
+          "tokens": [
+            "drive",
+            "has",
+            "she",
+            "but",
+            "car",
+            "Sari",
+            "it",
+            "a",
+            "doesn't"
+          ],
+          "solution": "Sari has a car, but she doesn't drive it.",
+          "prompt": "Arrange the words: Sari punya mobil, tapi dia tidak menyetirnya.",
+          "explanation": "Having a car and not driving it are two different ideas, so use **but**, with a comma before it: **Sari has a car, but she doesn't drive it.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Or: choices and negatives",
+        "text": "Now a closer look at or. It has one very important job.",
+        "pairs": [
+          {
+            "en": "Tea or coffee?",
+            "id": "Teh atau kopi?"
+          },
+          {
+            "en": "by bus or by motorbike",
+            "id": "naik bus atau motor"
+          },
+          {
+            "en": "I don't drink tea or coffee.",
+            "id": "Saya tidak minum teh ataupun kopi."
+          },
+          {
+            "en": "He doesn't have a car or a motorbike.",
+            "id": "Dia tidak punya mobil ataupun motor."
+          }
+        ],
+        "body": "**Or** gives a choice: Do you go to work by bus **or** by motorbike? In **negative** sentences (don't / doesn't), use **or** to join two things: I don't drink tea **or** coffee. In Indonesian you can say 'tidak minum teh dan kopi', but in English `I don't drink tea and coffee` is a common mistake."
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Careful: is the sentence positive or negative?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "and-but-or",
+          "prompt": "Complete: Rina doesn't like cats ___ dogs.",
+          "options": [
+            "because",
+            "or",
+            "but"
+          ],
+          "answer": 1,
+          "explanation": "The sentence is negative (**doesn't like**), so join the two animals with **or**. `doesn't like cats and dogs` is the Indonesian pattern, and **but** shows a different idea, which doesn't fit here."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Because: giving a reason",
+        "text": "Now the fourth word. It answers the question Why?",
+        "pairs": [
+          {
+            "en": "because",
+            "id": "karena"
+          },
+          {
+            "en": "Why?",
+            "id": "Kenapa?"
+          },
+          {
+            "en": "I stay at home because I'm sick.",
+            "id": "Saya di rumah karena saya sakit."
+          },
+          {
+            "en": "Why? — Because ...",
+            "id": "Kenapa? — Karena ..."
+          }
+        ],
+        "body": "Use **because** (karena) to give a reason. First say what happens, then **because** + the reason, in **one** sentence: I stay at home **because** I'm sick. Don't put a full stop before because: `I stay at home. Because I'm sick.` is a mistake in writing. (In a chat, a short answer to Why? can start with Because ...)"
+      },
+      {
+        "kind": "examples",
+        "title": "Reasons",
+        "text": "Here are some reasons people give. Each one is one sentence.",
+        "examples": [
+          {
+            "en": "I like Bandung because the weather is cool.",
+            "id": "Saya suka Bandung karena udaranya sejuk."
+          },
+          {
+            "en": "Sari takes a taxi because it's late.",
+            "id": "Sari naik taksi karena sudah malam."
+          },
+          {
+            "en": "We don't go to the beach because it's very hot.",
+            "id": "Kami tidak pergi ke pantai karena cuacanya sangat panas."
+          },
+          {
+            "en": "My father drinks a lot of water because he plays football.",
+            "id": "Ayah saya minum banyak air karena dia main sepak bola."
+          }
+        ],
+        "body": "What happens → **because** → why."
+      },
+      {
+        "kind": "question",
+        "title": "Listen carefully",
+        "text": "Your friend Dimas tells you about his mornings. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "because",
+          "listen": "I don't eat breakfast because I get up late.",
+          "options": [
+            "He isn't hungry in the morning.",
+            "He gets up late.",
+            "He doesn't like rice."
+          ],
+          "answer": 1,
+          "prompt": "Listen to Dimas. Why doesn't he eat breakfast?",
+          "explanation": "Dimas says he doesn't eat breakfast **because he gets up late**. The words after **because** give the reason."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "One more. Find the correct sentence.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "because",
+          "options": [
+            "Rina walks to work. Because her office is near her house.",
+            "Rina walks to work because her office is near her house.",
+            "Rina walks to work, but her office is near her house."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence is correct?",
+          "explanation": "The reason (her office is near her house) joins the sentence with **because**, with no full stop before it. **But** is for a different idea, not a reason."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · And, but, or, because",
+          "intro": "Four small words to join ideas and give reasons.",
+          "headers": [
+            "Word",
+            "Use it for",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "and",
+              "add an idea",
+              "I have a brother and a sister.",
+              "dan"
+            ],
+            [
+              "but",
+              "a different idea",
+              "The bus is slow, but it's cheap.",
+              "tapi"
+            ],
+            [
+              "or",
+              "a choice",
+              "Tea or coffee?",
+              "atau"
+            ],
+            [
+              "don't / doesn't ... or",
+              "two things in a negative",
+              "I don't drink tea or coffee.",
+              "tidak ... ataupun"
+            ],
+            [
+              "because",
+              "a reason (Why?)",
+              "I stay at home because I'm sick.",
+              "karena"
+            ]
+          ],
+          "tips": [
+            "In negative sentences, use **or**: `I don't like tea or coffee`, not `I don't like tea and coffee`.",
+            "Keep **because** in the same sentence: `I stay at home because I'm sick.` No full stop before because."
+          ],
+          "examples": [
+            {
+              "en": "Rina works in Jakarta and lives in Depok.",
+              "id": "Rina bekerja di Jakarta dan tinggal di Depok."
+            },
+            {
+              "en": "Do you go to work by bus or by motorbike?",
+              "id": "Kamu berangkat kerja naik bus atau motor?"
+            },
+            {
+              "en": "I like Bandung because the weather is cool.",
+              "id": "Saya suka Bandung karena udaranya sejuk."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and this page explain and, but, or and because with more examples."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar menggabungkan kalimat pendek dengan and, but, or dan because. Kita pelajari pelan-pelan, satu langkah kecil setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "And, but, or",
+        "text": "Kita mulai dengan tiga kata kecil yang menggabungkan ide.",
+        "pairs": [
+          {
+            "en": "and",
+            "id": "dan"
+          },
+          {
+            "en": "but",
+            "id": "tapi / tetapi"
+          },
+          {
+            "en": "or",
+            "id": "atau"
+          },
+          {
+            "en": "a brother and a sister",
+            "id": "saudara laki-laki dan perempuan"
+          },
+          {
+            "en": "slow, but cheap",
+            "id": "lambat, tapi murah"
+          },
+          {
+            "en": "tea or coffee?",
+            "id": "teh atau kopi?"
+          }
+        ],
+        "body": "Pakai **and** (dan) untuk menambah ide: I have a brother **and** a sister. Pakai **but** (tapi) untuk ide yang berbeda atau berlawanan: The bus is slow, **but** it's cheap. Pakai **or** (atau) untuk pilihan: Tea **or** coffee? Taruh koma sebelum **but** kalau menggabungkan dua kalimat. Dengan **and**, jangan ulangi subjek yang sama: Budi gets up **and** has a shower."
+      },
+      {
+        "kind": "examples",
+        "title": "Dua ide, satu kalimat",
+        "text": "Ini beberapa kalimat nyata. Perhatikan kata penghubung di setiap kalimat.",
+        "examples": [
+          {
+            "en": "I have a brother and a sister.",
+            "id": "Saya punya saudara laki-laki dan saudara perempuan."
+          },
+          {
+            "en": "Budi gets up and has a shower.",
+            "id": "Budi bangun lalu mandi."
+          },
+          {
+            "en": "The warung is small, but the food is great.",
+            "id": "Warungnya kecil, tapi makanannya enak sekali."
+          },
+          {
+            "en": "The bus is slow, but it's cheap.",
+            "id": "Busnya lambat, tapi murah."
+          },
+          {
+            "en": "Is Budi at home or at the office?",
+            "id": "Budi di rumah atau di kantor?"
+          }
+        ],
+        "body": "Ide yang sejalan → **and**. Ide yang berbeda → **but**. Pilihan → **or**."
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Giliranmu. Buat kalimat dengan dua ide yang berbeda.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "and-but-or",
+          "tokens": [
+            "drive",
+            "has",
+            "she",
+            "but",
+            "car",
+            "Sari",
+            "it",
+            "a",
+            "doesn't"
+          ],
+          "solution": "Sari has a car, but she doesn't drive it.",
+          "prompt": "Susun kata-katanya: Sari punya mobil, tapi dia tidak menyetirnya.",
+          "explanation": "Punya mobil tapi tidak menyetirnya adalah dua ide yang berbeda, jadi pakai **but**, dengan koma sebelumnya: **Sari has a car, but she doesn't drive it.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Or: pilihan dan kalimat negatif",
+        "text": "Sekarang kita lihat or lebih dekat. Ada satu tugasnya yang sangat penting.",
+        "pairs": [
+          {
+            "en": "Tea or coffee?",
+            "id": "Teh atau kopi?"
+          },
+          {
+            "en": "by bus or by motorbike",
+            "id": "naik bus atau motor"
+          },
+          {
+            "en": "I don't drink tea or coffee.",
+            "id": "Saya tidak minum teh ataupun kopi."
+          },
+          {
+            "en": "He doesn't have a car or a motorbike.",
+            "id": "Dia tidak punya mobil ataupun motor."
+          }
+        ],
+        "body": "**Or** memberi pilihan: Do you go to work by bus **or** by motorbike? Dalam kalimat **negatif** (don't / doesn't), pakai **or** untuk menggabungkan dua hal: I don't drink tea **or** coffee. Dalam bahasa Indonesia kamu bisa bilang 'tidak minum teh dan kopi', tapi dalam bahasa Inggris `I don't drink tea and coffee` adalah kesalahan yang umum."
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hati-hati: kalimatnya positif atau negatif?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "and-but-or",
+          "prompt": "Lengkapi: Rina doesn't like cats ___ dogs.",
+          "options": [
+            "because",
+            "or",
+            "but"
+          ],
+          "answer": 1,
+          "explanation": "Kalimatnya negatif (**doesn't like**), jadi gabungkan dua hewan itu dengan **or**. `doesn't like cats and dogs` adalah pola bahasa Indonesia, dan **but** menunjukkan ide yang berbeda, jadi tidak cocok di sini."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Because: memberi alasan",
+        "text": "Sekarang kata keempat. Kata ini menjawab pertanyaan Why?",
+        "pairs": [
+          {
+            "en": "because",
+            "id": "karena"
+          },
+          {
+            "en": "Why?",
+            "id": "Kenapa?"
+          },
+          {
+            "en": "I stay at home because I'm sick.",
+            "id": "Saya di rumah karena saya sakit."
+          },
+          {
+            "en": "Why? — Because ...",
+            "id": "Kenapa? — Karena ..."
+          }
+        ],
+        "body": "Pakai **because** (karena) untuk memberi alasan. Pertama sebutkan apa yang terjadi, lalu **because** + alasannya, dalam **satu** kalimat: I stay at home **because** I'm sick. Jangan taruh titik sebelum because: `I stay at home. Because I'm sick.` salah dalam tulisan. (Dalam obrolan, jawaban singkat untuk Why? boleh dimulai dengan Because ...)"
+      },
+      {
+        "kind": "examples",
+        "title": "Alasan",
+        "text": "Ini beberapa alasan yang biasa orang berikan. Masing-masing satu kalimat.",
+        "examples": [
+          {
+            "en": "I like Bandung because the weather is cool.",
+            "id": "Saya suka Bandung karena udaranya sejuk."
+          },
+          {
+            "en": "Sari takes a taxi because it's late.",
+            "id": "Sari naik taksi karena sudah malam."
+          },
+          {
+            "en": "We don't go to the beach because it's very hot.",
+            "id": "Kami tidak pergi ke pantai karena cuacanya sangat panas."
+          },
+          {
+            "en": "My father drinks a lot of water because he plays football.",
+            "id": "Ayah saya minum banyak air karena dia main sepak bola."
+          }
+        ],
+        "body": "Apa yang terjadi → **because** → kenapa."
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan baik-baik",
+        "text": "Temanmu, Dimas, bercerita tentang paginya. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "because",
+          "listen": "I don't eat breakfast because I get up late.",
+          "options": [
+            "He isn't hungry in the morning.",
+            "He gets up late.",
+            "He doesn't like rice."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan Dimas. Kenapa dia tidak sarapan?",
+          "explanation": "Dimas bilang dia tidak sarapan **because he gets up late** (karena dia bangun kesiangan). Kata-kata setelah **because** adalah alasannya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Satu lagi. Cari kalimat yang benar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "because",
+          "options": [
+            "Rina walks to work. Because her office is near her house.",
+            "Rina walks to work because her office is near her house.",
+            "Rina walks to work, but her office is near her house."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang benar?",
+          "explanation": "Alasannya (kantornya dekat rumah) digabung ke kalimat dengan **because**, tanpa titik sebelumnya. **But** untuk ide yang berbeda, bukan alasan."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · And, but, or, because",
+          "intro": "Empat kata kecil untuk menggabungkan ide dan memberi alasan.",
+          "headers": [
+            "Kata",
+            "Dipakai untuk",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "and",
+              "menambah ide",
+              "I have a brother and a sister.",
+              "dan"
+            ],
+            [
+              "but",
+              "ide yang berbeda",
+              "The bus is slow, but it's cheap.",
+              "tapi"
+            ],
+            [
+              "or",
+              "pilihan",
+              "Tea or coffee?",
+              "atau"
+            ],
+            [
+              "don't / doesn't ... or",
+              "dua hal dalam kalimat negatif",
+              "I don't drink tea or coffee.",
+              "tidak ... ataupun"
+            ],
+            [
+              "because",
+              "alasan (Why?)",
+              "I stay at home because I'm sick.",
+              "karena"
+            ]
+          ],
+          "tips": [
+            "Dalam kalimat negatif, pakai **or**: `I don't like tea or coffee`, bukan `I don't like tea and coffee`.",
+            "Satukan **because** dalam kalimat yang sama: `I stay at home because I'm sick.` Tanpa titik sebelum because."
+          ],
+          "examples": [
+            {
+              "en": "Rina works in Jakarta and lives in Depok.",
+              "id": "Rina bekerja di Jakarta dan tinggal di Depok."
+            },
+            {
+              "en": "Do you go to work by bus or by motorbike?",
+              "id": "Kamu berangkat kerja naik bus atau motor?"
+            },
+            {
+              "en": "I like Bandung because the weather is cool.",
+              "id": "Saya suka Bandung karena udaranya sejuk."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih banyak? Video dan halaman ini menjelaskan and, but, or dan because dengan lebih banyak contoh."
+      }
+    ]
+  }
+}

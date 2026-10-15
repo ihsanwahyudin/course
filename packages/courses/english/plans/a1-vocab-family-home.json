@@ -1,0 +1,726 @@
+{
+  "en": {
+    "greeting": "Hi! Today we talk about two important things: your family and your home. We'll learn the words in small groups, then you'll describe a home in a few short sentences.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Your close family",
+        "text": "Let's start with the people closest to you.",
+        "body": "Your **parents** are your mother and father (orang tua — always with -s). Brothers and sisters together are **siblings**. English shows if they are a man or a woman: **brother** or **sister**. Kakak = **older** brother/sister, adik = **younger** brother/sister. Your children are your **sons** and **daughters**.",
+        "pairs": [
+          {
+            "en": "parents",
+            "id": "orang tua"
+          },
+          {
+            "en": "mother / father",
+            "id": "ibu / ayah"
+          },
+          {
+            "en": "brother",
+            "id": "saudara laki-laki (kakak / adik)"
+          },
+          {
+            "en": "sister",
+            "id": "saudara perempuan (kakak / adik)"
+          },
+          {
+            "en": "siblings",
+            "id": "saudara kandung"
+          },
+          {
+            "en": "son / daughter",
+            "id": "anak laki-laki / anak perempuan"
+          },
+          {
+            "en": "children",
+            "id": "anak-anak"
+          },
+          {
+            "en": "husband / wife",
+            "id": "suami / istri"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "The wider family",
+        "text": "Now the bigger family you see at Lebaran.",
+        "body": "Your parents' parents are your **grandparents**: **grandmother** (nenek) and **grandfather** (kakek). Your parents' brothers are your **uncles**, their sisters are your **aunts**. Their children are your **cousins** — one word for boys and girls, like sepupu.",
+        "pairs": [
+          {
+            "en": "grandparents",
+            "id": "kakek dan nenek"
+          },
+          {
+            "en": "grandmother",
+            "id": "nenek"
+          },
+          {
+            "en": "grandfather",
+            "id": "kakek"
+          },
+          {
+            "en": "uncle",
+            "id": "om / paman"
+          },
+          {
+            "en": "aunt",
+            "id": "tante / bibi"
+          },
+          {
+            "en": "cousin",
+            "id": "sepupu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Think about who is who in Sari's family.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "family",
+          "prompt": "Sari's mother has a sister, Wulan. Who is Wulan to Sari?",
+          "options": [
+            "Her cousin.",
+            "Her grandmother.",
+            "Her aunt."
+          ],
+          "answer": 2,
+          "explanation": "Your mother's sister is your **aunt** (tante / bibi). Wulan's children are Sari's **cousins**, and Sari's **grandmother** is her mother's mother."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Talking about family",
+        "text": "Here's how people talk about their family. Read them out loud.",
+        "body": "Count brothers and sisters together as **siblings**: *three siblings: two brothers and one sister*, never 'three brothers: two boys and one girl'.",
+        "examples": [
+          {
+            "en": "My parents live in Medan.",
+            "id": "Orang tua saya tinggal di Medan."
+          },
+          {
+            "en": "I have three siblings: two brothers and one sister.",
+            "id": "Saya punya tiga saudara kandung: dua laki-laki dan satu perempuan."
+          },
+          {
+            "en": "My younger brother is a student.",
+            "id": "Adik laki-laki saya seorang pelajar."
+          },
+          {
+            "en": "Pak Joko and his wife have two daughters.",
+            "id": "Pak Joko dan istrinya punya dua anak perempuan."
+          },
+          {
+            "en": "My cousin Reza works in Bali.",
+            "id": "Sepupu saya, Reza, bekerja di Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Rina talks about her home. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "family",
+          "prompt": "Listen to Rina. Who does she live with?",
+          "listen": "I live in Surabaya with my parents and my grandmother.",
+          "options": [
+            "Her parents and her grandmother.",
+            "Her parents and her aunt.",
+            "Her brother and her grandmother."
+          ],
+          "answer": 0,
+          "explanation": "Rina says **my parents and my grandmother**: her mother, her father and her nenek."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rooms and furniture",
+        "text": "Now let's walk through a house.",
+        "body": "Rooms: **living room** (ruang tamu / ruang keluarga), **bedroom**, **kitchen**, **bathroom**. Kamar alone can be any room, so be clear: kamar tidur = **bedroom**, kamar mandi = **bathroom**. Just say **the kitchen**, not 'the kitchen room'. Furniture: **bed**, **sofa**, **wardrobe** (for clothes), **table**, **chair**, **fridge**.",
+        "pairs": [
+          {
+            "en": "living room",
+            "id": "ruang tamu / ruang keluarga"
+          },
+          {
+            "en": "bedroom",
+            "id": "kamar tidur"
+          },
+          {
+            "en": "kitchen",
+            "id": "dapur"
+          },
+          {
+            "en": "bathroom",
+            "id": "kamar mandi"
+          },
+          {
+            "en": "bed",
+            "id": "tempat tidur"
+          },
+          {
+            "en": "sofa",
+            "id": "sofa"
+          },
+          {
+            "en": "wardrobe",
+            "id": "lemari pakaian"
+          },
+          {
+            "en": "fridge",
+            "id": "kulkas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Which room is it?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rooms-furniture",
+          "prompt": "In the evening, Budi's family sits on the sofa and watches TV. Which room are they in?",
+          "options": [
+            "The bathroom.",
+            "The living room.",
+            "The kitchen room."
+          ],
+          "answer": 1,
+          "explanation": "The sofa and the TV are usually in the **living room** (ruang keluarga). There is no 'kitchen room' in English — it's just **the kitchen**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Describing a home",
+        "text": "To describe a home, say where, who and what. Look at these.",
+        "body": "**Where:** I live in a house / a flat in ... **Who:** I live with ... **What:** My house **has** ... (my house = it, so **has**). Put the adjective before the noun: a **big** bedroom.",
+        "examples": [
+          {
+            "en": "I live in a small flat in Jakarta.",
+            "id": "Saya tinggal di apartemen kecil di Jakarta."
+          },
+          {
+            "en": "I live with my wife and my son.",
+            "id": "Saya tinggal dengan istri dan anak laki-laki saya."
+          },
+          {
+            "en": "Our house has four bedrooms and a garden.",
+            "id": "Rumah kami punya empat kamar tidur dan sebuah kebun."
+          },
+          {
+            "en": "My bedroom has a bed, a desk and a wardrobe.",
+            "id": "Di kamar tidur saya ada tempat tidur, meja dan lemari pakaian."
+          },
+          {
+            "en": "The living room is big and bright.",
+            "id": "Ruang keluarganya besar dan terang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Joko tells you about his flat. Which sentence is correct?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-home",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "My flat have two bedrooms.",
+            "My flat is two bedrooms.",
+            "My flat has two bedrooms."
+          ],
+          "answer": 2,
+          "explanation": "My flat = it, so use **has** (punya): **My flat has two bedrooms.** 'Have' is for I, you, we, they, and 'is two bedrooms' says the flat IS two bedrooms."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now describe a kitchen.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-home",
+          "prompt": "Arrange the words: Dapur kami kecil tapi bersih.",
+          "tokens": [
+            "clean",
+            "Our",
+            "small",
+            "is",
+            "but",
+            "kitchen"
+          ],
+          "solution": "Our kitchen is small but clean.",
+          "explanation": "Start with the room (**Our kitchen**), then **is** + adjective. **But** joins two different ideas: small, but clean."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here are all the words on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Family & Home",
+          "intro": "Family words, rooms and furniture, and three sentences to describe your home.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Close family",
+              "parents (mother, father)",
+              "orang tua (ibu, ayah)"
+            ],
+            [
+              "Close family",
+              "brother / sister / siblings",
+              "saudara laki-laki / perempuan / saudara kandung"
+            ],
+            [
+              "Close family",
+              "son / daughter / children",
+              "anak laki-laki / perempuan / anak-anak"
+            ],
+            [
+              "Close family",
+              "husband / wife",
+              "suami / istri"
+            ],
+            [
+              "Wider family",
+              "grandparents (grandmother, grandfather)",
+              "kakek dan nenek"
+            ],
+            [
+              "Wider family",
+              "uncle / aunt",
+              "om, paman / tante, bibi"
+            ],
+            [
+              "Wider family",
+              "cousin",
+              "sepupu"
+            ],
+            [
+              "Rooms",
+              "living room / bedroom / dining room",
+              "ruang tamu, ruang keluarga / kamar tidur / ruang makan"
+            ],
+            [
+              "Rooms",
+              "kitchen / bathroom / garden",
+              "dapur / kamar mandi / kebun"
+            ],
+            [
+              "Furniture",
+              "bed / sofa / wardrobe",
+              "tempat tidur / sofa / lemari pakaian"
+            ],
+            [
+              "Furniture",
+              "table / chair / desk",
+              "meja / kursi / meja belajar"
+            ],
+            [
+              "Furniture",
+              "fridge / shelf",
+              "kulkas / rak"
+            ]
+          ],
+          "tips": [
+            "Orang tua = **parents**, always with -s. Brothers + sisters = **siblings**.",
+            "Say **the kitchen**, not `the kitchen room`. Kamar tidur = **bedroom**, kamar mandi = **bathroom**.",
+            "My house / my flat = it, so: **My house has** two bedrooms."
+          ],
+          "examples": [
+            {
+              "en": "I live in a house in Bandung.",
+              "id": "Saya tinggal di rumah di Bandung."
+            },
+            {
+              "en": "I live with my parents and my sister.",
+              "id": "Saya tinggal dengan orang tua dan saudara perempuan saya."
+            },
+            {
+              "en": "My house has two bedrooms and a small garden.",
+              "id": "Rumah saya punya dua kamar tidur dan kebun kecil."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Read a short email about a family and practise words for your home."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membahas dua hal penting: keluargamu dan rumahmu. Kita belajar kata-katanya dalam kelompok kecil, lalu kamu mendeskripsikan rumah dalam beberapa kalimat pendek.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Keluarga inti",
+        "text": "Kita mulai dari orang-orang terdekatmu.",
+        "body": "**Parents** adalah ibu dan ayahmu (orang tua — selalu pakai -s). Saudara laki-laki dan perempuan bersama-sama disebut **siblings**. Bahasa Inggris menunjukkan laki-laki atau perempuan: **brother** atau **sister**. Kakak = **older** brother/sister, adik = **younger** brother/sister. Anak-anakmu adalah **sons** (laki-laki) dan **daughters** (perempuan).",
+        "pairs": [
+          {
+            "en": "parents",
+            "id": "orang tua"
+          },
+          {
+            "en": "mother / father",
+            "id": "ibu / ayah"
+          },
+          {
+            "en": "brother",
+            "id": "saudara laki-laki (kakak / adik)"
+          },
+          {
+            "en": "sister",
+            "id": "saudara perempuan (kakak / adik)"
+          },
+          {
+            "en": "siblings",
+            "id": "saudara kandung"
+          },
+          {
+            "en": "son / daughter",
+            "id": "anak laki-laki / anak perempuan"
+          },
+          {
+            "en": "children",
+            "id": "anak-anak"
+          },
+          {
+            "en": "husband / wife",
+            "id": "suami / istri"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Keluarga besar",
+        "text": "Sekarang keluarga besar yang kamu temui saat Lebaran.",
+        "body": "Orang tua dari orang tuamu adalah **grandparents**: **grandmother** (nenek) dan **grandfather** (kakek). Saudara laki-laki orang tuamu adalah **uncles**, saudara perempuannya **aunts**. Anak-anak mereka adalah **cousins** — satu kata untuk laki-laki dan perempuan, sama seperti sepupu.",
+        "pairs": [
+          {
+            "en": "grandparents",
+            "id": "kakek dan nenek"
+          },
+          {
+            "en": "grandmother",
+            "id": "nenek"
+          },
+          {
+            "en": "grandfather",
+            "id": "kakek"
+          },
+          {
+            "en": "uncle",
+            "id": "om / paman"
+          },
+          {
+            "en": "aunt",
+            "id": "tante / bibi"
+          },
+          {
+            "en": "cousin",
+            "id": "sepupu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pikirkan siapa saja di keluarga Sari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "family",
+          "prompt": "Ibu Sari punya saudara perempuan, Wulan. Siapa Wulan bagi Sari?",
+          "options": [
+            "Her cousin.",
+            "Her grandmother.",
+            "Her aunt."
+          ],
+          "answer": 2,
+          "explanation": "Saudara perempuan ibumu adalah **aunt** (tante / bibi). Anak-anak Wulan adalah **cousins** (sepupu) Sari, dan **grandmother** Sari adalah ibu dari ibunya."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Bercerita tentang keluarga",
+        "text": "Begini cara orang bercerita tentang keluarganya. Baca dengan suara keras.",
+        "body": "Hitung saudara laki-laki dan perempuan bersama sebagai **siblings**: *three siblings: two brothers and one sister*, bukan 'three brothers: two boys and one girl'.",
+        "examples": [
+          {
+            "en": "My parents live in Medan.",
+            "id": "Orang tua saya tinggal di Medan."
+          },
+          {
+            "en": "I have three siblings: two brothers and one sister.",
+            "id": "Saya punya tiga saudara kandung: dua laki-laki dan satu perempuan."
+          },
+          {
+            "en": "My younger brother is a student.",
+            "id": "Adik laki-laki saya seorang pelajar."
+          },
+          {
+            "en": "Pak Joko and his wife have two daughters.",
+            "id": "Pak Joko dan istrinya punya dua anak perempuan."
+          },
+          {
+            "en": "My cousin Reza works in Bali.",
+            "id": "Sepupu saya, Reza, bekerja di Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Rina bercerita tentang rumahnya. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "family",
+          "prompt": "Dengarkan Rina. Dia tinggal dengan siapa?",
+          "listen": "I live in Surabaya with my parents and my grandmother.",
+          "options": [
+            "Her parents and her grandmother.",
+            "Her parents and her aunt.",
+            "Her brother and her grandmother."
+          ],
+          "answer": 0,
+          "explanation": "Rina bilang **my parents and my grandmother**: ibunya, ayahnya dan neneknya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ruangan dan perabot",
+        "text": "Sekarang kita keliling rumah.",
+        "body": "Ruangan: **living room** (ruang tamu / ruang keluarga), **bedroom**, **kitchen**, **bathroom**. Kamar saja bisa berarti ruangan apa pun, jadi perjelas: kamar tidur = **bedroom**, kamar mandi = **bathroom**. Cukup bilang **the kitchen**, bukan 'the kitchen room'. Perabot: **bed**, **sofa**, **wardrobe** (untuk pakaian), **table**, **chair**, **fridge**.",
+        "pairs": [
+          {
+            "en": "living room",
+            "id": "ruang tamu / ruang keluarga"
+          },
+          {
+            "en": "bedroom",
+            "id": "kamar tidur"
+          },
+          {
+            "en": "kitchen",
+            "id": "dapur"
+          },
+          {
+            "en": "bathroom",
+            "id": "kamar mandi"
+          },
+          {
+            "en": "bed",
+            "id": "tempat tidur"
+          },
+          {
+            "en": "sofa",
+            "id": "sofa"
+          },
+          {
+            "en": "wardrobe",
+            "id": "lemari pakaian"
+          },
+          {
+            "en": "fridge",
+            "id": "kulkas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ruangan yang mana?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rooms-furniture",
+          "prompt": "Malam hari, keluarga Budi duduk di sofa dan menonton TV. Mereka ada di ruangan apa?",
+          "options": [
+            "The bathroom.",
+            "The living room.",
+            "The kitchen room."
+          ],
+          "answer": 1,
+          "explanation": "Sofa dan TV biasanya ada di **living room** (ruang keluarga). Tidak ada 'kitchen room' dalam bahasa Inggris — cukup **the kitchen**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Mendeskripsikan rumah",
+        "text": "Untuk mendeskripsikan rumah, sebutkan di mana, dengan siapa, dan isinya. Lihat contoh ini.",
+        "body": "**Di mana:** I live in a house / a flat in ... **Dengan siapa:** I live with ... **Isinya:** My house **has** ... (my house = it, jadi **has**). Taruh kata sifat sebelum kata benda: a **big** bedroom.",
+        "examples": [
+          {
+            "en": "I live in a small flat in Jakarta.",
+            "id": "Saya tinggal di apartemen kecil di Jakarta."
+          },
+          {
+            "en": "I live with my wife and my son.",
+            "id": "Saya tinggal dengan istri dan anak laki-laki saya."
+          },
+          {
+            "en": "Our house has four bedrooms and a garden.",
+            "id": "Rumah kami punya empat kamar tidur dan sebuah kebun."
+          },
+          {
+            "en": "My bedroom has a bed, a desk and a wardrobe.",
+            "id": "Di kamar tidur saya ada tempat tidur, meja dan lemari pakaian."
+          },
+          {
+            "en": "The living room is big and bright.",
+            "id": "Ruang keluarganya besar dan terang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Joko bercerita tentang apartemennya. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-home",
+          "prompt": "Pilih kalimat yang benar.",
+          "options": [
+            "My flat have two bedrooms.",
+            "My flat is two bedrooms.",
+            "My flat has two bedrooms."
+          ],
+          "answer": 2,
+          "explanation": "My flat = it, jadi pakai **has** (punya): **My flat has two bedrooms.** 'Have' untuk I, you, we, they, dan 'is two bedrooms' artinya apartemennya ADALAH dua kamar tidur."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang deskripsikan sebuah dapur.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-home",
+          "prompt": "Susun kata-katanya: Dapur kami kecil tapi bersih.",
+          "tokens": [
+            "clean",
+            "Our",
+            "small",
+            "is",
+            "but",
+            "kitchen"
+          ],
+          "solution": "Our kitchen is small but clean.",
+          "explanation": "Mulai dengan ruangannya (**Our kitchen**), lalu **is** + kata sifat. **But** (tapi) menggabungkan dua ide yang berbeda: kecil, tapi bersih."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semua kosakatanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Keluarga & Rumah",
+          "intro": "Kosakata keluarga, ruangan dan perabot, serta tiga kalimat untuk mendeskripsikan rumahmu.",
+          "headers": [
+            "Kelompok",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Keluarga inti",
+              "parents (mother, father)",
+              "orang tua (ibu, ayah)"
+            ],
+            [
+              "Keluarga inti",
+              "brother / sister / siblings",
+              "saudara laki-laki / perempuan / saudara kandung"
+            ],
+            [
+              "Keluarga inti",
+              "son / daughter / children",
+              "anak laki-laki / perempuan / anak-anak"
+            ],
+            [
+              "Keluarga inti",
+              "husband / wife",
+              "suami / istri"
+            ],
+            [
+              "Keluarga besar",
+              "grandparents (grandmother, grandfather)",
+              "kakek dan nenek"
+            ],
+            [
+              "Keluarga besar",
+              "uncle / aunt",
+              "om, paman / tante, bibi"
+            ],
+            [
+              "Keluarga besar",
+              "cousin",
+              "sepupu"
+            ],
+            [
+              "Ruangan",
+              "living room / bedroom / dining room",
+              "ruang tamu, ruang keluarga / kamar tidur / ruang makan"
+            ],
+            [
+              "Ruangan",
+              "kitchen / bathroom / garden",
+              "dapur / kamar mandi / kebun"
+            ],
+            [
+              "Perabot",
+              "bed / sofa / wardrobe",
+              "tempat tidur / sofa / lemari pakaian"
+            ],
+            [
+              "Perabot",
+              "table / chair / desk",
+              "meja / kursi / meja belajar"
+            ],
+            [
+              "Perabot",
+              "fridge / shelf",
+              "kulkas / rak"
+            ]
+          ],
+          "tips": [
+            "Orang tua = **parents**, selalu pakai -s. Brothers + sisters = **siblings**.",
+            "Bilang **the kitchen**, bukan `the kitchen room`. Kamar tidur = **bedroom**, kamar mandi = **bathroom**.",
+            "My house / my flat = it, jadi: **My house has** two bedrooms."
+          ],
+          "examples": [
+            {
+              "en": "I live in a house in Bandung.",
+              "id": "Saya tinggal di rumah di Bandung."
+            },
+            {
+              "en": "I live with my parents and my sister.",
+              "id": "Saya tinggal dengan orang tua dan saudara perempuan saya."
+            },
+            {
+              "en": "My house has two bedrooms and a small garden.",
+              "id": "Rumah saya punya dua kamar tidur dan kebun kecil."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Baca email pendek tentang sebuah keluarga dan latih kosakata tentang rumahmu."
+      }
+    ]
+  }
+}

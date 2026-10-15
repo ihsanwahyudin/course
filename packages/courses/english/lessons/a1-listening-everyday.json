@@ -1,0 +1,612 @@
+{
+  "nodeId": "a1-listening-everyday",
+  "intro": "Welcome! In this lesson you practise everyday listening: names, prices, times, simple directions and short announcements at a station or in a shop. You don't need every word: read the question first, then listen for the key word.",
+  "teachingNotes": [
+    "This is a listening lesson: most practice is 'press play, then answer'. Teach the habit of reading the question first and predicting the answer type (How much? → a price, What time? → a time, Where? → a place or direction), then listening only for that key word. Replaying is normal; in real life the learner can say 'Sorry, can you repeat that, please?' or 'Slowly, please.'",
+    "The node's common error: hearing fifteen as fifty (and 13/30, 14/40, 16/60…). fifTEEN has the stress at the end and a long final n; FIFty has the stress at the start. In a price this turns Rp15.000 into Rp50.000, so exaggerate the stress and teach the check question 'One-five or five-zero?'.",
+    "Times: 'half past three' is 3:30, but Indonesian 'setengah tiga' is 2:30, so learners who translate word by word are one hour early. Quarter past = :15, quarter to = :45 (quarter to eight = 7:45). Announcements often use digital times (ten fifteen, eleven thirty). Names: surname = family name (nama keluarga), spelled with English letter names (E 'ee' vs I 'eye').",
+    "Directions are fixed chunks, not imperative grammar: go straight on, turn left / turn right, at the traffic lights, at the corner, it's on the left / on your right, next to. Key contrast: 'turn left' is what you do, 'on the left' is where the place is; one sentence often has both, so learners must listen for the part the question asks about. Place words: bank, station, school, hospital, mosque, pharmacy, post office, supermarket, café.",
+    "Announcements follow a pattern: Attention, please → what (the train to Surabaya, the store) → the key facts: platform or gate + a number, and a time after 'at'. Timetables use the present simple ('The train leaves at…', 'The shop closes at…'), plus 'is late'.",
+    "Limits: slow, clear speech and short texts (1–3 sentences). No past simple (except was/were), no future forms (no will / going to), no perfect tenses, no comparatives. Prices stay at or below a hundred thousand rupiah; don't go into British vs American floor numbers."
+  ],
+  "keyPoints": [
+    {
+      "title": "Names, numbers, prices and times",
+      "explanation": "Read the question first and listen for the key word. Surname = family name, spelled with English letter names. fifTEEN (15) has the stress at the end, FIFty (50) at the start. Half past three is 3:30, not 'setengah tiga'.",
+      "examples": [
+        {
+          "en": "fifTEEN — FIFty",
+          "id": "15 — 50"
+        },
+        {
+          "en": "twenty-five thousand rupiah",
+          "id": "Rp25.000"
+        },
+        {
+          "en": "half past three",
+          "id": "3:30 (setengah empat)"
+        }
+      ]
+    },
+    {
+      "title": "Simple directions",
+      "explanation": "Go straight on, turn left and turn right tell you what to do. On the left, on your right and next to tell you where the place is. Listen for the part the question asks about.",
+      "examples": [
+        {
+          "en": "Go straight on and turn left.",
+          "id": "Jalan lurus, lalu belok kiri."
+        },
+        {
+          "en": "It's on your right, next to the school.",
+          "id": "Tempatnya di sebelah kananmu, di samping sekolah."
+        }
+      ]
+    },
+    {
+      "title": "Short announcements",
+      "explanation": "Announcements start with 'Attention, please'. Then listen for what (train, bus, shop), the number after platform or gate, and the time after at.",
+      "examples": [
+        {
+          "en": "The train to Solo leaves from platform one at nine o'clock.",
+          "id": "Kereta ke Solo berangkat dari peron satu pukul sembilan."
+        },
+        {
+          "en": "The bus to Malang is late.",
+          "id": "Bus ke Malang terlambat."
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "catch-details",
+      "prompt": "You hear 'six-TEEN thousand rupiah', with the stress at the end. Write the price in numbers.",
+      "expected": [
+        "16000",
+        "16 000",
+        "rp16000",
+        "rp 16000",
+        "rp 16 000"
+      ],
+      "hint": "Stress at the end means a -teen number."
+    },
+    {
+      "objectiveId": "catch-details",
+      "prompt": "You hear 'quarter past eight'. Write the time in numbers, like 6:00.",
+      "expected": [
+        "8 15",
+        "08 15",
+        "815"
+      ],
+      "hint": "Quarter past = 15 minutes after the hour."
+    },
+    {
+      "objectiveId": "follow-directions",
+      "prompt": "Someone says 'Turn left.' Which way do you go? Answer in English or Indonesian.",
+      "expected": [
+        "left",
+        "turn left",
+        "to the left",
+        "kiri",
+        "ke kiri",
+        "belok kiri"
+      ],
+      "hint": "Left = kiri."
+    },
+    {
+      "objectiveId": "follow-directions",
+      "prompt": "You hear 'Go straight on.' What do you do? Answer in English or Indonesian.",
+      "expected": [
+        "go straight on",
+        "go straight",
+        "straight on",
+        "straight",
+        "lurus",
+        "jalan lurus",
+        "lurus terus"
+      ],
+      "hint": "Straight on = lurus."
+    },
+    {
+      "objectiveId": "short-announcements",
+      "prompt": "An announcement says 'The bus to Bogor leaves from gate three.' Where do you go? Write the gate number.",
+      "expected": [
+        "3",
+        "three",
+        "gate 3",
+        "gate three"
+      ],
+      "hint": "Listen for the number right after 'gate'."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "catch-details",
+      "prompt": "Someone spells a name: 'R-I-Z-K-Y'. Write the name.",
+      "expected": [
+        "rizky"
+      ],
+      "hint": "Y is said 'why'."
+    },
+    {
+      "objectiveId": "follow-directions",
+      "prompt": "You hear 'It's on your left.' Write it in Indonesian.",
+      "expected": [
+        "di sebelah kirimu",
+        "di kirimu",
+        "di sebelah kiri",
+        "di kiri",
+        "ada di sebelah kirimu",
+        "di sebelah kiri kamu",
+        "di kiri kamu"
+      ],
+      "hint": "Left = kiri."
+    },
+    {
+      "objectiveId": "short-announcements",
+      "prompt": "An announcement says 'The museum closes at five o'clock today.' What time does it close? Write it in numbers.",
+      "expected": [
+        "5 00",
+        "5",
+        "500",
+        "17 00",
+        "1700"
+      ],
+      "hint": "Listen for the time after 'at'."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "le-1",
+      "objectiveId": "catch-details",
+      "prompt": "Listen. Write the person's surname (family name).",
+      "listen": "Hello, I'm Sari. My surname is Wijaya: W-I-J-A-Y-A.",
+      "acceptableAnswers": [
+        "wijaya"
+      ],
+      "rubric": "Correct: Wijaya. One wrong letter = 50 (e.g. 'Wejaya', 'Wijaja'). The first name 'Sari' = 0."
+    },
+    {
+      "id": "le-2",
+      "objectiveId": "catch-details",
+      "prompt": "Listen. What time is the appointment? Write it in numbers, like 6:00.",
+      "listen": "Your appointment with Doctor Hasan is on Tuesday at half past four.",
+      "acceptableAnswers": [
+        "4 30",
+        "04 30",
+        "430",
+        "0430",
+        "16 30",
+        "1630",
+        "4 30 pm",
+        "4 30pm",
+        "4 30 p m"
+      ],
+      "rubric": "Correct: 4:30 (or 16:30). 3:30 = 0 (the 'setengah empat' trap: half past four is 4:30). 4:00 or 4:15 = 0."
+    },
+    {
+      "id": "le-3",
+      "objectiveId": "catch-details",
+      "prompt": "Listen. How much is the T-shirt? Write the price in numbers.",
+      "listen": "This T-shirt is fifty thousand rupiah.",
+      "acceptableAnswers": [
+        "50000",
+        "50 000",
+        "rp50000",
+        "rp 50000",
+        "rp50 000",
+        "rp 50 000",
+        "50000 rupiah",
+        "50 000 rupiah"
+      ],
+      "rubric": "Correct: Rp50.000. Accept 50000, 50.000 or 50,000 with or without Rp/rupiah. 15.000 (fifteen) = 0: FIFty has the stress at the start."
+    },
+    {
+      "id": "le-4",
+      "objectiveId": "follow-directions",
+      "prompt": "Listen to the directions. At the traffic lights, do you turn left or right? Write one word.",
+      "listen": "Go straight on to the traffic lights and turn right. The hospital is on the left.",
+      "acceptableAnswers": [
+        "right",
+        "turn right",
+        "kanan"
+      ],
+      "rubric": "Correct: right. 'left' = 0 (left is where the hospital is, not where you turn)."
+    },
+    {
+      "id": "le-5",
+      "objectiveId": "follow-directions",
+      "prompt": "Listen to the directions. What is the café next to? Write the place in English.",
+      "listen": "Go straight on and turn left at the corner. The café is on the right, next to the bank.",
+      "acceptableAnswers": [
+        "bank",
+        "the bank",
+        "a bank",
+        "next to the bank"
+      ],
+      "rubric": "Correct: the bank. 'the corner' or 'on the right' = 0."
+    },
+    {
+      "id": "le-6",
+      "objectiveId": "short-announcements",
+      "prompt": "Listen to the announcement. Which platform does the train to Bandung leave from? Write the number.",
+      "listen": "Attention, please. The train to Bandung leaves from platform four at ten fifteen. The train to Surabaya leaves from platform seven.",
+      "acceptableAnswers": [
+        "4",
+        "four",
+        "platform 4",
+        "platform four"
+      ],
+      "rubric": "Correct: 4. 7 (the Surabaya train) = 0; 10 or 15 (the time) = 0."
+    },
+    {
+      "id": "le-7",
+      "objectiveId": "short-announcements",
+      "prompt": "Listen to the announcement. What time does the store close? Write it in numbers, like 6:00.",
+      "listen": "Good evening, shoppers. The store closes in fifteen minutes, at nine o'clock. Thank you for shopping with us.",
+      "acceptableAnswers": [
+        "9 00",
+        "9",
+        "900",
+        "0900",
+        "09 00",
+        "21 00",
+        "2100",
+        "9 pm",
+        "9pm",
+        "9 p m",
+        "9 00 pm",
+        "9 00 p m",
+        "nine",
+        "nine o'clock",
+        "9 o'clock"
+      ],
+      "rubric": "Correct: 9:00 (or 21:00). 'fifteen' or 9:15 = 0: fifteen minutes is how long until closing, not the time."
+    }
+  ],
+  "material": [
+    {
+      "id": "before",
+      "title": "Before you listen",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "People don't wait for you, so **read the question first**. It tells you what to listen for: **How much?** → a price, **What time?** → a time, **Where?** → a place or a direction, **What's your name?** → a name. Then listen for that **key word**. Missed it? Say **Sorry, can you repeat that, please?** or **Slowly, please.**",
+          "i18n": {
+            "id": {
+              "text": "Orang tidak akan menunggumu, jadi **baca dulu pertanyaannya**. Pertanyaan itu memberitahu apa yang harus kamu dengarkan: **How much?** → harga, **What time?** → jam, **Where?** → tempat atau arah, **What's your name?** → nama. Lalu dengarkan **kata kunci** itu. Tidak tertangkap? Bilang **Sorry, can you repeat that, please?** atau **Slowly, please.**"
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Listen once for the general idea, then again for the detail you need. You don't need every word.",
+          "i18n": {
+            "id": {
+              "text": "Dengarkan sekali untuk gambaran umumnya, lalu sekali lagi untuk detail yang kamu perlukan. Kamu tidak perlu menangkap setiap kata."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "The question is 'What time does the bus leave?'. What do you listen for?",
+          "options": [
+            "A price",
+            "A time",
+            "A place"
+          ],
+          "answer": 1,
+          "explain": "What time asks for a time, so listen for a clock time like ten fifteen or half past six.",
+          "i18n": {
+            "id": {
+              "explain": "What time menanyakan jam, jadi dengarkan jam seperti ten fifteen atau half past six."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Sebelum menyimak"
+        }
+      }
+    },
+    {
+      "id": "details",
+      "title": "Names, numbers, prices and times",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**Names:** people say their **first name** and **surname** (family name) and spell it with English letter names: E is 'ee', I is 'eye'. **Numbers:** fif**TEEN** (15) has the stress at the end; **FIF**ty (50) at the start. **Prices:** *twenty thousand rupiah* = Rp20.000. **Times:** *half past* = :30, *quarter past* = :15, *quarter to* = :45.",
+          "i18n": {
+            "id": {
+              "text": "**Nama:** orang menyebut **first name** (nama depan) dan **surname** (nama keluarga), lalu mengejanya dengan nama huruf Inggris: E dibaca 'ee' (i), I dibaca 'eye' (ai). **Angka:** fif**TEEN** (15) tekanannya di akhir; **FIF**ty (50) di awal. **Harga:** *twenty thousand rupiah* = Rp20.000. **Jam:** *half past* = :30, *quarter past* = :15, *quarter to* = :45."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "My surname is Hartono: H-A-R-T-O-N-O.",
+              "id": "Nama keluarga saya Hartono: H-A-R-T-O-N-O.",
+              "note": "H is 'aitch'"
+            },
+            {
+              "en": "The book is sixty thousand rupiah.",
+              "id": "Bukunya enam puluh ribu rupiah.",
+              "note": "SIXty: stress at the start"
+            },
+            {
+              "en": "My number is 0812 3345 6071.",
+              "id": "Nomor saya 0812 3345 6071.",
+              "note": "one digit at a time; 33 = double three"
+            },
+            {
+              "en": "The class starts at quarter to eight.",
+              "id": "Kelasnya mulai pukul 7.45."
+            },
+            {
+              "en": "We meet at half past six.",
+              "id": "Kita bertemu pukul 6.30 (setengah tujuh)."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Careful: **half past six** is 6:30, which is *setengah tujuh*. Don't hear 'six' and think *setengah enam* (5:30).",
+          "i18n": {
+            "id": {
+              "text": "Hati-hati: **half past six** artinya 6:30, yaitu *setengah tujuh*. Jangan dengar 'six' lalu mengira *setengah enam* (5:30)."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "You hear 'The ticket is thirTEEN thousand rupiah', with the stress at the end. How much is it?",
+          "options": [
+            "Rp30.000",
+            "Rp13.000",
+            "Rp3.000"
+          ],
+          "answer": 1,
+          "explain": "Stress at the end means a -teen number: thirteen = 13, so Rp13.000.",
+          "i18n": {
+            "id": {
+              "explain": "Tekanan di akhir berarti angka -teen: thirteen = 13, jadi Rp13.000."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nama, angka, harga dan jam"
+        }
+      }
+    },
+    {
+      "id": "directions",
+      "title": "Simple directions",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Directions are short, fixed phrases. **Go straight on** = jalan lurus. **Turn left / turn right** = belok kiri / kanan (what you do). **It's on the left / on your right** = di sebelah kiri / kananmu (where the place is). **Next to** = di sebelah. Places: bank, station, school, hospital, mosque, **pharmacy** (apotek), **post office** (kantor pos), supermarket.",
+          "i18n": {
+            "id": {
+              "text": "Arah diberikan dengan frasa pendek yang tetap. **Go straight on** = jalan lurus. **Turn left / turn right** = belok kiri / kanan (yang kamu lakukan). **It's on the left / on your right** = di sebelah kiri / kananmu (letak tempatnya). **Next to** = di sebelah. Tempat: bank, station (stasiun), school, hospital (rumah sakit), mosque (masjid), **pharmacy** (apotek), **post office** (kantor pos), supermarket."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Excuse me, where is the bank?",
+              "id": "Permisi, bank di mana?"
+            },
+            {
+              "en": "Go straight on.",
+              "id": "Jalan lurus terus."
+            },
+            {
+              "en": "Turn left at the school.",
+              "id": "Belok kiri di sekolah."
+            },
+            {
+              "en": "The station is on your right.",
+              "id": "Stasiunnya ada di sebelah kananmu."
+            },
+            {
+              "en": "The pharmacy is next to the supermarket.",
+              "id": "Apoteknya di sebelah supermarket."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Turn left** and **on the left** are different: one is an action, the other is a place. 'Turn left. It's on the right.' means you turn left, then look right.",
+          "i18n": {
+            "id": {
+              "text": "**Turn left** dan **on the left** itu berbeda: yang satu tindakan, yang lain letak tempat. 'Turn left. It's on the right.' artinya kamu belok kiri, lalu lihat ke kanan."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "You hear: 'Turn right. The bank is on your left.' Where is the bank?",
+          "options": [
+            "On your right",
+            "On your left",
+            "Straight on"
+          ],
+          "answer": 1,
+          "explain": "'Turn right' is what you do; 'on your left' tells you where the bank is.",
+          "i18n": {
+            "id": {
+              "explain": "'Turn right' adalah yang kamu lakukan; 'on your left' memberitahu letak bank-nya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Arah sederhana"
+        }
+      }
+    },
+    {
+      "id": "announcements",
+      "title": "Short announcements",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Announcements at stations, airports and shops follow a pattern: **Attention, please.** → what (the train to Surabaya, the store) → the **key facts**: **platform** or **gate** + a number, and a **time**. Listen for the number right after *platform*, *gate* and *at*. **Is late** = terlambat; **closes at** = tutup pukul.",
+          "i18n": {
+            "id": {
+              "text": "Pengumuman di stasiun, bandara dan toko punya pola: **Attention, please.** → apa (kereta ke Surabaya, tokonya) → **info kunci**: **platform** (peron) atau **gate** (pintu) + nomor, dan **jam**. Dengarkan angka tepat setelah *platform*, *gate* dan *at*. **Is late** = terlambat; **closes at** = tutup pukul."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Attention, please.",
+              "id": "Mohon perhatian."
+            },
+            {
+              "en": "The train to Surabaya leaves from platform two.",
+              "id": "Kereta ke Surabaya berangkat dari peron dua."
+            },
+            {
+              "en": "The bus to Bogor is late.",
+              "id": "Bus ke Bogor terlambat."
+            },
+            {
+              "en": "The library closes at four thirty today.",
+              "id": "Perpustakaan tutup pukul 16.30 hari ini."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "You hear: 'Attention, please. The train to Malang leaves from platform nine at seven forty.' Which platform?",
+          "options": [
+            "Platform 7",
+            "Platform 9",
+            "Platform 40"
+          ],
+          "answer": 1,
+          "explain": "The number right after 'platform' is nine. Seven forty (7:40) is the time.",
+          "i18n": {
+            "id": {
+              "explain": "Angka tepat setelah 'platform' adalah nine (9). Seven forty (7:40) adalah jamnya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pengumuman pendek"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "How can I hear the difference between fifteen and fifty?",
+    "Why is 'half past three' not 'setengah tiga'?",
+    "What's the difference between 'turn left' and 'on the left'?",
+    "What can I say when someone speaks too fast?"
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "Finding the library",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/listening/a1/finding-library",
+      "source": "British Council LearnEnglish",
+      "note": "A1 listening: a new student asks the way to the library ('next to', 'on the right'). With transcript and exercises.",
+      "i18n": {
+        "id": {
+          "note": "Menyimak A1: mahasiswa baru menanyakan jalan ke perpustakaan ('next to', 'on the right'). Ada transkrip dan latihannya."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Booking a table",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/listening/a1/booking-table",
+      "source": "British Council LearnEnglish",
+      "note": "A1 listening: a phone call to book a restaurant table, with numbers of people and times like half past seven.",
+      "i18n": {
+        "id": {
+          "note": "Menyimak A1: telepon untuk memesan meja restoran, dengan jumlah orang dan jam seperti half past seven."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Ordering in a café",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/listening/a1/ordering-cafe",
+      "source": "British Council LearnEnglish",
+      "note": "A1 listening: short café conversations where you catch the prices.",
+      "i18n": {
+        "id": {
+          "note": "Menyimak A1: percakapan pendek di kafe, kamu menangkap harganya."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "fifTEEN or FIFty: which is 50?",
+      "back": "FIFty (stress at the start)"
+    },
+    {
+      "front": "half past three",
+      "back": "3:30 (setengah empat)"
+    },
+    {
+      "front": "nama keluarga",
+      "back": "surname"
+    },
+    {
+      "front": "jalan lurus",
+      "back": "go straight on"
+    },
+    {
+      "front": "belok kanan",
+      "back": "turn right"
+    },
+    {
+      "front": "di sebelah kirimu",
+      "back": "on your left"
+    },
+    {
+      "front": "peron",
+      "back": "platform"
+    },
+    {
+      "front": "Mohon perhatian.",
+      "back": "Attention, please."
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Selamat datang! Di pelajaran ini kamu berlatih menyimak bahasa Inggris sehari-hari: nama, harga, jam, arah sederhana dan pengumuman pendek di stasiun atau toko. Kamu tidak perlu menangkap setiap kata: baca dulu pertanyaannya, lalu dengarkan kata kuncinya.",
+      "suggestedQuestions": [
+        "Bagaimana cara mendengar beda fifteen dan fifty?",
+        "Kenapa 'half past three' bukan 'setengah tiga'?",
+        "Apa bedanya 'turn left' dan 'on the left'?",
+        "Apa yang bisa aku katakan kalau orang bicara terlalu cepat?"
+      ],
+      "assessment": {
+        "le-1": "Dengarkan. Tulis surname (nama keluarga) orang itu.",
+        "le-2": "Dengarkan. Jam berapa janji temunya? Tulis dengan angka, seperti 6:00.",
+        "le-3": "Dengarkan. Berapa harga kausnya? Tulis harganya dengan angka.",
+        "le-4": "Dengarkan petunjuk arahnya. Di lampu merah, kamu belok kiri atau kanan? Tulis satu kata dalam bahasa Inggris.",
+        "le-5": "Dengarkan petunjuk arahnya. Kafenya di sebelah apa? Tulis tempatnya dalam bahasa Inggris.",
+        "le-6": "Dengarkan pengumumannya. Kereta ke Bandung berangkat dari peron nomor berapa? Tulis nomornya.",
+        "le-7": "Dengarkan pengumumannya. Jam berapa tokonya tutup? Tulis dengan angka, seperti 6:00."
+      }
+    }
+  }
+}

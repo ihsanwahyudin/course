@@ -1,0 +1,698 @@
+{
+  "en": {
+    "greeting": "Hi! Today we polish three small things that make a big difference: the -s at the end of words, short forms like I'm and don't, and the melody of questions. Say everything out loud as we go.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Don't drop the -s",
+        "text": "Let's start with the little -s at the end of words. Tap each word to hear it.",
+        "body": "In Indonesian, words don't change. In English the **-s** is a real sound: it tells people **he/she/it** (*she works*) or **more than one** (*two books*). So always say it. After **p, t, k, f** it's a quiet **/s/** (no buzz in your throat). After a **vowel** or a buzzing sound like **b, d, g, l, m, n, v** it's **/z/**. Put a hand on your throat to feel the difference.",
+        "pairs": [
+          {
+            "en": "works",
+            "id": "bekerja · /s/"
+          },
+          {
+            "en": "eats",
+            "id": "makan · /s/"
+          },
+          {
+            "en": "stops",
+            "id": "berhenti · /s/"
+          },
+          {
+            "en": "books",
+            "id": "buku-buku · /s/"
+          },
+          {
+            "en": "plays",
+            "id": "bermain · /z/"
+          },
+          {
+            "en": "goes",
+            "id": "pergi · /z/"
+          },
+          {
+            "en": "lives",
+            "id": "tinggal · /z/"
+          },
+          {
+            "en": "bags",
+            "id": "tas-tas · /z/"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: one or more?",
+        "text": "Press play and listen to the very end of the last word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "s-endings",
+          "listen": "Look at the cats.",
+          "options": [
+            "cat",
+            "cats"
+          ],
+          "answer": 1,
+          "prompt": "Listen. Which word do you hear?",
+          "explanation": "You heard **cats**, with a clear /s/ at the end: more than one cat. Both words fit the sentence, so only the final **-s** tells you the answer. That's why you must say it too."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The extra syllable",
+        "text": "Some words get a whole extra syllable when you add -s.",
+        "body": "After **s, z, sh, ch, x** and a **j** sound (often spelled *ge*), the ending is **/ɪz/** and the word gets **one more syllable**: *wash* → **WASH-iz**, *fix* → **FIX-iz**, *bus* → **BUS-iz**. Look at the last **sound**, not the spelling: *goes* and *does* end in -es but have **no** extra syllable. And don't add one where it doesn't belong: *works* is one syllable, not *work-es*.",
+        "pairs": [
+          {
+            "en": "washes",
+            "id": "mencuci · WASH-iz"
+          },
+          {
+            "en": "fixes",
+            "id": "memperbaiki · FIX-iz"
+          },
+          {
+            "en": "dances",
+            "id": "menari · DANCE-iz"
+          },
+          {
+            "en": "buses",
+            "id": "bis-bis · BUS-iz"
+          },
+          {
+            "en": "changes",
+            "id": "mengganti · CHANGE-iz"
+          },
+          {
+            "en": "goes",
+            "id": "pergi · 1 suku kata"
+          },
+          {
+            "en": "works",
+            "id": "bekerja · 1 suku kata"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Think about the last sound of the base verb.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "s-endings",
+          "options": [
+            "watch (no ending)",
+            "watch-s (one syllable)",
+            "WATCH-iz (two syllables)"
+          ],
+          "answer": 2,
+          "prompt": "Budi ___ TV every evening. How do you say the verb?",
+          "explanation": "**watch** ends with **ch**, so the -es adds a syllable: **WATCH-iz**. 'watch' with no ending drops the he/she -s, and 'watch-s' squeezes the ending into one syllable. Both are common mistakes."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "-s in daily life",
+        "text": "Listen to each sentence, then say it yourself. Watch the end of every verb.",
+        "body": "Each sentence has a different -s: **/s/** (cooks, stops), **/z/** (plays, lives) or the extra syllable **/ɪz/** (washes).",
+        "examples": [
+          {
+            "en": "My mother cooks every morning.",
+            "id": "Ibuku memasak setiap pagi."
+          },
+          {
+            "en": "Rina plays badminton on Sundays.",
+            "id": "Rina main bulu tangkis setiap hari Minggu."
+          },
+          {
+            "en": "Dimas lives in Surabaya.",
+            "id": "Dimas tinggal di Surabaya."
+          },
+          {
+            "en": "My brother washes his car on Saturdays.",
+            "id": "Kakakku mencuci mobilnya setiap hari Sabtu."
+          },
+          {
+            "en": "The bus stops near the market.",
+            "id": "Bisnya berhenti di dekat pasar."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Short forms",
+        "text": "Now the short forms we use all the time in conversation.",
+        "body": "We join small words: **I am → I'm**, **is not → isn't**, **are not → aren't**, **do not → don't**, **does not → doesn't**. **I'm** is one syllable that rhymes with *time*. **isn't** is **IZ-nt** and **doesn't** is **DUZ-nt**. **don't** has the *o* of *go*. The **n't** means *not*, so say the **n** clearly, or people may hear the opposite.",
+        "pairs": [
+          {
+            "en": "I'm",
+            "id": "saya (I am) · 1 suku kata"
+          },
+          {
+            "en": "he's",
+            "id": "dia (he is)"
+          },
+          {
+            "en": "it's",
+            "id": "itu (it is)"
+          },
+          {
+            "en": "isn't",
+            "id": "tidak (is not) · IZ-nt"
+          },
+          {
+            "en": "aren't",
+            "id": "tidak (are not)"
+          },
+          {
+            "en": "don't",
+            "id": "tidak (do not) · o seperti di go"
+          },
+          {
+            "en": "doesn't",
+            "id": "tidak (does not) · DUZ-nt"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen for n't",
+        "text": "Listen carefully for the short form: is the sentence positive or negative?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contractions",
+          "listen": "Budi isn't at the office today.",
+          "options": [
+            "Yes, he is.",
+            "No, he isn't."
+          ],
+          "answer": 1,
+          "prompt": "Listen. Is Budi at the office today?",
+          "explanation": "You heard **isn't** (IZ-nt): *Budi isn't at the office today.* The **n't** makes it negative, so the answer is **No, he isn't.** If the speaker dropped the n, you would hear the opposite."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now build a sentence with a short form, then say it out loud: DUZ-nt.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "contractions",
+          "tokens": [
+            "eat",
+            "sister",
+            "meat",
+            "doesn't",
+            "My"
+          ],
+          "solution": "My sister doesn't eat meat.",
+          "prompt": "Arrange the words: Kakak perempuanku tidak makan daging.",
+          "explanation": "**My sister** = she, so the negative is **does not → doesn't**, followed by the base verb **eat** (no -s). Say it as one smooth phrase: *My sister DUZ-nt eat meat.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Questions: up or down?",
+        "text": "Last thing: the melody at the end of a question.",
+        "body": "**Yes/no questions** start with *Are, Is, Do, Does…* and **go up at the end ↗**. **Wh- questions** start with *What, Where, When, Who, How…* and **go down at the end ↘**. Many Indonesian speakers go up at the end of every question, because Indonesian questions often rise. Quick test: can you answer **yes** or **no**? Go up. Do you need information? Go down.",
+        "pairs": [
+          {
+            "en": "Are you hungry?",
+            "id": "Kamu lapar? · naik ↗"
+          },
+          {
+            "en": "Do you work here?",
+            "id": "Kamu bekerja di sini? · naik ↗"
+          },
+          {
+            "en": "Does she speak English?",
+            "id": "Dia bisa berbahasa Inggris? · naik ↗"
+          },
+          {
+            "en": "What's your name?",
+            "id": "Siapa namamu? · turun ↘"
+          },
+          {
+            "en": "Where do you live?",
+            "id": "Kamu tinggal di mana? · turun ↘"
+          },
+          {
+            "en": "When does the class start?",
+            "id": "Kapan kelasnya mulai? · turun ↘"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look at the first word of each question.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-intonation",
+          "options": [
+            "Is Sari your sister?",
+            "What does Sari do?",
+            "Does Sari work here?"
+          ],
+          "answer": 1,
+          "prompt": "Which question usually goes DOWN at the end?",
+          "explanation": "**What does Sari do?** starts with **What**, so it's a wh- question: your voice goes **down** ↘. The other two start with **Is** and **Does**: they are yes/no questions, so they go **up** ↗."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Everything from today on one page, to keep.",
+        "artifact": {
+          "title": "Cheat sheet · -s endings, short forms, intonation",
+          "intro": "How to say the -s ending, the most common short forms, and the melody of questions.",
+          "headers": [
+            "Pattern",
+            "Examples",
+            "How to say it"
+          ],
+          "rows": [
+            [
+              "-s after p, t, k, f",
+              "works, eats, stops",
+              "/s/ — no buzz"
+            ],
+            [
+              "-s after a vowel or b, d, g, l, m, n, v",
+              "plays, goes, lives",
+              "/z/ — with a buzz"
+            ],
+            [
+              "-s after s, z, sh, ch, x, j",
+              "watches, washes, fixes",
+              "/ɪz/ — one extra syllable"
+            ],
+            [
+              "I am",
+              "I'm",
+              "one syllable, rhymes with 'time'"
+            ],
+            [
+              "is not / are not",
+              "isn't / aren't",
+              "IZ-nt / one syllable"
+            ],
+            [
+              "do not / does not",
+              "don't / doesn't",
+              "o as in go / DUZ-nt"
+            ],
+            [
+              "Yes/no question",
+              "Are you…? Do you…?",
+              "voice goes up ↗ at the end"
+            ],
+            [
+              "Wh- question",
+              "What…? Where…? When…?",
+              "voice goes down ↘ at the end"
+            ]
+          ],
+          "tips": [
+            "Never drop the -s: it tells people **he/she/it** or **more than one**.",
+            "Listen to the last **sound**, not the spelling: **goes** has no extra syllable, **watches** does.",
+            "Say the **n** of **n't** clearly: it's the 'no' of the sentence."
+          ],
+          "examples": [
+            {
+              "en": "She works in a bank.",
+              "id": "Dia bekerja di bank."
+            },
+            {
+              "en": "My father watches the news every evening.",
+              "id": "Ayahku menonton berita setiap malam."
+            },
+            {
+              "en": "We don't eat pork.",
+              "id": "Kami tidak makan daging babi."
+            },
+            {
+              "en": "Do you work here?",
+              "id": "Kamu bekerja di sini?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and practise",
+        "text": "Short videos to hear these sounds and melodies again."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita memoles tiga hal kecil yang besar pengaruhnya: bunyi -s di akhir kata, bentuk singkat seperti I'm dan don't, serta nada pertanyaan. Ucapkan semuanya dengan suara keras sambil kita belajar.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Jangan hilangkan -s",
+        "text": "Kita mulai dari -s kecil di akhir kata. Ketuk setiap kata untuk mendengarnya.",
+        "body": "Dalam bahasa Indonesia kata tidak berubah. Dalam bahasa Inggris **-s** adalah bunyi nyata: ia menunjukkan **he/she/it** (*she works*) atau **lebih dari satu** (*two books*). Jadi selalu ucapkan. Sesudah **p, t, k, f** bunyinya **/s/** yang pelan (leher tidak bergetar). Sesudah **vokal** atau bunyi yang bergetar seperti **b, d, g, l, m, n, v** bunyinya **/z/**. Letakkan tangan di leher untuk merasakan bedanya.",
+        "pairs": [
+          {
+            "en": "works",
+            "id": "bekerja · /s/"
+          },
+          {
+            "en": "eats",
+            "id": "makan · /s/"
+          },
+          {
+            "en": "stops",
+            "id": "berhenti · /s/"
+          },
+          {
+            "en": "books",
+            "id": "buku-buku · /s/"
+          },
+          {
+            "en": "plays",
+            "id": "bermain · /z/"
+          },
+          {
+            "en": "goes",
+            "id": "pergi · /z/"
+          },
+          {
+            "en": "lives",
+            "id": "tinggal · /z/"
+          },
+          {
+            "en": "bags",
+            "id": "tas-tas · /z/"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: satu atau lebih?",
+        "text": "Tekan play dan dengarkan bagian paling akhir dari kata terakhir.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "s-endings",
+          "listen": "Look at the cats.",
+          "options": [
+            "cat",
+            "cats"
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan. Kata mana yang kamu dengar?",
+          "explanation": "Kamu mendengar **cats**, dengan /s/ yang jelas di akhir: lebih dari satu kucing. Kedua kata cocok di kalimat itu, jadi hanya **-s** di akhir yang menentukan jawabannya. Karena itu kamu juga harus mengucapkannya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Suku kata tambahan",
+        "text": "Beberapa kata mendapat satu suku kata utuh saat diberi -s.",
+        "body": "Sesudah **s, z, sh, ch, x** dan bunyi **j** (sering ditulis *ge*), akhirannya **/ɪz/** dan katanya mendapat **satu suku kata tambahan**: *wash* → **WASH-iz**, *fix* → **FIX-iz**, *bus* → **BUS-iz**. Perhatikan **bunyi** terakhir, bukan ejaannya: *goes* dan *does* berakhiran -es tapi **tidak** punya suku kata tambahan. Jangan juga menambahkannya di tempat yang salah: *works* satu suku kata, bukan *work-es*.",
+        "pairs": [
+          {
+            "en": "washes",
+            "id": "mencuci · WASH-iz"
+          },
+          {
+            "en": "fixes",
+            "id": "memperbaiki · FIX-iz"
+          },
+          {
+            "en": "dances",
+            "id": "menari · DANCE-iz"
+          },
+          {
+            "en": "buses",
+            "id": "bis-bis · BUS-iz"
+          },
+          {
+            "en": "changes",
+            "id": "mengganti · CHANGE-iz"
+          },
+          {
+            "en": "goes",
+            "id": "pergi · 1 suku kata"
+          },
+          {
+            "en": "works",
+            "id": "bekerja · 1 suku kata"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pikirkan bunyi terakhir dari kata kerja dasarnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "s-endings",
+          "options": [
+            "watch (no ending)",
+            "watch-s (one syllable)",
+            "WATCH-iz (two syllables)"
+          ],
+          "answer": 2,
+          "prompt": "Budi ___ TV every evening. Bagaimana kamu mengucapkan kata kerjanya?",
+          "explanation": "**watch** berakhir dengan **ch**, jadi -es menambah satu suku kata: **WATCH-iz**. 'watch' tanpa akhiran menghilangkan -s untuk he/she, dan 'watch-s' memampatkan akhirannya jadi satu suku kata. Keduanya kesalahan yang umum."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "-s dalam keseharian",
+        "text": "Dengarkan setiap kalimat, lalu ucapkan sendiri. Perhatikan akhir setiap kata kerja.",
+        "body": "Setiap kalimat punya -s yang berbeda: **/s/** (cooks, stops), **/z/** (plays, lives) atau suku kata tambahan **/ɪz/** (washes).",
+        "examples": [
+          {
+            "en": "My mother cooks every morning.",
+            "id": "Ibuku memasak setiap pagi."
+          },
+          {
+            "en": "Rina plays badminton on Sundays.",
+            "id": "Rina main bulu tangkis setiap hari Minggu."
+          },
+          {
+            "en": "Dimas lives in Surabaya.",
+            "id": "Dimas tinggal di Surabaya."
+          },
+          {
+            "en": "My brother washes his car on Saturdays.",
+            "id": "Kakakku mencuci mobilnya setiap hari Sabtu."
+          },
+          {
+            "en": "The bus stops near the market.",
+            "id": "Bisnya berhenti di dekat pasar."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Bentuk singkat",
+        "text": "Sekarang bentuk singkat yang selalu kita pakai dalam percakapan.",
+        "body": "Kita menggabungkan kata-kata kecil: **I am → I'm**, **is not → isn't**, **are not → aren't**, **do not → don't**, **does not → doesn't**. **I'm** satu suku kata yang berima dengan *time*. **isn't** berbunyi **IZ-nt** dan **doesn't** berbunyi **DUZ-nt**. **don't** memakai bunyi *o* seperti di *go*. **n't** berarti *not* (tidak), jadi ucapkan **n**-nya dengan jelas, kalau tidak orang bisa mendengar kebalikannya.",
+        "pairs": [
+          {
+            "en": "I'm",
+            "id": "saya (I am) · 1 suku kata"
+          },
+          {
+            "en": "he's",
+            "id": "dia (he is)"
+          },
+          {
+            "en": "it's",
+            "id": "itu (it is)"
+          },
+          {
+            "en": "isn't",
+            "id": "tidak (is not) · IZ-nt"
+          },
+          {
+            "en": "aren't",
+            "id": "tidak (are not)"
+          },
+          {
+            "en": "don't",
+            "id": "tidak (do not) · o seperti di go"
+          },
+          {
+            "en": "doesn't",
+            "id": "tidak (does not) · DUZ-nt"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan n't",
+        "text": "Dengarkan bentuk singkatnya baik-baik: kalimatnya positif atau negatif?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contractions",
+          "listen": "Budi isn't at the office today.",
+          "options": [
+            "Yes, he is.",
+            "No, he isn't."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan. Apakah Budi ada di kantor hari ini?",
+          "explanation": "Kamu mendengar **isn't** (IZ-nt): *Budi isn't at the office today.* **n't** membuatnya negatif, jadi jawabannya **No, he isn't.** Kalau pembicara menghilangkan n-nya, kamu akan mendengar kebalikannya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang susun kalimat dengan bentuk singkat, lalu ucapkan dengan keras: DUZ-nt.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "contractions",
+          "tokens": [
+            "eat",
+            "sister",
+            "meat",
+            "doesn't",
+            "My"
+          ],
+          "solution": "My sister doesn't eat meat.",
+          "prompt": "Susun kata-katanya: Kakak perempuanku tidak makan daging.",
+          "explanation": "**My sister** = she, jadi bentuk negatifnya **does not → doesn't**, diikuti kata kerja dasar **eat** (tanpa -s). Ucapkan sebagai satu frasa yang lancar: *My sister DUZ-nt eat meat.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pertanyaan: naik atau turun?",
+        "text": "Terakhir: nada di akhir pertanyaan.",
+        "body": "**Pertanyaan yes/no** diawali *Are, Is, Do, Does…* dan **naik di akhir ↗**. **Pertanyaan wh-** diawali *What, Where, When, Who, How…* dan **turun di akhir ↘**. Banyak penutur Indonesia menaikkan nada di akhir setiap pertanyaan, karena pertanyaan bahasa Indonesia sering naik. Tes cepat: bisakah dijawab **yes** atau **no**? Naikkan. Butuh informasi? Turunkan.",
+        "pairs": [
+          {
+            "en": "Are you hungry?",
+            "id": "Kamu lapar? · naik ↗"
+          },
+          {
+            "en": "Do you work here?",
+            "id": "Kamu bekerja di sini? · naik ↗"
+          },
+          {
+            "en": "Does she speak English?",
+            "id": "Dia bisa berbahasa Inggris? · naik ↗"
+          },
+          {
+            "en": "What's your name?",
+            "id": "Siapa namamu? · turun ↘"
+          },
+          {
+            "en": "Where do you live?",
+            "id": "Kamu tinggal di mana? · turun ↘"
+          },
+          {
+            "en": "When does the class start?",
+            "id": "Kapan kelasnya mulai? · turun ↘"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Lihat kata pertama setiap pertanyaan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "question-intonation",
+          "options": [
+            "Is Sari your sister?",
+            "What does Sari do?",
+            "Does Sari work here?"
+          ],
+          "answer": 1,
+          "prompt": "Pertanyaan mana yang biasanya TURUN di akhir?",
+          "explanation": "**What does Sari do?** diawali **What**, jadi ini pertanyaan wh-: suaramu **turun** ↘. Dua lainnya diawali **Is** dan **Does**: itu pertanyaan yes/no, jadi nadanya **naik** ↗."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semua materi hari ini dalam satu halaman, untuk disimpan.",
+        "artifact": {
+          "title": "Ringkasan · akhiran -s, bentuk singkat, intonasi",
+          "intro": "Cara mengucapkan akhiran -s, bentuk singkat yang paling umum, dan nada pertanyaan.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Cara mengucapkan"
+          ],
+          "rows": [
+            [
+              "-s sesudah p, t, k, f",
+              "works, eats, stops",
+              "/s/ — tidak bergetar"
+            ],
+            [
+              "-s sesudah vokal atau b, d, g, l, m, n, v",
+              "plays, goes, lives",
+              "/z/ — bergetar"
+            ],
+            [
+              "-s sesudah s, z, sh, ch, x, j",
+              "watches, washes, fixes",
+              "/ɪz/ — satu suku kata tambahan"
+            ],
+            [
+              "I am",
+              "I'm",
+              "satu suku kata, berima dengan 'time'"
+            ],
+            [
+              "is not / are not",
+              "isn't / aren't",
+              "IZ-nt / satu suku kata"
+            ],
+            [
+              "do not / does not",
+              "don't / doesn't",
+              "o seperti di go / DUZ-nt"
+            ],
+            [
+              "Pertanyaan yes/no",
+              "Are you…? Do you…?",
+              "nada naik ↗ di akhir"
+            ],
+            [
+              "Pertanyaan wh-",
+              "What…? Where…? When…?",
+              "nada turun ↘ di akhir"
+            ]
+          ],
+          "tips": [
+            "Jangan pernah hilangkan -s: ia menunjukkan **he/she/it** atau **lebih dari satu**.",
+            "Perhatikan **bunyi** terakhir, bukan ejaannya: **goes** tidak punya suku kata tambahan, **watches** punya.",
+            "Ucapkan **n** di **n't** dengan jelas: itulah 'tidak' dalam kalimat."
+          ],
+          "examples": [
+            {
+              "en": "She works in a bank.",
+              "id": "Dia bekerja di bank."
+            },
+            {
+              "en": "My father watches the news every evening.",
+              "id": "Ayahku menonton berita setiap malam."
+            },
+            {
+              "en": "We don't eat pork.",
+              "id": "Kami tidak makan daging babi."
+            },
+            {
+              "en": "Do you work here?",
+              "id": "Kamu bekerja di sini?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan berlatih",
+        "text": "Video pendek untuk mendengar bunyi dan nada ini sekali lagi."
+      }
+    ]
+  }
+}

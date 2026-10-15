@@ -1,0 +1,784 @@
+{
+  "en": {
+    "greeting": "Hi! Today you train your ears for everyday English: prices, times, directions and short announcements. Play each sound as many times as you like.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Names, numbers and times",
+        "text": "Before you listen, read the question: it tells you what to listen for. Tap each tile to hear it.",
+        "body": "Read the question first: **How much?** → a price, **What time?** → a time, **Where?** → a place. Then listen only for that key word. Watch the stress: fif**TEEN** (15) vs **FIF**ty (50). And **half past three** is 3:30, which is *setengah empat*, not *setengah tiga*!",
+        "pairs": [
+          {
+            "en": "surname",
+            "id": "nama keluarga"
+          },
+          {
+            "en": "fifteen",
+            "id": "15 · tekanan di akhir"
+          },
+          {
+            "en": "fifty",
+            "id": "50 · tekanan di awal"
+          },
+          {
+            "en": "twenty thousand rupiah",
+            "id": "Rp20.000"
+          },
+          {
+            "en": "half past six",
+            "id": "6:30 (setengah tujuh)"
+          },
+          {
+            "en": "quarter to nine",
+            "id": "8:45"
+          },
+          {
+            "en": "Sorry, can you repeat that, please?",
+            "id": "Maaf, bisa diulang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: how much?",
+        "text": "Two prices this time. Listen for the stress.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "catch-details",
+          "listen": "The chicken satay is fifteen thousand rupiah, and the iced tea is five thousand.",
+          "prompt": "Listen. How much is the chicken satay?",
+          "options": [
+            "Rp50.000",
+            "Rp15.000",
+            "Rp5.000"
+          ],
+          "answer": 1,
+          "explanation": "You heard fif**TEEN** thousand, with the stress at the end: Rp15.000. **FIF**ty has the stress at the start, and five thousand is the iced tea."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: what time?",
+        "text": "Budi leaves a voice message for Rina. Careful with 'half past'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "catch-details",
+          "listen": "Hi Rina, it's Budi. The football game is on Saturday at half past five.",
+          "prompt": "Listen. What time is the football game?",
+          "options": [
+            "4:30",
+            "5:30",
+            "5:15"
+          ],
+          "answer": 1,
+          "explanation": "**Half past five** = 5:30 (*setengah enam*). 4:30 is the 'setengah lima' trap, and 5:15 is *quarter past* five."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Simple directions",
+        "text": "Now: finding a place. Directions are short chunks, so learn them as whole phrases.",
+        "body": "**Turn left / turn right** is what you *do*. **On the left / on your right** is *where* the place is. One sentence often has both, so listen for the part the question asks about. **Go straight on** = jalan lurus.",
+        "pairs": [
+          {
+            "en": "Go straight on.",
+            "id": "Jalan lurus terus."
+          },
+          {
+            "en": "Turn left.",
+            "id": "Belok kiri."
+          },
+          {
+            "en": "Turn right.",
+            "id": "Belok kanan."
+          },
+          {
+            "en": "It's on the left.",
+            "id": "Ada di sebelah kiri."
+          },
+          {
+            "en": "It's on your right.",
+            "id": "Ada di sebelah kananmu."
+          },
+          {
+            "en": "next to",
+            "id": "di sebelah / di samping"
+          },
+          {
+            "en": "at the traffic lights",
+            "id": "di lampu merah"
+          },
+          {
+            "en": "at the corner",
+            "id": "di tikungan / di pojok"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Asking the way",
+        "text": "Here's how directions sound in real life. Tap to listen.",
+        "body": "First the way (go, turn), then where the place is (on the left, next to…).",
+        "examples": [
+          {
+            "en": "Excuse me, where is the station?",
+            "id": "Permisi, stasiunnya di mana?"
+          },
+          {
+            "en": "Go straight on and turn right at the bank.",
+            "id": "Jalan lurus, lalu belok kanan di bank."
+          },
+          {
+            "en": "The mosque is on the left.",
+            "id": "Masjidnya di sebelah kiri."
+          },
+          {
+            "en": "The ATM is next to the pharmacy.",
+            "id": "ATM-nya di sebelah apotek."
+          },
+          {
+            "en": "Sorry? Slowly, please.",
+            "id": "Maaf? Pelan-pelan, ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the way to the post office",
+        "text": "Listen for two things: where you turn, and which side the post office is on.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-directions",
+          "listen": "Turn left at the bank. Go straight on, and the post office is on your right.",
+          "prompt": "Listen. How do you get to the post office?",
+          "options": [
+            "Turn left at the bank; it's on your right.",
+            "Turn right at the bank; it's on your left.",
+            "Turn left at the bank; it's on your left."
+          ],
+          "answer": 0,
+          "explanation": "You **turn left** at the bank (the action), and the post office is **on your right** (the place). Don't mix up the two parts."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build it",
+        "text": "Now say where a place is. Build the sentence.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "follow-directions",
+          "prompt": "Arrange the words: Apoteknya di sebelah sekolah.",
+          "tokens": [
+            "next",
+            "school",
+            "The",
+            "is",
+            "pharmacy",
+            "to",
+            "the"
+          ],
+          "solution": "The pharmacy is next to the school.",
+          "explanation": "Place + **is** + **next to** + the other place. Next to = di sebelah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Short announcements",
+        "text": "Last topic: announcements at a station, an airport or a shop.",
+        "body": "Announcements start with **Attention, please**. Then you hear *what* (the train to Surabaya, the bus to Bogor) and the **key facts**: **platform** or **gate** + a number, and a **time**. Listen for the number right after *platform*, *gate* and *at*. **Is late** = terlambat.",
+        "pairs": [
+          {
+            "en": "Attention, please.",
+            "id": "Mohon perhatian."
+          },
+          {
+            "en": "platform",
+            "id": "peron"
+          },
+          {
+            "en": "gate",
+            "id": "pintu (keberangkatan)"
+          },
+          {
+            "en": "leaves at",
+            "id": "berangkat pukul"
+          },
+          {
+            "en": "arrives at",
+            "id": "tiba pukul"
+          },
+          {
+            "en": "is late",
+            "id": "terlambat"
+          },
+          {
+            "en": "closes at",
+            "id": "tutup pukul"
+          },
+          {
+            "en": "ten fifteen",
+            "id": "10:15"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: at the bus station",
+        "text": "Catch the gate number and the time.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-announcements",
+          "listen": "Attention, please. The bus to Yogyakarta is late. It leaves at eleven thirty from gate six.",
+          "prompt": "Listen. Where and when does the bus leave?",
+          "options": [
+            "Gate 16, at 11:30",
+            "Gate 6, at 11:30",
+            "Gate 6, at 10:30"
+          ],
+          "answer": 1,
+          "explanation": "You heard **gate six** (one short syllable, not six**TEEN**) and **eleven thirty** = 11:30. The bus is late, so it leaves at 11:30."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Try to hear the English in your head first.",
+        "flashcards": [
+          {
+            "front": "fifTEEN or FIFty: which is 50?",
+            "back": "FIFty (stress at the start)"
+          },
+          {
+            "front": "half past three",
+            "back": "3:30 (setengah empat)"
+          },
+          {
+            "front": "quarter to eight",
+            "back": "7:45"
+          },
+          {
+            "front": "belok kiri",
+            "back": "turn left"
+          },
+          {
+            "front": "jalan lurus",
+            "back": "go straight on"
+          },
+          {
+            "front": "di sebelah kananmu",
+            "back": "on your right"
+          },
+          {
+            "front": "peron",
+            "back": "platform"
+          },
+          {
+            "front": "Mohon perhatian.",
+            "back": "Attention, please."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "What you hear and what it means, on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Everyday listening",
+          "intro": "Numbers, times, directions and announcement words you'll hear, and what they mean.",
+          "headers": [
+            "You hear",
+            "It means",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "fifTEEN / FIFty",
+              "15 / 50",
+              "stress at the end / start"
+            ],
+            [
+              "twenty-five thousand rupiah",
+              "Rp25.000",
+              "thousand, no s"
+            ],
+            [
+              "half past three",
+              "3:30",
+              "not setengah tiga (2:30)"
+            ],
+            [
+              "quarter past / to eight",
+              "8:15 / 7:45",
+              "to = before the hour"
+            ],
+            [
+              "surname",
+              "nama keluarga",
+              "first name = nama depan"
+            ],
+            [
+              "go straight on",
+              "jalan lurus",
+              "don't turn"
+            ],
+            [
+              "turn left / turn right",
+              "belok kiri / kanan",
+              "what you do"
+            ],
+            [
+              "on the left / on your right",
+              "di kiri / di kananmu",
+              "where the place is"
+            ],
+            [
+              "next to",
+              "di sebelah",
+              "+ another place"
+            ],
+            [
+              "at the traffic lights / corner",
+              "di lampu merah / tikungan",
+              "where you turn"
+            ],
+            [
+              "Attention, please.",
+              "Mohon perhatian.",
+              "an announcement starts"
+            ],
+            [
+              "platform / gate + number",
+              "peron / pintu + nomor",
+              "catch the number"
+            ],
+            [
+              "leaves at / closes at + time",
+              "berangkat / tutup pukul",
+              "catch the time"
+            ],
+            [
+              "is late",
+              "terlambat",
+              "listen for the new time"
+            ]
+          ],
+          "tips": [
+            "Read the question first: **How much?** → a price, **What time?** → a time, **Where?** → a place.",
+            "Stress at the **end** = 13–19; stress at the **start** = 30, 40, 50…",
+            "Didn't catch it? Say **Sorry, can you repeat that, please?**"
+          ],
+          "examples": [
+            {
+              "en": "Go straight on and turn left.",
+              "id": "Jalan lurus, lalu belok kiri."
+            },
+            {
+              "en": "The train to Solo leaves from platform one.",
+              "id": "Kereta ke Solo berangkat dari peron satu."
+            },
+            {
+              "en": "Sorry, can you repeat that, please?",
+              "id": "Maaf, bisa diulang?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen more",
+        "text": "Short A1 listening lessons with audio, transcripts and exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu melatih telinga untuk bahasa Inggris sehari-hari: harga, jam, arah dan pengumuman pendek. Putar setiap suara sesering yang kamu mau.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Nama, angka dan jam",
+        "text": "Sebelum menyimak, baca dulu pertanyaannya: pertanyaan itu memberitahu apa yang harus kamu dengarkan. Ketuk setiap kartu untuk mendengarnya.",
+        "body": "Baca pertanyaannya dulu: **How much?** → harga, **What time?** → jam, **Where?** → tempat. Lalu dengarkan kata kunci itu saja. Perhatikan tekanannya: fif**TEEN** (15) vs **FIF**ty (50). Dan **half past three** itu 3:30, yaitu *setengah empat*, bukan *setengah tiga*!",
+        "pairs": [
+          {
+            "en": "surname",
+            "id": "nama keluarga"
+          },
+          {
+            "en": "fifteen",
+            "id": "15 · tekanan di akhir"
+          },
+          {
+            "en": "fifty",
+            "id": "50 · tekanan di awal"
+          },
+          {
+            "en": "twenty thousand rupiah",
+            "id": "Rp20.000"
+          },
+          {
+            "en": "half past six",
+            "id": "6:30 (setengah tujuh)"
+          },
+          {
+            "en": "quarter to nine",
+            "id": "8:45"
+          },
+          {
+            "en": "Sorry, can you repeat that, please?",
+            "id": "Maaf, bisa diulang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: berapa harganya?",
+        "text": "Kali ini ada dua harga. Dengarkan tekanannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "catch-details",
+          "listen": "The chicken satay is fifteen thousand rupiah, and the iced tea is five thousand.",
+          "prompt": "Dengarkan. Berapa harga sate ayamnya?",
+          "options": [
+            "Rp50.000",
+            "Rp15.000",
+            "Rp5.000"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar fif**TEEN** thousand, dengan tekanan di akhir: Rp15.000. **FIF**ty tekanannya di awal, dan five thousand adalah harga es tehnya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: jam berapa?",
+        "text": "Budi meninggalkan pesan suara untuk Rina. Hati-hati dengan 'half past'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "catch-details",
+          "listen": "Hi Rina, it's Budi. The football game is on Saturday at half past five.",
+          "prompt": "Dengarkan. Jam berapa pertandingan sepak bolanya?",
+          "options": [
+            "4:30",
+            "5:30",
+            "5:15"
+          ],
+          "answer": 1,
+          "explanation": "**Half past five** = 5:30 (*setengah enam*). 4:30 adalah jebakan 'setengah lima', dan 5:15 adalah *quarter past* five."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Arah sederhana",
+        "text": "Sekarang: mencari tempat. Petunjuk arah berupa frasa pendek, jadi hafalkan sebagai satu kesatuan.",
+        "body": "**Turn left / turn right** adalah yang kamu *lakukan*. **On the left / on your right** adalah *letak* tempatnya. Satu kalimat sering berisi keduanya, jadi dengarkan bagian yang ditanyakan. **Go straight on** = jalan lurus.",
+        "pairs": [
+          {
+            "en": "Go straight on.",
+            "id": "Jalan lurus terus."
+          },
+          {
+            "en": "Turn left.",
+            "id": "Belok kiri."
+          },
+          {
+            "en": "Turn right.",
+            "id": "Belok kanan."
+          },
+          {
+            "en": "It's on the left.",
+            "id": "Ada di sebelah kiri."
+          },
+          {
+            "en": "It's on your right.",
+            "id": "Ada di sebelah kananmu."
+          },
+          {
+            "en": "next to",
+            "id": "di sebelah / di samping"
+          },
+          {
+            "en": "at the traffic lights",
+            "id": "di lampu merah"
+          },
+          {
+            "en": "at the corner",
+            "id": "di tikungan / di pojok"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bertanya arah",
+        "text": "Begini bunyi petunjuk arah dalam kehidupan nyata. Ketuk untuk mendengarkan.",
+        "body": "Pertama jalannya (go, turn), lalu letak tempatnya (on the left, next to…).",
+        "examples": [
+          {
+            "en": "Excuse me, where is the station?",
+            "id": "Permisi, stasiunnya di mana?"
+          },
+          {
+            "en": "Go straight on and turn right at the bank.",
+            "id": "Jalan lurus, lalu belok kanan di bank."
+          },
+          {
+            "en": "The mosque is on the left.",
+            "id": "Masjidnya di sebelah kiri."
+          },
+          {
+            "en": "The ATM is next to the pharmacy.",
+            "id": "ATM-nya di sebelah apotek."
+          },
+          {
+            "en": "Sorry? Slowly, please.",
+            "id": "Maaf? Pelan-pelan, ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: jalan ke kantor pos",
+        "text": "Dengarkan dua hal: di mana kamu belok, dan di sisi mana kantor posnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-directions",
+          "listen": "Turn left at the bank. Go straight on, and the post office is on your right.",
+          "prompt": "Dengarkan. Bagaimana cara ke kantor pos?",
+          "options": [
+            "Turn left at the bank; it's on your right.",
+            "Turn right at the bank; it's on your left.",
+            "Turn left at the bank; it's on your left."
+          ],
+          "answer": 0,
+          "explanation": "Kamu **belok kiri** (turn left) di bank (tindakan), dan kantor posnya **di sebelah kananmu** (on your right, letak tempat). Jangan tertukar kedua bagian itu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang sebutkan letak sebuah tempat. Susun kalimatnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "follow-directions",
+          "prompt": "Susun kata-katanya: Apoteknya di sebelah sekolah.",
+          "tokens": [
+            "next",
+            "school",
+            "The",
+            "is",
+            "pharmacy",
+            "to",
+            "the"
+          ],
+          "solution": "The pharmacy is next to the school.",
+          "explanation": "Tempat + **is** + **next to** + tempat lain. Next to = di sebelah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pengumuman pendek",
+        "text": "Topik terakhir: pengumuman di stasiun, bandara atau toko.",
+        "body": "Pengumuman diawali **Attention, please**. Lalu kamu mendengar *apa* (the train to Surabaya, the bus to Bogor) dan **info kuncinya**: **platform** atau **gate** + nomor, dan **jam**. Dengarkan angka tepat setelah *platform*, *gate* dan *at*. **Is late** = terlambat.",
+        "pairs": [
+          {
+            "en": "Attention, please.",
+            "id": "Mohon perhatian."
+          },
+          {
+            "en": "platform",
+            "id": "peron"
+          },
+          {
+            "en": "gate",
+            "id": "pintu (keberangkatan)"
+          },
+          {
+            "en": "leaves at",
+            "id": "berangkat pukul"
+          },
+          {
+            "en": "arrives at",
+            "id": "tiba pukul"
+          },
+          {
+            "en": "is late",
+            "id": "terlambat"
+          },
+          {
+            "en": "closes at",
+            "id": "tutup pukul"
+          },
+          {
+            "en": "ten fifteen",
+            "id": "10:15"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: di terminal bus",
+        "text": "Tangkap nomor gate dan jamnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-announcements",
+          "listen": "Attention, please. The bus to Yogyakarta is late. It leaves at eleven thirty from gate six.",
+          "prompt": "Dengarkan. Dari mana dan jam berapa busnya berangkat?",
+          "options": [
+            "Gate 16, at 11:30",
+            "Gate 6, at 11:30",
+            "Gate 6, at 10:30"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar **gate six** (satu suku kata pendek, bukan six**TEEN**) dan **eleven thirty** = 11:30. Busnya terlambat, jadi berangkat pukul 11:30."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik setiap kartu. Coba bayangkan bahasa Inggrisnya dulu di kepalamu.",
+        "flashcards": [
+          {
+            "front": "fifTEEN or FIFty: which is 50?",
+            "back": "FIFty (stress at the start)"
+          },
+          {
+            "front": "half past three",
+            "back": "3:30 (setengah empat)"
+          },
+          {
+            "front": "quarter to eight",
+            "back": "7:45"
+          },
+          {
+            "front": "belok kiri",
+            "back": "turn left"
+          },
+          {
+            "front": "jalan lurus",
+            "back": "go straight on"
+          },
+          {
+            "front": "di sebelah kananmu",
+            "back": "on your right"
+          },
+          {
+            "front": "peron",
+            "back": "platform"
+          },
+          {
+            "front": "Mohon perhatian.",
+            "back": "Attention, please."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Apa yang kamu dengar dan artinya, dalam satu halaman.",
+        "artifact": {
+          "title": "Contekan · Menyimak sehari-hari",
+          "intro": "Angka, jam, arah dan kata-kata pengumuman yang akan kamu dengar, beserta artinya.",
+          "headers": [
+            "Kamu dengar",
+            "Artinya",
+            "Hati-hati"
+          ],
+          "rows": [
+            [
+              "fifTEEN / FIFty",
+              "15 / 50",
+              "tekanan di akhir / awal"
+            ],
+            [
+              "twenty-five thousand rupiah",
+              "Rp25.000",
+              "thousand, tanpa s"
+            ],
+            [
+              "half past three",
+              "3:30",
+              "bukan setengah tiga (2:30)"
+            ],
+            [
+              "quarter past / to eight",
+              "8:15 / 7:45",
+              "to = sebelum jamnya"
+            ],
+            [
+              "surname",
+              "nama keluarga",
+              "first name = nama depan"
+            ],
+            [
+              "go straight on",
+              "jalan lurus",
+              "jangan belok"
+            ],
+            [
+              "turn left / turn right",
+              "belok kiri / kanan",
+              "yang kamu lakukan"
+            ],
+            [
+              "on the left / on your right",
+              "di kiri / di kananmu",
+              "letak tempatnya"
+            ],
+            [
+              "next to",
+              "di sebelah",
+              "+ tempat lain"
+            ],
+            [
+              "at the traffic lights / corner",
+              "di lampu merah / tikungan",
+              "tempat kamu belok"
+            ],
+            [
+              "Attention, please.",
+              "Mohon perhatian.",
+              "pengumuman dimulai"
+            ],
+            [
+              "platform / gate + number",
+              "peron / pintu + nomor",
+              "tangkap nomornya"
+            ],
+            [
+              "leaves at / closes at + time",
+              "berangkat / tutup pukul",
+              "tangkap jamnya"
+            ],
+            [
+              "is late",
+              "terlambat",
+              "dengarkan jam barunya"
+            ]
+          ],
+          "tips": [
+            "Baca pertanyaannya dulu: **How much?** → harga, **What time?** → jam, **Where?** → tempat.",
+            "Tekanan di **akhir** = 13–19; tekanan di **awal** = 30, 40, 50…",
+            "Tidak tertangkap? Bilang **Sorry, can you repeat that, please?**"
+          ],
+          "examples": [
+            {
+              "en": "Go straight on and turn left.",
+              "id": "Jalan lurus, lalu belok kiri."
+            },
+            {
+              "en": "The train to Solo leaves from platform one.",
+              "id": "Kereta ke Solo berangkat dari peron satu."
+            },
+            {
+              "en": "Sorry, can you repeat that, please?",
+              "id": "Maaf, bisa diulang?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengar lebih banyak",
+        "text": "Pelajaran menyimak A1 yang pendek, dengan audio, transkrip dan latihan."
+      }
+    ]
+  }
+}

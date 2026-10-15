@@ -1,0 +1,742 @@
+{
+  "en": {
+    "greeting": "Hi, welcome back! Today you read short real texts: menus, signs, timetables, messages and profiles. You'll also learn to find information fast. Let's go!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Reading a menu",
+        "text": "Let's start with something you see every day: a menu.",
+        "body": "A menu has **sections**: **Snacks**, **Main dishes**, **Desserts** and **Drinks**. Read the section title first, then the dish names and the **price**. Words like **chicken**, **beef**, **fish** and **vegetable** tell you what is in the dish. Rp 25.000 and 25,000 are the same price.",
+        "pairs": [
+          {
+            "en": "Main dishes",
+            "id": "Makanan utama"
+          },
+          {
+            "en": "Desserts",
+            "id": "Makanan penutup"
+          },
+          {
+            "en": "Drinks",
+            "id": "Minuman"
+          },
+          {
+            "en": "Snacks",
+            "id": "Camilan"
+          },
+          {
+            "en": "Today's special",
+            "id": "Menu spesial hari ini"
+          },
+          {
+            "en": "chicken",
+            "id": "ayam"
+          },
+          {
+            "en": "beef",
+            "id": "daging sapi"
+          },
+          {
+            "en": "vegetable",
+            "id": "sayur"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Read the menu and think about what is in each dish.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "menus-signs-timetables",
+          "prompt": "Read the menu at a warung: 'Main dishes: Chicken satay Rp 30.000 · Beef rendang Rp 35.000 · Vegetable curry Rp 25.000 · Drinks: Iced tea Rp 6.000'. Budi doesn't eat meat. Which main dish is good for him?",
+          "options": [
+            "Chicken satay",
+            "Beef rendang",
+            "Vegetable curry"
+          ],
+          "answer": 2,
+          "explanation": "**Chicken** and **beef** are meat. **Vegetable** curry has no meat, so it's good for Budi."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Signs and opening hours",
+        "text": "Now let's read signs with more information.",
+        "body": "**Opening hours** tell you when a place is open. **Mon–Fri** = Monday to Friday, so the weekend is **not** in it. **am** is the morning, **pm** is the afternoon and evening. Read the day first, then the time. **OUT OF ORDER** means broken, not 'order food'.",
+        "pairs": [
+          {
+            "en": "OPENING HOURS",
+            "id": "Jam buka"
+          },
+          {
+            "en": "Mon–Fri",
+            "id": "Senin–Jumat"
+          },
+          {
+            "en": "Sat / Sun",
+            "id": "Sabtu / Minggu"
+          },
+          {
+            "en": "am",
+            "id": "pagi (sebelum jam 12)"
+          },
+          {
+            "en": "pm",
+            "id": "siang–malam (setelah jam 12)"
+          },
+          {
+            "en": "CLOSED ON SUNDAYS",
+            "id": "Tutup setiap Minggu"
+          },
+          {
+            "en": "OUT OF ORDER",
+            "id": "Rusak"
+          },
+          {
+            "en": "NO PARKING",
+            "id": "Dilarang parkir"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Find the right day first, then check the time.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "menus-signs-timetables",
+          "prompt": "Read the sign on the post office door: 'Open Mon–Fri 8 am – 4 pm · Sat 8 am – 12 noon'. It's Saturday, 2 pm. Is the post office open?",
+          "options": [
+            "No, it's closed",
+            "Yes, it's open",
+            "Yes, until 4 pm"
+          ],
+          "answer": 0,
+          "explanation": "On Saturday (**Sat**) it's open from 8 am to **12 noon** only. 2 pm is after 12, so it's closed. 4 pm is for Monday to Friday."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Simple timetables",
+        "text": "Next: timetables at the station and the airport.",
+        "body": "Read the column titles first. **Departs** (or **leaves**) is when it goes; **arrives** is when it gets there. Trains use a **platform**, planes use a **gate**. Timetables often use the 24-hour clock: **18:30** = 6:30 pm. English writes a colon (18:30), Indonesia often a dot (18.30).",
+        "pairs": [
+          {
+            "en": "departs / leaves",
+            "id": "berangkat"
+          },
+          {
+            "en": "arrives",
+            "id": "tiba"
+          },
+          {
+            "en": "platform",
+            "id": "peron"
+          },
+          {
+            "en": "gate",
+            "id": "gerbang (bandara)"
+          },
+          {
+            "en": "delayed",
+            "id": "terlambat / ditunda"
+          },
+          {
+            "en": "cancelled",
+            "id": "dibatalkan"
+          },
+          {
+            "en": "every 15 minutes",
+            "id": "setiap 15 menit"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Careful: which column do you need?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "menus-signs-timetables",
+          "prompt": "Read the board at Gambir station: 'Train to Bandung · Departs 08:20 · Arrives 11:35 · Platform 4'. What time does the train leave Gambir?",
+          "options": [
+            "At 11:35",
+            "At 08:20",
+            "At 4:00"
+          ],
+          "answer": 1,
+          "explanation": "**Departs** = berangkat, so look in the Departs column: **08:20**. 11:35 is when it **arrives** in Bandung, and 4 is the platform."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Messages and profiles",
+        "text": "Now short messages and profiles. Look at who writes and what they say.",
+        "body": "The name at the end of a message is the **writer**, so **I** = that person. Messages drop small words: 'Home at 8' = I am home at 8. In a profile, **from** is where you come from and **live in** is your home now.",
+        "examples": [
+          {
+            "en": "Sorry, I'm late. I'm on the bus. – Andi",
+            "id": "Maaf, aku terlambat. Aku di bus. – Andi"
+          },
+          {
+            "en": "See you at 7!",
+            "id": "Sampai jumpa jam 7!"
+          },
+          {
+            "en": "I'm from Makassar, but I live in Jakarta.",
+            "id": "Aku berasal dari Makassar, tapi aku tinggal di Jakarta."
+          },
+          {
+            "en": "I work at a bank.",
+            "id": "Aku bekerja di bank."
+          },
+          {
+            "en": "I like football and music.",
+            "id": "Aku suka sepak bola dan musik."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Who wrote this message? Look at the end.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "messages-profiles",
+          "prompt": "Read the message: 'Hi Sari, sorry, I'm in a meeting now. Call me at 3. Dimas'. Who is in a meeting?",
+          "options": [
+            "Sari",
+            "Sari and Dimas",
+            "Dimas"
+          ],
+          "answer": 2,
+          "explanation": "The name at the end is the writer: **Dimas**. So 'I'm in a meeting' means Dimas is in a meeting. Sari gets the message."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Scanning: find it fast",
+        "text": "Last skill: finding one piece of information fast.",
+        "body": "**Scanning** = looking for one thing, not reading every word. 1) Read the question. 2) Decide what the answer looks like. 3) Move your eyes fast until you see it. Prices start with **Rp**, times have **:** or **am / pm**, phone numbers start with **08**, days and names have a **capital letter**. Don't stop at words you don't know.",
+        "pairs": [
+          {
+            "en": "How much…?",
+            "id": "Berapa harganya? → cari Rp"
+          },
+          {
+            "en": "What time…?",
+            "id": "Jam berapa? → cari 00:00, am, pm"
+          },
+          {
+            "en": "Which day…?",
+            "id": "Hari apa? → cari Monday…Sunday"
+          },
+          {
+            "en": "Where…?",
+            "id": "Di mana? → cari nama tempat"
+          },
+          {
+            "en": "What's the number?",
+            "id": "Berapa nomornya? → cari 08…"
+          },
+          {
+            "en": "Who…?",
+            "id": "Siapa? → cari nama orang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Don't read everything. Find the word you need.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "scanning",
+          "prompt": "Scan the poster: 'BOOK FAIR · Gedung Sate, Bandung · 12–14 July · Open 10 am – 7 pm · Tickets Rp 10.000 · Students free · Info: 0813 4455 6677'. Rina is a student. How much does she pay?",
+          "options": [
+            "Rp 10.000",
+            "Nothing, it's free",
+            "Rp 12.000"
+          ],
+          "answer": 1,
+          "explanation": "Look for the word **Students**: 'Students free'. Free = gratis, so Rina pays nothing. Rp 10.000 is for other people, and 12 is a date."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet you can keep and look back at.",
+        "artifact": {
+          "title": "Cheat sheet · Reading short texts",
+          "intro": "Read the question first, then find the heading, the column or the word you need.",
+          "headers": [
+            "English",
+            "Where you see it",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Main dishes / Desserts / Drinks",
+              "menu",
+              "makanan utama / penutup / minuman"
+            ],
+            [
+              "Today's special",
+              "menu",
+              "menu spesial hari ini"
+            ],
+            [
+              "OPENING HOURS",
+              "shop, office",
+              "jam buka"
+            ],
+            [
+              "Mon–Fri",
+              "sign, timetable",
+              "Senin–Jumat"
+            ],
+            [
+              "am / pm",
+              "sign, timetable",
+              "pagi / siang–malam"
+            ],
+            [
+              "OUT OF ORDER",
+              "lift, machine",
+              "rusak"
+            ],
+            [
+              "CLOSED ON SUNDAYS",
+              "shop door",
+              "tutup setiap Minggu"
+            ],
+            [
+              "departs / leaves",
+              "timetable",
+              "berangkat"
+            ],
+            [
+              "arrives",
+              "timetable",
+              "tiba"
+            ],
+            [
+              "platform / gate",
+              "station / airport",
+              "peron / gerbang"
+            ],
+            [
+              "delayed / cancelled",
+              "timetable",
+              "terlambat / dibatalkan"
+            ],
+            [
+              "I'm from… / I live in…",
+              "profile",
+              "asal… / tinggal di…"
+            ]
+          ],
+          "tips": [
+            "Mon–Fri = Monday to Friday: the weekend is not in it.",
+            "**Departs** = berangkat, **arrives** = tiba. Check the column before you answer.",
+            "In a message, **I** = the name at the end. Prices: **Rp**, times: **:**, phones: **08…**"
+          ],
+          "examples": [
+            {
+              "en": "Open Mon–Fri 9 am – 5 pm",
+              "id": "Buka Senin–Jumat pukul 09.00–17.00"
+            },
+            {
+              "en": "Departs 07:15 · Platform 3",
+              "id": "Berangkat pukul 07.15 · Peron 3"
+            },
+            {
+              "en": "Sorry, I'm late. I'm on the bus. – Andi",
+              "id": "Maaf, aku terlambat. Aku di bus. – Andi"
+            },
+            {
+              "en": "I'm from Makassar, but I live in Jakarta.",
+              "id": "Aku berasal dari Makassar, tapi aku tinggal di Jakarta."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Try these real-style reading lessons: a menu, an airport board and a text chat."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang lagi! Hari ini kamu membaca teks pendek sungguhan: menu, papan tanda, jadwal, pesan dan profil. Kamu juga belajar menemukan informasi dengan cepat. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Membaca menu",
+        "text": "Kita mulai dari sesuatu yang kamu lihat setiap hari: menu.",
+        "body": "Menu punya beberapa **bagian**: **Snacks**, **Main dishes**, **Desserts** dan **Drinks**. Baca dulu judul bagiannya, lalu nama makanan dan **harganya**. Kata seperti **chicken**, **beef**, **fish** dan **vegetable** memberi tahu isi makanannya. Rp 25.000 dan 25,000 adalah harga yang sama.",
+        "pairs": [
+          {
+            "en": "Main dishes",
+            "id": "Makanan utama"
+          },
+          {
+            "en": "Desserts",
+            "id": "Makanan penutup"
+          },
+          {
+            "en": "Drinks",
+            "id": "Minuman"
+          },
+          {
+            "en": "Snacks",
+            "id": "Camilan"
+          },
+          {
+            "en": "Today's special",
+            "id": "Menu spesial hari ini"
+          },
+          {
+            "en": "chicken",
+            "id": "ayam"
+          },
+          {
+            "en": "beef",
+            "id": "daging sapi"
+          },
+          {
+            "en": "vegetable",
+            "id": "sayur"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Baca menunya dan pikirkan isi setiap makanan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "menus-signs-timetables",
+          "prompt": "Baca menu di sebuah warung: 'Main dishes: Chicken satay Rp 30.000 · Beef rendang Rp 35.000 · Vegetable curry Rp 25.000 · Drinks: Iced tea Rp 6.000'. Budi tidak makan daging. Makanan utama mana yang cocok untuknya?",
+          "options": [
+            "Chicken satay",
+            "Beef rendang",
+            "Vegetable curry"
+          ],
+          "answer": 2,
+          "explanation": "**Chicken** (ayam) dan **beef** (sapi) adalah daging. **Vegetable** curry (kari sayur) tidak pakai daging, jadi cocok untuk Budi."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Papan tanda dan jam buka",
+        "text": "Sekarang kita baca papan tanda dengan info lebih banyak.",
+        "body": "**Opening hours** memberi tahu kapan sebuah tempat buka. **Mon–Fri** = Senin sampai Jumat, jadi akhir pekan **tidak** termasuk. **am** adalah pagi, **pm** adalah siang sampai malam. Baca harinya dulu, lalu jamnya. **OUT OF ORDER** artinya rusak, bukan 'pesan makanan'.",
+        "pairs": [
+          {
+            "en": "OPENING HOURS",
+            "id": "Jam buka"
+          },
+          {
+            "en": "Mon–Fri",
+            "id": "Senin–Jumat"
+          },
+          {
+            "en": "Sat / Sun",
+            "id": "Sabtu / Minggu"
+          },
+          {
+            "en": "am",
+            "id": "pagi (sebelum jam 12)"
+          },
+          {
+            "en": "pm",
+            "id": "siang–malam (setelah jam 12)"
+          },
+          {
+            "en": "CLOSED ON SUNDAYS",
+            "id": "Tutup setiap Minggu"
+          },
+          {
+            "en": "OUT OF ORDER",
+            "id": "Rusak"
+          },
+          {
+            "en": "NO PARKING",
+            "id": "Dilarang parkir"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cari harinya dulu, lalu cek jamnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "menus-signs-timetables",
+          "prompt": "Baca tulisan di pintu kantor pos: 'Open Mon–Fri 8 am – 4 pm · Sat 8 am – 12 noon'. Sekarang hari Sabtu, jam 2 siang. Apakah kantor posnya buka?",
+          "options": [
+            "No, it's closed",
+            "Yes, it's open",
+            "Yes, until 4 pm"
+          ],
+          "answer": 0,
+          "explanation": "Hari Sabtu (**Sat**) buka hanya dari jam 8 pagi sampai **12 siang**. Jam 2 siang sudah lewat jam 12, jadi tutup. 4 pm itu untuk Senin sampai Jumat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jadwal sederhana",
+        "text": "Berikutnya: jadwal di stasiun dan bandara.",
+        "body": "Baca dulu judul kolomnya. **Departs** (atau **leaves**) adalah waktu berangkat; **arrives** adalah waktu tiba. Kereta memakai **platform** (peron), pesawat memakai **gate** (gerbang). Jadwal sering memakai format 24 jam: **18:30** = 6:30 pm. Bahasa Inggris memakai titik dua (18:30), di Indonesia sering memakai titik (18.30).",
+        "pairs": [
+          {
+            "en": "departs / leaves",
+            "id": "berangkat"
+          },
+          {
+            "en": "arrives",
+            "id": "tiba"
+          },
+          {
+            "en": "platform",
+            "id": "peron"
+          },
+          {
+            "en": "gate",
+            "id": "gerbang (bandara)"
+          },
+          {
+            "en": "delayed",
+            "id": "terlambat / ditunda"
+          },
+          {
+            "en": "cancelled",
+            "id": "dibatalkan"
+          },
+          {
+            "en": "every 15 minutes",
+            "id": "setiap 15 menit"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hati-hati: kolom mana yang kamu perlukan?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "menus-signs-timetables",
+          "prompt": "Baca papan di Stasiun Gambir: 'Train to Bandung · Departs 08:20 · Arrives 11:35 · Platform 4'. Jam berapa keretanya berangkat dari Gambir?",
+          "options": [
+            "At 11:35",
+            "At 08:20",
+            "At 4:00"
+          ],
+          "answer": 1,
+          "explanation": "**Departs** = berangkat, jadi lihat kolom Departs: **08:20**. 11:35 adalah jam **tiba** di Bandung, dan 4 adalah nomor peron."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Pesan dan profil",
+        "text": "Sekarang pesan pendek dan profil. Perhatikan siapa yang menulis dan apa katanya.",
+        "body": "Nama di akhir pesan adalah **penulisnya**, jadi **I** = orang itu. Pesan sering membuang kata kecil: 'Home at 8' = I am home at 8. Di profil, **from** adalah asalmu dan **live in** adalah tempat tinggalmu sekarang.",
+        "examples": [
+          {
+            "en": "Sorry, I'm late. I'm on the bus. – Andi",
+            "id": "Maaf, aku terlambat. Aku di bus. – Andi"
+          },
+          {
+            "en": "See you at 7!",
+            "id": "Sampai jumpa jam 7!"
+          },
+          {
+            "en": "I'm from Makassar, but I live in Jakarta.",
+            "id": "Aku berasal dari Makassar, tapi aku tinggal di Jakarta."
+          },
+          {
+            "en": "I work at a bank.",
+            "id": "Aku bekerja di bank."
+          },
+          {
+            "en": "I like football and music.",
+            "id": "Aku suka sepak bola dan musik."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Siapa yang menulis pesan ini? Lihat bagian akhirnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "messages-profiles",
+          "prompt": "Baca pesan ini: 'Hi Sari, sorry, I'm in a meeting now. Call me at 3. Dimas'. Siapa yang sedang rapat?",
+          "options": [
+            "Sari",
+            "Sari and Dimas",
+            "Dimas"
+          ],
+          "answer": 2,
+          "explanation": "Nama di akhir pesan adalah penulisnya: **Dimas**. Jadi 'I'm in a meeting' artinya Dimas yang sedang rapat. Sari yang menerima pesannya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Scanning: temukan dengan cepat",
+        "text": "Keterampilan terakhir: menemukan satu informasi dengan cepat.",
+        "body": "**Scanning** = mencari satu hal saja, bukan membaca setiap kata. 1) Baca pertanyaannya. 2) Tentukan seperti apa bentuk jawabannya. 3) Gerakkan matamu dengan cepat sampai kamu menemukannya. Harga diawali **Rp**, jam memakai **:** atau **am / pm**, nomor telepon diawali **08**, nama hari dan nama orang memakai **huruf kapital**. Jangan berhenti di kata yang tidak kamu tahu.",
+        "pairs": [
+          {
+            "en": "How much…?",
+            "id": "Berapa harganya? → cari Rp"
+          },
+          {
+            "en": "What time…?",
+            "id": "Jam berapa? → cari 00:00, am, pm"
+          },
+          {
+            "en": "Which day…?",
+            "id": "Hari apa? → cari Monday…Sunday"
+          },
+          {
+            "en": "Where…?",
+            "id": "Di mana? → cari nama tempat"
+          },
+          {
+            "en": "What's the number?",
+            "id": "Berapa nomornya? → cari 08…"
+          },
+          {
+            "en": "Who…?",
+            "id": "Siapa? → cari nama orang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Jangan baca semuanya. Cari kata yang kamu perlukan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "scanning",
+          "prompt": "Cari infonya dengan cepat di poster ini: 'BOOK FAIR · Gedung Sate, Bandung · 12–14 July · Open 10 am – 7 pm · Tickets Rp 10.000 · Students free · Info: 0813 4455 6677'. Rina seorang pelajar. Berapa yang dia bayar?",
+          "options": [
+            "Rp 10.000",
+            "Nothing, it's free",
+            "Rp 12.000"
+          ],
+          "answer": 1,
+          "explanation": "Cari kata **Students**: 'Students free'. Free = gratis, jadi Rina tidak bayar. Rp 10.000 untuk orang lain, dan 12 adalah tanggal."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan yang bisa kamu simpan dan lihat lagi nanti.",
+        "artifact": {
+          "title": "Ringkasan · Membaca teks pendek",
+          "intro": "Baca pertanyaannya dulu, lalu cari judul, kolom atau kata yang kamu perlukan.",
+          "headers": [
+            "English",
+            "Di mana kamu melihatnya",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Main dishes / Desserts / Drinks",
+              "menu",
+              "makanan utama / penutup / minuman"
+            ],
+            [
+              "Today's special",
+              "menu",
+              "menu spesial hari ini"
+            ],
+            [
+              "OPENING HOURS",
+              "toko, kantor",
+              "jam buka"
+            ],
+            [
+              "Mon–Fri",
+              "papan tanda, jadwal",
+              "Senin–Jumat"
+            ],
+            [
+              "am / pm",
+              "papan tanda, jadwal",
+              "pagi / siang–malam"
+            ],
+            [
+              "OUT OF ORDER",
+              "lift, mesin",
+              "rusak"
+            ],
+            [
+              "CLOSED ON SUNDAYS",
+              "pintu toko",
+              "tutup setiap Minggu"
+            ],
+            [
+              "departs / leaves",
+              "jadwal",
+              "berangkat"
+            ],
+            [
+              "arrives",
+              "jadwal",
+              "tiba"
+            ],
+            [
+              "platform / gate",
+              "stasiun / bandara",
+              "peron / gerbang"
+            ],
+            [
+              "delayed / cancelled",
+              "jadwal",
+              "terlambat / dibatalkan"
+            ],
+            [
+              "I'm from… / I live in…",
+              "profil",
+              "asal… / tinggal di…"
+            ]
+          ],
+          "tips": [
+            "Mon–Fri = Senin sampai Jumat: akhir pekan tidak termasuk.",
+            "**Departs** = berangkat, **arrives** = tiba. Cek kolomnya sebelum menjawab.",
+            "Di pesan, **I** = nama di akhir pesan. Harga: **Rp**, jam: **:**, telepon: **08…**"
+          ],
+          "examples": [
+            {
+              "en": "Open Mon–Fri 9 am – 5 pm",
+              "id": "Buka Senin–Jumat pukul 09.00–17.00"
+            },
+            {
+              "en": "Departs 07:15 · Platform 3",
+              "id": "Berangkat pukul 07.15 · Peron 3"
+            },
+            {
+              "en": "Sorry, I'm late. I'm on the bus. – Andi",
+              "id": "Maaf, aku terlambat. Aku di bus. – Andi"
+            },
+            {
+              "en": "I'm from Makassar, but I live in Jakarta.",
+              "id": "Aku berasal dari Makassar, tapi aku tinggal di Jakarta."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Coba pelajaran membaca ini: menu, papan keberangkatan bandara dan obrolan lewat pesan."
+      }
+    ]
+  }
+}

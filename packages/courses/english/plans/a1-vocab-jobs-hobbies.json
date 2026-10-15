@@ -1,0 +1,734 @@
+{
+  "en": {
+    "greeting": "Hi! Today we'll learn words for jobs, hobbies and the weekend, so you can talk about your work and your free time. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "What do you do?",
+        "text": "When people meet, they often ask: **What do you do?** It means 'What's your job?'.",
+        "body": "Answer with **I'm a** + job: **I'm a teacher.** Before a vowel sound use **an**: **I'm an engineer.** Indonesian says *Saya guru* with no article, but English always needs **a/an** before a job.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru"
+          },
+          {
+            "en": "doctor",
+            "id": "dokter"
+          },
+          {
+            "en": "nurse",
+            "id": "perawat"
+          },
+          {
+            "en": "driver",
+            "id": "sopir"
+          },
+          {
+            "en": "farmer",
+            "id": "petani"
+          },
+          {
+            "en": "cook",
+            "id": "juru masak"
+          },
+          {
+            "en": "shop assistant",
+            "id": "pramuniaga / penjaga toko"
+          },
+          {
+            "en": "engineer",
+            "id": "insinyur"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Where do they work?",
+        "text": "Now let's add the place. Look at the verb after the job.",
+        "body": "Most workplaces use **work in**: in a hospital, in a shop, in an office. A farm is different: **work on a farm**. With he/she, add **-s**: she **works**.",
+        "examples": [
+          {
+            "en": "My mother is a nurse. She works in a hospital.",
+            "id": "Ibu saya perawat. Dia bekerja di rumah sakit."
+          },
+          {
+            "en": "Sari is a shop assistant. She works in a shop in Bandung.",
+            "id": "Sari pramuniaga. Dia bekerja di toko di Bandung."
+          },
+          {
+            "en": "My uncle is an office worker. He works in an office.",
+            "id": "Paman saya karyawan kantor. Dia bekerja di kantor."
+          },
+          {
+            "en": "Rudi is a waiter. He works in a restaurant.",
+            "id": "Rudi pelayan. Dia bekerja di restoran."
+          },
+          {
+            "en": "Pak Made is a farmer. He works on a farm.",
+            "id": "Pak Made petani. Dia bekerja di ladang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Here's a man at a warung near your office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "jobs-workplaces",
+          "options": [
+            "He's a cook.",
+            "He's cook.",
+            "He's a cooker."
+          ],
+          "answer": 0,
+          "prompt": "Pak Joko cooks soto and nasi goreng for his customers every day. What is his job?",
+          "explanation": "A job needs **a**: **He's a cook.** A **cooker** is a stove (kompor), not a person, and 'He's cook' has no article."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sports: play or go?",
+        "text": "Now free time! Indonesian says *main* for a lot of things, but English uses two verbs.",
+        "body": "Use **play** with ball sports, games and instruments: **play football**, **play chess**, **play the guitar**. Use **go** with activities that end in **-ing**: **go swimming**, **go fishing**. Never 'play swimming', and no **to**: 'go to shopping' is wrong.",
+        "pairs": [
+          {
+            "en": "play football",
+            "id": "main sepak bola"
+          },
+          {
+            "en": "play badminton",
+            "id": "main bulu tangkis"
+          },
+          {
+            "en": "play chess",
+            "id": "main catur"
+          },
+          {
+            "en": "play the guitar",
+            "id": "main gitar"
+          },
+          {
+            "en": "go swimming",
+            "id": "berenang"
+          },
+          {
+            "en": "go cycling",
+            "id": "bersepeda"
+          },
+          {
+            "en": "go fishing",
+            "id": "memancing"
+          },
+          {
+            "en": "go shopping",
+            "id": "belanja"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari's favourite sport happens in a pool.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "hobbies-sports",
+          "options": [
+            "plays swimming",
+            "goes swimming",
+            "goes to swimming"
+          ],
+          "answer": 1,
+          "prompt": "Sari loves the water. Every Sunday morning she ___.",
+          "explanation": "Swimming ends in **-ing**, so we use **go**, with no 'to'. Sari = she, so **goes**: **She goes swimming.**"
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "My hobby is ...",
+        "text": "Here's how people talk about their hobbies.",
+        "body": "After **My hobby is** use a verb + **-ing**: **My hobby is reading.** Not 'My hobby is read'. You can also use the simple present: **In my free time I draw.**",
+        "examples": [
+          {
+            "en": "My hobby is reading.",
+            "id": "Hobi saya membaca."
+          },
+          {
+            "en": "Rina's hobby is cooking.",
+            "id": "Hobi Rina memasak."
+          },
+          {
+            "en": "In my free time I draw.",
+            "id": "Di waktu luang saya menggambar."
+          },
+          {
+            "en": "Budi plays chess in his free time.",
+            "id": "Budi main catur di waktu luangnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your friend Dimas plays music every evening. Help him say it.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "hobbies-sports",
+          "tokens": [
+            "guitar",
+            "is",
+            "playing",
+            "My",
+            "the",
+            "hobby"
+          ],
+          "solution": "My hobby is playing the guitar.",
+          "prompt": "Arrange the words: Hobi saya main gitar.",
+          "explanation": "After **My hobby is** we use **-ing**: **playing**. An instrument takes **the**: **playing the guitar**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "At the weekend",
+        "text": "Saturday and Sunday are **the weekend**. What do people do then?",
+        "body": "Say **at the weekend** (British) or **on the weekend** (American), and **on Sundays** for every Sunday. Use **go to** + a place (**go to the mall**) but **go** + -ing for an activity (**go shopping**). And we **watch** TV, we don't 'see' TV.",
+        "pairs": [
+          {
+            "en": "at the weekend",
+            "id": "di akhir pekan"
+          },
+          {
+            "en": "on Sundays",
+            "id": "setiap hari Minggu"
+          },
+          {
+            "en": "visit my grandparents",
+            "id": "mengunjungi kakek nenek"
+          },
+          {
+            "en": "meet friends",
+            "id": "bertemu teman-teman"
+          },
+          {
+            "en": "clean the house",
+            "id": "membersihkan rumah"
+          },
+          {
+            "en": "watch a film",
+            "id": "menonton film"
+          },
+          {
+            "en": "go to the mall",
+            "id": "pergi ke mal"
+          },
+          {
+            "en": "stay at home",
+            "id": "di rumah saja"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi asks Rina about her weekend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "weekend-activities",
+          "options": [
+            "play",
+            "go",
+            "meet"
+          ],
+          "answer": 2,
+          "prompt": "Budi: What do you do at the weekend? Rina: On Saturdays I ___ my friends at a café in Bandung.",
+          "explanation": "You **meet** people: **I meet my friends.** We **play** sports and games, and **go** needs **to** before a place, not before people."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip these cards to remember the new words.",
+        "flashcards": [
+          {
+            "front": "What do you do?",
+            "back": "Apa pekerjaanmu?"
+          },
+          {
+            "front": "I'm a nurse.",
+            "back": "Saya perawat."
+          },
+          {
+            "front": "work on a farm",
+            "back": "bekerja di ladang"
+          },
+          {
+            "front": "play badminton",
+            "back": "main bulu tangkis"
+          },
+          {
+            "front": "go cycling",
+            "back": "bersepeda"
+          },
+          {
+            "front": "My hobby is drawing.",
+            "back": "Hobi saya menggambar."
+          },
+          {
+            "front": "at the weekend / on the weekend",
+            "back": "di akhir pekan (UK / US)"
+          },
+          {
+            "front": "stay at home",
+            "back": "di rumah saja"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here are all the words on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Jobs & free time",
+          "intro": "Words for jobs, workplaces, hobbies and the weekend.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Jobs",
+              "teacher, doctor, nurse, driver, farmer, cook, shop assistant, engineer",
+              "guru, dokter, perawat, sopir, petani, juru masak, pramuniaga, insinyur"
+            ],
+            [
+              "Workplaces",
+              "work in a school / hospital / office / shop / restaurant / bank / factory",
+              "bekerja di sekolah / rumah sakit / kantor / toko / restoran / bank / pabrik"
+            ],
+            [
+              "On a farm",
+              "work on a farm",
+              "bekerja di ladang / sawah"
+            ],
+            [
+              "play + sport / game",
+              "play football, badminton, chess, the guitar",
+              "main sepak bola, bulu tangkis, catur, gitar"
+            ],
+            [
+              "go + -ing",
+              "go swimming, cycling, fishing, shopping",
+              "berenang, bersepeda, memancing, belanja"
+            ],
+            [
+              "My hobby is + -ing",
+              "My hobby is reading / cooking / drawing.",
+              "Hobi saya membaca / memasak / menggambar."
+            ],
+            [
+              "Weekend",
+              "visit my grandparents, meet friends, clean the house, watch TV, stay at home",
+              "mengunjungi kakek nenek, bertemu teman, membersihkan rumah, nonton TV, di rumah saja"
+            ]
+          ],
+          "tips": [
+            "A job needs **a/an**: **I'm a teacher**, **She's an engineer**.",
+            "**play** + ball sports and games; **go** + -ing: **go swimming**, never 'play swimming' or 'go to shopping'.",
+            "**My hobby is** + -ing: **My hobby is playing football**."
+          ],
+          "examples": [
+            {
+              "en": "What do you do? — I'm a shop assistant. I work in a shop.",
+              "id": "Apa pekerjaanmu? — Saya pramuniaga. Saya bekerja di toko."
+            },
+            {
+              "en": "We play badminton on Fridays.",
+              "id": "Kami main bulu tangkis setiap hari Jumat."
+            },
+            {
+              "en": "My hobby is cooking.",
+              "id": "Hobi saya memasak."
+            },
+            {
+              "en": "At the weekend I visit my grandparents.",
+              "id": "Di akhir pekan saya mengunjungi kakek nenek."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video explains play, go and do, and the page has more job words to practise."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar kata-kata untuk pekerjaan, hobi dan akhir pekan, supaya kamu bisa bercerita tentang pekerjaan dan waktu luangmu. Ayo kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "What do you do?",
+        "text": "Saat berkenalan, orang sering bertanya: **What do you do?** Artinya 'Apa pekerjaanmu?'.",
+        "body": "Jawab dengan **I'm a** + pekerjaan: **I'm a teacher.** Sebelum bunyi vokal pakai **an**: **I'm an engineer.** Bahasa Indonesia bilang *Saya guru* tanpa kata sandang, tapi bahasa Inggris selalu butuh **a/an** sebelum pekerjaan.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru"
+          },
+          {
+            "en": "doctor",
+            "id": "dokter"
+          },
+          {
+            "en": "nurse",
+            "id": "perawat"
+          },
+          {
+            "en": "driver",
+            "id": "sopir"
+          },
+          {
+            "en": "farmer",
+            "id": "petani"
+          },
+          {
+            "en": "cook",
+            "id": "juru masak"
+          },
+          {
+            "en": "shop assistant",
+            "id": "pramuniaga / penjaga toko"
+          },
+          {
+            "en": "engineer",
+            "id": "insinyur"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di mana mereka bekerja?",
+        "text": "Sekarang kita tambahkan tempatnya. Perhatikan kata kerja setelah pekerjaan.",
+        "body": "Kebanyakan tempat kerja memakai **work in**: in a hospital, in a shop, in an office. Ladang berbeda: **work on a farm**. Untuk he/she, tambahkan **-s**: she **works**.",
+        "examples": [
+          {
+            "en": "My mother is a nurse. She works in a hospital.",
+            "id": "Ibu saya perawat. Dia bekerja di rumah sakit."
+          },
+          {
+            "en": "Sari is a shop assistant. She works in a shop in Bandung.",
+            "id": "Sari pramuniaga. Dia bekerja di toko di Bandung."
+          },
+          {
+            "en": "My uncle is an office worker. He works in an office.",
+            "id": "Paman saya karyawan kantor. Dia bekerja di kantor."
+          },
+          {
+            "en": "Rudi is a waiter. He works in a restaurant.",
+            "id": "Rudi pelayan. Dia bekerja di restoran."
+          },
+          {
+            "en": "Pak Made is a farmer. He works on a farm.",
+            "id": "Pak Made petani. Dia bekerja di ladang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ini bapak pemilik warung dekat kantormu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "jobs-workplaces",
+          "options": [
+            "He's a cook.",
+            "He's cook.",
+            "He's a cooker."
+          ],
+          "answer": 0,
+          "prompt": "Pak Joko cooks soto and nasi goreng for his customers every day. Apa pekerjaannya?",
+          "explanation": "Pekerjaan butuh **a**: **He's a cook.** **Cooker** itu kompor, bukan orang, dan 'He's cook' tidak memakai kata sandang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Olahraga: play atau go?",
+        "text": "Sekarang waktu luang! Bahasa Indonesia bilang *main* untuk banyak hal, tapi bahasa Inggris memakai dua kata kerja.",
+        "body": "Pakai **play** untuk olahraga dengan bola, permainan dan alat musik: **play football**, **play chess**, **play the guitar**. Pakai **go** untuk kegiatan berakhiran **-ing**: **go swimming**, **go fishing**. Jangan bilang 'play swimming', dan tanpa **to**: 'go to shopping' itu salah.",
+        "pairs": [
+          {
+            "en": "play football",
+            "id": "main sepak bola"
+          },
+          {
+            "en": "play badminton",
+            "id": "main bulu tangkis"
+          },
+          {
+            "en": "play chess",
+            "id": "main catur"
+          },
+          {
+            "en": "play the guitar",
+            "id": "main gitar"
+          },
+          {
+            "en": "go swimming",
+            "id": "berenang"
+          },
+          {
+            "en": "go cycling",
+            "id": "bersepeda"
+          },
+          {
+            "en": "go fishing",
+            "id": "memancing"
+          },
+          {
+            "en": "go shopping",
+            "id": "belanja"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Olahraga favorit Sari dilakukan di kolam renang.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "hobbies-sports",
+          "options": [
+            "plays swimming",
+            "goes swimming",
+            "goes to swimming"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Sari loves the water. Every Sunday morning she ___.",
+          "explanation": "Swimming berakhiran **-ing**, jadi pakai **go**, tanpa 'to'. Sari = she, jadi **goes**: **She goes swimming.**"
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "My hobby is ...",
+        "text": "Begini cara orang bercerita tentang hobinya.",
+        "body": "Setelah **My hobby is** pakai kata kerja + **-ing**: **My hobby is reading.** Bukan 'My hobby is read'. Kamu juga bisa pakai simple present: **In my free time I draw.**",
+        "examples": [
+          {
+            "en": "My hobby is reading.",
+            "id": "Hobi saya membaca."
+          },
+          {
+            "en": "Rina's hobby is cooking.",
+            "id": "Hobi Rina memasak."
+          },
+          {
+            "en": "In my free time I draw.",
+            "id": "Di waktu luang saya menggambar."
+          },
+          {
+            "en": "Budi plays chess in his free time.",
+            "id": "Budi main catur di waktu luangnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Temanmu Dimas main musik setiap malam. Bantu dia mengatakannya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "hobbies-sports",
+          "tokens": [
+            "guitar",
+            "is",
+            "playing",
+            "My",
+            "the",
+            "hobby"
+          ],
+          "solution": "My hobby is playing the guitar.",
+          "prompt": "Susun kata-katanya: Hobi saya main gitar.",
+          "explanation": "Setelah **My hobby is** kita pakai **-ing**: **playing**. Alat musik memakai **the**: **playing the guitar**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Di akhir pekan",
+        "text": "Sabtu dan Minggu adalah **the weekend** (akhir pekan). Apa yang orang lakukan?",
+        "body": "Ucapkan **at the weekend** (Inggris) atau **on the weekend** (Amerika), dan **on Sundays** untuk setiap hari Minggu. Pakai **go to** + tempat (**go to the mall**) tapi **go** + -ing untuk kegiatan (**go shopping**). Dan kita **watch** TV, bukan 'see' TV.",
+        "pairs": [
+          {
+            "en": "at the weekend",
+            "id": "di akhir pekan"
+          },
+          {
+            "en": "on Sundays",
+            "id": "setiap hari Minggu"
+          },
+          {
+            "en": "visit my grandparents",
+            "id": "mengunjungi kakek nenek"
+          },
+          {
+            "en": "meet friends",
+            "id": "bertemu teman-teman"
+          },
+          {
+            "en": "clean the house",
+            "id": "membersihkan rumah"
+          },
+          {
+            "en": "watch a film",
+            "id": "menonton film"
+          },
+          {
+            "en": "go to the mall",
+            "id": "pergi ke mal"
+          },
+          {
+            "en": "stay at home",
+            "id": "di rumah saja"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi bertanya kepada Rina tentang akhir pekannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "weekend-activities",
+          "options": [
+            "play",
+            "go",
+            "meet"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: Budi: What do you do at the weekend? Rina: On Saturdays I ___ my friends at a café in Bandung.",
+          "explanation": "Untuk orang kita pakai **meet**: **I meet my friends.** **Play** untuk olahraga dan permainan, dan **go** butuh **to** sebelum tempat, bukan sebelum orang."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan singkat",
+        "text": "Balik kartu-kartu ini untuk mengingat kata-kata barunya.",
+        "flashcards": [
+          {
+            "front": "What do you do?",
+            "back": "Apa pekerjaanmu?"
+          },
+          {
+            "front": "I'm a nurse.",
+            "back": "Saya perawat."
+          },
+          {
+            "front": "work on a farm",
+            "back": "bekerja di ladang"
+          },
+          {
+            "front": "play badminton",
+            "back": "main bulu tangkis"
+          },
+          {
+            "front": "go cycling",
+            "back": "bersepeda"
+          },
+          {
+            "front": "My hobby is drawing.",
+            "back": "Hobi saya menggambar."
+          },
+          {
+            "front": "at the weekend / on the weekend",
+            "back": "di akhir pekan (UK / US)"
+          },
+          {
+            "front": "stay at home",
+            "back": "di rumah saja"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semua kata dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Pekerjaan & waktu luang",
+          "intro": "Kata-kata untuk pekerjaan, tempat kerja, hobi dan akhir pekan.",
+          "headers": [
+            "Kelompok",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Pekerjaan",
+              "teacher, doctor, nurse, driver, farmer, cook, shop assistant, engineer",
+              "guru, dokter, perawat, sopir, petani, juru masak, pramuniaga, insinyur"
+            ],
+            [
+              "Tempat kerja",
+              "work in a school / hospital / office / shop / restaurant / bank / factory",
+              "bekerja di sekolah / rumah sakit / kantor / toko / restoran / bank / pabrik"
+            ],
+            [
+              "Di ladang",
+              "work on a farm",
+              "bekerja di ladang / sawah"
+            ],
+            [
+              "play + olahraga / permainan",
+              "play football, badminton, chess, the guitar",
+              "main sepak bola, bulu tangkis, catur, gitar"
+            ],
+            [
+              "go + -ing (kegiatan)",
+              "go swimming, cycling, fishing, shopping",
+              "berenang, bersepeda, memancing, belanja"
+            ],
+            [
+              "My hobby is + -ing",
+              "My hobby is reading / cooking / drawing.",
+              "Hobi saya membaca / memasak / menggambar."
+            ],
+            [
+              "Akhir pekan",
+              "visit my grandparents, meet friends, clean the house, watch TV, stay at home",
+              "mengunjungi kakek nenek, bertemu teman, membersihkan rumah, nonton TV, di rumah saja"
+            ]
+          ],
+          "tips": [
+            "Pekerjaan butuh **a/an**: **I'm a teacher**, **She's an engineer**.",
+            "**play** + olahraga bola dan permainan; **go** + -ing: **go swimming**, bukan 'play swimming' atau 'go to shopping'.",
+            "**My hobby is** + -ing: **My hobby is playing football**."
+          ],
+          "examples": [
+            {
+              "en": "What do you do? — I'm a shop assistant. I work in a shop.",
+              "id": "Apa pekerjaanmu? — Saya pramuniaga. Saya bekerja di toko."
+            },
+            {
+              "en": "We play badminton on Fridays.",
+              "id": "Kami main bulu tangkis setiap hari Jumat."
+            },
+            {
+              "en": "My hobby is cooking.",
+              "id": "Hobi saya memasak."
+            },
+            {
+              "en": "At the weekend I visit my grandparents.",
+              "id": "Di akhir pekan saya mengunjungi kakek nenek."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih banyak? Video ini menjelaskan play, go dan do, dan halamannya punya lebih banyak kata pekerjaan untuk dilatih."
+      }
+    ]
+  }
+}

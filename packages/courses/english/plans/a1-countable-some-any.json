@@ -1,0 +1,676 @@
+{
+  "en": {
+    "greeting": "Hi! Today we talk about food and everyday things: what you can count, what you can't, and how to ask how much or how many. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Can you count it?",
+        "text": "Let's start with a simple question: can you count it?",
+        "body": "**Countable** nouns can be counted: **an** apple, two apple**s**. **Uncountable** nouns can't be counted one by one: **rice, water, sugar, milk, money**. They have **no a/an** and **no -s**. Not `two rices` or `a money`. In Indonesian the noun never changes (dua nasi), so be careful!",
+        "pairs": [
+          {
+            "en": "an apple → two apples",
+            "id": "sebuah apel → dua apel"
+          },
+          {
+            "en": "an egg → three eggs",
+            "id": "sebutir telur → tiga telur"
+          },
+          {
+            "en": "a book → four books",
+            "id": "sebuah buku → empat buku"
+          },
+          {
+            "en": "rice",
+            "id": "nasi / beras"
+          },
+          {
+            "en": "water",
+            "id": "air"
+          },
+          {
+            "en": "sugar",
+            "id": "gula"
+          },
+          {
+            "en": "milk",
+            "id": "susu"
+          },
+          {
+            "en": "money",
+            "id": "uang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A plate of rice",
+        "text": "So how do you order two portions of rice? You count the plate or the glass!",
+        "body": "Use a unit + **of**: a plate of rice, a glass of water. The unit takes -s: two **plates** of rice.",
+        "examples": [
+          {
+            "en": "I'd like a plate of rice, please.",
+            "id": "Saya pesan nasi sepiring, ya."
+          },
+          {
+            "en": "Two glasses of water, please.",
+            "id": "Air putihnya dua gelas, ya."
+          },
+          {
+            "en": "Mum buys a kilo of sugar.",
+            "id": "Ibu membeli sekilo gula."
+          },
+          {
+            "en": "There are two bottles of oil in the kitchen.",
+            "id": "Ada dua botol minyak di dapur."
+          },
+          {
+            "en": "I have a loaf of bread.",
+            "id": "Saya punya sebungkus roti tawar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's check. Which thing can you count?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "countable-uncountable",
+          "options": [
+            "I eat two rices every day.",
+            "I eat two eggs every day.",
+            "I eat two breads every day."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence is correct?",
+          "explanation": "**Eggs** are countable: one egg, two eggs. **Rice** and **bread** are uncountable, so they never take -s. Say two plates of rice or two loaves of bread."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "some and any",
+        "text": "Now two small words you need all the time: some and any.",
+        "body": "Use **some** in **positive** sentences: There are **some** apples. Use **any** in **negatives** and **questions**: I don't have **any** milk. Is there **any** water? Both go with plurals and uncountable nouns. Not `I don't have some money`.",
+        "pairs": [
+          {
+            "en": "some (positive)",
+            "id": "beberapa / ada (kalimat positif)"
+          },
+          {
+            "en": "There are some apples.",
+            "id": "Ada beberapa apel."
+          },
+          {
+            "en": "I have some money.",
+            "id": "Saya punya uang."
+          },
+          {
+            "en": "any (negative)",
+            "id": "sama sekali (kalimat negatif)"
+          },
+          {
+            "en": "I don't have any milk.",
+            "id": "Saya tidak punya susu sama sekali."
+          },
+          {
+            "en": "There aren't any chairs.",
+            "id": "Tidak ada kursi sama sekali."
+          },
+          {
+            "en": "any (question)",
+            "id": "ada …? (pertanyaan)"
+          },
+          {
+            "en": "Is there any water?",
+            "id": "Ada air?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi opens the kitchen cupboard. It's empty!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "some-any",
+          "options": [
+            "some",
+            "any",
+            "many"
+          ],
+          "answer": 1,
+          "prompt": "Complete: I'm hungry, but there isn't ___ food in the kitchen.",
+          "explanation": "The sentence is negative (**isn't**), so use **any**. **Some** is for positive sentences, and **many** doesn't fit here."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You want to make an omelette. Ask your mum.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "some-any",
+          "tokens": [
+            "eggs",
+            "the",
+            "Are",
+            "any",
+            "fridge",
+            "there",
+            "in"
+          ],
+          "solution": "Are there any eggs in the fridge?",
+          "prompt": "Arrange the words: Ada telur di kulkas?",
+          "explanation": "It's a question, so use **any**: Are there any eggs? Questions with there are start with **Are there**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How much? How many?",
+        "text": "Indonesian has one word, berapa. English has two!",
+        "body": "**How many** + a **plural** noun (things you count): How many apples? **How much** + an **uncountable** noun: How much rice? With a unit, count the unit: How **many** bottles of water? Not `How many water?`. **How much is it?** also asks the price.",
+        "pairs": [
+          {
+            "en": "How many + plural?",
+            "id": "Berapa …? (bisa dihitung)"
+          },
+          {
+            "en": "How many apples?",
+            "id": "Berapa apel?"
+          },
+          {
+            "en": "How many children do you have?",
+            "id": "Kamu punya berapa anak?"
+          },
+          {
+            "en": "How much + uncountable?",
+            "id": "Berapa banyak …? (tidak bisa dihitung)"
+          },
+          {
+            "en": "How much rice?",
+            "id": "Berapa banyak beras?"
+          },
+          {
+            "en": "How much milk do we need?",
+            "id": "Kita butuh berapa banyak susu?"
+          },
+          {
+            "en": "How many bottles of water?",
+            "id": "Berapa botol air?"
+          },
+          {
+            "en": "How much is it?",
+            "id": "Harganya berapa?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina makes a cup of tea for you.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "how-much-many",
+          "options": [
+            "many",
+            "much",
+            "any"
+          ],
+          "answer": 1,
+          "prompt": "She asks: 'How ___ sugar do you want?'",
+          "explanation": "**Sugar** is uncountable, so ask **How much**. **How many** is for plural nouns like eggs or apples, and **any** doesn't fit after How."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You meet a new teacher at a school in Bandung. Ask about her class.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "how-much-many",
+          "tokens": [
+            "there",
+            "class",
+            "many",
+            "students",
+            "your",
+            "How",
+            "in",
+            "are"
+          ],
+          "solution": "How many students are there in your class?",
+          "prompt": "Arrange the words: Ada berapa murid di kelasmu?",
+          "explanation": "**Students** is a plural countable noun, so use **How many**. Then **are there** + in your class."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next shopping trip!",
+        "artifact": {
+          "title": "Cheat sheet · Some, any, much, many",
+          "intro": "Countable nouns have a/an and -s. Uncountable nouns have neither. Use some in positive sentences, any in negatives and questions, How many with plurals and How much with uncountable nouns.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "countable: a/an + singular",
+              "an apple, an egg",
+              "sebuah apel, sebutir telur"
+            ],
+            [
+              "countable: plural + -s",
+              "two apples, three eggs",
+              "dua apel, tiga telur"
+            ],
+            [
+              "uncountable: no a/an, no -s",
+              "rice, water, sugar, milk, money",
+              "nasi, air, gula, susu, uang"
+            ],
+            [
+              "unit + of + uncountable",
+              "a plate of rice, two glasses of water",
+              "sepiring nasi, dua gelas air"
+            ],
+            [
+              "some (positive)",
+              "There are some apples. I have some milk.",
+              "Ada beberapa apel. Saya punya susu."
+            ],
+            [
+              "any (negative)",
+              "I don't have any money.",
+              "Saya tidak punya uang sama sekali."
+            ],
+            [
+              "any (question)",
+              "Is there any water?",
+              "Ada air?"
+            ],
+            [
+              "How many + plural",
+              "How many books do you have?",
+              "Kamu punya berapa buku?"
+            ],
+            [
+              "How much + uncountable",
+              "How much rice do we need?",
+              "Kita butuh berapa banyak beras?"
+            ],
+            [
+              "How much is it? (price)",
+              "How much is it? — It's 10,000 rupiah.",
+              "Harganya berapa? — 10.000 rupiah."
+            ]
+          ],
+          "tips": [
+            "Uncountable nouns never take -s: not `two rices`, but **two plates of rice**.",
+            "With not and in questions, use **any**: `I don't have some money` → **I don't have any money**.",
+            "Count it? **How many**. Can't count it? **How much**."
+          ],
+          "examples": [
+            {
+              "en": "Two plates of rice, please.",
+              "id": "Nasinya dua piring, ya."
+            },
+            {
+              "en": "There isn't any sugar.",
+              "id": "Tidak ada gula sama sekali."
+            },
+            {
+              "en": "How many brothers do you have?",
+              "id": "Kamu punya berapa saudara laki-laki?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This British Council page explains it again, with two short tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membicarakan makanan dan benda sehari-hari: apa yang bisa dihitung, apa yang tidak, dan cara bertanya berapa. Ayo pelan-pelan, satu langkah demi satu langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bisa dihitung atau tidak?",
+        "text": "Kita mulai dengan pertanyaan sederhana: bisa dihitung atau tidak?",
+        "body": "Kata benda **countable** bisa dihitung: **an** apple, two apple**s**. Kata benda **uncountable** tidak bisa dihitung satu per satu: **rice, water, sugar, milk, money**. Kata ini **tanpa a/an** dan **tanpa -s**. Bukan `two rices` atau `a money`. Dalam bahasa Indonesia kata bendanya tidak berubah (dua nasi), jadi hati-hati ya!",
+        "pairs": [
+          {
+            "en": "an apple → two apples",
+            "id": "sebuah apel → dua apel"
+          },
+          {
+            "en": "an egg → three eggs",
+            "id": "sebutir telur → tiga telur"
+          },
+          {
+            "en": "a book → four books",
+            "id": "sebuah buku → empat buku"
+          },
+          {
+            "en": "rice",
+            "id": "nasi / beras"
+          },
+          {
+            "en": "water",
+            "id": "air"
+          },
+          {
+            "en": "sugar",
+            "id": "gula"
+          },
+          {
+            "en": "milk",
+            "id": "susu"
+          },
+          {
+            "en": "money",
+            "id": "uang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Sepiring nasi",
+        "text": "Lalu bagaimana memesan nasi dua porsi? Hitung piring atau gelasnya!",
+        "body": "Pakai satuan + **of**: a plate of rice, a glass of water. Satuannya memakai -s: two **plates** of rice.",
+        "examples": [
+          {
+            "en": "I'd like a plate of rice, please.",
+            "id": "Saya pesan nasi sepiring, ya."
+          },
+          {
+            "en": "Two glasses of water, please.",
+            "id": "Air putihnya dua gelas, ya."
+          },
+          {
+            "en": "Mum buys a kilo of sugar.",
+            "id": "Ibu membeli sekilo gula."
+          },
+          {
+            "en": "There are two bottles of oil in the kitchen.",
+            "id": "Ada dua botol minyak di dapur."
+          },
+          {
+            "en": "I have a loaf of bread.",
+            "id": "Saya punya sebungkus roti tawar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ayo cek. Benda mana yang bisa dihitung?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "countable-uncountable",
+          "options": [
+            "I eat two rices every day.",
+            "I eat two eggs every day.",
+            "I eat two breads every day."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang benar?",
+          "explanation": "**Eggs** bisa dihitung: one egg, two eggs. **Rice** dan **bread** tidak bisa dihitung, jadi tidak pernah memakai -s. Katakan two plates of rice atau two loaves of bread."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "some dan any",
+        "text": "Sekarang dua kata kecil yang sering sekali dipakai: some dan any.",
+        "body": "Pakai **some** di kalimat **positif**: There are **some** apples. Pakai **any** di kalimat **negatif** dan **pertanyaan**: I don't have **any** milk. Is there **any** water? Keduanya dipakai dengan kata benda jamak dan uncountable. Bukan `I don't have some money`.",
+        "pairs": [
+          {
+            "en": "some (positive)",
+            "id": "beberapa / ada (kalimat positif)"
+          },
+          {
+            "en": "There are some apples.",
+            "id": "Ada beberapa apel."
+          },
+          {
+            "en": "I have some money.",
+            "id": "Saya punya uang."
+          },
+          {
+            "en": "any (negative)",
+            "id": "sama sekali (kalimat negatif)"
+          },
+          {
+            "en": "I don't have any milk.",
+            "id": "Saya tidak punya susu sama sekali."
+          },
+          {
+            "en": "There aren't any chairs.",
+            "id": "Tidak ada kursi sama sekali."
+          },
+          {
+            "en": "any (question)",
+            "id": "ada …? (pertanyaan)"
+          },
+          {
+            "en": "Is there any water?",
+            "id": "Ada air?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi membuka lemari dapur. Kosong!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "some-any",
+          "options": [
+            "some",
+            "any",
+            "many"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: I'm hungry, but there isn't ___ food in the kitchen.",
+          "explanation": "Kalimatnya negatif (**isn't**), jadi pakai **any**. **Some** untuk kalimat positif, dan **many** tidak cocok di sini."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu mau membuat telur dadar. Tanya ibumu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "some-any",
+          "tokens": [
+            "eggs",
+            "the",
+            "Are",
+            "any",
+            "fridge",
+            "there",
+            "in"
+          ],
+          "solution": "Are there any eggs in the fridge?",
+          "prompt": "Susun kata-katanya: Ada telur di kulkas?",
+          "explanation": "Ini pertanyaan, jadi pakai **any**: Are there any eggs? Pertanyaan dengan there are diawali **Are there**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How much? How many?",
+        "text": "Bahasa Indonesia punya satu kata, berapa. Bahasa Inggris punya dua!",
+        "body": "**How many** + kata benda **jamak** (benda yang bisa dihitung): How many apples? **How much** + kata benda **uncountable**: How much rice? Dengan satuan, hitung satuannya: How **many** bottles of water? Bukan `How many water?`. **How much is it?** juga dipakai untuk menanyakan harga.",
+        "pairs": [
+          {
+            "en": "How many + plural?",
+            "id": "Berapa …? (bisa dihitung)"
+          },
+          {
+            "en": "How many apples?",
+            "id": "Berapa apel?"
+          },
+          {
+            "en": "How many children do you have?",
+            "id": "Kamu punya berapa anak?"
+          },
+          {
+            "en": "How much + uncountable?",
+            "id": "Berapa banyak …? (tidak bisa dihitung)"
+          },
+          {
+            "en": "How much rice?",
+            "id": "Berapa banyak beras?"
+          },
+          {
+            "en": "How much milk do we need?",
+            "id": "Kita butuh berapa banyak susu?"
+          },
+          {
+            "en": "How many bottles of water?",
+            "id": "Berapa botol air?"
+          },
+          {
+            "en": "How much is it?",
+            "id": "Harganya berapa?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina membuatkan secangkir teh untukmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "how-much-many",
+          "options": [
+            "many",
+            "much",
+            "any"
+          ],
+          "answer": 1,
+          "prompt": "Dia bertanya: 'How ___ sugar do you want?'",
+          "explanation": "**Sugar** tidak bisa dihitung, jadi tanya dengan **How much**. **How many** untuk kata benda jamak seperti eggs atau apples, dan **any** tidak cocok setelah How."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu bertemu guru baru di sebuah sekolah di Bandung. Tanyakan tentang kelasnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "how-much-many",
+          "tokens": [
+            "there",
+            "class",
+            "many",
+            "students",
+            "your",
+            "How",
+            "in",
+            "are"
+          ],
+          "solution": "How many students are there in your class?",
+          "prompt": "Susun kata-katanya: Ada berapa murid di kelasmu?",
+          "explanation": "**Students** adalah kata benda jamak yang bisa dihitung, jadi pakai **How many**. Lalu **are there** + in your class."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk belanja berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · Some, any, much, many",
+          "intro": "Kata benda countable memakai a/an dan -s. Kata benda uncountable tidak memakai keduanya. Pakai some di kalimat positif, any di kalimat negatif dan pertanyaan, How many dengan kata benda jamak dan How much dengan kata benda uncountable.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "countable: a/an + singular",
+              "an apple, an egg",
+              "sebuah apel, sebutir telur"
+            ],
+            [
+              "countable: plural + -s",
+              "two apples, three eggs",
+              "dua apel, tiga telur"
+            ],
+            [
+              "uncountable: no a/an, no -s",
+              "rice, water, sugar, milk, money",
+              "nasi, air, gula, susu, uang"
+            ],
+            [
+              "unit + of + uncountable",
+              "a plate of rice, two glasses of water",
+              "sepiring nasi, dua gelas air"
+            ],
+            [
+              "some (positive)",
+              "There are some apples. I have some milk.",
+              "Ada beberapa apel. Saya punya susu."
+            ],
+            [
+              "any (negative)",
+              "I don't have any money.",
+              "Saya tidak punya uang sama sekali."
+            ],
+            [
+              "any (question)",
+              "Is there any water?",
+              "Ada air?"
+            ],
+            [
+              "How many + plural",
+              "How many books do you have?",
+              "Kamu punya berapa buku?"
+            ],
+            [
+              "How much + uncountable",
+              "How much rice do we need?",
+              "Kita butuh berapa banyak beras?"
+            ],
+            [
+              "How much is it? (price)",
+              "How much is it? — It's 10,000 rupiah.",
+              "Harganya berapa? — 10.000 rupiah."
+            ]
+          ],
+          "tips": [
+            "Kata benda uncountable tidak pernah memakai -s: bukan `two rices`, tapi **two plates of rice**.",
+            "Dengan not dan dalam pertanyaan, pakai **any**: `I don't have some money` → **I don't have any money**.",
+            "Bisa dihitung? **How many**. Tidak bisa dihitung? **How much**."
+          ],
+          "examples": [
+            {
+              "en": "Two plates of rice, please.",
+              "id": "Nasinya dua piring, ya."
+            },
+            {
+              "en": "There isn't any sugar.",
+              "id": "Tidak ada gula sama sekali."
+            },
+            {
+              "en": "How many brothers do you have?",
+              "id": "Kamu punya berapa saudara laki-laki?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lagi",
+        "text": "Mau latihan lagi? Halaman British Council ini menjelaskannya sekali lagi, dengan dua tes singkat."
+      }
+    ]
+  }
+}

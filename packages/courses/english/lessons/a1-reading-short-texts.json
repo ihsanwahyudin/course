@@ -1,0 +1,761 @@
+{
+  "nodeId": "a1-reading-short-texts",
+  "intro": "Hi! You can already read single words and simple signs. Today you read short real texts: menus, opening hours, train timetables, text messages and profiles. You'll also learn scanning: finding one piece of information fast, without reading every word.",
+  "teachingNotes": [
+    "Reading at A1 means understanding short real texts and finding information in them. Always ask the learner to read the question first, then look for the answer. They don't need every word, and answers are short: a word, a time, a price, a day or a name.",
+    "Menus, signs and timetables: menus have sections (Snacks, Main dishes, Desserts, Drinks). Mon–Fri means Monday to Friday, so the weekend is NOT included. am = morning, pm = afternoon/evening. Timetables often use the 24-hour clock with a colon (18:30 = 6:30 pm); Indonesia writes a dot (18.30). Learners often mix up DEPARTS (berangkat) and ARRIVES (tiba), and platform (trains) with gate (planes). OUT OF ORDER means rusak; it has nothing to do with ordering food.",
+    "Messages and profiles: the name at the end of a message is the writer, so 'I' = that person. Learners often think 'I' is the person who receives it. Messages drop small words ('Home at 8' = I am home at 8). In profiles, 'I'm from Medan' (asal) and 'I live in Surabaya' (tempat tinggal sekarang) are different; this is a common mistake when answering 'Where does she live?'.",
+    "Scanning: decide what the answer looks like before you look. Prices start with Rp, times have a colon or am/pm, phone numbers start with 08, days and names start with a capital letter. A typical error is taking the first number they see (the platform number instead of the time, or the price of the wrong dish). Prices: Rp 25.000 (Indonesia) and 25,000 (English texts) are the same.",
+    "Times: if a learner reads a time aloud, 'setengah tujuh' is 6:30 = half past six; British 'half seven' is 7:30. On timetables, saying the numbers (six thirty) is always safe.",
+    "Limits: the learner knows to be, the present simple and A0 vocabulary. Texts may use short fixed chunks (See you at 7, Call me after 5) but no past simple, no future forms (will, going to), no present perfect and no comparatives or superlatives. Keep texts to 1–6 short lines and use real Indonesian contexts (warung, station, office, Rupiah prices, 08… numbers)."
+  ],
+  "keyPoints": [
+    {
+      "title": "Menus, signs and timetables",
+      "explanation": "Read the headings first: the menu section, the days on a sign, the column titles on a timetable. Then find the line you need. Mon–Fri = Monday to Friday; departs = berangkat, arrives = tiba.",
+      "examples": [
+        {
+          "en": "Drinks: Iced tea Rp 6.000",
+          "id": "Minuman: Es teh Rp 6.000"
+        },
+        {
+          "en": "Open Mon–Fri 9 am – 5 pm",
+          "id": "Buka Senin–Jumat pukul 09.00–17.00"
+        },
+        {
+          "en": "Departs 07:15 · Platform 3",
+          "id": "Berangkat pukul 07.15 · Peron 3"
+        }
+      ]
+    },
+    {
+      "title": "Messages and profiles",
+      "explanation": "A message answers who, what, when and where. The name at the end is the writer, so 'I' is that person. A profile gives facts about one person: name, age, where they're from, where they live, job and likes.",
+      "examples": [
+        {
+          "en": "Sorry, I'm late. I'm on the bus. – Andi",
+          "id": "Maaf, aku terlambat. Aku di bus. – Andi"
+        },
+        {
+          "en": "I'm from Makassar, but I live in Jakarta.",
+          "id": "Aku berasal dari Makassar, tapi aku tinggal di Jakarta."
+        }
+      ]
+    },
+    {
+      "title": "Scanning: find it fast",
+      "explanation": "Read the question, decide what the answer looks like, then move your eyes quickly over the text until you see it. Don't stop at words you don't know.",
+      "examples": [
+        {
+          "en": "How much is the ticket? → look for Rp",
+          "id": "Berapa harga tiketnya? → cari Rp"
+        },
+        {
+          "en": "What time does it start? → look for am, pm or 00:00",
+          "id": "Jam berapa mulainya? → cari am, pm atau 00:00"
+        },
+        {
+          "en": "What's her number? → look for 08…",
+          "id": "Berapa nomornya? → cari 08…"
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "menus-signs-timetables",
+      "prompt": "Read the menu at a warung: 'Fried noodles Rp 20.000 · Chicken satay Rp 30.000 · Hot tea Rp 5.000 · Coffee Rp 10.000'. How much is the chicken satay?",
+      "expected": [
+        "rp 30000",
+        "30000",
+        "rp30000",
+        "30 000",
+        "thirty thousand",
+        "thirty thousand rupiah"
+      ],
+      "hint": "Find the words 'Chicken satay', then look at the number after Rp."
+    },
+    {
+      "objectiveId": "menus-signs-timetables",
+      "prompt": "Read the bus timetable: 'Bus 5 · Leaves Blok M 07:10 · Arrives Kota 08:05'. What time does the bus leave Blok M?",
+      "expected": [
+        "0710",
+        "710",
+        "07 10",
+        "7 10",
+        "seven ten",
+        "ten past seven",
+        "at 710",
+        "at 0710"
+      ],
+      "hint": "Leaves = berangkat. Don't look at the Arrives time."
+    },
+    {
+      "objectiveId": "messages-profiles",
+      "prompt": "Read the message: 'Mum, I'm at Dewi's house. Home at 8. Rina'. Where is Rina now?",
+      "expected": [
+        "at dewis house",
+        "dewis house",
+        "at dewi s house",
+        "dewi s house",
+        "shes at dewis house",
+        "she is at dewis house",
+        "at dewi's house",
+        "dewi's house"
+      ],
+      "hint": "Rina wrote the message, so 'I' = Rina."
+    },
+    {
+      "objectiveId": "scanning",
+      "prompt": "Scan the notice: 'English Club · Every Friday · 3 pm · Room 12 · Free for all students'. Which room is the club in?",
+      "expected": [
+        "12",
+        "room 12",
+        "twelve",
+        "room twelve"
+      ],
+      "hint": "Look for the word Room and the number after it."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "messages-profiles",
+      "prompt": "Read the profile: 'My name is Andi. I'm a teacher in Bogor. I play badminton on Saturdays.' What is Andi's job?",
+      "expected": [
+        "teacher",
+        "a teacher",
+        "he is a teacher",
+        "hes a teacher",
+        "he's a teacher"
+      ],
+      "hint": "Look for the word after 'I'm a'."
+    },
+    {
+      "objectiveId": "scanning",
+      "prompt": "Read the ferry timetable: 'Ferry to Bali: 06:00 · 09:00 · 12:00 · 15:00'. You get to the port at 10:00. What time is the next ferry?",
+      "expected": [
+        "1200",
+        "12",
+        "12 00",
+        "twelve",
+        "twelve oclock",
+        "noon",
+        "midday",
+        "12 pm",
+        "at 1200",
+        "at 12"
+      ],
+      "hint": "Find the first time after 10:00."
+    },
+    {
+      "objectiveId": "menus-signs-timetables",
+      "prompt": "A door at the hospital says 'NO ENTRY'. What does it mean in Indonesian?",
+      "expected": [
+        "dilarang masuk",
+        "tidak boleh masuk",
+        "jangan masuk"
+      ],
+      "hint": "Entry is like entrance (masuk). NO = dilarang."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "rst-1",
+      "objectiveId": "menus-signs-timetables",
+      "prompt": "Read the menu at a café in Bandung: 'Main dishes: Fried rice Rp 25.000 · Chicken soup Rp 22.000 · Drinks: Iced tea Rp 6.000 · Orange juice Rp 15.000'. How much is the chicken soup? Write the price.",
+      "acceptableAnswers": [
+        "rp 22000",
+        "rp22000",
+        "22000",
+        "22 000",
+        "rp 22 000",
+        "22000 rupiah",
+        "twenty two thousand",
+        "twenty two thousand rupiah"
+      ],
+      "rubric": "Correct: Rp 22.000 (any format: 22.000, 22,000, 22000, twenty-two thousand). 'Rp 25.000' (fried rice) or any other price = 0. '22' alone = 50."
+    },
+    {
+      "id": "rst-2",
+      "objectiveId": "menus-signs-timetables",
+      "prompt": "The lift in your office has a sign on it: 'OUT OF ORDER'. Can you use the lift today? Write yes or no.",
+      "acceptableAnswers": [
+        "no",
+        "tidak",
+        "no i cant",
+        "no i cannot",
+        "no you cant",
+        "no you cannot"
+      ],
+      "rubric": "Correct: no (OUT OF ORDER = rusak, the lift doesn't work). 'yes' = 0."
+    },
+    {
+      "id": "rst-3",
+      "objectiveId": "menus-signs-timetables",
+      "prompt": "Read the train timetable: 'Bandung → Jakarta (Gambir) · Departs 06:30 · Arrives 09:45 · Platform 2'. What time does the train arrive in Jakarta?",
+      "acceptableAnswers": [
+        "0945",
+        "945",
+        "09 45",
+        "9 45",
+        "at 0945",
+        "at 945",
+        "nine forty five",
+        "quarter to ten",
+        "a quarter to ten",
+        "945 am",
+        "0945 am"
+      ],
+      "rubric": "Correct: 09:45 (also 9.45, nine forty-five, quarter to ten). '06:30' (the departure time) = 0. '2' (the platform) = 0."
+    },
+    {
+      "id": "rst-4",
+      "objectiveId": "messages-profiles",
+      "prompt": "Read Budi's message: 'Hi Rina, the team meeting is on Thursday, not Wednesday. Room 3, 10 am. See you there! Budi'. Which day is the meeting?",
+      "acceptableAnswers": [
+        "thursday",
+        "on thursday",
+        "its on thursday",
+        "it is on thursday",
+        "the meeting is on thursday"
+      ],
+      "rubric": "Correct: Thursday. 'Wednesday' = 0 (the message says NOT Wednesday). 'Kamis' (right day, Indonesian) = 70."
+    },
+    {
+      "id": "rst-5",
+      "objectiveId": "messages-profiles",
+      "prompt": "Read the profile: 'Hi, I'm Sari. I'm 24 and I'm from Medan. I live in Surabaya and I work in a hotel. I love cooking.' Where does Sari live?",
+      "acceptableAnswers": [
+        "surabaya",
+        "in surabaya",
+        "she lives in surabaya"
+      ],
+      "rubric": "Correct: Surabaya. 'Medan' = 0 (that's where she is from, not where she lives). 'in a hotel' = 0 (that's where she works)."
+    },
+    {
+      "id": "rst-6",
+      "objectiveId": "scanning",
+      "prompt": "Scan the notice: 'SWIMMING POOL · Open every day 6 am – 8 pm · Adults Rp 30.000 · Children Rp 15.000 · Swimming lessons: Tuesday and Thursday, 4 pm'. On which days are the swimming lessons?",
+      "acceptableAnswers": [
+        "tuesday and thursday",
+        "on tuesday and thursday",
+        "tuesdays and thursdays",
+        "on tuesdays and thursdays",
+        "tuesday thursday",
+        "thursday and tuesday"
+      ],
+      "rubric": "Correct: Tuesday and Thursday (both days). Only one of the two days = 50. 'every day' = 0 (that's when the pool is open). 'Selasa dan Kamis' = 70."
+    },
+    {
+      "id": "rst-7",
+      "objectiveId": "scanning",
+      "prompt": "Scan the advert: 'ROOM FOR RENT · Jl. Dago 15, Bandung · Rp 1.500.000 a month · Free Wi-Fi · Call Pak Hadi: 0812 7788 1234 (after 5 pm)'. What number do you call?",
+      "acceptableAnswers": [
+        "0812 7788 1234",
+        "081277881234"
+      ],
+      "rubric": "Correct: 0812 7788 1234 (spaces don't matter). One wrong digit = 50. '15' (the house number) or the price = 0."
+    }
+  ],
+  "material": [
+    {
+      "id": "menus",
+      "title": "Reading a menu",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A menu has **sections**: **Snacks**, **Main dishes** (or **Mains**), **Desserts** and **Drinks**. Each line has a dish and a **price**. Read the section title first, then the dish names. Words like **chicken**, **beef**, **fish**, **rice** and **vegetable** tell you what is in the dish.",
+          "i18n": {
+            "id": {
+              "text": "Menu punya beberapa **bagian**: **Snacks** (camilan), **Main dishes** atau **Mains** (makanan utama), **Desserts** (makanan penutup) dan **Drinks** (minuman). Setiap baris berisi nama makanan dan **harga**. Baca dulu judul bagiannya, lalu nama makanannya. Kata seperti **chicken**, **beef**, **fish**, **rice** dan **vegetable** memberi tahu isi makanannya."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Snacks",
+              "id": "Camilan / makanan ringan"
+            },
+            {
+              "en": "Main dishes",
+              "id": "Makanan utama"
+            },
+            {
+              "en": "Desserts",
+              "id": "Makanan penutup"
+            },
+            {
+              "en": "Drinks",
+              "id": "Minuman"
+            },
+            {
+              "en": "Today's special",
+              "id": "Menu spesial hari ini"
+            },
+            {
+              "en": "Vegetable curry Rp 25.000",
+              "id": "Kari sayur Rp 25.000",
+              "note": "vegetable = no meat"
+            },
+            {
+              "en": "Iced tea / Hot tea",
+              "id": "Es teh / Teh panas"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Prices: Indonesia writes **Rp 25.000** with a dot. Many English menus write **25,000** with a comma. It's the same price: twenty-five thousand.",
+          "i18n": {
+            "id": {
+              "text": "Harga: di Indonesia ditulis **Rp 25.000** dengan titik. Banyak menu bahasa Inggris menulis **25,000** dengan koma. Harganya sama: dua puluh lima ribu."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "A menu says: 'Today's special: Gado-gado Rp 18.000'. What is 'Today's special'?",
+          "options": [
+            "a special dish for today",
+            "a free drink",
+            "a dessert"
+          ],
+          "answer": 0,
+          "explain": "Today's special is the special dish of the day, here gado-gado for Rp 18.000. It isn't free: it has a price.",
+          "i18n": {
+            "id": {
+              "explain": "Today's special adalah menu spesial hari ini, di sini gado-gado seharga Rp 18.000. Tidak gratis: ada harganya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Membaca menu"
+        }
+      }
+    },
+    {
+      "id": "signs",
+      "title": "Signs and opening hours",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "At A0 you read one-word signs like OPEN and EXIT. Now read signs with more information. **Opening hours** tell you when a place is open. **Mon–Fri** means Monday to Friday, so Saturday and Sunday are **not** in it. **am** is the morning (before 12 noon) and **pm** is the afternoon and evening. Read the day first, then the time.",
+          "i18n": {
+            "id": {
+              "text": "Di A0 kamu sudah membaca papan tanda satu kata seperti OPEN dan EXIT. Sekarang baca papan tanda dengan info lebih banyak. **Opening hours** (jam buka) memberi tahu kapan sebuah tempat buka. **Mon–Fri** artinya Senin sampai Jumat, jadi Sabtu dan Minggu **tidak** termasuk. **am** adalah pagi (sebelum jam 12 siang) dan **pm** adalah siang sampai malam. Baca harinya dulu, lalu jamnya."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "OPENING HOURS",
+              "id": "Jam buka"
+            },
+            {
+              "en": "Mon–Fri 9 am – 5 pm",
+              "id": "Senin–Jumat pukul 09.00–17.00"
+            },
+            {
+              "en": "CLOSED ON SUNDAYS",
+              "id": "Tutup setiap hari Minggu"
+            },
+            {
+              "en": "OUT OF ORDER",
+              "id": "Rusak / tidak bisa dipakai",
+              "note": "on lifts, machines, toilets"
+            },
+            {
+              "en": "NO PARKING",
+              "id": "Dilarang parkir"
+            },
+            {
+              "en": "BACK IN 10 MINUTES",
+              "id": "Kembali 10 menit lagi"
+            },
+            {
+              "en": "SALE · 50% OFF",
+              "id": "Diskon 50%"
+            },
+            {
+              "en": "FREE WI-FI",
+              "id": "Wi-Fi gratis"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**OUT OF ORDER** has nothing to do with ordering food. It means the lift, the machine or the toilet is broken (rusak).",
+          "i18n": {
+            "id": {
+              "text": "**OUT OF ORDER** tidak ada hubungannya dengan memesan makanan. Artinya lift, mesin atau toiletnya rusak."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "A shop sign says: 'Open Mon–Sat 10 am – 9 pm'. It's Sunday. Is the shop open?",
+          "options": [
+            "Yes, all day",
+            "No",
+            "Yes, from 10 am"
+          ],
+          "answer": 1,
+          "explain": "Mon–Sat is Monday to Saturday. Sunday is not in it, so the shop is closed on Sunday.",
+          "i18n": {
+            "id": {
+              "explain": "Mon–Sat artinya Senin sampai Sabtu. Minggu tidak termasuk, jadi tokonya tutup hari Minggu."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Papan tanda dan jam buka"
+        }
+      }
+    },
+    {
+      "id": "timetables",
+      "title": "Simple timetables",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A timetable shows **where** (to / from), **when** (**departs** or **leaves**, and **arrives**) and **where to wait** (a **platform** for trains, a **gate** for planes). Read the column titles first. Timetables often use the 24-hour clock: **18:30** is 6:30 pm. English writes a colon (18:30); Indonesia often writes a dot (18.30).",
+          "i18n": {
+            "id": {
+              "text": "Jadwal menunjukkan **ke mana** (to / from), **kapan** (**departs** atau **leaves** = berangkat, **arrives** = tiba) dan **di mana menunggu** (**platform** = peron untuk kereta, **gate** = gerbang untuk pesawat). Baca dulu judul kolomnya. Jadwal sering memakai format 24 jam: **18:30** adalah 6:30 pm. Bahasa Inggris memakai titik dua (18:30); di Indonesia sering memakai titik (18.30)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Departs 07:15",
+              "id": "Berangkat pukul 07.15"
+            },
+            {
+              "en": "Arrives 10:40",
+              "id": "Tiba pukul 10.40"
+            },
+            {
+              "en": "Platform 3",
+              "id": "Peron 3",
+              "note": "trains"
+            },
+            {
+              "en": "Gate B2",
+              "id": "Gerbang B2",
+              "note": "planes"
+            },
+            {
+              "en": "Delayed",
+              "id": "Terlambat / ditunda"
+            },
+            {
+              "en": "Cancelled",
+              "id": "Dibatalkan"
+            },
+            {
+              "en": "Every 15 minutes",
+              "id": "Setiap 15 menit"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Don't mix up **departs** and **arrives**. If you want to know when the train **leaves**, look in the **Departs** column, not the Arrives column.",
+          "i18n": {
+            "id": {
+              "text": "Jangan tertukar antara **departs** dan **arrives**. Kalau kamu ingin tahu kapan kereta **berangkat**, lihat kolom **Departs**, bukan kolom Arrives."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "A board at the airport says: 'GA 404 · Denpasar · Gate C3 · Delayed'. What does 'Delayed' mean?",
+          "options": [
+            "The plane is late",
+            "The plane is full",
+            "There is no plane today"
+          ],
+          "answer": 0,
+          "explain": "Delayed = terlambat / ditunda: the plane leaves later than the time on the board. 'No plane today' is Cancelled.",
+          "i18n": {
+            "id": {
+              "explain": "Delayed = terlambat / ditunda: pesawat berangkat lebih lambat dari jam di papan. 'Tidak ada pesawat hari ini' adalah Cancelled."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jadwal sederhana"
+        }
+      }
+    },
+    {
+      "id": "messages",
+      "title": "Messages and profiles",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A short message answers **who, what, when** and **where**. The name at the end is the **writer**, so **I** in the message is that person. Messages often drop small words: **'Home at 8'** = I am home at 8. A **profile** (on an app, a website or a class page) gives facts about one person: name, age, where they're **from**, where they **live**, job and likes.",
+          "i18n": {
+            "id": {
+              "text": "Pesan pendek menjawab **siapa, apa, kapan** dan **di mana**. Nama di akhir pesan adalah **penulisnya**, jadi **I** di dalam pesan adalah orang itu. Pesan sering membuang kata-kata kecil: **'Home at 8'** = I am home at 8 (aku di rumah jam 8). **Profil** (di aplikasi, situs web atau halaman kelas) berisi fakta tentang satu orang: nama, umur, asal (**from**), tempat tinggal (**live**), pekerjaan dan kesukaan."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Sorry, I'm late. I'm on the bus. – Andi",
+              "id": "Maaf, aku terlambat. Aku di bus. – Andi",
+              "note": "I = Andi"
+            },
+            {
+              "en": "See you at 7!",
+              "id": "Sampai jumpa jam 7!"
+            },
+            {
+              "en": "Call me after 5.",
+              "id": "Telepon aku setelah jam 5."
+            },
+            {
+              "en": "I'm from Makassar.",
+              "id": "Aku berasal dari Makassar."
+            },
+            {
+              "en": "I live in Jakarta.",
+              "id": "Aku tinggal di Jakarta."
+            },
+            {
+              "en": "I work at a bank.",
+              "id": "Aku bekerja di bank."
+            },
+            {
+              "en": "I like football and music.",
+              "id": "Aku suka sepak bola dan musik."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**From** and **live in** are different. 'I'm from Medan' is where you come from (asal). 'I live in Jakarta' is your home now. Read carefully when a question asks **Where does she live?**",
+          "i18n": {
+            "id": {
+              "text": "**From** dan **live in** itu berbeda. 'I'm from Medan' adalah asalmu. 'I live in Jakarta' adalah tempat tinggalmu sekarang. Baca dengan teliti kalau pertanyaannya **Where does she live?**"
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Read: 'I'm Agus. I'm 30. I'm from Bali, but I live in Bandung. I'm a nurse.' Where is Agus from?",
+          "options": [
+            "Bali",
+            "Bandung",
+            "a hospital"
+          ],
+          "answer": 0,
+          "explain": "'I'm from Bali' tells you where he comes from. Bandung is where he lives now.",
+          "i18n": {
+            "id": {
+              "explain": "'I'm from Bali' memberi tahu asalnya. Bandung adalah tempat tinggalnya sekarang."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pesan dan profil"
+        }
+      }
+    },
+    {
+      "id": "scanning",
+      "title": "Scanning: find it fast",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**Scanning** means looking for **one** piece of information, not reading every word. 1) Read the question first. 2) Decide what the answer looks like. 3) Move your eyes quickly over the text until you find it. Each kind of information has a shape: prices start with **Rp**, times have **:** or **am / pm**, phone numbers start with **08**, days and names start with a **capital letter**.",
+          "i18n": {
+            "id": {
+              "text": "**Scanning** artinya mencari **satu** informasi saja, bukan membaca setiap kata. 1) Baca pertanyaannya dulu. 2) Tentukan seperti apa bentuk jawabannya. 3) Gerakkan matamu dengan cepat di teks sampai kamu menemukannya. Setiap jenis informasi punya bentuk: harga diawali **Rp**, jam memakai **:** atau **am / pm**, nomor telepon diawali **08**, nama hari dan nama orang diawali **huruf kapital**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "How much…?",
+              "id": "Berapa harganya?",
+              "note": "look for Rp"
+            },
+            {
+              "en": "What time…?",
+              "id": "Jam berapa?",
+              "note": "look for 00:00, am, pm"
+            },
+            {
+              "en": "Which day…?",
+              "id": "Hari apa?",
+              "note": "look for Monday … Sunday"
+            },
+            {
+              "en": "Where…?",
+              "id": "Di mana?",
+              "note": "look for a place, Room, Platform, Gate"
+            },
+            {
+              "en": "What's the number?",
+              "id": "Berapa nomornya?",
+              "note": "look for 08…"
+            },
+            {
+              "en": "Who…?",
+              "id": "Siapa?",
+              "note": "look for a name"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "When you scan, don't stop at words you don't know. You don't need them! And don't take the first number you see: check the word next to it (Rp, Room, Platform, Gate).",
+          "i18n": {
+            "id": {
+              "text": "Saat scanning, jangan berhenti di kata yang tidak kamu tahu. Kamu tidak memerlukannya! Dan jangan langsung ambil angka pertama yang kamu lihat: cek kata di sebelahnya (Rp, Room, Platform, Gate)."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "You want to phone a shop. What do you look for in its advert?",
+          "options": [
+            "a word with @",
+            "a number that starts with 08",
+            "Rp and a number"
+          ],
+          "answer": 1,
+          "explain": "Phone numbers in Indonesia start with 08 (or +62 8). A word with @ is an email, and Rp is a price.",
+          "i18n": {
+            "id": {
+              "explain": "Nomor telepon di Indonesia diawali 08 (atau +62 8). Kata dengan @ adalah email, dan Rp adalah harga."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Scanning: temukan dengan cepat"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "What's the difference between departs and arrives?",
+    "How do I read the 24-hour clock on a timetable?",
+    "What does OUT OF ORDER mean?",
+    "How can I find information fast without reading every word?"
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "A restaurant menu",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/a1/restaurant-menu",
+      "source": "British Council LearnEnglish",
+      "note": "Read a café menu with prices and do two short tasks about it.",
+      "i18n": {
+        "id": {
+          "note": "Baca menu kafe lengkap dengan harga, lalu kerjakan dua latihan singkat tentangnya."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "An airport departures board",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/a1/airport-departures-board",
+      "source": "British Council LearnEnglish",
+      "note": "Practise reading times, gates and words like Boarding and Cancelled on a real-style board.",
+      "i18n": {
+        "id": {
+          "note": "Latihan membaca jam, gerbang dan kata seperti Boarding dan Cancelled di papan keberangkatan yang mirip aslinya."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Text messages to a friend",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/a1/text-messages-friend",
+      "source": "British Council LearnEnglish",
+      "note": "Two friends text to find a time and a place to meet. Read the chat and answer the questions.",
+      "i18n": {
+        "id": {
+          "note": "Dua teman berkirim pesan untuk mencari waktu dan tempat bertemu. Baca obrolannya dan jawab pertanyaannya."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "jam buka",
+      "back": "opening hours"
+    },
+    {
+      "front": "Senin sampai Jumat (di papan tanda)",
+      "back": "Mon–Fri"
+    },
+    {
+      "front": "rusak (lift, mesin)",
+      "back": "OUT OF ORDER"
+    },
+    {
+      "front": "berangkat (di jadwal)",
+      "back": "departs / leaves"
+    },
+    {
+      "front": "tiba (di jadwal)",
+      "back": "arrives"
+    },
+    {
+      "front": "peron (kereta)",
+      "back": "platform"
+    },
+    {
+      "front": "terlambat / ditunda (di jadwal)",
+      "back": "delayed"
+    },
+    {
+      "front": "makanan penutup",
+      "back": "desserts"
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Hai! Kamu sudah bisa membaca kata tunggal dan papan tanda sederhana. Hari ini kamu membaca teks pendek sungguhan: menu, jam buka, jadwal kereta, pesan singkat dan profil. Kamu juga belajar scanning: menemukan satu informasi dengan cepat, tanpa membaca setiap kata.",
+      "suggestedQuestions": [
+        "Apa bedanya departs dan arrives?",
+        "Bagaimana membaca format 24 jam di jadwal?",
+        "Apa arti OUT OF ORDER?",
+        "Bagaimana menemukan informasi dengan cepat tanpa membaca setiap kata?"
+      ],
+      "assessment": {
+        "rst-1": "Baca menu di sebuah kafe di Bandung: 'Main dishes: Fried rice Rp 25.000 · Chicken soup Rp 22.000 · Drinks: Iced tea Rp 6.000 · Orange juice Rp 15.000'. Berapa harga chicken soup? Tulis harganya.",
+        "rst-2": "Lift di kantormu ada tulisan: 'OUT OF ORDER'. Bisakah kamu memakai lift itu hari ini? Tulis yes atau no.",
+        "rst-3": "Baca jadwal kereta: 'Bandung → Jakarta (Gambir) · Departs 06:30 · Arrives 09:45 · Platform 2'. Jam berapa kereta tiba di Jakarta?",
+        "rst-4": "Baca pesan dari Budi: 'Hi Rina, the team meeting is on Thursday, not Wednesday. Room 3, 10 am. See you there! Budi'. Rapatnya hari apa? Tulis dalam bahasa Inggris.",
+        "rst-5": "Baca profil ini: 'Hi, I'm Sari. I'm 24 and I'm from Medan. I live in Surabaya and I work in a hotel. I love cooking.' Di mana Sari tinggal?",
+        "rst-6": "Cari infonya dengan cepat di pengumuman ini: 'SWIMMING POOL · Open every day 6 am – 8 pm · Adults Rp 30.000 · Children Rp 15.000 · Swimming lessons: Tuesday and Thursday, 4 pm'. Hari apa saja ada les renang? Tulis dalam bahasa Inggris.",
+        "rst-7": "Cari infonya dengan cepat di iklan ini: 'ROOM FOR RENT · Jl. Dago 15, Bandung · Rp 1.500.000 a month · Free Wi-Fi · Call Pak Hadi: 0812 7788 1234 (after 5 pm)'. Nomor berapa yang kamu telepon?"
+      }
+    }
+  }
+}

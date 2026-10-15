@@ -1,0 +1,772 @@
+{
+  "en": {
+    "greeting": "Hi! Today we learn words you use every day: clothes, the weather and parts of the body. Small groups of words, one step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Clothes",
+        "text": "Let's start with clothes. Here are the words you need every day.",
+        "body": "Learn these clothes words. **Trousers, jeans** and **shorts** are always plural: My jeans **are** new.\n\nFor clothes, Indonesian *pakai* is **wear**, not *use*: **She is wearing a red dress.** Use **is wearing** for now and **wear** for habits: I wear a uniform every day.",
+        "pairs": [
+          {
+            "en": "shirt",
+            "id": "kemeja"
+          },
+          {
+            "en": "T-shirt",
+            "id": "kaos"
+          },
+          {
+            "en": "trousers",
+            "id": "celana panjang"
+          },
+          {
+            "en": "jeans",
+            "id": "celana jeans"
+          },
+          {
+            "en": "shorts",
+            "id": "celana pendek"
+          },
+          {
+            "en": "skirt",
+            "id": "rok"
+          },
+          {
+            "en": "dress",
+            "id": "gaun"
+          },
+          {
+            "en": "jacket",
+            "id": "jaket"
+          },
+          {
+            "en": "shoes",
+            "id": "sepatu"
+          },
+          {
+            "en": "socks",
+            "id": "kaus kaki"
+          },
+          {
+            "en": "hat",
+            "id": "topi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Quick check: which verb goes with clothes?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "clothes",
+          "options": [
+            "is using",
+            "is wear",
+            "is wearing"
+          ],
+          "answer": 2,
+          "prompt": "Look at Pak Hasan. He ___ a batik shirt and black trousers.",
+          "explanation": "For clothes we say **wear**, not use. It's happening now, so we need **is + -ing**: is wearing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The weather",
+        "text": "Now the weather. In English, weather sentences start with **It**.",
+        "body": "Say **It's** + a weather word: It's sunny, It's hot, It's cloudy.\n\nRain is a verb: **It's raining** (now). Don't say `Today is rain` or `It's rain`.\n\nTo ask, say **What's the weather like?**",
+        "pairs": [
+          {
+            "en": "sunny",
+            "id": "cerah"
+          },
+          {
+            "en": "hot",
+            "id": "panas"
+          },
+          {
+            "en": "warm",
+            "id": "hangat"
+          },
+          {
+            "en": "cool",
+            "id": "sejuk"
+          },
+          {
+            "en": "cold",
+            "id": "dingin"
+          },
+          {
+            "en": "cloudy",
+            "id": "berawan, mendung"
+          },
+          {
+            "en": "windy",
+            "id": "berangin"
+          },
+          {
+            "en": "It's raining.",
+            "id": "Sedang hujan."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Weather talk",
+        "text": "Here's how people talk about the weather in real life.",
+        "body": "Indonesia has a **rainy season** (musim hujan) and a **dry season** (musim kemarau).",
+        "examples": [
+          {
+            "en": "It's very hot in Jakarta today.",
+            "id": "Hari ini di Jakarta panas sekali."
+          },
+          {
+            "en": "It's raining, so I'm taking an umbrella.",
+            "id": "Sedang hujan, jadi saya bawa payung."
+          },
+          {
+            "en": "In the rainy season, it rains every afternoon.",
+            "id": "Di musim hujan, setiap sore hujan."
+          },
+          {
+            "en": "It's cool and windy in Puncak.",
+            "id": "Di Puncak sejuk dan berangin."
+          },
+          {
+            "en": "It was cold in Lembang yesterday.",
+            "id": "Kemarin di Lembang dingin."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari looks out of the window. Choose the right words.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "weather",
+          "options": [
+            "is rain",
+            "is raining",
+            "rains"
+          ],
+          "answer": 1,
+          "prompt": "Oh no! It ___ again. Where's my umbrella?",
+          "explanation": "Rain happening now is a verb in the present continuous: **is raining**. 'It is rain' is a common mistake from Indonesian 'hujan'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Now build the weather question.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "weather",
+          "tokens": [
+            "like",
+            "weather",
+            "What",
+            "the",
+            "is"
+          ],
+          "solution": "What is the weather like?",
+          "prompt": "Arrange the words: Cuacanya bagaimana?",
+          "explanation": "The weather question is **What is the weather like?** (short: What's the weather like?). **like** goes at the end. Don't say `How is the weather like?`"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Parts of the body",
+        "text": "Last group: the body. Two Indonesian words need two English words each.",
+        "body": "**Tangan** is **hand** (with fingers) or **arm**. **Kaki** is **foot** (you stand on it) or **leg**.\n\nTwo plurals are irregular: one **foot**, two **feet**; one **tooth**, two **teeth**.\n\nOne part **hurts**: My back hurts. Two parts **hurt**: My eyes hurt.",
+        "pairs": [
+          {
+            "en": "head",
+            "id": "kepala"
+          },
+          {
+            "en": "eye",
+            "id": "mata"
+          },
+          {
+            "en": "ear",
+            "id": "telinga"
+          },
+          {
+            "en": "nose",
+            "id": "hidung"
+          },
+          {
+            "en": "mouth",
+            "id": "mulut"
+          },
+          {
+            "en": "tooth → teeth",
+            "id": "gigi"
+          },
+          {
+            "en": "arm",
+            "id": "lengan"
+          },
+          {
+            "en": "hand",
+            "id": "tangan (telapak & jari)"
+          },
+          {
+            "en": "leg",
+            "id": "kaki (paha sampai pergelangan)"
+          },
+          {
+            "en": "foot → feet",
+            "id": "telapak kaki"
+          },
+          {
+            "en": "back",
+            "id": "punggung"
+          },
+          {
+            "en": "stomach",
+            "id": "perut"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas is walking from the station to his office. Help him finish his sentence.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "body-parts",
+          "options": [
+            "feet",
+            "foots",
+            "foot"
+          ],
+          "answer": 0,
+          "prompt": "Dimas: 'My ___ are very tired!'",
+          "explanation": "Foot has an irregular plural: one foot, two **feet**. 'Are' tells you it's plural, and 'foots' is not a word."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip through these to review. Say each one out loud.",
+        "flashcards": [
+          {
+            "front": "trousers",
+            "back": "celana panjang"
+          },
+          {
+            "front": "I'm wearing a jacket.",
+            "back": "Saya sedang memakai jaket."
+          },
+          {
+            "front": "It's raining.",
+            "back": "Sedang hujan."
+          },
+          {
+            "front": "It's hot and sunny.",
+            "back": "Panas dan cerah."
+          },
+          {
+            "front": "arm",
+            "back": "lengan"
+          },
+          {
+            "front": "leg",
+            "back": "kaki (paha sampai pergelangan)"
+          },
+          {
+            "front": "back",
+            "back": "punggung"
+          },
+          {
+            "front": "stomach",
+            "back": "perut"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything from today on one page. Keep it handy.",
+        "artifact": {
+          "title": "Cheat sheet · Clothes, weather & body",
+          "intro": "Words for clothes, the weather and parts of the body, with the patterns to use them.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Tops",
+              "shirt, T-shirt, jacket, dress",
+              "kemeja, kaos, jaket, gaun"
+            ],
+            [
+              "Bottoms",
+              "trousers, jeans, shorts, skirt",
+              "celana panjang, celana jeans, celana pendek, rok"
+            ],
+            [
+              "Feet and head",
+              "shoes, sandals, socks, hat",
+              "sepatu, sandal, kaus kaki, topi"
+            ],
+            [
+              "wear",
+              "I wear a uniform. / I'm wearing a jacket.",
+              "Saya memakai seragam. / Saya sedang memakai jaket."
+            ],
+            [
+              "Weather",
+              "It's sunny / hot / warm / cool / cold.",
+              "cerah / panas / hangat / sejuk / dingin"
+            ],
+            [
+              "Weather",
+              "It's cloudy / windy / raining.",
+              "berawan / berangin / sedang hujan"
+            ],
+            [
+              "Asking",
+              "What's the weather like?",
+              "Cuacanya bagaimana?"
+            ],
+            [
+              "Seasons",
+              "rainy season, dry season",
+              "musim hujan, musim kemarau"
+            ],
+            [
+              "Head",
+              "head, hair, eye, ear, nose, mouth, tooth (teeth)",
+              "kepala, rambut, mata, telinga, hidung, mulut, gigi"
+            ],
+            [
+              "Body",
+              "arm, hand, leg, foot (feet), back, stomach",
+              "lengan, tangan, kaki, telapak kaki, punggung, perut"
+            ],
+            [
+              "hurts / hurt",
+              "My back hurts. / My eyes hurt.",
+              "Punggungku sakit. / Mataku sakit."
+            ]
+          ],
+          "tips": [
+            "Clothes: **wear**, not use: She is wearing a red dress.",
+            "Weather: start with **It**: It's raining today, not `Today is rain`.",
+            "Irregular plurals: **foot → feet**, **tooth → teeth**."
+          ],
+          "examples": [
+            {
+              "en": "Rina is wearing a white shirt and a long skirt.",
+              "id": "Rina memakai kemeja putih dan rok panjang."
+            },
+            {
+              "en": "It's raining, so I'm taking an umbrella.",
+              "id": "Sedang hujan, jadi saya bawa payung."
+            },
+            {
+              "en": "My back hurts.",
+              "id": "Punggungku sakit."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These British Council pages have picture exercises for clothes, weather and the body."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar kata-kata yang kamu pakai setiap hari: pakaian, cuaca dan bagian tubuh. Sedikit demi sedikit, satu langkah setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Pakaian",
+        "text": "Kita mulai dari pakaian. Ini kata-kata yang kamu butuhkan setiap hari.",
+        "body": "Pelajari kata-kata pakaian ini. **Trousers, jeans** dan **shorts** selalu jamak: My jeans **are** new.\n\nUntuk pakaian, *pakai* dalam bahasa Inggris adalah **wear**, bukan *use*: **She is wearing a red dress.** Pakai **is wearing** untuk sekarang dan **wear** untuk kebiasaan: I wear a uniform every day.",
+        "pairs": [
+          {
+            "en": "shirt",
+            "id": "kemeja"
+          },
+          {
+            "en": "T-shirt",
+            "id": "kaos"
+          },
+          {
+            "en": "trousers",
+            "id": "celana panjang"
+          },
+          {
+            "en": "jeans",
+            "id": "celana jeans"
+          },
+          {
+            "en": "shorts",
+            "id": "celana pendek"
+          },
+          {
+            "en": "skirt",
+            "id": "rok"
+          },
+          {
+            "en": "dress",
+            "id": "gaun"
+          },
+          {
+            "en": "jacket",
+            "id": "jaket"
+          },
+          {
+            "en": "shoes",
+            "id": "sepatu"
+          },
+          {
+            "en": "socks",
+            "id": "kaus kaki"
+          },
+          {
+            "en": "hat",
+            "id": "topi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cek cepat: kata kerja apa yang dipakai untuk pakaian?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "clothes",
+          "options": [
+            "is using",
+            "is wear",
+            "is wearing"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: Look at Pak Hasan. He ___ a batik shirt and black trousers.",
+          "explanation": "Untuk pakaian kita pakai **wear**, bukan use. Ini terjadi sekarang, jadi butuh **is + -ing**: is wearing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Cuaca",
+        "text": "Sekarang cuaca. Dalam bahasa Inggris, kalimat tentang cuaca dimulai dengan **It**.",
+        "body": "Katakan **It's** + kata cuaca: It's sunny, It's hot, It's cloudy.\n\nRain di sini kata kerja: **It's raining** (sedang hujan). Jangan bilang `Today is rain` atau `It's rain`.\n\nUntuk bertanya, katakan **What's the weather like?**",
+        "pairs": [
+          {
+            "en": "sunny",
+            "id": "cerah"
+          },
+          {
+            "en": "hot",
+            "id": "panas"
+          },
+          {
+            "en": "warm",
+            "id": "hangat"
+          },
+          {
+            "en": "cool",
+            "id": "sejuk"
+          },
+          {
+            "en": "cold",
+            "id": "dingin"
+          },
+          {
+            "en": "cloudy",
+            "id": "berawan, mendung"
+          },
+          {
+            "en": "windy",
+            "id": "berangin"
+          },
+          {
+            "en": "It's raining.",
+            "id": "Sedang hujan."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Ngobrol soal cuaca",
+        "text": "Begini cara orang membicarakan cuaca sehari-hari.",
+        "body": "Indonesia punya **rainy season** (musim hujan) dan **dry season** (musim kemarau).",
+        "examples": [
+          {
+            "en": "It's very hot in Jakarta today.",
+            "id": "Hari ini di Jakarta panas sekali."
+          },
+          {
+            "en": "It's raining, so I'm taking an umbrella.",
+            "id": "Sedang hujan, jadi saya bawa payung."
+          },
+          {
+            "en": "In the rainy season, it rains every afternoon.",
+            "id": "Di musim hujan, setiap sore hujan."
+          },
+          {
+            "en": "It's cool and windy in Puncak.",
+            "id": "Di Puncak sejuk dan berangin."
+          },
+          {
+            "en": "It was cold in Lembang yesterday.",
+            "id": "Kemarin di Lembang dingin."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari melihat ke luar jendela. Pilih kata yang tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "weather",
+          "options": [
+            "is rain",
+            "is raining",
+            "rains"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Oh no! It ___ again. Where's my umbrella?",
+          "explanation": "Hujan yang sedang turun memakai kata kerja bentuk present continuous: **is raining**. 'It is rain' adalah kesalahan umum karena kata 'hujan' dalam bahasa Indonesia."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaan",
+        "text": "Sekarang susun pertanyaan tentang cuaca.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "weather",
+          "tokens": [
+            "like",
+            "weather",
+            "What",
+            "the",
+            "is"
+          ],
+          "solution": "What is the weather like?",
+          "prompt": "Susun kata-katanya: Cuacanya bagaimana?",
+          "explanation": "Pertanyaan tentang cuaca adalah **What is the weather like?** (singkatnya: What's the weather like?). **like** ada di akhir. Jangan bilang `How is the weather like?`"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bagian tubuh",
+        "text": "Kelompok terakhir: tubuh. Ada dua kata Indonesia yang masing-masing punya dua kata Inggris.",
+        "body": "**Tangan** bisa **hand** (telapak dan jari) atau **arm** (lengan). **Kaki** bisa **foot** (bagian untuk berdiri) atau **leg**.\n\nDua bentuk jamak tidak beraturan: one **foot**, two **feet**; one **tooth**, two **teeth**.\n\nSatu bagian pakai **hurts**: My back hurts. Dua bagian pakai **hurt**: My eyes hurt.",
+        "pairs": [
+          {
+            "en": "head",
+            "id": "kepala"
+          },
+          {
+            "en": "eye",
+            "id": "mata"
+          },
+          {
+            "en": "ear",
+            "id": "telinga"
+          },
+          {
+            "en": "nose",
+            "id": "hidung"
+          },
+          {
+            "en": "mouth",
+            "id": "mulut"
+          },
+          {
+            "en": "tooth → teeth",
+            "id": "gigi"
+          },
+          {
+            "en": "arm",
+            "id": "lengan"
+          },
+          {
+            "en": "hand",
+            "id": "tangan (telapak & jari)"
+          },
+          {
+            "en": "leg",
+            "id": "kaki (paha sampai pergelangan)"
+          },
+          {
+            "en": "foot → feet",
+            "id": "telapak kaki"
+          },
+          {
+            "en": "back",
+            "id": "punggung"
+          },
+          {
+            "en": "stomach",
+            "id": "perut"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas sedang berjalan dari stasiun ke kantornya. Bantu dia melengkapi kalimatnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "body-parts",
+          "options": [
+            "feet",
+            "foots",
+            "foot"
+          ],
+          "answer": 0,
+          "prompt": "Lengkapi: Dimas: 'My ___ are very tired!'",
+          "explanation": "Foot punya bentuk jamak tidak beraturan: one foot, two **feet**. Kata 'are' menunjukkan jamak, dan 'foots' itu bukan kata."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartu-kartu ini untuk mengulang. Ucapkan masing-masing dengan suara keras.",
+        "flashcards": [
+          {
+            "front": "trousers",
+            "back": "celana panjang"
+          },
+          {
+            "front": "I'm wearing a jacket.",
+            "back": "Saya sedang memakai jaket."
+          },
+          {
+            "front": "It's raining.",
+            "back": "Sedang hujan."
+          },
+          {
+            "front": "It's hot and sunny.",
+            "back": "Panas dan cerah."
+          },
+          {
+            "front": "arm",
+            "back": "lengan"
+          },
+          {
+            "front": "leg",
+            "back": "kaki (paha sampai pergelangan)"
+          },
+          {
+            "front": "back",
+            "back": "punggung"
+          },
+          {
+            "front": "stomach",
+            "back": "perut"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · Pakaian, cuaca & tubuh",
+          "intro": "Kosakata pakaian, cuaca dan bagian tubuh, lengkap dengan pola kalimatnya.",
+          "headers": [
+            "Kelompok",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Atasan",
+              "shirt, T-shirt, jacket, dress",
+              "kemeja, kaos, jaket, gaun"
+            ],
+            [
+              "Bawahan",
+              "trousers, jeans, shorts, skirt",
+              "celana panjang, celana jeans, celana pendek, rok"
+            ],
+            [
+              "Kaki dan kepala",
+              "shoes, sandals, socks, hat",
+              "sepatu, sandal, kaus kaki, topi"
+            ],
+            [
+              "wear (memakai)",
+              "I wear a uniform. / I'm wearing a jacket.",
+              "Saya memakai seragam. / Saya sedang memakai jaket."
+            ],
+            [
+              "Cuaca",
+              "It's sunny / hot / warm / cool / cold.",
+              "cerah / panas / hangat / sejuk / dingin"
+            ],
+            [
+              "Cuaca",
+              "It's cloudy / windy / raining.",
+              "berawan / berangin / sedang hujan"
+            ],
+            [
+              "Bertanya",
+              "What's the weather like?",
+              "Cuacanya bagaimana?"
+            ],
+            [
+              "Musim",
+              "rainy season, dry season",
+              "musim hujan, musim kemarau"
+            ],
+            [
+              "Kepala",
+              "head, hair, eye, ear, nose, mouth, tooth (teeth)",
+              "kepala, rambut, mata, telinga, hidung, mulut, gigi"
+            ],
+            [
+              "Tubuh",
+              "arm, hand, leg, foot (feet), back, stomach",
+              "lengan, tangan, kaki, telapak kaki, punggung, perut"
+            ],
+            [
+              "hurts / hurt (sakit)",
+              "My back hurts. / My eyes hurt.",
+              "Punggungku sakit. / Mataku sakit."
+            ]
+          ],
+          "tips": [
+            "Pakaian: **wear**, bukan use: She is wearing a red dress.",
+            "Cuaca: mulai dengan **It**: It's raining today, bukan `Today is rain`.",
+            "Jamak tidak beraturan: **foot → feet**, **tooth → teeth**."
+          ],
+          "examples": [
+            {
+              "en": "Rina is wearing a white shirt and a long skirt.",
+              "id": "Rina memakai kemeja putih dan rok panjang."
+            },
+            {
+              "en": "It's raining, so I'm taking an umbrella.",
+              "id": "Sedang hujan, jadi saya bawa payung."
+            },
+            {
+              "en": "My back hurts.",
+              "id": "Punggungku sakit."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman British Council ini punya latihan bergambar untuk pakaian, cuaca dan tubuh."
+      }
+    ]
+  }
+}
