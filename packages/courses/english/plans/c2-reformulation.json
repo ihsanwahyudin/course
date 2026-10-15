@@ -1,0 +1,778 @@
+{
+  "en": {
+    "greeting": "Hi! Today is about precision: picking the word with exactly the right strength, keeping going when a word suddenly disappears, and turning a point up or down with the right partner word. Let's start with words on a scale.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Words on a scale",
+        "text": "Quick recap, then the new part.",
+        "body": "From connotation you know words carry feelings; from hedging and modal nuance, how sure you are (*probably → bound to*). New today: **degree**. Indonesian adds *sangat*; English picks a different word for each level:\n**concerned → worried → alarmed → panicked**\n**annoyed → irritated → furious**\n**pleased → delighted → thrilled**\n**likely → highly likely → bound to**\n**slightly → somewhat → considerably → dramatically**\nThe middle of a scale overlaps; the ends don't.",
+        "pairs": [
+          {
+            "en": "concerned",
+            "id": "khawatir, prihatin (tetap tenang, formal)"
+          },
+          {
+            "en": "alarmed",
+            "id": "cemas dan kaget (ada bahaya)"
+          },
+          {
+            "en": "panicked",
+            "id": "panik (tidak bisa berpikir jernih)"
+          },
+          {
+            "en": "annoyed",
+            "id": "kesal"
+          },
+          {
+            "en": "furious",
+            "id": "marah besar"
+          },
+          {
+            "en": "delighted",
+            "id": "sangat senang"
+          },
+          {
+            "en": "thrilled",
+            "id": "senang sekali, bersemangat"
+          },
+          {
+            "en": "dramatically",
+            "id": "secara drastis"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Same family, different job",
+        "text": "Some near-synonyms differ in what they do, not only in strength. You'll hear these in the news and in formal meetings.",
+        "body": "**criticise** says what's wrong; **condemn** says it's morally wrong. **claim** may be doubted; **assert** is firm; **allege** accuses without proof yet (*the alleged …* in the news). **reluctant to** = may still do it; **refuse to** = says no (a verb: not *was refused to*).",
+        "examples": [
+          {
+            "en": "The auditors criticised the way the budget was managed.",
+            "id": "Para auditor mengkritik cara anggaran itu dikelola."
+          },
+          {
+            "en": "Human rights groups condemned the attack on journalists.",
+            "id": "Kelompok-kelompok HAM mengecam serangan terhadap para wartawan."
+          },
+          {
+            "en": "The company claims its app is the fastest in Indonesia.",
+            "id": "Perusahaan itu mengklaim aplikasinya yang tercepat di Indonesia."
+          },
+          {
+            "en": "Police allege that two staff members sold customer data.",
+            "id": "Polisi menuduh dua karyawan menjual data pelanggan."
+          },
+          {
+            "en": "Budi was reluctant to move to Surabaya, but he agreed in the end.",
+            "id": "Budi enggan pindah ke Surabaya, tapi akhirnya dia setuju."
+          },
+          {
+            "en": "The landlord refused to return the deposit.",
+            "id": "Pemilik kos menolak mengembalikan uang jaminan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dr. Wulan is presenting a report on small businesses in Yogyakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fine-nuance",
+          "prompt": "A batik shop's online orders went from 2,000 a month to 9,000 a month in one year. Which sentence describes the change precisely?",
+          "options": [
+            "Online orders rose slightly.",
+            "Online orders rose dramatically.",
+            "Online orders rose somewhat."
+          ],
+          "answer": 1,
+          "explanation": "From 2,000 to 9,000 is more than four times as many: a **dramatic** rise (drastis). *slightly* is for a small change, like 2%, and *somewhat* (agak) also makes it sound small, which would mislead the audience."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "When the word won't come",
+        "text": "Everyone loses words, even native speakers. The skill is not stopping.",
+        "body": "Talk around the gap (*paraphrase*):\n**Describe what it does:** *It's the thing you use to … / the person who …*\n**Give an example:** *It's like when …*\n**Use a more general word** (a *kata payung*): *It's a kind of tool / a type of permit*\n**Use the opposite:** *the opposite of polite* (= rude)\nThe common mistake is **going silent or switching to Indonesian** (*apa ya namanya … itu lho …*). Silence hands your turn to someone else; Indonesian loses international listeners. A clear description beats a perfect word that never comes.",
+        "pairs": [
+          {
+            "en": "It's the thing you use to …",
+            "id": "benda yang dipakai untuk …"
+          },
+          {
+            "en": "It's the person who …",
+            "id": "orang yang …"
+          },
+          {
+            "en": "It's like when …",
+            "id": "seperti saat …"
+          },
+          {
+            "en": "It's a kind of …",
+            "id": "semacam …"
+          },
+          {
+            "en": "the opposite of …",
+            "id": "kebalikan dari …"
+          },
+          {
+            "en": "What's it called?",
+            "id": "apa ya namanya?"
+          },
+          {
+            "en": "It's on the tip of my tongue.",
+            "id": "sudah di ujung lidah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "You're telling an Australian colleague about your landlord in Jakarta. He never fixes anything and counts every rupiah, but the word *stingy* won't come.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "reformulate-smoothly",
+          "prompt": "Arrange the words to describe the landlord with the opposite strategy.",
+          "tokens": [
+            "generous",
+            "the",
+            "He",
+            "of",
+            "is",
+            "opposite"
+          ],
+          "solution": "He is the opposite of generous.",
+          "explanation": "**the opposite of + a word you know** is a quick paraphrase: *the opposite of generous* = stingy (pelit). Your colleague understands at once, and you never stop talking."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Repair phrases",
+        "text": "These phrases tell the listener what you're doing while you fix or improve what you said.",
+        "body": "*Or rather* swaps in a more accurate word; *In other words* says it more simply; *To be more precise* adds the exact detail; *Let me put it another way* starts a new explanation; *I'm looking for the word …* announces a description. Fillers like *Well, let me think …* keep the floor: they show you haven't finished.",
+        "examples": [
+          {
+            "en": "What I mean is that the deadline is too tight, not that the idea is bad.",
+            "id": "Maksud saya, tenggatnya terlalu mepet, bukan idenya yang jelek."
+          },
+          {
+            "en": "It was a mistake, or rather a misunderstanding between the two teams.",
+            "id": "Itu sebuah kesalahan, atau lebih tepatnya salah paham antara dua tim."
+          },
+          {
+            "en": "The venue costs more than our whole budget. In other words, we can't afford it.",
+            "id": "Biaya tempatnya lebih besar daripada seluruh anggaran kita. Dengan kata lain, kita tidak sanggup membayarnya."
+          },
+          {
+            "en": "Sales were good. To be more precise, they were 12% above target.",
+            "id": "Penjualannya bagus. Tepatnya, 12% di atas target."
+          },
+          {
+            "en": "Well, let me think … how shall I put it … the plan is too ambitious for one year.",
+            "id": "Hmm, coba saya pikir … bagaimana ya mengatakannya … rencana itu terlalu ambisius untuk satu tahun."
+          },
+          {
+            "en": "I'm looking for the word … it's the person who checks a company's accounts.",
+            "id": "Saya lagi mencari katanya … orang yang memeriksa keuangan perusahaan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: stuck for a word",
+        "text": "Budi is on a video call with a partner from Melbourne, planning a new office in Bandung. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reformulate-smoothly",
+          "listen": "For the new office, we'll also need a, um, a... oh, what's it called? We had one in Jakarta for old contracts.",
+          "prompt": "Budi gets stuck on a word. Choose the best next sentence for him.",
+          "options": [
+            "Sorry, my English is bad. Never mind, it's not important.",
+            "Aduh, apa ya namanya… mesin penghancur kertas itu lho.",
+            "I'm looking for the word… it's a machine that cuts old papers into thin strips, so nobody can read them."
+          ],
+          "answer": 2,
+          "explanation": "Budi keeps going in English: he says he's searching for the word, then **describes what it does**, so the partner can say *Oh, a shredder!* The first option gives up and drops a real need. The second switches to Indonesian, which the partner from Melbourne can't follow."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Turn it up, turn it down",
+        "text": "Recap from B2: highly likely, deeply concerned, bitterly disappointed. Now the finer controls.",
+        "body": "Gradable words (*tired, important, cold*) take **very / extremely**. Words that already mean the maximum (*exhausted, essential, vital, freezing, furious, perfect*) take **absolutely / utterly / completely**, not *very*. **utterly** is mostly for negative ideas.\nSoften with **slightly, somewhat, a little**. For your stance: **arguably**, **to some extent**, **by no means** (= definitely not), **far from** + adjective.\nIndonesian trap: *jauh dari kata sempurna* → *far from perfect*, not *far from the word perfect*.",
+        "pairs": [
+          {
+            "en": "utterly exhausted",
+            "id": "benar-benar kelelahan"
+          },
+          {
+            "en": "completely impossible",
+            "id": "sama sekali mustahil"
+          },
+          {
+            "en": "slightly",
+            "id": "sedikit"
+          },
+          {
+            "en": "somewhat",
+            "id": "agak (lebih formal)"
+          },
+          {
+            "en": "arguably",
+            "id": "bisa dibilang"
+          },
+          {
+            "en": "to some extent",
+            "id": "sampai batas tertentu"
+          },
+          {
+            "en": "by no means",
+            "id": "sama sekali tidak"
+          },
+          {
+            "en": "far from perfect",
+            "id": "jauh dari sempurna"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The right partner",
+        "text": "Pak Hasan is briefing a construction team in Surabaya before work starts on a new building site.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emphasise-soften",
+          "prompt": "Choose the natural intensifier: 'Wearing a helmet on site is ___ essential.'",
+          "options": [
+            "very",
+            "slightly",
+            "absolutely"
+          ],
+          "answer": 2,
+          "explanation": "*essential* already means 'absolutely necessary', the top of the scale, so it takes **absolutely** (or *totally*), not *very*. *slightly essential* makes no sense: something is either essential or it isn't."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Say exactly how sure",
+        "text": "After a long negotiation in Jakarta, Bu Ani's team still hasn't agreed on the price with a partner from Singapore. A colleague asks if the deal is done.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emphasise-soften",
+          "prompt": "Bu Ani wants to say clearly that the deal is definitely NOT certain yet. Which sentence says this precisely?",
+          "options": [
+            "The deal is by no means certain.",
+            "The deal is somewhat certain.",
+            "The deal is utterly certain."
+          ],
+          "answer": 0,
+          "explanation": "**by no means** = sama sekali tidak: a strong, clear *not*. *somewhat certain* is unnatural and suggests it's partly agreed. *utterly certain* says the opposite: completely sure."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page, for your next meeting or presentation.",
+        "artifact": {
+          "title": "Cheat sheet · Precision and reformulation",
+          "intro": "Pick the right strength, never stop when a word disappears, and match your intensifier to the word.",
+          "headers": [
+            "Area",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Worry",
+              "concerned → worried → alarmed → panicked",
+              "khawatir (tenang) → khawatir → cemas dan kaget → panik"
+            ],
+            [
+              "Anger",
+              "annoyed → irritated → furious",
+              "kesal → jengkel → marah besar"
+            ],
+            [
+              "Happiness",
+              "pleased → delighted → thrilled",
+              "senang → sangat senang → senang sekali"
+            ],
+            [
+              "Probability",
+              "likely → highly likely → bound to",
+              "kemungkinan besar → sangat mungkin → pasti"
+            ],
+            [
+              "Change",
+              "slightly → somewhat → considerably → dramatically",
+              "sedikit → agak → cukup besar → drastis"
+            ],
+            [
+              "Same family",
+              "criticise / condemn",
+              "mengkritik / mengecam"
+            ],
+            [
+              "Same family",
+              "claim / assert / allege",
+              "mengklaim / menegaskan / menuduh tanpa bukti"
+            ],
+            [
+              "Same family",
+              "reluctant to / unwilling to / refuse to",
+              "enggan / tidak mau / menolak"
+            ],
+            [
+              "Paraphrase",
+              "It's the thing you use to … / a kind of … / like when … / the opposite of …",
+              "benda untuk … / semacam … / seperti saat … / kebalikan dari …"
+            ],
+            [
+              "Repair",
+              "What I mean is … / Let me put it another way. / Or rather … / In other words … / To be more precise …",
+              "maksud saya … / coba saya jelaskan dengan cara lain / atau lebih tepatnya … / dengan kata lain … / tepatnya …"
+            ],
+            [
+              "Keep the floor",
+              "Well, let me think … / How shall I put it … / What's it called?",
+              "hmm, coba saya pikir … / bagaimana ya … / apa ya namanya?"
+            ],
+            [
+              "Emphasise",
+              "absolutely essential, utterly exhausted, completely impossible (not very)",
+              "mutlak penting, benar-benar kelelahan, sama sekali mustahil"
+            ],
+            [
+              "Soften",
+              "slightly, somewhat, a little; arguably; to some extent",
+              "sedikit, agak; bisa dibilang; sampai batas tertentu"
+            ],
+            [
+              "Strong not",
+              "by no means …, far from …",
+              "sama sekali tidak …, jauh dari …"
+            ]
+          ],
+          "tips": [
+            "Match the degree to the situation: a 2% rise isn't dramatic, and a calm statement is concerned, not alarmed.",
+            "Stuck? Don't go silent or switch to Indonesian: describe it, give an example, use a general word or the opposite.",
+            "Maximum words (essential, exhausted, freezing) take absolutely / utterly, never very or slightly."
+          ],
+          "examples": [
+            {
+              "en": "Residents were alarmed when the river rose two metres in one night.",
+              "id": "Warga cemas dan kaget ketika sungai naik dua meter dalam semalam."
+            },
+            {
+              "en": "It's a kind of permit you need before you build a house.",
+              "id": "Itu semacam izin yang kamu perlukan sebelum membangun rumah."
+            },
+            {
+              "en": "After the night shift, the nurses were utterly exhausted.",
+              "id": "Setelah sif malam, para perawat benar-benar kelelahan."
+            },
+            {
+              "en": "The new system is far from perfect, but it's faster than the old one.",
+              "id": "Sistem baru itu jauh dari sempurna, tapi lebih cepat daripada yang lama."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read more",
+        "text": "Two short British Council grammar pages on intensifiers and on gradable vs non-gradable adjectives: below your level, but a quick way to check the very / absolutely rule."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini tentang presisi: memilih kata dengan kekuatan yang pas, tetap bicara saat sebuah kata tiba-tiba hilang, dan menaikkan atau menurunkan kekuatan poin dengan pasangan kata yang tepat. Kita mulai dari kata-kata pada sebuah skala.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata-kata pada sebuah skala",
+        "text": "Ulasan singkat dulu, lalu bagian barunya.",
+        "body": "Dari konotasi kamu tahu kata membawa rasa; dari hedging dan modal nuance, seberapa yakin kamu (*probably → bound to*). Yang baru hari ini: **tingkat kekuatan**. Bahasa Indonesia menambahkan *sangat*; bahasa Inggris memilih kata yang berbeda untuk setiap tingkat:\n**concerned → worried → alarmed → panicked**\n**annoyed → irritated → furious**\n**pleased → delighted → thrilled**\n**likely → highly likely → bound to**\n**slightly → somewhat → considerably → dramatically**\nBagian tengah skala tumpang tindih; ujung-ujungnya tidak.",
+        "pairs": [
+          {
+            "en": "concerned",
+            "id": "khawatir, prihatin (tetap tenang, formal)"
+          },
+          {
+            "en": "alarmed",
+            "id": "cemas dan kaget (ada bahaya)"
+          },
+          {
+            "en": "panicked",
+            "id": "panik (tidak bisa berpikir jernih)"
+          },
+          {
+            "en": "annoyed",
+            "id": "kesal"
+          },
+          {
+            "en": "furious",
+            "id": "marah besar"
+          },
+          {
+            "en": "delighted",
+            "id": "sangat senang"
+          },
+          {
+            "en": "thrilled",
+            "id": "senang sekali, bersemangat"
+          },
+          {
+            "en": "dramatically",
+            "id": "secara drastis"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Satu keluarga, fungsi berbeda",
+        "text": "Beberapa kata yang mirip berbeda dalam fungsinya, bukan hanya kekuatannya. Kamu akan mendengarnya di berita dan rapat formal.",
+        "body": "**criticise** mengatakan apa yang salah; **condemn** mengecam karena salah secara moral. **claim** bisa diragukan; **assert** itu tegas; **allege** menuduh tanpa bukti dulu (*the alleged …* di berita). **reluctant to** = mungkin tetap melakukannya; **refuse to** = berkata tidak (kata kerja: bukan *was refused to*).",
+        "examples": [
+          {
+            "en": "The auditors criticised the way the budget was managed.",
+            "id": "Para auditor mengkritik cara anggaran itu dikelola."
+          },
+          {
+            "en": "Human rights groups condemned the attack on journalists.",
+            "id": "Kelompok-kelompok HAM mengecam serangan terhadap para wartawan."
+          },
+          {
+            "en": "The company claims its app is the fastest in Indonesia.",
+            "id": "Perusahaan itu mengklaim aplikasinya yang tercepat di Indonesia."
+          },
+          {
+            "en": "Police allege that two staff members sold customer data.",
+            "id": "Polisi menuduh dua karyawan menjual data pelanggan."
+          },
+          {
+            "en": "Budi was reluctant to move to Surabaya, but he agreed in the end.",
+            "id": "Budi enggan pindah ke Surabaya, tapi akhirnya dia setuju."
+          },
+          {
+            "en": "The landlord refused to return the deposit.",
+            "id": "Pemilik kos menolak mengembalikan uang jaminan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dr. Wulan sedang memaparkan laporan tentang usaha kecil di Yogyakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fine-nuance",
+          "prompt": "Pesanan online sebuah toko batik naik dari 2.000 per bulan menjadi 9.000 per bulan dalam satu tahun. Kalimat mana yang menggambarkan perubahannya dengan presisi?",
+          "options": [
+            "Online orders rose slightly.",
+            "Online orders rose dramatically.",
+            "Online orders rose somewhat."
+          ],
+          "answer": 1,
+          "explanation": "Dari 2.000 ke 9.000 itu lebih dari empat kali lipat: kenaikan yang **dramatic** (drastis). *slightly* untuk perubahan kecil, misalnya 2%, dan *somewhat* (agak) juga membuatnya terdengar kecil, sehingga menyesatkan pendengar."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Saat kata tidak kunjung muncul",
+        "text": "Semua orang pernah lupa kata, bahkan penutur asli. Keahliannya adalah tidak berhenti.",
+        "body": "Jelaskan di sekitar celah itu (*parafrase*):\n**Jelaskan fungsinya:** *It's the thing you use to … / the person who …*\n**Beri contoh:** *It's like when …*\n**Pakai kata yang lebih umum** (*kata payung*): *It's a kind of tool / a type of permit*\n**Pakai kebalikannya:** *the opposite of polite* (= rude)\nKesalahan umumnya adalah **diam atau pindah ke bahasa Indonesia** (*apa ya namanya … itu lho …*). Diam menyerahkan giliranmu ke orang lain; bahasa Indonesia membuat pendengar internasional kehilangan jejak. Penjelasan yang jelas lebih baik daripada kata sempurna yang tidak kunjung muncul.",
+        "pairs": [
+          {
+            "en": "It's the thing you use to …",
+            "id": "benda yang dipakai untuk …"
+          },
+          {
+            "en": "It's the person who …",
+            "id": "orang yang …"
+          },
+          {
+            "en": "It's like when …",
+            "id": "seperti saat …"
+          },
+          {
+            "en": "It's a kind of …",
+            "id": "semacam …"
+          },
+          {
+            "en": "the opposite of …",
+            "id": "kebalikan dari …"
+          },
+          {
+            "en": "What's it called?",
+            "id": "apa ya namanya?"
+          },
+          {
+            "en": "It's on the tip of my tongue.",
+            "id": "sudah di ujung lidah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kamu sedang bercerita kepada rekan kerja dari Australia tentang pemilik kosmu di Jakarta. Dia tidak pernah memperbaiki apa pun dan menghitung setiap rupiah, tapi kata *stingy* tidak kunjung muncul.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "reformulate-smoothly",
+          "prompt": "Susun kata-katanya untuk menggambarkan pemilik kos itu dengan strategi kebalikan.",
+          "tokens": [
+            "generous",
+            "the",
+            "He",
+            "of",
+            "is",
+            "opposite"
+          ],
+          "solution": "He is the opposite of generous.",
+          "explanation": "**the opposite of + kata yang kamu tahu** adalah parafrase yang cepat: *the opposite of generous* = stingy (pelit). Rekanmu langsung paham, dan kamu tidak berhenti bicara."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Frasa perbaikan",
+        "text": "Frasa-frasa ini memberi tahu pendengar apa yang sedang kamu lakukan saat memperbaiki atau memperjelas ucapanmu.",
+        "body": "*Or rather* mengganti dengan kata yang lebih akurat; *In other words* mengatakannya lebih sederhana; *To be more precise* menambahkan detail yang persis; *Let me put it another way* memulai penjelasan baru; *I'm looking for the word …* mengumumkan bahwa kamu akan menjelaskan. Pengisi seperti *Well, let me think …* mempertahankan giliran bicaramu: tanda bahwa kamu belum selesai.",
+        "examples": [
+          {
+            "en": "What I mean is that the deadline is too tight, not that the idea is bad.",
+            "id": "Maksud saya, tenggatnya terlalu mepet, bukan idenya yang jelek."
+          },
+          {
+            "en": "It was a mistake, or rather a misunderstanding between the two teams.",
+            "id": "Itu sebuah kesalahan, atau lebih tepatnya salah paham antara dua tim."
+          },
+          {
+            "en": "The venue costs more than our whole budget. In other words, we can't afford it.",
+            "id": "Biaya tempatnya lebih besar daripada seluruh anggaran kita. Dengan kata lain, kita tidak sanggup membayarnya."
+          },
+          {
+            "en": "Sales were good. To be more precise, they were 12% above target.",
+            "id": "Penjualannya bagus. Tepatnya, 12% di atas target."
+          },
+          {
+            "en": "Well, let me think … how shall I put it … the plan is too ambitious for one year.",
+            "id": "Hmm, coba saya pikir … bagaimana ya mengatakannya … rencana itu terlalu ambisius untuk satu tahun."
+          },
+          {
+            "en": "I'm looking for the word … it's the person who checks a company's accounts.",
+            "id": "Saya lagi mencari katanya … orang yang memeriksa keuangan perusahaan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: buntu mencari kata",
+        "text": "Budi sedang dalam panggilan video dengan mitra dari Melbourne, merencanakan kantor baru di Bandung. Tekan putar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reformulate-smoothly",
+          "listen": "For the new office, we'll also need a, um, a... oh, what's it called? We had one in Jakarta for old contracts.",
+          "prompt": "Budi buntu mencari sebuah kata. Pilih kalimat berikutnya yang paling baik untuknya.",
+          "options": [
+            "Sorry, my English is bad. Never mind, it's not important.",
+            "Aduh, apa ya namanya… mesin penghancur kertas itu lho.",
+            "I'm looking for the word… it's a machine that cuts old papers into thin strips, so nobody can read them."
+          ],
+          "answer": 2,
+          "explanation": "Budi tetap bicara dalam bahasa Inggris: dia bilang sedang mencari katanya, lalu **menjelaskan fungsinya**, sehingga mitranya bisa berkata *Oh, a shredder!* Pilihan pertama menyerah dan membuang kebutuhan yang nyata. Pilihan kedua pindah ke bahasa Indonesia, yang tidak dimengerti mitra dari Melbourne."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Naikkan, turunkan",
+        "text": "Ulasan dari B2: highly likely, deeply concerned, bitterly disappointed. Sekarang kendali yang lebih halus.",
+        "body": "Kata yang bisa bertingkat (*tired, important, cold*) dipasangkan dengan **very / extremely**. Kata yang sudah bermakna maksimal (*exhausted, essential, vital, freezing, furious, perfect*) dipasangkan dengan **absolutely / utterly / completely**, bukan *very*. **utterly** biasanya untuk hal negatif.\nLunakkan dengan **slightly, somewhat, a little**. Untuk sikapmu: **arguably**, **to some extent**, **by no means** (= sama sekali tidak), **far from** + kata sifat.\nJebakan bahasa Indonesia: *jauh dari kata sempurna* → *far from perfect*, bukan *far from the word perfect*.",
+        "pairs": [
+          {
+            "en": "utterly exhausted",
+            "id": "benar-benar kelelahan"
+          },
+          {
+            "en": "completely impossible",
+            "id": "sama sekali mustahil"
+          },
+          {
+            "en": "slightly",
+            "id": "sedikit"
+          },
+          {
+            "en": "somewhat",
+            "id": "agak (lebih formal)"
+          },
+          {
+            "en": "arguably",
+            "id": "bisa dibilang"
+          },
+          {
+            "en": "to some extent",
+            "id": "sampai batas tertentu"
+          },
+          {
+            "en": "by no means",
+            "id": "sama sekali tidak"
+          },
+          {
+            "en": "far from perfect",
+            "id": "jauh dari sempurna"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pasangan yang tepat",
+        "text": "Pak Hasan sedang memberi arahan kepada tim konstruksi di Surabaya sebelum pekerjaan di lokasi gedung baru dimulai.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emphasise-soften",
+          "prompt": "Pilih penguat yang wajar: 'Wearing a helmet on site is ___ essential.'",
+          "options": [
+            "very",
+            "slightly",
+            "absolutely"
+          ],
+          "answer": 2,
+          "explanation": "*essential* sudah berarti 'mutlak perlu', puncak skala, jadi pasangannya **absolutely** (atau *totally*), bukan *very*. *slightly essential* tidak masuk akal: sesuatu itu penting mutlak atau tidak sama sekali."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Katakan persis seberapa yakin",
+        "text": "Setelah negosiasi panjang di Jakarta, tim Bu Ani masih belum sepakat soal harga dengan mitra dari Singapura. Seorang rekan bertanya apakah kesepakatannya sudah beres.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emphasise-soften",
+          "prompt": "Bu Ani ingin mengatakan dengan jelas bahwa kesepakatan itu sama sekali BELUM pasti. Kalimat mana yang mengatakannya dengan presisi?",
+          "options": [
+            "The deal is by no means certain.",
+            "The deal is somewhat certain.",
+            "The deal is utterly certain."
+          ],
+          "answer": 0,
+          "explanation": "**by no means** = sama sekali tidak: *tidak* yang kuat dan jelas. *somewhat certain* tidak wajar dan memberi kesan sudah sebagian disepakati. *utterly certain* justru mengatakan kebalikannya: benar-benar pasti."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman, untuk rapat atau presentasimu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Presisi dan reformulasi",
+          "intro": "Pilih kekuatan yang pas, jangan berhenti saat kata hilang, dan cocokkan penguat dengan katanya.",
+          "headers": [
+            "Bidang",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Khawatir",
+              "concerned → worried → alarmed → panicked",
+              "khawatir (tenang) → khawatir → cemas dan kaget → panik"
+            ],
+            [
+              "Marah",
+              "annoyed → irritated → furious",
+              "kesal → jengkel → marah besar"
+            ],
+            [
+              "Senang",
+              "pleased → delighted → thrilled",
+              "senang → sangat senang → senang sekali"
+            ],
+            [
+              "Kemungkinan",
+              "likely → highly likely → bound to",
+              "kemungkinan besar → sangat mungkin → pasti"
+            ],
+            [
+              "Perubahan",
+              "slightly → somewhat → considerably → dramatically",
+              "sedikit → agak → cukup besar → drastis"
+            ],
+            [
+              "Satu keluarga",
+              "criticise / condemn",
+              "mengkritik / mengecam"
+            ],
+            [
+              "Satu keluarga",
+              "claim / assert / allege",
+              "mengklaim / menegaskan / menuduh tanpa bukti"
+            ],
+            [
+              "Satu keluarga",
+              "reluctant to / unwilling to / refuse to",
+              "enggan / tidak mau / menolak"
+            ],
+            [
+              "Parafrase",
+              "It's the thing you use to … / a kind of … / like when … / the opposite of …",
+              "benda untuk … / semacam … / seperti saat … / kebalikan dari …"
+            ],
+            [
+              "Perbaikan",
+              "What I mean is … / Let me put it another way. / Or rather … / In other words … / To be more precise …",
+              "maksud saya … / coba saya jelaskan dengan cara lain / atau lebih tepatnya … / dengan kata lain … / tepatnya …"
+            ],
+            [
+              "Pegang giliran",
+              "Well, let me think … / How shall I put it … / What's it called?",
+              "hmm, coba saya pikir … / bagaimana ya … / apa ya namanya?"
+            ],
+            [
+              "Menguatkan",
+              "absolutely essential, utterly exhausted, completely impossible (not very)",
+              "mutlak penting, benar-benar kelelahan, sama sekali mustahil"
+            ],
+            [
+              "Melunakkan",
+              "slightly, somewhat, a little; arguably; to some extent",
+              "sedikit, agak; bisa dibilang; sampai batas tertentu"
+            ],
+            [
+              "'Tidak' yang kuat",
+              "by no means …, far from …",
+              "sama sekali tidak …, jauh dari …"
+            ]
+          ],
+          "tips": [
+            "Cocokkan tingkatnya dengan situasi: kenaikan 2% tidak dramatis, dan pernyataan yang tenang memakai concerned, bukan alarmed.",
+            "Buntu? Jangan diam atau pindah ke bahasa Indonesia: jelaskan fungsinya, beri contoh, pakai kata yang lebih umum atau kebalikannya.",
+            "Kata maksimal (essential, exhausted, freezing) dipasangkan dengan absolutely / utterly, tidak pernah very atau slightly."
+          ],
+          "examples": [
+            {
+              "en": "Residents were alarmed when the river rose two metres in one night.",
+              "id": "Warga cemas dan kaget ketika sungai naik dua meter dalam semalam."
+            },
+            {
+              "en": "It's a kind of permit you need before you build a house.",
+              "id": "Itu semacam izin yang kamu perlukan sebelum membangun rumah."
+            },
+            {
+              "en": "After the night shift, the nurses were utterly exhausted.",
+              "id": "Setelah sif malam, para perawat benar-benar kelelahan."
+            },
+            {
+              "en": "The new system is far from perfect, but it's faster than the old one.",
+              "id": "Sistem baru itu jauh dari sempurna, tapi lebih cepat daripada yang lama."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Bacaan tambahan",
+        "text": "Dua halaman tata bahasa singkat dari British Council tentang penguat dan tentang kata sifat yang bisa dan tidak bisa bertingkat: di bawah levelmu, tapi cara cepat untuk mengecek aturan very / absolutely."
+      }
+    ]
+  }
+}

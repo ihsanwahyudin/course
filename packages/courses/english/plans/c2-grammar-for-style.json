@@ -1,0 +1,582 @@
+{
+  "en": {
+    "greeting": "Hi! You can already build clefts, inversion and fronting. Today you learn to choose between them, and to give your writing rhythm. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "From forming to choosing",
+        "text": "You can already build these structures. Today you choose between them.",
+        "body": "**Recap (C1):** you can already **form**:\n- **cleft** (split in two for focus): *What I need is more time. It was Sari who called.*\n- **inversion** (auxiliary before the subject): *Never have I seen… Only when… did I…*\n- **fronting** (a part moved to the front): *Much as I like it, … Such was the demand that…*\nThe C2 step is **choosing**: which structure puts the focus where *this* text needs it (a speech, an op-ed, a report, a LinkedIn post), and when plain order is better. Most of this is **style**, so the context decides.",
+        "pairs": [
+          {
+            "en": "What I need is more time.",
+            "id": "Yang saya butuhkan adalah lebih banyak waktu."
+          },
+          {
+            "en": "Never have I seen such a mess.",
+            "id": "Belum pernah saya melihat kekacauan seperti ini."
+          },
+          {
+            "en": "Much as I like it, I can't afford it.",
+            "id": "Meskipun saya suka sekali, saya tidak mampu membelinya."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "The end is the spotlight",
+        "text": "Rule one: where the news goes.",
+        "body": "**End-focus:** English puts the **new or most important** information **at the end** of a sentence; in speech the main stress falls there too. Same facts, different news:\n- *The new office opens in March in **Surabaya**.* (news: where)\n- *The new office opens in Surabaya in **March**.* (news: when)\n**End-weight:** long, heavy parts go **last**. *It surprised everyone that the ministry approved the budget without any discussion* reads more easily than a long subject before the verb.",
+        "pairs": [
+          {
+            "en": "The new office opens in March in Surabaya.",
+            "id": "Kantor baru dibuka bulan Maret di Surabaya."
+          },
+          {
+            "en": "The new office opens in Surabaya in March.",
+            "id": "Kantor baru di Surabaya dibuka bulan Maret."
+          },
+          {
+            "en": "It surprised everyone that the ministry approved the budget without any discussion.",
+            "id": "Semua orang terkejut bahwa kementerian menyetujui anggaran itu tanpa diskusi sama sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Put the answer where the board will notice it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-for-focus",
+          "prompt": "Report conclusion. The board asked: 'What caused the three-month delay?' Following end-focus, which sentence puts the answer where readers will notice it most?",
+          "options": [
+            "It was the delay that the late delivery of the servers caused.",
+            "The late delivery of the servers caused the delay.",
+            "The delay was caused by the late delivery of the servers."
+          ],
+          "answer": 2,
+          "explanation": "Everyone already knows about *the delay* (given); the **cause** is the new answer, so it goes **last**. The passive does exactly that. The second option is correct grammar but ends on the known *the delay*. The first puts the spotlight on *the delay*, the part nobody asked about."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Given before new",
+        "text": "Now the same idea across sentences.",
+        "body": "Start each sentence with what the reader **already knows** (given) and end with what's **new**. The new end of one sentence becomes the given start of the next, so the text flows like a chain:\n*Last year we launched a savings app for fishermen in Makassar. **The app** was built by **three students from Hasanuddin University**.*\nHere the **passive** isn't weaker or more formal: it keeps the given *the app* first. Other links: **this / these + a word you've used** (*These figures…*) or a fronted phrase (*Of these options, …*).",
+        "pairs": [
+          {
+            "en": "Last year we launched a savings app for fishermen in Makassar.",
+            "id": "Tahun lalu kami meluncurkan aplikasi tabungan untuk nelayan di Makassar."
+          },
+          {
+            "en": "The app was built by three students from Hasanuddin University.",
+            "id": "Aplikasi itu dibuat oleh tiga mahasiswa Universitas Hasanuddin."
+          },
+          {
+            "en": "These students now run a company with twelve staff.",
+            "id": "Para mahasiswa itu sekarang menjalankan perusahaan dengan dua belas karyawan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Which sentence keeps the chain going?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-for-focus",
+          "prompt": "Op-ed (practice text). Previous sentence: 'Last year, Jakarta opened forty kilometres of new bus lanes.' Which sentence follows best, given before new?",
+          "options": [
+            "Twenty minutes is how much the average commute has been cut by these lanes.",
+            "These lanes have already cut the average commute by twenty minutes.",
+            "The average commute has already been cut by twenty minutes by these lanes."
+          ],
+          "answer": 1,
+          "explanation": "*These lanes* points straight back to the previous sentence (given), and the new fact, *twenty minutes*, comes last. The first option puts the new number first and the known lanes last. The third starts with something new and ends on the known *these lanes*, with two *by* phrases in a row."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Choosing the tool",
+        "text": "Match the structure to the job, and get the form right.",
+        "body": "- **Correct an assumption** → it-cleft: *It isn't the price that worries our clients; it's the delivery time.*\n- **Build to a climax** in a speech → what-cleft or inversion, then a short sentence: *What got us here wasn't luck. It was hard work.*\n- **Contrast two things** → fronting: *The budget we can fix; trust we can't.*\n- **Link to the previous sentence** → passive or *this/these*.\n**Plain order is better most of the time.** One strong structure per paragraph lands; three in a row sound **theatrical**.\n**Accuracy is part of control:** *Never **have I** seen* (not *Never I have*); *Only when I read it **did I understand*** (inversion in the second part); *What I need **is*** (no *it*).",
+        "pairs": [
+          {
+            "en": "It isn't the price that worries our clients; it's the delivery time.",
+            "id": "Yang membuat klien kami khawatir bukan harganya, tapi waktu pengirimannya."
+          },
+          {
+            "en": "What got us here wasn't luck. It was hard work.",
+            "id": "Yang membawa kita sampai sini bukan keberuntungan. Melainkan kerja keras."
+          },
+          {
+            "en": "The budget we can fix; trust we can't.",
+            "id": "Anggaran bisa kita perbaiki; kepercayaan tidak."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani is writing her anniversary speech.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "inversion-cleft-fronting",
+          "prompt": "Company anniversary speech. Many staff believe the company's success came from its new products. The CEO, Bu Ani, wants to correct this and give the credit to the staff. Which line does it best?",
+          "options": [
+            "It wasn't our products that carried us through 25 years; it was you.",
+            "It wasn't our products they carried us through 25 years; it was you.",
+            "Not only our products carried us through 25 years, but also you."
+          ],
+          "answer": 0,
+          "explanation": "Correcting an assumption is the job of an **it-cleft**: *It wasn't X that…; it was Y.* The second option replaces *that* with *they* (from *-lah yang*): *that/who* holds the cleft together. The third has no inversion after *Not only* (*Not only did…*), and it adds the staff instead of correcting the belief."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Fix the inversion",
+        "text": "One slip spoils a strong sentence.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "inversion-cleft-fronting",
+          "prompt": "Report conclusion. Fix the inversion error and build the correct sentence: 'Only after the survey we saw the pattern.'",
+          "tokens": [
+            "we",
+            "pattern",
+            "Only",
+            "see",
+            "the",
+            "survey",
+            "did",
+            "after",
+            "the"
+          ],
+          "solution": "Only after the survey did we see the pattern.",
+          "explanation": "With *Only after* + a time phrase at the start, the auxiliary comes before the subject. *We saw* has no auxiliary, so add *did* and use the base verb: *did we see*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rhythm: vary length and structure",
+        "text": "Correct sentences can still sound like a machine.",
+        "body": "Mix **simple** (one clause), **compound** (two joined by *and/but/so*) and **complex** (with *when/because/although*) sentences, start them differently, and put a **short sentence after long ones** for punch.\n**Before** (report): *We started the project in January. We interviewed forty farmers in Central Java. We found three problems. We changed the design in May. Usage tripled.*\n**After:** *We started in January by interviewing forty farmers in Central Java, and three problems kept coming up. In May, we redesigned the app. Usage tripled.*",
+        "pairs": [
+          {
+            "en": "Usage tripled.",
+            "id": "Penggunaannya naik tiga kali lipat."
+          },
+          {
+            "en": "The budget was small, but the team was strong.",
+            "id": "Anggarannya kecil, tapi timnya kuat."
+          },
+          {
+            "en": "When the budget was cut, the team found cheaper suppliers.",
+            "id": "Ketika anggarannya dipotong, tim itu menemukan pemasok yang lebih murah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas wants his LinkedIn post to sound less like a list.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "vary-sentences",
+          "prompt": "LinkedIn post (practice text): 'I joined Sari's startup in 2022. I was the only designer. I worked on the app every night. I learnt a lot from our users. I am proud of the result.' Which revision fixes the monotony?",
+          "options": [
+            "I joined Sari's startup in 2022, and I was the only designer, and I worked on the app every night, and I learnt a lot from our users, and I am proud of the result.",
+            "When I joined Sari's startup in 2022, I was the only designer, so I worked on the app every night and learnt a lot from our users. I'm proud of the result.",
+            "In 2022 I joined Sari's startup. As the only designer, I worked on the app every night. From our users I learnt a lot. Of the result I am proud."
+          ],
+          "answer": 1,
+          "explanation": "It mixes a long complex sentence (*When…, …, so…*) with a short one at the end, so the last line lands. The first option just chains everything with *and*: still monotonous. The third starts every sentence with a fronted phrase, and *Of the result I am proud* sounds theatrical."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Grammar for style",
+          "intro": "Choose the structure the text needs. Normal word order is always correct; the others move the focus.",
+          "headers": [
+            "Goal",
+            "Tool",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Put the news last",
+              "end-focus",
+              "The new office opens in Surabaya in March."
+            ],
+            [
+              "Put long, heavy parts last",
+              "end-weight: It … that …",
+              "It surprised everyone that the ministry approved the budget without any discussion."
+            ],
+            [
+              "Link to the previous sentence",
+              "given first: this/these, the passive",
+              "The app was built by three students from Hasanuddin University."
+            ],
+            [
+              "Correct an assumption",
+              "it-cleft",
+              "It isn't the price that worries our clients; it's the delivery time."
+            ],
+            [
+              "Build to a climax in a speech",
+              "what-cleft or inversion + a short sentence",
+              "What got us here wasn't luck. It was hard work."
+            ],
+            [
+              "Contrast two things",
+              "fronting",
+              "The budget we can fix; trust we can't."
+            ],
+            [
+              "Sound weighty in an op-ed (once)",
+              "inversion",
+              "Not only did the policy fail to cut traffic, it also raised fares."
+            ],
+            [
+              "Add punch after long sentences",
+              "a short simple sentence",
+              "Usage tripled."
+            ],
+            [
+              "Avoid monotony",
+              "mix simple, compound, complex; vary openings",
+              "When the budget was cut, the team found cheaper suppliers."
+            ],
+            [
+              "Sound natural (most of the time)",
+              "plain word order",
+              "I'm honoured, and I want to thank you all."
+            ]
+          ],
+          "tips": [
+            "Ask what the reader thinks before your sentence: a wrong belief → it-cleft; waiting for the big point → what-cleft or inversion; needs a link → given first.",
+            "One strong structure per paragraph; three in a row sound theatrical.",
+            "Accuracy: Never have I (not Never I have); Only when… did I understand (not I understood); What I need is (no it)."
+          ],
+          "examples": [
+            {
+              "en": "It isn't the price that worries our clients; it's the delivery time.",
+              "id": "Yang membuat klien kami khawatir bukan harganya, tapi waktu pengirimannya."
+            },
+            {
+              "en": "Never have I seen such a mess.",
+              "id": "Belum pernah saya melihat kekacauan seperti ini."
+            },
+            {
+              "en": "Only when I read the report did I understand the problem.",
+              "id": "Baru setelah membaca laporannya saya memahami masalahnya."
+            },
+            {
+              "en": "What I need is more time.",
+              "id": "Yang saya butuhkan adalah lebih banyak waktu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A C1 recap page on clefts and inversion, and a writing-centre page on sentence variety."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah bisa membuat cleft, inversion dan fronting. Hari ini kamu belajar memilih di antaranya, dan memberi ritme pada tulisanmu. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Dari membentuk ke memilih",
+        "text": "Kamu sudah bisa membuat struktur-struktur ini. Hari ini kamu memilih di antaranya.",
+        "body": "**Rekap (C1):** kamu sudah bisa **membentuk**:\n- **cleft** (kalimat dibelah dua untuk fokus): *What I need is more time. It was Sari who called.*\n- **inversion** (auxiliary/kata kerja bantu sebelum subjek): *Never have I seen… Only when… did I…*\n- **fronting** (satu bagian dipindah ke depan): *Much as I like it, … Such was the demand that…*\nLangkah C2 adalah **memilih**: struktur mana yang menaruh fokus di tempat yang dibutuhkan teks *ini* (pidato, op-ed, laporan, postingan LinkedIn), dan kapan urutan biasa lebih baik. Sebagian besar ini soal **gaya**, jadi konteksnya yang menentukan.",
+        "pairs": [
+          {
+            "en": "What I need is more time.",
+            "id": "Yang saya butuhkan adalah lebih banyak waktu."
+          },
+          {
+            "en": "Never have I seen such a mess.",
+            "id": "Belum pernah saya melihat kekacauan seperti ini."
+          },
+          {
+            "en": "Much as I like it, I can't afford it.",
+            "id": "Meskipun saya suka sekali, saya tidak mampu membelinya."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Akhir kalimat adalah lampu sorotnya",
+        "text": "Aturan pertama: di mana beritanya ditaruh.",
+        "body": "**End-focus** (fokus di akhir): bahasa Inggris menaruh informasi yang **baru atau paling penting** di **akhir** kalimat; saat bicara, tekanan utamanya juga di situ. Fakta sama, berita berbeda:\n- *The new office opens in March in **Surabaya**.* (beritanya: di mana)\n- *The new office opens in Surabaya in **March**.* (beritanya: kapan)\n**End-weight** (beban di akhir): bagian yang panjang dan berat ditaruh **di belakang**. *It surprised everyone that the ministry approved the budget without any discussion* lebih mudah dibaca daripada subjek panjang sebelum kata kerjanya.",
+        "pairs": [
+          {
+            "en": "The new office opens in March in Surabaya.",
+            "id": "Kantor baru dibuka bulan Maret di Surabaya."
+          },
+          {
+            "en": "The new office opens in Surabaya in March.",
+            "id": "Kantor baru di Surabaya dibuka bulan Maret."
+          },
+          {
+            "en": "It surprised everyone that the ministry approved the budget without any discussion.",
+            "id": "Semua orang terkejut bahwa kementerian menyetujui anggaran itu tanpa diskusi sama sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Taruh jawabannya di tempat yang akan diperhatikan dewan direksi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-for-focus",
+          "prompt": "Kesimpulan laporan. Dewan direksi bertanya: 'What caused the three-month delay?' Mengikuti end-focus, kalimat mana yang menaruh jawabannya di tempat yang paling diperhatikan pembaca?",
+          "options": [
+            "It was the delay that the late delivery of the servers caused.",
+            "The late delivery of the servers caused the delay.",
+            "The delay was caused by the late delivery of the servers."
+          ],
+          "answer": 2,
+          "explanation": "Semua orang sudah tahu tentang *the delay* (sudah diketahui); **penyebabnya** adalah jawaban yang baru, jadi ditaruh **di akhir**. Passive melakukan persis itu. Pilihan kedua benar secara grammar tapi berakhir di *the delay* yang sudah diketahui. Pilihan pertama menyorot *the delay*, bagian yang tidak ditanyakan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Yang lama dulu, baru yang baru",
+        "text": "Sekarang ide yang sama antar kalimat.",
+        "body": "Mulai setiap kalimat dengan yang **sudah diketahui** pembaca (given) dan akhiri dengan yang **baru**. Bagian baru di akhir satu kalimat menjadi awal yang 'lama' di kalimat berikutnya, jadi teksnya mengalir seperti rantai:\n*Last year we launched a savings app for fishermen in Makassar. **The app** was built by **three students from Hasanuddin University**.*\nDi sini **passive** bukan lebih lemah atau lebih formal: passive menjaga *the app* yang sudah diketahui tetap di depan. Penyambung lain: **this / these + kata yang sudah dipakai** (*These figures…*) atau frasa di depan (*Of these options, …*).",
+        "pairs": [
+          {
+            "en": "Last year we launched a savings app for fishermen in Makassar.",
+            "id": "Tahun lalu kami meluncurkan aplikasi tabungan untuk nelayan di Makassar."
+          },
+          {
+            "en": "The app was built by three students from Hasanuddin University.",
+            "id": "Aplikasi itu dibuat oleh tiga mahasiswa Universitas Hasanuddin."
+          },
+          {
+            "en": "These students now run a company with twelve staff.",
+            "id": "Para mahasiswa itu sekarang menjalankan perusahaan dengan dua belas karyawan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kalimat mana yang menjaga rantainya tetap tersambung?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-for-focus",
+          "prompt": "Op-ed (teks latihan). Kalimat sebelumnya: 'Last year, Jakarta opened forty kilometres of new bus lanes.' Kalimat mana yang paling cocok sebagai lanjutan, yang lama dulu baru yang baru?",
+          "options": [
+            "Twenty minutes is how much the average commute has been cut by these lanes.",
+            "These lanes have already cut the average commute by twenty minutes.",
+            "The average commute has already been cut by twenty minutes by these lanes."
+          ],
+          "answer": 1,
+          "explanation": "*These lanes* langsung menunjuk ke kalimat sebelumnya (sudah diketahui), dan fakta barunya, *twenty minutes*, datang di akhir. Pilihan pertama menaruh angka yang baru di depan dan jalur bus yang sudah dikenal di belakang. Pilihan ketiga dimulai dengan sesuatu yang baru dan berakhir di *these lanes* yang sudah diketahui, dengan dua frasa *by* berturut-turut."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Memilih alatnya",
+        "text": "Cocokkan strukturnya dengan tugasnya, dan pastikan bentuknya benar.",
+        "body": "- **Meluruskan anggapan** → it-cleft: *It isn't the price that worries our clients; it's the delivery time.*\n- **Membangun puncak** dalam pidato → what-cleft atau inversion, lalu kalimat pendek: *What got us here wasn't luck. It was hard work.*\n- **Mengontraskan dua hal** → fronting: *The budget we can fix; trust we can't.*\n- **Menyambung ke kalimat sebelumnya** → passive atau *this/these*.\n**Urutan biasa lebih baik di sebagian besar waktu.** Satu struktur kuat per paragraf mengena; tiga berturut-turut terdengar **teatrikal**.\n**Akurasi bagian dari penguasaan:** *Never **have I** seen* (bukan *Never I have*); *Only when I read it **did I understand*** (inversion di bagian kedua); *What I need **is*** (tanpa *it*).",
+        "pairs": [
+          {
+            "en": "It isn't the price that worries our clients; it's the delivery time.",
+            "id": "Yang membuat klien kami khawatir bukan harganya, tapi waktu pengirimannya."
+          },
+          {
+            "en": "What got us here wasn't luck. It was hard work.",
+            "id": "Yang membawa kita sampai sini bukan keberuntungan. Melainkan kerja keras."
+          },
+          {
+            "en": "The budget we can fix; trust we can't.",
+            "id": "Anggaran bisa kita perbaiki; kepercayaan tidak."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani sedang menulis pidato ulang tahun perusahaannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "inversion-cleft-fronting",
+          "prompt": "Pidato ulang tahun perusahaan. Banyak karyawan percaya kesuksesan perusahaan datang dari produk-produk barunya. CEO-nya, Bu Ani, ingin meluruskan ini dan memberi penghargaan kepada karyawan. Kalimat mana yang paling tepat?",
+          "options": [
+            "It wasn't our products that carried us through 25 years; it was you.",
+            "It wasn't our products they carried us through 25 years; it was you.",
+            "Not only our products carried us through 25 years, but also you."
+          ],
+          "answer": 0,
+          "explanation": "Meluruskan anggapan adalah tugas **it-cleft**: *It wasn't X that…; it was Y.* Pilihan kedua mengganti *that* dengan *they* (dari *-lah yang*): *that/who* yang menyatukan cleft-nya. Pilihan ketiga tidak memakai inversion setelah *Not only* (*Not only did…*), dan malah menambahkan karyawan, bukan meluruskan anggapannya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Perbaiki inversion-nya",
+        "text": "Satu kesalahan merusak kalimat yang kuat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "inversion-cleft-fronting",
+          "prompt": "Kesimpulan laporan. Perbaiki kesalahan inversion-nya dan susun kalimat yang benar: 'Only after the survey we saw the pattern.'",
+          "tokens": [
+            "we",
+            "pattern",
+            "Only",
+            "see",
+            "the",
+            "survey",
+            "did",
+            "after",
+            "the"
+          ],
+          "solution": "Only after the survey did we see the pattern.",
+          "explanation": "Dengan *Only after* + frasa waktu di awal, auxiliary datang sebelum subjek. *We saw* tidak punya auxiliary, jadi tambahkan *did* dan pakai kata kerja dasar: *did we see*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ritme: variasikan panjang dan struktur",
+        "text": "Kalimat yang benar pun bisa terdengar seperti mesin.",
+        "body": "Campur kalimat **simple** (satu klausa), **compound** (dua klausa disambung *and/but/so*) dan **complex** (dengan *when/because/although*), mulai dengan cara berbeda, dan taruh **kalimat pendek setelah kalimat panjang** sebagai pukulan.\n**Sebelum** (laporan): *We started the project in January. We interviewed forty farmers in Central Java. We found three problems. We changed the design in May. Usage tripled.*\n**Sesudah:** *We started in January by interviewing forty farmers in Central Java, and three problems kept coming up. In May, we redesigned the app. Usage tripled.*",
+        "pairs": [
+          {
+            "en": "Usage tripled.",
+            "id": "Penggunaannya naik tiga kali lipat."
+          },
+          {
+            "en": "The budget was small, but the team was strong.",
+            "id": "Anggarannya kecil, tapi timnya kuat."
+          },
+          {
+            "en": "When the budget was cut, the team found cheaper suppliers.",
+            "id": "Ketika anggarannya dipotong, tim itu menemukan pemasok yang lebih murah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas ingin postingan LinkedIn-nya tidak terdengar seperti daftar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "vary-sentences",
+          "prompt": "Postingan LinkedIn (teks latihan): 'I joined Sari's startup in 2022. I was the only designer. I worked on the app every night. I learnt a lot from our users. I am proud of the result.' Revisi mana yang menghilangkan kesan monoton?",
+          "options": [
+            "I joined Sari's startup in 2022, and I was the only designer, and I worked on the app every night, and I learnt a lot from our users, and I am proud of the result.",
+            "When I joined Sari's startup in 2022, I was the only designer, so I worked on the app every night and learnt a lot from our users. I'm proud of the result.",
+            "In 2022 I joined Sari's startup. As the only designer, I worked on the app every night. From our users I learnt a lot. Of the result I am proud."
+          ],
+          "answer": 1,
+          "explanation": "Revisi ini mencampur satu kalimat complex yang panjang (*When…, …, so…*) dengan kalimat pendek di akhir, jadi kalimat terakhirnya mengena. Pilihan pertama hanya merangkai semuanya dengan *and*: tetap monoton. Pilihan ketiga memulai setiap kalimat dengan frasa yang dipindah ke depan, dan *Of the result I am proud* terdengar teatrikal."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajarannya dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Grammar untuk gaya bahasa",
+          "intro": "Pilih struktur yang dibutuhkan teksnya. Urutan kata biasa selalu benar; struktur lain memindahkan fokusnya.",
+          "headers": [
+            "Tujuan",
+            "Alat",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Taruh beritanya di akhir",
+              "end-focus",
+              "The new office opens in Surabaya in March."
+            ],
+            [
+              "Taruh bagian panjang di akhir",
+              "end-weight: It … that …",
+              "It surprised everyone that the ministry approved the budget without any discussion."
+            ],
+            [
+              "Menyambung ke kalimat sebelumnya",
+              "yang lama di depan: this/these, passive",
+              "The app was built by three students from Hasanuddin University."
+            ],
+            [
+              "Meluruskan anggapan",
+              "it-cleft",
+              "It isn't the price that worries our clients; it's the delivery time."
+            ],
+            [
+              "Membangun puncak pidato",
+              "what-cleft atau inversion + kalimat pendek",
+              "What got us here wasn't luck. It was hard work."
+            ],
+            [
+              "Mengontraskan dua hal",
+              "fronting",
+              "The budget we can fix; trust we can't."
+            ],
+            [
+              "Terdengar berbobot di op-ed (sekali)",
+              "inversion",
+              "Not only did the policy fail to cut traffic, it also raised fares."
+            ],
+            [
+              "Pukulan setelah kalimat panjang",
+              "kalimat simple yang pendek",
+              "Usage tripled."
+            ],
+            [
+              "Menghindari monoton",
+              "campur simple, compound, complex; variasikan pembuka",
+              "When the budget was cut, the team found cheaper suppliers."
+            ],
+            [
+              "Terdengar alami (hampir selalu)",
+              "urutan kata biasa",
+              "I'm honoured, and I want to thank you all."
+            ]
+          ],
+          "tips": [
+            "Tanyakan apa yang dipikirkan pembaca sebelum kalimatmu: anggapan keliru → it-cleft; menunggu poin besar → what-cleft atau inversion; perlu sambungan → yang lama di depan.",
+            "Satu struktur kuat per paragraf; tiga berturut-turut terdengar teatrikal.",
+            "Akurasi: Never have I (bukan Never I have); Only when… did I understand (bukan I understood); What I need is (tanpa it)."
+          ],
+          "examples": [
+            {
+              "en": "It isn't the price that worries our clients; it's the delivery time.",
+              "id": "Yang membuat klien kami khawatir bukan harganya, tapi waktu pengirimannya."
+            },
+            {
+              "en": "Never have I seen such a mess.",
+              "id": "Belum pernah saya melihat kekacauan seperti ini."
+            },
+            {
+              "en": "Only when I read the report did I understand the problem.",
+              "id": "Baru setelah membaca laporannya saya memahami masalahnya."
+            },
+            {
+              "en": "What I need is more time.",
+              "id": "Yang saya butuhkan adalah lebih banyak waktu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Halaman rekap C1 tentang cleft dan inversion, dan halaman pusat penulisan tentang variasi kalimat."
+      }
+    ]
+  }
+}

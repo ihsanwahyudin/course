@@ -1,0 +1,566 @@
+{
+  "en": {
+    "greeting": "Welcome to C2! You already know the structures; now it's about control. Today: balanced lists and pairs, noun phrases a reader can follow, and sentences with only one meaning. Step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Parallel structure: the same form",
+        "text": "Lists read best when every item has the same shape.",
+        "body": "**Parallel structure** = the items in a list or a pair have the **same grammatical form** (all verbs, all -ing forms, all nouns or all clauses).\n- *The project aims to reduce costs, **improving** quality and **to train** staff.* ✗ (three shapes)\n- *The project aims **to reduce** costs, **improve** quality and **train** staff.* ✓\nPut *to* once at the start, or before every item; don't mix.\n**Indonesian trap:** *mengurangi, meningkatkan, melatih* keep one shape by themselves. In English, choose the form for the first item and copy it.",
+        "pairs": [
+          {
+            "en": "The project aims to reduce costs, improve quality and train staff.",
+            "id": "Proyek ini bertujuan mengurangi biaya, meningkatkan kualitas, dan melatih staf."
+          },
+          {
+            "en": "The project focuses on reducing costs, improving quality and training staff.",
+            "id": "Proyek ini berfokus pada pengurangan biaya, peningkatan kualitas, dan pelatihan staf."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pairs that match",
+        "text": "Both halves of a pair need the same shape too.",
+        "body": "After **both … and**, **either … or**, **neither … nor**, **not only … but also**, the two halves match: *both demanding and well paid* ✓, not *both demanding and pays well* ✗. Comparisons with *than* too: *faster than driving*, not *than to drive*.",
+        "examples": [
+          {
+            "en": "The job is both demanding and well paid.",
+            "id": "Pekerjaan itu menuntut sekaligus bergaji bagus. (dua kata sifat)"
+          },
+          {
+            "en": "She not only wrote the code but also tested it.",
+            "id": "Dia tidak hanya menulis kodenya, tetapi juga mengujinya. (dua kata kerja)"
+          },
+          {
+            "en": "We can either meet in Bandung or talk online.",
+            "id": "Kita bisa bertemu di Bandung atau bicara secara online. (dua kata kerja)"
+          },
+          {
+            "en": "Neither the manager nor the staff knew about the audit.",
+            "id": "Baik manajer maupun stafnya tidak tahu soal audit itu. (dua kata benda)"
+          },
+          {
+            "en": "Taking the train is faster than driving.",
+            "id": "Naik kereta lebih cepat daripada menyetir. (-ing dan -ing)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan is writing the aims of a new programme. Check every item after 'aims to'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "multi-clause-parallelism",
+          "prompt": "Which sentence has correct parallel structure?",
+          "options": [
+            "The programme aims to support small farmers, cutting food waste and to create local jobs.",
+            "The programme aims to support small farmers, to cut food waste and creating local jobs.",
+            "The programme aims to support small farmers, cut food waste and create local jobs."
+          ],
+          "answer": 2,
+          "explanation": "One *to* at the start, then three bare verbs: *support, cut, create*. The other two mix to + verb with an -ing form, so the list loses its shape."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Unpack the noun stack",
+        "text": "One head noun, and only a few words in front of it.",
+        "body": "**Recap (C1):** a noun phrase has one **head** (kata inti); the verb agrees with it.\nA **noun stack** piles many nouns before the head: *the government new rural school teacher training funding policy* ✗\n**Unpack it:** find the head (usually the last noun: *policy*), put the owner and an adjective before it, and move the details after it with *on / for / in / of* or one relative clause.\n**Indonesian trap:** don't reverse the Indonesian order into a stack, and don't turn every *yang* into *which is*.",
+        "pairs": [
+          {
+            "en": "the government's new policy on funding teacher training in rural schools",
+            "id": "kebijakan baru pemerintah tentang pendanaan pelatihan guru di sekolah-sekolah pedesaan"
+          },
+          {
+            "en": "the hospital's plan to recruit more night-shift nurses",
+            "id": "rencana rumah sakit untuk merekrut lebih banyak perawat shift malam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Find the clearest version",
+        "text": "Bu Ani's report mentions 'the city council new street food vendor licence fee'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "clear-noun-phrases",
+          "prompt": "Which is the clearest way to write 'the city council new street food vendor licence fee' in a report?",
+          "options": [
+            "the city council's new licence fee for street food vendors",
+            "the new fee of the licence of the vendors of street food of the city council",
+            "the fee which is new which is for the licence which street food vendors need from the city council"
+          ],
+          "answer": 0,
+          "explanation": "Head = **fee**. The owner and the adjective go before it (*the city council's new licence fee*), the people after it (*for street food vendors*). The second is a chain of *of*, the third the *yang … yang …* translation: both bury the head."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Four kinds of ambiguity",
+        "text": "Can your sentence be read in two ways? These are the usual causes.",
+        "body": "**1. Dangling modifier:** *Walking into the office, the computer was already on* ✗ → *…, **I** saw that the computer was already on*.\n**2. Misplaced only/almost:** they limit the word right after them. *We **almost lost** every client* (we lost none) ≠ *We lost **almost every** client* (we lost most).\n**3. Unclear pronoun:** *When the manager met the consultant, **she** said …* Who? Repeat the noun.\n**4. Unclear attachment:** *I saw the man **with the binoculars**.* Whose binoculars? → *Using binoculars, I saw the man.*",
+        "pairs": [
+          {
+            "en": "Only Rina signed the contract.",
+            "id": "Hanya Rina yang menandatangani kontrak itu."
+          },
+          {
+            "en": "Rina signed only the contract.",
+            "id": "Rina hanya menandatangani kontrak itu, bukan dokumen lain."
+          },
+          {
+            "en": "When the manager met the consultant, the consultant said the budget was too small.",
+            "id": "Saat manajer bertemu konsultan, konsultan itulah yang bilang anggarannya terlalu kecil."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Whose laptop?",
+        "text": "Budi and Dimas are both men, so 'his' can point to either of them.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "avoid-ambiguity",
+          "prompt": "It was Dimas's laptop that crashed. Which sentence says this clearly?",
+          "options": [
+            "Budi phoned Dimas because his laptop had crashed.",
+            "Dimas's laptop had crashed, so Budi phoned him.",
+            "Budi phoned Dimas because of his crashed laptop."
+          ],
+          "answer": 1,
+          "explanation": "In the first and third, *his* can mean Budi's or Dimas's. The second names the owner (*Dimas's laptop*), and *him* can only be Dimas, because Budi is the one phoning."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Put almost in its place",
+        "text": "almost limits the word right after it.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "avoid-ambiguity",
+          "prompt": "Arrange the words: Dia (memang) mengirim laporan itu ke hampir semua mitra.",
+          "tokens": [
+            "every",
+            "sent",
+            "almost",
+            "She",
+            "partner",
+            "the",
+            "to",
+            "report"
+          ],
+          "solution": "She sent the report to almost every partner.",
+          "explanation": "*almost every partner* = nearly all of the partners, and she really did send it. *She almost sent the report to every partner* would mean she didn't send it at all."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Long sentences: build or split",
+        "text": "One sentence can hold four clauses, if it's built well.",
+        "body": "Participle clause + **main clause** + relative clause + reason, all in one sentence (see the tile).\n**Keep it clear:** main subject and verb early and close together; each extra clause next to what it describes; long, new information at the end; **parallel clauses** for parallel ideas (*why …, what … and how …*).\n**Split it** when there are two main messages or the reader waits too long for the verb.\n**Indonesian trap:** long *yang … dan … sehingga … di mana …* chains. *di mana* is only *where* for a place or situation.",
+        "pairs": [
+          {
+            "en": "Having reviewed the figures, the board approved the budget, which had been cut by 10%, because sales had risen.",
+            "id": "Setelah meninjau angka-angkanya, dewan menyetujui anggaran, yang sudah dipotong 10%, karena penjualan naik."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Balance the clauses",
+        "text": "After a two-month delay, the board wants a report. Look at the three things it should explain.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "multi-clause-parallelism",
+          "prompt": "Which sentence keeps the clauses parallel?",
+          "options": [
+            "The report should explain why the launch was delayed, our lessons and how to avoid delays in future.",
+            "The report should explain why the launch was delayed, what we learnt and how we will avoid delays in future.",
+            "The report should explain why the launch was delayed, what we learnt and avoiding delays in future."
+          ],
+          "answer": 1,
+          "explanation": "All three things are **wh-clauses** with their own subject and verb: *why … was delayed, what we learnt, how we will avoid*. The first mixes in a noun phrase (*our lessons*) and *how to*; the third ends with an -ing form."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "The whole lesson on one page. Check these before you send a report.",
+        "artifact": {
+          "title": "Cheat sheet · Complex sentence control",
+          "intro": "Parallel, readable, one meaning. A long sentence is fine if a reader can follow it the first time.",
+          "headers": [
+            "Problem",
+            "✗",
+            "✓"
+          ],
+          "rows": [
+            [
+              "Mixed forms in a list",
+              "to reduce costs, improving quality and to train staff",
+              "to reduce costs, improve quality and train staff"
+            ],
+            [
+              "Unmatched pair",
+              "both demanding and pays well",
+              "both demanding and well paid"
+            ],
+            [
+              "Comparison",
+              "faster than to drive",
+              "faster than driving"
+            ],
+            [
+              "Noun stack",
+              "the government new rural school teacher training funding policy",
+              "the government's new policy on funding teacher training in rural schools"
+            ],
+            [
+              "yang … yang … chain",
+              "the app which is new which is from the startup which is in Bandung",
+              "the new app from a Bandung startup"
+            ],
+            [
+              "Dangling modifier",
+              "Walking into the office, the computer was already on.",
+              "Walking into the office, I saw that the computer was already on."
+            ],
+            [
+              "Misplaced almost",
+              "We almost lost every client. (if you lost most)",
+              "We lost almost every client."
+            ],
+            [
+              "Misplaced only (in writing)",
+              "Rina only signed the contract. (if you mean nothing else)",
+              "Rina signed only the contract."
+            ],
+            [
+              "Unclear pronoun",
+              "When the manager met the consultant, she said …",
+              "…, the consultant said …"
+            ],
+            [
+              "Unclear attachment",
+              "I saw the man with the binoculars.",
+              "Using binoculars, I saw the man."
+            ],
+            [
+              "Too much in one sentence",
+              "The clinic, which a foundation whose director … funded, opened …",
+              "The clinic opened … It was funded by …"
+            ]
+          ],
+          "tips": [
+            "Lists and pairs: choose the form for the first item and copy it.",
+            "Noun phrases: head early, one or two words before it, short phrases after it.",
+            "Before sending: who does each action, and what does each only, almost, she or which point to?"
+          ],
+          "examples": [
+            {
+              "en": "The project aims to reduce costs, improve quality and train staff.",
+              "id": "Proyek ini bertujuan mengurangi biaya, meningkatkan kualitas, dan melatih staf."
+            },
+            {
+              "en": "the government's new policy on funding teacher training in rural schools",
+              "id": "kebijakan baru pemerintah tentang pendanaan pelatihan guru di sekolah-sekolah pedesaan"
+            },
+            {
+              "en": "Walking into the office, I saw that the computer was already on.",
+              "id": "Saat masuk ke kantor, saya melihat komputernya sudah menyala."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These university writing-lab pages explain parallel structure and dangling modifiers with extra examples."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Selamat datang di C2! Kamu sudah mengenal strukturnya; sekarang soal kendali. Hari ini: daftar dan pasangan yang seimbang, noun phrase yang bisa diikuti pembaca, dan kalimat yang hanya punya satu arti. Langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Struktur paralel: bentuk yang sama",
+        "text": "Daftar paling enak dibaca kalau semua bagiannya punya bentuk yang sama.",
+        "body": "**Struktur paralel** = semua bagian dalam daftar atau pasangan punya **bentuk tata bahasa yang sama** (semuanya kata kerja, semuanya -ing, semuanya kata benda, atau semuanya klausa).\n- *The project aims to reduce costs, **improving** quality and **to train** staff.* ✗ (tiga bentuk)\n- *The project aims **to reduce** costs, **improve** quality and **train** staff.* ✓\nTulis *to* sekali di awal, atau di depan setiap bagian; jangan dicampur.\n**Jebakan bahasa Indonesia:** *mengurangi, meningkatkan, melatih* otomatis sama bentuknya. Dalam bahasa Inggris, pilih bentuk untuk bagian pertama lalu tiru.",
+        "pairs": [
+          {
+            "en": "The project aims to reduce costs, improve quality and train staff.",
+            "id": "Proyek ini bertujuan mengurangi biaya, meningkatkan kualitas, dan melatih staf."
+          },
+          {
+            "en": "The project focuses on reducing costs, improving quality and training staff.",
+            "id": "Proyek ini berfokus pada pengurangan biaya, peningkatan kualitas, dan pelatihan staf."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pasangan yang sejajar",
+        "text": "Kedua bagian sebuah pasangan juga harus sama bentuknya.",
+        "body": "Setelah **both … and**, **either … or**, **neither … nor**, **not only … but also**, kedua bagiannya sejajar: *both demanding and well paid* ✓, bukan *both demanding and pays well* ✗. Perbandingan dengan *than* juga: *faster than driving*, bukan *than to drive*.",
+        "examples": [
+          {
+            "en": "The job is both demanding and well paid.",
+            "id": "Pekerjaan itu menuntut sekaligus bergaji bagus. (dua kata sifat)"
+          },
+          {
+            "en": "She not only wrote the code but also tested it.",
+            "id": "Dia tidak hanya menulis kodenya, tetapi juga mengujinya. (dua kata kerja)"
+          },
+          {
+            "en": "We can either meet in Bandung or talk online.",
+            "id": "Kita bisa bertemu di Bandung atau bicara secara online. (dua kata kerja)"
+          },
+          {
+            "en": "Neither the manager nor the staff knew about the audit.",
+            "id": "Baik manajer maupun stafnya tidak tahu soal audit itu. (dua kata benda)"
+          },
+          {
+            "en": "Taking the train is faster than driving.",
+            "id": "Naik kereta lebih cepat daripada menyetir. (-ing dan -ing)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan sedang menulis tujuan sebuah program baru. Periksa setiap bagian setelah 'aims to'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "multi-clause-parallelism",
+          "prompt": "Kalimat mana yang struktur paralelnya benar?",
+          "options": [
+            "The programme aims to support small farmers, cutting food waste and to create local jobs.",
+            "The programme aims to support small farmers, to cut food waste and creating local jobs.",
+            "The programme aims to support small farmers, cut food waste and create local jobs."
+          ],
+          "answer": 2,
+          "explanation": "Satu *to* di awal, lalu tiga kata kerja dasar: *support, cut, create*. Dua kalimat lainnya mencampur to + kata kerja dengan bentuk -ing, jadi daftarnya kehilangan pola."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Urai tumpukan kata benda",
+        "text": "Satu kata inti, dan hanya sedikit kata di depannya.",
+        "body": "**Ulasan (C1):** noun phrase punya satu **kata inti** (head); kata kerjanya mengikuti kata inti itu.\n**Noun stack** menumpuk banyak kata benda di depan kata inti: *the government new rural school teacher training funding policy* ✗\n**Cara mengurai:** cari kata intinya (biasanya kata benda terakhir: *policy*), taruh pemilik dan kata sifat di depannya, lalu pindahkan detailnya ke belakang dengan *on / for / in / of* atau satu klausa relatif.\n**Jebakan bahasa Indonesia:** jangan membalik urutan bahasa Indonesia jadi tumpukan, dan jangan ubah setiap *yang* menjadi *which is*.",
+        "pairs": [
+          {
+            "en": "the government's new policy on funding teacher training in rural schools",
+            "id": "kebijakan baru pemerintah tentang pendanaan pelatihan guru di sekolah-sekolah pedesaan"
+          },
+          {
+            "en": "the hospital's plan to recruit more night-shift nurses",
+            "id": "rencana rumah sakit untuk merekrut lebih banyak perawat shift malam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Cari versi yang paling jelas",
+        "text": "Laporan Bu Ani menyebut 'the city council new street food vendor licence fee'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "clear-noun-phrases",
+          "prompt": "Mana cara paling jelas untuk menulis 'the city council new street food vendor licence fee' dalam laporan?",
+          "options": [
+            "the city council's new licence fee for street food vendors",
+            "the new fee of the licence of the vendors of street food of the city council",
+            "the fee which is new which is for the licence which street food vendors need from the city council"
+          ],
+          "answer": 0,
+          "explanation": "Kata inti = **fee**. Pemilik dan kata sifat di depannya (*the city council's new licence fee*), orangnya di belakang (*for street food vendors*). Pilihan kedua adalah rantai *of*, pilihan ketiga terjemahan *yang … yang …*: keduanya mengubur kata intinya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Empat jenis ambiguitas",
+        "text": "Bisakah kalimatmu dibaca dengan dua cara? Ini penyebab yang paling sering.",
+        "body": "**1. Dangling modifier:** *Walking into the office, the computer was already on* ✗ → *…, **I** saw that the computer was already on*.\n**2. only/almost salah tempat:** keduanya membatasi kata tepat sesudahnya. *We **almost lost** every client* (tidak ada yang hilang) ≠ *We lost **almost every** client* (sebagian besar hilang).\n**3. Kata ganti tidak jelas:** *When the manager met the consultant, **she** said …* Siapa? Ulangi kata bendanya.\n**4. Frasa menempel ke dua kata:** *I saw the man **with the binoculars**.* Teropong siapa? → *Using binoculars, I saw the man.*",
+        "pairs": [
+          {
+            "en": "Only Rina signed the contract.",
+            "id": "Hanya Rina yang menandatangani kontrak itu."
+          },
+          {
+            "en": "Rina signed only the contract.",
+            "id": "Rina hanya menandatangani kontrak itu, bukan dokumen lain."
+          },
+          {
+            "en": "When the manager met the consultant, the consultant said the budget was too small.",
+            "id": "Saat manajer bertemu konsultan, konsultan itulah yang bilang anggarannya terlalu kecil."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Laptop siapa?",
+        "text": "Budi dan Dimas sama-sama laki-laki, jadi 'his' bisa menunjuk ke salah satunya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "avoid-ambiguity",
+          "prompt": "Laptop Dimas-lah yang rusak. Kalimat mana yang mengatakannya dengan jelas?",
+          "options": [
+            "Budi phoned Dimas because his laptop had crashed.",
+            "Dimas's laptop had crashed, so Budi phoned him.",
+            "Budi phoned Dimas because of his crashed laptop."
+          ],
+          "answer": 1,
+          "explanation": "Pada kalimat pertama dan ketiga, *his* bisa berarti milik Budi atau milik Dimas. Kalimat kedua menyebut pemiliknya (*Dimas's laptop*), dan *him* hanya bisa berarti Dimas, karena Budi yang menelepon."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Taruh almost di tempatnya",
+        "text": "almost membatasi kata tepat sesudahnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "avoid-ambiguity",
+          "prompt": "Susun kata-katanya: Dia (memang) mengirim laporan itu ke hampir semua mitra.",
+          "tokens": [
+            "every",
+            "sent",
+            "almost",
+            "She",
+            "partner",
+            "the",
+            "to",
+            "report"
+          ],
+          "solution": "She sent the report to almost every partner.",
+          "explanation": "*almost every partner* = hampir semua mitra, dan laporannya benar-benar dikirim. *She almost sent the report to every partner* berarti dia sama sekali tidak jadi mengirimnya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kalimat panjang: susun atau pecah",
+        "text": "Satu kalimat bisa memuat empat klausa, asal disusun dengan baik.",
+        "body": "Klausa partisip + **klausa utama** + klausa relatif + alasan, semuanya dalam satu kalimat (lihat kartunya).\n**Supaya jelas:** subjek utama dan kata kerjanya muncul awal dan berdekatan; setiap klausa tambahan di samping hal yang dijelaskannya; informasi panjang dan baru di akhir; **klausa paralel** untuk ide yang sejajar (*why …, what … and how …*).\n**Pecah** kalau ada dua pesan utama atau pembaca terlalu lama menunggu kata kerja.\n**Jebakan bahasa Indonesia:** rantai panjang *yang … dan … sehingga … di mana …*. *di mana* hanya menjadi *where* untuk tempat atau situasi.",
+        "pairs": [
+          {
+            "en": "Having reviewed the figures, the board approved the budget, which had been cut by 10%, because sales had risen.",
+            "id": "Setelah meninjau angka-angkanya, dewan menyetujui anggaran, yang sudah dipotong 10%, karena penjualan naik."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Seimbangkan klausanya",
+        "text": "Setelah peluncuran tertunda dua bulan, dewan minta laporan. Perhatikan tiga hal yang harus dijelaskan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "multi-clause-parallelism",
+          "prompt": "Kalimat mana yang klausanya tetap paralel?",
+          "options": [
+            "The report should explain why the launch was delayed, our lessons and how to avoid delays in future.",
+            "The report should explain why the launch was delayed, what we learnt and how we will avoid delays in future.",
+            "The report should explain why the launch was delayed, what we learnt and avoiding delays in future."
+          ],
+          "answer": 1,
+          "explanation": "Ketiganya adalah **klausa wh-** dengan subjek dan kata kerjanya sendiri: *why … was delayed, what we learnt, how we will avoid*. Pilihan pertama menyelipkan noun phrase (*our lessons*) dan *how to*; pilihan ketiga diakhiri bentuk -ing."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Seluruh pelajaran dalam satu halaman. Periksa ini sebelum mengirim laporan.",
+        "artifact": {
+          "title": "Ringkasan · Penguasaan kalimat kompleks",
+          "intro": "Paralel, mudah dibaca, satu arti. Kalimat panjang tidak apa-apa kalau pembaca bisa mengikutinya pada bacaan pertama.",
+          "headers": [
+            "Masalah",
+            "✗",
+            "✓"
+          ],
+          "rows": [
+            [
+              "Bentuk campur dalam daftar",
+              "to reduce costs, improving quality and to train staff",
+              "to reduce costs, improve quality and train staff"
+            ],
+            [
+              "Pasangan tidak sejajar",
+              "both demanding and pays well",
+              "both demanding and well paid"
+            ],
+            [
+              "Perbandingan",
+              "faster than to drive",
+              "faster than driving"
+            ],
+            [
+              "Tumpukan kata benda",
+              "the government new rural school teacher training funding policy",
+              "the government's new policy on funding teacher training in rural schools"
+            ],
+            [
+              "Rantai yang … yang …",
+              "the app which is new which is from the startup which is in Bandung",
+              "the new app from a Bandung startup"
+            ],
+            [
+              "Dangling modifier",
+              "Walking into the office, the computer was already on.",
+              "Walking into the office, I saw that the computer was already on."
+            ],
+            [
+              "almost salah tempat",
+              "We almost lost every client. (kalau sebagian besar hilang)",
+              "We lost almost every client."
+            ],
+            [
+              "only salah tempat (tulisan)",
+              "Rina only signed the contract. (kalau maksudnya tidak ada dokumen lain)",
+              "Rina signed only the contract."
+            ],
+            [
+              "Kata ganti tidak jelas",
+              "When the manager met the consultant, she said …",
+              "…, the consultant said …"
+            ],
+            [
+              "Frasa menempel ke dua kata",
+              "I saw the man with the binoculars.",
+              "Using binoculars, I saw the man."
+            ],
+            [
+              "Terlalu banyak dalam satu kalimat",
+              "The clinic, which a foundation whose director … funded, opened …",
+              "The clinic opened … It was funded by …"
+            ]
+          ],
+          "tips": [
+            "Daftar dan pasangan: pilih bentuk untuk bagian pertama, lalu tiru.",
+            "Noun phrase: kata inti di depan, satu atau dua kata sebelumnya, frasa pendek sesudahnya.",
+            "Sebelum mengirim: siapa melakukan setiap tindakan, dan ke mana only, almost, she atau which menunjuk?"
+          ],
+          "examples": [
+            {
+              "en": "The project aims to reduce costs, improve quality and train staff.",
+              "id": "Proyek ini bertujuan mengurangi biaya, meningkatkan kualitas, dan melatih staf."
+            },
+            {
+              "en": "the government's new policy on funding teacher training in rural schools",
+              "id": "kebijakan baru pemerintah tentang pendanaan pelatihan guru di sekolah-sekolah pedesaan"
+            },
+            {
+              "en": "Walking into the office, I saw that the computer was already on.",
+              "id": "Saat masuk ke kantor, saya melihat komputernya sudah menyala."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Halaman dari pusat penulisan universitas ini menjelaskan struktur paralel dan dangling modifier dengan contoh tambahan."
+      }
+    ]
+  }
+}
