@@ -1,0 +1,768 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll get ready for a job interview in English: describing your experience with proof, telling a STAR story, and talking about your strengths, weaknesses and goals. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Your experience, with proof",
+        "text": "Almost every interview starts with 'Tell me about yourself.' Let's build a strong answer.",
+        "body": "Use three parts: **now** (*I've been working as a … for / since …*), **before** (*Before that, I worked at …*), and **why this job**. Then give **proof**, not just *hard-working*: **I was responsible for …**, **I managed to …** (= berhasil), **I led a team of …**, and **numbers**: *increased sales by 20%*. Careful: *manage* + noun = memimpin (*I managed a team*), but *managed to* + verb = berhasil.",
+        "pairs": [
+          {
+            "en": "I've been working as a … for / since …",
+            "id": "Saya sudah bekerja sebagai … selama / sejak …"
+          },
+          {
+            "en": "Before that, I worked at …",
+            "id": "Sebelumnya, saya bekerja di …"
+          },
+          {
+            "en": "I was responsible for …",
+            "id": "Saya bertanggung jawab atas …"
+          },
+          {
+            "en": "I managed to …",
+            "id": "Saya berhasil …"
+          },
+          {
+            "en": "I led a team of five.",
+            "id": "Saya memimpin tim berisi lima orang."
+          },
+          {
+            "en": "increased sales by 20%",
+            "id": "menaikkan penjualan sebesar 20%"
+          },
+          {
+            "en": "five years of experience",
+            "id": "lima tahun pengalaman (bukan 'many experiences')"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Concrete, not vague",
+        "text": "Read these aloud. Each one gives a fact the interviewer can believe.",
+        "body": "Traps: *sejak* isn't always *since*. A **length** of time takes **for** (*for three years*, not *'since three years'*); a **starting point** takes **since** (*since 2021*). *berhasil* is **managed to**, not *'succeeded to'*. *per cent* is British, *percent* American.",
+        "examples": [
+          {
+            "en": "I've been working as an accountant at a bank in Surabaya for three years.",
+            "id": "Saya sudah bekerja sebagai akuntan di sebuah bank di Surabaya selama tiga tahun."
+          },
+          {
+            "en": "Before that, I worked at an online shop in Bandung for two years.",
+            "id": "Sebelumnya, saya bekerja di sebuah toko online di Bandung selama dua tahun."
+          },
+          {
+            "en": "I was responsible for the company's TikTok and Instagram accounts.",
+            "id": "Saya bertanggung jawab atas akun TikTok dan Instagram perusahaan."
+          },
+          {
+            "en": "I managed to grow our followers from 5,000 to 40,000 in one year.",
+            "id": "Saya berhasil menambah pengikut kami dari 5.000 menjadi 40.000 dalam satu tahun."
+          },
+          {
+            "en": "I led a team of four, and we reduced printing costs by 30%.",
+            "id": "Saya memimpin tim berisi empat orang, dan kami menekan biaya cetak sebesar 30%."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "For or since?",
+        "text": "Let's check the time words.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-experience-with",
+          "prompt": "The interviewer asks: 'How long have you been working at your current company?' You joined it in 2022, and you still work there. Which answer is correct?",
+          "options": [
+            "I've been working there since three years.",
+            "I'm working there since 2022.",
+            "I've been working there since 2022."
+          ],
+          "answer": 2,
+          "explanation": "You still work there, so use the present perfect continuous (**I've been working**), and **since** + a starting point (2022). *since three years* mixes since with a length of time (that needs *for*), and *I'm working there since* uses the present continuous: it can't take since or for."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The STAR method",
+        "text": "Next: questions like 'Tell me about a time when you …'. They have a special name and a special answer.",
+        "body": "A **behavioural question** (pertanyaan perilaku) asks what you **did** in a real situation. Answer with **STAR**: **S**ituation = the background, short; **T**ask = what you had to do; **A**ction = what **you** did, step by step (the longest part); **R**esult = what happened in the end, with numbers, and what you learnt. It's a story, so use the **past simple** (*I called, I moved*). Say **I**, not *we*, for your own actions: the interviewer is hiring you, not your team.",
+        "pairs": [
+          {
+            "en": "Tell me about a time when you …",
+            "id": "Ceritakan saat kamu …"
+          },
+          {
+            "en": "Situation",
+            "id": "situasinya: latar belakang, singkat"
+          },
+          {
+            "en": "Task",
+            "id": "tugasnya: apa yang harus kamu lakukan"
+          },
+          {
+            "en": "Action",
+            "id": "tindakanmu: apa yang KAMU lakukan"
+          },
+          {
+            "en": "Result",
+            "id": "hasilnya: angka + pelajarannya"
+          },
+          {
+            "en": "As a result, …",
+            "id": "Hasilnya, …"
+          },
+          {
+            "en": "I learnt that …",
+            "id": "Saya belajar bahwa …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A full STAR answer",
+        "text": "Here's a model answer to 'Tell me about a time you solved a problem at work.' Read it aloud and find S, T, A and R.",
+        "body": "The parts come in order: S (the clinic, the long wait), T (what the manager asked), A (three things *I* did) and R (numbers + a lesson). Notice the past forms: *was working, asked, looked, moved, fell*. *learnt* is British; *learned* works everywhere.",
+        "examples": [
+          {
+            "en": "Tell me about a time you solved a problem at work.",
+            "id": "(Pertanyaan) Ceritakan saat kamu menyelesaikan masalah di tempat kerja."
+          },
+          {
+            "en": "Last year, I was working as an admin supervisor at a clinic in Surabaya. Patients were waiting more than an hour.",
+            "id": "(S) Tahun lalu, saya bekerja sebagai supervisor admin di sebuah klinik di Surabaya. Pasien menunggu lebih dari satu jam."
+          },
+          {
+            "en": "My manager asked me to cut the waiting time before the end of the month.",
+            "id": "(T) Manajer saya meminta saya memangkas waktu tunggu sebelum akhir bulan."
+          },
+          {
+            "en": "First, I looked at the data. Most patients came between eight and ten.",
+            "id": "(A) Pertama, saya melihat datanya. Kebanyakan pasien datang antara jam delapan dan sepuluh."
+          },
+          {
+            "en": "So I moved two staff to the morning shift and set up online booking through WhatsApp.",
+            "id": "(A) Jadi saya memindahkan dua staf ke shift pagi dan membuat pendaftaran online lewat WhatsApp."
+          },
+          {
+            "en": "As a result, the waiting time fell from 70 to 25 minutes. I learnt that the data often shows the real problem.",
+            "id": "(R) Hasilnya, waktu tunggu turun dari 70 menjadi 25 menit. Saya belajar bahwa data sering menunjukkan masalah yang sebenarnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Finish the story",
+        "text": "Rina's STAR answer is missing its last part. Help her.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "answer-behavioural-questions",
+          "prompt": "Rina's answer. S: Our online shop was getting a lot of complaints about late deliveries. T: I had to fix it before the 12.12 sale. A: I compared three couriers, chose a faster one and checked every order myself. Which sentence is the best Result?",
+          "options": [
+            "We always try our best to make our customers happy.",
+            "As a result, late deliveries fell from 30% of orders to 5%, and we got our best reviews ever during the sale.",
+            "In the end, I finish the problem and everything is good."
+          ],
+          "answer": 1,
+          "explanation": "A good Result says what happened in the end, in the **past simple**, with **numbers** (*fell from 30% … to 5%*). The first option is general and in the present: it's not part of the story. The third has no past forms (*finish, is*) and no facts."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Strengths and weaknesses",
+        "text": "Two classic questions: 'What's your main strength?' and 'What's your biggest weakness?'",
+        "body": "**Strength:** name **one**, then prove it: **My main strength is** + noun (*teamwork, problem-solving*) … **For example, …** + a true story with a number. **Weakness:** choose something real but not a disaster for the job, and say how you're improving: **I sometimes find it hard to …, so I'm working on it by …**. Watch two habits: **too modest** (the *'saya masih belajar'* style: *Sorry, I'm still learning*) sounds unsure; **too proud** (*I'm the best, I can do everything*) is hard to believe. The middle way: facts.",
+        "pairs": [
+          {
+            "en": "My main strength is …",
+            "id": "Kekuatan utama saya adalah …"
+          },
+          {
+            "en": "For example, …",
+            "id": "Contohnya, …"
+          },
+          {
+            "en": "I'm good at …",
+            "id": "Saya pandai / jago …"
+          },
+          {
+            "en": "attention to detail",
+            "id": "ketelitian"
+          },
+          {
+            "en": "I sometimes find it hard to …",
+            "id": "Kadang saya sulit …"
+          },
+          {
+            "en": "so I'm working on it by …",
+            "id": "jadi saya sedang memperbaikinya dengan …"
+          },
+          {
+            "en": "I've been taking an online course in …",
+            "id": "Saya sedang ikut kursus online …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your main strength",
+        "text": "Which answer would convince you if you were the interviewer?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "strengths-career-goals",
+          "prompt": "Sari is interviewing for a job at a supermarket chain in Jakarta. The manager asks: 'What's your main strength?' Which answer is best?",
+          "options": [
+            "My main strength is problem-solving. For example, when our cashier system went down last month, I set up a manual process in ten minutes, so we didn't lose any sales.",
+            "My main strength is that I'm very hard-working, smart, creative, friendly and honest.",
+            "Sorry, I don't think I have a real strength yet. I'm still learning."
+          ],
+          "answer": 0,
+          "explanation": "It names **one** strength and proves it with **For example** + a real story with a result. A long list of adjectives proves nothing, and the third answer is far too modest: in an English interview it sounds like you have no skills."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Press play and listen to the interviewer's question.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "strengths-career-goals",
+          "prompt": "Listen to the interviewer's question. Which reply is best?",
+          "listen": "And what would you say is your biggest weakness?",
+          "options": [
+            "I don't have any weaknesses. I'm good at everything.",
+            "Sorry, I'm still learning, so I have a lot of weaknesses.",
+            "I sometimes get nervous when I present to large groups, so I've been giving short presentations at our weekly team meeting to get more practice."
+          ],
+          "answer": 2,
+          "explanation": "The interviewer asks about your **biggest weakness**. The best reply is honest, real and shows what you're doing about it (*I've been giving short presentations …*). *I don't have any weaknesses* is overclaiming, and *I have a lot of weaknesses* is too modest and doesn't name one."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Goals and your own questions",
+        "text": "Last part: the future, and the end of the interview.",
+        "body": "*Where do you see yourself in five years?* → **In five years, I'd like to …** / **I'm hoping to …** / **My long-term goal is to …** (*I'd like* sounds more polite than *I want*). At the end you'll hear *Do you have any questions for us?* Always ask one: *No questions* can sound uninterested. **Personal details:** Indonesian CVs often list religion and marital status, but in many countries interviewers avoid these topics, so you don't need to mention them unprompted.",
+        "pairs": [
+          {
+            "en": "In five years, I'd like to …",
+            "id": "Dalam lima tahun, saya ingin …"
+          },
+          {
+            "en": "I'm hoping to …",
+            "id": "Saya berharap bisa …"
+          },
+          {
+            "en": "My long-term goal is to …",
+            "id": "Tujuan jangka panjang saya adalah …"
+          },
+          {
+            "en": "What are the biggest challenges for the team right now?",
+            "id": "Apa tantangan terbesar tim saat ini?"
+          },
+          {
+            "en": "What training do new staff get?",
+            "id": "Pelatihan apa yang didapat staf baru?"
+          },
+          {
+            "en": "What are the next steps in the process?",
+            "id": "Apa tahap berikutnya dalam proses ini?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's your interview kit on one page. Read it again the night before.",
+        "artifact": {
+          "title": "Cheat sheet · job interviews",
+          "intro": "Say how long with for/since, prove your experience with numbers, tell STAR stories in the past simple with I, and talk about strengths, weaknesses and goals with facts.",
+          "headers": [
+            "Part",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "How long (still true)",
+              "I've been working as a … for three years / since 2022.",
+              "for + lamanya, since + titik mulai"
+            ],
+            [
+              "Before",
+              "Before that, I worked at … for two years.",
+              "sebelumnya (sudah selesai: past simple)"
+            ],
+            [
+              "Proof",
+              "I was responsible for … / I led a team of …",
+              "bertanggung jawab atas / memimpin tim"
+            ],
+            [
+              "Success",
+              "I managed to cut costs by 15%.",
+              "saya berhasil … (bukan 'succeeded to')"
+            ],
+            [
+              "S = Situation",
+              "Last year, I was working as …",
+              "latar belakang, singkat"
+            ],
+            [
+              "T = Task",
+              "My manager asked me to … / I had to …",
+              "apa yang harus kamu lakukan"
+            ],
+            [
+              "A = Action",
+              "First, I … Then I … I also …",
+              "apa yang KAMU lakukan (bagian terpanjang)"
+            ],
+            [
+              "R = Result",
+              "As a result, … fell / rose by … I learnt that …",
+              "hasil dengan angka + pelajarannya"
+            ],
+            [
+              "Strength",
+              "My main strength is … For example, …",
+              "kekuatan utama + bukti"
+            ],
+            [
+              "Weakness",
+              "I sometimes find it hard to …, so I'm working on it by …",
+              "kelemahan nyata + cara memperbaikinya"
+            ],
+            [
+              "Goals",
+              "In five years, I'd like to … / I'm hoping to …",
+              "dalam lima tahun, saya ingin … / berharap …"
+            ],
+            [
+              "Your questions",
+              "What does a typical day look like in this role?",
+              "seperti apa hari kerja biasa di posisi ini?"
+            ],
+            [
+              "The end",
+              "What are the next steps in the process?",
+              "apa tahap berikutnya?"
+            ]
+          ],
+          "tips": [
+            "Not 'since three years' but for three years; not 'succeeded to' but managed to; not 'many experiences' but five years of experience.",
+            "In a STAR story, use past forms and say I for your own actions, not we.",
+            "Not too modest, not too proud: let facts and numbers speak. No need to mention religion or marital status unprompted."
+          ],
+          "examples": [
+            {
+              "en": "I've been working in customer service for five years.",
+              "id": "Saya sudah bekerja di layanan pelanggan selama lima tahun."
+            },
+            {
+              "en": "I managed to reduce complaints by half in three months.",
+              "id": "Saya berhasil mengurangi keluhan sampai separuhnya dalam tiga bulan."
+            },
+            {
+              "en": "My main strength is attention to detail. For example, I found a 40-million-rupiah mistake in our tax report.",
+              "id": "Kekuatan utama saya adalah ketelitian. Contohnya, saya menemukan kesalahan 40 juta rupiah di laporan pajak kami."
+            },
+            {
+              "en": "In five years, I'm hoping to lead a small team here.",
+              "id": "Dalam lima tahun, saya berharap bisa memimpin tim kecil di sini."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here's a video about STAR answers and an article on preparing for an interview in English."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu bersiap untuk wawancara kerja dalam bahasa Inggris: menjelaskan pengalamanmu dengan bukti, menceritakan kisah STAR, dan membicarakan kekuatan, kelemahan serta tujuanmu. Ayo kita mulai langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Pengalamanmu, dengan bukti",
+        "text": "Hampir setiap wawancara dimulai dengan 'Tell me about yourself' (ceritakan tentang dirimu). Ayo susun jawaban yang kuat.",
+        "body": "Pakai tiga bagian: **sekarang** (*I've been working as a … for / since …*), **sebelumnya** (*Before that, I worked at …*), dan **kenapa pekerjaan ini**. Lalu beri **bukti**, bukan cuma *hard-working*: **I was responsible for …** (bertanggung jawab atas), **I managed to …** (= berhasil), **I led a team of …** (memimpin tim), dan **angka**: *increased sales by 20%*. Hati-hati: *manage* + kata benda = memimpin (*I managed a team*), tapi *managed to* + kata kerja = berhasil.",
+        "pairs": [
+          {
+            "en": "I've been working as a … for / since …",
+            "id": "Saya sudah bekerja sebagai … selama / sejak …"
+          },
+          {
+            "en": "Before that, I worked at …",
+            "id": "Sebelumnya, saya bekerja di …"
+          },
+          {
+            "en": "I was responsible for …",
+            "id": "Saya bertanggung jawab atas …"
+          },
+          {
+            "en": "I managed to …",
+            "id": "Saya berhasil …"
+          },
+          {
+            "en": "I led a team of five.",
+            "id": "Saya memimpin tim berisi lima orang."
+          },
+          {
+            "en": "increased sales by 20%",
+            "id": "menaikkan penjualan sebesar 20%"
+          },
+          {
+            "en": "five years of experience",
+            "id": "lima tahun pengalaman (bukan 'many experiences')"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Konkret, bukan samar",
+        "text": "Baca kalimat-kalimat ini dengan suara keras. Masing-masing memberi fakta yang bisa dipercaya pewawancara.",
+        "body": "Jebakan: *sejak* tidak selalu *since*. **Lamanya** waktu pakai **for** (*for three years*, bukan *'since three years'*); **titik mulai** pakai **since** (*since 2021*). *berhasil* adalah **managed to**, bukan *'succeeded to'*. *per cent* itu British, *percent* Amerika.",
+        "examples": [
+          {
+            "en": "I've been working as an accountant at a bank in Surabaya for three years.",
+            "id": "Saya sudah bekerja sebagai akuntan di sebuah bank di Surabaya selama tiga tahun."
+          },
+          {
+            "en": "Before that, I worked at an online shop in Bandung for two years.",
+            "id": "Sebelumnya, saya bekerja di sebuah toko online di Bandung selama dua tahun."
+          },
+          {
+            "en": "I was responsible for the company's TikTok and Instagram accounts.",
+            "id": "Saya bertanggung jawab atas akun TikTok dan Instagram perusahaan."
+          },
+          {
+            "en": "I managed to grow our followers from 5,000 to 40,000 in one year.",
+            "id": "Saya berhasil menambah pengikut kami dari 5.000 menjadi 40.000 dalam satu tahun."
+          },
+          {
+            "en": "I led a team of four, and we reduced printing costs by 30%.",
+            "id": "Saya memimpin tim berisi empat orang, dan kami menekan biaya cetak sebesar 30%."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "For atau since?",
+        "text": "Ayo cek kata-kata waktunya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-experience-with",
+          "prompt": "Pewawancara bertanya: 'How long have you been working at your current company?' Kamu masuk ke perusahaan itu tahun 2022, dan masih bekerja di sana. Jawaban mana yang benar?",
+          "options": [
+            "I've been working there since three years.",
+            "I'm working there since 2022.",
+            "I've been working there since 2022."
+          ],
+          "answer": 2,
+          "explanation": "Kamu masih bekerja di sana, jadi pakai present perfect continuous (**I've been working**), dan **since** + titik mulai (2022). *since three years* mencampur since dengan lamanya waktu (itu butuh *for*), dan *I'm working there since* memakai present continuous, yang tidak bisa dipakai dengan since atau for."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Metode STAR",
+        "text": "Berikutnya: pertanyaan seperti 'Tell me about a time when you …'. Pertanyaan ini punya nama khusus dan cara menjawab yang khusus.",
+        "body": "**Behavioural question** (pertanyaan perilaku) menanyakan apa yang **kamu lakukan** dalam situasi nyata. Jawab dengan **STAR**: **S**ituation = latar belakangnya, singkat; **T**ask = apa yang harus kamu lakukan; **A**ction = apa yang **kamu** lakukan, langkah demi langkah (bagian terpanjang); **R**esult = apa yang terjadi pada akhirnya, dengan angka, dan apa yang kamu pelajari. Ini cerita, jadi pakai **past simple** (*I called, I moved*). Pakai **I**, bukan *we*, untuk tindakanmu sendiri: yang direkrut kamu, bukan timmu.",
+        "pairs": [
+          {
+            "en": "Tell me about a time when you …",
+            "id": "Ceritakan saat kamu …"
+          },
+          {
+            "en": "Situation",
+            "id": "situasinya: latar belakang, singkat"
+          },
+          {
+            "en": "Task",
+            "id": "tugasnya: apa yang harus kamu lakukan"
+          },
+          {
+            "en": "Action",
+            "id": "tindakanmu: apa yang KAMU lakukan"
+          },
+          {
+            "en": "Result",
+            "id": "hasilnya: angka + pelajarannya"
+          },
+          {
+            "en": "As a result, …",
+            "id": "Hasilnya, …"
+          },
+          {
+            "en": "I learnt that …",
+            "id": "Saya belajar bahwa …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Satu jawaban STAR lengkap",
+        "text": "Ini contoh jawaban untuk 'Tell me about a time you solved a problem at work.' Baca dengan suara keras dan temukan S, T, A dan R.",
+        "body": "Bagian-bagiannya berurutan: S (kliniknya, antrean panjang), T (apa yang diminta manajer), A (tiga hal yang *saya* lakukan) dan R (angka + pelajaran). Perhatikan bentuk lampaunya: *was working, asked, looked, moved, fell*. *learnt* itu British; *learned* bisa dipakai di mana saja.",
+        "examples": [
+          {
+            "en": "Tell me about a time you solved a problem at work.",
+            "id": "(Pertanyaan) Ceritakan saat kamu menyelesaikan masalah di tempat kerja."
+          },
+          {
+            "en": "Last year, I was working as an admin supervisor at a clinic in Surabaya. Patients were waiting more than an hour.",
+            "id": "(S) Tahun lalu, saya bekerja sebagai supervisor admin di sebuah klinik di Surabaya. Pasien menunggu lebih dari satu jam."
+          },
+          {
+            "en": "My manager asked me to cut the waiting time before the end of the month.",
+            "id": "(T) Manajer saya meminta saya memangkas waktu tunggu sebelum akhir bulan."
+          },
+          {
+            "en": "First, I looked at the data. Most patients came between eight and ten.",
+            "id": "(A) Pertama, saya melihat datanya. Kebanyakan pasien datang antara jam delapan dan sepuluh."
+          },
+          {
+            "en": "So I moved two staff to the morning shift and set up online booking through WhatsApp.",
+            "id": "(A) Jadi saya memindahkan dua staf ke shift pagi dan membuat pendaftaran online lewat WhatsApp."
+          },
+          {
+            "en": "As a result, the waiting time fell from 70 to 25 minutes. I learnt that the data often shows the real problem.",
+            "id": "(R) Hasilnya, waktu tunggu turun dari 70 menjadi 25 menit. Saya belajar bahwa data sering menunjukkan masalah yang sebenarnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Selesaikan ceritanya",
+        "text": "Jawaban STAR Rina belum ada bagian terakhirnya. Bantu dia.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "answer-behavioural-questions",
+          "prompt": "Jawaban Rina. S: Our online shop was getting a lot of complaints about late deliveries. T: I had to fix it before the 12.12 sale. A: I compared three couriers, chose a faster one and checked every order myself. Kalimat mana yang paling baik untuk Result?",
+          "options": [
+            "We always try our best to make our customers happy.",
+            "As a result, late deliveries fell from 30% of orders to 5%, and we got our best reviews ever during the sale.",
+            "In the end, I finish the problem and everything is good."
+          ],
+          "answer": 1,
+          "explanation": "Result yang baik menyebut apa yang terjadi pada akhirnya, dengan **past simple** dan **angka** (*fell from 30% … to 5%*). Pilihan pertama umum dan memakai present: bukan bagian dari ceritanya. Pilihan ketiga tidak punya bentuk lampau (*finish, is*) dan tidak ada faktanya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kekuatan dan kelemahan",
+        "text": "Dua pertanyaan klasik: 'What's your main strength?' dan 'What's your biggest weakness?'",
+        "body": "**Kekuatan:** sebutkan **satu**, lalu buktikan: **My main strength is** + kata benda (*teamwork, problem-solving*) … **For example, …** + cerita nyata dengan angka. **Kelemahan:** pilih sesuatu yang nyata tapi tidak fatal untuk pekerjaannya, dan katakan cara kamu memperbaikinya: **I sometimes find it hard to …, so I'm working on it by …**. Waspadai dua kebiasaan: **terlalu merendah** (gaya *'saya masih belajar'*: *Sorry, I'm still learning*) terdengar tidak yakin; **terlalu membanggakan diri** (*I'm the best, I can do everything*) sulit dipercaya. Jalan tengahnya: fakta.",
+        "pairs": [
+          {
+            "en": "My main strength is …",
+            "id": "Kekuatan utama saya adalah …"
+          },
+          {
+            "en": "For example, …",
+            "id": "Contohnya, …"
+          },
+          {
+            "en": "I'm good at …",
+            "id": "Saya pandai / jago …"
+          },
+          {
+            "en": "attention to detail",
+            "id": "ketelitian"
+          },
+          {
+            "en": "I sometimes find it hard to …",
+            "id": "Kadang saya sulit …"
+          },
+          {
+            "en": "so I'm working on it by …",
+            "id": "jadi saya sedang memperbaikinya dengan …"
+          },
+          {
+            "en": "I've been taking an online course in …",
+            "id": "Saya sedang ikut kursus online …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kekuatan utamamu",
+        "text": "Jawaban mana yang akan meyakinkanmu kalau kamu pewawancaranya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "strengths-career-goals",
+          "prompt": "Sari sedang wawancara untuk pekerjaan di sebuah jaringan supermarket di Jakarta. Manajernya bertanya: 'What's your main strength?' Jawaban mana yang paling baik?",
+          "options": [
+            "My main strength is problem-solving. For example, when our cashier system went down last month, I set up a manual process in ten minutes, so we didn't lose any sales.",
+            "My main strength is that I'm very hard-working, smart, creative, friendly and honest.",
+            "Sorry, I don't think I have a real strength yet. I'm still learning."
+          ],
+          "answer": 0,
+          "explanation": "Jawaban ini menyebut **satu** kekuatan dan membuktikannya dengan **For example** + cerita nyata yang ada hasilnya. Daftar panjang kata sifat tidak membuktikan apa pun, dan jawaban ketiga jauh terlalu merendah: di wawancara berbahasa Inggris, itu terdengar seperti kamu tidak punya kemampuan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dan jawab",
+        "text": "Tekan play dan dengarkan pertanyaan pewawancara.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "strengths-career-goals",
+          "prompt": "Dengarkan pertanyaan pewawancara. Jawaban mana yang paling baik?",
+          "listen": "And what would you say is your biggest weakness?",
+          "options": [
+            "I don't have any weaknesses. I'm good at everything.",
+            "Sorry, I'm still learning, so I have a lot of weaknesses.",
+            "I sometimes get nervous when I present to large groups, so I've been giving short presentations at our weekly team meeting to get more practice."
+          ],
+          "answer": 2,
+          "explanation": "Pewawancara bertanya tentang **kelemahan terbesarmu** (biggest weakness). Jawaban terbaik itu jujur, nyata, dan menunjukkan apa yang sedang kamu lakukan untuk memperbaikinya (*I've been giving short presentations …*). *I don't have any weaknesses* terlalu membanggakan diri, dan *I have a lot of weaknesses* terlalu merendah dan tidak menyebut satu pun."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tujuan dan pertanyaanmu sendiri",
+        "text": "Bagian terakhir: masa depan, dan akhir wawancara.",
+        "body": "*Where do you see yourself in five years?* → **In five years, I'd like to …** / **I'm hoping to …** / **My long-term goal is to …** (*I'd like* terdengar lebih sopan daripada *I want*). Di akhir kamu akan mendengar *Do you have any questions for us?* Selalu ajukan satu pertanyaan: *tidak ada pertanyaan* bisa terdengar tidak tertarik. **Data pribadi:** CV di Indonesia sering mencantumkan agama dan status pernikahan, tapi di banyak negara pewawancara menghindari topik ini, jadi kamu tidak perlu menyebutnya kalau tidak ditanya.",
+        "pairs": [
+          {
+            "en": "In five years, I'd like to …",
+            "id": "Dalam lima tahun, saya ingin …"
+          },
+          {
+            "en": "I'm hoping to …",
+            "id": "Saya berharap bisa …"
+          },
+          {
+            "en": "My long-term goal is to …",
+            "id": "Tujuan jangka panjang saya adalah …"
+          },
+          {
+            "en": "What are the biggest challenges for the team right now?",
+            "id": "Apa tantangan terbesar tim saat ini?"
+          },
+          {
+            "en": "What training do new staff get?",
+            "id": "Pelatihan apa yang didapat staf baru?"
+          },
+          {
+            "en": "What are the next steps in the process?",
+            "id": "Apa tahap berikutnya dalam proses ini?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini perlengkapan wawancaramu dalam satu halaman. Baca lagi malam sebelum wawancara.",
+        "artifact": {
+          "title": "Ringkasan · wawancara kerja",
+          "intro": "Sebut berapa lama dengan for/since, buktikan pengalamanmu dengan angka, ceritakan kisah STAR dengan past simple dan I, lalu bicarakan kekuatan, kelemahan dan tujuan dengan fakta.",
+          "headers": [
+            "Bagian",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Berapa lama (masih berlaku)",
+              "I've been working as a … for three years / since 2022.",
+              "for + lamanya, since + titik mulai"
+            ],
+            [
+              "Sebelumnya",
+              "Before that, I worked at … for two years.",
+              "sebelumnya (sudah selesai: past simple)"
+            ],
+            [
+              "Bukti",
+              "I was responsible for … / I led a team of …",
+              "bertanggung jawab atas / memimpin tim"
+            ],
+            [
+              "Keberhasilan",
+              "I managed to cut costs by 15%.",
+              "saya berhasil … (bukan 'succeeded to')"
+            ],
+            [
+              "S = Situation",
+              "Last year, I was working as …",
+              "latar belakang, singkat"
+            ],
+            [
+              "T = Task",
+              "My manager asked me to … / I had to …",
+              "apa yang harus kamu lakukan"
+            ],
+            [
+              "A = Action",
+              "First, I … Then I … I also …",
+              "apa yang KAMU lakukan (bagian terpanjang)"
+            ],
+            [
+              "R = Result",
+              "As a result, … fell / rose by … I learnt that …",
+              "hasil dengan angka + pelajarannya"
+            ],
+            [
+              "Kekuatan",
+              "My main strength is … For example, …",
+              "kekuatan utama + bukti"
+            ],
+            [
+              "Kelemahan",
+              "I sometimes find it hard to …, so I'm working on it by …",
+              "kelemahan nyata + cara memperbaikinya"
+            ],
+            [
+              "Tujuan",
+              "In five years, I'd like to … / I'm hoping to …",
+              "dalam lima tahun, saya ingin … / berharap …"
+            ],
+            [
+              "Pertanyaanmu",
+              "What does a typical day look like in this role?",
+              "seperti apa hari kerja biasa di posisi ini?"
+            ],
+            [
+              "Penutup",
+              "What are the next steps in the process?",
+              "apa tahap berikutnya?"
+            ]
+          ],
+          "tips": [
+            "Bukan 'since three years' tapi for three years; bukan 'succeeded to' tapi managed to; bukan 'many experiences' tapi five years of experience.",
+            "Dalam cerita STAR, pakai bentuk lampau dan katakan I untuk tindakanmu sendiri, bukan we.",
+            "Jangan terlalu merendah, jangan terlalu membanggakan diri: biarkan fakta dan angka yang bicara. Tidak perlu menyebut agama atau status pernikahan kalau tidak ditanya."
+          ],
+          "examples": [
+            {
+              "en": "I've been working in customer service for five years.",
+              "id": "Saya sudah bekerja di layanan pelanggan selama lima tahun."
+            },
+            {
+              "en": "I managed to reduce complaints by half in three months.",
+              "id": "Saya berhasil mengurangi keluhan sampai separuhnya dalam tiga bulan."
+            },
+            {
+              "en": "My main strength is attention to detail. For example, I found a 40-million-rupiah mistake in our tax report.",
+              "id": "Kekuatan utama saya adalah ketelitian. Contohnya, saya menemukan kesalahan 40 juta rupiah di laporan pajak kami."
+            },
+            {
+              "en": "In five years, I'm hoping to lead a small team here.",
+              "id": "Dalam lima tahun, saya berharap bisa memimpin tim kecil di sini."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini video tentang jawaban STAR dan artikel tentang persiapan wawancara dalam bahasa Inggris."
+      }
+    ]
+  }
+}

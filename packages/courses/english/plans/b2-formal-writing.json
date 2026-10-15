@@ -1,0 +1,810 @@
+{
+  "en": {
+    "greeting": "Hi! You already know polite emails, formal words, B2 linkers and the passive. Today we put them all together: formal emails and letters for requests, complaints and job applications, and a short report with headings.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "What makes writing formal",
+        "text": "Quick recap: you know the parts of an email, formal words like enquire and regarding, linkers like However and Moreover, and the passive. A formal text uses them all.",
+        "body": "A formal email, letter or report is **impersonal** (about facts, not feelings) and **complete**:\n- **no contractions**: *I am, we cannot*\n- **the passive** when the doer isn't important: *Your application will be reviewed.*\n- **formal words and linkers**: *enquire, regarding, require; However, Moreover*\n- **one-word verbs**, not phrasal verbs: *postpone*, not *put off*\n- **full sentences**: no emoji, no *pls, thx, asap*\n\nThese are tendencies: active sentences like *I am writing …* or *We have received …* are fine too.",
+        "pairs": [
+          {
+            "en": "I'm → I am",
+            "id": "bentuk lengkap, tanpa kontraksi"
+          },
+          {
+            "en": "can't → cannot",
+            "id": "tidak bisa / tidak dapat"
+          },
+          {
+            "en": "asap → as soon as possible",
+            "id": "secepatnya"
+          },
+          {
+            "en": "about → regarding",
+            "id": "tentang → mengenai"
+          },
+          {
+            "en": "put off → postpone",
+            "id": "menunda"
+          },
+          {
+            "en": "Your application will be reviewed.",
+            "id": "Lamaran Anda akan ditinjau. (pasif)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A university in Jakarta is sending a notice to all its students about the final exam.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-in-a",
+          "prompt": "Which sentence fits a formal notice?",
+          "options": [
+            "We've put off the final exam till Monday, 9 June.",
+            "The final exam has been postponed until Monday, 9 June.",
+            "The final exam has been put off till Mon, 9 June."
+          ],
+          "answer": 1,
+          "explanation": "A formal notice uses the passive (the doer, the university, is obvious), the one-word verb **postponed** and *until*. The first option has a contraction (*We've*) and the phrasal verb *put off*; the third still uses *put off*, *till* and the abbreviation *Mon*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dear … Yours …",
+        "text": "Every formal letter starts and ends in a fixed way. In British English, the greeting decides the sign-off.",
+        "body": "- Name known: *Dear Ms Tan,* … **Yours sincerely,**\n- Name unknown: *Dear Sir or Madam,* … **Yours faithfully,**\n\nTrick: **S**ir and **s**incerely never go together. **American** English uses *Sincerely,* for both. In normal work emails: *Kind regards,* / *Best regards,* (semi-formal).\n\nIndonesian habits: *Dengan hormat* has no English line (not *With respect,* ✗). Skip long *Puji syukur …* / *Semoga sehat selalu* openings: start with your purpose. *Demikian surat ini kami sampaikan …* → *Thank you for your time. I look forward to hearing from you.*",
+        "pairs": [
+          {
+            "en": "Dear Ms Tan,",
+            "id": "Yth. Ibu Tan, (nama diketahui)"
+          },
+          {
+            "en": "Dear Sir or Madam,",
+            "id": "Kepada Yth. Bapak/Ibu, (nama tidak diketahui)"
+          },
+          {
+            "en": "Yours sincerely,",
+            "id": "Hormat saya, (setelah Dear + nama)"
+          },
+          {
+            "en": "Yours faithfully,",
+            "id": "Hormat saya, (setelah Dear Sir or Madam)"
+          },
+          {
+            "en": "Sincerely,",
+            "id": "Hormat saya, (Amerika)"
+          },
+          {
+            "en": "Kind regards,",
+            "id": "Salam, (email semi-formal)"
+          },
+          {
+            "en": "Thank you for your time.",
+            "id": "Terima kasih atas waktu Anda."
+          },
+          {
+            "en": "I look forward to hearing from you.",
+            "id": "Saya menantikan kabar dari Anda."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Start and finish",
+        "text": "Sari is writing a formal complaint to a British airline. She doesn't know the name of the person who will read it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "formal-emails-letters",
+          "prompt": "Which greeting and sign-off are right for her letter?",
+          "options": [
+            "Dear Sir or Madam, … Yours sincerely,",
+            "Dear Sir or Madam, … Yours faithfully,",
+            "Hi Sir, … Yours faithfully,"
+          ],
+          "answer": 1,
+          "explanation": "No name → **Dear Sir or Madam,**, and in British English that goes with **Yours faithfully,**. *Yours sincerely* is for a letter that starts with a name (*Dear Ms Tan,*): Sir and sincerely never go together. *Hi Sir* mixes informal *Hi* with formal *Sir*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Request, complaint, application",
+        "text": "Each kind of letter has its own plan, and the purpose always comes in the first line.",
+        "body": "**Request**: *I am writing to enquire about …* (`I want to ask about …` is correct English, but too direct here) + *I would be grateful if you could …*\n\n**Complaint**, firm but polite: 1) the problem: *I am writing to complain about …* 2) the facts: date, order number, what went wrong 3) the action you expect: *I would appreciate a replacement.*\n\n**Application**: *I am writing to apply for the position of …, as advertised on …* (a phrase to remember) + your experience + *Please find attached my CV.*",
+        "pairs": [
+          {
+            "en": "I am writing to enquire about …",
+            "id": "Saya menulis untuk menanyakan …"
+          },
+          {
+            "en": "I would be grateful if you could …",
+            "id": "Saya akan sangat berterima kasih jika Anda dapat …"
+          },
+          {
+            "en": "I am writing to complain about …",
+            "id": "Saya menulis untuk menyampaikan keluhan tentang …"
+          },
+          {
+            "en": "I would appreciate a replacement.",
+            "id": "Saya mengharapkan penggantian."
+          },
+          {
+            "en": "I am writing to apply for the position of …",
+            "id": "Saya bermaksud melamar posisi …"
+          },
+          {
+            "en": "as advertised on …",
+            "id": "sesuai iklan di …"
+          },
+          {
+            "en": "Please find attached my CV.",
+            "id": "Terlampir CV saya."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A complaint, step by step",
+        "text": "Sari ordered a desk lamp from an online shop, but it never arrived. Here is her email.",
+        "body": "Notice the order: the purpose → the facts (dates, the order number, the passive where the doer isn't important) → the action she expects → a closing line → the sign-off.",
+        "examples": [
+          {
+            "en": "Dear Sir or Madam,",
+            "id": "Kepada Yth. Bapak/Ibu,"
+          },
+          {
+            "en": "I am writing to complain about an order from your online shop.",
+            "id": "Saya menulis untuk menyampaikan keluhan tentang pesanan dari toko online Anda."
+          },
+          {
+            "en": "On 2 May I ordered a desk lamp (order no. 58213), and delivery was promised within three days.",
+            "id": "Pada 2 Mei saya memesan lampu meja (pesanan no. 58213), dan pengirimannya dijanjikan dalam tiga hari."
+          },
+          {
+            "en": "However, the lamp has still not been delivered, and my emails have not been answered.",
+            "id": "Namun, lampunya masih belum dikirim, dan email-email saya belum dijawab."
+          },
+          {
+            "en": "I would be grateful if you could send the lamp by Friday or refund my payment in full.",
+            "id": "Saya akan sangat berterima kasih jika Anda dapat mengirimkan lampunya paling lambat hari Jumat atau mengembalikan pembayaran saya sepenuhnya."
+          },
+          {
+            "en": "I look forward to hearing from you. Yours faithfully, Sari Lestari",
+            "id": "Saya menantikan kabar dari Anda. Hormat saya, Sari Lestari"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the request",
+        "text": "Budi's new office chair from an online shop arrived broken. He ends his complaint email with the action he expects.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "formal-emails-letters",
+          "prompt": "Arrange the words: Saya mengharapkan pengembalian dana untuk kursi yang rusak itu.",
+          "tokens": [
+            "refund",
+            "chair",
+            "I",
+            "the",
+            "appreciate",
+            "for",
+            "would",
+            "damaged",
+            "a"
+          ],
+          "solution": "I would appreciate a refund for the damaged chair.",
+          "explanation": "**I would appreciate** + a noun says the action you expect, firmly but politely: *a refund* (pengembalian dana), *a replacement* (penggantian). It's the last step of a complaint, after the problem and the facts."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "A short report",
+        "text": "A report is not a letter: no Dear and no sign-off. It has a title and short section headings.",
+        "body": "- **Introduction**: the aim, in one or two sentences: *The aim of this report is to …*\n- **Findings**: facts and numbers, often in the passive: *A survey was conducted …*, *It was found that …*\n- **Recommendations**: what should happen next: *The company should …*, *It is recommended that …* (a formal phrase to remember)\n\nStay objective: facts, not feelings (no *I think*, no *!!*). And keep it short: no long *BAB I, Latar Belakang …* style introduction.",
+        "pairs": [
+          {
+            "en": "Introduction",
+            "id": "pendahuluan: tujuan laporan"
+          },
+          {
+            "en": "Findings",
+            "id": "temuan: fakta dan angka"
+          },
+          {
+            "en": "Recommendations",
+            "id": "rekomendasi: apa yang sebaiknya dilakukan"
+          },
+          {
+            "en": "The aim of this report is to …",
+            "id": "Tujuan laporan ini adalah …"
+          },
+          {
+            "en": "A survey was conducted …",
+            "id": "Survei dilakukan …"
+          },
+          {
+            "en": "It is recommended that …",
+            "id": "Disarankan agar …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which section?",
+        "text": "Bu Ani is writing a short report on the office canteen for her manager.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "structure-a-short",
+          "prompt": "Her report has three headings. Which heading does this paragraph go under? 'Of the 85 staff who answered the survey, 64% said the canteen is too crowded between 12.00 and 12.30. Moreover, several complaints were received about the price of drinks.'",
+          "options": [
+            "Introduction",
+            "Recommendations",
+            "Findings"
+          ],
+          "answer": 2,
+          "explanation": "Survey numbers and complaints received are **facts**, so they go under **Findings**. The Introduction only gives the aim of the report, and Recommendations say what should happen next (*should*, *It is recommended that …*)."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Key phrases",
+        "text": "Flip the cards and say the formal English before you look.",
+        "flashcards": [
+          {
+            "front": "Dengan hormat, (di awal surat)",
+            "back": "no English line: just Dear Ms Tan, / Dear Sir or Madam,"
+          },
+          {
+            "front": "Saya bermaksud menanyakan … (formal)",
+            "back": "I am writing to enquire about …"
+          },
+          {
+            "front": "Saya akan sangat berterima kasih jika Anda dapat …",
+            "back": "I would be grateful if you could …"
+          },
+          {
+            "front": "Saya bermaksud melamar posisi …, sesuai iklan di …",
+            "back": "I am writing to apply for the position of …, as advertised on …"
+          },
+          {
+            "front": "Salam penutup British: Dear + nama",
+            "back": "Yours sincerely,"
+          },
+          {
+            "front": "Salam penutup British: Dear Sir or Madam",
+            "back": "Yours faithfully, (American: Sincerely,)"
+          },
+          {
+            "front": "Demikian surat ini kami sampaikan. Terima kasih.",
+            "back": "Thank you for your time. I look forward to hearing from you."
+          },
+          {
+            "front": "Tiga judul bagian laporan singkat",
+            "back": "Introduction · Findings · Recommendations"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · formal emails and reports",
+          "intro": "Formal writing is impersonal and complete: no contractions, no abbreviations or emoji, formal words, and the passive where the doer isn't important. Say your purpose in the first line.",
+          "headers": [
+            "Part",
+            "Formal English",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Greeting, name known",
+              "Dear Ms Tan, / Dear Mr Lim,",
+              "Yth. Ibu Tan / Bapak Lim"
+            ],
+            [
+              "Greeting, name unknown",
+              "Dear Sir or Madam,",
+              "Kepada Yth. Bapak/Ibu"
+            ],
+            [
+              "Request",
+              "I am writing to enquire about …",
+              "Saya menulis untuk menanyakan …"
+            ],
+            [
+              "Request",
+              "I would be grateful if you could …",
+              "Saya akan sangat berterima kasih jika Anda dapat …"
+            ],
+            [
+              "Complaint",
+              "I am writing to complain about …",
+              "Saya menyampaikan keluhan tentang …"
+            ],
+            [
+              "Complaint",
+              "I would appreciate a refund / a replacement.",
+              "Saya mengharapkan pengembalian dana / penggantian."
+            ],
+            [
+              "Application",
+              "I am writing to apply for the position of …, as advertised on …",
+              "Saya bermaksud melamar posisi …, sesuai iklan di …"
+            ],
+            [
+              "Closing line",
+              "Thank you for your time. I look forward to hearing from you.",
+              "Demikian … terima kasih."
+            ],
+            [
+              "Sign-off, name known (British)",
+              "Yours sincerely,",
+              "Hormat saya,"
+            ],
+            [
+              "Sign-off, name unknown (British)",
+              "Yours faithfully,",
+              "Hormat saya,"
+            ],
+            [
+              "Sign-off, semi-formal email",
+              "Kind regards, / Best regards,",
+              "Salam,"
+            ],
+            [
+              "Report: Introduction",
+              "The aim of this report is to …",
+              "Tujuan laporan ini adalah …"
+            ],
+            [
+              "Report: Findings",
+              "A survey was conducted … / It was found that …",
+              "Survei dilakukan … / Ditemukan bahwa …"
+            ],
+            [
+              "Report: Recommendations",
+              "The company should … / It is recommended that …",
+              "Perusahaan sebaiknya … / Disarankan agar …"
+            ]
+          ],
+          "tips": [
+            "Purpose first: I am writing to enquire about / complain about / apply for … Leave out Dengan hormat, Puji syukur and Saya yang bertanda tangan di bawah ini.",
+            "British: Dear + name → Yours sincerely; Dear Sir or Madam → Yours faithfully. American: Sincerely, for both. Semi-formal emails: Kind regards,",
+            "A report has a title and headings, no Dear and no sign-off: Introduction (the aim), Findings (facts), Recommendations (should)."
+          ],
+          "examples": [
+            {
+              "en": "The meeting has been postponed until next Tuesday.",
+              "id": "Rapatnya ditunda sampai Selasa depan."
+            },
+            {
+              "en": "I am writing to enquire about internships at your company.",
+              "id": "Saya menulis untuk menanyakan program magang di perusahaan Anda."
+            },
+            {
+              "en": "I would be grateful if you could send me the application form.",
+              "id": "Saya akan sangat berterima kasih jika Anda dapat mengirimkan formulir pendaftarannya kepada saya."
+            },
+            {
+              "en": "It is recommended that staff use the new app.",
+              "id": "Disarankan agar karyawan memakai aplikasi yang baru."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Two British Council B2 models to study: a formal letter of complaint and a short report with headings."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu email yang sopan, kata-kata formal, kata penghubung B2 dan kalimat pasif. Hari ini kita gabungkan semuanya: email dan surat formal untuk permintaan, keluhan dan lamaran kerja, plus laporan singkat dengan judul bagian.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Apa yang membuat tulisan formal",
+        "text": "Ulasan singkat: kamu sudah tahu bagian-bagian email, kata formal seperti enquire dan regarding, kata penghubung seperti However dan Moreover, dan kalimat pasif. Teks formal memakai semuanya.",
+        "body": "Email, surat atau laporan formal itu **impersonal** (tentang fakta, bukan perasaan) dan **lengkap**:\n- **tanpa kontraksi** (bentuk singkat): *I am, we cannot*\n- **kalimat pasif** kalau pelakunya tidak penting: *Your application will be reviewed.*\n- **kata dan kata penghubung formal**: *enquire, regarding, require; However, Moreover*\n- **kata kerja satu kata**, bukan phrasal verb: *postpone*, bukan *put off*\n- **kalimat lengkap**: tanpa emoji, tanpa *pls, thx, asap*\n\nIni kecenderungan: kalimat aktif seperti *I am writing …* atau *We have received …* juga tidak masalah.",
+        "pairs": [
+          {
+            "en": "I'm → I am",
+            "id": "bentuk lengkap, tanpa kontraksi"
+          },
+          {
+            "en": "can't → cannot",
+            "id": "tidak bisa / tidak dapat"
+          },
+          {
+            "en": "asap → as soon as possible",
+            "id": "secepatnya"
+          },
+          {
+            "en": "about → regarding",
+            "id": "tentang → mengenai"
+          },
+          {
+            "en": "put off → postpone",
+            "id": "menunda"
+          },
+          {
+            "en": "Your application will be reviewed.",
+            "id": "Lamaran Anda akan ditinjau. (pasif)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sebuah universitas di Jakarta mengirim pengumuman kepada semua mahasiswanya tentang ujian akhir.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-in-a",
+          "prompt": "Kalimat mana yang cocok untuk pengumuman formal?",
+          "options": [
+            "We've put off the final exam till Monday, 9 June.",
+            "The final exam has been postponed until Monday, 9 June.",
+            "The final exam has been put off till Mon, 9 June."
+          ],
+          "answer": 1,
+          "explanation": "Pengumuman formal memakai kalimat pasif (pelakunya, universitas, sudah jelas), kata kerja satu kata **postponed** dan *until*. Pilihan pertama punya kontraksi (*We've*) dan phrasal verb *put off*; pilihan ketiga masih memakai *put off*, *till* dan singkatan *Mon*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dear … Yours …",
+        "text": "Setiap surat formal dibuka dan ditutup dengan cara yang tetap. Di bahasa Inggris British, salam pembuka menentukan salam penutup.",
+        "body": "- Nama diketahui: *Dear Ms Tan,* … **Yours sincerely,**\n- Nama tidak diketahui: *Dear Sir or Madam,* … **Yours faithfully,**\n\nTriknya: **S**ir dan **s**incerely tidak pernah berpasangan. Bahasa Inggris **Amerika** memakai *Sincerely,* untuk keduanya. Di email kerja biasa: *Kind regards,* / *Best regards,* (semi-formal).\n\nKebiasaan Indonesia: *Dengan hormat* tidak punya baris bahasa Inggris (bukan *With respect,* ✗). Lewati pembuka panjang (*Puji syukur …* / *Semoga sehat selalu*): langsung ke tujuanmu. *Demikian surat ini kami sampaikan …* → *Thank you for your time. I look forward to hearing from you.*",
+        "pairs": [
+          {
+            "en": "Dear Ms Tan,",
+            "id": "Yth. Ibu Tan, (nama diketahui)"
+          },
+          {
+            "en": "Dear Sir or Madam,",
+            "id": "Kepada Yth. Bapak/Ibu, (nama tidak diketahui)"
+          },
+          {
+            "en": "Yours sincerely,",
+            "id": "Hormat saya, (setelah Dear + nama)"
+          },
+          {
+            "en": "Yours faithfully,",
+            "id": "Hormat saya, (setelah Dear Sir or Madam)"
+          },
+          {
+            "en": "Sincerely,",
+            "id": "Hormat saya, (Amerika)"
+          },
+          {
+            "en": "Kind regards,",
+            "id": "Salam, (email semi-formal)"
+          },
+          {
+            "en": "Thank you for your time.",
+            "id": "Terima kasih atas waktu Anda."
+          },
+          {
+            "en": "I look forward to hearing from you.",
+            "id": "Saya menantikan kabar dari Anda."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pembuka dan penutup",
+        "text": "Sari menulis surat keluhan formal kepada sebuah maskapai British. Ia tidak tahu nama orang yang akan membacanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "formal-emails-letters",
+          "prompt": "Salam pembuka dan penutup mana yang tepat untuk suratnya?",
+          "options": [
+            "Dear Sir or Madam, … Yours sincerely,",
+            "Dear Sir or Madam, … Yours faithfully,",
+            "Hi Sir, … Yours faithfully,"
+          ],
+          "answer": 1,
+          "explanation": "Tanpa nama → **Dear Sir or Madam,**, dan di bahasa Inggris British pasangannya **Yours faithfully,**. *Yours sincerely* untuk surat yang dibuka dengan nama (*Dear Ms Tan,*): Sir dan sincerely tidak pernah berpasangan. *Hi Sir* mencampur *Hi* yang informal dengan *Sir* yang formal."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Permintaan, keluhan, lamaran",
+        "text": "Setiap jenis surat punya rencananya sendiri, dan tujuannya selalu ada di kalimat pertama.",
+        "body": "**Permintaan**: *I am writing to enquire about …* (`I want to ask about …` itu bahasa Inggris yang benar, tapi terlalu langsung di sini) + *I would be grateful if you could …*\n\n**Keluhan**, tegas tapi sopan: 1) masalahnya: *I am writing to complain about …* 2) faktanya: tanggal, nomor pesanan, apa yang salah 3) tindakan yang kamu harapkan: *I would appreciate a replacement.*\n\n**Lamaran**: *I am writing to apply for the position of …, as advertised on …* (frasa yang dihafal saja) + pengalamanmu + *Please find attached my CV.*",
+        "pairs": [
+          {
+            "en": "I am writing to enquire about …",
+            "id": "Saya menulis untuk menanyakan …"
+          },
+          {
+            "en": "I would be grateful if you could …",
+            "id": "Saya akan sangat berterima kasih jika Anda dapat …"
+          },
+          {
+            "en": "I am writing to complain about …",
+            "id": "Saya menulis untuk menyampaikan keluhan tentang …"
+          },
+          {
+            "en": "I would appreciate a replacement.",
+            "id": "Saya mengharapkan penggantian."
+          },
+          {
+            "en": "I am writing to apply for the position of …",
+            "id": "Saya bermaksud melamar posisi …"
+          },
+          {
+            "en": "as advertised on …",
+            "id": "sesuai iklan di …"
+          },
+          {
+            "en": "Please find attached my CV.",
+            "id": "Terlampir CV saya."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Keluhan, langkah demi langkah",
+        "text": "Sari memesan lampu meja dari toko online, tapi barangnya tidak pernah datang. Ini emailnya.",
+        "body": "Perhatikan urutannya: tujuan → fakta (tanggal, nomor pesanan, kalimat pasif kalau pelakunya tidak penting) → tindakan yang ia harapkan → kalimat penutup → salam penutup.",
+        "examples": [
+          {
+            "en": "Dear Sir or Madam,",
+            "id": "Kepada Yth. Bapak/Ibu,"
+          },
+          {
+            "en": "I am writing to complain about an order from your online shop.",
+            "id": "Saya menulis untuk menyampaikan keluhan tentang pesanan dari toko online Anda."
+          },
+          {
+            "en": "On 2 May I ordered a desk lamp (order no. 58213), and delivery was promised within three days.",
+            "id": "Pada 2 Mei saya memesan lampu meja (pesanan no. 58213), dan pengirimannya dijanjikan dalam tiga hari."
+          },
+          {
+            "en": "However, the lamp has still not been delivered, and my emails have not been answered.",
+            "id": "Namun, lampunya masih belum dikirim, dan email-email saya belum dijawab."
+          },
+          {
+            "en": "I would be grateful if you could send the lamp by Friday or refund my payment in full.",
+            "id": "Saya akan sangat berterima kasih jika Anda dapat mengirimkan lampunya paling lambat hari Jumat atau mengembalikan pembayaran saya sepenuhnya."
+          },
+          {
+            "en": "I look forward to hearing from you. Yours faithfully, Sari Lestari",
+            "id": "Saya menantikan kabar dari Anda. Hormat saya, Sari Lestari"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun permintaannya",
+        "text": "Kursi kantor baru yang Budi beli di toko online datang dalam keadaan rusak. Ia menutup email keluhannya dengan tindakan yang ia harapkan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "formal-emails-letters",
+          "prompt": "Susun kata-katanya: Saya mengharapkan pengembalian dana untuk kursi yang rusak itu.",
+          "tokens": [
+            "refund",
+            "chair",
+            "I",
+            "the",
+            "appreciate",
+            "for",
+            "would",
+            "damaged",
+            "a"
+          ],
+          "solution": "I would appreciate a refund for the damaged chair.",
+          "explanation": "**I would appreciate** + kata benda menyatakan tindakan yang kamu harapkan dengan tegas tapi sopan: *a refund* (pengembalian dana), *a replacement* (penggantian). Ini langkah terakhir dalam surat keluhan, setelah masalah dan faktanya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Laporan singkat",
+        "text": "Laporan bukan surat: tanpa Dear dan tanpa salam penutup. Laporan punya judul dan judul bagian (heading) yang pendek.",
+        "body": "- **Introduction**: tujuannya, dalam satu atau dua kalimat: *The aim of this report is to …*\n- **Findings**: fakta dan angka, sering dalam kalimat pasif: *A survey was conducted …*, *It was found that …*\n- **Recommendations**: apa yang sebaiknya dilakukan selanjutnya: *The company should …*, *It is recommended that …* (frasa formal yang dihafal saja)\n\nTetap objektif: fakta, bukan perasaan (tanpa *I think*, tanpa *!!*). Dan buat singkat: tanpa pendahuluan panjang gaya *BAB I, Latar Belakang …*.",
+        "pairs": [
+          {
+            "en": "Introduction",
+            "id": "pendahuluan: tujuan laporan"
+          },
+          {
+            "en": "Findings",
+            "id": "temuan: fakta dan angka"
+          },
+          {
+            "en": "Recommendations",
+            "id": "rekomendasi: apa yang sebaiknya dilakukan"
+          },
+          {
+            "en": "The aim of this report is to …",
+            "id": "Tujuan laporan ini adalah …"
+          },
+          {
+            "en": "A survey was conducted …",
+            "id": "Survei dilakukan …"
+          },
+          {
+            "en": "It is recommended that …",
+            "id": "Disarankan agar …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Bagian yang mana?",
+        "text": "Bu Ani menulis laporan singkat tentang kantin kantor untuk atasannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "structure-a-short",
+          "prompt": "Laporannya punya tiga judul bagian. Paragraf ini masuk di bawah judul yang mana? 'Of the 85 staff who answered the survey, 64% said the canteen is too crowded between 12.00 and 12.30. Moreover, several complaints were received about the price of drinks.'",
+          "options": [
+            "Introduction",
+            "Recommendations",
+            "Findings"
+          ],
+          "answer": 2,
+          "explanation": "Angka dari survei dan keluhan yang diterima adalah **fakta**, jadi masuk di bawah **Findings**. Introduction hanya memberi tujuan laporan, dan Recommendations menyebutkan apa yang sebaiknya dilakukan selanjutnya (*should*, *It is recommended that …*)."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Frasa kunci",
+        "text": "Balik kartunya, dan ucapkan bahasa Inggris formalnya sebelum kamu melihat.",
+        "flashcards": [
+          {
+            "front": "Dengan hormat, (di awal surat)",
+            "back": "no English line: just Dear Ms Tan, / Dear Sir or Madam,"
+          },
+          {
+            "front": "Saya bermaksud menanyakan … (formal)",
+            "back": "I am writing to enquire about …"
+          },
+          {
+            "front": "Saya akan sangat berterima kasih jika Anda dapat …",
+            "back": "I would be grateful if you could …"
+          },
+          {
+            "front": "Saya bermaksud melamar posisi …, sesuai iklan di …",
+            "back": "I am writing to apply for the position of …, as advertised on …"
+          },
+          {
+            "front": "Salam penutup British: Dear + nama",
+            "back": "Yours sincerely,"
+          },
+          {
+            "front": "Salam penutup British: Dear Sir or Madam",
+            "back": "Yours faithfully, (American: Sincerely,)"
+          },
+          {
+            "front": "Demikian surat ini kami sampaikan. Terima kasih.",
+            "back": "Thank you for your time. I look forward to hearing from you."
+          },
+          {
+            "front": "Tiga judul bagian laporan singkat",
+            "back": "Introduction · Findings · Recommendations"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · email dan laporan formal",
+          "intro": "Tulisan formal itu impersonal dan lengkap: tanpa kontraksi, tanpa singkatan atau emoji, kata-kata formal, dan kalimat pasif kalau pelakunya tidak penting. Sebutkan tujuanmu di kalimat pertama.",
+          "headers": [
+            "Bagian",
+            "Bahasa Inggris formal",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Salam pembuka, nama diketahui",
+              "Dear Ms Tan, / Dear Mr Lim,",
+              "Yth. Ibu Tan / Bapak Lim"
+            ],
+            [
+              "Salam pembuka, nama tidak diketahui",
+              "Dear Sir or Madam,",
+              "Kepada Yth. Bapak/Ibu"
+            ],
+            [
+              "Permintaan",
+              "I am writing to enquire about …",
+              "Saya menulis untuk menanyakan …"
+            ],
+            [
+              "Permintaan",
+              "I would be grateful if you could …",
+              "Saya akan sangat berterima kasih jika Anda dapat …"
+            ],
+            [
+              "Keluhan",
+              "I am writing to complain about …",
+              "Saya menyampaikan keluhan tentang …"
+            ],
+            [
+              "Keluhan",
+              "I would appreciate a refund / a replacement.",
+              "Saya mengharapkan pengembalian dana / penggantian."
+            ],
+            [
+              "Lamaran",
+              "I am writing to apply for the position of …, as advertised on …",
+              "Saya bermaksud melamar posisi …, sesuai iklan di …"
+            ],
+            [
+              "Kalimat penutup",
+              "Thank you for your time. I look forward to hearing from you.",
+              "Demikian … terima kasih."
+            ],
+            [
+              "Salam penutup, nama diketahui (British)",
+              "Yours sincerely,",
+              "Hormat saya,"
+            ],
+            [
+              "Salam penutup, nama tidak diketahui (British)",
+              "Yours faithfully,",
+              "Hormat saya,"
+            ],
+            [
+              "Salam penutup, email semi-formal",
+              "Kind regards, / Best regards,",
+              "Salam,"
+            ],
+            [
+              "Laporan: Introduction",
+              "The aim of this report is to …",
+              "Tujuan laporan ini adalah …"
+            ],
+            [
+              "Laporan: Findings",
+              "A survey was conducted … / It was found that …",
+              "Survei dilakukan … / Ditemukan bahwa …"
+            ],
+            [
+              "Laporan: Recommendations",
+              "The company should … / It is recommended that …",
+              "Perusahaan sebaiknya … / Disarankan agar …"
+            ]
+          ],
+          "tips": [
+            "Tujuan dulu: I am writing to enquire about / complain about / apply for … Hapus Dengan hormat, Puji syukur dan Saya yang bertanda tangan di bawah ini.",
+            "British: Dear + nama → Yours sincerely; Dear Sir or Madam → Yours faithfully. Amerika: Sincerely, untuk keduanya. Email semi-formal: Kind regards,",
+            "Laporan punya judul dan judul bagian, tanpa Dear dan tanpa salam penutup: Introduction (tujuan), Findings (fakta), Recommendations (should)."
+          ],
+          "examples": [
+            {
+              "en": "The meeting has been postponed until next Tuesday.",
+              "id": "Rapatnya ditunda sampai Selasa depan."
+            },
+            {
+              "en": "I am writing to enquire about internships at your company.",
+              "id": "Saya menulis untuk menanyakan program magang di perusahaan Anda."
+            },
+            {
+              "en": "I would be grateful if you could send me the application form.",
+              "id": "Saya akan sangat berterima kasih jika Anda dapat mengirimkan formulir pendaftarannya kepada saya."
+            },
+            {
+              "en": "It is recommended that staff use the new app.",
+              "id": "Disarankan agar karyawan memakai aplikasi yang baru."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Dua contoh B2 dari British Council untuk dipelajari: surat keluhan formal dan laporan singkat dengan judul bagian."
+      }
+    ]
+  }
+}

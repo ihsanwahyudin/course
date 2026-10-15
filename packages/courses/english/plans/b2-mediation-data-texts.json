@@ -1,0 +1,732 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll help other people understand and work together: explain a table to someone who can't see it, summarise a long article for the person who needs it, and lead a group discussion. You already describe graphs and read long texts, so you're ready.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Explaining a table to someone who can't see it",
+        "text": "You've written about charts. Now imagine your manager is on the phone and can't see the table. What do you say?",
+        "body": "A listener can't remember ten numbers, so you choose for them:\n1. **What it's about:** *This table shows …*\n2. **The big picture first**, like an overview: *Basically, …*\n3. **Only 2–3 key numbers, rounded:** *just under half, about a third, one in ten*\n4. **Check:** *Does that make sense?*\n\nDon't read every figure in table order: after the third number, nobody is listening.",
+        "pairs": [
+          {
+            "en": "This table shows how people get to work.",
+            "id": "Tabel ini menunjukkan cara orang berangkat kerja. (1 · tentang apa)"
+          },
+          {
+            "en": "Basically, …",
+            "id": "Intinya, … (2 · gambaran besar)"
+          },
+          {
+            "en": "The main thing to notice is …",
+            "id": "Hal utama yang perlu diperhatikan adalah … (2 · gambaran besar)"
+          },
+          {
+            "en": "about a third",
+            "id": "sekitar sepertiga (≈ 33%)"
+          },
+          {
+            "en": "just over half",
+            "id": "sedikit lebih dari separuh (≈ 51–53%)"
+          },
+          {
+            "en": "roughly one in ten",
+            "id": "kira-kira satu dari sepuluh (≈ 10%)"
+          },
+          {
+            "en": "Does that make sense?",
+            "id": "Masuk akal? / Sudah jelas? (4 · cek pemahaman)"
+          },
+          {
+            "en": "Any questions so far?",
+            "id": "Ada pertanyaan sejauh ini? (4 · cek pemahaman)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Rina explains a table on the phone",
+        "text": "Here's the table Rina has (practice figures). Listen to how little of it she actually reads out.",
+        "body": "Where families in a city buy most of their groceries: traditional market 41.8% · minimarket 33.1% · supermarket 15.4% · online 9.7%.\n\nRina skips the supermarket figure: it isn't a key point. And watch the decimals: Indonesian **41,8%** = English **41.8%**, said *forty-one **point** eight*, never *comma*.",
+        "examples": [
+          {
+            "en": "This table shows where families in the city buy most of their groceries.",
+            "id": "Tabel ini menunjukkan di mana keluarga di kota itu membeli sebagian besar belanjaan dapurnya."
+          },
+          {
+            "en": "Basically, most people still shop in person, not online.",
+            "id": "Intinya, kebanyakan orang masih belanja langsung, bukan online."
+          },
+          {
+            "en": "The traditional market is the most popular: just over four in ten families shop there.",
+            "id": "Pasar tradisional paling populer: sedikit lebih dari empat dari sepuluh keluarga belanja di sana."
+          },
+          {
+            "en": "About a third use a minimarket, and only about one in ten shop online.",
+            "id": "Sekitar sepertiga belanja di minimarket, dan hanya sekitar satu dari sepuluh yang belanja online."
+          },
+          {
+            "en": "Does that make sense so far?",
+            "id": "Sejauh ini sudah jelas?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Now you have a table, and Pak Hasan is on the line.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-data-orally",
+          "options": [
+            "Sixty-two point four per cent every day, eighteen point nine per cent a few times a week, seven point two per cent less often and eleven point five per cent never.",
+            "Never is eleven point five per cent. I think it's because internet packages are expensive.",
+            "Basically, most adults there go online every day: about six in ten. Only just over one in ten never use it. Does that make sense?"
+          ],
+          "answer": 2,
+          "prompt": "A survey of 1,000 adults in Medan (practice figures): use the internet every day 62.4% · a few times a week 18.9% · less often 7.2% · never 11.5%. Your manager, Pak Hasan, is on the phone and isn't a numbers person. Which explanation is best?",
+          "explanation": "The last one gives **the big picture first**, then two **rounded** numbers (62.4% ≈ six in ten, 11.5% = just over one in ten), then **checks**. The first reads every figure, and the second starts with a detail and adds a guess as if it were a fact."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Round it",
+        "text": "One more: this time just one number.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-data-orally",
+          "options": [
+            "Just over half of them eat at their desk.",
+            "Just under half of them eat at their desk.",
+            "Forty-eight comma six per cent of them eat at their desk."
+          ],
+          "answer": 1,
+          "prompt": "A survey (practice figures) says 48.6% of office workers in Bandung eat lunch at their desk. You're explaining it on a video call. Which is the clearest way to say it?",
+          "explanation": "48.6% is a little **less** than 50%, so **just under half**. *Just over half* would be a bit more than 50%. And English says *point*, not *comma*: 48.6 = *forty-eight point six*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One article, three readers",
+        "text": "At B1 you learnt: main point first, then 2–3 key facts. With a long article, the question is: which facts? It depends on who's reading.",
+        "body": "Ask: **who is it for, and what will they do with it?**\n- **Manager** → the **decision points**: options, cost, deadline.\n- **Foreign colleague** → **context**: what every Indonesian already knows.\n- **Client** → the **impact on them**: what changes, when, what to do.\n\nSkim, scan for what THIS reader needs, then write from notes. From an Indonesian article, don't translate sentence by sentence.",
+        "pairs": [
+          {
+            "en": "The decision we need to make is whether … or …",
+            "id": "Keputusan yang perlu kita ambil adalah apakah … atau … (manajer)"
+          },
+          {
+            "en": "We need to decide by Friday.",
+            "id": "Kita perlu memutuskan paling lambat Jumat. (manajer)"
+          },
+          {
+            "en": "For context, …",
+            "id": "Sebagai konteks, … (rekan kerja asing)"
+          },
+          {
+            "en": "In Indonesia, …",
+            "id": "Di Indonesia, … (rekan kerja asing)"
+          },
+          {
+            "en": "For you, this means …",
+            "id": "Buat Anda, artinya … (klien)"
+          },
+          {
+            "en": "The main change for you is …",
+            "id": "Perubahan utama buat Anda adalah … (klien)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Same article, three summaries",
+        "text": "Here's a practice article from an Indonesian newspaper (the content is invented), summarised for three different people.",
+        "body": "The article: from June to September, private companies in Jakarta must let staff work from home on Tuesdays and Thursdays, to cut traffic and air pollution. Companies that break the rule can be fined. Customer service, hospitals and shops stay open.\n\nSummaries for: 1) the manager, 2) Mark, a colleague from Australia, 3) a client.",
+        "examples": [
+          {
+            "en": "From June to September, we have to work from home on Tuesdays and Thursdays. We need to decide which meetings move online, and whether five more people need laptops.",
+            "id": "Dari Juni sampai September, kita harus bekerja dari rumah setiap Selasa dan Kamis. Kita perlu memutuskan rapat mana yang pindah ke online, dan apakah lima orang lagi butuh laptop."
+          },
+          {
+            "en": "For context, Jakarta's air is often very bad in the dry season, and traffic is a big part of the problem. So the city is making companies work from home two days a week.",
+            "id": "Sebagai konteks, udara Jakarta sering sangat buruk di musim kemarau, dan lalu lintas adalah penyebab besarnya. Jadi pemerintah kota mewajibkan perusahaan bekerja dari rumah dua hari seminggu."
+          },
+          {
+            "en": "For you, nothing changes with your orders: our customer service is open as normal. But our meetings with you on Tuesdays and Thursdays will be online.",
+            "id": "Buat Anda, tidak ada yang berubah dengan pesanan Anda: layanan pelanggan kami tetap buka seperti biasa. Tapi rapat kami dengan Anda setiap Selasa dan Kamis akan diadakan online."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Summarise for your manager",
+        "text": "Your office building in Bandung sent a long newsletter, and Bu Ani has no time to read it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-for-audience",
+          "options": [
+            "Last year the building added solar panels, and the lifts will be repaired in June. The rent is also going up.",
+            "We need to decide by 15 June: sign a two-year contract and keep today's rent, or stay flexible and pay about 15% more from July.",
+            "The building management is greedy, so I think we should move to another office."
+          ],
+          "answer": 1,
+          "prompt": "The practice newsletter says: the lifts will be repaired in June; solar panels were added last year; from 1 July, the rent goes up by about 15%; tenants who sign a two-year contract by 15 June keep today's rent. Your manager, Bu Ani, wants the decision points. Which summary is best?",
+          "explanation": "A manager wants **the decision**: the two options, the cost and the deadline, and the middle summary gives exactly that. The first follows the newsletter's order and hides the decision at the end; the last adds an opinion that isn't in the text."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Facilitating a group: five moves",
+        "text": "Last part. Sari, Dimas, Rina and Lukas, an exchange student from Germany, are planning a survey for a class project, and you're leading the session.",
+        "body": "A facilitator helps the group do the task:\n1. **Open:** *Our aim today is to …*\n2. **Invite views** by name.\n3. **Keep on track.**\n4. **Keep time.**\n5. **Sum up** what you agreed and who does what next.\n\nIndonesian traps: *Ayo kembali ke topik* → **Let's get back to the topic**, not `Let's back to`. *Sepuluh menit lagi* → **ten minutes left**, not `ten minutes again`. Inviting a quiet person by name is kind, not rude.",
+        "pairs": [
+          {
+            "en": "Our aim today is to …",
+            "id": "Tujuan kita hari ini adalah … (membuka tugas)"
+          },
+          {
+            "en": "Sari, what's your take?",
+            "id": "Sari, bagaimana pandanganmu? (take = pandangan, bukan 'ambil')"
+          },
+          {
+            "en": "Dimas, we haven't heard from you yet.",
+            "id": "Dimas, kami belum mendengar pendapatmu. (mengajak)"
+          },
+          {
+            "en": "Thanks, Sari. Let's hear from someone else.",
+            "id": "Terima kasih, Sari. Ayo dengar dari yang lain."
+          },
+          {
+            "en": "That's an interesting point, but let's come back to it later.",
+            "id": "Poin yang menarik, tapi kita bahas lagi nanti, ya. (menjaga arah)"
+          },
+          {
+            "en": "I think we're getting a bit off track.",
+            "id": "Sepertinya kita agak keluar dari topik."
+          },
+          {
+            "en": "We're running out of time.",
+            "id": "Waktu kita hampir habis. (menjaga waktu)"
+          },
+          {
+            "en": "So, we've agreed to …",
+            "id": "Jadi, kita sudah sepakat untuk … (menyimpulkan)"
+          },
+          {
+            "en": "So, to sum up, …",
+            "id": "Jadi, kesimpulannya, … (menyimpulkan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Fifteen minutes into the session, the group isn't really a group.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "facilitate-group-work",
+          "options": [
+            "Rina, why are you so quiet?",
+            "Thanks, Dimas. Rina, what's your take?",
+            "Rina, you must give an opinion now."
+          ],
+          "answer": 1,
+          "prompt": "Dimas has done most of the talking for fifteen minutes, and Rina hasn't said anything yet. What's the best thing to say?",
+          "explanation": "Thank the person who talked a lot, then **invite** the quiet person **by name** with an open question: *what's your take?* (take = your view). *Why are you so quiet?* puts her on the spot, and *you must* sounds like an order."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Keep time",
+        "text": "The session ends at 3 p.m., and it's 2.55.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "facilitate-group-work",
+          "tokens": [
+            "left",
+            "five",
+            "We",
+            "minutes",
+            "have"
+          ],
+          "solution": "We have five minutes left.",
+          "prompt": "Arrange the words: Waktu kita tinggal lima menit lagi.",
+          "explanation": "Here *lagi* means what remains, so English uses **left** at the end: *We have five minutes left* (or *We've got five minutes left*). *Again* would mean *one more time*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · explaining data, summarising, facilitating",
+          "intro": "Three ways to help other people: explain numbers they can't see, summarise what they need, and keep a group working together.",
+          "headers": [
+            "Task",
+            "Do this",
+            "Say"
+          ],
+          "rows": [
+            [
+              "Explain data",
+              "say what it's about",
+              "This table shows where people buy their groceries."
+            ],
+            [
+              "Explain data",
+              "big picture first",
+              "Basically, most people still shop in person."
+            ],
+            [
+              "Explain data",
+              "2–3 numbers, rounded",
+              "just under half · about a third · one in ten"
+            ],
+            [
+              "Explain data",
+              "check understanding",
+              "Does that make sense? / Any questions so far?"
+            ],
+            [
+              "Explain data",
+              "decimals the English way",
+              "48,7% → 48.7%, forty-eight point seven per cent"
+            ],
+            [
+              "Summarise",
+              "manager: decision points",
+              "The decision we need to make is whether … or …"
+            ],
+            [
+              "Summarise",
+              "foreign colleague: context",
+              "For context, … / In Indonesia, …"
+            ],
+            [
+              "Summarise",
+              "client: impact on them",
+              "For you, this means …"
+            ],
+            [
+              "Facilitate",
+              "open the task",
+              "Our aim today is to …"
+            ],
+            [
+              "Facilitate",
+              "invite views",
+              "Sari, what's your take? / We haven't heard from you yet."
+            ],
+            [
+              "Facilitate",
+              "keep on track",
+              "That's an interesting point, but let's come back to it later."
+            ],
+            [
+              "Facilitate",
+              "keep time",
+              "We've got ten minutes left."
+            ],
+            [
+              "Facilitate",
+              "sum up and next steps",
+              "So, to sum up, we've agreed to … Rina is going to … by Friday."
+            ]
+          ],
+          "tips": [
+            "Data: big picture first, 2–3 rounded numbers, then check. Never read every figure.",
+            "Summary: ask who it's for. Manager = decision, colleague = context, client = impact.",
+            "Not 'one from five', 'Let's back to the topic' or 'five minutes again'."
+          ],
+          "examples": [
+            {
+              "en": "Basically, most people still shop in person, not online.",
+              "id": "Intinya, kebanyakan orang masih belanja langsung, bukan online."
+            },
+            {
+              "en": "For context, Jakarta's air is often very bad in the dry season.",
+              "id": "Sebagai konteks, udara Jakarta sering sangat buruk di musim kemarau."
+            },
+            {
+              "en": "That's an interesting point, but let's come back to it later.",
+              "id": "Poin yang menarik, tapi kita bahas lagi nanti, ya."
+            },
+            {
+              "en": "So, we've agreed to send the survey on Monday.",
+              "id": "Jadi, kita sudah sepakat mengirim survei hari Senin."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "A British Council B2 listening lesson: three students organise a study group and agree on a plan, with exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan membantu orang lain memahami dan bekerja sama: menjelaskan tabel kepada orang yang tidak bisa melihatnya, meringkas artikel panjang untuk orang yang membutuhkannya, dan memimpin diskusi kelompok. Kamu sudah bisa mendeskripsikan grafik dan membaca teks panjang, jadi kamu siap.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menjelaskan tabel kepada orang yang tidak bisa melihatnya",
+        "text": "Kamu sudah menulis tentang grafik. Sekarang bayangkan manajermu di telepon dan tidak bisa melihat tabelnya. Apa yang kamu katakan?",
+        "body": "Pendengar tidak bisa mengingat sepuluh angka, jadi kamu yang memilihkan:\n1. **Tentang apa:** *This table shows …*\n2. **Gambaran besar dulu**, seperti overview: *Basically, …*\n3. **Hanya 2–3 angka penting, dibulatkan:** *just under half, about a third, one in ten*\n4. **Cek:** *Does that make sense?*\n\nJangan bacakan semua angka sesuai urutan tabel: setelah angka ketiga, tidak ada yang mendengarkan lagi.",
+        "pairs": [
+          {
+            "en": "This table shows how people get to work.",
+            "id": "Tabel ini menunjukkan cara orang berangkat kerja. (1 · tentang apa)"
+          },
+          {
+            "en": "Basically, …",
+            "id": "Intinya, … (2 · gambaran besar)"
+          },
+          {
+            "en": "The main thing to notice is …",
+            "id": "Hal utama yang perlu diperhatikan adalah … (2 · gambaran besar)"
+          },
+          {
+            "en": "about a third",
+            "id": "sekitar sepertiga (≈ 33%)"
+          },
+          {
+            "en": "just over half",
+            "id": "sedikit lebih dari separuh (≈ 51–53%)"
+          },
+          {
+            "en": "roughly one in ten",
+            "id": "kira-kira satu dari sepuluh (≈ 10%)"
+          },
+          {
+            "en": "Does that make sense?",
+            "id": "Masuk akal? / Sudah jelas? (4 · cek pemahaman)"
+          },
+          {
+            "en": "Any questions so far?",
+            "id": "Ada pertanyaan sejauh ini? (4 · cek pemahaman)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Rina menjelaskan tabel lewat telepon",
+        "text": "Ini tabel yang Rina pegang (angka latihan). Perhatikan betapa sedikit angka yang benar-benar ia bacakan.",
+        "body": "Tempat keluarga di sebuah kota membeli sebagian besar belanjaan dapurnya: traditional market 41.8% · minimarket 33.1% · supermarket 15.4% · online 9.7%.\n\nRina melewatkan angka supermarket: itu bukan poin penting. Dan perhatikan desimalnya: **41,8%** dalam bahasa Indonesia = **41.8%** dalam bahasa Inggris, dibaca *forty-one **point** eight*, tidak pernah *comma*.",
+        "examples": [
+          {
+            "en": "This table shows where families in the city buy most of their groceries.",
+            "id": "Tabel ini menunjukkan di mana keluarga di kota itu membeli sebagian besar belanjaan dapurnya."
+          },
+          {
+            "en": "Basically, most people still shop in person, not online.",
+            "id": "Intinya, kebanyakan orang masih belanja langsung, bukan online."
+          },
+          {
+            "en": "The traditional market is the most popular: just over four in ten families shop there.",
+            "id": "Pasar tradisional paling populer: sedikit lebih dari empat dari sepuluh keluarga belanja di sana."
+          },
+          {
+            "en": "About a third use a minimarket, and only about one in ten shop online.",
+            "id": "Sekitar sepertiga belanja di minimarket, dan hanya sekitar satu dari sepuluh yang belanja online."
+          },
+          {
+            "en": "Does that make sense so far?",
+            "id": "Sejauh ini sudah jelas?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sekarang kamu yang pegang tabel, dan Pak Hasan ada di telepon.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-data-orally",
+          "options": [
+            "Sixty-two point four per cent every day, eighteen point nine per cent a few times a week, seven point two per cent less often and eleven point five per cent never.",
+            "Never is eleven point five per cent. I think it's because internet packages are expensive.",
+            "Basically, most adults there go online every day: about six in ten. Only just over one in ten never use it. Does that make sense?"
+          ],
+          "answer": 2,
+          "prompt": "Survei terhadap 1.000 orang dewasa di Medan (angka latihan): use the internet every day 62.4% · a few times a week 18.9% · less often 7.2% · never 11.5%. Manajermu, Pak Hasan, ada di telepon dan tidak terlalu paham angka. Penjelasan mana yang paling baik?",
+          "explanation": "Pilihan terakhir memberi **gambaran besar dulu**, lalu dua angka yang **dibulatkan** (62,4% ≈ enam dari sepuluh, 11,5% = sedikit lebih dari satu dari sepuluh), lalu **mengecek**. Pilihan pertama membacakan semua angka, dan pilihan kedua dimulai dengan detail lalu menambahkan tebakan seolah-olah fakta."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Bulatkan",
+        "text": "Satu lagi: kali ini hanya satu angka.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-data-orally",
+          "options": [
+            "Just over half of them eat at their desk.",
+            "Just under half of them eat at their desk.",
+            "Forty-eight comma six per cent of them eat at their desk."
+          ],
+          "answer": 1,
+          "prompt": "Sebuah survei (angka latihan) mengatakan 48,6% pekerja kantor di Bandung makan siang di meja kerjanya. Kamu menjelaskannya di video call. Cara mana yang paling jelas?",
+          "explanation": "48,6% sedikit **kurang** dari 50%, jadi **just under half**. *Just over half* berarti sedikit lebih dari 50%. Dan bahasa Inggris bilang *point*, bukan *comma*: 48.6 = *forty-eight point six*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Satu artikel, tiga pembaca",
+        "text": "Di B1 kamu sudah belajar: poin utama dulu, lalu 2–3 fakta penting. Dengan artikel panjang, pertanyaannya: fakta yang mana? Itu tergantung siapa pembacanya.",
+        "body": "Tanya: **untuk siapa, dan akan dipakai untuk apa?**\n- **Manajer** → **poin keputusannya**: pilihan, biaya, tenggat.\n- **Rekan kerja asing** → **konteks**: hal yang semua orang Indonesia sudah tahu.\n- **Klien** → **dampaknya bagi mereka**: apa yang berubah, kapan, apa yang harus dilakukan.\n\nSkim, scan apa yang dibutuhkan pembaca INI, lalu tulis dari catatan. Dari artikel berbahasa Indonesia, jangan terjemahkan kalimat per kalimat.",
+        "pairs": [
+          {
+            "en": "The decision we need to make is whether … or …",
+            "id": "Keputusan yang perlu kita ambil adalah apakah … atau … (manajer)"
+          },
+          {
+            "en": "We need to decide by Friday.",
+            "id": "Kita perlu memutuskan paling lambat Jumat. (manajer)"
+          },
+          {
+            "en": "For context, …",
+            "id": "Sebagai konteks, … (rekan kerja asing)"
+          },
+          {
+            "en": "In Indonesia, …",
+            "id": "Di Indonesia, … (rekan kerja asing)"
+          },
+          {
+            "en": "For you, this means …",
+            "id": "Buat Anda, artinya … (klien)"
+          },
+          {
+            "en": "The main change for you is …",
+            "id": "Perubahan utama buat Anda adalah … (klien)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Artikel yang sama, tiga ringkasan",
+        "text": "Ini artikel latihan dari koran berbahasa Indonesia (isinya karangan), diringkas untuk tiga orang yang berbeda.",
+        "body": "Artikelnya: dari Juni sampai September, perusahaan swasta di Jakarta wajib menerapkan kerja dari rumah setiap Selasa dan Kamis, untuk mengurangi kemacetan dan polusi udara. Perusahaan yang melanggar bisa didenda. Layanan pelanggan, rumah sakit dan toko tetap buka.\n\nRingkasan untuk: 1) manajer, 2) Mark, rekan kerja dari Australia, 3) klien.",
+        "examples": [
+          {
+            "en": "From June to September, we have to work from home on Tuesdays and Thursdays. We need to decide which meetings move online, and whether five more people need laptops.",
+            "id": "Dari Juni sampai September, kita harus bekerja dari rumah setiap Selasa dan Kamis. Kita perlu memutuskan rapat mana yang pindah ke online, dan apakah lima orang lagi butuh laptop."
+          },
+          {
+            "en": "For context, Jakarta's air is often very bad in the dry season, and traffic is a big part of the problem. So the city is making companies work from home two days a week.",
+            "id": "Sebagai konteks, udara Jakarta sering sangat buruk di musim kemarau, dan lalu lintas adalah penyebab besarnya. Jadi pemerintah kota mewajibkan perusahaan bekerja dari rumah dua hari seminggu."
+          },
+          {
+            "en": "For you, nothing changes with your orders: our customer service is open as normal. But our meetings with you on Tuesdays and Thursdays will be online.",
+            "id": "Buat Anda, tidak ada yang berubah dengan pesanan Anda: layanan pelanggan kami tetap buka seperti biasa. Tapi rapat kami dengan Anda setiap Selasa dan Kamis akan diadakan online."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Meringkas untuk manajermu",
+        "text": "Gedung kantormu di Bandung mengirim newsletter yang panjang, dan Bu Ani tidak sempat membacanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-for-audience",
+          "options": [
+            "Last year the building added solar panels, and the lifts will be repaired in June. The rent is also going up.",
+            "We need to decide by 15 June: sign a two-year contract and keep today's rent, or stay flexible and pay about 15% more from July.",
+            "The building management is greedy, so I think we should move to another office."
+          ],
+          "answer": 1,
+          "prompt": "Newsletter latihan itu berisi: lift akan diperbaiki bulan Juni; panel surya dipasang tahun lalu; mulai 1 Juli, sewa naik sekitar 15%; penyewa yang menandatangani kontrak dua tahun paling lambat 15 Juni tetap membayar sewa yang sekarang. Manajermu, Bu Ani, ingin poin keputusannya. Ringkasan mana yang paling baik?",
+          "explanation": "Manajer ingin **keputusannya**: dua pilihan, biaya dan tenggatnya, dan ringkasan tengah memberi persis itu. Ringkasan pertama mengikuti urutan newsletter dan menyembunyikan keputusannya di akhir; ringkasan terakhir menambahkan opini yang tidak ada di teks."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Memfasilitasi kelompok: lima langkah",
+        "text": "Bagian terakhir. Sari, Dimas, Rina dan Lukas, mahasiswa pertukaran dari Jerman, sedang merencanakan survei untuk proyek kuliah, dan kamu yang memimpin sesinya.",
+        "body": "Fasilitator membantu kelompok menyelesaikan tugasnya:\n1. **Membuka:** *Our aim today is to …*\n2. **Mengajak berpendapat** dengan menyebut nama.\n3. **Menjaga tetap terarah.**\n4. **Menjaga waktu.**\n5. **Menyimpulkan** apa yang disepakati dan siapa melakukan apa berikutnya.\n\nJebakan bahasa Indonesia: *Ayo kembali ke topik* → **Let's get back to the topic**, bukan `Let's back to`. *Sepuluh menit lagi* → **ten minutes left**, bukan `ten minutes again`. Mengajak orang yang pendiam dengan menyebut namanya itu baik, bukan kasar.",
+        "pairs": [
+          {
+            "en": "Our aim today is to …",
+            "id": "Tujuan kita hari ini adalah … (membuka tugas)"
+          },
+          {
+            "en": "Sari, what's your take?",
+            "id": "Sari, bagaimana pandanganmu? (take = pandangan, bukan 'ambil')"
+          },
+          {
+            "en": "Dimas, we haven't heard from you yet.",
+            "id": "Dimas, kami belum mendengar pendapatmu. (mengajak)"
+          },
+          {
+            "en": "Thanks, Sari. Let's hear from someone else.",
+            "id": "Terima kasih, Sari. Ayo dengar dari yang lain."
+          },
+          {
+            "en": "That's an interesting point, but let's come back to it later.",
+            "id": "Poin yang menarik, tapi kita bahas lagi nanti, ya. (menjaga arah)"
+          },
+          {
+            "en": "I think we're getting a bit off track.",
+            "id": "Sepertinya kita agak keluar dari topik."
+          },
+          {
+            "en": "We're running out of time.",
+            "id": "Waktu kita hampir habis. (menjaga waktu)"
+          },
+          {
+            "en": "So, we've agreed to …",
+            "id": "Jadi, kita sudah sepakat untuk … (menyimpulkan)"
+          },
+          {
+            "en": "So, to sum up, …",
+            "id": "Jadi, kesimpulannya, … (menyimpulkan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Lima belas menit sesi berjalan, kelompoknya belum benar-benar bekerja sebagai kelompok.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "facilitate-group-work",
+          "options": [
+            "Rina, why are you so quiet?",
+            "Thanks, Dimas. Rina, what's your take?",
+            "Rina, you must give an opinion now."
+          ],
+          "answer": 1,
+          "prompt": "Dimas paling banyak bicara selama lima belas menit, dan Rina belum bicara sama sekali. Apa yang paling baik untuk dikatakan?",
+          "explanation": "Ucapkan terima kasih kepada orang yang banyak bicara, lalu **ajak** orang yang pendiam **dengan menyebut namanya** lewat pertanyaan terbuka: *what's your take?* (take = pandanganmu). *Why are you so quiet?* memojokkannya, dan *you must* terdengar seperti perintah."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jaga waktunya",
+        "text": "Sesinya selesai pukul 3 sore, dan sekarang pukul 2.55.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "facilitate-group-work",
+          "tokens": [
+            "left",
+            "five",
+            "We",
+            "minutes",
+            "have"
+          ],
+          "solution": "We have five minutes left.",
+          "prompt": "Susun kata-katanya: Waktu kita tinggal lima menit lagi.",
+          "explanation": "Di sini *lagi* berarti sisa waktunya, jadi bahasa Inggris memakai **left** di akhir: *We have five minutes left* (atau *We've got five minutes left*). *Again* berarti *sekali lagi*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · menjelaskan data, meringkas, memfasilitasi",
+          "intro": "Tiga cara membantu orang lain: menjelaskan angka yang tidak bisa mereka lihat, meringkas apa yang mereka butuhkan, dan menjaga kelompok tetap bekerja sama.",
+          "headers": [
+            "Tugas",
+            "Lakukan ini",
+            "Katakan"
+          ],
+          "rows": [
+            [
+              "Menjelaskan data",
+              "katakan tentang apa",
+              "This table shows where people buy their groceries."
+            ],
+            [
+              "Menjelaskan data",
+              "gambaran besar dulu",
+              "Basically, most people still shop in person."
+            ],
+            [
+              "Menjelaskan data",
+              "2–3 angka, dibulatkan",
+              "just under half · about a third · one in ten"
+            ],
+            [
+              "Menjelaskan data",
+              "cek pemahaman",
+              "Does that make sense? / Any questions so far?"
+            ],
+            [
+              "Menjelaskan data",
+              "desimal cara Inggris",
+              "48,7% → 48.7%, forty-eight point seven per cent"
+            ],
+            [
+              "Meringkas",
+              "manajer: poin keputusan",
+              "The decision we need to make is whether … or …"
+            ],
+            [
+              "Meringkas",
+              "rekan kerja asing: konteks",
+              "For context, … / In Indonesia, …"
+            ],
+            [
+              "Meringkas",
+              "klien: dampak bagi mereka",
+              "For you, this means …"
+            ],
+            [
+              "Memfasilitasi",
+              "membuka tugas",
+              "Our aim today is to …"
+            ],
+            [
+              "Memfasilitasi",
+              "mengajak berpendapat",
+              "Sari, what's your take? / We haven't heard from you yet."
+            ],
+            [
+              "Memfasilitasi",
+              "menjaga tetap terarah",
+              "That's an interesting point, but let's come back to it later."
+            ],
+            [
+              "Memfasilitasi",
+              "menjaga waktu",
+              "We've got ten minutes left."
+            ],
+            [
+              "Memfasilitasi",
+              "menyimpulkan dan langkah berikutnya",
+              "So, to sum up, we've agreed to … Rina is going to … by Friday."
+            ]
+          ],
+          "tips": [
+            "Data: gambaran besar dulu, 2–3 angka yang dibulatkan, lalu cek. Jangan bacakan semua angka.",
+            "Ringkasan: tanya untuk siapa. Manajer = keputusan, rekan kerja = konteks, klien = dampak.",
+            "Bukan 'one from five', 'Let's back to the topic' atau 'five minutes again'."
+          ],
+          "examples": [
+            {
+              "en": "Basically, most people still shop in person, not online.",
+              "id": "Intinya, kebanyakan orang masih belanja langsung, bukan online."
+            },
+            {
+              "en": "For context, Jakarta's air is often very bad in the dry season.",
+              "id": "Sebagai konteks, udara Jakarta sering sangat buruk di musim kemarau."
+            },
+            {
+              "en": "That's an interesting point, but let's come back to it later.",
+              "id": "Poin yang menarik, tapi kita bahas lagi nanti, ya."
+            },
+            {
+              "en": "So, we've agreed to send the survey on Monday.",
+              "id": "Jadi, kita sudah sepakat mengirim survei hari Senin."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Pelajaran menyimak B2 dari British Council: tiga mahasiswa mengatur kelompok belajar dan menyepakati rencana, dengan latihan."
+      }
+    ]
+  }
+}

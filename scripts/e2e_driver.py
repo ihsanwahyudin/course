@@ -257,7 +257,7 @@ def learn(api, curriculum):
         if status != 409:
             fail(f"{nid} should not start: {status} {body}")
     print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A}")
-    for ck in ("a0-checkpoint", "a1-checkpoint", "a2-checkpoint", "b1-checkpoint"):
+    for ck in ("a0-checkpoint", "a1-checkpoint", "a2-checkpoint", "b1-checkpoint", "b2-checkpoint"):
         level_checkpoint(api, ls, ck)
     sign_in(api, EMAIL_B, register=False)
     _, d = call(api, "GET", "/api/v1/dashboard")

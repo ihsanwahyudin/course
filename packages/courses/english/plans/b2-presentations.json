@@ -1,0 +1,742 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to give a presentation in English: guide your audience through the talk, explain a chart clearly and handle questions calmly. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Open your talk",
+        "text": "A good presentation starts with a clear map. Let's learn how to open.",
+        "body": "**Signposts** (papan penunjuk jalan) are phrases that tell listeners where they are in your talk. Open in three moves: **greet and thank** (*Good morning, everyone, and thank you for coming.*), **give the topic** (*Today I'd like to talk about …*) and **give the map** (*I've divided my talk into three parts. First, … Then, … Finally, …*). Skip the long apology (*Mohon maaf kalau ada kesalahan* → `Sorry for my bad English` ✗): it's humble in Indonesian, but in English it makes people expect a weak talk. Thank them instead.",
+        "pairs": [
+          {
+            "en": "Good morning, everyone.",
+            "id": "Selamat pagi semuanya."
+          },
+          {
+            "en": "Thank you for coming.",
+            "id": "Terima kasih sudah datang."
+          },
+          {
+            "en": "Today I'd like to talk about …",
+            "id": "Hari ini saya ingin membahas …"
+          },
+          {
+            "en": "I've divided my talk into … parts.",
+            "id": "Saya membagi presentasi saya menjadi … bagian."
+          },
+          {
+            "en": "First, … Then, … Finally, …",
+            "id": "Pertama, … Lalu, … Terakhir, …"
+          },
+          {
+            "en": "Please feel free to ask questions at the end.",
+            "id": "Silakan bertanya di akhir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Give the map",
+        "text": "Build the sentence that tells the audience how your talk is organised.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "signpost-the-structure",
+          "prompt": "Arrange the words: Saya membagi presentasi saya menjadi tiga bagian.",
+          "tokens": [
+            "into",
+            "talk",
+            "I",
+            "parts",
+            "have",
+            "my",
+            "three",
+            "divided"
+          ],
+          "solution": "I have divided my talk into three parts.",
+          "explanation": "**I have divided** (I've divided): you made the plan before the talk, and it's ready now, so present perfect. **divide … into** = membagi … menjadi. Then name the parts: *First, … Then, … Finally, …*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Move on and finish",
+        "text": "Now the signs between the parts, and at the end.",
+        "body": "When one part ends, close it and open the next: **Let's move on to …** / **Now let's look at …** / **That brings me to …** Not `Okay, next. This is the graph.` ✗: *Okay, next* gives no direction, and everyone can see it's a graph. At the end: **To sum up, …** (recap from the meetings lesson), **The key takeaway is that …** (*takeaway* = the main message people take home) and **Thank you for listening. I'm happy to take any questions.** No closing apology needed.",
+        "pairs": [
+          {
+            "en": "Let's move on to …",
+            "id": "Mari lanjut ke …"
+          },
+          {
+            "en": "Now let's look at …",
+            "id": "Sekarang mari kita lihat …"
+          },
+          {
+            "en": "That brings me to …",
+            "id": "Itu membawa saya ke …"
+          },
+          {
+            "en": "To sum up, …",
+            "id": "Singkatnya, …"
+          },
+          {
+            "en": "The key takeaway is that …",
+            "id": "Pesan utamanya adalah …"
+          },
+          {
+            "en": "Thank you for listening.",
+            "id": "Terima kasih sudah mendengarkan."
+          },
+          {
+            "en": "I'm happy to take any questions.",
+            "id": "Dengan senang hati saya menjawab pertanyaan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Help Sari move to her next part.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "signpost-the-structure",
+          "prompt": "Sari has finished the first part of her talk, about why customers cancel orders. Her next slide shows the results of a customer survey. Which is the best way to move on?",
+          "options": [
+            "Okay, next. This is the survey.",
+            "Let's move on to the results of our customer survey.",
+            "Sorry, now I want to change to the survey."
+          ],
+          "answer": 1,
+          "explanation": "**Let's move on to …** closes one part and tells listeners exactly what comes next. *Okay, next. This is the survey.* gives no direction and states the obvious, and *I want to change to* is *saya mau ganti ke* word for word."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Talk about your visuals",
+        "text": "Charts are where many presentations lose their audience. Here's how to guide people through one.",
+        "body": "Three moves: **say what it shows** (*This chart shows …*), **point to the part** (*As you can see, …* / *If you look at the left-hand column, …*) and **give the message** (*What's interesting here is that …*). For the message, use your trend words: *rose sharply, peaked at, remained stable, doubled*; **to** + the new level, never `rose until 4,000` ✗. Don't read the slide word for word: the audience reads faster than you speak. Look at them, slow down for numbers, and say it in your own words.",
+        "pairs": [
+          {
+            "en": "This chart shows …",
+            "id": "Grafik ini menunjukkan …"
+          },
+          {
+            "en": "As you can see, …",
+            "id": "Seperti yang bisa Anda lihat, …"
+          },
+          {
+            "en": "If you look at the left-hand column, …",
+            "id": "Kalau Anda melihat kolom sebelah kiri, …"
+          },
+          {
+            "en": "On the right, you can see …",
+            "id": "Di sebelah kanan, Anda bisa melihat …"
+          },
+          {
+            "en": "What's interesting here is that …",
+            "id": "Yang menarik di sini adalah …"
+          },
+          {
+            "en": "The figures speak for themselves.",
+            "id": "Angkanya sudah berbicara sendiri."
+          },
+          {
+            "en": "column / row",
+            "id": "kolom / baris"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Explaining a chart",
+        "text": "Read these aloud, slowly, with a short pause before each number.",
+        "body": "The slide, as a table (practice figures): monthly users of a food app in Bandung · January 20,000 · April 35,000 · July 50,000 · October 48,000. Notice the three moves: what it shows, where to look, and the message.",
+        "examples": [
+          {
+            "en": "This graph shows the number of monthly users of our app in Bandung.",
+            "id": "Grafik ini menunjukkan jumlah pengguna bulanan aplikasi kita di Bandung."
+          },
+          {
+            "en": "As you can see, the number of users rose steadily from January to July.",
+            "id": "Seperti yang bisa Anda lihat, jumlah pengguna naik terus dari Januari sampai Juli."
+          },
+          {
+            "en": "In July, it peaked at fifty thousand, and then it fell slightly.",
+            "id": "Di bulan Juli, jumlahnya mencapai puncak di lima puluh ribu, lalu turun sedikit."
+          },
+          {
+            "en": "What's interesting here is that the number more than doubled in just six months.",
+            "id": "Yang menarik di sini adalah jumlahnya naik lebih dari dua kali lipat hanya dalam enam bulan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Present the slide",
+        "text": "Now you present a slide.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-trends-and",
+          "prompt": "Your slide (practice figures): orders per month · Surabaya: January 2,000, June 4,000 · Bandung: January 3,000, June 3,000. Which is the best way to talk about it?",
+          "options": [
+            "Okay, next. This is the chart. Surabaya, two thousand, four thousand. Bandung, three thousand, three thousand.",
+            "As you can see, orders in Surabaya rose until 4,000, while orders in Bandung fell sharply.",
+            "As you can see, orders in Surabaya doubled, from 2,000 to 4,000, while orders in Bandung remained stable."
+          ],
+          "answer": 2,
+          "explanation": "It points to the slide (*As you can see*), gives the message (*doubled*, *remained stable*) and matches the figures. The first one just reads the numbers aloud. The second one uses *until* for a level (say *rose to 4,000*), and Bandung didn't fall: it stayed at 3,000."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Handle questions",
+        "text": "Last part: the questions at the end. Here's a simple plan.",
+        "body": "Four moves: **welcome** (*That's a great question.*), **check** if you're not sure (*If I understand correctly, you're asking …?*), **answer briefly**, then **check back** (*Does that answer your question?*). Don't know? **Don't bluff** (pura-pura tahu): *I'm afraid I don't have that figure with me, but I'll follow up by email.* **I'm afraid** = sayangnya, a polite way to give bad news, not *takut*. An honest follow-up sounds professional; a wrong guess hurts your credibility.",
+        "pairs": [
+          {
+            "en": "That's a great question.",
+            "id": "Pertanyaan yang bagus."
+          },
+          {
+            "en": "If I understand correctly, you're asking …",
+            "id": "Kalau saya tidak salah tangkap, Anda bertanya …"
+          },
+          {
+            "en": "I'm afraid I don't have that figure with me.",
+            "id": "Sayangnya saya tidak membawa angka itu."
+          },
+          {
+            "en": "I'll follow up by email.",
+            "id": "Akan saya tindak lanjuti lewat email."
+          },
+          {
+            "en": "I'll check and get back to you.",
+            "id": "Akan saya cek lalu saya kabari."
+          },
+          {
+            "en": "I'll come to that in a minute.",
+            "id": "Nanti saya bahas."
+          },
+          {
+            "en": "Does that answer your question?",
+            "id": "Apakah itu menjawab pertanyaan Anda?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Press play and listen to a question from the audience.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "handle-audience-questions",
+          "prompt": "You're presenting this year's sales at your company in Jakarta. You don't have the figures for each city with you. Listen to the question. What's the best reply?",
+          "listen": "Thank you for the presentation. Could you tell us the exact sales figure for Medan in December?",
+          "options": [
+            "Sales in Medan were about two billion rupiah, I think. Maybe a bit more.",
+            "That's a good question. I'm afraid I don't have the Medan figure with me, but I'll check it and send it to you by email today.",
+            "Sorry, I'm afraid of this question. Next question, please."
+          ],
+          "answer": 1,
+          "explanation": "You don't have the figure, so be honest: welcome the question, say **I'm afraid** (sayangnya) you don't have it, and promise a follow-up. The first reply is a guess, and if it's wrong, people stop trusting your numbers. In the third, *I'm afraid of this question* means 'I'm scared of it', and it doesn't answer at all."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Check the question",
+        "text": "One more: a question you don't fully understand.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "handle-audience-questions",
+          "prompt": "At a seminar in Yogyakarta, a student asks a long question about prices, delivery and next year. You aren't sure what she really wants to know. What's the best first reply?",
+          "options": [
+            "Yes. Next question, please.",
+            "If I understand correctly, you're asking whether delivery will cost more next year?",
+            "Sorry, I don't understand your English."
+          ],
+          "answer": 1,
+          "explanation": "Check before you answer: **If I understand correctly, you're asking …?** shows you listened and lets her correct you. *Next question* ignores her, and *I don't understand your English* blames her; if you need to, say *Sorry, I'm not sure I follow* (from the meetings lesson)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it open while you prepare your next presentation.",
+        "artifact": {
+          "title": "Cheat sheet · presentations",
+          "intro": "Open with a map, signpost every move, explain each chart in three moves, and handle questions honestly.",
+          "headers": [
+            "Situation",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Open",
+              "Good morning, everyone, and thank you for coming.",
+              "selamat pagi semuanya, terima kasih sudah datang"
+            ],
+            [
+              "Give the topic",
+              "Today I'd like to talk about …",
+              "hari ini saya ingin membahas …"
+            ],
+            [
+              "Give the map",
+              "I've divided my talk into three parts. First, … Then, … Finally, …",
+              "saya membagi presentasi menjadi tiga bagian"
+            ],
+            [
+              "Move on",
+              "Let's move on to … / Now let's look at …",
+              "mari lanjut ke … / sekarang mari kita lihat …"
+            ],
+            [
+              "Start a new part",
+              "That brings me to …",
+              "itu membawa saya ke …"
+            ],
+            [
+              "Conclude",
+              "To sum up, … / The key takeaway is that …",
+              "singkatnya … / pesan utamanya adalah …"
+            ],
+            [
+              "Finish",
+              "Thank you for listening. I'm happy to take any questions.",
+              "terima kasih sudah mendengarkan; silakan bertanya"
+            ],
+            [
+              "Say what a visual shows",
+              "This chart shows …",
+              "grafik ini menunjukkan …"
+            ],
+            [
+              "Point to a part",
+              "As you can see, … / If you look at the left-hand column, …",
+              "seperti yang bisa Anda lihat / kalau Anda melihat kolom kiri"
+            ],
+            [
+              "Give the message",
+              "What's interesting here is that …",
+              "yang menarik di sini adalah …"
+            ],
+            [
+              "Welcome a question",
+              "That's a great question.",
+              "pertanyaan yang bagus"
+            ],
+            [
+              "Check the question",
+              "If I understand correctly, you're asking …?",
+              "kalau saya tidak salah tangkap, Anda bertanya …?"
+            ],
+            [
+              "You don't know",
+              "I'm afraid I don't have that figure with me, but I'll follow up by email.",
+              "sayangnya saya tidak membawa angkanya; akan saya kirim lewat email"
+            ],
+            [
+              "Check back",
+              "Does that answer your question?",
+              "apakah itu menjawab pertanyaan Anda?"
+            ]
+          ],
+          "tips": [
+            "No opening apology ('Sorry for my bad English'): thank the audience instead. Not 'Okay, next. This is the graph': say Let's move on to … As you can see, …",
+            "Don't read the slide: say what it shows, point to the part, and give the message with trend words (rose to 4,000, not rose until 4,000).",
+            "I'm afraid = sayangnya, not takut. Don't bluff: I'll check and follow up by email."
+          ],
+          "examples": [
+            {
+              "en": "Let's move on to the results. As you can see in this graph, sales rose sharply in March.",
+              "id": "Mari lanjut ke hasilnya. Seperti yang bisa Anda lihat di grafik ini, penjualan naik tajam di bulan Maret."
+            },
+            {
+              "en": "What's interesting here is that most orders came from Surabaya.",
+              "id": "Yang menarik di sini adalah sebagian besar pesanan datang dari Surabaya."
+            },
+            {
+              "en": "That's a great question. I'll check and get back to you this afternoon.",
+              "id": "Pertanyaan yang bagus. Akan saya cek lalu saya kabari sore ini."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Here are two short engVid videos with presentation phrases and tips for difficult questions."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu belajar presentasi dalam bahasa Inggris: memandu audiens sepanjang presentasi, menjelaskan grafik dengan jelas dan menjawab pertanyaan dengan tenang. Ayo kita mulai langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Membuka presentasi",
+        "text": "Presentasi yang baik dimulai dengan peta yang jelas. Ayo belajar cara membukanya.",
+        "body": "**Signpost** (papan penunjuk jalan) adalah ungkapan yang memberi tahu pendengar mereka sedang di bagian mana. Buka dalam tiga langkah: **beri salam dan terima kasih** (*Good morning, everyone, and thank you for coming.*), **sebutkan topiknya** (*Today I'd like to talk about …*) dan **beri petanya** (*I've divided my talk into three parts. First, … Then, … Finally, …*). Lewati permintaan maaf yang panjang (*Mohon maaf kalau ada kesalahan* → `Sorry for my bad English` ✗): itu rendah hati dalam bahasa Indonesia, tapi dalam bahasa Inggris membuat audiens menduga presentasimu lemah. Ucapkan terima kasih saja.",
+        "pairs": [
+          {
+            "en": "Good morning, everyone.",
+            "id": "Selamat pagi semuanya."
+          },
+          {
+            "en": "Thank you for coming.",
+            "id": "Terima kasih sudah datang."
+          },
+          {
+            "en": "Today I'd like to talk about …",
+            "id": "Hari ini saya ingin membahas …"
+          },
+          {
+            "en": "I've divided my talk into … parts.",
+            "id": "Saya membagi presentasi saya menjadi … bagian."
+          },
+          {
+            "en": "First, … Then, … Finally, …",
+            "id": "Pertama, … Lalu, … Terakhir, …"
+          },
+          {
+            "en": "Please feel free to ask questions at the end.",
+            "id": "Silakan bertanya di akhir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Beri petanya",
+        "text": "Susun kalimat yang memberi tahu audiens bagaimana presentasimu disusun.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "signpost-the-structure",
+          "prompt": "Susun kata-katanya: Saya membagi presentasi saya menjadi tiga bagian.",
+          "tokens": [
+            "into",
+            "talk",
+            "I",
+            "parts",
+            "have",
+            "my",
+            "three",
+            "divided"
+          ],
+          "solution": "I have divided my talk into three parts.",
+          "explanation": "**I have divided** (I've divided): kamu membuat rencananya sebelum presentasi, dan sekarang sudah siap, jadi present perfect. **divide … into** = membagi … menjadi. Lalu sebutkan bagian-bagiannya: *First, … Then, … Finally, …*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pindah bagian dan menutup",
+        "text": "Sekarang tanda-tanda di antara bagian, dan di akhir.",
+        "body": "Saat satu bagian selesai, tutup lalu buka bagian berikutnya: **Let's move on to …** / **Now let's look at …** / **That brings me to …** Bukan `Okay, next. This is the graph.` ✗: *Okay, next* tidak memberi arah, dan semua orang bisa melihat itu grafik. Di akhir: **To sum up, …** (ulasan dari pelajaran rapat), **The key takeaway is that …** (*takeaway* = pesan utama yang dibawa pulang) dan **Thank you for listening. I'm happy to take any questions.** Tidak perlu minta maaf di penutup.",
+        "pairs": [
+          {
+            "en": "Let's move on to …",
+            "id": "Mari lanjut ke …"
+          },
+          {
+            "en": "Now let's look at …",
+            "id": "Sekarang mari kita lihat …"
+          },
+          {
+            "en": "That brings me to …",
+            "id": "Itu membawa saya ke …"
+          },
+          {
+            "en": "To sum up, …",
+            "id": "Singkatnya, …"
+          },
+          {
+            "en": "The key takeaway is that …",
+            "id": "Pesan utamanya adalah …"
+          },
+          {
+            "en": "Thank you for listening.",
+            "id": "Terima kasih sudah mendengarkan."
+          },
+          {
+            "en": "I'm happy to take any questions.",
+            "id": "Dengan senang hati saya menjawab pertanyaan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bantu Sari pindah ke bagian berikutnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "signpost-the-structure",
+          "prompt": "Sari sudah selesai dengan bagian pertama presentasinya, tentang alasan pelanggan membatalkan pesanan. Slide berikutnya menunjukkan hasil survei pelanggan. Cara mana yang paling baik untuk pindah bagian?",
+          "options": [
+            "Okay, next. This is the survey.",
+            "Let's move on to the results of our customer survey.",
+            "Sorry, now I want to change to the survey."
+          ],
+          "answer": 1,
+          "explanation": "**Let's move on to …** menutup satu bagian dan memberi tahu pendengar dengan tepat apa yang berikutnya. *Okay, next. This is the survey.* tidak memberi arah dan hanya menyebut yang sudah jelas, dan *I want to change to* adalah *saya mau ganti ke* kata per kata."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membahas visualmu",
+        "text": "Di bagian grafik, banyak presentasi kehilangan audiensnya. Begini cara memandu mereka.",
+        "body": "Tiga langkah: **sebutkan apa yang ditunjukkan** (*This chart shows …*), **tunjuk bagiannya** (*As you can see, …* / *If you look at the left-hand column, …*) dan **sampaikan pesannya** (*What's interesting here is that …*). Untuk pesannya, pakai kata-kata tren: *rose sharply, peaked at, remained stable, doubled*; **to** + level barunya, bukan `rose until 4,000` ✗. Jangan membaca slide kata per kata: audiens membaca lebih cepat daripada kamu bicara. Lihat ke mereka, pelan-pelan saat menyebut angka, dan sampaikan dengan kata-katamu sendiri.",
+        "pairs": [
+          {
+            "en": "This chart shows …",
+            "id": "Grafik ini menunjukkan …"
+          },
+          {
+            "en": "As you can see, …",
+            "id": "Seperti yang bisa Anda lihat, …"
+          },
+          {
+            "en": "If you look at the left-hand column, …",
+            "id": "Kalau Anda melihat kolom sebelah kiri, …"
+          },
+          {
+            "en": "On the right, you can see …",
+            "id": "Di sebelah kanan, Anda bisa melihat …"
+          },
+          {
+            "en": "What's interesting here is that …",
+            "id": "Yang menarik di sini adalah …"
+          },
+          {
+            "en": "The figures speak for themselves.",
+            "id": "Angkanya sudah berbicara sendiri."
+          },
+          {
+            "en": "column / row",
+            "id": "kolom / baris"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Menjelaskan grafik",
+        "text": "Baca keras-keras, pelan-pelan, dengan jeda singkat sebelum setiap angka.",
+        "body": "Slide-nya, dalam bentuk tabel (angka latihan): pengguna bulanan sebuah aplikasi makanan di Bandung · Januari 20.000 · April 35.000 · Juli 50.000 · Oktober 48.000. Perhatikan tiga langkahnya: apa yang ditunjukkan, ke mana harus melihat, dan pesannya.",
+        "examples": [
+          {
+            "en": "This graph shows the number of monthly users of our app in Bandung.",
+            "id": "Grafik ini menunjukkan jumlah pengguna bulanan aplikasi kita di Bandung."
+          },
+          {
+            "en": "As you can see, the number of users rose steadily from January to July.",
+            "id": "Seperti yang bisa Anda lihat, jumlah pengguna naik terus dari Januari sampai Juli."
+          },
+          {
+            "en": "In July, it peaked at fifty thousand, and then it fell slightly.",
+            "id": "Di bulan Juli, jumlahnya mencapai puncak di lima puluh ribu, lalu turun sedikit."
+          },
+          {
+            "en": "What's interesting here is that the number more than doubled in just six months.",
+            "id": "Yang menarik di sini adalah jumlahnya naik lebih dari dua kali lipat hanya dalam enam bulan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Presentasikan slide-nya",
+        "text": "Sekarang kamu yang mempresentasikan slide.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-trends-and",
+          "prompt": "Slide-mu (angka latihan): pesanan per bulan · Surabaya: Januari 2.000, Juni 4.000 · Bandung: Januari 3.000, Juni 3.000. Cara mana yang paling baik untuk membahasnya?",
+          "options": [
+            "Okay, next. This is the chart. Surabaya, two thousand, four thousand. Bandung, three thousand, three thousand.",
+            "As you can see, orders in Surabaya rose until 4,000, while orders in Bandung fell sharply.",
+            "As you can see, orders in Surabaya doubled, from 2,000 to 4,000, while orders in Bandung remained stable."
+          ],
+          "answer": 2,
+          "explanation": "Kalimat ini menunjuk slide-nya (*As you can see*), menyampaikan pesannya (*doubled*, *remained stable*) dan sesuai dengan angkanya. Yang pertama hanya membacakan angka. Yang kedua memakai *until* untuk level (katakan *rose to 4,000*), dan Bandung tidak turun: tetap di 3.000."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menjawab pertanyaan",
+        "text": "Bagian terakhir: pertanyaan di akhir presentasi. Ini rencana sederhananya.",
+        "body": "Empat langkah: **sambut** (*That's a great question.*), **cek** kalau kamu tidak yakin (*If I understand correctly, you're asking …?*), **jawab dengan singkat**, lalu **cek kembali** (*Does that answer your question?*). Tidak tahu? **Jangan pura-pura tahu** (bluffing): *I'm afraid I don't have that figure with me, but I'll follow up by email.* **I'm afraid** = sayangnya, cara sopan menyampaikan kabar kurang enak, bukan *takut*. Tindak lanjut yang jujur terdengar profesional; tebakan yang salah merusak kepercayaan orang.",
+        "pairs": [
+          {
+            "en": "That's a great question.",
+            "id": "Pertanyaan yang bagus."
+          },
+          {
+            "en": "If I understand correctly, you're asking …",
+            "id": "Kalau saya tidak salah tangkap, Anda bertanya …"
+          },
+          {
+            "en": "I'm afraid I don't have that figure with me.",
+            "id": "Sayangnya saya tidak membawa angka itu."
+          },
+          {
+            "en": "I'll follow up by email.",
+            "id": "Akan saya tindak lanjuti lewat email."
+          },
+          {
+            "en": "I'll check and get back to you.",
+            "id": "Akan saya cek lalu saya kabari."
+          },
+          {
+            "en": "I'll come to that in a minute.",
+            "id": "Nanti saya bahas."
+          },
+          {
+            "en": "Does that answer your question?",
+            "id": "Apakah itu menjawab pertanyaan Anda?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Tekan play dan dengarkan pertanyaan dari audiens.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "handle-audience-questions",
+          "prompt": "Kamu sedang mempresentasikan penjualan tahun ini di kantormu di Jakarta. Kamu tidak membawa angka untuk setiap kota. Dengarkan pertanyaannya. Jawaban mana yang paling baik?",
+          "listen": "Thank you for the presentation. Could you tell us the exact sales figure for Medan in December?",
+          "options": [
+            "Sales in Medan were about two billion rupiah, I think. Maybe a bit more.",
+            "That's a good question. I'm afraid I don't have the Medan figure with me, but I'll check it and send it to you by email today.",
+            "Sorry, I'm afraid of this question. Next question, please."
+          ],
+          "answer": 1,
+          "explanation": "Kamu tidak punya angkanya, jadi jujurlah: sambut pertanyaannya, katakan **I'm afraid** (sayangnya) kamu tidak membawanya, dan janjikan tindak lanjut. Jawaban pertama adalah tebakan, dan kalau salah, orang berhenti memercayai angka-angkamu. Yang ketiga, *I'm afraid of this question* artinya 'saya takut dengan pertanyaan ini', dan sama sekali tidak menjawab."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Cek pertanyaannya",
+        "text": "Satu lagi: pertanyaan yang tidak sepenuhnya kamu pahami.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "handle-audience-questions",
+          "prompt": "Di sebuah seminar di Yogyakarta, seorang mahasiswi mengajukan pertanyaan panjang tentang harga, pengiriman dan tahun depan. Kamu tidak yakin apa yang sebenarnya ingin dia ketahui. Apa jawaban pertama yang paling baik?",
+          "options": [
+            "Yes. Next question, please.",
+            "If I understand correctly, you're asking whether delivery will cost more next year?",
+            "Sorry, I don't understand your English."
+          ],
+          "answer": 1,
+          "explanation": "Cek dulu sebelum menjawab: **If I understand correctly, you're asking …?** menunjukkan kamu mendengarkan dan memberi dia kesempatan untuk membetulkan. *Next question* mengabaikannya, dan *I don't understand your English* menyalahkannya; kalau perlu, katakan *Sorry, I'm not sure I follow* (dari pelajaran rapat)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Buka terus saat kamu menyiapkan presentasi berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · presentasi",
+          "intro": "Buka dengan peta, tandai setiap perpindahan, jelaskan setiap grafik dalam tiga langkah, dan jawab pertanyaan dengan jujur.",
+          "headers": [
+            "Situasi",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Membuka",
+              "Good morning, everyone, and thank you for coming.",
+              "selamat pagi semuanya, terima kasih sudah datang"
+            ],
+            [
+              "Menyebut topik",
+              "Today I'd like to talk about …",
+              "hari ini saya ingin membahas …"
+            ],
+            [
+              "Memberi peta",
+              "I've divided my talk into three parts. First, … Then, … Finally, …",
+              "saya membagi presentasi menjadi tiga bagian"
+            ],
+            [
+              "Pindah bagian",
+              "Let's move on to … / Now let's look at …",
+              "mari lanjut ke … / sekarang mari kita lihat …"
+            ],
+            [
+              "Memulai bagian baru",
+              "That brings me to …",
+              "itu membawa saya ke …"
+            ],
+            [
+              "Menyimpulkan",
+              "To sum up, … / The key takeaway is that …",
+              "singkatnya … / pesan utamanya adalah …"
+            ],
+            [
+              "Menutup",
+              "Thank you for listening. I'm happy to take any questions.",
+              "terima kasih sudah mendengarkan; silakan bertanya"
+            ],
+            [
+              "Menyebut isi visual",
+              "This chart shows …",
+              "grafik ini menunjukkan …"
+            ],
+            [
+              "Menunjuk bagian",
+              "As you can see, … / If you look at the left-hand column, …",
+              "seperti yang bisa Anda lihat / kalau Anda melihat kolom kiri"
+            ],
+            [
+              "Menyampaikan pesan",
+              "What's interesting here is that …",
+              "yang menarik di sini adalah …"
+            ],
+            [
+              "Menyambut pertanyaan",
+              "That's a great question.",
+              "pertanyaan yang bagus"
+            ],
+            [
+              "Mengecek pertanyaan",
+              "If I understand correctly, you're asking …?",
+              "kalau saya tidak salah tangkap, Anda bertanya …?"
+            ],
+            [
+              "Kalau tidak tahu",
+              "I'm afraid I don't have that figure with me, but I'll follow up by email.",
+              "sayangnya saya tidak membawa angkanya; akan saya kirim lewat email"
+            ],
+            [
+              "Mengecek kembali",
+              "Does that answer your question?",
+              "apakah itu menjawab pertanyaan Anda?"
+            ]
+          ],
+          "tips": [
+            "Jangan minta maaf di awal ('Sorry for my bad English'): ucapkan terima kasih kepada audiens. Bukan 'Okay, next. This is the graph': katakan Let's move on to … As you can see, …",
+            "Jangan membaca slide: sebutkan apa yang ditunjukkan, tunjuk bagiannya, dan sampaikan pesannya dengan kata-kata tren (rose to 4,000, bukan rose until 4,000).",
+            "I'm afraid = sayangnya, bukan takut. Jangan pura-pura tahu: I'll check and follow up by email."
+          ],
+          "examples": [
+            {
+              "en": "Let's move on to the results. As you can see in this graph, sales rose sharply in March.",
+              "id": "Mari lanjut ke hasilnya. Seperti yang bisa Anda lihat di grafik ini, penjualan naik tajam di bulan Maret."
+            },
+            {
+              "en": "What's interesting here is that most orders came from Surabaya.",
+              "id": "Yang menarik di sini adalah sebagian besar pesanan datang dari Surabaya."
+            },
+            {
+              "en": "That's a great question. I'll check and get back to you this afternoon.",
+              "id": "Pertanyaan yang bagus. Akan saya cek lalu saya kabari sore ini."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ini dua video singkat dari engVid berisi ungkapan untuk presentasi dan tips menghadapi pertanyaan sulit."
+      }
+    ]
+  }
+}
