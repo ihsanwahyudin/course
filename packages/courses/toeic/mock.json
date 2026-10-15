@@ -1,0 +1,126 @@
+{
+  "version": "2026.10.1",
+  "level": "Mock",
+  "title": "L&R Practice Tests",
+  "description": "Full timed Listening and Reading practice tests, an error review and a test-day plan.",
+  "i18n": {
+    "id": {
+      "title": "Latihan Tes L&R",
+      "description": "Latihan tes Listening and Reading lengkap dengan waktu, tinjauan kesalahan, dan rencana hari tes."
+    }
+  },
+  "nodes": [
+    {
+      "id": "toeic-lr-practice-test",
+      "level": "Mock",
+      "title": "Full L&R Practice Test",
+      "summary": "A complete 200-question, two-hour practice test under real timing.",
+      "prerequisiteIds": [
+        "toeic-graphics-implied",
+        "toeic-reading-time-management"
+      ],
+      "objectives": [
+        {
+          "id": "full-timing",
+          "text": "Complete all 200 questions within the real time limits without pausing the audio"
+        },
+        {
+          "id": "answer-sheet",
+          "text": "Mark answers in the right place and keep track of question numbers across parts"
+        },
+        {
+          "id": "estimate-score",
+          "text": "Read your practice result as an estimated score range, not an official score"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Latihan Tes L&R Lengkap",
+          "summary": "Satu latihan tes lengkap 200 soal selama dua jam dengan waktu seperti aslinya.",
+          "objectives": {
+            "full-timing": "Menyelesaikan 200 soal dalam batas waktu sebenarnya tanpa menghentikan audio",
+            "answer-sheet": "Menandai jawaban di tempat yang benar dan menjaga urutan nomor soal antar bagian",
+            "estimate-score": "Membaca hasil latihan sebagai perkiraan rentang skor, bukan skor resmi"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-lr-score-review",
+      "level": "Mock",
+      "title": "Score Review & Error Log",
+      "summary": "Sort your mistakes by part and by the abilities ETS reports, then target the biggest gaps.",
+      "prerequisiteIds": [
+        "toeic-lr-practice-test"
+      ],
+      "objectives": [
+        {
+          "id": "error-types",
+          "text": "Classify each mistake (vocabulary, grammar, missed detail, paraphrase, timing)"
+        },
+        {
+          "id": "abilities-measured",
+          "text": "Map mistakes to the abilities shown on the score report (e.g. details in short spoken texts, inferences in written texts)"
+        },
+        {
+          "id": "next-steps",
+          "text": "Choose the two parts that will raise your score most and plan practice for them"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Tinjauan Skor & Catatan Kesalahan",
+          "summary": "Kelompokkan kesalahanmu per bagian dan per kemampuan yang dilaporkan ETS, lalu fokus ke celah terbesar.",
+          "objectives": {
+            "error-types": "Mengelompokkan setiap kesalahan (kosakata, grammar, detail terlewat, parafrase, waktu)",
+            "abilities-measured": "Memetakan kesalahan ke kemampuan yang tercantum di laporan skor (mis. detail dalam teks lisan pendek, inferensi dalam teks tertulis)",
+            "next-steps": "Memilih dua bagian yang paling bisa menaikkan skor dan merencanakan latihan untuk keduanya"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-lr-test-day",
+      "level": "Mock",
+      "title": "Second Practice Test & Test-Day Plan",
+      "summary": "A second timed test to measure progress, plus what to expect at the test centre.",
+      "prerequisiteIds": [
+        "toeic-lr-score-review"
+      ],
+      "objectives": [
+        {
+          "id": "measure-progress",
+          "text": "Compare a second practice result with the first, part by part"
+        },
+        {
+          "id": "test-day-rules",
+          "text": "Prepare for test-day rules such as ID requirements and no notes or note paper"
+        },
+        {
+          "id": "final-routine",
+          "text": "Plan a final-week routine and an in-test pacing plan"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Latihan Tes Kedua & Rencana Hari Tes",
+          "summary": "Latihan tes kedua untuk mengukur kemajuan, plus apa yang perlu diharapkan di tempat tes.",
+          "objectives": {
+            "measure-progress": "Membandingkan hasil latihan kedua dengan yang pertama, bagian per bagian",
+            "test-day-rules": "Bersiap menghadapi aturan hari tes seperti syarat identitas dan larangan membawa catatan atau kertas",
+            "final-routine": "Merencanakan rutinitas minggu terakhir dan rencana pengaturan waktu selama tes"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "version": "2026.10.1",
+  "level": "Listening",
+  "title": "Listening (Parts 1–4)",
+  "description": "Photographs, Question-Response, Conversations and Talks: 100 questions, each recording played only once.",
+  "i18n": {
+    "id": {
+      "title": "Listening (Part 1–4)",
+      "description": "Photographs, Question-Response, Conversations dan Talks: 100 soal, setiap rekaman hanya diputar satu kali."
+    }
+  },
+  "nodes": [
+    {
+      "id": "toeic-part1-photographs",
+      "level": "Listening",
+      "title": "Part 1: Photographs",
+      "summary": "Choose the one statement out of four that best describes a photo (6 questions).",
+      "prerequisiteIds": [
+        "toeic-format-overview",
+        "toeic-workplace-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "describe-actions",
+          "text": "Identify statements that correctly describe people's actions and the position of objects"
+        },
+        {
+          "id": "being-vs-been",
+          "text": "Tell apart 'is being + past participle' (action in progress) from 'has been + past participle' (finished state)"
+        },
+        {
+          "id": "photo-traps",
+          "text": "Reject options that mention things not in the photo or use a similar-sounding word"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-present-continuous"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 1: Photographs",
+          "summary": "Memilih satu dari empat pernyataan yang paling tepat menggambarkan sebuah foto (6 soal).",
+          "objectives": {
+            "describe-actions": "Mengenali pernyataan yang benar tentang tindakan orang dan posisi benda",
+            "being-vs-been": "Membedakan 'is being + past participle' (tindakan sedang berlangsung) dan 'has been + past participle' (keadaan yang sudah selesai)",
+            "photo-traps": "Menolak pilihan yang menyebut hal yang tidak ada di foto atau memakai kata yang bunyinya mirip"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part2-question-response",
+      "level": "Listening",
+      "title": "Part 2: Question-Response",
+      "summary": "Pick the best of three spoken responses to a question or statement (25 questions).",
+      "prerequisiteIds": [
+        "toeic-part1-photographs"
+      ],
+      "objectives": [
+        {
+          "id": "wh-first-word",
+          "text": "Catch the first word of a WH-question and eliminate responses that answer a different question type"
+        },
+        {
+          "id": "indirect-answers",
+          "text": "Accept natural indirect answers (e.g. 'Let me check the schedule') to a direct question"
+        },
+        {
+          "id": "statements-requests",
+          "text": "Respond correctly to statements, suggestions and requests, not only questions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-everyday-conversation"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-modals-advice"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 2: Question-Response",
+          "summary": "Memilih tanggapan terbaik dari tiga jawaban lisan untuk sebuah pertanyaan atau pernyataan (25 soal).",
+          "objectives": {
+            "wh-first-word": "Menangkap kata pertama pertanyaan WH dan mencoret jawaban yang menjawab jenis pertanyaan lain",
+            "indirect-answers": "Menerima jawaban tidak langsung yang wajar (mis. 'Let me check the schedule') untuk pertanyaan langsung",
+            "statements-requests": "Menanggapi pernyataan, saran dan permintaan dengan tepat, bukan hanya pertanyaan"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-listening-traps",
+      "level": "Listening",
+      "title": "Paraphrase & Distractor Traps",
+      "summary": "The correct option usually paraphrases the audio; wrong options repeat its words or sounds.",
+      "prerequisiteIds": [
+        "toeic-part2-question-response"
+      ],
+      "objectives": [
+        {
+          "id": "spot-paraphrase",
+          "text": "Match a spoken phrase to its paraphrase in the answer options (e.g. 'the printer is broken' → 'equipment is not working')"
+        },
+        {
+          "id": "sound-alike",
+          "text": "Reject options built on repeated or similar-sounding words (e.g. copy / coffee, contract / contact)"
+        },
+        {
+          "id": "accents",
+          "text": "Understand the same information spoken in different English accents (e.g. American, British, Australian)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-alphabet-sounds"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jebakan Parafrase & Pengecoh",
+          "summary": "Jawaban benar biasanya memparafrasekan audio; pilihan yang salah mengulang kata atau bunyinya.",
+          "objectives": {
+            "spot-paraphrase": "Mencocokkan frasa lisan dengan parafrasenya di pilihan jawaban (mis. 'the printer is broken' → 'equipment is not working')",
+            "sound-alike": "Menolak pilihan yang dibuat dari kata yang diulang atau bunyinya mirip (mis. copy / coffee, contract / contact)",
+            "accents": "Memahami informasi yang sama yang diucapkan dengan aksen bahasa Inggris yang berbeda (mis. Amerika, Inggris, Australia)"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part3-conversations",
+      "level": "Listening",
+      "title": "Part 3: Conversations",
+      "summary": "Answer three questions about each conversation between two or three speakers (39 questions).",
+      "prerequisiteIds": [
+        "toeic-listening-traps"
+      ],
+      "objectives": [
+        {
+          "id": "preview-questions",
+          "text": "Preview the three questions before the audio and predict what to listen for"
+        },
+        {
+          "id": "gist-and-detail",
+          "text": "Answer gist questions (who, where, why) and detail questions (what, when, how much) from one listening"
+        },
+        {
+          "id": "three-speakers",
+          "text": "Follow who says what in conversations with three speakers"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-meetings"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-making-plans"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-future-forms"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 3: Conversations",
+          "summary": "Menjawab tiga soal tentang setiap percakapan antara dua atau tiga pembicara (39 soal).",
+          "objectives": {
+            "preview-questions": "Membaca tiga soal sebelum audio diputar dan memprediksi informasi yang perlu didengar",
+            "gist-and-detail": "Menjawab soal gambaran umum (siapa, di mana, mengapa) dan soal detail (apa, kapan, berapa) dari satu kali mendengar",
+            "three-speakers": "Mengikuti siapa mengatakan apa dalam percakapan dengan tiga pembicara"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part4-talks",
+      "level": "Listening",
+      "title": "Part 4: Talks",
+      "summary": "Answer three questions about each short talk by one speaker — announcements, messages, tours, reports (30 questions).",
+      "prerequisiteIds": [
+        "toeic-part3-conversations"
+      ],
+      "objectives": [
+        {
+          "id": "talk-types",
+          "text": "Recognise common talk types (voicemail, announcement, tour, broadcast, meeting excerpt) and what each usually asks"
+        },
+        {
+          "id": "speaker-purpose",
+          "text": "Identify the speaker's purpose and the action the listener is asked to take"
+        },
+        {
+          "id": "track-order",
+          "text": "Keep track of the three answers in the order they come up in the talk"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-presentations"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-future-forms"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 4: Talks",
+          "summary": "Menjawab tiga soal tentang setiap talk singkat oleh satu pembicara — pengumuman, pesan, tur, laporan (30 soal).",
+          "objectives": {
+            "talk-types": "Mengenali jenis talk yang umum (pesan suara, pengumuman, tur, siaran, cuplikan rapat) dan soal yang biasanya ditanyakan",
+            "speaker-purpose": "Mengidentifikasi tujuan pembicara dan tindakan yang diminta dari pendengar",
+            "track-order": "Mengikuti tiga jawaban sesuai urutan kemunculannya dalam talk"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-graphics-implied",
+      "level": "Listening",
+      "title": "Graphic & Implied-Meaning Questions",
+      "summary": "'Look at the graphic' and 'What does the speaker mean when she says…' questions in the Listening section.",
+      "prerequisiteIds": [
+        "toeic-part4-talks"
+      ],
+      "objectives": [
+        {
+          "id": "graphic-link",
+          "text": "Combine the audio with a schedule, price list, map or chart to choose the answer"
+        },
+        {
+          "id": "implied-meaning",
+          "text": "Infer what a speaker means by a quoted phrase from its context"
+        },
+        {
+          "id": "pacing-listening",
+          "text": "Read ahead to the next set of questions while the directions or other audio play"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-comparatives"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-modals-deduction"
+        },
+        {
+          "course": "english",
+          "nodeId": "c2-implied-meaning"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Soal Grafik & Makna Tersirat",
+          "summary": "Soal 'Look at the graphic' dan 'What does the speaker mean when she says…' di bagian Listening.",
+          "objectives": {
+            "graphic-link": "Menggabungkan audio dengan jadwal, daftar harga, peta atau grafik untuk memilih jawaban",
+            "implied-meaning": "Menyimpulkan maksud pembicara dari frasa yang dikutip berdasarkan konteksnya",
+            "pacing-listening": "Membaca lebih dulu set soal berikutnya saat petunjuk atau audio lain sedang diputar"
+          }
+        }
+      }
+    }
+  ]
+}

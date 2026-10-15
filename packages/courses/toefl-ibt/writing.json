@@ -1,0 +1,215 @@
+{
+  "version": "2026.10.1",
+  "level": "Writing",
+  "title": "Writing",
+  "description": "Build a Sentence, Write an Email and Write for an Academic Discussion, plus self-editing for the errors that cost points.",
+  "i18n": {
+    "id": {
+      "title": "Writing",
+      "description": "Build a Sentence, Write an Email dan Write for an Academic Discussion, plus menyunting sendiri kesalahan yang mengurangi skor."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ibt-build-a-sentence",
+      "level": "Writing",
+      "title": "Build a Sentence",
+      "summary": "Put scrambled words and phrases in order to make a grammatical reply in a short exchange.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "word-order",
+          "text": "Arrange words into correct English word order"
+        },
+        {
+          "id": "question-forms",
+          "text": "Build direct and indirect questions correctly"
+        },
+        {
+          "id": "fit-the-context",
+          "text": "Make the reply fit the first sentence of the exchange"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-reported-speech"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Build a Sentence",
+          "summary": "Mengurutkan kata dan frasa acak menjadi balasan yang gramatikal dalam percakapan singkat.",
+          "objectives": {
+            "word-order": "Menyusun kata sesuai urutan kata bahasa Inggris yang benar",
+            "question-forms": "Menyusun pertanyaan langsung dan tidak langsung dengan benar",
+            "fit-the-context": "Membuat balasan yang sesuai dengan kalimat pertama dalam percakapan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-write-an-email",
+      "level": "Writing",
+      "title": "Write an Email",
+      "summary": "Write a short email for an academic or social situation: request, inform or propose a solution.",
+      "prerequisiteIds": [
+        "ibt-build-a-sentence"
+      ],
+      "objectives": [
+        {
+          "id": "cover-the-task",
+          "text": "Address every point the prompt asks for"
+        },
+        {
+          "id": "email-tone",
+          "text": "Use a polite, appropriate tone for the reader"
+        },
+        {
+          "id": "email-structure",
+          "text": "Organise an email with a greeting, clear purpose, details and closing"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-modals-advice"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Write an Email",
+          "summary": "Menulis email singkat untuk situasi akademik atau sosial: meminta, memberi informasi atau mengusulkan solusi.",
+          "objectives": {
+            "cover-the-task": "Menjawab setiap poin yang diminta soal",
+            "email-tone": "Menggunakan nada yang sopan dan sesuai dengan pembacanya",
+            "email-structure": "Menyusun email dengan salam pembuka, tujuan yang jelas, detail dan penutup"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-academic-discussion",
+      "level": "Writing",
+      "title": "Write for an Academic Discussion",
+      "summary": "Post a reply in an online class discussion that states and supports your opinion.",
+      "prerequisiteIds": [
+        "ibt-write-an-email",
+        "ibt-academic-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "clear-position",
+          "text": "State a clear position on the professor's question"
+        },
+        {
+          "id": "support-with-reasons",
+          "text": "Support the position with reasons and a specific example"
+        },
+        {
+          "id": "engage-peers",
+          "text": "Respond to another student's view instead of repeating it"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-academic-writing"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Write for an Academic Discussion",
+          "summary": "Menulis tanggapan dalam diskusi kelas online yang menyatakan dan mendukung pendapatmu.",
+          "objectives": {
+            "clear-position": "Menyatakan posisi yang jelas terhadap pertanyaan dosen",
+            "support-with-reasons": "Mendukung posisi dengan alasan dan contoh yang spesifik",
+            "engage-peers": "Menanggapi pendapat mahasiswa lain alih-alih mengulanginya"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-self-editing",
+      "level": "Writing",
+      "title": "Self-Editing for Accuracy",
+      "summary": "Plan quickly and check your writing for the errors Indonesian speakers make most.",
+      "prerequisiteIds": [
+        "ibt-write-an-email"
+      ],
+      "objectives": [
+        {
+          "id": "quick-plan",
+          "text": "Plan a response in one minute before writing"
+        },
+        {
+          "id": "common-errors",
+          "text": "Find and fix errors in articles, plurals, verb tense and subject–verb agreement"
+        },
+        {
+          "id": "vary-sentences",
+          "text": "Vary sentence structures and vocabulary instead of repeating them"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-simple-present"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-countable-uncountable"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-present-perfect"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyunting Sendiri untuk Akurasi",
+          "summary": "Merencanakan dengan cepat dan memeriksa tulisan dari kesalahan yang paling sering dibuat penutur bahasa Indonesia.",
+          "objectives": {
+            "quick-plan": "Merencanakan jawaban dalam satu menit sebelum menulis",
+            "common-errors": "Menemukan dan memperbaiki kesalahan artikel, bentuk jamak, tenses dan kesesuaian subjek–verba",
+            "vary-sentences": "Memvariasikan struktur kalimat dan kosakata alih-alih mengulanginya"
+          }
+        }
+      }
+    }
+  ]
+}

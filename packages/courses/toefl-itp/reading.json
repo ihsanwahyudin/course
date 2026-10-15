@@ -1,0 +1,328 @@
+{
+  "version": "2026.10.1",
+  "level": "Reading",
+  "title": "Reading Comprehension",
+  "description": "Section 3: 50 questions in 55 minutes on short academic passages, answered from what each passage states or implies.",
+  "i18n": {
+    "id": {
+      "title": "Reading Comprehension",
+      "description": "Section 3: 50 soal dalam 55 menit tentang teks akademik pendek, dijawab berdasarkan apa yang dinyatakan atau tersirat dalam teks."
+    }
+  },
+  "nodes": [
+    {
+      "id": "itp-reading-main-idea",
+      "level": "Reading",
+      "title": "Main Idea and Purpose",
+      "summary": "What is the passage, or one paragraph, mainly about?",
+      "prerequisiteIds": [
+        "itp-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "skim-topic",
+          "text": "Skim the first and last sentences of paragraphs to find the topic"
+        },
+        {
+          "id": "too-narrow-broad",
+          "text": "Reject options that are too narrow, too broad or only a detail"
+        },
+        {
+          "id": "author-purpose",
+          "text": "Identify why the author wrote the passage or mentions a particular point"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-academic-writing"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Ide Utama dan Tujuan",
+          "summary": "Teks ini, atau satu paragrafnya, terutama membahas apa?",
+          "objectives": {
+            "skim-topic": "Membaca sekilas kalimat pertama dan terakhir tiap paragraf untuk menemukan topik",
+            "too-narrow-broad": "Menolak opsi yang terlalu sempit, terlalu luas atau hanya berupa detail",
+            "author-purpose": "Menentukan alasan penulis menulis teks atau menyebutkan suatu poin"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-reading-detail",
+      "level": "Reading",
+      "title": "Detail, EXCEPT and Location Questions",
+      "summary": "Scan for stated facts, the one fact not mentioned, and where an idea appears.",
+      "prerequisiteIds": [
+        "itp-reading-main-idea"
+      ],
+      "objectives": [
+        {
+          "id": "scan-keywords",
+          "text": "Scan for keywords, numbers and names to find the sentence that answers a detail question"
+        },
+        {
+          "id": "paraphrased-answer",
+          "text": "Match the correct option to a paraphrase of the passage, not to copied words"
+        },
+        {
+          "id": "except-not",
+          "text": "Answer NOT/EXCEPT questions by checking off the three options that are mentioned"
+        },
+        {
+          "id": "locate-lines",
+          "text": "Answer 'Where in the passage…' questions by locating the exact lines"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-there-is-are"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Soal Detail, EXCEPT dan Lokasi",
+          "summary": "Memindai fakta yang dinyatakan, satu fakta yang tidak disebut, dan letak sebuah ide.",
+          "objectives": {
+            "scan-keywords": "Memindai kata kunci, angka dan nama untuk menemukan kalimat yang menjawab soal detail",
+            "paraphrased-answer": "Mencocokkan opsi yang benar dengan parafrase isi teks, bukan dengan kata yang sama persis",
+            "except-not": "Menjawab soal NOT/EXCEPT dengan mencentang tiga opsi yang memang disebutkan",
+            "locate-lines": "Menjawab soal 'Where in the passage…' dengan menemukan baris yang tepat"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-reading-vocab-context",
+      "level": "Reading",
+      "title": "Vocabulary in Context",
+      "summary": "Find the meaning a word has in this passage, not just in the dictionary.",
+      "prerequisiteIds": [
+        "itp-reading-main-idea"
+      ],
+      "objectives": [
+        {
+          "id": "context-clues",
+          "text": "Use definitions, examples and contrasts around a word to infer its meaning"
+        },
+        {
+          "id": "substitute-check",
+          "text": "Test each option by substituting it into the sentence"
+        },
+        {
+          "id": "multiple-meanings",
+          "text": "Choose the meaning that fits the passage for words with several common meanings"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kosakata dalam Konteks",
+          "summary": "Menemukan makna kata di dalam teks ini, bukan sekadar makna kamus.",
+          "objectives": {
+            "context-clues": "Memakai definisi, contoh dan kontras di sekitar kata untuk menebak maknanya",
+            "substitute-check": "Menguji tiap opsi dengan memasukkannya ke dalam kalimat",
+            "multiple-meanings": "Memilih makna yang cocok dengan teks untuk kata yang punya beberapa arti umum"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-reading-reference",
+      "level": "Reading",
+      "title": "Reference Questions",
+      "summary": "What does 'it', 'they' or 'this tradition' refer to?",
+      "prerequisiteIds": [
+        "itp-reading-detail"
+      ],
+      "objectives": [
+        {
+          "id": "pronoun-antecedent",
+          "text": "Find the noun a pronoun refers to by checking number and meaning"
+        },
+        {
+          "id": "phrase-reference",
+          "text": "Find what a demonstrative phrase (this process, these changes) refers back to"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-pronouns"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Soal Rujukan (Reference)",
+          "summary": "Kata 'it', 'they' atau 'this tradition' merujuk pada apa?",
+          "objectives": {
+            "pronoun-antecedent": "Menemukan nomina yang dirujuk pronomina dengan memeriksa jumlah dan maknanya",
+            "phrase-reference": "Menemukan hal yang dirujuk oleh frasa penunjuk (this process, these changes)"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-reading-inference",
+      "level": "Reading",
+      "title": "Inference Questions",
+      "summary": "Choose what the passage implies or what the author would most likely agree with.",
+      "prerequisiteIds": [
+        "itp-reading-detail"
+      ],
+      "objectives": [
+        {
+          "id": "supported-inference",
+          "text": "Choose the inference that is supported by specific lines in the passage"
+        },
+        {
+          "id": "reject-outside",
+          "text": "Reject options that rely on outside knowledge or go further than the passage"
+        },
+        {
+          "id": "author-attitude",
+          "text": "Identify the author's attitude or tone from word choice and hedging"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-modals-deduction"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-hedging"
+        },
+        {
+          "course": "english",
+          "nodeId": "c2-implied-meaning"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Soal Inferensi",
+          "summary": "Memilih apa yang tersirat dalam teks atau yang paling mungkin disetujui penulis.",
+          "objectives": {
+            "supported-inference": "Memilih kesimpulan yang didukung baris tertentu di dalam teks",
+            "reject-outside": "Menolak opsi yang bergantung pada pengetahuan di luar teks atau melampaui isi teks",
+            "author-attitude": "Menentukan sikap atau nada penulis dari pilihan kata dan ungkapan yang melunakkan"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-academic-vocabulary",
+      "level": "Reading",
+      "title": "Academic Vocabulary for ITP Topics",
+      "summary": "Build the word families that recur in science, history and social science passages.",
+      "prerequisiteIds": [
+        "itp-reading-vocab-context"
+      ],
+      "objectives": [
+        {
+          "id": "topic-words",
+          "text": "Understand core vocabulary for common passage topics (biology, geology, astronomy, U.S. history, the arts)"
+        },
+        {
+          "id": "word-families",
+          "text": "Recognise word families and affixes to guess unfamiliar academic words"
+        },
+        {
+          "id": "synonym-pairs",
+          "text": "Match frequent academic words with their likely synonyms in answer options"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-academic-writing"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kosakata Akademik untuk Topik ITP",
+          "summary": "Membangun kelompok kata yang sering muncul di teks sains, sejarah dan ilmu sosial.",
+          "objectives": {
+            "topic-words": "Memahami kosakata inti untuk topik teks yang umum (biologi, geologi, astronomi, sejarah AS, seni)",
+            "word-families": "Mengenali kelompok kata dan imbuhan untuk menebak kata akademik yang belum dikenal",
+            "synonym-pairs": "Mencocokkan kata akademik yang sering muncul dengan sinonimnya di pilihan jawaban"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-reading-pacing",
+      "level": "Reading",
+      "title": "Skimming, Scanning and Pacing",
+      "summary": "Usually about five passages, 50 questions, 55 minutes: roughly 11 minutes per passage.",
+      "prerequisiteIds": [
+        "itp-reading-reference",
+        "itp-reading-inference"
+      ],
+      "objectives": [
+        {
+          "id": "passage-budget",
+          "text": "Keep to a time budget of about 11 minutes per passage"
+        },
+        {
+          "id": "question-order",
+          "text": "Answer quick detail, reference and vocabulary questions first and return to harder ones"
+        },
+        {
+          "id": "full-set",
+          "text": "Complete a full 50-question reading set within 55 minutes"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Skimming, Scanning dan Tempo",
+          "summary": "Biasanya sekitar lima teks, 50 soal, 55 menit: kira-kira 11 menit per teks.",
+          "objectives": {
+            "passage-budget": "Menjaga anggaran waktu sekitar 11 menit per teks",
+            "question-order": "Mengerjakan dulu soal detail, rujukan dan kosakata yang cepat, lalu kembali ke soal yang lebih sulit",
+            "full-set": "Menyelesaikan satu set reading lengkap berisi 50 soal dalam 55 menit"
+          }
+        }
+      }
+    }
+  ]
+}

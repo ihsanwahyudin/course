@@ -1,0 +1,202 @@
+{
+  "version": "2026.10.1",
+  "level": "Speaking",
+  "title": "Speaking",
+  "description": "Listen and Repeat and Take an Interview: clear, intelligible speech and well-organised answers under time pressure.",
+  "i18n": {
+    "id": {
+      "title": "Speaking",
+      "description": "Listen and Repeat dan Take an Interview: ucapan yang jelas dan mudah dipahami serta jawaban yang tertata di bawah tekanan waktu."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ibt-intelligibility",
+      "level": "Speaking",
+      "title": "Intelligibility: Stress, Rhythm & Intonation",
+      "summary": "Speak so a listener understands you easily: word stress, sentence rhythm and intonation.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "word-stress",
+          "text": "Put stress on the correct syllable in common academic words"
+        },
+        {
+          "id": "thought-groups",
+          "text": "Group words into natural chunks with pauses in the right places"
+        },
+        {
+          "id": "final-sounds",
+          "text": "Pronounce final consonants and -s/-ed endings clearly"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-alphabet-sounds"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-past-simple-regular"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kejelasan Ucapan: Tekanan, Ritme & Intonasi",
+          "summary": "Berbicara agar pendengar mudah memahamimu: tekanan kata, ritme kalimat dan intonasi.",
+          "objectives": {
+            "word-stress": "Memberi tekanan pada suku kata yang benar dalam kata akademik umum",
+            "thought-groups": "Mengelompokkan kata menjadi potongan alami dengan jeda di tempat yang tepat",
+            "final-sounds": "Mengucapkan konsonan akhir serta akhiran -s/-ed dengan jelas"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-listen-and-repeat",
+      "level": "Speaking",
+      "title": "Listen and Repeat",
+      "summary": "Repeat sentences from a campus or academic scenario accurately and clearly.",
+      "prerequisiteIds": [
+        "ibt-intelligibility"
+      ],
+      "objectives": [
+        {
+          "id": "hold-in-memory",
+          "text": "Hold a sentence in memory by meaning, not word by word"
+        },
+        {
+          "id": "repeat-accurately",
+          "text": "Repeat longer sentences with all words and grammar intact"
+        },
+        {
+          "id": "repeat-prosody",
+          "text": "Copy the speaker's stress and intonation"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-present-continuous"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listen and Repeat",
+          "summary": "Mengulang kalimat dari skenario kampus atau akademik dengan akurat dan jelas.",
+          "objectives": {
+            "hold-in-memory": "Mengingat kalimat berdasarkan maknanya, bukan kata per kata",
+            "repeat-accurately": "Mengulang kalimat yang lebih panjang dengan semua kata dan tata bahasa tetap utuh",
+            "repeat-prosody": "Meniru tekanan dan intonasi pembicara"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-take-an-interview",
+      "level": "Speaking",
+      "title": "Take an Interview",
+      "summary": "Answer interview questions about your experiences and opinions with clear elaboration.",
+      "prerequisiteIds": [
+        "ibt-listen-and-repeat"
+      ],
+      "objectives": [
+        {
+          "id": "answer-directly",
+          "text": "Answer the question directly in the first sentence"
+        },
+        {
+          "id": "elaborate",
+          "text": "Extend an answer with a reason, example or personal experience"
+        },
+        {
+          "id": "range-of-functions",
+          "text": "Describe, explain, compare, predict and give opinions as the questions require"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-telling-stories"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-second-conditional"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Take an Interview",
+          "summary": "Menjawab pertanyaan wawancara tentang pengalaman dan pendapatmu dengan uraian yang jelas.",
+          "objectives": {
+            "answer-directly": "Menjawab pertanyaan secara langsung di kalimat pertama",
+            "elaborate": "Mengembangkan jawaban dengan alasan, contoh atau pengalaman pribadi",
+            "range-of-functions": "Mendeskripsikan, menjelaskan, membandingkan, memprediksi dan memberi pendapat sesuai tuntutan pertanyaan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-speaking-under-pressure",
+      "level": "Speaking",
+      "title": "Organised Answers Under Time Pressure",
+      "summary": "Use simple answer frames to stay fluent and finish your point before time runs out.",
+      "prerequisiteIds": [
+        "ibt-take-an-interview"
+      ],
+      "objectives": [
+        {
+          "id": "answer-frame",
+          "text": "Use a point–reason–example frame for spontaneous answers"
+        },
+        {
+          "id": "buy-time",
+          "text": "Use natural phrases to gain thinking time instead of long silences"
+        },
+        {
+          "id": "finish-on-time",
+          "text": "Finish an answer with a clear closing sentence within the time limit"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-hedging"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jawaban Tertata di Bawah Tekanan Waktu",
+          "summary": "Memakai kerangka jawaban sederhana agar tetap lancar dan menuntaskan poinmu sebelum waktu habis.",
+          "objectives": {
+            "answer-frame": "Menggunakan kerangka poin–alasan–contoh untuk jawaban spontan",
+            "buy-time": "Menggunakan frasa alami untuk mendapat waktu berpikir alih-alih diam lama",
+            "finish-on-time": "Menutup jawaban dengan kalimat penutup yang jelas dalam batas waktu"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "version": "2026.10.1",
+  "level": "Start",
+  "title": "Format & Strategy",
+  "description": "How the 2026 TOEFL iBT works: sections, adaptive design, the 1–6 band scale and the academic vocabulary every section relies on.",
+  "i18n": {
+    "id": {
+      "title": "Format & Strategi",
+      "description": "Cara kerja TOEFL iBT 2026: bagian-bagian tes, desain adaptif, skala band 1–6 dan kosakata akademik yang dipakai di setiap bagian."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ibt-test-overview",
+      "level": "Start",
+      "title": "The 2026 TOEFL iBT at a Glance",
+      "summary": "The four sections, their task types and how the adaptive Reading and Listening sections work.",
+      "prerequisiteIds": [],
+      "objectives": [
+        {
+          "id": "name-sections",
+          "text": "Name the four sections in test order and the task types in each"
+        },
+        {
+          "id": "adaptive-design",
+          "text": "Explain that Reading and Listening are two-stage adaptive while Writing and Speaking are the same for everyone"
+        },
+        {
+          "id": "delivery-options",
+          "text": "Compare taking the test at a test centre with the Home Edition"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Sekilas TOEFL iBT 2026",
+          "summary": "Empat bagian tes, tipe soalnya, dan cara kerja Reading dan Listening yang adaptif.",
+          "objectives": {
+            "name-sections": "Menyebutkan empat bagian tes sesuai urutannya dan tipe soal di setiap bagian",
+            "adaptive-design": "Menjelaskan bahwa Reading dan Listening adaptif dua tahap, sedangkan Writing dan Speaking sama untuk semua peserta",
+            "delivery-options": "Membandingkan tes di test center dengan Home Edition"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-score-scale",
+      "level": "Start",
+      "title": "Scores, Bands & CEFR",
+      "summary": "Read the 1–6 band scale, its CEFR mapping and the comparable 0–120 score, and set a target band.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "band-to-cefr",
+          "text": "Match a 1–6 band to its CEFR level using the official table"
+        },
+        {
+          "id": "overall-band",
+          "text": "Calculate an overall band as the average of four section bands rounded to the nearest half band"
+        },
+        {
+          "id": "set-target",
+          "text": "Convert a university or scholarship requirement into a target band for each section"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Skor, Band & CEFR",
+          "summary": "Membaca skala band 1–6, padanan CEFR-nya dan skor pembanding 0–120, lalu menentukan target band.",
+          "objectives": {
+            "band-to-cefr": "Mencocokkan band 1–6 dengan level CEFR menggunakan tabel resmi",
+            "overall-band": "Menghitung band keseluruhan sebagai rata-rata empat band bagian yang dibulatkan ke setengah band terdekat",
+            "set-target": "Mengubah syarat universitas atau beasiswa menjadi target band untuk setiap bagian"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-test-day-strategy",
+      "level": "Start",
+      "title": "Timing & Test-Day Strategy",
+      "summary": "Pace yourself through a test of about one and a half hours with no scheduled break.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "pacing-plan",
+          "text": "Make a pacing plan for each section within its time limit"
+        },
+        {
+          "id": "guess-and-move",
+          "text": "Decide when to answer, guess or move on so no question is left blank"
+        },
+        {
+          "id": "test-day-checklist",
+          "text": "Prepare a test-day checklist for the test centre or Home Edition"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Waktu & Strategi Hari Tes",
+          "summary": "Mengatur tempo dalam tes sekitar satu setengah jam tanpa jeda terjadwal.",
+          "objectives": {
+            "pacing-plan": "Membuat rencana pembagian waktu untuk setiap bagian sesuai batas waktunya",
+            "guess-and-move": "Memutuskan kapan menjawab, menebak atau lanjut agar tidak ada soal yang kosong",
+            "test-day-checklist": "Menyiapkan daftar periksa hari tes untuk test center atau Home Edition"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-academic-vocabulary",
+      "level": "Start",
+      "title": "Academic & Campus Vocabulary",
+      "summary": "High-frequency academic words and campus-life language that appear across all four sections.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "academic-words",
+          "text": "Recognise and use common academic words in context (e.g. analyse, significant, evidence)"
+        },
+        {
+          "id": "campus-language",
+          "text": "Understand campus-life words for courses, deadlines, housing and offices"
+        },
+        {
+          "id": "word-families",
+          "text": "Build word families (noun, verb, adjective, adverb) from one root"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-phrasal-verbs"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kosakata Akademik & Kampus",
+          "summary": "Kata akademik berfrekuensi tinggi dan bahasa kehidupan kampus yang muncul di keempat bagian tes.",
+          "objectives": {
+            "academic-words": "Mengenali dan menggunakan kata akademik umum dalam konteks (misalnya analyse, significant, evidence)",
+            "campus-language": "Memahami kosakata kehidupan kampus tentang mata kuliah, tenggat, asrama dan kantor layanan",
+            "word-families": "Membentuk keluarga kata (nomina, verba, adjektiva, adverbia) dari satu akar kata"
+          }
+        }
+      }
+    }
+  ]
+}

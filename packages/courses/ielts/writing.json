@@ -1,0 +1,302 @@
+{
+  "version": "2026.10.1",
+  "level": "Writing",
+  "title": "Writing",
+  "description": "Academic Writing: Task 1 describes visual information (at least 150 words, about 20 minutes) and Task 2 is an essay (at least 250 words, about 40 minutes). Task 2 counts more. General Training Task 1 is a letter instead.",
+  "i18n": {
+    "id": {
+      "title": "Writing",
+      "description": "Academic Writing: Task 1 mendeskripsikan informasi visual (minimal 150 kata, sekitar 20 menit) dan Task 2 berupa esai (minimal 250 kata, sekitar 40 menit). Bobot Task 2 lebih besar. Di General Training, Task 1 berupa surat."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ielts-writing-task1-data",
+      "level": "Writing",
+      "title": "Task 1: Graphs, Charts & Tables",
+      "summary": "Write an overview and compare key figures from line graphs, bar charts, pie charts and tables.",
+      "prerequisiteIds": [
+        "ielts-academic-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "overview",
+          "text": "Write a clear overview of the main trends or differences without listing every number"
+        },
+        {
+          "id": "describe-trends",
+          "text": "Describe changes over time with accurate verbs, adverbs and tenses (rose sharply, fell slightly)"
+        },
+        {
+          "id": "compare-data",
+          "text": "Compare and group data using comparatives, superlatives and approximate figures"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-comparatives"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-past-simple-regular"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Task 1: Grafik, Diagram & Tabel",
+          "summary": "Menulis gambaran umum dan membandingkan angka-angka kunci dari grafik garis, diagram batang, diagram lingkaran dan tabel.",
+          "objectives": {
+            "overview": "Menulis gambaran umum (overview) yang jelas tentang tren atau perbedaan utama tanpa menyebut semua angka",
+            "describe-trends": "Mendeskripsikan perubahan dari waktu ke waktu dengan kata kerja, adverbia dan tenses yang tepat (rose sharply, fell slightly)",
+            "compare-data": "Membandingkan dan mengelompokkan data dengan comparative, superlative dan angka perkiraan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-writing-task1-process-map",
+      "level": "Writing",
+      "title": "Task 1: Processes & Maps",
+      "summary": "Describe the stages of a process or the changes shown on maps or plans.",
+      "prerequisiteIds": [
+        "ielts-writing-task1-data"
+      ],
+      "objectives": [
+        {
+          "id": "process-stages",
+          "text": "Describe the stages of a process in order using the passive and sequencing words"
+        },
+        {
+          "id": "map-changes",
+          "text": "Describe how a place changed between two maps using location language and past or present perfect forms"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-present-perfect"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Task 1: Proses & Peta",
+          "summary": "Mendeskripsikan tahapan suatu proses atau perubahan yang ditunjukkan peta atau denah.",
+          "objectives": {
+            "process-stages": "Mendeskripsikan tahapan proses secara berurutan dengan kalimat pasif dan kata penanda urutan",
+            "map-changes": "Mendeskripsikan perubahan suatu tempat di antara dua peta dengan bahasa lokasi dan bentuk past atau present perfect"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-writing-task2-prompts",
+      "level": "Writing",
+      "title": "Task 2: Understanding the Question",
+      "summary": "Work out what a Task 2 prompt asks: a point of view, an argument or a problem, and every part you must answer.",
+      "prerequisiteIds": [
+        "ielts-academic-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "identify-task",
+          "text": "Identify what a prompt asks for (give an opinion, discuss two views, explain causes or solutions, weigh advantages and disadvantages)"
+        },
+        {
+          "id": "all-parts",
+          "text": "List every part of a prompt that the essay must address"
+        },
+        {
+          "id": "clear-position",
+          "text": "Write a thesis statement that gives a clear position relevant to the question"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Task 2: Memahami Soal",
+          "summary": "Memahami apa yang diminta soal Task 2: sudut pandang, argumen atau masalah, dan semua bagian yang harus dijawab.",
+          "objectives": {
+            "identify-task": "Menentukan apa yang diminta soal (memberi pendapat, membahas dua pandangan, menjelaskan sebab atau solusi, menimbang kelebihan dan kekurangan)",
+            "all-parts": "Mendaftar setiap bagian soal yang harus dijawab esai",
+            "clear-position": "Menulis thesis statement dengan posisi yang jelas dan relevan dengan soal"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-writing-task2-essay",
+      "level": "Writing",
+      "title": "Task 2: Planning & Writing the Essay",
+      "summary": "Plan in a few minutes, then write a well-organised essay of at least 250 words in about 40 minutes.",
+      "prerequisiteIds": [
+        "ielts-writing-task2-prompts"
+      ],
+      "objectives": [
+        {
+          "id": "essay-plan",
+          "text": "Plan an essay with an introduction, two or three body paragraphs and a conclusion"
+        },
+        {
+          "id": "develop-ideas",
+          "text": "Develop each body paragraph with a topic sentence, explanation and a relevant example"
+        },
+        {
+          "id": "cohesion",
+          "text": "Link sentences and paragraphs with a range of cohesive devices without overusing them"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-academic-writing"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Task 2: Merencanakan & Menulis Esai",
+          "summary": "Merencanakan dalam beberapa menit, lalu menulis esai yang tertata minimal 250 kata dalam sekitar 40 menit.",
+          "objectives": {
+            "essay-plan": "Merencanakan esai dengan pendahuluan, dua atau tiga paragraf isi dan kesimpulan",
+            "develop-ideas": "Mengembangkan setiap paragraf isi dengan kalimat topik, penjelasan dan contoh yang relevan",
+            "cohesion": "Menghubungkan kalimat dan paragraf dengan beragam penanda kohesi tanpa berlebihan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-writing-criteria",
+      "level": "Writing",
+      "title": "Writing Criteria: Range & Accuracy",
+      "summary": "Raise your Lexical resource and Grammatical range and accuracy, and check your own writing against the four criteria.",
+      "prerequisiteIds": [
+        "ielts-writing-task1-data",
+        "ielts-writing-task2-essay"
+      ],
+      "objectives": [
+        {
+          "id": "four-criteria",
+          "text": "Explain the four Writing criteria and how Task 1 and Task 2 are weighted"
+        },
+        {
+          "id": "complex-sentences",
+          "text": "Use a mix of simple and complex sentences (relative clauses, conditionals) accurately"
+        },
+        {
+          "id": "self-edit",
+          "text": "Find and correct common errors (articles, subject-verb agreement, word form) in your own writing"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-second-conditional"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kriteria Writing: Ragam & Akurasi",
+          "summary": "Meningkatkan Lexical resource serta Grammatical range and accuracy, dan menilai tulisanmu sendiri dengan empat kriteria.",
+          "objectives": {
+            "four-criteria": "Menjelaskan empat kriteria Writing dan bobot Task 1 dan Task 2",
+            "complex-sentences": "Menggunakan campuran kalimat sederhana dan kompleks (relative clause, conditional) dengan akurat",
+            "self-edit": "Menemukan dan memperbaiki kesalahan umum (artikel, kesesuaian subjek-kata kerja, bentuk kata) di tulisan sendiri"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-gt-letter",
+      "level": "Writing",
+      "title": "General Training Task 1: Letters",
+      "summary": "For General Training only: write a letter of at least 150 words that covers all three bullet points in the right tone.",
+      "prerequisiteIds": [
+        "ielts-writing-task2-prompts"
+      ],
+      "objectives": [
+        {
+          "id": "letter-purpose",
+          "text": "Identify the purpose of the letter and cover all three bullet points in the prompt"
+        },
+        {
+          "id": "letter-tone",
+          "text": "Choose a personal, semi-formal or formal tone and use matching openings and closings"
+        },
+        {
+          "id": "letter-paragraphs",
+          "text": "Write the letter as continuous paragraphs, not notes or bullet points"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-register"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "General Training Task 1: Surat",
+          "summary": "Khusus General Training: menulis surat minimal 150 kata yang mencakup ketiga poin soal dengan nada yang tepat.",
+          "objectives": {
+            "letter-purpose": "Menentukan tujuan surat dan membahas ketiga poin di soal",
+            "letter-tone": "Memilih nada personal, semi-formal atau formal dan memakai salam pembuka dan penutup yang sesuai",
+            "letter-paragraphs": "Menulis surat dalam paragraf utuh, bukan catatan atau poin-poin"
+          }
+        }
+      }
+    }
+  ]
+}

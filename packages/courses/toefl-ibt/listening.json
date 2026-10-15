@@ -1,0 +1,250 @@
+{
+  "version": "2026.10.1",
+  "level": "Listening",
+  "title": "Listening",
+  "description": "The four Listening task types, from single exchanges to academic talks, with note-taking for longer audio that is played only once.",
+  "i18n": {
+    "id": {
+      "title": "Listening",
+      "description": "Empat tipe soal Listening, dari percakapan satu giliran sampai kuliah akademik, plus mencatat untuk audio panjang yang hanya diputar sekali."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ibt-listen-choose-response",
+      "level": "Listening",
+      "title": "Listen and Choose a Response",
+      "summary": "Hear one line of a conversation and choose the most natural reply.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "speaker-intent",
+          "text": "Recognise what the speaker wants (request, suggestion, complaint, offer)"
+        },
+        {
+          "id": "natural-reply",
+          "text": "Choose a reply that fits the intent, not just the words heard"
+        },
+        {
+          "id": "indirect-answers",
+          "text": "Understand indirect answers and common spoken patterns"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-everyday-conversation"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-modals-advice"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listen and Choose a Response",
+          "summary": "Mendengar satu ujaran dalam percakapan dan memilih balasan yang paling wajar.",
+          "objectives": {
+            "speaker-intent": "Mengenali maksud pembicara (permintaan, saran, keluhan, tawaran)",
+            "natural-reply": "Memilih balasan yang sesuai maksud, bukan sekadar kata yang terdengar",
+            "indirect-answers": "Memahami jawaban tidak langsung dan pola ujaran lisan yang umum"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-listen-conversation",
+      "level": "Listening",
+      "title": "Listen to a Conversation",
+      "summary": "Follow a short conversation, mostly about campus life, and answer questions on it.",
+      "prerequisiteIds": [
+        "ibt-listen-choose-response"
+      ],
+      "objectives": [
+        {
+          "id": "conversation-gist",
+          "text": "Identify the problem or topic of the conversation"
+        },
+        {
+          "id": "conversation-details",
+          "text": "Recall key details and the decision the speakers reach"
+        },
+        {
+          "id": "speaker-attitude",
+          "text": "Infer a speaker's attitude or what they will probably do next"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-phrasal-verbs"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-making-plans"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listen to a Conversation",
+          "summary": "Mengikuti percakapan pendek, kebanyakan tentang kehidupan kampus, lalu menjawab soal tentangnya.",
+          "objectives": {
+            "conversation-gist": "Menentukan masalah atau topik percakapan",
+            "conversation-details": "Mengingat detail penting dan keputusan yang diambil para pembicara",
+            "speaker-attitude": "Menyimpulkan sikap pembicara atau apa yang kemungkinan akan ia lakukan selanjutnya"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-listen-announcement",
+      "level": "Listening",
+      "title": "Listen to an Announcement",
+      "summary": "Understand a classroom or campus announcement: its purpose, key information and next steps.",
+      "prerequisiteIds": [
+        "ibt-listen-choose-response"
+      ],
+      "objectives": [
+        {
+          "id": "announcement-purpose",
+          "text": "State the purpose of an announcement"
+        },
+        {
+          "id": "announcement-info",
+          "text": "Catch key information such as changes, dates and locations"
+        },
+        {
+          "id": "next-action",
+          "text": "Predict what listeners are expected to do next"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-future-forms"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listen to an Announcement",
+          "summary": "Memahami pengumuman di kelas atau kampus: tujuan, informasi penting dan langkah berikutnya.",
+          "objectives": {
+            "announcement-purpose": "Menyatakan tujuan sebuah pengumuman",
+            "announcement-info": "Menangkap informasi penting seperti perubahan, tanggal dan lokasi",
+            "next-action": "Memperkirakan apa yang diharapkan dilakukan pendengar selanjutnya"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-note-taking",
+      "level": "Listening",
+      "title": "Note-Taking for Listening",
+      "summary": "Take quick, useful notes on audio you hear only once.",
+      "prerequisiteIds": [
+        "ibt-listen-conversation",
+        "ibt-listen-announcement"
+      ],
+      "objectives": [
+        {
+          "id": "note-structure",
+          "text": "Organise notes into main points and supporting details"
+        },
+        {
+          "id": "abbreviations",
+          "text": "Use abbreviations and symbols to write faster"
+        },
+        {
+          "id": "signal-words",
+          "text": "Notice signal words that mark new points, examples and conclusions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mencatat Saat Listening",
+          "summary": "Membuat catatan cepat dan berguna dari audio yang hanya diputar sekali.",
+          "objectives": {
+            "note-structure": "Menyusun catatan menjadi poin utama dan detail pendukung",
+            "abbreviations": "Menggunakan singkatan dan simbol agar mencatat lebih cepat",
+            "signal-words": "Memperhatikan kata penanda yang menandai poin baru, contoh dan kesimpulan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-listen-academic-talk",
+      "level": "Listening",
+      "title": "Listen to an Academic Talk",
+      "summary": "Follow a short talk by a professor or expert: main idea, organisation and inference.",
+      "prerequisiteIds": [
+        "ibt-note-taking",
+        "ibt-academic-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "talk-main-idea",
+          "text": "Identify the main idea of an academic talk"
+        },
+        {
+          "id": "talk-organisation",
+          "text": "Explain how the speaker organises information and uses examples"
+        },
+        {
+          "id": "talk-inference",
+          "text": "Make inferences and interpret less common or idiomatic expressions"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-presentations"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "c2-implied-meaning"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listen to an Academic Talk",
+          "summary": "Mengikuti kuliah singkat dosen atau pakar: gagasan utama, susunan dan inferensi.",
+          "objectives": {
+            "talk-main-idea": "Menentukan gagasan utama sebuah kuliah akademik",
+            "talk-organisation": "Menjelaskan cara pembicara menyusun informasi dan menggunakan contoh",
+            "talk-inference": "Membuat inferensi dan menafsirkan ungkapan yang jarang dipakai atau idiomatis"
+          }
+        }
+      }
+    }
+  ]
+}

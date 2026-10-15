@@ -1,0 +1,146 @@
+{
+  "version": "2026.10.1",
+  "level": "Start",
+  "title": "Format & Strategy",
+  "description": "How IELTS works in 2026: Academic vs General Training, the computer-delivered test, the 0–9 band scale, and the paraphrasing and academic vocabulary every section relies on.",
+  "i18n": {
+    "id": {
+      "title": "Format & Strategi",
+      "description": "Cara kerja IELTS di 2026: Academic vs General Training, tes berbasis komputer, skala band 0–9, serta parafrase dan kosakata akademik yang dipakai di setiap bagian."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ielts-test-overview",
+      "level": "Start",
+      "title": "IELTS at a Glance",
+      "summary": "The four sections, Academic vs General Training, computer delivery and how band scores are calculated.",
+      "prerequisiteIds": [],
+      "objectives": [
+        {
+          "id": "name-sections",
+          "text": "Name the four sections with their timing and number of questions or tasks"
+        },
+        {
+          "id": "academic-vs-gt",
+          "text": "Explain which parts differ between IELTS Academic and General Training (Reading and Writing only)"
+        },
+        {
+          "id": "computer-delivery",
+          "text": "Describe the computer-delivered test, including the face-to-face Speaking test and why there is no separate answer-transfer time"
+        },
+        {
+          "id": "band-scores",
+          "text": "Calculate an overall band from four section bands using the official rounding rule"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Sekilas tentang IELTS",
+          "summary": "Empat bagian tes, Academic vs General Training, tes berbasis komputer, dan cara menghitung band score.",
+          "objectives": {
+            "name-sections": "Menyebutkan empat bagian tes beserta durasi dan jumlah soal atau tugasnya",
+            "academic-vs-gt": "Menjelaskan bagian mana yang berbeda antara IELTS Academic dan General Training (hanya Reading dan Writing)",
+            "computer-delivery": "Menjelaskan tes berbasis komputer, termasuk Speaking tatap muka dan alasan tidak ada waktu khusus memindahkan jawaban",
+            "band-scores": "Menghitung overall band dari empat band per bagian dengan aturan pembulatan resmi"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-paraphrasing",
+      "level": "Start",
+      "title": "Paraphrasing & Synonyms",
+      "summary": "Recognise and produce the paraphrases IELTS uses to link questions to the recording or passage.",
+      "prerequisiteIds": [
+        "ielts-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "spot-paraphrase",
+          "text": "Match a question statement to the sentence in a text that says the same thing in different words"
+        },
+        {
+          "id": "synonym-swap",
+          "text": "Replace key words in a sentence with accurate synonyms without changing the meaning"
+        },
+        {
+          "id": "structure-change",
+          "text": "Paraphrase a sentence by changing its structure (for example active to passive, verb to noun)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Parafrase & Sinonim",
+          "summary": "Mengenali dan membuat parafrase yang dipakai IELTS untuk menghubungkan soal dengan rekaman atau bacaan.",
+          "objectives": {
+            "spot-paraphrase": "Mencocokkan pernyataan soal dengan kalimat di teks yang menyampaikan hal sama dengan kata-kata berbeda",
+            "synonym-swap": "Mengganti kata kunci dalam kalimat dengan sinonim yang tepat tanpa mengubah makna",
+            "structure-change": "Memparafrase kalimat dengan mengubah strukturnya (misalnya aktif ke pasif, kata kerja ke kata benda)"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-academic-vocabulary",
+      "level": "Start",
+      "title": "Academic Vocabulary for IELTS",
+      "summary": "High-frequency academic words and collocations for common IELTS topics.",
+      "prerequisiteIds": [
+        "ielts-paraphrasing"
+      ],
+      "objectives": [
+        {
+          "id": "topic-vocabulary",
+          "text": "Use key vocabulary for frequent IELTS topics such as education, environment, technology and health"
+        },
+        {
+          "id": "word-families",
+          "text": "Choose the correct word form (noun, verb, adjective, adverb) from a word family in context"
+        },
+        {
+          "id": "academic-collocations",
+          "text": "Use common academic collocations correctly (for example 'play a role', 'have an impact on')"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-academic-writing"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kosakata Akademik untuk IELTS",
+          "summary": "Kata dan kolokasi akademik yang sering muncul untuk topik-topik umum IELTS.",
+          "objectives": {
+            "topic-vocabulary": "Menggunakan kosakata kunci untuk topik IELTS yang sering muncul seperti pendidikan, lingkungan, teknologi dan kesehatan",
+            "word-families": "Memilih bentuk kata yang benar (nomina, verba, adjektiva, adverbia) dari satu keluarga kata sesuai konteks",
+            "academic-collocations": "Menggunakan kolokasi akademik umum dengan benar (misalnya 'play a role', 'have an impact on')"
+          }
+        }
+      }
+    }
+  ]
+}

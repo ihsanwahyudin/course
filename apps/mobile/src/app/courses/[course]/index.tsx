@@ -1,5 +1,5 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 
 import { RoadmapGraph } from '@/components/roadmap/RoadmapGraph';
 import { RoadmapList } from '@/components/roadmap/RoadmapList';
@@ -11,6 +11,7 @@ import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Span, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
+import type { Course } from '@/lib/api';
 import { useErrorText } from '@/lib/errors';
 import { useEnroll, useRoadmap, useSaveProfile } from '@/lib/queries';
 import { useUI } from '@/lib/store';
@@ -48,7 +49,12 @@ export default function CourseScreen() {
   const next = data.nodes.find((n) => n.id === data.nextNodeId);
   const here = `/courses/${course.slug}`;
 
-  const primary = !data.authenticated ? (
+  const comingSoon = course.status === 'coming_soon';
+  const primary = comingSoon ? (
+    <Text color={colors.muted} style={{ maxWidth: 520 }}>
+      {t('course.comingSoonCourse')}
+    </Text>
+  ) : !data.authenticated ? (
     <>
       <PillButton label={t('course.signUpToStart')} icon="arrowUpRight" onPress={() => router.push({ pathname: '/register', params: { next: here } })} />
       <PillButton label={t('common.logIn')} variant="secondary" onPress={() => router.push({ pathname: '/login', params: { next: here } })} />
@@ -77,7 +83,8 @@ export default function CourseScreen() {
         <GradientRing size={44} />
         <View>
           <Eyebrow>
-            {course.category} · {course.levels[0]}–{course.levels[course.levels.length - 1]}
+            {course.category} ·{' '}
+            {course.recommendedAfter ? t('course.skillsCount', { n: course.totalNodes }) : `${course.levels[0]}–${course.levels[course.levels.length - 1]}`}
           </Eyebrow>
           <Text size={13} color={colors.muted}>
             {t('course.meta', { ready: course.readyNodes, total: course.totalNodes })}
@@ -111,7 +118,7 @@ export default function CourseScreen() {
 
   const progressTile = (
     <Card reveal={1} style={{ width: wide ? span(contentWidth, gap, 3, 1) : contentWidth, gap: 16, justifyContent: 'space-between' }}>
-      <Eyebrow color="rgba(17,17,19,0.6)">{data.enrolled ? t('course.yourProgress') : t('course.theGoal')}</Eyebrow>
+      <Eyebrow color="rgba(17,17,19,0.6)">{data.enrolled ? t('course.yourProgress') : course.recommendedAfter ? t('course.recommendedEyebrow') : t('course.theGoal')}</Eyebrow>
       {data.enrolled ? (
         <>
           <Heading size={wide ? 72 : 56} tabular>
@@ -125,6 +132,13 @@ export default function CourseScreen() {
             </Text>
           </View>
         </>
+      ) : course.recommendedAfter ? (
+        <Pressable onPress={() => router.push(`/courses/${course.recommendedAfter!.course}`)} accessibilityRole="link" style={{ gap: 8 }}>
+          <Heading size={wide ? 72 : 56}>{course.recommendedAfter.level}</Heading>
+          <Text size={13} color="rgba(17,17,19,0.7)">
+            {t('course.recommendedLine', { course: course.recommendedAfter.courseTitle, level: course.recommendedAfter.level, title: course.recommendedAfter.levelTitle })}
+          </Text>
+        </Pressable>
       ) : (
         <>
           <Heading size={wide ? 72 : 56}>{course.targetLevel}</Heading>
@@ -198,12 +212,57 @@ export default function CourseScreen() {
       ) : (
         <RoadmapList course={course.slug} nodes={data.nodes} levels={summary.levels} />
       )}
+      {data.relatedTracks.length ? <RelatedTracks tracks={data.relatedTracks} /> : null}
     </Screen>
+  );
+}
+
+// "Where to next": suggested tracks after this roadmap, like roadmap.sh's
+// "relevant tracks" box.
+function RelatedTracks({ tracks }: { tracks: Course[] }) {
+  const router = useRouter();
+  const t = useT();
+  const { wide, gap, contentWidth } = useLayout();
+  const cols = wide ? Math.min(tracks.length, 4) : 1;
+  const w = (contentWidth - 2 - (wide ? 64 : 48) - gap * (cols - 1)) / cols;
+  return (
+    <Card style={{ marginTop: wide ? 40 : 28, gap: 18, alignItems: 'center' }} padding={wide ? 32 : 24}>
+      <View style={{ gap: 6, alignItems: 'center', maxWidth: 620 }}>
+        <Eyebrow>{t('course.relatedEyebrow')}</Eyebrow>
+        <Heading size={wide ? 30 : 24} style={{ textAlign: 'center' }}>
+          {t('course.relatedTitle')}
+        </Heading>
+        <Text size={14} color={colors.muted} style={{ textAlign: 'center' }}>
+          {t('course.relatedText')}
+        </Text>
+      </View>
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap, justifyContent: 'center', alignSelf: 'stretch' }}>
+        {tracks.map((tr) => (
+          <Pressable
+            key={tr.slug}
+            onPress={() => router.push(`/courses/${tr.slug}`)}
+            accessibilityRole="link"
+            style={({ pressed }) => [styles.track, { width: w }, pressed && { opacity: 0.85 }]}
+          >
+            <Text size={17} weight="medium" color={colors.white} tight style={{ textAlign: 'center' }}>
+              {tr.title}
+            </Text>
+            <Text size={12} color="rgba(255,255,255,0.75)" style={{ textAlign: 'center' }}>
+              {tr.recommendedAfter
+                ? t('course.recommendedAfter', { course: tr.recommendedAfter.courseTitle, level: tr.recommendedAfter.level })
+                : tr.tagline}
+              {tr.status === 'coming_soon' ? ` · ${t('common.comingSoon')}` : ''}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
+    </Card>
   );
 }
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   profileLine: { gap: 10, borderTopWidth: 1, borderTopColor: colors.line, paddingTop: 16 },
+  track: { backgroundColor: colors.accent, borderRadius: 14, paddingVertical: 16, paddingHorizontal: 14, gap: 4, alignItems: 'center', justifyContent: 'center', minHeight: 76 },
   bannerIcon: { width: 40, height: 40, borderRadius: 20, backgroundColor: colors.accentSoft, alignItems: 'center', justifyContent: 'center' },
 });

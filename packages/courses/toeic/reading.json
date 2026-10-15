@@ -1,0 +1,302 @@
+{
+  "version": "2026.10.1",
+  "level": "Reading",
+  "title": "Reading (Parts 5–7)",
+  "description": "Incomplete Sentences, Text Completion and Reading Comprehension: 100 questions in 75 minutes.",
+  "i18n": {
+    "id": {
+      "title": "Reading (Part 5–7)",
+      "description": "Incomplete Sentences, Text Completion dan Reading Comprehension: 100 soal dalam 75 menit."
+    }
+  },
+  "nodes": [
+    {
+      "id": "toeic-word-forms",
+      "level": "Reading",
+      "title": "Word Forms & Grammar Patterns",
+      "summary": "Parts of speech, verb forms and connectors — the grammar behind most Part 5 and 6 questions.",
+      "prerequisiteIds": [
+        "toeic-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "parts-of-speech",
+          "text": "Choose the right part of speech from a word family (e.g. decide / decision / decisive / decisively) by its position in the sentence"
+        },
+        {
+          "id": "verb-form",
+          "text": "Choose the correct verb tense, voice and agreement from time clues and the subject"
+        },
+        {
+          "id": "connectors",
+          "text": "Tell apart prepositions, conjunctions and adverbs with similar meanings (e.g. despite / although / however)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-gerunds-infinitives"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk Kata & Pola Grammar",
+          "summary": "Jenis kata, bentuk kata kerja dan kata penghubung — grammar di balik sebagian besar soal Part 5 dan 6.",
+          "objectives": {
+            "parts-of-speech": "Memilih jenis kata yang tepat dari satu keluarga kata (mis. decide / decision / decisive / decisively) berdasarkan posisinya di kalimat",
+            "verb-form": "Memilih bentuk kata kerja (tense, aktif/pasif, kesesuaian subjek) dari petunjuk waktu dan subjek",
+            "connectors": "Membedakan preposisi, konjungsi dan adverbia yang maknanya mirip (mis. despite / although / however)"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part5-incomplete-sentences",
+      "level": "Reading",
+      "title": "Part 5: Incomplete Sentences",
+      "summary": "Choose the word or phrase that completes each sentence (30 questions).",
+      "prerequisiteIds": [
+        "toeic-word-forms",
+        "toeic-workplace-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "grammar-or-vocab",
+          "text": "Decide quickly whether a question tests grammar (different forms of one word) or vocabulary (different words)"
+        },
+        {
+          "id": "vocab-in-context",
+          "text": "Choose the word that fits the meaning and the collocation of the sentence"
+        },
+        {
+          "id": "speed",
+          "text": "Answer a Part 5 question in about 20–30 seconds on average"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-present-perfect"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 5: Incomplete Sentences",
+          "summary": "Memilih kata atau frasa yang melengkapi setiap kalimat (30 soal).",
+          "objectives": {
+            "grammar-or-vocab": "Menentukan dengan cepat apakah soal menguji grammar (bentuk berbeda dari satu kata) atau kosakata (kata-kata berbeda)",
+            "vocab-in-context": "Memilih kata yang cocok dengan makna dan kolokasi kalimat",
+            "speed": "Menjawab soal Part 5 rata-rata dalam sekitar 20–30 detik"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part6-text-completion",
+      "level": "Reading",
+      "title": "Part 6: Text Completion",
+      "summary": "Fill four gaps in each short text, including choosing a whole sentence that fits (16 questions).",
+      "prerequisiteIds": [
+        "toeic-part5-incomplete-sentences"
+      ],
+      "objectives": [
+        {
+          "id": "context-tense",
+          "text": "Use the surrounding sentences, not just the gap's sentence, to choose tense and connectors"
+        },
+        {
+          "id": "sentence-insertion",
+          "text": "Choose the sentence that fits the gap logically by linking it to what comes before and after"
+        },
+        {
+          "id": "text-types",
+          "text": "Recognise the purpose of short business texts such as e-mails, notices and memos"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 6: Text Completion",
+          "summary": "Mengisi empat rumpang di setiap teks pendek, termasuk memilih satu kalimat utuh yang cocok (16 soal).",
+          "objectives": {
+            "context-tense": "Memakai kalimat-kalimat di sekitarnya, bukan hanya kalimat yang rumpang, untuk memilih tense dan kata penghubung",
+            "sentence-insertion": "Memilih kalimat yang logis untuk mengisi rumpang dengan menghubungkannya ke kalimat sebelum dan sesudahnya",
+            "text-types": "Mengenali tujuan teks bisnis pendek seperti e-mail, pemberitahuan dan memo"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part7-single-passages",
+      "level": "Reading",
+      "title": "Part 7: Single Passages",
+      "summary": "Ads, e-mails, notices, articles and text-message chains with 2–4 questions each (29 questions).",
+      "prerequisiteIds": [
+        "toeic-part6-text-completion"
+      ],
+      "objectives": [
+        {
+          "id": "scan-detail",
+          "text": "Scan a passage to locate specific details such as dates, prices and names"
+        },
+        {
+          "id": "infer-not-true",
+          "text": "Answer inference, 'NOT true' and 'closest in meaning' questions"
+        },
+        {
+          "id": "chat-intent",
+          "text": "Interpret what a writer means by a short phrase in a text-message or online chat"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-reported-speech"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 7: Single Passages",
+          "summary": "Iklan, e-mail, pemberitahuan, artikel dan rangkaian pesan teks dengan 2–4 soal per teks (29 soal).",
+          "objectives": {
+            "scan-detail": "Memindai bacaan untuk menemukan detail tertentu seperti tanggal, harga dan nama",
+            "infer-not-true": "Menjawab soal inferensi, 'NOT true' dan 'closest in meaning'",
+            "chat-intent": "Menafsirkan maksud penulis dari frasa pendek dalam pesan teks atau obrolan online"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-part7-multiple-passages",
+      "level": "Reading",
+      "title": "Part 7: Multiple Passages",
+      "summary": "Sets of two or three related texts with five questions each (25 questions).",
+      "prerequisiteIds": [
+        "toeic-part7-single-passages"
+      ],
+      "objectives": [
+        {
+          "id": "cross-reference",
+          "text": "Connect information across two or three texts to answer a question"
+        },
+        {
+          "id": "question-order",
+          "text": "Decide which text each question points to before reading in detail"
+        },
+        {
+          "id": "forms-tables",
+          "text": "Read forms, invoices, schedules and tables quickly for the needed value"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-comparatives"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 7: Multiple Passages",
+          "summary": "Set berisi dua atau tiga teks yang saling berkaitan dengan lima soal per set (25 soal).",
+          "objectives": {
+            "cross-reference": "Menghubungkan informasi dari dua atau tiga teks untuk menjawab satu soal",
+            "question-order": "Menentukan teks mana yang dirujuk setiap soal sebelum membaca secara detail",
+            "forms-tables": "Membaca formulir, faktur, jadwal dan tabel dengan cepat untuk menemukan nilai yang dibutuhkan"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-reading-time-management",
+      "level": "Reading",
+      "title": "Reading Time Management",
+      "summary": "Split the 75 minutes so you reach the last passages, and guess smartly when time runs out.",
+      "prerequisiteIds": [
+        "toeic-part7-multiple-passages"
+      ],
+      "objectives": [
+        {
+          "id": "time-budget",
+          "text": "Follow a time budget per part (e.g. about 10 minutes for Part 5, 8 for Part 6, 55 for Part 7)"
+        },
+        {
+          "id": "skip-return",
+          "text": "Skip a question that takes too long and come back to it later"
+        },
+        {
+          "id": "no-blanks",
+          "text": "Leave no question unanswered, since wrong answers are not penalised"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Manajemen Waktu Reading",
+          "summary": "Membagi 75 menit agar kamu sampai ke bacaan terakhir, dan menebak dengan cerdas saat waktu habis.",
+          "objectives": {
+            "time-budget": "Mengikuti anggaran waktu per bagian (mis. sekitar 10 menit untuk Part 5, 8 untuk Part 6, 55 untuk Part 7)",
+            "skip-return": "Melewati soal yang terlalu lama dan kembali mengerjakannya nanti",
+            "no-blanks": "Tidak membiarkan satu soal pun kosong, karena jawaban salah tidak mengurangi nilai"
+          }
+        }
+      }
+    }
+  ]
+}

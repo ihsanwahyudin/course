@@ -13,6 +13,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"sort"
 	"strings"
 )
@@ -41,6 +42,9 @@ type Node struct {
 	// Focus lists the onboarding goals (goal option ids) this node matters
 	// most for; untagged nodes are core for everyone.
 	Focus []string `json:"focus,omitempty"`
+	// Foundations are lessons of other courses this node builds on (for
+	// test-prep tracks: the grammar and skills from the core roadmap).
+	Foundations []NodeRef `json:"foundations,omitempty"`
 	// Translations keyed by language; never sent to clients (views use
 	// the localized copy from Curriculum.LocalNode).
 	I18n map[string]NodeText `json:"i18n,omitempty"`
@@ -157,6 +161,24 @@ type Course struct {
 	// every other listed language must be fully translated.
 	Languages []string              `json:"languages,omitempty"`
 	I18n      map[string]CourseText `json:"i18n,omitempty"`
+	// RecommendedAfter is where a learner should be in another course
+	// before starting this one (e.g. a test-prep track after English B1).
+	RecommendedAfter *LevelRef `json:"recommendedAfter,omitempty"`
+	// RelatedTracks are courses suggested at the end of this roadmap
+	// ("where to go next"), by slug.
+	RelatedTracks []string `json:"relatedTracks,omitempty"`
+}
+
+// LevelRef points at a level of a course.
+type LevelRef struct {
+	Course string `json:"course"`
+	Level  string `json:"level"`
+}
+
+// NodeRef points at a node of a course.
+type NodeRef struct {
+	Course string `json:"course"`
+	NodeID string `json:"nodeId"`
 }
 
 // BaseLanguage is the language course files are written in.
@@ -466,7 +488,9 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 		}
 	}
 
-	if len(errs) == 0 {
+	// A published course needs somewhere to start; a coming-soon course
+	// can be a roadmap of lessons that aren't written yet.
+	if len(errs) == 0 && c.Status == CoursePublished {
 		errs = append(errs, validateReachability(c)...)
 	}
 	if len(errs) > 0 {
@@ -777,7 +801,42 @@ func LoadCatalog(root string) (*Catalog, error) {
 		cat.Courses = append(cat.Courses, c)
 	}
 	sort.Slice(cat.Courses, func(i, j int) bool { return cat.Courses[i].Title < cat.Courses[j].Title })
+	if err := cat.validateLinks(); err != nil {
+		return nil, err
+	}
 	return cat, nil
+}
+
+// validateLinks checks references between courses: related tracks,
+// recommended levels and node foundations must exist.
+func (c *Catalog) validateLinks() error {
+	var errs []error
+	for _, cur := range c.Courses {
+		for _, slug := range cur.RelatedTracks {
+			if _, ok := c.bySlug[slug]; !ok || slug == cur.Slug {
+				errs = append(errs, fmt.Errorf("course %q: related track %q isn't another course", cur.Slug, slug))
+			}
+		}
+		if r := cur.RecommendedAfter; r != nil {
+			other, ok := c.bySlug[r.Course]
+			if !ok || !slices.Contains(other.LevelIDs, r.Level) {
+				errs = append(errs, fmt.Errorf("course %q: recommendedAfter %s/%s doesn't exist", cur.Slug, r.Course, r.Level))
+			}
+		}
+		for _, n := range cur.Nodes {
+			for _, f := range n.Foundations {
+				other, ok := c.bySlug[f.Course]
+				if !ok {
+					errs = append(errs, fmt.Errorf("course %q node %q: foundation course %q doesn't exist", cur.Slug, n.ID, f.Course))
+					continue
+				}
+				if _, ok := other.Node(f.NodeID); !ok {
+					errs = append(errs, fmt.Errorf("course %q node %q: foundation %s/%s doesn't exist", cur.Slug, n.ID, f.Course, f.NodeID))
+				}
+			}
+		}
+	}
+	return errors.Join(errs...)
 }
 
 // NewCatalog builds a catalog from already-loaded courses (tests).

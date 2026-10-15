@@ -1,0 +1,298 @@
+{
+  "version": "2026.10.1",
+  "level": "Structure",
+  "title": "Structure and Written Expression",
+  "description": "Section 2: 40 questions in 25 minutes. Complete sentences in Structure and find the one error in Written Expression.",
+  "i18n": {
+    "id": {
+      "title": "Structure and Written Expression",
+      "description": "Section 2: 40 soal dalam 25 menit. Lengkapi kalimat di bagian Structure dan temukan satu kesalahan di bagian Written Expression."
+    }
+  },
+  "nodes": [
+    {
+      "id": "itp-structure-clauses",
+      "level": "Structure",
+      "title": "Structure: Subjects, Verbs and Clauses",
+      "summary": "Complete the sentence by finding what is missing: a subject, a verb or a connector.",
+      "prerequisiteIds": [
+        "itp-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "missing-element",
+          "text": "Decide whether an incomplete sentence is missing a subject, a main verb or a clause connector"
+        },
+        {
+          "id": "one-verb-rule",
+          "text": "Check that each clause has exactly one subject and one main verb"
+        },
+        {
+          "id": "reduced-clauses",
+          "text": "Complete sentences with relative, adverb and reduced clauses (e.g. 'Founded in 1636, Harvard…')"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-basic-sentences"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Structure: Subjek, Kata Kerja dan Klausa",
+          "summary": "Lengkapi kalimat dengan menemukan yang hilang: subjek, kata kerja atau kata penghubung.",
+          "objectives": {
+            "missing-element": "Menentukan apakah kalimat rumpang kekurangan subjek, kata kerja utama atau penghubung klausa",
+            "one-verb-rule": "Memeriksa bahwa setiap klausa punya tepat satu subjek dan satu kata kerja utama",
+            "reduced-clauses": "Melengkapi kalimat dengan relative clause, adverb clause dan reduced clause (mis. 'Founded in 1636, Harvard…')"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-structure-verbs",
+      "level": "Structure",
+      "title": "Verb Forms, Tenses and Passive",
+      "summary": "Pick the right tense, voice and form after auxiliaries and other verbs.",
+      "prerequisiteIds": [
+        "itp-structure-clauses"
+      ],
+      "objectives": [
+        {
+          "id": "tense-choice",
+          "text": "Choose the correct tense from time clues (since, by the time, in 1900)"
+        },
+        {
+          "id": "passive-forms",
+          "text": "Distinguish active and passive forms and use the past participle correctly"
+        },
+        {
+          "id": "verb-after-verb",
+          "text": "Use the correct form after modals, have/be and verbs that take a gerund or infinitive"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-present-perfect"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-gerunds-infinitives"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk Kata Kerja, Tenses dan Pasif",
+          "summary": "Memilih tense, bentuk aktif/pasif dan bentuk kata kerja yang tepat setelah auxiliary dan kata kerja lain.",
+          "objectives": {
+            "tense-choice": "Memilih tense yang benar dari petunjuk waktu (since, by the time, in 1900)",
+            "passive-forms": "Membedakan bentuk aktif dan pasif serta memakai past participle dengan benar",
+            "verb-after-verb": "Memakai bentuk yang benar setelah modal, have/be dan kata kerja yang diikuti gerund atau infinitive"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-structure-advanced",
+      "level": "Structure",
+      "title": "Inversion, Conditionals and Comparisons",
+      "summary": "Handle the less common patterns that Structure items like to test.",
+      "prerequisiteIds": [
+        "itp-structure-verbs"
+      ],
+      "objectives": [
+        {
+          "id": "inversion",
+          "text": "Complete sentences with inverted word order after negative or place expressions (Not only…, Seldom…, In the forest lies…)"
+        },
+        {
+          "id": "conditionals",
+          "text": "Complete conditional sentences, including forms without 'if' (Had they known…)"
+        },
+        {
+          "id": "comparisons",
+          "text": "Complete comparative and superlative structures (the more…, the more…; as… as)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-inversion"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-third-conditional"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-comparatives"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Inversi, Pengandaian dan Perbandingan",
+          "summary": "Menguasai pola-pola yang jarang dipakai tetapi sering diuji di soal Structure.",
+          "objectives": {
+            "inversion": "Melengkapi kalimat dengan susunan terbalik setelah ungkapan negatif atau tempat (Not only…, Seldom…, In the forest lies…)",
+            "conditionals": "Melengkapi kalimat pengandaian, termasuk bentuk tanpa 'if' (Had they known…)",
+            "comparisons": "Melengkapi struktur komparatif dan superlatif (the more…, the more…; as… as)"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-written-expression",
+      "level": "Structure",
+      "title": "Written Expression: Find the Error",
+      "summary": "Four underlined parts, one must be changed.",
+      "prerequisiteIds": [
+        "itp-structure-verbs"
+      ],
+      "objectives": [
+        {
+          "id": "method",
+          "text": "Check each underlined part against its neighbours instead of reading for meaning only"
+        },
+        {
+          "id": "word-form",
+          "text": "Spot wrong word forms (noun, verb, adjective, adverb) in the underlined parts"
+        },
+        {
+          "id": "nouns-articles",
+          "text": "Spot errors with singular/plural nouns, countable/uncountable nouns and articles"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-countable-uncountable"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-collocations"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Written Expression: Temukan Kesalahan",
+          "summary": "Empat bagian bergaris bawah, satu harus diubah.",
+          "objectives": {
+            "method": "Memeriksa setiap bagian bergaris bawah terhadap kata di sekitarnya, bukan hanya membaca maknanya",
+            "word-form": "Menemukan bentuk kata yang salah (nomina, verba, adjektiva, adverbia) di bagian bergaris bawah",
+            "nouns-articles": "Menemukan kesalahan pada nomina tunggal/jamak, nomina terhitung/tak terhitung dan artikel"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-agreement-parallel",
+      "level": "Structure",
+      "title": "Agreement, Parallelism and Pronouns",
+      "summary": "The classic Written Expression errors: subject–verb agreement, parallel lists and pronoun reference.",
+      "prerequisiteIds": [
+        "itp-written-expression"
+      ],
+      "objectives": [
+        {
+          "id": "subject-verb",
+          "text": "Spot subject–verb agreement errors when the subject and verb are far apart"
+        },
+        {
+          "id": "parallel",
+          "text": "Spot items in a list or pair (and, or, both… and) that are not parallel"
+        },
+        {
+          "id": "pronoun-agreement",
+          "text": "Spot pronouns and possessives that do not agree with the noun they refer to"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-simple-present"
+        },
+        {
+          "course": "english",
+          "nodeId": "a0-pronouns"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kesesuaian, Paralelisme dan Pronomina",
+          "summary": "Kesalahan klasik Written Expression: kesesuaian subjek–kata kerja, daftar yang paralel dan rujukan pronomina.",
+          "objectives": {
+            "subject-verb": "Menemukan kesalahan kesesuaian subjek–kata kerja ketika subjek dan kata kerjanya berjauhan",
+            "parallel": "Menemukan unsur dalam daftar atau pasangan (and, or, both… and) yang tidak paralel",
+            "pronoun-agreement": "Menemukan pronomina dan posesif yang tidak sesuai dengan nomina yang dirujuknya"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-structure-pacing",
+      "level": "Structure",
+      "title": "40 Questions in 25 Minutes",
+      "summary": "Work through the whole section at a steady pace with a personal error checklist.",
+      "prerequisiteIds": [
+        "itp-structure-advanced",
+        "itp-agreement-parallel"
+      ],
+      "objectives": [
+        {
+          "id": "pace",
+          "text": "Complete a full 15 + 25 question set within 25 minutes"
+        },
+        {
+          "id": "error-checklist",
+          "text": "Apply a fixed checklist (verb, agreement, word form, parallelism, article) to each Written Expression item"
+        },
+        {
+          "id": "weak-patterns",
+          "text": "Identify the two grammar patterns that cost the most points in a practice set"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "40 Soal dalam 25 Menit",
+          "summary": "Menyelesaikan satu section penuh dengan tempo stabil dan daftar periksa kesalahan pribadi.",
+          "objectives": {
+            "pace": "Menyelesaikan satu set lengkap 15 + 25 soal dalam 25 menit",
+            "error-checklist": "Menerapkan daftar periksa tetap (verba, kesesuaian, bentuk kata, paralelisme, artikel) pada tiap soal Written Expression",
+            "weak-patterns": "Menemukan dua pola grammar yang paling banyak mengurangi poin dalam satu set latihan"
+          }
+        }
+      }
+    }
+  ]
+}

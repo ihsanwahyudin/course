@@ -125,6 +125,26 @@ export default function NodeScreen() {
           </Card>
         ))}
       </View>
+      {node.foundations.length ? (
+        <Card reveal={4} style={{ gap: 14 }}>
+          <View style={{ gap: 4 }}>
+            <Eyebrow>{t('node.foundations')}</Eyebrow>
+            <Text size={14} color={colors.muted}>
+              {t('node.foundationsText', { course: node.foundations[0].course.title })}
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
+            {node.foundations.map((n) => (
+              <Chip
+                key={`${n.course.slug}/${n.id}`}
+                label={`${n.level} · ${n.title}`}
+                icon={n.status === 'mastered' ? 'check' : n.status === 'locked' ? 'lock' : undefined}
+                onPress={() => router.push(`/courses/${n.course.slug}/${n.id}`)}
+              />
+            ))}
+          </View>
+        </Card>
+      ) : null}
     </View>
   );
 

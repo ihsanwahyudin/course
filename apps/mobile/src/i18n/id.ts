@@ -169,6 +169,14 @@ export const id: Dict = {
     graph: 'Grafik',
     list: 'Daftar',
     levelMastered: '{done}/{total} dikuasai',
+    relatedEyebrow: 'Lanjut ke mana',
+    relatedTitle: 'Lanjut ke jalur berikut',
+    relatedText: 'Mau ikut tes bahasa Inggris? Jalur-jalur ini melanjutkan roadmap ini, bagian demi bagian dan jenis soal demi jenis soal.',
+    recommendedAfter: 'Disarankan setelah {course} {level}',
+    recommendedEyebrow: 'Mulai setelah',
+    recommendedLine: '{course} · {level} {title}',
+    comingSoonCourse: 'Jalur ini segera hadir. Lihat roadmap-nya untuk tahu apa saja yang akan dipelajari.',
+    skillsCount: '{n} skill',
   },
   node: {
     loading: 'Memuat pelajaran',
@@ -190,6 +198,8 @@ export const id: Dict = {
     objectives: 'Tujuan',
     keyIdeas: 'Ide utama',
     bestScore: 'Nilai terbaikmu',
+    foundations: 'Dasarnya',
+    foundationsText: 'Pelajaran dari {course} yang dipakai di sini.',
   },
   auth: {
     createAccount: 'Buat akun',

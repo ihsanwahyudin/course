@@ -1,0 +1,210 @@
+{
+  "version": "2026.10.1",
+  "level": "Speaking",
+  "title": "Speaking",
+  "description": "A recorded, face-to-face interview with an examiner in three parts, 11–14 minutes. The same test for Academic and General Training.",
+  "i18n": {
+    "id": {
+      "title": "Speaking",
+      "description": "Wawancara tatap muka dengan penguji yang direkam, tiga bagian, 11–14 menit. Tesnya sama untuk Academic dan General Training."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ielts-speaking-part1",
+      "level": "Speaking",
+      "title": "Part 1: Introduction & Interview",
+      "summary": "Answer short questions about yourself and familiar topics such as home, work, studies and interests.",
+      "prerequisiteIds": [
+        "ielts-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "extended-answers",
+          "text": "Answer familiar-topic questions in two or three sentences with a reason or example"
+        },
+        {
+          "id": "tense-control",
+          "text": "Use present, past and future forms correctly when talking about routines, experiences and plans"
+        },
+        {
+          "id": "natural-openers",
+          "text": "Start answers naturally without repeating the question word for word"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-self-introduction"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-daily-routines"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-future-forms"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 1: Perkenalan & Wawancara",
+          "summary": "Menjawab pertanyaan singkat tentang diri sendiri dan topik sehari-hari seperti rumah, pekerjaan, studi dan minat.",
+          "objectives": {
+            "extended-answers": "Menjawab pertanyaan topik sehari-hari dalam dua atau tiga kalimat dengan alasan atau contoh",
+            "tense-control": "Memakai bentuk present, past dan future dengan benar saat membicarakan rutinitas, pengalaman dan rencana",
+            "natural-openers": "Memulai jawaban secara alami tanpa mengulang pertanyaan kata per kata"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-speaking-part2",
+      "level": "Speaking",
+      "title": "Part 2: Long Turn (Task Card)",
+      "summary": "Use one minute to make notes, then speak for up to two minutes on the topic on the task card.",
+      "prerequisiteIds": [
+        "ielts-speaking-part1"
+      ],
+      "objectives": [
+        {
+          "id": "one-minute-notes",
+          "text": "Make useful keyword notes covering every prompt on the task card in one minute"
+        },
+        {
+          "id": "speak-two-minutes",
+          "text": "Speak for close to two minutes with a clear beginning, middle and end"
+        },
+        {
+          "id": "narrate-describe",
+          "text": "Narrate a past experience or describe a person, place or object with past tenses and descriptive language"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-telling-stories"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-past-continuous"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-describing-people"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 2: Long Turn (Kartu Tugas)",
+          "summary": "Memakai satu menit untuk membuat catatan, lalu berbicara hingga dua menit tentang topik di kartu tugas.",
+          "objectives": {
+            "one-minute-notes": "Membuat catatan kata kunci yang mencakup semua poin di kartu tugas dalam satu menit",
+            "speak-two-minutes": "Berbicara mendekati dua menit dengan pembuka, isi dan penutup yang jelas",
+            "narrate-describe": "Menceritakan pengalaman masa lalu atau mendeskripsikan orang, tempat atau benda dengan past tense dan bahasa deskriptif"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-speaking-part3",
+      "level": "Speaking",
+      "title": "Part 3: Discussion",
+      "summary": "Discuss more abstract questions linked to the Part 2 topic: compare, speculate and justify opinions.",
+      "prerequisiteIds": [
+        "ielts-speaking-part2"
+      ],
+      "objectives": [
+        {
+          "id": "justify-opinions",
+          "text": "Give and justify an opinion on an abstract issue with reasons and examples"
+        },
+        {
+          "id": "speculate",
+          "text": "Speculate about the future or hypothetical situations using conditionals and modals"
+        },
+        {
+          "id": "compare-perspectives",
+          "text": "Compare different perspectives (past and present, young and old, different countries) and hedge where appropriate"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-second-conditional"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-hedging"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part 3: Diskusi",
+          "summary": "Membahas pertanyaan yang lebih abstrak terkait topik Part 2: membandingkan, berspekulasi dan memberi alasan atas pendapat.",
+          "objectives": {
+            "justify-opinions": "Memberi dan membela pendapat tentang isu abstrak dengan alasan dan contoh",
+            "speculate": "Berspekulasi tentang masa depan atau situasi hipotetis dengan conditional dan modal",
+            "compare-perspectives": "Membandingkan sudut pandang berbeda (dulu dan sekarang, muda dan tua, negara berbeda) dan memperhalus pernyataan bila perlu"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-speaking-fluency-pronunciation",
+      "level": "Speaking",
+      "title": "Fluency, Coherence & Pronunciation",
+      "summary": "Keep talking smoothly, organise ideas and speak clearly, as the Speaking criteria reward.",
+      "prerequisiteIds": [
+        "ielts-speaking-part1"
+      ],
+      "objectives": [
+        {
+          "id": "speaking-criteria",
+          "text": "Explain the four Speaking criteria: Fluency and coherence, Lexical resource, Grammatical range and accuracy, Pronunciation"
+        },
+        {
+          "id": "fillers-repair",
+          "text": "Use natural fillers and self-correction to keep speaking instead of stopping"
+        },
+        {
+          "id": "clear-sounds",
+          "text": "Pronounce word endings, word stress and sentence stress clearly enough to be understood easily"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-alphabet-sounds"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kelancaran, Koherensi & Pelafalan",
+          "summary": "Tetap berbicara dengan lancar, menata ide dan berbicara dengan jelas, sesuai kriteria penilaian Speaking.",
+          "objectives": {
+            "speaking-criteria": "Menjelaskan empat kriteria Speaking: Fluency and coherence, Lexical resource, Grammatical range and accuracy, Pronunciation",
+            "fillers-repair": "Memakai filler yang alami dan koreksi diri agar tetap berbicara dan tidak berhenti",
+            "clear-sounds": "Melafalkan akhiran kata, tekanan kata dan tekanan kalimat cukup jelas agar mudah dipahami"
+          }
+        }
+      }
+    }
+  ]
+}

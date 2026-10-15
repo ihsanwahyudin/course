@@ -1,0 +1,129 @@
+{
+  "version": "2026.10.1",
+  "level": "Mock",
+  "title": "Full Practice Tests",
+  "description": "Put all four sections together under real timing, then read your estimated bands and plan your next steps.",
+  "i18n": {
+    "id": {
+      "title": "Simulasi Tes Lengkap",
+      "description": "Gabungkan keempat bagian dengan waktu sesungguhnya, lalu baca perkiraan band-mu dan rencanakan langkah berikutnya."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ielts-timed-practice",
+      "level": "Mock",
+      "title": "Timed Section Practice",
+      "summary": "Complete each section on its own under real time limits on screen.",
+      "prerequisiteIds": [
+        "ielts-listening-sentence-short-answer",
+        "ielts-listening-matching",
+        "ielts-listening-map-labelling",
+        "ielts-reading-mcq-short-answer",
+        "ielts-reading-matching-information",
+        "ielts-reading-completion",
+        "ielts-writing-task1-process-map",
+        "ielts-writing-criteria",
+        "ielts-speaking-part3",
+        "ielts-speaking-fluency-pronunciation"
+      ],
+      "objectives": [
+        {
+          "id": "timed-listening-reading",
+          "text": "Finish a full Listening (40 questions) and Reading (40 questions) section within the time limits"
+        },
+        {
+          "id": "timed-writing",
+          "text": "Write Task 1 and Task 2 within 60 minutes and meet both word counts"
+        },
+        {
+          "id": "timed-speaking",
+          "text": "Complete all three Speaking parts in 11–14 minutes"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Latihan Bagian Berwaktu",
+          "summary": "Mengerjakan setiap bagian secara terpisah dengan batas waktu sesungguhnya di layar.",
+          "objectives": {
+            "timed-listening-reading": "Menyelesaikan satu bagian Listening (40 soal) dan Reading (40 soal) penuh dalam batas waktu",
+            "timed-writing": "Menulis Task 1 dan Task 2 dalam 60 menit dan memenuhi kedua batas minimal kata",
+            "timed-speaking": "Menyelesaikan ketiga bagian Speaking dalam 11–14 menit"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-full-mock",
+      "level": "Mock",
+      "title": "Full Mock Test",
+      "summary": "Take a complete Listening, Reading and Writing test in one sitting, plus a Speaking interview.",
+      "prerequisiteIds": [
+        "ielts-timed-practice"
+      ],
+      "objectives": [
+        {
+          "id": "one-sitting",
+          "text": "Complete Listening, Reading and Writing back to back in about two and a half hours without breaks"
+        },
+        {
+          "id": "keep-strategy",
+          "text": "Apply the strategy for each question type under full-test pressure"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Simulasi Tes Lengkap",
+          "summary": "Mengerjakan Listening, Reading dan Writing lengkap dalam satu sesi, ditambah wawancara Speaking.",
+          "objectives": {
+            "one-sitting": "Menyelesaikan Listening, Reading dan Writing berturut-turut dalam sekitar dua setengah jam tanpa jeda",
+            "keep-strategy": "Menerapkan strategi setiap tipe soal di bawah tekanan tes lengkap"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-score-review",
+      "level": "Mock",
+      "title": "Score Review & Test-day Plan",
+      "summary": "Turn mock results into estimated bands, find your weakest areas and plan for test day.",
+      "prerequisiteIds": [
+        "ielts-full-mock"
+      ],
+      "objectives": [
+        {
+          "id": "estimate-bands",
+          "text": "Convert raw Listening and Reading scores to approximate bands and calculate an estimated overall band"
+        },
+        {
+          "id": "target-gaps",
+          "text": "Compare estimated bands with the target score required by a university or scholarship and pick the weakest section to improve"
+        },
+        {
+          "id": "test-day",
+          "text": "Plan test-day logistics, including ID, the separate Speaking time and the option of One Skill Retake"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Evaluasi Skor & Rencana Hari Tes",
+          "summary": "Mengubah hasil simulasi menjadi perkiraan band, menemukan kelemahan dan merencanakan hari tes.",
+          "objectives": {
+            "estimate-bands": "Mengonversi skor mentah Listening dan Reading ke perkiraan band dan menghitung perkiraan overall band",
+            "target-gaps": "Membandingkan perkiraan band dengan skor target universitas atau beasiswa dan memilih bagian terlemah untuk ditingkatkan",
+            "test-day": "Merencanakan persiapan hari tes, termasuk kartu identitas, jadwal Speaking yang terpisah dan opsi One Skill Retake"
+          }
+        }
+      }
+    }
+  ]
+}

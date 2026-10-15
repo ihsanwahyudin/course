@@ -1,0 +1,202 @@
+{
+  "version": "2026.10.1",
+  "level": "Writing",
+  "title": "Writing Test",
+  "description": "The separate TOEIC Writing test: 8 questions in about 60 minutes, scored 0–200, plus a Speaking & Writing practice test.",
+  "i18n": {
+    "id": {
+      "title": "Tes Writing",
+      "description": "Tes TOEIC Writing yang terpisah: 8 soal dalam sekitar 60 menit, dinilai 0–200, plus latihan tes Speaking & Writing."
+    }
+  },
+  "nodes": [
+    {
+      "id": "toeic-write-sentence-picture",
+      "level": "Writing",
+      "title": "Write a Sentence Based on a Picture",
+      "summary": "Questions 1–5: write one sentence about a picture using two given words (8 minutes for all five).",
+      "prerequisiteIds": [
+        "toeic-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "use-both-words",
+          "text": "Write one grammatical sentence that uses both given words, changing their form if needed"
+        },
+        {
+          "id": "relevant-to-picture",
+          "text": "Make the sentence describe what is actually in the picture"
+        },
+        {
+          "id": "check-quickly",
+          "text": "Check each sentence for agreement, articles and punctuation within the time limit"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-present-continuous"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Write a Sentence Based on a Picture",
+          "summary": "Soal 1–5: menulis satu kalimat tentang gambar dengan memakai dua kata yang diberikan (8 menit untuk kelima soal).",
+          "objectives": {
+            "use-both-words": "Menulis satu kalimat yang benar secara grammar dengan memakai kedua kata yang diberikan, mengubah bentuknya bila perlu",
+            "relevant-to-picture": "Membuat kalimat yang sesuai dengan isi gambar",
+            "check-quickly": "Memeriksa setiap kalimat (kesesuaian subjek-kata kerja, artikel dan tanda baca) dalam batas waktu"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-respond-written-request",
+      "level": "Writing",
+      "title": "Respond to a Written Request",
+      "summary": "Questions 6–7: read an e-mail and write a reply that completes the listed tasks (10 minutes each).",
+      "prerequisiteIds": [
+        "toeic-write-sentence-picture"
+      ],
+      "objectives": [
+        {
+          "id": "cover-all-tasks",
+          "text": "Complete every task the directions list (e.g. ask two questions and make one request)"
+        },
+        {
+          "id": "email-structure",
+          "text": "Use a clear e-mail structure: greeting, purpose, details and closing"
+        },
+        {
+          "id": "polite-tone",
+          "text": "Use a polite, professional tone and varied sentences"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Respond to a Written Request",
+          "summary": "Soal 6–7: membaca e-mail dan menulis balasan yang menyelesaikan tugas-tugas yang diminta (10 menit per soal).",
+          "objectives": {
+            "cover-all-tasks": "Menyelesaikan semua tugas yang diminta petunjuk (mis. mengajukan dua pertanyaan dan satu permintaan)",
+            "email-structure": "Memakai struktur e-mail yang jelas: salam, tujuan, detail dan penutup",
+            "polite-tone": "Memakai nada sopan dan profesional serta variasi kalimat"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-opinion-essay",
+      "level": "Writing",
+      "title": "Write an Opinion Essay",
+      "summary": "Question 8: plan, write and revise an opinion essay in 30 minutes (ETS suggests at least 300 words).",
+      "prerequisiteIds": [
+        "toeic-respond-written-request"
+      ],
+      "objectives": [
+        {
+          "id": "essay-plan",
+          "text": "Plan an essay in under five minutes: position, two or three reasons, examples"
+        },
+        {
+          "id": "paragraphs",
+          "text": "Write an introduction, body paragraphs with support and a conclusion"
+        },
+        {
+          "id": "revise",
+          "text": "Leave time to revise grammar, word choice and connectors"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-formal-writing"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Write an Opinion Essay",
+          "summary": "Soal 8: merencanakan, menulis dan merevisi esai opini dalam 30 menit (ETS menyarankan minimal 300 kata).",
+          "objectives": {
+            "essay-plan": "Merencanakan esai dalam kurang dari lima menit: pendapat, dua atau tiga alasan, contoh",
+            "paragraphs": "Menulis pendahuluan, paragraf isi dengan dukungan, dan kesimpulan",
+            "revise": "Menyisakan waktu untuk merevisi grammar, pilihan kata dan kata penghubung"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-sw-practice-test",
+      "level": "Writing",
+      "title": "Speaking & Writing Practice Test",
+      "summary": "Full timed Speaking and Writing practice with feedback based on the official evaluation criteria.",
+      "prerequisiteIds": [
+        "toeic-express-opinion",
+        "toeic-opinion-essay"
+      ],
+      "objectives": [
+        {
+          "id": "timed-speaking",
+          "text": "Complete all 11 Speaking tasks with the real preparation and response times"
+        },
+        {
+          "id": "timed-writing",
+          "text": "Complete all 8 Writing tasks within about 60 minutes"
+        },
+        {
+          "id": "criteria-review",
+          "text": "Review your answers against the official criteria (pronunciation, grammar, vocabulary, organisation, relevance) and pick one focus per test"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Latihan Tes Speaking & Writing",
+          "summary": "Latihan Speaking dan Writing lengkap dengan waktu, plus umpan balik berdasarkan kriteria penilaian resmi.",
+          "objectives": {
+            "timed-speaking": "Menyelesaikan 11 tugas Speaking dengan waktu persiapan dan menjawab seperti aslinya",
+            "timed-writing": "Menyelesaikan 8 tugas Writing dalam sekitar 60 menit",
+            "criteria-review": "Meninjau jawabanmu dengan kriteria resmi (pelafalan, grammar, kosakata, organisasi, relevansi) dan memilih satu fokus per tes"
+          }
+        }
+      }
+    }
+  ]
+}

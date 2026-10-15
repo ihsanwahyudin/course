@@ -1,0 +1,173 @@
+{
+  "version": "2026.10.1",
+  "level": "Mock",
+  "title": "Full Practice Tests",
+  "description": "Put the three sections together under real timing, review your estimated score and close your weakest gaps. Includes an overview of the optional Speaking test.",
+  "i18n": {
+    "id": {
+      "title": "Simulasi Tes Lengkap",
+      "description": "Gabungkan tiga section dengan waktu sungguhan, tinjau perkiraan skormu dan tutup celah terlemahmu. Termasuk gambaran tes Speaking opsional."
+    }
+  },
+  "nodes": [
+    {
+      "id": "itp-speaking-optional",
+      "level": "Mock",
+      "title": "The Optional Speaking Test",
+      "summary": "Know the four digital Speaking tasks in case your institution adds them.",
+      "prerequisiteIds": [
+        "itp-listening-part-b"
+      ],
+      "objectives": [
+        {
+          "id": "speaking-tasks",
+          "text": "Describe the four tasks (read aloud, two familiar-topic tasks, one integrated conversation task) and their timing"
+        },
+        {
+          "id": "familiar-topic",
+          "text": "Give a clear 45-second answer to a familiar-topic question with a reason and an example"
+        },
+        {
+          "id": "integrated-summary",
+          "text": "Summarise a problem and two solutions from a conversation and state a preference in 60 seconds"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-reported-speech"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Tes Speaking Opsional",
+          "summary": "Kenali empat tugas Speaking digital, jaga-jaga jika institusimu menambahkannya.",
+          "objectives": {
+            "speaking-tasks": "Menjelaskan empat tugas (read aloud, dua tugas topik sehari-hari, satu tugas terintegrasi percakapan) beserta waktunya",
+            "familiar-topic": "Memberi jawaban jelas selama 45 detik untuk pertanyaan topik sehari-hari, lengkap dengan alasan dan contoh",
+            "integrated-summary": "Merangkum satu masalah dan dua solusi dari percakapan lalu menyatakan pilihan dalam 60 detik"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-mock-test-1",
+      "level": "Mock",
+      "title": "Full Mock Test 1",
+      "summary": "All 140 questions in 115 minutes, in the real section order.",
+      "prerequisiteIds": [
+        "itp-scoring-cefr",
+        "itp-answer-strategy",
+        "itp-idioms-implied",
+        "itp-listening-part-c",
+        "itp-listening-notes",
+        "itp-structure-pacing",
+        "itp-academic-vocabulary",
+        "itp-reading-pacing"
+      ],
+      "objectives": [
+        {
+          "id": "complete-timed",
+          "text": "Complete all three sections in order within the official time limits without a break"
+        },
+        {
+          "id": "estimate-score",
+          "text": "Convert correct answers into an estimated section and total score, labelled as an estimate"
+        },
+        {
+          "id": "answer-all",
+          "text": "Leave no question unanswered"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Simulasi Tes Lengkap 1",
+          "summary": "Semua 140 soal dalam 115 menit, sesuai urutan section aslinya.",
+          "objectives": {
+            "complete-timed": "Menyelesaikan ketiga section secara berurutan dalam batas waktu resmi tanpa jeda",
+            "estimate-score": "Mengubah jumlah jawaban benar menjadi perkiraan skor section dan total, dengan label 'perkiraan'",
+            "answer-all": "Tidak membiarkan satu soal pun tanpa jawaban"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-score-review",
+      "level": "Mock",
+      "title": "Score Review and Error Log",
+      "summary": "Turn mock-test mistakes into a short, targeted study plan.",
+      "prerequisiteIds": [
+        "itp-mock-test-1"
+      ],
+      "objectives": [
+        {
+          "id": "classify-errors",
+          "text": "Classify each wrong answer by question type and cause (vocabulary, grammar point, time, trap option)"
+        },
+        {
+          "id": "gap-to-target",
+          "text": "Compare estimated section scores with the target and the CEFR cut scores to find the biggest gap"
+        },
+        {
+          "id": "study-plan",
+          "text": "Choose the three lessons to revisit before the next mock test"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Tinjauan Skor dan Catatan Kesalahan",
+          "summary": "Mengubah kesalahan di simulasi menjadi rencana belajar yang singkat dan terarah.",
+          "objectives": {
+            "classify-errors": "Mengelompokkan setiap jawaban salah berdasarkan tipe soal dan penyebabnya (kosakata, poin grammar, waktu, opsi jebakan)",
+            "gap-to-target": "Membandingkan perkiraan skor section dengan target dan batas skor CEFR untuk menemukan celah terbesar",
+            "study-plan": "Memilih tiga pelajaran yang perlu diulang sebelum simulasi berikutnya"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-mock-test-2",
+      "level": "Mock",
+      "title": "Full Mock Test 2 and Test-Day Plan",
+      "summary": "A second timed test to measure progress, then a plan for the real day.",
+      "prerequisiteIds": [
+        "itp-score-review"
+      ],
+      "objectives": [
+        {
+          "id": "measure-progress",
+          "text": "Complete a second full timed test and compare the estimated score with Mock Test 1"
+        },
+        {
+          "id": "test-day-plan",
+          "text": "Prepare a test-day plan: ID, materials for paper or digital/at-home delivery, timing and pacing targets per section"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Simulasi Tes Lengkap 2 dan Rencana Hari Tes",
+          "summary": "Tes berwaktu kedua untuk mengukur kemajuan, lalu rencana untuk hari tes sebenarnya.",
+          "objectives": {
+            "measure-progress": "Menyelesaikan tes lengkap berwaktu kedua dan membandingkan perkiraan skornya dengan Simulasi Tes 1",
+            "test-day-plan": "Menyiapkan rencana hari tes: identitas, perlengkapan untuk versi kertas atau digital/di rumah, serta target waktu dan tempo per section"
+          }
+        }
+      }
+    }
+  ]
+}

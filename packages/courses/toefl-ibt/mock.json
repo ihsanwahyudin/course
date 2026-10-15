@@ -1,0 +1,121 @@
+{
+  "version": "2026.10.1",
+  "level": "Mock",
+  "title": "Full Practice Tests",
+  "description": "Timed section practice, a full practice test under real conditions, and a score review that turns results into a study plan.",
+  "i18n": {
+    "id": {
+      "title": "Tes Simulasi Lengkap",
+      "description": "Latihan per bagian dengan waktu, tes simulasi lengkap dalam kondisi nyata, dan tinjauan skor yang diubah menjadi rencana belajar."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ibt-section-practice",
+      "level": "Mock",
+      "title": "Timed Section Practice",
+      "summary": "Practise each section separately under its real time limit and task order.",
+      "prerequisiteIds": [
+        "ibt-reading-strategies",
+        "ibt-listen-academic-talk",
+        "ibt-academic-discussion",
+        "ibt-self-editing",
+        "ibt-speaking-under-pressure",
+        "ibt-test-day-strategy"
+      ],
+      "objectives": [
+        {
+          "id": "section-timing",
+          "text": "Complete each section within its time limit"
+        },
+        {
+          "id": "weak-task-types",
+          "text": "Identify the two task types with the lowest accuracy"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Latihan per Bagian dengan Waktu",
+          "summary": "Berlatih setiap bagian secara terpisah dengan batas waktu dan urutan soal yang sebenarnya.",
+          "objectives": {
+            "section-timing": "Menyelesaikan setiap bagian dalam batas waktunya",
+            "weak-task-types": "Mengidentifikasi dua tipe soal dengan akurasi terendah"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-full-practice-test",
+      "level": "Mock",
+      "title": "Full Practice Test",
+      "summary": "Take a complete practice test in one sitting under real test conditions.",
+      "prerequisiteIds": [
+        "ibt-section-practice",
+        "ibt-score-scale"
+      ],
+      "objectives": [
+        {
+          "id": "full-sitting",
+          "text": "Complete all four sections in order without a break"
+        },
+        {
+          "id": "estimate-band",
+          "text": "Estimate a band for each section and overall, knowing it is only an estimate"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Tes Simulasi Lengkap",
+          "summary": "Mengerjakan tes simulasi lengkap dalam satu kali duduk dengan kondisi seperti tes sungguhan.",
+          "objectives": {
+            "full-sitting": "Menyelesaikan keempat bagian secara berurutan tanpa jeda",
+            "estimate-band": "Memperkirakan band setiap bagian dan keseluruhan, dengan sadar bahwa itu hanya perkiraan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-score-review",
+      "level": "Mock",
+      "title": "Score Review & Study Plan",
+      "summary": "Turn practice results into a focused plan for the weeks before test day.",
+      "prerequisiteIds": [
+        "ibt-full-practice-test"
+      ],
+      "objectives": [
+        {
+          "id": "gap-to-target",
+          "text": "Compare estimated bands with target bands and find the biggest gap"
+        },
+        {
+          "id": "study-plan",
+          "text": "Write a weekly study plan that targets the weakest task types"
+        },
+        {
+          "id": "retake-decision",
+          "text": "Decide when you are ready to book or retake the test"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Tinjauan Skor & Rencana Belajar",
+          "summary": "Mengubah hasil latihan menjadi rencana terarah untuk minggu-minggu sebelum hari tes.",
+          "objectives": {
+            "gap-to-target": "Membandingkan perkiraan band dengan target band dan menemukan selisih terbesar",
+            "study-plan": "Menulis rencana belajar mingguan yang menyasar tipe soal terlemah",
+            "retake-decision": "Memutuskan kapan kamu siap mendaftar atau mengulang tes"
+          }
+        }
+      }
+    }
+  ]
+}

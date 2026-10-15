@@ -174,3 +174,46 @@ func TestLocalizedViews(t *testing.T) {
 		t.Fatal("lesson intro localization wrong")
 	}
 }
+
+func TestComingSoonCourseNeedsNoReadyLesson(t *testing.T) {
+	soon := testCourse
+	soon.Status = CourseComingSoon
+	_, err := Build(soon, []levelFile{{Version: "1", Level: "A0", Nodes: []Node{{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentComingSoon}}}}, nil)
+	if err != nil {
+		t.Fatalf("a coming-soon roadmap of unwritten lessons is fine: %v", err)
+	}
+}
+
+func TestCatalogValidatesLinksBetweenCourses(t *testing.T) {
+	english, err := LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	english.RelatedTracks = nil // its real tracks aren't in this small catalog
+	track := testCourse
+	track.Slug, track.Status = "track", CourseComingSoon
+	mk := func(rec *LevelRef, related []string, f []NodeRef) *Catalog {
+		c := track
+		c.RecommendedAfter, c.RelatedTracks = rec, related
+		cur, err := Build(c, []levelFile{{Version: "1", Level: "A0", Nodes: []Node{{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentComingSoon, Foundations: f}}}}, nil)
+		if err != nil {
+			t.Fatal(err)
+		}
+		return NewCatalog(english, cur)
+	}
+	ok := mk(&LevelRef{"english", "B1"}, []string{"english"}, []NodeRef{{"english", "b2-passive-voice"}})
+	if err := ok.validateLinks(); err != nil {
+		t.Fatalf("valid links rejected: %v", err)
+	}
+	for name, cat := range map[string]*Catalog{
+		"unknown level":      mk(&LevelRef{"english", "Z9"}, nil, nil),
+		"unknown track":      mk(nil, []string{"klingon"}, nil),
+		"self track":         mk(nil, []string{"track"}, nil),
+		"unknown foundation": mk(nil, nil, []NodeRef{{"english", "ghost"}}),
+		"unknown course":     mk(nil, nil, []NodeRef{{"klingon", "x"}}),
+	} {
+		if err := cat.validateLinks(); err == nil {
+			t.Errorf("%s: should be rejected", name)
+		}
+	}
+}

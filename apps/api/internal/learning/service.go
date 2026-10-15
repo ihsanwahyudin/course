@@ -144,6 +144,23 @@ type CourseCard struct {
 	ReadyNodes  int             `json:"readyNodes"`
 	Enrolled    bool            `json:"enrolled"`
 	Progress    *CourseProgress `json:"progress"`
+	// RecommendedAfter: where to be in another course before starting.
+	RecommendedAfter *LevelLink `json:"recommendedAfter"`
+}
+
+// LevelLink is a level of a (usually other) course.
+type LevelLink struct {
+	Course      string `json:"course"`
+	CourseTitle string `json:"courseTitle"`
+	Level       string `json:"level"`
+	LevelTitle  string `json:"levelTitle"`
+}
+
+// FoundationView is a lesson of another course a node builds on, with the
+// learner's status there.
+type FoundationView struct {
+	Course CourseRef `json:"course"`
+	NodeView
 }
 
 type EnrollmentView struct {
@@ -158,6 +175,8 @@ type RoadmapView struct {
 	Enrollment    EnrollmentView `json:"enrollment"`
 	Version       string         `json:"version"`
 	Nodes         []NodeView     `json:"nodes"`
+	// RelatedTracks are suggested next courses, shown after the roadmap.
+	RelatedTracks []CourseCard   `json:"relatedTracks"`
 	NextNodeID    *string        `json:"nextNodeId"`
 	Summary       Summary        `json:"summary"`
 	Profile       ProfileSummary `json:"profile"`
@@ -280,7 +299,7 @@ func summary(st state) Summary {
 	return sum
 }
 
-func courseCard(st state) CourseCard {
+func (s *Service) courseCard(st state) CourseCard {
 	c := st.cur
 	sum := summary(st)
 	text := c.Text(st.lang)
@@ -301,6 +320,17 @@ func courseCard(st state) CourseCard {
 		}
 		card.Progress = p
 	}
+	if r := c.RecommendedAfter; r != nil {
+		if other, ok := s.Catalog.Course(r.Course); ok {
+			link := &LevelLink{Course: other.Slug, CourseTitle: other.Text(st.lang).Title, Level: r.Level}
+			for _, l := range other.LocalLevels(st.lang) {
+				if l.Level == r.Level {
+					link.LevelTitle = l.Title
+				}
+			}
+			card.RecommendedAfter = link
+		}
+	}
 	return card
 }
 
@@ -312,7 +342,7 @@ func (s *Service) Courses(ctx context.Context, userID string) ([]CourseCard, err
 		if err != nil {
 			return nil, err
 		}
-		out = append(out, courseCard(st))
+		out = append(out, s.courseCard(st))
 	}
 	return out, nil
 }
@@ -327,7 +357,7 @@ func (s *Service) Roadmap(ctx context.Context, userID, courseSlug string) (Roadm
 		return RoadmapView{}, err
 	}
 	v := RoadmapView{
-		Course: courseCard(st), Authenticated: userID != "", Enrolled: st.enrolled,
+		Course: s.courseCard(st), Authenticated: userID != "", Enrolled: st.enrolled,
 		Enrollment: EnrollmentView{st.enrollment.CurrentLevel, st.enrollment.TargetLevel},
 		Version:    cur.Version, Summary: summary(st), Profile: profileSummary(st),
 	}
@@ -336,6 +366,16 @@ func (s *Service) Roadmap(ctx context.Context, userID, courseSlug string) (Roadm
 	}
 	if next := progress.NextSuggested(cur, st.statuses, st.prefer()); next != nil {
 		v.NextNodeID = &next.ID
+	}
+	v.RelatedTracks = []CourseCard{}
+	for _, slug := range cur.RelatedTracks {
+		if other, ok := s.Catalog.Course(slug); ok {
+			ost, err := s.load(ctx, s.Store.Pool, userID, other)
+			if err != nil {
+				return RoadmapView{}, err
+			}
+			v.RelatedTracks = append(v.RelatedTracks, s.courseCard(ost))
+		}
 	}
 	return v, nil
 }
@@ -369,6 +409,8 @@ type NodeDetail struct {
 	BlockedReason string     `json:"blockedReason,omitempty"`
 	OpenSessionID *string    `json:"openSessionId"`
 	KeyPoints     []string   `json:"keyPoints"`
+	// Foundations are lessons of other courses this one builds on.
+	Foundations []FoundationView `json:"foundations"`
 }
 
 func (s *Service) Node(ctx context.Context, userID, courseSlug, id string) (NodeDetail, error) {
@@ -394,6 +436,24 @@ func (s *Service) Node(ctx context.Context, userID, courseSlug, id string) (Node
 		d.Successors = append(d.Successors, nodeView(st, cn))
 	}
 	d.CanStart, d.BlockedReason = startable(st, n)
+	d.Foundations = []FoundationView{}
+	others := map[string]state{}
+	for _, f := range n.Foundations {
+		other, ok := s.Catalog.Course(f.Course)
+		if !ok {
+			continue
+		}
+		ost, ok := others[f.Course]
+		if !ok {
+			if ost, err = s.load(ctx, s.Store.Pool, userID, other); err != nil {
+				return NodeDetail{}, err
+			}
+			others[f.Course] = ost
+		}
+		if fn, ok := other.Node(f.NodeID); ok {
+			d.Foundations = append(d.Foundations, FoundationView{Course: CourseRef{other.Slug, other.Text(ost.lang).Title}, NodeView: nodeView(ost, fn)})
+		}
+	}
 	if l, ok := cur.Lesson(n.ID); ok {
 		for _, k := range l.KeyPoints {
 			d.KeyPoints = append(d.KeyPoints, k.Title)
@@ -829,7 +889,7 @@ func (s *Service) CourseProgress(ctx context.Context, userID, courseSlug string)
 	if err != nil {
 		return ProgressView{}, err
 	}
-	v := ProgressView{Course: courseCard(st), Summary: summary(st), Mastered: []MasteredItem{}}
+	v := ProgressView{Course: s.courseCard(st), Summary: summary(st), Mastered: []MasteredItem{}}
 	rows, err := storage.ListProgress(ctx, db, userID, cur.Slug)
 	if err != nil {
 		return v, err
@@ -903,7 +963,7 @@ func (s *Service) Dashboard(ctx context.Context, user storage.User) (DashboardVi
 		if err != nil {
 			return v, err
 		}
-		card := courseCard(st)
+		card := s.courseCard(st)
 		v.TotalMastered += card.Progress.Mastered
 		v.Courses = append(v.Courses, card)
 	}
@@ -913,7 +973,7 @@ func (s *Service) Dashboard(ctx context.Context, user storage.User) (DashboardVi
 			if err != nil {
 				return v, err
 			}
-			v.Explore = append(v.Explore, courseCard(st))
+			v.Explore = append(v.Explore, s.courseCard(st))
 		}
 	}
 	open, err := storage.OpenSessions(ctx, db, user.ID)

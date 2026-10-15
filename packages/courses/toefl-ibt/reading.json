@@ -1,0 +1,212 @@
+{
+  "version": "2026.10.1",
+  "level": "Reading",
+  "title": "Reading",
+  "description": "The three Reading task types — Complete the Words, Read in Daily Life and Read an Academic Passage — plus skimming, scanning and paraphrase strategies.",
+  "i18n": {
+    "id": {
+      "title": "Reading",
+      "description": "Tiga tipe soal Reading — Complete the Words, Read in Daily Life dan Read an Academic Passage — serta strategi skimming, scanning dan parafrase."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ibt-complete-the-words",
+      "level": "Reading",
+      "title": "Complete the Words",
+      "summary": "Fill in the missing letters of words in a short academic text using grammar and context.",
+      "prerequisiteIds": [
+        "ibt-academic-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "word-from-context",
+          "text": "Identify the missing part of a word from the letters shown and the meaning of the sentence"
+        },
+        {
+          "id": "grammar-form",
+          "text": "Choose the correct word form (tense, plural, part of speech) for the gap"
+        },
+        {
+          "id": "spelling-accuracy",
+          "text": "Spell common academic words correctly"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-past-simple-irregular"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-countable-uncountable"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Complete the Words",
+          "summary": "Melengkapi huruf yang hilang pada kata-kata dalam teks akademik pendek dengan bantuan tata bahasa dan konteks.",
+          "objectives": {
+            "word-from-context": "Menentukan bagian kata yang hilang dari huruf yang ditampilkan dan makna kalimat",
+            "grammar-form": "Memilih bentuk kata yang benar (tenses, jamak, kelas kata) untuk bagian yang kosong",
+            "spelling-accuracy": "Mengeja kata akademik umum dengan benar"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-read-in-daily-life",
+      "level": "Reading",
+      "title": "Read in Daily Life",
+      "summary": "Understand short everyday texts such as notices, emails, menus and social media posts.",
+      "prerequisiteIds": [
+        "ibt-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "text-purpose",
+          "text": "Identify the main purpose of a short everyday text"
+        },
+        {
+          "id": "key-details",
+          "text": "Find key details such as times, places and conditions"
+        },
+        {
+          "id": "implied-meaning",
+          "text": "Infer what the writer implies but does not state directly"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-short-messages"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Read in Daily Life",
+          "summary": "Memahami teks sehari-hari yang pendek seperti pengumuman, email, menu dan unggahan media sosial.",
+          "objectives": {
+            "text-purpose": "Menentukan tujuan utama teks sehari-hari yang pendek",
+            "key-details": "Menemukan detail penting seperti waktu, tempat dan syarat",
+            "implied-meaning": "Menyimpulkan maksud penulis yang tidak dinyatakan secara langsung"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-read-academic-passage",
+      "level": "Reading",
+      "title": "Read an Academic Passage",
+      "summary": "Answer questions on a short university-style passage: main idea, details, vocabulary and inference.",
+      "prerequisiteIds": [
+        "ibt-read-in-daily-life",
+        "ibt-academic-vocabulary"
+      ],
+      "objectives": [
+        {
+          "id": "main-idea",
+          "text": "Identify the main idea of an academic passage"
+        },
+        {
+          "id": "supporting-details",
+          "text": "Locate supporting details and pronoun referents"
+        },
+        {
+          "id": "vocab-in-context",
+          "text": "Work out the meaning of a word from context"
+        },
+        {
+          "id": "text-structure",
+          "text": "Recognise how ideas are organised (cause–effect, compare–contrast)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Read an Academic Passage",
+          "summary": "Menjawab soal tentang teks pendek bergaya kuliah: gagasan utama, detail, kosakata dan inferensi.",
+          "objectives": {
+            "main-idea": "Menentukan gagasan utama teks akademik",
+            "supporting-details": "Menemukan detail pendukung dan rujukan kata ganti",
+            "vocab-in-context": "Menebak makna kata dari konteks",
+            "text-structure": "Mengenali cara gagasan disusun (sebab–akibat, perbandingan–kontras)"
+          }
+        }
+      }
+    },
+    {
+      "id": "ibt-reading-strategies",
+      "level": "Reading",
+      "title": "Skimming, Scanning & Paraphrase",
+      "summary": "Read faster and choose answers that restate the text in different words.",
+      "prerequisiteIds": [
+        "ibt-read-academic-passage"
+      ],
+      "objectives": [
+        {
+          "id": "skim-scan",
+          "text": "Skim for the gist and scan for a specific detail within a time limit"
+        },
+        {
+          "id": "spot-paraphrase",
+          "text": "Match a correct answer option to the paraphrased sentence in the text"
+        },
+        {
+          "id": "eliminate-distractors",
+          "text": "Eliminate distractors that are too broad, too narrow or not stated"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c2-implied-meaning"
+        },
+        {
+          "course": "english",
+          "nodeId": "c1-hedging"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Skimming, Scanning & Parafrase",
+          "summary": "Membaca lebih cepat dan memilih jawaban yang menyatakan ulang isi teks dengan kata-kata berbeda.",
+          "objectives": {
+            "skim-scan": "Membaca sekilas (skimming) untuk inti dan memindai (scanning) untuk detail tertentu dalam batas waktu",
+            "spot-paraphrase": "Mencocokkan pilihan jawaban yang benar dengan kalimat parafrasenya di teks",
+            "eliminate-distractors": "Menyingkirkan pengecoh yang terlalu luas, terlalu sempit atau tidak disebutkan"
+          }
+        }
+      }
+    }
+  ]
+}

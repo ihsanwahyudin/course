@@ -1,0 +1,136 @@
+{
+  "version": "2026.10.1",
+  "level": "Start",
+  "title": "Format & Strategy",
+  "description": "Learn how the TOEIC Listening and Reading test works, the workplace topics it uses and how to set a realistic score goal.",
+  "i18n": {
+    "id": {
+      "title": "Format & Strategi",
+      "description": "Pahami cara kerja tes TOEIC Listening and Reading, topik dunia kerja yang dipakai, dan cara menetapkan target skor yang realistis."
+    }
+  },
+  "nodes": [
+    {
+      "id": "toeic-format-overview",
+      "level": "Start",
+      "title": "TOEIC Format & Scoring",
+      "summary": "The 200 questions, seven parts, timing and 10–990 score scale of the Listening and Reading test.",
+      "prerequisiteIds": [],
+      "objectives": [
+        {
+          "id": "name-parts",
+          "text": "Name the seven parts of the Listening and Reading test and the number of questions in each"
+        },
+        {
+          "id": "explain-timing",
+          "text": "Explain the timing: about 45 minutes of recorded Listening and 75 self-paced minutes of Reading"
+        },
+        {
+          "id": "explain-scoring",
+          "text": "Explain how section scores (5–495) add up to a total score (10–990) and that there is no penalty for guessing"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Format & Penilaian TOEIC",
+          "summary": "200 soal, tujuh bagian, pembagian waktu dan skala skor 10–990 pada tes Listening and Reading.",
+          "objectives": {
+            "name-parts": "Menyebutkan tujuh bagian tes Listening and Reading beserta jumlah soal di tiap bagian",
+            "explain-timing": "Menjelaskan pembagian waktu: sekitar 45 menit Listening dari rekaman dan 75 menit Reading yang diatur sendiri",
+            "explain-scoring": "Menjelaskan bagaimana skor tiap bagian (5–495) dijumlahkan menjadi skor total (10–990) dan bahwa menebak tidak dikurangi nilai"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-workplace-vocabulary",
+      "level": "Start",
+      "title": "Workplace Vocabulary by Topic",
+      "summary": "Core words for the office, meetings, travel, dining, finance, hiring and purchasing — the settings TOEIC uses.",
+      "prerequisiteIds": [
+        "toeic-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "topic-sets",
+          "text": "Recognise key vocabulary for common TOEIC settings such as offices, travel, dining, finance and personnel"
+        },
+        {
+          "id": "business-collocations",
+          "text": "Use frequent business collocations correctly (e.g. place an order, meet a deadline, submit a report)"
+        },
+        {
+          "id": "near-synonyms",
+          "text": "Choose between near-synonyms that test writers often contrast (e.g. reservation / appointment, fee / fare)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-phrasal-verbs"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-meetings"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-emails"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kosakata Dunia Kerja per Topik",
+          "summary": "Kata-kata inti untuk kantor, rapat, perjalanan, makan di luar, keuangan, rekrutmen dan pembelian — situasi yang dipakai TOEIC.",
+          "objectives": {
+            "topic-sets": "Mengenali kosakata kunci untuk situasi TOEIC yang umum seperti kantor, perjalanan, makan di luar, keuangan dan kepegawaian",
+            "business-collocations": "Menggunakan kolokasi bisnis yang sering muncul dengan benar (mis. place an order, meet a deadline, submit a report)",
+            "near-synonyms": "Memilih di antara kata yang maknanya mirip dan sering dibandingkan dalam soal (mis. reservation / appointment, fee / fare)"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-score-goals",
+      "level": "Start",
+      "title": "Diagnostic & Score Goals",
+      "summary": "Find your starting point, read the CEFR mapping and plan the weeks to your target score.",
+      "prerequisiteIds": [
+        "toeic-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "cefr-mapping",
+          "text": "Relate a TOEIC section score to the CEFR level ETS maps it to (e.g. Listening 275 and Reading 275 ≈ B1)"
+        },
+        {
+          "id": "set-target",
+          "text": "Set a target score based on what an employer, campus or program actually requires"
+        },
+        {
+          "id": "study-plan",
+          "text": "Build a weekly study plan that puts more time on the weakest parts from a diagnostic"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Diagnostik & Target Skor",
+          "summary": "Ketahui titik awalmu, baca pemetaan CEFR, dan rencanakan minggu-minggu menuju target skormu.",
+          "objectives": {
+            "cefr-mapping": "Menghubungkan skor bagian TOEIC dengan level CEFR menurut pemetaan ETS (mis. Listening 275 dan Reading 275 ≈ B1)",
+            "set-target": "Menetapkan target skor berdasarkan syarat nyata dari perusahaan, kampus atau program",
+            "study-plan": "Menyusun rencana belajar mingguan yang memberi waktu lebih untuk bagian terlemah dari hasil diagnostik"
+          }
+        }
+      }
+    }
+  ]
+}

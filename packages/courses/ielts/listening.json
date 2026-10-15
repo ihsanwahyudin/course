@@ -1,0 +1,277 @@
+{
+  "version": "2026.10.1",
+  "level": "Listening",
+  "title": "Listening",
+  "description": "Four recordings, 40 questions, about 30 minutes, heard once only. The same test for Academic and General Training.",
+  "i18n": {
+    "id": {
+      "title": "Listening",
+      "description": "Empat rekaman, 40 soal, sekitar 30 menit, hanya diputar sekali. Tesnya sama untuk Academic dan General Training."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ielts-listening-strategy",
+      "level": "Listening",
+      "title": "Listening Strategy: Predict & Follow",
+      "summary": "Use the reading time to predict answers, follow the question order and avoid distractors.",
+      "prerequisiteIds": [
+        "ielts-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "four-parts",
+          "text": "Describe the four parts (two everyday social situations, two educational or training contexts) and how difficulty rises"
+        },
+        {
+          "id": "predict-answers",
+          "text": "Predict the type of word (number, name, noun, adjective) each gap needs before the recording starts"
+        },
+        {
+          "id": "avoid-distractors",
+          "text": "Recognise when a speaker corrects or changes information and choose the final answer"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Strategi Listening: Prediksi & Ikuti",
+          "summary": "Manfaatkan waktu membaca soal untuk memprediksi jawaban, mengikuti urutan soal dan menghindari jebakan.",
+          "objectives": {
+            "four-parts": "Menjelaskan empat bagian (dua situasi sosial sehari-hari, dua konteks pendidikan atau pelatihan) dan bagaimana tingkat kesulitannya naik",
+            "predict-answers": "Memprediksi jenis kata (angka, nama, nomina, adjektiva) yang dibutuhkan setiap isian sebelum rekaman dimulai",
+            "avoid-distractors": "Mengenali saat pembicara mengoreksi atau mengubah informasi dan memilih jawaban akhirnya"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-listening-form-completion",
+      "level": "Listening",
+      "title": "Form, Note, Table & Flow-chart Completion",
+      "summary": "Fill gaps with exact words and numbers from the recording within the word limit.",
+      "prerequisiteIds": [
+        "ielts-listening-strategy"
+      ],
+      "objectives": [
+        {
+          "id": "spell-names-numbers",
+          "text": "Write spelled-out names, dates, phone numbers and prices correctly"
+        },
+        {
+          "id": "word-limit",
+          "text": "Follow the word limit in instructions such as 'ONE WORD AND/OR A NUMBER'"
+        },
+        {
+          "id": "grammar-fit",
+          "text": "Check that each answer fits the gap grammatically (singular/plural, word class)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-alphabet-sounds"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-countable-uncountable"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Melengkapi Formulir, Catatan, Tabel & Flow-chart",
+          "summary": "Mengisi bagian kosong dengan kata dan angka persis dari rekaman sesuai batas jumlah kata.",
+          "objectives": {
+            "spell-names-numbers": "Menulis nama yang dieja, tanggal, nomor telepon dan harga dengan benar",
+            "word-limit": "Mematuhi batas kata di instruksi seperti 'ONE WORD AND/OR A NUMBER'",
+            "grammar-fit": "Memastikan setiap jawaban cocok secara tata bahasa dengan isiannya (tunggal/jamak, jenis kata)"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-listening-sentence-short-answer",
+      "level": "Listening",
+      "title": "Sentence Completion & Short-answer Questions",
+      "summary": "Complete sentences and answer wh- questions with words you hear, within the word limit.",
+      "prerequisiteIds": [
+        "ielts-listening-form-completion"
+      ],
+      "objectives": [
+        {
+          "id": "complete-sentences",
+          "text": "Complete a sentence so that it is grammatical and matches what the speaker says"
+        },
+        {
+          "id": "short-answers",
+          "text": "Answer short wh- questions with words from the recording within the word limit"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-countable-uncountable"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Melengkapi Kalimat & Soal Jawaban Singkat",
+          "summary": "Melengkapi kalimat dan menjawab pertanyaan wh- dengan kata yang kamu dengar, sesuai batas kata.",
+          "objectives": {
+            "complete-sentences": "Melengkapi kalimat agar benar secara tata bahasa dan sesuai dengan ucapan pembicara",
+            "short-answers": "Menjawab pertanyaan wh- singkat dengan kata dari rekaman sesuai batas kata"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-listening-multiple-choice",
+      "level": "Listening",
+      "title": "Listening: Multiple Choice",
+      "summary": "Choose one or more correct options when every option is mentioned in the recording.",
+      "prerequisiteIds": [
+        "ielts-listening-strategy",
+        "ielts-paraphrasing"
+      ],
+      "objectives": [
+        {
+          "id": "underline-differences",
+          "text": "Identify the key difference between options before listening"
+        },
+        {
+          "id": "paraphrased-answer",
+          "text": "Choose the option that paraphrases what the speaker actually means, not the one that repeats their words"
+        },
+        {
+          "id": "choose-two",
+          "text": "Answer 'choose TWO letters' questions correctly"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listening: Pilihan Ganda",
+          "summary": "Memilih satu atau lebih opsi yang benar saat semua opsi disebut di rekaman.",
+          "objectives": {
+            "underline-differences": "Menemukan perbedaan kunci antar-opsi sebelum mendengarkan",
+            "paraphrased-answer": "Memilih opsi yang memparafrasekan maksud pembicara, bukan yang mengulang kata-katanya",
+            "choose-two": "Menjawab soal 'choose TWO letters' dengan benar"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-listening-matching",
+      "level": "Listening",
+      "title": "Listening: Matching",
+      "summary": "Match items to a list of options while following a conversation or talk.",
+      "prerequisiteIds": [
+        "ielts-listening-multiple-choice"
+      ],
+      "objectives": [
+        {
+          "id": "track-speakers",
+          "text": "Follow which speaker or item is being discussed as the recording moves through a list"
+        },
+        {
+          "id": "match-options",
+          "text": "Match each item to the correct option when some options are not used"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-reported-speech"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Listening: Mencocokkan",
+          "summary": "Mencocokkan item dengan daftar opsi sambil mengikuti percakapan atau ceramah.",
+          "objectives": {
+            "track-speakers": "Mengikuti pembicara atau item mana yang sedang dibahas saat rekaman bergerak melalui daftar",
+            "match-options": "Mencocokkan setiap item dengan opsi yang benar saat ada opsi yang tidak dipakai"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-listening-map-labelling",
+      "level": "Listening",
+      "title": "Plan, Map & Diagram Labelling",
+      "summary": "Follow directions and descriptions to label a plan, map or diagram.",
+      "prerequisiteIds": [
+        "ielts-listening-form-completion"
+      ],
+      "objectives": [
+        {
+          "id": "orient-map",
+          "text": "Find the starting point and orientation of a map or plan before listening"
+        },
+        {
+          "id": "follow-directions",
+          "text": "Follow spoken directions and location phrases (opposite, next to, at the far end) to label places"
+        },
+        {
+          "id": "label-diagram",
+          "text": "Label parts of a diagram from a spoken description"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-there-is-are"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Melabeli Denah, Peta & Diagram",
+          "summary": "Mengikuti petunjuk arah dan deskripsi untuk melabeli denah, peta atau diagram.",
+          "objectives": {
+            "orient-map": "Menemukan titik awal dan arah peta atau denah sebelum mendengarkan",
+            "follow-directions": "Mengikuti petunjuk arah dan frasa lokasi (opposite, next to, at the far end) untuk melabeli tempat",
+            "label-diagram": "Melabeli bagian diagram dari deskripsi lisan"
+          }
+        }
+      }
+    }
+  ]
+}

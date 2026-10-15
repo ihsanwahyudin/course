@@ -1,0 +1,248 @@
+{
+  "version": "2026.10.1",
+  "level": "Listening",
+  "title": "Listening Comprehension",
+  "description": "Section 1: 50 questions in about 35 minutes on short conversations, longer conversations and academic talks, each heard only once.",
+  "i18n": {
+    "id": {
+      "title": "Listening Comprehension",
+      "description": "Section 1: 50 soal dalam sekitar 35 menit tentang percakapan pendek, percakapan panjang dan ceramah akademik, masing-masing hanya diputar sekali."
+    }
+  },
+  "nodes": [
+    {
+      "id": "itp-listening-part-a",
+      "level": "Listening",
+      "title": "Part A: Short Conversations",
+      "summary": "Two speakers, one question, four printed answers.",
+      "prerequisiteIds": [
+        "itp-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "focus-second-speaker",
+          "text": "Identify that the answer usually depends on what the second speaker says"
+        },
+        {
+          "id": "paraphrase-match",
+          "text": "Choose the option that paraphrases what was said instead of the one that repeats similar-sounding words"
+        },
+        {
+          "id": "common-question-stems",
+          "text": "Recognise the common question stems (What does the man mean? What will the woman probably do next?)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-everyday-conversation"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-future-forms"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part A: Percakapan Pendek",
+          "summary": "Dua pembicara, satu pertanyaan, empat jawaban tercetak.",
+          "objectives": {
+            "focus-second-speaker": "Menyadari bahwa jawaban biasanya bergantung pada ucapan pembicara kedua",
+            "paraphrase-match": "Memilih opsi yang memparafrasekan isi ucapan, bukan opsi yang mengulang kata yang bunyinya mirip",
+            "common-question-stems": "Mengenali bentuk pertanyaan yang sering muncul (What does the man mean? What will the woman probably do next?)"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-idioms-implied",
+      "level": "Listening",
+      "title": "Idioms and Implied Meaning",
+      "summary": "Understand idioms, suggestions and agreement that speakers never say directly.",
+      "prerequisiteIds": [
+        "itp-listening-part-a"
+      ],
+      "objectives": [
+        {
+          "id": "common-idioms",
+          "text": "Interpret common spoken idioms and phrasal verbs in campus conversations"
+        },
+        {
+          "id": "implied-response",
+          "text": "Infer agreement, disagreement, surprise or a suggestion from an indirect reply"
+        },
+        {
+          "id": "negatives-conditions",
+          "text": "Understand tricky negatives and wishes or conditions (e.g. 'I couldn't agree more', 'If only I had known')"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-phrasal-verbs"
+        },
+        {
+          "course": "english",
+          "nodeId": "c2-implied-meaning"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-third-conditional"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Idiom dan Makna Tersirat",
+          "summary": "Memahami idiom, saran dan persetujuan yang tidak diucapkan secara langsung.",
+          "objectives": {
+            "common-idioms": "Menafsirkan idiom lisan dan phrasal verb yang umum dalam percakapan kampus",
+            "implied-response": "Menyimpulkan persetujuan, ketidaksetujuan, keterkejutan atau saran dari jawaban tidak langsung",
+            "negatives-conditions": "Memahami kalimat negatif yang menjebak serta harapan atau pengandaian (mis. 'I couldn't agree more', 'If only I had known')"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-listening-part-b",
+      "level": "Listening",
+      "title": "Part B: Longer Conversations",
+      "summary": "Follow a campus conversation and answer several questions about it.",
+      "prerequisiteIds": [
+        "itp-listening-part-a"
+      ],
+      "objectives": [
+        {
+          "id": "topic-question",
+          "text": "Answer 'What are the speakers mainly discussing?' from the opening lines"
+        },
+        {
+          "id": "track-details",
+          "text": "Track details, problems and decisions in the order they are mentioned"
+        },
+        {
+          "id": "preview-options",
+          "text": "Preview the printed options to predict what to listen for"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-making-plans"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part B: Percakapan Panjang",
+          "summary": "Mengikuti percakapan di kampus dan menjawab beberapa pertanyaan tentangnya.",
+          "objectives": {
+            "topic-question": "Menjawab 'What are the speakers mainly discussing?' dari kalimat-kalimat pembuka",
+            "track-details": "Mengikuti detail, masalah dan keputusan sesuai urutan penyebutannya",
+            "preview-options": "Membaca sekilas opsi tercetak untuk menebak informasi yang perlu didengarkan"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-listening-part-c",
+      "level": "Listening",
+      "title": "Part C: Talks and Lectures",
+      "summary": "Understand short academic talks and announcements heard only once.",
+      "prerequisiteIds": [
+        "itp-listening-part-b"
+      ],
+      "objectives": [
+        {
+          "id": "main-purpose",
+          "text": "Identify the main topic or purpose of a talk"
+        },
+        {
+          "id": "signal-words",
+          "text": "Use signal words (first, however, as a result, for example) to follow the structure of a lecture"
+        },
+        {
+          "id": "detail-recall",
+          "text": "Recall key facts, examples and causes mentioned in the talk"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-presentations"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Part C: Ceramah dan Pengumuman",
+          "summary": "Memahami ceramah akademik singkat dan pengumuman yang hanya diputar sekali.",
+          "objectives": {
+            "main-purpose": "Menentukan topik utama atau tujuan sebuah ceramah",
+            "signal-words": "Memakai kata penanda (first, however, as a result, for example) untuk mengikuti struktur ceramah",
+            "detail-recall": "Mengingat fakta kunci, contoh dan sebab yang disebutkan dalam ceramah"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-listening-notes",
+      "level": "Listening",
+      "title": "Note-Taking and Predicting",
+      "summary": "Short notes and smart predictions for conversations and talks you hear once.",
+      "prerequisiteIds": [
+        "itp-listening-part-b"
+      ],
+      "objectives": [
+        {
+          "id": "short-notes",
+          "text": "Take brief notes (keywords, numbers, abbreviations) of main idea, major points and details"
+        },
+        {
+          "id": "predict-questions",
+          "text": "Predict likely questions from the printed options before the audio starts"
+        },
+        {
+          "id": "recover-quickly",
+          "text": "Guess and move on after a missed question so the next one is not lost"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mencatat dan Memprediksi",
+          "summary": "Catatan singkat dan prediksi cerdas untuk percakapan dan ceramah yang hanya didengar sekali.",
+          "objectives": {
+            "short-notes": "Membuat catatan singkat (kata kunci, angka, singkatan) tentang ide utama, poin besar dan detail",
+            "predict-questions": "Memprediksi pertanyaan yang mungkin muncul dari opsi tercetak sebelum audio dimulai",
+            "recover-quickly": "Menebak lalu lanjut setelah melewatkan satu soal agar soal berikutnya tidak ikut hilang"
+          }
+        }
+      }
+    }
+  ]
+}

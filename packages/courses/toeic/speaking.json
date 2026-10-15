@@ -1,0 +1,252 @@
+{
+  "version": "2026.10.1",
+  "level": "Speaking",
+  "title": "Speaking Test",
+  "description": "The separate TOEIC Speaking test: 11 questions in about 20 minutes, scored 0–200.",
+  "i18n": {
+    "id": {
+      "title": "Tes Speaking",
+      "description": "Tes TOEIC Speaking yang terpisah: 11 soal dalam sekitar 20 menit, dinilai 0–200."
+    }
+  },
+  "nodes": [
+    {
+      "id": "toeic-read-text-aloud",
+      "level": "Speaking",
+      "title": "Read a Text Aloud",
+      "summary": "Questions 1–2: prepare for 45 seconds, then read a short announcement or ad aloud for 45 seconds.",
+      "prerequisiteIds": [
+        "toeic-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "pronunciation",
+          "text": "Pronounce workplace words, names and numbers clearly enough to be understood"
+        },
+        {
+          "id": "stress-pausing",
+          "text": "Use sentence stress, pauses at commas and lists, and rising or falling intonation"
+        },
+        {
+          "id": "use-prep-time",
+          "text": "Use the 45-second preparation to mark difficult words and pauses"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-alphabet-sounds"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Read a Text Aloud",
+          "summary": "Soal 1–2: bersiap selama 45 detik, lalu membaca pengumuman atau iklan pendek dengan suara keras selama 45 detik.",
+          "objectives": {
+            "pronunciation": "Mengucapkan kata-kata dunia kerja, nama dan angka dengan cukup jelas agar dipahami",
+            "stress-pausing": "Memakai tekanan kalimat, jeda di koma dan daftar, serta intonasi naik atau turun",
+            "use-prep-time": "Memakai 45 detik persiapan untuk menandai kata sulit dan tempat jeda"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-describe-picture",
+      "level": "Speaking",
+      "title": "Describe a Picture",
+      "summary": "Questions 3–4: prepare for 45 seconds, then describe a photo for 30 seconds.",
+      "prerequisiteIds": [
+        "toeic-read-text-aloud"
+      ],
+      "objectives": [
+        {
+          "id": "picture-structure",
+          "text": "Describe a picture in a clear order: the setting, the main people and actions, then details"
+        },
+        {
+          "id": "location-language",
+          "text": "Use present continuous and location phrases (in the foreground, on the left, next to)"
+        },
+        {
+          "id": "fill-30-seconds",
+          "text": "Keep talking for the full 30 seconds without long silences"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-present-continuous"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-there-is-are"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Describe a Picture",
+          "summary": "Soal 3–4: bersiap selama 45 detik, lalu mendeskripsikan sebuah foto selama 30 detik.",
+          "objectives": {
+            "picture-structure": "Mendeskripsikan gambar dengan urutan jelas: tempat, orang dan tindakan utama, lalu detail",
+            "location-language": "Memakai present continuous dan frasa lokasi (in the foreground, on the left, next to)",
+            "fill-30-seconds": "Terus berbicara selama 30 detik penuh tanpa diam terlalu lama"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-respond-to-questions",
+      "level": "Speaking",
+      "title": "Respond to Questions",
+      "summary": "Questions 5–7: three questions on one everyday topic, 3 seconds to prepare, 15–30 seconds to answer.",
+      "prerequisiteIds": [
+        "toeic-describe-picture"
+      ],
+      "objectives": [
+        {
+          "id": "answer-directly",
+          "text": "Answer the exact question first, then add one reason or detail"
+        },
+        {
+          "id": "reuse-question",
+          "text": "Reuse words from the question to start the answer quickly"
+        },
+        {
+          "id": "q7-longer",
+          "text": "Give a longer, organised answer for question 7 (30 seconds)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-everyday-conversation"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-adverbs-frequency"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Respond to Questions",
+          "summary": "Soal 5–7: tiga pertanyaan tentang satu topik sehari-hari, 3 detik persiapan, 15–30 detik menjawab.",
+          "objectives": {
+            "answer-directly": "Menjawab inti pertanyaan lebih dulu, lalu menambahkan satu alasan atau detail",
+            "reuse-question": "Memakai ulang kata-kata dari pertanyaan untuk memulai jawaban dengan cepat",
+            "q7-longer": "Memberi jawaban yang lebih panjang dan tertata untuk soal 7 (30 detik)"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-respond-using-information",
+      "level": "Speaking",
+      "title": "Respond to Questions Using Information Provided",
+      "summary": "Questions 8–10: read a schedule or agenda for 45 seconds, then answer a caller's questions.",
+      "prerequisiteIds": [
+        "toeic-respond-to-questions"
+      ],
+      "objectives": [
+        {
+          "id": "read-schedule",
+          "text": "Find times, prices and names on a schedule or agenda in 45 seconds"
+        },
+        {
+          "id": "correct-politely",
+          "text": "Politely correct a caller's wrong assumption using the information"
+        },
+        {
+          "id": "summarise-items",
+          "text": "Summarise two or more items from the schedule for question 10"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-prepositions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b1-future-forms"
+        },
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Respond to Questions Using Information Provided",
+          "summary": "Soal 8–10: membaca jadwal atau agenda selama 45 detik, lalu menjawab pertanyaan penelepon.",
+          "objectives": {
+            "read-schedule": "Menemukan waktu, harga dan nama di jadwal atau agenda dalam 45 detik",
+            "correct-politely": "Mengoreksi asumsi penelepon yang keliru dengan sopan berdasarkan informasi yang ada",
+            "summarise-items": "Merangkum dua item atau lebih dari jadwal untuk soal 10"
+          }
+        }
+      }
+    },
+    {
+      "id": "toeic-express-opinion",
+      "level": "Speaking",
+      "title": "Express an Opinion",
+      "summary": "Question 11: prepare for 45 seconds, then give and support an opinion for 60 seconds.",
+      "prerequisiteIds": [
+        "toeic-respond-using-information"
+      ],
+      "objectives": [
+        {
+          "id": "state-position",
+          "text": "State a clear position in the first sentence"
+        },
+        {
+          "id": "support-reasons",
+          "text": "Support the opinion with two reasons and a short example"
+        },
+        {
+          "id": "sixty-seconds",
+          "text": "Organise a 60-second answer with linking words and a closing sentence"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-giving-opinions"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Express an Opinion",
+          "summary": "Soal 11: bersiap selama 45 detik, lalu menyampaikan dan mendukung pendapat selama 60 detik.",
+          "objectives": {
+            "state-position": "Menyatakan pendapat yang jelas di kalimat pertama",
+            "support-reasons": "Mendukung pendapat dengan dua alasan dan satu contoh singkat",
+            "sixty-seconds": "Menyusun jawaban 60 detik dengan kata penghubung dan kalimat penutup"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "version": "2026.10.1",
+  "level": "Reading",
+  "title": "Reading",
+  "description": "Academic Reading: three long passages, 40 questions, 60 minutes, eleven question types. General Training uses the same question types with shorter everyday and workplace texts.",
+  "i18n": {
+    "id": {
+      "title": "Reading",
+      "description": "Academic Reading: tiga bacaan panjang, 40 soal, 60 menit, sebelas tipe soal. General Training memakai tipe soal yang sama dengan teks sehari-hari dan dunia kerja yang lebih pendek."
+    }
+  },
+  "nodes": [
+    {
+      "id": "ielts-reading-skimming-scanning",
+      "level": "Reading",
+      "title": "Skimming, Scanning & Time per Passage",
+      "summary": "Read fast for the main idea, find details quickly and spend about 20 minutes per passage.",
+      "prerequisiteIds": [
+        "ielts-test-overview"
+      ],
+      "objectives": [
+        {
+          "id": "skim-main-idea",
+          "text": "Skim a passage and state the main idea of each paragraph"
+        },
+        {
+          "id": "scan-details",
+          "text": "Scan for names, numbers and key words to locate the part of the passage a question refers to"
+        },
+        {
+          "id": "time-plan",
+          "text": "Plan time across three passages with no extra answer-transfer time"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Skimming, Scanning & Waktu per Bacaan",
+          "summary": "Membaca cepat untuk ide pokok, menemukan detail dengan cepat dan memakai sekitar 20 menit per bacaan.",
+          "objectives": {
+            "skim-main-idea": "Membaca sekilas bacaan dan menyebutkan ide pokok setiap paragraf",
+            "scan-details": "Mencari nama, angka dan kata kunci untuk menemukan bagian bacaan yang dimaksud soal",
+            "time-plan": "Merencanakan waktu untuk tiga bacaan tanpa waktu tambahan memindahkan jawaban"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-reading-tfng",
+      "level": "Reading",
+      "title": "True/False/Not Given & Yes/No/Not Given",
+      "summary": "Identify information and the writer's views or claims, and tell 'false' apart from 'not given'.",
+      "prerequisiteIds": [
+        "ielts-reading-skimming-scanning",
+        "ielts-paraphrasing"
+      ],
+      "objectives": [
+        {
+          "id": "fact-vs-view",
+          "text": "Explain when a question uses True/False/Not Given (information) and when Yes/No/Not Given (writer's views or claims)"
+        },
+        {
+          "id": "false-vs-not-given",
+          "text": "Distinguish a statement that contradicts the passage from one the passage does not mention"
+        },
+        {
+          "id": "qualifiers",
+          "text": "Notice qualifiers such as 'all', 'some', 'always', 'may' that change whether a statement is true"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "c1-hedging"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-reported-speech"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-adverbs-frequency"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "True/False/Not Given & Yes/No/Not Given",
+          "summary": "Mengidentifikasi informasi serta pandangan atau klaim penulis, dan membedakan 'false' dari 'not given'.",
+          "objectives": {
+            "fact-vs-view": "Menjelaskan kapan soal memakai True/False/Not Given (informasi) dan kapan Yes/No/Not Given (pandangan atau klaim penulis)",
+            "false-vs-not-given": "Membedakan pernyataan yang bertentangan dengan bacaan dari pernyataan yang tidak disebut di bacaan",
+            "qualifiers": "Memperhatikan kata pembatas seperti 'all', 'some', 'always', 'may' yang menentukan benar tidaknya pernyataan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-reading-matching-headings",
+      "level": "Reading",
+      "title": "Matching Headings",
+      "summary": "Choose the heading that sums up the main idea of each paragraph or section.",
+      "prerequisiteIds": [
+        "ielts-reading-skimming-scanning"
+      ],
+      "objectives": [
+        {
+          "id": "main-vs-detail",
+          "text": "Tell the main idea of a paragraph apart from a supporting detail"
+        },
+        {
+          "id": "match-heading",
+          "text": "Match headings to paragraphs when there are more headings than paragraphs"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-linking-words"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mencocokkan Judul (Matching Headings)",
+          "summary": "Memilih judul yang merangkum ide pokok setiap paragraf atau bagian.",
+          "objectives": {
+            "main-vs-detail": "Membedakan ide pokok paragraf dari detail pendukung",
+            "match-heading": "Mencocokkan judul dengan paragraf saat jumlah judul lebih banyak dari paragraf"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-reading-matching-information",
+      "level": "Reading",
+      "title": "Matching Information, Features & Sentence Endings",
+      "summary": "Locate specific information, link features to people or categories and complete sentences with the right ending.",
+      "prerequisiteIds": [
+        "ielts-reading-matching-headings"
+      ],
+      "objectives": [
+        {
+          "id": "matching-information",
+          "text": "Find which paragraph contains a given piece of information"
+        },
+        {
+          "id": "matching-features",
+          "text": "Match statements to people, theories or categories named in the passage"
+        },
+        {
+          "id": "sentence-endings",
+          "text": "Choose the sentence ending that is both grammatical and true to the passage"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b1-relative-clauses"
+        },
+        {
+          "course": "english",
+          "nodeId": "b2-reported-speech"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mencocokkan Informasi, Fitur & Akhir Kalimat",
+          "summary": "Menemukan informasi tertentu, menghubungkan fitur dengan orang atau kategori, dan melengkapi kalimat dengan akhiran yang tepat.",
+          "objectives": {
+            "matching-information": "Menemukan paragraf yang memuat informasi tertentu",
+            "matching-features": "Mencocokkan pernyataan dengan orang, teori atau kategori yang disebut di bacaan",
+            "sentence-endings": "Memilih akhir kalimat yang benar secara tata bahasa sekaligus sesuai isi bacaan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-reading-completion",
+      "level": "Reading",
+      "title": "Sentence, Summary, Note, Table, Flow-chart & Diagram Completion",
+      "summary": "Complete gaps with words from the passage or from a box, within the word limit.",
+      "prerequisiteIds": [
+        "ielts-reading-skimming-scanning",
+        "ielts-paraphrasing"
+      ],
+      "objectives": [
+        {
+          "id": "words-from-passage",
+          "text": "Fill gaps with words copied exactly from the passage within the word limit"
+        },
+        {
+          "id": "summary-word-box",
+          "text": "Complete a summary from a box of options by predicting the word class needed"
+        },
+        {
+          "id": "diagram-labels",
+          "text": "Label a diagram or flow-chart that describes a process from the passage"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "b2-passive-voice"
+        },
+        {
+          "course": "english",
+          "nodeId": "a2-countable-uncountable"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Melengkapi Kalimat, Ringkasan, Catatan, Tabel, Flow-chart & Diagram",
+          "summary": "Mengisi bagian kosong dengan kata dari bacaan atau dari kotak pilihan, sesuai batas kata.",
+          "objectives": {
+            "words-from-passage": "Mengisi bagian kosong dengan kata yang disalin persis dari bacaan sesuai batas kata",
+            "summary-word-box": "Melengkapi ringkasan dari kotak pilihan dengan memprediksi jenis kata yang dibutuhkan",
+            "diagram-labels": "Melabeli diagram atau flow-chart yang menjelaskan suatu proses dari bacaan"
+          }
+        }
+      }
+    },
+    {
+      "id": "ielts-reading-mcq-short-answer",
+      "level": "Reading",
+      "title": "Reading: Multiple Choice & Short-answer Questions",
+      "summary": "Answer multiple-choice and short-answer questions on detail, main idea and the writer's purpose.",
+      "prerequisiteIds": [
+        "ielts-reading-tfng"
+      ],
+      "objectives": [
+        {
+          "id": "eliminate-options",
+          "text": "Eliminate options that are wrong, not mentioned or only partly true"
+        },
+        {
+          "id": "writer-purpose",
+          "text": "Identify the writer's purpose or the main idea of a passage in a multiple-choice question"
+        },
+        {
+          "id": "short-answers",
+          "text": "Answer factual questions with words from the passage within the word limit"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a1-questions"
+        },
+        {
+          "course": "english",
+          "nodeId": "c2-implied-meaning"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Reading: Pilihan Ganda & Soal Jawaban Singkat",
+          "summary": "Menjawab soal pilihan ganda dan jawaban singkat tentang detail, ide pokok dan tujuan penulis.",
+          "objectives": {
+            "eliminate-options": "Mengeliminasi opsi yang salah, tidak disebut atau hanya benar sebagian",
+            "writer-purpose": "Menentukan tujuan penulis atau ide pokok bacaan dalam soal pilihan ganda",
+            "short-answers": "Menjawab pertanyaan faktual dengan kata dari bacaan sesuai batas kata"
+          }
+        }
+      }
+    }
+  ]
+}

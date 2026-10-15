@@ -740,3 +740,39 @@ func TestNoAudioIsMadeUnlessAskedFor(t *testing.T) {
 		t.Fatalf("no audio may be made without bundle-audio: %d provider calls", n)
 	}
 }
+
+func TestRelatedTracksAndFoundations(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	ctx := WithLang(context.Background(), "id")
+	rm, err := s.Roadmap(ctx, learnerID, course)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(rm.RelatedTracks) != 4 || rm.RelatedTracks[0].Slug != "toefl-itp" || rm.RelatedTracks[0].Status != "coming_soon" {
+		t.Fatalf("related tracks: %+v", rm.RelatedTracks)
+	}
+	if r := rm.RelatedTracks[0].RecommendedAfter; r == nil || r.Level != "B1" || r.CourseTitle != "Bahasa Inggris" || r.LevelTitle == "" {
+		t.Fatalf("recommended after: %+v", r)
+	}
+	// A coming-soon track can be browsed but not started.
+	track, err := s.Roadmap(ctx, learnerID, "toefl-itp")
+	if err != nil || len(track.Nodes) == 0 {
+		t.Fatalf("track roadmap: %v", err)
+	}
+	if _, err := s.Enroll(ctx, learnerID, "toefl-itp"); code(err) != "course_coming_soon" {
+		t.Fatalf("enrolling in a coming-soon track: %v", err)
+	}
+	// A track lesson lists the English lessons it builds on, with the learner's status there.
+	var withFoundations string
+	cur, _ := s.Catalog.Course("toefl-itp")
+	for _, n := range cur.Nodes {
+		if len(n.Foundations) > 0 {
+			withFoundations = n.ID
+			break
+		}
+	}
+	d, err := s.Node(ctx, learnerID, "toefl-itp", withFoundations)
+	if err != nil || len(d.Foundations) == 0 || d.Foundations[0].Course.Slug != "english" || d.Foundations[0].Status == "" {
+		t.Fatalf("foundations: %+v %v", d.Foundations, err)
+	}
+}

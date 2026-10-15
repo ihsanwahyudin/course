@@ -1,0 +1,143 @@
+{
+  "version": "2026.10.1",
+  "level": "Start",
+  "title": "Format & Strategy",
+  "description": "Learn how TOEFL ITP Level 1 is built, how it is scored and how to manage time and guessing before you train each section.",
+  "i18n": {
+    "id": {
+      "title": "Format & Strategi",
+      "description": "Pahami susunan TOEFL ITP Level 1, cara penilaiannya, serta cara mengatur waktu dan menebak sebelum melatih tiap section."
+    }
+  },
+  "nodes": [
+    {
+      "id": "itp-format-overview",
+      "level": "Start",
+      "title": "The TOEFL ITP Level 1 Format",
+      "summary": "Three multiple-choice sections, 140 questions, 115 minutes.",
+      "prerequisiteIds": [],
+      "objectives": [
+        {
+          "id": "name-sections",
+          "text": "Name the three sections in order with their question counts and time limits"
+        },
+        {
+          "id": "name-parts",
+          "text": "Describe the parts inside each section (Listening Parts A, B and C; Structure and Written Expression; reading passages)"
+        },
+        {
+          "id": "itp-vs-ibt",
+          "text": "Explain how TOEFL ITP differs from TOEFL iBT and why institutions use it"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [],
+      "i18n": {
+        "id": {
+          "title": "Format TOEFL ITP Level 1",
+          "summary": "Tiga section pilihan ganda, 140 soal, 115 menit.",
+          "objectives": {
+            "name-sections": "Menyebutkan tiga section secara berurutan beserta jumlah soal dan batas waktunya",
+            "name-parts": "Menjelaskan bagian-bagian di tiap section (Listening Part A, B dan C; Structure dan Written Expression; teks bacaan)",
+            "itp-vs-ibt": "Menjelaskan perbedaan TOEFL ITP dengan TOEFL iBT dan alasan institusi memakainya"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-scoring-cefr",
+      "level": "Start",
+      "title": "Scores, Scaling and CEFR",
+      "summary": "How correct answers become section scores, a 310–677 total and a CEFR level.",
+      "prerequisiteIds": [
+        "itp-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "section-scales",
+          "text": "State the section score scales (31–68, 31–68, 31–67) and the total range 310–677"
+        },
+        {
+          "id": "total-formula",
+          "text": "Calculate a total score from three section scores (sum × 10 ÷ 3)"
+        },
+        {
+          "id": "cefr-cuts",
+          "text": "Match a total or section score to the ETS CEFR minimums (A2 343, B1 433, B2 543, C1 620)"
+        },
+        {
+          "id": "set-target",
+          "text": "Set a realistic target score from an institution's requirement and the score's two-year validity"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a2-comparatives"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Skor, Skala dan CEFR",
+          "summary": "Bagaimana jawaban benar menjadi skor section, total 310–677 dan level CEFR.",
+          "objectives": {
+            "section-scales": "Menyebutkan skala skor section (31–68, 31–68, 31–67) dan rentang total 310–677",
+            "total-formula": "Menghitung skor total dari tiga skor section (jumlah × 10 ÷ 3)",
+            "cefr-cuts": "Mencocokkan skor total atau section dengan batas minimum CEFR dari ETS (A2 343, B1 433, B2 543, C1 620)",
+            "set-target": "Menentukan target skor yang realistis berdasarkan syarat institusi dan masa berlaku skor dua tahun"
+          }
+        }
+      }
+    },
+    {
+      "id": "itp-answer-strategy",
+      "level": "Start",
+      "title": "Pacing, Guessing and Elimination",
+      "summary": "Answer every question: there is no penalty for guessing.",
+      "prerequisiteIds": [
+        "itp-format-overview"
+      ],
+      "objectives": [
+        {
+          "id": "no-penalty",
+          "text": "Explain why every question should be answered (scores count correct answers only; no penalty for guessing)"
+        },
+        {
+          "id": "eliminate",
+          "text": "Eliminate clearly wrong options before choosing the best of four answers"
+        },
+        {
+          "id": "time-budget",
+          "text": "Plan a time budget per section and decide when to skip and return to a question"
+        },
+        {
+          "id": "test-day-rules",
+          "text": "Follow test-day rules for paper and digital delivery (one answer per question, notes only where allowed, no breaks)"
+        }
+      ],
+      "masteryThreshold": 80,
+      "contentStatus": "coming_soon",
+      "foundations": [
+        {
+          "course": "english",
+          "nodeId": "a0-classroom-language"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Tempo, Menebak dan Eliminasi",
+          "summary": "Jawab semua soal: tidak ada pengurangan nilai untuk tebakan.",
+          "objectives": {
+            "no-penalty": "Menjelaskan mengapa semua soal harus dijawab (skor hanya menghitung jawaban benar; tebakan tidak dikurangi nilai)",
+            "eliminate": "Menyingkirkan opsi yang jelas salah sebelum memilih jawaban terbaik dari empat pilihan",
+            "time-budget": "Menyusun anggaran waktu per section dan menentukan kapan melewati soal lalu kembali lagi",
+            "test-day-rules": "Mematuhi aturan hari tes untuk versi kertas dan digital (satu jawaban per soal, catatan hanya jika diizinkan, tanpa jeda istirahat)"
+          }
+        }
+      }
+    }
+  ]
+}

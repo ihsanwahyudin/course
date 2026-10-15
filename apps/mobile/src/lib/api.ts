@@ -106,6 +106,8 @@ export type Course = {
   readyNodes: number;
   enrolled: boolean;
   progress: CourseProgress | null;
+  /** Where to be in another course before starting (test-prep tracks). */
+  recommendedAfter: { course: string; courseTitle: string; level: Level; levelTitle: string } | null;
 };
 
 export type CourseRef = { slug: string; title: string };
@@ -132,6 +134,8 @@ export type Roadmap = {
   nextNodeId: string | null;
   summary: Summary;
   profile: ProfileSummary;
+  /** Suggested next courses, shown after the roadmap. */
+  relatedTracks: Course[];
 };
 
 export type NodeDetail = RoadmapNode & {
@@ -142,6 +146,8 @@ export type NodeDetail = RoadmapNode & {
   blockedReason?: string;
   openSessionId: string | null;
   keyPoints: string[];
+  /** Lessons of other courses this one builds on. */
+  foundations: (RoadmapNode & { course: CourseRef })[];
 };
 
 export type Attempt = {

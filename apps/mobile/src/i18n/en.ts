@@ -168,6 +168,14 @@ export const en = {
     graph: 'Graph',
     list: 'List',
     levelMastered: '{done}/{total} mastered',
+    relatedEyebrow: 'Where to next',
+    relatedTitle: 'Continue with these tracks',
+    relatedText: 'Preparing for an English test? These tracks build on this roadmap, one section and question type at a time.',
+    recommendedAfter: 'Best after {course} {level}',
+    recommendedEyebrow: 'Start after',
+    recommendedLine: '{course} · {level} {title}',
+    comingSoonCourse: 'This track is coming soon. Browse the roadmap to see what it will cover.',
+    skillsCount: '{n} skills',
   },
   node: {
     loading: 'Loading lesson',
@@ -189,6 +197,8 @@ export const en = {
     objectives: 'Objectives',
     keyIdeas: 'Key ideas',
     bestScore: 'Your best score',
+    foundations: 'Builds on',
+    foundationsText: 'Lessons from {course} this one relies on.',
   },
   auth: {
     createAccount: 'Create account',
