@@ -327,6 +327,45 @@ func TestHandWrittenStepsNeedNoAI(t *testing.T) {
 	}
 }
 
+func TestLessonFollowsLanguageSwitch(t *testing.T) {
+	s := newService(t, &ai.Mock{})
+	en, id := WithLang(context.Background(), "en"), WithLang(context.Background(), "id")
+	cur, _ := s.Catalog.Course(course)
+	enPlan, _, _ := tutor.AuthoredPlan(cur, "a0-alphabet-sounds", "en")
+	idPlan, _, _ := tutor.AuthoredPlan(cur, "a0-alphabet-sounds", "id")
+
+	sess, err := s.StartSession(en, learnerID, course, "a0-alphabet-sounds")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sess, err = s.NextStep(en, learnerID, sess.ID, 0); err != nil {
+		t.Fatal(err)
+	}
+	q := enPlan.Steps[1].Question
+	if q == nil {
+		t.Fatal("step 2 of the alphabet lesson should be a question")
+	}
+	if sess, err = s.AnswerStep(en, learnerID, sess.ID, 1, rightAnswer(*q)); err != nil {
+		t.Fatal(err)
+	}
+
+	// Switching to Indonesian: same place, same answer, Indonesian steps.
+	got, err := s.GetSession(id, learnerID, sess.ID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got.Locale != "id" || got.Lesson.StepIndex != 1 || got.Lesson.Steps[0].Title != idPlan.Steps[0].Title || got.Lesson.Greeting != idPlan.Greeting {
+		t.Fatalf("the lesson should switch to Indonesian in place: %s step %d %q", got.Locale, got.Lesson.StepIndex, got.Lesson.Steps[0].Title)
+	}
+	if a := got.Lesson.Steps[1].Question; a == nil || !a.Answered || !a.Correct || a.Prompt != idPlan.Steps[1].Question.Prompt {
+		t.Fatalf("the answered question should carry over: %+v", a)
+	}
+	// And back, also through StartSession.
+	if back, err := s.StartSession(en, learnerID, course, "a0-alphabet-sounds"); err != nil || back.ID != sess.ID || back.Lesson.Steps[0].Title != enPlan.Steps[0].Title {
+		t.Fatalf("back to English: %v %s %q", err, back.ID, back.Lesson.Steps[0].Title)
+	}
+}
+
 func TestPersonalisationOff(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	s.Catalog.DisableOnboarding()

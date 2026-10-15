@@ -17,6 +17,13 @@ func SetSessionPlan(ctx context.Context, db DB, id string, plan json.RawMessage)
 	return err
 }
 
+// SetSessionLanguage switches a session to the same steps in another
+// language, keeping the learner's place and answers.
+func SetSessionLanguage(ctx context.Context, db DB, id, locale string, plan json.RawMessage) error {
+	_, err := db.Exec(ctx, `UPDATE learning_sessions SET locale=$2, plan=$3, updated_at=NOW() WHERE id=$1`, id, locale, plan)
+	return err
+}
+
 // SaveSteps stores the current step and the per-step state.
 func SaveSteps(ctx context.Context, db DB, id string, stepIndex int, state json.RawMessage) error {
 	_, err := db.Exec(ctx, `UPDATE learning_sessions SET step_index=$2, step_state=$3, updated_at=NOW() WHERE id=$1`, id, stepIndex, state)
