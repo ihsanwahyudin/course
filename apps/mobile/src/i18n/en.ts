@@ -485,6 +485,13 @@ export const en = {
     finished: 'You’ve finished every ready lesson on this path. New lessons are on the way.',
     practiceAgain: 'Practise again with new questions',
   },
+  level: {
+    eyebrow: 'Level checkpoint · {level}',
+    intro: 'You\'ve learnt everything in {level}. This checkpoint mixes it all together, like a real conversation.',
+    text: '10–15 new questions from every {level} lesson. You need {threshold}/100 to complete the level; if a lesson needs more work, you\'ll see which.',
+    from: 'From the lesson: {title}',
+    weakTitle: 'Go back to these lessons first:',
+  },
   correction: {
     title: 'Corrections',
     show: 'See the corrections ({n} questions)',

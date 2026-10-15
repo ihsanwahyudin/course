@@ -191,3 +191,12 @@ func TestExactMatch(t *testing.T) {
 		t.Fatal("ExactMatch must compare whole normalized answers")
 	}
 }
+
+func TestStrictMatch(t *testing.T) {
+	if !StrictMatch(" My name is Budi. ", []string{"My name is Budi"}) || !StrictMatch("I’m fine", []string{"I'm fine!"}) {
+		t.Fatal("spacing, curly quotes and a final full stop don't matter")
+	}
+	if StrictMatch("my name is budi", []string{"My name is Budi."}) || StrictMatch("C-O-F-E-E", []string{"C-O-F-F-E-E"}) || StrictMatch("", []string{""}) {
+		t.Fatal("case and letters do")
+	}
+}

@@ -55,7 +55,22 @@ type LessonInput struct {
 	LearnerProfile []string                 // author-written hints from onboarding answers
 	LearnerNotes   []string                 // the learner's own words (data)
 	Memory         []string                 // what the tutor remembers about the learner
-	CacheKey       string
+	// LevelLessons: for a level checkpoint, every lesson it covers.
+	LevelLessons []LevelLesson
+	CacheKey     string
+}
+
+// LevelLesson is one lesson a level checkpoint covers.
+type LevelLesson struct {
+	ID           string
+	Title        string
+	Objective    string   // the checkpoint objective its questions count towards
+	Objectives   []string // what the lesson teaches
+	CommonErrors []string
+	// Sample is one of the lesson's hand-written checkpoint questions (its
+	// prompt in the learner's language): for level and style, and the fallback.
+	Sample       curriculum.AssessmentItem
+	SamplePrompt string
 }
 
 type HintInput struct {

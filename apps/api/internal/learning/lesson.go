@@ -199,6 +199,9 @@ func (s *Service) lessonInput(ctx context.Context, st state, n *curriculum.Node,
 		CacheKey: fmt.Sprintf("%s:%s:%s", cur.Slug, n.ID, lang),
 	}
 	in.LearnerProfile, in.LearnerNotes = cur.TutorHints(st.profile)
+	if n.LevelCheck() {
+		in.LevelLessons = levelLessons(cur, n, lang)
+	}
 	if st.userID != "" {
 		if items, err := storage.ListMemory(ctx, s.Store.Pool, st.userID, 10); err == nil {
 			for _, m := range items {
@@ -207,6 +210,29 @@ func (s *Service) lessonInput(ctx context.Context, st state, n *curriculum.Node,
 		}
 	}
 	return in
+}
+
+// levelLessons describes the lessons a level checkpoint covers, each with
+// one of its hand-written checkpoint questions as a sample.
+func levelLessons(cur *curriculum.Curriculum, ck *curriculum.Node, lang string) []ai.LevelLesson {
+	lessons, objective := cur.LevelLessons(ck)
+	var out []ai.LevelLesson
+	for _, n := range lessons {
+		l, ok := cur.Lesson(n.ID)
+		if !ok || len(l.Assessment) == 0 || objective[n.ID] == "" {
+			continue
+		}
+		local := cur.LocalNode(n.ID, lang)
+		ll := ai.LevelLesson{ID: n.ID, Title: local.Title, Objective: objective[n.ID], Sample: l.Assessment[0], SamplePrompt: l.PromptIn(l.Assessment[0], lang)}
+		for _, o := range local.Objectives {
+			ll.Objectives = append(ll.Objectives, o.Text)
+		}
+		for _, e := range n.CommonErrors {
+			ll.CommonErrors = append(ll.CommonErrors, e.Wrong+" → "+e.Right)
+		}
+		out = append(out, ll)
+	}
+	return out
 }
 
 func objectiveIDs(n *curriculum.Node) []string {

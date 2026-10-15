@@ -62,7 +62,8 @@ func TestRepositoryMaterial(t *testing.T) {
 		t.Fatal(err)
 	}
 	for _, n := range c.Nodes {
-		if !n.Ready() {
+		if !n.Ready() || n.LevelCheck() {
+			// Level checkpoints are only a test, with no material of their own.
 			if c.MaterialIn(n.ID, "en") != nil {
 				t.Fatalf("%s has no lesson, so no material", n.ID)
 			}

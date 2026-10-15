@@ -746,26 +746,46 @@
       "objectives": [
         {
           "id": "receptive",
-          "text": "Answer listening, reading, grammar and vocabulary questions from all A0 nodes"
+          "text": "Answer listening, reading, grammar and vocabulary questions from every A0 lesson",
+          "from": [
+            "a0-classroom-language",
+            "a0-pronouns",
+            "a0-common-vocabulary",
+            "a0-to-be-basics",
+            "a0-basic-sentences",
+            "a0-listening-first",
+            "a0-reading-first"
+          ]
         },
         {
           "id": "greet-and-spell",
-          "text": "Greet someone and spell your name aloud"
+          "text": "Greet someone and spell your name aloud",
+          "from": [
+            "a0-greetings",
+            "a0-alphabet-sounds",
+            "a0-sounds-indonesian"
+          ]
         },
         {
           "id": "fill-form",
-          "text": "Fill in a simple form with your personal details"
+          "text": "Fill in a simple form with your personal details",
+          "from": [
+            "a0-numbers",
+            "a0-time-dates",
+            "a0-personal-info",
+            "a0-writing-basics"
+          ]
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "i18n": {
         "id": {
           "title": "Checkpoint A0",
           "summary": "Tes campuran semua strand A0: soal menyimak, membaca, grammar dan kosakata, plus menyapa, mengeja nama dan mengisi formulir.",
           "canDo": "Bisa menunjukkan semua kemampuan A0 sekaligus: menyapa, mengeja nama dan mengisi formulir sederhana.",
           "objectives": {
-            "receptive": "Menjawab soal menyimak, membaca, grammar dan kosakata dari semua node A0",
+            "receptive": "Menjawab soal menyimak, membaca, grammar dan kosakata dari semua pelajaran A0",
             "greet-and-spell": "Menyapa seseorang dan mengeja namamu dengan lantang",
             "fill-form": "Mengisi formulir sederhana dengan data pribadimu"
           }

@@ -35,6 +35,7 @@ const (
 // CheckItemView is a checkpoint question as the learner sees it.
 type CheckItemView struct {
 	ID          string   `json:"id"`
+	LessonID    string   `json:"lessonId,omitempty"` // level checkpoints: the lesson it comes from
 	ObjectiveID string   `json:"objectiveId"`
 	Type        string   `json:"type"` // mcq | word_order | text
 	Prompt      string   `json:"prompt"`
@@ -59,7 +60,7 @@ func checkpointView(c storage.Checkpoint, attempt int) (*CheckpointView, error) 
 	}
 	v := &CheckpointView{ID: c.ID, Practice: c.Practice, Attempt: attempt, Items: make([]CheckItemView, 0, len(items))}
 	for _, it := range items {
-		v.Items = append(v.Items, CheckItemView{it.ID, it.ObjectiveID, it.Type, it.Prompt, it.Options, it.Tokens, it.Listen != ""})
+		v.Items = append(v.Items, CheckItemView{it.ID, it.LessonID, it.ObjectiveID, it.Type, it.Prompt, it.Options, it.Tokens, it.Listen != ""})
 	}
 	return v, nil
 }
@@ -88,10 +89,15 @@ func (s *Service) StartCheckpoint(ctx context.Context, userID, sessionID string)
 		if sess.EndedAt != nil {
 			return CheckpointView{}, errLessonClosed
 		}
-		if lc, err := decodeLesson(cur, n, sess); err != nil {
-			return CheckpointView{}, err
-		} else if len(lc.plan.Steps) == 0 || sess.StepIndex < len(lc.plan.Steps) {
-			return CheckpointView{}, errStepsFirst
+		// A level checkpoint has no steps of its own.
+		if !n.LevelCheck() {
+			lc, err := decodeLesson(cur, n, sess)
+			if err != nil {
+				return CheckpointView{}, err
+			}
+			if len(lc.plan.Steps) == 0 || sess.StepIndex < len(lc.plan.Steps) {
+				return CheckpointView{}, errStepsFirst
+			}
 		}
 	}
 	c, err := s.ensureCheckpoint(ctx, userID, sess, practice)
@@ -155,7 +161,7 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 		return storage.Checkpoint{}, err
 	}
 	lesson, ok := cur.Lesson(n.ID)
-	if !ok {
+	if !ok && !n.LevelCheck() {
 		return storage.Checkpoint{}, errf(409, "no_checkpoint", false, "This lesson has no checkpoint.")
 	}
 	st, err := s.load(ctx, s.Store.Pool, userID, cur)
@@ -178,14 +184,36 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			}
 		}
 	}
+	in := ai.CheckpointInput{LessonInput: s.lessonInput(ctx, st, n, lang), Earlier: earlier}
 	// Never the hand-written questions again (they're the fallback), nor earlier ones.
 	avoid := append([]string{}, earlier...)
-	for _, it := range lesson.Assessment {
-		avoid = append(avoid, it.Prompt, strings.TrimSpace(lesson.PromptIn(it, lang)+" "+it.Listen), strings.TrimSpace(it.Prompt+" "+it.Listen))
+	handWritten := func(l *curriculum.Lesson) {
+		for _, it := range l.Assessment {
+			avoid = append(avoid, it.Prompt, strings.TrimSpace(l.PromptIn(it, lang)+" "+it.Listen), strings.TrimSpace(it.Prompt+" "+it.Listen))
+		}
+	}
+	validate := func(items []tutor.CheckItem, avoid []string) ([]tutor.CheckItem, error) {
+		return tutor.ValidateCheckpoint(items, objs, avoid)
+	}
+	fallback := func() []tutor.CheckItem { return ai.AuthoredCheckpoint(lesson, lang) }
+	if n.LevelCheck() {
+		lessons := map[string]string{}
+		for _, l := range in.LevelLessons {
+			lessons[l.ID] = l.Objective
+			if ll, ok := cur.Lesson(l.ID); ok {
+				handWritten(ll)
+			}
+		}
+		validate = func(items []tutor.CheckItem, avoid []string) ([]tutor.CheckItem, error) {
+			return tutor.ValidateLevelCheckpoint(items, lessons, avoid)
+		}
+		fallback = func() []tutor.CheckItem { return ai.LevelFallback(in.LevelLessons) }
+	} else {
+		handWritten(lesson)
+		in.Examples = lesson.Assessment
 	}
 	var items []tutor.CheckItem
 	source := "authored"
-	in := ai.CheckpointInput{LessonInput: s.lessonInput(ctx, st, n, lang), Examples: lesson.Assessment, Earlier: earlier}
 	for attempt := 0; attempt < 2; attempt++ {
 		if err := s.checkQuota(ctx, userID); err != nil {
 			break
@@ -203,12 +231,12 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			items, err = tutor.FromDrafts(out.Items)
 		}
 		if err == nil {
-			if items, err = tutor.ValidateCheckpoint(items, objs, avoid); err == nil {
+			if items, err = validate(items, avoid); err == nil {
 				// A second look, question by question: drop any with two right
 				// answers, a wrong key or the wrong language, then check the rest
 				// still covers the lesson.
 				kept, problems := s.verifyCheckpoint(ctx, userID, in.LessonInput, items)
-				if items, err = tutor.ValidateCheckpoint(kept, objs, avoid); err == nil {
+				if items, err = validate(kept, avoid); err == nil {
 					source = s.AI.Name()
 					break
 				}
@@ -221,7 +249,7 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 		slog.Warn("checkpoint rejected", "provider", s.AI.Name(), "node", n.ID, "attempt", attempt, "err", err, "problems", in.Problems)
 	}
 	if source == "authored" {
-		if items, err = tutor.ValidateCheckpoint(ai.AuthoredCheckpoint(lesson, lang), objs, nil); err != nil {
+		if items, err = validate(fallback(), nil); err != nil {
 			return storage.Checkpoint{}, fmt.Errorf("hand-written checkpoint for %s: %w", n.ID, err)
 		}
 	}
@@ -368,7 +396,7 @@ func (s *Service) SubmitCheckpoint(ctx context.Context, userID, sessionID, check
 	case c.SubmittedAt != nil:
 		return AssessmentResult{}, errf(409, "checkpoint_submitted", false, "These answers were already sent. Start the checkpoint again for new questions.")
 	}
-	if !c.Practice {
+	if !c.Practice && !n.LevelCheck() {
 		if lc, err := decodeLesson(cur, n, sess); err != nil {
 			return AssessmentResult{}, err
 		} else if len(lc.plan.Steps) == 0 || sess.StepIndex < len(lc.plan.Steps) {
@@ -391,7 +419,7 @@ func (s *Service) SubmitCheckpoint(ctx context.Context, userID, sessionID, check
 	lang := cur.Lang(c.Locale)
 	fixed := map[string]int{}
 	for _, it := range items {
-		if score, ok := tutor.FixedVerdict(it, clean[it.ID], ai.ExactMatch); ok {
+		if score, ok := tutor.FixedVerdict(it, clean[it.ID], ai.StrictMatch); ok {
 			fixed[it.ID] = score
 		}
 	}
@@ -484,7 +512,7 @@ func (s *Service) SubmitCheckpoint(ctx context.Context, userID, sessionID, check
 		out.Unlocked = []NodeView{}
 	}
 	s.saveCheckpointMistakes(ctx, userID, cur, n, review)
-	if out.NewlyMastered {
+	if out.NewlyMastered && !n.LevelCheck() {
 		s.finishLesson(ctx, userID, cur, n, sess, res.ObjectiveScores)
 	}
 	if !res.Passed && !c.Practice {

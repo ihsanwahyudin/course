@@ -486,6 +486,13 @@ export const id: Dict = {
     finished: 'Semua pelajaran yang siap di jalur ini sudah selesai. Pelajaran baru segera hadir.',
     practiceAgain: 'Latihan lagi dengan soal baru',
   },
+  level: {
+    eyebrow: 'Checkpoint level · {level}',
+    intro: 'Semua pelajaran {level} sudah kamu pelajari. Checkpoint ini mencampur semuanya, seperti percakapan sungguhan.',
+    text: '10–15 soal baru dari semua pelajaran {level}. Kamu butuh {threshold}/100 untuk menuntaskan level ini; kalau ada pelajaran yang masih lemah, kamu akan tahu yang mana.',
+    from: 'Dari pelajaran: {title}',
+    weakTitle: 'Ulang dulu pelajaran ini:',
+  },
   correction: {
     title: 'Koreksi',
     show: 'Lihat koreksi ({n} soal)',

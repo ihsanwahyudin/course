@@ -28,6 +28,9 @@ const (
 type Objective struct {
 	ID   string `json:"id"`
 	Text string `json:"text"`
+	// From lists, for a level checkpoint, the level's lessons this objective
+	// draws its questions from.
+	From []string `json:"from,omitempty"`
 }
 
 type Node struct {
@@ -78,6 +81,28 @@ type NodeText struct {
 }
 
 func (n *Node) Ready() bool { return n.ContentStatus == ContentReady }
+
+// LevelCheck reports whether the node is its level's checkpoint: a test of
+// the whole level, with no lesson of its own.
+func (n *Node) LevelCheck() bool { return n.Strand == "CK" }
+
+// LevelLessons returns the lessons a level checkpoint covers (its level's
+// other nodes, in curriculum order), each with the checkpoint objective it
+// counts towards.
+func (c *Curriculum) LevelLessons(ck *Node) (lessons []*Node, objective map[string]string) {
+	objective = map[string]string{}
+	for _, o := range ck.Objectives {
+		for _, id := range o.From {
+			objective[id] = o.ID
+		}
+	}
+	for _, n := range c.Nodes {
+		if n.Level == ck.Level && !n.LevelCheck() {
+			lessons = append(lessons, n)
+		}
+	}
+	return lessons, objective
+}
 
 type LevelInfo struct {
 	Level       string `json:"level"`
@@ -617,11 +642,60 @@ func validateLessons(c *Curriculum) []error {
 		}
 	}
 	for _, n := range c.byID {
+		if n.LevelCheck() {
+			errs = append(errs, validateLevelCheck(c, n)...)
+			continue
+		}
 		if n.Ready() && c.lessons[n.ID] == nil {
 			errs = append(errs, fmt.Errorf("node %q is ready but has no lesson file", n.ID))
 		}
 	}
 	sort.Slice(errs, func(i, j int) bool { return errs[i].Error() < errs[j].Error() })
+	return errs
+}
+
+// validateLevelCheck: a ready level checkpoint needs every lesson of its
+// level ready, and each of them assigned to exactly one of its objectives.
+func validateLevelCheck(c *Curriculum, ck *Node) []error {
+	var errs []error
+	// Runs before c.Nodes is built, so the level's lessons come from byID.
+	objective := map[string]string{}
+	for _, o := range ck.Objectives {
+		for _, id := range o.From {
+			objective[id] = o.ID
+		}
+	}
+	var lessons []*Node
+	inLevel := map[string]bool{}
+	for _, n := range c.byID {
+		if n.Level == ck.Level && !n.LevelCheck() {
+			lessons = append(lessons, n)
+			inLevel[n.ID] = true
+		}
+	}
+	seen := map[string]bool{}
+	for _, o := range ck.Objectives {
+		for _, id := range o.From {
+			if !inLevel[id] {
+				errs = append(errs, fmt.Errorf("checkpoint %q: objective %q draws from %q, which isn't a lesson of level %s", ck.ID, o.ID, id, ck.Level))
+			}
+			if seen[id] {
+				errs = append(errs, fmt.Errorf("checkpoint %q: lesson %q counts towards two objectives", ck.ID, id))
+			}
+			seen[id] = true
+		}
+	}
+	if !ck.Ready() {
+		return errs
+	}
+	for _, l := range lessons {
+		if !l.Ready() {
+			errs = append(errs, fmt.Errorf("checkpoint %q is ready but lesson %q of its level isn't", ck.ID, l.ID))
+		}
+		if objective[l.ID] == "" {
+			errs = append(errs, fmt.Errorf("checkpoint %q: lesson %q isn't assigned to any objective", ck.ID, l.ID))
+		}
+	}
 	return errs
 }
 

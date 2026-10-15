@@ -184,6 +184,9 @@ func (m *Mock) Checkpoint(ctx context.Context, in CheckpointInput) (Result, erro
 	if err := ctx.Err(); err != nil {
 		return Result{}, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}
+	if len(in.LevelLessons) > 0 {
+		return ok(map[string]any{"items": LevelFallback(in.LevelLessons)})
+	}
 	return ok(map[string]any{"items": AuthoredCheckpoint(in.Lesson, in.Locale)})
 }
 
@@ -289,6 +292,28 @@ func ExactMatch(answer string, expected []string) bool {
 	}
 	for _, e := range expected {
 		if Normalize(e) == a {
+			return true
+		}
+	}
+	return false
+}
+
+// StrictMatch is ExactMatch that keeps letter case and inner punctuation
+// (only spacing, curly quotes and a final full stop, ! or ? are ignored):
+// the checkpoint's no-AI floor, so "my name is budi" never passes for a
+// question about capital letters.
+func StrictMatch(answer string, expected []string) bool {
+	norm := func(s string) string {
+		s = strings.NewReplacer("’", "'", "‘", "'", "“", `"`, "”", `"`).Replace(strings.TrimSpace(s))
+		s = strings.TrimRight(s, ".!? ")
+		return strings.Join(strings.Fields(s), " ")
+	}
+	a := norm(answer)
+	if a == "" {
+		return false
+	}
+	for _, e := range expected {
+		if norm(e) == a {
 			return true
 		}
 	}

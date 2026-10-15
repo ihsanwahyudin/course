@@ -93,7 +93,7 @@ export function LessonResult({
         {a?.review ? (
           <View style={styles.card}>
             <Eyebrow color={colors.accent}>{t('correction.title')}</Eyebrow>
-            <AttemptReview attempt={a} />
+            <AttemptReview attempt={a} lessonTitles={Object.fromEntries((session.level?.lessons ?? []).map((l) => [l.id, l.title]))} />
           </View>
         ) : null}
 

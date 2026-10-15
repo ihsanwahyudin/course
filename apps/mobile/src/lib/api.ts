@@ -181,6 +181,8 @@ export type Attempt = {
 // A checkpoint is written fresh for every attempt; answers stay on the server.
 export type CheckItemView = {
   id: string;
+  /** Level checkpoints: the lesson the question comes from. */
+  lessonId?: string;
   objectiveId: string;
   type: 'mcq' | 'word_order' | 'text';
   prompt: string;
@@ -191,6 +193,7 @@ export type CheckItemView = {
 export type CheckpointView = { id: string; practice: boolean; attempt: number; items: CheckItemView[] };
 export type ItemReview = {
   id: string;
+  lessonId?: string;
   objectiveId: string;
   type: CheckItemView['type'];
   prompt: string;
@@ -204,7 +207,14 @@ export type ItemReview = {
   /** The question's answer key was wrong; graded against the real answer. */
   keyFixed?: boolean;
 };
-export type CheckpointReview = { items: ItemReview[]; strengths: string[]; toReview: string[] };
+export type CheckpointReview = {
+  items: ItemReview[];
+  strengths: string[];
+  toReview: string[];
+  /** Level checkpoints: each lesson's score. */
+  lessons?: Record<string, number>;
+};
+export type LevelView = { lessons: { id: string; title: string; objective: string; status: NodeStatus }[] };
 export type AttemptSummary = { id: string; score: number; threshold: number; passed: boolean; practice: boolean; createdAt: string };
 
 // Lesson reading material (course data, localized by the server).
@@ -321,6 +331,8 @@ export type Session = {
   masteredBy: Attempt | null;
   /** Checkpoint history for this lesson, newest first. */
   attempts: AttemptSummary[];
+  /** Level checkpoints: the lessons it covers. */
+  level: LevelView | null;
   prev: RoadmapNode | null;
   next: RoadmapNode | null;
 };

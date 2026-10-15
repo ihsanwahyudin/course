@@ -255,11 +255,34 @@ def learn(api, curriculum):
         if status != 409:
             fail(f"{nid} should not start: {status} {body}")
     print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A}")
+    level_checkpoint(api, ls)
     sign_in(api, EMAIL_B, register=False)
     _, d = call(api, "GET", "/api/v1/dashboard")
     if d["courses"] or d["openSessions"] or d["totalMastered"]:
         fail(f"{EMAIL_B} sees someone else's progress: {d}")
     print(f"  ✓ {EMAIL_B} sees none of it")
+
+
+def level_checkpoint(api, ls):
+    # The A0 checkpoint: no steps, questions from every A0 lesson.
+    status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": "a0-checkpoint"})
+    if status != 200 or s["lesson"] or not s["level"] or any(l["status"] != "mastered" for l in s["level"]["lessons"]):
+        fail(f"a0-checkpoint should open with its mastered lessons: {status} {s.get('level')}")
+    status, cp = call(api, "POST", f"/api/v1/sessions/{s['id']}/checkpoint")
+    if status != 200 or len(cp["items"]) < 10 or not all(it.get("lessonId") for it in cp["items"]):
+        fail(f"level checkpoint: {status} {cp}")
+    # The offline provider uses one hand-written question per lesson.
+    def key(it):
+        for a in ls[it["lessonId"]]["assessment"]:
+            if a["prompt"] == it["prompt"]:
+                return a["acceptableAnswers"][0]
+        fail(f"no hand-written question matches {it['prompt']!r}")
+    right = [{"itemId": it["id"], "answer": key(it)} for it in cp["items"]]
+    status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": right})
+    lessons_scored = r.get("attempt", {}).get("review", {}).get("lessons", {}) if status == 200 else {}
+    if status != 200 or not r["passed"] or len(lessons_scored) != len(cp["items"]) or r["session"]["node"]["status"] != "mastered":
+        fail(f"level checkpoint should pass: {status} {r}")
+    print(f"  ✓ a0-checkpoint: {len(cp['items'])} questions from {len(lessons_scored)} lessons, {r['attempt']['score']}/100, level A0 complete")
 
 
 def verify(api, curriculum):

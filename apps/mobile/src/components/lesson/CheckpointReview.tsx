@@ -16,7 +16,7 @@ const look: Record<ItemReview['verdict'], { icon: IconName; fg: string; bg: stri
   wrong: { icon: 'close', fg: colors.danger, bg: colors.peach },
 };
 
-function Item({ it, n }: { it: ItemReview; n: number }) {
+function Item({ it, n, lesson }: { it: ItemReview; n: number; lesson?: string }) {
   const t = useT();
   const l = look[it.verdict];
   return (
@@ -26,6 +26,7 @@ function Item({ it, n }: { it: ItemReview; n: number }) {
           <Icon name={l.icon} size={13} color={l.fg} strokeWidth={2.5} />
         </View>
         <View style={{ flex: 1, gap: 6 }}>
+          {lesson ? <Eyebrow>{lesson}</Eyebrow> : null}
           <Text size={15} weight="medium" tight>
             {n}. {it.prompt}
           </Text>
@@ -71,7 +72,7 @@ function Item({ it, n }: { it: ItemReview; n: number }) {
 
 // Every answer of an attempt with its correction and explanation, plus
 // what the learner does well and what to practise.
-export function ReviewList({ review, feedback }: { review: CheckpointReview; feedback?: string }) {
+export function ReviewList({ review, feedback, lessonTitles }: { review: CheckpointReview; feedback?: string; lessonTitles?: Record<string, string> }) {
   const t = useT();
   return (
     <View style={{ gap: 10 }}>
@@ -101,14 +102,14 @@ export function ReviewList({ review, feedback }: { review: CheckpointReview; fee
         </View>
       ) : null}
       {review.items.map((it, i) => (
-        <Item key={it.id} it={it} n={i + 1} />
+        <Item key={it.id} it={it} n={i + 1} lesson={it.lessonId ? lessonTitles?.[it.lessonId] : undefined} />
       ))}
     </View>
   );
 }
 
 // An attempt's corrections behind a "see the corrections" toggle.
-export function AttemptReview({ attempt, open: initiallyOpen = false }: { attempt: Attempt; open?: boolean }) {
+export function AttemptReview({ attempt, open: initiallyOpen = false, lessonTitles }: { attempt: Attempt; open?: boolean; lessonTitles?: Record<string, string> }) {
   const t = useT();
   const [open, setOpen] = useState(initiallyOpen);
   if (!attempt.review) return null;
@@ -119,7 +120,7 @@ export function AttemptReview({ attempt, open: initiallyOpen = false }: { attemp
         icon={open ? 'arrowUp' : 'list'}
         onPress={() => setOpen(!open)}
       />
-      {open ? <ReviewList review={attempt.review} feedback={attempt.feedback} /> : null}
+      {open ? <ReviewList review={attempt.review} feedback={attempt.feedback} lessonTitles={lessonTitles} /> : null}
     </View>
   );
 }

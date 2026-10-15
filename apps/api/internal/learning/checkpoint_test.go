@@ -8,6 +8,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/jackc/pgx/v5"
+
 	"fluentpath/api/internal/ai"
 	"fluentpath/api/internal/progress"
 	"fluentpath/api/internal/storage"
@@ -244,5 +246,84 @@ func TestCheckerSendsBrokenQuestionsBack(t *testing.T) {
 	}
 	if !strings.HasPrefix(sess.Checkpoint.Items[0].Prompt, "Round 2") || len(sess.Checkpoint.Items) != 5 {
 		t.Fatalf("the second, checked draft is used: %+v", sess.Checkpoint.Items)
+	}
+}
+
+func TestLevelCheckpoint(t *testing.T) {
+	mock := &ai.Mock{}
+	var seen []ai.CheckpointInput
+	inner := &ai.Mock{}
+	mock.CheckpointFunc = func(in ai.CheckpointInput) (json.RawMessage, error) {
+		seen = append(seen, in)
+		r, err := inner.Checkpoint(context.Background(), in)
+		return r.Raw, err
+	}
+	s := newService(t, mock)
+	ctx := context.Background()
+	cur, _ := s.Catalog.Course(course)
+	ck, _ := cur.Node("a0-checkpoint")
+	lessons, _ := cur.LevelLessons(ck)
+
+	if _, err := s.StartSession(ctx, learnerID, course, "a0-checkpoint"); code(err) != "node_locked" {
+		t.Fatalf("the level checkpoint opens once the level's lessons are mastered: %v", err)
+	}
+	if _, err := s.Enroll(ctx, learnerID, course); err != nil {
+		t.Fatal(err)
+	}
+	if err := pgx.BeginFunc(ctx, s.Store.Pool, func(tx pgx.Tx) error {
+		for _, l := range lessons {
+			if _, err := storage.LockProgress(ctx, tx, learnerID, course, l.ID); err != nil {
+				return err
+			}
+			if _, err := storage.MarkMastered(ctx, tx, learnerID, course, l.ID, 100); err != nil {
+				return err
+			}
+		}
+		return nil
+	}); err != nil {
+		t.Fatal(err)
+	}
+	sess, err := s.StartSession(ctx, learnerID, course, "a0-checkpoint")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sess.Lesson != nil || sess.Level == nil || len(sess.Level.Lessons) != len(lessons) || sess.Level.Lessons[0].Status != progress.StatusMastered {
+		t.Fatalf("a level checkpoint has no steps, just its lessons: %+v", sess.Level)
+	}
+	cp, err := s.StartCheckpoint(ctx, learnerID, sess.ID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	// The mock's drafts copy the hand-written questions, so both are refused
+	// and the fallback (one hand-written question per lesson) is used.
+	if len(seen) != 2 || len(seen[0].LevelLessons) != len(lessons) || len(cp.Items) != len(lessons) || cp.Items[0].LessonID != lessons[0].ID {
+		t.Fatalf("the writer gets every lesson; one question per lesson from the fallback: %d %+v", len(seen), cp.Items)
+	}
+
+	// Two lessons go wrong: the review says which, and the level is still passed.
+	c, _ := storage.OpenCheckpoint(ctx, s.Store.Pool, sess.ID)
+	var items []tutor.CheckItem
+	_ = json.Unmarshal(c.Items, &items)
+	answers := map[string]string{}
+	for _, it := range items {
+		answers[it.ID] = it.Accepted[0]
+		if it.LessonID == "a0-greetings" || it.LessonID == "a0-numbers" {
+			answers[it.ID] = "zzz"
+		}
+	}
+	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var review tutor.Review
+	_ = json.Unmarshal(res.Attempt.Review, &review)
+	if review.Lessons["a0-greetings"] >= 80 || review.Lessons["a0-numbers"] >= 80 || review.Lessons["a0-pronouns"] != 100 || len(review.Lessons) != len(lessons) {
+		t.Fatalf("per-lesson scores: %v", review.Lessons)
+	}
+	if !res.Passed || !res.NewlyMastered || res.Session.Node.Status != progress.StatusMastered || res.Session.Phase != string(tutor.PhaseMastered) {
+		t.Fatalf("level passed: %+v", res.Attempt)
+	}
+	if mock.Calls.Summary != 0 {
+		t.Fatal("a level checkpoint has no lesson summary")
 	}
 }

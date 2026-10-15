@@ -15,9 +15,11 @@ import (
 const QuestionText = "text"
 
 const (
-	MinCheckItems = 5
-	MaxCheckItems = 8
-	maxAccepted   = 20
+	MinCheckItems      = 5
+	MaxCheckItems      = 8
+	MinLevelCheckItems = 10
+	MaxLevelCheckItems = 15
+	maxAccepted        = 20
 )
 
 // CheckItem is one checkpoint question. Multiple choice and word order use
@@ -25,6 +27,8 @@ const (
 // answer key never leaves the server before grading.
 type CheckItem struct {
 	ID string `json:"id"`
+	// LessonID: in a level checkpoint, the lesson the question comes from.
+	LessonID string `json:"lessonId,omitempty"`
 	Question
 	Accepted []string `json:"acceptedAnswers"`
 	Rubric   string   `json:"rubric"`
@@ -99,8 +103,38 @@ func shuffleOptions(options []string, answer int, seed string) ([]string, int) {
 // together cover every objective and repeat none of the earlier ones. It
 // numbers the items and shuffles word-order tokens that came in order.
 func ValidateCheckpoint(items []CheckItem, objectives map[string]bool, earlier []string) ([]CheckItem, error) {
-	if len(items) < MinCheckItems || len(items) > MaxCheckItems {
-		return nil, fmt.Errorf("a checkpoint needs %d–%d questions, got %d", MinCheckItems, MaxCheckItems, len(items))
+	return validateItems(items, objectives, earlier, MinCheckItems, MaxCheckItems)
+}
+
+// ValidateLevelCheckpoint checks a level checkpoint: 10–15 questions, each
+// from one of the level's lessons and counted towards that lesson's
+// objective, spread over at least two thirds of the lessons.
+// lessons maps each lesson id to its checkpoint objective.
+func ValidateLevelCheckpoint(items []CheckItem, lessons map[string]string, earlier []string) ([]CheckItem, error) {
+	objectives := map[string]bool{}
+	for _, o := range lessons {
+		objectives[o] = true
+	}
+	used := map[string]bool{}
+	for i, it := range items {
+		o, ok := lessons[it.LessonID]
+		if !ok {
+			return nil, fmt.Errorf("question %d names lesson %q, which this checkpoint doesn't cover", i+1, it.LessonID)
+		}
+		if it.ObjectiveID != o {
+			return nil, fmt.Errorf("question %d: a question from %s counts towards %q, not %q", i+1, it.LessonID, o, it.ObjectiveID)
+		}
+		used[it.LessonID] = true
+	}
+	if need := (2*len(lessons) + 2) / 3; len(used) < need {
+		return nil, fmt.Errorf("questions come from %d lessons; spread them over at least %d", len(used), need)
+	}
+	return validateItems(items, objectives, earlier, MinLevelCheckItems, MaxLevelCheckItems)
+}
+
+func validateItems(items []CheckItem, objectives map[string]bool, earlier []string, min, max int) ([]CheckItem, error) {
+	if len(items) < min || len(items) > max {
+		return nil, fmt.Errorf("a checkpoint needs %d–%d questions, got %d", min, max, len(items))
 	}
 	seen := map[string]bool{}
 	for _, p := range earlier {
@@ -225,6 +259,7 @@ func FixedVerdict(it CheckItem, answer string, exact func(string, []string) bool
 // ItemReview is how one answer was graded, kept with the attempt.
 type ItemReview struct {
 	ID          string   `json:"id"`
+	LessonID    string   `json:"lessonId,omitempty"`
 	ObjectiveID string   `json:"objectiveId"`
 	Type        string   `json:"type"`
 	Prompt      string   `json:"prompt"`
@@ -246,6 +281,8 @@ type Review struct {
 	Items     []ItemReview `json:"items"`
 	Strengths []string     `json:"strengths"`
 	ToReview  []string     `json:"toReview"`
+	// Lessons: in a level checkpoint, each lesson's score (mean of its questions).
+	Lessons map[string]int `json:"lessons,omitempty"`
 }
 
 const (
@@ -324,7 +361,7 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 			}
 		}
 		rev.Items = append(rev.Items, ItemReview{
-			ID: it.ID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt, Options: it.Options, Listen: it.Listen,
+			ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt, Options: it.Options, Listen: it.Listen,
 			Answer: ans, CorrectAnswer: correct, Score: score, Verdict: verdict(score), Explanation: expl, KeyFixed: keyFixed,
 		})
 		sum[it.ObjectiveID] += score
@@ -333,6 +370,19 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 	scores := map[string]int{}
 	for id, n := range count {
 		scores[id] = int(math.Round(float64(sum[id]) / float64(n)))
+	}
+	lsum, lcount := map[string]int{}, map[string]int{}
+	for _, r := range rev.Items {
+		if r.LessonID != "" {
+			lsum[r.LessonID] += r.Score
+			lcount[r.LessonID]++
+		}
+	}
+	if len(lcount) > 0 {
+		rev.Lessons = map[string]int{}
+		for id, n := range lcount {
+			rev.Lessons[id] = int(math.Round(float64(lsum[id]) / float64(n)))
+		}
 	}
 	return rev, scores, clean(g.Feedback), nil
 }

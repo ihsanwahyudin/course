@@ -505,8 +505,31 @@ type SessionView struct {
 	MasteredBy *storage.Attempt `json:"masteredBy"`
 	// Attempts is the learner's checkpoint history for this lesson, newest first.
 	Attempts []AttemptSummary `json:"attempts"`
-	Prev     *NodeView        `json:"prev"`
-	Next     *NodeView        `json:"next"`
+	// Level: for a level checkpoint, the lessons it covers.
+	Level *LevelView `json:"level"`
+	Prev  *NodeView  `json:"prev"`
+	Next  *NodeView  `json:"next"`
+}
+
+// LevelView lists a level checkpoint's lessons with the learner's progress.
+type LevelView struct {
+	Lessons []LevelLessonView `json:"lessons"`
+}
+
+type LevelLessonView struct {
+	ID        string          `json:"id"`
+	Title     string          `json:"title"`
+	Objective string          `json:"objective"` // the checkpoint objective it counts towards
+	Status    progress.Status `json:"status"`
+}
+
+func levelView(st state, ck *curriculum.Node) *LevelView {
+	lessons, objective := st.cur.LevelLessons(ck)
+	v := &LevelView{Lessons: make([]LevelLessonView, 0, len(lessons))}
+	for _, n := range lessons {
+		v.Lessons = append(v.Lessons, LevelLessonView{n.ID, st.cur.LocalNode(n.ID, st.lang).Title, objective[n.ID], st.statuses[n.ID]})
+	}
+	return v
 }
 
 func (s *Service) sessionCourse(sess storage.Session) (*curriculum.Curriculum, *curriculum.Node, error) {
@@ -557,6 +580,9 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 		}
 	} else if !errors.Is(err, storage.ErrNotFound) {
 		return SessionView{}, err
+	}
+	if n.LevelCheck() {
+		v.Level = levelView(st, n)
 	}
 	history, err := storage.NodeAttempts(ctx, db, sess.UserID, cur.Slug, n.ID, attemptHistory)
 	if err != nil {
@@ -665,8 +691,13 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 	if err != nil {
 		return SessionView{}, err
 	}
-	// The first visit writes this learner's lesson plan.
-	if sess.EndedAt == nil {
+	switch {
+	case sess.EndedAt != nil:
+	case n.LevelCheck():
+		// A level checkpoint is only the test: start writing it now.
+		s.prefetchCheckpoint(userID, sess)
+	default:
+		// The first visit writes this learner's lesson plan.
 		if err := s.ensurePlan(ctx, st, n, &sess); err != nil {
 			return SessionView{}, err
 		}

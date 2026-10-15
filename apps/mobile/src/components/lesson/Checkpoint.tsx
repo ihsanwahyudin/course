@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Platform, StyleSheet, TextInput, View } from 'react-native';
 
@@ -45,13 +46,16 @@ export function Checkpoint({
   session: Session;
   practice?: boolean;
   onResult: (r: AssessmentResult) => void;
-  onOpenMaterial: () => void;
+  /** Lessons only; a level checkpoint has no material of its own. */
+  onOpenMaterial?: () => void;
   onProgress?: () => void;
   onClose?: () => void;
 }) {
   const t = useT();
+  const router = useRouter();
   const errorText = useErrorText();
   const start = useStartCheckpoint(session.id);
+  const lessonTitles = Object.fromEntries((session.level?.lessons ?? []).map((l) => [l.id, l.title]));
   const submit = useSubmitAssessment(session.id);
   const cp = session.checkpoint;
   const drafts = useUI((s) => (cp ? s.drafts[cp.id] : undefined)) ?? {};
@@ -68,6 +72,10 @@ export function Checkpoint({
   const last = session.lastAttempt;
   const failed = !practice && last && !last.passed ? last : null;
   const weak = failed ? session.node.objectives.filter((o) => (failed.objectiveScores[o.id] ?? 0) < failed.threshold) : [];
+  // Level checkpoints: the lessons that went wrong, to go back to.
+  const weakLessons = failed?.review?.lessons
+    ? (session.level?.lessons ?? []).filter((l) => (failed.review!.lessons![l.id] ?? 100) < failed.threshold)
+    : [];
   const objective = (id: string) => session.node.objectives.find((o) => o.id === id)?.text;
   const draft = item ? (drafts[item.id] ?? '') : '';
   const isLast = idx === items.length - 1;
@@ -130,7 +138,19 @@ export function Checkpoint({
                 </Text>
               </View>
             ))}
-            {failed.review ? <AttemptReview attempt={failed} /> : failed.feedback ? <Text size={14} color={colors.muted}>{failed.feedback}</Text> : null}
+            {weakLessons.length ? (
+              <View style={{ gap: 8 }}>
+                <Text size={15} weight="medium">
+                  {t('level.weakTitle')}
+                </Text>
+                <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+                  {weakLessons.map((l) => (
+                    <PillButton key={l.id} label={l.title} icon="arrowUpRight" size="sm" variant="secondary" onPress={() => router.push(`/learn/${session.courseSlug}/${l.id}`)} />
+                  ))}
+                </View>
+              </View>
+            ) : null}
+            {failed.review ? <AttemptReview attempt={failed} lessonTitles={lessonTitles} /> : failed.feedback ? <Text size={14} color={colors.muted}>{failed.feedback}</Text> : null}
           </View>
         </Indented>
       ) : practised && last?.practice ? (
@@ -139,10 +159,10 @@ export function Checkpoint({
             <Text size={17} weight="medium">
               {t('checkpoint.practiceResult', { score: last.score })}
             </Text>
-            <AttemptReview attempt={last} open />
+            <AttemptReview attempt={last} open lessonTitles={lessonTitles} />
           </View>
         </Indented>
-      ) : !practice ? (
+      ) : !practice && !session.level ? (
         <TutorLine>{t('checkpoint.intro')}</TutorLine>
       ) : null}
       {/* After mastery the result card shows the history. */}
@@ -175,15 +195,19 @@ export function Checkpoint({
                   {cp ? t('checkpoint.title', { n: cp.items.length }) : t('checkpoint.titleNew')}
                 </Heading>
                 <Text size={14} color="rgba(255,255,255,0.72)">
-                  {practice ? t('checkpoint.practiceText') : t('checkpoint.text', { threshold: session.node.masteryThreshold, title: session.node.title })}
+                  {practice
+                    ? t('checkpoint.practiceText')
+                    : session.level
+                      ? t('level.text', { threshold: session.node.masteryThreshold, level: session.node.level })
+                      : t('checkpoint.text', { threshold: session.node.masteryThreshold, title: session.node.title })}
                 </Text>
                 <View style={{ flexDirection: 'row', gap: 10, flexWrap: 'wrap' }}>
                   <PillButton label={startLabel} variant="accent" onPress={begin} />
                   {practice && onClose ? (
                     <PillButton label={t('checkpoint.close')} onPress={onClose} style={{ backgroundColor: 'rgba(255,255,255,0.1)' }} />
-                  ) : (
+                  ) : onOpenMaterial ? (
                     <PillButton label={failed ? t('checkpoint.openMaterial') : t('checkpoint.practise')} onPress={onOpenMaterial} style={{ backgroundColor: 'rgba(255,255,255,0.1)' }} />
-                  )}
+                  ) : null}
                 </View>
               </>
             )}
@@ -219,7 +243,11 @@ export function Checkpoint({
                 {item.prompt}
               </Text>
               {item.hasAudio ? <ListenButton key={item.id} path={`/api/v1/sessions/${session.id}/checkpoints/${cp.id}/items/${item.id}/listen`} /> : null}
-              {objective(item.objectiveId) ? (
+              {item.lessonId && lessonTitles[item.lessonId] ? (
+                <Text size={13} color={colors.muted}>
+                  {t('level.from', { title: lessonTitles[item.lessonId] })}
+                </Text>
+              ) : objective(item.objectiveId) ? (
                 <Text size={13} color={colors.muted}>
                   {t('checkpoint.objective', { text: objective(item.objectiveId)! })}
                 </Text>

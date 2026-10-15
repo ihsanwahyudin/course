@@ -7,6 +7,7 @@ import { Checkpoint } from '@/components/lesson/Checkpoint';
 import { LessonResult } from '@/components/lesson/LessonResult';
 import { LessonSidebar } from '@/components/lesson/LessonSidebar';
 import { LessonThread } from '@/components/lesson/LessonThread';
+import { LevelIntro } from '@/components/lesson/LevelIntro';
 import { MaterialView } from '@/components/lesson/Material';
 import { ArtifactActions, ArtifactView, artifactCards } from '@/components/lesson/Widgets';
 import { ErrorState, LoadingState } from '@/components/ui/Bits';
@@ -202,7 +203,8 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
       <ScrollView ref={scrollRef} contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 80 }]} keyboardShouldPersistTaps="handled">
         <View style={styles.column}>
           {l ? <LessonThread session={s} openArtifact={(artifact) => setPanel({ kind: 'artifact', artifact })} /> : null}
-          {l && mastered ? (
+          {s.level ? <LevelIntro session={s} /> : null}
+          {(l || s.level) && mastered ? (
             <>
               <LessonResult
                 session={s}
@@ -217,17 +219,17 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
                   practice
                   // Keep the panel open to show the practice result.
                   onResult={() => setPractising(true)}
-                  onOpenMaterial={() => setPanel({ kind: 'material' })}
+                  onOpenMaterial={s.material ? () => setPanel({ kind: 'material' }) : undefined}
                   onProgress={() => setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 80)}
                   onClose={() => setPractising(false)}
                 />
               ) : null}
             </>
-          ) : l?.checkpoint ? (
+          ) : l?.checkpoint || s.level ? (
             <Checkpoint
               session={s}
               onResult={(r) => setUnlocked(r.unlocked)}
-              onOpenMaterial={() => setPanel({ kind: 'material' })}
+              onOpenMaterial={s.material ? () => setPanel({ kind: 'material' }) : undefined}
               onProgress={() => setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 80)}
             />
           ) : null}
@@ -238,7 +240,7 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
   }
 
   const stepText = !lesson ? '' : lesson.checkpoint ? t('checkpoint.eyebrow') : t('lesson.stepCount', { n: lesson.stepIndex + 1, total: lesson.totalSteps });
-  const eyebrow = s ? [lessonNo ? t('lesson.levelLesson', { level: s.node.level, n: lessonNo }) : s.node.level, mastered ? t('lesson.masteredTag') : null].filter(Boolean).join(' · ') : '';
+  const eyebrow = s ? [s.level ? `${s.node.level} · ${t('checkpoint.eyebrow')}` : lessonNo ? t('lesson.levelLesson', { level: s.node.level, n: lessonNo }) : s.node.level, mastered ? t('lesson.masteredTag') : null].filter(Boolean).join(' · ') : '';
 
   const header = s ? (
     wide ? (
@@ -256,7 +258,9 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
             <Eyebrow color={colors.ink}>{stepText}</Eyebrow>
           </View>
         ) : null}
-        <PillButton label={t('lesson.material')} icon="book" variant="secondary" size="sm" style={{ alignSelf: 'center' }} onPress={() => setPanel(panel?.kind === 'material' ? null : { kind: 'material' })} />
+        {s.material ? (
+          <PillButton label={t('lesson.material')} icon="book" variant="secondary" size="sm" style={{ alignSelf: 'center' }} onPress={() => setPanel(panel?.kind === 'material' ? null : { kind: 'material' })} />
+        ) : null}
       </View>
     ) : (
       <View style={[styles.phoneHeader, { paddingTop: insets.top + 8 }]}>
@@ -268,7 +272,7 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
               {s.node.title}
             </Text>
           </View>
-          <IconButton icon="book" label={t('lesson.material')} variant="soft" size={36} onPress={() => setPanel({ kind: 'material' })} />
+          {s.material ? <IconButton icon="book" label={t('lesson.material')} variant="soft" size={36} onPress={() => setPanel({ kind: 'material' })} /> : null}
         </View>
         {lesson ? (
           <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
