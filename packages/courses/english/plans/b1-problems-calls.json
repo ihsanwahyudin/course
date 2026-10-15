@@ -1,0 +1,770 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to explain a problem clearly, complain politely and handle phone and Zoom calls with confidence. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Explain a problem",
+        "text": "When something goes wrong, the helpdesk can't see it. Let's learn to explain it in three parts.",
+        "body": "Say **what** is wrong (*The internet is **down***), **when** it started with the **past simple** (*It **stopped working** last night*) and **what you've tried** with the **present perfect**, no time word (*I**'ve restarted** the router twice*). Trap: *mati sejak tadi pagi* is not *'It is die since this morning'*: say **It stopped working this morning**, or answer *Since when?* with **Since this morning.**",
+        "pairs": [
+          {
+            "en": "The internet is down.",
+            "id": "Internetnya mati."
+          },
+          {
+            "en": "It doesn't work.",
+            "id": "Tidak berfungsi."
+          },
+          {
+            "en": "It stopped working last night.",
+            "id": "Berhenti berfungsi tadi malam."
+          },
+          {
+            "en": "Since this morning.",
+            "id": "Sejak tadi pagi."
+          },
+          {
+            "en": "I've restarted the router twice.",
+            "id": "Saya sudah me-restart router dua kali."
+          },
+          {
+            "en": "not … yet",
+            "id": "belum"
+          },
+          {
+            "en": "charge",
+            "id": "menagih / memotong saldo"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Problems at the helpdesk",
+        "text": "Read these aloud. Find the what, the when and what the person has tried.",
+        "body": "A finished time (*yesterday, this morning, last night*) → past simple. What you've tried, with no time → present perfect (*I've already restarted …*).",
+        "examples": [
+          {
+            "en": "The app stopped working after the update yesterday.",
+            "id": "Aplikasinya berhenti berfungsi setelah update kemarin."
+          },
+          {
+            "en": "I've already restarted my phone, but the app still doesn't open.",
+            "id": "Saya sudah me-restart HP, tapi aplikasinya tetap tidak mau terbuka."
+          },
+          {
+            "en": "The driver cancelled my order three times this morning.",
+            "id": "Drivernya membatalkan pesanan saya tiga kali tadi pagi."
+          },
+          {
+            "en": "Sorry, the app charged me twice for one trip.",
+            "id": "Maaf, aplikasinya memotong saldo saya dua kali untuk satu perjalanan."
+          },
+          {
+            "en": "Since when? — Since last night.",
+            "id": "Sejak kapan? — Sejak tadi malam."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's practise the three parts.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-problems",
+          "prompt": "You call an online shop because your parcel is late. Which explanation is the clearest?",
+          "options": [
+            "My parcel hasn't arrived yet. I ordered it last Monday, and the app says 'delivered'.",
+            "Parcel not come since Monday until now.",
+            "Sorry, sorry, maybe there is a little problem, maybe with the parcel …"
+          ],
+          "answer": 0,
+          "explanation": "The first one says **what** (*hasn't arrived yet*), **when** (*I ordered it last Monday*, past simple) and a useful detail. *Parcel not come since …* has no verb form and copies *sejak … sampai sekarang*; the third one apologises but never says the problem."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "What have you tried?",
+        "text": "Now build the 'what you've tried' sentence.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "explain-problems",
+          "prompt": "Your ojek online app doesn't accept your card. Tell the helpdesk what you've tried. Arrange the words: Saya sudah mencoba dua kartu yang berbeda.",
+          "tokens": [
+            "cards",
+            "have",
+            "two",
+            "I",
+            "different",
+            "tried"
+          ],
+          "solution": "I have tried two different cards.",
+          "explanation": "What you've tried, with no time word → present perfect: **I have tried** (have + third form). *two different cards*: the number and adjective come before the noun."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Complain politely",
+        "text": "Now let's turn the problem into a polite complaint.",
+        "body": "Three steps: a **soft start** (*I'm afraid there's a problem with …*), the **facts** calmly, then **one request** (*Could you …, please?*, *I'd appreciate it if you could …*, *What can you do about it?*). **I'm afraid** here is not *saya takut*: it means *mohon maaf / sayangnya*. **complain** is the verb, **a complaint** the noun: *I'd like to make a complaint*, not *'I want to complaint'*. Learn *I'd appreciate **it** if you could* as one phrase.",
+        "pairs": [
+          {
+            "en": "I'm afraid there's a problem with …",
+            "id": "Mohon maaf, ada masalah dengan …"
+          },
+          {
+            "en": "I'd like to make a complaint about …",
+            "id": "Saya ingin menyampaikan komplain tentang …"
+          },
+          {
+            "en": "Sorry to bother you, but …",
+            "id": "Maaf mengganggu, tapi …"
+          },
+          {
+            "en": "Could you …, please?",
+            "id": "Bisa tolong …?"
+          },
+          {
+            "en": "I'd appreciate it if you could …",
+            "id": "Saya akan sangat berterima kasih kalau Anda bisa …"
+          },
+          {
+            "en": "What can you do about it?",
+            "id": "Apa yang bisa Anda lakukan untuk ini?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Polite complaints",
+        "text": "Listen to how calm and clear these sound.",
+        "body": "Polite isn't weak: each one says the problem clearly and asks for one thing. Too direct (*Change my room now!*) and too indirect (*Sorry before, maybe …*) both fail.",
+        "examples": [
+          {
+            "en": "Good evening. I'd like to make a complaint about my internet connection.",
+            "id": "Selamat malam. Saya ingin menyampaikan komplain tentang koneksi internet saya."
+          },
+          {
+            "en": "I'm afraid the driver took a longer way, and I paid 15,000 rupiah more.",
+            "id": "Mohon maaf, drivernya lewat jalan yang lebih jauh, dan saya membayar Rp15.000 lebih mahal."
+          },
+          {
+            "en": "Sorry to bother you, but my booking says two nights, not one.",
+            "id": "Maaf mengganggu, tapi di booking saya tertulis dua malam, bukan satu."
+          },
+          {
+            "en": "I'd appreciate it if you could send a technician today.",
+            "id": "Saya akan sangat berterima kasih kalau Anda bisa mengirim teknisi hari ini."
+          },
+          {
+            "en": "The technician didn't come yesterday. What can you do about it?",
+            "id": "Teknisinya kemarin tidak datang. Apa yang bisa Anda lakukan?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Choose the best complaint",
+        "text": "Time for a complaint.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "polite-complaints",
+          "prompt": "Your food from a delivery app has arrived, but one of your two iced teas is missing. You call the restaurant. Which is the best complaint?",
+          "options": [
+            "Where is my drink? Your service is really bad!",
+            "Hello, I'm afraid part of my order is missing: I ordered two iced teas, but I only got one. What can you do about it?",
+            "Sorry before, sorry, maybe, if possible, maybe the drink …"
+          ],
+          "answer": 1,
+          "explanation": "It has a soft start (*I'm afraid*), the facts (*I ordered two … but I only got one*) and asks for a solution (*What can you do about it?*). The first one attacks the restaurant, and the third never says what's wrong."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Phone and video calls",
+        "text": "Last part: the phrases that make phone and Zoom calls easy.",
+        "body": "On the phone, the other person can't see you, so say **this is** + your name, not *I am*: *Hello, this is Sari.* Ask for someone with **Could I speak to …, please?** If they ask for you: **Speaking.** On Zoom: **You're on mute** = your mic is off; **you're breaking up** = your voice comes and goes. *speak with* is also correct (more American), but *I am Budi* is the Indonesian *Saya Budi* word for word.",
+        "pairs": [
+          {
+            "en": "Hello, this is …",
+            "id": "Halo, saya … (di telepon)"
+          },
+          {
+            "en": "Could I speak to …, please?",
+            "id": "Bisa bicara dengan …?"
+          },
+          {
+            "en": "Speaking.",
+            "id": "Saya sendiri. (kalau kamu yang dicari)"
+          },
+          {
+            "en": "Who's calling, please?",
+            "id": "Dengan siapa ini?"
+          },
+          {
+            "en": "Hold on. / One moment, please.",
+            "id": "Tunggu sebentar."
+          },
+          {
+            "en": "I'll call you back.",
+            "id": "Nanti saya telepon balik."
+          },
+          {
+            "en": "Can you hear me?",
+            "id": "Suara saya terdengar?"
+          },
+          {
+            "en": "You're on mute.",
+            "id": "Mic-mu masih mati."
+          },
+          {
+            "en": "Sorry, you're breaking up.",
+            "id": "Maaf, suaramu putus-putus."
+          },
+          {
+            "en": "Could you say that again, please?",
+            "id": "Bisa diulang?"
+          },
+          {
+            "en": "Could you spell that, please?",
+            "id": "Bisa dieja?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Start the call",
+        "text": "Now a phone call.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "phone-video-calls",
+          "prompt": "You phone a company in Jakarta and the receptionist answers. Which is the best way to start?",
+          "options": [
+            "Hello, here is Budi. I want to speak Mr Andi.",
+            "Hello, I am Budi. Can I speak with Mr Andi?",
+            "Hello, this is Budi. Could I speak to Mr Andi, please?"
+          ],
+          "answer": 2,
+          "explanation": "On the phone, say **this is** + your name, and ask with **Could I speak to …, please?** *I am Budi* is Indonesian word for word, and *here is Budi* / *I want to speak Mr Andi* are wrong and sound rude."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "phone-video-calls",
+          "prompt": "You're in a Zoom meeting with your team. Listen to your manager. What's the best reply?",
+          "listen": "Hi Rina, we can see you, but we can't hear anything. I think you're on mute.",
+          "options": [
+            "Sorry, you're breaking up.",
+            "Oh, sorry! Can you hear me now?",
+            "Hold on. Could you spell that, please?"
+          ],
+          "answer": 1,
+          "explanation": "Your manager says you're **on mute**: they can't hear you at all. Unmute and check: *Can you hear me now?* *You're breaking up* is for a voice that comes and goes, and nobody asked you to spell anything."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next call.",
+        "artifact": {
+          "title": "Cheat sheet · problems, complaints & calls",
+          "intro": "Explain the problem in three parts, complain with a soft start and one request, and use phone phrases like this is and Could I speak to …?",
+          "headers": [
+            "Situation",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "What's wrong",
+              "The internet is down. / The app doesn't work.",
+              "internet mati / aplikasi tidak berfungsi"
+            ],
+            [
+              "When it started",
+              "It stopped working last night.",
+              "kapan: past simple + waktu selesai"
+            ],
+            [
+              "Since when?",
+              "Since this morning.",
+              "sejak tadi pagi (jawaban pendek)"
+            ],
+            [
+              "What you've tried",
+              "I've restarted the router twice.",
+              "sudah dicoba: present perfect, tanpa waktu"
+            ],
+            [
+              "Soft start",
+              "I'm afraid there's a problem with …",
+              "mohon maaf, ada masalah dengan …"
+            ],
+            [
+              "Make a complaint",
+              "I'd like to make a complaint about …",
+              "saya ingin komplain tentang …"
+            ],
+            [
+              "Ask for a solution",
+              "Could you …, please? / I'd appreciate it if you could …",
+              "bisa tolong …? / saya akan sangat berterima kasih kalau …"
+            ],
+            [
+              "Ask what they'll do",
+              "What can you do about it?",
+              "apa yang bisa Anda lakukan?"
+            ],
+            [
+              "Say who you are (phone)",
+              "Hello, this is Sari.",
+              "halo, saya Sari (bukan I am)"
+            ],
+            [
+              "Ask for someone",
+              "Could I speak to …, please?",
+              "bisa bicara dengan …?"
+            ],
+            [
+              "Ask someone to wait",
+              "Hold on. / One moment, please.",
+              "tunggu sebentar"
+            ],
+            [
+              "Phone later",
+              "I'll call you back.",
+              "nanti saya telepon balik"
+            ],
+            [
+              "Video call",
+              "Can you hear me? / You're on mute.",
+              "suara saya terdengar? / mic-mu mati"
+            ],
+            [
+              "Bad line",
+              "Sorry, you're breaking up. Could you say that again?",
+              "suaramu putus-putus, bisa diulang?"
+            ]
+          ],
+          "tips": [
+            "Past simple for when (It stopped working this morning); present perfect for what you've tried (I've restarted it twice).",
+            "I'm afraid = mohon maaf / sayangnya, not saya takut. complain = verb, a complaint = noun.",
+            "On the phone: this is Budi, not I am Budi."
+          ],
+          "examples": [
+            {
+              "en": "The router stopped working last night. I've restarted it twice.",
+              "id": "Routernya mati tadi malam. Saya sudah me-restart-nya dua kali."
+            },
+            {
+              "en": "I'd like to make a complaint about my delivery.",
+              "id": "Saya ingin menyampaikan komplain tentang pengiriman saya."
+            },
+            {
+              "en": "Good afternoon, this is Rina from PT Maju Jaya.",
+              "id": "Selamat siang, saya Rina dari PT Maju Jaya."
+            },
+            {
+              "en": "Sorry, I'm in a meeting. I'll call you back.",
+              "id": "Maaf, saya sedang rapat. Nanti saya telepon balik."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here's a video about phone English and an article about complaints."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar menjelaskan masalah dengan jelas, komplain dengan sopan, dan menangani telepon serta rapat Zoom dengan percaya diri. Ayo kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menjelaskan masalah",
+        "text": "Kalau ada yang bermasalah, petugas layanan tidak bisa melihatnya. Ayo belajar menjelaskannya dalam tiga bagian.",
+        "body": "Katakan **apa** masalahnya (*The internet is **down*** = internetnya mati), **kapan** mulainya dengan **past simple** (*It **stopped working** last night*) dan **apa yang sudah kamu coba** dengan **present perfect**, tanpa kata waktu (*I**'ve restarted** the router twice*). Jebakan: *mati sejak tadi pagi* bukan *'It is die since this morning'*: katakan **It stopped working this morning**, atau jawab *Since when?* dengan **Since this morning.**",
+        "pairs": [
+          {
+            "en": "The internet is down.",
+            "id": "Internetnya mati."
+          },
+          {
+            "en": "It doesn't work.",
+            "id": "Tidak berfungsi."
+          },
+          {
+            "en": "It stopped working last night.",
+            "id": "Berhenti berfungsi tadi malam."
+          },
+          {
+            "en": "Since this morning.",
+            "id": "Sejak tadi pagi."
+          },
+          {
+            "en": "I've restarted the router twice.",
+            "id": "Saya sudah me-restart router dua kali."
+          },
+          {
+            "en": "not … yet",
+            "id": "belum"
+          },
+          {
+            "en": "charge",
+            "id": "menagih / memotong saldo"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Masalah di layanan bantuan",
+        "text": "Baca keras-keras. Temukan apa masalahnya, kapan, dan apa yang sudah dicoba.",
+        "body": "Waktu yang sudah selesai (*yesterday, this morning, last night*) → past simple. Yang sudah kamu coba, tanpa waktu → present perfect (*I've already restarted …*).",
+        "examples": [
+          {
+            "en": "The app stopped working after the update yesterday.",
+            "id": "Aplikasinya berhenti berfungsi setelah update kemarin."
+          },
+          {
+            "en": "I've already restarted my phone, but the app still doesn't open.",
+            "id": "Saya sudah me-restart HP, tapi aplikasinya tetap tidak mau terbuka."
+          },
+          {
+            "en": "The driver cancelled my order three times this morning.",
+            "id": "Drivernya membatalkan pesanan saya tiga kali tadi pagi."
+          },
+          {
+            "en": "Sorry, the app charged me twice for one trip.",
+            "id": "Maaf, aplikasinya memotong saldo saya dua kali untuk satu perjalanan."
+          },
+          {
+            "en": "Since when? — Since last night.",
+            "id": "Sejak kapan? — Sejak tadi malam."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ayo latihan tiga bagiannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-problems",
+          "prompt": "Kamu menelepon toko online karena paketmu terlambat. Penjelasan mana yang paling jelas?",
+          "options": [
+            "My parcel hasn't arrived yet. I ordered it last Monday, and the app says 'delivered'.",
+            "Parcel not come since Monday until now.",
+            "Sorry, sorry, maybe there is a little problem, maybe with the parcel …"
+          ],
+          "answer": 0,
+          "explanation": "Pilihan pertama menyebut **apa** masalahnya (*hasn't arrived yet* = belum sampai), **kapan** (*I ordered it last Monday*, past simple) dan detail yang berguna. *Parcel not come since …* tidak punya bentuk kata kerja dan meniru *sejak … sampai sekarang*; pilihan ketiga minta maaf tapi tidak pernah menyebut masalahnya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Apa yang sudah kamu coba?",
+        "text": "Sekarang susun kalimat 'yang sudah dicoba'.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "explain-problems",
+          "prompt": "Aplikasi ojek online-mu tidak menerima kartumu. Beri tahu layanan bantuan apa yang sudah kamu coba. Susun kata-katanya: Saya sudah mencoba dua kartu yang berbeda.",
+          "tokens": [
+            "cards",
+            "have",
+            "two",
+            "I",
+            "different",
+            "tried"
+          ],
+          "solution": "I have tried two different cards.",
+          "explanation": "Yang sudah dicoba, tanpa kata waktu → present perfect: **I have tried** (have + bentuk ketiga). *two different cards*: angka dan kata sifat datang sebelum kata benda (*kartu yang berbeda* → *different cards*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Komplain dengan sopan",
+        "text": "Sekarang ayo ubah masalahnya menjadi komplain yang sopan.",
+        "body": "Tiga langkah: **pembuka yang halus** (*I'm afraid there's a problem with …*), **faktanya** dengan tenang, lalu **satu permintaan** (*Could you …, please?*, *I'd appreciate it if you could …*, *What can you do about it?*). **I'm afraid** di sini bukan *saya takut*: artinya *mohon maaf / sayangnya*. **complain** kata kerja, **a complaint** kata benda: *I'd like to make a complaint*, bukan *'I want to complaint'*. Hafalkan *I'd appreciate **it** if you could* sebagai satu ungkapan.",
+        "pairs": [
+          {
+            "en": "I'm afraid there's a problem with …",
+            "id": "Mohon maaf, ada masalah dengan …"
+          },
+          {
+            "en": "I'd like to make a complaint about …",
+            "id": "Saya ingin menyampaikan komplain tentang …"
+          },
+          {
+            "en": "Sorry to bother you, but …",
+            "id": "Maaf mengganggu, tapi …"
+          },
+          {
+            "en": "Could you …, please?",
+            "id": "Bisa tolong …?"
+          },
+          {
+            "en": "I'd appreciate it if you could …",
+            "id": "Saya akan sangat berterima kasih kalau Anda bisa …"
+          },
+          {
+            "en": "What can you do about it?",
+            "id": "Apa yang bisa Anda lakukan untuk ini?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Komplain yang sopan",
+        "text": "Dengarkan betapa tenang dan jelasnya kalimat-kalimat ini.",
+        "body": "Sopan bukan berarti lemah: setiap kalimat menyebut masalahnya dengan jelas dan meminta satu hal. Terlalu langsung (*Change my room now!*) dan terlalu berbelit (*Sorry before, maybe …*) sama-sama gagal.",
+        "examples": [
+          {
+            "en": "Good evening. I'd like to make a complaint about my internet connection.",
+            "id": "Selamat malam. Saya ingin menyampaikan komplain tentang koneksi internet saya."
+          },
+          {
+            "en": "I'm afraid the driver took a longer way, and I paid 15,000 rupiah more.",
+            "id": "Mohon maaf, drivernya lewat jalan yang lebih jauh, dan saya membayar Rp15.000 lebih mahal."
+          },
+          {
+            "en": "Sorry to bother you, but my booking says two nights, not one.",
+            "id": "Maaf mengganggu, tapi di booking saya tertulis dua malam, bukan satu."
+          },
+          {
+            "en": "I'd appreciate it if you could send a technician today.",
+            "id": "Saya akan sangat berterima kasih kalau Anda bisa mengirim teknisi hari ini."
+          },
+          {
+            "en": "The technician didn't come yesterday. What can you do about it?",
+            "id": "Teknisinya kemarin tidak datang. Apa yang bisa Anda lakukan?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih komplain terbaik",
+        "text": "Saatnya komplain.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "polite-complaints",
+          "prompt": "Makananmu dari aplikasi pesan-antar sudah datang, tapi satu dari dua es tehmu tidak ada. Kamu menelepon restorannya. Komplain mana yang terbaik?",
+          "options": [
+            "Where is my drink? Your service is really bad!",
+            "Hello, I'm afraid part of my order is missing: I ordered two iced teas, but I only got one. What can you do about it?",
+            "Sorry before, sorry, maybe, if possible, maybe the drink …"
+          ],
+          "answer": 1,
+          "explanation": "Pilihan ini punya pembuka yang halus (*I'm afraid*), faktanya (*I ordered two … but I only got one*) dan meminta solusi (*What can you do about it?*). Pilihan pertama menyerang restorannya, dan pilihan ketiga tidak pernah menyebut masalahnya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Telepon dan video call",
+        "text": "Bagian terakhir: ungkapan yang membuat telepon dan rapat Zoom jadi mudah.",
+        "body": "Di telepon, lawan bicara tidak bisa melihatmu, jadi katakan **this is** + namamu, bukan *I am*: *Hello, this is Sari.* Minta bicara dengan seseorang: **Could I speak to …, please?** Kalau yang dicari kamu: **Speaking.** Di Zoom: **You're on mute** = mic-mu mati; **you're breaking up** = suaramu putus-putus. *speak with* juga benar (lebih Amerika), tapi *I am Budi* adalah terjemahan kata per kata dari *Saya Budi*.",
+        "pairs": [
+          {
+            "en": "Hello, this is …",
+            "id": "Halo, saya … (di telepon)"
+          },
+          {
+            "en": "Could I speak to …, please?",
+            "id": "Bisa bicara dengan …?"
+          },
+          {
+            "en": "Speaking.",
+            "id": "Saya sendiri. (kalau kamu yang dicari)"
+          },
+          {
+            "en": "Who's calling, please?",
+            "id": "Dengan siapa ini?"
+          },
+          {
+            "en": "Hold on. / One moment, please.",
+            "id": "Tunggu sebentar."
+          },
+          {
+            "en": "I'll call you back.",
+            "id": "Nanti saya telepon balik."
+          },
+          {
+            "en": "Can you hear me?",
+            "id": "Suara saya terdengar?"
+          },
+          {
+            "en": "You're on mute.",
+            "id": "Mic-mu masih mati."
+          },
+          {
+            "en": "Sorry, you're breaking up.",
+            "id": "Maaf, suaramu putus-putus."
+          },
+          {
+            "en": "Could you say that again, please?",
+            "id": "Bisa diulang?"
+          },
+          {
+            "en": "Could you spell that, please?",
+            "id": "Bisa dieja?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Mulai teleponnya",
+        "text": "Sekarang telepon.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "phone-video-calls",
+          "prompt": "Kamu menelepon sebuah perusahaan di Jakarta dan resepsionis mengangkatnya. Mana cara terbaik untuk memulai?",
+          "options": [
+            "Hello, here is Budi. I want to speak Mr Andi.",
+            "Hello, I am Budi. Can I speak with Mr Andi?",
+            "Hello, this is Budi. Could I speak to Mr Andi, please?"
+          ],
+          "answer": 2,
+          "explanation": "Di telepon, katakan **this is** + namamu, dan minta dengan **Could I speak to …, please?** *I am Budi* adalah terjemahan kata per kata, dan *here is Budi* / *I want to speak Mr Andi* salah dan terdengar kasar."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dan jawab",
+        "text": "Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "phone-video-calls",
+          "prompt": "Kamu sedang rapat Zoom dengan timmu. Dengarkan manajermu. Apa jawaban terbaik?",
+          "listen": "Hi Rina, we can see you, but we can't hear anything. I think you're on mute.",
+          "options": [
+            "Sorry, you're breaking up.",
+            "Oh, sorry! Can you hear me now?",
+            "Hold on. Could you spell that, please?"
+          ],
+          "answer": 1,
+          "explanation": "Manajermu bilang kamu **on mute**: mereka sama sekali tidak mendengarmu. Nyalakan mic dan cek: *Can you hear me now?* *You're breaking up* untuk suara yang putus-putus, dan tidak ada yang memintamu mengeja."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk telepon berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · masalah, komplain & telepon",
+          "intro": "Jelaskan masalah dalam tiga bagian, komplain dengan pembuka halus dan satu permintaan, dan pakai ungkapan telepon seperti this is dan Could I speak to …?",
+          "headers": [
+            "Situasi",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Apa masalahnya",
+              "The internet is down. / The app doesn't work.",
+              "internet mati / aplikasi tidak berfungsi"
+            ],
+            [
+              "Kapan mulainya",
+              "It stopped working last night.",
+              "kapan: past simple + waktu selesai"
+            ],
+            [
+              "Sejak kapan?",
+              "Since this morning.",
+              "sejak tadi pagi (jawaban pendek)"
+            ],
+            [
+              "Yang sudah dicoba",
+              "I've restarted the router twice.",
+              "sudah dicoba: present perfect, tanpa waktu"
+            ],
+            [
+              "Pembuka halus",
+              "I'm afraid there's a problem with …",
+              "mohon maaf, ada masalah dengan …"
+            ],
+            [
+              "Menyampaikan komplain",
+              "I'd like to make a complaint about …",
+              "saya ingin komplain tentang …"
+            ],
+            [
+              "Meminta solusi",
+              "Could you …, please? / I'd appreciate it if you could …",
+              "bisa tolong …? / saya akan sangat berterima kasih kalau …"
+            ],
+            [
+              "Menanyakan tindakan mereka",
+              "What can you do about it?",
+              "apa yang bisa Anda lakukan?"
+            ],
+            [
+              "Menyebut siapa kamu (telepon)",
+              "Hello, this is Sari.",
+              "halo, saya Sari (bukan I am)"
+            ],
+            [
+              "Mencari seseorang",
+              "Could I speak to …, please?",
+              "bisa bicara dengan …?"
+            ],
+            [
+              "Meminta menunggu",
+              "Hold on. / One moment, please.",
+              "tunggu sebentar"
+            ],
+            [
+              "Menelepon nanti",
+              "I'll call you back.",
+              "nanti saya telepon balik"
+            ],
+            [
+              "Video call",
+              "Can you hear me? / You're on mute.",
+              "suara saya terdengar? / mic-mu mati"
+            ],
+            [
+              "Sinyal jelek",
+              "Sorry, you're breaking up. Could you say that again?",
+              "suaramu putus-putus, bisa diulang?"
+            ]
+          ],
+          "tips": [
+            "Past simple untuk kapan (It stopped working this morning); present perfect untuk yang sudah dicoba (I've restarted it twice).",
+            "I'm afraid = mohon maaf / sayangnya, bukan saya takut. complain = kata kerja, a complaint = kata benda.",
+            "Di telepon: this is Budi, bukan I am Budi."
+          ],
+          "examples": [
+            {
+              "en": "The router stopped working last night. I've restarted it twice.",
+              "id": "Routernya mati tadi malam. Saya sudah me-restart-nya dua kali."
+            },
+            {
+              "en": "I'd like to make a complaint about my delivery.",
+              "id": "Saya ingin menyampaikan komplain tentang pengiriman saya."
+            },
+            {
+              "en": "Good afternoon, this is Rina from PT Maju Jaya.",
+              "id": "Selamat siang, saya Rina dari PT Maju Jaya."
+            },
+            {
+              "en": "Sorry, I'm in a meeting. I'll call you back.",
+              "id": "Maaf, saya sedang rapat. Nanti saya telepon balik."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini video tentang bahasa Inggris di telepon dan artikel tentang komplain."
+      }
+    ]
+  }
+}

@@ -46,10 +46,13 @@ func QuestionFromPrompt(p curriculum.PracticePrompt, all []curriculum.PracticePr
 		return Question{}, false
 	}
 	answer := p.Expected[0]
+	if badLen(answer, maxShort) {
+		return Question{}, false // a model text, not an option
+	}
 	opts := []string{answer}
 	for j := 0; j < len(all) && len(opts) < 3; j++ {
 		o := all[(j+rotate)%len(all)]
-		if len(o.Expected) == 0 {
+		if len(o.Expected) == 0 || badLen(o.Expected[0], maxShort) {
 			continue
 		}
 		d := o.Expected[0]

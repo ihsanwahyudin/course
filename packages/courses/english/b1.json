@@ -1616,7 +1616,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career",
         "study",
@@ -1667,7 +1667,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career",
         "travel"
@@ -1718,7 +1718,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career",
         "tech"
@@ -1769,7 +1769,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "study"
       ],
@@ -1813,7 +1813,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career",
         "travel"
@@ -1865,23 +1865,59 @@
       "objectives": [
         {
           "id": "grammar-vocabulary",
-          "text": "Grammar and vocabulary from all B1 nodes"
+          "text": "Grammar and vocabulary from all B1 nodes",
+          "from": [
+            "b1-present-perfect",
+            "b1-present-perfect-continuous",
+            "b1-past-continuous",
+            "b1-past-perfect",
+            "b1-used-to",
+            "b1-future-forms",
+            "b1-first-conditional",
+            "b1-second-conditional",
+            "b1-modals-advice",
+            "b1-modals-deduction-present",
+            "b1-passive-intro",
+            "b1-reported-speech-intro",
+            "b1-relative-clauses",
+            "b1-gerunds-infinitives",
+            "b1-so-such-too-enough",
+            "b1-indirect-questions-tags",
+            "b1-linkers-contrast-purpose",
+            "b1-phrasal-verbs",
+            "b1-word-formation",
+            "b1-collocations-basic",
+            "b1-vocab-feelings",
+            "b1-vocab-work-education",
+            "b1-vocab-media-tech",
+            "b1-vocab-environment-travel"
+          ]
         },
         {
           "id": "reading-listening",
-          "text": "Reading and listening with new texts and audio"
+          "text": "Reading and listening with new texts and audio",
+          "from": [
+            "b1-listening-main-points",
+            "b1-reading-articles"
+          ]
         },
         {
           "id": "writing-speaking",
-          "text": "Writing (an email and a story or article of about 100 words) and speaking tasks"
-        },
-        {
-          "id": "pass-mark",
-          "text": "Score at least 70 in every strand and 80 on average"
+          "text": "Writing (an email and a story or article of about 100 words) and speaking tasks",
+          "from": [
+            "b1-pron-rhythm-intonation",
+            "b1-pron-clusters-pairs",
+            "b1-telling-stories",
+            "b1-giving-opinions",
+            "b1-problems-calls",
+            "b1-emails",
+            "b1-writing-stories-articles",
+            "b1-mediation-summaries"
+          ]
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "i18n": {
         "id": {
           "title": "Checkpoint B1",
@@ -1890,8 +1926,7 @@
           "objectives": {
             "grammar-vocabulary": "Grammar dan kosakata dari semua node B1",
             "reading-listening": "Reading dan listening dengan teks dan audio baru",
-            "writing-speaking": "Tugas writing (email serta cerita atau artikel sekitar 100 kata) dan speaking",
-            "pass-mark": "Meraih nilai minimal 70 di setiap strand dan rata-rata 80"
+            "writing-speaking": "Tugas writing (email serta cerita atau artikel sekitar 100 kata) dan speaking"
           }
         }
       }

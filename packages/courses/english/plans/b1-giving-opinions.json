@@ -1,0 +1,714 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to give your opinion with a reason, agree with people, and disagree politely. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Giving your opinion",
+        "text": "People ask you all the time: what do you think? You already know **I think** from A2. Let's add more ways to start.",
+        "body": "**I think …** is the everyday starter. **In my opinion, …** is a bit more formal. **Personally, …** and **For me, …** say it's *your* view. **I believe …** is stronger. For a 'no' opinion, say **I don't think …** (*I don't think it's a good idea*).\n**Indonesian trap:** *Menurut saya* is NOT *According to me*: that sounds strange. **according to** is for other people or sources (*according to the news*).",
+        "pairs": [
+          {
+            "en": "I think …",
+            "id": "menurut saya / saya rasa"
+          },
+          {
+            "en": "In my opinion, …",
+            "id": "menurut pendapat saya (lebih formal)"
+          },
+          {
+            "en": "Personally, …",
+            "id": "secara pribadi"
+          },
+          {
+            "en": "For me, …",
+            "id": "bagi saya"
+          },
+          {
+            "en": "I believe …",
+            "id": "saya yakin (lebih kuat)"
+          },
+          {
+            "en": "I don't think …",
+            "id": "menurut saya tidak …"
+          },
+          {
+            "en": "according to the news",
+            "id": "menurut berita (orang / sumber lain)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina is talking about working from home.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-and-justify",
+          "options": [
+            "According to me, working from home is more relaxing.",
+            "For me, working from home is more relaxing.",
+            "In my opinion, I am think working from home is more relaxing."
+          ],
+          "answer": 1,
+          "prompt": "Rina wants to say: 'Menurut saya, kerja dari rumah lebih santai.' Which is the most natural?",
+          "explanation": "**For me, …** is a natural way to give your own opinion. *According to me* sounds strange: according to is for other people or sources. And *think* is a verb, so there's no *am*, and one starter is enough."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Say why",
+        "text": "An opinion with no reason sounds weak. Give it three parts: **opinion → reason → example**.",
+        "body": "**because** + subject + verb: *because the roads are busy*. **because of** + a noun (a thing): *because of the traffic*. **The main reason is that …** for your biggest reason. **For example, …** for a real case.\n**That's why …** (*makanya*) goes the other way: the reason comes **first**, then *That's why* + your opinion: *The roads are busy. That's why I take the KRL.*\nTo see both sides, use **although**.",
+        "pairs": [
+          {
+            "en": "because + subject + verb",
+            "id": "karena + subjek + kata kerja"
+          },
+          {
+            "en": "because of + noun",
+            "id": "karena + kata benda"
+          },
+          {
+            "en": "The main reason is that …",
+            "id": "Alasan utamanya adalah …"
+          },
+          {
+            "en": "For example, …",
+            "id": "Contohnya, …"
+          },
+          {
+            "en": "That's why …",
+            "id": "Makanya … / Itulah sebabnya …"
+          },
+          {
+            "en": "Although …, I think …",
+            "id": "Meskipun …, menurut saya …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Opinions with reasons",
+        "text": "Here are four hot topics. Look at the starter, the reason and the example in each one.",
+        "body": "Notice the order with **That's why**: reason first (*My office is far*), then the decision. And **although** shows you can see the other side too.",
+        "examples": [
+          {
+            "en": "I think working from home is great because I save two hours a day.",
+            "id": "Menurut saya kerja dari rumah itu bagus karena saya hemat dua jam sehari."
+          },
+          {
+            "en": "In my opinion, kids under 13 shouldn't use social media. The main reason is that they can meet strangers online.",
+            "id": "Menurut pendapat saya, anak di bawah 13 tahun sebaiknya tidak memakai media sosial. Alasan utamanya adalah mereka bisa bertemu orang asing di internet."
+          },
+          {
+            "en": "Personally, I like a four-day week. For example, I could visit my parents in Bandung every weekend.",
+            "id": "Secara pribadi, saya suka empat hari kerja seminggu. Contohnya, saya bisa mengunjungi orang tua di Bandung setiap akhir pekan."
+          },
+          {
+            "en": "My office is far from the station. That's why I ride a motorbike.",
+            "id": "Kantor saya jauh dari stasiun. Makanya saya naik motor."
+          },
+          {
+            "en": "Although motorbikes are fast, I believe the KRL is safer.",
+            "id": "Meskipun motor itu cepat, saya yakin KRL lebih aman."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi gives his opinion about motorbikes. Look at what comes after the gap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-and-justify",
+          "options": [
+            "because of",
+            "because",
+            "so that"
+          ],
+          "answer": 1,
+          "prompt": "Complete Budi's opinion: I think motorbikes are dangerous in Jakarta ___ many riders go too fast.",
+          "explanation": "After the gap comes a subject + verb (*many riders go*), and it's the reason, so use **because**. *because of* needs only a noun (*because of the traffic*). *so that* is for a goal (supaya), not a reason."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Agreeing",
+        "text": "When you share someone's opinion, say it. Here's the biggest Indonesian trap in this lesson.",
+        "body": "*Saya setuju* feels like *saya senang* (*I **am** happy*), so learners say `I am agree` ✗. But **agree** is a **verb** (an action word, like *like* or *want*), so there's **no am**:\n*I like* → **I agree** · *I don't like* → **I don't agree** · *Do you like …?* → **Do you agree?** · *she likes* → **she agrees**.\nagree **with** a person or idea: *I agree with Sari.*",
+        "pairs": [
+          {
+            "en": "I agree.",
+            "id": "Saya setuju."
+          },
+          {
+            "en": "I agree with you.",
+            "id": "Saya setuju denganmu."
+          },
+          {
+            "en": "Exactly!",
+            "id": "Betul sekali! / Persis!"
+          },
+          {
+            "en": "That's true.",
+            "id": "Memang benar."
+          },
+          {
+            "en": "You're right.",
+            "id": "Kamu benar."
+          },
+          {
+            "en": "I think so too.",
+            "id": "Saya juga berpikir begitu."
+          },
+          {
+            "en": "I don't agree.",
+            "id": "Saya tidak setuju."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Fix the sentence",
+        "text": "There's no am in the tiles. That's on purpose.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "agree-and-disagree",
+          "tokens": [
+            "idea",
+            "agree",
+            "your",
+            "I",
+            "with"
+          ],
+          "solution": "I agree with your idea.",
+          "prompt": "Budi wrote in the team chat: 'I am agree with your idea.' Fix it: arrange the words.",
+          "explanation": "**agree** is a verb, so it doesn't need *am*: **I agree with your idea.** It works like *I like your idea*. Use **with** before the person or idea."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Disagreeing politely",
+        "text": "Disagreeing is different in every culture. Let's find the middle way.",
+        "body": "Many English speakers **soften** disagreement: *You're wrong* sounds rude at work. Many Indonesians **avoid** it (*sungkan*) and just say *Iya, Pak*. But in English, silence or *Yes, yes* means **you agree**.\n**The middle way:** 1) show you heard the idea, 2) **but** + your view, 3) a reason.\n**not really** makes it softer: *I don't really agree* = *kurang setuju*.",
+        "pairs": [
+          {
+            "en": "I see what you mean, but …",
+            "id": "Saya paham maksudmu, tapi …"
+          },
+          {
+            "en": "That's true, but …",
+            "id": "Memang benar, tapi …"
+          },
+          {
+            "en": "I'm not sure about that.",
+            "id": "Saya kurang yakin soal itu."
+          },
+          {
+            "en": "I don't really agree, because …",
+            "id": "Saya kurang setuju, karena …"
+          },
+          {
+            "en": "That's a good point. However, …",
+            "id": "Itu poin yang bagus. Namun, …"
+          },
+          {
+            "en": "You're wrong.",
+            "id": "Kamu salah. (terlalu langsung)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Your boss has a new idea. You see it differently.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "agree-and-disagree",
+          "options": [
+            "You're wrong. That's a terrible idea.",
+            "Yes, Pak. Good idea.",
+            "I see what you mean, but I think we need some office days too."
+          ],
+          "answer": 2,
+          "prompt": "At a meeting, Pak Hasan says: 'From next month, everyone should work from home every day.' You don't agree, and you want to say so politely. What do you say?",
+          "explanation": "**I see what you mean, but …** shows you heard his idea, then gives your view: clear and polite. *You're wrong* is too direct for a meeting. *Yes, Pak. Good idea.* is the *sungkan* trap: in English it means you agree."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "A colleague shares an opinion at lunch. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "agree-and-disagree",
+          "listen": "In my opinion, motorbikes are the best way to get around Jakarta. They're cheap, and they're fast, even in heavy traffic.",
+          "options": [
+            "You're wrong. Motorbikes are terrible.",
+            "That's true, they're cheap. But they can be dangerous on busy roads.",
+            "That's true. But working from home can be lonely."
+          ],
+          "answer": 1,
+          "prompt": "Listen to your colleague's opinion. Choose the best reply: polite, and about what you heard.",
+          "explanation": "Your colleague talked about **motorbikes**: cheap and fast. **That's true, they're cheap. But …** agrees with part of it, then gives a different view with a reason. *You're wrong* is too direct, and the reply about working from home doesn't answer what you heard."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next meeting or discussion.",
+        "artifact": {
+          "title": "Cheat sheet · giving opinions",
+          "intro": "Opinion → reason → example. Agree simply; disagree clearly but softly.",
+          "headers": [
+            "Job",
+            "Say",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Give your opinion",
+              "I think … / In my opinion, … / Personally, … / For me, …",
+              "In my opinion, the MRT is the best way to get to work."
+            ],
+            [
+              "A stronger opinion",
+              "I believe …",
+              "I believe kids need time away from screens."
+            ],
+            [
+              "A 'no' opinion",
+              "I don't think …",
+              "I don't think a four-day week works for every job."
+            ],
+            [
+              "Give a reason",
+              "because + subject + verb / because of + noun",
+              "… because the traffic is terrible."
+            ],
+            [
+              "Your biggest reason",
+              "The main reason is that …",
+              "The main reason is that I save two hours a day."
+            ],
+            [
+              "An example",
+              "For example, …",
+              "For example, I can cook lunch at home."
+            ],
+            [
+              "Reason → result",
+              "That's why …",
+              "The roads are busy. That's why I take the KRL."
+            ],
+            [
+              "Agree",
+              "I agree (with you). / Exactly! / That's true. / You're right.",
+              "I agree with Rina."
+            ],
+            [
+              "Partly agree",
+              "That's true, but … / I see what you mean, but …",
+              "That's true, but the KRL is crowded at seven."
+            ],
+            [
+              "Disagree politely",
+              "I'm not sure about that. / I don't really agree, because …",
+              "I don't really agree, because some jobs need five days."
+            ],
+            [
+              "Too direct (avoid at work)",
+              "You're wrong. / That's not true.",
+              "→ I see what you mean, but …"
+            ]
+          ],
+          "tips": [
+            "**Menurut saya** = *I think / In my opinion*, not *According to me* (according to is for other people or sources).",
+            "**agree** is a verb: `I am agree` ✗ → **I agree** ✓, **I don't agree**, **Do you agree?**, **she agrees**.",
+            "Don't stay quiet or say *Yes, yes* when you disagree: in English that means you agree. Show you heard the idea, then **but** + your view + a reason."
+          ],
+          "examples": [
+            {
+              "en": "Personally, I think working from home is great because I save two hours a day.",
+              "id": "Secara pribadi, menurut saya kerja dari rumah itu bagus karena saya hemat dua jam sehari."
+            },
+            {
+              "en": "Although motorbikes are fast, I believe the KRL is safer.",
+              "id": "Meskipun motor itu cepat, saya yakin KRL lebih aman."
+            },
+            {
+              "en": "Exactly! I think so too.",
+              "id": "Betul sekali! Saya juga berpikir begitu."
+            },
+            {
+              "en": "I'm not sure about that. Some kids use social media to study.",
+              "id": "Saya kurang yakin soal itu. Sebagian anak memakai media sosial untuk belajar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here's a B1 video page from the British Council and a video lesson, all in English."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar menyampaikan pendapat beserta alasannya, menyatakan setuju, dan tidak setuju dengan sopan. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menyampaikan pendapat",
+        "text": "Orang sering bertanya: menurutmu bagaimana? Kamu sudah tahu **I think** dari A2. Yuk tambah cara lain untuk memulai.",
+        "body": "**I think …** adalah pembuka sehari-hari. **In my opinion, …** sedikit lebih formal. **Personally, …** dan **For me, …** menunjukkan itu pandangan*mu*. **I believe …** lebih kuat. Untuk pendapat 'tidak', katakan **I don't think …** (*I don't think it's a good idea*).\n**Jebakan bahasa Indonesia:** *Menurut saya* BUKAN *According to me*: itu terdengar aneh. **according to** dipakai untuk orang atau sumber lain (*according to the news* = menurut berita).",
+        "pairs": [
+          {
+            "en": "I think …",
+            "id": "menurut saya / saya rasa"
+          },
+          {
+            "en": "In my opinion, …",
+            "id": "menurut pendapat saya (lebih formal)"
+          },
+          {
+            "en": "Personally, …",
+            "id": "secara pribadi"
+          },
+          {
+            "en": "For me, …",
+            "id": "bagi saya"
+          },
+          {
+            "en": "I believe …",
+            "id": "saya yakin (lebih kuat)"
+          },
+          {
+            "en": "I don't think …",
+            "id": "menurut saya tidak …"
+          },
+          {
+            "en": "according to the news",
+            "id": "menurut berita (orang / sumber lain)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina sedang membicarakan kerja dari rumah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-and-justify",
+          "options": [
+            "According to me, working from home is more relaxing.",
+            "For me, working from home is more relaxing.",
+            "In my opinion, I am think working from home is more relaxing."
+          ],
+          "answer": 1,
+          "prompt": "Rina ingin bilang: 'Menurut saya, kerja dari rumah lebih santai.' Mana yang paling alami?",
+          "explanation": "**For me, …** adalah cara alami untuk memberi pendapatmu sendiri. *According to me* terdengar aneh: according to dipakai untuk orang atau sumber lain. Dan *think* adalah kata kerja, jadi tanpa *am*, dan satu pembuka saja sudah cukup."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Katakan kenapa",
+        "text": "Pendapat tanpa alasan terdengar lemah. Beri tiga bagian: **pendapat → alasan → contoh**.",
+        "body": "**because** + subjek + kata kerja: *because the roads are busy*. **because of** + kata benda (benda/hal): *because of the traffic*. **The main reason is that …** untuk alasan terbesarmu. **For example, …** untuk kasus nyata.\n**That's why …** (*makanya*) arahnya terbalik: alasannya datang **lebih dulu**, lalu *That's why* + pendapatmu: *The roads are busy. That's why I take the KRL.*\nUntuk melihat dua sisi, pakai **although**.",
+        "pairs": [
+          {
+            "en": "because + subject + verb",
+            "id": "karena + subjek + kata kerja"
+          },
+          {
+            "en": "because of + noun",
+            "id": "karena + kata benda"
+          },
+          {
+            "en": "The main reason is that …",
+            "id": "Alasan utamanya adalah …"
+          },
+          {
+            "en": "For example, …",
+            "id": "Contohnya, …"
+          },
+          {
+            "en": "That's why …",
+            "id": "Makanya … / Itulah sebabnya …"
+          },
+          {
+            "en": "Although …, I think …",
+            "id": "Meskipun …, menurut saya …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pendapat beserta alasan",
+        "text": "Ini empat topik hangat. Perhatikan pembuka, alasan dan contoh di masing-masing.",
+        "body": "Perhatikan urutannya dengan **That's why**: alasan dulu (*My office is far*), lalu keputusannya. Dan **although** menunjukkan kamu juga bisa melihat sisi lainnya.",
+        "examples": [
+          {
+            "en": "I think working from home is great because I save two hours a day.",
+            "id": "Menurut saya kerja dari rumah itu bagus karena saya hemat dua jam sehari."
+          },
+          {
+            "en": "In my opinion, kids under 13 shouldn't use social media. The main reason is that they can meet strangers online.",
+            "id": "Menurut pendapat saya, anak di bawah 13 tahun sebaiknya tidak memakai media sosial. Alasan utamanya adalah mereka bisa bertemu orang asing di internet."
+          },
+          {
+            "en": "Personally, I like a four-day week. For example, I could visit my parents in Bandung every weekend.",
+            "id": "Secara pribadi, saya suka empat hari kerja seminggu. Contohnya, saya bisa mengunjungi orang tua di Bandung setiap akhir pekan."
+          },
+          {
+            "en": "My office is far from the station. That's why I ride a motorbike.",
+            "id": "Kantor saya jauh dari stasiun. Makanya saya naik motor."
+          },
+          {
+            "en": "Although motorbikes are fast, I believe the KRL is safer.",
+            "id": "Meskipun motor itu cepat, saya yakin KRL lebih aman."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi memberi pendapatnya tentang motor. Lihat apa yang datang setelah titik-titik.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-and-justify",
+          "options": [
+            "because of",
+            "because",
+            "so that"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi pendapat Budi: I think motorbikes are dangerous in Jakarta ___ many riders go too fast.",
+          "explanation": "Setelah titik-titik ada subjek + kata kerja (*many riders go*), dan itu alasannya, jadi pakai **because**. *because of* hanya diikuti kata benda (*because of the traffic*). *so that* untuk tujuan (supaya), bukan alasan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menyatakan setuju",
+        "text": "Kalau kamu sependapat dengan seseorang, katakan. Ini jebakan bahasa Indonesia terbesar di pelajaran ini.",
+        "body": "*Saya setuju* terasa seperti *saya senang* (*I **am** happy*), jadi pelajar bilang `I am agree` ✗. Tapi **agree** adalah **kata kerja** (kata tindakan, seperti *like* atau *want*), jadi **tanpa am**:\n*I like* → **I agree** · *I don't like* → **I don't agree** · *Do you like …?* → **Do you agree?** · *she likes* → **she agrees**.\nagree **with** orang atau ide: *I agree with Sari.*",
+        "pairs": [
+          {
+            "en": "I agree.",
+            "id": "Saya setuju."
+          },
+          {
+            "en": "I agree with you.",
+            "id": "Saya setuju denganmu."
+          },
+          {
+            "en": "Exactly!",
+            "id": "Betul sekali! / Persis!"
+          },
+          {
+            "en": "That's true.",
+            "id": "Memang benar."
+          },
+          {
+            "en": "You're right.",
+            "id": "Kamu benar."
+          },
+          {
+            "en": "I think so too.",
+            "id": "Saya juga berpikir begitu."
+          },
+          {
+            "en": "I don't agree.",
+            "id": "Saya tidak setuju."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Perbaiki kalimatnya",
+        "text": "Tidak ada am di kotak-kotak katanya. Itu disengaja.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "agree-and-disagree",
+          "tokens": [
+            "idea",
+            "agree",
+            "your",
+            "I",
+            "with"
+          ],
+          "solution": "I agree with your idea.",
+          "prompt": "Budi menulis di grup kantor: 'I am agree with your idea.' Perbaiki: susun kata-katanya.",
+          "explanation": "**agree** adalah kata kerja, jadi tidak butuh *am*: **I agree with your idea.** Polanya sama seperti *I like your idea*. Pakai **with** sebelum orang atau idenya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tidak setuju dengan sopan",
+        "text": "Cara menyatakan tidak setuju berbeda di setiap budaya. Yuk cari jalan tengahnya.",
+        "body": "Banyak penutur bahasa Inggris **melembutkan** ketidaksetujuan: *You're wrong* terdengar kasar di kantor. Banyak orang Indonesia **menghindarinya** (*sungkan*) dan cuma bilang *Iya, Pak*. Tapi dalam bahasa Inggris, diam atau *Yes, yes* berarti **kamu setuju**.\n**Jalan tengahnya:** 1) tunjukkan kamu mendengar idenya, 2) **but** + pandanganmu, 3) alasan.\n**not really** membuatnya lebih lembut: *I don't really agree* = *kurang setuju*.",
+        "pairs": [
+          {
+            "en": "I see what you mean, but …",
+            "id": "Saya paham maksudmu, tapi …"
+          },
+          {
+            "en": "That's true, but …",
+            "id": "Memang benar, tapi …"
+          },
+          {
+            "en": "I'm not sure about that.",
+            "id": "Saya kurang yakin soal itu."
+          },
+          {
+            "en": "I don't really agree, because …",
+            "id": "Saya kurang setuju, karena …"
+          },
+          {
+            "en": "That's a good point. However, …",
+            "id": "Itu poin yang bagus. Namun, …"
+          },
+          {
+            "en": "You're wrong.",
+            "id": "Kamu salah. (terlalu langsung)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Atasanmu punya ide baru. Kamu melihatnya berbeda.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "agree-and-disagree",
+          "options": [
+            "You're wrong. That's a terrible idea.",
+            "Yes, Pak. Good idea.",
+            "I see what you mean, but I think we need some office days too."
+          ],
+          "answer": 2,
+          "prompt": "Di rapat, Pak Hasan bilang: 'From next month, everyone should work from home every day.' Kamu tidak setuju, dan ingin mengatakannya dengan sopan. Apa yang kamu katakan?",
+          "explanation": "**I see what you mean, but …** menunjukkan kamu mendengar idenya, lalu memberi pandanganmu: jelas dan sopan. *You're wrong* terlalu langsung untuk rapat. *Yes, Pak. Good idea.* adalah jebakan *sungkan*: dalam bahasa Inggris artinya kamu setuju."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan balas",
+        "text": "Seorang rekan kerja menyampaikan pendapat saat makan siang. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "agree-and-disagree",
+          "listen": "In my opinion, motorbikes are the best way to get around Jakarta. They're cheap, and they're fast, even in heavy traffic.",
+          "options": [
+            "You're wrong. Motorbikes are terrible.",
+            "That's true, they're cheap. But they can be dangerous on busy roads.",
+            "That's true. But working from home can be lonely."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan pendapat rekan kerjamu. Pilih balasan terbaik: sopan, dan sesuai dengan yang kamu dengar.",
+          "explanation": "Rekan kerjamu membicarakan **motor**: murah dan cepat. **That's true, they're cheap. But …** menyetujui sebagian, lalu memberi pandangan lain dengan alasan. *You're wrong* terlalu langsung, dan balasan tentang kerja dari rumah tidak menjawab apa yang kamu dengar."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk rapat atau diskusimu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · menyampaikan pendapat",
+          "intro": "Pendapat → alasan → contoh. Setuju dengan sederhana; tidak setuju dengan jelas tapi lembut.",
+          "headers": [
+            "Fungsi",
+            "Katakan",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Memberi pendapat",
+              "I think … / In my opinion, … / Personally, … / For me, …",
+              "In my opinion, the MRT is the best way to get to work."
+            ],
+            [
+              "Pendapat yang lebih kuat",
+              "I believe …",
+              "I believe kids need time away from screens."
+            ],
+            [
+              "Pendapat 'tidak'",
+              "I don't think …",
+              "I don't think a four-day week works for every job."
+            ],
+            [
+              "Memberi alasan",
+              "because + subjek + kata kerja / because of + kata benda",
+              "… because the traffic is terrible."
+            ],
+            [
+              "Alasan terbesarmu",
+              "The main reason is that …",
+              "The main reason is that I save two hours a day."
+            ],
+            [
+              "Contoh",
+              "For example, …",
+              "For example, I can cook lunch at home."
+            ],
+            [
+              "Alasan → akibat (makanya)",
+              "That's why …",
+              "The roads are busy. That's why I take the KRL."
+            ],
+            [
+              "Setuju",
+              "I agree (with you). / Exactly! / That's true. / You're right.",
+              "I agree with Rina."
+            ],
+            [
+              "Setuju sebagian",
+              "That's true, but … / I see what you mean, but …",
+              "That's true, but the KRL is crowded at seven."
+            ],
+            [
+              "Tidak setuju dengan sopan",
+              "I'm not sure about that. / I don't really agree, because …",
+              "I don't really agree, because some jobs need five days."
+            ],
+            [
+              "Terlalu langsung (hindari di kantor)",
+              "You're wrong. / That's not true.",
+              "→ I see what you mean, but …"
+            ]
+          ],
+          "tips": [
+            "**Menurut saya** = *I think / In my opinion*, bukan *According to me* (according to untuk orang atau sumber lain).",
+            "**agree** adalah kata kerja: `I am agree` ✗ → **I agree** ✓, **I don't agree**, **Do you agree?**, **she agrees**.",
+            "Jangan diam atau bilang *Yes, yes* saat kamu tidak setuju: dalam bahasa Inggris itu berarti kamu setuju. Tunjukkan kamu mendengar idenya, lalu **but** + pandanganmu + alasan."
+          ],
+          "examples": [
+            {
+              "en": "Personally, I think working from home is great because I save two hours a day.",
+              "id": "Secara pribadi, menurut saya kerja dari rumah itu bagus karena saya hemat dua jam sehari."
+            },
+            {
+              "en": "Although motorbikes are fast, I believe the KRL is safer.",
+              "id": "Meskipun motor itu cepat, saya yakin KRL lebih aman."
+            },
+            {
+              "en": "Exactly! I think so too.",
+              "id": "Betul sekali! Saya juga berpikir begitu."
+            },
+            {
+              "en": "I'm not sure about that. Some kids use social media to study.",
+              "id": "Saya kurang yakin soal itu. Sebagian anak memakai media sosial untuk belajar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini halaman video B1 dari British Council dan sebuah video pelajaran, seluruhnya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll write in English: a short story of about 100 words, and a short review with your opinion. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "A story in about 100 words",
+        "text": "You already know how to tell a story out loud. Writing one uses the same shape, plus a few extras.",
+        "body": "- **A title**: short, and it makes people curious.\n- **A first line that hooks the reader** (*hook* = kail): a surprise, a problem or a strong feeling. Not a long greeting like *Hello everyone, my name is Budi and today I want to tell you…* ✗\n- **Three short paragraphs**: the scene (was/were + -ing), the events (past simple; had + third form to go back), the ending and how you felt.\n- **About 100 words** (80–120).",
+        "pairs": [
+          {
+            "en": "a title",
+            "id": "judul"
+          },
+          {
+            "en": "a hook",
+            "id": "kalimat pengait (yang bikin penasaran)"
+          },
+          {
+            "en": "the scene",
+            "id": "latar (kapan, di mana, apa yang sedang terjadi)"
+          },
+          {
+            "en": "the events",
+            "id": "kejadian-kejadiannya"
+          },
+          {
+            "en": "the ending",
+            "id": "akhir cerita"
+          },
+          {
+            "en": "a paragraph",
+            "id": "paragraf"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A 106-word story",
+        "text": "Here's a whole story. Look at what each part does.",
+        "body": "Title → hook (a problem: why five hours?) → paragraph 1, the scene (**was raining, was standing**) → paragraph 2, the events (**came, got on, realised**; **had taken** goes back) → paragraph 3, the ending and a feeling (**couldn't stop laughing**).",
+        "examples": [
+          {
+            "en": "The Longest Trip Home",
+            "id": "Perjalanan Pulang Terpanjang"
+          },
+          {
+            "en": "I only wanted to go home, but it took me five hours.",
+            "id": "Aku cuma ingin pulang, tapi butuh lima jam."
+          },
+          {
+            "en": "It was a Friday evening in Jakarta, and it was raining heavily. I was standing at the bus stop with hundreds of other tired workers.",
+            "id": "Waktu itu Jumat sore di Jakarta, dan hujan deras. Aku sedang berdiri di halte bersama ratusan pekerja lain yang capek."
+          },
+          {
+            "en": "After an hour, a bus finally came, and I got on. Twenty minutes later, I realised I had taken the wrong bus! I got off and tried to order an ojek. Unfortunately, my phone had died.",
+            "id": "Setelah satu jam, akhirnya bus datang, dan aku naik. Dua puluh menit kemudian, aku sadar aku salah naik bus! Aku turun dan mencoba memesan ojek. Sayangnya, HP-ku sudah mati."
+          },
+          {
+            "en": "In the end, a kind woman at a warung let me use her phone, and I got home at midnight. I was wet and exhausted, but I couldn't stop laughing. What a night!",
+            "id": "Akhirnya, seorang ibu yang baik di warung meminjamkan HP-nya, dan aku sampai di rumah tengah malam. Aku basah dan capek sekali, tapi aku tidak bisa berhenti tertawa. Malam yang luar biasa!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas is writing a story about his first day at a new job.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-story",
+          "prompt": "Which first line hooks the reader best?",
+          "options": [
+            "Hello everyone, my name is Dimas, and today I want to tell you a story about my new job.",
+            "Last Monday I went to my new office.",
+            "My first day at my new job was a complete disaster."
+          ],
+          "answer": 2,
+          "explanation": "**A complete disaster** is a strong feeling and a problem: the reader wants to know what went wrong. The long greeting wastes your best line (a written story isn't a speech), and 'I went to my new office' is true but gives no reason to read on."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Short sentences, every verb in the past",
+        "text": "Two habits from Indonesian can make English writing hard to read.",
+        "body": "**1. 'dan … dan … dan …'** In Indonesian we often join everything in one long sentence. In English, write **one or two ideas per sentence** and choose a linker that shows **how** they connect: **then / after that** (order), **suddenly** (surprise), **but / However, / although** (contrast), **because / so** (reason, result), **to / so that** (purpose). One linker per sentence: not *Although …, but …* ✗.\n**2. No tense marking.** In a past story, **every** verb changes: *I got off and I **ordered** an ojek* (not *I order*).",
+        "pairs": [
+          {
+            "en": "then / after that",
+            "id": "lalu / setelah itu"
+          },
+          {
+            "en": "suddenly",
+            "id": "tiba-tiba"
+          },
+          {
+            "en": "However, …",
+            "id": "Namun, … (kalimat baru)"
+          },
+          {
+            "en": "although",
+            "id": "meskipun"
+          },
+          {
+            "en": "so",
+            "id": "jadi (akibat)"
+          },
+          {
+            "en": "so that",
+            "id": "supaya (tujuan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari is writing about a late night in Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-story",
+          "prompt": "Complete Sari's story: I ran all the way to the station, but I was too late. The last KRL ___.",
+          "options": [
+            "already leaves",
+            "had already left",
+            "has already left"
+          ],
+          "answer": 1,
+          "explanation": "The train left **before** Sari got to the station, so go back with had + third form: **had already left**. 'already leaves' is the Indonesian no-tense trap, and 'has already left' is for news now, not for a past story."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One paragraph, one main idea",
+        "text": "Now the paragraphs. In the reading lesson you looked for the main idea. Now you write it.",
+        "body": "Each paragraph has **one main idea**, and in English the **first sentence** usually says it: the **topic sentence** (*kalimat utama*, like *paragraf deduktif* at school). The other sentences **support** it with examples, reasons and details.\nA good topic sentence isn't **too narrow** (one detail: *A cup costs Rp28,000.*) or **too broad** (*Bandung is a city in Indonesia.*).\n**A new main idea = a new paragraph.** Online, leave an empty line between paragraphs.",
+        "pairs": [
+          {
+            "en": "a topic sentence",
+            "id": "kalimat utama"
+          },
+          {
+            "en": "a supporting sentence",
+            "id": "kalimat penjelas"
+          },
+          {
+            "en": "the main idea",
+            "id": "ide pokok"
+          },
+          {
+            "en": "a detail",
+            "id": "detail, rincian"
+          },
+          {
+            "en": "too narrow / too broad",
+            "id": "terlalu sempit / terlalu luas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A paragraph from Budi's post for his campus magazine has lost its first sentence.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "topic-sentences",
+          "prompt": "Choose the best topic sentence for this paragraph: '___ You can borrow books for free, and the Wi-Fi is fast. There are quiet rooms for study, and on Saturdays there are free English classes.'",
+          "options": [
+            "The new city library is a great place for students.",
+            "I went to the library last Saturday.",
+            "The library has fast Wi-Fi."
+          ],
+          "answer": 0,
+          "explanation": "Free books, fast Wi-Fi, quiet rooms and free classes all support one idea: **the library is a great place for students**. 'The library has fast Wi-Fi' is only one detail (too narrow), and 'I went to the library' is a single event, not the main idea."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "A short article or review",
+        "text": "A review gives your opinion of a place, a film or a product. A short article gives ideas about a topic. Both have the same shape.",
+        "body": "1. **A title** and an **opening question or a surprising fact**: *Where can you drink good coffee next to rice fields?*\n2. **2–3 paragraphs**, each with a topic sentence: what it is, the good, the bad (**However, …** / **although**).\n3. **Your opinion with reasons**: *In my opinion, … because …* (not *In my opinion, I think* ✗).\n4. **A recommendation**: *I'd recommend* + a noun or -ing, *It's worth* + -ing. Not *I recommend you to try* ✗ or *It's worth to visit* ✗. Learn these two as phrases.",
+        "pairs": [
+          {
+            "en": "In my opinion, …",
+            "id": "Menurutku, …"
+          },
+          {
+            "en": "I'd recommend the soto.",
+            "id": "Aku sarankan soto-nya."
+          },
+          {
+            "en": "I'd recommend going early.",
+            "id": "Aku sarankan datang lebih awal."
+          },
+          {
+            "en": "It's worth visiting.",
+            "id": "Layak dikunjungi."
+          },
+          {
+            "en": "If you like coffee, you'll love it.",
+            "id": "Kalau kamu suka kopi, kamu pasti suka tempat ini."
+          },
+          {
+            "en": "You should try the pisang goreng.",
+            "id": "Kamu harus coba pisang gorengnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina is reviewing a homestay in Yogyakarta. She wants to show the good after the bad.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "article-review",
+          "prompt": "Complete Rina's review: The homestay is a bit far from the city centre. ___, it's quiet, clean and only Rp250,000 a night.",
+          "options": [
+            "Although",
+            "Because of",
+            "However"
+          ],
+          "answer": 2,
+          "explanation": "A new sentence that turns to the good side starts with **However,** (namun). **Although** joins two parts in one sentence and needs a subject + verb after it (not a comma), and **Because of** gives a reason, not a contrast."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Order the review",
+        "text": "Budi wrote a review of a warung, but the paragraphs are mixed up.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "article-review",
+          "prompt": "Put Budi's review in order.\nA: In my opinion, it's the best soto in Jakarta. I'd recommend going early, before the lunch crowd.\nB: Have you ever tried soto Betawi with extra emping? Last Sunday I had lunch at Warung Bu Ani in Tebet.\nC: The soto was rich and hot, and a bowl costs only Rp25,000. However, the warung is small, and we waited twenty minutes for a table.",
+          "options": [
+            "B – C – A",
+            "A – B – C",
+            "C – A – B"
+          ],
+          "answer": 0,
+          "explanation": "**B** opens with a question to catch the reader. **C** gives the good and the bad (**However, …**). **A** ends with the opinion and a recommendation (**I'd recommend going early**)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it next to you when you write.",
+        "artifact": {
+          "title": "Cheat sheet · stories & short articles",
+          "intro": "A story: title → hook → scene → events → ending + feeling. A review: title → opening → the good → the bad → opinion → recommendation. One main idea per paragraph, topic sentence first.",
+          "headers": [
+            "Part",
+            "What to write",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Title",
+              "short, makes people curious",
+              "The Longest Trip Home"
+            ],
+            [
+              "Hook (story)",
+              "a surprise, a problem, a feeling",
+              "I only wanted to go home, but it took me five hours."
+            ],
+            [
+              "Scene",
+              "was/were + -ing",
+              "It was raining, and I was standing at the bus stop."
+            ],
+            [
+              "Events",
+              "past simple; had + third form to go back",
+              "I realised I had taken the wrong bus."
+            ],
+            [
+              "Ending",
+              "what happened + how you felt",
+              "In the end, I got home at midnight. What a night!"
+            ],
+            [
+              "Opening (review)",
+              "a question or a surprising fact",
+              "Where can you drink good coffee next to rice fields?"
+            ],
+            [
+              "Topic sentence",
+              "the main idea, first in the paragraph",
+              "The view is the best thing about this café."
+            ],
+            [
+              "Contrast",
+              "However, (new sentence) / although",
+              "However, the café isn't perfect."
+            ],
+            [
+              "Opinion",
+              "In my opinion, … because …",
+              "In my opinion, it's perfect for a slow morning."
+            ],
+            [
+              "Recommendation",
+              "I'd recommend + noun / -ing; It's worth + -ing",
+              "I'd recommend going on a weekday. It's worth visiting."
+            ]
+          ],
+          "tips": [
+            "No 'and … and … and …' chains: one or two ideas per sentence, one linker per sentence (not **Although …, but …**).",
+            "In a story, check every verb: **I got off and ordered an ojek** (not 'and I order').",
+            "Not 'I recommend you to try' or 'It's worth to visit': **I'd recommend going early** / **It's worth visiting**."
+          ],
+          "examples": [
+            {
+              "en": "My first day at my new job was a complete disaster.",
+              "id": "Hari pertamaku di kerjaan baru benar-benar kacau."
+            },
+            {
+              "en": "We drove to the beach. However, it was raining, so we stayed in the car.",
+              "id": "Kami menyetir ke pantai. Namun, hujan turun, jadi kami tetap di mobil."
+            },
+            {
+              "en": "The new city library is a great place for students.",
+              "id": "Perpustakaan kota yang baru adalah tempat yang bagus untuk pelajar."
+            },
+            {
+              "en": "I'd recommend going on a weekday, and it's worth visiting just for the view.",
+              "id": "Aku sarankan datang di hari kerja, dan tempat ini layak dikunjungi walaupun hanya untuk pemandangannya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here are two British Council writing lessons: a short story and a restaurant review."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan menulis dalam bahasa Inggris: cerita pendek sekitar 100 kata, dan review pendek berisi pendapatmu. Ayo kita mulai langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Cerita sekitar 100 kata",
+        "text": "Kamu sudah bisa bercerita secara lisan. Menulis cerita memakai bentuk yang sama, ditambah beberapa hal.",
+        "body": "- **Judul**: pendek, dan membuat orang penasaran.\n- **Kalimat pertama yang mengait pembaca** (*hook* = kail): kejutan, masalah atau perasaan yang kuat. Bukan salam panjang seperti *Hello everyone, my name is Budi and today I want to tell you…* ✗\n- **Tiga paragraf pendek**: latar (was/were + -ing), kejadian (past simple; had + bentuk ketiga untuk kembali ke masa sebelumnya), akhir cerita dan apa yang kamu rasakan.\n- **Sekitar 100 kata** (80–120).",
+        "pairs": [
+          {
+            "en": "a title",
+            "id": "judul"
+          },
+          {
+            "en": "a hook",
+            "id": "kalimat pengait (yang bikin penasaran)"
+          },
+          {
+            "en": "the scene",
+            "id": "latar (kapan, di mana, apa yang sedang terjadi)"
+          },
+          {
+            "en": "the events",
+            "id": "kejadian-kejadiannya"
+          },
+          {
+            "en": "the ending",
+            "id": "akhir cerita"
+          },
+          {
+            "en": "a paragraph",
+            "id": "paragraf"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Cerita 106 kata",
+        "text": "Ini satu cerita utuh. Perhatikan tugas setiap bagiannya.",
+        "body": "Judul → kalimat pengait (sebuah masalah: kenapa lima jam?) → paragraf 1, latar (**was raining, was standing**) → paragraf 2, kejadian (**came, got on, realised**; **had taken** kembali ke masa sebelumnya) → paragraf 3, akhir dan perasaan (**couldn't stop laughing**).",
+        "examples": [
+          {
+            "en": "The Longest Trip Home",
+            "id": "Perjalanan Pulang Terpanjang"
+          },
+          {
+            "en": "I only wanted to go home, but it took me five hours.",
+            "id": "Aku cuma ingin pulang, tapi butuh lima jam."
+          },
+          {
+            "en": "It was a Friday evening in Jakarta, and it was raining heavily. I was standing at the bus stop with hundreds of other tired workers.",
+            "id": "Waktu itu Jumat sore di Jakarta, dan hujan deras. Aku sedang berdiri di halte bersama ratusan pekerja lain yang capek."
+          },
+          {
+            "en": "After an hour, a bus finally came, and I got on. Twenty minutes later, I realised I had taken the wrong bus! I got off and tried to order an ojek. Unfortunately, my phone had died.",
+            "id": "Setelah satu jam, akhirnya bus datang, dan aku naik. Dua puluh menit kemudian, aku sadar aku salah naik bus! Aku turun dan mencoba memesan ojek. Sayangnya, HP-ku sudah mati."
+          },
+          {
+            "en": "In the end, a kind woman at a warung let me use her phone, and I got home at midnight. I was wet and exhausted, but I couldn't stop laughing. What a night!",
+            "id": "Akhirnya, seorang ibu yang baik di warung meminjamkan HP-nya, dan aku sampai di rumah tengah malam. Aku basah dan capek sekali, tapi aku tidak bisa berhenti tertawa. Malam yang luar biasa!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas sedang menulis cerita tentang hari pertamanya di kantor baru.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-story",
+          "prompt": "Kalimat pertama mana yang paling mengait pembaca?",
+          "options": [
+            "Hello everyone, my name is Dimas, and today I want to tell you a story about my new job.",
+            "Last Monday I went to my new office.",
+            "My first day at my new job was a complete disaster."
+          ],
+          "answer": 2,
+          "explanation": "**A complete disaster** (benar-benar kacau) adalah perasaan yang kuat sekaligus masalah: pembaca ingin tahu apa yang salah. Salam panjang membuang kalimat terbaikmu (cerita tertulis bukan pidato), dan 'I went to my new office' memang benar, tapi tidak memberi alasan untuk terus membaca."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kalimat pendek, semua kata kerja lampau",
+        "text": "Ada dua kebiasaan dari bahasa Indonesia yang bisa membuat tulisan bahasa Inggris sulit dibaca.",
+        "body": "**1. 'dan … dan … dan …'** Dalam bahasa Indonesia kita sering menggabungkan semuanya dalam satu kalimat panjang. Dalam bahasa Inggris, tulis **satu atau dua ide per kalimat** dan pilih linker (kata penghubung) yang menunjukkan **bagaimana** ide-idenya berhubungan: **then / after that** (urutan), **suddenly** (kejutan), **but / However, / although** (pertentangan), **because / so** (alasan, akibat), **to / so that** (tujuan). Satu linker per kalimat: bukan *Although …, but …* ✗.\n**2. Tanpa penanda waktu.** Dalam cerita lampau, **setiap** kata kerja berubah: *I got off and I **ordered** an ojek* (bukan *I order*).",
+        "pairs": [
+          {
+            "en": "then / after that",
+            "id": "lalu / setelah itu"
+          },
+          {
+            "en": "suddenly",
+            "id": "tiba-tiba"
+          },
+          {
+            "en": "However, …",
+            "id": "Namun, … (kalimat baru)"
+          },
+          {
+            "en": "although",
+            "id": "meskipun"
+          },
+          {
+            "en": "so",
+            "id": "jadi (akibat)"
+          },
+          {
+            "en": "so that",
+            "id": "supaya (tujuan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari sedang menulis tentang malam yang larut di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-story",
+          "prompt": "Lengkapi cerita Sari: I ran all the way to the station, but I was too late. The last KRL ___.",
+          "options": [
+            "already leaves",
+            "had already left",
+            "has already left"
+          ],
+          "answer": 1,
+          "explanation": "Keretanya berangkat **sebelum** Sari sampai di stasiun, jadi kembali ke masa sebelumnya dengan had + bentuk ketiga: **had already left**. 'already leaves' adalah jebakan tanpa tense dari bahasa Indonesia, dan 'has already left' untuk kabar saat ini, bukan untuk cerita lampau."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Satu paragraf, satu ide pokok",
+        "text": "Sekarang paragrafnya. Di pelajaran membaca kamu mencari ide pokok. Sekarang kamu yang menulisnya.",
+        "body": "Setiap paragraf punya **satu ide pokok**, dan dalam bahasa Inggris **kalimat pertama** biasanya menyatakannya: itulah **topic sentence** (*kalimat utama*, seperti *paragraf deduktif* di sekolah). Kalimat-kalimat lainnya **mendukung**-nya dengan contoh, alasan dan detail.\nTopic sentence yang bagus tidak **terlalu sempit** (satu detail: *A cup costs Rp28,000.*) dan tidak **terlalu luas** (*Bandung is a city in Indonesia.*).\n**Ide pokok baru = paragraf baru.** Di internet, beri satu baris kosong di antara paragraf.",
+        "pairs": [
+          {
+            "en": "a topic sentence",
+            "id": "kalimat utama"
+          },
+          {
+            "en": "a supporting sentence",
+            "id": "kalimat penjelas"
+          },
+          {
+            "en": "the main idea",
+            "id": "ide pokok"
+          },
+          {
+            "en": "a detail",
+            "id": "detail, rincian"
+          },
+          {
+            "en": "too narrow / too broad",
+            "id": "terlalu sempit / terlalu luas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Satu paragraf dari tulisan Budi untuk majalah kampusnya kehilangan kalimat pertamanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "topic-sentences",
+          "prompt": "Pilih topic sentence terbaik untuk paragraf ini: '___ You can borrow books for free, and the Wi-Fi is fast. There are quiet rooms for study, and on Saturdays there are free English classes.'",
+          "options": [
+            "The new city library is a great place for students.",
+            "I went to the library last Saturday.",
+            "The library has fast Wi-Fi."
+          ],
+          "answer": 0,
+          "explanation": "Buku gratis, Wi-Fi cepat, ruang belajar yang tenang dan kelas gratis semuanya mendukung satu ide: **perpustakaannya tempat yang bagus untuk pelajar**. 'The library has fast Wi-Fi' hanya satu detail (terlalu sempit), dan 'I went to the library' adalah satu kejadian, bukan ide pokok."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Artikel atau review pendek",
+        "text": "Review memberi pendapatmu tentang tempat, film atau produk. Artikel pendek memberi ide tentang suatu topik. Bentuk keduanya sama.",
+        "body": "1. **Judul** dan **pertanyaan pembuka atau fakta yang mengejutkan**: *Where can you drink good coffee next to rice fields?*\n2. **2–3 paragraf**, masing-masing dengan topic sentence: apa tempatnya, sisi baik, sisi buruk (**However, …** / **although**).\n3. **Pendapatmu dengan alasan**: *In my opinion, … because …* (bukan *In my opinion, I think* ✗).\n4. **Rekomendasi**: *I'd recommend* + kata benda atau -ing, *It's worth* + -ing. Bukan *I recommend you to try* ✗ atau *It's worth to visit* ✗. Hafalkan keduanya sebagai frasa.",
+        "pairs": [
+          {
+            "en": "In my opinion, …",
+            "id": "Menurutku, …"
+          },
+          {
+            "en": "I'd recommend the soto.",
+            "id": "Aku sarankan soto-nya."
+          },
+          {
+            "en": "I'd recommend going early.",
+            "id": "Aku sarankan datang lebih awal."
+          },
+          {
+            "en": "It's worth visiting.",
+            "id": "Layak dikunjungi."
+          },
+          {
+            "en": "If you like coffee, you'll love it.",
+            "id": "Kalau kamu suka kopi, kamu pasti suka tempat ini."
+          },
+          {
+            "en": "You should try the pisang goreng.",
+            "id": "Kamu harus coba pisang gorengnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina menulis review sebuah homestay di Yogyakarta. Dia ingin menunjukkan sisi baik setelah sisi buruknya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "article-review",
+          "prompt": "Lengkapi review Rina: The homestay is a bit far from the city centre. ___, it's quiet, clean and only Rp250,000 a night.",
+          "options": [
+            "Although",
+            "Because of",
+            "However"
+          ],
+          "answer": 2,
+          "explanation": "Kalimat baru yang beralih ke sisi baik dimulai dengan **However,** (namun). **Although** menyambung dua bagian dalam satu kalimat dan harus diikuti subjek + kata kerja (bukan koma), dan **Because of** memberi alasan, bukan pertentangan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Urutkan review-nya",
+        "text": "Budi menulis review sebuah warung, tapi paragrafnya teracak.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "article-review",
+          "prompt": "Urutkan review Budi.\nA: In my opinion, it's the best soto in Jakarta. I'd recommend going early, before the lunch crowd.\nB: Have you ever tried soto Betawi with extra emping? Last Sunday I had lunch at Warung Bu Ani in Tebet.\nC: The soto was rich and hot, and a bowl costs only Rp25,000. However, the warung is small, and we waited twenty minutes for a table.",
+          "options": [
+            "B – C – A",
+            "A – B – C",
+            "C – A – B"
+          ],
+          "answer": 0,
+          "explanation": "**B** dibuka dengan pertanyaan untuk menarik pembaca. **C** memberi sisi baik dan buruknya (**However, …**). **A** menutup dengan pendapat dan rekomendasi (**I'd recommend going early**)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Rangkuman",
+        "text": "Ini semuanya dalam satu halaman. Simpan di dekatmu saat menulis.",
+        "artifact": {
+          "title": "Rangkuman · cerita & artikel pendek",
+          "intro": "Cerita: judul → kalimat pengait → latar → kejadian → akhir + perasaan. Review: judul → pembuka → sisi baik → sisi buruk → pendapat → rekomendasi. Satu ide pokok per paragraf, topic sentence di awal.",
+          "headers": [
+            "Bagian",
+            "Apa yang ditulis",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Judul",
+              "pendek, bikin penasaran",
+              "The Longest Trip Home"
+            ],
+            [
+              "Pengait (cerita)",
+              "kejutan, masalah, perasaan",
+              "I only wanted to go home, but it took me five hours."
+            ],
+            [
+              "Latar",
+              "was/were + -ing",
+              "It was raining, and I was standing at the bus stop."
+            ],
+            [
+              "Kejadian",
+              "past simple; had + bentuk ketiga untuk kembali ke masa sebelumnya",
+              "I realised I had taken the wrong bus."
+            ],
+            [
+              "Akhir",
+              "apa yang terjadi + apa yang kamu rasakan",
+              "In the end, I got home at midnight. What a night!"
+            ],
+            [
+              "Pembuka (review)",
+              "pertanyaan atau fakta yang mengejutkan",
+              "Where can you drink good coffee next to rice fields?"
+            ],
+            [
+              "Topic sentence",
+              "ide pokok, di awal paragraf",
+              "The view is the best thing about this café."
+            ],
+            [
+              "Pertentangan",
+              "However, (kalimat baru) / although",
+              "However, the café isn't perfect."
+            ],
+            [
+              "Pendapat",
+              "In my opinion, … because …",
+              "In my opinion, it's perfect for a slow morning."
+            ],
+            [
+              "Rekomendasi",
+              "I'd recommend + kata benda / -ing; It's worth + -ing",
+              "I'd recommend going on a weekday. It's worth visiting."
+            ]
+          ],
+          "tips": [
+            "Tanpa rantai 'and … and … and …': satu atau dua ide per kalimat, satu linker per kalimat (bukan **Although …, but …**).",
+            "Dalam cerita, periksa setiap kata kerja: **I got off and ordered an ojek** (bukan 'and I order').",
+            "Bukan 'I recommend you to try' atau 'It's worth to visit': **I'd recommend going early** / **It's worth visiting**."
+          ],
+          "examples": [
+            {
+              "en": "My first day at my new job was a complete disaster.",
+              "id": "Hari pertamaku di kerjaan baru benar-benar kacau."
+            },
+            {
+              "en": "We drove to the beach. However, it was raining, so we stayed in the car.",
+              "id": "Kami menyetir ke pantai. Namun, hujan turun, jadi kami tetap di mobil."
+            },
+            {
+              "en": "The new city library is a great place for students.",
+              "id": "Perpustakaan kota yang baru adalah tempat yang bagus untuk pelajar."
+            },
+            {
+              "en": "I'd recommend going on a weekday, and it's worth visiting just for the view.",
+              "id": "Aku sarankan datang di hari kerja, dan tempat ini layak dikunjungi walaupun hanya untuk pemandangannya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini dua pelajaran menulis dari British Council: cerita pendek dan review restoran."
+      }
+    ]
+  }
+}

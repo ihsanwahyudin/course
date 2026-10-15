@@ -1,0 +1,706 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to sum up texts and conversations for other people, and to explain Indonesian notices, menus and words like mudik in English. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "What a summary is",
+        "text": "At A2 you passed on short messages and the key facts of a notice. Now let's sum up longer texts and whole conversations for someone else.",
+        "body": "A **summary** (ringkasan) is the short version for a colleague, a friend or your boss. Give the **main point** first, then the **2–3 key facts** they need: often what, when, where, and what they have to do. Use **your own words** and keep it much **shorter** than the original. Leave out greetings, examples and small details, and never add facts or your own opinion. First ask: **who is it for, and what do they need?**",
+        "pairs": [
+          {
+            "en": "a summary",
+            "id": "ringkasan"
+          },
+          {
+            "en": "sum up",
+            "id": "meringkas"
+          },
+          {
+            "en": "the main point",
+            "id": "inti, pesan utama"
+          },
+          {
+            "en": "key facts",
+            "id": "fakta penting"
+          },
+          {
+            "en": "in your own words",
+            "id": "dengan kata-katamu sendiri"
+          },
+          {
+            "en": "leave out",
+            "id": "tidak dimasukkan, dilewati"
+          },
+          {
+            "en": "Basically, …",
+            "id": "Intinya, …"
+          },
+          {
+            "en": "In short, …",
+            "id": "Singkatnya, …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Summing up texts and talks",
+        "text": "Read these aloud. Look at how each summary starts.",
+        "body": "A **text** you can still read (an email, an article, a notice): **says** + present. A **conversation** that's over: **said / told** and the verb **one step back**, like in the reported speech lesson (*is → was, can → could, will → would*).",
+        "examples": [
+          {
+            "en": "Basically, the email says the lift is broken until Friday.",
+            "id": "Intinya, email itu bilang liftnya rusak sampai Jumat."
+          },
+          {
+            "en": "In short, the article says remote work is good for parents, but it can be lonely.",
+            "id": "Singkatnya, artikel itu bilang kerja jarak jauh bagus untuk orang tua, tapi bisa bikin kesepian."
+          },
+          {
+            "en": "Sari told me she was sick, so she couldn't finish the report.",
+            "id": "Sari bilang ke aku dia sakit, jadi dia tidak bisa menyelesaikan laporannya."
+          },
+          {
+            "en": "Pak Hasan said the new design was great, but it was too expensive.",
+            "id": "Pak Hasan bilang desain barunya bagus sekali, tapi terlalu mahal."
+          },
+          {
+            "en": "The main point is that the meeting is now on Thursday.",
+            "id": "Intinya, rapatnya sekarang hari Kamis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Yesterday Budi from the Bandung office called you. Mr Lee wasn't there.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-for-others",
+          "prompt": "Budi said: 'Our new printer doesn't work. The technician can only come on Thursday, so we can't print the reports before Friday. Sorry!' Which is the best summary for Mr Lee?",
+          "options": [
+            "Budi said the technician could come on Thursday.",
+            "Budi said the new printer didn't work, so the reports were ready on Thursday.",
+            "Budi said their new printer didn't work, so they couldn't print the reports before Friday."
+          ],
+          "answer": 2,
+          "explanation": "The best summary has the **main point** (the printer doesn't work) and the **key fact** for Mr Lee (no reports before Friday), with said + one step back. The technician is only a detail, and *ready on Thursday* changes the facts."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "What's missing?",
+        "text": "Tom was on leave, and he has 200 emails. He asks what HR said.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-for-others",
+          "prompt": "HR's email: 'From next month the office opens at 7.30. Everyone can choose to work from 7.30 to 4.30 or from 9 to 6. Please tell your manager your choice by Friday.' Sari's summary: 'From next month we can work from 7.30 to 4.30 or from 9 to 6.' What did she leave out?",
+          "options": [
+            "The new working times.",
+            "What Tom has to do by Friday.",
+            "When the change starts."
+          ],
+          "answer": 1,
+          "explanation": "The summary has the times and *from next month*, but not the action: **tell your manager your choice by Friday**. What the listener has to do, and by when, is almost always a key fact."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Explaining an Indonesian text",
+        "text": "Tom, Emma and Mr Lee can't read Indonesian. When they ask 'What does it say?', you explain.",
+        "body": "Don't translate every word. Ask: **what does it mean for them?** What can or can't they do, when, and how much? Skip *Dengan hormat* and *Atas perhatiannya*. Rules: **dilarang** → **You can't…** or **No + -ing**; **wajib** → **You have to…**; **mohon / harap** → **Please…**. A **di-** verb sounds best with a person: *Pagar dikunci* → ***They lock** the gate*. On a **menu**, keep the dish name and explain it. Prices: **Rp25.000** → **Rp25,000** in English.",
+        "pairs": [
+          {
+            "en": "No smoking. / You can't smoke here.",
+            "id": "Dilarang merokok."
+          },
+          {
+            "en": "You have to …",
+            "id": "wajib … / harus …"
+          },
+          {
+            "en": "Please …",
+            "id": "mohon … / harap …"
+          },
+          {
+            "en": "by the 5th",
+            "id": "paling lambat tanggal 5"
+          },
+          {
+            "en": "They lock the gate at 10 p.m.",
+            "id": "Pagar dikunci pukul 22.00."
+          },
+          {
+            "en": "Nasi goreng is fried rice.",
+            "id": "nama makanan tetap, lalu jelaskan"
+          },
+          {
+            "en": "spicy / not spicy",
+            "id": "pedas / tidak pedas"
+          },
+          {
+            "en": "Rp25,000",
+            "id": "Rp25.000 (dua puluh lima ribu rupiah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Tom just moved into your kos and can't read the notice in the kitchen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-indonesian-sources",
+          "prompt": "The notice: 'Sampah dibuang setiap hari Selasa dan Jumat sebelum jam 7 pagi. Dilarang memasak di dalam kamar.' Which explanation is best for Tom?",
+          "options": [
+            "The garbage throws every Tuesday and Friday before 7. Forbidden cooking in room.",
+            "Put your rubbish out on Tuesdays and Fridays before 7 a.m. You can't cook in your room.",
+            "Put your rubbish out every day before 7 a.m. You can cook in your room."
+          ],
+          "answer": 1,
+          "explanation": "It gives both rules in natural English: the **di-** verb becomes an instruction for Tom (*Put your rubbish out*), and **dilarang** → **You can't**. The first is word for word and unclear (garbage can't throw!); the third changes the facts. (*rubbish* is British; Americans say *trash* or *garbage*.)"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Words with no English word",
+        "text": "Tom asks: 'What's mudik?' There's no English word for it, so keep the word and explain it.",
+        "body": "Use one of three patterns, then add one or two key facts. **It's a kind of** + a thing: *Angkringan is a kind of food cart.* **It's when** + a person + a verb: *Mudik is when people travel to their hometown for Lebaran.* **It's like** + a thing from their country + **but** + the difference: *A kos is like a shared house, but you rent only one room.* Don't forget **a**: *It's kind of sweet* means 'agak manis'. And don't translate names: *nasi kucing* isn't 'cat rice'!",
+        "pairs": [
+          {
+            "en": "It's a kind of …",
+            "id": "Itu semacam …"
+          },
+          {
+            "en": "It's when …",
+            "id": "Itu saat / ketika …"
+          },
+          {
+            "en": "It's like …, but …",
+            "id": "Mirip …, tapi …"
+          },
+          {
+            "en": "hometown",
+            "id": "kampung halaman"
+          },
+          {
+            "en": "Lebaran / Eid",
+            "id": "Idulfitri"
+          },
+          {
+            "en": "neighbours",
+            "id": "tetangga"
+          },
+          {
+            "en": "for free",
+            "id": "tanpa dibayar, gratis"
+          },
+          {
+            "en": "a pot (of money)",
+            "id": "kumpulan uang bersama"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Indonesian words, explained",
+        "text": "Here's how you might explain some everyday words to Emma.",
+        "body": "Keep the Indonesian word, use a pattern, then add a fact or two. Two short sentences are clearer than one long one.",
+        "examples": [
+          {
+            "en": "Gotong royong is when neighbours work together for free, for example to clean the street.",
+            "id": "Gotong royong: tetangga bekerja bersama tanpa dibayar, misalnya membersihkan jalan."
+          },
+          {
+            "en": "Angkringan is a kind of food cart. It sells cheap snacks and hot drinks until late at night.",
+            "id": "Angkringan: gerobak makanan yang menjual camilan murah dan minuman panas sampai larut malam."
+          },
+          {
+            "en": "Nasi kucing is a very small portion of rice with sambal and a little fish.",
+            "id": "Nasi kucing: nasi porsi kecil dengan sambal dan sedikit ikan."
+          },
+          {
+            "en": "Lebaran is Eid, the big holiday at the end of Ramadan.",
+            "id": "Lebaran adalah Idulfitri, hari raya besar di akhir Ramadan."
+          },
+          {
+            "en": "A kos is like a shared house, but the owner often lives there and makes the rules.",
+            "id": "Kos mirip rumah bersama, tapi pemiliknya sering tinggal di sana dan membuat aturan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Emma's neighbour invited her to an arisan, and she asks you what it is.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-terms-culture",
+          "prompt": "Which explanation of arisan is best for Emma?",
+          "options": [
+            "Arisan is a kind of party.",
+            "It's a regular meeting of friends or neighbours. Everyone pays the same amount into a pot, and each time one person wins all the money.",
+            "It's like a bank, but for women. You save money there and get interest."
+          ],
+          "answer": 1,
+          "explanation": "It says what an arisan is (a regular meeting) and adds the key facts: everyone pays, and each time one person wins the pot. *A kind of party* is too vague: Emma still knows nothing about the money. And an arisan isn't a bank: there's no interest."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the explanation",
+        "text": "Tom sees 'ojek' in an app and asks what it is. Use the It's like …, but … pattern.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "explain-terms-culture",
+          "prompt": "Arrange the words to explain ojek.",
+          "tokens": [
+            "motorbike",
+            "but",
+            "a",
+            "It's",
+            "on",
+            "taxi",
+            "like",
+            "a"
+          ],
+          "solution": "It's like a taxi, but on a motorbike.",
+          "explanation": "**It's like** + a familiar thing (a taxi) + **but** + the difference (on a motorbike). Then add a fact: *You sit on the back, and you can book it on an app.*"
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · summarising & explaining",
+          "intro": "Summing up for someone else, explaining Indonesian texts, and explaining words with no English word.",
+          "headers": [
+            "Situation",
+            "What to do",
+            "Example"
+          ],
+          "rows": [
+            [
+              "A summary of a text",
+              "main point + 2–3 key facts; says + present",
+              "Basically, the email says the office is closed on Friday."
+            ],
+            [
+              "A summary of a conversation",
+              "said / told + the verb one step back",
+              "Pak Hasan told us the client was happy."
+            ],
+            [
+              "A rule with dilarang",
+              "You can't … / No + -ing",
+              "No parking in front of the gate."
+            ],
+            [
+              "A rule with wajib",
+              "You have to …",
+              "You have to pay the rent by the 5th."
+            ],
+            [
+              "mohon / harap",
+              "Please …",
+              "Please keep the kitchen clean."
+            ],
+            [
+              "A di- verb",
+              "say who does it",
+              "They lock the gate at 10 p.m."
+            ],
+            [
+              "A menu",
+              "keep the name, then explain",
+              "Gado-gado is vegetables with peanut sauce."
+            ],
+            [
+              "A price",
+              "a comma for thousands",
+              "Rp25,000 = twenty-five thousand rupiah"
+            ],
+            [
+              "A word with no English word",
+              "It's a kind of … / It's when … / It's like …, but …",
+              "Arisan is a kind of regular social gathering."
+            ]
+          ],
+          "tips": [
+            "Ask first: **who is it for, and what do they need to know or do?** Main point first, then the key facts.",
+            "Don't copy or translate word by word: *Forbidden cooking in room* ✗ → **You can't cook in your room.**",
+            "**It's a kind of** needs **a**; **It's when** needs a person + a verb (*It's when people go…*)."
+          ],
+          "examples": [
+            {
+              "en": "In short, Pak Hasan said the client wanted a lower price.",
+              "id": "Singkatnya, Pak Hasan bilang kliennya ingin harga yang lebih murah."
+            },
+            {
+              "en": "Gotong royong is when neighbours work together for free.",
+              "id": "Gotong royong: tetangga bekerja bersama tanpa dibayar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Here's a video with a simple way to summarise what you read."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar meringkas teks dan percakapan untuk orang lain, serta menjelaskan pengumuman, menu dan kata-kata seperti mudik dalam bahasa Inggris. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Apa itu ringkasan",
+        "text": "Di A2 kamu menyampaikan pesan pendek dan fakta penting dari sebuah pengumuman. Sekarang kita ringkas teks yang lebih panjang dan percakapan utuh untuk orang lain.",
+        "body": "**Ringkasan** (summary) adalah versi pendek untuk orang yang tidak ada di sana. Sampaikan **intinya** (main point) dulu, lalu **2–3 fakta penting** (key facts) yang dia perlukan: sering apa, kapan, di mana, dan apa yang harus dia lakukan. Pakai **kata-katamu sendiri** dan buat jauh **lebih pendek** dari aslinya. Lewati salam, contoh dan detail kecil, dan jangan menambah fakta atau pendapatmu. Tanya dulu: **untuk siapa, dan apa yang dia perlukan?**",
+        "pairs": [
+          {
+            "en": "a summary",
+            "id": "ringkasan"
+          },
+          {
+            "en": "sum up",
+            "id": "meringkas"
+          },
+          {
+            "en": "the main point",
+            "id": "inti, pesan utama"
+          },
+          {
+            "en": "key facts",
+            "id": "fakta penting"
+          },
+          {
+            "en": "in your own words",
+            "id": "dengan kata-katamu sendiri"
+          },
+          {
+            "en": "leave out",
+            "id": "tidak dimasukkan, dilewati"
+          },
+          {
+            "en": "Basically, …",
+            "id": "Intinya, …"
+          },
+          {
+            "en": "In short, …",
+            "id": "Singkatnya, …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Meringkas teks dan obrolan",
+        "text": "Baca keras-keras. Perhatikan bagaimana setiap ringkasan dimulai.",
+        "body": "**Teks** yang masih bisa dibaca (email, artikel, pengumuman): **says** + bentuk sekarang. **Percakapan** yang sudah lewat: **said / told** dan kata kerjanya **mundur satu langkah**, seperti di pelajaran reported speech (*is → was, can → could, will → would*).",
+        "examples": [
+          {
+            "en": "Basically, the email says the lift is broken until Friday.",
+            "id": "Intinya, email itu bilang liftnya rusak sampai Jumat."
+          },
+          {
+            "en": "In short, the article says remote work is good for parents, but it can be lonely.",
+            "id": "Singkatnya, artikel itu bilang kerja jarak jauh bagus untuk orang tua, tapi bisa bikin kesepian."
+          },
+          {
+            "en": "Sari told me she was sick, so she couldn't finish the report.",
+            "id": "Sari bilang ke aku dia sakit, jadi dia tidak bisa menyelesaikan laporannya."
+          },
+          {
+            "en": "Pak Hasan said the new design was great, but it was too expensive.",
+            "id": "Pak Hasan bilang desain barunya bagus sekali, tapi terlalu mahal."
+          },
+          {
+            "en": "The main point is that the meeting is now on Thursday.",
+            "id": "Intinya, rapatnya sekarang hari Kamis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kemarin Budi dari kantor Bandung meneleponmu. Mr Lee sedang tidak ada.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-for-others",
+          "prompt": "Budi bilang: 'Our new printer doesn't work. The technician can only come on Thursday, so we can't print the reports before Friday. Sorry!' Mana ringkasan terbaik untuk Mr Lee?",
+          "options": [
+            "Budi said the technician could come on Thursday.",
+            "Budi said the new printer didn't work, so the reports were ready on Thursday.",
+            "Budi said their new printer didn't work, so they couldn't print the reports before Friday."
+          ],
+          "answer": 2,
+          "explanation": "Ringkasan terbaik memuat **intinya** (printernya tidak berfungsi) dan **fakta penting** untuk Mr Lee (laporan tidak bisa dicetak sebelum Jumat), dengan said + mundur satu langkah. Teknisinya hanya detail, dan *ready on Thursday* mengubah faktanya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Apa yang terlewat?",
+        "text": "Tom baru kembali dari cuti dan punya 200 email. Dia bertanya apa kata HR.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-for-others",
+          "prompt": "Email HR: 'From next month the office opens at 7.30. Everyone can choose to work from 7.30 to 4.30 or from 9 to 6. Please tell your manager your choice by Friday.' Ringkasan Sari: 'From next month we can work from 7.30 to 4.30 or from 9 to 6.' Apa yang terlewat?",
+          "options": [
+            "The new working times.",
+            "What Tom has to do by Friday.",
+            "When the change starts."
+          ],
+          "answer": 1,
+          "explanation": "Ringkasannya memuat jam kerja dan *from next month*, tapi tidak memuat tindakannya: **tell your manager your choice by Friday**. Apa yang harus dilakukan pendengar, dan kapan batasnya, hampir selalu fakta penting."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menjelaskan teks berbahasa Indonesia",
+        "text": "Tom, Emma dan Mr Lee tidak bisa membaca bahasa Indonesia. Saat mereka bertanya 'What does it say?', kamu yang menjelaskan.",
+        "body": "Jangan terjemahkan setiap kata. Tanyakan: **apa artinya bagi mereka?** Apa yang boleh atau tidak boleh, kapan, dan berapa? Lewati *Dengan hormat* dan *Atas perhatiannya*. Aturan: **dilarang** → **You can't…** atau **No + -ing**; **wajib** → **You have to…**; **mohon / harap** → **Please…**. Kata kerja **di-** paling enak dengan orangnya: *Pagar dikunci* → ***They lock** the gate*. Di **menu**, nama makanan tetap, lalu jelaskan. Harga: **Rp25.000** → **Rp25,000** dalam bahasa Inggris.",
+        "pairs": [
+          {
+            "en": "No smoking. / You can't smoke here.",
+            "id": "Dilarang merokok."
+          },
+          {
+            "en": "You have to …",
+            "id": "wajib … / harus …"
+          },
+          {
+            "en": "Please …",
+            "id": "mohon … / harap …"
+          },
+          {
+            "en": "by the 5th",
+            "id": "paling lambat tanggal 5"
+          },
+          {
+            "en": "They lock the gate at 10 p.m.",
+            "id": "Pagar dikunci pukul 22.00."
+          },
+          {
+            "en": "Nasi goreng is fried rice.",
+            "id": "nama makanan tetap, lalu jelaskan"
+          },
+          {
+            "en": "spicy / not spicy",
+            "id": "pedas / tidak pedas"
+          },
+          {
+            "en": "Rp25,000",
+            "id": "Rp25.000 (dua puluh lima ribu rupiah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tom baru pindah ke kosmu dan tidak bisa membaca pengumuman di dapur.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-indonesian-sources",
+          "prompt": "Pengumumannya: 'Sampah dibuang setiap hari Selasa dan Jumat sebelum jam 7 pagi. Dilarang memasak di dalam kamar.' Penjelasan mana yang terbaik untuk Tom?",
+          "options": [
+            "The garbage throws every Tuesday and Friday before 7. Forbidden cooking in room.",
+            "Put your rubbish out on Tuesdays and Fridays before 7 a.m. You can't cook in your room.",
+            "Put your rubbish out every day before 7 a.m. You can cook in your room."
+          ],
+          "answer": 1,
+          "explanation": "Kedua aturannya tersampaikan dalam bahasa Inggris yang wajar: kata kerja **di-** menjadi petunjuk untuk Tom (*Put your rubbish out*), dan **dilarang** → **You can't**. Pilihan pertama kata per kata dan tidak jelas (sampah tidak bisa membuang!); pilihan ketiga mengubah faktanya. (*rubbish* itu British; orang Amerika bilang *trash* atau *garbage*.)"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata yang tidak ada padanannya",
+        "text": "Tom bertanya: 'What's mudik?' Tidak ada satu kata bahasa Inggris untuk itu, jadi pertahankan katanya dan jelaskan.",
+        "body": "Pakai salah satu dari tiga pola, lalu tambahkan satu atau dua fakta penting. **It's a kind of** + benda (= semacam): *Angkringan is a kind of food cart.* **It's when** + orang + kata kerja (= saat/ketika): *Mudik is when people travel to their hometown for Lebaran.* **It's like** + sesuatu dari negara mereka + **but** + bedanya: *A kos is like a shared house, but you rent only one room.* Jangan lupa **a**: *It's kind of sweet* artinya 'agak manis'. Dan jangan terjemahkan nama: *nasi kucing* bukan 'cat rice'!",
+        "pairs": [
+          {
+            "en": "It's a kind of …",
+            "id": "Itu semacam …"
+          },
+          {
+            "en": "It's when …",
+            "id": "Itu saat / ketika …"
+          },
+          {
+            "en": "It's like …, but …",
+            "id": "Mirip …, tapi …"
+          },
+          {
+            "en": "hometown",
+            "id": "kampung halaman"
+          },
+          {
+            "en": "Lebaran / Eid",
+            "id": "Idulfitri"
+          },
+          {
+            "en": "neighbours",
+            "id": "tetangga"
+          },
+          {
+            "en": "for free",
+            "id": "tanpa dibayar, gratis"
+          },
+          {
+            "en": "a pot (of money)",
+            "id": "kumpulan uang bersama"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata-kata Indonesia, dijelaskan",
+        "text": "Begini caranya menjelaskan beberapa kata sehari-hari ke Emma.",
+        "body": "Pertahankan kata Indonesianya, pakai salah satu pola, lalu tambahkan satu atau dua fakta. Dua kalimat pendek lebih jelas daripada satu kalimat panjang.",
+        "examples": [
+          {
+            "en": "Gotong royong is when neighbours work together for free, for example to clean the street.",
+            "id": "Gotong royong: tetangga bekerja bersama tanpa dibayar, misalnya membersihkan jalan."
+          },
+          {
+            "en": "Angkringan is a kind of food cart. It sells cheap snacks and hot drinks until late at night.",
+            "id": "Angkringan: gerobak makanan yang menjual camilan murah dan minuman panas sampai larut malam."
+          },
+          {
+            "en": "Nasi kucing is a very small portion of rice with sambal and a little fish.",
+            "id": "Nasi kucing: nasi porsi kecil dengan sambal dan sedikit ikan."
+          },
+          {
+            "en": "Lebaran is Eid, the big holiday at the end of Ramadan.",
+            "id": "Lebaran adalah Idulfitri, hari raya besar di akhir Ramadan."
+          },
+          {
+            "en": "A kos is like a shared house, but the owner often lives there and makes the rules.",
+            "id": "Kos mirip rumah bersama, tapi pemiliknya sering tinggal di sana dan membuat aturan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tetangga Emma mengajaknya ikut arisan, dan Emma bertanya kepadamu apa itu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-terms-culture",
+          "prompt": "Penjelasan arisan mana yang terbaik untuk Emma?",
+          "options": [
+            "Arisan is a kind of party.",
+            "It's a regular meeting of friends or neighbours. Everyone pays the same amount into a pot, and each time one person wins all the money.",
+            "It's like a bank, but for women. You save money there and get interest."
+          ],
+          "answer": 1,
+          "explanation": "Penjelasan ini menyebut apa itu arisan (pertemuan rutin) dan menambahkan fakta pentingnya: semua orang menyetor, dan setiap kali satu orang mendapat seluruh uangnya (*the pot*). *A kind of party* terlalu kabur: Emma tetap tidak tahu soal uangnya. Dan arisan bukan bank: tidak ada bunganya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun penjelasannya",
+        "text": "Tom melihat 'ojek' di sebuah aplikasi dan bertanya apa itu. Pakai pola It's like …, but … .",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "explain-terms-culture",
+          "prompt": "Susun kata-katanya untuk menjelaskan ojek.",
+          "tokens": [
+            "motorbike",
+            "but",
+            "a",
+            "It's",
+            "on",
+            "taxi",
+            "like",
+            "a"
+          ],
+          "solution": "It's like a taxi, but on a motorbike.",
+          "explanation": "**It's like** + sesuatu yang Tom kenal (taksi) + **but** + bedanya (naik motor). Lalu tambahkan fakta: *You sit on the back, and you can book it on an app.*"
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · meringkas & menjelaskan",
+          "intro": "Meringkas untuk orang lain, menjelaskan teks berbahasa Indonesia, dan menjelaskan kata yang tidak ada padanannya dalam bahasa Inggris.",
+          "headers": [
+            "Situasi",
+            "Yang dilakukan",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Ringkasan sebuah teks",
+              "inti + 2–3 fakta penting; says + bentuk sekarang",
+              "Basically, the email says the office is closed on Friday."
+            ],
+            [
+              "Ringkasan sebuah percakapan",
+              "said / told + kata kerja mundur satu langkah",
+              "Pak Hasan told us the client was happy."
+            ],
+            [
+              "Aturan dengan dilarang",
+              "You can't … / No + -ing",
+              "No parking in front of the gate."
+            ],
+            [
+              "Aturan dengan wajib",
+              "You have to …",
+              "You have to pay the rent by the 5th."
+            ],
+            [
+              "mohon / harap",
+              "Please …",
+              "Please keep the kitchen clean."
+            ],
+            [
+              "Kata kerja di-",
+              "sebutkan siapa yang melakukannya",
+              "They lock the gate at 10 p.m."
+            ],
+            [
+              "Menu",
+              "nama tetap, lalu jelaskan",
+              "Gado-gado is vegetables with peanut sauce."
+            ],
+            [
+              "Harga",
+              "koma untuk ribuan",
+              "Rp25,000 = twenty-five thousand rupiah"
+            ],
+            [
+              "Kata tanpa padanan",
+              "It's a kind of … / It's when … / It's like …, but …",
+              "Arisan is a kind of regular social gathering."
+            ]
+          ],
+          "tips": [
+            "Tanya dulu: **untuk siapa, dan apa yang perlu dia tahu atau lakukan?** Inti dulu, lalu fakta pentingnya.",
+            "Jangan menyalin atau menerjemahkan kata per kata: *Forbidden cooking in room* ✗ → **You can't cook in your room.**",
+            "**It's a kind of** butuh **a**; **It's when** butuh orang + kata kerja (*It's when people go…*)."
+          ],
+          "examples": [
+            {
+              "en": "In short, Pak Hasan said the client wanted a lower price.",
+              "id": "Singkatnya, Pak Hasan bilang kliennya ingin harga yang lebih murah."
+            },
+            {
+              "en": "Gotong royong is when neighbours work together for free.",
+              "id": "Gotong royong: tetangga bekerja bersama tanpa dibayar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ini video dengan cara sederhana untuk meringkas bacaan."
+      }
+    ]
+  }
+}
