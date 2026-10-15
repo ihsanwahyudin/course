@@ -409,7 +409,7 @@ func (s *Service) stepAction(ctx context.Context, userID, sessionID string, n in
 
 // Next moves past step n. A question must be answered (or given up) first.
 func (s *Service) NextStep(ctx context.Context, userID, sessionID string, n int) (SessionView, error) {
-	return s.stepAction(ctx, userID, sessionID, n, "next", func(lc *lessonCtx, st state, lang string) error {
+	view, err := s.stepAction(ctx, userID, sessionID, n, "next", func(lc *lessonCtx, st state, lang string) error {
 		if n != lc.sess.StepIndex {
 			return errf(409, "step_done", false, "You've already moved past this step.")
 		}
@@ -421,6 +421,11 @@ func (s *Service) NextStep(ctx context.Context, userID, sessionID string, n int)
 		lc.sess.StepIndex = n + 1
 		return nil
 	})
+	// On the last step, start writing the checkpoint so it's ready in time.
+	if err == nil && view.Lesson != nil && view.Lesson.StepIndex >= view.Lesson.TotalSteps-1 && view.Checkpoint == nil {
+		s.prefetchCheckpoint(userID, view.Session)
+	}
+	return view, err
 }
 
 type AnswerInput struct {
@@ -783,11 +788,11 @@ type ListenAudio struct {
 	Text  string
 }
 
-func (s *Service) listenAudio(ctx context.Context, userID, text string) (ListenAudio, error) {
+func (s *Service) listenAudio(ctx context.Context, userID, text string, live bool) (ListenAudio, error) {
 	if text == "" {
 		return ListenAudio{}, errf(404, "no_audio", false, "This question has nothing to listen to.")
 	}
-	b, err := s.Speech(ctx, userID, text)
+	b, err := s.speech(ctx, userID, text, live)
 	if ErrIs(err, "speech_unavailable") {
 		return ListenAudio{Text: text}, nil
 	}
@@ -811,25 +816,5 @@ func (s *Service) StepListen(ctx context.Context, userID, sessionID string, n in
 	if n < 0 || n >= len(lc.plan.Steps) || n > sess.StepIndex || lc.plan.Steps[n].Question == nil {
 		return ListenAudio{}, errf(409, "step_not_open", false, "That step isn't open yet.")
 	}
-	return s.listenAudio(ctx, userID, lc.plan.Steps[n].Question.Listen)
-}
-
-// ItemListen plays a checkpoint listening item.
-func (s *Service) ItemListen(ctx context.Context, userID, sessionID, itemID string) (ListenAudio, error) {
-	sess, err := s.getOwnSession(ctx, userID, sessionID)
-	if err != nil {
-		return ListenAudio{}, err
-	}
-	cur, node, err := s.sessionCourse(sess)
-	if err != nil {
-		return ListenAudio{}, err
-	}
-	if l, ok := cur.Lesson(node.ID); ok {
-		for _, it := range l.Assessment {
-			if it.ID == itemID {
-				return s.listenAudio(ctx, userID, it.Listen)
-			}
-		}
-	}
-	return ListenAudio{}, errf(404, "item_not_found", false, "No such checkpoint question.")
+	return s.listenAudio(ctx, userID, lc.plan.Steps[n].Question.Listen, s.LiveSpeech)
 }

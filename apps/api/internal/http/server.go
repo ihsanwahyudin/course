@@ -124,7 +124,8 @@ func (s *Server) Router() http.Handler {
 			r.Post("/sessions", s.startSession)
 			r.Get("/sessions/{sessionId}", s.getSession)
 			r.Get("/sessions/{sessionId}/steps/{step}/listen", s.stepListen)
-			r.Get("/sessions/{sessionId}/assessment/{itemId}/listen", s.itemListen)
+			r.Get("/sessions/{sessionId}/checkpoints/{checkpointId}/items/{itemId}/listen", s.checkpointListen)
+			r.Get("/attempts/{attemptId}", s.attempt)
 			r.Get("/me/memory", s.memory)
 			r.Patch("/me/memory", s.setMemory)
 			r.Delete("/me/memory", s.deleteAllMemory)
@@ -146,6 +147,7 @@ func (s *Server) Router() http.Handler {
 				r.Post("/sessions/{sessionId}/steps/{step}/reveal", s.revealStep)
 				r.Post("/sessions/{sessionId}/steps/{step}/similar", s.similarStep)
 				r.Post("/sessions/{sessionId}/steps/{step}/ask", s.askStep)
+				r.Post("/sessions/{sessionId}/checkpoint", s.startCheckpoint)
 				r.Post("/sessions/{sessionId}/assessment", s.submitAssessment)
 				r.Get("/tts", s.speech)
 				r.Post("/transcribe", s.transcribe)
@@ -641,12 +643,17 @@ func (s *Server) stepListen(w http.ResponseWriter, r *http.Request) {
 	writeListen(w, a, err)
 }
 
-func (s *Server) itemListen(w http.ResponseWriter, r *http.Request) {
+func (s *Server) checkpointListen(w http.ResponseWriter, r *http.Request) {
 	id, ok := sessionID(w, r)
 	if !ok {
 		return
 	}
-	a, err := s.Svc.ItemListen(r.Context(), userID(r), id, chi.URLParam(r, "itemId"))
+	cp := chi.URLParam(r, "checkpointId")
+	if !uuidRe.MatchString(cp) {
+		writeErr(w, &apperr.Error{Status: 404, Code: "item_not_found", Message: "No such checkpoint question."})
+		return
+	}
+	a, err := s.Svc.CheckpointListen(r.Context(), userID(r), id, cp, chi.URLParam(r, "itemId"))
 	writeListen(w, a, err)
 }
 
@@ -818,12 +825,17 @@ func (s *Server) submitAssessment(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	var body struct {
-		Answers []struct {
+		CheckpointID string `json:"checkpointId"`
+		Answers      []struct {
 			ItemID string `json:"itemId"`
 			Answer string `json:"answer"`
 		} `json:"answers"`
 	}
 	if !decode(w, r, &body) {
+		return
+	}
+	if body.CheckpointID != "" && !uuidRe.MatchString(body.CheckpointID) {
+		writeErr(w, &apperr.Error{Status: 409, Code: "no_checkpoint", Message: "Start the checkpoint first."})
 		return
 	}
 	answers := map[string]string{}
@@ -834,7 +846,28 @@ func (s *Server) submitAssessment(w http.ResponseWriter, r *http.Request) {
 		}
 		answers[a.ItemID] = a.Answer
 	}
-	v, err := s.Svc.SubmitAssessment(r.Context(), userID(r), id, answers)
+	v, err := s.Svc.SubmitCheckpoint(r.Context(), userID(r), id, body.CheckpointID, answers)
+	respond(w, v, err)
+}
+
+// startCheckpoint opens the lesson's checkpoint, writing new questions if
+// none is open (this can take a few seconds).
+func (s *Server) startCheckpoint(w http.ResponseWriter, r *http.Request) {
+	id, ok := sessionID(w, r)
+	if !ok {
+		return
+	}
+	v, err := s.Svc.StartCheckpoint(r.Context(), userID(r), id)
+	respond(w, v, err)
+}
+
+func (s *Server) attempt(w http.ResponseWriter, r *http.Request) {
+	id := chi.URLParam(r, "attemptId")
+	if !uuidRe.MatchString(id) {
+		writeErr(w, &apperr.Error{Status: 404, Code: "attempt_not_found", Message: "Attempt not found."})
+		return
+	}
+	v, err := s.Svc.Attempt(r.Context(), userID(r), id)
 	respond(w, v, err)
 }
 

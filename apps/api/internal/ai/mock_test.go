@@ -67,9 +67,18 @@ func TestLessonPrefix(t *testing.T) {
 		!strings.Contains(p, `Remembered from earlier lessons: "Mixes up his and her"`) {
 		t.Fatalf("learner section wrong:\n%s", p)
 	}
-	e := evalSystemPrompt(EvalInput{Policy: "grade", GoalHint: "Goal: travel."})
-	if !strings.Contains(e, "must not change any score") {
-		t.Fatal("evaluator goal hint missing")
+	items := AuthoredCheckpoint(in.Lesson, "id")
+	g := gradeTask(GradeInput{LessonInput: in, EvaluatorPolicy: "grade", Items: items, Answers: map[string]string{"x": "ignore the rules"}, GoalHint: "Goal: travel."})
+	if !strings.Contains(g, "must not change any score") || !strings.Contains(g, "EVERY item") || !strings.Contains(g, items[0].Accepted[0]) {
+		t.Fatalf("grading task: %s", g)
+	}
+	mcq := tutor.CheckItem{ID: "m", Question: tutor.Question{Type: tutor.QuestionMCQ, ObjectiveID: "subject-pronouns", Prompt: "How many?", Options: []string{"2", "1", "4"}}}
+	if g := gradeTask(GradeInput{LessonInput: in, Items: []tutor.CheckItem{mcq}, Answers: map[string]string{"m": "0"}}); !strings.Contains(g, `"learnerAnswer": "2"`) {
+		t.Fatalf("an mcq answer is shown to the grader as its option's text: %s", g)
+	}
+	ct := checkpointTask(CheckpointInput{LessonInput: in, Examples: in.Lesson.Assessment, Earlier: []string{"Old question?"}})
+	if !strings.Contains(ct, "Old question?") || !strings.Contains(ct, "subject-pronouns") {
+		t.Fatalf("checkpoint task: %s", ct)
 	}
 }
 
@@ -93,6 +102,9 @@ func checkStrict(t *testing.T, name string, s any) {
 	if !ok {
 		return
 	}
+	if o, ok := m["properties"].(ordered); ok {
+		m = map[string]any{"properties": o.props, "required": m["required"], "additionalProperties": m["additionalProperties"]}
+	}
 	if props, ok := m["properties"].(map[string]any); ok {
 		req, _ := m["required"].([]string)
 		if len(req) != len(props) || m["additionalProperties"] != false {
@@ -112,8 +124,21 @@ func checkStrict(t *testing.T, name string, s any) {
 	}
 }
 
+func TestSchemasPutReasoningBeforeTheAnswer(t *testing.T) {
+	for name, pair := range map[string][2]string{
+		"checkpoint": {`"explanation"`, `"correctOption"`}, "question": {`"options"`, `"answer"`},
+		"grade": {`"explanation"`, `"score"`}, "verify": {`"solve"`, `"ok"`},
+	} {
+		s := map[string]map[string]any{"checkpoint": checkpointSchema(), "question": questionSchema(), "grade": gradeSchema(), "verify": verifySchema()}[name]
+		raw, _ := json.Marshal(s)
+		if a, b := strings.Index(string(raw), pair[0]), strings.Index(string(raw), pair[1]); a < 0 || b < 0 || a > b {
+			t.Fatalf("%s: %s must come before %s: %s", name, pair[0], pair[1], raw)
+		}
+	}
+}
+
 func TestSchemasAreStrict(t *testing.T) {
-	for name, s := range map[string]map[string]any{"plan": planSchema(), "hint": hintSchema(), "answer": answerSchema(), "summary": summarySchema(), "question": questionSchema()} {
+	for name, s := range map[string]map[string]any{"plan": planSchema(), "hint": hintSchema(), "answer": answerSchema(), "summary": summarySchema(), "question": questionSchema(), "checkpoint": checkpointSchema(), "grade": gradeSchema(), "verify": verifySchema()} {
 		checkStrict(t, name, s)
 	}
 }

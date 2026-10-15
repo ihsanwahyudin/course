@@ -466,16 +466,24 @@ type Attempt struct {
 	Feedback        string          `json:"feedback"`
 	Answers         json.RawMessage `json:"-"`
 	CreatedAt       time.Time       `json:"createdAt"`
+	CheckpointID    *string         `json:"checkpointId"`
+	// Practice attempts were taken after mastery and never change progress.
+	Practice bool `json:"practice"`
+	// Review is every graded answer with its explanation (tutor.Review).
+	Review json.RawMessage `json:"review,omitempty"`
 }
 
 type NewAttempt struct {
 	SessionID         string
+	CheckpointID      string
+	Practice          bool
 	Score, Threshold  int
 	Passed            bool
 	ObjectiveScores   map[string]int
 	Evidence          []string
 	Feedback          string
 	Answers           map[string]string
+	Review            any
 	EvaluatorResponse json.RawMessage
 	Evaluator         string
 }
@@ -484,23 +492,36 @@ func InsertAttempt(ctx context.Context, db DB, a NewAttempt) (Attempt, error) {
 	scores, _ := json.Marshal(a.ObjectiveScores)
 	evidence, _ := json.Marshal(a.Evidence)
 	answers, _ := json.Marshal(a.Answers)
+	review, _ := json.Marshal(a.Review)
 	raw := a.EvaluatorResponse
 	if !json.Valid(raw) {
 		raw, _ = json.Marshal(string(raw))
 	}
-	return scanAttempt(db.QueryRow(ctx, `INSERT INTO assessment_attempts
-		(session_id, score, threshold, passed, objective_scores, evidence, feedback, answers, evaluator_response, evaluator)
-		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)
-		RETURNING `+attemptCols, a.SessionID, a.Score, a.Threshold, a.Passed, scores, evidence, a.Feedback, answers, raw, a.Evaluator))
+	var checkpoint *string
+	if a.CheckpointID != "" {
+		checkpoint = &a.CheckpointID
+	}
+	return scanAttemptRow(db.QueryRow(ctx, `INSERT INTO assessment_attempts
+		(session_id, score, threshold, passed, objective_scores, evidence, feedback, answers, evaluator_response, evaluator, checkpoint_id, practice, review)
+		VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+		RETURNING `+attemptCols, a.SessionID, a.Score, a.Threshold, a.Passed, scores, evidence, a.Feedback, answers, raw, a.Evaluator, checkpoint, a.Practice, review), false)
 }
 
-const attemptCols = `id, session_id, score, threshold, passed, objective_scores, evidence, feedback, answers, created_at`
+const (
+	attemptCols  = `id, session_id, score, threshold, passed, objective_scores, evidence, feedback, answers, created_at, checkpoint_id, practice, review`
+	attemptColsA = `a.id, a.session_id, a.score, a.threshold, a.passed, a.objective_scores, a.evidence, a.feedback, a.answers, a.created_at, a.checkpoint_id, a.practice, a.review`
+)
 
-func scanAttempt(row pgx.Row) (Attempt, error) {
+// scanAttemptRow reads attemptCols, then the session's course and node when withNode.
+func scanAttemptRow(row pgx.Row, withNode bool) (Attempt, error) {
 	var a Attempt
 	var score, threshold int16
-	var scores, evidence []byte
-	err := row.Scan(&a.ID, &a.SessionID, &score, &threshold, &a.Passed, &scores, &evidence, &a.Feedback, &a.Answers, &a.CreatedAt)
+	var scores, evidence, review []byte
+	dest := []any{&a.ID, &a.SessionID, &score, &threshold, &a.Passed, &scores, &evidence, &a.Feedback, &a.Answers, &a.CreatedAt, &a.CheckpointID, &a.Practice, &review}
+	if withNode {
+		dest = append(dest, &a.CourseSlug, &a.NodeID)
+	}
+	err := row.Scan(dest...)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return a, ErrNotFound
 	}
@@ -508,6 +529,9 @@ func scanAttempt(row pgx.Row) (Attempt, error) {
 		return a, err
 	}
 	a.Score, a.Threshold = int(score), int(threshold)
+	if len(review) > 0 && string(review) != "null" {
+		a.Review = review
+	}
 	if err := json.Unmarshal(scores, &a.ObjectiveScores); err != nil {
 		return a, err
 	}
@@ -518,30 +542,28 @@ func scanAttempt(row pgx.Row) (Attempt, error) {
 }
 
 func LatestAttempt(ctx context.Context, db DB, sessionID string) (Attempt, error) {
-	return scanAttempt(db.QueryRow(ctx, `SELECT `+attemptCols+` FROM assessment_attempts
-		WHERE session_id=$1 ORDER BY created_at DESC LIMIT 1`, sessionID))
+	return scanAttemptRow(db.QueryRow(ctx, `SELECT `+attemptCols+` FROM assessment_attempts
+		WHERE session_id=$1 ORDER BY created_at DESC LIMIT 1`, sessionID), false)
+}
+
+// PassedAttempt is the session's latest passed attempt that counted (not practice).
+func PassedAttempt(ctx context.Context, db DB, sessionID string) (Attempt, error) {
+	return scanAttemptRow(db.QueryRow(ctx, `SELECT `+attemptCols+` FROM assessment_attempts
+		WHERE session_id=$1 AND passed AND NOT practice ORDER BY created_at DESC LIMIT 1`, sessionID), false)
 }
 
 // RecentAttempts lists the user's latest attempts; course "" means all courses.
 func RecentAttempts(ctx context.Context, db DB, userID, course string, limit int) ([]Attempt, error) {
-	rows, err := db.Query(ctx, `SELECT a.id, a.session_id, s.course_slug, s.node_id, a.score, a.threshold, a.passed,
-			a.objective_scores, a.evidence, a.feedback, a.answers, a.created_at
+	rows, err := db.Query(ctx, `SELECT `+attemptColsA+`, s.course_slug, s.node_id
 		FROM assessment_attempts a JOIN learning_sessions s ON s.id = a.session_id
 		WHERE s.user_id=$1 AND ($2 = '' OR s.course_slug = $2) ORDER BY a.created_at DESC LIMIT $3`, userID, course, limit)
 	if err != nil {
 		return nil, err
 	}
 	return pgx.CollectRows(rows, func(r pgx.CollectableRow) (Attempt, error) {
-		var a Attempt
-		var score, threshold int16
-		var scores, evidence []byte
-		if err := r.Scan(&a.ID, &a.SessionID, &a.CourseSlug, &a.NodeID, &score, &threshold, &a.Passed, &scores, &evidence, &a.Feedback, &a.Answers, &a.CreatedAt); err != nil {
-			return a, err
-		}
-		a.Score, a.Threshold = int(score), int(threshold)
-		_ = json.Unmarshal(scores, &a.ObjectiveScores)
-		_ = json.Unmarshal(evidence, &a.Evidence)
-		return a, nil
+		a, err := scanAttemptRow(r, true)
+		a.Review = nil
+		return a, err
 	})
 }
 

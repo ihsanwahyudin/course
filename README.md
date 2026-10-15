@@ -190,7 +190,7 @@ The whole app works in **English and Bahasa Indonesia**.
 
 - **Prompt caching:** every lesson call starts with the same prefix (policy → language → lesson material → scope rules → about the learner) and carries `prompt_cache_key = course:node:language`, so OpenAI bills the repeated prefix as cached input.
 - **Exact-match grading:** checkpoint answers that exactly match a reference answer skip the evaluator, and practice questions are graded in Go without the AI.
-- **Daily budget:** usage is logged for every call in `ai_usage`, and `AI_DAILY_TOKENS_PER_USER` (default 60,000; cached input doesn't count) caps it per learner per day. Over the cap, plans fall back to the material's plan and hints to built-in ones; Ask AI returns `ai_quota`.
+- **Daily budget:** usage is logged for every call in `ai_usage`, and `AI_DAILY_TOKENS_PER_USER` (default 150,000; cached input doesn't count) caps it per learner per day. Over the cap, plans fall back to the material's plan, hints to built-in ones, checkpoints to the lesson's hand-written questions graded against their answer key; Ask AI returns `ai_quota`.
 
 ## Personalization (onboarding) — switched off for now
 

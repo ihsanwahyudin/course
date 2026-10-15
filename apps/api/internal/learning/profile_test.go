@@ -47,7 +47,7 @@ func TestProfileValidationAndSkip(t *testing.T) {
 
 func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 	var seenPlan []ai.LessonInput
-	var seenEval []ai.EvalInput
+	var seenGrade []ai.GradeInput
 	mock := &ai.Mock{}
 	inner := &ai.Mock{}
 	mock.PlanFunc = func(in ai.LessonInput) (json.RawMessage, error) {
@@ -55,9 +55,9 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 		r, err := inner.LessonPlan(context.Background(), in)
 		return r.Raw, err
 	}
-	mock.EvalFunc = func(in ai.EvalInput) (json.RawMessage, error) {
-		seenEval = append(seenEval, in)
-		r, err := inner.Evaluate(context.Background(), in)
+	mock.GradeFunc = func(in ai.GradeInput) (json.RawMessage, error) {
+		seenGrade = append(seenGrade, in)
+		r, err := inner.GradeCheckpoint(context.Background(), in)
 		return r.Raw, err
 	}
 	s := newService(t, mock)
@@ -114,15 +114,15 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 	}
 	sess = finishSteps(t, s, sess)
 	// The evaluator gets the profile too.
-	// One wrong answer, so the evaluator is consulted for that item only.
+	// One wrong answer: the grader judges it, the exact matches are fixed.
 	ans := answers(s, "a0-alphabet-sounds", true)
-	ans["alpha-5"] = "g-r-e-n"
+	ans["q5"] = "g-r-e-n"
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, ans)
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(seenEval) != 1 || !strings.Contains(seenEval[0].GoalHint, "work") || len(seenEval[0].Items) != 1 {
-		t.Fatalf("evaluator should get the goal hint and only the unmatched item: %+v", seenEval)
+	if len(seenGrade) != 1 || !strings.Contains(seenGrade[0].GoalHint, "work") || len(seenGrade[0].Items) != 5 || len(seenGrade[0].Fixed) != 4 {
+		t.Fatalf("the grader should get the goal hint, every item and the 4 fixed scores: %+v", seenGrade)
 	}
 	if res.Attempt.Threshold != 80 {
 		t.Fatalf("profile must not change the pass mark: %+v", res.Attempt)

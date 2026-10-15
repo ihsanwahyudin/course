@@ -149,11 +149,26 @@ export function useStepAction(sessionId: string) {
   });
 }
 
+// Opens the lesson's checkpoint (writing new questions if none is open).
+export function useStartCheckpoint(sessionId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: () => api.startCheckpoint(sessionId),
+    onSuccess: (cp) => {
+      qc.setQueryData<Session>(keys.session(sessionId, currentLocale()), (s) => (s ? { ...s, checkpoint: cp } : s));
+    },
+  });
+}
+
+export const useAttempt = (id: string | null) =>
+  useQuery({ queryKey: ['attempt', id], queryFn: () => api.attempt(id!), enabled: !!id, staleTime: Infinity });
+
 export function useSubmitAssessment(sessionId: string) {
   const qc = useQueryClient();
   const invalidate = useInvalidateProgress();
   return useMutation({
-    mutationFn: (answers: { itemId: string; answer: string }[]) => api.submitAssessment(sessionId, answers),
+    mutationFn: ({ checkpointId, answers }: { checkpointId: string; answers: { itemId: string; answer: string }[] }) =>
+      api.submitAssessment(sessionId, checkpointId, answers),
     onSuccess: (r) => {
       qc.setQueryData(keys.session(r.session.id, currentLocale()), r.session);
       invalidate();

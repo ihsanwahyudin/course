@@ -12,17 +12,19 @@ import (
 )
 
 // Mock is a deterministic, offline provider: plans come straight from the
-// lesson material, hints and answers are canned, and grading matches the
-// curriculum's reference answers. Used for tests, e2e checks and local
+// lesson material, hints and answers are canned, checkpoints are the lesson's
+// hand-written ones and grading matches their reference answers. Used for tests, e2e checks and local
 // development without an API key.
 type Mock struct {
 	// Optional overrides for tests.
-	PlanFunc func(LessonInput) (json.RawMessage, error)
-	HintFunc func(HintInput) (json.RawMessage, error)
-	AskFunc  func(AskInput) (json.RawMessage, error)
-	EvalFunc func(EvalInput) (json.RawMessage, error)
+	PlanFunc       func(LessonInput) (json.RawMessage, error)
+	HintFunc       func(HintInput) (json.RawMessage, error)
+	AskFunc        func(AskInput) (json.RawMessage, error)
+	CheckpointFunc func(CheckpointInput) (json.RawMessage, error)
+	GradeFunc      func(GradeInput) (json.RawMessage, error)
+	VerifyFunc     func(VerifyInput) (json.RawMessage, error)
 	// Calls counts provider calls (tests check caching and pre-grading).
-	Calls struct{ Plan, Hint, Similar, Ask, Summary, Eval int }
+	Calls struct{ Plan, Hint, Similar, Ask, Summary, Checkpoint, Verify, Grade int }
 }
 
 func (m *Mock) Name() string { return "mock" }
@@ -173,39 +175,85 @@ func phrase(locale, key string) string {
 	return mockText["en"][key]
 }
 
-func (m *Mock) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
-	m.Calls.Eval++
-	if m.EvalFunc != nil {
-		raw, err := m.EvalFunc(in)
+func (m *Mock) Checkpoint(ctx context.Context, in CheckpointInput) (Result, error) {
+	m.Calls.Checkpoint++
+	if m.CheckpointFunc != nil {
+		raw, err := m.CheckpointFunc(in)
 		return Result{Raw: raw, Usage: mockUsage}, err
 	}
 	if err := ctx.Err(); err != nil {
 		return Result{}, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}
-	sum := map[string]int{}
-	count := map[string]int{}
-	var evidence, misses []string
-	for _, it := range in.Items {
-		ans := in.Answers[it.ID]
-		score := 0
-		switch {
-		case Matches(ans, it.AcceptableAnswers):
-			score = 100
-			evidence = append(evidence, fmt.Sprintf(phrase(in.Locale, "correct_answer"), strings.TrimSpace(ans)))
-		case strings.TrimSpace(ans) != "":
-			score = 40
-			misses = append(misses, it.ObjectiveID)
-		default:
-			misses = append(misses, it.ObjectiveID)
-		}
-		sum[it.ObjectiveID] += score
-		count[it.ObjectiveID]++
+	return ok(map[string]any{"items": AuthoredCheckpoint(in.Lesson, in.Locale)})
+}
+
+// VerifyCheckpoint passes every question unless a test says otherwise.
+func (m *Mock) VerifyCheckpoint(ctx context.Context, in VerifyInput) (Result, error) {
+	m.Calls.Verify++
+	if m.VerifyFunc != nil {
+		raw, err := m.VerifyFunc(in)
+		return Result{Raw: raw, Usage: mockUsage}, err
 	}
-	scores := map[string]int{}
-	for _, o := range in.Node.Objectives {
-		if count[o.ID] > 0 {
-			scores[o.ID] = sum[o.ID] / count[o.ID]
+	type check struct {
+		ID      string `json:"id"`
+		OK      bool   `json:"ok"`
+		Problem string `json:"problem"`
+	}
+	out := make([]check, 0, len(in.Items))
+	for _, it := range in.Items {
+		out = append(out, check{it.ID, true, ""})
+	}
+	return ok(map[string]any{"items": out})
+}
+
+// AuthoredCheckpoint turns a lesson's hand-written checkpoint into open
+// questions (also the fallback when the AI's checkpoint doesn't validate).
+func AuthoredCheckpoint(l *curriculum.Lesson, lang string) []tutor.CheckItem {
+	items := make([]tutor.CheckItem, 0, len(l.Assessment))
+	for _, it := range l.Assessment {
+		items = append(items, tutor.CheckItem{
+			Question: tutor.Question{Type: tutor.QuestionText, ObjectiveID: it.ObjectiveID, Prompt: l.PromptIn(it, lang), Listen: it.Listen, Explanation: it.Rubric},
+			Accepted: it.AcceptableAnswers, Rubric: it.Rubric,
+		})
+	}
+	return items
+}
+
+func (m *Mock) GradeCheckpoint(ctx context.Context, in GradeInput) (Result, error) {
+	m.Calls.Grade++
+	if m.GradeFunc != nil {
+		raw, err := m.GradeFunc(in)
+		return Result{Raw: raw, Usage: mockUsage}, err
+	}
+	if err := ctx.Err(); err != nil {
+		return Result{}, fmt.Errorf("%w: %v", ErrUnavailable, err)
+	}
+	type graded struct {
+		ID            string `json:"id"`
+		Score         int    `json:"score"`
+		CorrectAnswer string `json:"correctAnswer"`
+		Explanation   string `json:"explanation"`
+	}
+	var items []graded
+	var strengths, misses []string
+	for _, it := range in.Items {
+		ans := strings.TrimSpace(in.Answers[it.ID])
+		score, fixed := in.Fixed[it.ID]
+		if !fixed {
+			switch {
+			case Matches(ans, it.Accepted):
+				score = 100
+			case ans != "":
+				score = 40
+			}
 		}
+		expl := fmt.Sprintf(phrase(in.Locale, "correct_answer"), it.Key())
+		if score >= 80 {
+			strengths = append(strengths, it.ObjectiveID)
+		} else {
+			misses = append(misses, it.ObjectiveID)
+		}
+		items = append(items, graded{it.ID, score, it.Key(), expl})
 	}
 	feedback := phrase(in.Locale, "all_correct")
 	if len(misses) > 0 {
@@ -219,11 +267,7 @@ func (m *Mock) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
 		}
 		feedback = fmt.Sprintf(phrase(in.Locale, "review"), strings.Join(texts, "; "))
 	}
-	if evidence == nil {
-		evidence = []string{phrase(in.Locale, "none_correct")}
-	}
-	raw, err := json.Marshal(map[string]any{"objectiveScores": scores, "evidence": evidence, "feedback": feedback})
-	return Result{Raw: raw, Usage: mockUsage}, err
+	return ok(map[string]any{"items": items, "strengths": unique(strengths), "toReview": unique(misses), "feedback": feedback})
 }
 
 var nonWord = regexp.MustCompile(`[^a-z0-9' ]+`)

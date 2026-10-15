@@ -273,6 +273,12 @@ func (s *Service) speechPath(text string) string {
 // Speech returns MP3 audio for an English sentence, cached on disk so each
 // sentence is only synthesised once.
 func (s *Service) Speech(ctx context.Context, userID, text string) ([]byte, error) {
+	return s.speech(ctx, userID, text, s.LiveSpeech)
+}
+
+// speech is Speech; live lets it ask the provider for audio it doesn't have
+// (checkpoint listening questions are new every attempt, so they always may).
+func (s *Service) speech(ctx context.Context, userID, text string, live bool) ([]byte, error) {
 	text = speechText(text)
 	if text == "" || utf8.RuneCountInString(text) > maxSpeechRunes {
 		return nil, errf(400, "invalid_text", false, "Text must be 1–%d characters.", maxSpeechRunes)
@@ -284,7 +290,7 @@ func (s *Service) Speech(ctx context.Context, userID, text string) ([]byte, erro
 	if b, err := os.ReadFile(path); err == nil {
 		return b, nil
 	}
-	if !s.LiveSpeech {
+	if !live {
 		return nil, errNoAudio
 	}
 	if err := s.checkQuota(ctx, userID); err != nil {
@@ -348,7 +354,7 @@ func (s *Service) synthesize(ctx context.Context, userID, text, path string) *sp
 // warmSpeech makes a new plan's audio in the background.
 func (s *Service) warmSpeech(userID string, p tutor.Plan) {
 	if s.WarmSpeech && s.LiveSpeech {
-		s.warmTexts(userID, tutor.SpeechTexts(p, warmMaxTexts))
+		s.warmTexts(userID, tutor.SpeechTexts(p, warmMaxTexts), s.LiveSpeech)
 	}
 }
 
@@ -377,7 +383,7 @@ func (s *Service) WarmAllLessons() {
 		return
 	}
 	// No learner: shared lesson audio doesn't count against anyone's budget.
-	s.warmTexts("", missing)
+	s.warmTexts("", missing, s.LiveSpeech)
 }
 
 // BundleLessonAudio writes the audio of every lesson sentence into its
@@ -446,7 +452,7 @@ func pruneAudio(cur *curriculum.Curriculum) {
 	}
 }
 
-func (s *Service) warmTexts(userID string, texts []string) {
+func (s *Service) warmTexts(userID string, texts []string, live bool) {
 	if len(texts) == 0 {
 		return
 	}
@@ -458,7 +464,7 @@ func (s *Service) warmTexts(userID string, texts []string) {
 		// The provider sometimes times out; whatever failed gets two more rounds.
 		todo := texts
 		for round := 0; round < 3 && len(todo) > 0 && ctx.Err() == nil; round++ {
-			todo = s.speakAll(ctx, userID, todo)
+			todo = s.speakAll(ctx, userID, todo, live)
 		}
 		if userID == "" {
 			slog.Info("lesson audio ready", "made", len(texts)-len(todo), "failed", len(todo))
@@ -467,7 +473,7 @@ func (s *Service) warmTexts(userID string, texts []string) {
 }
 
 // speakAll makes audio for texts a few at a time and returns the ones that failed.
-func (s *Service) speakAll(ctx context.Context, userID string, texts []string) []string {
+func (s *Service) speakAll(ctx context.Context, userID string, texts []string, live bool) []string {
 	sem := make(chan struct{}, warmParallel)
 	var wg sync.WaitGroup
 	var mu sync.Mutex
@@ -478,7 +484,7 @@ func (s *Service) speakAll(ctx context.Context, userID string, texts []string) [
 		go func() {
 			defer wg.Done()
 			defer func() { <-sem }()
-			if _, err := s.Speech(ctx, userID, t); err != nil {
+			if _, err := s.speech(ctx, userID, t, live); err != nil {
 				mu.Lock()
 				failed = append(failed, t)
 				mu.Unlock()

@@ -57,9 +57,12 @@ func NewOpenAI(apiKey, tutorModel, evalModel, baseURL string) *OpenAI {
 func (o *OpenAI) Name() string { return "openai" }
 
 func (o *OpenAI) lessonCall(ctx context.Context, in LessonInput, task, user, name string, schema map[string]any, maxTokens int, history []ChatMessage) (Result, error) {
-	budget := o.TutorBudget
-	if name == "lesson_plan" {
+	budget, model := o.TutorBudget, o.TutorModel
+	switch name {
+	case "lesson_plan", "checkpoint":
 		budget = o.PlanBudget
+	case "checkpoint_grade", "checkpoint_check":
+		budget, model = o.EvalBudget, o.EvalModel
 	}
 	ctx, cancel := context.WithTimeout(ctx, budget)
 	defer cancel()
@@ -73,7 +76,7 @@ func (o *OpenAI) lessonCall(ctx context.Context, in LessonInput, task, user, nam
 	if user != "" {
 		input = append(input, map[string]string{"role": "user", "content": user})
 	}
-	return o.respond(ctx, request{Model: o.TutorModel, Input: input, Name: name, Schema: schema, MaxTokens: maxTokens, CacheKey: in.CacheKey})
+	return o.respond(ctx, request{Model: model, Input: input, Name: name, Schema: schema, MaxTokens: maxTokens, CacheKey: in.CacheKey})
 }
 
 func (o *OpenAI) LessonPlan(ctx context.Context, in LessonInput) (Result, error) {
@@ -100,14 +103,16 @@ func (o *OpenAI) Summarize(ctx context.Context, in SummaryInput) (Result, error)
 	return o.lessonCall(ctx, in.LessonInput, summaryTask(in), "", "summary", summarySchema(), 700, nil)
 }
 
-func (o *OpenAI) Evaluate(ctx context.Context, in EvalInput) (Result, error) {
-	ctx, cancel := context.WithTimeout(ctx, o.EvalBudget)
-	defer cancel()
-	input := []map[string]string{
-		{"role": "system", "content": evalSystemPrompt(in)},
-		{"role": "user", "content": evalUserPrompt(in)},
-	}
-	return o.respond(ctx, request{Model: o.EvalModel, Input: input, Name: "assessment_result", Schema: evalSchema(in), MaxTokens: 1200})
+func (o *OpenAI) Checkpoint(ctx context.Context, in CheckpointInput) (Result, error) {
+	return o.lessonCall(ctx, in.LessonInput, checkpointTask(in), "", "checkpoint", checkpointSchema(), 6000, nil)
+}
+
+func (o *OpenAI) VerifyCheckpoint(ctx context.Context, in VerifyInput) (Result, error) {
+	return o.lessonCall(ctx, in.LessonInput, verifyTask(in), "", "checkpoint_check", verifySchema(), 3000, nil)
+}
+
+func (o *OpenAI) GradeCheckpoint(ctx context.Context, in GradeInput) (Result, error) {
+	return o.lessonCall(ctx, in.LessonInput, gradeTask(in), "", "checkpoint_grade", gradeSchema(), 4000, nil)
 }
 
 // Speech calls the text-to-speech endpoint and returns MP3 audio.

@@ -143,6 +143,7 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
   const start = useStartSession();
   const [panel, setPanel] = useState<Panel | null>(null);
   const [unlocked, setUnlocked] = useState<RoadmapNode[]>([]);
+  const [practising, setPractising] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
 
   const { mutate: startSession } = start;
@@ -202,7 +203,26 @@ function Lesson({ course, nodeId }: { course: string; nodeId: string }) {
         <View style={styles.column}>
           {l ? <LessonThread session={s} openArtifact={(artifact) => setPanel({ kind: 'artifact', artifact })} /> : null}
           {l && mastered ? (
-            <LessonResult session={s} unlocked={unlocked} onRoadmap={toRoadmap} onNext={(id) => router.replace(`/learn/${course}/${id}`)} />
+            <>
+              <LessonResult
+                session={s}
+                unlocked={unlocked}
+                onRoadmap={toRoadmap}
+                onNext={(id) => router.replace(`/learn/${course}/${id}`)}
+                onPractice={practising || s.checkpoint ? undefined : () => setPractising(true)}
+              />
+              {practising || s.checkpoint ? (
+                <Checkpoint
+                  session={s}
+                  practice
+                  // Keep the panel open to show the practice result.
+                  onResult={() => setPractising(true)}
+                  onOpenMaterial={() => setPanel({ kind: 'material' })}
+                  onProgress={() => setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 80)}
+                  onClose={() => setPractising(false)}
+                />
+              ) : null}
+            </>
           ) : l?.checkpoint ? (
             <Checkpoint
               session={s}

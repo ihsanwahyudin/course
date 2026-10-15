@@ -6,6 +6,7 @@ import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
 import type { RoadmapNode, Session } from '@/lib/api';
 import { colors, radius } from '@/theme/tokens';
+import { AttemptHistory, AttemptReview } from './CheckpointReview';
 import { Indented, TutorLine } from './StepParts';
 
 function Chip({ icon, label }: { icon: IconName; label: string }) {
@@ -19,13 +20,27 @@ function Chip({ icon, label }: { icon: IconName; label: string }) {
   );
 }
 
-// After a passed checkpoint: score per objective, the lesson summary and
-// what comes next.
-export function LessonResult({ session, unlocked, onNext, onRoadmap }: { session: Session; unlocked: RoadmapNode[]; onNext: (id: string) => void; onRoadmap: () => void }) {
+// After a passed checkpoint: score per objective with every answer's
+// correction, the lesson summary, the checkpoint history and what comes next.
+export function LessonResult({
+  session,
+  unlocked,
+  onNext,
+  onRoadmap,
+  onPractice,
+}: {
+  session: Session;
+  unlocked: RoadmapNode[];
+  onNext: (id: string) => void;
+  onRoadmap: () => void;
+  onPractice?: () => void;
+}) {
   const t = useT();
-  const a = session.lastAttempt;
+  // The attempt that mastered the lesson (later ones may be practice).
+  const a = session.masteredBy ?? (session.lastAttempt && !session.lastAttempt.practice ? session.lastAttempt : null);
   const sum = session.lesson?.summary ?? null;
-  const next = sum?.next ?? unlocked[0] ?? null;
+  const following = session.next && session.next.status !== 'locked' && session.next.status !== 'coming_soon' ? session.next : null;
+  const next = sum?.next ?? unlocked[0] ?? following;
   return (
     <View style={{ gap: 16 }}>
       <TutorLine>{t('result.done')}</TutorLine>
@@ -73,6 +88,12 @@ export function LessonResult({ session, unlocked, onNext, onRoadmap }: { session
                 ))}
               </View>
             ) : null}
+          </View>
+        ) : null}
+        {a?.review ? (
+          <View style={styles.card}>
+            <Eyebrow color={colors.accent}>{t('correction.title')}</Eyebrow>
+            <AttemptReview attempt={a} />
           </View>
         ) : null}
 
@@ -137,8 +158,10 @@ export function LessonResult({ session, unlocked, onNext, onRoadmap }: { session
               <PillButton label={t('result.startNext', { title: next.title })} onPress={() => onNext(next.id)} />
             ) : null}
             <PillButton label={t('result.backRoadmap')} variant="secondary" onPress={onRoadmap} />
+            {onPractice ? <PillButton label={t('result.practiceAgain')} icon="refresh" variant="secondary" onPress={onPractice} /> : null}
           </View>
         </View>
+        {session.attempts.length > 1 ? <AttemptHistory attempts={session.attempts} current={session.lastAttempt?.id} /> : null}
       </Indented>
     </View>
   );

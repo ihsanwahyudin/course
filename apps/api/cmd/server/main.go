@@ -84,7 +84,7 @@ func run() error {
 	go cleanExpiredSessions(ctx, store)
 
 	svc := &learning.Service{Store: store, Catalog: catalog, AI: provider, TimeZone: env("APP_TIMEZONE", "Asia/Jakarta"),
-		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 60000),
+		DailyTokens: envInt("AI_DAILY_TOKENS_PER_USER", 150000),
 		// Pre-make lesson audio when the provider has a voice (WARM_SPEECH=off to disable).
 		// Audio is made only on purpose (bundle-audio, after review) unless
 		// LIVE_SPEECH=on lets the server make missing audio itself, and
@@ -92,7 +92,9 @@ func run() error {
 		LiveSpeech: provider.Name() != "mock" && env("LIVE_SPEECH", "off") == "on",
 		WarmSpeech: provider.Name() != "mock" && env("WARM_SPEECH", "off") == "on",
 		// Kept across restarts so lesson audio is only ever made once.
-		SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts")}
+		SpeechCacheDir: env("SPEECH_CACHE_DIR", "data/tts"),
+		// Write the next checkpoint ahead of time (PREFETCH_CHECKPOINTS=off to disable).
+		PrefetchCheckpoints: env("PREFETCH_CHECKPOINTS", "on") == "on"}
 	svc.WarmAllLessons()
 	srv := &apihttp.Server{
 		Svc: svc, Auth: &auth.Service{Store: store}, Catalog: catalog,

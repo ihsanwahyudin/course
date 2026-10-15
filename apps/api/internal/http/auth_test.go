@@ -322,8 +322,14 @@ func TestStepMemoryNotesAndSpeechEndpoints(t *testing.T) {
 	if _, body = do(h, call{method: "POST", path: base + "1/answer", body: `{"choice":0,"extra":1}`, cookie: c}); errCode(body) != "invalid_json" {
 		t.Fatalf("unknown fields are rejected: %v", body)
 	}
-	if _, body = do(h, call{method: "POST", path: "/api/v1/sessions/" + id + "/assessment", body: `{"answers":[]}`, cookie: c}); errCode(body) != "finish_steps_first" {
+	if _, body = do(h, call{method: "POST", path: "/api/v1/sessions/" + id + "/checkpoint", cookie: c}); errCode(body) != "finish_steps_first" {
 		t.Fatalf("checkpoint before the steps: %v", body)
+	}
+	if _, body = do(h, call{method: "POST", path: "/api/v1/sessions/" + id + "/assessment", body: `{"answers":[]}`, cookie: c}); errCode(body) != "no_checkpoint" {
+		t.Fatalf("answers before the checkpoint: %v", body)
+	}
+	if _, body = do(h, call{method: "GET", path: "/api/v1/attempts/not-a-uuid", cookie: c}); errCode(body) != "attempt_not_found" {
+		t.Fatalf("bad attempt id: %v", body)
 	}
 
 	// Memory and notes.

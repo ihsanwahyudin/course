@@ -137,10 +137,9 @@ def drive(api, node_id, lesson, helper=False):
     status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": node_id})
     if status != 200:
         fail(f"start {node_id}: {status} {s}")
-    if s["phase"] != "LEARNING" or not s["lesson"] or len(s["lesson"]["steps"]) != 1 or not s["assessment"] or not s["lesson"]["greeting"]:
+    if s["phase"] != "LEARNING" or not s["lesson"] or len(s["lesson"]["steps"]) != 1 or s["checkpoint"] or not s["lesson"]["greeting"]:
         fail(f"{node_id}: lesson should open on its first step with the checkpoint ahead: {s.get('phase')}")
-    right = [{"itemId": it["id"], "answer": it["acceptableAnswers"][0]} for it in lesson["assessment"]]
-    status, body = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": right})
+    status, body = call(api, "POST", f"/api/v1/sessions/{s['id']}/checkpoint")
     if status != 409 or body["error"]["code"] != "finish_steps_first":
         fail(f"{node_id}: checkpoint before the steps: {status} {body}")
     if helper:
@@ -161,16 +160,26 @@ def drive(api, node_id, lesson, helper=False):
         print(f"  ✓ {node_id}: {total} steps — asked, 2 hints then gave up, similar question once; flashcards saved and reviewed")
 
     # A failing attempt first: must not unlock anything, and the lesson stays open.
-    wrong = [{"itemId": it["id"], "answer": "zzz"} for it in lesson["assessment"]]
-    status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": wrong})
+    cp = start_checkpoint(api, node_id, s, lesson, attempt=1)
+    wrong = [{"itemId": it["id"], "answer": "zzz"} for it in cp["items"]]
+    status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": wrong})
     if status != 200 or r["passed"] or r["unlocked"]:
         fail(f"{node_id}: failing attempt misbehaved: {status} {r}")
-    if r["session"]["phase"] != "LEARNING" or not r["session"]["canChat"]:
+    if r["session"]["phase"] != "LEARNING" or not r["session"]["canChat"] or r["session"]["checkpoint"]:
         fail(f"{node_id}: expected the lesson to stay open after failing, got {r['session']['phase']}")
+    review = r["attempt"]["review"]["items"]
+    if len(review) != len(cp["items"]) or any(not it["explanation"] or it["verdict"] == "correct" for it in review):
+        fail(f"{node_id}: every answer should be explained: {review}")
     s = r["session"]
-    status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": right})
+    # A retake is a new checkpoint.
+    cp = start_checkpoint(api, node_id, s, lesson, attempt=2)
+    right = [{"itemId": it["id"], "answer": lesson["assessment"][i]["acceptableAnswers"][0]} for i, it in enumerate(cp["items"])]
+    status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": right})
     if status != 200 or not r["passed"]:
         fail(f"{node_id}: passing attempt failed: {status} {r}")
+    history = r["session"]["attempts"]
+    if [a["passed"] for a in history] != [True, False]:
+        fail(f"{node_id}: checkpoint history should hold both attempts, newest first: {history}")
     summary = r["session"]["lesson"]["summary"]
     if not summary or not summary["mastered"]:
         fail(f"{node_id}: lesson summary missing: {summary}")
@@ -180,9 +189,29 @@ def drive(api, node_id, lesson, helper=False):
     status, again = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"answers": right})
     if status != 200 or not again["alreadyCompleted"] or again["newlyMastered"]:
         fail(f"{node_id}: resubmission not idempotent: {status} {again}")
+    # Opening the lesson again shows the finished lesson, not a new one.
+    status, back = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": node_id})
+    if status != 200 or back["id"] != s["id"] or back["phase"] != "MASTERED" or len(back["attempts"]) != 2:
+        fail(f"{node_id}: a mastered lesson should reopen where it was finished: {status} {back.get('id')} {back.get('phase')}")
+    if helper:
+        # Practice after mastery: recorded, progress untouched.
+        cp = start_checkpoint(api, node_id, back, lesson, attempt=3, practice=True)
+        status, p = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": wrong})
+        if status != 200 or p["passed"] or not p["attempt"]["practice"] or p["session"]["node"]["status"] != "mastered":
+            fail(f"{node_id}: a practice checkpoint must not change progress: {status} {p}")
+        print(f"  ✓ {node_id}: practice checkpoint after mastery recorded ({p['attempt']['score']}/100), still mastered")
     unlocked = [n["id"] for n in r["unlocked"]]
     extra = f", {summary['flashcardsAdded']} mistake card(s)" if summary["flashcardsAdded"] else ""
     print(f"  ✓ {node_id}: {r['attempt']['score']}/100, unlocked {unlocked or '—'}{extra}")
+
+
+def start_checkpoint(api, node_id, s, lesson, attempt, practice=False):
+    status, cp = call(api, "POST", f"/api/v1/sessions/{s['id']}/checkpoint")
+    if status != 200 or cp["attempt"] != attempt or cp["practice"] != practice or len(cp["items"]) != len(lesson["assessment"]):
+        fail(f"{node_id}: checkpoint {attempt}: {status} {cp}")
+    if any("acceptedAnswers" in it or "rubric" in it for it in cp["items"]):
+        fail(f"{node_id}: the checkpoint must not carry its answers")
+    return cp
 
 
 def enroll(api):

@@ -87,11 +87,13 @@ func code(err error) string {
 func answers(s *Service, nodeID string, correct bool) map[string]string {
 	lesson := lessonOf(s, nodeID)
 	out := map[string]string{}
-	for _, it := range lesson.Assessment {
+	// The mock writes the hand-written checkpoint, numbered q1, q2, …
+	for i, it := range lesson.Assessment {
+		id := fmt.Sprintf("q%d", i+1)
 		if correct {
-			out[it.ID] = it.AcceptableAnswers[0]
+			out[id] = it.AcceptableAnswers[0]
 		} else {
-			out[it.ID] = "zzz"
+			out[id] = "zzz"
 		}
 	}
 	return out
@@ -105,7 +107,7 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if sess.Lesson == nil || len(sess.Lesson.Steps) != 1 || sess.Lesson.TotalSteps < tutor.MinSteps || sess.Material == nil || len(sess.Assessment) == 0 || sess.Phase != string(tutor.PhaseLearning) {
+	if sess.Lesson == nil || len(sess.Lesson.Steps) != 1 || sess.Lesson.TotalSteps < tutor.MinSteps || sess.Material == nil || sess.Checkpoint != nil || sess.Phase != string(tutor.PhaseLearning) {
 		t.Fatalf("a new lesson opens on its first step with the material at hand: %+v", sess)
 	}
 	if sess.Prev == nil || sess.Prev.ID != "a0-greetings" || sess.Next == nil || sess.Next.ID != "a0-sounds-indonesian" {
@@ -115,7 +117,7 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	if err != nil || again.ID != sess.ID {
 		t.Fatalf("starting twice should resume the same session: %v %s vs %s", err, again.ID, sess.ID)
 	}
-	if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true)); code(err) != "finish_steps_first" {
+	if _, err := s.StartCheckpoint(ctx, learnerID, sess.ID); code(err) != "finish_steps_first" {
 		t.Fatalf("the checkpoint comes after the steps: %v", err)
 	}
 	finishSteps(t, s, sess)
@@ -185,7 +187,7 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 	if res.Passed || res.NewlyMastered || len(res.Unlocked) != 0 || res.Attempt.Score >= 80 {
 		t.Fatalf("expected failing result: %+v", res)
 	}
-	if res.Session.Phase != string(tutor.PhaseLearning) || !res.Session.CanChat || len(res.Session.Assessment) == 0 {
+	if res.Session.Phase != string(tutor.PhaseLearning) || !res.Session.CanChat || res.Session.Checkpoint != nil || len(res.Session.Attempts) != 1 {
 		t.Fatalf("a failed quiz keeps the lesson open for more learning: %+v", res.Session)
 	}
 	if a := res.Session.LastAttempt; a == nil || a.Passed || res.Session.Lesson.Summary != nil {
@@ -198,8 +200,11 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 		t.Fatalf("successor must stay locked, got %v", err)
 	}
 
-	// The final quiz can be retaken straight away.
+	// The final quiz can be retaken straight away, with a new checkpoint.
 	sess = res.Session
+	if _, err := s.StartCheckpoint(ctx, learnerID, sess.ID); err != nil {
+		t.Fatal(err)
+	}
 	res, err = s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", true))
 	if err != nil || !res.Passed || !res.NewlyMastered {
 		t.Fatalf("retake should pass: %+v %v", res, err)
@@ -248,20 +253,28 @@ func TestProviderFailuresNeverPersistOrAwardMastery(t *testing.T) {
 	mock.AskFunc = nil
 	sess = finishSteps(t, s, view)
 
-	for name, fn := range map[string]func(ai.EvalInput) (json.RawMessage, error){
-		"timeout": func(ai.EvalInput) (json.RawMessage, error) { return nil, fmt.Errorf("%w: deadline", ai.ErrUnavailable) },
-		"malformed": func(ai.EvalInput) (json.RawMessage, error) {
-			return json.RawMessage(`{"objectiveScores": "great"}`), nil
+	graded := func(score int, explanation string) json.RawMessage {
+		var items []string
+		for i := range lessonOf(s, "a0-alphabet-sounds").Assessment {
+			items = append(items, fmt.Sprintf(`{"id":"q%d","score":%d,"correctAnswer":"x","explanation":%q}`, i+1, score, explanation))
+		}
+		return json.RawMessage(`{"items":[` + strings.Join(items, ",") + `],"strengths":[],"toReview":[],"feedback":"x"}`)
+	}
+	for name, fn := range map[string]func(ai.GradeInput) (json.RawMessage, error){
+		"timeout": func(ai.GradeInput) (json.RawMessage, error) {
+			return nil, fmt.Errorf("%w: deadline", ai.ErrUnavailable)
 		},
-		"missing objective": func(ai.EvalInput) (json.RawMessage, error) {
-			return json.RawMessage(`{"objectiveScores":{"vowels":100},"evidence":[],"feedback":"x"}`), nil
+		"malformed": func(ai.GradeInput) (json.RawMessage, error) {
+			return json.RawMessage(`{"items": "great"}`), nil
 		},
-		"inflated score": func(ai.EvalInput) (json.RawMessage, error) {
-			return json.RawMessage(`{"objectiveScores":{"letter-names":500,"vowels":100,"spelling":100},"evidence":[],"feedback":"x"}`), nil
+		"missing item": func(ai.GradeInput) (json.RawMessage, error) {
+			return json.RawMessage(`{"items":[{"id":"q1","score":100,"correctAnswer":"i","explanation":"x"}],"strengths":[],"toReview":[],"feedback":"x"}`), nil
 		},
+		"inflated score":      func(ai.GradeInput) (json.RawMessage, error) { return graded(500, "x"), nil },
+		"missing explanation": func(ai.GradeInput) (json.RawMessage, error) { return graded(100, ""), nil },
 	} {
-		mock.EvalFunc = fn
-		// Wrong answers, so the evaluator is consulted (exact matches aren't).
+		mock.GradeFunc = fn
+		// Wrong answers, so the grader has to judge them.
 		_, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, "a0-alphabet-sounds", false))
 		var le *Error
 		if !errors.As(err, &le) || le.Status != 502 || !le.Retryable {
@@ -537,10 +550,14 @@ func wrongAnswer(q tutor.Question) AnswerInput {
 	return AnswerInput{Tokens: w}
 }
 
-// finishSteps answers every open question correctly and moves to the checkpoint.
+// finishSteps answers every open question correctly and opens the checkpoint.
 func finishSteps(t *testing.T, s *Service, sess SessionView) SessionView {
 	t.Helper()
-	ctx := context.Background()
+	return finishStepsIn(t, s, context.Background(), sess)
+}
+
+func finishStepsIn(t *testing.T, s *Service, ctx context.Context, sess SessionView) SessionView {
+	t.Helper()
 	plan := planOf(t, s, sess.ID)
 	for !sess.Lesson.Checkpoint {
 		i := sess.Lesson.StepIndex
@@ -553,6 +570,13 @@ func finishSteps(t *testing.T, s *Service, sess SessionView) SessionView {
 		if sess, err = s.NextStep(ctx, learnerID, sess.ID, i); err != nil {
 			t.Fatalf("next step %d: %v", i, err)
 		}
+	}
+	if _, err := s.StartCheckpoint(ctx, learnerID, sess.ID); err != nil {
+		t.Fatalf("start checkpoint: %v", err)
+	}
+	sess, err := s.GetSession(ctx, learnerID, sess.ID)
+	if err != nil || sess.Checkpoint == nil {
+		t.Fatalf("the checkpoint should be open: %v", err)
 	}
 	return sess
 }

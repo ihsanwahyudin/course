@@ -171,7 +171,41 @@ export type Attempt = {
   evidence: string[];
   feedback: string;
   createdAt: string;
+  checkpointId: string | null;
+  /** Taken after mastery: recorded, but it never changes progress. */
+  practice: boolean;
+  /** Every graded answer with its explanation (only on single attempts). */
+  review?: CheckpointReview;
 };
+
+// A checkpoint is written fresh for every attempt; answers stay on the server.
+export type CheckItemView = {
+  id: string;
+  objectiveId: string;
+  type: 'mcq' | 'word_order' | 'text';
+  prompt: string;
+  options?: string[];
+  tokens?: string[];
+  hasAudio: boolean;
+};
+export type CheckpointView = { id: string; practice: boolean; attempt: number; items: CheckItemView[] };
+export type ItemReview = {
+  id: string;
+  objectiveId: string;
+  type: CheckItemView['type'];
+  prompt: string;
+  options?: string[];
+  listen?: string;
+  answer: string;
+  correctAnswer: string;
+  score: number;
+  verdict: 'correct' | 'partial' | 'wrong';
+  explanation: string;
+  /** The question's answer key was wrong; graded against the real answer. */
+  keyFixed?: boolean;
+};
+export type CheckpointReview = { items: ItemReview[]; strengths: string[]; toReview: string[] };
+export type AttemptSummary = { id: string; score: number; threshold: number; passed: boolean; practice: boolean; createdAt: string };
 
 // Lesson reading material (course data, localized by the server).
 export type ExampleRow = { en: string; id: string; note?: string };
@@ -280,8 +314,13 @@ export type Session = {
   material: Material | null;
   lesson: Lesson | null;
   canChat: boolean;
-  assessment: { id: string; objectiveId: string; prompt: string; hasAudio: boolean }[];
+  /** The open checkpoint, once started. */
+  checkpoint: CheckpointView | null;
   lastAttempt: Attempt | null;
+  /** The attempt that mastered the lesson (practice attempts come later). */
+  masteredBy: Attempt | null;
+  /** Checkpoint history for this lesson, newest first. */
+  attempts: AttemptSummary[];
   prev: RoadmapNode | null;
   next: RoadmapNode | null;
 };
@@ -435,8 +474,11 @@ export const api = {
   notes: () => request<{ notes: Note[] }>('/api/v1/notes'),
   saveNote: (b: { course: string; nodeId: string; artifact: Artifact }) => request<Note>('/api/v1/notes', post(b)),
   deleteNote: (id: string) => request<{ ok: boolean }>(`/api/v1/notes/${enc(id)}`, { method: 'DELETE' }),
-  submitAssessment: (id: string, answers: { itemId: string; answer: string }[]) =>
-    request<AssessmentResult>(`/api/v1/sessions/${enc(id)}/assessment`, { ...post({ answers }), timeoutMs: 95000 }),
+  // Writing a checkpoint's questions can take a while.
+  startCheckpoint: (id: string) => request<CheckpointView>(`/api/v1/sessions/${enc(id)}/checkpoint`, { method: 'POST', timeoutMs: 170000 }),
+  submitAssessment: (id: string, checkpointId: string, answers: { itemId: string; answer: string }[]) =>
+    request<AssessmentResult>(`/api/v1/sessions/${enc(id)}/assessment`, { ...post({ checkpointId, answers }), timeoutMs: 125000 }),
+  attempt: (id: string) => request<Attempt>(`/api/v1/attempts/${enc(id)}`),
   // flashcards
   saveFlashcards: (b: { course: string; nodeId: string; cards: Flashcard[] }) =>
     request<{ added: number; total: number; due: number }>('/api/v1/flashcards', post(b)),

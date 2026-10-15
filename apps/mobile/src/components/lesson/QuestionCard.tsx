@@ -13,7 +13,7 @@ import { RichText } from './RichText';
 
 export type QuestionBusy = 'answer' | 'hint' | 'reveal' | null;
 
-function Option({ label, state, onPress, disabled }: { label: string; state: 'idle' | 'picked' | 'right' | 'wrong' | 'dim'; onPress: () => void; disabled: boolean }) {
+export function Option({ label, state, onPress, disabled }: { label: string; state: 'idle' | 'picked' | 'right' | 'wrong' | 'dim'; onPress: () => void; disabled: boolean }) {
   const [hovered, setHovered] = useState(false);
   const look = {
     idle: { bg: hovered && !disabled ? colors.canvas : colors.card, border: colors.lineStrong, fg: colors.ink },
@@ -101,49 +101,59 @@ function Result({ q }: { q: QuestionView }) {
   );
 }
 
-// Word order: tap words to build the sentence, tap again to take one back.
-function WordOrder({ q, picked, setPicked, locked }: { q: QuestionView; picked: number[]; setPicked: (p: number[]) => void; locked: boolean }) {
+// Tap words to build a sentence, tap one in the sentence to take it back.
+export function WordPicker({ tokens, picked, setPicked }: { tokens: string[]; picked: number[]; setPicked: (p: number[]) => void }) {
   const t = useT();
-  const shown = locked ? (q.picked ?? []) : picked.map((i) => q.tokens[i]);
   return (
     <View style={{ gap: 12 }}>
-      <View style={[styles.sentence, locked && q.answered && { borderColor: q.correct ? colors.emerald : colors.danger }]}>
-        {shown.length ? (
-          shown.map((w, k) => (
-            <Pressable key={`${w}-${k}`} disabled={locked} onPress={() => setPicked(picked.filter((_, j) => j !== k))} accessibilityRole="button" style={styles.word}>
+      <Sentence words={picked.map((i) => tokens[i])} onRemove={(k) => setPicked(picked.filter((_, j) => j !== k))} />
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+        {tokens.map((w, i) =>
+          picked.includes(i) ? (
+            <View key={i} style={[styles.word, styles.wordGhost]}>
+              <Text size={15} color="transparent">
+                {w}
+              </Text>
+            </View>
+          ) : (
+            <Pressable key={i} onPress={() => setPicked([...picked, i])} accessibilityRole="button" style={[styles.word, styles.wordPick]}>
               <Text size={15} weight="medium">
                 {w}
               </Text>
             </Pressable>
-          ))
-        ) : (
-          <Text size={14} color={colors.muted}>
-            {t('step.tapWords')}
-          </Text>
+          ),
         )}
+        {picked.length ? <LinkButton label={t('step.clear')} icon="undo" onPress={() => setPicked([])} /> : null}
       </View>
-      {!locked ? (
-        <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-          {q.tokens.map((w, i) =>
-            picked.includes(i) ? (
-              <View key={i} style={[styles.word, styles.wordGhost]}>
-                <Text size={15} color="transparent">
-                  {w}
-                </Text>
-              </View>
-            ) : (
-              <Pressable key={i} onPress={() => setPicked([...picked, i])} accessibilityRole="button" style={[styles.word, styles.wordPick]}>
-                <Text size={15} weight="medium">
-                  {w}
-                </Text>
-              </Pressable>
-            ),
-          )}
-          {picked.length ? <LinkButton label={t('step.clear')} icon="undo" onPress={() => setPicked([])} /> : null}
-        </View>
-      ) : null}
     </View>
   );
+}
+
+function Sentence({ words, onRemove, border }: { words: string[]; onRemove?: (k: number) => void; border?: string }) {
+  const t = useT();
+  return (
+    <View style={[styles.sentence, border ? { borderColor: border } : null]}>
+      {words.length ? (
+        words.map((w, k) => (
+          <Pressable key={`${w}-${k}`} disabled={!onRemove} onPress={() => onRemove?.(k)} accessibilityRole="button" style={styles.word}>
+            <Text size={15} weight="medium">
+              {w}
+            </Text>
+          </Pressable>
+        ))
+      ) : (
+        <Text size={14} color={colors.muted}>
+          {t('step.tapWords')}
+        </Text>
+      )}
+    </View>
+  );
+}
+
+// Word order: build the sentence, or show what the learner built once answered.
+function WordOrder({ q, picked, setPicked, locked }: { q: QuestionView; picked: number[]; setPicked: (p: number[]) => void; locked: boolean }) {
+  if (!locked) return <WordPicker tokens={q.tokens} picked={picked} setPicked={setPicked} />;
+  return <Sentence words={q.picked ?? []} border={q.answered ? (q.correct ? colors.emerald : colors.danger) : undefined} />;
 }
 
 type Props = {

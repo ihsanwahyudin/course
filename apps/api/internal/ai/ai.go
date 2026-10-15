@@ -1,6 +1,6 @@
 // Package ai adapts AI providers to the jobs FluentPath gives them: writing a
 // lesson plan, hints, similar questions, answering questions inside a step,
-// summarising a finished lesson, rubric-based assessment, and speech
+// summarising a finished lesson, writing and grading checkpoints, and speech
 // (text-to-speech and transcription). Providers return raw JSON; the tutor
 // and assessment packages validate it before anything is stored, and nothing
 // a provider returns can change mastery directly.
@@ -85,14 +85,27 @@ type SummaryInput struct {
 	NextLesson string         // title of the next lesson, if any
 }
 
-type EvalInput struct {
-	Policy         string // course.json tutor.evaluatorPolicy
-	Locale         string // language for feedback and evidence
-	LanguagePolicy string
-	TargetLevel    string
-	Node           *curriculum.Node
-	Items          []curriculum.AssessmentItem
-	Answers        map[string]string // item id -> learner answer
+// CheckpointInput asks for a fresh checkpoint (final quiz) for a lesson.
+type CheckpointInput struct {
+	LessonInput
+	Examples []curriculum.AssessmentItem // the hand-written checkpoint, for level and style
+	Earlier  []string                    // questions from earlier attempts, not to repeat
+	Problems []string                    // what the checker found in the last draft, to fix
+}
+
+// VerifyInput asks for a written checkpoint to be checked question by question.
+type VerifyInput struct {
+	LessonInput
+	Items []tutor.CheckItem
+}
+
+// GradeInput asks for every checkpoint answer to be judged and explained.
+type GradeInput struct {
+	LessonInput
+	EvaluatorPolicy string // course.json tutor.evaluatorPolicy
+	Items           []tutor.CheckItem
+	Answers         map[string]string // item id -> learner answer
+	Fixed           map[string]int    // scores the server already decided
 	// GoalHint is the learner's goal, for relating feedback to it. It must
 	// not affect scores.
 	GoalHint string
@@ -105,7 +118,11 @@ type Provider interface {
 	SimilarQuestion(ctx context.Context, in SimilarInput) (Result, error)
 	Ask(ctx context.Context, in AskInput) (Result, error)
 	Summarize(ctx context.Context, in SummaryInput) (Result, error)
-	Evaluate(ctx context.Context, in EvalInput) (Result, error)
+	// Checkpoint writes a new checkpoint; GradeCheckpoint judges its answers.
+	Checkpoint(ctx context.Context, in CheckpointInput) (Result, error)
+	// VerifyCheckpoint checks every question of a written checkpoint.
+	VerifyCheckpoint(ctx context.Context, in VerifyInput) (Result, error)
+	GradeCheckpoint(ctx context.Context, in GradeInput) (Result, error)
 	// Speech returns MP3 audio, or ErrNoAudio.
 	Speech(ctx context.Context, text string) ([]byte, error)
 	// Transcribe turns a short English recording into text, or ErrNoAudio.

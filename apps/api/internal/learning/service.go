@@ -9,7 +9,6 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"log/slog"
 	"math"
 	"sort"
 	"strings"
@@ -20,7 +19,6 @@ import (
 
 	"fluentpath/api/internal/ai"
 	"fluentpath/api/internal/apperr"
-	"fluentpath/api/internal/assessment"
 	"fluentpath/api/internal/curriculum"
 	"fluentpath/api/internal/progress"
 	"fluentpath/api/internal/storage"
@@ -60,9 +58,15 @@ type Service struct {
 	// made only on purpose, with `bundle-audio`, after the content is reviewed.
 	LiveSpeech bool
 
+	// PrefetchCheckpoints writes a learner's next checkpoint in the
+	// background (on the lesson's last step, and after a failed attempt).
+	PrefetchCheckpoints bool
+
 	speechMu       sync.Mutex
 	speechInflight map[string]*speechCall
-	warm           sync.WaitGroup // background speech warming (tests wait on it)
+	cpMu           sync.Mutex
+	cpInflight     map[string]chan struct{} // checkpoint writers by session
+	warm           sync.WaitGroup           // background speech warming (tests wait on it)
 }
 
 func (s *Service) course(slug string) (*curriculum.Curriculum, error) {
@@ -487,25 +491,22 @@ func startable(st state, n *curriculum.Node) (bool, string) {
 
 // ---- sessions ----
 
-type AssessmentItemView struct {
-	ID          string `json:"id"`
-	ObjectiveID string `json:"objectiveId"`
-	Prompt      string `json:"prompt"`
-	// HasAudio: a listening item; play it from …/assessment/{itemId}/listen.
-	HasAudio bool `json:"hasAudio"`
-}
-
 type SessionView struct {
 	storage.Session
-	Course      CourseRef                `json:"course"`
-	Node        NodeView                 `json:"node"`
-	Material    *curriculum.MaterialView `json:"material"` // full material, opened from the header
-	Lesson      *LessonView              `json:"lesson"`
-	CanChat     bool                     `json:"canChat"`
-	Assessment  []AssessmentItemView     `json:"assessment"`
-	LastAttempt *storage.Attempt         `json:"lastAttempt"`
-	Prev        *NodeView                `json:"prev"`
-	Next        *NodeView                `json:"next"`
+	Course   CourseRef                `json:"course"`
+	Node     NodeView                 `json:"node"`
+	Material *curriculum.MaterialView `json:"material"` // full material, opened from the header
+	Lesson   *LessonView              `json:"lesson"`
+	CanChat  bool                     `json:"canChat"`
+	// Checkpoint is the open checkpoint, if one has been started.
+	Checkpoint  *CheckpointView  `json:"checkpoint"`
+	LastAttempt *storage.Attempt `json:"lastAttempt"`
+	// MasteredBy is the attempt that mastered the lesson (practice comes later).
+	MasteredBy *storage.Attempt `json:"masteredBy"`
+	// Attempts is the learner's checkpoint history for this lesson, newest first.
+	Attempts []AttemptSummary `json:"attempts"`
+	Prev     *NodeView        `json:"prev"`
+	Next     *NodeView        `json:"next"`
 }
 
 func (s *Service) sessionCourse(sess storage.Session) (*curriculum.Curriculum, *curriculum.Node, error) {
@@ -541,7 +542,7 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 	lang := cur.Lang(sess.Locale)
 	v := SessionView{
 		Session: sess, Course: CourseRef{cur.Slug, cur.Text(st.lang).Title}, Node: nodeView(st, n),
-		Material: cur.MaterialIn(n.ID, lang), CanChat: sess.EndedAt == nil, Assessment: []AssessmentItemView{},
+		Material: cur.MaterialIn(n.ID, lang), CanChat: sess.EndedAt == nil,
 	}
 	lc, err := decodeLesson(cur, n, sess)
 	if err != nil {
@@ -550,19 +551,30 @@ func (s *Service) sessionView(ctx context.Context, db storage.DB, sess storage.S
 	if v.Lesson, err = s.lessonView(ctx, db, st, lc, lang); err != nil {
 		return SessionView{}, err
 	}
-	// The final quiz is always available while learning (answers stay on the server).
-	if sess.EndedAt == nil {
-		if l, ok := cur.Lesson(n.ID); ok {
-			for _, it := range l.Assessment {
-				v.Assessment = append(v.Assessment, AssessmentItemView{it.ID, it.ObjectiveID, l.PromptIn(it, lang), it.Listen != ""})
-			}
+	if c, err := storage.OpenCheckpoint(ctx, db, sess.ID); err == nil {
+		if v.Checkpoint, err = s.openCheckpointView(ctx, sess.UserID, cur, n, c); err != nil {
+			return SessionView{}, err
 		}
+	} else if !errors.Is(err, storage.ErrNotFound) {
+		return SessionView{}, err
 	}
+	history, err := storage.NodeAttempts(ctx, db, sess.UserID, cur.Slug, n.ID, attemptHistory)
+	if err != nil {
+		return SessionView{}, err
+	}
+	v.Attempts = attemptSummaries(history)
 	v.Prev, v.Next = neighbours(st, n)
 	if a, err := storage.LatestAttempt(ctx, db, sess.ID); err == nil {
 		v.LastAttempt = &a
 	} else if !errors.Is(err, storage.ErrNotFound) {
 		return SessionView{}, err
+	}
+	if sess.Phase == string(tutor.PhaseMastered) {
+		if a, err := storage.PassedAttempt(ctx, db, sess.ID); err == nil {
+			v.MasteredBy = &a
+		} else if !errors.Is(err, storage.ErrNotFound) {
+			return SessionView{}, err
+		}
 	}
 	return v, nil
 }
@@ -594,6 +606,35 @@ func (s *Service) StartSession(ctx context.Context, userID, courseSlug, nodeID s
 	}
 	locale := cur.Lang(langFrom(ctx))
 	sess, err := storage.FindOpenSession(ctx, s.Store.Pool, userID, cur.Slug, n.ID)
+	if (err == nil || errors.Is(err, storage.ErrNotFound)) && st.statuses[n.ID] == progress.StatusMastered {
+		// A mastered lesson reopens where it was finished: every step, the
+		// checkpoint history and practice checkpoints. An open session left
+		// from an earlier visit is closed (kept, like every session).
+		if done, derr := storage.LatestSession(ctx, s.Store.Pool, userID, cur.Slug, n.ID, string(tutor.PhaseMastered)); derr == nil {
+			if err == nil {
+				if err := storage.EndSession(ctx, s.Store.Pool, sess.ID, sess.Phase); err != nil {
+					return SessionView{}, err
+				}
+			}
+			// Mastered before lessons had steps: show the steps, all open.
+			if p, ok, perr := tutor.AuthoredPlan(cur, n.ID, cur.Lang(done.Locale)); len(done.Plan) == 0 && ok && perr == nil {
+				raw, err := json.Marshal(p)
+				if err == nil {
+					err = storage.SetSessionPlan(ctx, s.Store.Pool, done.ID, raw)
+				}
+				if err == nil {
+					err = storage.SaveSteps(ctx, s.Store.Pool, done.ID, len(p.Steps), json.RawMessage(`[]`))
+				}
+				if err != nil {
+					return SessionView{}, err
+				}
+				done.Plan, done.StepIndex, done.StepState = raw, len(p.Steps), json.RawMessage(`[]`)
+			}
+			return s.sessionView(ctx, s.Store.Pool, done)
+		} else if !errors.Is(derr, storage.ErrNotFound) {
+			return SessionView{}, derr
+		}
+	}
 	if err == nil && s.lessonRewritten(cur, n, sess) {
 		// The lesson's steps were rewritten since this session began: keep the
 		// old session (with its questions to the tutor) and start the new version.
@@ -697,127 +738,6 @@ type AssessmentResult struct {
 	AlreadyCompleted bool            `json:"alreadyCompleted"`
 	Unlocked         []NodeView      `json:"unlocked"`
 	Session          SessionView     `json:"session"`
-}
-
-func (s *Service) SubmitAssessment(ctx context.Context, userID, sessionID string, answers map[string]string) (AssessmentResult, error) {
-	sess, err := s.getOwnSession(ctx, userID, sessionID)
-	if err != nil {
-		return AssessmentResult{}, err
-	}
-	if sess.Phase == string(tutor.PhaseMastered) {
-		return s.completedResult(ctx, userID, sess)
-	}
-	cur, n, err := s.sessionCourse(sess)
-	if err != nil {
-		return AssessmentResult{}, err
-	}
-	// The checkpoint comes after the lesson's steps.
-	if lc, err := decodeLesson(cur, n, sess); err != nil {
-		return AssessmentResult{}, err
-	} else if len(lc.plan.Steps) == 0 || sess.StepIndex < len(lc.plan.Steps) {
-		return AssessmentResult{}, errStepsFirst
-	}
-	lesson, _ := cur.Lesson(n.ID)
-	clean := map[string]string{}
-	for k, v := range answers {
-		clean[k] = strings.TrimSpace(v)
-	}
-	if err := assessment.ValidateAnswers(lesson.Assessment, clean); err != nil {
-		return AssessmentResult{}, errf(400, "invalid_answers", false, "%s", err.Error())
-	}
-
-	st, err := s.load(ctx, s.Store.Pool, userID, cur)
-	if err != nil {
-		return AssessmentResult{}, err
-	}
-	lang := st.lang
-	raw, evaluator, err := s.grade(ctx, userID, cur, n, lesson, st, lang, clean)
-	if err != nil {
-		return AssessmentResult{}, err
-	}
-	res, err := assessment.Score(raw, n)
-	if err != nil {
-		slog.Warn("evaluator result rejected", "provider", s.AI.Name(), "session", sess.ID, "err", err)
-		return AssessmentResult{}, errf(502, "evaluator_malformed", true, "Scoring returned an invalid result. Nothing was saved — please submit again.")
-	}
-
-	var out AssessmentResult
-	err = pgx.BeginFunc(ctx, s.Store.Pool, func(tx pgx.Tx) error {
-		locked, err := storage.LockSession(ctx, tx, sess.ID, userID)
-		if err != nil {
-			return err
-		}
-		if locked.Phase == string(tutor.PhaseMastered) {
-			out.AlreadyCompleted = true
-			return nil
-		}
-		before, err := s.load(ctx, tx, userID, cur)
-		if err != nil {
-			return err
-		}
-		if _, err := storage.LockProgress(ctx, tx, userID, cur.Slug, n.ID); err != nil {
-			return err
-		}
-		out.Attempt, err = storage.InsertAttempt(ctx, tx, storage.NewAttempt{
-			SessionID: sess.ID, Score: res.Score, Threshold: res.Threshold, Passed: res.Passed,
-			ObjectiveScores: res.ObjectiveScores, Evidence: res.Evidence, Feedback: res.Feedback,
-			Answers: clean, EvaluatorResponse: json.RawMessage(raw), Evaluator: evaluator,
-		})
-		if err != nil {
-			return err
-		}
-		out.Attempt.CourseSlug, out.Attempt.NodeID = cur.Slug, n.ID
-		out.Passed = res.Passed
-		if res.Passed {
-			if out.NewlyMastered, err = storage.MarkMastered(ctx, tx, userID, cur.Slug, n.ID, res.Score); err != nil {
-				return err
-			}
-			if err := storage.EndSession(ctx, tx, sess.ID, string(tutor.PhaseMastered)); err != nil {
-				return err
-			}
-			msg := tr(lang, "mastered", res.Score, cur.LocalNode(n.ID, lang).Title, res.Feedback)
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, string(tutor.PhaseMastered), map[string]any{"kind": "result"}); err != nil {
-				return err
-			}
-		} else {
-			var weak []string
-			for _, o := range cur.LocalNode(n.ID, lang).Objectives {
-				if res.ObjectiveScores[o.ID] < res.Threshold {
-					weak = append(weak, lowerFirst(o.Text))
-				}
-			}
-			msg := tr(lang, "review", res.Score, res.Threshold, res.Feedback, strings.Join(weak, "; "))
-			if _, err := storage.AddMessage(ctx, tx, sess.ID, "assistant", msg, sess.Phase, map[string]any{"kind": "review_intro"}); err != nil {
-				return err
-			}
-		}
-		after, err := s.load(ctx, tx, userID, cur)
-		if err != nil {
-			return err
-		}
-		for _, id := range progress.NewlyUnlocked(cur, before.statuses, after.statuses) {
-			un, _ := cur.Node(id)
-			out.Unlocked = append(out.Unlocked, nodeView(after, un))
-		}
-		if err := storage.SetEnrollmentLevel(ctx, tx, userID, cur.Slug, progress.CurrentLevel(cur, after.statuses)); err != nil {
-			return err
-		}
-		return storage.TouchEnrollment(ctx, tx, userID, cur.Slug)
-	})
-	if err != nil {
-		return AssessmentResult{}, err
-	}
-	if out.AlreadyCompleted {
-		return s.completedResult(ctx, userID, sess)
-	}
-	if out.Unlocked == nil {
-		out.Unlocked = []NodeView{}
-	}
-	if out.NewlyMastered {
-		s.finishLesson(ctx, userID, cur, n, sess, res.ObjectiveScores)
-	}
-	out.Session, err = s.GetSession(ctx, userID, sess.ID)
-	return out, err
 }
 
 // completedResult answers a repeated submission for an already-mastered
