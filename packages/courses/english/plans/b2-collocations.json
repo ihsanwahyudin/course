@@ -1,0 +1,760 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn word partners that make your English sound natural: heavy traffic, meet a deadline, highly unlikely. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Learn the pair",
+        "text": "At B1 you learnt make a mistake and take a photo. Today: three new kinds of word partner.",
+        "body": "Recap: **collocations** (*kolokasi*) are words that usually go together. Today's three kinds:\n- **adjective + noun**: an adjective describes a noun (a thing): *heavy traffic*.\n- **verb + noun** at work: *meet a deadline*.\n- **adverb + adjective**: an adverb like *very* makes an adjective stronger: *highly unlikely*.\n\nThe wrong partner (`crowded traffic`, `reach the deadline`) isn't bad grammar; it just sounds **translated**. So **learn the pair**: write *meet a deadline*, not just *deadline*.",
+        "pairs": [
+          {
+            "en": "heavy traffic",
+            "id": "lalu lintas padat, macet"
+          },
+          {
+            "en": "strong coffee",
+            "id": "kopi kental"
+          },
+          {
+            "en": "meet a deadline",
+            "id": "memenuhi tenggat"
+          },
+          {
+            "en": "raise an issue",
+            "id": "menyampaikan masalah"
+          },
+          {
+            "en": "highly unlikely",
+            "id": "kecil sekali kemungkinannya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Adjective + noun",
+        "text": "Some adjectives have favourite nouns, and Indonesian often suggests the wrong one.",
+        "body": "**heavy** = a lot of: *heavy traffic*, *heavy rain* (deras). Not `crowded traffic`: **crowded** = full of people.\n**strong** = powerful: *strong coffee* (kental, not `thick`), *a strong accent*, *a strong wind*.\nA **price** is **high** or **low**; a thing is *expensive*.\nA **tight** deadline is *mepet*.\n*berat* isn't always heavy: *masalah berat* = **a serious problem**; *keputusan besar* = **a major decision**.",
+        "examples": [
+          {
+            "en": "There's heavy traffic on the toll road to Bandung.",
+            "id": "Jalan tol ke Bandung macet."
+          },
+          {
+            "en": "The KRL is always crowded at 7 a.m.",
+            "id": "KRL selalu penuh sesak jam 7 pagi."
+          },
+          {
+            "en": "Hotel prices in Bali are high in December.",
+            "id": "Harga hotel di Bali mahal di bulan Desember."
+          },
+          {
+            "en": "We have a tight deadline for this report.",
+            "id": "Tenggat laporan ini mepet."
+          },
+          {
+            "en": "Losing our biggest client is a serious problem.",
+            "id": "Kehilangan klien terbesar kita adalah masalah serius."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's the rainy season in Jakarta. Rina arrives late and explains why to her manager.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-noun",
+          "prompt": "Complete: Sorry I'm late. There was very ___ rain this morning, and my street flooded.",
+          "options": [
+            "strong",
+            "thick",
+            "heavy"
+          ],
+          "answer": 2,
+          "explanation": "*hujan deras* = **heavy rain**: heavy means 'a lot of', like heavy traffic. `strong rain` is a word-by-word guess from *deras*, and *thick* is for soup or a book."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Verb + noun at work",
+        "text": "Next: the verbs that go with everyday work nouns.",
+        "body": "- **meet a deadline** (finish on time); opposite **miss a deadline**. Not `reach the deadline`: you **reach a goal**.\n- **raise an issue** (menyampaikan masalah); **hold a meeting** (a bit formal; *have a meeting* is everyday).\n- **set a goal** (not `put a goal`), **make progress** (not `do progress`; no *a*).\n- **take responsibility for**, **run a business**, **pay attention to**.",
+        "pairs": [
+          {
+            "en": "miss a deadline",
+            "id": "melewati tenggat"
+          },
+          {
+            "en": "hold a meeting",
+            "id": "mengadakan rapat"
+          },
+          {
+            "en": "set a goal",
+            "id": "menetapkan target"
+          },
+          {
+            "en": "reach a goal",
+            "id": "mencapai target"
+          },
+          {
+            "en": "make progress",
+            "id": "ada kemajuan"
+          },
+          {
+            "en": "take responsibility for",
+            "id": "bertanggung jawab atas"
+          },
+          {
+            "en": "run a business",
+            "id": "menjalankan usaha"
+          },
+          {
+            "en": "pay attention to",
+            "id": "memperhatikan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi's team is building a new ojek-booking app. The manager asks how it's going.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-noun",
+          "prompt": "Complete: We're ___ good progress: the payment page is almost finished.",
+          "options": [
+            "making",
+            "doing",
+            "getting"
+          ],
+          "answer": 0,
+          "explanation": "The partner of progress is **make**: *make progress* (ada kemajuan). `doing progress` and `getting progress` are guesses from *melakukan / mendapat*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "A client's order went to the wrong address because Sari typed it wrong. She calls the client.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "verb-noun",
+          "prompt": "Arrange the words: Saya bertanggung jawab penuh atas kesalahan ini.",
+          "tokens": [
+            "responsibility",
+            "mistake",
+            "I",
+            "for",
+            "full",
+            "this",
+            "take"
+          ],
+          "solution": "I take full responsibility for this mistake.",
+          "explanation": "*bertanggung jawab atas* = **take responsibility for** + the thing. *full* goes before the noun: **take full responsibility**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Adverb + adjective",
+        "text": "Last group: words that make an adjective stronger.",
+        "body": "Indonesian uses *sangat* for everything. **very** is always safe in English, but natural English often picks a partner:\n- **highly** + unlikely, recommended, successful\n- **fully** (100%) + aware\n- **deeply** + feelings: concerned (prihatin, khawatir)\n- **completely** + different, wrong\n- **bitterly** + disappointed\n\nNot `strongly unlikely`: **strongly** goes with verbs of opinion: *I strongly agree*.",
+        "pairs": [
+          {
+            "en": "highly recommended",
+            "id": "sangat direkomendasikan"
+          },
+          {
+            "en": "highly successful",
+            "id": "sangat sukses"
+          },
+          {
+            "en": "fully aware",
+            "id": "sadar sepenuhnya"
+          },
+          {
+            "en": "deeply concerned",
+            "id": "sangat prihatin, sangat khawatir"
+          },
+          {
+            "en": "completely different",
+            "id": "sama sekali berbeda"
+          },
+          {
+            "en": "bitterly disappointed",
+            "id": "sangat kecewa"
+          },
+          {
+            "en": "strongly agree",
+            "id": "sangat setuju"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas moved from a small startup in Bandung to a big bank in Jakarta. A friend asks him about the new job.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adverb-adjective",
+          "prompt": "Complete: Working at the bank is ___ different from working at a startup.",
+          "options": [
+            "highly",
+            "completely",
+            "strongly"
+          ],
+          "answer": 1,
+          "explanation": "The partner of different is **completely** (or *totally*, *very*): *completely different* = sama sekali berbeda. *highly* goes with words like unlikely and recommended, and *strongly* with verbs like agree."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "After a flood in their area, residents talk to a TV reporter about clean water.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adverb-adjective",
+          "prompt": "Complete: We are ___ concerned about the water supply for our children.",
+          "options": [
+            "fully",
+            "bitterly",
+            "deeply"
+          ],
+          "answer": 2,
+          "explanation": "concerned (khawatir, prihatin) is a feeling, and feelings go with **deeply**: *deeply concerned*. *fully* goes with aware, and *bitterly* with disappointed."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip each card: say the English pair before you turn it over.",
+        "flashcards": [
+          {
+            "front": "macet (lalu lintas padat)",
+            "back": "heavy traffic (not 'crowded traffic')"
+          },
+          {
+            "front": "kopi kental",
+            "back": "strong coffee (not 'thick coffee')"
+          },
+          {
+            "front": "masalah berat",
+            "back": "a serious problem (not 'a heavy problem')"
+          },
+          {
+            "front": "memenuhi tenggat",
+            "back": "meet a deadline (not 'reach the deadline')"
+          },
+          {
+            "front": "menetapkan target",
+            "back": "set a goal (not 'put a goal')"
+          },
+          {
+            "front": "kecil sekali kemungkinannya",
+            "back": "highly unlikely (not 'strongly unlikely')"
+          },
+          {
+            "front": "sadar sepenuhnya",
+            "back": "fully aware"
+          },
+          {
+            "front": "sangat kecewa",
+            "back": "bitterly disappointed"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · collocations",
+          "intro": "Learn the pair, not the single word. When you're not sure, use very and check a collocation dictionary.",
+          "headers": [
+            "Pattern",
+            "Collocation",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "adjective + noun",
+              "heavy traffic, heavy rain",
+              "macet, hujan deras"
+            ],
+            [
+              "adjective + noun",
+              "strong coffee, a strong accent, a strong wind",
+              "kopi kental, logat kental, angin kencang"
+            ],
+            [
+              "adjective + noun",
+              "a high price, a low price",
+              "harga mahal, harga murah"
+            ],
+            [
+              "adjective + noun",
+              "a tight deadline",
+              "tenggat yang mepet"
+            ],
+            [
+              "adjective + noun",
+              "a serious problem, a major decision",
+              "masalah serius, keputusan besar"
+            ],
+            [
+              "verb + noun",
+              "meet a deadline, miss a deadline",
+              "memenuhi tenggat, melewati tenggat"
+            ],
+            [
+              "verb + noun",
+              "raise an issue, hold a meeting",
+              "menyampaikan masalah, mengadakan rapat"
+            ],
+            [
+              "verb + noun",
+              "set a goal, reach a goal",
+              "menetapkan target, mencapai target"
+            ],
+            [
+              "verb + noun",
+              "make progress, take responsibility for",
+              "ada kemajuan, bertanggung jawab atas"
+            ],
+            [
+              "verb + noun",
+              "run a business, pay attention to",
+              "menjalankan usaha, memperhatikan"
+            ],
+            [
+              "adverb + adjective",
+              "highly unlikely, highly recommended, highly successful",
+              "kecil sekali kemungkinannya, sangat direkomendasikan, sangat sukses"
+            ],
+            [
+              "adverb + adjective",
+              "fully aware, deeply concerned",
+              "sadar sepenuhnya, sangat prihatin"
+            ],
+            [
+              "adverb + adjective",
+              "completely different, bitterly disappointed",
+              "sama sekali berbeda, sangat kecewa"
+            ],
+            [
+              "strongly + verb",
+              "strongly agree, strongly believe",
+              "sangat setuju, sangat yakin"
+            ]
+          ],
+          "tips": [
+            "Not `crowded traffic`, `strong rain`, `thick coffee`, `the price is expensive`, `reach the deadline` or `strongly unlikely`: **heavy** traffic, **heavy** rain, **strong** coffee, the price is **high**, **meet** the deadline, **highly** unlikely.",
+            "Some pairs have a correct twin: a **big / major** decision, **hold / have** a meeting, **raise / bring up** an issue, **fully / well** aware, **completely / totally** different. **very** is always safe.",
+            "Write new words with their partner (**meet a deadline**, not just *deadline*). Check a collocation dictionary (Oxford Collocations Dictionary, Ozdic) or the examples in Cambridge Dictionary."
+          ],
+          "examples": [
+            {
+              "en": "There's heavy traffic on the toll road to Bandung.",
+              "id": "Jalan tol ke Bandung macet."
+            },
+            {
+              "en": "If we work on Saturday, we can still meet the deadline.",
+              "id": "Kalau kita kerja hari Sabtu, kita masih bisa selesai tepat waktu."
+            },
+            {
+              "en": "Rina is making good progress with her IELTS preparation.",
+              "id": "Persiapan IELTS Rina mengalami kemajuan yang bagus."
+            },
+            {
+              "en": "This dentist in Bandung is highly recommended.",
+              "id": "Dokter gigi di Bandung ini sangat direkomendasikan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This engVid video teaches ten adverb + adjective partners, with a quiz on the engVid site."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar pasangan kata yang membuat bahasa Inggrismu terdengar alami: heavy traffic, meet a deadline, highly unlikely. Kita jalan pelan-pelan, ya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Hafalkan pasangannya",
+        "text": "Di B1 kamu sudah belajar make a mistake dan take a photo. Hari ini: tiga jenis pasangan kata yang baru.",
+        "body": "Ulasan: **kolokasi** (collocation) adalah kata-kata yang biasa dipakai bersama. Tiga jenis hari ini:\n- **kata sifat + kata benda**: kata sifat (adjective) menjelaskan kata benda (noun, benda atau hal): *heavy traffic*.\n- **kata kerja + kata benda** di dunia kerja: *meet a deadline*.\n- **adverb + kata sifat**: adverb (kata keterangan) seperti *very* menguatkan kata sifat: *highly unlikely*.\n\nPasangan yang salah (`crowded traffic`, `reach the deadline`) bukan salah tata bahasa; hanya terdengar seperti **terjemahan**. Jadi **hafalkan pasangannya**: catat *meet a deadline*, bukan cuma *deadline*.",
+        "pairs": [
+          {
+            "en": "heavy traffic",
+            "id": "lalu lintas padat, macet"
+          },
+          {
+            "en": "strong coffee",
+            "id": "kopi kental"
+          },
+          {
+            "en": "meet a deadline",
+            "id": "memenuhi tenggat"
+          },
+          {
+            "en": "raise an issue",
+            "id": "menyampaikan masalah"
+          },
+          {
+            "en": "highly unlikely",
+            "id": "kecil sekali kemungkinannya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata sifat + kata benda",
+        "text": "Beberapa kata sifat punya kata benda favorit, dan bahasa Indonesia sering menggoda kita memilih yang salah.",
+        "body": "**heavy** = banyak, padat: *heavy traffic* (macet), *heavy rain* (hujan deras). Bukan `crowded traffic`: **crowded** = penuh orang.\n**strong** = kuat: *strong coffee* (kopi kental, bukan `thick`), *a strong accent* (logat kental), *a strong wind*.\n**Harga** itu **high** atau **low**; barangnya yang *expensive*.\nTenggat yang mepet = **tight** deadline.\n*berat* tidak selalu heavy: *masalah berat* = **a serious problem**; *keputusan besar* = **a major decision**.",
+        "examples": [
+          {
+            "en": "There's heavy traffic on the toll road to Bandung.",
+            "id": "Jalan tol ke Bandung macet."
+          },
+          {
+            "en": "The KRL is always crowded at 7 a.m.",
+            "id": "KRL selalu penuh sesak jam 7 pagi."
+          },
+          {
+            "en": "Hotel prices in Bali are high in December.",
+            "id": "Harga hotel di Bali mahal di bulan Desember."
+          },
+          {
+            "en": "We have a tight deadline for this report.",
+            "id": "Tenggat laporan ini mepet."
+          },
+          {
+            "en": "Losing our biggest client is a serious problem.",
+            "id": "Kehilangan klien terbesar kita adalah masalah serius."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sedang musim hujan di Jakarta. Rina datang terlambat dan menjelaskan alasannya ke manajernya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-noun",
+          "prompt": "Lengkapi: Sorry I'm late. There was very ___ rain this morning, and my street flooded.",
+          "options": [
+            "strong",
+            "thick",
+            "heavy"
+          ],
+          "answer": 2,
+          "explanation": "*hujan deras* = **heavy rain**: heavy berarti 'banyak', seperti heavy traffic. `strong rain` adalah tebakan kata per kata dari *deras*, dan *thick* untuk sup yang kental atau buku yang tebal."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata kerja + kata benda di kantor",
+        "text": "Berikutnya: kata kerja yang berpasangan dengan kata benda sehari-hari di kantor.",
+        "body": "- **meet a deadline** (selesai tepat waktu); lawannya **miss a deadline**. Bukan `reach the deadline`: yang di-**reach** itu target (**reach a goal**).\n- **raise an issue** (menyampaikan masalah); **hold a meeting** (mengadakan rapat, agak formal; *have a meeting* untuk sehari-hari).\n- **set a goal** (bukan `put a goal`), **make progress** (bukan `do progress`; tanpa *a*).\n- **take responsibility for**, **run a business**, **pay attention to**.",
+        "pairs": [
+          {
+            "en": "miss a deadline",
+            "id": "melewati tenggat"
+          },
+          {
+            "en": "hold a meeting",
+            "id": "mengadakan rapat"
+          },
+          {
+            "en": "set a goal",
+            "id": "menetapkan target"
+          },
+          {
+            "en": "reach a goal",
+            "id": "mencapai target"
+          },
+          {
+            "en": "make progress",
+            "id": "ada kemajuan"
+          },
+          {
+            "en": "take responsibility for",
+            "id": "bertanggung jawab atas"
+          },
+          {
+            "en": "run a business",
+            "id": "menjalankan usaha"
+          },
+          {
+            "en": "pay attention to",
+            "id": "memperhatikan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tim Budi sedang membuat aplikasi pemesanan ojek baru. Manajernya bertanya bagaimana perkembangannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-noun",
+          "prompt": "Lengkapi: We're ___ good progress: the payment page is almost finished.",
+          "options": [
+            "making",
+            "doing",
+            "getting"
+          ],
+          "answer": 0,
+          "explanation": "Pasangan progress adalah **make**: *make progress* (ada kemajuan). `doing progress` dan `getting progress` adalah tebakan dari *melakukan / mendapat*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Pesanan seorang klien terkirim ke alamat yang salah karena Sari salah mengetiknya. Sari menelepon kliennya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "verb-noun",
+          "prompt": "Susun kata-katanya: Saya bertanggung jawab penuh atas kesalahan ini.",
+          "tokens": [
+            "responsibility",
+            "mistake",
+            "I",
+            "for",
+            "full",
+            "this",
+            "take"
+          ],
+          "solution": "I take full responsibility for this mistake.",
+          "explanation": "*bertanggung jawab atas* = **take responsibility for** + halnya. *full* (penuh) diletakkan sebelum kata bendanya: **take full responsibility**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Adverb + kata sifat",
+        "text": "Kelompok terakhir: kata-kata yang menguatkan kata sifat.",
+        "body": "Bahasa Indonesia memakai *sangat* untuk semuanya. **very** selalu aman dalam bahasa Inggris, tapi bahasa Inggris yang alami sering memilih pasangan:\n- **highly** + unlikely, recommended, successful\n- **fully** (100%) + aware\n- **deeply** + perasaan: concerned (prihatin, khawatir)\n- **completely** + different, wrong\n- **bitterly** + disappointed\n\nBukan `strongly unlikely`: **strongly** berpasangan dengan kata kerja pendapat: *I strongly agree* (saya sangat setuju).",
+        "pairs": [
+          {
+            "en": "highly recommended",
+            "id": "sangat direkomendasikan"
+          },
+          {
+            "en": "highly successful",
+            "id": "sangat sukses"
+          },
+          {
+            "en": "fully aware",
+            "id": "sadar sepenuhnya"
+          },
+          {
+            "en": "deeply concerned",
+            "id": "sangat prihatin, sangat khawatir"
+          },
+          {
+            "en": "completely different",
+            "id": "sama sekali berbeda"
+          },
+          {
+            "en": "bitterly disappointed",
+            "id": "sangat kecewa"
+          },
+          {
+            "en": "strongly agree",
+            "id": "sangat setuju"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas pindah dari startup kecil di Bandung ke bank besar di Jakarta. Temannya bertanya soal pekerjaan barunya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adverb-adjective",
+          "prompt": "Lengkapi: Working at the bank is ___ different from working at a startup.",
+          "options": [
+            "highly",
+            "completely",
+            "strongly"
+          ],
+          "answer": 1,
+          "explanation": "Pasangan different adalah **completely** (atau *totally*, *very*): *completely different* = sama sekali berbeda. *highly* berpasangan dengan kata seperti unlikely dan recommended, dan *strongly* dengan kata kerja seperti agree."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Setelah banjir di daerah mereka, warga berbicara dengan reporter TV soal air bersih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adverb-adjective",
+          "prompt": "Lengkapi: We are ___ concerned about the water supply for our children.",
+          "options": [
+            "fully",
+            "bitterly",
+            "deeply"
+          ],
+          "answer": 2,
+          "explanation": "concerned (khawatir, prihatin) adalah perasaan, dan perasaan berpasangan dengan **deeply**: *deeply concerned*. *fully* berpasangan dengan aware, dan *bitterly* dengan disappointed."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik setiap kartu: ucapkan pasangan bahasa Inggrisnya sebelum kamu membaliknya.",
+        "flashcards": [
+          {
+            "front": "macet (lalu lintas padat)",
+            "back": "heavy traffic (not 'crowded traffic')"
+          },
+          {
+            "front": "kopi kental",
+            "back": "strong coffee (not 'thick coffee')"
+          },
+          {
+            "front": "masalah berat",
+            "back": "a serious problem (not 'a heavy problem')"
+          },
+          {
+            "front": "memenuhi tenggat",
+            "back": "meet a deadline (not 'reach the deadline')"
+          },
+          {
+            "front": "menetapkan target",
+            "back": "set a goal (not 'put a goal')"
+          },
+          {
+            "front": "kecil sekali kemungkinannya",
+            "back": "highly unlikely (not 'strongly unlikely')"
+          },
+          {
+            "front": "sadar sepenuhnya",
+            "back": "fully aware"
+          },
+          {
+            "front": "sangat kecewa",
+            "back": "bitterly disappointed"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · kolokasi",
+          "intro": "Hafalkan pasangannya, bukan katanya saja. Kalau ragu, pakai very dan cek kamus kolokasi.",
+          "headers": [
+            "Pola",
+            "Kolokasi",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "kata sifat + kata benda",
+              "heavy traffic, heavy rain",
+              "macet, hujan deras"
+            ],
+            [
+              "kata sifat + kata benda",
+              "strong coffee, a strong accent, a strong wind",
+              "kopi kental, logat kental, angin kencang"
+            ],
+            [
+              "kata sifat + kata benda",
+              "a high price, a low price",
+              "harga mahal, harga murah"
+            ],
+            [
+              "kata sifat + kata benda",
+              "a tight deadline",
+              "tenggat yang mepet"
+            ],
+            [
+              "kata sifat + kata benda",
+              "a serious problem, a major decision",
+              "masalah serius, keputusan besar"
+            ],
+            [
+              "kata kerja + kata benda",
+              "meet a deadline, miss a deadline",
+              "memenuhi tenggat, melewati tenggat"
+            ],
+            [
+              "kata kerja + kata benda",
+              "raise an issue, hold a meeting",
+              "menyampaikan masalah, mengadakan rapat"
+            ],
+            [
+              "kata kerja + kata benda",
+              "set a goal, reach a goal",
+              "menetapkan target, mencapai target"
+            ],
+            [
+              "kata kerja + kata benda",
+              "make progress, take responsibility for",
+              "ada kemajuan, bertanggung jawab atas"
+            ],
+            [
+              "kata kerja + kata benda",
+              "run a business, pay attention to",
+              "menjalankan usaha, memperhatikan"
+            ],
+            [
+              "adverb + kata sifat",
+              "highly unlikely, highly recommended, highly successful",
+              "kecil sekali kemungkinannya, sangat direkomendasikan, sangat sukses"
+            ],
+            [
+              "adverb + kata sifat",
+              "fully aware, deeply concerned",
+              "sadar sepenuhnya, sangat prihatin"
+            ],
+            [
+              "adverb + kata sifat",
+              "completely different, bitterly disappointed",
+              "sama sekali berbeda, sangat kecewa"
+            ],
+            [
+              "strongly + kata kerja",
+              "strongly agree, strongly believe",
+              "sangat setuju, sangat yakin"
+            ]
+          ],
+          "tips": [
+            "Bukan `crowded traffic`, `strong rain`, `thick coffee`, `the price is expensive`, `reach the deadline` atau `strongly unlikely`: **heavy** traffic, **heavy** rain, **strong** coffee, the price is **high**, **meet** the deadline, **highly** unlikely.",
+            "Beberapa pasangan punya 'kembaran' yang juga benar: a **big / major** decision, **hold / have** a meeting, **raise / bring up** an issue, **fully / well** aware, **completely / totally** different. **very** selalu aman.",
+            "Catat kata baru bersama pasangannya (**meet a deadline**, bukan cuma *deadline*). Cek kamus kolokasi (Oxford Collocations Dictionary, Ozdic) atau contoh kalimat di Cambridge Dictionary."
+          ],
+          "examples": [
+            {
+              "en": "There's heavy traffic on the toll road to Bandung.",
+              "id": "Jalan tol ke Bandung macet."
+            },
+            {
+              "en": "If we work on Saturday, we can still meet the deadline.",
+              "id": "Kalau kita kerja hari Sabtu, kita masih bisa selesai tepat waktu."
+            },
+            {
+              "en": "Rina is making good progress with her IELTS preparation.",
+              "id": "Persiapan IELTS Rina mengalami kemajuan yang bagus."
+            },
+            {
+              "en": "This dentist in Bandung is highly recommended.",
+              "id": "Dokter gigi di Bandung ini sangat direkomendasikan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Video engVid ini mengajarkan sepuluh pasangan adverb + kata sifat, dengan kuis di situs engVid. Videonya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

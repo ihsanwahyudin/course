@@ -1,0 +1,534 @@
+{
+  "en": {
+    "greeting": "Hi! Last time you made relative clauses shorter: the man standing there, the report written by Rina. Today the same forms move to the start of a sentence, so you can write shorter, smoother sentences. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "A shorter way to start a sentence",
+        "text": "You already know these forms. Now they move to the front.",
+        "body": "A **participle clause** starts a sentence with an **-ing** form or a **V3**, then a comma. It has **no subject and no tense**: it takes them from the main part.\nAn **-ing clause** means **at the same time** (= when/while) or **a reason** (= because):\n- *Walking home, I saw Rina.* = When I was walking home, …\n- *Feeling tired, she went to bed early.* = Because she felt tired, …\nIt's mostly a **writing** style (reports, news, emails). In speech, people usually say the full clause.",
+        "pairs": [
+          {
+            "en": "Walking home, I saw Rina.",
+            "id": "Saat berjalan pulang, saya melihat Rina. (= When I was walking)"
+          },
+          {
+            "en": "Feeling tired, she went to bed early.",
+            "id": "Karena merasa lelah, dia tidur lebih awal. (= Because she felt)"
+          },
+          {
+            "en": "the man standing there",
+            "id": "pria yang berdiri di sana (pelajaran lalu: = who is standing)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Same time or reason",
+        "text": "Read each one and ask: same time, or a reason?",
+        "body": "The time comes from the main clause (*saw* = past, *listen* = present). Negative: **not + -ing**, never *'Don't knowing'*.",
+        "examples": [
+          {
+            "en": "Knowing the area well, Budi took a shortcut.",
+            "id": "Karena kenal betul daerah itu, Budi lewat jalan pintas. (alasan)"
+          },
+          {
+            "en": "Looking out of the window, Rina saw the flood.",
+            "id": "Sambil melihat ke luar jendela, Rina melihat banjir itu. (bersamaan)"
+          },
+          {
+            "en": "Walking to the office, I often listen to podcasts.",
+            "id": "Saat berjalan ke kantor, saya sering mendengarkan podcast. (kebiasaan sekarang)"
+          },
+          {
+            "en": "Not knowing anyone at the party, Sari stayed close to Dimas.",
+            "id": "Karena tidak kenal siapa pun di pesta itu, Sari terus dekat dengan Dimas. (not + -ing)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Who is doing it?",
+        "text": "This is the most important rule of the lesson.",
+        "body": "The clause has no subject, so the **first person or thing after the comma** must be the one doing the -ing action.\n- *Walking home, **I** got caught in the rain.* ✓\n- *Walking home, **the rain** started.* ✗ The rain wasn't walking!\n**Indonesian trap:** *Sambil berjalan pulang, hujan turun* sounds OK in Indonesian, but not in English. If the doers are different, use a full clause: *As I was walking home, it started to rain.*",
+        "pairs": [
+          {
+            "en": "Walking home, I got caught in the rain.",
+            "id": "Saat berjalan pulang, saya kehujanan. ✓"
+          },
+          {
+            "en": "As I was walking home, it started to rain.",
+            "id": "Saat saya berjalan pulang, hujan mulai turun. ✓ (pelaku berbeda → klausa lengkap)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Who was waiting? Make sure that person comes after the comma.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-clauses",
+          "options": [
+            "the train was 20 minutes late.",
+            "I chatted with an old friend from college.",
+            "it was very crowded."
+          ],
+          "answer": 1,
+          "prompt": "Choose the correct ending: Waiting for the KRL at Manggarai station, ___",
+          "explanation": "The person waiting must come right after the comma: **I** was waiting, so *I chatted…* is correct. The train and *it* weren't waiting for the KRL, so the other endings are dangling participles."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "-ed clauses: done to the subject",
+        "text": "Now the V3, the form you know from the passive.",
+        "body": "When the subject **receives** the action, start with the **V3**: ***Built** in 1990, the bridge is still strong* (= the bridge was built). A quick map: **-ing ≈ me-** (the subject does it), **V3 ≈ di-** (it's done to the subject: *dibangun → built*). Use the V3, not the base form (*'Build in 1990'* ✗) or the past simple (*'Took in 2019'* ✗ → *Taken*).",
+        "pairs": [
+          {
+            "en": "Built in 1990, the bridge is still strong.",
+            "id": "Dibangun tahun 1990, jembatan itu masih kokoh."
+          },
+          {
+            "en": "Written in simple English, the guide is easy to follow.",
+            "id": "Ditulis dalam bahasa Inggris sederhana, panduan itu mudah diikuti."
+          },
+          {
+            "en": "Located near the station, the hotel is always busy.",
+            "id": "Terletak dekat stasiun, hotel itu selalu ramai."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Did the hotel do the action, or was it done to the hotel?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ed-clauses",
+          "options": [
+            "Building",
+            "Build",
+            "Built"
+          ],
+          "answer": 2,
+          "prompt": "___ in 1950, this hotel in Bandung is one of the oldest in the city.",
+          "explanation": "The hotel didn't build anything; it **was built** (dibangun). Passive meaning → V3: **Built**. *Building* would mean the hotel was doing the building, and *Build* is the base form."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "What happened first?",
+        "text": "Two ways to show that one action came before another.",
+        "body": "**having + V3** = the first action was **finished** before the next: ***Having finished** the report, I went home.* You can also use **after + -ing** (you met this at B1): ***After finishing** the report, I went home.* Same meaning. After *after, before, when, while*, use **-ing**, never the base form: *'After finish'* ✗, *'After finished'* ✗. In speech, the full clause is most natural: *After I finished the report, …*",
+        "pairs": [
+          {
+            "en": "Having finished the report, I went home.",
+            "id": "Setelah menyelesaikan laporan itu, saya pulang."
+          },
+          {
+            "en": "After finishing the report, I went home.",
+            "id": "Setelah menyelesaikan laporan itu, saya pulang. (arti sama)"
+          },
+          {
+            "en": "Before leaving the office, please turn off the AC.",
+            "id": "Sebelum meninggalkan kantor, tolong matikan AC."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "What form comes after after?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "having-past-participle",
+          "options": [
+            "sign",
+            "signing",
+            "signed"
+          ],
+          "answer": 1,
+          "prompt": "After ___ the contract, Pak Hasan sent it back to the client.",
+          "explanation": "A word like **after** is followed by the **-ing** form: *after signing*. *After sign* uses the base form, and *after signed* needs a subject (*after he signed*)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Start with Having: first they missed the train, then they took a taxi.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "having-past-participle",
+          "tokens": [
+            "took",
+            "the",
+            "Having",
+            "KRL",
+            "last",
+            "a",
+            "missed",
+            "we",
+            "taxi"
+          ],
+          "solution": "Having missed the last KRL, we took a taxi.",
+          "prompt": "Arrange the words. Start with Having: Karena sudah ketinggalan KRL terakhir, kami naik taksi.",
+          "explanation": "**Having + V3** (*having missed*) shows the earlier action. The people who missed the train (**we**) come right after the comma."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "One more",
+        "text": "A reason, in the negative.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-clauses",
+          "options": [
+            "Not knowing",
+            "Don't knowing",
+            "Not known"
+          ],
+          "answer": 0,
+          "prompt": "___ what to say, Budi just smiled and nodded.",
+          "explanation": "For a negative reason, put **not** before the -ing: *Not knowing* (= Because he didn't know what to say). *Don't knowing* isn't English, and *Not known* is passive: Budi is the one who didn't know."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Participle clauses",
+          "intro": "Short clauses at the start of a sentence, mostly in writing. The person or thing after the comma must match the clause.",
+          "headers": [
+            "Pattern",
+            "Use it for",
+            "Example"
+          ],
+          "rows": [
+            [
+              "-ing, …",
+              "same time (= when/while)",
+              "Walking home, I saw Rina."
+            ],
+            [
+              "-ing, …",
+              "a reason (= because)",
+              "Feeling tired, she went to bed early."
+            ],
+            [
+              "Not + -ing, …",
+              "a negative reason",
+              "Not knowing the way, we used Google Maps."
+            ],
+            [
+              "V3, …",
+              "passive meaning (≈ di-)",
+              "Built in 1990, the bridge is still strong."
+            ],
+            [
+              "Having + V3, …",
+              "an action finished first",
+              "Having finished the report, I went home."
+            ],
+            [
+              "after / before + -ing",
+              "time order (not 'after finish')",
+              "Before leaving the office, turn off the AC."
+            ]
+          ],
+          "tips": [
+            "Check the subject: who is doing the -ing action? That person goes right after the comma.",
+            "-ing ≈ me- (does it); V3 ≈ di- (it is done to it). Use the V3, not 'Build'.",
+            "In conversation, the full clause is more natural: When I was walking home, …"
+          ],
+          "examples": [
+            {
+              "en": "Walking home, I got caught in the rain.",
+              "id": "Saat berjalan pulang, saya kehujanan."
+            },
+            {
+              "en": "Built in 1990, the bridge is still strong.",
+              "id": "Dibangun tahun 1990, jembatan itu masih kokoh."
+            },
+            {
+              "en": "After finishing the report, I went home.",
+              "id": "Setelah menyelesaikan laporan itu, saya pulang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These links explain participle clauses in other words, with extra practice."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Terakhir kali kamu meringkas relative clause: the man standing there, the report written by Rina. Hari ini bentuk yang sama pindah ke awal kalimat, supaya kamu bisa menulis kalimat yang lebih ringkas dan lancar. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Cara ringkas memulai kalimat",
+        "text": "Bentuk ini sudah kamu kenal. Sekarang pindah ke depan.",
+        "body": "**Klausa partisip** (participle clause) memulai kalimat dengan bentuk **-ing** atau **V3**, lalu koma. Klausa ini **tidak punya subjek dan tense**: keduanya diambil dari bagian utama kalimat.\n**Klausa -ing** berarti **bersamaan** (= when/while, saat) atau **alasan** (= because, karena):\n- *Walking home, I saw Rina.* = When I was walking home, …\n- *Feeling tired, she went to bed early.* = Because she felt tired, …\nIni terutama gaya **tulisan** (laporan, berita, email). Saat bicara, orang biasanya memakai klausa lengkap.",
+        "pairs": [
+          {
+            "en": "Walking home, I saw Rina.",
+            "id": "Saat berjalan pulang, saya melihat Rina. (= When I was walking)"
+          },
+          {
+            "en": "Feeling tired, she went to bed early.",
+            "id": "Karena merasa lelah, dia tidur lebih awal. (= Because she felt)"
+          },
+          {
+            "en": "the man standing there",
+            "id": "pria yang berdiri di sana (pelajaran lalu: = who is standing)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bersamaan atau alasan",
+        "text": "Baca satu per satu dan tanya: bersamaan, atau alasan?",
+        "body": "Waktunya ditentukan klausa utama (*saw* = lampau, *listen* = sekarang). Negatif: **not + -ing**, bukan *'Don't knowing'*.",
+        "examples": [
+          {
+            "en": "Knowing the area well, Budi took a shortcut.",
+            "id": "Karena kenal betul daerah itu, Budi lewat jalan pintas. (alasan)"
+          },
+          {
+            "en": "Looking out of the window, Rina saw the flood.",
+            "id": "Sambil melihat ke luar jendela, Rina melihat banjir itu. (bersamaan)"
+          },
+          {
+            "en": "Walking to the office, I often listen to podcasts.",
+            "id": "Saat berjalan ke kantor, saya sering mendengarkan podcast. (kebiasaan sekarang)"
+          },
+          {
+            "en": "Not knowing anyone at the party, Sari stayed close to Dimas.",
+            "id": "Karena tidak kenal siapa pun di pesta itu, Sari terus dekat dengan Dimas. (not + -ing)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Siapa yang melakukannya?",
+        "text": "Ini aturan terpenting di pelajaran ini.",
+        "body": "Klausanya tidak punya subjek, jadi **orang atau benda pertama setelah koma** harus yang melakukan kegiatan -ing itu. (**Subjek** = siapa yang melakukan.)\n- *Walking home, **I** got caught in the rain.* ✓\n- *Walking home, **the rain** started.* ✗ Hujannya tidak berjalan!\n**Jebakan bahasa Indonesia:** *Sambil berjalan pulang, hujan turun* terdengar wajar dalam bahasa Indonesia, tapi tidak dalam bahasa Inggris. Kalau pelakunya berbeda, pakai klausa lengkap: *As I was walking home, it started to rain.*",
+        "pairs": [
+          {
+            "en": "Walking home, I got caught in the rain.",
+            "id": "Saat berjalan pulang, saya kehujanan. ✓"
+          },
+          {
+            "en": "As I was walking home, it started to rain.",
+            "id": "Saat saya berjalan pulang, hujan mulai turun. ✓ (pelaku berbeda → klausa lengkap)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Siapa yang menunggu? Pastikan orang itu ada setelah koma.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-clauses",
+          "options": [
+            "the train was 20 minutes late.",
+            "I chatted with an old friend from college.",
+            "it was very crowded."
+          ],
+          "answer": 1,
+          "prompt": "Pilih akhir kalimat yang benar: Waiting for the KRL at Manggarai station, ___",
+          "explanation": "Orang yang menunggu harus ada tepat setelah koma: **I** yang menunggu, jadi *I chatted…* benar. Keretanya dan *it* tidak sedang menunggu KRL, jadi dua pilihan lain adalah dangling participle."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Klausa -ed: subjek dikenai tindakan",
+        "text": "Sekarang V3, bentuk yang kamu kenal dari kalimat pasif.",
+        "body": "Kalau subjek **dikenai** tindakan, mulai dengan **V3**: ***Built** in 1990, the bridge is still strong* (= jembatan itu dibangun). Peta cepat: **-ing ≈ me-** (subjek melakukan), **V3 ≈ di-** (subjek dikenai: *dibangun → built*). Pakai V3, bukan bentuk dasar (*'Build in 1990'* ✗) atau bentuk lampau (*'Took in 2019'* ✗ → *Taken*).",
+        "pairs": [
+          {
+            "en": "Built in 1990, the bridge is still strong.",
+            "id": "Dibangun tahun 1990, jembatan itu masih kokoh."
+          },
+          {
+            "en": "Written in simple English, the guide is easy to follow.",
+            "id": "Ditulis dalam bahasa Inggris sederhana, panduan itu mudah diikuti."
+          },
+          {
+            "en": "Located near the station, the hotel is always busy.",
+            "id": "Terletak dekat stasiun, hotel itu selalu ramai."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hotelnya yang melakukan, atau hotelnya yang dikenai tindakan?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ed-clauses",
+          "options": [
+            "Building",
+            "Build",
+            "Built"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: ___ in 1950, this hotel in Bandung is one of the oldest in the city.",
+          "explanation": "Hotel itu tidak membangun apa pun; hotel itu **dibangun** (was built). Makna pasif → V3: **Built**. *Building* berarti hotelnya yang membangun, dan *Build* adalah bentuk dasar."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mana yang terjadi lebih dulu?",
+        "text": "Dua cara menunjukkan bahwa satu kegiatan terjadi sebelum yang lain.",
+        "body": "**having + V3** = kegiatan pertama sudah **selesai** sebelum kegiatan berikutnya: ***Having finished** the report, I went home.* Kamu juga bisa pakai **after + -ing** (sudah kamu temui di B1): ***After finishing** the report, I went home.* Artinya sama. Setelah *after, before, when, while*, pakai **-ing**, bukan bentuk dasar: *'After finish'* ✗, *'After finished'* ✗. Saat bicara, klausa lengkap paling wajar: *After I finished the report, …*",
+        "pairs": [
+          {
+            "en": "Having finished the report, I went home.",
+            "id": "Setelah menyelesaikan laporan itu, saya pulang."
+          },
+          {
+            "en": "After finishing the report, I went home.",
+            "id": "Setelah menyelesaikan laporan itu, saya pulang. (arti sama)"
+          },
+          {
+            "en": "Before leaving the office, please turn off the AC.",
+            "id": "Sebelum meninggalkan kantor, tolong matikan AC."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bentuk apa yang datang setelah after?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "having-past-participle",
+          "options": [
+            "sign",
+            "signing",
+            "signed"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: After ___ the contract, Pak Hasan sent it back to the client.",
+          "explanation": "Kata seperti **after** diikuti bentuk **-ing**: *after signing*. *After sign* memakai bentuk dasar, dan *after signed* butuh subjek (*after he signed*)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Mulai dengan Having: mereka ketinggalan kereta dulu, baru naik taksi.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "having-past-participle",
+          "tokens": [
+            "took",
+            "the",
+            "Having",
+            "KRL",
+            "last",
+            "a",
+            "missed",
+            "we",
+            "taxi"
+          ],
+          "solution": "Having missed the last KRL, we took a taxi.",
+          "prompt": "Susun kata-katanya. Mulai dengan Having: Karena sudah ketinggalan KRL terakhir, kami naik taksi.",
+          "explanation": "**Having + V3** (*having missed*) menunjukkan kegiatan yang lebih dulu. Orang yang ketinggalan kereta (**we**) ada tepat setelah koma."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Satu lagi",
+        "text": "Alasan, dalam bentuk negatif.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ing-clauses",
+          "options": [
+            "Not knowing",
+            "Don't knowing",
+            "Not known"
+          ],
+          "answer": 0,
+          "prompt": "Lengkapi: ___ what to say, Budi just smiled and nodded.",
+          "explanation": "Untuk alasan negatif, taruh **not** sebelum -ing: *Not knowing* (= Because he didn't know what to say). *Don't knowing* bukan bahasa Inggris, dan *Not known* bermakna pasif: Budi-lah yang tidak tahu harus bilang apa."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Klausa partisip",
+          "intro": "Klausa pendek di awal kalimat, terutama dalam tulisan. Orang atau benda setelah koma harus cocok dengan klausanya.",
+          "headers": [
+            "Pola",
+            "Dipakai untuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "-ing, …",
+              "bersamaan (= when/while)",
+              "Walking home, I saw Rina."
+            ],
+            [
+              "-ing, …",
+              "alasan (= because)",
+              "Feeling tired, she went to bed early."
+            ],
+            [
+              "Not + -ing, …",
+              "alasan negatif",
+              "Not knowing the way, we used Google Maps."
+            ],
+            [
+              "V3, …",
+              "makna pasif (≈ di-)",
+              "Built in 1990, the bridge is still strong."
+            ],
+            [
+              "Having + V3, …",
+              "kegiatan yang selesai lebih dulu",
+              "Having finished the report, I went home."
+            ],
+            [
+              "after / before + -ing",
+              "urutan waktu (bukan 'after finish')",
+              "Before leaving the office, turn off the AC."
+            ]
+          ],
+          "tips": [
+            "Cek subjeknya: siapa yang melakukan kegiatan -ing? Orang itu harus ada tepat setelah koma.",
+            "-ing ≈ me- (melakukan); V3 ≈ di- (dikenai). Pakai V3, bukan 'Build'.",
+            "Dalam percakapan, klausa lengkap lebih wajar: When I was walking home, …"
+          ],
+          "examples": [
+            {
+              "en": "Walking home, I got caught in the rain.",
+              "id": "Saat berjalan pulang, saya kehujanan."
+            },
+            {
+              "en": "Built in 1990, the bridge is still strong.",
+              "id": "Dibangun tahun 1990, jembatan itu masih kokoh."
+            },
+            {
+              "en": "After finishing the report, I went home.",
+              "id": "Setelah menyelesaikan laporan itu, saya pulang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Link ini menjelaskan klausa partisip dengan cara lain, plus latihan tambahan."
+      }
+    ]
+  }
+}

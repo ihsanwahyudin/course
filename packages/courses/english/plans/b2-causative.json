@@ -1,0 +1,652 @@
+{
+  "en": {
+    "greeting": "Hi! Today: how to say that someone else did a job for you, like a haircut, a repair or the laundry, and how the same pattern tells bad news. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Someone else does it",
+        "text": "Quick recap: the passive is be + third form (My car was repaired). Now let's put you in the sentence: you arranged it, someone else did it.",
+        "body": "**have + thing + third form** = someone else does the job, usually because you arranged or paid for it: *I **had my hair cut** yesterday.*\n**The Indonesian trap:** *saya potong rambut* usually means you went to the barber, but English *I cut my hair* means you held the scissors yourself. Same with *cuci motor* and *servis AC*.\nWhy *cut*, not 'cutted'? **cut → cut → cut**: its third form looks like the base verb (also *put, set*).",
+        "pairs": [
+          {
+            "en": "had my hair cut",
+            "id": "potong rambut (di tukang cukur)"
+          },
+          {
+            "en": "have my car serviced",
+            "id": "servis mobil (di bengkel)"
+          },
+          {
+            "en": "had my teeth checked",
+            "id": "periksa gigi (ke dokter gigi)"
+          },
+          {
+            "en": "have my shirts ironed",
+            "id": "setrika kemeja (di laundry)"
+          },
+          {
+            "en": "have it delivered",
+            "id": "minta diantar (lewat kurir)"
+          },
+          {
+            "en": "cut → cut → cut",
+            "id": "bentuk ketiga sama dengan bentuk dasar"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Services, the English way",
+        "text": "In each sentence, someone else does the work. Look where the thing goes: between have and the third form.",
+        "body": "have is a normal verb here, so questions and negatives use **do/does/did**: *Where **do** you have your hair cut?* British *at the barber's*; American *at the barber / barbershop*.",
+        "examples": [
+          {
+            "en": "I had my hair cut at the barber's near my kos.",
+            "id": "Saya potong rambut di tukang cukur dekat kos."
+          },
+          {
+            "en": "Bu Ani has her car serviced every six months.",
+            "id": "Bu Ani servis mobil setiap enam bulan."
+          },
+          {
+            "en": "I had my thesis printed and bound near campus.",
+            "id": "Saya cetak dan jilid skripsi di dekat kampus."
+          },
+          {
+            "en": "Where do you have your hair cut?",
+            "id": "Kamu biasa potong rambut di mana?"
+          },
+          {
+            "en": "I'll have the documents delivered to your office.",
+            "id": "Dokumennya akan saya kirim lewat kurir ke kantormu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "On Saturday Dimas took his dirty motorbike to a cuci motor place. The staff washed it while he drank coffee.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "have-something-done",
+          "prompt": "Complete what Dimas says: 'I ___ on Saturday. It looks new now!'",
+          "options": [
+            "washed my motorbike",
+            "had washed my motorbike",
+            "had my motorbike washed"
+          ],
+          "answer": 2,
+          "explanation": "The staff did the work, so use **have + thing + third form**: *had my motorbike washed*. 'washed my motorbike' says Dimas washed it himself, and 'had washed my motorbike' is the past perfect: also Dimas himself."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Word order changes the meaning",
+        "text": "Same words, opposite meanings. The position of the thing decides who did the work.",
+        "body": "- *I **had my car repaired**.* → the thing is **between** had and the third form: a mechanic did it.\n- *I **had repaired** my car.* → had + third form together = **past perfect**: **you** did it, before another past moment.\n**have works in every tense**, so change have and keep the rest: *I **have** it serviced every year. I've **had** it serviced. I'm **having** it serviced tomorrow. I'll **have** it serviced.*",
+        "pairs": [
+          {
+            "en": "I had my car repaired.",
+            "id": "Mobilku diperbaiki (oleh montir)."
+          },
+          {
+            "en": "I had repaired my car.",
+            "id": "Saya sudah memperbaiki mobil sendiri (sebelumnya)."
+          },
+          {
+            "en": "I have it serviced every year.",
+            "id": "Saya servis tiap tahun."
+          },
+          {
+            "en": "I've had it serviced.",
+            "id": "Sudah diservis (di bengkel)."
+          },
+          {
+            "en": "I'm having it serviced tomorrow.",
+            "id": "Besok diservis (sudah dijadwalkan)."
+          },
+          {
+            "en": "I'll have it serviced.",
+            "id": "Nanti saya bawa ke servis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina and her housemates called a technician to their kos this morning. Now the room is cool again.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "have-something-done",
+          "prompt": "Arrange the words: AC-nya baru saja diservis (teknisinya yang mengerjakan, kami yang memanggil).",
+          "tokens": [
+            "serviced",
+            "had",
+            "the",
+            "We",
+            "conditioner",
+            "just",
+            "air",
+            "have"
+          ],
+          "solution": "We have just had the air conditioner serviced.",
+          "explanation": "Present perfect of have: **have just had**, then the thing **the air conditioner**, then the third form **serviced**. 'We have just serviced the air conditioner' would mean they did it themselves."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "get: the casual version",
+        "text": "In everyday speech, people often say get instead of have.",
+        "body": "**get + thing + third form** means the same as have for services, but sounds more casual. It's very common after **need to, have to, should, going to**: *I need to **get my phone fixed**. You should **get that cough checked**.*\nThe last word is still the **third form**: 'I got my laptop **fix**' ✗ → *I got my laptop **fixed*** ✓. Indonesian *dibetulkan* has *di-*, so English needs the third form.\nBritish and American English both use it.",
+        "pairs": [
+          {
+            "en": "get my phone fixed",
+            "id": "HP-ku dibetulkan (di tukang servis)"
+          },
+          {
+            "en": "get my hair cut",
+            "id": "potong rambut"
+          },
+          {
+            "en": "get the car washed",
+            "id": "cuci mobil (di tempat cuci)"
+          },
+          {
+            "en": "get my lunch delivered",
+            "id": "makan siang diantar (ojek online)"
+          },
+          {
+            "en": "get that checked",
+            "id": "periksakan itu"
+          },
+          {
+            "en": "need to get … done",
+            "id": "perlu …-kan (oleh orang lain)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi's laptop is too slow for his design work and needs more memory (RAM). He doesn't want to open it himself, so he messages a friend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "get-something-done",
+          "prompt": "Complete: 'There's a good computer shop in Glodok. I'll get it ___ there tomorrow.'",
+          "options": [
+            "upgrade",
+            "upgraded",
+            "upgrading"
+          ],
+          "answer": 1,
+          "explanation": "get + thing + **third form**: *get it upgraded* (someone at the shop upgrades it). 'get it upgrade' is the classic mistake (like 'get my laptop fix'): the base verb doesn't work here. 'get it upgrading' would mean the laptop does the upgrading."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bad things that happen to you",
+        "text": "The same pattern also tells bad news: something was done to you, and nobody arranged it.",
+        "body": "*I **had my phone stolen** on the KRL.* You didn't pay a thief! Here have means *this happened to me* (HP-ku dicopet).\nCompare the passive: *My phone **was stolen*** (the story is about the phone) and *I **had my phone stolen*** (the story is about **you**). Both are correct.\nWatch the order: 'I **had stolen** my phone' is the past perfect and says **you** were the thief. 'got my phone stolen' is heard in casual talk, but **had** is the safe choice.",
+        "pairs": [
+          {
+            "en": "had my phone stolen",
+            "id": "HP-ku dicuri / dicopet"
+          },
+          {
+            "en": "had my account hacked",
+            "id": "akunku diretas"
+          },
+          {
+            "en": "had my flight cancelled",
+            "id": "penerbanganku dibatalkan (US: canceled)"
+          },
+          {
+            "en": "had my car scratched",
+            "id": "mobilku digores orang"
+          },
+          {
+            "en": "My phone was stolen.",
+            "id": "HP-ku dicuri. (passive, fokus pada HP)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari took a crowded TransJakarta bus to work. When she got off, her wallet was gone. She tells her manager why she's late.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-services",
+          "prompt": "Which sentence tells what happened to Sari?",
+          "options": [
+            "I had stolen my wallet on the bus.",
+            "I had my wallet stolen on the bus.",
+            "My wallet had stolen on the bus."
+          ],
+          "answer": 1,
+          "explanation": "Something bad was done to her: **had + thing + third form** → *I had my wallet stolen*. 'I had stolen my wallet' is the past perfect and says Sari was the thief, and 'My wallet had stolen' says the wallet stole something."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · have / get something done",
+          "intro": "have/get + the thing + the third form = someone else does it for you, or something bad happens to you. The thing always goes between have/get and the third form.",
+          "headers": [
+            "Use",
+            "Pattern",
+            "Example",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "service (past)",
+              "had + thing + third form",
+              "I had my hair cut.",
+              "Saya potong rambut (di tukang cukur)."
+            ],
+            [
+              "habit",
+              "have/has + thing + third form",
+              "Bu Ani has her car serviced every six months.",
+              "Bu Ani servis mobil tiap enam bulan."
+            ],
+            [
+              "present perfect",
+              "have/has had + thing + third form",
+              "We've had the air conditioner serviced.",
+              "AC-nya sudah diservis."
+            ],
+            [
+              "arranged future",
+              "am/is/are having + thing + third form",
+              "We're having our bathroom renovated next month.",
+              "Kamar mandi kami akan direnovasi."
+            ],
+            [
+              "will",
+              "will have + thing + third form",
+              "I'll have it delivered to your office.",
+              "Akan saya kirim lewat kurir."
+            ],
+            [
+              "casual (get)",
+              "get + thing + third form",
+              "I need to get my phone fixed.",
+              "HP-ku perlu dibetulkan."
+            ],
+            [
+              "bad experience",
+              "had + thing + third form",
+              "I had my phone stolen on the KRL.",
+              "HP-ku dicopet di KRL."
+            ],
+            [
+              "NOT someone else",
+              "had + third form + thing (past perfect)",
+              "I had repaired my car.",
+              "Saya sendiri sudah memperbaiki mobil."
+            ],
+            [
+              "NOT someone else",
+              "verb + thing",
+              "I cut my hair myself.",
+              "Saya memotong rambut sendiri."
+            ]
+          ],
+          "tips": [
+            "Word order: **had my car repaired** (a mechanic) ≠ **had repaired my car** (you, past perfect).",
+            "Always the **third form** after the thing: get my laptop **fixed**, not 'fix'. cut → cut → cut, so *had my hair cut* is right.",
+            "have and get both work for services; get is more casual. For bad news, **had** is the safe choice."
+          ],
+          "examples": [
+            {
+              "en": "Where do you have your hair cut?",
+              "id": "Kamu biasa potong rambut di mana?"
+            },
+            {
+              "en": "You should get that cough checked.",
+              "id": "Sebaiknya batukmu itu diperiksakan."
+            },
+            {
+              "en": "Bu Ani had her email account hacked.",
+              "id": "Akun email Bu Ani diretas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Two short BBC Learning English videos on have something done, and a page with practice exercises (it also shows a related pattern, have someone do, that we don't practise here)."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini: cara bilang bahwa orang lain yang mengerjakan sesuatu untukmu, seperti potong rambut, servis atau laundry, dan bagaimana pola yang sama dipakai untuk kabar buruk. Yuk, kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Orang lain yang mengerjakan",
+        "text": "Ringkasan singkat: passive = be + bentuk ketiga (My car was repaired). Sekarang kita masukkan kamu ke kalimatnya: kamu yang mengatur, orang lain yang mengerjakan.",
+        "body": "**have + benda + bentuk ketiga** = orang lain yang mengerjakan, biasanya karena kamu yang mengatur atau membayarnya: *I **had my hair cut** yesterday.*\n**Jebakan bahasa Indonesia:** *saya potong rambut* biasanya berarti kamu pergi ke tukang cukur, tapi *I cut my hair* berarti kamu sendiri yang memegang gunting. Sama dengan *cuci motor* dan *servis AC*.\nKenapa *cut*, bukan 'cutted'? **cut → cut → cut**: bentuk ketiganya sama dengan bentuk dasar (juga *put, set*).",
+        "pairs": [
+          {
+            "en": "had my hair cut",
+            "id": "potong rambut (di tukang cukur)"
+          },
+          {
+            "en": "have my car serviced",
+            "id": "servis mobil (di bengkel)"
+          },
+          {
+            "en": "had my teeth checked",
+            "id": "periksa gigi (ke dokter gigi)"
+          },
+          {
+            "en": "have my shirts ironed",
+            "id": "setrika kemeja (di laundry)"
+          },
+          {
+            "en": "have it delivered",
+            "id": "minta diantar (lewat kurir)"
+          },
+          {
+            "en": "cut → cut → cut",
+            "id": "bentuk ketiga sama dengan bentuk dasar"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Layanan, versi bahasa Inggris",
+        "text": "Di setiap kalimat, orang lain yang mengerjakan. Perhatikan posisi bendanya: di antara have dan bentuk ketiga.",
+        "body": "have di sini kata kerja biasa, jadi kalimat tanya dan negatif pakai **do/does/did**: *Where **do** you have your hair cut?* British *at the barber's*; Amerika *at the barber / barbershop*.",
+        "examples": [
+          {
+            "en": "I had my hair cut at the barber's near my kos.",
+            "id": "Saya potong rambut di tukang cukur dekat kos."
+          },
+          {
+            "en": "Bu Ani has her car serviced every six months.",
+            "id": "Bu Ani servis mobil setiap enam bulan."
+          },
+          {
+            "en": "I had my thesis printed and bound near campus.",
+            "id": "Saya cetak dan jilid skripsi di dekat kampus."
+          },
+          {
+            "en": "Where do you have your hair cut?",
+            "id": "Kamu biasa potong rambut di mana?"
+          },
+          {
+            "en": "I'll have the documents delivered to your office.",
+            "id": "Dokumennya akan saya kirim lewat kurir ke kantormu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hari Sabtu Dimas membawa motornya yang kotor ke tempat cuci motor. Petugasnya yang mencuci, sementara dia minum kopi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "have-something-done",
+          "prompt": "Lengkapi kata-kata Dimas: 'I ___ on Saturday. It looks new now!'",
+          "options": [
+            "washed my motorbike",
+            "had washed my motorbike",
+            "had my motorbike washed"
+          ],
+          "answer": 2,
+          "explanation": "Petugasnya yang mengerjakan, jadi pakai **have + benda + bentuk ketiga**: *had my motorbike washed*. 'washed my motorbike' berarti Dimas sendiri yang mencuci, dan 'had washed my motorbike' adalah past perfect: juga Dimas sendiri."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Urutan kata mengubah arti",
+        "text": "Kata-katanya sama, artinya berlawanan. Posisi bendanya yang menentukan siapa yang mengerjakan.",
+        "body": "- *I **had my car repaired**.* → bendanya ada **di antara** had dan bentuk ketiga: montir yang mengerjakan.\n- *I **had repaired** my car.* → had + bentuk ketiga berdampingan = **past perfect**: **kamu sendiri** yang mengerjakan, sebelum suatu waktu lain di masa lalu.\n**have bisa di semua tense**, jadi ubah have-nya saja, sisanya tetap: *I **have** it serviced every year. I've **had** it serviced. I'm **having** it serviced tomorrow. I'll **have** it serviced.*",
+        "pairs": [
+          {
+            "en": "I had my car repaired.",
+            "id": "Mobilku diperbaiki (oleh montir)."
+          },
+          {
+            "en": "I had repaired my car.",
+            "id": "Saya sudah memperbaiki mobil sendiri (sebelumnya)."
+          },
+          {
+            "en": "I have it serviced every year.",
+            "id": "Saya servis tiap tahun."
+          },
+          {
+            "en": "I've had it serviced.",
+            "id": "Sudah diservis (di bengkel)."
+          },
+          {
+            "en": "I'm having it serviced tomorrow.",
+            "id": "Besok diservis (sudah dijadwalkan)."
+          },
+          {
+            "en": "I'll have it serviced.",
+            "id": "Nanti saya bawa ke servis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Pagi ini Rina dan teman-teman kosnya memanggil teknisi. Sekarang kamarnya sejuk lagi.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "have-something-done",
+          "prompt": "Susun kata-katanya: AC-nya baru saja diservis (teknisinya yang mengerjakan, kami yang memanggil).",
+          "tokens": [
+            "serviced",
+            "had",
+            "the",
+            "We",
+            "conditioner",
+            "just",
+            "air",
+            "have"
+          ],
+          "solution": "We have just had the air conditioner serviced.",
+          "explanation": "Present perfect dari have: **have just had**, lalu bendanya **the air conditioner**, lalu bentuk ketiga **serviced**. 'We have just serviced the air conditioner' berarti mereka sendiri yang menyervis."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "get: versi santainya",
+        "text": "Dalam percakapan sehari-hari, orang sering bilang get sebagai ganti have.",
+        "body": "**get + benda + bentuk ketiga** artinya sama dengan have untuk layanan, tapi lebih santai. Sangat sering setelah **need to, have to, should, going to**: *I need to **get my phone fixed**. You should **get that cough checked**.*\nKata terakhirnya tetap **bentuk ketiga**: 'I got my laptop **fix**' ✗ → *I got my laptop **fixed*** ✓. *Dibetulkan* punya *di-*, jadi bahasa Inggris butuh bentuk ketiga.\nBritish dan Amerika sama-sama memakainya.",
+        "pairs": [
+          {
+            "en": "get my phone fixed",
+            "id": "HP-ku dibetulkan (di tukang servis)"
+          },
+          {
+            "en": "get my hair cut",
+            "id": "potong rambut"
+          },
+          {
+            "en": "get the car washed",
+            "id": "cuci mobil (di tempat cuci)"
+          },
+          {
+            "en": "get my lunch delivered",
+            "id": "makan siang diantar (ojek online)"
+          },
+          {
+            "en": "get that checked",
+            "id": "periksakan itu"
+          },
+          {
+            "en": "need to get … done",
+            "id": "perlu …-kan (oleh orang lain)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Laptop Budi terlalu lambat untuk pekerjaan desainnya dan perlu tambah RAM. Dia tidak mau membongkarnya sendiri, jadi dia mengirim pesan ke temannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "get-something-done",
+          "prompt": "Lengkapi: 'There's a good computer shop in Glodok. I'll get it ___ there tomorrow.'",
+          "options": [
+            "upgrade",
+            "upgraded",
+            "upgrading"
+          ],
+          "answer": 1,
+          "explanation": "get + benda + **bentuk ketiga**: *get it upgraded* (orang di toko komputer yang meng-upgrade). 'get it upgrade' adalah kesalahan klasik (seperti 'get my laptop fix'): bentuk dasar tidak bisa dipakai di sini. 'get it upgrading' berarti laptopnya yang meng-upgrade sesuatu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hal buruk yang menimpamu",
+        "text": "Pola yang sama juga dipakai untuk kabar buruk: sesuatu menimpamu, dan tidak ada yang mengaturnya.",
+        "body": "*I **had my phone stolen** on the KRL.* Kamu kan tidak membayar pencuri! Di sini have berarti *ini terjadi pada saya* (HP-ku dicopet).\nBandingkan dengan passive: *My phone **was stolen*** (ceritanya tentang HP-nya) dan *I **had my phone stolen*** (ceritanya tentang **kamu**). Dua-duanya benar.\nPerhatikan urutannya: 'I **had stolen** my phone' adalah past perfect dan berarti **kamu** pencurinya. 'got my phone stolen' terdengar di obrolan santai, tapi **had** pilihan yang aman.",
+        "pairs": [
+          {
+            "en": "had my phone stolen",
+            "id": "HP-ku dicuri / dicopet"
+          },
+          {
+            "en": "had my account hacked",
+            "id": "akunku diretas"
+          },
+          {
+            "en": "had my flight cancelled",
+            "id": "penerbanganku dibatalkan (US: canceled)"
+          },
+          {
+            "en": "had my car scratched",
+            "id": "mobilku digores orang"
+          },
+          {
+            "en": "My phone was stolen.",
+            "id": "HP-ku dicuri. (passive, fokus pada HP)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari naik bus TransJakarta yang penuh sesak ke kantor. Waktu turun, dompetnya sudah hilang. Dia menjelaskan ke manajernya kenapa dia terlambat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-services",
+          "prompt": "Kalimat mana yang menceritakan apa yang menimpa Sari?",
+          "options": [
+            "I had stolen my wallet on the bus.",
+            "I had my wallet stolen on the bus.",
+            "My wallet had stolen on the bus."
+          ],
+          "answer": 1,
+          "explanation": "Hal buruk menimpanya: **had + benda + bentuk ketiga** → *I had my wallet stolen*. 'I had stolen my wallet' adalah past perfect dan berarti Sari sendiri pencurinya, dan 'My wallet had stolen' berarti dompetnya yang mencuri sesuatu."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · have / get something done",
+          "intro": "have/get + bendanya + bentuk ketiga = orang lain yang mengerjakan untukmu, atau hal buruk menimpamu. Bendanya selalu di antara have/get dan bentuk ketiga.",
+          "headers": [
+            "Pemakaian",
+            "Pola",
+            "Contoh",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "layanan (lampau)",
+              "had + benda + bentuk ketiga",
+              "I had my hair cut.",
+              "Saya potong rambut (di tukang cukur)."
+            ],
+            [
+              "kebiasaan",
+              "have/has + benda + bentuk ketiga",
+              "Bu Ani has her car serviced every six months.",
+              "Bu Ani servis mobil tiap enam bulan."
+            ],
+            [
+              "present perfect",
+              "have/has had + benda + bentuk ketiga",
+              "We've had the air conditioner serviced.",
+              "AC-nya sudah diservis."
+            ],
+            [
+              "rencana yang sudah diatur",
+              "am/is/are having + benda + bentuk ketiga",
+              "We're having our bathroom renovated next month.",
+              "Kamar mandi kami akan direnovasi."
+            ],
+            [
+              "will",
+              "will have + benda + bentuk ketiga",
+              "I'll have it delivered to your office.",
+              "Akan saya kirim lewat kurir."
+            ],
+            [
+              "santai (get)",
+              "get + benda + bentuk ketiga",
+              "I need to get my phone fixed.",
+              "HP-ku perlu dibetulkan."
+            ],
+            [
+              "pengalaman buruk",
+              "had + benda + bentuk ketiga",
+              "I had my phone stolen on the KRL.",
+              "HP-ku dicopet di KRL."
+            ],
+            [
+              "BUKAN orang lain",
+              "had + bentuk ketiga + benda (past perfect)",
+              "I had repaired my car.",
+              "Saya sendiri sudah memperbaiki mobil."
+            ],
+            [
+              "BUKAN orang lain",
+              "kata kerja + benda",
+              "I cut my hair myself.",
+              "Saya memotong rambut sendiri."
+            ]
+          ],
+          "tips": [
+            "Urutan kata: **had my car repaired** (montir) ≠ **had repaired my car** (kamu sendiri, past perfect).",
+            "Selalu **bentuk ketiga** setelah bendanya: get my laptop **fixed**, bukan 'fix'. cut → cut → cut, jadi *had my hair cut* sudah benar.",
+            "have dan get sama-sama bisa untuk layanan; get lebih santai. Untuk kabar buruk, **had** pilihan yang aman."
+          ],
+          "examples": [
+            {
+              "en": "Where do you have your hair cut?",
+              "id": "Kamu biasa potong rambut di mana?"
+            },
+            {
+              "en": "You should get that cough checked.",
+              "id": "Sebaiknya batukmu itu diperiksakan."
+            },
+            {
+              "en": "Bu Ani had her email account hacked.",
+              "id": "Akun email Bu Ani diretas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ada dua video singkat dari BBC Learning English tentang have something done, dan satu halaman dengan latihan (halaman itu juga membahas pola terkait, have someone do, yang tidak kita latih di sini)."
+      }
+    ]
+  }
+}

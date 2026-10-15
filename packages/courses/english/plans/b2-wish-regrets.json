@@ -1,0 +1,734 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll talk about wishes and regrets: what you'd like to be different now, what you wish had happened, and what people should have done. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Wishes about now",
+        "text": "Remember the second conditional? *If I had a car* = I **don't** have a car. A past form can mean **not real**. **wish** uses the same idea.",
+        "body": "To say you want your life **now** to be different, use **I wish** + the verb **one step back**:\n- **past simple**: *I wish I **had** a car.* (I don't.)\n- **can → could**: *I wish I **could** swim.* (I can't.)\n- **be → were / was**: *I wish I **were** taller.*\nThe past here isn't about yesterday: it means **far from reality**. Not 'I wish I **can**…'.\n**If only** = the same, but stronger. For real hopes (*semoga*), use **hope**: *I hope you pass.*",
+        "pairs": [
+          {
+            "en": "I wish …",
+            "id": "Andai saja … / Saya berharap … (tapi tidak nyata)"
+          },
+          {
+            "en": "If only …!",
+            "id": "Andai saja …! (lebih kuat)"
+          },
+          {
+            "en": "have → had",
+            "id": "punya"
+          },
+          {
+            "en": "can → could",
+            "id": "bisa"
+          },
+          {
+            "en": "I wish I were taller.",
+            "id": "Andai saja saya lebih tinggi."
+          },
+          {
+            "en": "I wish I didn't have to work on Saturdays.",
+            "id": "Andai saja saya tidak harus kerja hari Sabtu."
+          },
+          {
+            "en": "I hope you pass.",
+            "id": "Semoga kamu lulus. (nyata → hope)"
+          },
+          {
+            "en": "to commute",
+            "id": "pulang-pergi kerja (jarak jauh)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A long commute",
+        "text": "Rina lives in Bogor. She spends almost four hours a day on the KRL to her office in Jakarta, and she's tired of it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "wish-if-only",
+          "options": [
+            "live",
+            "lived",
+            "would live"
+          ],
+          "answer": 1,
+          "prompt": "Complete what Rina says: I wish I ___ in Jakarta.",
+          "explanation": "Rina doesn't live in Jakarta **now**, so the wish takes the verb **one step back**: past simple *lived*. *live* doesn't step back, and you don't use *would* after *I wish I*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Regrets, and wish + would",
+        "text": "Two more patterns: wishes about the **past**, and wishes about **other people**.",
+        "body": "**About the past** → one more step back, to **had + third form** (like the if-part of the third conditional):\n*I wish I **had studied** harder.* (I didn't.) *I wish I **hadn't said** that.* (I did.)\nNot 'I wish I studied harder **last year**'.\n**Someone else should change** → **wish + would**, often annoyed: *I wish you **would stop** interrupting me.*\nNot with **I**: 'I wish I would…' ✗ → *I wish I could…*\nIndonesian *andai saja / coba* works for both times; English changes the **verb**.",
+        "pairs": [
+          {
+            "en": "I wish I had studied harder.",
+            "id": "Andai saja dulu saya belajar lebih giat."
+          },
+          {
+            "en": "I wish I hadn't said that.",
+            "id": "Andai saja saya tidak mengatakan itu."
+          },
+          {
+            "en": "I wish you would stop.",
+            "id": "Saya harap kamu berhenti. (kesal)"
+          },
+          {
+            "en": "I wish the bus would come.",
+            "id": "Andai saja busnya cepat datang."
+          },
+          {
+            "en": "bring → brought → brought",
+            "id": "membawa"
+          },
+          {
+            "en": "an umbrella",
+            "id": "payung"
+          },
+          {
+            "en": "soaked",
+            "id": "basah kuyup"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "No umbrella",
+        "text": "This morning Budi left his umbrella at home. Now he's standing at the bus stop in heavy rain, completely soaked.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "wish-if-only",
+          "tokens": [
+            "brought",
+            "only",
+            "an",
+            "I",
+            "umbrella",
+            "If",
+            "had"
+          ],
+          "solution": "If only I had brought an umbrella.",
+          "prompt": "Arrange the words: Andai saja tadi aku bawa payung.",
+          "explanation": "A strong wish about the **past** (this morning): **If only + had + third form** (*bring → brought → brought*). He didn't bring it, and he regrets it."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "should have: regrets and criticism",
+        "text": "You know **should** for advice: *You should leave early tomorrow.* For the past, English adds **have + third form**.",
+        "body": "- **should have + third form** = a good idea that **didn't** happen (*harusnya …, tapi tidak*): *I **should have left** earlier.*\n- **shouldn't have + third form** = a bad idea that **did** happen (*seharusnya tidak …*): *You **shouldn't have shouted** at him.*\nAbout you = a **regret**; about others = a **criticism**.\nTrap: Indonesian *harusnya kemarin* keeps the verb, but English needs the third form: 'You shouldn't **came** late' ✗ → **shouldn't have come** ✓.\nSay *should've* ('SHUD-ev'); never write 'should of'.",
+        "pairs": [
+          {
+            "en": "should have + third form",
+            "id": "harusnya … (tapi tidak terjadi)"
+          },
+          {
+            "en": "shouldn't have + third form",
+            "id": "seharusnya tidak … (tapi terjadi)"
+          },
+          {
+            "en": "should've",
+            "id": "should have (dibaca 'SHUD-ev')"
+          },
+          {
+            "en": "eat → ate → eaten",
+            "id": "makan"
+          },
+          {
+            "en": "come → came → come",
+            "id": "datang"
+          },
+          {
+            "en": "go → went → gone",
+            "id": "pergi"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "It didn't happen, or it did",
+        "text": "Regret or criticism? In each sentence, ask: did it happen or not?",
+        "body": "**should have** → it **didn't** happen. **shouldn't have** → it **did** happen.",
+        "examples": [
+          {
+            "en": "I should have charged my phone last night.",
+            "id": "Harusnya tadi malam saya mengecas HP."
+          },
+          {
+            "en": "We should have checked the address before we ordered the ojek.",
+            "id": "Harusnya kita cek alamatnya dulu sebelum pesan ojek."
+          },
+          {
+            "en": "You should have told me you were in Surabaya!",
+            "id": "Harusnya kamu bilang kalau kamu ada di Surabaya!"
+          },
+          {
+            "en": "He shouldn't have sent that email to the whole team.",
+            "id": "Seharusnya dia tidak mengirim email itu ke seluruh tim."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Too much nasi padang",
+        "text": "At lunch, Sari ate three plates of nasi padang. Now she's back at her desk and she feels sick.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "should-have",
+          "options": [
+            "shouldn't have eaten",
+            "shouldn't ate",
+            "shouldn't have ate"
+          ],
+          "answer": 0,
+          "prompt": "Complete what Sari says: I ___ so much!",
+          "explanation": "She ate too much (it happened, and it was a bad idea), so: **shouldn't have + third form** (*eat → ate → eaten*). After *have*, use the third form, never *ate*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "would rather and it's time",
+        "text": "Two more ways to say what you'd prefer, and what should happen now.",
+        "body": "**would rather** ('d rather) = *mendingan, lebih suka*. Ask: **who** is it about?\n- **you** → + **base verb**, no *to*: *I'd rather **stay** home.*\n- **another person** → + person + **past simple**: *I'd rather you **didn't smoke** here.*\n**it's time** + **to** + verb: *It's time **to go**.* Or **it's (high) time** + person + **past simple** when it should already be happening: *It's high time you **found** a new job.*\nNot 'It's time we **go** home' ✗ → *It's time we **went** home* ✓.",
+        "pairs": [
+          {
+            "en": "I'd rather stay home.",
+            "id": "Mendingan saya di rumah saja."
+          },
+          {
+            "en": "I'd rather not say.",
+            "id": "Saya lebih baik tidak bilang."
+          },
+          {
+            "en": "I'd rather you didn't smoke here.",
+            "id": "Saya lebih suka kamu tidak merokok di sini."
+          },
+          {
+            "en": "It's time to go.",
+            "id": "Sudah waktunya pergi."
+          },
+          {
+            "en": "It's time for lunch.",
+            "id": "Sudah waktunya makan siang."
+          },
+          {
+            "en": "It's high time you found a new job.",
+            "id": "Sudah saatnya (dari dulu) kamu cari kerja baru."
+          },
+          {
+            "en": "the government",
+            "id": "pemerintah"
+          },
+          {
+            "en": "a traffic jam",
+            "id": "kemacetan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Taxi or train?",
+        "text": "Pak Hasan: 'Shall we take a taxi to the airport?' Bu Ani prefers the airport train: it's cheaper and there's no traffic.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "would-rather-its-time",
+          "options": [
+            "took",
+            "to take",
+            "take"
+          ],
+          "answer": 2,
+          "prompt": "Complete Bu Ani's answer: No, I'd rather ___ the airport train.",
+          "explanation": "Bu Ani is talking about **herself**, so **would rather + base verb**, with no *to*. The past (*took*) is only for another person: *I'd rather you took the train.*"
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jakarta traffic",
+        "text": "Every day, people in Jakarta spend hours in traffic jams. A newspaper says the government should act now: in fact, it should have acted years ago.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "would-rather-its-time",
+          "options": [
+            "does",
+            "did",
+            "has done"
+          ],
+          "answer": 1,
+          "prompt": "Complete: It's high time the government ___ something about the traffic.",
+          "explanation": "**It's high time + person + past simple**: it should already be happening, so the verb steps back (*do → did*), even though it's about now. *does* is a common mistake, and *has done* doesn't fit."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for the next time you have a wish or a regret!",
+        "artifact": {
+          "title": "Cheat sheet · Wish, if only & regrets",
+          "intro": "One idea runs through this lesson: to talk about something that isn't real, the verb takes one step back. Now → past simple; the past → had + third form.",
+          "headers": [
+            "Use",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Wish about now",
+              "wish / if only + past simple",
+              "I wish I had a car."
+            ],
+            [
+              "Wish about an ability",
+              "wish + could",
+              "I wish I could swim."
+            ],
+            [
+              "Wish with be",
+              "wish + were / was",
+              "I wish I were taller."
+            ],
+            [
+              "Regret about the past",
+              "wish / if only + had + third form",
+              "I wish I had taken the job in Bandung."
+            ],
+            [
+              "Someone else should change",
+              "wish + would / wouldn't",
+              "I wish you wouldn't interrupt me."
+            ],
+            [
+              "Real hope (semoga)",
+              "hope + present / will",
+              "I hope you pass the exam."
+            ],
+            [
+              "Regret (I didn't)",
+              "should have + third form",
+              "I should have charged my phone."
+            ],
+            [
+              "Criticism (you did)",
+              "shouldn't have + third form",
+              "You shouldn't have shouted at him."
+            ],
+            [
+              "Preference: me",
+              "would rather + base verb",
+              "I'd rather walk than take an ojek."
+            ],
+            [
+              "Preference: another person",
+              "would rather + person + past simple",
+              "I'd rather you paid in cash."
+            ],
+            [
+              "Now is the moment",
+              "it's time + to + verb",
+              "It's time to start the meeting."
+            ],
+            [
+              "It should already happen",
+              "it's (high) time + person + past simple",
+              "It's about time Budi paid back the money."
+            ]
+          ],
+          "tips": [
+            "**One step back:** I wish I **could** (not can), I wish I **had** studied (not studied) for the past, It's time we **went** (not go).",
+            "**wish + would** is for other people or things: *I wish you would …*, never *I wish I would …*.",
+            "**should have / shouldn't have + third form**: *shouldn't have **come***, not *shouldn't came*. Write *should've*, never *should of*."
+          ],
+          "examples": [
+            {
+              "en": "If only I knew her phone number!",
+              "id": "Andai saja saya tahu nomor HP-nya!"
+            },
+            {
+              "en": "We shouldn't have stayed in such a cheap hotel.",
+              "id": "Seharusnya kita tidak menginap di hotel semurah itu."
+            },
+            {
+              "en": "I'd rather you didn't tell anyone about this.",
+              "id": "Saya lebih suka kamu tidak menceritakan ini ke siapa pun."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and watch",
+        "text": "Want more? Read the British Council page on wish and if only (with two tests), watch an older BBC programme on regrets with wish, and try a C1 challenge page."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan membicarakan harapan dan penyesalan: apa yang ingin kamu ubah sekarang, apa yang kamu harap dulu terjadi, dan apa yang seharusnya dilakukan orang. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Harapan tentang sekarang",
+        "text": "Ingat second conditional? *If I had a car* = saya **tidak** punya mobil. Bentuk past bisa berarti **tidak nyata**. **wish** memakai ide yang sama.",
+        "body": "Untuk bilang kamu ingin hidupmu **sekarang** berbeda, pakai **I wish** + kata kerja yang **mundur satu langkah**:\n- **past simple**: *I wish I **had** a car.* (kenyataannya tidak.)\n- **can → could**: *I wish I **could** swim.* (kenyataannya tidak bisa.)\n- **be → were / was**: *I wish I **were** taller.*\nBentuk past di sini bukan tentang kemarin: artinya **jauh dari kenyataan**. Bukan 'I wish I **can**…'.\n**If only** = sama, tapi lebih kuat. Untuk harapan nyata (*semoga*), pakai **hope**: *I hope you pass.*",
+        "pairs": [
+          {
+            "en": "I wish …",
+            "id": "Andai saja … / Saya berharap … (tapi tidak nyata)"
+          },
+          {
+            "en": "If only …!",
+            "id": "Andai saja …! (lebih kuat)"
+          },
+          {
+            "en": "have → had",
+            "id": "punya"
+          },
+          {
+            "en": "can → could",
+            "id": "bisa"
+          },
+          {
+            "en": "I wish I were taller.",
+            "id": "Andai saja saya lebih tinggi."
+          },
+          {
+            "en": "I wish I didn't have to work on Saturdays.",
+            "id": "Andai saja saya tidak harus kerja hari Sabtu."
+          },
+          {
+            "en": "I hope you pass.",
+            "id": "Semoga kamu lulus. (nyata → hope)"
+          },
+          {
+            "en": "to commute",
+            "id": "pulang-pergi kerja (jarak jauh)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Perjalanan jauh",
+        "text": "Rina tinggal di Bogor. Setiap hari dia menghabiskan hampir empat jam di KRL ke kantornya di Jakarta, dan dia sudah lelah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "wish-if-only",
+          "options": [
+            "live",
+            "lived",
+            "would live"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi ucapan Rina: I wish I ___ in Jakarta.",
+          "explanation": "Rina **sekarang** tidak tinggal di Jakarta, jadi wish memundurkan kata kerjanya **satu langkah**: past simple *lived*. *live* tidak mundur, dan *would* tidak dipakai setelah *I wish I*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Penyesalan, dan wish + would",
+        "text": "Dua pola lagi: harapan tentang **masa lalu**, dan harapan tentang **orang lain**.",
+        "body": "**Tentang masa lalu** → mundur satu langkah lagi, ke **had + bentuk ketiga** (seperti bagian if di third conditional):\n*I wish I **had studied** harder.* (kenyataannya tidak.) *I wish I **hadn't said** that.* (kenyataannya saya mengatakannya.)\nBukan 'I wish I studied harder **last year**'.\n**Orang lain yang harus berubah** → **wish + would**, sering karena kesal: *I wish you **would stop** interrupting me.*\nTidak dengan **I**: 'I wish I would…' ✗ → *I wish I could…*\n*Andai saja / coba* dipakai untuk kedua waktu; bahasa Inggris mengubah **kata kerjanya**.",
+        "pairs": [
+          {
+            "en": "I wish I had studied harder.",
+            "id": "Andai saja dulu saya belajar lebih giat."
+          },
+          {
+            "en": "I wish I hadn't said that.",
+            "id": "Andai saja saya tidak mengatakan itu."
+          },
+          {
+            "en": "I wish you would stop.",
+            "id": "Saya harap kamu berhenti. (kesal)"
+          },
+          {
+            "en": "I wish the bus would come.",
+            "id": "Andai saja busnya cepat datang."
+          },
+          {
+            "en": "bring → brought → brought",
+            "id": "membawa"
+          },
+          {
+            "en": "an umbrella",
+            "id": "payung"
+          },
+          {
+            "en": "soaked",
+            "id": "basah kuyup"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tidak bawa payung",
+        "text": "Tadi pagi Budi meninggalkan payungnya di rumah. Sekarang dia berdiri di halte bus di tengah hujan deras, basah kuyup.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "wish-if-only",
+          "tokens": [
+            "brought",
+            "only",
+            "an",
+            "I",
+            "umbrella",
+            "If",
+            "had"
+          ],
+          "solution": "If only I had brought an umbrella.",
+          "prompt": "Susun kata-katanya: Andai saja tadi aku bawa payung.",
+          "explanation": "Harapan yang kuat tentang **masa lalu** (tadi pagi): **If only + had + bentuk ketiga** (*bring → brought → brought*). Dia tidak membawanya, dan dia menyesal."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "should have: penyesalan dan kritik",
+        "text": "Kamu sudah kenal **should** untuk saran: *You should leave early tomorrow.* Untuk masa lalu, bahasa Inggris menambahkan **have + bentuk ketiga**.",
+        "body": "- **should have + bentuk ketiga** = ide baik yang **tidak** terjadi (*harusnya …, tapi tidak*): *I **should have left** earlier.*\n- **shouldn't have + bentuk ketiga** = ide buruk yang **terjadi** (*seharusnya tidak …*): *You **shouldn't have shouted** at him.*\nTentang dirimu = **penyesalan**; tentang orang lain = **kritik**.\nJebakan: *harusnya kemarin* tidak mengubah kata kerja, tapi bahasa Inggris perlu bentuk ketiga: 'You shouldn't **came** late' ✗ → **shouldn't have come** ✓.\nUcapkan *should've* ('SHUD-ev'); jangan pernah menulis 'should of'.",
+        "pairs": [
+          {
+            "en": "should have + third form",
+            "id": "harusnya … (tapi tidak terjadi)"
+          },
+          {
+            "en": "shouldn't have + third form",
+            "id": "seharusnya tidak … (tapi terjadi)"
+          },
+          {
+            "en": "should've",
+            "id": "should have (dibaca 'SHUD-ev')"
+          },
+          {
+            "en": "eat → ate → eaten",
+            "id": "makan"
+          },
+          {
+            "en": "come → came → come",
+            "id": "datang"
+          },
+          {
+            "en": "go → went → gone",
+            "id": "pergi"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tidak terjadi, atau terjadi",
+        "text": "Penyesalan atau kritik? Di setiap kalimat, tanya: terjadi atau tidak?",
+        "body": "**should have** → **tidak** terjadi. **shouldn't have** → **terjadi**.",
+        "examples": [
+          {
+            "en": "I should have charged my phone last night.",
+            "id": "Harusnya tadi malam saya mengecas HP."
+          },
+          {
+            "en": "We should have checked the address before we ordered the ojek.",
+            "id": "Harusnya kita cek alamatnya dulu sebelum pesan ojek."
+          },
+          {
+            "en": "You should have told me you were in Surabaya!",
+            "id": "Harusnya kamu bilang kalau kamu ada di Surabaya!"
+          },
+          {
+            "en": "He shouldn't have sent that email to the whole team.",
+            "id": "Seharusnya dia tidak mengirim email itu ke seluruh tim."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kebanyakan nasi padang",
+        "text": "Waktu makan siang, Sari makan tiga piring nasi padang. Sekarang dia kembali ke mejanya dan merasa mual.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "should-have",
+          "options": [
+            "shouldn't have eaten",
+            "shouldn't ate",
+            "shouldn't have ate"
+          ],
+          "answer": 0,
+          "prompt": "Lengkapi ucapan Sari: I ___ so much!",
+          "explanation": "Dia makan terlalu banyak (itu terjadi, dan itu ide buruk), jadi: **shouldn't have + bentuk ketiga** (*eat → ate → eaten*). Setelah *have*, pakai bentuk ketiga, jangan *ate*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "would rather dan it's time",
+        "text": "Dua cara lagi untuk bilang apa yang kamu lebih suka, dan apa yang seharusnya terjadi sekarang.",
+        "body": "**would rather** ('d rather) = *mendingan, lebih suka*. Tanya: ini tentang **siapa**?\n- **dirimu** → + **kata kerja dasar**, tanpa *to*: *I'd rather **stay** home.*\n- **orang lain** → + orang + **past simple**: *I'd rather you **didn't smoke** here.*\n**it's time** + **to** + kata kerja: *It's time **to go**.* Atau **it's (high) time** + orang + **past simple** kalau seharusnya sudah terjadi: *It's high time you **found** a new job.*\nBukan 'It's time we **go** home' ✗ → *It's time we **went** home* ✓.",
+        "pairs": [
+          {
+            "en": "I'd rather stay home.",
+            "id": "Mendingan saya di rumah saja."
+          },
+          {
+            "en": "I'd rather not say.",
+            "id": "Saya lebih baik tidak bilang."
+          },
+          {
+            "en": "I'd rather you didn't smoke here.",
+            "id": "Saya lebih suka kamu tidak merokok di sini."
+          },
+          {
+            "en": "It's time to go.",
+            "id": "Sudah waktunya pergi."
+          },
+          {
+            "en": "It's time for lunch.",
+            "id": "Sudah waktunya makan siang."
+          },
+          {
+            "en": "It's high time you found a new job.",
+            "id": "Sudah saatnya (dari dulu) kamu cari kerja baru."
+          },
+          {
+            "en": "the government",
+            "id": "pemerintah"
+          },
+          {
+            "en": "a traffic jam",
+            "id": "kemacetan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Taksi atau kereta?",
+        "text": "Pak Hasan: 'Shall we take a taxi to the airport?' Bu Ani lebih suka kereta bandara: lebih murah dan tidak kena macet.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "would-rather-its-time",
+          "options": [
+            "took",
+            "to take",
+            "take"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi jawaban Bu Ani: No, I'd rather ___ the airport train.",
+          "explanation": "Bu Ani bicara tentang **dirinya sendiri**, jadi **would rather + kata kerja dasar**, tanpa *to*. Bentuk past (*took*) hanya untuk orang lain: *I'd rather you took the train.*"
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Macet di Jakarta",
+        "text": "Setiap hari, orang di Jakarta menghabiskan berjam-jam di kemacetan. Sebuah koran menulis bahwa pemerintah harus bertindak sekarang: sebenarnya, seharusnya sudah dari bertahun-tahun lalu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "would-rather-its-time",
+          "options": [
+            "does",
+            "did",
+            "has done"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: It's high time the government ___ something about the traffic.",
+          "explanation": "**It's high time + orang + past simple**: seharusnya sudah terjadi, jadi kata kerjanya mundur (*do → did*), walaupun tentang sekarang. *does* adalah kesalahan umum, dan *has done* tidak cocok."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk saat kamu punya harapan atau penyesalan berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · Wish, if only & penyesalan",
+          "intro": "Satu ide di seluruh pelajaran ini: untuk membicarakan sesuatu yang tidak nyata, kata kerjanya mundur satu langkah. Sekarang → past simple; masa lalu → had + bentuk ketiga.",
+          "headers": [
+            "Fungsi",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Harapan tentang sekarang",
+              "wish / if only + past simple",
+              "I wish I had a car."
+            ],
+            [
+              "Harapan tentang kemampuan",
+              "wish + could",
+              "I wish I could swim."
+            ],
+            [
+              "Harapan dengan be",
+              "wish + were / was",
+              "I wish I were taller."
+            ],
+            [
+              "Penyesalan masa lalu",
+              "wish / if only + had + bentuk ketiga",
+              "I wish I had taken the job in Bandung."
+            ],
+            [
+              "Orang lain harus berubah",
+              "wish + would / wouldn't",
+              "I wish you wouldn't interrupt me."
+            ],
+            [
+              "Harapan nyata (semoga)",
+              "hope + present / will",
+              "I hope you pass the exam."
+            ],
+            [
+              "Penyesalan (tidak saya lakukan)",
+              "should have + bentuk ketiga",
+              "I should have charged my phone."
+            ],
+            [
+              "Kritik (kamu lakukan)",
+              "shouldn't have + bentuk ketiga",
+              "You shouldn't have shouted at him."
+            ],
+            [
+              "Pilihan: saya",
+              "would rather + kata kerja dasar",
+              "I'd rather walk than take an ojek."
+            ],
+            [
+              "Pilihan: orang lain",
+              "would rather + orang + past simple",
+              "I'd rather you paid in cash."
+            ],
+            [
+              "Saatnya sekarang",
+              "it's time + to + kata kerja",
+              "It's time to start the meeting."
+            ],
+            [
+              "Seharusnya sudah terjadi",
+              "it's (high) time + orang + past simple",
+              "It's about time Budi paid back the money."
+            ]
+          ],
+          "tips": [
+            "**Mundur satu langkah:** I wish I **could** (bukan can), I wish I **had** studied (bukan studied) untuk masa lalu, It's time we **went** (bukan go).",
+            "**wish + would** untuk orang lain atau benda: *I wish you would …*, jangan *I wish I would …*.",
+            "**should have / shouldn't have + bentuk ketiga**: *shouldn't have **come***, bukan *shouldn't came*. Tulis *should've*, jangan *should of*."
+          ],
+          "examples": [
+            {
+              "en": "If only I knew her phone number!",
+              "id": "Andai saja saya tahu nomor HP-nya!"
+            },
+            {
+              "en": "We shouldn't have stayed in such a cheap hotel.",
+              "id": "Seharusnya kita tidak menginap di hotel semurah itu."
+            },
+            {
+              "en": "I'd rather you didn't tell anyone about this.",
+              "id": "Saya lebih suka kamu tidak menceritakan ini ke siapa pun."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan tonton",
+        "text": "Mau lebih? Baca halaman British Council tentang wish dan if only (dengan dua tes), tonton program lama BBC tentang penyesalan dengan wish, dan coba halaman tantangan level C1."
+      }
+    ]
+  }
+}

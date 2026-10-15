@@ -1,0 +1,740 @@
+{
+  "en": {
+    "greeting": "Hi! Today you find out why fast English is so hard to hear: sounds disappear, change and shrink. Once you know the tricks, you can undo them in your head. Listen to every example and say it along with the recording.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Sounds that disappear",
+        "text": "Quick recap: you already link words (*turn off* → 'tur-noff') and keep the small words weak. In fast speech, English goes further. Tap each phrase and listen.",
+        "body": "In fast, relaxed speech some sounds **disappear**. This is called **elision**. The most common one: a **t** or **d** stuck **between two consonant sounds** (like s, n, b, m) often drops, because three consonants in a row are hard to say fast: *last night* → 'las night', *handbag* → 'hanbag'.\nBut before a **vowel** sound the t stays and **links**: *just a minute* → 'jus-ta minute'.\nThe trap: listening for every letter of the written word. You hear 'las night', so think *last night*.",
+        "pairs": [
+          {
+            "en": "last night",
+            "id": "tadi malam · terdengar 'las night'"
+          },
+          {
+            "en": "handbag",
+            "id": "tas tangan · terdengar 'hanbag'"
+          },
+          {
+            "en": "must be",
+            "id": "pasti · terdengar 'mus be'"
+          },
+          {
+            "en": "an old friend",
+            "id": "teman lama · terdengar 'an ol friend'"
+          },
+          {
+            "en": "just a minute",
+            "id": "sebentar · t tetap: 'jus-ta minute'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which t survives?",
+        "text": "Think about the sound right after the t.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "elision-assimilation",
+          "prompt": "In fast speech, which phrase usually does NOT lose its t?",
+          "options": [
+            "last week",
+            "first of all",
+            "most people"
+          ],
+          "answer": 1,
+          "explanation": "In *first of all* the t comes before a vowel (*of*), so it isn't stuck between consonants: it links, 'firs-tof all'. In *last week* (s-t-w) and *most people* (s-t-p) the t sits between two consonant sounds, so it often disappears: 'las week', 'mos people'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sounds that change",
+        "text": "Now sounds that change: your mouth gets ready for the next sound early. Tap and listen.",
+        "body": "**Assimilation** = a sound changes to be more like the next one.\n- **n → m** before p, b, m (closed lips): *ten people* → 'tem people'\n- **d → b** before p, b, m: *a good boy* → 'a goob boy'\n- **t + you → 'ch'** (like the c in *cari*): *don't you* → 'doncha'\n- **d + you → 'j'** (like the j in *jalan*): *did you* → 'didja', *would you* → 'wouldja'\nIndonesian does this too: me- + beli → **mem**beli. For listening, undo the change: 'tem people' = *ten people*.",
+        "pairs": [
+          {
+            "en": "ten people",
+            "id": "sepuluh orang · terdengar 'tem people'"
+          },
+          {
+            "en": "in Bandung",
+            "id": "di Bandung · terdengar 'im Bandung'"
+          },
+          {
+            "en": "a good boy",
+            "id": "anak yang baik · terdengar 'a goob boy'"
+          },
+          {
+            "en": "Don't you like it?",
+            "id": "Kamu nggak suka? · 'doncha'"
+          },
+          {
+            "en": "Did you see it?",
+            "id": "Kamu lihat itu? · 'didja'"
+          },
+          {
+            "en": "Would you like some tea?",
+            "id": "Mau teh? · 'wouldja'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Meet where?",
+        "text": "Pak Hasan is leaving the office and talks quickly to Rina.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "elision-assimilation",
+          "prompt": "Pak Hasan says quickly: 'I'll meecha in the lobby at nine.' What are the full words?",
+          "options": [
+            "I'll meet you in the lobby at nine.",
+            "I'll meet her in the lobby at nine.",
+            "I'll meet them in the lobby at nine."
+          ],
+          "answer": 0,
+          "explanation": "t + you → 'ch': *meet you* → 'meecha', just like *don't you* → 'doncha'. *meet her* would sound like 'mee-ter' (the h is weak and the t links), and *meet them* like 'mee-tem'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Small words at full speed",
+        "text": "Small words shrink even more in fast speech. Tap each line: the strong words are clear, the small ones are tiny.",
+        "body": "Recap: small words are weak in the middle of a sentence. At full speed:\n- **to** → 'tuh', **for** → 'fuh' (American 'fer')\n- **and** → just **'n'**: 'fish 'n' chips'\n- **of** → 'uh': 'a cuppa tea'\n- **can** → 'kn': 'we kn MEET'\n- **them** → **'em'** (like the letter M)\n('uh' = the short e of *emas*.) They're strong at the end (*Who's it **for**?*) and in short answers (*Yes, we **can**.*). The mistake: every word full and separate, 'I – am – going – to – go'.",
+        "pairs": [
+          {
+            "en": "I need to leave.",
+            "id": "Aku perlu pergi. · 'ai NEED tuh LEAVE'"
+          },
+          {
+            "en": "a present for Rina",
+            "id": "hadiah untuk Rina · 'fuh RI-na'"
+          },
+          {
+            "en": "fish and chips",
+            "id": "ikan dan kentang goreng · 'fish 'n' chips'"
+          },
+          {
+            "en": "a cup of tea",
+            "id": "secangkir teh · 'a cuppa tea'"
+          },
+          {
+            "en": "We can meet at ten.",
+            "id": "Kita bisa ketemu jam sepuluh. · 'we kn MEET'"
+          },
+          {
+            "en": "Call them now.",
+            "id": "Telepon mereka sekarang. · 'CALL em NOW'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: Bu Ani's request",
+        "text": "Bu Ani is talking to her assistant about a meeting. Press play and listen for the strong words first.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "weak-forms-fast",
+          "listen": "Can you call them and ask for a new date?",
+          "prompt": "Listen. Which sentence did Bu Ani say?",
+          "options": [
+            "Can you call him and ask for a new date?",
+            "Can you call them and ask for a new date?",
+            "Can't you call them and ask for a new date?"
+          ],
+          "answer": 1,
+          "explanation": "She said *Can you call **them** and ask **for** a new date?* Fast: 'kn yuh CALL em n ASK fuh a NEW DATE'. *can* is a weak 'kn' (a strong, long 'KAANT' would be *can't*), *them* → 'em', *and* → 'n'. *him* would sound like 'im', with an i, not an e."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "gonna, wanna, gotta",
+        "text": "Three short forms you'll hear in every film and chat. Tap and listen: the recording says the full words, quickly.",
+        "body": "- **gonna** = **going to** + a verb: *I'm going to be late* → 'I'm gonna be late'\n- **wanna** = **want to**: 'Do you wanna come?'\n- **gotta** = **have got to** (= have to): 'I've gotta go'\nWatch out: a **place** is never gonna (*I'm going to the office*), and *she wants to* is never wanna.\nThey're **informal**: fine to hear and say with friends, but **never write** them in emails, reports or essays. Like *gimana* or *nggak*: OK on WhatsApp, not in a letter to your lecturer.",
+        "pairs": [
+          {
+            "en": "I'm going to be late.",
+            "id": "Aku bakal telat. · cepat: 'I'm gonna be late'"
+          },
+          {
+            "en": "Do you want to come?",
+            "id": "Kamu mau ikut? · cepat: 'Do you wanna come?'"
+          },
+          {
+            "en": "I've got to go.",
+            "id": "Aku harus pergi. · cepat: 'I've gotta go'"
+          },
+          {
+            "en": "I'm going to the office.",
+            "id": "Aku mau ke kantor. · tempat: tidak pernah 'gonna'"
+          },
+          {
+            "en": "She wants to rest.",
+            "id": "Dia mau istirahat. · wants to: tidak pernah 'wanna'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: Rina's plan",
+        "text": "Rina is chatting with a colleague by the coffee machine. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "gonna-wanna-gotta",
+          "listen": "I'm going to call her after lunch.",
+          "prompt": "Listen. Rina speaks fast and casually. Which sentence has the full words she said?",
+          "options": [
+            "I'm calling her after lunch.",
+            "I want to call her after lunch.",
+            "I'm going to call her after lunch."
+          ],
+          "answer": 2,
+          "explanation": "She said *I'm **going to** call her after lunch*. In fast, casual speech *going to* + a verb shrinks towards 'gonna': 'I'm gonna CALL her AF-ter LUNCH'. *want to* would sound like 'wanna', and *I'm calling* has no 'tuh' before *call*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "From chat to email",
+        "text": "Dimas is turning a chat message into an email.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "gonna-wanna-gotta",
+          "prompt": "Dimas wrote in the team chat: 'We wanna thank the whole team!' Now he's writing it in an email to the directors. Arrange the words.",
+          "tokens": [
+            "thank",
+            "whole",
+            "want",
+            "We",
+            "team",
+            "to",
+            "the"
+          ],
+          "solution": "We want to thank the whole team.",
+          "explanation": "*wanna* = *want to*, and in an email you write the full words: **We want to thank the whole team.** For an even more formal email: *We would like to thank…*. *wanna, gonna, gotta* belong in speech and chats with friends."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip the cards. For each one, say the full words and then the fast version.",
+        "flashcards": [
+          {
+            "front": "elision (bunyi hilang)",
+            "back": "a sound disappears: last night → 'las night'"
+          },
+          {
+            "front": "assimilation (bunyi berubah)",
+            "back": "a sound changes: ten people → 'tem people'"
+          },
+          {
+            "front": "'doncha' / 'didja'",
+            "back": "don't you / did you"
+          },
+          {
+            "front": "'n' (fish 'n' chips)",
+            "back": "and"
+          },
+          {
+            "front": "'em' (call 'em)",
+            "back": "them"
+          },
+          {
+            "front": "gonna",
+            "back": "going to + a verb (speech only, never for a place)"
+          },
+          {
+            "front": "wanna",
+            "back": "want to (speech only; she wants to, never 'she wanna')"
+          },
+          {
+            "front": "gotta",
+            "back": "have got to = have to (speech only)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "All of today's sound changes on one page, to keep.",
+        "artifact": {
+          "title": "Cheat sheet · connected speech",
+          "intro": "What happens in fast, relaxed speech. These are tendencies, not rules: careful speakers keep the full sounds, and so can you. The main thing is to hear them.",
+          "headers": [
+            "What happens",
+            "Example",
+            "Sounds like"
+          ],
+          "rows": [
+            [
+              "t/d between two consonants disappears",
+              "last night · handbag",
+              "'las night' · 'hanbag'"
+            ],
+            [
+              "…but before a vowel it links",
+              "just a minute",
+              "'jus-ta minute'"
+            ],
+            [
+              "n → m before p, b, m",
+              "ten people · in Bandung",
+              "'tem people' · 'im Bandung'"
+            ],
+            [
+              "d → b before p, b, m",
+              "a good boy",
+              "'a goob boy'"
+            ],
+            [
+              "t + you → 'ch'",
+              "don't you · meet you",
+              "'doncha' · 'meecha'"
+            ],
+            [
+              "d + you → 'j'",
+              "did you · would you",
+              "'didja' · 'wouldja'"
+            ],
+            [
+              "to, for: weak",
+              "need to leave · for Rina",
+              "'tuh' · 'fuh'"
+            ],
+            [
+              "and → 'n'",
+              "fish and chips",
+              "'fish 'n' chips'"
+            ],
+            [
+              "of → 'uh'",
+              "a cup of tea · a lot of",
+              "'a cuppa tea' · 'a lotta'"
+            ],
+            [
+              "can: weak (can't: strong)",
+              "we can meet",
+              "'we kn MEET'"
+            ],
+            [
+              "them → 'em'",
+              "call them",
+              "'CALL em'"
+            ],
+            [
+              "going to + verb (speech only)",
+              "I'm going to be late",
+              "'I'm gonna be late'"
+            ],
+            [
+              "want to (speech only)",
+              "Do you want to come?",
+              "'Do you wanna come?'"
+            ],
+            [
+              "have got to (speech only)",
+              "I've got to go",
+              "'I've gotta go'"
+            ]
+          ],
+          "tips": [
+            "Listening: catch the strong words first, rebuild the small words from grammar, then undo the changes ('tem' → ten, 'cha' → you).",
+            "Never write gonna, wanna or gotta in emails, reports or essays: *I'm going to…*, *I want to…* / *I would like to…*, *I have to…*.",
+            "Speaking: link and keep the small words weak, but you don't have to drop sounds. Clear is always fine."
+          ],
+          "examples": [
+            {
+              "en": "I left my handbag at the office last night.",
+              "id": "Tas tanganku ketinggalan di kantor tadi malam."
+            },
+            {
+              "en": "Don't you want to come with us?",
+              "id": "Kamu nggak mau ikut kami?"
+            },
+            {
+              "en": "Tell them we can meet at ten.",
+              "id": "Bilang ke mereka kita bisa ketemu jam sepuluh."
+            },
+            {
+              "en": "I've got to go. See you tomorrow!",
+              "id": "Aku harus pergi. Sampai besok!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read",
+        "text": "Two short BBC videos on sounds that disappear and change, and a VOA article on gonna, wanna and gotta. Repeat the sentences with the speakers."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan tahu kenapa bahasa Inggris yang cepat susah sekali didengar: bunyi-bunyi hilang, berubah dan menyusut. Kalau kamu sudah tahu triknya, kamu bisa mengembalikannya di kepala. Dengarkan setiap contoh dan ucapkan bersama rekamannya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bunyi yang hilang",
+        "text": "Ulasan singkat: kamu sudah bisa menyambung kata (*turn off* → 'tur-noff') dan membuat kata-kata kecil lemah. Dalam ucapan cepat, bahasa Inggris melangkah lebih jauh. Ketuk setiap frasa dan dengarkan.",
+        "body": "Dalam ucapan yang cepat dan santai, sebagian bunyi **hilang**. Ini disebut **elision**. Yang paling sering: **t** atau **d** yang **terjepit di antara dua bunyi konsonan** (huruf mati seperti s, n, b, m) sering tidak diucapkan, karena tiga konsonan berturut-turut susah diucapkan cepat: *last night* → 'las night', *handbag* → 'hanbag'.\nTapi sebelum bunyi **vokal** (huruf hidup), t-nya tetap ada dan **menyambung**: *just a minute* → 'jus-ta minute'.\nJebakannya: menunggu setiap huruf dari tulisan. Kamu mendengar 'las night', jadi pikirkan *last night*.",
+        "pairs": [
+          {
+            "en": "last night",
+            "id": "tadi malam · terdengar 'las night'"
+          },
+          {
+            "en": "handbag",
+            "id": "tas tangan · terdengar 'hanbag'"
+          },
+          {
+            "en": "must be",
+            "id": "pasti · terdengar 'mus be'"
+          },
+          {
+            "en": "an old friend",
+            "id": "teman lama · terdengar 'an ol friend'"
+          },
+          {
+            "en": "just a minute",
+            "id": "sebentar · t tetap: 'jus-ta minute'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "t mana yang bertahan?",
+        "text": "Perhatikan bunyi tepat setelah t-nya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "elision-assimilation",
+          "prompt": "Dalam ucapan cepat, frasa mana yang biasanya TIDAK kehilangan t-nya?",
+          "options": [
+            "last week",
+            "first of all",
+            "most people"
+          ],
+          "answer": 1,
+          "explanation": "Di *first of all* t-nya datang sebelum vokal (*of*), jadi tidak terjepit di antara konsonan: t-nya menyambung, 'firs-tof all'. Di *last week* (s-t-w) dan *most people* (s-t-p) t-nya ada di antara dua bunyi konsonan, jadi sering hilang: 'las week', 'mos people'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bunyi yang berubah",
+        "text": "Sekarang bunyi yang berubah: mulutmu bersiap lebih awal untuk bunyi berikutnya. Ketuk dan dengarkan.",
+        "body": "**Assimilation** = sebuah bunyi berubah supaya lebih mirip bunyi berikutnya.\n- **n → m** sebelum p, b, m (bibir tertutup): *ten people* → 'tem people'\n- **d → b** sebelum p, b, m: *a good boy* → 'a goob boy'\n- **t + you → 'ch'** (seperti c di *cari*): *don't you* → 'doncha'\n- **d + you → 'j'** (seperti j di *jalan*): *did you* → 'didja', *would you* → 'wouldja'\nBahasa Indonesia juga begini: me- + beli → **mem**beli. Saat mendengarkan, kembalikan perubahannya: 'tem people' = *ten people*.",
+        "pairs": [
+          {
+            "en": "ten people",
+            "id": "sepuluh orang · terdengar 'tem people'"
+          },
+          {
+            "en": "in Bandung",
+            "id": "di Bandung · terdengar 'im Bandung'"
+          },
+          {
+            "en": "a good boy",
+            "id": "anak yang baik · terdengar 'a goob boy'"
+          },
+          {
+            "en": "Don't you like it?",
+            "id": "Kamu nggak suka? · 'doncha'"
+          },
+          {
+            "en": "Did you see it?",
+            "id": "Kamu lihat itu? · 'didja'"
+          },
+          {
+            "en": "Would you like some tea?",
+            "id": "Mau teh? · 'wouldja'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ketemu di mana?",
+        "text": "Pak Hasan sedang keluar kantor dan bicara cepat ke Rina.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "elision-assimilation",
+          "prompt": "Pak Hasan bilang dengan cepat: 'I'll meecha in the lobby at nine.' Apa kata-kata lengkapnya?",
+          "options": [
+            "I'll meet you in the lobby at nine.",
+            "I'll meet her in the lobby at nine.",
+            "I'll meet them in the lobby at nine."
+          ],
+          "answer": 0,
+          "explanation": "t + you → 'ch': *meet you* → 'meecha', sama seperti *don't you* → 'doncha'. *meet her* akan terdengar seperti 'mee-ter' (h-nya lemah dan t-nya menyambung), dan *meet them* seperti 'mee-tem'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata kecil dengan kecepatan penuh",
+        "text": "Dalam ucapan cepat, kata-kata kecil menyusut lagi. Ketuk setiap baris: kata-kata kuatnya jelas, yang kecil hampir tak terdengar.",
+        "body": "Ulasan: kata-kata kecil lemah di tengah kalimat. Dengan kecepatan penuh:\n- **to** → 'te', **for** → 'fe' (Amerika 'fer')\n- **and** → cuma **'n'**: 'fish 'n' chips'\n- **of** → 'e': 'a cuppa tea'\n- **can** → 'kn': 'we kn MEET'\n- **them** → **'em'** (seperti huruf M)\n(e di sini = e lemah seperti di *emas*.) Kata-kata ini kuat di akhir kalimat (*Who's it **for**?*) dan di jawaban pendek (*Yes, we **can**.*). Kesalahannya: setiap kata penuh dan terpisah, 'I – am – going – to – go'.",
+        "pairs": [
+          {
+            "en": "I need to leave.",
+            "id": "Aku perlu pergi. · 'ai NEED te LEAVE'"
+          },
+          {
+            "en": "a present for Rina",
+            "id": "hadiah untuk Rina · 'fe RI-na'"
+          },
+          {
+            "en": "fish and chips",
+            "id": "ikan dan kentang goreng · 'fish 'n' chips'"
+          },
+          {
+            "en": "a cup of tea",
+            "id": "secangkir teh · 'a cuppa tea'"
+          },
+          {
+            "en": "We can meet at ten.",
+            "id": "Kita bisa ketemu jam sepuluh. · 'we kn MEET'"
+          },
+          {
+            "en": "Call them now.",
+            "id": "Telepon mereka sekarang. · 'CALL em NOW'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: permintaan Bu Ani",
+        "text": "Bu Ani sedang bicara dengan asistennya tentang sebuah rapat. Tekan play dan dengarkan dulu kata-kata yang kuat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "weak-forms-fast",
+          "listen": "Can you call them and ask for a new date?",
+          "prompt": "Dengarkan. Kalimat mana yang diucapkan Bu Ani?",
+          "options": [
+            "Can you call him and ask for a new date?",
+            "Can you call them and ask for a new date?",
+            "Can't you call them and ask for a new date?"
+          ],
+          "answer": 1,
+          "explanation": "Dia bilang *Can you call **them** and ask **for** a new date?* Versi cepatnya: 'kn ye CALL em n ASK fe a NEW DATE'. *can* lemah, 'kn' (kalau kuat dan panjang, 'KAANT', itu *can't*), *them* → 'em', *and* → 'n'. *him* akan terdengar seperti 'im', dengan i, bukan e."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "gonna, wanna, gotta",
+        "text": "Tiga bentuk pendek yang akan kamu dengar di setiap film dan obrolan. Ketuk dan dengarkan: rekamannya mengucapkan kata-kata lengkapnya, dengan cepat.",
+        "body": "- **gonna** = **going to** + kata kerja: *I'm going to be late* → 'I'm gonna be late'\n- **wanna** = **want to**: 'Do you wanna come?'\n- **gotta** = **have got to** (= have to, harus): 'I've gotta go'\nHati-hati: **tempat** tidak pernah jadi gonna (*I'm going to the office*), dan *she wants to* tidak pernah jadi wanna.\nBentuk ini **informal**: boleh didengar dan diucapkan dengan teman, tapi **jangan pernah ditulis** di email, laporan atau esai. Seperti *gimana* atau *nggak*: oke di WhatsApp, tidak di surat untuk dosenmu.",
+        "pairs": [
+          {
+            "en": "I'm going to be late.",
+            "id": "Aku bakal telat. · cepat: 'I'm gonna be late'"
+          },
+          {
+            "en": "Do you want to come?",
+            "id": "Kamu mau ikut? · cepat: 'Do you wanna come?'"
+          },
+          {
+            "en": "I've got to go.",
+            "id": "Aku harus pergi. · cepat: 'I've gotta go'"
+          },
+          {
+            "en": "I'm going to the office.",
+            "id": "Aku mau ke kantor. · tempat: tidak pernah 'gonna'"
+          },
+          {
+            "en": "She wants to rest.",
+            "id": "Dia mau istirahat. · wants to: tidak pernah 'wanna'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: rencana Rina",
+        "text": "Rina sedang mengobrol dengan rekan kerjanya di dekat mesin kopi. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "gonna-wanna-gotta",
+          "listen": "I'm going to call her after lunch.",
+          "prompt": "Dengarkan. Rina bicara cepat dan santai. Kalimat mana yang berisi kata-kata lengkap yang dia ucapkan?",
+          "options": [
+            "I'm calling her after lunch.",
+            "I want to call her after lunch.",
+            "I'm going to call her after lunch."
+          ],
+          "answer": 2,
+          "explanation": "Dia bilang *I'm **going to** call her after lunch*. Dalam ucapan yang cepat dan santai, *going to* + kata kerja menyusut mendekati 'gonna': 'I'm gonna CALL her AF-ter LUNCH'. *want to* akan terdengar seperti 'wanna', dan *I'm calling* tidak punya 'te' sebelum *call*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dari chat ke email",
+        "text": "Dimas sedang mengubah pesan chat menjadi email.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "gonna-wanna-gotta",
+          "prompt": "Dimas menulis di chat tim: 'We wanna thank the whole team!' Sekarang dia menulisnya di email untuk para direktur. Susun kata-katanya.",
+          "tokens": [
+            "thank",
+            "whole",
+            "want",
+            "We",
+            "team",
+            "to",
+            "the"
+          ],
+          "solution": "We want to thank the whole team.",
+          "explanation": "*wanna* = *want to*, dan di email kamu menulis kata-kata lengkapnya: **We want to thank the whole team.** Untuk email yang lebih formal lagi: *We would like to thank…*. *wanna, gonna, gotta* tempatnya di ucapan dan chat dengan teman."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartunya. Untuk setiap kartu, ucapkan kata-kata lengkapnya, lalu versi cepatnya.",
+        "flashcards": [
+          {
+            "front": "elision (bunyi hilang)",
+            "back": "a sound disappears: last night → 'las night'"
+          },
+          {
+            "front": "assimilation (bunyi berubah)",
+            "back": "a sound changes: ten people → 'tem people'"
+          },
+          {
+            "front": "'doncha' / 'didja'",
+            "back": "don't you / did you"
+          },
+          {
+            "front": "'n' (fish 'n' chips)",
+            "back": "and"
+          },
+          {
+            "front": "'em' (call 'em)",
+            "back": "them"
+          },
+          {
+            "front": "gonna",
+            "back": "going to + a verb (speech only, never for a place)"
+          },
+          {
+            "front": "wanna",
+            "back": "want to (speech only; she wants to, never 'she wanna')"
+          },
+          {
+            "front": "gotta",
+            "back": "have got to = have to (speech only)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semua perubahan bunyi hari ini dalam satu halaman, untuk disimpan.",
+        "artifact": {
+          "title": "Ringkasan · connected speech",
+          "intro": "Apa yang terjadi dalam ucapan yang cepat dan santai. Ini kecenderungan, bukan aturan: pembicara yang hati-hati tetap mengucapkan bunyi lengkapnya, dan kamu juga boleh. Yang paling penting: bisa mendengarnya.",
+          "headers": [
+            "Yang terjadi",
+            "Contoh",
+            "Terdengar seperti"
+          ],
+          "rows": [
+            [
+              "t/d di antara dua konsonan hilang",
+              "last night · handbag",
+              "'las night' · 'hanbag'"
+            ],
+            [
+              "…tapi sebelum vokal, menyambung",
+              "just a minute",
+              "'jus-ta minute'"
+            ],
+            [
+              "n → m sebelum p, b, m",
+              "ten people · in Bandung",
+              "'tem people' · 'im Bandung'"
+            ],
+            [
+              "d → b sebelum p, b, m",
+              "a good boy",
+              "'a goob boy'"
+            ],
+            [
+              "t + you → 'ch'",
+              "don't you · meet you",
+              "'doncha' · 'meecha'"
+            ],
+            [
+              "d + you → 'j'",
+              "did you · would you",
+              "'didja' · 'wouldja'"
+            ],
+            [
+              "to, for: lemah",
+              "need to leave · for Rina",
+              "'te' · 'fe'"
+            ],
+            [
+              "and → 'n'",
+              "fish and chips",
+              "'fish 'n' chips'"
+            ],
+            [
+              "of → 'e'",
+              "a cup of tea · a lot of",
+              "'a cuppa tea' · 'a lotta'"
+            ],
+            [
+              "can: lemah (can't: kuat)",
+              "we can meet",
+              "'we kn MEET'"
+            ],
+            [
+              "them → 'em'",
+              "call them",
+              "'CALL em'"
+            ],
+            [
+              "going to + kata kerja (hanya ucapan)",
+              "I'm going to be late",
+              "'I'm gonna be late'"
+            ],
+            [
+              "want to (hanya ucapan)",
+              "Do you want to come?",
+              "'Do you wanna come?'"
+            ],
+            [
+              "have got to (hanya ucapan)",
+              "I've got to go",
+              "'I've gotta go'"
+            ]
+          ],
+          "tips": [
+            "Mendengarkan: tangkap dulu kata-kata kuatnya, susun kembali kata-kata kecilnya dari tata bahasa, lalu kembalikan perubahannya ('tem' → ten, 'cha' → you).",
+            "Jangan pernah menulis gonna, wanna atau gotta di email, laporan atau esai: *I'm going to…*, *I want to…* / *I would like to…*, *I have to…*.",
+            "Berbicara: sambungkan kata dan buat kata-kata kecil tetap lemah, tapi kamu tidak harus menghilangkan bunyi. Jelas itu selalu boleh."
+          ],
+          "examples": [
+            {
+              "en": "I left my handbag at the office last night.",
+              "id": "Tas tanganku ketinggalan di kantor tadi malam."
+            },
+            {
+              "en": "Don't you want to come with us?",
+              "id": "Kamu nggak mau ikut kami?"
+            },
+            {
+              "en": "Tell them we can meet at ten.",
+              "id": "Bilang ke mereka kita bisa ketemu jam sepuluh."
+            },
+            {
+              "en": "I've got to go. See you tomorrow!",
+              "id": "Aku harus pergi. Sampai besok!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca",
+        "text": "Dua video pendek BBC tentang bunyi yang hilang dan berubah, dan satu artikel VOA tentang gonna, wanna dan gotta. Tirukan kalimat-kalimatnya bersama para pembicara."
+      }
+    ]
+  }
+}

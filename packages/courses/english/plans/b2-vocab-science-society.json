@@ -1,0 +1,760 @@
+{
+  "en": {
+    "greeting": "Hi! Today we'll talk like the news: science and research, climate change and energy, and social issues. You'll learn the words and how to discuss difficult topics in a calm, balanced way. Let's start with research.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Research words",
+        "text": "First, the words scientists and students use every day.",
+        "body": "You **do** or **conduct** (more formal) **research on** a topic. One piece of research is **a study**. A study collects **data** and finds **evidence** (bukti); what it finds are its **findings**.\n\nThe trap: **research** and **evidence** are **uncountable** (we don't count them one by one, like *water*). So **a lot of research**, **some evidence**, never `many researches` or `evidences`. Want to count? **two studies**. And never `datas`.",
+        "pairs": [
+          {
+            "en": "research",
+            "id": "riset, penelitian"
+          },
+          {
+            "en": "a study",
+            "id": "sebuah penelitian"
+          },
+          {
+            "en": "an experiment",
+            "id": "eksperimen, percobaan"
+          },
+          {
+            "en": "data",
+            "id": "data"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "findings",
+            "id": "temuan, hasil penelitian"
+          },
+          {
+            "en": "a researcher",
+            "id": "peneliti"
+          },
+          {
+            "en": "conduct research",
+            "id": "melakukan riset"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan's aunt says that drinking coconut water every morning cures diabetes. Pak Hasan asks his doctor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "science-innovation",
+          "prompt": "Complete the doctor's reply: There's no scientific ___ for that, so please keep taking your medicine.",
+          "options": [
+            "evidence",
+            "evidences",
+            "an evidence"
+          ],
+          "answer": 0,
+          "explanation": "**evidence** (bukti) is uncountable: no **-s** and no **a**. `evidences` copies Indonesian *bukti-bukti*. To count it, say *a piece of evidence*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "From research to breakthrough",
+        "text": "Now the words for new ideas. Watch out for *menemukan*: English has two words for it.",
+        "body": "**discover** = find something that **already existed** (in nature). **invent** = make something **new** that didn't exist before. A very important new result after a lot of work is **a breakthrough** (terobosan): you **make a breakthrough**. **develop** = mengembangkan; **innovation** = inovasi.",
+        "examples": [
+          {
+            "en": "Alexander Fleming discovered penicillin in 1928.",
+            "id": "Alexander Fleming menemukan penisilin pada tahun 1928."
+          },
+          {
+            "en": "Who invented the light bulb?",
+            "id": "Siapa yang menemukan bola lampu?"
+          },
+          {
+            "en": "Two new studies show that walking every day helps your heart.",
+            "id": "Dua penelitian baru menunjukkan bahwa berjalan kaki setiap hari baik untuk jantung."
+          },
+          {
+            "en": "The findings show that people who sleep less make more mistakes.",
+            "id": "Hasil penelitiannya menunjukkan bahwa orang yang kurang tidur membuat lebih banyak kesalahan."
+          },
+          {
+            "en": "Indonesia's startups need more innovation.",
+            "id": "Startup Indonesia butuh lebih banyak inovasi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Sari is reading the science news on her phone in the MRT.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "science-innovation",
+          "prompt": "Arrange the words: Tim itu mengembangkan vaksin baru.",
+          "tokens": [
+            "vaccine",
+            "developed",
+            "new",
+            "The",
+            "a",
+            "team"
+          ],
+          "solution": "The team developed a new vaccine.",
+          "explanation": "*mengembangkan* = **develop** (past: **developed**). The adjective **new** comes before the noun **vaccine**, the opposite of Indonesian *vaksin baru*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Climate and energy",
+        "text": "You know climate change and pollution from B1. Now the words from news about energy.",
+        "body": "Cars, factories and power stations produce **emissions** and **greenhouse gases**, which make the planet warmer. **Fossil fuels** (coal, oil, gas) will run out one day; **renewable energy** won't: **solar** (sun), **wind**, **hydro** (water) and **geothermal** (the heat from under the ground, near volcanoes).\n\nYour **carbon footprint** is how much CO2 your lifestyle produces. **Sustainable** = it can continue without hurting the planet.",
+        "pairs": [
+          {
+            "en": "emissions",
+            "id": "emisi"
+          },
+          {
+            "en": "greenhouse gases",
+            "id": "gas rumah kaca"
+          },
+          {
+            "en": "fossil fuels",
+            "id": "bahan bakar fosil"
+          },
+          {
+            "en": "coal",
+            "id": "batu bara"
+          },
+          {
+            "en": "renewable energy",
+            "id": "energi terbarukan"
+          },
+          {
+            "en": "geothermal",
+            "id": "panas bumi"
+          },
+          {
+            "en": "carbon footprint",
+            "id": "jejak karbon"
+          },
+          {
+            "en": "sustainable",
+            "id": "berkelanjutan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi is showing a visitor from Germany a power station in West Java, near an old volcano.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "climate-energy",
+          "prompt": "Budi: This power station uses the heat from deep under the ground to make electricity. It's ___.",
+          "options": [
+            "solar energy",
+            "geothermal energy",
+            "a fossil fuel"
+          ],
+          "answer": 1,
+          "explanation": "Heat from under the ground = **geothermal energy** (panas bumi), a kind of renewable energy. **Solar** comes from the sun, and fossil fuels are coal, oil and gas, which are burned."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Two traps from Indonesian",
+        "text": "Here's how to talk about the planet without two very common mistakes.",
+        "body": "1. *Perubahan iklim* → **Climate change**, not `The climate change`: a big general topic takes no *the* (like *pollution* or *education*).\n2. *membuat lingkungan rusak* → not `makes the environment broken`. **broken** is for things like a phone or a chair. For nature and health, use **damage**, **harm** or **pollute**.",
+        "examples": [
+          {
+            "en": "Climate change is making heavy rain more common in many places.",
+            "id": "Perubahan iklim membuat hujan deras makin sering di banyak tempat."
+          },
+          {
+            "en": "Pollution damages the environment.",
+            "id": "Polusi merusak lingkungan."
+          },
+          {
+            "en": "Smoking harms your health.",
+            "id": "Merokok merusak kesehatanmu."
+          },
+          {
+            "en": "Our office switched to solar panels to cut its emissions.",
+            "id": "Kantor kami beralih ke panel surya untuk memangkas emisinya."
+          },
+          {
+            "en": "Flying a lot makes your carbon footprint much bigger.",
+            "id": "Sering naik pesawat membuat jejak karbonmu jauh lebih besar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas is writing a short news report about illegal mining in some parts of Kalimantan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "climate-energy",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Illegal mining is broken the rivers.",
+            "Illegal mining makes the rivers broken.",
+            "Illegal mining damages the rivers."
+          ],
+          "answer": 2,
+          "explanation": "For nature we use **damage** (or *harm*, *pollute*): **Illegal mining damages the rivers.** `makes the rivers broken` copies Indonesian *membuat sungai rusak*; **broken** is for objects like a phone."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Social issues, said fairly",
+        "text": "Last group: social issues, and how to talk about them in a calm, balanced way.",
+        "body": "Show more than one side: **Some people argue that …**, **Others believe …**, **On the other hand, …** (di sisi lain). **It could be argued that …** is a phrase to remember. Use **may**, **can** and **often** instead of *always*.\n\nAvoid loaded words like *destroy*, *lazy*, *terrible* or *everyone knows*: they make you sound one-sided. Spelling: British **urbanisation**, **ageing**; American **urbanization**, **aging**.",
+        "pairs": [
+          {
+            "en": "inequality",
+            "id": "ketimpangan"
+          },
+          {
+            "en": "unemployment",
+            "id": "pengangguran"
+          },
+          {
+            "en": "poverty",
+            "id": "kemiskinan"
+          },
+          {
+            "en": "access to healthcare",
+            "id": "akses ke layanan kesehatan"
+          },
+          {
+            "en": "urbanisation",
+            "id": "urbanisasi"
+          },
+          {
+            "en": "an ageing population",
+            "id": "populasi yang menua"
+          },
+          {
+            "en": "Some people argue that …",
+            "id": "Sebagian orang berpendapat bahwa …"
+          },
+          {
+            "en": "On the other hand, …",
+            "id": "Di sisi lain, …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani's company is thinking about a four-day working week. She has to write a short, fair summary for the directors.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "social-issues-neutral",
+          "prompt": "Which sentence is the most balanced?",
+          "options": [
+            "Some people argue that a four-day week makes workers happier. On the other hand, some managers worry that customers may wait longer.",
+            "A four-day week is a crazy idea, and only lazy people want it.",
+            "Everyone knows a four-day week is perfect for every company."
+          ],
+          "answer": 0,
+          "explanation": "The first sentence gives **two sides** with neutral phrases (*Some people argue that …*, *On the other hand*) and a careful **may**. The others use loaded words (*crazy*, *lazy*) or one-sided ones (*Everyone knows*, *perfect for every company*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Science, environment & society",
+          "intro": "Science and research, climate and energy, and social issues: the words and how to use them.",
+          "headers": [
+            "Word",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "research (uncountable)",
+              "riset, penelitian",
+              "There is a lot of research on dengue."
+            ],
+            [
+              "a study / studies",
+              "sebuah penelitian",
+              "Two studies show the same result."
+            ],
+            [
+              "evidence (uncountable), data",
+              "bukti, data",
+              "There's no evidence for that."
+            ],
+            [
+              "findings",
+              "temuan, hasil penelitian",
+              "The findings show that…"
+            ],
+            [
+              "discover / invent",
+              "menemukan (yang sudah ada) / menciptakan",
+              "Fleming discovered penicillin."
+            ],
+            [
+              "develop, a breakthrough, innovation",
+              "mengembangkan, terobosan, inovasi",
+              "They made a breakthrough."
+            ],
+            [
+              "climate change (no 'the')",
+              "perubahan iklim",
+              "Climate change is a global problem."
+            ],
+            [
+              "emissions, greenhouse gases",
+              "emisi, gas rumah kaca",
+              "We need to reduce emissions."
+            ],
+            [
+              "fossil fuels / renewable energy",
+              "bahan bakar fosil / energi terbarukan",
+              "Coal and oil are fossil fuels."
+            ],
+            [
+              "solar, wind, geothermal",
+              "surya, angin, panas bumi",
+              "Indonesia has a lot of geothermal energy."
+            ],
+            [
+              "carbon footprint, sustainable",
+              "jejak karbon, berkelanjutan",
+              "Taking the KRL is more sustainable."
+            ],
+            [
+              "damage / harm / pollute",
+              "merusak / membahayakan / mencemari",
+              "Pollution damages the environment."
+            ],
+            [
+              "inequality, unemployment, poverty",
+              "ketimpangan, pengangguran, kemiskinan",
+              "Unemployment is high among young people in some areas."
+            ],
+            [
+              "urbanisation, an ageing population, access to",
+              "urbanisasi, populasi menua, akses ke",
+              "Some people argue that…; On the other hand, …"
+            ]
+          ],
+          "tips": [
+            "Not `many researches`, `evidences`, `datas` or `The climate change`: **a lot of research**, **some evidence**, **data**, **Climate change**.",
+            "**broken** is for objects. For nature and health: **damage**, **harm**, **pollute**.",
+            "Sound balanced: **Some people argue that …**, **On the other hand, …**, **It could be argued that …**, and **may / can** instead of *always*."
+          ],
+          "examples": [
+            {
+              "en": "Indonesia has many volcanoes, so it has a lot of geothermal energy.",
+              "id": "Indonesia punya banyak gunung berapi, jadi punya banyak energi panas bumi."
+            },
+            {
+              "en": "Many young people move to Jakarta and Surabaya to look for work.",
+              "id": "Banyak anak muda pindah ke Jakarta dan Surabaya untuk mencari kerja."
+            },
+            {
+              "en": "Urbanisation can create jobs, but it may also lead to more traffic.",
+              "id": "Urbanisasi bisa menciptakan lapangan kerja, tapi juga bisa menyebabkan lebih banyak macet."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A British Council B1–B2 reading about a UN climate conference, and an Oxford word list on renewable energy. Both are all in English."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita bicara seperti di berita: sains dan riset, perubahan iklim dan energi, serta isu sosial. Kamu akan belajar kata-katanya dan cara membahas topik yang sulit dengan tenang dan berimbang. Kita mulai dari riset.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata-kata riset",
+        "text": "Pertama, kata-kata yang dipakai ilmuwan dan mahasiswa setiap hari.",
+        "body": "Kamu **do** atau **conduct** (lebih formal) **research on** sebuah topik (melakukan riset tentang). Satu riset disebut **a study**. Sebuah penelitian mengumpulkan **data** dan menemukan **evidence** (bukti); apa yang ditemukannya disebut **findings**.\n\nJebakannya: **research** dan **evidence** tidak bisa dihitung (**uncountable**, seperti *water*). Jadi **a lot of research**, **some evidence**, tidak pernah `many researches` atau `evidences`. Mau menghitung? **two studies**. Dan tidak pernah `datas`.",
+        "pairs": [
+          {
+            "en": "research",
+            "id": "riset, penelitian"
+          },
+          {
+            "en": "a study",
+            "id": "sebuah penelitian"
+          },
+          {
+            "en": "an experiment",
+            "id": "eksperimen, percobaan"
+          },
+          {
+            "en": "data",
+            "id": "data"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "findings",
+            "id": "temuan, hasil penelitian"
+          },
+          {
+            "en": "a researcher",
+            "id": "peneliti"
+          },
+          {
+            "en": "conduct research",
+            "id": "melakukan riset"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tante Pak Hasan bilang minum air kelapa setiap pagi bisa menyembuhkan diabetes. Pak Hasan bertanya ke dokternya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "science-innovation",
+          "prompt": "Lengkapi jawaban dokter: There's no scientific ___ for that, so please keep taking your medicine.",
+          "options": [
+            "evidence",
+            "evidences",
+            "an evidence"
+          ],
+          "answer": 0,
+          "explanation": "**evidence** (bukti) tidak bisa dihitung: tidak pakai **-s** dan tidak pakai **a**. `evidences` meniru *bukti-bukti* dalam bahasa Indonesia. Kalau mau menghitung, bilang *a piece of evidence*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Dari riset sampai terobosan",
+        "text": "Sekarang kata-kata untuk ide baru. Hati-hati dengan *menemukan*: bahasa Inggris punya dua kata untuknya.",
+        "body": "**discover** = menemukan sesuatu yang **sudah ada** (di alam). **invent** = menciptakan sesuatu yang **baru**, yang belum pernah ada. Hasil baru yang sangat penting setelah kerja keras disebut **a breakthrough** (terobosan): kamu **make a breakthrough**. **develop** = mengembangkan; **innovation** = inovasi.",
+        "examples": [
+          {
+            "en": "Alexander Fleming discovered penicillin in 1928.",
+            "id": "Alexander Fleming menemukan penisilin pada tahun 1928."
+          },
+          {
+            "en": "Who invented the light bulb?",
+            "id": "Siapa yang menemukan bola lampu?"
+          },
+          {
+            "en": "Two new studies show that walking every day helps your heart.",
+            "id": "Dua penelitian baru menunjukkan bahwa berjalan kaki setiap hari baik untuk jantung."
+          },
+          {
+            "en": "The findings show that people who sleep less make more mistakes.",
+            "id": "Hasil penelitiannya menunjukkan bahwa orang yang kurang tidur membuat lebih banyak kesalahan."
+          },
+          {
+            "en": "Indonesia's startups need more innovation.",
+            "id": "Startup Indonesia butuh lebih banyak inovasi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sari membaca berita sains di HP-nya di MRT.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "science-innovation",
+          "prompt": "Susun kata-katanya: Tim itu mengembangkan vaksin baru.",
+          "tokens": [
+            "vaccine",
+            "developed",
+            "new",
+            "The",
+            "a",
+            "team"
+          ],
+          "solution": "The team developed a new vaccine.",
+          "explanation": "*mengembangkan* = **develop** (lampau: **developed**). Kata sifat **new** diletakkan sebelum kata benda **vaccine**, kebalikan dari *vaksin baru* dalam bahasa Indonesia."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Iklim dan energi",
+        "text": "Kamu sudah kenal climate change dan pollution dari B1. Sekarang kata-kata dari berita tentang energi.",
+        "body": "Mobil, pabrik dan pembangkit listrik menghasilkan **emissions** (emisi) dan **greenhouse gases** (gas rumah kaca), yang membuat bumi makin panas. **Fossil fuels** (batu bara, minyak, gas) suatu hari akan habis; **renewable energy** tidak: **solar** (matahari), **wind** (angin), **hydro** (air) dan **geothermal** (panas dari dalam tanah, dekat gunung berapi).\n\n**Carbon footprint** adalah seberapa banyak CO2 yang dihasilkan gaya hidupmu. **Sustainable** = bisa terus berjalan tanpa merugikan bumi.",
+        "pairs": [
+          {
+            "en": "emissions",
+            "id": "emisi"
+          },
+          {
+            "en": "greenhouse gases",
+            "id": "gas rumah kaca"
+          },
+          {
+            "en": "fossil fuels",
+            "id": "bahan bakar fosil"
+          },
+          {
+            "en": "coal",
+            "id": "batu bara"
+          },
+          {
+            "en": "renewable energy",
+            "id": "energi terbarukan"
+          },
+          {
+            "en": "geothermal",
+            "id": "panas bumi"
+          },
+          {
+            "en": "carbon footprint",
+            "id": "jejak karbon"
+          },
+          {
+            "en": "sustainable",
+            "id": "berkelanjutan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi mengajak tamu dari Jerman melihat pembangkit listrik di Jawa Barat, dekat gunung berapi tua.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "climate-energy",
+          "prompt": "Lengkapi kalimat Budi: This power station uses the heat from deep under the ground to make electricity. It's ___.",
+          "options": [
+            "solar energy",
+            "geothermal energy",
+            "a fossil fuel"
+          ],
+          "answer": 1,
+          "explanation": "Panas dari dalam tanah = **geothermal energy** (panas bumi), salah satu energi terbarukan. **Solar** berasal dari matahari, dan fossil fuels adalah batu bara, minyak dan gas, yang dibakar."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Dua jebakan dari bahasa Indonesia",
+        "text": "Begini cara membicarakan bumi tanpa dua kesalahan yang sangat umum.",
+        "body": "1. *Perubahan iklim* → **Climate change**, bukan `The climate change`: topik umum yang besar tidak pakai *the* (seperti *pollution* atau *education*).\n2. *membuat lingkungan rusak* → bukan `makes the environment broken`. **broken** untuk benda seperti HP atau kursi. Untuk alam dan kesehatan, pakai **damage**, **harm** atau **pollute**.",
+        "examples": [
+          {
+            "en": "Climate change is making heavy rain more common in many places.",
+            "id": "Perubahan iklim membuat hujan deras makin sering di banyak tempat."
+          },
+          {
+            "en": "Pollution damages the environment.",
+            "id": "Polusi merusak lingkungan."
+          },
+          {
+            "en": "Smoking harms your health.",
+            "id": "Merokok merusak kesehatanmu."
+          },
+          {
+            "en": "Our office switched to solar panels to cut its emissions.",
+            "id": "Kantor kami beralih ke panel surya untuk memangkas emisinya."
+          },
+          {
+            "en": "Flying a lot makes your carbon footprint much bigger.",
+            "id": "Sering naik pesawat membuat jejak karbonmu jauh lebih besar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas menulis berita singkat tentang tambang ilegal di beberapa daerah di Kalimantan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "climate-energy",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "Illegal mining is broken the rivers.",
+            "Illegal mining makes the rivers broken.",
+            "Illegal mining damages the rivers."
+          ],
+          "answer": 2,
+          "explanation": "Untuk alam kita pakai **damage** (atau *harm*, *pollute*): **Illegal mining damages the rivers.** `makes the rivers broken` meniru *membuat sungai rusak*; **broken** untuk benda seperti HP."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Isu sosial, dibahas dengan adil",
+        "text": "Kelompok terakhir: isu sosial, dan cara membahasnya dengan tenang dan berimbang.",
+        "body": "Tunjukkan lebih dari satu sisi: **Some people argue that …** (sebagian orang berpendapat …), **Others believe …** (yang lain percaya …), **On the other hand, …** (di sisi lain). **It could be argued that …** (bisa dikatakan bahwa …) adalah frasa untuk dihafal. Pakai **may**, **can** dan **often** daripada *always*.\n\nHindari kata yang berat sebelah seperti *destroy*, *lazy*, *terrible* atau *everyone knows*: kamu jadi terdengar memihak. Ejaan: Inggris **urbanisation**, **ageing**; Amerika **urbanization**, **aging**.",
+        "pairs": [
+          {
+            "en": "inequality",
+            "id": "ketimpangan"
+          },
+          {
+            "en": "unemployment",
+            "id": "pengangguran"
+          },
+          {
+            "en": "poverty",
+            "id": "kemiskinan"
+          },
+          {
+            "en": "access to healthcare",
+            "id": "akses ke layanan kesehatan"
+          },
+          {
+            "en": "urbanisation",
+            "id": "urbanisasi"
+          },
+          {
+            "en": "an ageing population",
+            "id": "populasi yang menua"
+          },
+          {
+            "en": "Some people argue that …",
+            "id": "Sebagian orang berpendapat bahwa …"
+          },
+          {
+            "en": "On the other hand, …",
+            "id": "Di sisi lain, …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Perusahaan Bu Ani sedang mempertimbangkan empat hari kerja seminggu. Dia harus menulis ringkasan singkat yang adil untuk para direktur.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "social-issues-neutral",
+          "prompt": "Kalimat mana yang paling berimbang?",
+          "options": [
+            "Some people argue that a four-day week makes workers happier. On the other hand, some managers worry that customers may wait longer.",
+            "A four-day week is a crazy idea, and only lazy people want it.",
+            "Everyone knows a four-day week is perfect for every company."
+          ],
+          "answer": 0,
+          "explanation": "Kalimat pertama memberi **dua sisi** dengan frasa netral (*Some people argue that …*, *On the other hand*) dan **may** yang hati-hati. Yang lain memakai kata berat sebelah (*crazy*, *lazy*) atau memihak (*Everyone knows*, *perfect for every company*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Sains, lingkungan & masyarakat",
+          "intro": "Sains dan riset, iklim dan energi, serta isu sosial: kata-katanya dan cara memakainya.",
+          "headers": [
+            "Kata",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "research (uncountable)",
+              "riset, penelitian",
+              "There is a lot of research on dengue."
+            ],
+            [
+              "a study / studies",
+              "sebuah penelitian",
+              "Two studies show the same result."
+            ],
+            [
+              "evidence (uncountable), data",
+              "bukti, data",
+              "There's no evidence for that."
+            ],
+            [
+              "findings",
+              "temuan, hasil penelitian",
+              "The findings show that…"
+            ],
+            [
+              "discover / invent",
+              "menemukan (yang sudah ada) / menciptakan",
+              "Fleming discovered penicillin."
+            ],
+            [
+              "develop, a breakthrough, innovation",
+              "mengembangkan, terobosan, inovasi",
+              "They made a breakthrough."
+            ],
+            [
+              "climate change (tanpa 'the')",
+              "perubahan iklim",
+              "Climate change is a global problem."
+            ],
+            [
+              "emissions, greenhouse gases",
+              "emisi, gas rumah kaca",
+              "We need to reduce emissions."
+            ],
+            [
+              "fossil fuels / renewable energy",
+              "bahan bakar fosil / energi terbarukan",
+              "Coal and oil are fossil fuels."
+            ],
+            [
+              "solar, wind, geothermal",
+              "surya, angin, panas bumi",
+              "Indonesia has a lot of geothermal energy."
+            ],
+            [
+              "carbon footprint, sustainable",
+              "jejak karbon, berkelanjutan",
+              "Taking the KRL is more sustainable."
+            ],
+            [
+              "damage / harm / pollute",
+              "merusak / membahayakan / mencemari",
+              "Pollution damages the environment."
+            ],
+            [
+              "inequality, unemployment, poverty",
+              "ketimpangan, pengangguran, kemiskinan",
+              "Unemployment is high among young people in some areas."
+            ],
+            [
+              "urbanisation, an ageing population, access to",
+              "urbanisasi, populasi menua, akses ke",
+              "Some people argue that…; On the other hand, …"
+            ]
+          ],
+          "tips": [
+            "Bukan `many researches`, `evidences`, `datas` atau `The climate change`: **a lot of research**, **some evidence**, **data**, **Climate change**.",
+            "**broken** untuk benda. Untuk alam dan kesehatan: **damage**, **harm**, **pollute**.",
+            "Supaya berimbang: **Some people argue that …**, **On the other hand, …**, **It could be argued that …**, dan **may / can** daripada *always*."
+          ],
+          "examples": [
+            {
+              "en": "Indonesia has many volcanoes, so it has a lot of geothermal energy.",
+              "id": "Indonesia punya banyak gunung berapi, jadi punya banyak energi panas bumi."
+            },
+            {
+              "en": "Many young people move to Jakarta and Surabaya to look for work.",
+              "id": "Banyak anak muda pindah ke Jakarta dan Surabaya untuk mencari kerja."
+            },
+            {
+              "en": "Urbanisation can create jobs, but it may also lead to more traffic.",
+              "id": "Urbanisasi bisa menciptakan lapangan kerja, tapi juga bisa menyebabkan lebih banyak macet."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Bacaan British Council level B1–B2 tentang konferensi iklim PBB, dan daftar kata Oxford tentang energi terbarukan. Keduanya seluruhnya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

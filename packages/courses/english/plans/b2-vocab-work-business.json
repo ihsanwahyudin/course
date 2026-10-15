@@ -1,0 +1,808 @@
+{
+  "en": {
+    "greeting": "Hi! At B1 you learnt the words for getting a job. Today it's the job itself: meetings and deadlines, the money side of a business, and who does what in a company.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Before, during and after a meeting",
+        "text": "You already know **meeting**, **deadline** and **colleague**. Let's follow one meeting from start to finish.",
+        "body": "- **Before:** the **agenda** = the list of topics. You **brief** someone = give them the key facts before they start.\n- **During:** you **discuss** the topics, and someone **takes the minutes** (the written record: always *-s*, nothing to do with time).\n- **At the end:** **action points** = tasks with a name and a deadline.\n- **After:** you **follow up** on them.\n\nTrap: *membahas tentang* → `discuss about` ✗. **discuss** takes the topic directly: *discuss the budget*. But *talk about* is right.",
+        "pairs": [
+          {
+            "en": "agenda",
+            "id": "daftar topik rapat"
+          },
+          {
+            "en": "brief someone on something",
+            "id": "memberi penjelasan singkat tentang sesuatu"
+          },
+          {
+            "en": "discuss the budget",
+            "id": "membahas anggaran (tanpa 'about')"
+          },
+          {
+            "en": "take the minutes",
+            "id": "mencatat notulen"
+          },
+          {
+            "en": "action points",
+            "id": "poin tindak lanjut (AS: action items)"
+          },
+          {
+            "en": "follow up on the action points",
+            "id": "menindaklanjuti poin-poinnya"
+          },
+          {
+            "en": "KPIs",
+            "id": "indikator kinerja utama (key performance indicators)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan runs a small startup in Jakarta. He's planning tomorrow's team meeting.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "meetings-projects-deadlines",
+          "prompt": "Pak Hasan: \"Tomorrow we need to ___ the new KPI targets.\"",
+          "options": [
+            "discuss about",
+            "talk",
+            "discuss"
+          ],
+          "answer": 2,
+          "explanation": "**discuss** takes the topic directly: *discuss the new KPI targets*. 'discuss about' comes from *membahas tentang*. 'talk' needs *about* here: *talk about the targets*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Projects: on track or behind?",
+        "text": "Now the words for a project and how it's going.",
+        "body": "**Stakeholders** care about the result (client, manager, users). **Milestones** are the big steps on the way. **Deliverables** are what you hand over (a report, an app).\n\nHow's it going? **on track / on schedule** (sesuai jadwal), **behind schedule** (terlambat), **ahead of schedule** (lebih cepat). You **meet** or **miss** a deadline.\n\n**postpone** = move to later (*ditunda, diundur*); **cancel** = it won't happen (*dibatalkan*). Schedule: British 'SHED-yool', American 'SKED-jool'.",
+        "pairs": [
+          {
+            "en": "stakeholder",
+            "id": "pemangku kepentingan"
+          },
+          {
+            "en": "milestone",
+            "id": "tahap penting"
+          },
+          {
+            "en": "deliverable",
+            "id": "hasil kerja yang harus diserahkan"
+          },
+          {
+            "en": "on track",
+            "id": "sesuai rencana"
+          },
+          {
+            "en": "behind schedule",
+            "id": "terlambat dari jadwal"
+          },
+          {
+            "en": "ahead of schedule",
+            "id": "lebih cepat dari jadwal"
+          },
+          {
+            "en": "postpone",
+            "id": "menunda, mengundur (tetap terjadi nanti)"
+          },
+          {
+            "en": "cancel",
+            "id": "membatalkan (tidak jadi)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "How's the project going?",
+        "text": "Sari is writing a status update for the stakeholders of a new app.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "meetings-projects-deadlines",
+          "prompt": "\"We planned to launch the app on 1 March, but the developers need two more weeks.\" The project is ___.",
+          "options": [
+            "on track",
+            "behind schedule",
+            "ahead of schedule"
+          ],
+          "answer": 1,
+          "explanation": "The app will be two weeks late, so the project is **behind schedule** (terlambat dari jadwal). **on track** means it's going as planned, and **ahead of schedule** means early."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Money: revenue − costs = profit",
+        "text": "Now the money side. One sum explains most of the words.",
+        "body": "**revenue** (pendapatan, omzet: all the money from sales) − **costs** (biaya) = **profit** (laba). Costs bigger than revenue: a **loss** (rugi). The same: you **break even** (impas; past *broke even*).\n\nTrap: *mendapat untung* → **make a profit**, not 'get a profit'.\n\nAlso: **budget** (anggaran), **invoice** (tagihan), **Q1** (first quarter = three months), **increase by 10%** (naik sebesar 10%). For a person's money, say *income* (penghasilan); for a company's sales, *revenue*.",
+        "pairs": [
+          {
+            "en": "revenue",
+            "id": "pendapatan, omzet"
+          },
+          {
+            "en": "costs",
+            "id": "biaya"
+          },
+          {
+            "en": "make a profit",
+            "id": "mendapat laba / untung"
+          },
+          {
+            "en": "make a loss",
+            "id": "rugi"
+          },
+          {
+            "en": "break even",
+            "id": "impas, balik modal"
+          },
+          {
+            "en": "budget",
+            "id": "anggaran"
+          },
+          {
+            "en": "invoice",
+            "id": "tagihan, faktur"
+          },
+          {
+            "en": "Q1 (the first quarter)",
+            "id": "kuartal pertama"
+          },
+          {
+            "en": "Sales increased by 15% in Q2.",
+            "id": "Penjualan naik sebesar 15% di kuartal kedua."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Read the numbers",
+        "text": "The owner of an online batik shop in Solo is talking about the year.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "basic-finance",
+          "prompt": "\"This year our sales brought in Rp2 billion. After salaries, rent and ads, Rp300 million was left.\" What is the Rp2 billion?",
+          "options": [
+            "the profit",
+            "the budget",
+            "the revenue"
+          ],
+          "answer": 2,
+          "explanation": "All the money that comes in from sales is the **revenue** (Rp2 billion). The **profit** is what's left after the costs (Rp300 million). A **budget** is money you plan to spend."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Who does what at work",
+        "text": "Last group: the people and the structure of a company.",
+        "body": "A company has **departments** (Indonesian offices say *divisi*), each with a **head of** department. A **team lead** (British: team leader) runs a small team.\n\n- **report to** someone = that person is your boss.\n- **be responsible for** your work or team (bertanggung jawab atas), not 'responsible to'. **be in charge of** means almost the same.\n- **colleague** = someone in your own organisation; **counterpart** = someone with the same job as you in **another** organisation.",
+        "pairs": [
+          {
+            "en": "the finance department",
+            "id": "departemen keuangan"
+          },
+          {
+            "en": "Head of Marketing",
+            "id": "kepala departemen pemasaran"
+          },
+          {
+            "en": "team lead / team leader",
+            "id": "ketua tim"
+          },
+          {
+            "en": "Sari reports to Bu Ani.",
+            "id": "Bu Ani atasan langsung Sari."
+          },
+          {
+            "en": "be responsible for the budget",
+            "id": "bertanggung jawab atas anggaran"
+          },
+          {
+            "en": "be in charge of the project",
+            "id": "memegang / memimpin proyek itu"
+          },
+          {
+            "en": "colleague",
+            "id": "rekan kerja (organisasi yang sama)"
+          },
+          {
+            "en": "counterpart",
+            "id": "mitra sejawat (pekerjaan sama, organisasi lain)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina works in the finance department of a bank in Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "roles-structure",
+          "prompt": "Every week Rina has a call with Mr Tan. He does the same job as Rina, but at a partner bank in Singapore. Mr Tan is Rina's ___.",
+          "options": [
+            "team lead",
+            "counterpart",
+            "head of department"
+          ],
+          "answer": 1,
+          "explanation": "Someone with the **same job** as you in **another organisation** is your **counterpart** (mitra sejawat). A team lead or a head of department would be Rina's boss, in her own bank."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now say what you look after at work. Remember the little word after responsible.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "roles-structure",
+          "prompt": "Arrange the words: Saya bertanggung jawab atas tim penjualan.",
+          "tokens": [
+            "responsible",
+            "sales",
+            "I",
+            "the",
+            "for",
+            "am",
+            "team"
+          ],
+          "solution": "I am responsible for the sales team.",
+          "explanation": "*bertanggung jawab atas* = **be responsible for** + the work or the people you look after. 'responsible to' is the common mistake."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Quick review: try to say the English before you flip the card.",
+        "flashcards": [
+          {
+            "front": "notulen rapat",
+            "back": "the minutes"
+          },
+          {
+            "front": "membahas anggaran",
+            "back": "discuss the budget (not 'discuss about')"
+          },
+          {
+            "front": "terlambat dari jadwal",
+            "back": "behind schedule"
+          },
+          {
+            "front": "menunda vs membatalkan",
+            "back": "postpone (later) vs cancel (not at all)"
+          },
+          {
+            "front": "pendapatan − biaya = laba",
+            "back": "revenue − costs = profit"
+          },
+          {
+            "front": "untung / rugi / impas",
+            "back": "make a profit / make a loss / break even"
+          },
+          {
+            "front": "bertanggung jawab atas",
+            "back": "be responsible for (not 'responsible to')"
+          },
+          {
+            "front": "mitra sejawat di perusahaan lain",
+            "back": "counterpart"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here are the key words of the lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · work, business & money",
+          "intro": "Three groups: meetings and projects, money, and roles. Learn each word with the words that go with it.",
+          "headers": [
+            "Word / phrase",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "agenda",
+              "daftar topik rapat",
+              "Item 3 on the agenda is the budget."
+            ],
+            [
+              "take the minutes",
+              "mencatat notulen",
+              "Who's taking the minutes today?"
+            ],
+            [
+              "discuss + topic",
+              "membahas (tanpa 'about')",
+              "We discussed the new KPIs."
+            ],
+            [
+              "action points · follow up",
+              "poin tindak lanjut · menindaklanjuti",
+              "I'll follow up on the action points."
+            ],
+            [
+              "on track / behind schedule",
+              "sesuai rencana / terlambat",
+              "We're two weeks behind schedule."
+            ],
+            [
+              "postpone / cancel",
+              "menunda / membatalkan",
+              "The training was postponed to next month."
+            ],
+            [
+              "milestone · deliverable · stakeholder",
+              "tahap penting · hasil kerja · pemangku kepentingan",
+              "The first milestone is a working app by June."
+            ],
+            [
+              "revenue − costs = profit",
+              "pendapatan − biaya = laba",
+              "Our revenue increased by 20% in Q3."
+            ],
+            [
+              "make a profit / a loss",
+              "untung / rugi (not 'get a profit')",
+              "The shop made a profit of Rp50 million."
+            ],
+            [
+              "break even",
+              "impas, balik modal",
+              "The new branch broke even after six months."
+            ],
+            [
+              "budget · invoice · quarter",
+              "anggaran · tagihan · kuartal",
+              "The project is over budget."
+            ],
+            [
+              "department · head of · team lead",
+              "departemen · kepala · ketua tim",
+              "Bu Ani is the Head of Finance."
+            ],
+            [
+              "report to · be responsible for · be in charge of",
+              "atasannya · bertanggung jawab atas · memegang",
+              "Rina is responsible for the company's Instagram account."
+            ],
+            [
+              "colleague / counterpart",
+              "rekan kerja / mitra sejawat di organisasi lain",
+              "I'm meeting my counterpart from our partner company."
+            ]
+          ],
+          "tips": [
+            "Three classic mistakes: `discuss about` → discuss; `got a profit` → made a profit; `responsible to` → responsible for.",
+            "income = a person's penghasilan; a company's sales money = revenue.",
+            "British vs American: action points / action items, team leader / team lead, cancelled / canceled."
+          ],
+          "examples": [
+            {
+              "en": "Can you brief me on the project before the call?",
+              "id": "Bisa jelaskan singkat soal proyeknya sebelum teleponnya?"
+            },
+            {
+              "en": "We need to cut costs: the project is over budget.",
+              "id": "Kita perlu memangkas biaya: proyeknya melebihi anggaran."
+            },
+            {
+              "en": "All the team leads report to Pak Hasan, the Head of IT.",
+              "id": "Semua ketua tim melapor kepada Pak Hasan, Kepala TI."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Two British Council pages: an article on running good meetings (agenda, minutes, action points in a real text) and a B2 listening where a manager talks about her staff."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Di B1 kamu sudah belajar kata-kata untuk mencari kerja. Hari ini tentang pekerjaannya sendiri: rapat dan tenggat, sisi keuangan bisnis, dan siapa melakukan apa di perusahaan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Sebelum, selama dan sesudah rapat",
+        "text": "Kamu sudah tahu **meeting**, **deadline** dan **colleague**. Ayo ikuti satu rapat dari awal sampai akhir.",
+        "body": "- **Sebelum:** **agenda** = daftar topiknya. Kamu **brief** seseorang = memberi info pentingnya sebelum dia mulai.\n- **Selama:** kamu **discuss** topiknya, dan seseorang **takes the minutes** (mencatat notulen: selalu pakai *-s*, tidak ada hubungannya dengan menit).\n- **Di akhir:** **action points** = tugas dengan nama orang dan tenggatnya.\n- **Sesudahnya:** kamu **follow up** (menindaklanjuti).\n\nJebakan: *membahas tentang* → `discuss about` ✗. **discuss** langsung diikuti topiknya: *discuss the budget*. Tapi *talk about* benar.",
+        "pairs": [
+          {
+            "en": "agenda",
+            "id": "daftar topik rapat"
+          },
+          {
+            "en": "brief someone on something",
+            "id": "memberi penjelasan singkat tentang sesuatu"
+          },
+          {
+            "en": "discuss the budget",
+            "id": "membahas anggaran (tanpa 'about')"
+          },
+          {
+            "en": "take the minutes",
+            "id": "mencatat notulen"
+          },
+          {
+            "en": "action points",
+            "id": "poin tindak lanjut (AS: action items)"
+          },
+          {
+            "en": "follow up on the action points",
+            "id": "menindaklanjuti poin-poinnya"
+          },
+          {
+            "en": "KPIs",
+            "id": "indikator kinerja utama (key performance indicators)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan menjalankan startup kecil di Jakarta. Dia sedang menyiapkan rapat tim besok.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "meetings-projects-deadlines",
+          "prompt": "Lengkapi: Pak Hasan: \"Tomorrow we need to ___ the new KPI targets.\"",
+          "options": [
+            "discuss about",
+            "talk",
+            "discuss"
+          ],
+          "answer": 2,
+          "explanation": "**discuss** langsung diikuti topiknya: *discuss the new KPI targets*. 'discuss about' berasal dari *membahas tentang*. 'talk' di sini butuh *about*: *talk about the targets*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Proyek: sesuai jadwal atau terlambat?",
+        "text": "Sekarang kata-kata untuk proyek dan perkembangannya.",
+        "body": "**Stakeholders** peduli pada hasilnya (klien, manajer, pengguna). **Milestones** adalah langkah-langkah besar di perjalanannya. **Deliverables** adalah yang kamu serahkan (laporan, aplikasi).\n\nBagaimana perkembangannya? **on track / on schedule** (sesuai jadwal), **behind schedule** (terlambat), **ahead of schedule** (lebih cepat). Kamu **meet** atau **miss** a deadline.\n\n**postpone** = dipindah ke nanti (*ditunda, diundur*); **cancel** = tidak jadi (*dibatalkan*). Schedule: British 'SYED-yuul', Amerika 'SKED-juul'.",
+        "pairs": [
+          {
+            "en": "stakeholder",
+            "id": "pemangku kepentingan"
+          },
+          {
+            "en": "milestone",
+            "id": "tahap penting"
+          },
+          {
+            "en": "deliverable",
+            "id": "hasil kerja yang harus diserahkan"
+          },
+          {
+            "en": "on track",
+            "id": "sesuai rencana"
+          },
+          {
+            "en": "behind schedule",
+            "id": "terlambat dari jadwal"
+          },
+          {
+            "en": "ahead of schedule",
+            "id": "lebih cepat dari jadwal"
+          },
+          {
+            "en": "postpone",
+            "id": "menunda, mengundur (tetap terjadi nanti)"
+          },
+          {
+            "en": "cancel",
+            "id": "membatalkan (tidak jadi)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Bagaimana proyeknya?",
+        "text": "Sari sedang menulis laporan perkembangan untuk para pemangku kepentingan sebuah aplikasi baru.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "meetings-projects-deadlines",
+          "prompt": "Lengkapi: \"We planned to launch the app on 1 March, but the developers need two more weeks.\" The project is ___.",
+          "options": [
+            "on track",
+            "behind schedule",
+            "ahead of schedule"
+          ],
+          "answer": 1,
+          "explanation": "Aplikasinya akan terlambat dua minggu, jadi proyeknya **behind schedule** (terlambat dari jadwal). **on track** berarti berjalan sesuai rencana, dan **ahead of schedule** berarti lebih cepat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Uang: revenue − costs = profit",
+        "text": "Sekarang sisi keuangannya. Satu rumus menjelaskan sebagian besar katanya.",
+        "body": "**revenue** (pendapatan, omzet: semua uang dari penjualan) − **costs** (biaya) = **profit** (laba). Biaya lebih besar dari pendapatan: **loss** (rugi). Sama besar: kamu **break even** (impas; lampaunya *broke even*).\n\nJebakan: *mendapat untung* → **make a profit**, bukan 'get a profit'.\n\nJuga: **budget** (anggaran), **invoice** (tagihan), **Q1** (kuartal pertama = tiga bulan), **increase by 10%** (naik sebesar 10%). Untuk uang seseorang, pakai *income* (penghasilan); untuk penjualan perusahaan, *revenue*.",
+        "pairs": [
+          {
+            "en": "revenue",
+            "id": "pendapatan, omzet"
+          },
+          {
+            "en": "costs",
+            "id": "biaya"
+          },
+          {
+            "en": "make a profit",
+            "id": "mendapat laba / untung"
+          },
+          {
+            "en": "make a loss",
+            "id": "rugi"
+          },
+          {
+            "en": "break even",
+            "id": "impas, balik modal"
+          },
+          {
+            "en": "budget",
+            "id": "anggaran"
+          },
+          {
+            "en": "invoice",
+            "id": "tagihan, faktur"
+          },
+          {
+            "en": "Q1 (the first quarter)",
+            "id": "kuartal pertama"
+          },
+          {
+            "en": "Sales increased by 15% in Q2.",
+            "id": "Penjualan naik sebesar 15% di kuartal kedua."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Baca angkanya",
+        "text": "Pemilik toko batik online di Solo sedang bercerita tentang tahun ini.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "basic-finance",
+          "prompt": "\"This year our sales brought in Rp2 billion. After salaries, rent and ads, Rp300 million was left.\" Rp2 miliar itu apa?",
+          "options": [
+            "the profit",
+            "the budget",
+            "the revenue"
+          ],
+          "answer": 2,
+          "explanation": "Semua uang yang masuk dari penjualan adalah **revenue** (Rp2 miliar). **Profit** adalah sisanya setelah biaya (Rp300 juta). **Budget** adalah uang yang kamu rencanakan untuk dibelanjakan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Siapa melakukan apa di kantor",
+        "text": "Kelompok terakhir: orang-orang dan struktur perusahaan.",
+        "body": "Perusahaan punya **departments** (di kantor Indonesia sering disebut *divisi*), masing-masing dengan **head of** department (kepala). **Team lead** (British: team leader) memimpin tim kecil.\n\n- **report to** seseorang = orang itu atasanmu.\n- **be responsible for** pekerjaan atau timmu (bertanggung jawab atas), bukan 'responsible to'. **be in charge of** artinya hampir sama.\n- **colleague** = orang di organisasimu sendiri; **counterpart** = orang dengan pekerjaan yang sama di organisasi **lain**.",
+        "pairs": [
+          {
+            "en": "the finance department",
+            "id": "departemen keuangan"
+          },
+          {
+            "en": "Head of Marketing",
+            "id": "kepala departemen pemasaran"
+          },
+          {
+            "en": "team lead / team leader",
+            "id": "ketua tim"
+          },
+          {
+            "en": "Sari reports to Bu Ani.",
+            "id": "Bu Ani atasan langsung Sari."
+          },
+          {
+            "en": "be responsible for the budget",
+            "id": "bertanggung jawab atas anggaran"
+          },
+          {
+            "en": "be in charge of the project",
+            "id": "memegang / memimpin proyek itu"
+          },
+          {
+            "en": "colleague",
+            "id": "rekan kerja (organisasi yang sama)"
+          },
+          {
+            "en": "counterpart",
+            "id": "mitra sejawat (pekerjaan sama, organisasi lain)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina bekerja di departemen keuangan sebuah bank di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "roles-structure",
+          "prompt": "Lengkapi: Every week Rina has a call with Mr Tan. He does the same job as Rina, but at a partner bank in Singapore. Mr Tan is Rina's ___.",
+          "options": [
+            "team lead",
+            "counterpart",
+            "head of department"
+          ],
+          "answer": 1,
+          "explanation": "Orang dengan **pekerjaan yang sama** denganmu di **organisasi lain** adalah **counterpart** (mitra sejawat). Team lead atau head of department adalah atasan Rina, di banknya sendiri."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang katakan apa yang kamu urus di kantor. Ingat kata kecil setelah responsible.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "roles-structure",
+          "prompt": "Susun kata-katanya: Saya bertanggung jawab atas tim penjualan.",
+          "tokens": [
+            "responsible",
+            "sales",
+            "I",
+            "the",
+            "for",
+            "am",
+            "team"
+          ],
+          "solution": "I am responsible for the sales team.",
+          "explanation": "*bertanggung jawab atas* = **be responsible for** + pekerjaan atau orang yang kamu urus. 'responsible to' adalah kesalahan yang umum."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Ulasan cepat: coba ucapkan bahasa Inggrisnya sebelum membalik kartu.",
+        "flashcards": [
+          {
+            "front": "notulen rapat",
+            "back": "the minutes"
+          },
+          {
+            "front": "membahas anggaran",
+            "back": "discuss the budget (not 'discuss about')"
+          },
+          {
+            "front": "terlambat dari jadwal",
+            "back": "behind schedule"
+          },
+          {
+            "front": "menunda vs membatalkan",
+            "back": "postpone (later) vs cancel (not at all)"
+          },
+          {
+            "front": "pendapatan − biaya = laba",
+            "back": "revenue − costs = profit"
+          },
+          {
+            "front": "untung / rugi / impas",
+            "back": "make a profit / make a loss / break even"
+          },
+          {
+            "front": "bertanggung jawab atas",
+            "back": "be responsible for (not 'responsible to')"
+          },
+          {
+            "front": "mitra sejawat di perusahaan lain",
+            "back": "counterpart"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini kata-kata kunci pelajaran ini dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · kerja, bisnis & keuangan",
+          "intro": "Tiga kelompok: rapat dan proyek, uang, dan peran. Pelajari setiap kata bersama kata-kata yang biasa menemaninya.",
+          "headers": [
+            "Kata / frasa",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "agenda",
+              "daftar topik rapat",
+              "Item 3 on the agenda is the budget."
+            ],
+            [
+              "take the minutes",
+              "mencatat notulen",
+              "Who's taking the minutes today?"
+            ],
+            [
+              "discuss + topic",
+              "membahas (tanpa 'about')",
+              "We discussed the new KPIs."
+            ],
+            [
+              "action points · follow up",
+              "poin tindak lanjut · menindaklanjuti",
+              "I'll follow up on the action points."
+            ],
+            [
+              "on track / behind schedule",
+              "sesuai rencana / terlambat",
+              "We're two weeks behind schedule."
+            ],
+            [
+              "postpone / cancel",
+              "menunda / membatalkan",
+              "The training was postponed to next month."
+            ],
+            [
+              "milestone · deliverable · stakeholder",
+              "tahap penting · hasil kerja · pemangku kepentingan",
+              "The first milestone is a working app by June."
+            ],
+            [
+              "revenue − costs = profit",
+              "pendapatan − biaya = laba",
+              "Our revenue increased by 20% in Q3."
+            ],
+            [
+              "make a profit / a loss",
+              "untung / rugi (bukan 'get a profit')",
+              "The shop made a profit of Rp50 million."
+            ],
+            [
+              "break even",
+              "impas, balik modal",
+              "The new branch broke even after six months."
+            ],
+            [
+              "budget · invoice · quarter",
+              "anggaran · tagihan · kuartal",
+              "The project is over budget."
+            ],
+            [
+              "department · head of · team lead",
+              "departemen · kepala · ketua tim",
+              "Bu Ani is the Head of Finance."
+            ],
+            [
+              "report to · be responsible for · be in charge of",
+              "atasannya · bertanggung jawab atas · memegang",
+              "Rina is responsible for the company's Instagram account."
+            ],
+            [
+              "colleague / counterpart",
+              "rekan kerja / mitra sejawat di organisasi lain",
+              "I'm meeting my counterpart from our partner company."
+            ]
+          ],
+          "tips": [
+            "Tiga kesalahan klasik: `discuss about` → discuss; `got a profit` → made a profit; `responsible to` → responsible for.",
+            "income = penghasilan seseorang; uang penjualan perusahaan = revenue.",
+            "British vs Amerika: action points / action items, team leader / team lead, cancelled / canceled."
+          ],
+          "examples": [
+            {
+              "en": "Can you brief me on the project before the call?",
+              "id": "Bisa jelaskan singkat soal proyeknya sebelum teleponnya?"
+            },
+            {
+              "en": "We need to cut costs: the project is over budget.",
+              "id": "Kita perlu memangkas biaya: proyeknya melebihi anggaran."
+            },
+            {
+              "en": "All the team leads report to Pak Hasan, the Head of IT.",
+              "id": "Semua ketua tim melapor kepada Pak Hasan, Kepala TI."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Dua halaman British Council: artikel tentang cara memimpin rapat yang baik (agenda, minutes, action points dalam teks nyata) dan latihan mendengarkan B2 di mana seorang manajer bercerita tentang stafnya."
+      }
+    ]
+  }
+}
