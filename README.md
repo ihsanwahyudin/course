@@ -235,6 +235,14 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 - **Test-prep tracks** (TOEFL ITP, TOEIC, IELTS, TOEFL iBT) are separate coming-soon courses whose roadmaps follow each test's current official format (see each course's README for sources). The English roadmap ends with a "Continue with these tracks" box, and track lessons link to the English lessons they build on.
 - **Adding a course:** copy the `english` folder structure, write `course.json` and the level files, and run the Go tests. The new course then appears in the catalog automatically.
 
+## Deploy (Render)
+
+`render.yaml` is a Render Blueprint: one Docker web service built from `apps/api/Dockerfile` (the Go API plus the Expo web
+export, served from the same origin, with the committed lesson audio) and a managed Postgres. In the Render dashboard choose
+**New → Blueprint**, pick this repository, and paste `OPENAI_API_KEY` when Render asks for it (it is never stored in the repo).
+Migrations run at startup; `/healthz` is the health check. The web app calls the API on its own origin, so no
+`EXPO_PUBLIC_API_URL` or `CORS_ORIGINS` is needed there.
+
 ## Known limitations
 
 - **No email verification or password reset yet.** Accounts work, but there's no "forgot password" flow and emails aren't verified.
@@ -250,4 +258,4 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 2. Password reset and email verification.
 3. Review the A1–C2 lessons and record their audio; then the test-prep tracks (TOEFL ITP, TOEIC, IELTS, TOEFL iBT).
 4. Spaced repetition and a placement test.
-5. Deploy: Go API + managed Postgres, and the Expo Web export (`npx expo export -p web`).
+5. Native app builds (EAS) pointing at the deployed API.

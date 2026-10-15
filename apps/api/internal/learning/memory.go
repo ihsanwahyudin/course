@@ -402,34 +402,58 @@ func (s *Service) BundleLessonAudio(ctx context.Context, fresh bool) (written in
 		}
 		for round := 0; round < 3 && len(todo) > 0; round++ {
 			var again []string
-			for _, t := range todo {
-				var b []byte
-				var err error
-				if fresh {
-					cctx, cancel := context.WithTimeout(ctx, speechTimeout)
-					b, err = s.say(cctx, t)
-					cancel()
-				} else {
-					b, err = s.Speech(ctx, "", t)
-				}
-				if err == nil {
-					err = os.MkdirAll(filepath.Dir(cur.AudioPath(t)), 0o755)
-				}
-				if err == nil {
-					err = os.WriteFile(cur.AudioPath(t), b, 0o644)
-				}
-				if err != nil {
-					again = append(again, t)
-					continue
-				}
-				written++
+			var mu sync.Mutex
+			var wg sync.WaitGroup
+			queue := make(chan string)
+			for range bundleWorkers {
+				wg.Add(1)
+				go func() {
+					defer wg.Done()
+					for t := range queue {
+						err := s.bundleOne(ctx, cur, t, fresh)
+						mu.Lock()
+						if err != nil {
+							again = append(again, t)
+						} else if written++; written%100 == 0 {
+							slog.Info("lesson audio", "written", written)
+						}
+						mu.Unlock()
+					}
+				}()
 			}
+			for _, t := range todo {
+				queue <- t
+			}
+			close(queue)
+			wg.Wait()
 			todo = again
 		}
 		failed = append(failed, todo...)
 		pruneAudio(cur)
 	}
 	return written, failed
+}
+
+// bundleWorkers is how many sentences are recorded at once.
+const bundleWorkers = 12
+
+func (s *Service) bundleOne(ctx context.Context, cur *curriculum.Curriculum, t string, fresh bool) error {
+	var b []byte
+	var err error
+	if fresh {
+		cctx, cancel := context.WithTimeout(ctx, speechTimeout)
+		b, err = s.say(cctx, t)
+		cancel()
+	} else {
+		b, err = s.Speech(ctx, "", t)
+	}
+	if err == nil {
+		err = os.MkdirAll(filepath.Dir(cur.AudioPath(t)), 0o755)
+	}
+	if err == nil {
+		err = os.WriteFile(cur.AudioPath(t), b, 0o644)
+	}
+	return err
 }
 
 // pruneAudio removes recordings no lesson reads any more (after edits).

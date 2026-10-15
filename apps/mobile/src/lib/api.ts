@@ -9,9 +9,14 @@ const fallback = Platform.OS === 'android' ? 'http://10.0.2.2:8080' : 'http://lo
 
 // On web, a localhost API URL only works on the dev machine itself. When the
 // page is opened from another device on the LAN (e.g. http://192.168.x.x:8081),
-// call the API on that same host instead.
-function resolveApiUrl(configured: string) {
-  if (Platform.OS !== 'web' || typeof window === 'undefined') return configured;
+// call the API on that same host instead. A page the API serves itself (a
+// deployment, not the Expo dev server) calls its own origin.
+const expoDevPorts = ['8081', '19006'];
+
+function resolveApiUrl(configured: string | undefined) {
+  if (Platform.OS !== 'web' || typeof window === 'undefined') return configured || fallback;
+  if (!configured && !expoDevPorts.includes(window.location.port)) return window.location.origin;
+  configured = configured || fallback;
   const pageHost = window.location.hostname;
   try {
     const url = new URL(configured);
@@ -26,7 +31,7 @@ function resolveApiUrl(configured: string) {
   return configured;
 }
 
-export const API_URL = resolveApiUrl(process.env.EXPO_PUBLIC_API_URL || fallback).replace(/\/$/, '');
+export const API_URL = resolveApiUrl(process.env.EXPO_PUBLIC_API_URL).replace(/\/$/, '');
 
 // Levels are course data (course.json); English uses CEFR-style A0–C2.
 export type Level = string;
