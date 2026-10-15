@@ -11,7 +11,7 @@
   "keyPoints": [
     {
       "title": "Capital letters and punctuation",
-      "explanation": "Use a capital letter for the first word of a sentence, the word I, names and places. End a sentence with a full stop (.) and a question with a question mark (?).",
+      "explanation": "Use a capital letter for the first word of a sentence, the word I, names and places. Only I is always a capital: my and me are not. End a sentence with a full stop (.) (Americans call it a period) and a question with a question mark (?).",
       "examples": [
         {
           "en": "My name is Budi and I live in Bandung.",
@@ -25,7 +25,7 @@
     },
     {
       "title": "Writing your details",
-      "explanation": "Names and places start with a capital letter. Email addresses are written in small letters with no spaces. Group phone numbers so they are easy to read.",
+      "explanation": "Names and places start with a capital letter. Email addresses are written in small letters with no spaces: when people say 'at' and 'dot', you write @ and a dot. Group phone numbers so they are easy to read. From abroad, +62 (Indonesia's country code) replaces the first 0.",
       "examples": [
         {
           "en": "Jalan Braga 10, Bandung 40111",
@@ -43,7 +43,7 @@
     },
     {
       "title": "Filling in a form",
-      "explanation": "First name is your own name, surname is your family name. Write your date of birth as day/month/year.",
+      "explanation": "First name is your own name (nama depan), surname (also: last name, family name) is the last part of your name. Write your date of birth as day/month/year, like in Indonesia; American forms use month/day/year.",
       "examples": [
         {
           "en": "First name: Dewi · Surname: Anggraini",
@@ -227,6 +227,15 @@
         },
         {
           "type": "tip",
+          "text": "**Only I, not my or me.** The rule is just for the one-letter word **I** (= saya, aku). It has no special meaning; English simply always writes it big. Other words for 'saya' follow the normal rule and are small in the middle of a sentence: Sari and **I** like **my** class. Can you help **me**?\n\nAnd jobs are not names: *teacher, doctor, student* stay small, but a name with a title is a name: **Pak Hasan**, **Bu Rina**.",
+          "i18n": {
+            "id": {
+              "text": "**Hanya I, bukan my atau me.** Aturan ini khusus untuk kata satu huruf **I** (= saya, aku). Tidak ada arti khususnya; bahasa Inggris memang selalu menulisnya dengan huruf besar. Kata lain untuk 'saya' mengikuti aturan biasa dan ditulis kecil di tengah kalimat: Sari and **I** like **my** class. Can you help **me**?\n\nLalu pekerjaan bukan nama: *teacher, doctor, student* tetap huruf kecil, tapi nama dengan sapaan tetap nama: **Pak Hasan**, **Bu Rina**."
+            }
+          }
+        },
+        {
+          "type": "tip",
           "text": "In chat apps people often type everything in small letters. In emails, forms and at work, use capitals — especially **I**. A small 'i' looks like a mistake.",
           "i18n": {
             "id": {
@@ -243,10 +252,10 @@
             "my, teacher"
           ],
           "answer": 0,
-          "explain": "My is the first word, and Pak Hasan is a person's name (with his title). Teacher is a normal word.",
+          "explain": "My is the first word, and Pak Hasan is a person's name (with his title). Teacher is a job, not a name, so it stays small.",
           "i18n": {
             "id": {
-              "explain": "My kata pertama, dan Pak Hasan nama orang (dengan sapaannya). Teacher kata biasa."
+              "explain": "My kata pertama, dan Pak Hasan nama orang (dengan sapaannya). Teacher adalah pekerjaan, bukan nama, jadi tetap huruf kecil."
             }
           }
         }
@@ -263,10 +272,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "End a sentence with a **full stop** (.) and a question with a **question mark** (?). Use a **comma** (,) between items in a list and between parts of an address. The **apostrophe** (') shows letters are missing: I'm = I am, What's = What is.",
+          "text": "End a sentence with a **full stop** (.) and a question with a **question mark** (?). Use a **comma** (,) between items in a list and between parts of an address. The **apostrophe** (') shows letters are missing: I'm = I am (the *a* is missing), What's = What is (the *i* is missing).\n\nBritish and American English use different names for the dot at the end: British **full stop**, American **period**. It's the same mark; you can use either word.",
           "i18n": {
             "id": {
-              "text": "Akhiri kalimat dengan **full stop** (titik .) dan pertanyaan dengan **question mark** (tanda tanya ?). Pakai **comma** (koma ,) di antara isi daftar dan di antara bagian alamat. **Apostrophe** (') menandai huruf yang hilang: I'm = I am, What's = What is."
+              "text": "Akhiri kalimat dengan **full stop** (titik .) dan pertanyaan dengan **question mark** (tanda tanya ?). Pakai **comma** (koma ,) di antara isi daftar dan di antara bagian alamat. **Apostrophe** (apostrof ') menandai huruf yang hilang: I'm = I am (huruf *a* hilang), What's = What is (huruf *i* hilang).\n\nBahasa Inggris British dan Amerika punya nama berbeda untuk titik di akhir kalimat: British **full stop**, Amerika **period**. Tandanya sama; kamu boleh memakai salah satunya."
             }
           }
         },
@@ -304,10 +313,10 @@
             ","
           ],
           "answer": 1,
-          "explain": "It's a question, so it ends with a question mark.",
+          "explain": "It's a question (it asks something), so it ends with a question mark, just like in Indonesian.",
           "i18n": {
             "id": {
-              "explain": "Ini pertanyaan, jadi diakhiri tanda tanya."
+              "explain": "Ini pertanyaan (menanyakan sesuatu), jadi diakhiri tanda tanya, sama seperti bahasa Indonesia."
             }
           }
         }
@@ -324,10 +333,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "**Names** and **places** start with a capital letter. Write an **address** like this: street and number, then a comma, then the city and postcode. Write an **email address** in small letters with no spaces. Write a **phone number** in small groups so it is easy to read.",
+          "text": "**Names** and **places** start with a capital letter. Write an **address** like this: street and number, then a comma, then the city and postcode. Write an **email address** in small letters with no spaces. When someone **says** an email, they say **at** for **@** and **dot** for **.**; when you **write** it, you type the signs, not the words. Write a **phone number** in small groups so it is easy to read.",
           "i18n": {
             "id": {
-              "text": "**Nama** dan **tempat** diawali huruf kapital. Tulis **alamat** seperti ini: nama jalan dan nomor, lalu koma, lalu kota dan kode pos. Tulis **alamat email** dengan huruf kecil tanpa spasi. Tulis **nomor telepon** dalam kelompok kecil supaya mudah dibaca."
+              "text": "**Nama** dan **tempat** diawali huruf kapital. Tulis **alamat** seperti ini: nama jalan dan nomor, lalu koma, lalu kota dan kode pos. Tulis **alamat email** dengan huruf kecil tanpa spasi. Saat orang **mengucapkan** email, mereka bilang **at** untuk **@** dan **dot** untuk **.**; saat kamu **menulisnya**, ketik tandanya, bukan katanya. Tulis **nomor telepon** dalam kelompok kecil supaya mudah dibaca."
             }
           }
         },
@@ -355,6 +364,15 @@
               "id": "nomor yang sama dari luar negeri: 0 di depan diganti +62"
             }
           ]
+        },
+        {
+          "type": "tip",
+          "text": "**Why does +62 replace the 0?** **62** is Indonesia's country code (kode negara): it tells the phone network 'this number is in Indonesia'. The **0** at the start is only used for calls inside Indonesia, so from another country you drop it: 0821 … → **+62 821 …** (not +62 0821).\n\nAlso: British forms say **postcode**, American forms say **ZIP code**. Both mean *kode pos*.",
+          "i18n": {
+            "id": {
+              "text": "**Kenapa +62 menggantikan angka 0?** **62** adalah kode negara Indonesia: kode ini memberi tahu jaringan telepon 'nomor ini ada di Indonesia'. Angka **0** di depan hanya dipakai untuk menelepon di dalam Indonesia, jadi dari negara lain angka 0 itu dibuang: 0821 … → **+62 821 …** (bukan +62 0821).\n\nSelain itu: formulir British memakai kata **postcode**, formulir Amerika memakai **ZIP code**. Keduanya artinya *kode pos*."
+            }
+          }
         },
         {
           "type": "tip",
@@ -394,10 +412,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Forms at a hotel, a school, a gym or an embassy use the same words. **First name** is your own name; **surname** (or *last name*, *family name*) is your family name. Write your **date of birth** as **day/month/year** (17/08/1998) — like in Indonesia. Paper forms often say **BLOCK CAPITALS**: write all the letters as capitals, except your email and your signature.",
+          "text": "Forms at a hotel, a school, a gym or an embassy use the same words. **First name** is your own name (nama depan); **surname** (British) or **last name** (American), also called *family name*, is the last part of your name. Write your **date of birth** as **day/month/year** (17/08/1998), like in Indonesia. Paper forms often say **BLOCK CAPITALS**: write all the letters as capitals, except your email and your signature.",
           "i18n": {
             "id": {
-              "text": "Formulir di hotel, sekolah, tempat gym atau kedutaan memakai kata-kata yang sama. **First name** adalah nama dirimu; **surname** (atau *last name*, *family name*) adalah nama keluarga. Tulis **date of birth** (tanggal lahir) sebagai **hari/bulan/tahun** (17/08/1998) — sama seperti di Indonesia. Formulir kertas sering meminta **BLOCK CAPITALS**: tulis semua huruf dengan kapital, kecuali email dan tanda tangan."
+              "text": "Formulir di hotel, sekolah, tempat gym atau kedutaan memakai kata-kata yang sama. **First name** adalah nama dirimu (nama depan); **surname** (British) atau **last name** (Amerika), juga disebut *family name*, adalah bagian terakhir namamu. Tulis **date of birth** (tanggal lahir) sebagai **hari/bulan/tahun** (17/08/1998), sama seperti di Indonesia. Formulir kertas sering meminta **BLOCK CAPITALS**: tulis semua huruf dengan kapital, kecuali email dan tanda tangan."
             }
           }
         },
@@ -436,6 +454,15 @@
           "i18n": {
             "id": {
               "text": "Hati-hati dengan tanggal di formulir Amerika: Amerika Serikat menulis **bulan/hari/tahun**, jadi 17 Agustus 1998 ditulis 08/17/1998. Kalau ragu, tulis bulannya dengan kata: 17 August 1998."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "**Indonesian names don't always fit.** Forms expect two names: a first name and a family name. Many Indonesians have no family name, and some have only one name. That's normal. With two or more names, put the **last** one in *Surname* and the rest in *First name*. With only one name, forms differ: read the form's instructions or ask the person at the desk. Always write your name the same way as in your passport or ID.",
+          "i18n": {
+            "id": {
+              "text": "**Nama Indonesia tidak selalu cocok.** Formulir mengharapkan dua nama: nama depan dan nama keluarga. Banyak orang Indonesia tidak punya nama keluarga, dan ada yang namanya hanya satu kata. Itu wajar. Kalau namamu dua kata atau lebih, tulis kata **terakhir** di *Surname* dan sisanya di *First name*. Kalau namamu hanya satu kata, aturan tiap formulir berbeda: baca petunjuk formulirnya atau tanyakan ke petugas. Selalu tulis namamu sama seperti di paspor atau KTP."
             }
           }
         },

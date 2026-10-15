@@ -5,7 +5,10 @@
     "Learners know the Latin alphabet from Indonesian, but the English letter NAMES differ: e.g. A is /eɪ/ (not 'a'), E is /iː/, I is /aɪ/, G is /dʒiː/, J is /dʒeɪ/.",
     "Text-only lesson: describe letter names with sound-alike words (C sounds like 'see', I like 'eye', Y like 'why').",
     "Spelling practice: learners write letters separated by dashes, e.g. C-A-T.",
-    "Common confusions for Indonesian speakers: E vs I, G vs J, A vs E."
+    "Common confusions for Indonesian speakers: E vs I, G vs J, A vs E.",
+    "Separate a letter's NAME from its SOUND. The name is what you say when spelling (A = 'ay'); inside a word the letter often sounds different (apple starts with an 'e'-like sound, cat with a 'k' sound, umbrella with an 'a' sound). Say this explicitly whenever an example word doesn't start with the letter's name.",
+    "Vowel = huruf vokal (huruf hidup), consonant = huruf konsonan (huruf mati). Y is counted as a consonant letter (yes, yellow), but in my and happy it makes a vowel sound; say that it 'borrows' a vowel sound so the two statements don't seem to contradict each other.",
+    "Z is 'zed' in British English and 'zee' in American English; both are correct."
   ],
   "keyPoints": [
     {
@@ -24,7 +27,7 @@
     },
     {
       "title": "Five vowels",
-      "explanation": "The vowel letters are A, E, I, O and U. Every other letter is a consonant. (Y sometimes acts like a vowel, as in 'my'.)",
+      "explanation": "The vowel letters are A, E, I, O and U. Every other letter, Y too, is a consonant. Y is still a consonant letter, but in some words it borrows a vowel sound, as in 'my' ('ai').",
       "examples": [
         {
           "en": "c-A-t has one vowel: A",
@@ -196,10 +199,10 @@
         },
         {
           "type": "tip",
-          "text": "The pairs that confuse Indonesian speakers most are **E/I**, **G/J** and **A/R**. Say them slowly in pairs: E–I, G–J, A–R.",
+          "text": "The pairs that confuse Indonesian speakers most are **E/I**, **G/J** and **A/R**. Say them slowly in pairs: E–I, G–J, A–R. And **Z** has two names: **zed** in British English and **zee** in American English. Both are correct.",
           "i18n": {
             "id": {
-              "text": "Pasangan yang paling sering tertukar bagi penutur bahasa Indonesia adalah **E/I**, **G/J** dan **A/R**. Ucapkan pelan-pelan berpasangan: E–I, G–J, A–R."
+              "text": "Pasangan yang paling sering tertukar bagi penutur bahasa Indonesia adalah **E/I**, **G/J** dan **A/R**. Ucapkan pelan-pelan berpasangan: E–I, G–J, A–R. Lalu **Z** punya dua nama: **zed** dalam bahasa Inggris British dan **zee** ('zi') dalam bahasa Inggris Amerika. Keduanya benar."
             }
           }
         },
@@ -227,15 +230,104 @@
       }
     },
     {
+      "id": "name-sound",
+      "title": "A letter's name and its sound",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Every English letter has a **name** and a **sound**, and they are often different.\n- The **name** is what you say when you **spell**: A is 'ei', C is 'si'.\n- The **sound** is how the letter sounds **inside a word**: in *apple* the A sounds like 'e', in *cat* the C sounds like 'k'.\n\nIn Indonesian a letter's name and its sound are almost the same (a is 'a', k is 'ka'), so this feels strange at first. Remember: **spelling** a word → say the letter **names**. **Reading** a word → say the **sounds**.",
+          "i18n": {
+            "id": {
+              "text": "Setiap huruf bahasa Inggris punya **nama** dan **bunyi**, dan keduanya sering berbeda.\n- **Nama** huruf dipakai saat kamu **mengeja**: A dibaca 'ei', C dibaca 'si'.\n- **Bunyi** huruf adalah suaranya **di dalam kata**: di *apple* huruf A berbunyi 'e', di *cat* huruf C berbunyi 'k'.\n\nDi bahasa Indonesia nama dan bunyi huruf hampir sama (a dibaca 'a', k dibaca 'ka'), jadi awalnya ini terasa aneh. Ingat: saat **mengeja** → sebut **nama** hurufnya. Saat **membaca** kata → ucapkan **bunyinya**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "A — apple",
+              "id": "nama 'ei' · di *apple* bunyinya 'e' ('E-pel')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "E — egg",
+              "id": "nama 'i' · di *egg* bunyinya 'e' ('EG')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "I — ink",
+              "id": "nama 'ai' · di *ink* bunyinya 'i' ('INK')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "U — umbrella",
+              "id": "nama 'yu' · di *umbrella* bunyinya 'a' ('am-BRE-la')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "C — cat",
+              "id": "nama 'si' · di *cat* bunyinya 'k' ('KET')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "G — goat",
+              "id": "nama 'ji' · di *goat* bunyinya 'g' ('GOUT')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "Y — yellow",
+              "id": "nama 'wai' · di *yellow* bunyinya 'y' ('YE-lou')",
+              "note": "name ≠ sound"
+            },
+            {
+              "en": "M — moon",
+              "id": "nama 'em' · di *moon* bunyinya 'm' ('MUUN')",
+              "note": "here they are close"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Two more things that surprise learners. **W** is called 'double-you' (*dabel-yu*) because long ago it was written as two U's side by side. And one letter can have different sounds in different words; you'll practise the hardest ones in the next lesson. For now, learn the **names** well: they're what you need to spell your name and email.",
+          "i18n": {
+            "id": {
+              "text": "Dua hal lagi yang sering membuat bingung. **W** dinamai 'double-you' (*dabel-yu*) karena dulu ditulis sebagai dua huruf U yang berdampingan. Lalu satu huruf bisa punya bunyi berbeda di kata yang berbeda; bunyi yang paling sulit akan kamu latih di pelajaran berikutnya. Untuk sekarang, kuasai dulu **nama** hurufnya: itulah yang kamu perlukan untuk mengeja nama dan email."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "You spell the word 'cat' out loud. How do you say the first letter?",
+          "options": [
+            "'k', the sound at the start of cat",
+            "'see', the name of the letter C"
+          ],
+          "answer": 1,
+          "explain": "When you spell, you say each letter's name. C is called 'see', even though cat starts with a 'k' sound.",
+          "i18n": {
+            "id": {
+              "explain": "Saat mengeja, kamu menyebut nama tiap huruf. Nama huruf C adalah 'see' (si), walaupun *cat* diawali bunyi 'k'."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nama huruf dan bunyinya"
+        }
+      }
+    },
+    {
       "id": "vowels",
       "title": "The five vowels",
       "blocks": [
         {
           "type": "text",
-          "text": "The vowel letters are **A, E, I, O, U**. All the other letters are consonants. **Y** sometimes works like a vowel, as in *my* or *happy*.",
+          "text": "The vowel letters are **A, E, I, O, U**. All the other letters are consonants.\n\nBut wait: **Y** is in the consonant group, so why does it sometimes sound like a vowel? As a **letter**, Y counts as a consonant, and at the start of a word it sounds like Indonesian *y* (*yes, yellow*). But in *my* it sounds 'ai' and in *happy* it sounds 'i': there Y **borrows** a vowel sound. The letter group doesn't change, only the sound.",
           "i18n": {
             "id": {
-              "text": "Huruf vokal adalah **A, E, I, O, U**. Huruf lainnya konsonan. **Y** kadang berperan seperti vokal, misalnya di *my* atau *happy*."
+              "text": "Huruf vokal (huruf hidup) adalah **A, E, I, O, U**. Huruf lainnya konsonan (huruf mati).\n\nTapi tunggu: **Y** masuk kelompok konsonan, jadi kenapa kadang bunyinya seperti vokal? Sebagai **huruf**, Y dihitung konsonan, dan di awal kata bunyinya seperti *y* dalam bahasa Indonesia (*yes, yellow*). Tapi di *my* bunyinya 'ai' dan di *happy* bunyinya 'i': di situ Y **meminjam** bunyi vokal. Kelompok hurufnya tidak berubah, hanya bunyinya."
             }
           }
         },
@@ -265,10 +357,10 @@
             "3"
           ],
           "answer": 1,
-          "explain": "p-h-O-n-E: the vowels are O and E.",
+          "explain": "p-h-O-n-E: the vowels are O and E. The E at the end isn't said in 'phone', but it's still a vowel letter.",
           "i18n": {
             "id": {
-              "explain": "p-h-O-n-E: vokalnya O dan E."
+              "explain": "p-h-O-n-E: vokalnya O dan E. Huruf E di akhir tidak dibunyikan saat mengucapkan 'phone', tapi tetap huruf vokal."
             }
           }
         }
@@ -350,7 +442,8 @@
           "rows": [
             {
               "en": "My email is rina at mail dot com: R-I-N-A.",
-              "id": "Email saya rina@mail.com: R-I-N-A."
+              "id": "Email saya rina@mail.com: R-I-N-A. (@ dibaca 'at', titik dibaca 'dot')",
+              "note": "@ = 'at', . = 'dot'"
             },
             {
               "en": "That's B as in Bravo, not D as in Delta.",

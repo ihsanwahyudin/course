@@ -92,7 +92,7 @@ func LatestSession(ctx context.Context, db DB, userID, course, nodeID, phase str
 func NodeAttempts(ctx context.Context, db DB, userID, course, nodeID string, limit int) ([]Attempt, error) {
 	rows, err := db.Query(ctx, `SELECT `+attemptColsA+`, s.course_slug, s.node_id
 		FROM assessment_attempts a JOIN learning_sessions s ON s.id = a.session_id
-		WHERE s.user_id=$1 AND s.course_slug=$2 AND s.node_id=$3 ORDER BY a.created_at DESC LIMIT $4`, userID, course, nodeID, limit)
+		WHERE s.user_id=$1 AND s.course_slug=$2 AND s.node_id=$3 ORDER BY a.seq DESC LIMIT $4`, userID, course, nodeID, limit)
 	if err != nil {
 		return nil, err
 	}

@@ -6,7 +6,11 @@
     "Indonesian times of day don't map one to one: siang and sore are both 'Good afternoon' (12 noon to about 6 p.m.), and 11 a.m. is still 'Good morning'. 'Selamat malam' is 'Good evening' when you arrive but 'Good night' when you leave or go to bed. The most common error is saying 'Good night' when arriving in the evening. There is no 'Good noon'.",
     "Indonesian 'maaf' covers two English words: 'sorry' after a mistake, and 'excuse me' before a question, to call someone or to pass (Indonesian 'permisi'). 'Sama-sama' is 'You're welcome', never 'same-same'.",
     "'How are you?' is part of hello: the answer is short and positive, with thanks and a question back (I'm fine, thanks. And you?). Learners sometimes confuse it with 'Who are you?' and answer with their name.",
-    "Show register simply: Hi / Bye / Thanks with friends; Good morning / Goodbye / Thank you with teachers, bosses and customers. Add please to requests, because a bare request can sound rude in English."
+    "Show register simply: Hi / Bye / Thanks with friends; Good morning / Goodbye / Thank you with teachers, bosses and customers. Add please to requests, because a bare request can sound rude in English.",
+    "Prompts use a.m. and p.m., which many Indonesian learners don't use: a.m. = from midnight to 12 noon (pagi), p.m. = from 12 noon to midnight (siang, sore, malam). Explain it if the learner hesitates.",
+    "Learners meet short forms here: I'm = I am, you're = you are. Just say they are the short forms people use when speaking and that I'm fine / You're welcome are learnt as whole phrases. Don't teach 'to be' yet.",
+    "Warn against word-by-word translation of fixed phrases: How are you? = apa kabar? (not 'bagaimana kamu'), See you = sampai jumpa (not 'lihat kamu'), You're welcome = sama-sama, and Not bad = lumayan, which is a positive answer even though it contains 'bad'.",
+    "'Mum' in the examples is British; Americans write and say 'Mom'. Both mean ibu."
   ],
   "keyPoints": [
     {
@@ -47,7 +51,7 @@
     },
     {
       "title": "How are you?",
-      "explanation": "How are you? is part of saying hello. Answer short, say thanks and ask back: I'm fine, thanks. And you? Other good answers: I'm good, Very well, Not bad.",
+      "explanation": "How are you? is part of saying hello. Answer short, say thanks and ask back: I'm fine, thanks. And you? Other good answers: I'm good, Very well, Not bad. I'm is the short form of I am. Not bad sounds negative but means 'lumayan', a good answer.",
       "examples": [
         {
           "en": "Hi, Sari! How are you?",
@@ -272,6 +276,15 @@
         },
         {
           "type": "tip",
+          "text": "**a.m. and p.m.** English often writes the time with **a.m.** (from midnight to 12 noon: *pagi*) or **p.m.** (from 12 noon to midnight: *siang, sore, malam*). So *7 a.m.* is jam 7 pagi, *4 p.m.* is jam 4 sore and *8 p.m.* is jam 8 malam. Look for a.m. or p.m. first, then choose the greeting.",
+          "i18n": {
+            "id": {
+              "text": "**a.m. dan p.m.** Bahasa Inggris sering menulis jam dengan **a.m.** (dari tengah malam sampai jam 12 siang: *pagi*) atau **p.m.** (dari jam 12 siang sampai tengah malam: *siang, sore, malam*). Jadi *7 a.m.* artinya jam 7 pagi, *4 p.m.* jam 4 sore, dan *8 p.m.* jam 8 malam. Lihat dulu a.m. atau p.m., baru pilih salamnya."
+            }
+          }
+        },
+        {
+          "type": "tip",
           "text": "Indonesian has four times of day (pagi, siang, sore, malam), but English greetings have three. **Selamat siang** and **selamat sore** are both **Good afternoon**, and at 11 a.m. it's still **Good morning**. There is no 'Good noon'.",
           "i18n": {
             "id": {
@@ -308,10 +321,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "When you leave, say **Goodbye** (polite) or **Bye** (relaxed). Add **See you!**, **See you later!** or **See you tomorrow!** When you leave at night or go to bed, say **Good night**.",
+          "text": "When you leave, say **Goodbye** (polite) or **Bye** (relaxed). Add **See you!**, **See you later!** or **See you tomorrow!** When you leave at night or go to bed, say **Good night**. **See you** is a fixed phrase that means *sampai jumpa*: don't translate it word by word ('lihat kamu').",
           "i18n": {
             "id": {
-              "text": "Saat pergi, ucapkan **Goodbye** (sopan) atau **Bye** (santai). Tambahkan **See you!**, **See you later!** atau **See you tomorrow!** Kalau kamu pulang malam hari atau mau tidur, ucapkan **Good night**."
+              "text": "Saat pergi, ucapkan **Goodbye** (sopan) atau **Bye** (santai). Tambahkan **See you!**, **See you later!** atau **See you tomorrow!** Kalau kamu pulang malam hari atau mau tidur, ucapkan **Good night**. **See you** adalah ungkapan tetap yang artinya *sampai jumpa*: jangan diterjemahkan kata per kata ('lihat kamu')."
             }
           }
         },
@@ -332,8 +345,8 @@
             },
             {
               "en": "Good night, Mum!",
-              "id": "Selamat tidur, Bu!",
-              "note": "going to bed"
+              "id": "Selamat tidur, Bu! (Mum = ibu)",
+              "note": "going to bed · Mum is British, Americans say Mom"
             }
           ]
         },
@@ -375,10 +388,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "**Please** makes a request polite. Put it at the end or the start: *Two teas, please.* *Please come in.* Say **Thank you** (or **Thanks** with friends) when someone helps you or gives you something. The answer to *Thank you* is **You're welcome** or **No problem**.",
+          "text": "**Please** makes a request polite. Put it **at the end** when you ask for something (*Two teas, please.* = Minta dua teh) and **at the start** when you invite someone to do something (*Please come in.* = Silakan masuk). That's why one English *please* can be *minta*, *tolong* or *silakan* in Indonesian. Say **Thank you** (or **Thanks** with friends) when someone helps you or gives you something. The answer to *Thank you* is **You're welcome** or **No problem**.",
           "i18n": {
             "id": {
-              "text": "**Please** membuat permintaan jadi sopan. Taruh di akhir atau di awal: *Two teas, please.* *Please come in.* Ucapkan **Thank you** (atau **Thanks** ke teman) saat seseorang membantumu atau memberimu sesuatu. Jawaban untuk *Thank you* adalah **You're welcome** atau **No problem**."
+              "text": "**Please** membuat permintaan jadi sopan. Taruh **di akhir** saat kamu meminta sesuatu (*Two teas, please.* = Minta dua teh) dan **di awal** saat kamu mempersilakan orang melakukan sesuatu (*Please come in.* = Silakan masuk). Karena itu satu kata *please* bisa berarti *minta*, *tolong* atau *silakan*. Ucapkan **Thank you** (atau **Thanks** ke teman) saat seseorang membantumu atau memberimu sesuatu. Jawaban untuk *Thank you* adalah **You're welcome** atau **No problem**."
             }
           }
         },
@@ -409,10 +422,10 @@
         },
         {
           "type": "tip",
-          "text": "*Sama-sama* is **You're welcome**, not 'same-same'. And use please a lot: in English a request without it can sound rude.",
+          "text": "*Sama-sama* is **You're welcome**, not 'same-same'. Learn *You're welcome* as one fixed phrase: don't translate *welcome* here. (*You're* is the short form of *you are*.) And use please a lot: in English a request without it can sound rude.",
           "i18n": {
             "id": {
-              "text": "*Sama-sama* adalah **You're welcome**, bukan 'same-same'. Dan sering-seringlah memakai please: dalam bahasa Inggris, permintaan tanpa please bisa terdengar kasar."
+              "text": "*Sama-sama* adalah **You're welcome**, bukan 'same-same'. Hafalkan *You're welcome* sebagai satu ungkapan utuh: kata *welcome* di sini tidak perlu diterjemahkan. (*You're* adalah bentuk pendek dari *you are*.) Dan sering-seringlah memakai please: dalam bahasa Inggris, permintaan tanpa please bisa terdengar kasar."
             }
           }
         },
@@ -542,6 +555,15 @@
           "i18n": {
             "id": {
               "text": "Jangan tertukar **How are you?** (apa kabar?) dan **Who are you?** (kamu siapa?). Jawab *How are you?* dengan keadaanmu, bukan dengan namamu."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Three things that can look strange:\n- **I'm** is the short form of **I am** (*saya*). People almost always say *I'm* when they speak.\n- **How are you?** is one fixed question that means *apa kabar?*. Don't translate it word by word.\n- **Not bad** has the word *bad* (*jelek*), but it means *lumayan, cukup baik*. It's a positive answer.",
+          "i18n": {
+            "id": {
+              "text": "Tiga hal yang mungkin terasa aneh:\n- **I'm** adalah bentuk pendek dari **I am** (*saya*). Saat bicara, orang hampir selalu bilang *I'm*.\n- **How are you?** adalah satu pertanyaan tetap yang artinya *apa kabar?*. Jangan diterjemahkan kata per kata.\n- **Not bad** memang ada kata *bad* (*jelek*), tapi artinya *lumayan, cukup baik*. Itu jawaban yang positif."
             }
           }
         },

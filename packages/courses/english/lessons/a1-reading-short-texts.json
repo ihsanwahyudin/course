@@ -12,7 +12,7 @@
   "keyPoints": [
     {
       "title": "Menus, signs and timetables",
-      "explanation": "Read the headings first: the menu section, the days on a sign, the column titles on a timetable. Then find the line you need. Mon–Fri = Monday to Friday; departs = berangkat, arrives = tiba.",
+      "explanation": "Read the headings first: the menu section, the days on a sign, the column titles on a timetable. Then find the line you need. Mon–Fri = Monday to Friday (days are often cut to three letters); am = morning, pm = after 12 noon; departs = berangkat, arrives = tiba.",
       "examples": [
         {
           "en": "Drinks: Iced tea Rp 6.000",
@@ -301,7 +301,8 @@
             },
             {
               "en": "Iced tea / Hot tea",
-              "id": "Es teh / Teh panas"
+              "id": "Es teh / Teh panas",
+              "note": "iced = with ice (pakai es)"
             }
           ]
         },
@@ -389,11 +390,46 @@
           ]
         },
         {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Mon / Tue / Wed",
+              "id": "Senin / Selasa / Rabu",
+              "note": "Monday, Tuesday, Wednesday"
+            },
+            {
+              "en": "Thu / Fri",
+              "id": "Kamis / Jumat",
+              "note": "Thursday, Friday"
+            },
+            {
+              "en": "Sat / Sun",
+              "id": "Sabtu / Minggu",
+              "note": "Saturday, Sunday = the weekend"
+            },
+            {
+              "en": "9 am",
+              "id": "jam 9 pagi (09.00)",
+              "note": "am = before 12 noon"
+            },
+            {
+              "en": "12 noon",
+              "id": "jam 12 siang",
+              "note": "you may also see 12 pm"
+            },
+            {
+              "en": "5 pm",
+              "id": "jam 5 sore (17.00)",
+              "note": "pm = after 12 noon"
+            }
+          ]
+        },
+        {
           "type": "tip",
-          "text": "**OUT OF ORDER** has nothing to do with ordering food. It means the lift, the machine or the toilet is broken (rusak).",
+          "text": "**OUT OF ORDER** has nothing to do with ordering food. It means the lift, the machine or the toilet is broken (rusak). *Order* has two meanings in English: 'pesan' in a restaurant, and 'keadaan baik' here, so *out of order* = not in good condition.\n\nBritish and American: **lift** (UK) = **elevator** (US). Both mean the same thing.",
           "i18n": {
             "id": {
-              "text": "**OUT OF ORDER** tidak ada hubungannya dengan memesan makanan. Artinya lift, mesin atau toiletnya rusak."
+              "text": "**OUT OF ORDER** tidak ada hubungannya dengan memesan makanan. Artinya lift, mesin atau toiletnya rusak. Kata *order* punya dua arti dalam bahasa Inggris: 'pesan' di restoran, dan 'keadaan baik' di sini, jadi *out of order* = sedang tidak dalam keadaan baik.\n\nInggris dan Amerika: **lift** (UK) = **elevator** (US). Artinya sama."
             }
           }
         },
@@ -451,7 +487,7 @@
             },
             {
               "en": "Gate B2",
-              "id": "Gerbang B2",
+              "id": "Gerbang / pintu keberangkatan B2",
               "note": "planes"
             },
             {
@@ -470,10 +506,10 @@
         },
         {
           "type": "tip",
-          "text": "Don't mix up **departs** and **arrives**. If you want to know when the train **leaves**, look in the **Departs** column, not the Arrives column.",
+          "text": "Don't mix up **departs** and **arrives**. If you want to know when the train **leaves**, look in the **Departs** column, not the Arrives column. **Departs** and **leaves** mean the same: berangkat.\n\nBritish and American spelling and dates can look different: *cancelled* (UK) = *canceled* (US). A date like *12–14 July* (UK: day, then month) is *July 12–14* in the US. Same dates.",
           "i18n": {
             "id": {
-              "text": "Jangan tertukar antara **departs** dan **arrives**. Kalau kamu ingin tahu kapan kereta **berangkat**, lihat kolom **Departs**, bukan kolom Arrives."
+              "text": "Jangan tertukar antara **departs** dan **arrives**. Kalau kamu ingin tahu kapan kereta **berangkat**, lihat kolom **Departs**, bukan kolom Arrives. **Departs** dan **leaves** artinya sama: berangkat.\n\nEjaan dan tanggal Inggris (UK) dan Amerika (US) bisa terlihat berbeda: *cancelled* (UK) = *canceled* (US). Tanggal seperti *12–14 July* (UK: tanggal dulu, lalu bulan) ditulis *July 12–14* di US. Tanggalnya sama."
             }
           }
         },
@@ -539,7 +575,8 @@
             },
             {
               "en": "I work at a bank.",
-              "id": "Aku bekerja di bank."
+              "id": "Aku bekerja di bank.",
+              "note": "at a bank or in a bank: both are correct"
             },
             {
               "en": "I like football and music.",
@@ -549,10 +586,10 @@
         },
         {
           "type": "tip",
-          "text": "**From** and **live in** are different. 'I'm from Medan' is where you come from (asal). 'I live in Jakarta' is your home now. Read carefully when a question asks **Where does she live?**",
+          "text": "**From** and **live in** are different. 'I'm from Medan' is where you come from (asal). 'I live in Jakarta' is your home now. Read carefully when a question asks **Where does she live?**\n\nProfiles often give an age like this: *I'm 30* = umurku 30 tahun. English uses **am / is** for age, and *years old* is often left out.",
           "i18n": {
             "id": {
-              "text": "**From** dan **live in** itu berbeda. 'I'm from Medan' adalah asalmu. 'I live in Jakarta' adalah tempat tinggalmu sekarang. Baca dengan teliti kalau pertanyaannya **Where does she live?**"
+              "text": "**From** dan **live in** itu berbeda. 'I'm from Medan' adalah asalmu. 'I live in Jakarta' adalah tempat tinggalmu sekarang. Baca dengan teliti kalau pertanyaannya **Where does she live?**\n\nProfil sering menulis umur seperti ini: *I'm 30* = umurku 30 tahun. Bahasa Inggris memakai **am / is** untuk umur, dan kata *years old* sering tidak ditulis."
             }
           }
         },

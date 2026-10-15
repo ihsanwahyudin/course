@@ -1,6 +1,6 @@
 {
   "nodeId": "a0-basic-sentences",
-  "intro": "Great progress! Now we put words together into real sentences. You'll practise English word order (Subject + Verb + Object), using 'a' and 'an', and making plurals like books and boxes. Warm-up: try one short sentence about what you like — for example, 'I like coffee.'",
+  "intro": "Great progress! Now we put words together into real sentences. You'll practise English word order (Subject + Verb + Object, or simply: who + does what + what), using 'a' and 'an', and making plurals (more than one) like books and boxes. Warm-up: try one short sentence about what you like — for example, 'I like coffee.'",
   "teachingNotes": [
     "Word order is usually the same as Indonesian (S-V-O), which helps; stress that English almost always needs a subject (no 'Like coffee').",
     "Indonesian has no articles: learners drop 'a/an'. 'an' goes before vowel SOUNDS (an apple, an hour, a university).",
@@ -10,7 +10,7 @@
   "keyPoints": [
     {
       "title": "Subject + Verb + Object",
-      "explanation": "Most English sentences start with who does the action, then the action, then the thing. Always include the subject.",
+      "explanation": "Most English sentences start with who does the action (the subject), then the action (the verb), then the thing (the object). The order is the same as Indonesian, but English always includes the subject.",
       "examples": [
         {
           "en": "I drink tea.",
@@ -24,7 +24,7 @@
     },
     {
       "title": "a or an",
-      "explanation": "Use a/an before one countable thing. Use 'an' before a vowel sound (an apple, an egg), 'a' before a consonant sound (a book, a car).",
+      "explanation": "Use a/an before one thing you can count (one, two, three…). Use 'an' before a vowel sound (an apple, an egg), 'a' before a consonant sound (a book, a car). Things you don't count one by one, like tea, coffee or music, take no a/an: I drink tea.",
       "examples": [
         {
           "en": "I have an apple.",
@@ -38,11 +38,11 @@
     },
     {
       "title": "Plurals with -s / -es",
-      "explanation": "Add -s for more than one: book → books. Add -es after s, x, ch, sh: box → boxes, watch → watches. Don't repeat the word like in Indonesian.",
+      "explanation": "Add -s for more than one: book → books. Add -es after s, x, ch, sh (box → boxes, class → classes), because you can't say an extra s after those sounds without adding a little sound. Don't repeat the word like in Indonesian, and keep the -s after a number: two books.",
       "examples": [
         {
           "en": "two books",
-          "id": "dua buku (bukan buku-buku)"
+          "id": "dua buku (bukan buku-buku, bukan two book)"
         },
         {
           "en": "three boxes",
@@ -152,10 +152,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Most English sentences follow the same order: **who** (subject) → **does what** (verb) → **to what** (object). Unlike Indonesian, you can't drop the subject: *Makan nasi* must be **I eat rice**.",
+          "text": "Most English sentences follow the same order: **who** (the **subject**) → **does what** (the **verb**, the action word) → **to what** (the **object**). Good news: this is the same order as Indonesian: *Saya minum teh* = **I drink tea**.\n\nThe difference: Indonesian can drop the subject when it's clear (*Makan nasi, yuk*). English can't: you must always say who, so *Makan nasi* must be **I eat rice** (or *We eat rice* …).",
           "i18n": {
             "id": {
-              "text": "Sebagian besar kalimat bahasa Inggris mengikuti urutan yang sama: **siapa** (subjek) → **melakukan apa** (kata kerja) → **terhadap apa** (objek). Berbeda dari bahasa Indonesia, subjek tidak boleh dihilangkan: *Makan nasi* harus menjadi **I eat rice**."
+              "text": "Sebagian besar kalimat bahasa Inggris mengikuti urutan yang sama: **siapa** (**subjek**) → **melakukan apa** (**kata kerja**, kata kegiatan) → **terhadap apa** (**objek**). Kabar baiknya: urutannya sama dengan bahasa Indonesia: *Saya minum teh* = **I drink tea**.\n\nBedanya: bahasa Indonesia boleh menghilangkan subjek kalau sudah jelas (*Makan nasi, yuk*). Bahasa Inggris tidak boleh: kamu harus selalu menyebut siapa, jadi *Makan nasi* harus menjadi **I eat rice** (atau *We eat rice* …)."
             }
           }
         },
@@ -185,10 +185,10 @@
             "Drink tea."
           ],
           "answer": 1,
-          "explain": "Subject (I) + verb (drink) + object (tea).",
+          "explain": "Subject (I, who) + verb (drink, the action) + object (tea, what). 'Drink tea.' has no subject, and 'Tea I drink.' has the wrong order.",
           "i18n": {
             "id": {
-              "explain": "Subjek (I) + kata kerja (drink) + objek (tea)."
+              "explain": "Subjek (I, siapa) + kata kerja (drink, kegiatannya) + objek (tea, apa). 'Drink tea.' tidak punya subjek, dan 'Tea I drink.' urutannya salah."
             }
           }
         }
@@ -205,10 +205,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Use **a** or **an** before **one** countable thing when you first mention it. The choice depends on the **sound**, not the letter: **an** before a vowel sound (*an apple, an hour*), **a** before a consonant sound (*a book, a university*: university starts with a 'yu' sound, like *you*, and the h in *hour* is silent).",
+          "text": "Use **a** or **an** before **one** thing you can count (one apple, two apples…) when you first mention it. It means about the same as *sebuah / seorang / sebutir*. Indonesian often leaves those words out (*Saya punya mobil*), but English needs **a/an**: **I have a car**.\n\nThe choice depends on the **sound**, not the letter: **an** before a **vowel sound** (a word that starts with an open-mouth sound: a, e, i, o, u), as in *an apple, an hour*; **a** before a **consonant sound** (all the other sounds), as in *a book, a university*: university starts with a 'yu' sound, like *you*, and the h in *hour* is silent.",
           "i18n": {
             "id": {
-              "text": "Gunakan **a** atau **an** sebelum **satu** benda yang bisa dihitung saat pertama disebut. Pilihannya bergantung pada **bunyi**, bukan huruf: **an** sebelum bunyi vokal (*an apple, an hour*), **a** sebelum bunyi konsonan (*a book, a university*: university dibaca 'yu-ni-ver-si-ti', diawali bunyi 'y' seperti *you*, sedangkan h pada *hour* tidak dibaca)."
+              "text": "Gunakan **a** atau **an** sebelum **satu** benda yang bisa dihitung (satu apel, dua apel…) saat pertama disebut. Artinya kira-kira sama dengan *sebuah / seorang / sebutir*. Bahasa Indonesia sering tidak memakai kata itu (*Saya punya mobil*), tapi bahasa Inggris butuh **a/an**: **I have a car**.\n\nPilihannya bergantung pada **bunyi**, bukan huruf: **an** sebelum **bunyi vokal** (kata yang diawali bunyi dengan mulut terbuka: a, e, i, o, u), seperti *an apple, an hour*; **a** sebelum **bunyi konsonan** (semua bunyi lainnya), seperti *a book, a university*: university dibaca 'yu-ni-ver-si-ti', diawali bunyi 'y' seperti *you*, sedangkan h pada *hour* tidak dibaca."
             }
           }
         },
@@ -229,11 +229,20 @@
               "note": "h is silent: 'our'"
             },
             {
-              "en": "He goes to a university.",
-              "id": "Dia kuliah di universitas.",
-              "note": "u sounds like 'you'"
+              "en": "I go to a university.",
+              "id": "Saya kuliah di universitas.",
+              "note": "u sounds like 'you' (goes = go, used with he/she: you'll learn this later)"
             }
           ]
+        },
+        {
+          "type": "tip",
+          "text": "**Why no a in I drink tea or We play football?** a/an is only for **one** thing you can count. So there is no a/an:\n- with **more than one**: *They read books.* (the -s already says 'many')\n- with things English doesn't count one by one, like **tea, coffee, water, rice, music**. You can't say *two teas* or *a music* in normal English, so just say *I drink tea*, *I like music*.\n- with games and languages: *We play football*, *You speak English*.",
+          "i18n": {
+            "id": {
+              "text": "**Kenapa tidak ada a di I drink tea atau We play football?** a/an hanya untuk **satu** benda yang bisa dihitung. Jadi tidak pakai a/an:\n- untuk **lebih dari satu**: *They read books.* (-s sudah berarti 'banyak')\n- untuk benda yang dalam bahasa Inggris tidak dihitung satu per satu, seperti **tea, coffee, water, rice, music**. Biasanya orang tidak bilang *two teas* atau *a music*, jadi cukup *I drink tea*, *I like music*.\n- untuk permainan dan bahasa: *We play football*, *You speak English*."
+            }
+          }
         },
         {
           "type": "check",
@@ -352,10 +361,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "For more than one, add **-s**: *book → books*. Add **-es** after s, x, ch and sh: *box → boxes, watch → watches*. Don't repeat the word like Indonesian *buku-buku*, and keep the -s even after a number: **two books**.",
+          "text": "For more than one (the **plural**), add **-s**: *book → books*. Add **-es** after **s, x, ch** and **sh**: *box → boxes, sandwich → sandwiches*. Why? These words already end in a hissing sound (s, ks, ch, sh). You can't add another s straight after it, so English adds a small extra sound, like **'iz'**: *box* → **BOK-siz**, *class* → **KLAS-iz**. That extra sound is written **-es**.\n\nIndonesian makes plurals by repeating the word (*buku-buku*) or by the number alone (*dua buku*). English does neither: don't repeat the word, and keep the -s even after a number: **two books**, not *two book*.",
           "i18n": {
             "id": {
-              "text": "Untuk lebih dari satu, tambahkan **-s**: *book → books*. Tambahkan **-es** setelah s, x, ch dan sh: *box → boxes, watch → watches*. Jangan mengulang kata seperti *buku-buku*, dan walaupun sudah ada angka, -s tetap dipakai: **two books**."
+              "text": "Untuk lebih dari satu (bentuk **jamak**), tambahkan **-s**: *book → books*. Tambahkan **-es** setelah **s, x, ch** dan **sh**: *box → boxes, sandwich → sandwiches*. Kenapa? Kata-kata ini sudah berakhiran bunyi desis (s, ks, ch, sh). Kamu tidak bisa langsung menambah bunyi s lagi, jadi bahasa Inggris menambah bunyi kecil, seperti **'iz'**: *box* → **BOK-siz**, *class* → **KLAS-iz**. Bunyi tambahan itu ditulis **-es**.\n\nBahasa Indonesia membuat jamak dengan mengulang kata (*buku-buku*) atau cukup dengan angka (*dua buku*). Bahasa Inggris tidak memakai keduanya: jangan mengulang kata, dan -s tetap dipakai walaupun sudah ada angka: **two books**, bukan *two book*."
             }
           }
         },
@@ -378,6 +387,15 @@
           ]
         },
         {
+          "type": "tip",
+          "text": "Two small notes. **hundred** and **thousand** after a number stay without -s (*two thousand rupiah*): there they are part of the number, like *ribu* in *dua ribu*, not things you count. And a few words don't follow the -s rule at all (for example *child → children*). You'll learn those one by one later; for now, -s and -es work for most words.",
+          "i18n": {
+            "id": {
+              "text": "Dua catatan kecil. **hundred** dan **thousand** setelah angka tetap tanpa -s (*two thousand rupiah*): di situ keduanya bagian dari angka, seperti *ribu* di *dua ribu*, bukan benda yang dihitung. Lalu ada beberapa kata yang sama sekali tidak mengikuti aturan -s (misalnya *child → children*). Nanti kamu pelajari satu per satu; untuk sekarang, -s dan -es berlaku untuk kebanyakan kata."
+            }
+          }
+        },
+        {
           "type": "check",
           "prompt": "One bus, two ___.",
           "options": [
@@ -386,10 +404,10 @@
             "buses"
           ],
           "answer": 2,
-          "explain": "Bus ends in s, so add -es: buses.",
+          "explain": "Bus ends in s, so add -es (said 'BAS-iz'): buses.",
           "i18n": {
             "id": {
-              "explain": "Bus berakhiran s, jadi tambah -es: buses."
+              "explain": "Bus berakhiran s, jadi tambah -es (dibaca BAS-iz): buses."
             }
           }
         }
@@ -406,10 +424,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Short, complete sentences are what you need for messages and forms: *I need a room. We have two bags. She is an engineer.* Check three things: a subject, a verb, and a/an or -s on the noun.",
+          "text": "Short, complete sentences are what you need for messages and forms: *I need a room. We have two bags. She is an engineer.* Check three things: a subject (who), a verb (the action), and a/an or -s on the noun (the word for the thing or person: *room, bags, engineer*).",
           "i18n": {
             "id": {
-              "text": "Kalimat pendek yang lengkap adalah yang kamu butuhkan untuk pesan dan formulir: *I need a room. We have two bags. She is an engineer.* Cek tiga hal: ada subjek, ada kata kerja, dan a/an atau -s pada kata benda."
+              "text": "Kalimat pendek yang lengkap adalah yang kamu butuhkan untuk pesan dan formulir: *I need a room. We have two bags. She is an engineer.* Cek tiga hal: ada subjek (siapa), ada kata kerja (kegiatannya), dan a/an atau -s pada kata benda (kata untuk benda atau orang: *room, bags, engineer*)."
             }
           }
         },
@@ -500,8 +518,8 @@
       "back": "an hour (h is silent)"
     },
     {
-      "front": "Plural of watch",
-      "back": "watches"
+      "front": "Plural of sandwich",
+      "back": "sandwiches (-es after ch)"
     },
     {
       "front": "Plural of box",
@@ -514,7 +532,7 @@
   ],
   "i18n": {
     "id": {
-      "intro": "Kemajuan yang bagus! Sekarang kita susun kata menjadi kalimat sungguhan. Kamu akan berlatih urutan kata bahasa Inggris (Subjek + Kata Kerja + Objek), memakai 'a' dan 'an', dan membuat bentuk jamak seperti books dan boxes. Pemanasan: coba buat satu kalimat pendek tentang sesuatu yang kamu suka — misalnya 'I like coffee.'",
+      "intro": "Kemajuan yang bagus! Sekarang kita susun kata menjadi kalimat sungguhan. Kamu akan berlatih urutan kata bahasa Inggris (Subjek + Kata Kerja + Objek, atau sederhananya: siapa + melakukan apa + apa), memakai 'a' dan 'an', dan membuat bentuk jamak (lebih dari satu) seperti books dan boxes. Pemanasan: coba buat satu kalimat pendek tentang sesuatu yang kamu suka — misalnya 'I like coffee.'",
       "suggestedQuestions": [
         "Kenapa subjek selalu dibutuhkan?",
         "'a hour' atau 'an hour'?",

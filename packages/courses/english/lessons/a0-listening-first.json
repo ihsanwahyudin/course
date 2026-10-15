@@ -6,12 +6,15 @@
     "Letter names Indonesian ears confuse: E ('ee') vs I ('eye'), G ('jee') vs J ('jay'), A ('ay') vs R ('ar'), plus W ('double-you'), Y ('why') and H ('aitch'). 'Double N' means NN.",
     "Phone numbers are said digit by digit in small groups; 0 is often 'oh', and 55 can be 'double five'. The classic trap is thirteen (stress at the end) vs thirty (stress at the start). Prices: 'twenty-five thousand rupiah' — thousand, with no s.",
     "Greetings: Good morning / afternoon / evening when you meet someone; Good night only when leaving or going to bed (a common Indonesian error is 'Good night' on arrival). The reply to How are you? is I'm fine, thanks. And you?",
-    "Classroom instructions are short commands: Listen. Repeat. Open / Close your book. Sit down. Stand up. Write your name. Look at the board. Learners only need to understand and act — don't teach the imperative as grammar, and use no new tenses."
+    "Classroom instructions are short commands: Listen. Repeat. Open / Close your book. Sit down. Stand up. Write your name. Look at the board. Learners only need to understand and act — don't teach the imperative as grammar, and use no new tenses.",
+    "Z is 'zed' in British English and 'zee' in American English; the audio voice may use either, so accept both and say so.",
+    "Explain 'stress' in plain words the first time (the part of the word said louder and longer). 'oh' for 0 is because 0 looks like the letter O. After a number, thousand never takes -s (twenty thousand), even though it's many thousands.",
+    "p.m. = after midday (6 p.m. = 18.00), a.m. = before midday; learners use the 24-hour clock in writing."
   ],
   "keyPoints": [
     {
       "title": "Letters, numbers and names",
-      "explanation": "Names are spelled with English letter names, so listen for the pairs that sound alike (E/I, G/J, A/R). Phone numbers come digit by digit, with 'oh' for 0 and 'double' for two of the same. For 13–19 the stress is at the end; for 30, 40, 50… it is at the start.",
+      "explanation": "Names are spelled with English letter names, which are different from Indonesian ones (E is 'ee', I is 'eye'), so listen for the pairs that sound alike (E/I, G/J, A/R). Phone numbers come digit by digit, with 'oh' for 0 and 'double' for two of the same. For 13–19 the stress (the louder, longer part) is at the end; for 30, 40, 50… it is at the start.",
       "examples": [
         {
           "en": "It's spelled D-E-W-I.",
@@ -148,7 +151,8 @@
         "rp 15000",
         "rp 15 000",
         "15000 rupiah",
-        "15 000 rupiah"
+        "15 000 rupiah",
+        "rp15 000"
       ],
       "rubric": "Correct: Rp15.000. Accept 15000, 15.000, 15,000 with or without Rp/rupiah. 50.000 (fifty) = 0."
     },
@@ -260,10 +264,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "People spell names letter by letter with the **English letter names**. Listen carefully for the pairs that sound alike to Indonesian ears: **E** ('ee') and **I** ('eye'), **G** ('jee') and **J** ('jay'), **A** ('ay') and **R** ('ar'). **Double** means two of the same letter.",
+          "text": "People spell names letter by letter with the **English letter names**. They are not the same as Indonesian letter names: in Indonesian, E is said 'e' and I is said 'i', but in English **E** is 'ee' and **I** is 'eye'. Listen carefully for the pairs that sound alike to Indonesian ears: **E** ('ee') and **I** ('eye'), **G** ('jee') and **J** ('jay'), **A** ('ay') and **R** ('ar'). **Double** means two of the same letter.",
           "i18n": {
             "id": {
-              "text": "Orang mengeja nama huruf demi huruf dengan **nama huruf versi Inggris**. Dengarkan baik-baik pasangan yang terdengar mirip bagi telinga Indonesia: **E** ('ee', dibaca i) dan **I** ('eye', dibaca ai), **G** ('jee', dibaca ji) dan **J** ('jay', dibaca jei), **A** ('ay', dibaca ei) dan **R** ('ar'). **Double** berarti dua huruf yang sama."
+              "text": "Orang mengeja nama huruf demi huruf dengan **nama huruf versi Inggris**. Nama huruf ini tidak sama dengan bahasa Indonesia: kita membaca E 'e' dan I 'i', tapi dalam bahasa Inggris **E** dibaca 'ii' (i panjang) dan **I** dibaca 'ai'. Dengarkan baik-baik pasangan yang terdengar mirip bagi telinga Indonesia: **E** ('ee', dibaca ii) dan **I** ('eye', dibaca ai), **G** ('jee', dibaca ji) dan **J** ('jay', dibaca jei), **A** ('ay', dibaca ei) dan **R** ('ar'). **Double** berarti dua huruf yang sama."
             }
           }
         },
@@ -281,13 +285,62 @@
             },
             {
               "en": "W is 'double-you', Y is 'why'.",
-              "id": "W dibaca 'dabel-yu', Y dibaca 'wai'."
+              "id": "W dibaca 'dabel-yu' (bentuknya seperti dua U), Y dibaca 'wai'."
             },
             {
               "en": "H is 'aitch'.",
               "id": "H dibaca 'eic'."
             }
           ]
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "A",
+              "id": "dibaca 'ei' (bukan 'a')",
+              "note": "like day"
+            },
+            {
+              "en": "E",
+              "id": "dibaca 'ii', i panjang (bukan 'e')",
+              "note": "like see"
+            },
+            {
+              "en": "I",
+              "id": "dibaca 'ai' (bukan 'i')",
+              "note": "like eye"
+            },
+            {
+              "en": "O",
+              "id": "dibaca 'ou'",
+              "note": "like no"
+            },
+            {
+              "en": "U",
+              "id": "dibaca 'yu'",
+              "note": "like you"
+            },
+            {
+              "en": "K",
+              "id": "dibaca 'kei'",
+              "note": "like okay"
+            },
+            {
+              "en": "Z",
+              "id": "dibaca 'zed' (Inggris/UK) atau 'zi' (Amerika)",
+              "note": "UK zed, US zee"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "The trap: English **E** sounds like Indonesian *i*, and English **I** sounds like *ai*. When you hear 'ee', write **E**; when you hear 'eye', write **I**. And **Z** has two names: British English says 'zed', American English says 'zee'. Both mean Z.",
+          "i18n": {
+            "id": {
+              "text": "Jebakannya: **E** bahasa Inggris terdengar seperti *i* bahasa Indonesia, dan **I** terdengar seperti *ai*. Kalau kamu dengar 'ii', tulis **E**; kalau dengar 'ai', tulis **I**. Lalu **Z** punya dua nama: bahasa Inggris British bilang 'zed', bahasa Inggris Amerika bilang 'zi'. Dua-duanya artinya Z."
+            }
+          }
         },
         {
           "type": "check",
@@ -298,10 +351,10 @@
             "Jogo"
           ],
           "answer": 1,
-          "explain": "'Jay' is J and 'kay' is K, so it's J-O-K-O: Joko. G is 'jee'.",
+          "explain": "'Jay' is J and 'kay' is K, so it's J-O-K-O: Joko. G is 'jee', and 'oh' is the letter O.",
           "i18n": {
             "id": {
-              "explain": "'Jay' adalah J dan 'kay' adalah K, jadi J-O-K-O: Joko. G dibaca 'jee'."
+              "explain": "'Jay' adalah J dan 'kay' adalah K, jadi J-O-K-O: Joko. G dibaca 'jee', dan 'oh' adalah huruf O."
             }
           }
         }
@@ -318,10 +371,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "**Phone numbers** are said one digit at a time, in small groups: *oh-eight-one-two*. People often say **oh** for 0 and **double** for two of the same digit (*double five* = 55). For **13–19** the stress is at the end (thir**TEEN**); for **30, 40, 50…** it is at the start (**THIR**ty). Prices: *twenty thousand rupiah* = Rp20.000.",
+          "text": "**Phone numbers** are said one digit at a time, in small groups: *oh-eight-one-two*. People often say **oh** for 0 (because 0 looks like the letter O) and **double** for two of the same digit (*double five* = 55).\n\nFor **13–19** the **stress** is at the end (thir**TEEN**); for **30, 40, 50…** it is at the start (**THIR**ty). **Stress** means the part of the word that is said **louder and longer**; here it's written in capitals.\n\nPrices: *twenty thousand rupiah* = Rp20.000. After a number, **thousand** has **no -s**, even though it's many thousands: *twenty thousand*, not 'twenty thousands'.",
           "i18n": {
             "id": {
-              "text": "**Nomor telepon** diucapkan satu angka demi satu angka, dalam kelompok kecil: *oh-eight-one-two*. Orang sering bilang **oh** untuk 0 dan **double** untuk dua angka yang sama (*double five* = 55). Untuk **13–19** tekanannya di akhir (thir**TEEN**); untuk **30, 40, 50…** tekanannya di awal (**THIR**ty). Harga: *twenty thousand rupiah* = Rp20.000."
+              "text": "**Nomor telepon** diucapkan satu angka demi satu angka, dalam kelompok kecil: *oh-eight-one-two*. Orang sering bilang **oh** untuk 0 (karena 0 bentuknya seperti huruf O) dan **double** untuk dua angka yang sama (*double five* = 55).\n\nUntuk **13–19** **tekanannya** di akhir (thir**TEEN**); untuk **30, 40, 50…** tekanannya di awal (**THIR**ty). **Tekanan** artinya bagian kata yang diucapkan **lebih keras dan lebih panjang**; di sini ditulis dengan huruf besar.\n\nHarga: *twenty thousand rupiah* = Rp20.000. Setelah angka, **thousand** **tidak** pakai -s, walaupun jumlahnya ribuan: *twenty thousand*, bukan 'twenty thousands'."
             }
           }
         },
@@ -385,10 +438,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Greetings change with the time of day: **Good morning** (until about 12), **Good afternoon** (12–6 p.m.), **Good evening** (after 6 p.m.). **Good night** is not hello — it means goodbye at night or before bed. When someone asks **How are you?**, answer **I'm fine, thanks. And you?**",
+          "text": "Greetings change with the time of day: **Good morning** (until about 12), **Good afternoon** (12–6 p.m.), **Good evening** (after 6 p.m.). **p.m.** means after midday, so 6 p.m. = 18.00; **a.m.** means before midday. **Good night** is not hello — it means goodbye at night or before bed. When someone asks **How are you?**, answer **I'm fine, thanks. And you?**",
           "i18n": {
             "id": {
-              "text": "Salam berubah sesuai waktu: **Good morning** (sampai sekitar jam 12), **Good afternoon** (jam 12–18), **Good evening** (setelah jam 18). **Good night** bukan salam bertemu — artinya selamat tinggal di malam hari atau sebelum tidur. Kalau seseorang bertanya **How are you?**, jawab **I'm fine, thanks. And you?**"
+              "text": "Salam berubah sesuai waktu: **Good morning** (sampai sekitar jam 12), **Good afternoon** (jam 12–18), **Good evening** (setelah jam 18). **p.m.** artinya setelah tengah hari, jadi 6 p.m. = jam 18.00; **a.m.** artinya sebelum tengah hari. **Good night** bukan salam bertemu — artinya selamat tinggal di malam hari atau sebelum tidur. Kalau seseorang bertanya **How are you?**, jawab **I'm fine, thanks. And you?**"
             }
           }
         },
@@ -437,10 +490,10 @@
             "Good afternoon!"
           ],
           "answer": 1,
-          "explain": "After 6 p.m., hello is Good evening. Good night is only for leaving or going to bed.",
+          "explain": "8 p.m. is in the evening (20.00). After 6 p.m., hello is Good evening. Good night is only for leaving or going to bed.",
           "i18n": {
             "id": {
-              "explain": "Setelah jam 18, salam bertemu adalah Good evening. Good night hanya untuk pamit atau mau tidur."
+              "explain": "8 p.m. = jam 8 malam (20.00). Setelah jam 18, salam bertemu adalah Good evening. Good night hanya untuk pamit atau mau tidur."
             }
           }
         }
@@ -457,10 +510,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Teachers give short instructions that start with the **action word**: *Listen. Repeat. Open your book. Close your book. Sit down. Stand up. Write your name. Look at the board.* Catch the first word and you know what to do. Often you'll also hear **please**.",
+          "text": "Teachers give short instructions that start with the **action word**: *Listen. Repeat. Open your book. Close your book. Sit down. Stand up. Write your name. Look at the board.* Catch the first word and you know what to do. Often you'll also hear **please**, at the start or at the end: it's like *tolong* or *silakan* and makes the instruction polite.",
           "i18n": {
             "id": {
-              "text": "Guru memberi instruksi pendek yang diawali **kata tindakan**: *Listen. Repeat. Open your book. Close your book. Sit down. Stand up. Write your name. Look at the board.* Tangkap kata pertamanya dan kamu tahu apa yang harus dilakukan. Sering juga ada kata **please**."
+              "text": "Guru memberi instruksi pendek yang diawali **kata tindakan**: *Listen. Repeat. Open your book. Close your book. Sit down. Stand up. Write your name. Look at the board.* Tangkap kata pertamanya dan kamu tahu apa yang harus dilakukan. Sering juga ada kata **please**, di awal atau di akhir: artinya seperti *tolong* atau *silakan*, supaya instruksinya sopan."
             }
           }
         },

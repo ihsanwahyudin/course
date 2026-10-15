@@ -5,12 +5,16 @@
     "Indonesian questions often keep statement order ('Kamu tinggal di mana?'); English needs Wh-word + auxiliary + subject + verb.",
     "With be: Where are you from? With other verbs: Where do you live? / Where does she work?",
     "what = apa, where = di mana, who = siapa, when = kapan, how = bagaimana, how old = berapa umur.",
-    "Practise personal information: name, origin, job, age, address, hobbies."
+    "Practise personal information: name, origin, job, age, address, hobbies.",
+    "Siapa namamu? → learners say *'Who is your name?'. English asks for a name with What (a name is information, not a person). Likewise berapa splits into How old (age), How much (price) and What (phone number).",
+    "'Wh- words' is a label: how is in the group even though it doesn't start with wh.",
+    "What does she do? has two dos: does is the helper (no meaning), do is the main verb. Point this out so it doesn't look like a typo.",
+    "Where are you from? keeps from at the end (Indonesian 'dari mana' stays together). 'bathroom' in American English also means the toilet."
   ],
   "keyPoints": [
     {
       "title": "Question words",
-      "explanation": "what (apa), where (di mana), who (siapa), when (kapan), how (bagaimana). How old? asks about age.",
+      "explanation": "what (apa), where (di mana), who (siapa), when (kapan), how (bagaimana). How old? asks about age. A name is asked with What: What's your name? (Siapa namamu?), never 'Who is your name?'.",
       "examples": [
         {
           "en": "Where is the station?",
@@ -24,7 +28,7 @@
     },
     {
       "title": "Question word order",
-      "explanation": "Wh-word + am/is/are + subject? or Wh-word + do/does + subject + verb? Don't keep statement order.",
+      "explanation": "Wh-word + am/is/are + subject? or Wh-word + do/does + subject + verb? Don't keep statement order. do/does is only a helper here; in 'What does he do?' the second do is the real verb.",
       "examples": [
         {
           "en": "Where do you live?",
@@ -102,11 +106,11 @@
     {
       "id": "q-1",
       "objectiveId": "wh-words",
-      "prompt": "Which question word? ___ do you go to work? — By train.",
+      "prompt": "Which question word? ___ is your mother? — She's fine, thanks.",
       "acceptableAnswers": [
         "how"
       ],
-      "rubric": "Correct: How."
+      "rubric": "Correct: How (asking about someone's health or feelings). 'What' or 'Who' = 0."
     },
     {
       "id": "q-2",
@@ -152,10 +156,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Each question word asks for a different kind of information. **How** has extra uses: *How old?* (age), *How much?* (price), *How many?* (number).",
+          "text": "Each question word asks for a different kind of information. They're often called **wh- words**, because most of them start with *wh* (what, where, who, when, why). **How** doesn't, but it belongs to the same group. **How** has extra uses: *How old?* (age), *How much?* (price), *How many?* (number).",
           "i18n": {
             "id": {
-              "text": "Setiap kata tanya menanyakan informasi yang berbeda. **How** punya kegunaan tambahan: *How old?* (umur), *How much?* (harga), *How many?* (jumlah)."
+              "text": "Setiap kata tanya menanyakan informasi yang berbeda. Kata-kata ini sering disebut **wh- words**, karena kebanyakan diawali *wh* (what, where, who, when, why). **How** tidak diawali wh, tapi termasuk kelompok yang sama. **How** punya kegunaan tambahan: *How old?* (umur), *How much?* (harga), *How many?* (jumlah)."
             }
           }
         },
@@ -164,7 +168,8 @@
           "rows": [
             {
               "en": "What is your name?",
-              "id": "what = apa · Siapa namamu?"
+              "id": "what = apa · Siapa namamu? (nama → What, bukan Who)",
+              "note": "name → What, not Who"
             },
             {
               "en": "Where is the station?",
@@ -212,15 +217,90 @@
       }
     },
     {
+      "id": "siapa-berapa",
+      "title": "siapa and berapa: which English word?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Two Indonesian question words don't match English one to one.\n- **siapa**: for a **person**, English uses **Who** (*Siapa gurumu? → Who is your teacher?*). But for a **name**, English uses **What**: *Siapa namamu? → **What's** your name?* A name is a piece of information, not a person. 'Who is your name?' is always wrong.\n- **berapa**: English picks a different word for each thing: age → **How old**, price → **How much**, a phone number → **What** (a phone number isn't an amount, it's information, like a name).\n\nSo don't translate the question word. Ask yourself: what kind of answer do I want?",
+          "i18n": {
+            "id": {
+              "text": "Dua kata tanya bahasa Indonesia tidak sama persis dengan bahasa Inggris.\n- **siapa**: untuk **orang**, bahasa Inggris memakai **Who** (*Siapa gurumu? → Who is your teacher?*). Tapi untuk **nama**, bahasa Inggris memakai **What**: *Siapa namamu? → **What's** your name?* Nama itu informasi, bukan orang. 'Who is your name?' selalu salah.\n- **berapa**: bahasa Inggris memakai kata yang berbeda untuk setiap hal: umur → **How old**, harga → **How much**, nomor telepon → **What** (nomor telepon bukan jumlah, tapi informasi, seperti nama).\n\nJadi jangan terjemahkan kata tanyanya. Tanyakan pada dirimu: jawaban seperti apa yang aku mau?"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "What's your name?",
+              "id": "Siapa namamu?",
+              "note": "a name → What"
+            },
+            {
+              "en": "Who is your teacher?",
+              "id": "Siapa gurumu?",
+              "note": "a person → Who"
+            },
+            {
+              "en": "How old are you?",
+              "id": "Umurmu berapa?",
+              "note": "age → How old"
+            },
+            {
+              "en": "How much is this bag?",
+              "id": "Tas ini berapa harganya?",
+              "note": "price → How much"
+            },
+            {
+              "en": "What's your phone number?",
+              "id": "Nomor teleponmu berapa?",
+              "note": "a number to write down → What"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**What's** is the short form of **What is**: the **'** replaces the i. You'll hear *What's your name?* much more often than *What is your name?*. Both are correct.",
+          "i18n": {
+            "id": {
+              "text": "**What's** adalah bentuk singkat dari **What is**: tanda **'** menggantikan huruf i. Kamu akan lebih sering mendengar *What's your name?* daripada *What is your name?*. Dua-duanya benar."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "You meet a new colleague. ___ is your name?",
+          "options": [
+            "Who",
+            "What",
+            "How"
+          ],
+          "answer": 1,
+          "explain": "You want a name, and a name is information, so What: What is your name? Indonesian says 'Siapa namamu?', but English never says 'Who is your name?'.",
+          "i18n": {
+            "id": {
+              "explain": "Kamu menanyakan nama, dan nama itu informasi, jadi What: What is your name? Bahasa Indonesia bilang 'Siapa namamu?', tapi bahasa Inggris tidak pernah bilang 'Who is your name?'."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "siapa dan berapa: kata Inggris yang mana?"
+        }
+      }
+    },
+    {
       "id": "order-be",
       "title": "Word order with be",
       "blocks": [
         {
           "type": "text",
-          "text": "With am/is/are, the question word comes first, then **be**, then the subject: **Where are you** from? Don't keep statement order (*Where you are from?*).",
+          "text": "With am/is/are, the question word comes first, then **be**, then the **subject** (who or what you're asking about: *you, the bathroom, that man*): **Where are you** from? Indonesian keeps the normal order (*Kamu dari mana?*), but English moves **be** in front of the subject. Don't keep statement order (*Where you are from?*). Also notice that **from** stays at the end: *Where are you from?*",
           "i18n": {
             "id": {
-              "text": "Dengan am/is/are, kata tanya di depan, lalu **be**, lalu subjek: **Where are you** from? Jangan memakai urutan kalimat biasa (*Where you are from?*)."
+              "text": "Dengan am/is/are, kata tanya di depan, lalu **be**, lalu **subjek** (siapa atau apa yang kamu tanyakan: *you, the bathroom, that man*): **Where are you** from? Bahasa Indonesia memakai urutan biasa (*Kamu dari mana?*), tapi bahasa Inggris memindahkan **be** ke depan subjek. Jangan memakai urutan kalimat biasa (*Where you are from?*). Perhatikan juga, **from** tetap di akhir: *Where are you from?*"
             }
           }
         },
@@ -229,7 +309,8 @@
           "rows": [
             {
               "en": "Where is the bathroom?",
-              "id": "Kamar mandinya di mana?"
+              "id": "Kamar mandi / toiletnya di mana?",
+              "note": "US English: bathroom also means toilet"
             },
             {
               "en": "How old are you?",
@@ -270,10 +351,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "With other verbs, add **do** or **does**: question word + do/does + subject + base verb. *Where do you live? What does he do?* (*What does he do?* asks about someone's job.)",
+          "text": "With other verbs, add **do** or **does**: question word + do/does + subject + base verb (the dictionary form: *live, work*). *Where do you live?* Here **do/does** is only a helper: it has no meaning, it just makes the question. That's why *What does he do?* has two: **does** is the helper, **do** is the real verb (melakukan). *What does he do?* asks about someone's job.",
           "i18n": {
             "id": {
-              "text": "Dengan kata kerja lain, tambahkan **do** atau **does**: kata tanya + do/does + subjek + kata kerja dasar. *Where do you live? What does he do?* (*What does he do?* menanyakan pekerjaan seseorang.)"
+              "text": "Dengan kata kerja lain, tambahkan **do** atau **does**: kata tanya + do/does + subjek + kata kerja dasar (bentuk di kamus: *live, work*). *Where do you live?* Di sini **do/does** hanya kata bantu: tidak punya arti, cuma membentuk pertanyaan. Karena itu *What does he do?* punya dua: **does** kata bantunya, **do** kata kerja sebenarnya (melakukan). *What does he do?* menanyakan pekerjaan seseorang."
             }
           }
         },
@@ -303,10 +384,10 @@
             "is"
           ],
           "answer": 1,
-          "explain": "Your brother = he → does.",
+          "explain": "Your brother is one person (= he), so does. 'is' is wrong because work is a normal verb: normal verbs need do/does in questions.",
           "i18n": {
             "id": {
-              "explain": "Your brother = he → does."
+              "explain": "Your brother itu satu orang (= he), jadi does. 'is' salah karena work adalah kata kerja biasa: kata kerja biasa butuh do/does dalam pertanyaan."
             }
           }
         }
@@ -452,7 +533,7 @@
         "Kenapa 'Where are you from?' bukan 'Where you are from?'"
       ],
       "assessment": {
-        "q-1": "Kata tanya apa? ___ do you go to work? — By train.",
+        "q-1": "Kata tanya apa? ___ is your mother? — She's fine, thanks.",
         "q-2": "Kata tanya apa? ___ is your bag? — It's under the table.",
         "q-3": "Susun kata-katanya: does / work / she / where",
         "q-4": "Perbaiki pertanyaannya: Where you are from?",

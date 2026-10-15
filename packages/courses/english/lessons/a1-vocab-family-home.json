@@ -48,7 +48,7 @@
     },
     {
       "title": "Describing your home",
-      "explanation": "Say where you live, who you live with, and what your home has: I live in a house / a flat in Bandung. I live with my wife and my son. My house has two bedrooms. The living room is big. Use has with my house, my flat, it.",
+      "explanation": "Say where you live, who you live with, and what your home has: I live in a house / a flat in Bandung. I live with my wife and my son. My house has two bedrooms. The living room is big. Use has (have for he, she, it) with my house, my flat, it. The adjective comes before the noun: a big kitchen (dapur besar).",
       "examples": [
         {
           "en": "I live in a small flat in Jakarta.",
@@ -337,10 +337,19 @@
         },
         {
           "type": "tip",
-          "text": "**Orang tua** is always **parents**, with -s: *I live with my parents*, not 'my parent' or 'old people'. **Cousin** is the same word for a man or a woman, just like sepupu. One child, two **children** (not 'childs').",
+          "text": "**'s** means 'milik / punya': *Aunt Lina is my mother's sister* = Tante Lina saudara perempuan ibu saya. *Rina's house* = rumah Rina. Look at the order: in English the owner comes **first** (*my mother's* …), in Indonesian it comes last (… *ibu saya*). After a plural word that already ends in -s, just add **'**: *my parents' house* = rumah orang tua saya.",
           "i18n": {
             "id": {
-              "text": "**Orang tua** selalu **parents**, pakai -s: *I live with my parents*, bukan 'my parent' atau 'old people'. **Cousin** dipakai untuk laki-laki maupun perempuan, sama seperti sepupu. Satu child, dua **children** (bukan 'childs')."
+              "text": "**'s** artinya 'milik / punya': *Aunt Lina is my mother's sister* = Tante Lina saudara perempuan ibu saya. *Rina's house* = rumah Rina. Perhatikan urutannya: di bahasa Inggris pemiliknya disebut **duluan** (*my mother's* …), di bahasa Indonesia di belakang (… *ibu saya*). Setelah kata jamak yang sudah berakhiran -s, cukup tambah **'**: *my parents' house* = rumah orang tua saya."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Indonesian doesn't change a word when there's more than one (satu kamar, tiga kamar), but English adds **-s**: one bedroom, three bedroom**s**. **Orang tua** is two people, so it's always **parents**, with -s: *I live with my parents*, not 'my parent' or 'old people'. **Cousin** is the same word for a man or a woman, just like sepupu. One child, two **children** (not 'childs'): most words just add -s for 'more than one', but a few are special and you simply remember them.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia tidak mengubah kata kalau jumlahnya lebih dari satu (satu kamar, tiga kamar), tapi bahasa Inggris menambah **-s**: one bedroom, three bedroom**s**. **Orang tua** itu dua orang, jadi selalu **parents**, pakai -s: *I live with my parents*, bukan 'my parent' atau 'old people'. **Cousin** dipakai untuk laki-laki maupun perempuan, sama seperti sepupu. Satu child, dua **children** (bukan 'childs'): kebanyakan kata cukup ditambah -s untuk 'lebih dari satu', tapi ada beberapa kata khusus yang harus dihafal saja."
             }
           }
         },
@@ -443,10 +452,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Three easy steps. **Where:** I live in a house / a flat in Bogor. **Who:** I live with my parents and my brother. **What:** My house has three bedrooms. The living room is big. Use **has** with my house, my flat and it, and put the adjective **before** the noun: a **big** kitchen.",
+          "text": "Three easy steps. **Where:** I live in a house / a flat in Bogor. **Who:** I live with my parents and my brother. **What:** My house has three bedrooms. The living room is big.\n\nTwo things work differently from Indonesian:\n- **has**, not have, with my house, my flat and it. *Have* (punya) changes to *has* for one person or thing that isn't I or you (he, she, it). It's a special form: not 'haves', just **has**.\n- The **adjective** (kata sifat: a word that describes, like big, small, old) goes **before** the **noun** (kata benda: the name of a thing, like kitchen): a **big** kitchen = dapur besar.\n\nAlso, Indonesian says 'Ruang tamunya besar' without 'adalah', but English needs **is**: The living room **is** big.",
           "i18n": {
             "id": {
-              "text": "Tiga langkah mudah. **Di mana:** I live in a house / a flat in Bogor. **Dengan siapa:** I live with my parents and my brother. **Isinya:** My house has three bedrooms. The living room is big. Pakai **has** untuk my house, my flat dan it, dan taruh kata sifat **sebelum** kata benda: a **big** kitchen."
+              "text": "Tiga langkah mudah. **Di mana:** I live in a house / a flat in Bogor. **Dengan siapa:** I live with my parents and my brother. **Isinya:** My house has three bedrooms. The living room is big.\n\nDua hal yang berbeda dari bahasa Indonesia:\n- Pakai **has**, bukan have, untuk my house, my flat dan it. *Have* (punya) berubah jadi *has* untuk satu orang atau benda selain I dan you (he, she, it). Ini bentuk khusus: bukan 'haves', tapi **has**.\n- **Kata sifat** (kata yang menjelaskan, seperti big, small, old) ditaruh **sebelum** **kata benda** (nama benda, seperti kitchen): a **big** kitchen = dapur besar.\n\nSelain itu, bahasa Indonesia bilang 'Ruang tamunya besar' tanpa 'adalah', tapi bahasa Inggris perlu **is**: The living room **is** big."
             }
           }
         },
@@ -468,20 +477,21 @@
             },
             {
               "en": "My bedroom has a bed, a desk and a wardrobe.",
-              "id": "Kamar tidur saya ada tempat tidur, meja dan lemari pakaian."
+              "id": "Di kamar tidur saya ada tempat tidur, meja dan lemari pakaian."
             },
             {
               "en": "It's an old house, but I love it.",
-              "id": "Rumahnya tua, tapi saya suka sekali."
+              "id": "Rumahnya tua, tapi saya suka sekali.",
+              "note": "an old: 'old' starts with a vowel sound"
             }
           ]
         },
         {
           "type": "tip",
-          "text": "My house = it, so the verb is **has**: *My flat has two bedrooms*, not 'my flat have'. And don't forget the plural -s: three bedroom**s**, two bathroom**s**.",
+          "text": "My house = it, so the verb is **has**: *My flat has two bedrooms*, not 'my flat have'. And don't forget the plural -s (more than one): three bedroom**s**, two bathroom**s**.\n\nBritish and American English use some different words. Both are correct, and people understand both:\n- **flat** (UK) = **apartment** (US) = apartemen\n- **Mum** (UK) = **Mom** (US) = ibu\n- **wardrobe** (UK) = **closet** (US) = lemari pakaian\n- **garden** (UK) = often **yard** (US) = halaman / kebun",
           "i18n": {
             "id": {
-              "text": "My house = it, jadi kata kerjanya **has**: *My flat has two bedrooms*, bukan 'my flat have'. Jangan lupa -s untuk jamak: three bedroom**s**, two bathroom**s**."
+              "text": "My house = it, jadi kata kerjanya **has**: *My flat has two bedrooms*, bukan 'my flat have'. Jangan lupa -s untuk jamak (lebih dari satu): three bedroom**s**, two bathroom**s**.\n\nBahasa Inggris Inggris (UK) dan Amerika (US) memakai beberapa kata yang berbeda. Keduanya benar dan sama-sama dipahami:\n- **flat** (UK) = **apartment** (US) = apartemen\n- **Mum** (UK) = **Mom** (US) = ibu\n- **wardrobe** (UK) = **closet** (US) = lemari pakaian\n- **garden** (UK) = sering **yard** (US) = halaman / kebun"
             }
           }
         },

@@ -543,20 +543,20 @@ func scanAttemptRow(row pgx.Row, withNode bool) (Attempt, error) {
 
 func LatestAttempt(ctx context.Context, db DB, sessionID string) (Attempt, error) {
 	return scanAttemptRow(db.QueryRow(ctx, `SELECT `+attemptCols+` FROM assessment_attempts
-		WHERE session_id=$1 ORDER BY created_at DESC LIMIT 1`, sessionID), false)
+		WHERE session_id=$1 ORDER BY seq DESC LIMIT 1`, sessionID), false)
 }
 
 // PassedAttempt is the session's latest passed attempt that counted (not practice).
 func PassedAttempt(ctx context.Context, db DB, sessionID string) (Attempt, error) {
 	return scanAttemptRow(db.QueryRow(ctx, `SELECT `+attemptCols+` FROM assessment_attempts
-		WHERE session_id=$1 AND passed AND NOT practice ORDER BY created_at DESC LIMIT 1`, sessionID), false)
+		WHERE session_id=$1 AND passed AND NOT practice ORDER BY seq DESC LIMIT 1`, sessionID), false)
 }
 
 // RecentAttempts lists the user's latest attempts; course "" means all courses.
 func RecentAttempts(ctx context.Context, db DB, userID, course string, limit int) ([]Attempt, error) {
 	rows, err := db.Query(ctx, `SELECT `+attemptColsA+`, s.course_slug, s.node_id
 		FROM assessment_attempts a JOIN learning_sessions s ON s.id = a.session_id
-		WHERE s.user_id=$1 AND ($2 = '' OR s.course_slug = $2) ORDER BY a.created_at DESC LIMIT $3`, userID, course, limit)
+		WHERE s.user_id=$1 AND ($2 = '' OR s.course_slug = $2) ORDER BY a.seq DESC LIMIT $3`, userID, course, limit)
 	if err != nil {
 		return nil, err
 	}

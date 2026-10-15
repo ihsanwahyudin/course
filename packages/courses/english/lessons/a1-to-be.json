@@ -5,12 +5,16 @@
     "Key Indonesian interference: dropping 'be' entirely (*'I happy', *'She a doctor').",
     "I → am, he/she/it → is, you/we/they → are. Contractions: I'm, he's, they're, isn't, aren't.",
     "Negative: add 'not' after be. There is no *'amn't'; use 'I'm not'.",
-    "Questions: move be to the front (Is she a teacher?). Short answers: Yes, she is. / No, she isn't."
+    "Questions: move be to the front (Is she a teacher?). Short answers: Yes, she is. / No, she isn't.",
+    "Learners apply 'is = one person' to you: *'You is my friend'. Say plainly that you ALWAYS takes are, even for one person, and that this is just to be remembered.",
+    "Indonesian has two negative words (tidak / bukan); English uses not for both. Indonesian also drops the subject ('Jauh?'), English needs it ('Is it far?').",
+    "Why not 'Yes, I'm': a short form can't be the last word of a sentence. 'No, I'm not' is fine because not follows. 'He's not / they're not' are also correct.",
+    "Jobs need a/an (I am a teacher); just point it out here, it is taught in the next lesson (articles)."
   ],
   "keyPoints": [
     {
       "title": "am / is / are",
-      "explanation": "I am. He, she, it is. You, we, they are. English needs this verb even when Indonesian has none.",
+      "explanation": "I am. He, she, it is. You, we, they are. You always takes are, even for one person. English needs this verb even when Indonesian has none (Saya guru → I am a teacher).",
       "examples": [
         {
           "en": "I am a student.",
@@ -24,7 +28,7 @@
     },
     {
       "title": "Negative: be + not",
-      "explanation": "Put 'not' after am/is/are: I'm not, he isn't, they aren't.",
+      "explanation": "Put 'not' after am/is/are: I'm not, he isn't, they aren't. Not covers both tidak and bukan. There is no 'amn't'.",
       "examples": [
         {
           "en": "She isn't at home.",
@@ -38,7 +42,7 @@
     },
     {
       "title": "Questions and short answers",
-      "explanation": "Move am/is/are before the subject: Are you tired? Short answers repeat be: Yes, I am. / No, I'm not.",
+      "explanation": "Move am/is/are before the subject: Are you tired? English has no word for 'apakah': the moved verb does that job. Short answers repeat be: Yes, I am. / No, I'm not. Not 'Yes, I'm': a short form can't end a sentence.",
       "examples": [
         {
           "en": "Is he a doctor? — Yes, he is.",
@@ -166,10 +170,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Indonesian often has no verb in sentences like *Saya pelajar*. English **always** needs one: the verb **be**. Use **am** with I, **is** with he/she/it (and one person or thing), **are** with you/we/they.",
+          "text": "Indonesian often has no verb in sentences like *Saya pelajar*. English **always** needs one: the verb **be**. **be** is the dictionary name of this verb; in sentences you use its forms **am**, **is** and **are**. Which one depends on the **subject** (who or what the sentence is about: *I, she, my parents, the coffee*):\n- **am** with **I** (only with I)\n- **is** with **he/she/it** (one person or thing: *my father, the coffee*)\n- **are** with **you/we/they** (*my parents, Rina and Budi*)",
           "i18n": {
             "id": {
-              "text": "Bahasa Indonesia sering tidak memakai kata kerja dalam kalimat seperti *Saya pelajar*. Bahasa Inggris **selalu** butuh satu: kata kerja **be**. Pakai **am** untuk I, **is** untuk he/she/it (dan satu orang atau benda), **are** untuk you/we/they."
+              "text": "Bahasa Indonesia sering tidak memakai kata kerja dalam kalimat seperti *Saya pelajar*. Bahasa Inggris **selalu** butuh satu: kata kerja **be**. **be** adalah nama kata kerja ini di kamus; di dalam kalimat kamu memakai bentuknya: **am**, **is** dan **are**. Yang mana, tergantung **subjeknya** (siapa atau apa yang dibicarakan: *I, she, my parents, the coffee*):\n- **am** untuk **I** (hanya untuk I)\n- **is** untuk **he/she/it** (satu orang atau benda: *my father, the coffee*)\n- **are** untuk **you/we/they** (*my parents, Rina and Budi*)"
             }
           }
         },
@@ -195,6 +199,15 @@
           ]
         },
         {
+          "type": "tip",
+          "text": "Two things to just remember. **you** always takes **are**, even when you talk to **one** person: *You're early today.* 'You is' is always wrong. And the short forms (*I'm, she's, they're*) are the same words said faster: the **'** (apostrophe) replaces a missing letter, *I am → I'm*. Both forms are correct.",
+          "i18n": {
+            "id": {
+              "text": "Dua hal yang cukup dihafal. **you** selalu pakai **are**, walaupun kamu bicara dengan **satu** orang saja: *You're early today.* 'You is' selalu salah. Lalu bentuk singkat (*I'm, she's, they're*) adalah kata yang sama, hanya diucapkan lebih cepat: tanda **'** (apostrof) menggantikan huruf yang hilang, *I am → I'm*. Dua-duanya benar."
+            }
+          }
+        },
+        {
           "type": "check",
           "prompt": "My parents ___ in Surabaya.",
           "options": [
@@ -203,10 +216,10 @@
             "are"
           ],
           "answer": 2,
-          "explain": "My parents = they, so are.",
+          "explain": "My parents are two people, so my parents = they, and they takes are.",
           "i18n": {
             "id": {
-              "explain": "My parents = they, jadi are."
+              "explain": "My parents itu dua orang, jadi my parents = they, dan they memakai are."
             }
           }
         }
@@ -218,15 +231,90 @@
       }
     },
     {
+      "id": "no-verb",
+      "title": "Why English needs am/is/are",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Indonesian a sentence can work with no verb: *Saya guru. Mereka senang. Dia di kantor.* In English every sentence **must** have a verb. When there is no action word (like *work* or *eat*), **be** fills the gap. You need it in three places:\n- before **who someone is** or a **job**: *I am a teacher.* (Saya guru.)\n- before a word that says **how someone or something is**: *They are happy.* (Mereka senang.)\n- before a **place**: *She is at work.* (Dia di kantor.)\nSometimes Indonesian has **adalah** there, but usually it has nothing. English always has am, is or are.",
+          "i18n": {
+            "id": {
+              "text": "Dalam bahasa Indonesia, kalimat bisa jalan tanpa kata kerja: *Saya guru. Mereka senang. Dia di kantor.* Dalam bahasa Inggris, setiap kalimat **harus** punya kata kerja. Kalau tidak ada kata kegiatan (seperti *work* atau *eat*), **be** yang mengisi tempat kosong itu. Kamu membutuhkannya di tiga tempat:\n- sebelum **siapa seseorang** atau **pekerjaannya**: *I am a teacher.* (Saya guru.)\n- sebelum kata yang menjelaskan **keadaan** orang atau benda: *They are happy.* (Mereka senang.)\n- sebelum **tempat**: *She is at work.* (Dia di kantor.)\nKadang bahasa Indonesia memakai **adalah** di situ, tapi biasanya tidak ada kata apa pun. Bahasa Inggris selalu memakai am, is atau are."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I am a teacher.",
+              "id": "Saya guru.",
+              "note": "job → am"
+            },
+            {
+              "en": "My mother is a nurse.",
+              "id": "Ibu saya perawat.",
+              "note": "my mother = she → is"
+            },
+            {
+              "en": "They are happy.",
+              "id": "Mereka senang.",
+              "note": "how they are → are"
+            },
+            {
+              "en": "We are at home.",
+              "id": "Kami di rumah.",
+              "note": "place → are"
+            },
+            {
+              "en": "Is it far?",
+              "id": "Jauh?",
+              "note": "English needs a subject: it"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Two small words to notice. **a** in *I am **a** teacher* means one (seorang, sebuah); you'll learn it properly in the next lesson. And English needs a subject: Indonesian says *Jauh?*, English says *Is **it** far?* (**it** = the place or thing you're talking about).",
+          "i18n": {
+            "id": {
+              "text": "Dua kata kecil yang perlu diperhatikan. **a** di *I am **a** teacher* artinya satu (seorang, sebuah); kamu akan mempelajarinya di pelajaran berikutnya. Lalu bahasa Inggris butuh subjek: bahasa Indonesia bilang *Jauh?*, bahasa Inggris bilang *Is **it** far?* (**it** = tempat atau benda yang sedang dibicarakan)."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Choose the correct sentence: Saya lelah.",
+          "options": [
+            "I tired.",
+            "I am tired.",
+            "I is tired."
+          ],
+          "answer": 1,
+          "explain": "English needs be here: I takes am, so I am tired. 'I tired' has no verb, and 'is' is for he/she/it.",
+          "i18n": {
+            "id": {
+              "explain": "Bahasa Inggris butuh be di sini: I memakai am, jadi I am tired. 'I tired' tidak punya kata kerja, dan 'is' untuk he/she/it."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kenapa bahasa Inggris butuh am/is/are?"
+        }
+      }
+    },
+    {
       "id": "negative",
       "title": "Negatives: not",
       "blocks": [
         {
           "type": "text",
-          "text": "Put **not** after am/is/are. In speech, use the short forms: **I'm not**, **he isn't**, **they aren't**. There is no 'amn't'.",
+          "text": "Put **not** after am/is/are. Indonesian has two words, **tidak** and **bukan**; English uses **not** for both: *I'm not tired* (tidak lelah), *She isn't a doctor* (bukan dokter). In speech, use the short forms: **I'm not**, **he isn't**, **they aren't**. You may also hear *he's not* and *they're not*: they're correct too. There is no 'amn't': that word just doesn't exist, so always say **I'm not**.",
           "i18n": {
             "id": {
-              "text": "Letakkan **not** setelah am/is/are. Dalam percakapan, pakai bentuk singkat: **I'm not**, **he isn't**, **they aren't**. Tidak ada bentuk 'amn't'."
+              "text": "Letakkan **not** setelah am/is/are. Bahasa Indonesia punya dua kata, **tidak** dan **bukan**; bahasa Inggris memakai **not** untuk keduanya: *I'm not tired* (tidak lelah), *She isn't a doctor* (bukan dokter). Dalam percakapan, pakai bentuk singkat: **I'm not**, **he isn't**, **they aren't**. Kamu juga mungkin mendengar *he's not* dan *they're not*: itu juga benar. Bentuk 'amn't' tidak ada sama sekali, jadi selalu bilang **I'm not**."
             }
           }
         },
@@ -256,10 +344,10 @@
             "not"
           ],
           "answer": 0,
-          "explain": "The museum = it → is → isn't.",
+          "explain": "The museum is one thing (= it), so is → isn't. 'not' alone is wrong because English can't drop be, and 'aren't' is for you/we/they.",
           "i18n": {
             "id": {
-              "explain": "The museum = it → is → isn't."
+              "explain": "The museum itu satu benda (= it), jadi is → isn't. 'not' saja salah karena be tidak boleh dihilangkan, dan 'aren't' untuk you/we/they."
             }
           }
         }
@@ -276,10 +364,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "To ask, move am/is/are **in front of** the subject: *You are tired → **Are you** tired?* Answer with a short form that repeats be: **Yes, I am.** / **No, I'm not.** Don't answer just 'Yes' or 'No' in polite conversation.",
+          "text": "To ask, move am/is/are **in front of** the subject: *You are tired → **Are you** tired?* English has no word like **apakah**: moving the verb to the front does that job. Answer with a short form that repeats be: **Yes, I am.** / **No, I'm not.** Just 'Yes' or 'No' isn't wrong, but it can sound a bit cold, so add the short answer.",
           "i18n": {
             "id": {
-              "text": "Untuk bertanya, pindahkan am/is/are **ke depan** subjek: *You are tired → **Are you** tired?* Jawab dengan bentuk singkat yang mengulang be: **Yes, I am.** / **No, I'm not.** Dalam percakapan sopan, jangan hanya menjawab 'Yes' atau 'No'."
+              "text": "Untuk bertanya, pindahkan am/is/are **ke depan** subjek: *You are tired → **Are you** tired?* Bahasa Inggris tidak punya kata seperti **apakah**: memindahkan kata kerjanya ke depan itulah tanda pertanyaannya. Jawab dengan bentuk singkat yang mengulang be: **Yes, I am.** / **No, I'm not.** Menjawab 'Yes' atau 'No' saja tidak salah, tapi bisa terdengar kurang ramah, jadi tambahkan jawaban singkatnya."
             }
           }
         },
@@ -302,10 +390,10 @@
         },
         {
           "type": "tip",
-          "text": "In a 'Yes' short answer, don't contract: say **Yes, I am**, not 'Yes, I'm'.",
+          "text": "In a 'Yes' short answer, don't contract: say **Yes, I am**, not 'Yes, I'm'. Why? A short form like *I'm* or *he's* can't be the **last word** of a sentence. **No, I'm not** is fine, because *not* comes after it.",
           "i18n": {
             "id": {
-              "text": "Untuk jawaban singkat 'Yes', jangan disingkat: ucapkan **Yes, I am**, bukan 'Yes, I'm'."
+              "text": "Untuk jawaban singkat 'Yes', jangan disingkat: ucapkan **Yes, I am**, bukan 'Yes, I'm'. Kenapa? Bentuk singkat seperti *I'm* atau *he's* tidak boleh jadi **kata terakhir** kalimat. **No, I'm not** boleh, karena masih ada *not* sesudahnya."
             }
           }
         },
@@ -318,10 +406,10 @@
             "Am"
           ],
           "answer": 1,
-          "explain": "Your sister = she → Is.",
+          "explain": "Your sister is one person (= she), so Is. Are is for you/we/they, and am only for I.",
           "i18n": {
             "id": {
-              "explain": "Your sister = she → Is."
+              "explain": "Your sister itu satu orang (= she), jadi Is. Are untuk you/we/they, dan am hanya untuk I."
             }
           }
         }

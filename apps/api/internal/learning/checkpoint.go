@@ -383,15 +383,20 @@ func (s *Service) SubmitCheckpoint(ctx context.Context, userID, sessionID, check
 	} else {
 		c, err = storage.OpenCheckpoint(ctx, s.Store.Pool, sess.ID)
 	}
-	mastered := sess.Phase == string(tutor.PhaseMastered)
+	// A submission racing another one for the same checkpoint may find it
+	// already submitted: read the session again before calling it an error.
+	masteredNow := func() bool {
+		fresh, ferr := storage.GetSession(ctx, s.Store.Pool, sess.ID, userID)
+		return ferr == nil && fresh.Phase == string(tutor.PhaseMastered)
+	}
 	switch {
-	case errors.Is(err, storage.ErrNotFound) && mastered:
+	case errors.Is(err, storage.ErrNotFound) && masteredNow():
 		return s.completedResult(ctx, userID, sess)
 	case errors.Is(err, storage.ErrNotFound):
 		return AssessmentResult{}, errf(409, "no_checkpoint", false, "Start the checkpoint first.")
 	case err != nil:
 		return AssessmentResult{}, err
-	case c.SubmittedAt != nil && mastered:
+	case c.SubmittedAt != nil && masteredNow():
 		return s.completedResult(ctx, userID, sess)
 	case c.SubmittedAt != nil:
 		return AssessmentResult{}, errf(409, "checkpoint_submitted", false, "These answers were already sent. Start the checkpoint again for new questions.")

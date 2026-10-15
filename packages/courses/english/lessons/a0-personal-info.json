@@ -12,7 +12,7 @@
   "keyPoints": [
     {
       "title": "Countries and nationalities",
-      "explanation": "A country is a place (Indonesia, Japan). A nationality describes a person from that country (Indonesian, Japanese). Say 'I'm from + country' or 'I'm + nationality' — not 'I'm Indonesia'.",
+      "explanation": "A country is a place (Indonesia, Japan). A nationality describes a person from that country (Indonesian, Japanese). Say 'I'm from + country' or 'I'm + nationality', not 'I'm Indonesia': you are a person, not a place. There is no single rule for making the nationality (-n, -ese, or a different word), so learn each pair.",
       "examples": [
         {
           "en": "I'm from Indonesia. I'm Indonesian.",
@@ -26,7 +26,7 @@
     },
     {
       "title": "Personal details",
-      "explanation": "Give details with short fixed sentences and keep 'is': My name is…, I'm 25, My address is…, My email is…, My phone number is…",
+      "explanation": "Give details with short fixed sentences and keep 'is' (≈ 'adalah'): My name is…, I'm 25, My address is…, My email is…, My phone number is…. Indonesian can leave that word out ('Alamat saya Jalan Merdeka 5'); English can't. Don't put 'in' there: 'in' means 'di dalam', not 'adalah'.",
       "examples": [
         {
           "en": "My address is Jalan Merdeka 5, Bandung.",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Fixed questions",
-      "explanation": "Learn the questions as whole chunks and answer with the matching chunk. What's = What is: don't drop the 's.",
+      "explanation": "Learn the questions as whole chunks and answer with the matching chunk. What's = What is: don't drop the 's. Indonesian says 'Siapa namamu?' and 'Alamatmu di mana?', but English asks both with What: What's your name? What's your address?",
       "examples": [
         {
           "en": "What's your name? — My name is Budi.",
@@ -210,10 +210,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "A **country** is a place: Indonesia, Japan, Australia. A **nationality** describes a person from that country: Indonesian, Japanese, Australian. There are two ways to say where you are from: **I'm from** + country, or **I'm** + nationality (without *from*).",
+          "text": "A **country** is a place: Indonesia, Japan, Australia. A **nationality** describes a person from that country: Indonesian, Japanese, Australian. There are two ways to say where you are from: **I'm from** + country, or **I'm** + nationality (without *from*).\n\nIndonesian uses the same word for both (*Saya dari Indonesia*, *Saya orang Indonesia*) and adds *orang*. English changes the word itself: **Indonesia** (the place) → **Indonesian** (the person). The word **Indonesian** also means the language: *bahasa Indonesia* = **Indonesian**.",
           "i18n": {
             "id": {
-              "text": "**Country** (negara) adalah tempat: Indonesia, Japan, Australia. **Nationality** (kebangsaan) menjelaskan orang dari negara itu: Indonesian, Japanese, Australian. Ada dua cara menyebut asalmu: **I'm from** + negara, atau **I'm** + kebangsaan (tanpa *from*)."
+              "text": "**Country** (negara) adalah tempat: Indonesia, Japan, Australia. **Nationality** (kebangsaan) menjelaskan orang dari negara itu: Indonesian, Japanese, Australian. Ada dua cara menyebut asalmu: **I'm from** + negara, atau **I'm** + kebangsaan (tanpa *from*).\n\nBahasa Indonesia memakai kata yang sama untuk keduanya (*Saya dari Indonesia*, *Saya orang Indonesia*) dan menambahkan kata *orang*. Bahasa Inggris mengubah katanya sendiri: **Indonesia** (tempatnya) → **Indonesian** (orangnya). Kata **Indonesian** juga berarti bahasanya: *bahasa Indonesia* = **Indonesian**."
             }
           }
         },
@@ -238,7 +238,7 @@
             {
               "en": "South Korea → Korean",
               "id": "Korea Selatan → orang Korea",
-              "note": "+ n"
+              "note": "+ n (people usually just say Korean)"
             },
             {
               "en": "Japan → Japanese",
@@ -258,16 +258,25 @@
             {
               "en": "the UK → British",
               "id": "Inggris Raya → orang Inggris",
-              "note": "different"
+              "note": "different; 'the' because the full name is the United Kingdom"
             }
           ]
         },
         {
           "type": "tip",
-          "text": "Don't say 'I am Indonesia' — you are a person, not a country! Say **I'm Indonesian** or **I'm from Indonesia**. Countries and nationalities always start with a **capital letter**.",
+          "text": "**Is there a rule for nationalities?** Not one rule. Many add **-n** or **-an** (Indonesian, Australian, Korean), some add **-ese** (Chinese), and some are just different (Thai, British). So learn each country together with its nationality, as a pair.\n\nCareful with the word *Inggris*: Indonesian uses it for many things. The language is **English**. A person from **the UK** (the United Kingdom) is **British**.",
           "i18n": {
             "id": {
-              "text": "Jangan bilang 'I am Indonesia' — kamu orang, bukan negara! Katakan **I'm Indonesian** atau **I'm from Indonesia**. Nama negara dan kebangsaan selalu diawali **huruf kapital**."
+              "text": "**Ada aturan untuk kebangsaan?** Tidak ada satu aturan. Banyak yang ditambah **-n** atau **-an** (Indonesian, Australian, Korean), ada yang ditambah **-ese** (Chinese), dan ada yang bentuknya berbeda sama sekali (Thai, British). Jadi hafalkan setiap negara bersama kebangsaannya, sebagai pasangan.\n\nHati-hati dengan kata *Inggris*: bahasa Indonesia memakainya untuk banyak hal. Bahasanya disebut **English**. Orang dari **the UK** (the United Kingdom, Inggris Raya) disebut **British**."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "Don't say 'I am Indonesia': that means 'saya adalah negara Indonesia', and you are a person, not a country! Say **I'm Indonesian** (saya orang Indonesia) or **I'm from Indonesia** (saya dari Indonesia). And don't mix them: *from* goes with the country, so not *I'm from Indonesian*. Countries and nationalities always start with a **capital letter**.",
+          "i18n": {
+            "id": {
+              "text": "Jangan bilang 'I am Indonesia': artinya 'saya adalah negara Indonesia', padahal kamu orang, bukan negara! Katakan **I'm Indonesian** (saya orang Indonesia) atau **I'm from Indonesia** (saya dari Indonesia). Dan jangan dicampur: *from* dipasangkan dengan nama negara, jadi bukan *I'm from Indonesian*. Nama negara dan kebangsaan selalu diawali **huruf kapital**."
             }
           }
         },
@@ -280,10 +289,10 @@
             "Thailandese"
           ],
           "answer": 1,
-          "explain": "Thailand is the country. The nationality is Thai — a short, different form.",
+          "explain": "Thailand is the country. The nationality is Thai: a short, different form you just have to learn. 'Thailandese' is not a word.",
           "i18n": {
             "id": {
-              "explain": "Thailand adalah negaranya. Kebangsaannya Thai — bentuk pendek yang berbeda."
+              "explain": "Thailand adalah negaranya. Kebangsaannya Thai: bentuk pendek yang berbeda dan memang harus dihafal. 'Thailandese' tidak ada."
             }
           }
         }
@@ -300,10 +309,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Give your details with short fixed sentences: **My name is** …, **I'm** + age, **My address is** …, **My email is** …, **My phone number is** …. Indonesian often drops the verb (*Alamat saya Jalan Merdeka 5*), but English needs **is**.",
+          "text": "Give your details with short fixed sentences: **My name is** …, **I'm** + age, **My address is** …, **My email is** …, **My phone number is** ….\n\nIndonesian often joins the two parts with nothing: *Alamat saya Jalan Merdeka 5*. English **must** put a small word in the middle: **is** (it means about the same as *adalah*). Many learners put **in** there, because they think of *Alamat saya di Jalan Merdeka* and translate **di** as *in*. But *in* means *di dalam*, so *My address in Jalan Merdeka 5* is an unfinished sentence. Use **is**.",
           "i18n": {
             "id": {
-              "text": "Sebutkan data dirimu dengan kalimat pendek yang tetap: **My name is** …, **I'm** + umur, **My address is** …, **My email is** …, **My phone number is** …. Bahasa Indonesia sering tanpa kata kerja (*Alamat saya Jalan Merdeka 5*), tapi bahasa Inggris butuh **is**."
+              "text": "Sebutkan data dirimu dengan kalimat pendek yang tetap: **My name is** …, **I'm** + umur, **My address is** …, **My email is** …, **My phone number is** ….\n\nBahasa Indonesia sering menyambung dua bagian kalimat tanpa kata apa pun: *Alamat saya Jalan Merdeka 5*. Bahasa Inggris **harus** memberi kata kecil di tengahnya: **is** (artinya kira-kira sama dengan *adalah*). Banyak pelajar menaruh **in** di situ, karena berpikir *Alamat saya di Jalan Merdeka* lalu menerjemahkan **di** menjadi *in*. Tapi *in* artinya *di dalam*, jadi *My address in Jalan Merdeka 5* adalah kalimat yang belum selesai. Pakai **is**."
             }
           }
         },
@@ -331,10 +340,10 @@
         },
         {
           "type": "tip",
-          "text": "Two classic mistakes: 'My address **in** Jalan Merdeka 5' → **My address is Jalan Merdeka 5**. 'I have 25 years' → **I'm 25**.",
+          "text": "Two classic mistakes: 'My address **in** Jalan Merdeka 5' → **My address is Jalan Merdeka 5** (is ≈ adalah, in = di dalam). 'I have 25 years' → **I'm 25**: in English your age is something you *are* (I am), not something you *have*.",
           "i18n": {
             "id": {
-              "text": "Dua kesalahan klasik: 'My address **in** Jalan Merdeka 5' → **My address is Jalan Merdeka 5**. 'I have 25 years' → **I'm 25**."
+              "text": "Dua kesalahan klasik: 'My address **in** Jalan Merdeka 5' → **My address is Jalan Merdeka 5** (is ≈ adalah, in = di dalam). 'I have 25 years' → **I'm 25**: dalam bahasa Inggris umur adalah keadaanmu (I am), bukan sesuatu yang kamu *punya* (have)."
             }
           }
         },
@@ -347,10 +356,10 @@
             "at"
           ],
           "answer": 1,
-          "explain": "The sentence needs the verb is: My address is … . 'In' and 'at' are not verbs.",
+          "explain": "The sentence needs is (≈ adalah): My address is … . 'In' and 'at' mean 'di', and they can't join 'my address' to the address.",
           "i18n": {
             "id": {
-              "explain": "Kalimat ini butuh kata kerja is: My address is … . 'In' dan 'at' bukan kata kerja."
+              "explain": "Kalimat ini butuh is (≈ adalah): My address is … . 'In' dan 'at' artinya 'di', dan keduanya tidak bisa menyambung 'my address' dengan alamatnya."
             }
           }
         }
@@ -418,10 +427,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Learn these questions as **whole chunks**. **What's** = *What is* — don't drop the **'s**: say *What's your name?*, not 'What your name?'. After you answer, you can ask back with **And you?**",
+          "text": "Learn these questions as **whole chunks**: you don't need grammar rules for them yet.\n- **What's** = *What is*. The sign **'** (apostrophe) shows that a letter is missing (the i of *is*). Don't drop the **'s**: say *What's your name?*, not 'What your name?'. Indonesian *Siapa namamu?* has no word for *is*, but English needs it.\n- Indonesian asks *Siapa namamu?* with **siapa** (who), but English asks **What's** your name? Never *Who is your name?*\n- Indonesian asks *Alamatmu di mana?* with **di mana** (where), but English asks **What's** your address? You want the words of the address, so use *What*.\n- In **Where are you from?**, *from* goes at the **end** (Indonesian puts *dari* first: *dari mana?*).\n\nAfter you answer, you can ask back with **And you?**",
           "i18n": {
             "id": {
-              "text": "Hafalkan pertanyaan ini sebagai **satu paket utuh**. **What's** = *What is* — jangan hilangkan **'s**: katakan *What's your name?*, bukan 'What your name?'. Setelah menjawab, kamu bisa balik bertanya dengan **And you?**"
+              "text": "Hafalkan pertanyaan ini sebagai **satu paket utuh**: kamu belum perlu aturan tata bahasanya.\n- **What's** = *What is*. Tanda **'** (apostrof) menunjukkan ada huruf yang hilang (huruf i dari *is*). Jangan hilangkan **'s**: katakan *What's your name?*, bukan 'What your name?'. *Siapa namamu?* tidak punya kata untuk *is*, tapi bahasa Inggris butuh.\n- Bahasa Indonesia bertanya *Siapa namamu?* dengan **siapa** (who), tapi bahasa Inggris memakai **What's** your name? Jangan *Who is your name?*\n- Bahasa Indonesia bertanya *Alamatmu di mana?* dengan **di mana** (where), tapi bahasa Inggris memakai **What's** your address? Yang kamu minta adalah tulisan alamatnya, jadi pakai *What*.\n- Di **Where are you from?**, kata *from* ada di **akhir** (bahasa Indonesia menaruh *dari* di depan: *dari mana?*).\n\nSetelah menjawab, kamu bisa balik bertanya dengan **And you?**"
             }
           }
         },
@@ -459,10 +468,10 @@
             "Where are you from?"
           ],
           "answer": 0,
-          "explain": "How old are you? asks about age. How are you? asks how someone feels.",
+          "explain": "How old are you? asks about age (old = tua, so literally 'how old'). How are you? asks how someone feels.",
           "i18n": {
             "id": {
-              "explain": "How old are you? menanyakan umur. How are you? menanyakan kabar."
+              "explain": "How old are you? menanyakan umur (old = tua, jadi kata per katanya 'seberapa tua'). How are you? menanyakan kabar."
             }
           }
         }

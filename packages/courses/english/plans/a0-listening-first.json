@@ -6,7 +6,7 @@
         "kind": "concept",
         "title": "Letters you'll hear",
         "text": "When people spell a name, they use English letter names. Tap each letter to hear it.",
-        "body": "Listen for the pairs that sound alike to Indonesian ears: **A** ('ay') and **R** ('ar'), **E** ('ee') and **I** ('eye'), **G** ('jee') and **J** ('jay'). **W** is 'double-you' and **Y** is 'why'. **Double** means two of the same letter: 'A, double N, A' is Anna.",
+        "body": "English letters have their own names, not the Indonesian ones: Indonesian says E 'e' and I 'i', English says **E** 'ee' and **I** 'eye'. Listen for the pairs that sound alike to Indonesian ears: **A** ('ay') and **R** ('ar'), **E** ('ee') and **I** ('eye'), **G** ('jee') and **J** ('jay'). **W** is 'double-you' (it looks like two U's) and **Y** is 'why'. **Z** is 'zed' in British English, 'zee' in American English. **Double** means two of the same letter: 'A, double N, A' is Anna.",
         "pairs": [
           {
             "en": "A",
@@ -18,7 +18,7 @@
           },
           {
             "en": "E",
-            "id": "dibaca i"
+            "id": "dibaca ii (i panjang)"
           },
           {
             "en": "I",
@@ -38,7 +38,7 @@
           },
           {
             "en": "W",
-            "id": "dibaca dabel-yu"
+            "id": "dibaca dabel-yu (seperti dua U)"
           },
           {
             "en": "Y",
@@ -46,7 +46,7 @@
           },
           {
             "en": "Z",
-            "id": "dibaca zed / zi"
+            "id": "dibaca zed (UK) / zi (Amerika)"
           }
         ]
       },
@@ -65,14 +65,14 @@
           ],
           "answer": 0,
           "prompt": "Listen. How is the name spelled?",
-          "explanation": "You heard R-**E**-Z-A: the second letter is 'ee', which is **E** (I is 'eye'). The third letter is 'zed', so it's Z, not S ('es')."
+          "explanation": "You heard R-**E**-Z-A: the second letter is 'ee', which is **E** (I is 'eye'). The third letter is 'zed' (American English says 'zee'), so it's Z, not S ('es')."
         }
       },
       {
         "kind": "concept",
         "title": "Numbers you'll hear",
-        "text": "Numbers are where listening gets tricky. Tap each one and listen to the stress.",
-        "body": "For **13–19** the stress is at the **end** (thir**TEEN**); for **30, 40, 50…** it is at the **start** (**THIR**ty). Phone numbers come **one digit at a time**, often with **oh** for 0 and **double** for two of the same. Prices: *twenty thousand rupiah* = Rp20.000.",
+        "text": "Numbers are where listening gets tricky. Tap each one and listen to the **stress**: the part of the word said louder and longer (written in capitals here).",
+        "body": "For **13–19** the stress is at the **end** (thir**TEEN**); for **30, 40, 50…** it is at the **start** (**THIR**ty). Phone numbers come **one digit at a time**, often with **oh** for 0 (it looks like the letter O) and **double** for two of the same. Prices: *twenty thousand rupiah* = Rp20.000. After a number, **thousand** has no -s, even for many thousands: not 'twenty thousands'.",
         "pairs": [
           {
             "en": "thirteen",
@@ -119,7 +119,7 @@
           ],
           "answer": 1,
           "prompt": "Listen. How much is the coffee?",
-          "explanation": "You heard **THIRty thousand**, with the stress at the start: Rp30.000. Thirteen has the stress at the end (thir**TEEN**), and three is a short one-syllable word."
+          "explanation": "You heard **THIRty thousand**, with the stress at the start: Rp30.000. Thirteen has the stress at the end (thir**TEEN**), and three is one short beat."
         }
       },
       {
@@ -144,7 +144,7 @@
         "kind": "concept",
         "title": "Greetings you'll hear",
         "text": "Now let's listen to people saying hello and goodbye.",
-        "body": "**Good morning / afternoon / evening** are for meeting people. **Good night** means goodbye at night, not hello. To **How are you?** you answer **I'm fine, thanks. And you?** To **Nice to meet you** you answer **Nice to meet you too.**",
+        "body": "**Good morning / afternoon / evening** are for meeting people. **Good night** means goodbye at night, not hello. So Indonesian *selamat malam* has two English versions: **Good evening** when you arrive, **Good night** when you leave. To **How are you?** you answer **I'm fine, thanks. And you?** To **Nice to meet you** you answer **Nice to meet you too.**",
         "pairs": [
           {
             "en": "Good morning!",
@@ -202,7 +202,7 @@
         "kind": "concept",
         "title": "Classroom instructions",
         "text": "Last group: what teachers say in class.",
-        "body": "Instructions start with the **action word**: *listen, repeat, open, close, sit, stand, write, look*. Catch the first word and you know what to do. Watch the opposites: **open ↔ close**, **sit down ↔ stand up**.",
+        "body": "Instructions start with the **action word**: *listen, repeat, open, close, sit, stand, write, look*. Catch the first word and you know what to do. Watch the opposites: **open ↔ close**, **sit down ↔ stand up**. **please** (tolong, silakan) can come at the start or at the end; it just makes it polite.",
         "pairs": [
           {
             "en": "Listen.",
@@ -339,6 +339,11 @@
               "not W"
             ],
             [
+              "'zed' / 'zee'",
+              "Z",
+              "zed = UK, zee = US"
+            ],
+            [
               "'oh' (phone)",
               "0",
               "zero"
@@ -414,7 +419,7 @@
         "kind": "concept",
         "title": "Huruf yang akan kamu dengar",
         "text": "Saat orang mengeja nama, mereka memakai nama huruf versi Inggris. Ketuk setiap huruf untuk mendengarnya.",
-        "body": "Dengarkan pasangan yang terdengar mirip bagi telinga Indonesia: **A** ('ay', dibaca ei) dan **R** ('ar'), **E** ('ee', dibaca i) dan **I** ('eye', dibaca ai), **G** ('jee', dibaca ji) dan **J** ('jay', dibaca jei). **W** dibaca 'double-you' dan **Y** dibaca 'why'. **Double** berarti dua huruf yang sama: 'A, double N, A' adalah Anna.",
+        "body": "Nama huruf bahasa Inggris berbeda dari bahasa Indonesia: kita bilang E 'e' dan I 'i', bahasa Inggris bilang **E** 'ii' dan **I** 'ai'. Dengarkan pasangan yang terdengar mirip: **A** ('ay', dibaca ei) dan **R** ('ar'), **E** ('ee', dibaca ii) dan **I** ('eye', dibaca ai), **G** ('jee', dibaca ji) dan **J** ('jay', dibaca jei). **W** dibaca 'double-you' (bentuknya seperti dua U) dan **Y** dibaca 'why'. **Z** dibaca 'zed' (UK) atau 'zi' (Amerika). **Double** berarti dua huruf yang sama: 'A, double N, A' adalah Anna.",
         "pairs": [
           {
             "en": "A",
@@ -426,7 +431,7 @@
           },
           {
             "en": "E",
-            "id": "dibaca i"
+            "id": "dibaca ii (i panjang)"
           },
           {
             "en": "I",
@@ -446,7 +451,7 @@
           },
           {
             "en": "W",
-            "id": "dibaca dabel-yu"
+            "id": "dibaca dabel-yu (seperti dua U)"
           },
           {
             "en": "Y",
@@ -454,7 +459,7 @@
           },
           {
             "en": "Z",
-            "id": "dibaca zed / zi"
+            "id": "dibaca zed (UK) / zi (Amerika)"
           }
         ]
       },
@@ -473,14 +478,14 @@
           ],
           "answer": 0,
           "prompt": "Dengarkan. Bagaimana ejaan nama itu?",
-          "explanation": "Kamu mendengar R-**E**-Z-A: huruf kedua dibaca 'ee', yaitu **E** (I dibaca 'eye'). Huruf ketiga dibaca 'zed', jadi Z, bukan S ('es')."
+          "explanation": "Kamu mendengar R-**E**-Z-A: huruf kedua dibaca 'ee' (ii), yaitu **E** (I dibaca 'eye', ai). Huruf ketiga dibaca 'zed' (orang Amerika bilang 'zi'), jadi Z, bukan S ('es')."
         }
       },
       {
         "kind": "concept",
         "title": "Angka yang akan kamu dengar",
-        "text": "Di angka, menyimak jadi lebih menantang. Ketuk satu per satu dan dengarkan tekanannya.",
-        "body": "Untuk **13–19** tekanannya di **akhir** (thir**TEEN**); untuk **30, 40, 50…** tekanannya di **awal** (**THIR**ty). Nomor telepon diucapkan **satu angka demi satu angka**, sering dengan **oh** untuk 0 dan **double** untuk dua angka sama. Harga: *twenty thousand rupiah* = Rp20.000.",
+        "text": "Di angka, menyimak jadi lebih menantang. Ketuk satu per satu dan dengarkan **tekanannya**: bagian kata yang diucapkan lebih keras dan lebih panjang (di sini ditulis dengan huruf besar).",
+        "body": "Untuk **13–19** tekanannya di **akhir** (thir**TEEN**); untuk **30, 40, 50…** tekanannya di **awal** (**THIR**ty). Nomor telepon diucapkan **satu angka demi satu angka**, sering dengan **oh** untuk 0 (bentuknya seperti huruf O) dan **double** untuk dua angka sama. Harga: *twenty thousand rupiah* = Rp20.000. Setelah angka, **thousand** tidak pakai -s, walaupun ribuan: bukan 'twenty thousands'.",
         "pairs": [
           {
             "en": "thirteen",
@@ -527,7 +532,7 @@
           ],
           "answer": 1,
           "prompt": "Dengarkan. Berapa harga kopinya?",
-          "explanation": "Kamu mendengar **THIRty thousand**, dengan tekanan di awal: Rp30.000. Thirteen tekanannya di akhir (thir**TEEN**), dan three hanya satu suku kata pendek."
+          "explanation": "Kamu mendengar **THIRty thousand**, dengan tekanan di awal: Rp30.000. Thirteen tekanannya di akhir (thir**TEEN**), dan three hanya satu ketukan pendek."
         }
       },
       {
@@ -552,7 +557,7 @@
         "kind": "concept",
         "title": "Salam yang akan kamu dengar",
         "text": "Sekarang kita dengarkan orang menyapa dan berpamitan.",
-        "body": "**Good morning / afternoon / evening** dipakai saat bertemu. **Good night** artinya pamit di malam hari, bukan menyapa. Untuk **How are you?** jawab **I'm fine, thanks. And you?** Untuk **Nice to meet you** jawab **Nice to meet you too.**",
+        "body": "**Good morning / afternoon / evening** dipakai saat bertemu. **Good night** artinya pamit di malam hari, bukan menyapa. Jadi *selamat malam* punya dua versi dalam bahasa Inggris: **Good evening** saat datang, **Good night** saat pamit. Untuk **How are you?** jawab **I'm fine, thanks. And you?** Untuk **Nice to meet you** jawab **Nice to meet you too.**",
         "pairs": [
           {
             "en": "Good morning!",
@@ -610,7 +615,7 @@
         "kind": "concept",
         "title": "Instruksi di kelas",
         "text": "Kelompok terakhir: yang diucapkan guru di kelas.",
-        "body": "Instruksi diawali **kata tindakan**: *listen, repeat, open, close, sit, stand, write, look*. Tangkap kata pertamanya dan kamu tahu apa yang harus dilakukan. Perhatikan pasangan berlawanan: **open ↔ close**, **sit down ↔ stand up**.",
+        "body": "Instruksi diawali **kata tindakan**: *listen, repeat, open, close, sit, stand, write, look*. Tangkap kata pertamanya dan kamu tahu apa yang harus dilakukan. Perhatikan pasangan berlawanan: **open ↔ close**, **sit down ↔ stand up**. **please** (tolong, silakan) bisa di awal atau di akhir; fungsinya supaya sopan.",
         "pairs": [
           {
             "en": "Listen.",
@@ -670,27 +675,27 @@
         "text": "Balik setiap kartu. Coba bayangkan bunyinya dulu di kepalamu.",
         "flashcards": [
           {
-            "front": "You hear 'jee'",
+            "front": "Kamu dengar 'jee'",
             "back": "G"
           },
           {
-            "front": "You hear 'jay'",
+            "front": "Kamu dengar 'jay'",
             "back": "J"
           },
           {
-            "front": "You hear 'ee'",
+            "front": "Kamu dengar 'ee' (ii)",
             "back": "E"
           },
           {
-            "front": "You hear 'eye'",
+            "front": "Kamu dengar 'eye' (ai)",
             "back": "I"
           },
           {
-            "front": "thirTEEN or THIRty: which is 13?",
-            "back": "thirTEEN (stress at the end)"
+            "front": "thirTEEN atau THIRty: mana yang 13?",
+            "back": "thirTEEN (tekanan di akhir)"
           },
           {
-            "front": "'double eight' in a phone number",
+            "front": "'double eight' di nomor telepon",
             "back": "88"
           },
           {
@@ -745,6 +750,11 @@
               "'why'",
               "Y",
               "bukan W"
+            ],
+            [
+              "'zed' / 'zi'",
+              "Z",
+              "zed = UK, zi = Amerika"
             ],
             [
               "'oh' (telepon)",

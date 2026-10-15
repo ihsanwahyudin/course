@@ -6,7 +6,11 @@
     "Common error: 'How to spell your name?' (a direct translation of 'Bagaimana mengeja…'). The right question is 'How do you spell your name?'. Similar: 'What mean busy?' → 'What does busy mean?'.",
     "Say 'speak more slowly' (not 'more slow'). A short 'Sorry?' or 'Pardon?' with the voice going up also means 'please say it again'. 'Repeat!' alone sounds like an order: always add please.",
     "Classroom instructions are short and start with the action word, with no 'you': Listen. Repeat. Open your book. Teach opposites together (open/close, stand up/sit down). 'Repeat after me' means say it again after the teacher.",
-    "Spelling answers use the letter names from the alphabet lesson (G = 'jee', J = 'jay', E = 'ee', I = 'eye'). Numbers come in a later lesson, so avoid instructions like 'Turn to page 25'."
+    "Spelling answers use the letter names from the alphabet lesson (G = 'jee', J = 'jay', E = 'ee', I = 'eye'). Numbers come in a later lesson, so avoid instructions like 'Turn to page 25'.",
+    "If the learner asks why 'do' / 'does' is in the question: say it's a small helper word English questions need, with no meaning of its own here (it is not 'melakukan'), which is why a word-by-word translation fails. Use 'does' in What does … mean? and 'do' in How do you spell …?; learn both questions whole, the rule comes later.",
+    "'Sorry?' with the voice going up is a question meaning 'apa tadi?', not an apology. Learners met sorry as 'maaf, after a mistake' in the greetings lesson, so point out the difference.",
+    "slow vs slowly in plain words: slow describes a person or thing (a slow bus = bis yang lambat), slowly describes how someone does something (speak slowly = bicara dengan pelan). Don't use the word 'adverb'.",
+    "Short forms the learner meets here: What's = What is, don't = do not, you're = you are. 'your' means both -mu (one person) and kalian (a group): Open your book / Open your books."
   ],
   "keyPoints": [
     {
@@ -244,7 +248,8 @@
           "rows": [
             {
               "en": "Sorry? Can you repeat that, please?",
-              "id": "Maaf? Bisa diulang?"
+              "id": "Maaf? Bisa diulang?",
+              "note": "Sorry? with the voice going up = what did you say?"
             },
             {
               "en": "Pardon?",
@@ -263,10 +268,19 @@
         },
         {
           "type": "tip",
-          "text": "Say **slowly**, not 'slow': *speak more slowly*. And always add **please**: 'Repeat!' alone sounds like an order.",
+          "text": "Say **slowly**, not 'slow': *slow* describes a person or thing (*a slow bus*), and *slowly* describes **how** someone does something (*speak slowly*). And always add **please**: 'Repeat!' alone sounds like an order. *Can you … , please?* is not really asking if the person is able to: it's the polite way to ask someone to do something, like *bisa … ?* or *tolong …*.",
           "i18n": {
             "id": {
-              "text": "Ucapkan **slowly**, bukan 'slow': *speak more slowly*. Dan selalu tambahkan **please**: 'Repeat!' saja terdengar seperti perintah."
+              "text": "Ucapkan **slowly**, bukan 'slow': *slow* menjelaskan orang atau benda (*a slow bus* = bis yang lambat), sedangkan *slowly* menjelaskan **cara** orang melakukan sesuatu (*speak slowly* = bicara dengan pelan). Dan selalu tambahkan **please**: 'Repeat!' saja terdengar seperti perintah. *Can you … , please?* sebenarnya tidak menanyakan apakah orangnya mampu: ini cara sopan meminta orang melakukan sesuatu, seperti *bisa … ?* atau *tolong …*."
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "**Wait, isn't *sorry* for mistakes?** Yes, but **Sorry?** said like a question, with your voice going **up** at the end, means *apa tadi?* (please say it again). It's not an apology here. **Pardon?** means the same and is a bit more formal. And in *I don't understand*, **don't** is the short form of **do not** (*tidak*).",
+          "i18n": {
+            "id": {
+              "text": "**Lho, bukannya *sorry* untuk minta maaf?** Betul, tapi **Sorry?** yang diucapkan seperti pertanyaan, dengan nada **naik** di akhir, artinya *apa tadi?* (tolong ulangi). Di sini itu bukan permintaan maaf. **Pardon?** artinya sama dan sedikit lebih formal. Lalu di *I don't understand*, **don't** adalah bentuk pendek dari **do not** (*tidak*)."
             }
           }
         },
@@ -337,6 +351,15 @@
           }
         },
         {
+          "type": "tip",
+          "text": "**Why *do* and *does*?** English questions often need a small helper word. Here *do* / *does* has no meaning of its own (it isn't *melakukan*); it just makes the sentence a question. Indonesian doesn't need it, so a word-by-word translation goes wrong: *Bagaimana mengeja…* → 'How to spell…?', *Apa arti…* → 'What mean…?'. It's **does** in *What does … mean?* and **do** in *How do you spell …?*. The rule for when to use which comes in a later lesson; for now, learn the two questions whole. And **What's** is the short form of **What is**.",
+          "i18n": {
+            "id": {
+              "text": "**Kenapa ada *do* dan *does*?** Pertanyaan bahasa Inggris sering butuh kata bantu kecil. Di sini *do* / *does* tidak punya arti sendiri (bukan *melakukan*); kata itu hanya membuat kalimatnya jadi pertanyaan. Bahasa Indonesia tidak memerlukannya, jadi terjemahan kata per kata jadi salah: *Bagaimana mengeja…* → 'How to spell…?', *Apa arti…* → 'What mean…?'. Pakai **does** di *What does … mean?* dan **do** di *How do you spell …?*. Aturan kapan memakai yang mana ada di pelajaran berikutnya; untuk sekarang, hafalkan kedua pertanyaan itu secara utuh. Lalu **What's** adalah bentuk pendek dari **What is**."
+            }
+          }
+        },
+        {
           "type": "check",
           "prompt": "You read the word 'quiet'. Which question is correct?",
           "options": [
@@ -345,10 +368,10 @@
             "What does 'quiet' mean?"
           ],
           "answer": 2,
-          "explain": "The pattern is What does + word + mean? The word goes in the middle and mean comes last.",
+          "explain": "The pattern is What does + word + mean? The word goes in the middle and mean comes last. Does is the small helper word the question needs; without it ('What mean…?') it's a word-by-word translation.",
           "i18n": {
             "id": {
-              "explain": "Polanya What does + kata + mean? Katanya di tengah dan mean di akhir."
+              "explain": "Polanya What does + kata + mean? Katanya di tengah dan mean di akhir. Does adalah kata bantu yang dibutuhkan pertanyaan ini; tanpa does ('What mean…?') itu terjemahan kata per kata."
             }
           }
         }
@@ -368,7 +391,7 @@
           "text": "Teachers give short instructions. They start with the action word and don't say 'you': **Listen.** **Repeat.** **Read.** **Write.** **Look at the board.** **Open your book.** **Sit down.** **Work in pairs.** Adding **please** makes them softer.",
           "i18n": {
             "id": {
-              "text": "Guru memberi instruksi pendek. Instruksi dimulai dengan kata kerja dan tanpa 'you': **Listen.** **Repeat.** **Read.** **Write.** **Look at the board.** **Open your book.** **Sit down.** **Work in pairs.** Tambahan **please** membuatnya lebih halus."
+              "text": "Guru memberi instruksi pendek. Instruksi dimulai dengan kata kerja (kata untuk tindakan, misalnya *listen, write*) dan tanpa 'you': **Listen.** **Repeat.** **Read.** **Write.** **Look at the board.** **Open your book.** **Sit down.** **Work in pairs.** Tambahan **please** membuatnya lebih halus."
             }
           }
         },
@@ -399,10 +422,10 @@
         },
         {
           "type": "tip",
-          "text": "Learn instructions in pairs of opposites: **open ↔ close**, **stand up ↔ sit down**. Then one word helps you remember the other.",
+          "text": "Learn instructions in pairs of opposites: **open ↔ close**, **stand up ↔ sit down**. Then one word helps you remember the other. And **your** means both *-mu* (one person) and *kalian* (a group): *Open your book* / *Open your books*. English uses the same word.",
           "i18n": {
             "id": {
-              "text": "Pelajari instruksi berpasangan dengan lawan katanya: **open ↔ close**, **stand up ↔ sit down**. Jadi satu kata membantumu mengingat yang lain."
+              "text": "Pelajari instruksi berpasangan dengan lawan katanya: **open ↔ close**, **stand up ↔ sit down**. Jadi satu kata membantumu mengingat yang lain. Lalu **your** bisa berarti *-mu* (satu orang) atau *kalian* (banyak orang): *Open your book* / *Open your books*. Bahasa Inggris memakai kata yang sama."
             }
           }
         },
@@ -451,7 +474,8 @@
             },
             {
               "en": "You're on mute.",
-              "id": "Mikrofonmu masih mati."
+              "id": "Mikrofonmu masih mati.",
+              "note": "you're = you are"
             },
             {
               "en": "Sorry, I can't hear you.",

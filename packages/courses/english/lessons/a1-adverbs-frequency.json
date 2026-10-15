@@ -4,6 +4,7 @@
   "teachingNotes": [
     "Teach the five words as a scale: always (100%) > usually (about 90%) > often (about 70%) > sometimes (about 50%) > never (0%). Indonesian: selalu, biasanya, sering, kadang-kadang, tidak pernah. Don't add rarely, seldom or hardly ever yet unless the learner asks.",
     "Position: before the main verb (I always go to the gym), but after am/is/are (She is always late). Common errors: *'I go always to the gym', *'She always is late'. Indonesian has no 'be' in 'Dia selalu terlambat', so learners put the adverb before 'is'.",
+    "Explain the jargon plainly: 'main verb' = the action word (go, eat, cook); am/is/are are not actions. A simple trick: look for am/is/are first; if there is one, the frequency word goes after it; if not, it goes before the action word. Also say why the -s stays in 'He never drinks': only do/does takes the -s away, never doesn't. Once and twice are special words (1 and 2 times); from 3 it's regular (three times). 'a week' here = per week (seminggu).",
     "Never is already negative: *'I don't never eat meat' → 'I never eat meat'. With he/she/it the verb keeps its -s after never/always: 'He never drinks coffee' (not *'never drink', not *'doesn't never drink').",
     "How often + do/does + subject + base verb: How often do you cook? How often does she call you? Answers: every day / every week, once a week, twice a week, three times a month, never. Once = 1 time, twice = 2 times.",
     "In yes/no questions the adverb goes after the subject: Do you often cook? Usually and sometimes may also start a sentence (Sometimes I walk to work), but practise the middle position first.",
@@ -30,7 +31,7 @@
     },
     {
       "title": "Where the word goes",
-      "explanation": "Put it before the main verb (I usually walk to school), but after am/is/are (He is often tired). In a do/does question, it goes after the subject: Do you often cook?",
+      "explanation": "Put it before the main verb, the action word (I usually walk to school), but after am/is/are (He is often tired), because am/is/are aren't actions. Trick: find am/is/are first. In a do/does question, it goes after the subject, still right before the action word: Do you often cook?",
       "examples": [
         {
           "en": "My mother usually cooks dinner.",
@@ -44,7 +45,7 @@
     },
     {
       "title": "Asking How often …?",
-      "explanation": "How often + do/does + subject + base verb. Answer with a frequency word or with every day, once a week, twice a week, three times a month.",
+      "explanation": "How often + do/does + subject + basic verb (no -s: cook, go). Answer with a frequency word or with every day, once a week, twice a week, three times a month. 1 time = once, 2 times = twice (special words); from 3 it's three times, four times.",
       "examples": [
         {
           "en": "How often do you go to the gym? — Twice a week.",
@@ -74,7 +75,7 @@
         "we sometimes eat at the warung",
         "sometimes we eat at the warung"
       ],
-      "hint": "It goes before the main verb 'eat'."
+      "hint": "It goes before the action word (the main verb) 'eat'. Starting with Sometimes is also OK."
     },
     {
       "objectiveId": "use-adverbs-of",
@@ -82,7 +83,7 @@
       "expected": [
         "the bus is often late"
       ],
-      "hint": "With am/is/are, the word goes after the verb."
+      "hint": "Look for am/is/are first. There is 'is', so the word goes after is."
     },
     {
       "objectiveId": "ask-how-often",
@@ -90,7 +91,7 @@
       "expected": [
         "how often do they go to bandung"
       ],
-      "hint": "How often + do + they + base verb."
+      "hint": "How often + do + they + basic verb (go)."
     },
     {
       "objectiveId": "ask-how-often",
@@ -109,7 +110,7 @@
       "expected": [
         "i never"
       ],
-      "hint": "I never + verb … (no 'don't')."
+      "hint": "I never + verb … (no 'don't': never already means 'not')."
     },
     {
       "objectiveId": "use-adverbs-of",
@@ -128,7 +129,7 @@
         "how often do you go to the cinema",
         "how often do you watch movies at the cinema"
       ],
-      "hint": "How often do you …?"
+      "hint": "How often do you …? (films/cinema is British; movies/movie theater is American. Both are fine.)"
     }
   ],
   "assessment": [
@@ -246,10 +247,10 @@
         },
         {
           "type": "tip",
-          "text": "**Never** is already negative, so don't add don't or doesn't: *I never eat meat*, not *I don't never eat meat*. With he/she/it the verb still has **-s**: *She never drinks coffee*.",
+          "text": "**Never** already means 'not', so don't add don't or doesn't: *I never eat meat*, not *I don't never eat meat* (two 'not' words in one sentence are wrong in English). With he/she/it the verb still has **-s**: *She never drinks coffee*. Why? Only **do/does** takes the -s away (*she doesn't drink*). **never** isn't do/does, so the -s stays.",
           "i18n": {
             "id": {
-              "text": "**Never** sudah bermakna negatif, jadi jangan tambahkan don't atau doesn't: *I never eat meat*, bukan *I don't never eat meat*. Dengan he/she/it kata kerjanya tetap pakai **-s**: *She never drinks coffee*."
+              "text": "**Never** sudah berarti 'tidak', jadi jangan tambahkan don't atau doesn't: *I never eat meat*, bukan *I don't never eat meat* (dua kata 'tidak' dalam satu kalimat salah dalam bahasa Inggris). Dengan he/she/it kata kerjanya tetap pakai **-s**: *She never drinks coffee*. Kenapa? Yang menghilangkan -s hanya **do/does** (*she doesn't drink*). **never** bukan do/does, jadi -s-nya tetap."
             }
           }
         },
@@ -262,10 +263,10 @@
             "doesn't never"
           ],
           "answer": 1,
-          "explain": "A vegetarian eats meat 0% of the time, so: never. 'doesn't never' is a double negative.",
+          "explain": "A vegetarian eats meat 0% of the time, so: never. 'doesn't never' has two 'not' words (a double negative), which is wrong in English.",
           "i18n": {
             "id": {
-              "explain": "Vegetarian makan daging 0% dari waktunya, jadi: never. 'doesn't never' adalah negatif ganda."
+              "explain": "Vegetarian makan daging 0% dari waktunya, jadi: never. 'doesn't never' punya dua kata 'tidak' (negatif ganda), dan itu salah dalam bahasa Inggris."
             }
           }
         }
@@ -282,10 +283,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "Put the frequency word **before the main verb**: *I usually walk to school.* But with **am / is / are**, put it **after** the verb: *He is often tired.* In a do/does question it goes after the subject: *Do you often cook?*",
+          "text": "Put the frequency word **before the main verb**, that is, the action word (*go, eat, walk*): *I usually walk to school.* But with **am / is / are**, put it **after**: *He is often tired.* Why? am/is/are aren't actions; they just link the person to a description. Easy trick: look for **am/is/are** first. If there is one, put the word after it. If not, put it before the action word. In a do/does question it goes after the subject, still right before the action word: *Do you often **cook**?*",
           "i18n": {
             "id": {
-              "text": "Taruh kata frekuensi **sebelum kata kerja utama**: *I usually walk to school.* Tapi dengan **am / is / are**, taruh **setelah** kata kerjanya: *He is often tired.* Dalam pertanyaan do/does, kata itu ada setelah subjek: *Do you often cook?*"
+              "text": "Taruh kata frekuensi **sebelum kata kerja utama**, yaitu kata kegiatannya (*go, eat, walk*): *I usually walk to school.* Tapi dengan **am / is / are**, taruh **setelah**nya: *He is often tired.* Kenapa? am/is/are bukan kegiatan; kata ini hanya menghubungkan orang dengan keterangannya. Trik gampang: cari **am/is/are** dulu. Kalau ada, taruh katanya setelah itu. Kalau tidak ada, taruh sebelum kata kegiatannya. Dalam pertanyaan do/does, kata itu ada setelah subjek, tetap tepat sebelum kata kegiatannya: *Do you often **cook**?*"
             }
           }
         },
@@ -294,7 +295,7 @@
           "rows": [
             {
               "en": "My mother usually cooks dinner.",
-              "id": "Ibu saya biasanya memasak makan malam.",
+              "id": "Ibu saya biasanya memasak makan malam. (*cooks* = kata kegiatan)",
               "note": "before the main verb"
             },
             {
@@ -304,7 +305,7 @@
             },
             {
               "en": "The market is always busy on Sundays.",
-              "id": "Pasar selalu ramai setiap hari Minggu.",
+              "id": "Pasar selalu ramai setiap hari Minggu. (ada *is* → always setelahnya)",
               "note": "after is"
             },
             {
@@ -316,10 +317,10 @@
         },
         {
           "type": "tip",
-          "text": "Two common mistakes: *I go always to the gym* → **I always go to the gym**, and *She always is late* → **She is always late**. In Indonesian we say 'Dia selalu terlambat' with no 'is', so it's easy to put the word in the wrong place.",
+          "text": "Two common mistakes: *I go always to the gym* → **I always go to the gym**, and *She always is late* → **She is always late**. In Indonesian we say 'Dia selalu terlambat' with no 'is', so it's easy to put the word in the wrong place. **Usually** and **sometimes** can also start a sentence (*Sometimes I walk to work*), but the middle position is the safest.",
           "i18n": {
             "id": {
-              "text": "Dua kesalahan yang sering terjadi: *I go always to the gym* → **I always go to the gym**, dan *She always is late* → **She is always late**. Dalam bahasa Indonesia kita bilang 'Dia selalu terlambat' tanpa 'is', jadi gampang salah menaruh katanya."
+              "text": "Dua kesalahan yang sering terjadi: *I go always to the gym* → **I always go to the gym**, dan *She always is late* → **She is always late**. Dalam bahasa Indonesia kita bilang 'Dia selalu terlambat' tanpa 'is', jadi gampang salah menaruh katanya. **Usually** dan **sometimes** juga boleh di awal kalimat (*Sometimes I walk to work*), tapi posisi tengah adalah yang paling aman."
             }
           }
         },
@@ -332,10 +333,10 @@
             "They often goes to the mosque."
           ],
           "answer": 1,
-          "explain": "Often goes before the main verb 'go', and with 'they' the verb has no -s.",
+          "explain": "Often goes before the action word 'go', and with 'they' (more than one person) the verb has no -s.",
           "i18n": {
             "id": {
-              "explain": "Often ditaruh sebelum kata kerja utama 'go', dan dengan 'they' kata kerjanya tanpa -s."
+              "explain": "Often ditaruh sebelum kata kegiatan 'go', dan dengan 'they' (lebih dari satu orang) kata kerjanya tanpa -s."
             }
           }
         }
@@ -352,10 +353,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "To ask about frequency, use **How often + do/does + subject + base verb**: *How often do you cook? How often does he go swimming?* Answer with a frequency word or with **every day / every week**, **once a week** (1 time), **twice a week** (2 times), **three times a month**.",
+          "text": "To ask about frequency, use **How often + do/does + subject + basic verb** (no -s: *cook, go*): *How often do you cook? How often does he go swimming?* Answer with a frequency word or with **every day / every week**, **once a week** (1 time), **twice a week** (2 times), **three times a month**. Here **a week** means 'per week' (*seminggu*).",
           "i18n": {
             "id": {
-              "text": "Untuk bertanya tentang frekuensi, pakai **How often + do/does + subjek + kata kerja dasar**: *How often do you cook? How often does he go swimming?* Jawab dengan kata frekuensi atau dengan **every day / every week**, **once a week** (1 kali), **twice a week** (2 kali), **three times a month**."
+              "text": "Untuk bertanya tentang frekuensi, pakai **How often + do/does + subjek + kata kerja dasar** (tanpa -s: *cook, go*): *How often do you cook? How often does he go swimming?* Jawab dengan kata frekuensi atau dengan **every day / every week**, **once a week** (1 kali), **twice a week** (2 kali), **three times a month**. Di sini **a week** artinya 'per minggu' (*seminggu*)."
             }
           }
         },
@@ -379,6 +380,15 @@
               "id": "Seberapa sering kamu naik kereta? — Tidak pernah. Saya naik motor."
             }
           ]
+        },
+        {
+          "type": "tip",
+          "text": "**once** and **twice** are special words: 1 time = **once**, 2 times = **twice**. From 3 it's regular: **three times, four times, five times**. And after **does** the verb has no -s (*How often does Sari **call**?*), because *does* already shows he/she.",
+          "i18n": {
+            "id": {
+              "text": "**once** dan **twice** adalah kata khusus: 1 kali = **once**, 2 kali = **twice**. Mulai dari 3 polanya biasa: **three times, four times, five times**. Lalu setelah **does** kata kerjanya tanpa -s (*How often does Sari **call**?*), karena *does* sudah menunjukkan he/she."
+            }
+          }
         },
         {
           "type": "check",

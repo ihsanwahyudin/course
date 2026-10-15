@@ -12,7 +12,7 @@
   "keyPoints": [
     {
       "title": "Names, numbers, prices and times",
-      "explanation": "Read the question first and listen for the key word. Surname = family name, spelled with English letter names. fifTEEN (15) has the stress at the end, FIFty (50) at the start. Half past three is 3:30, not 'setengah tiga'.",
+      "explanation": "Read the question first and listen for the key word. Surname = family name, spelled with English letter names. fifTEEN (15) has the stress (the louder part) at the end, FIFty (50) at the start. Half past three is 3:30 (past = after the hour), not 'setengah tiga'.",
       "examples": [
         {
           "en": "fifTEEN — FIFty",
@@ -316,12 +316,54 @@
       "blocks": [
         {
           "type": "text",
-          "text": "**Names:** people say their **first name** and **surname** (family name) and spell it with English letter names: E is 'ee', I is 'eye'. **Numbers:** fif**TEEN** (15) has the stress at the end; **FIF**ty (50) at the start. **Prices:** *twenty thousand rupiah* = Rp20.000. **Times:** *half past* = :30, *quarter past* = :15, *quarter to* = :45.",
+          "text": "**Names:** people say their **first name** and **surname** (family name) and spell it with English letter names (see the table below).\n\n**Numbers:** **stress** means the part of a word you say louder and longer. fif**TEEN** (15) has the stress at the end; **FIF**ty (50) at the start. The same for 13/30, 14/40, 16/60… The endings help too: **-teen** = belasan (13–19), **-ty** = puluhan (20, 30, 40…).\n\n**Prices:** *twenty thousand rupiah* = Rp20.000. After a number, **thousand** has **no -s**: *twenty thousand*, not 'twenty thousands'. Also, English writes thousands with a comma (20,000) and Indonesian with a dot (20.000): same number.\n\n**Times:** *half past* = :30, *quarter past* = :15, *quarter to* = :45.",
           "i18n": {
             "id": {
-              "text": "**Nama:** orang menyebut **first name** (nama depan) dan **surname** (nama keluarga), lalu mengejanya dengan nama huruf Inggris: E dibaca 'ee' (i), I dibaca 'eye' (ai). **Angka:** fif**TEEN** (15) tekanannya di akhir; **FIF**ty (50) di awal. **Harga:** *twenty thousand rupiah* = Rp20.000. **Jam:** *half past* = :30, *quarter past* = :15, *quarter to* = :45."
+              "text": "**Nama:** orang menyebut **first name** (nama depan) dan **surname** (nama keluarga), lalu mengejanya dengan nama huruf Inggris (lihat tabel di bawah).\n\n**Angka:** **tekanan** (stress) adalah bagian kata yang diucapkan lebih keras dan lebih panjang. fif**TEEN** (15) tekanannya di akhir; **FIF**ty (50) di awal. Sama untuk 13/30, 14/40, 16/60… Akhirannya juga membantu: **-teen** = belasan (13–19), **-ty** = puluhan (20, 30, 40…).\n\n**Harga:** *twenty thousand rupiah* = Rp20.000. Setelah angka, **thousand** **tanpa -s**: *twenty thousand*, bukan 'twenty thousands'. Selain itu, bahasa Inggris menulis ribuan dengan koma (20,000) dan bahasa Indonesia dengan titik (20.000): angkanya sama.\n\n**Jam:** *half past* = :30, *quarter past* = :15, *quarter to* = :45."
             }
           }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "A",
+              "id": "dibaca 'ei' (bukan 'a')",
+              "note": "letter name"
+            },
+            {
+              "en": "E",
+              "id": "dibaca 'ii' (seperti huruf i kita)",
+              "note": "easy to mix up with I"
+            },
+            {
+              "en": "I",
+              "id": "dibaca 'ai'",
+              "note": "easy to mix up with E"
+            },
+            {
+              "en": "G / J",
+              "id": "G dibaca 'ji', J dibaca 'jei'",
+              "note": "easy to mix up"
+            },
+            {
+              "en": "H",
+              "id": "dibaca 'eich'"
+            },
+            {
+              "en": "R",
+              "id": "dibaca 'aa(r)'"
+            },
+            {
+              "en": "W",
+              "id": "dibaca 'DA-bel-yu' (artinya 'double u')",
+              "note": "three beats"
+            },
+            {
+              "en": "Y",
+              "id": "dibaca 'wai' (seperti why)"
+            }
+          ]
         },
         {
           "type": "examples",
@@ -339,7 +381,7 @@
             {
               "en": "My number is 0812 3345 6071.",
               "id": "Nomor saya 0812 3345 6071.",
-              "note": "one digit at a time; 33 = double three"
+              "note": "one digit at a time; 0 is often said 'oh'; 33 = double three (double = dua kali)"
             },
             {
               "en": "The class starts at quarter to eight.",
@@ -353,10 +395,10 @@
         },
         {
           "type": "tip",
-          "text": "Careful: **half past six** is 6:30, which is *setengah tujuh*. Don't hear 'six' and think *setengah enam* (5:30).",
+          "text": "Why is **half past six** 6:30, *setengah tujuh*? Because **past** means *lewat*: English counts from the hour that has **already passed**: six o'clock + half an hour. Indonesian *setengah tujuh* counts **toward** the next hour. So don't hear 'six' and think *setengah enam* (5:30).\n\n**Quarter to** works like Indonesian *kurang*: *quarter to eight* = jam delapan kurang seperempat = 7:45. **Quarter past** = lewat seperempat: *quarter past eight* = 8:15.\n\nAnnouncements often use the simple way: hour, then minutes: *ten fifteen* = 10:15, *seven forty* = 7:40. **O'clock** = tepat: *nine o'clock* = 9:00.",
           "i18n": {
             "id": {
-              "text": "Hati-hati: **half past six** artinya 6:30, yaitu *setengah tujuh*. Jangan dengar 'six' lalu mengira *setengah enam* (5:30)."
+              "text": "Kenapa **half past six** itu 6:30, *setengah tujuh*? Karena **past** artinya *lewat*: bahasa Inggris menghitung dari jam yang **sudah lewat**: jam enam + setengah jam. *Setengah tujuh* dalam bahasa Indonesia menghitung **menuju** jam berikutnya. Jadi jangan dengar 'six' lalu mengira *setengah enam* (5:30).\n\n**Quarter to** mirip kata *kurang* dalam bahasa Indonesia: *quarter to eight* = jam delapan kurang seperempat = 7:45. **Quarter past** = lewat seperempat: *quarter past eight* = 8:15.\n\nPengumuman sering memakai cara yang sederhana: jam, lalu menit: *ten fifteen* = 10:15, *seven forty* = 7:40. **O'clock** = tepat: *nine o'clock* = 9:00."
             }
           }
         },
@@ -423,10 +465,10 @@
         },
         {
           "type": "tip",
-          "text": "**Turn left** and **on the left** are different: one is an action, the other is a place. 'Turn left. It's on the right.' means you turn left, then look right.",
+          "text": "**Turn left** and **on the left** are different: one is an action, the other is a place. 'Turn left. It's on the right.' means you turn left, then look right. **On the right** and **on your right** mean the same.\n\nBritish and American English: *go straight on* (UK) = *go straight ahead* (US); *pharmacy* is used in both, but you may also hear *chemist's* (UK) or *drugstore* (US) for apotek.",
           "i18n": {
             "id": {
-              "text": "**Turn left** dan **on the left** itu berbeda: yang satu tindakan, yang lain letak tempat. 'Turn left. It's on the right.' artinya kamu belok kiri, lalu lihat ke kanan."
+              "text": "**Turn left** dan **on the left** itu berbeda: yang satu tindakan, yang lain letak tempat. 'Turn left. It's on the right.' artinya kamu belok kiri, lalu lihat ke kanan. **On the right** dan **on your right** artinya sama.\n\nInggris (UK) dan Amerika (US): *go straight on* (UK) = *go straight ahead* (US); *pharmacy* dipakai di keduanya, tapi kamu juga bisa mendengar *chemist's* (UK) atau *drugstore* (US) untuk apotek."
             }
           }
         },
@@ -486,6 +528,15 @@
               "id": "Perpustakaan tutup pukul 16.30 hari ini."
             }
           ]
+        },
+        {
+          "type": "tip",
+          "text": "Shops in announcements are often called a **store** (more American; British English says *shop*), and the people inside are **shoppers**. Not every number is the one you need: the time usually comes right after **at**.",
+          "i18n": {
+            "id": {
+              "text": "Di pengumuman, toko sering disebut **store** (lebih Amerika; bahasa Inggris Britania bilang *shop*), dan orang di dalamnya **shoppers** (pembeli). Tidak semua angka adalah yang kamu perlukan: jamnya biasanya ada tepat setelah kata **at**."
+            }
+          }
         },
         {
           "type": "check",
