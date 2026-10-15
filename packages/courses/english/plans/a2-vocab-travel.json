@@ -1,0 +1,792 @@
+{
+  "en": {
+    "greeting": "Hi! Today we go travelling: the airport, the hotel, tickets, how to describe a route, and what you do on holiday.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "At the airport",
+        "text": "Let's start at Soekarno-Hatta Airport. Here are the words you see and hear there.",
+        "body": "You **check in** at the check-in desk: you give them your **luggage** and get a **boarding pass**. Then you go to your **gate**. **Luggage / baggage** can't be counted, like rice: no *a*, no *-s* (*two bags*, not 'two luggages'). Trap: Indonesians say 'pesawatnya delay', but in English it's **The flight is delayed** or **There's a delay**.",
+        "pairs": [
+          {
+            "en": "passport",
+            "id": "paspor"
+          },
+          {
+            "en": "flight",
+            "id": "penerbangan"
+          },
+          {
+            "en": "check in",
+            "id": "lapor diri / check-in"
+          },
+          {
+            "en": "boarding pass",
+            "id": "kartu naik pesawat"
+          },
+          {
+            "en": "gate",
+            "id": "pintu keberangkatan"
+          },
+          {
+            "en": "luggage / baggage",
+            "id": "bagasi, barang bawaan"
+          },
+          {
+            "en": "a delay",
+            "id": "penundaan"
+          },
+          {
+            "en": "delayed",
+            "id": "ditunda / terlambat"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Bad news on the airport screen.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "airport-hotel-tickets",
+          "prompt": "Arrange the words: Penerbangan kami ke Lombok ditunda.",
+          "tokens": [
+            "delayed",
+            "Lombok",
+            "flight",
+            "is",
+            "Our",
+            "to"
+          ],
+          "solution": "Our flight to Lombok is delayed.",
+          "explanation": "Ditunda = **is delayed**: English needs **is** and the **-ed** form, not 'is delay'. Order: who or what (**Our flight to Lombok**) + **is delayed**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hotels and tickets",
+        "text": "Now you arrive at your hotel. And you need tickets for the train or the boat.",
+        "body": "**Book** is also a verb: **book a room** = memesan kamar. A **single room** is for one person, a **double room** for two (one big bed). **Reception** is the desk; the person is the **receptionist**. **Check in** when you arrive, **check out** when you leave and pay. Tickets: **one-way** = sekali jalan, **return** = pulang-pergi. British vs American: return ticket (UK) = **round-trip ticket** (US).",
+        "pairs": [
+          {
+            "en": "book a room",
+            "id": "memesan kamar"
+          },
+          {
+            "en": "reservation",
+            "id": "reservasi, pesanan"
+          },
+          {
+            "en": "single room",
+            "id": "kamar untuk satu orang"
+          },
+          {
+            "en": "double room",
+            "id": "kamar untuk dua orang"
+          },
+          {
+            "en": "reception",
+            "id": "meja resepsionis"
+          },
+          {
+            "en": "check out",
+            "id": "check-out, keluar dari hotel"
+          },
+          {
+            "en": "one-way ticket",
+            "id": "tiket sekali jalan"
+          },
+          {
+            "en": "return ticket",
+            "id": "tiket pulang-pergi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina is at Gambir station.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "airport-hotel-tickets",
+          "prompt": "Rina has a new job in Surabaya. She needs a train ticket to Surabaya, and she doesn't come back to Jakarta. What does she say at the ticket office?",
+          "options": [
+            "A return ticket to Surabaya, please.",
+            "A back ticket to Surabaya, please.",
+            "A one-way ticket to Surabaya, please."
+          ],
+          "answer": 2,
+          "explanation": "She only goes there, so she needs a **one-way ticket** (sekali jalan). A **return ticket** is there and back (pulang-pergi), and 'back ticket' isn't English."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Into, across, along, past",
+        "text": "Now let's describe a route. These little words say where you move.",
+        "body": "They come after a moving verb (go, walk, drive): **into** = masuk ke dalam, **out of** = keluar dari, **across** = dari satu sisi ke sisi lain, **along** = menyusuri (a road, a river, a beach), **past** = melewati, without stopping. Trap: **pass** and **past** sound almost the same. After walk / go / drive it's **past**: *walk past*, never 'walk pass'.",
+        "pairs": [
+          {
+            "en": "into",
+            "id": "masuk ke dalam"
+          },
+          {
+            "en": "out of",
+            "id": "keluar dari"
+          },
+          {
+            "en": "across",
+            "id": "menyeberangi"
+          },
+          {
+            "en": "along",
+            "id": "menyusuri, sepanjang"
+          },
+          {
+            "en": "past",
+            "id": "melewati"
+          },
+          {
+            "en": "bridge",
+            "id": "jembatan"
+          },
+          {
+            "en": "river",
+            "id": "sungai"
+          },
+          {
+            "en": "beach",
+            "id": "pantai"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A tourist asks you the way to the hotel.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prepositions-of-movement",
+          "prompt": "The hotel is after the bank, on the same side of the road. Don't stop at the bank. Complete: Walk ___ the bank. The hotel is on the right.",
+          "options": [
+            "across",
+            "pass",
+            "past"
+          ],
+          "answer": 2,
+          "explanation": "You go by the bank without stopping: **walk past** (melewati). 'Pass' sounds the same but is a verb on its own, so 'walk pass' is wrong. **Across** means to the other side, but the hotel is on the same side."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Get on the bus, get into the taxi",
+        "text": "Indonesian says naik and turun for every vehicle. English has two pairs.",
+        "body": "**get on / get off**: bus, train, plane, boat, motorbike (big, or you sit on top). **get into / get out of**: car, taxi (small, you bend down and sit inside). Not 'We go into the bus' but **We get on the bus**. A1 **by bus** is how you travel; **get on the bus** is the moment you step in.",
+        "examples": [
+          {
+            "en": "The bus is here. Let's get on!",
+            "id": "Busnya datang. Ayo naik!"
+          },
+          {
+            "en": "We get off the plane at Ngurah Rai Airport.",
+            "id": "Kami turun dari pesawat di Bandara Ngurah Rai."
+          },
+          {
+            "en": "The ojek is here. I get on the motorbike.",
+            "id": "Ojeknya sudah datang. Saya naik ke motornya."
+          },
+          {
+            "en": "Get into the car, please.",
+            "id": "Silakan masuk ke mobil."
+          },
+          {
+            "en": "Sari gets out of the taxi at the hotel.",
+            "id": "Sari turun dari taksi di hotel."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas takes the KRL home from work.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prepositions-of-movement",
+          "prompt": "Dimas lives in Bogor. The train stops at Bogor station and the doors open. Dimas ___ the train.",
+          "options": [
+            "gets on",
+            "gets off",
+            "goes off"
+          ],
+          "answer": 1,
+          "explanation": "He's home, so he leaves the train: **gets off** (turun). A train is big, so it's **on / off**. **Gets on** is when you go in, and 'goes off' isn't used for leaving a train."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "On holiday",
+        "text": "Last part: what do you do on holiday?",
+        "body": "Pergi liburan = **go on holiday**, never 'go to holiday': holiday isn't a place. A place takes **to**: *go to Lombok*. Activities use go + **-ing**: *go sightseeing, go snorkelling*. Ambil foto = **take photos**, not 'make photos'. British vs American: holiday (UK) = **vacation** (US); snorkelling (UK) = **snorkeling** (US).",
+        "pairs": [
+          {
+            "en": "go on holiday",
+            "id": "pergi liburan"
+          },
+          {
+            "en": "be on holiday",
+            "id": "sedang liburan"
+          },
+          {
+            "en": "go sightseeing",
+            "id": "jalan-jalan melihat tempat wisata"
+          },
+          {
+            "en": "go snorkelling",
+            "id": "snorkeling"
+          },
+          {
+            "en": "take photos",
+            "id": "foto-foto, ambil foto"
+          },
+          {
+            "en": "buy souvenirs",
+            "id": "beli suvenir, oleh-oleh"
+          },
+          {
+            "en": "stay at a hotel",
+            "id": "menginap di hotel"
+          },
+          {
+            "en": "visit a temple",
+            "id": "mengunjungi candi / pura"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani talks about her parents.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "holiday-activities",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "My parents go to holiday in Bali every August.",
+            "My parents go holiday in Bali every August.",
+            "My parents go on holiday to Bali every August."
+          ],
+          "answer": 2,
+          "explanation": "Pergi liburan = **go on holiday**, and the place takes **to**: *go on holiday to Bali*. 'Go to holiday' treats holiday like a place, and 'go holiday' is missing *on*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Take it on your next trip!",
+        "artifact": {
+          "title": "Cheat sheet · Travel & Holidays",
+          "intro": "Airport, hotel and ticket words, prepositions of movement, and holiday activities.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Airport",
+              "passport / flight / gate",
+              "paspor / penerbangan / pintu keberangkatan"
+            ],
+            [
+              "Airport",
+              "check in / boarding pass",
+              "check-in / kartu naik pesawat"
+            ],
+            [
+              "Airport",
+              "luggage, baggage (no a, no -s)",
+              "bagasi, barang bawaan"
+            ],
+            [
+              "Airport",
+              "a delay / The flight is delayed.",
+              "penundaan / Pesawatnya ditunda."
+            ],
+            [
+              "Hotel",
+              "book a room / reservation",
+              "memesan kamar / reservasi"
+            ],
+            [
+              "Hotel",
+              "single room / double room",
+              "kamar satu orang / dua orang"
+            ],
+            [
+              "Hotel",
+              "reception / check out",
+              "meja resepsionis / check-out"
+            ],
+            [
+              "Tickets",
+              "one-way / return (UK) = round-trip (US)",
+              "sekali jalan / pulang-pergi"
+            ],
+            [
+              "Movement",
+              "into / out of",
+              "masuk ke dalam / keluar dari"
+            ],
+            [
+              "Movement",
+              "across / along / past",
+              "menyeberangi / menyusuri / melewati"
+            ],
+            [
+              "Vehicles",
+              "get on / get off: bus, train, plane, motorbike",
+              "naik / turun"
+            ],
+            [
+              "Vehicles",
+              "get into / get out of: car, taxi",
+              "naik / turun"
+            ],
+            [
+              "Holiday",
+              "go on holiday / be on holiday",
+              "pergi liburan / sedang liburan"
+            ],
+            [
+              "Holiday",
+              "go sightseeing / go snorkelling / take photos",
+              "jalan-jalan / snorkeling / foto-foto"
+            ]
+          ],
+          "tips": [
+            "**The flight is delayed** (not 'is delay'), and **two bags** (not 'two luggages').",
+            "**Walk past** the bank, not 'walk pass'. **Get on** the bus, **get into** the taxi.",
+            "**Go on holiday** (not 'go to holiday'), but **go to** + a place: *go on holiday to Lombok*."
+          ],
+          "examples": [
+            {
+              "en": "Can I see your boarding pass, please?",
+              "id": "Boleh saya lihat kartu naik pesawat Anda?"
+            },
+            {
+              "en": "Go across the bridge and walk along the river.",
+              "id": "Seberangi jembatannya lalu jalan menyusuri sungai."
+            },
+            {
+              "en": "We get on the boat to Komodo Island.",
+              "id": "Kami naik kapal ke Pulau Komodo."
+            },
+            {
+              "en": "In Labuan Bajo we go snorkelling and take photos.",
+              "id": "Di Labuan Bajo kami snorkeling dan foto-foto."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Try these exercises on hotel and holiday words."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita jalan-jalan: bandara, hotel, tiket, cara menjelaskan rute, dan kegiatan saat liburan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Di bandara",
+        "text": "Kita mulai di Bandara Soekarno-Hatta. Ini kata-kata yang kamu lihat dan dengar di sana.",
+        "body": "Kamu **check in** di meja check-in: kamu menyerahkan **luggage** (bagasi) dan mendapat **boarding pass**. Lalu kamu pergi ke **gate**. **Luggage / baggage** tidak bisa dihitung, seperti rice: tanpa *a*, tanpa *-s* (*two bags*, bukan 'two luggages'). Jebakan: kita bilang 'pesawatnya delay', tapi dalam bahasa Inggris **The flight is delayed** atau **There's a delay**.",
+        "pairs": [
+          {
+            "en": "passport",
+            "id": "paspor"
+          },
+          {
+            "en": "flight",
+            "id": "penerbangan"
+          },
+          {
+            "en": "check in",
+            "id": "lapor diri / check-in"
+          },
+          {
+            "en": "boarding pass",
+            "id": "kartu naik pesawat"
+          },
+          {
+            "en": "gate",
+            "id": "pintu keberangkatan"
+          },
+          {
+            "en": "luggage / baggage",
+            "id": "bagasi, barang bawaan"
+          },
+          {
+            "en": "a delay",
+            "id": "penundaan"
+          },
+          {
+            "en": "delayed",
+            "id": "ditunda / terlambat"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kabar buruk di layar bandara.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "airport-hotel-tickets",
+          "prompt": "Susun kata-katanya: Penerbangan kami ke Lombok ditunda.",
+          "tokens": [
+            "delayed",
+            "Lombok",
+            "flight",
+            "is",
+            "Our",
+            "to"
+          ],
+          "solution": "Our flight to Lombok is delayed.",
+          "explanation": "Ditunda = **is delayed**: bahasa Inggris perlu **is** dan bentuk **-ed**, bukan 'is delay'. Urutannya: siapa atau apa (**Our flight to Lombok**) + **is delayed**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hotel dan tiket",
+        "text": "Sekarang kamu tiba di hotel. Kamu juga perlu tiket kereta atau kapal.",
+        "body": "**Book** juga kata kerja: **book a room** = memesan kamar. **Single room** untuk satu orang, **double room** untuk dua orang (satu ranjang besar). **Reception** adalah mejanya; orangnya **receptionist**. **Check in** saat datang, **check out** saat pergi dan membayar. Tiket: **one-way** = sekali jalan, **return** = pulang-pergi. Inggris (UK) vs Amerika (US): return ticket (UK) = **round-trip ticket** (US).",
+        "pairs": [
+          {
+            "en": "book a room",
+            "id": "memesan kamar"
+          },
+          {
+            "en": "reservation",
+            "id": "reservasi, pesanan"
+          },
+          {
+            "en": "single room",
+            "id": "kamar untuk satu orang"
+          },
+          {
+            "en": "double room",
+            "id": "kamar untuk dua orang"
+          },
+          {
+            "en": "reception",
+            "id": "meja resepsionis"
+          },
+          {
+            "en": "check out",
+            "id": "check-out, keluar dari hotel"
+          },
+          {
+            "en": "one-way ticket",
+            "id": "tiket sekali jalan"
+          },
+          {
+            "en": "return ticket",
+            "id": "tiket pulang-pergi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina ada di Stasiun Gambir.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "airport-hotel-tickets",
+          "prompt": "Rina dapat pekerjaan baru di Surabaya. Dia perlu tiket kereta ke Surabaya, dan dia tidak kembali ke Jakarta. Apa yang dia katakan di loket tiket?",
+          "options": [
+            "A return ticket to Surabaya, please.",
+            "A back ticket to Surabaya, please.",
+            "A one-way ticket to Surabaya, please."
+          ],
+          "answer": 2,
+          "explanation": "Dia hanya pergi ke sana, jadi dia perlu **one-way ticket** (sekali jalan). **Return ticket** itu pergi dan pulang (pulang-pergi), dan 'back ticket' bukan bahasa Inggris."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Into, across, along, past",
+        "text": "Sekarang kita jelaskan rute. Kata-kata kecil ini menunjukkan ke mana kamu bergerak.",
+        "body": "Letaknya setelah kata kerja gerak (go, walk, drive): **into** = masuk ke dalam, **out of** = keluar dari, **across** = dari satu sisi ke sisi lain, **along** = menyusuri (jalan, sungai, pantai), **past** = melewati, tanpa berhenti. Jebakan: **pass** dan **past** bunyinya hampir sama. Setelah walk / go / drive pakai **past**: *walk past*, jangan 'walk pass'.",
+        "pairs": [
+          {
+            "en": "into",
+            "id": "masuk ke dalam"
+          },
+          {
+            "en": "out of",
+            "id": "keluar dari"
+          },
+          {
+            "en": "across",
+            "id": "menyeberangi"
+          },
+          {
+            "en": "along",
+            "id": "menyusuri, sepanjang"
+          },
+          {
+            "en": "past",
+            "id": "melewati"
+          },
+          {
+            "en": "bridge",
+            "id": "jembatan"
+          },
+          {
+            "en": "river",
+            "id": "sungai"
+          },
+          {
+            "en": "beach",
+            "id": "pantai"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Seorang turis menanyakan jalan ke hotel.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prepositions-of-movement",
+          "prompt": "Hotelnya setelah bank, di sisi jalan yang sama. Jangan berhenti di bank. Lengkapi: Walk ___ the bank. The hotel is on the right.",
+          "options": [
+            "across",
+            "pass",
+            "past"
+          ],
+          "answer": 2,
+          "explanation": "Kamu lewat bank tanpa berhenti: **walk past** (melewati). 'Pass' bunyinya sama tapi itu kata kerja yang berdiri sendiri, jadi 'walk pass' salah. **Across** artinya ke seberang, padahal hotelnya di sisi yang sama."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Naik bus, masuk ke taksi",
+        "text": "Bahasa Indonesia memakai naik dan turun untuk semua kendaraan. Bahasa Inggris punya dua pasang.",
+        "body": "**get on / get off**: bus, kereta, pesawat, kapal, motor (besar, atau kamu duduk di atasnya). **get into / get out of**: mobil, taksi (kecil, kamu membungkuk lalu duduk di dalam). Bukan 'We go into the bus' tapi **We get on the bus**. **By bus** dari A1 adalah cara bepergian; **get on the bus** adalah saat kamu melangkah masuk.",
+        "examples": [
+          {
+            "en": "The bus is here. Let's get on!",
+            "id": "Busnya datang. Ayo naik!"
+          },
+          {
+            "en": "We get off the plane at Ngurah Rai Airport.",
+            "id": "Kami turun dari pesawat di Bandara Ngurah Rai."
+          },
+          {
+            "en": "The ojek is here. I get on the motorbike.",
+            "id": "Ojeknya sudah datang. Saya naik ke motornya."
+          },
+          {
+            "en": "Get into the car, please.",
+            "id": "Silakan masuk ke mobil."
+          },
+          {
+            "en": "Sari gets out of the taxi at the hotel.",
+            "id": "Sari turun dari taksi di hotel."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas pulang kerja naik KRL.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prepositions-of-movement",
+          "prompt": "Dimas tinggal di Bogor. Keretanya berhenti di Stasiun Bogor dan pintunya terbuka. Lengkapi: Dimas ___ the train.",
+          "options": [
+            "gets on",
+            "gets off",
+            "goes off"
+          ],
+          "answer": 1,
+          "explanation": "Dia sudah sampai, jadi dia keluar dari kereta: **gets off** (turun). Kereta itu besar, jadi pakai **on / off**. **Gets on** saat naik, dan 'goes off' tidak dipakai untuk turun dari kereta."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Saat liburan",
+        "text": "Bagian terakhir: apa yang kamu lakukan saat liburan?",
+        "body": "Pergi liburan = **go on holiday**, jangan 'go to holiday': holiday bukan tempat. Tempat memakai **to**: *go to Lombok*. Kegiatan memakai go + **-ing**: *go sightseeing, go snorkelling*. Ambil foto = **take photos**, bukan 'make photos'. Inggris (UK) vs Amerika (US): holiday (UK) = **vacation** (US); snorkelling (UK) = **snorkeling** (US).",
+        "pairs": [
+          {
+            "en": "go on holiday",
+            "id": "pergi liburan"
+          },
+          {
+            "en": "be on holiday",
+            "id": "sedang liburan"
+          },
+          {
+            "en": "go sightseeing",
+            "id": "jalan-jalan melihat tempat wisata"
+          },
+          {
+            "en": "go snorkelling",
+            "id": "snorkeling"
+          },
+          {
+            "en": "take photos",
+            "id": "foto-foto, ambil foto"
+          },
+          {
+            "en": "buy souvenirs",
+            "id": "beli suvenir, oleh-oleh"
+          },
+          {
+            "en": "stay at a hotel",
+            "id": "menginap di hotel"
+          },
+          {
+            "en": "visit a temple",
+            "id": "mengunjungi candi / pura"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani bercerita tentang orang tuanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "holiday-activities",
+          "prompt": "Pilih kalimat yang benar.",
+          "options": [
+            "My parents go to holiday in Bali every August.",
+            "My parents go holiday in Bali every August.",
+            "My parents go on holiday to Bali every August."
+          ],
+          "answer": 2,
+          "explanation": "Pergi liburan = **go on holiday**, dan tempatnya memakai **to**: *go on holiday to Bali*. 'Go to holiday' menganggap holiday sebagai tempat, dan 'go holiday' kurang *on*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Bawa saat perjalananmu berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · Perjalanan & Liburan",
+          "intro": "Kosakata bandara, hotel dan tiket, preposisi gerak, serta kegiatan liburan.",
+          "headers": [
+            "Kelompok",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Bandara",
+              "passport / flight / gate",
+              "paspor / penerbangan / pintu keberangkatan"
+            ],
+            [
+              "Bandara",
+              "check in / boarding pass",
+              "check-in / kartu naik pesawat"
+            ],
+            [
+              "Bandara",
+              "luggage, baggage (tanpa a, tanpa -s)",
+              "bagasi, barang bawaan"
+            ],
+            [
+              "Bandara",
+              "a delay / The flight is delayed.",
+              "penundaan / Pesawatnya ditunda."
+            ],
+            [
+              "Hotel",
+              "book a room / reservation",
+              "memesan kamar / reservasi"
+            ],
+            [
+              "Hotel",
+              "single room / double room",
+              "kamar satu orang / dua orang"
+            ],
+            [
+              "Hotel",
+              "reception / check out",
+              "meja resepsionis / check-out"
+            ],
+            [
+              "Tiket",
+              "one-way / return (UK) = round-trip (US)",
+              "sekali jalan / pulang-pergi"
+            ],
+            [
+              "Gerak",
+              "into / out of",
+              "masuk ke dalam / keluar dari"
+            ],
+            [
+              "Gerak",
+              "across / along / past",
+              "menyeberangi / menyusuri / melewati"
+            ],
+            [
+              "Kendaraan",
+              "get on / get off: bus, train, plane, motorbike",
+              "naik / turun"
+            ],
+            [
+              "Kendaraan",
+              "get into / get out of: car, taxi",
+              "naik / turun"
+            ],
+            [
+              "Liburan",
+              "go on holiday / be on holiday",
+              "pergi liburan / sedang liburan"
+            ],
+            [
+              "Liburan",
+              "go sightseeing / go snorkelling / take photos",
+              "jalan-jalan / snorkeling / foto-foto"
+            ]
+          ],
+          "tips": [
+            "**The flight is delayed** (bukan 'is delay'), dan **two bags** (bukan 'two luggages').",
+            "**Walk past** the bank, bukan 'walk pass'. **Get on** the bus, **get into** the taxi.",
+            "**Go on holiday** (bukan 'go to holiday'), tapi **go to** + tempat: *go on holiday to Lombok*."
+          ],
+          "examples": [
+            {
+              "en": "Can I see your boarding pass, please?",
+              "id": "Boleh saya lihat kartu naik pesawat Anda?"
+            },
+            {
+              "en": "Go across the bridge and walk along the river.",
+              "id": "Seberangi jembatannya lalu jalan menyusuri sungai."
+            },
+            {
+              "en": "We get on the boat to Komodo Island.",
+              "id": "Kami naik kapal ke Pulau Komodo."
+            },
+            {
+              "en": "In Labuan Bajo we go snorkelling and take photos.",
+              "id": "Di Labuan Bajo kami snorkeling dan foto-foto."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Coba latihan kosakata hotel dan liburan ini."
+      }
+    ]
+  }
+}

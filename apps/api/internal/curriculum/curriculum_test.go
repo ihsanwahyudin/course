@@ -107,6 +107,16 @@ func TestValidatorRequiresAssessmentCoverage(t *testing.T) {
 	wantErr(t, err, `objective "o2" has no assessment item`)
 }
 
+func TestValidatorRejectsItemIDsSharedByTwoLessons(t *testing.T) {
+	a, b := readyLesson("a", "o"), readyLesson("b", "o")
+	b.Assessment[0].ID = "a-1"
+	err := build([]Node{
+		{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentReady},
+		{ID: "b", Title: "B", Objectives: obj("o"), ContentStatus: ContentReady, PrerequisiteIDs: []string{"a"}},
+	}, map[string]*Lesson{"a": a, "b": b})
+	wantErr(t, err, `assessment item "a-1" is used by both "a" and "b"`)
+}
+
 func TestValidatorRequiresReadyRoot(t *testing.T) {
 	err := build([]Node{{ID: "a", Title: "A", Objectives: obj("o"), ContentStatus: ContentComingSoon}}, nil)
 	wantErr(t, err, "no ready root node")

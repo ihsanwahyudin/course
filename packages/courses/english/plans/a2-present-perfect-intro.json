@@ -1,0 +1,798 @@
+{
+  "en": {
+    "greeting": "Hi! You already know went, saw and ate for yesterday. Today: a new form for your experiences and fresh news, with ever, never, just, already and yet. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "have/has + the third form",
+        "text": "Indonesian says pernah, sudah and belum. English uses a new form for this: have/has + the third form of the verb.",
+        "body": "This is the **present perfect**: **have/has + third form**. Use it for something that happened **before now** when you **don't say when**: experiences (*pernah*) and fresh news (*sudah, baru saja, belum*). **have** with I, you, we, they; **has** with he, she, it. Every verb has three forms: base, past and **third form** (bentuk ketiga, the **past participle**). Regular verbs: the third form = the past (*worked*). These irregular verbs have a **new** third form, with no rule: learn them. Never use the past here: *I have seen*, not 'I have saw'.",
+        "pairs": [
+          {
+            "en": "work → worked → worked",
+            "id": "bekerja (sama dengan bentuk lampau)"
+          },
+          {
+            "en": "see → saw → seen",
+            "id": "melihat"
+          },
+          {
+            "en": "be → was/were → been",
+            "id": "ada, berada (been to = pernah ke)"
+          },
+          {
+            "en": "eat → ate → eaten",
+            "id": "makan"
+          },
+          {
+            "en": "go → went → gone",
+            "id": "pergi"
+          },
+          {
+            "en": "do → did → done",
+            "id": "melakukan, mengerjakan"
+          },
+          {
+            "en": "write → wrote → written",
+            "id": "menulis"
+          },
+          {
+            "en": "take → took → taken",
+            "id": "mengambil; naik (bus, ojek)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari's email to her manager is ready to send.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-present-perfect",
+          "prompt": "Complete: Sari ___ an email to her manager.",
+          "options": [
+            "has wrote",
+            "has written",
+            "have written"
+          ],
+          "answer": 1,
+          "explanation": "Sari = she → **has**, then the **third form**: write → wrote → **written**. 'has wrote' uses the past form (the most common mistake), and 'have' is for I, you, we, they."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Have you ever…?",
+        "text": "Now let's talk about experiences: things you have done (or not) in your life.",
+        "body": "**Have you ever + third form?** = Apakah kamu pernah…? Short answers: **Yes, I have.** / **No, I haven't.** (haven't = have not). **never** = belum/tidak pernah: *I have never eaten durian.* never already means 'not', so not 'I haven't never'. **Trap:** *Saya pernah ke Bali* = **I have been to Bali**, with no ever: ever is for questions. For places, say **been to** (went there and came back). Why not went? After have/has you always need the third form, and went is the past.",
+        "pairs": [
+          {
+            "en": "Have you ever…?",
+            "id": "Apakah kamu pernah…?"
+          },
+          {
+            "en": "Has she ever…?",
+            "id": "Apakah dia (perempuan) pernah…?"
+          },
+          {
+            "en": "Yes, I have.",
+            "id": "Pernah."
+          },
+          {
+            "en": "No, I haven't.",
+            "id": "Belum / Tidak."
+          },
+          {
+            "en": "I have never…",
+            "id": "Saya belum pernah…"
+          },
+          {
+            "en": "I have been to…",
+            "id": "Saya pernah ke…"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Talking about experiences",
+        "text": "Here are some people talking about their lives. Notice what happens when they say when.",
+        "body": "The experience uses **have/has + third form**. When you add **when** it happened (a finished time like *last year*), switch to the **past simple**: *I went there last year*, not 'I have been there last year'. Note: *Budi has **gone** to Bali* = he is in Bali now; *has **been*** = he went and came back.",
+        "examples": [
+          {
+            "en": "Have you ever been to Lombok? — Yes, I have.",
+            "id": "Kamu pernah ke Lombok? — Pernah."
+          },
+          {
+            "en": "I went there last year with my family.",
+            "id": "Saya ke sana tahun lalu bersama keluarga."
+          },
+          {
+            "en": "Bu Ani has never done yoga.",
+            "id": "Bu Ani belum pernah yoga."
+          },
+          {
+            "en": "I've been to Malaysia twice.",
+            "id": "Saya sudah dua kali ke Malaysia."
+          },
+          {
+            "en": "Have you ever written a letter in English? — No, never.",
+            "id": "Kamu pernah menulis surat dalam bahasa Inggris? — Belum pernah."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Said when? Past simple",
+        "text": "Two ways to talk about the past. The question is: do you say when?",
+        "timeline": {
+          "title": "Past simple or present perfect?",
+          "caption": "A finished time (yesterday, last week, two days ago) → past simple: I saw it two days ago. No time, and it matters now → have/has + third form: I have seen it.",
+          "marks": [
+            {
+              "label": "two days ago: I saw the film",
+              "kind": "past"
+            },
+            {
+              "label": "some time before now: I have seen the film",
+              "kind": "past"
+            },
+            {
+              "label": "now: I know the story",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You want to ask a new colleague: 'Kamu pernah ke Yogyakarta?'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "experiences-ever-never",
+          "prompt": "Which question is correct?",
+          "options": [
+            "Have you ever went to Yogyakarta?",
+            "Have you ever been to Yogyakarta?",
+            "Did you ever been to Yogyakarta?"
+          ],
+          "answer": 1,
+          "explanation": "pernah ke = **have been to**. After have you need the third form **been**, not the past **went**. 'Did you ever been' mixes did with the third form: did goes with the base verb."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina is talking about her mother. In Jakarta it's always hot.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "experiences-ever-never",
+          "prompt": "Arrange the words: Ibuku belum pernah melihat salju.",
+          "tokens": [
+            "seen",
+            "never",
+            "My",
+            "snow",
+            "has",
+            "mother"
+          ],
+          "solution": "My mother has never seen snow.",
+          "explanation": "belum pernah = **never**, between **has** and the third form: **has never seen** (see → saw → seen). My mother = she → has."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "just, already, yet",
+        "text": "Three small words for fresh news. You already use them in Indonesian every day.",
+        "body": "**just** = baru saja, **already** = sudah, **not … yet** = belum. In questions, **yet** = sudah … belum? **just** and **already** go **between have/has and the third form**: *She has just arrived. I've already paid.* **yet** goes **at the end**, only in negatives and questions: *I haven't finished yet. Have you eaten yet?* Answers: **Yes, I have.** / **No, not yet.** Trap: *Saya sudah selesai* has no helper word, but English needs one: **I've already finished**, not 'I already finish'. Short forms: **I've** = I have, **she's** = she has (before a third form), **hasn't** = has not.",
+        "pairs": [
+          {
+            "en": "just",
+            "id": "baru saja"
+          },
+          {
+            "en": "already",
+            "id": "sudah"
+          },
+          {
+            "en": "not … yet",
+            "id": "belum"
+          },
+          {
+            "en": "… yet?",
+            "id": "sudah … belum?"
+          },
+          {
+            "en": "No, not yet.",
+            "id": "Belum."
+          },
+          {
+            "en": "I've / she's",
+            "id": "I have / she has"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and answer",
+        "text": "Your boss asks you something about a client. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "just-already-yet",
+          "listen": "Have you called Pak Hasan yet?",
+          "prompt": "Listen to your boss's question. You want to say 'Ya, baru saja saya telepon.' Choose your answer.",
+          "options": [
+            "Yes, I just call him.",
+            "Yes, I've just called him.",
+            "Yes, I've called him yesterday."
+          ],
+          "answer": 1,
+          "explanation": "Your boss asks **Have you called Pak Hasan yet?** baru saja = **just**, between have and the third form: **I've just called him.** 'I just call him' has no have and no third form, and 'yesterday' is a finished time, so it can't go with have called."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in the third forms and the new words.",
+        "flashcards": [
+          {
+            "front": "see · be · eat → third form?",
+            "back": "seen · been · eaten"
+          },
+          {
+            "front": "go · do · write · take → third form?",
+            "back": "gone · done · written · taken"
+          },
+          {
+            "front": "work · visit · buy → third form?",
+            "back": "worked · visited · bought (same as the past)"
+          },
+          {
+            "front": "Kamu pernah ke Bali?",
+            "back": "Have you ever been to Bali?"
+          },
+          {
+            "front": "Saya belum pernah naik kereta api.",
+            "back": "I have never taken a train."
+          },
+          {
+            "front": "Sudah makan belum? — Belum.",
+            "back": "Have you eaten yet? — No, not yet."
+          },
+          {
+            "front": "Dia (laki-laki) baru saja sampai.",
+            "back": "He has just arrived."
+          },
+          {
+            "front": "Kemarin saya melihatnya.",
+            "back": "I saw it yesterday. (finished time → past simple)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · present perfect",
+          "intro": "have/has + third form, for experiences (ever, never) and fresh news (just, already, yet). Regular verbs: the third form = the past.",
+          "headers": [
+            "Verb",
+            "Past",
+            "Third form",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "work",
+              "worked",
+              "worked",
+              "bekerja"
+            ],
+            [
+              "visit",
+              "visited",
+              "visited",
+              "mengunjungi"
+            ],
+            [
+              "see",
+              "saw",
+              "seen",
+              "melihat"
+            ],
+            [
+              "be",
+              "was / were",
+              "been",
+              "ada, berada (been to = pernah ke)"
+            ],
+            [
+              "eat",
+              "ate",
+              "eaten",
+              "makan"
+            ],
+            [
+              "go",
+              "went",
+              "gone",
+              "pergi"
+            ],
+            [
+              "do",
+              "did",
+              "done",
+              "melakukan, mengerjakan"
+            ],
+            [
+              "write",
+              "wrote",
+              "written",
+              "menulis"
+            ],
+            [
+              "take",
+              "took",
+              "taken",
+              "mengambil; naik (bus, ojek)"
+            ],
+            [
+              "have",
+              "had",
+              "had",
+              "punya; makan (have lunch)"
+            ],
+            [
+              "buy",
+              "bought",
+              "bought",
+              "membeli"
+            ],
+            [
+              "make",
+              "made",
+              "made",
+              "membuat"
+            ],
+            [
+              "say",
+              "said",
+              "said",
+              "berkata, bilang"
+            ]
+          ],
+          "tips": [
+            "**have** with I, you, we, they; **has** with he, she, it. Always the third form after it: **I have seen**, not 'I have saw'.",
+            "**ever** in questions (pernah), **never** = belum pernah. **just / already** go between have and the third form; **yet** goes at the end of negatives and questions.",
+            "A finished time (yesterday, last week, … ago) → past simple: **I saw it yesterday**, not 'I have seen it yesterday'."
+          ],
+          "examples": [
+            {
+              "en": "Have you ever been to Bali? — No, I haven't.",
+              "id": "Kamu pernah ke Bali? — Belum."
+            },
+            {
+              "en": "I have never eaten durian.",
+              "id": "Saya belum pernah makan durian."
+            },
+            {
+              "en": "She has just arrived.",
+              "id": "Dia (perempuan) baru saja datang."
+            },
+            {
+              "en": "We haven't paid yet.",
+              "id": "Kami belum bayar."
+            },
+            {
+              "en": "I've seen this film. I saw it last week.",
+              "id": "Saya sudah nonton film ini. Saya nonton minggu lalu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Two short BBC videos (one on ever/never, one on just/already/yet) and a British Council page with practice tests. They are a little above this lesson's level, so turn on the subtitles."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu went, saw dan ate untuk cerita kemarin. Hari ini: bentuk baru untuk pengalaman dan kabar terbaru, dengan ever, never, just, already dan yet. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "have/has + bentuk ketiga",
+        "text": "Bahasa Indonesia memakai pernah, sudah dan belum. Bahasa Inggris memakai bentuk baru untuk ini: have/has + bentuk ketiga kata kerja.",
+        "body": "Ini namanya **present perfect**: **have/has + bentuk ketiga**. Pakai untuk hal yang terjadi **sebelum sekarang** saat kamu **tidak menyebut kapan**: pengalaman (*pernah*) dan kabar baru (*sudah, baru saja, belum*). **have** untuk I, you, we, they; **has** untuk he, she, it. Setiap kata kerja punya tiga bentuk: dasar, lampau dan **bentuk ketiga** (**past participle**). Kata kerja beraturan: bentuk ketiga = bentuk lampau (*worked*). Kata kerja tidak beraturan ini punya bentuk ketiga yang **baru**, tanpa aturan: hafalkan. Jangan pakai bentuk lampau di sini: *I have seen*, bukan 'I have saw'.",
+        "pairs": [
+          {
+            "en": "work → worked → worked",
+            "id": "bekerja (sama dengan bentuk lampau)"
+          },
+          {
+            "en": "see → saw → seen",
+            "id": "melihat"
+          },
+          {
+            "en": "be → was/were → been",
+            "id": "ada, berada (been to = pernah ke)"
+          },
+          {
+            "en": "eat → ate → eaten",
+            "id": "makan"
+          },
+          {
+            "en": "go → went → gone",
+            "id": "pergi"
+          },
+          {
+            "en": "do → did → done",
+            "id": "melakukan, mengerjakan"
+          },
+          {
+            "en": "write → wrote → written",
+            "id": "menulis"
+          },
+          {
+            "en": "take → took → taken",
+            "id": "mengambil; naik (bus, ojek)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Email Sari untuk manajernya sudah siap dikirim.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-present-perfect",
+          "prompt": "Lengkapi: Sari ___ an email to her manager.",
+          "options": [
+            "has wrote",
+            "has written",
+            "have written"
+          ],
+          "answer": 1,
+          "explanation": "Sari = she → **has**, lalu **bentuk ketiga**: write → wrote → **written**. 'has wrote' memakai bentuk lampau (kesalahan yang paling sering), dan 'have' untuk I, you, we, they."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Have you ever…?",
+        "text": "Sekarang kita bicara tentang pengalaman: hal yang pernah (atau belum pernah) kamu lakukan dalam hidupmu.",
+        "body": "**Have you ever + bentuk ketiga?** = Apakah kamu pernah…? Jawaban singkat: **Yes, I have.** / **No, I haven't.** (haven't = have not). **never** = belum/tidak pernah: *I have never eaten durian.* never sudah berarti 'tidak', jadi bukan 'I haven't never'. **Jebakan:** *Saya pernah ke Bali* = **I have been to Bali**, tanpa ever: ever untuk pertanyaan. Untuk tempat, pakai **been to** (pernah ke sana dan sudah kembali). Kenapa bukan went? Setelah have/has selalu perlu bentuk ketiga, dan went itu bentuk lampau.",
+        "pairs": [
+          {
+            "en": "Have you ever…?",
+            "id": "Apakah kamu pernah…?"
+          },
+          {
+            "en": "Has she ever…?",
+            "id": "Apakah dia (perempuan) pernah…?"
+          },
+          {
+            "en": "Yes, I have.",
+            "id": "Pernah."
+          },
+          {
+            "en": "No, I haven't.",
+            "id": "Belum / Tidak."
+          },
+          {
+            "en": "I have never…",
+            "id": "Saya belum pernah…"
+          },
+          {
+            "en": "I have been to…",
+            "id": "Saya pernah ke…"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bercerita tentang pengalaman",
+        "text": "Ini beberapa orang bercerita tentang hidup mereka. Perhatikan apa yang terjadi saat mereka menyebut kapan.",
+        "body": "Pengalamannya memakai **have/has + bentuk ketiga**. Kalau kamu menambah **kapan** terjadinya (waktu yang sudah selesai seperti *last year*), ganti ke **past simple**: *I went there last year*, bukan 'I have been there last year'. Catatan: *Budi has **gone** to Bali* = dia sekarang ada di Bali; *has **been*** = dia pernah ke sana dan sudah kembali.",
+        "examples": [
+          {
+            "en": "Have you ever been to Lombok? — Yes, I have.",
+            "id": "Kamu pernah ke Lombok? — Pernah."
+          },
+          {
+            "en": "I went there last year with my family.",
+            "id": "Saya ke sana tahun lalu bersama keluarga."
+          },
+          {
+            "en": "Bu Ani has never done yoga.",
+            "id": "Bu Ani belum pernah yoga."
+          },
+          {
+            "en": "I've been to Malaysia twice.",
+            "id": "Saya sudah dua kali ke Malaysia."
+          },
+          {
+            "en": "Have you ever written a letter in English? — No, never.",
+            "id": "Kamu pernah menulis surat dalam bahasa Inggris? — Belum pernah."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Ada kapan-nya? Past simple",
+        "text": "Dua cara membicarakan masa lalu. Pertanyaannya: apakah kamu menyebut kapan?",
+        "timeline": {
+          "title": "Past simple atau present perfect?",
+          "caption": "Waktu yang sudah selesai (yesterday, last week, two days ago) → past simple: I saw it two days ago. Tanpa waktu, dan penting sekarang → have/has + bentuk ketiga: I have seen it.",
+          "marks": [
+            {
+              "label": "two days ago: I saw the film",
+              "kind": "past"
+            },
+            {
+              "label": "kapan saja sebelum sekarang: I have seen the film",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang: saya tahu ceritanya",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu ingin bertanya ke rekan kerja baru: 'Kamu pernah ke Yogyakarta?'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "experiences-ever-never",
+          "prompt": "Pertanyaan mana yang benar?",
+          "options": [
+            "Have you ever went to Yogyakarta?",
+            "Have you ever been to Yogyakarta?",
+            "Did you ever been to Yogyakarta?"
+          ],
+          "answer": 1,
+          "explanation": "pernah ke = **have been to**. Setelah have perlu bentuk ketiga **been**, bukan bentuk lampau **went**. 'Did you ever been' mencampur did dengan bentuk ketiga: did dipakai dengan kata kerja dasar."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Rina bercerita tentang ibunya. Di Jakarta selalu panas.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "experiences-ever-never",
+          "prompt": "Susun kata-katanya: Ibuku belum pernah melihat salju.",
+          "tokens": [
+            "seen",
+            "never",
+            "My",
+            "snow",
+            "has",
+            "mother"
+          ],
+          "solution": "My mother has never seen snow.",
+          "explanation": "belum pernah = **never**, di antara **has** dan bentuk ketiga: **has never seen** (see → saw → seen). My mother = she → has."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "just, already, yet",
+        "text": "Tiga kata kecil untuk kabar baru. Dalam bahasa Indonesia kamu memakainya setiap hari.",
+        "body": "**just** = baru saja, **already** = sudah, **not … yet** = belum. Di pertanyaan, **yet** = sudah … belum? **just** dan **already** diletakkan **di antara have/has dan bentuk ketiga**: *She has just arrived. I've already paid.* **yet** diletakkan **di akhir**, hanya di kalimat negatif dan pertanyaan: *I haven't finished yet. Have you eaten yet?* Jawabannya: **Yes, I have.** / **No, not yet.** Jebakan: *Saya sudah selesai* tidak memakai kata bantu, tapi bahasa Inggris perlu: **I've already finished**, bukan 'I already finish'. Bentuk singkat: **I've** = I have, **she's** = she has (sebelum bentuk ketiga), **hasn't** = has not.",
+        "pairs": [
+          {
+            "en": "just",
+            "id": "baru saja"
+          },
+          {
+            "en": "already",
+            "id": "sudah"
+          },
+          {
+            "en": "not … yet",
+            "id": "belum"
+          },
+          {
+            "en": "… yet?",
+            "id": "sudah … belum?"
+          },
+          {
+            "en": "No, not yet.",
+            "id": "Belum."
+          },
+          {
+            "en": "I've / she's",
+            "id": "I have / she has"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Bosmu menanyakan sesuatu tentang klien. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "just-already-yet",
+          "listen": "Have you called Pak Hasan yet?",
+          "prompt": "Dengarkan pertanyaan bosmu. Kamu ingin bilang 'Ya, baru saja saya telepon.' Pilih jawabanmu.",
+          "options": [
+            "Yes, I just call him.",
+            "Yes, I've just called him.",
+            "Yes, I've called him yesterday."
+          ],
+          "answer": 1,
+          "explanation": "Bosmu bertanya **Have you called Pak Hasan yet?** baru saja = **just**, di antara have dan bentuk ketiga: **I've just called him.** 'I just call him' tidak memakai have dan bentuk ketiga, dan 'yesterday' adalah waktu yang sudah selesai, jadi tidak bisa dipakai dengan have called."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan singkat",
+        "text": "Balik kartu-kartu ini supaya bentuk ketiga dan kata-kata barunya makin melekat.",
+        "flashcards": [
+          {
+            "front": "see · be · eat → third form?",
+            "back": "seen · been · eaten"
+          },
+          {
+            "front": "go · do · write · take → third form?",
+            "back": "gone · done · written · taken"
+          },
+          {
+            "front": "work · visit · buy → third form?",
+            "back": "worked · visited · bought (same as the past)"
+          },
+          {
+            "front": "Kamu pernah ke Bali?",
+            "back": "Have you ever been to Bali?"
+          },
+          {
+            "front": "Saya belum pernah naik kereta api.",
+            "back": "I have never taken a train."
+          },
+          {
+            "front": "Sudah makan belum? — Belum.",
+            "back": "Have you eaten yet? — No, not yet."
+          },
+          {
+            "front": "Dia (laki-laki) baru saja sampai.",
+            "back": "He has just arrived."
+          },
+          {
+            "front": "Kemarin saya melihatnya.",
+            "back": "I saw it yesterday. (finished time → past simple)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · present perfect",
+          "intro": "have/has + bentuk ketiga, untuk pengalaman (ever, never) dan kabar baru (just, already, yet). Kata kerja beraturan: bentuk ketiga = bentuk lampau.",
+          "headers": [
+            "Kata kerja",
+            "Bentuk lampau",
+            "Bentuk ketiga",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "work",
+              "worked",
+              "worked",
+              "bekerja"
+            ],
+            [
+              "visit",
+              "visited",
+              "visited",
+              "mengunjungi"
+            ],
+            [
+              "see",
+              "saw",
+              "seen",
+              "melihat"
+            ],
+            [
+              "be",
+              "was / were",
+              "been",
+              "ada, berada (been to = pernah ke)"
+            ],
+            [
+              "eat",
+              "ate",
+              "eaten",
+              "makan"
+            ],
+            [
+              "go",
+              "went",
+              "gone",
+              "pergi"
+            ],
+            [
+              "do",
+              "did",
+              "done",
+              "melakukan, mengerjakan"
+            ],
+            [
+              "write",
+              "wrote",
+              "written",
+              "menulis"
+            ],
+            [
+              "take",
+              "took",
+              "taken",
+              "mengambil; naik (bus, ojek)"
+            ],
+            [
+              "have",
+              "had",
+              "had",
+              "punya; makan (have lunch)"
+            ],
+            [
+              "buy",
+              "bought",
+              "bought",
+              "membeli"
+            ],
+            [
+              "make",
+              "made",
+              "made",
+              "membuat"
+            ],
+            [
+              "say",
+              "said",
+              "said",
+              "berkata, bilang"
+            ]
+          ],
+          "tips": [
+            "**have** untuk I, you, we, they; **has** untuk he, she, it. Setelahnya selalu bentuk ketiga: **I have seen**, bukan 'I have saw'.",
+            "**ever** di pertanyaan (pernah), **never** = belum pernah. **just / already** di antara have dan bentuk ketiga; **yet** di akhir kalimat negatif dan pertanyaan.",
+            "Waktu yang sudah selesai (yesterday, last week, … ago) → past simple: **I saw it yesterday**, bukan 'I have seen it yesterday'."
+          ],
+          "examples": [
+            {
+              "en": "Have you ever been to Bali? — No, I haven't.",
+              "id": "Kamu pernah ke Bali? — Belum."
+            },
+            {
+              "en": "I have never eaten durian.",
+              "id": "Saya belum pernah makan durian."
+            },
+            {
+              "en": "She has just arrived.",
+              "id": "Dia (perempuan) baru saja datang."
+            },
+            {
+              "en": "We haven't paid yet.",
+              "id": "Kami belum bayar."
+            },
+            {
+              "en": "I've seen this film. I saw it last week.",
+              "id": "Saya sudah nonton film ini. Saya nonton minggu lalu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Dua video pendek dari BBC (satu tentang ever/never, satu tentang just/already/yet) dan satu halaman British Council dengan tes latihan. Levelnya sedikit di atas pelajaran ini, jadi nyalakan subtitelnya."
+      }
+    ]
+  }
+}

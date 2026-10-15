@@ -1,0 +1,716 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to say how people do things, like drive carefully or speak English well, and how to make words stronger or softer. Let's take it one small step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "How? Add -ly",
+        "text": "You know adjectives like slow and careful. Now let's say how someone does something.",
+        "body": "An **adjective** describes a person or thing: *a slow bus*. An **adverb** describes **how** someone does something: The bus moves **slowly**. Most adverbs are **adjective + -ly**. Indonesian keeps the same word (*pelan*, sometimes *dengan pelan*), but English changes it.\n\nSpelling: careful → carefu**ll**y (two l's). Consonant + **y** → **-ily**: easy → easily. **-le** → **-ly**: gentle → gently.",
+        "pairs": [
+          {
+            "en": "slow → slowly",
+            "id": "pelan → dengan pelan"
+          },
+          {
+            "en": "quick → quickly",
+            "id": "cepat → dengan cepat"
+          },
+          {
+            "en": "quiet → quietly",
+            "id": "tenang → dengan tenang, tanpa suara"
+          },
+          {
+            "en": "careful → carefully",
+            "id": "hati-hati → dengan hati-hati"
+          },
+          {
+            "en": "bad → badly",
+            "id": "buruk → dengan buruk"
+          },
+          {
+            "en": "easy → easily",
+            "id": "mudah → dengan mudah"
+          },
+          {
+            "en": "gentle → gently",
+            "id": "lembut → dengan lembut"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's try the spelling. The adjective is happy.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-adverbs",
+          "prompt": "Complete: The children are playing ___ in the park.",
+          "options": [
+            "happyly",
+            "happy",
+            "happily"
+          ],
+          "answer": 2,
+          "explanation": "happy ends in a consonant + **y**, so y changes to **i** before -ly: **happily**. *happy* alone is the adjective: it can't say how they play."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "No -ly: fast, hard, well",
+        "text": "A few adverbs break the -ly rule. Just remember them.",
+        "body": "**fast, hard, early, late** don't change: a fast train → it goes **fast**. **good → well**. No 'fastly', no 'goodly'. Careful: **hardly** is a different word = *hampir tidak*. *He works hard* = he works a lot; *He hardly works* = he almost doesn't work!",
+        "examples": [
+          {
+            "en": "The train to Bandung goes very fast.",
+            "id": "Kereta ke Bandung melaju sangat cepat."
+          },
+          {
+            "en": "Pak Hasan works hard every day.",
+            "id": "Pak Hasan bekerja keras setiap hari."
+          },
+          {
+            "en": "I sometimes get up late on Sundays.",
+            "id": "Kadang saya bangun siang di hari Minggu."
+          },
+          {
+            "en": "Bu Ani cooks rendang really well.",
+            "id": "Bu Ani jago sekali memasak rendang."
+          },
+          {
+            "en": "He hardly sleeps. He's very busy.",
+            "id": "Dia hampir tidak tidur. Dia sangat sibuk."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Adjective or adverb?",
+        "text": "Here's the Indonesian trap. Ask one question: a person or thing, or how?",
+        "body": "A person or thing → **adjective**: *a careful driver*. After **am/is/are** too: *Budi is careful*. How someone does something → **adverb**: *Budi drives carefully*. Indonesian says *hati-hati* for both. Trick: if Indonesian can say *dengan ...*, English needs the adverb.\n\n**friendly** ends in -ly but is an adjective (*a friendly waiter*). And I'm **well** is right: there well means **healthy** (*sehat*).",
+        "pairs": [
+          {
+            "en": "a careful driver",
+            "id": "pengemudi yang hati-hati"
+          },
+          {
+            "en": "drives carefully",
+            "id": "menyetir dengan hati-hati"
+          },
+          {
+            "en": "a good cook",
+            "id": "juru masak yang jago"
+          },
+          {
+            "en": "cooks well",
+            "id": "memasak dengan baik"
+          },
+          {
+            "en": "Her English is good.",
+            "id": "Bahasa Inggrisnya bagus."
+          },
+          {
+            "en": "a friendly waiter",
+            "id": "pelayan yang ramah"
+          },
+          {
+            "en": "I'm well, thanks.",
+            "id": "Saya sehat, terima kasih."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi plays football every Sunday. How does he play?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-adverbs",
+          "prompt": "Budi is a good footballer. Complete: He plays very ___.",
+          "options": [
+            "good",
+            "well",
+            "goodly"
+          ],
+          "answer": 1,
+          "explanation": "This says **how** he plays, so it needs the adverb, and the adverb of good is **well**: very **well**. *good* describes a person or thing (*a good footballer*), and 'goodly' doesn't exist."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Now the other way round: is this about a person, or about how?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-vs-adverb",
+          "prompt": "Sari never makes mistakes. Complete: She's a ___ worker.",
+          "options": [
+            "careful",
+            "carefully",
+            "carefuly"
+          ],
+          "answer": 0,
+          "explanation": "The word describes a person (a ___ **worker**), so use the **adjective**: a **careful** worker. *carefully* says how someone does something, and 'carefuly' is a spelling mistake."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Where does the adverb go?",
+        "text": "Last thing about adverbs: where to put them.",
+        "body": "Put the adverb **after the verb**, or after the verb + its **object** (the thing after the verb, like *Mandarin* in *speaks Mandarin*). Never between them: not `speaks fluently Mandarin`. Indonesian has the same order: *berbicara bahasa Mandarin dengan lancar*.",
+        "examples": [
+          {
+            "en": "Dimas speaks Mandarin fluently.",
+            "id": "Dimas berbicara bahasa Mandarin dengan lancar."
+          },
+          {
+            "en": "Please read the contract carefully.",
+            "id": "Tolong baca kontraknya dengan teliti."
+          },
+          {
+            "en": "My son writes his name very neatly.",
+            "id": "Anak laki-laki saya menulis namanya dengan sangat rapi."
+          },
+          {
+            "en": "Can you explain it slowly, please?",
+            "id": "Bisakah kamu menjelaskannya pelan-pelan?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina has piano lessons every week. Say she plays it well.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "adjective-vs-adverb",
+          "prompt": "Arrange the words: Rina bermain piano dengan baik.",
+          "tokens": [
+            "well",
+            "piano",
+            "Rina",
+            "the",
+            "plays"
+          ],
+          "solution": "Rina plays the piano well.",
+          "explanation": "First the verb and its object (**plays the piano**), then the adverb **well** at the end. 'Rina plays well the piano' puts the adverb between the verb and the object."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "very, really, quite",
+        "text": "Now let's make words stronger or softer.",
+        "body": "**very** and **really** make a word stronger; **quite** makes it a little softer (= *cukup, lumayan*). They go **right before** an adjective or adverb: *very slowly, quite well*. Before a **verb**, only **really**: *I really like it*, not `I very like it`. Indonesian *sangat suka* tempts you to say 'very like'. In American English, quite is often as strong as very.",
+        "pairs": [
+          {
+            "en": "very",
+            "id": "sangat"
+          },
+          {
+            "en": "really",
+            "id": "sangat, benar-benar"
+          },
+          {
+            "en": "quite",
+            "id": "cukup, lumayan"
+          },
+          {
+            "en": "very slowly",
+            "id": "sangat pelan"
+          },
+          {
+            "en": "quite good",
+            "id": "lumayan bagus"
+          },
+          {
+            "en": "really want",
+            "id": "sangat ingin"
+          },
+          {
+            "en": "I like it very much.",
+            "id": "Saya sangat menyukainya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas watches every football match on TV. Which sentence is right?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "degree-words",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Dimas very likes football.",
+            "Dimas likes very football.",
+            "Dimas really likes football."
+          ],
+          "answer": 2,
+          "explanation": "likes is a verb, and only **really** can go before a verb: Dimas **really likes** football. *very* only goes before an adjective or adverb (very good, very well)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Adverbs of manner & degree",
+          "intro": "Adjective = a person or thing. Adverb = how someone does something. very / really / quite = how strong.",
+          "headers": [
+            "Rule",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "adjective + -ly",
+              "slow → slowly, careful → carefully",
+              "pelan, hati-hati"
+            ],
+            [
+              "consonant + y → -ily",
+              "easy → easily, happy → happily",
+              "mudah, senang"
+            ],
+            [
+              "-le → -ly",
+              "gentle → gently, simple → simply",
+              "lembut, sederhana"
+            ],
+            [
+              "same word",
+              "fast, hard, early, late",
+              "cepat, keras, awal, terlambat"
+            ],
+            [
+              "good → well",
+              "a good cook → cooks well",
+              "jago masak → memasak dengan baik"
+            ],
+            [
+              "hardly ≠ hard",
+              "He hardly sleeps.",
+              "Dia hampir tidak tidur."
+            ],
+            [
+              "adjective: person or thing",
+              "a careful driver / Budi is careful.",
+              "pengemudi yang hati-hati / Budi hati-hati."
+            ],
+            [
+              "adverb: how",
+              "Budi drives carefully.",
+              "Budi menyetir dengan hati-hati."
+            ],
+            [
+              "-ly adjectives",
+              "a friendly waiter (in a friendly way)",
+              "pelayan yang ramah (dengan ramah)"
+            ],
+            [
+              "well = healthy",
+              "I'm well, thanks.",
+              "Saya sehat, terima kasih."
+            ],
+            [
+              "verb + object + adverb",
+              "Dimas speaks Mandarin fluently.",
+              "Dimas berbicara bahasa Mandarin dengan lancar."
+            ],
+            [
+              "very / really / quite + adjective or adverb",
+              "very slowly, really good, quite well",
+              "sangat pelan, sangat bagus, cukup baik"
+            ],
+            [
+              "really + verb",
+              "I really like it.",
+              "Saya sangat suka."
+            ]
+          ],
+          "tips": [
+            "If Indonesian can say **dengan ...** (dengan hati-hati), English needs the adverb.",
+            "After **am / is / are**, use the adjective: She is **careful**, not `She is carefully`.",
+            "Not `I very like it`: before a verb, use **really**."
+          ],
+          "examples": [
+            {
+              "en": "Please speak slowly.",
+              "id": "Tolong bicara pelan-pelan."
+            },
+            {
+              "en": "Pak Hasan works hard every day.",
+              "id": "Pak Hasan bekerja keras setiap hari."
+            },
+            {
+              "en": "My room is quite small, but it's clean.",
+              "id": "Kamar saya cukup kecil, tapi bersih."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and this page explain adverbs of manner, good vs well and hard vs hardly, with short exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar menjelaskan bagaimana orang melakukan sesuatu, misalnya menyetir dengan hati-hati atau berbicara bahasa Inggris dengan baik, dan cara menguatkan atau melemahkan kata. Kita pelajari pelan-pelan, satu langkah kecil setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bagaimana? Tambah -ly",
+        "text": "Kamu sudah kenal kata sifat seperti slow dan careful. Sekarang yuk jelaskan bagaimana seseorang melakukan sesuatu.",
+        "body": "**Kata sifat** (adjective) menjelaskan orang atau benda: *a slow bus* (bus yang lambat). **Adverb** (kata keterangan cara) menjelaskan **bagaimana** seseorang melakukan sesuatu: The bus moves **slowly** (busnya bergerak pelan). Kebanyakan adverb = **kata sifat + -ly**. Bahasa Indonesia memakai kata yang sama (*pelan*, kadang *dengan pelan*), tapi bahasa Inggris mengubahnya.\n\nEjaan: careful → carefu**ll**y (dua l). Konsonan + **y** → **-ily**: easy → easily. **-le** → **-ly**: gentle → gently.",
+        "pairs": [
+          {
+            "en": "slow → slowly",
+            "id": "pelan → dengan pelan"
+          },
+          {
+            "en": "quick → quickly",
+            "id": "cepat → dengan cepat"
+          },
+          {
+            "en": "quiet → quietly",
+            "id": "tenang → dengan tenang, tanpa suara"
+          },
+          {
+            "en": "careful → carefully",
+            "id": "hati-hati → dengan hati-hati"
+          },
+          {
+            "en": "bad → badly",
+            "id": "buruk → dengan buruk"
+          },
+          {
+            "en": "easy → easily",
+            "id": "mudah → dengan mudah"
+          },
+          {
+            "en": "gentle → gently",
+            "id": "lembut → dengan lembut"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Yuk coba ejaannya. Kata sifatnya happy.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-adverbs",
+          "prompt": "Lengkapi: The children are playing ___ in the park.",
+          "options": [
+            "happyly",
+            "happy",
+            "happily"
+          ],
+          "answer": 2,
+          "explanation": "happy berakhir dengan konsonan + **y**, jadi y berubah menjadi **i** sebelum -ly: **happily**. *happy* saja adalah kata sifat: tidak bisa menjelaskan cara mereka bermain."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Tanpa -ly: fast, hard, well",
+        "text": "Ada beberapa adverb yang tidak ikut aturan -ly. Cukup dihafal saja.",
+        "body": "**fast, hard, early, late** tidak berubah: a fast train → it goes **fast**. **good → well**. Tidak ada 'fastly' atau 'goodly'. Hati-hati: **hardly** adalah kata lain = *hampir tidak*. *He works hard* = dia bekerja keras; *He hardly works* = dia hampir tidak bekerja!",
+        "examples": [
+          {
+            "en": "The train to Bandung goes very fast.",
+            "id": "Kereta ke Bandung melaju sangat cepat."
+          },
+          {
+            "en": "Pak Hasan works hard every day.",
+            "id": "Pak Hasan bekerja keras setiap hari."
+          },
+          {
+            "en": "I sometimes get up late on Sundays.",
+            "id": "Kadang saya bangun siang di hari Minggu."
+          },
+          {
+            "en": "Bu Ani cooks rendang really well.",
+            "id": "Bu Ani jago sekali memasak rendang."
+          },
+          {
+            "en": "He hardly sleeps. He's very busy.",
+            "id": "Dia hampir tidak tidur. Dia sangat sibuk."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Kata sifat atau adverb?",
+        "text": "Ini jebakan bahasa Indonesia. Tanyakan satu hal: orang atau benda, atau caranya?",
+        "body": "Orang atau benda → **kata sifat**: *a careful driver*. Setelah **am/is/are** juga: *Budi is careful*. Cara seseorang melakukan sesuatu → **adverb**: *Budi drives carefully*. Bahasa Indonesia bilang *hati-hati* untuk keduanya. Triknya: kalau bahasa Indonesia bisa pakai *dengan ...*, bahasa Inggris butuh adverb.\n\n**friendly** berakhir -ly tapi kata sifat (*a friendly waiter*). Dan I'm **well** itu benar: di sini well artinya **sehat**.",
+        "pairs": [
+          {
+            "en": "a careful driver",
+            "id": "pengemudi yang hati-hati"
+          },
+          {
+            "en": "drives carefully",
+            "id": "menyetir dengan hati-hati"
+          },
+          {
+            "en": "a good cook",
+            "id": "juru masak yang jago"
+          },
+          {
+            "en": "cooks well",
+            "id": "memasak dengan baik"
+          },
+          {
+            "en": "Her English is good.",
+            "id": "Bahasa Inggrisnya bagus."
+          },
+          {
+            "en": "a friendly waiter",
+            "id": "pelayan yang ramah"
+          },
+          {
+            "en": "I'm well, thanks.",
+            "id": "Saya sehat, terima kasih."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi main sepak bola setiap hari Minggu. Bagaimana cara dia bermain?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-adverbs",
+          "prompt": "Budi pemain sepak bola yang bagus. Lengkapi: He plays very ___.",
+          "options": [
+            "good",
+            "well",
+            "goodly"
+          ],
+          "answer": 1,
+          "explanation": "Kalimat ini menjelaskan **cara** dia bermain, jadi butuh adverb, dan adverb dari good adalah **well**: very **well**. *good* menjelaskan orang atau benda (*a good footballer*), dan kata 'goodly' tidak ada."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sekarang sebaliknya: ini tentang orang, atau tentang caranya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-vs-adverb",
+          "prompt": "Sari tidak pernah membuat kesalahan. Lengkapi: She's a ___ worker.",
+          "options": [
+            "careful",
+            "carefully",
+            "carefuly"
+          ],
+          "answer": 0,
+          "explanation": "Katanya menjelaskan orang (a ___ **worker**), jadi pakai **kata sifat**: a **careful** worker. *carefully* menjelaskan cara melakukan sesuatu, dan 'carefuly' salah eja."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Di mana letak adverb?",
+        "text": "Hal terakhir tentang adverb: di mana menaruhnya.",
+        "body": "Taruh adverb **setelah kata kerja**, atau setelah kata kerja + **objeknya** (benda setelah kata kerja, misalnya *Mandarin* di *speaks Mandarin*). Jangan di antara keduanya: bukan `speaks fluently Mandarin`. Urutan bahasa Indonesia sama: *berbicara bahasa Mandarin dengan lancar*.",
+        "examples": [
+          {
+            "en": "Dimas speaks Mandarin fluently.",
+            "id": "Dimas berbicara bahasa Mandarin dengan lancar."
+          },
+          {
+            "en": "Please read the contract carefully.",
+            "id": "Tolong baca kontraknya dengan teliti."
+          },
+          {
+            "en": "My son writes his name very neatly.",
+            "id": "Anak laki-laki saya menulis namanya dengan sangat rapi."
+          },
+          {
+            "en": "Can you explain it slowly, please?",
+            "id": "Bisakah kamu menjelaskannya pelan-pelan?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Rina les piano setiap minggu. Bilang bahwa dia bermain dengan baik.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "adjective-vs-adverb",
+          "prompt": "Susun kata-katanya: Rina bermain piano dengan baik.",
+          "tokens": [
+            "well",
+            "piano",
+            "Rina",
+            "the",
+            "plays"
+          ],
+          "solution": "Rina plays the piano well.",
+          "explanation": "Pertama kata kerja dan objeknya (**plays the piano**), lalu adverb **well** di akhir. 'Rina plays well the piano' menaruh adverb di antara kata kerja dan objek."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "very, really, quite",
+        "text": "Sekarang yuk buat kata lebih kuat atau lebih lemah.",
+        "body": "**very** dan **really** membuat kata lebih kuat; **quite** membuatnya sedikit lebih lemah (= *cukup, lumayan*). Letaknya **tepat sebelum** kata sifat atau adverb: *very slowly, quite well*. Sebelum **kata kerja**, hanya **really**: *I really like it*, bukan `I very like it`. *Sangat suka* membuat orang tergoda bilang 'very like'. Dalam bahasa Inggris Amerika, quite sering sama kuatnya dengan very.",
+        "pairs": [
+          {
+            "en": "very",
+            "id": "sangat"
+          },
+          {
+            "en": "really",
+            "id": "sangat, benar-benar"
+          },
+          {
+            "en": "quite",
+            "id": "cukup, lumayan"
+          },
+          {
+            "en": "very slowly",
+            "id": "sangat pelan"
+          },
+          {
+            "en": "quite good",
+            "id": "lumayan bagus"
+          },
+          {
+            "en": "really want",
+            "id": "sangat ingin"
+          },
+          {
+            "en": "I like it very much.",
+            "id": "Saya sangat menyukainya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas menonton setiap pertandingan sepak bola di TV. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "degree-words",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "Dimas very likes football.",
+            "Dimas likes very football.",
+            "Dimas really likes football."
+          ],
+          "answer": 2,
+          "explanation": "likes adalah kata kerja, dan hanya **really** yang bisa ada sebelum kata kerja: Dimas **really likes** football. *very* hanya ada sebelum kata sifat atau adverb (very good, very well)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Adverb cara & tingkat",
+          "intro": "Kata sifat = orang atau benda. Adverb = cara seseorang melakukan sesuatu. very / really / quite = seberapa kuat.",
+          "headers": [
+            "Aturan",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "kata sifat + -ly",
+              "slow → slowly, careful → carefully",
+              "pelan, hati-hati"
+            ],
+            [
+              "konsonan + y → -ily",
+              "easy → easily, happy → happily",
+              "mudah, senang"
+            ],
+            [
+              "-le → -ly",
+              "gentle → gently, simple → simply",
+              "lembut, sederhana"
+            ],
+            [
+              "kata yang sama",
+              "fast, hard, early, late",
+              "cepat, keras, awal, terlambat"
+            ],
+            [
+              "good → well",
+              "a good cook → cooks well",
+              "jago masak → memasak dengan baik"
+            ],
+            [
+              "hardly ≠ hard",
+              "He hardly sleeps.",
+              "Dia hampir tidak tidur."
+            ],
+            [
+              "kata sifat: orang atau benda",
+              "a careful driver / Budi is careful.",
+              "pengemudi yang hati-hati / Budi hati-hati."
+            ],
+            [
+              "adverb: caranya",
+              "Budi drives carefully.",
+              "Budi menyetir dengan hati-hati."
+            ],
+            [
+              "kata sifat berakhiran -ly",
+              "a friendly waiter (in a friendly way)",
+              "pelayan yang ramah (dengan ramah)"
+            ],
+            [
+              "well = sehat",
+              "I'm well, thanks.",
+              "Saya sehat, terima kasih."
+            ],
+            [
+              "kata kerja + objek + adverb",
+              "Dimas speaks Mandarin fluently.",
+              "Dimas berbicara bahasa Mandarin dengan lancar."
+            ],
+            [
+              "very / really / quite + kata sifat atau adverb",
+              "very slowly, really good, quite well",
+              "sangat pelan, sangat bagus, cukup baik"
+            ],
+            [
+              "really + kata kerja",
+              "I really like it.",
+              "Saya sangat suka."
+            ]
+          ],
+          "tips": [
+            "Kalau bahasa Indonesia bisa pakai **dengan ...** (dengan hati-hati), bahasa Inggris butuh adverb.",
+            "Setelah **am / is / are**, pakai kata sifat: She is **careful**, bukan `She is carefully`.",
+            "Bukan `I very like it`: sebelum kata kerja, pakai **really**."
+          ],
+          "examples": [
+            {
+              "en": "Please speak slowly.",
+              "id": "Tolong bicara pelan-pelan."
+            },
+            {
+              "en": "Pak Hasan works hard every day.",
+              "id": "Pak Hasan bekerja keras setiap hari."
+            },
+            {
+              "en": "My room is quite small, but it's clean.",
+              "id": "Kamar saya cukup kecil, tapi bersih."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau belajar lebih banyak? Video dan halaman ini menjelaskan adverb cara, good vs well dan hard vs hardly, dengan latihan singkat."
+      }
+    ]
+  }
+}

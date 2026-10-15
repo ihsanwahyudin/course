@@ -1,0 +1,576 @@
+{
+  "en": {
+    "greeting": "Hi! Today we learn sentences with if: things that are always true, things that may happen in the future, and when to say when instead. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Always true: if + present",
+        "text": "Let's start with sentences about things that happen **every time**.",
+        "body": "A sentence with **if** has two parts: the **if-part** (the condition: *If you heat ice*) and the **result** (*it melts*). When the result happens **every time** (a fact or a habit), use the **present simple** in both parts. This is the **zero conditional**. **No will**: not 'it will melts'. And add **-s** after he/she/it in both parts: *If Budi eats chilli, he gets a stomachache.*",
+        "pairs": [
+          {
+            "en": "If you heat ice, it melts.",
+            "id": "Kalau es dipanaskan, es itu meleleh."
+          },
+          {
+            "en": "If you don't water plants, they die.",
+            "id": "Kalau tanaman tidak disiram, tanaman itu mati."
+          },
+          {
+            "en": "If I drink coffee at night, I can't sleep.",
+            "id": "Kalau saya minum kopi malam-malam, saya tidak bisa tidur."
+          },
+          {
+            "en": "If Budi eats chilli, he gets a stomachache.",
+            "id": "Kalau Budi makan cabai, perutnya sakit."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A science fact: it's true every time.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "zero-conditional",
+          "prompt": "Complete: If you heat water to 100°C, it ___.",
+          "options": [
+            "boil",
+            "will boils",
+            "boils"
+          ],
+          "answer": 2,
+          "explanation": "Water boils at 100°C **every time**, so use the present simple: **it boils**, with **-s** for *it*. 'boil' has no -s, and 'will boils' is wrong twice: a fact needs no will, and there's never -s after will."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One possible future: if + present, will",
+        "text": "Now a different situation: **one time in the future** that **may** happen.",
+        "body": "Maybe it rains tomorrow, maybe not. If it does, here's the result: *If it rains tomorrow, I'll stay home.* Use **if + present simple, will / won't + verb**: the **first conditional**. Ask yourself: **every time** (fact, habit) → present, present. **One time, later** (tomorrow, tonight, this weekend) → present, **will**. Indonesian trap: *Kalau besok hujan, saya di rumah saja* has no *akan*, but English needs **will** in the result.",
+        "pairs": [
+          {
+            "en": "If it rains tomorrow, I'll stay home.",
+            "id": "Kalau besok hujan, saya di rumah saja."
+          },
+          {
+            "en": "If you hurry, you'll catch the bus.",
+            "id": "Kalau kamu cepat, kamu akan dapat busnya."
+          },
+          {
+            "en": "If the traffic is bad, we'll be late.",
+            "id": "Kalau macet, kita akan terlambat."
+          },
+          {
+            "en": "If Rina is tired tonight, she won't cook.",
+            "id": "Kalau nanti malam Rina capek, dia tidak akan masak."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "No will after if",
+        "text": "The if-part talks about the future, but it has **no will**. Look at the verb after **if** in each sentence.",
+        "body": "Not 'If it will rain'. The word **if** already shows we're imagining the future, so the verb after it stays **present**. Indonesian adds *nanti* or *akan* (*Kalau nanti hujan …*), English doesn't: just **If it rains** (you can add *tomorrow*). **will** goes only in the result. And keep the **-s**: *If Rina comes*, not 'If Rina come'.",
+        "examples": [
+          {
+            "en": "If it rains, I'll stay home.",
+            "id": "Kalau nanti hujan, saya di rumah saja."
+          },
+          {
+            "en": "If Rina comes tonight, we'll eat together.",
+            "id": "Kalau nanti malam Rina datang, kita makan bersama."
+          },
+          {
+            "en": "If the shop is open, I'll buy some bread.",
+            "id": "Kalau tokonya buka, saya akan beli roti."
+          },
+          {
+            "en": "If you need help, I'll be in my room.",
+            "id": "Kalau kamu butuh bantuan, saya ada di kamar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina has a job interview in Jakarta tomorrow.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "first-conditional",
+          "prompt": "Complete: If she ___ the job, she'll move to Jakarta.",
+          "options": [
+            "will get",
+            "gets",
+            "get"
+          ],
+          "answer": 1,
+          "explanation": "No will in the if-part, even about the future: **If she gets the job**. *she* needs **-s**, so 'get' is wrong. **will** goes in the result: *she'll move*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Two orders and the comma",
+        "text": "You can swap the two parts. Only the comma changes.",
+        "body": "**if-part first** → put a **comma** after it: *If you're hungry, I'll make some noodles.* **Result first** → **no comma**: *I'll make some noodles if you're hungry.* The meaning is the same. When you speak, the comma is a short pause. It works the same for facts (*If you heat ice, it melts.*) and for **when**.",
+        "pairs": [
+          {
+            "en": "If you're hungry, I'll make some noodles.",
+            "id": "Kalau kamu lapar, saya buatkan mi."
+          },
+          {
+            "en": "I'll make some noodles if you're hungry.",
+            "id": "Saya buatkan mi kalau kamu lapar."
+          },
+          {
+            "en": "If Budi calls, I'll tell you.",
+            "id": "Kalau Budi menelepon, saya kasih tahu kamu."
+          },
+          {
+            "en": "I'll tell you if Budi calls.",
+            "id": "Saya kasih tahu kamu kalau Budi menelepon."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Where's the comma?",
+        "text": "One of these sentences is missing a comma.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "first-conditional",
+          "prompt": "Which sentence needs a comma?",
+          "options": [
+            "I'll drive if you're tired.",
+            "If you're tired I'll drive."
+          ],
+          "answer": 1,
+          "explanation": "In **If you're tired I'll drive**, the if-part comes first, so it needs a comma: **If you're tired, I'll drive.** In *I'll drive if you're tired*, the result comes first, so no comma."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "if (maybe) or when (sure)?",
+        "text": "Indonesian **kalau** can mean **if** or **when**. English makes you choose.",
+        "body": "**if** = **maybe**: you're not sure it will happen. *If I see Budi, I'll tell him.* **when** = **sure**: it will happen, just later. *When I get home, I'll call you.* So 'If I get home tonight, I'll call you' sounds like you may not get home! After **when**, the same rule: present, **no will** (*When I get home*, not 'When I will get home'). For facts, if and when mean almost the same (*When you heat ice, it melts*): a fact is always sure.",
+        "pairs": [
+          {
+            "en": "If I see Budi, I'll tell him.",
+            "id": "Kalau saya ketemu Budi, saya akan bilang ke dia. (mungkin)"
+          },
+          {
+            "en": "When I get home, I'll call you.",
+            "id": "Nanti kalau sudah sampai rumah, saya telepon kamu. (pasti)"
+          },
+          {
+            "en": "If it's sunny on Sunday, we'll go to the park.",
+            "id": "Kalau hari Minggu cerah, kita akan ke taman. (mungkin)"
+          },
+          {
+            "en": "When the class finishes, I'll eat lunch.",
+            "id": "Nanti kalau kelasnya selesai, saya makan siang. (pasti)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi is on the train to Bandung. It arrives at 4 p.m. He sends a message to his mum.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "if-vs-when",
+          "prompt": "Complete: '___, I'll send you a photo of the station.'",
+          "options": [
+            "If I arrive",
+            "When I will arrive",
+            "When I arrive"
+          ],
+          "answer": 2,
+          "explanation": "Budi is sure he'll arrive, so use **when**, with the present: **When I arrive**. 'If I arrive' sounds like he may never get there, and there's no will after when."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "It's raining hard. The rain is sure to stop later.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "if-vs-when",
+          "prompt": "Arrange the words, starting with When: Nanti kalau hujannya sudah berhenti, kita pulang.",
+          "tokens": [
+            "home",
+            "we'll",
+            "stops",
+            "When",
+            "go",
+            "the",
+            "rain"
+          ],
+          "solution": "When the rain stops, we'll go home.",
+          "explanation": "The rain is **sure** to stop, so **When**. After when, the present: **the rain stops** (+s, no will). The when-part comes first, so a comma, then **we'll go home**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · if and when",
+          "intro": "Zero conditional for things that are always true, first conditional for one possible future, and if vs when.",
+          "headers": [
+            "Use",
+            "Form",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Always true (fact, habit)",
+              "if + present, present",
+              "If you heat ice, it melts."
+            ],
+            [
+              "One possible future",
+              "if + present, will + verb",
+              "If it rains tomorrow, I'll stay home."
+            ],
+            [
+              "One possible future (no)",
+              "if + present, won't + verb",
+              "If Rina is tired, she won't cook."
+            ],
+            [
+              "Sure to happen",
+              "when + present, will + verb",
+              "When I get home, I'll call you."
+            ],
+            [
+              "if first",
+              "comma",
+              "If you're hungry, I'll make some noodles."
+            ],
+            [
+              "result first",
+              "no comma",
+              "I'll make some noodles if you're hungry."
+            ]
+          ],
+          "tips": [
+            "**No will after if or when**, even about the future: *If it rains*, not 'If it will rain'. Indonesian says *kalau nanti hujan*; English has no *nanti* there.",
+            "Every time → present, present. One time, later (tomorrow, tonight) → present, **will**. Keep the **-s** with he/she/it: *If Rina comes*, *it melts*.",
+            "**kalau** = if or when: **if** = maybe, **when** = sure."
+          ],
+          "examples": [
+            {
+              "en": "If I drink coffee at night, I can't sleep.",
+              "id": "Kalau saya minum kopi malam-malam, saya tidak bisa tidur."
+            },
+            {
+              "en": "If you hurry, you'll catch the bus.",
+              "id": "Kalau kamu cepat, kamu akan dapat busnya."
+            },
+            {
+              "en": "If I see Budi, I'll tell him.",
+              "id": "Kalau saya ketemu Budi, saya akan bilang ke dia."
+            },
+            {
+              "en": "When the class finishes, I'll eat lunch.",
+              "id": "Nanti kalau kelasnya selesai, saya makan siang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and this page explain if sentences in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar kalimat dengan if: hal yang selalu benar, hal yang mungkin terjadi nanti, dan kapan memakai when. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Selalu benar: if + present",
+        "text": "Kita mulai dengan kalimat tentang hal yang terjadi **setiap kali**.",
+        "body": "Kalimat dengan **if** (kalau) punya dua bagian: **bagian if** (syaratnya: *If you heat ice*) dan **hasilnya** (*it melts*). Kalau hasilnya terjadi **setiap kali** (fakta atau kebiasaan), pakai **present simple** di kedua bagian. Ini namanya **zero conditional**. **Tanpa will**: bukan 'it will melts'. Dan tambahkan **-s** setelah he/she/it di kedua bagian: *If Budi eats chilli, he gets a stomachache.*",
+        "pairs": [
+          {
+            "en": "If you heat ice, it melts.",
+            "id": "Kalau es dipanaskan, es itu meleleh."
+          },
+          {
+            "en": "If you don't water plants, they die.",
+            "id": "Kalau tanaman tidak disiram, tanaman itu mati."
+          },
+          {
+            "en": "If I drink coffee at night, I can't sleep.",
+            "id": "Kalau saya minum kopi malam-malam, saya tidak bisa tidur."
+          },
+          {
+            "en": "If Budi eats chilli, he gets a stomachache.",
+            "id": "Kalau Budi makan cabai, perutnya sakit."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Fakta ilmiah: selalu benar setiap kali.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "zero-conditional",
+          "prompt": "Lengkapi: If you heat water to 100°C, it ___.",
+          "options": [
+            "boil",
+            "will boils",
+            "boils"
+          ],
+          "answer": 2,
+          "explanation": "Air mendidih pada 100°C **setiap kali**, jadi pakai present simple: **it boils**, dengan **-s** untuk *it*. 'boil' tidak memakai -s, dan 'will boils' salah dua kali: fakta tidak butuh will, dan tidak pernah ada -s setelah will."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Satu kemungkinan nanti: if + present, will",
+        "text": "Sekarang situasi yang lain: **satu kali di masa depan** yang **mungkin** terjadi.",
+        "body": "Mungkin besok hujan, mungkin tidak. Kalau hujan, inilah hasilnya: *If it rains tomorrow, I'll stay home.* Pakai **if + present simple, will / won't + kata kerja**: ini **first conditional**. Tanyakan: **setiap kali** (fakta, kebiasaan) → present, present. **Satu kali, nanti** (besok, nanti malam, akhir pekan ini) → present, **will**. Jebakan bahasa Indonesia: *Kalau besok hujan, saya di rumah saja* tidak memakai *akan*, tapi bahasa Inggris butuh **will** di bagian hasil.",
+        "pairs": [
+          {
+            "en": "If it rains tomorrow, I'll stay home.",
+            "id": "Kalau besok hujan, saya di rumah saja."
+          },
+          {
+            "en": "If you hurry, you'll catch the bus.",
+            "id": "Kalau kamu cepat, kamu akan dapat busnya."
+          },
+          {
+            "en": "If the traffic is bad, we'll be late.",
+            "id": "Kalau macet, kita akan terlambat."
+          },
+          {
+            "en": "If Rina is tired tonight, she won't cook.",
+            "id": "Kalau nanti malam Rina capek, dia tidak akan masak."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tanpa will setelah if",
+        "text": "Bagian if membicarakan masa depan, tapi **tanpa will**. Perhatikan kata kerja setelah **if** di setiap kalimat.",
+        "body": "Bukan 'If it will rain'. Kata **if** sudah menunjukkan kita sedang membayangkan masa depan, jadi kata kerja setelahnya tetap **present**. Bahasa Indonesia menambah *nanti* atau *akan* (*Kalau nanti hujan …*), bahasa Inggris tidak: cukup **If it rains** (boleh ditambah *tomorrow*). **will** hanya ada di bagian hasil. Dan jangan lupa **-s**: *If Rina comes*, bukan 'If Rina come'.",
+        "examples": [
+          {
+            "en": "If it rains, I'll stay home.",
+            "id": "Kalau nanti hujan, saya di rumah saja."
+          },
+          {
+            "en": "If Rina comes tonight, we'll eat together.",
+            "id": "Kalau nanti malam Rina datang, kita makan bersama."
+          },
+          {
+            "en": "If the shop is open, I'll buy some bread.",
+            "id": "Kalau tokonya buka, saya akan beli roti."
+          },
+          {
+            "en": "If you need help, I'll be in my room.",
+            "id": "Kalau kamu butuh bantuan, saya ada di kamar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Besok Rina wawancara kerja di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "first-conditional",
+          "prompt": "Lengkapi: If she ___ the job, she'll move to Jakarta.",
+          "options": [
+            "will get",
+            "gets",
+            "get"
+          ],
+          "answer": 1,
+          "explanation": "Tidak ada will di bagian if, walaupun tentang masa depan: **If she gets the job**. *she* butuh **-s**, jadi 'get' salah. **will** ada di bagian hasil: *she'll move*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dua urutan dan koma",
+        "text": "Kedua bagian boleh ditukar. Yang berubah hanya komanya.",
+        "body": "**Bagian if di depan** → beri **koma** setelahnya: *If you're hungry, I'll make some noodles.* **Hasil di depan** → **tanpa koma**: *I'll make some noodles if you're hungry.* Artinya sama. Saat bicara, koma itu jeda pendek. Aturan ini sama untuk fakta (*If you heat ice, it melts.*) dan untuk **when**.",
+        "pairs": [
+          {
+            "en": "If you're hungry, I'll make some noodles.",
+            "id": "Kalau kamu lapar, saya buatkan mi."
+          },
+          {
+            "en": "I'll make some noodles if you're hungry.",
+            "id": "Saya buatkan mi kalau kamu lapar."
+          },
+          {
+            "en": "If Budi calls, I'll tell you.",
+            "id": "Kalau Budi menelepon, saya kasih tahu kamu."
+          },
+          {
+            "en": "I'll tell you if Budi calls.",
+            "id": "Saya kasih tahu kamu kalau Budi menelepon."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Di mana komanya?",
+        "text": "Salah satu kalimat ini kurang koma.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "first-conditional",
+          "prompt": "Kalimat mana yang butuh koma?",
+          "options": [
+            "I'll drive if you're tired.",
+            "If you're tired I'll drive."
+          ],
+          "answer": 1,
+          "explanation": "Di **If you're tired I'll drive**, bagian if ada di depan, jadi butuh koma: **If you're tired, I'll drive.** Di *I'll drive if you're tired*, hasilnya di depan, jadi tanpa koma."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "if (mungkin) atau when (pasti)?",
+        "text": "Kata **kalau** bisa berarti **if** atau **when**. Bahasa Inggris membuatmu memilih.",
+        "body": "**if** = **mungkin**: kamu belum yakin itu akan terjadi. *If I see Budi, I'll tell him.* **when** = **pasti**: itu akan terjadi, hanya nanti. *When I get home, I'll call you.* Jadi 'If I get home tonight, I'll call you' terdengar seolah kamu mungkin tidak sampai rumah! Setelah **when**, aturannya sama: present, **tanpa will** (*When I get home*, bukan 'When I will get home'). Untuk fakta, if dan when artinya hampir sama (*When you heat ice, it melts*): fakta selalu pasti.",
+        "pairs": [
+          {
+            "en": "If I see Budi, I'll tell him.",
+            "id": "Kalau saya ketemu Budi, saya akan bilang ke dia. (mungkin)"
+          },
+          {
+            "en": "When I get home, I'll call you.",
+            "id": "Nanti kalau sudah sampai rumah, saya telepon kamu. (pasti)"
+          },
+          {
+            "en": "If it's sunny on Sunday, we'll go to the park.",
+            "id": "Kalau hari Minggu cerah, kita akan ke taman. (mungkin)"
+          },
+          {
+            "en": "When the class finishes, I'll eat lunch.",
+            "id": "Nanti kalau kelasnya selesai, saya makan siang. (pasti)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi sedang di kereta ke Bandung. Keretanya tiba jam 4 sore. Dia mengirim pesan ke ibunya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "if-vs-when",
+          "prompt": "Lengkapi: '___, I'll send you a photo of the station.'",
+          "options": [
+            "If I arrive",
+            "When I will arrive",
+            "When I arrive"
+          ],
+          "answer": 2,
+          "explanation": "Budi pasti akan tiba, jadi pakai **when**, dengan present: **When I arrive**. 'If I arrive' terdengar seolah dia mungkin tidak pernah sampai, dan tidak ada will setelah when."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Hujan deras. Hujannya pasti berhenti nanti.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "if-vs-when",
+          "prompt": "Susun kata-katanya, mulai dengan When: Nanti kalau hujannya sudah berhenti, kita pulang.",
+          "tokens": [
+            "home",
+            "we'll",
+            "stops",
+            "When",
+            "go",
+            "the",
+            "rain"
+          ],
+          "solution": "When the rain stops, we'll go home.",
+          "explanation": "Hujannya **pasti** berhenti, jadi **When**. Setelah when, pakai present: **the rain stops** (+s, tanpa will). Bagian when ada di depan, jadi pakai koma, lalu **we'll go home**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · if dan when",
+          "intro": "Zero conditional untuk hal yang selalu benar, first conditional untuk satu kemungkinan di masa depan, dan if atau when.",
+          "headers": [
+            "Pemakaian",
+            "Bentuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Selalu benar (fakta, kebiasaan)",
+              "if + present, present",
+              "If you heat ice, it melts."
+            ],
+            [
+              "Satu kemungkinan nanti",
+              "if + present, will + verb",
+              "If it rains tomorrow, I'll stay home."
+            ],
+            [
+              "Satu kemungkinan nanti (tidak)",
+              "if + present, won't + verb",
+              "If Rina is tired, she won't cook."
+            ],
+            [
+              "Pasti terjadi",
+              "when + present, will + verb",
+              "When I get home, I'll call you."
+            ],
+            [
+              "if di depan",
+              "koma",
+              "If you're hungry, I'll make some noodles."
+            ],
+            [
+              "hasil di depan",
+              "tanpa koma",
+              "I'll make some noodles if you're hungry."
+            ]
+          ],
+          "tips": [
+            "**Tanpa will setelah if atau when**, walaupun tentang masa depan: *If it rains*, bukan 'If it will rain'. Bahasa Indonesia bilang *kalau nanti hujan*; bahasa Inggris tidak punya *nanti* di situ.",
+            "Setiap kali → present, present. Satu kali, nanti (besok, nanti malam) → present, **will**. Jangan lupa **-s** untuk he/she/it: *If Rina comes*, *it melts*.",
+            "**kalau** = if atau when: **if** = mungkin, **when** = pasti."
+          ],
+          "examples": [
+            {
+              "en": "If I drink coffee at night, I can't sleep.",
+              "id": "Kalau saya minum kopi malam-malam, saya tidak bisa tidur."
+            },
+            {
+              "en": "If you hurry, you'll catch the bus.",
+              "id": "Kalau kamu cepat, kamu akan dapat busnya."
+            },
+            {
+              "en": "If I see Budi, I'll tell him.",
+              "id": "Kalau saya ketemu Budi, saya akan bilang ke dia."
+            },
+            {
+              "en": "When the class finishes, I'll eat lunch.",
+              "id": "Nanti kalau kelasnya selesai, saya makan siang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau belajar lagi? Video dan halaman ini menjelaskan kalimat dengan if dengan cara yang berbeda."
+      }
+    ]
+  }
+}

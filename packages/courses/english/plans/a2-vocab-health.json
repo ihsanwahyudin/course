@@ -1,0 +1,798 @@
+{
+  "en": {
+    "greeting": "Hi! Today we learn to talk about health and feelings: what's wrong when you're ill, what the doctor and the pharmacist say, and how you feel. One small group of words at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Symptoms: say it with have",
+        "text": "Let's start with what's wrong when you're ill. In English you **have** an illness, like you have a bag.",
+        "body": "Indonesian says *Saya sakit kepala*, so learners say `I am headache`. But a headache is a thing (kata benda), not a word that describes you. You **have** it: **I have a headache.** With he / she: **She has a cold.** (British English also: *I've got a cold*.)\n\nMost of these words need **a**: a headache, a cough. **Flu** doesn't: *I have flu*. **ache** (= sakit, nyeri) sounds like 'eik'.",
+        "pairs": [
+          {
+            "en": "headache",
+            "id": "sakit kepala"
+          },
+          {
+            "en": "stomachache",
+            "id": "sakit perut"
+          },
+          {
+            "en": "toothache",
+            "id": "sakit gigi"
+          },
+          {
+            "en": "sore throat",
+            "id": "sakit tenggorokan"
+          },
+          {
+            "en": "fever",
+            "id": "demam"
+          },
+          {
+            "en": "cough",
+            "id": "batuk"
+          },
+          {
+            "en": "cold",
+            "id": "pilek"
+          },
+          {
+            "en": "flu",
+            "id": "flu (tanpa a: I have flu)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "What's wrong?",
+        "text": "Here are the words in real sentences.",
+        "body": "*Badan saya panas* or *Anak saya panas* means fever. In English `My body is hot` only means you feel warm (after sport, in the sun). For the illness say **have a fever** (British English: **have a temperature**). *Kepala saya sakit* can be **I have a headache** or **My head hurts**.",
+        "examples": [
+          {
+            "en": "Budi has a headache today.",
+            "id": "Budi sakit kepala hari ini."
+          },
+          {
+            "en": "My son has a fever. His temperature is 39 degrees.",
+            "id": "Anak laki-lakiku demam. Suhunya 39 derajat."
+          },
+          {
+            "en": "I've got a cold and a cough.",
+            "id": "Saya pilek dan batuk."
+          },
+          {
+            "en": "Sari has a sore throat, so she can't sing tonight.",
+            "id": "Sari sakit tenggorokan, jadi dia tidak bisa menyanyi malam ini."
+          },
+          {
+            "en": "My tooth hurts. I have a toothache.",
+            "id": "Gigiku sakit. Saya sakit gigi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina is at the clinic. Help her tell the doctor what's wrong.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "symptoms-illnesses",
+          "options": [
+            "My body is hot.",
+            "I am fever.",
+            "I have a fever."
+          ],
+          "answer": 2,
+          "prompt": "Rina's temperature is 38.5 °C. What does she tell the doctor?",
+          "explanation": "A fever is a thing you **have**: **I have a fever.** `I am fever` copies *saya demam* with *am*, and `My body is hot` is a word-by-word *badan saya panas*: in English it doesn't say you're ill."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "At the doctor's and the pharmacy",
+        "text": "Now the words you need at the doctor's and at the pharmacy (apotek).",
+        "body": "The doctor asks **What's the matter?** or **What's wrong?** (= Ada keluhan apa?). Answer with *I have …*.\n\nTwo traps: *resep* from the doctor is a **prescription** (a *recipe* is for cooking). And *minum obat* is **take medicine**, not *drink*.\n\n**twice a day** = dua kali sehari (once, twice, three times). **at the doctor's** = di tempat praktik dokter.",
+        "pairs": [
+          {
+            "en": "appointment",
+            "id": "janji temu (dengan dokter)"
+          },
+          {
+            "en": "nurse",
+            "id": "perawat"
+          },
+          {
+            "en": "prescription",
+            "id": "resep dokter"
+          },
+          {
+            "en": "pharmacy",
+            "id": "apotek"
+          },
+          {
+            "en": "medicine",
+            "id": "obat"
+          },
+          {
+            "en": "tablets",
+            "id": "tablet, pil"
+          },
+          {
+            "en": "twice a day",
+            "id": "dua kali sehari"
+          },
+          {
+            "en": "after meals",
+            "id": "sesudah makan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "At the clinic",
+        "text": "Here's a visit to the doctor and the pharmacy.",
+        "body": "The doctor's advice is an instruction: it starts with the verb, like *Minum obat!*: **Drink**, **Stay**, **Take**. **Don't** = jangan. Always read the label on your medicine.",
+        "examples": [
+          {
+            "en": "Can I have an appointment for this afternoon?",
+            "id": "Bisa saya buat janji untuk sore ini?"
+          },
+          {
+            "en": "What's the matter, Pak Hasan? — I have a bad cough.",
+            "id": "Ada keluhan apa, Pak Hasan? — Saya batuk parah."
+          },
+          {
+            "en": "Drink a lot of water and stay in bed.",
+            "id": "Minum banyak air dan istirahat di tempat tidur."
+          },
+          {
+            "en": "Here's your prescription. Take it to the pharmacy.",
+            "id": "Ini resepnya. Bawa ke apotek."
+          },
+          {
+            "en": "I'd like some cough syrup, please.",
+            "id": "Saya mau beli obat batuk sirup."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Bu Ani is at the pharmacy. Press play and listen to the pharmacist.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "doctor-pharmacy",
+          "listen": "Take these tablets twice a day, after meals.",
+          "options": [
+            "Twice a day, before meals",
+            "Once a day, after meals",
+            "Twice a day, after meals"
+          ],
+          "answer": 2,
+          "prompt": "Listen. When does Bu Ani take the tablets?",
+          "explanation": "The pharmacist says **twice a day** (dua kali sehari) and **after meals** (sesudah makan). *Before meals* is the opposite: sebelum makan. *Once* = one time."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "You call the clinic. Build what you say.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "doctor-pharmacy",
+          "tokens": [
+            "appointment",
+            "the",
+            "I'd",
+            "with",
+            "like",
+            "doctor",
+            "an"
+          ],
+          "solution": "I'd like an appointment with the doctor.",
+          "prompt": "Arrange the words: Saya mau buat janji temu dengan dokter.",
+          "explanation": "**I'd like** (= I would like) is a polite *saya mau*. **an appointment** = janji temu (*an* because *appointment* starts with a vowel sound). Then **with the doctor**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Feelings: bored or boring?",
+        "text": "Last group: how you feel. Indonesian *Saya capek* has no 'am', but English needs it: **I'm tired** (or **I feel tired**).",
+        "body": "**-ed** = how a person feels: *I'm bored* = saya bosan. **-ing** = the thing that makes the feeling: *The film is boring* = filmnya membosankan. So `I'm boring at home` means *saya membosankan*! Say **I'm bored at home.**\n\nSame pattern: tired / tiring, interested / interesting. Happy, sad and angry have no pair. **worried about** = khawatir tentang.",
+        "pairs": [
+          {
+            "en": "happy",
+            "id": "senang, bahagia"
+          },
+          {
+            "en": "sad",
+            "id": "sedih"
+          },
+          {
+            "en": "angry",
+            "id": "marah"
+          },
+          {
+            "en": "worried",
+            "id": "khawatir"
+          },
+          {
+            "en": "tired",
+            "id": "capek, lelah"
+          },
+          {
+            "en": "nervous",
+            "id": "gugup, deg-degan"
+          },
+          {
+            "en": "bored",
+            "id": "bosan (yang merasa)"
+          },
+          {
+            "en": "boring",
+            "id": "membosankan (penyebabnya)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas sends you a message on Sunday. Choose the right word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "basic-feelings",
+          "options": [
+            "boring",
+            "bored",
+            "tiring"
+          ],
+          "answer": 1,
+          "prompt": "Dimas: 'I'm at home all day and there's nothing to do. I'm so ___.'",
+          "explanation": "Dimas is talking about how he **feels** (bosan), so use **-ed**: **bored**. `I'm boring` means *saya membosankan*: other people feel bored with him! *Tiring* describes a thing that makes you tired."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip through these to review. Say each one out loud.",
+        "flashcards": [
+          {
+            "front": "I have a headache.",
+            "back": "Saya sakit kepala."
+          },
+          {
+            "front": "a sore throat",
+            "back": "sakit tenggorokan"
+          },
+          {
+            "front": "a cough",
+            "back": "batuk"
+          },
+          {
+            "front": "What's the matter?",
+            "back": "Ada keluhan apa? / Kenapa?"
+          },
+          {
+            "front": "a prescription",
+            "back": "resep dokter (bukan recipe)"
+          },
+          {
+            "front": "take medicine",
+            "back": "minum obat"
+          },
+          {
+            "front": "worried",
+            "back": "khawatir"
+          },
+          {
+            "front": "bored / boring",
+            "back": "bosan / membosankan"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything from today on one page. Keep it handy.",
+        "artifact": {
+          "title": "Cheat sheet · Health & feelings",
+          "intro": "Symptoms, words for the doctor's and the pharmacy, and feelings.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Symptoms",
+              "I have a headache / a stomachache / a toothache.",
+              "sakit kepala / sakit perut / sakit gigi"
+            ],
+            [
+              "Symptoms",
+              "I have a fever / a cough / a sore throat.",
+              "demam / batuk / sakit tenggorokan"
+            ],
+            [
+              "Illnesses",
+              "I have a cold. / I have flu.",
+              "pilek / flu"
+            ],
+            [
+              "he / she",
+              "She has a cold. / He's got a cough.",
+              "Dia pilek. / Dia batuk."
+            ],
+            [
+              "Doctor",
+              "What's the matter? / What's wrong?",
+              "Ada keluhan apa? / Kenapa?"
+            ],
+            [
+              "Doctor",
+              "appointment, nurse, prescription",
+              "janji temu, perawat, resep dokter"
+            ],
+            [
+              "Advice",
+              "Drink a lot of water. Stay in bed.",
+              "Minum banyak air. Istirahat di tempat tidur."
+            ],
+            [
+              "Pharmacy",
+              "pharmacy (UK also chemist's), medicine, tablets",
+              "apotek, obat, tablet"
+            ],
+            [
+              "How often",
+              "once / twice / three times a day",
+              "sekali / dua kali / tiga kali sehari"
+            ],
+            [
+              "When",
+              "before meals / after meals",
+              "sebelum makan / sesudah makan"
+            ],
+            [
+              "Feelings",
+              "happy, sad, angry, worried, nervous",
+              "senang, sedih, marah, khawatir, gugup"
+            ],
+            [
+              "-ed / -ing",
+              "I'm bored. / The film is boring.",
+              "Saya bosan. / Filmnya membosankan."
+            ],
+            [
+              "-ed / -ing",
+              "I'm tired. / My job is tiring.",
+              "Saya capek. / Pekerjaanku melelahkan."
+            ]
+          ],
+          "tips": [
+            "Illnesses: **have**, not am: `I am headache` → **I have a headache**. `My body is hot` → **I have a fever**.",
+            "*minum obat* = **take** medicine; *resep* = **prescription** (a *recipe* is for cooking).",
+            "**-ed** = how you feel (I'm bored); **-ing** = what causes it (The film is boring)."
+          ],
+          "examples": [
+            {
+              "en": "What's wrong? — I have a sore throat.",
+              "id": "Kenapa? — Saya sakit tenggorokan."
+            },
+            {
+              "en": "Take these tablets before meals.",
+              "id": "Minum tablet ini sebelum makan."
+            },
+            {
+              "en": "I'm bored at home. This TV show is boring.",
+              "id": "Saya bosan di rumah. Acara TV ini membosankan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice with bored / boring and similar pairs? This British Council page has a short explanation and two quizzes."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar membicarakan kesehatan dan perasaan: menyebut keluhan saat sakit, memahami dokter dan apoteker, dan mengatakan perasaanmu. Sedikit demi sedikit, satu kelompok kata setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Gejala: pakai have",
+        "text": "Kita mulai dari keluhan saat sakit. Dalam bahasa Inggris, kamu **punya** (have) penyakitnya, seperti punya tas.",
+        "body": "Bahasa Indonesia bilang *Saya sakit kepala*, jadi pelajar sering bilang `I am headache`. Padahal headache itu benda (kata benda), bukan kata yang menjelaskan dirimu. Kamu **punya** sakitnya: **I have a headache.** Untuk he / she: **She has a cold.** (Bahasa Inggris Britania juga: *I've got a cold*.)\n\nKebanyakan kata ini perlu **a**: a headache, a cough. **Flu** tidak: *I have flu*. **ache** (= sakit, nyeri) dibaca 'eik'.",
+        "pairs": [
+          {
+            "en": "headache",
+            "id": "sakit kepala"
+          },
+          {
+            "en": "stomachache",
+            "id": "sakit perut"
+          },
+          {
+            "en": "toothache",
+            "id": "sakit gigi"
+          },
+          {
+            "en": "sore throat",
+            "id": "sakit tenggorokan"
+          },
+          {
+            "en": "fever",
+            "id": "demam"
+          },
+          {
+            "en": "cough",
+            "id": "batuk"
+          },
+          {
+            "en": "cold",
+            "id": "pilek"
+          },
+          {
+            "en": "flu",
+            "id": "flu (tanpa a: I have flu)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Ada keluhan apa?",
+        "text": "Ini kata-katanya dalam kalimat sungguhan.",
+        "body": "*Badan saya panas* atau *Anak saya panas* artinya demam. Dalam bahasa Inggris `My body is hot` cuma berarti kamu merasa gerah (habis olahraga, kena matahari). Untuk penyakitnya katakan **have a fever** (Britania: **have a temperature**). *Kepala saya sakit* bisa **I have a headache** atau **My head hurts**.",
+        "examples": [
+          {
+            "en": "Budi has a headache today.",
+            "id": "Budi sakit kepala hari ini."
+          },
+          {
+            "en": "My son has a fever. His temperature is 39 degrees.",
+            "id": "Anak laki-lakiku demam. Suhunya 39 derajat."
+          },
+          {
+            "en": "I've got a cold and a cough.",
+            "id": "Saya pilek dan batuk."
+          },
+          {
+            "en": "Sari has a sore throat, so she can't sing tonight.",
+            "id": "Sari sakit tenggorokan, jadi dia tidak bisa menyanyi malam ini."
+          },
+          {
+            "en": "My tooth hurts. I have a toothache.",
+            "id": "Gigiku sakit. Saya sakit gigi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina sedang di klinik. Bantu dia menyampaikan keluhannya ke dokter.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "symptoms-illnesses",
+          "options": [
+            "My body is hot.",
+            "I am fever.",
+            "I have a fever."
+          ],
+          "answer": 2,
+          "prompt": "Suhu badan Rina 38,5 °C. Apa yang dia katakan kepada dokter?",
+          "explanation": "Demam adalah sesuatu yang kamu **punya**: **I have a fever.** `I am fever` meniru *saya demam* dengan *am*, dan `My body is hot` adalah terjemahan kata per kata dari *badan saya panas*: dalam bahasa Inggris kalimat itu tidak berarti kamu sakit."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Di dokter dan di apotek",
+        "text": "Sekarang kata-kata yang kamu butuhkan di dokter dan di apotek (pharmacy).",
+        "body": "Dokter bertanya **What's the matter?** atau **What's wrong?** (= Ada keluhan apa?). Jawab dengan *I have …*.\n\nDua jebakan: *resep* dari dokter adalah **prescription** (*recipe* itu resep masakan). Dan *minum obat* adalah **take medicine**, bukan *drink*.\n\n**twice a day** = dua kali sehari (once, twice, three times). **at the doctor's** = di tempat praktik dokter.",
+        "pairs": [
+          {
+            "en": "appointment",
+            "id": "janji temu (dengan dokter)"
+          },
+          {
+            "en": "nurse",
+            "id": "perawat"
+          },
+          {
+            "en": "prescription",
+            "id": "resep dokter"
+          },
+          {
+            "en": "pharmacy",
+            "id": "apotek"
+          },
+          {
+            "en": "medicine",
+            "id": "obat"
+          },
+          {
+            "en": "tablets",
+            "id": "tablet, pil"
+          },
+          {
+            "en": "twice a day",
+            "id": "dua kali sehari"
+          },
+          {
+            "en": "after meals",
+            "id": "sesudah makan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di klinik",
+        "text": "Ini kunjungan ke dokter dan ke apotek.",
+        "body": "Saran dokter berupa kalimat perintah: dimulai dengan kata kerja, seperti *Minum obat!*: **Drink**, **Stay**, **Take**. **Don't** = jangan. Selalu baca label obatmu.",
+        "examples": [
+          {
+            "en": "Can I have an appointment for this afternoon?",
+            "id": "Bisa saya buat janji untuk sore ini?"
+          },
+          {
+            "en": "What's the matter, Pak Hasan? — I have a bad cough.",
+            "id": "Ada keluhan apa, Pak Hasan? — Saya batuk parah."
+          },
+          {
+            "en": "Drink a lot of water and stay in bed.",
+            "id": "Minum banyak air dan istirahat di tempat tidur."
+          },
+          {
+            "en": "Here's your prescription. Take it to the pharmacy.",
+            "id": "Ini resepnya. Bawa ke apotek."
+          },
+          {
+            "en": "I'd like some cough syrup, please.",
+            "id": "Saya mau beli obat batuk sirup."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Bu Ani sedang di apotek. Tekan putar dan dengarkan apotekernya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "doctor-pharmacy",
+          "listen": "Take these tablets twice a day, after meals.",
+          "options": [
+            "Twice a day, before meals",
+            "Once a day, after meals",
+            "Twice a day, after meals"
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan. Kapan Bu Ani minum tabletnya?",
+          "explanation": "Apotekernya bilang **twice a day** (dua kali sehari) dan **after meals** (sesudah makan). *Before meals* kebalikannya: sebelum makan. *Once* = satu kali."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kamu menelepon klinik. Susun yang kamu ucapkan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "doctor-pharmacy",
+          "tokens": [
+            "appointment",
+            "the",
+            "I'd",
+            "with",
+            "like",
+            "doctor",
+            "an"
+          ],
+          "solution": "I'd like an appointment with the doctor.",
+          "prompt": "Susun kata-katanya: Saya mau buat janji temu dengan dokter.",
+          "explanation": "**I'd like** (= I would like) adalah *saya mau* yang sopan. **an appointment** = janji temu (*an* karena *appointment* diawali bunyi vokal). Lalu **with the doctor**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Perasaan: bored atau boring?",
+        "text": "Kelompok terakhir: perasaanmu. *Saya capek* tidak punya 'am', tapi bahasa Inggris memerlukannya: **I'm tired** (atau **I feel tired**).",
+        "body": "**-ed** = yang dirasakan seseorang: *I'm bored* = saya bosan. **-ing** = hal yang membuat perasaan itu: *The film is boring* = filmnya membosankan. Jadi `I'm boring at home` artinya *saya membosankan*! Katakan **I'm bored at home.**\n\nPolanya sama: tired / tiring, interested / interesting. Happy, sad dan angry tidak punya pasangan. **worried about** = khawatir tentang.",
+        "pairs": [
+          {
+            "en": "happy",
+            "id": "senang, bahagia"
+          },
+          {
+            "en": "sad",
+            "id": "sedih"
+          },
+          {
+            "en": "angry",
+            "id": "marah"
+          },
+          {
+            "en": "worried",
+            "id": "khawatir"
+          },
+          {
+            "en": "tired",
+            "id": "capek, lelah"
+          },
+          {
+            "en": "nervous",
+            "id": "gugup, deg-degan"
+          },
+          {
+            "en": "bored",
+            "id": "bosan (yang merasa)"
+          },
+          {
+            "en": "boring",
+            "id": "membosankan (penyebabnya)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas mengirim pesan kepadamu hari Minggu. Pilih kata yang tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "basic-feelings",
+          "options": [
+            "boring",
+            "bored",
+            "tiring"
+          ],
+          "answer": 1,
+          "prompt": "Dimas: 'I'm at home all day and there's nothing to do. I'm so ___.'",
+          "explanation": "Dimas membicarakan apa yang dia **rasakan** (bosan), jadi pakai **-ed**: **bored**. `I'm boring` artinya *saya membosankan*: orang lain yang bosan dengannya! *Tiring* menjelaskan hal yang membuatmu capek."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartu-kartu ini untuk mengulang. Ucapkan masing-masing dengan suara keras.",
+        "flashcards": [
+          {
+            "front": "I have a headache.",
+            "back": "Saya sakit kepala."
+          },
+          {
+            "front": "a sore throat",
+            "back": "sakit tenggorokan"
+          },
+          {
+            "front": "a cough",
+            "back": "batuk"
+          },
+          {
+            "front": "What's the matter?",
+            "back": "Ada keluhan apa? / Kenapa?"
+          },
+          {
+            "front": "a prescription",
+            "back": "resep dokter (bukan recipe)"
+          },
+          {
+            "front": "take medicine",
+            "back": "minum obat"
+          },
+          {
+            "front": "worried",
+            "back": "khawatir"
+          },
+          {
+            "front": "bored / boring",
+            "back": "bosan / membosankan"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semua materi hari ini dalam satu halaman. Simpan baik-baik.",
+        "artifact": {
+          "title": "Ringkasan · Kesehatan & perasaan",
+          "intro": "Gejala, kosakata di dokter dan di apotek, serta perasaan.",
+          "headers": [
+            "Kelompok",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Gejala",
+              "I have a headache / a stomachache / a toothache.",
+              "sakit kepala / sakit perut / sakit gigi"
+            ],
+            [
+              "Gejala",
+              "I have a fever / a cough / a sore throat.",
+              "demam / batuk / sakit tenggorokan"
+            ],
+            [
+              "Penyakit",
+              "I have a cold. / I have flu.",
+              "pilek / flu"
+            ],
+            [
+              "he / she",
+              "She has a cold. / He's got a cough.",
+              "Dia pilek. / Dia batuk."
+            ],
+            [
+              "Dokter",
+              "What's the matter? / What's wrong?",
+              "Ada keluhan apa? / Kenapa?"
+            ],
+            [
+              "Dokter",
+              "appointment, nurse, prescription",
+              "janji temu, perawat, resep dokter"
+            ],
+            [
+              "Saran",
+              "Drink a lot of water. Stay in bed.",
+              "Minum banyak air. Istirahat di tempat tidur."
+            ],
+            [
+              "Apotek",
+              "pharmacy (UK also chemist's), medicine, tablets",
+              "apotek, obat, tablet"
+            ],
+            [
+              "Seberapa sering",
+              "once / twice / three times a day",
+              "sekali / dua kali / tiga kali sehari"
+            ],
+            [
+              "Kapan",
+              "before meals / after meals",
+              "sebelum makan / sesudah makan"
+            ],
+            [
+              "Perasaan",
+              "happy, sad, angry, worried, nervous",
+              "senang, sedih, marah, khawatir, gugup"
+            ],
+            [
+              "-ed / -ing",
+              "I'm bored. / The film is boring.",
+              "Saya bosan. / Filmnya membosankan."
+            ],
+            [
+              "-ed / -ing",
+              "I'm tired. / My job is tiring.",
+              "Saya capek. / Pekerjaanku melelahkan."
+            ]
+          ],
+          "tips": [
+            "Penyakit: **have**, bukan am: `I am headache` → **I have a headache**. `My body is hot` → **I have a fever**.",
+            "*minum obat* = **take** medicine; *resep* = **prescription** (*recipe* itu resep masakan).",
+            "**-ed** = yang kamu rasakan (I'm bored); **-ing** = penyebabnya (The film is boring)."
+          ],
+          "examples": [
+            {
+              "en": "What's wrong? — I have a sore throat.",
+              "id": "Kenapa? — Saya sakit tenggorokan."
+            },
+            {
+              "en": "Take these tablets before meals.",
+              "id": "Minum tablet ini sebelum makan."
+            },
+            {
+              "en": "I'm bored at home. This TV show is boring.",
+              "id": "Saya bosan di rumah. Acara TV ini membosankan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi soal bored / boring dan pasangan sejenis? Halaman British Council ini punya penjelasan singkat dan dua kuis."
+      }
+    ]
+  }
+}

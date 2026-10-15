@@ -604,6 +604,9 @@ func Build(course Course, files []levelFile, lessons map[string]*Lesson) (*Curri
 
 func validateLessons(c *Curriculum) []error {
 	var errs []error
+	// Item ids are unique across the course, so a level checkpoint (or a
+	// mistake card) never mixes up two lessons' questions.
+	itemOwner := map[string]string{}
 	for id, l := range c.lessons {
 		n, ok := c.byID[id]
 		if !ok {
@@ -630,6 +633,11 @@ func validateLessons(c *Curriculum) []error {
 				errs = append(errs, fmt.Errorf("lesson %q: duplicate assessment item %q", id, it.ID))
 			}
 			itemIDs[it.ID] = true
+			if other, ok := itemOwner[it.ID]; ok && other != id {
+				a, b := min(id, other), max(id, other)
+				errs = append(errs, fmt.Errorf("assessment item %q is used by both %q and %q; give one a new prefix", it.ID, a, b))
+			}
+			itemOwner[it.ID] = id
 			if !objIDs[it.ObjectiveID] {
 				errs = append(errs, fmt.Errorf("lesson %q: item %q targets unknown objective %q", id, it.ID, it.ObjectiveID))
 			}

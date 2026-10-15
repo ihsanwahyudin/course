@@ -1,0 +1,700 @@
+{
+  "en": {
+    "greeting": "Hi! You know how to say what's happening now: I'm cooking. Today we take it into the past: I was cooking. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Sedang, but in the past",
+        "text": "You already say what's happening now: I'm cooking. What about something that was happening last night?",
+        "body": "Change **am/is/are** to **was/were** and keep the **-ing**: *I'm cooking* (now) → **At 8 last night I was cooking.** This is the **past continuous**: an action **in progress** (started, not finished yet) at a time in the past. Indonesian keeps the same *sedang* and only adds a time word (*jam 8 tadi malam saya sedang memasak*). English changes the helper word too: 'At 8 last night I am cooking' ✗ → **I was cooking**. And keep the -ing: 'I was cook' ✗.",
+        "pairs": [
+          {
+            "en": "I'm cooking.",
+            "id": "Saya sedang memasak. (sekarang)"
+          },
+          {
+            "en": "I was cooking.",
+            "id": "Saya sedang memasak. (tadi, di masa lalu)"
+          },
+          {
+            "en": "she's sleeping → she was sleeping",
+            "id": "dia (perempuan) sedang tidur"
+          },
+          {
+            "en": "they're working → they were working",
+            "id": "mereka sedang bekerja"
+          },
+          {
+            "en": "at 8 last night",
+            "id": "jam 8 tadi malam"
+          },
+          {
+            "en": "at 7 this morning",
+            "id": "jam 7 tadi pagi"
+          },
+          {
+            "en": "at this time yesterday",
+            "id": "kemarin jam segini"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "In the middle at 8",
+        "text": "Picture last night. Where is 8 o'clock?",
+        "timeline": {
+          "title": "Last night: cooking dinner",
+          "caption": "You started cooking at 7:30 and finished at 8:30. At 8 you were in the middle: I was cooking. was/were + -ing = in the middle of an action at that moment.",
+          "marks": [
+            {
+              "label": "7:30 · started cooking",
+              "kind": "past"
+            },
+            {
+              "label": "8:00 · I was cooking",
+              "kind": "past"
+            },
+            {
+              "label": "8:30 · finished",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Put Indonesian 'sedang' into the past.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "action-in-progress",
+          "prompt": "Which sentence means 'Jam 8 tadi malam Rina sedang membuat kue'?",
+          "options": [
+            "At 8 last night Rina is making a cake.",
+            "At 8 last night Rina was making a cake.",
+            "At 8 last night Rina was make a cake."
+          ],
+          "answer": 1,
+          "explanation": "**8 last night** is in the past, so **is** becomes **was**, and the verb keeps -ing: **Rina was making a cake.** 'is making' keeps the present (the *sedang* habit), and 'was make' drops the -ing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "was or were?",
+        "text": "It's the same choice you know from the past of to be.",
+        "body": "**I, he, she, it** and one person (*Rina, my boss*) → **was**. **you, we, they** and two or more (*my parents, Budi and Sari*) → **were**. 'They was' ✗: *they* is more than one, so **they were**. **you** is always **were**, even for one person (because it's *you are*). Indonesian has no was/were, so check the **subject** (who does the action). Spell the -ing as before: *have → having* (drop the e), *run → running* (double), *study → studying*.",
+        "pairs": [
+          {
+            "en": "I was",
+            "id": "saya (sedang …)"
+          },
+          {
+            "en": "he / she / it was",
+            "id": "dia / itu (sedang …)"
+          },
+          {
+            "en": "Rina was",
+            "id": "Rina (sedang …)"
+          },
+          {
+            "en": "you were",
+            "id": "kamu / kalian (sedang …)"
+          },
+          {
+            "en": "we were",
+            "id": "kami / kita (sedang …)"
+          },
+          {
+            "en": "they were",
+            "id": "mereka (sedang …)"
+          },
+          {
+            "en": "my parents were",
+            "id": "orang tuaku (sedang …)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Saturday afternoon at home.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-past-continuous",
+          "prompt": "Complete: At four yesterday afternoon, my sisters ___ the car.",
+          "options": [
+            "was washing",
+            "were washing",
+            "were wash"
+          ],
+          "answer": 1,
+          "explanation": "**my sisters** = they (two or more) → **were**, plus the -ing: **were washing**. 'was' is only for one person or thing, and 'were wash' is missing the -ing."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "At 9 last night",
+        "text": "At 9 last night, at Sari's house, everyone was in the middle of something.",
+        "body": "One person or thing → **was**; two or more → **were**. In *It was raining*, **it** means nothing: English just needs a word at the start, as in *It's raining*.",
+        "examples": [
+          {
+            "en": "Sari was doing her homework.",
+            "id": "Sari sedang mengerjakan PR-nya."
+          },
+          {
+            "en": "Her father was reading the news on his phone.",
+            "id": "Ayahnya sedang membaca berita di HP-nya."
+          },
+          {
+            "en": "Her mother was talking to Bu Ani on the phone.",
+            "id": "Ibunya sedang mengobrol dengan Bu Ani di telepon."
+          },
+          {
+            "en": "Her grandparents were sitting on the terrace.",
+            "id": "Kakek dan neneknya sedang duduk di teras."
+          },
+          {
+            "en": "It was raining outside.",
+            "id": "Di luar sedang hujan."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Not, and questions",
+        "text": "Negatives and questions work just like was/were on their own.",
+        "body": "**Negative:** **wasn't / weren't** + -ing: *I wasn't sleeping.* **Question:** **Was/Were** first, then the subject: *He was eating* → **Was he eating?** Short answers: **Yes, he was. / No, he wasn't.** To ask about a time: **What were you doing at 8?** No **did** here (was/were already shows the past): 'Did you sleeping?' ✗. And don't just add a question mark: 'You were sleeping?' → **Were you sleeping?**",
+        "pairs": [
+          {
+            "en": "I wasn't working.",
+            "id": "Saya tidak sedang bekerja."
+          },
+          {
+            "en": "They weren't listening.",
+            "id": "Mereka tidak sedang mendengarkan."
+          },
+          {
+            "en": "Was he eating?",
+            "id": "Apakah dia (laki-laki) sedang makan?"
+          },
+          {
+            "en": "Yes, he was. / No, he wasn't.",
+            "id": "Ya. / Tidak."
+          },
+          {
+            "en": "Were you sleeping?",
+            "id": "Apakah kamu sedang tidur?"
+          },
+          {
+            "en": "What were you doing?",
+            "id": "Kamu sedang apa (tadi)?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You want to know what your friend Rina was doing on the phone.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "form-past-continuous",
+          "prompt": "Arrange the words: Apakah dia (perempuan) sedang menelepon ibunya?",
+          "tokens": [
+            "calling",
+            "mother",
+            "Was",
+            "her",
+            "she"
+          ],
+          "solution": "Was she calling her mother?",
+          "explanation": "Question = **Was/Were** + subject + -ing: **Was she calling her mother?** *she* is one person → **Was**, not Were. No *did*: was already shows the past."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and answer",
+        "text": "Your colleague Budi asks you something. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "action-in-progress",
+          "listen": "What were you doing at three yesterday afternoon?",
+          "prompt": "Listen to Budi's question. Choose the best answer.",
+          "options": [
+            "Yes, I was.",
+            "I'm reading a book in my room.",
+            "I was reading a book in my room."
+          ],
+          "answer": 2,
+          "explanation": "Budi asks **What were you doing at three yesterday afternoon?** A past time + *what … doing* asks what you were in the middle of → **I was reading a book in my room.** 'Yes, I was' only answers a yes/no question (*Were you…?*), and 'I'm reading' is about now."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in was/were + -ing.",
+        "flashcards": [
+          {
+            "front": "I / he / she / it / Rina + ? + -ing",
+            "back": "was (I was working)"
+          },
+          {
+            "front": "you / we / they / my parents + ? + -ing",
+            "back": "were (they were working)"
+          },
+          {
+            "front": "Jam 8 tadi malam saya sedang memasak.",
+            "back": "At 8 last night I was cooking."
+          },
+          {
+            "front": "Negative: Rina was laughing.",
+            "back": "Rina wasn't laughing. (Rina tidak sedang tertawa.)"
+          },
+          {
+            "front": "Question: You were working.",
+            "back": "Were you working? (Apakah kamu sedang bekerja?)"
+          },
+          {
+            "front": "Kamu sedang apa jam 10 tadi malam?",
+            "back": "What were you doing at 10 last night?"
+          },
+          {
+            "front": "They was watching TV. ✗",
+            "back": "They were watching TV. ✓ (Mereka sedang menonton TV.)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · past continuous",
+          "intro": "was/were + -ing: what was in progress at a time in the past.",
+          "headers": [
+            "Subject",
+            "Positive",
+            "Negative",
+            "Question"
+          ],
+          "rows": [
+            [
+              "I",
+              "I was working",
+              "I wasn't working",
+              "Was I working?"
+            ],
+            [
+              "he / she / it",
+              "she was working",
+              "she wasn't working",
+              "Was she working?"
+            ],
+            [
+              "you",
+              "you were working",
+              "you weren't working",
+              "Were you working?"
+            ],
+            [
+              "we",
+              "we were working",
+              "we weren't working",
+              "Were we working?"
+            ],
+            [
+              "they",
+              "they were working",
+              "they weren't working",
+              "Were they working?"
+            ]
+          ],
+          "tips": [
+            "**was/were + -ing** = in the middle of an action at a past time: **At 8 last night I was cooking.**",
+            "One person or thing → **was**; you / two or more → **were**. Never 'they was'.",
+            "A past time + *sedang* → was/were, not am/is/are: 'At 8 last night I am cooking' ✗. No did in questions: **Were you sleeping?**"
+          ],
+          "examples": [
+            {
+              "en": "At 6 this morning I was waiting for an ojek.",
+              "id": "Jam 6 tadi pagi saya sedang menunggu ojek."
+            },
+            {
+              "en": "My friends were having lunch in the kantin at one.",
+              "id": "Teman-temanku sedang makan siang di kantin jam satu."
+            },
+            {
+              "en": "Was it raining in Bogor? — Yes, it was.",
+              "id": "Apakah di Bogor sedang hujan? — Ya."
+            },
+            {
+              "en": "What were you doing at 10 last night? — I was watching a film.",
+              "id": "Kamu sedang apa jam 10 tadi malam? — Saya sedang menonton film."
+            },
+            {
+              "en": "Last night I cooked dinner. At 8 I was cooking.",
+              "id": "Tadi malam saya memasak makan malam (selesai). Jam 8 saya sedang memasak."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? A grammar page with two short tests, and a beginner video (the first part and the questions at the end fit this lesson)."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah bisa bilang apa yang sedang terjadi sekarang: I'm cooking. Hari ini kita bawa ke masa lalu: I was cooking. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Sedang, tapi di masa lalu",
+        "text": "Kamu sudah bisa bilang apa yang sedang terjadi sekarang: I'm cooking. Bagaimana dengan kegiatan yang sedang berlangsung tadi malam?",
+        "body": "Ganti **am/is/are** dengan **was/were**, dan -ing-nya tetap: *I'm cooking* (sekarang) → **At 8 last night I was cooking.** Ini namanya **past continuous**: kegiatan yang **sedang berlangsung** (sudah dimulai, belum selesai) pada suatu waktu di masa lalu. Bahasa Indonesia tetap memakai *sedang* dan hanya menambah kata waktu (*jam 8 tadi malam saya sedang memasak*). Bahasa Inggris juga mengubah kata bantunya: 'At 8 last night I am cooking' ✗ → **I was cooking**. Dan -ing-nya jangan dibuang: 'I was cook' ✗.",
+        "pairs": [
+          {
+            "en": "I'm cooking.",
+            "id": "Saya sedang memasak. (sekarang)"
+          },
+          {
+            "en": "I was cooking.",
+            "id": "Saya sedang memasak. (tadi, di masa lalu)"
+          },
+          {
+            "en": "she's sleeping → she was sleeping",
+            "id": "dia (perempuan) sedang tidur"
+          },
+          {
+            "en": "they're working → they were working",
+            "id": "mereka sedang bekerja"
+          },
+          {
+            "en": "at 8 last night",
+            "id": "jam 8 tadi malam"
+          },
+          {
+            "en": "at 7 this morning",
+            "id": "jam 7 tadi pagi"
+          },
+          {
+            "en": "at this time yesterday",
+            "id": "kemarin jam segini"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Di tengah kegiatan jam 8",
+        "text": "Bayangkan tadi malam. Jam 8 ada di mana?",
+        "timeline": {
+          "title": "Tadi malam: memasak makan malam",
+          "caption": "Kamu mulai memasak jam 7.30 dan selesai jam 8.30. Jam 8 kamu sedang di tengah kegiatan itu: I was cooking. was/were + -ing = sedang di tengah sebuah kegiatan pada saat itu.",
+          "marks": [
+            {
+              "label": "7:30 · started cooking",
+              "kind": "past"
+            },
+            {
+              "label": "8:00 · I was cooking",
+              "kind": "past"
+            },
+            {
+              "label": "8:30 · finished",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ubah 'sedang' ke masa lalu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "action-in-progress",
+          "prompt": "Kalimat mana yang artinya 'Jam 8 tadi malam Rina sedang membuat kue'?",
+          "options": [
+            "At 8 last night Rina is making a cake.",
+            "At 8 last night Rina was making a cake.",
+            "At 8 last night Rina was make a cake."
+          ],
+          "answer": 1,
+          "explanation": "**8 last night** sudah lewat, jadi **is** menjadi **was**, dan kata kerjanya tetap -ing: **Rina was making a cake.** 'is making' tetap bentuk sekarang (kebiasaan dari kata *sedang*), dan 'was make' kehilangan -ing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "was atau were?",
+        "text": "Pilihannya sama seperti yang kamu kenal dari bentuk lampau to be.",
+        "body": "**I, he, she, it** dan satu orang (*Rina, my boss*) → **was**. **you, we, they** dan dua orang atau lebih (*my parents, Budi and Sari*) → **were**. 'They was' ✗: *they* lebih dari satu, jadi **they were**. **you** selalu **were**, walaupun satu orang (karena *you are*). Bahasa Indonesia tidak punya was/were, jadi selalu cek **subjeknya** (siapa yang melakukan). Ejaan -ing sama seperti sebelumnya: *have → having* (buang e), *run → running* (gandakan), *study → studying*.",
+        "pairs": [
+          {
+            "en": "I was",
+            "id": "saya (sedang …)"
+          },
+          {
+            "en": "he / she / it was",
+            "id": "dia / itu (sedang …)"
+          },
+          {
+            "en": "Rina was",
+            "id": "Rina (sedang …)"
+          },
+          {
+            "en": "you were",
+            "id": "kamu / kalian (sedang …)"
+          },
+          {
+            "en": "we were",
+            "id": "kami / kita (sedang …)"
+          },
+          {
+            "en": "they were",
+            "id": "mereka (sedang …)"
+          },
+          {
+            "en": "my parents were",
+            "id": "orang tuaku (sedang …)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sabtu sore di rumah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-past-continuous",
+          "prompt": "Lengkapi: At four yesterday afternoon, my sisters ___ the car.",
+          "options": [
+            "was washing",
+            "were washing",
+            "were wash"
+          ],
+          "answer": 1,
+          "explanation": "**my sisters** = they (dua orang atau lebih) → **were**, ditambah -ing: **were washing**. 'was' hanya untuk satu orang atau benda, dan 'were wash' tidak memakai -ing."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Jam 9 tadi malam",
+        "text": "Jam 9 tadi malam, di rumah Sari, semua orang sedang melakukan sesuatu.",
+        "body": "Satu orang atau benda → **was**; dua atau lebih → **were**. Di *It was raining*, **it** tidak ada artinya: bahasa Inggris cuma butuh kata di depan, sama seperti *It's raining*.",
+        "examples": [
+          {
+            "en": "Sari was doing her homework.",
+            "id": "Sari sedang mengerjakan PR-nya."
+          },
+          {
+            "en": "Her father was reading the news on his phone.",
+            "id": "Ayahnya sedang membaca berita di HP-nya."
+          },
+          {
+            "en": "Her mother was talking to Bu Ani on the phone.",
+            "id": "Ibunya sedang mengobrol dengan Bu Ani di telepon."
+          },
+          {
+            "en": "Her grandparents were sitting on the terrace.",
+            "id": "Kakek dan neneknya sedang duduk di teras."
+          },
+          {
+            "en": "It was raining outside.",
+            "id": "Di luar sedang hujan."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Negatif dan pertanyaan",
+        "text": "Kalimat negatif dan pertanyaan caranya sama seperti was/were tanpa kata kerja lain.",
+        "body": "**Negatif:** **wasn't / weren't** + -ing: *I wasn't sleeping.* **Pertanyaan:** **Was/Were** di depan, lalu subjeknya: *He was eating* → **Was he eating?** Jawaban singkat: **Yes, he was. / No, he wasn't.** Untuk bertanya tentang suatu jam: **What were you doing at 8?** Di sini tidak pakai **did** (was/were sudah menunjukkan masa lalu): 'Did you sleeping?' ✗. Dan jangan hanya menambah tanda tanya: 'You were sleeping?' → **Were you sleeping?**",
+        "pairs": [
+          {
+            "en": "I wasn't working.",
+            "id": "Saya tidak sedang bekerja."
+          },
+          {
+            "en": "They weren't listening.",
+            "id": "Mereka tidak sedang mendengarkan."
+          },
+          {
+            "en": "Was he eating?",
+            "id": "Apakah dia (laki-laki) sedang makan?"
+          },
+          {
+            "en": "Yes, he was. / No, he wasn't.",
+            "id": "Ya. / Tidak."
+          },
+          {
+            "en": "Were you sleeping?",
+            "id": "Apakah kamu sedang tidur?"
+          },
+          {
+            "en": "What were you doing?",
+            "id": "Kamu sedang apa (tadi)?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu ingin tahu apa yang sedang dilakukan temanmu Rina di telepon.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "form-past-continuous",
+          "prompt": "Susun kata-katanya: Apakah dia (perempuan) sedang menelepon ibunya?",
+          "tokens": [
+            "calling",
+            "mother",
+            "Was",
+            "her",
+            "she"
+          ],
+          "solution": "Was she calling her mother?",
+          "explanation": "Pertanyaan = **Was/Were** + subjek + -ing: **Was she calling her mother?** *she* satu orang → **Was**, bukan Were. Tanpa *did*: was sudah menunjukkan masa lalu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Rekan kerjamu Budi menanyakan sesuatu. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "action-in-progress",
+          "listen": "What were you doing at three yesterday afternoon?",
+          "prompt": "Dengarkan pertanyaan Budi. Pilih jawaban yang paling tepat.",
+          "options": [
+            "Yes, I was.",
+            "I'm reading a book in my room.",
+            "I was reading a book in my room."
+          ],
+          "answer": 2,
+          "explanation": "Budi bertanya **What were you doing at three yesterday afternoon?** Waktu lampau + *what … doing* menanyakan kegiatan yang sedang kamu lakukan saat itu → **I was reading a book in my room.** 'Yes, I was' hanya menjawab pertanyaan ya/tidak (*Were you…?*), dan 'I'm reading' tentang sekarang."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartu-kartu ini supaya was/were + -ing makin melekat.",
+        "flashcards": [
+          {
+            "front": "I / he / she / it / Rina + ? + -ing",
+            "back": "was (I was working)"
+          },
+          {
+            "front": "you / we / they / my parents + ? + -ing",
+            "back": "were (they were working)"
+          },
+          {
+            "front": "Jam 8 tadi malam saya sedang memasak.",
+            "back": "At 8 last night I was cooking."
+          },
+          {
+            "front": "Negative: Rina was laughing.",
+            "back": "Rina wasn't laughing. (Rina tidak sedang tertawa.)"
+          },
+          {
+            "front": "Question: You were working.",
+            "back": "Were you working? (Apakah kamu sedang bekerja?)"
+          },
+          {
+            "front": "Kamu sedang apa jam 10 tadi malam?",
+            "back": "What were you doing at 10 last night?"
+          },
+          {
+            "front": "They was watching TV. ✗",
+            "back": "They were watching TV. ✓ (Mereka sedang menonton TV.)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · past continuous",
+          "intro": "was/were + -ing: kegiatan yang sedang berlangsung pada suatu waktu di masa lalu.",
+          "headers": [
+            "Subjek",
+            "Positif",
+            "Negatif",
+            "Pertanyaan"
+          ],
+          "rows": [
+            [
+              "I",
+              "I was working",
+              "I wasn't working",
+              "Was I working?"
+            ],
+            [
+              "he / she / it",
+              "she was working",
+              "she wasn't working",
+              "Was she working?"
+            ],
+            [
+              "you",
+              "you were working",
+              "you weren't working",
+              "Were you working?"
+            ],
+            [
+              "we",
+              "we were working",
+              "we weren't working",
+              "Were we working?"
+            ],
+            [
+              "they",
+              "they were working",
+              "they weren't working",
+              "Were they working?"
+            ]
+          ],
+          "tips": [
+            "**was/were + -ing** = sedang di tengah sebuah kegiatan pada waktu lampau: **At 8 last night I was cooking.**",
+            "Satu orang atau benda → **was**; you / dua atau lebih → **were**. Tidak pernah 'they was'.",
+            "Waktu lampau + *sedang* → was/were, bukan am/is/are: 'At 8 last night I am cooking' ✗. Pertanyaan tanpa did: **Were you sleeping?**"
+          ],
+          "examples": [
+            {
+              "en": "At 6 this morning I was waiting for an ojek.",
+              "id": "Jam 6 tadi pagi saya sedang menunggu ojek."
+            },
+            {
+              "en": "My friends were having lunch in the kantin at one.",
+              "id": "Teman-temanku sedang makan siang di kantin jam satu."
+            },
+            {
+              "en": "Was it raining in Bogor? — Yes, it was.",
+              "id": "Apakah di Bogor sedang hujan? — Ya."
+            },
+            {
+              "en": "What were you doing at 10 last night? — I was watching a film.",
+              "id": "Kamu sedang apa jam 10 tadi malam? — Saya sedang menonton film."
+            },
+            {
+              "en": "Last night I cooked dinner. At 8 I was cooking.",
+              "id": "Tadi malam saya memasak makan malam (selesai). Jam 8 saya sedang memasak."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ada halaman tata bahasa dengan dua tes singkat, dan video untuk pemula (bagian awal dan pertanyaan di akhir cocok dengan pelajaran ini)."
+      }
+    ]
+  }
+}

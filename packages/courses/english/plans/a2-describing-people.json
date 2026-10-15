@@ -1,0 +1,768 @@
+{
+  "en": {
+    "greeting": "Hi! Today we describe people: what they look like, what they are like, and who is taller or funnier. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Is or has?",
+        "text": "To describe how someone looks, English uses two verbs: be and have.",
+        "body": "Height and body: **be + adjective**: *She's tall. He's slim.*\nHair, eyes, a beard: **have/has + adjective + noun**: *She has curly hair. He has a moustache.*\n*Dia tinggi* has no verb in Indonesian, so don't forget **is**. For people, *tinggi* is **tall**, not high.\n**fat** sounds rude in English, even if *gemuk* is said casually at home: say **a bit heavy** or **big**. **slim** (*langsing*) sounds nicer than **thin** (*kurus*).",
+        "pairs": [
+          {
+            "en": "tall",
+            "id": "tinggi"
+          },
+          {
+            "en": "short",
+            "id": "pendek"
+          },
+          {
+            "en": "slim",
+            "id": "langsing"
+          },
+          {
+            "en": "thin",
+            "id": "kurus"
+          },
+          {
+            "en": "a bit heavy",
+            "id": "agak gemuk (sopan)"
+          },
+          {
+            "en": "big",
+            "id": "berbadan besar"
+          },
+          {
+            "en": "a beard",
+            "id": "jenggot"
+          },
+          {
+            "en": "a moustache",
+            "id": "kumis"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Hair, eyes and glasses",
+        "text": "Now the hair and the face.",
+        "body": "Indonesian says *rambut panjang* (noun first). English puts the describing word **before** hair: **She has long hair**, not 'hair long'.\nTwo describing words? **Length first, colour last**: *short black hair*. Curly or straight goes in the middle.\n**hair** on your head has no -s: 'long hairs' is wrong. **eyes** has -s: you can count them.\nFor glasses use **wear** (*pakai*): **He wears glasses**, not 'uses glasses'.",
+        "pairs": [
+          {
+            "en": "long hair",
+            "id": "rambut panjang"
+          },
+          {
+            "en": "short hair",
+            "id": "rambut pendek"
+          },
+          {
+            "en": "straight hair",
+            "id": "rambut lurus"
+          },
+          {
+            "en": "curly hair",
+            "id": "rambut keriting"
+          },
+          {
+            "en": "grey hair",
+            "id": "rambut beruban"
+          },
+          {
+            "en": "brown eyes",
+            "id": "mata cokelat"
+          },
+          {
+            "en": "wear glasses",
+            "id": "pakai kacamata"
+          },
+          {
+            "en": "wear a hijab",
+            "id": "pakai hijab"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're describing your neighbour to a friend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-appearance",
+          "prompt": "Bu Ani's hair is grey and it's long. Which sentence is correct?",
+          "options": [
+            "Bu Ani has hair long and grey.",
+            "Bu Ani has long grey hair.",
+            "Bu Ani has grey long hairs."
+          ],
+          "answer": 1,
+          "explanation": "Describing words go **before** hair, **length first, colour last**: long grey hair. **hair** has no -s. 'hair long' copies Indonesian *rambut panjang*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Personality",
+        "text": "Now the inside: what kind of person someone is.",
+        "body": "These words describe **personality** (*sifat*). Use them after **be**: *She's friendly.*\nBefore a noun (person, man, teacher) you need **a**: **She's a friendly person**, not 'She's friendly person'. With very: **a very friendly person**.\na/an looks at the next word: **an honest man** (the h in *honest* is silent: 'onest'), but **a very** honest man.\n*lucu* that makes you laugh = **funny**; a cute baby = **cute**.",
+        "pairs": [
+          {
+            "en": "friendly",
+            "id": "ramah"
+          },
+          {
+            "en": "kind",
+            "id": "baik hati"
+          },
+          {
+            "en": "funny",
+            "id": "lucu (bikin tertawa)"
+          },
+          {
+            "en": "shy",
+            "id": "pemalu"
+          },
+          {
+            "en": "honest",
+            "id": "jujur"
+          },
+          {
+            "en": "patient",
+            "id": "sabar"
+          },
+          {
+            "en": "hard-working",
+            "id": "rajin, pekerja keras"
+          },
+          {
+            "en": "lazy",
+            "id": "malas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Tell a friend about your child's teacher.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-personality-with",
+          "prompt": "Arrange the words: Dia (Bu Rina) guru yang sangat sabar.",
+          "tokens": [
+            "teacher",
+            "patient",
+            "She's",
+            "very",
+            "a"
+          ],
+          "solution": "She's a very patient teacher.",
+          "explanation": "With a noun (teacher) you need **a**, and it goes before **very**: a + very + patient + teacher. 'She's very patient teacher' is wrong without a."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Look like, or like?",
+        "text": "Two questions look almost the same, but they ask different things.",
+        "body": "**What does she look like?** = appearance (*penampilannya*). **What is she like?** = personality (*orangnya seperti apa*). In both, **like** means *seperti*, not *suka*. **What does she like?** (no look, no is) = *Dia suka apa?*",
+        "examples": [
+          {
+            "en": "What does your brother look like? — He's tall and he has short hair.",
+            "id": "Saudaramu penampilannya seperti apa? — Dia tinggi dan rambutnya pendek."
+          },
+          {
+            "en": "What's your teacher like? — She's kind and very patient.",
+            "id": "Gurumu orangnya seperti apa? — Dia baik hati dan sangat sabar."
+          },
+          {
+            "en": "What does Budi like? — He likes badminton.",
+            "id": "Budi suka apa? — Dia suka bulu tangkis."
+          },
+          {
+            "en": "Rina looks like her mother.",
+            "id": "Rina mirip ibunya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A colleague asks you about your office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-personality-with",
+          "prompt": "Sari asks: 'What's your new boss like?' What does she want to know?",
+          "options": [
+            "What he looks like",
+            "What kind of person he is",
+            "What he likes"
+          ],
+          "answer": 1,
+          "explanation": "**What is he like?** (*What's* = What is) asks about **personality**: friendly, patient, funny… **What does he look like?** asks about appearance, and **What does he like?** asks about the things he likes."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Taller than me",
+        "text": "Now compare people, with the comparatives you already know.",
+        "body": "Same rules as before:\n- short words: **-er + than**: tall → **taller than**, young → **younger than**, kind → **kinder than**\n- 2 beats ending in -y: funny → **funnier**\n- longer words: **more patient**, **more honest**\n- the same: **as tall as** (*setinggi*)\nAfter than, say **me**: *My brother is taller than me.* With hair: *Budi has shorter hair than Dimas.*\n*kakak* = **older** sister/brother, *adik* = **younger** sister/brother.",
+        "pairs": [
+          {
+            "en": "taller than",
+            "id": "lebih tinggi daripada"
+          },
+          {
+            "en": "younger than",
+            "id": "lebih muda daripada"
+          },
+          {
+            "en": "funnier than",
+            "id": "lebih lucu daripada"
+          },
+          {
+            "en": "more patient than",
+            "id": "lebih sabar daripada"
+          },
+          {
+            "en": "as tall as",
+            "id": "setinggi"
+          },
+          {
+            "en": "the tallest in my family",
+            "id": "paling tinggi di keluargaku"
+          },
+          {
+            "en": "older sister",
+            "id": "kakak perempuan"
+          },
+          {
+            "en": "younger brother",
+            "id": "adik laki-laki"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Two siblings and the housework.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-people",
+          "prompt": "Dimas sleeps all weekend and never helps at home. His sister always helps. Complete: Dimas is ___ than his sister.",
+          "options": [
+            "more lazy",
+            "lazier",
+            "lazyer"
+          ],
+          "answer": 1,
+          "explanation": "**lazy** has 2 beats (la-zy) and ends in consonant + y, so y becomes i: **lazier**. 'more lazy' uses the long-word rule, and 'lazyer' forgets the y → i change."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Compare yourself with a friend.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "compare-people",
+          "prompt": "Arrange the words: Rambut Rina lebih panjang daripada rambutku.",
+          "tokens": [
+            "than",
+            "hair",
+            "Rina",
+            "me",
+            "longer",
+            "has"
+          ],
+          "solution": "Rina has longer hair than me.",
+          "explanation": "long → **longer** (1 beat, + er), and like any describing word it goes **before hair**. Then **than me**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · describing people",
+          "intro": "Appearance, personality, the two questions, and comparing people.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "be + adjective (body)",
+              "She's tall. He's slim.",
+              "Dia tinggi. Dia langsing."
+            ],
+            [
+              "have/has + adjective + noun",
+              "She has long hair.",
+              "Rambutnya panjang."
+            ],
+            [
+              "length → colour + hair",
+              "short grey hair",
+              "rambut pendek beruban"
+            ],
+            [
+              "have a beard / moustache",
+              "He has a beard.",
+              "Dia berjenggot."
+            ],
+            [
+              "wear glasses / a hijab",
+              "He wears glasses.",
+              "Dia pakai kacamata."
+            ],
+            [
+              "polite words",
+              "a bit heavy (not fat)",
+              "agak gemuk (sopan)"
+            ],
+            [
+              "a (very) + adjective + noun",
+              "a very kind person",
+              "orang yang sangat baik hati"
+            ],
+            [
+              "What does … look like?",
+              "What does she look like?",
+              "Penampilannya seperti apa?"
+            ],
+            [
+              "What is … like?",
+              "What is she like?",
+              "Orangnya (sifatnya) seperti apa?"
+            ],
+            [
+              "-er + than",
+              "taller than me",
+              "lebih tinggi daripada aku"
+            ],
+            [
+              "more + long word + than",
+              "more honest than",
+              "lebih jujur daripada"
+            ],
+            [
+              "as + adjective + as",
+              "as tall as",
+              "setinggi"
+            ]
+          ],
+          "tips": [
+            "Adjectives go **before** the noun, length first and colour last: **long black hair** (no -s on hair).",
+            "With person / man / teacher you need **a**: **a very friendly person**. an honest man, but a very honest man.",
+            "**look like** = appearance, **be like** = personality, **like** (no look, no be) = suka."
+          ],
+          "examples": [
+            {
+              "en": "My sister has short curly hair.",
+              "id": "Rambut kakak perempuanku pendek dan keriting."
+            },
+            {
+              "en": "Pak Hasan wears glasses and has a moustache.",
+              "id": "Pak Hasan pakai kacamata dan berkumis."
+            },
+            {
+              "en": "What's your boss like? — He's very honest.",
+              "id": "Atasanmu orangnya seperti apa? — Dia sangat jujur."
+            },
+            {
+              "en": "My mother is more patient than my father.",
+              "id": "Ibuku lebih sabar daripada ayahku."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Try these exercises on describing how people look."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar mendeskripsikan orang: penampilannya, sifatnya, dan siapa yang lebih tinggi atau lebih lucu. Ayo kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Is atau has?",
+        "text": "Untuk menjelaskan penampilan seseorang, bahasa Inggris memakai dua kata kerja: be dan have.",
+        "body": "Tinggi dan bentuk tubuh: **be + kata sifat**: *She's tall. He's slim.*\nRambut, mata, jenggot: **have/has + kata sifat + kata benda**: *She has curly hair. He has a moustache.*\n*Dia tinggi* tidak punya kata kerja, jadi jangan lupa **is**. Untuk orang, *tinggi* = **tall**, bukan high.\n**fat** terdengar kasar dalam bahasa Inggris, walaupun *gemuk* biasa diucapkan di rumah: bilang **a bit heavy** atau **big**. **slim** (*langsing*) lebih enak didengar daripada **thin** (*kurus*).",
+        "pairs": [
+          {
+            "en": "tall",
+            "id": "tinggi"
+          },
+          {
+            "en": "short",
+            "id": "pendek"
+          },
+          {
+            "en": "slim",
+            "id": "langsing"
+          },
+          {
+            "en": "thin",
+            "id": "kurus"
+          },
+          {
+            "en": "a bit heavy",
+            "id": "agak gemuk (sopan)"
+          },
+          {
+            "en": "big",
+            "id": "berbadan besar"
+          },
+          {
+            "en": "a beard",
+            "id": "jenggot"
+          },
+          {
+            "en": "a moustache",
+            "id": "kumis"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Rambut, mata, dan kacamata",
+        "text": "Sekarang rambut dan wajah.",
+        "body": "Bahasa Indonesia bilang *rambut panjang* (kata benda dulu). Bahasa Inggris menaruh kata sifat **sebelum** hair: **She has long hair**, bukan 'hair long'.\nDua kata sifat? **Panjang-pendek dulu, warna terakhir**: *short black hair*. Curly atau straight di tengah.\n**hair** (rambut di kepala) tanpa -s: 'long hairs' salah. **eyes** pakai -s: mata bisa dihitung.\nUntuk kacamata pakai **wear** (*pakai*): **He wears glasses**, bukan 'uses glasses'.",
+        "pairs": [
+          {
+            "en": "long hair",
+            "id": "rambut panjang"
+          },
+          {
+            "en": "short hair",
+            "id": "rambut pendek"
+          },
+          {
+            "en": "straight hair",
+            "id": "rambut lurus"
+          },
+          {
+            "en": "curly hair",
+            "id": "rambut keriting"
+          },
+          {
+            "en": "grey hair",
+            "id": "rambut beruban"
+          },
+          {
+            "en": "brown eyes",
+            "id": "mata cokelat"
+          },
+          {
+            "en": "wear glasses",
+            "id": "pakai kacamata"
+          },
+          {
+            "en": "wear a hijab",
+            "id": "pakai hijab"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu sedang menceritakan tetanggamu kepada teman.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-appearance",
+          "prompt": "Rambut Bu Ani beruban dan panjang. Kalimat mana yang benar?",
+          "options": [
+            "Bu Ani has hair long and grey.",
+            "Bu Ani has long grey hair.",
+            "Bu Ani has grey long hairs."
+          ],
+          "answer": 1,
+          "explanation": "Kata sifat diletakkan **sebelum** hair, **panjang-pendek dulu, warna terakhir**: long grey hair. **hair** tidak diberi -s. 'hair long' meniru *rambut panjang*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sifat",
+        "text": "Sekarang bagian dalam: orang seperti apa seseorang itu.",
+        "body": "Kata-kata ini menggambarkan **sifat** (*personality*). Pakai setelah **be**: *She's friendly.*\nSebelum kata benda (person, man, teacher) kamu butuh **a**: **She's a friendly person**, bukan 'She's friendly person'. Dengan very: **a very friendly person**.\na/an melihat kata berikutnya: **an honest man** (h di *honest* tidak dibaca: 'onest'), tapi **a very** honest man.\n*lucu* yang bikin tertawa = **funny**; bayi yang menggemaskan = **cute**.",
+        "pairs": [
+          {
+            "en": "friendly",
+            "id": "ramah"
+          },
+          {
+            "en": "kind",
+            "id": "baik hati"
+          },
+          {
+            "en": "funny",
+            "id": "lucu (bikin tertawa)"
+          },
+          {
+            "en": "shy",
+            "id": "pemalu"
+          },
+          {
+            "en": "honest",
+            "id": "jujur"
+          },
+          {
+            "en": "patient",
+            "id": "sabar"
+          },
+          {
+            "en": "hard-working",
+            "id": "rajin, pekerja keras"
+          },
+          {
+            "en": "lazy",
+            "id": "malas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Ceritakan guru anakmu kepada teman.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-personality-with",
+          "prompt": "Susun kata-katanya: Dia (Bu Rina) guru yang sangat sabar.",
+          "tokens": [
+            "teacher",
+            "patient",
+            "She's",
+            "very",
+            "a"
+          ],
+          "solution": "She's a very patient teacher.",
+          "explanation": "Dengan kata benda (teacher) kamu butuh **a**, dan letaknya sebelum **very**: a + very + patient + teacher. 'She's very patient teacher' salah karena tidak ada a."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Look like, atau like?",
+        "text": "Dua pertanyaan ini kelihatan hampir sama, tapi menanyakan hal yang berbeda.",
+        "body": "**What does she look like?** = penampilan. **What is she like?** = sifat (*orangnya seperti apa*). Di keduanya, **like** artinya *seperti*, bukan *suka*. **What does she like?** (tanpa look, tanpa is) = *Dia suka apa?*",
+        "examples": [
+          {
+            "en": "What does your brother look like? — He's tall and he has short hair.",
+            "id": "Saudaramu penampilannya seperti apa? — Dia tinggi dan rambutnya pendek."
+          },
+          {
+            "en": "What's your teacher like? — She's kind and very patient.",
+            "id": "Gurumu orangnya seperti apa? — Dia baik hati dan sangat sabar."
+          },
+          {
+            "en": "What does Budi like? — He likes badminton.",
+            "id": "Budi suka apa? — Dia suka bulu tangkis."
+          },
+          {
+            "en": "Rina looks like her mother.",
+            "id": "Rina mirip ibunya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rekan kerjamu bertanya tentang kantormu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-personality-with",
+          "prompt": "Sari bertanya: 'What's your new boss like?' Apa yang ingin dia ketahui?",
+          "options": [
+            "What he looks like",
+            "What kind of person he is",
+            "What he likes"
+          ],
+          "answer": 1,
+          "explanation": "**What is he like?** (*What's* = What is) menanyakan **sifat**: ramah, sabar, lucu… **What does he look like?** menanyakan penampilan, dan **What does he like?** menanyakan hal-hal yang dia sukai."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Taller than me",
+        "text": "Sekarang bandingkan orang, dengan bentuk perbandingan yang sudah kamu tahu.",
+        "body": "Aturannya sama seperti sebelumnya:\n- kata pendek: **-er + than**: tall → **taller than**, young → **younger than**, kind → **kinder than**\n- 2 ketukan berakhiran -y: funny → **funnier**\n- kata lebih panjang: **more patient**, **more honest**\n- sama: **as tall as** (*setinggi*)\nSetelah than, pakai **me**: *My brother is taller than me.* Dengan rambut: *Budi has shorter hair than Dimas.*\n*kakak* = **older** sister/brother, *adik* = **younger** sister/brother.",
+        "pairs": [
+          {
+            "en": "taller than",
+            "id": "lebih tinggi daripada"
+          },
+          {
+            "en": "younger than",
+            "id": "lebih muda daripada"
+          },
+          {
+            "en": "funnier than",
+            "id": "lebih lucu daripada"
+          },
+          {
+            "en": "more patient than",
+            "id": "lebih sabar daripada"
+          },
+          {
+            "en": "as tall as",
+            "id": "setinggi"
+          },
+          {
+            "en": "the tallest in my family",
+            "id": "paling tinggi di keluargaku"
+          },
+          {
+            "en": "older sister",
+            "id": "kakak perempuan"
+          },
+          {
+            "en": "younger brother",
+            "id": "adik laki-laki"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dua saudara dan pekerjaan rumah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-people",
+          "prompt": "Dimas tidur sepanjang akhir pekan dan tidak pernah membantu di rumah. Kakaknya selalu membantu. Lengkapi: Dimas is ___ than his sister.",
+          "options": [
+            "more lazy",
+            "lazier",
+            "lazyer"
+          ],
+          "answer": 1,
+          "explanation": "**lazy** punya 2 ketukan (la-zy) dan berakhiran konsonan + y, jadi y berubah jadi i: **lazier**. 'more lazy' memakai aturan kata panjang, dan 'lazyer' lupa mengubah y → i."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Bandingkan dirimu dengan seorang teman.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "compare-people",
+          "prompt": "Susun kata-katanya: Rambut Rina lebih panjang daripada rambutku.",
+          "tokens": [
+            "than",
+            "hair",
+            "Rina",
+            "me",
+            "longer",
+            "has"
+          ],
+          "solution": "Rina has longer hair than me.",
+          "explanation": "long → **longer** (1 ketukan, + er), dan seperti kata sifat lainnya letaknya **sebelum hair**. Lalu **than me**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · mendeskripsikan orang",
+          "intro": "Penampilan, sifat, dua pertanyaan, dan membandingkan orang.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "be + kata sifat (tubuh)",
+              "She's tall. He's slim.",
+              "Dia tinggi. Dia langsing."
+            ],
+            [
+              "have/has + kata sifat + kata benda",
+              "She has long hair.",
+              "Rambutnya panjang."
+            ],
+            [
+              "panjang-pendek → warna + hair",
+              "short grey hair",
+              "rambut pendek beruban"
+            ],
+            [
+              "have a beard / moustache",
+              "He has a beard.",
+              "Dia berjenggot."
+            ],
+            [
+              "wear glasses / a hijab",
+              "He wears glasses.",
+              "Dia pakai kacamata."
+            ],
+            [
+              "kata yang sopan",
+              "a bit heavy (bukan fat)",
+              "agak gemuk (sopan)"
+            ],
+            [
+              "a (very) + kata sifat + kata benda",
+              "a very kind person",
+              "orang yang sangat baik hati"
+            ],
+            [
+              "What does … look like?",
+              "What does she look like?",
+              "Penampilannya seperti apa?"
+            ],
+            [
+              "What is … like?",
+              "What is she like?",
+              "Orangnya (sifatnya) seperti apa?"
+            ],
+            [
+              "-er + than",
+              "taller than me",
+              "lebih tinggi daripada aku"
+            ],
+            [
+              "more + kata panjang + than",
+              "more honest than",
+              "lebih jujur daripada"
+            ],
+            [
+              "as + kata sifat + as",
+              "as tall as",
+              "setinggi"
+            ]
+          ],
+          "tips": [
+            "Kata sifat diletakkan **sebelum** kata benda, panjang-pendek dulu dan warna terakhir: **long black hair** (hair tanpa -s).",
+            "Dengan person / man / teacher kamu butuh **a**: **a very friendly person**. an honest man, tapi a very honest man.",
+            "**look like** = penampilan, **be like** = sifat, **like** (tanpa look, tanpa be) = suka."
+          ],
+          "examples": [
+            {
+              "en": "My sister has short curly hair.",
+              "id": "Rambut kakak perempuanku pendek dan keriting."
+            },
+            {
+              "en": "Pak Hasan wears glasses and has a moustache.",
+              "id": "Pak Hasan pakai kacamata dan berkumis."
+            },
+            {
+              "en": "What's your boss like? — He's very honest.",
+              "id": "Atasanmu orangnya seperti apa? — Dia sangat jujur."
+            },
+            {
+              "en": "My mother is more patient than my father.",
+              "id": "Ibuku lebih sabar daripada ayahku."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Coba latihan ini tentang mendeskripsikan penampilan orang."
+      }
+    ]
+  }
+}

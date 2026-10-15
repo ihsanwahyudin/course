@@ -1,0 +1,630 @@
+{
+  "en": {
+    "greeting": "Hi! You can talk about the past now, so today we'll tell stories: what happened first, what happened next, and what happened because of it. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Order words for stories",
+        "text": "In A1 you told your normal day with **first, then, after that, finally**. Now use them for a story in the **past**.",
+        "body": "**First** = the first event. **Then**, **next** and **after that** = the events in the middle: they mean almost the same, so mix them. **Finally** = the last event, or the end of a long wait (= akhirnya). The verbs are in the past simple: *went, had, bought*. Commas: usually after *First, Next, After that, Finally*; usually not after *Then*. Careful: **After** alone isn't **after that**: say *After that, we …*, not 'After, we …'.",
+        "pairs": [
+          {
+            "en": "First",
+            "id": "pertama-tama"
+          },
+          {
+            "en": "Then",
+            "id": "lalu, kemudian"
+          },
+          {
+            "en": "Next",
+            "id": "berikutnya, selanjutnya"
+          },
+          {
+            "en": "After that",
+            "id": "setelah itu"
+          },
+          {
+            "en": "Finally",
+            "id": "terakhir; akhirnya (setelah menunggu lama)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dewi's trip to Yogyakarta",
+        "text": "Here's a short story. Look at the order words and the past verbs.",
+        "body": "**Then, Next** and **After that** are all in the middle: you could swap them. **First** and **Finally** can't move.",
+        "examples": [
+          {
+            "en": "Last weekend, Dewi went to Yogyakarta.",
+            "id": "Akhir pekan lalu, Dewi pergi ke Yogyakarta."
+          },
+          {
+            "en": "First, she visited Borobudur.",
+            "id": "Pertama-tama, dia mengunjungi Borobudur."
+          },
+          {
+            "en": "Then she had gudeg for lunch.",
+            "id": "Lalu dia makan gudeg untuk makan siang."
+          },
+          {
+            "en": "Next, she walked along Malioboro.",
+            "id": "Berikutnya, dia berjalan-jalan di Malioboro."
+          },
+          {
+            "en": "After that, she bought some batik.",
+            "id": "Setelah itu, dia membeli batik."
+          },
+          {
+            "en": "Finally, she took the train home.",
+            "id": "Terakhir, dia naik kereta pulang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina tells you about her Saturday.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sequence-words",
+          "prompt": "Rina: '___, I cleaned my room. Then I went to the market. After that, I cooked lunch.'",
+          "options": [
+            "Finally",
+            "First",
+            "After"
+          ],
+          "answer": 1,
+          "explanation": "Cleaning the room is the **first** event, so start with **First**. Finally is for the last event, and After alone needs something after it (*after that, after lunch*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "before, after, when",
+        "text": "Now join two events in **one** sentence.",
+        "body": "**before** (sebelum), **after** (setelah) and **when** (ketika, saat: at that moment) + a **subject + verb** (the subject = who does it): *after **I finished** work*. Or a noun: *after work*. This part can go first (with a comma) or second (no comma). Indonesian trap: *Setelah selesai kerja, **lalu** saya pulang*. In English, after already shows the order, so **no then**: *After I finished work, I went home.* And both verbs stay in the past.",
+        "pairs": [
+          {
+            "en": "before",
+            "id": "sebelum"
+          },
+          {
+            "en": "after",
+            "id": "setelah, sesudah"
+          },
+          {
+            "en": "when",
+            "id": "ketika, saat"
+          },
+          {
+            "en": "after work",
+            "id": "sepulang kerja"
+          },
+          {
+            "en": "before lunch",
+            "id": "sebelum makan siang"
+          },
+          {
+            "en": "When I got to the station, …",
+            "id": "Ketika saya sampai di stasiun, …"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Same order, three ways",
+        "text": "**before** and **after** don't change what happened first. Look at the order of the events, not the order of the words.",
+        "timeline": {
+          "title": "Rina's evening",
+          "caption": "After Rina finished work, she went home. = Rina went home after she finished work. = Before Rina went home, she finished work. In all three, she finished work first.",
+          "marks": [
+            {
+              "label": "1. Rina finished work",
+              "kind": "past"
+            },
+            {
+              "label": "2. Rina went home",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Which came first?",
+        "text": "Look at the times, then choose.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "before-after-when",
+          "prompt": "The film started at 7:00. We got to the cinema at 7:15. Complete: The film started ___ we got to the cinema.",
+          "options": [
+            "after",
+            "before",
+            "when"
+          ],
+          "answer": 1,
+          "explanation": "7:00 comes before 7:15: the film started first, so use **before**. after would mean we were there first, and when would mean the same moment."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Spot the right sentence",
+        "text": "Only one of these is correct English.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "before-after-when",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "After the meeting ended, then we had lunch.",
+            "After the meeting ended, we had lunch.",
+            "After the meeting end, we had lunch."
+          ],
+          "answer": 1,
+          "explanation": "**after** already shows the order, so there's no *then* in the second part (Indonesian *lalu*). In a story both verbs are in the past: *ended*, not *end*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "so for the result",
+        "text": "You know **because** for a reason. Its partner is **so**, for a result.",
+        "body": "**reason, so result**: *I was tired, so I went to bed early.* = *I went to bed early **because** I was tired.* One sentence takes **so** or **because**, never both: Indonesian *Karena …, jadi …* becomes 'Because …, so …', which is wrong. Second trap: **akhirnya** often means *jadi* (*Hujan, akhirnya saya di rumah*): that's **so**, not finally.",
+        "pairs": [
+          {
+            "en": "so",
+            "id": "jadi, makanya (sebelum akibat)"
+          },
+          {
+            "en": "because",
+            "id": "karena (sebelum alasan)"
+          },
+          {
+            "en": "I was tired, so I went to bed early.",
+            "id": "Saya capek, jadi saya tidur lebih awal."
+          },
+          {
+            "en": "I went to bed early because I was tired.",
+            "id": "Saya tidur lebih awal karena saya capek."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Think about the Indonesian: *Hujan deras, akhirnya kami tidak jadi ke pantai.*",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-for-result",
+          "prompt": "It rained a lot, ___ we didn't go to the beach.",
+          "options": [
+            "finally",
+            "because",
+            "so"
+          ],
+          "answer": 2,
+          "explanation": "The rain is the reason and not going is the result, so use **so**. *finally* is the *akhirnya* trap: it's only for the last event. *because* would make 'we didn't go' the reason for the rain."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Reason first, then **so** and the result.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "so-for-result",
+          "prompt": "Arrange the words: Sari lapar, jadi dia membeli martabak.",
+          "tokens": [
+            "bought",
+            "hungry",
+            "so",
+            "a",
+            "Sari",
+            "martabak",
+            "she",
+            "was"
+          ],
+          "solution": "Sari was hungry, so she bought a martabak.",
+          "explanation": "The reason (*Sari was hungry*) comes first, then a comma, **so**, and the result (*she bought a martabak*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for when you write your next story.",
+        "artifact": {
+          "title": "Cheat sheet · Linking words for stories",
+          "intro": "Tell the story in the past simple. Order the events, join them, and show results.",
+          "headers": [
+            "Word",
+            "Job",
+            "Example"
+          ],
+          "rows": [
+            [
+              "First, …",
+              "the first event",
+              "First, we took the bus to Bogor."
+            ],
+            [
+              "Then / Next / After that",
+              "the middle events (mix them)",
+              "Then we had lunch. After that, we visited the park."
+            ],
+            [
+              "Finally, …",
+              "the last event, or the end of a long wait",
+              "Finally, we went home."
+            ],
+            [
+              "before + subject + verb",
+              "sebelum",
+              "I had a coffee before I went to work."
+            ],
+            [
+              "after + subject + verb",
+              "setelah (no then!)",
+              "After I got home, I cooked dinner."
+            ],
+            [
+              "when + subject + verb",
+              "ketika, saat",
+              "When I got to the station, the train was there."
+            ],
+            [
+              "…, so …",
+              "the result (jadi)",
+              "The bus was late, so I took an ojek."
+            ],
+            [
+              "… because …",
+              "the reason (karena)",
+              "I took an ojek because the bus was late."
+            ]
+          ],
+          "tips": [
+            "**after / before** already show the order: no **then** in the second part. Comma only when the after/before/when part comes first.",
+            "**so** or **because**, never both: not 'Because the bus was late, so …'.",
+            "**akhirnya** = *jadi* → **so**; **akhirnya** after a long wait or the last event → **Finally**."
+          ],
+          "examples": [
+            {
+              "en": "First, Budi bought the tickets.",
+              "id": "Pertama-tama, Budi membeli tiketnya."
+            },
+            {
+              "en": "When the rain stopped, we went out.",
+              "id": "Ketika hujan berhenti, kami keluar."
+            },
+            {
+              "en": "The shop was closed, so we went home.",
+              "id": "Tokonya tutup, jadi kami pulang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This video explains the order words, and this page has a short A2 story to read and write."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Sekarang kamu sudah bisa membicarakan masa lalu, jadi hari ini kita akan bercerita: apa yang terjadi pertama, apa yang terjadi berikutnya, dan apa akibatnya. Ayo kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata urutan untuk bercerita",
+        "text": "Di A1 kamu menceritakan hari biasamu dengan **first, then, after that, finally**. Sekarang pakai kata-kata itu untuk cerita di **masa lalu**.",
+        "body": "**First** = kejadian pertama. **Then**, **next** dan **after that** = kejadian di tengah: artinya hampir sama, jadi pakai bergantian. **Finally** = kejadian terakhir, atau akhir dari menunggu lama (= akhirnya). Kata kerjanya past simple: *went, had, bought*. Koma: biasanya setelah *First, Next, After that, Finally*; biasanya tidak setelah *Then*. Hati-hati: **After** saja bukan **after that**: katakan *After that, we …*, bukan 'After, we …'.",
+        "pairs": [
+          {
+            "en": "First",
+            "id": "pertama-tama"
+          },
+          {
+            "en": "Then",
+            "id": "lalu, kemudian"
+          },
+          {
+            "en": "Next",
+            "id": "berikutnya, selanjutnya"
+          },
+          {
+            "en": "After that",
+            "id": "setelah itu"
+          },
+          {
+            "en": "Finally",
+            "id": "terakhir; akhirnya (setelah menunggu lama)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Perjalanan Dewi ke Yogyakarta",
+        "text": "Ini cerita pendek. Perhatikan kata urutan dan kata kerja past-nya.",
+        "body": "**Then, Next** dan **After that** semuanya di tengah: boleh ditukar. **First** dan **Finally** tidak bisa dipindah.",
+        "examples": [
+          {
+            "en": "Last weekend, Dewi went to Yogyakarta.",
+            "id": "Akhir pekan lalu, Dewi pergi ke Yogyakarta."
+          },
+          {
+            "en": "First, she visited Borobudur.",
+            "id": "Pertama-tama, dia mengunjungi Borobudur."
+          },
+          {
+            "en": "Then she had gudeg for lunch.",
+            "id": "Lalu dia makan gudeg untuk makan siang."
+          },
+          {
+            "en": "Next, she walked along Malioboro.",
+            "id": "Berikutnya, dia berjalan-jalan di Malioboro."
+          },
+          {
+            "en": "After that, she bought some batik.",
+            "id": "Setelah itu, dia membeli batik."
+          },
+          {
+            "en": "Finally, she took the train home.",
+            "id": "Terakhir, dia naik kereta pulang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina bercerita tentang hari Sabtunya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sequence-words",
+          "prompt": "Lengkapi cerita Rina: '___, I cleaned my room. Then I went to the market. After that, I cooked lunch.'",
+          "options": [
+            "Finally",
+            "First",
+            "After"
+          ],
+          "answer": 1,
+          "explanation": "Membersihkan kamar adalah kejadian **pertama**, jadi mulai dengan **First**. Finally untuk kejadian terakhir, dan After saja butuh sesuatu di belakangnya (*after that, after lunch*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "before, after, when",
+        "text": "Sekarang gabungkan dua kejadian dalam **satu** kalimat.",
+        "body": "**before** (sebelum), **after** (setelah) dan **when** (ketika, saat: pada saat itu) + **subjek + kata kerja** (subjek = siapa yang melakukan): *after **I finished** work*. Atau kata benda: *after work*. Bagian ini boleh di depan (pakai koma) atau di belakang (tanpa koma). Jebakan bahasa Indonesia: *Setelah selesai kerja, **lalu** saya pulang*. Dalam bahasa Inggris, after sudah menunjukkan urutan, jadi **tanpa then**: *After I finished work, I went home.* Dan kedua kata kerjanya tetap past.",
+        "pairs": [
+          {
+            "en": "before",
+            "id": "sebelum"
+          },
+          {
+            "en": "after",
+            "id": "setelah, sesudah"
+          },
+          {
+            "en": "when",
+            "id": "ketika, saat"
+          },
+          {
+            "en": "after work",
+            "id": "sepulang kerja"
+          },
+          {
+            "en": "before lunch",
+            "id": "sebelum makan siang"
+          },
+          {
+            "en": "When I got to the station, …",
+            "id": "Ketika saya sampai di stasiun, …"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Urutan sama, tiga cara",
+        "text": "**before** dan **after** tidak mengubah apa yang terjadi duluan. Lihat urutan kejadiannya, bukan urutan katanya.",
+        "timeline": {
+          "title": "Sore hari Rina",
+          "caption": "After Rina finished work, she went home. = Rina went home after she finished work. = Before Rina went home, she finished work. Di ketiganya, Rina selesai kerja duluan.",
+          "marks": [
+            {
+              "label": "1. Rina finished work",
+              "kind": "past"
+            },
+            {
+              "label": "2. Rina went home",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Mana yang duluan?",
+        "text": "Lihat jamnya, lalu pilih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "before-after-when",
+          "prompt": "Filmnya mulai jam 7:00. Kami sampai di bioskop jam 7:15. Lengkapi: The film started ___ we got to the cinema.",
+          "options": [
+            "after",
+            "before",
+            "when"
+          ],
+          "answer": 1,
+          "explanation": "7:00 lebih dulu dari 7:15: filmnya mulai duluan, jadi pakai **before**. after berarti kami sampai duluan, dan when berarti pada saat yang sama."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Cari kalimat yang benar",
+        "text": "Hanya satu yang benar dalam bahasa Inggris.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "before-after-when",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "After the meeting ended, then we had lunch.",
+            "After the meeting ended, we had lunch.",
+            "After the meeting end, we had lunch."
+          ],
+          "answer": 1,
+          "explanation": "**after** sudah menunjukkan urutan, jadi tidak ada *then* di bagian kedua (*lalu* dalam bahasa Indonesia). Dalam cerita, kedua kata kerjanya past: *ended*, bukan *end*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "so untuk akibat",
+        "text": "Kamu sudah kenal **because** untuk alasan. Pasangannya adalah **so**, untuk akibat.",
+        "body": "**alasan, so akibat**: *I was tired, so I went to bed early.* = *I went to bed early **because** I was tired.* Satu kalimat memakai **so** atau **because**, jangan dua-duanya: *Karena …, jadi …* jadi 'Because …, so …', dan itu salah. Jebakan kedua: **akhirnya** sering berarti *jadi* (*Hujan, akhirnya saya di rumah*): itu **so**, bukan finally.",
+        "pairs": [
+          {
+            "en": "so",
+            "id": "jadi, makanya (sebelum akibat)"
+          },
+          {
+            "en": "because",
+            "id": "karena (sebelum alasan)"
+          },
+          {
+            "en": "I was tired, so I went to bed early.",
+            "id": "Saya capek, jadi saya tidur lebih awal."
+          },
+          {
+            "en": "I went to bed early because I was tired.",
+            "id": "Saya tidur lebih awal karena saya capek."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pikirkan kalimat Indonesianya: *Hujan deras, akhirnya kami tidak jadi ke pantai.*",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-for-result",
+          "prompt": "Lengkapi: It rained a lot, ___ we didn't go to the beach.",
+          "options": [
+            "finally",
+            "because",
+            "so"
+          ],
+          "answer": 2,
+          "explanation": "Hujan adalah alasannya dan tidak jadi pergi adalah akibatnya, jadi pakai **so**. *finally* adalah jebakan *akhirnya*: kata itu hanya untuk kejadian terakhir. *because* akan membuat 'kami tidak pergi' menjadi alasan hujannya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Alasan dulu, lalu **so** dan akibatnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "so-for-result",
+          "prompt": "Susun kata-katanya: Sari lapar, jadi dia membeli martabak.",
+          "tokens": [
+            "bought",
+            "hungry",
+            "so",
+            "a",
+            "Sari",
+            "martabak",
+            "she",
+            "was"
+          ],
+          "solution": "Sari was hungry, so she bought a martabak.",
+          "explanation": "Alasannya (*Sari was hungry*) di depan, lalu koma, **so**, dan akibatnya (*she bought a martabak*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk saat kamu menulis cerita berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Kata penghubung untuk bercerita",
+          "intro": "Ceritakan dengan past simple. Urutkan kejadiannya, gabungkan, dan tunjukkan akibatnya.",
+          "headers": [
+            "Kata",
+            "Tugas",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "First, …",
+              "kejadian pertama",
+              "First, we took the bus to Bogor."
+            ],
+            [
+              "Then / Next / After that",
+              "kejadian di tengah (pakai bergantian)",
+              "Then we had lunch. After that, we visited the park."
+            ],
+            [
+              "Finally, …",
+              "kejadian terakhir, atau akhir dari menunggu lama",
+              "Finally, we went home."
+            ],
+            [
+              "before + subjek + kata kerja",
+              "sebelum",
+              "I had a coffee before I went to work."
+            ],
+            [
+              "after + subjek + kata kerja",
+              "setelah (tanpa then!)",
+              "After I got home, I cooked dinner."
+            ],
+            [
+              "when + subjek + kata kerja",
+              "ketika, saat",
+              "When I got to the station, the train was there."
+            ],
+            [
+              "…, so …",
+              "akibat (jadi)",
+              "The bus was late, so I took an ojek."
+            ],
+            [
+              "… because …",
+              "alasan (karena)",
+              "I took an ojek because the bus was late."
+            ]
+          ],
+          "tips": [
+            "**after / before** sudah menunjukkan urutan: tidak ada **then** di bagian kedua. Koma hanya kalau bagian after/before/when ada di depan.",
+            "**so** atau **because**, jangan dua-duanya: bukan 'Because the bus was late, so …'.",
+            "**akhirnya** = *jadi* → **so**; **akhirnya** setelah menunggu lama atau kejadian terakhir → **Finally**."
+          ],
+          "examples": [
+            {
+              "en": "First, Budi bought the tickets.",
+              "id": "Pertama-tama, Budi membeli tiketnya."
+            },
+            {
+              "en": "When the rain stopped, we went out.",
+              "id": "Ketika hujan berhenti, kami keluar."
+            },
+            {
+              "en": "The shop was closed, so we went home.",
+              "id": "Tokonya tutup, jadi kami pulang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video ini menjelaskan kata-kata urutan, dan halaman ini punya cerita pendek level A2 untuk dibaca dan latihan menulis."
+      }
+    ]
+  }
+}
