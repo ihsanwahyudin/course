@@ -1,15 +1,15 @@
-import { useRouter } from "expo-router";
-import { useState } from "react";
-import { Pressable, StyleSheet, View } from "react-native";
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
+import { Pressable, StyleSheet, View } from 'react-native';
 
-import { GoalBadge, ProgressBar, StatusChip } from "@/components/ui/Bits";
-import { Card } from "@/components/ui/Card";
-import { Icon } from "@/components/ui/Icon";
-import { Eyebrow, Heading, Text } from "@/components/ui/Text";
-import type { Course, LevelSummary, RoadmapNode } from "@/lib/api";
-import { useT } from "@/i18n";
-import { colors, radius } from "@/theme/tokens";
-import type { Branch } from "./layout";
+import { GoalBadge, ProgressBar, StatusChip } from '@/components/ui/Bits';
+import { Card } from '@/components/ui/Card';
+import { Icon } from '@/components/ui/Icon';
+import { Eyebrow, Heading, Text } from '@/components/ui/Text';
+import type { Course, LevelSummary, RoadmapNode } from '@/lib/api';
+import { useT } from '@/i18n';
+import { colors, radius } from '@/theme/tokens';
+import type { Branch } from './layout';
 
 function Row({ course, node }: { course: string; node: RoadmapNode }) {
   const router = useRouter();
@@ -21,25 +21,17 @@ function Row({ course, node }: { course: string; node: RoadmapNode }) {
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
-      accessibilityLabel={`${node.title}, ${t(`status.${node.status}`)}${node.recommended ? `, ${t("onboarding.recommended")}` : ""}`}
+      accessibilityLabel={`${node.title}, ${t(`status.${node.status}`)}${node.recommended ? `, ${t('onboarding.recommended')}` : ''}`}
       style={[styles.row, hovered && { backgroundColor: colors.canvas }]}
     >
       <View style={{ flex: 1, gap: 4 }}>
-        <Text
-          weight="medium"
-          tight
-          color={
-            node.status === "coming_soon" || node.status === "locked"
-              ? colors.muted
-              : colors.ink
-          }
-        >
+        <Text weight="medium" tight color={node.status === 'coming_soon' || node.status === 'locked' ? colors.muted : colors.ink}>
           {node.title}
         </Text>
         <Text size={13} color={colors.muted} numberOfLines={1}>
           {node.summary}
         </Text>
-        {node.recommended && node.status !== "mastered" ? <GoalBadge /> : null}
+        {node.recommended && node.status !== 'mastered' ? <GoalBadge /> : null}
       </View>
       <StatusChip status={node.status} />
       <Icon name="chevronRight" size={16} color={colors.muted} />
@@ -66,9 +58,7 @@ function TrackRow({ track }: { track: Course }) {
           {track.tagline}
         </Text>
       </View>
-      {track.status === "coming_soon" ? (
-        <StatusChip status="coming_soon" />
-      ) : null}
+      {track.status === 'coming_soon' ? <StatusChip status="coming_soon" /> : null}
       <Icon name="arrowUpRight" size={16} color={colors.accent} />
     </Pressable>
   );
@@ -82,15 +72,13 @@ function BranchCard({ branch, next }: { branch: Branch; next?: string }) {
       <View style={styles.branchHead}>
         <Icon name="route" size={18} color={colors.accent} />
         <View style={{ flex: 1, gap: 2 }}>
-          <Eyebrow color={colors.accent}>
-            {t("course.branchAfter", { level: branch.level })}
-          </Eyebrow>
+          <Eyebrow color={colors.accent}>{t('course.branchAfter', { level: branch.level })}</Eyebrow>
           <Text weight="medium" size={17} tight>
-            {t("course.branchTitle")}
+            {t('course.branchTitle')}
           </Text>
           {next ? (
             <Text size={13} color={colors.muted}>
-              {t("course.branchBack", { level: next })}
+              {t('course.branchBack', { level: next })}
             </Text>
           ) : null}
         </View>
@@ -103,17 +91,7 @@ function BranchCard({ branch, next }: { branch: Branch; next?: string }) {
 }
 
 // Accessible list alternative to the graph, grouped by level.
-export function RoadmapList({
-  course,
-  nodes,
-  levels,
-  branches = [],
-}: {
-  course: string;
-  nodes: RoadmapNode[];
-  levels: LevelSummary[];
-  branches?: Branch[];
-}) {
+export function RoadmapList({ course, nodes, levels, branches = [] }: { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; branches?: Branch[] }) {
   return (
     <View style={{ gap: 12 }}>
       {levels.map((l, i) => (
@@ -132,14 +110,10 @@ export function RoadmapList({
                 </Text>
               </View>
               <View style={{ width: 96, gap: 6 }}>
-                <Eyebrow style={{ textAlign: "right" }}>
+                <Eyebrow style={{ textAlign: 'right' }}>
                   {l.mastered}/{l.total}
                 </Eyebrow>
-                <ProgressBar
-                  value={l.total ? (l.mastered / l.total) * 100 : 0}
-                  color={colors.emerald}
-                  height={4}
-                />
+                <ProgressBar value={l.total ? (l.mastered / l.total) * 100 : 0} color={colors.emerald} height={4} />
               </View>
             </View>
             {nodes
@@ -151,11 +125,7 @@ export function RoadmapList({
           {branches
             .filter((b) => b.level === l.level)
             .map((b) => (
-              <BranchCard
-                key={b.anchor}
-                branch={b}
-                next={levels[i + 1]?.level}
-              />
+              <BranchCard key={b.anchor} branch={b} next={levels[i + 1]?.level} />
             ))}
         </View>
       ))}
@@ -164,29 +134,13 @@ export function RoadmapList({
 }
 
 const styles = StyleSheet.create({
-  branch: { marginLeft: 24, borderColor: colors.accent, borderStyle: "dashed" },
-  branchHead: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 12,
-    padding: 20,
-  },
-  head: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 14,
-    padding: 20,
-  },
-  levelPill: {
-    backgroundColor: colors.ink,
-    borderRadius: radius.pill,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    marginTop: 2,
-  },
+  branch: { marginLeft: 24, borderColor: colors.accent, borderStyle: 'dashed' },
+  branchHead: { flexDirection: 'row', alignItems: 'flex-start', gap: 12, padding: 20 },
+  head: { flexDirection: 'row', alignItems: 'flex-start', gap: 14, padding: 20 },
+  levelPill: { backgroundColor: colors.ink, borderRadius: radius.pill, paddingHorizontal: 10, paddingVertical: 4, marginTop: 2 },
   row: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     gap: 12,
     paddingHorizontal: 20,
     paddingVertical: 14,
