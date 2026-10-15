@@ -1,7 +1,7 @@
 # Render Blueprint: one Docker web service (Go API + Expo web app on the same
-# origin) and a managed Postgres. Create it from the Render dashboard:
-# New → Blueprint → this repository. Render asks for OPENAI_API_KEY there;
-# it is never stored in the repo.
+# origin). The database is Neon Postgres. Create it from the Render dashboard:
+# New → Blueprint → this repository. Render asks for DATABASE_URL (the Neon
+# connection string) and OPENAI_API_KEY there; neither is stored in the repo.
 services:
   - type: web
     name: fluentpath
@@ -12,10 +12,9 @@ services:
     region: singapore
     healthCheckPath: /healthz
     envVars:
+      # Neon's direct (non-pooled) connection string, with sslmode=require.
       - key: DATABASE_URL
-        fromDatabase:
-          name: fluentpath-db
-          property: connectionString
+        sync: false
       - key: AI_PROVIDER
         value: openai
       - key: OPENAI_API_KEY
@@ -30,10 +29,3 @@ services:
         value: Asia/Jakarta
       - key: AI_DAILY_TOKENS_PER_USER
         value: "150000"
-
-databases:
-  - name: fluentpath-db
-    databaseName: fluentpath
-    user: fluentpath
-    plan: free
-    region: singapore
