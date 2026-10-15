@@ -70,13 +70,14 @@ func TestRepositoryMaterial(t *testing.T) {
 			continue
 		}
 		en, id := c.MaterialIn(n.ID, "en"), c.MaterialIn(n.ID, "id")
-		if len(en.Sections) < 3 || len(en.Resources) == 0 || len(en.Flashcards) == 0 || len(en.SuggestedQuestions) == 0 {
+		// Resources are optional (0–3): only links someone could verify.
+		if len(en.Sections) < 3 || len(en.Flashcards) == 0 || len(en.SuggestedQuestions) == 0 {
 			t.Fatalf("%s: material incomplete: %+v", n.ID, en)
 		}
 		if en.Sections[0].Blocks[0].Text == id.Sections[0].Blocks[0].Text || en.SuggestedQuestions[0] == id.SuggestedQuestions[0] || en.Lead == id.Lead {
 			t.Fatalf("%s: Indonesian material not applied", n.ID)
 		}
-		if id.Sections[0].I18n != nil || id.Sections[0].Blocks[0].I18n != nil || id.Resources[0].I18n != nil {
+		if id.Sections[0].I18n != nil || id.Sections[0].Blocks[0].I18n != nil || (len(id.Resources) > 0 && id.Resources[0].I18n != nil) {
 			t.Fatalf("%s: translation maps leak into the view", n.ID)
 		}
 	}

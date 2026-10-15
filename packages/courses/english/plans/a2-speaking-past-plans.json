@@ -1,0 +1,750 @@
+{
+  "en": {
+    "greeting": "Hi! Today is all about real conversations: telling someone about your weekend, sharing your plans, and keeping the chat going. You already know the grammar, so let's use it.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "How was your weekend?",
+        "text": "Let's start with the two questions people ask every Monday.",
+        "body": "**How was your weekend?** asks if it was good: answer **It was** + a word: *It was great! It was OK.* or **Not bad.** **What did you do?** asks what happened: answer with **past verbs**: *I went to Puncak. I stayed at home.* **The trap:** Indonesian doesn't change the verb (*Minggu lalu saya pergi…*), so learners say *Last weekend I go…*. In English the weekend is over, so **every verb is past**: went, ate, stayed.",
+        "pairs": [
+          {
+            "en": "How was your weekend?",
+            "id": "Akhir pekanmu gimana?"
+          },
+          {
+            "en": "It was great!",
+            "id": "Seru! / Asyik!"
+          },
+          {
+            "en": "It was OK.",
+            "id": "Biasa aja."
+          },
+          {
+            "en": "Not bad.",
+            "id": "Lumayan."
+          },
+          {
+            "en": "What did you do?",
+            "id": "Kamu ngapain? (masa lalu)"
+          },
+          {
+            "en": "I went to…",
+            "id": "Saya pergi ke…"
+          },
+          {
+            "en": "I stayed at home.",
+            "id": "Saya di rumah aja."
+          },
+          {
+            "en": "How was your holiday?",
+            "id": "Liburanmu gimana? (Amerika: vacation)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "It's Monday morning. A colleague asks you something. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "tell-weekend-holiday",
+          "prompt": "Listen to the question. Which answer is correct?",
+          "listen": "What did you do on Saturday?",
+          "options": [
+            "I visit my grandma in Depok.",
+            "I'm going to visit my grandma in Depok.",
+            "I visited my grandma in Depok."
+          ],
+          "answer": 2,
+          "explanation": "The question uses **did** and Saturday is over, so answer in the past: **I visited**. *I visit* is the Indonesian habit (no past form), and *I'm going to visit* is a plan for later."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Add a detail",
+        "text": "One sentence is a good start. Now make your story a little longer.",
+        "body": "Add **who** (*with my family, on my own* = sendirian), **where** (*to Ancol, at a warung*) and **what it was like**: **It was** + a describing word (*fun, delicious, crowded, tiring*). **Seru** is **fun**, not *funny* (funny = lucu). **Macet** is *The traffic was terrible.* Join ideas with **and**, **but**, **because**: *We went to Ancol, but it was very crowded.*",
+        "pairs": [
+          {
+            "en": "fun",
+            "id": "seru"
+          },
+          {
+            "en": "funny",
+            "id": "lucu (bikin ketawa)"
+          },
+          {
+            "en": "delicious",
+            "id": "enak (makanan)"
+          },
+          {
+            "en": "crowded",
+            "id": "ramai, penuh orang"
+          },
+          {
+            "en": "relaxing",
+            "id": "santai, bikin rileks"
+          },
+          {
+            "en": "tiring",
+            "id": "melelahkan, bikin capek"
+          },
+          {
+            "en": "on my own",
+            "id": "sendirian"
+          },
+          {
+            "en": "The traffic was terrible.",
+            "id": "Macet parah."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Monday at the office",
+        "text": "Here are some short weekend stories. Each one has a detail. Read them out loud.",
+        "body": "**It was tiring** = the trip made you tired. **I was tired** = you were tired. Both are fine, but not *It was tired*.",
+        "examples": [
+          {
+            "en": "I went to Ancol with my kids. It was fun, but very crowded.",
+            "id": "Saya ke Ancol sama anak-anak. Seru, tapi ramai banget."
+          },
+          {
+            "en": "We ate nasi padang at a warung near the station. It was delicious.",
+            "id": "Kami makan nasi padang di warung dekat stasiun. Enak banget."
+          },
+          {
+            "en": "I went to Bandung on my own. The traffic was terrible!",
+            "id": "Saya ke Bandung sendirian. Macetnya parah!"
+          },
+          {
+            "en": "It was OK. I didn't go out because I was tired.",
+            "id": "Biasa aja. Saya nggak ke mana-mana karena capek."
+          },
+          {
+            "en": "How was your holiday? — Great! I went back to my hometown for Lebaran.",
+            "id": "Liburanmu gimana? — Seru! Saya mudik waktu Lebaran."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Past or future?",
+        "text": "The time word in the question tells you which form to use.",
+        "timeline": {
+          "title": "Last weekend → this weekend",
+          "caption": "Last weekend and yesterday are finished: past (I went, It was great). This weekend is coming: going to, or I'm + -ing for something fixed with other people.",
+          "marks": [
+            {
+              "label": "last weekend: I went…",
+              "kind": "past"
+            },
+            {
+              "label": "yesterday: It was…",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            },
+            {
+              "label": "this weekend: I'm going to…",
+              "kind": "future"
+            },
+            {
+              "label": "Saturday at 7: I'm meeting…",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Your plans",
+        "text": "On Friday, the question moves to the future.",
+        "body": "**What are you going to do this weekend?** → your own plan: **I'm going to** + verb: *I'm going to visit my aunt.* **What are you doing on Saturday?** → something fixed with other people: **I'm** + verb-**ing** + a time: *I'm meeting Sari at 7.* No plans? **Nothing special.** / **I'm not sure.** **The trap:** *Besok saya ke Bogor* has no future in the verb, so learners say *Tomorrow I go to Bogor*. Say **Tomorrow I'm going to Bogor.**",
+        "pairs": [
+          {
+            "en": "What are you going to do this weekend?",
+            "id": "Akhir pekan ini mau ngapain?"
+          },
+          {
+            "en": "What are you doing on Saturday?",
+            "id": "Sabtu ada acara apa?"
+          },
+          {
+            "en": "I'm going to…",
+            "id": "Saya mau… / Rencananya…"
+          },
+          {
+            "en": "I'm meeting…",
+            "id": "Saya ketemu… (sudah janjian)"
+          },
+          {
+            "en": "Nothing special.",
+            "id": "Nggak ada yang spesial."
+          },
+          {
+            "en": "I'm not sure.",
+            "id": "Belum tahu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Match your answer to the question: plan or past?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "share-plans",
+          "prompt": "It's Friday afternoon. Dimas asks: 'What are you going to do this weekend?' Which answer is correct?",
+          "options": [
+            "I going to wash my motorbike.",
+            "I'm going to wash my motorbike.",
+            "I washed my motorbike."
+          ],
+          "answer": 1,
+          "explanation": "Dimas asks about a plan, so use **am + going to + verb**: *I'm going to wash*. *I going to* is missing **am** (Indonesian *mau* has no 'be'), and *I washed* is the past: the weekend hasn't happened yet."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Follow-up questions",
+        "text": "People often ask one more question. Give a little more than yes or no.",
+        "body": "Answer with the **short answer** + **one more fact**: *Was it expensive?* — **No, it wasn't.** *It was only 50,000 rupiah.* The short answer copies the first word: **Did** → *I did / I didn't*, **Was** → *it was / it wasn't*. Then **ask back**: *How about you? Where did you go? Who did you go with?* Indonesian *sama siapa* comes at the end, and so does English **with**. Watch the order: *Where did you go?*, not *Where you went?*",
+        "pairs": [
+          {
+            "en": "Did you have a good time?",
+            "id": "Seneng nggak?"
+          },
+          {
+            "en": "Yes, I did!",
+            "id": "Iya!"
+          },
+          {
+            "en": "No, I didn't.",
+            "id": "Nggak."
+          },
+          {
+            "en": "Was it expensive?",
+            "id": "Mahal nggak?"
+          },
+          {
+            "en": "How about you?",
+            "id": "Kamu sendiri?"
+          },
+          {
+            "en": "Where did you go?",
+            "id": "Kamu ke mana?"
+          },
+          {
+            "en": "Who did you go with?",
+            "id": "Kamu pergi sama siapa?"
+          },
+          {
+            "en": "Really? That's great!",
+            "id": "Oh ya? Keren!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "You just came back from a trip to Yogyakarta. Your friend asks about it. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-up-questions",
+          "prompt": "Listen to your friend's question. Choose the best reply.",
+          "listen": "Did you have a good time in Yogyakarta?",
+          "options": [
+            "Yes, I do! We visit Borobudur.",
+            "Yes, I did! We visited Borobudur and ate gudeg.",
+            "No, I didn't. It was really fun!"
+          ],
+          "answer": 1,
+          "explanation": "A **did** question gets **Yes, I did**, plus one more fact in the past: *We visited… and ate…*. *Yes, I do* and *We visit* are the present, and *No, I didn't… It was really fun!* says two opposite things."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Your colleague had dinner with someone last night. Ask who.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "follow-up-questions",
+          "prompt": "Arrange the words: Kamu makan malam sama siapa?",
+          "tokens": [
+            "with",
+            "dinner",
+            "Who",
+            "have",
+            "you",
+            "did"
+          ],
+          "solution": "Who did you have dinner with?",
+          "explanation": "Question word + **did** + you + base verb: **have**, not *had*, because did already shows the past. Indonesian *sama siapa* is at the end, and English **with** goes at the end too."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole conversation on one page. Keep it for Monday morning.",
+        "artifact": {
+          "title": "Cheat sheet · Weekend chat: past & plans",
+          "intro": "The questions you'll hear, and how to answer: answer, add a detail, ask back.",
+          "headers": [
+            "Question",
+            "Answer",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "How was your weekend?",
+              "It was great / OK. Not bad.",
+              "Akhir pekanmu gimana?"
+            ],
+            [
+              "What did you do?",
+              "I went to… / I stayed at home.",
+              "Kamu ngapain?"
+            ],
+            [
+              "Who did you go with?",
+              "With my family. / On my own.",
+              "Sama siapa?"
+            ],
+            [
+              "How was it?",
+              "It was fun / delicious / crowded.",
+              "Gimana?"
+            ],
+            [
+              "Did you have a good time?",
+              "Yes, I did! + one more fact",
+              "Seneng nggak?"
+            ],
+            [
+              "Was it expensive?",
+              "No, it wasn't. + one more fact",
+              "Mahal nggak?"
+            ],
+            [
+              "What are you going to do this weekend?",
+              "I'm going to… / Nothing special.",
+              "Akhir pekan ini mau ngapain?"
+            ],
+            [
+              "What are you doing on Saturday?",
+              "I'm meeting… at 7.",
+              "Sabtu ada acara apa?"
+            ],
+            [
+              "(ask back)",
+              "And you? / How about you?",
+              "Kamu sendiri?"
+            ]
+          ],
+          "tips": [
+            "Finished time (last weekend, yesterday) → **every** verb is past: **I went**, not `I go`.",
+            "**Did** question → **Yes, I did / No, I didn't** + one more fact.",
+            "**seru** = **fun** (funny = lucu)."
+          ],
+          "examples": [
+            {
+              "en": "It was great! I went to Bogor with my family. How about you?",
+              "id": "Seru! Saya ke Bogor sama keluarga. Kamu sendiri?"
+            },
+            {
+              "en": "Was it expensive? — No, it wasn't. The hotel was only 300,000 rupiah.",
+              "id": "Mahal nggak? — Nggak. Hotelnya cuma 300.000 rupiah."
+            },
+            {
+              "en": "Nothing special. I'm going to relax at home.",
+              "id": "Nggak ada yang spesial. Saya mau santai di rumah."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and listen",
+        "text": "Want more? Watch a short chat with reactions and listen to people talking about their weekend."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita fokus ke percakapan sungguhan: cerita tentang akhir pekanmu, menyampaikan rencana, dan menjaga obrolan tetap jalan. Tata bahasanya sudah kamu tahu, jadi ayo kita pakai.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "How was your weekend?",
+        "text": "Kita mulai dari dua pertanyaan yang ditanyakan orang setiap hari Senin.",
+        "body": "**How was your weekend?** menanyakan rasanya: jawab **It was** + satu kata: *It was great! It was OK.* atau **Not bad.** **What did you do?** menanyakan apa yang terjadi: jawab dengan **kata kerja lampau**: *I went to Puncak. I stayed at home.* **Jebakannya:** bahasa Indonesia tidak mengubah kata kerja (*Minggu lalu saya pergi…*), jadi pelajar bilang *Last weekend I go…*. Dalam bahasa Inggris akhir pekannya sudah lewat, jadi **semua kata kerjanya lampau**: went, ate, stayed.",
+        "pairs": [
+          {
+            "en": "How was your weekend?",
+            "id": "Akhir pekanmu gimana?"
+          },
+          {
+            "en": "It was great!",
+            "id": "Seru! / Asyik!"
+          },
+          {
+            "en": "It was OK.",
+            "id": "Biasa aja."
+          },
+          {
+            "en": "Not bad.",
+            "id": "Lumayan."
+          },
+          {
+            "en": "What did you do?",
+            "id": "Kamu ngapain? (masa lalu)"
+          },
+          {
+            "en": "I went to…",
+            "id": "Saya pergi ke…"
+          },
+          {
+            "en": "I stayed at home.",
+            "id": "Saya di rumah aja."
+          },
+          {
+            "en": "How was your holiday?",
+            "id": "Liburanmu gimana? (Amerika: vacation)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Senin pagi. Rekan kerjamu bertanya sesuatu. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "tell-weekend-holiday",
+          "prompt": "Dengarkan pertanyaannya. Jawaban mana yang benar?",
+          "listen": "What did you do on Saturday?",
+          "options": [
+            "I visit my grandma in Depok.",
+            "I'm going to visit my grandma in Depok.",
+            "I visited my grandma in Depok."
+          ],
+          "answer": 2,
+          "explanation": "Pertanyaannya memakai **did** dan hari Sabtu sudah lewat, jadi jawab dengan bentuk lampau: **I visited**. *I visit* adalah kebiasaan dari bahasa Indonesia (tanpa bentuk lampau), dan *I'm going to visit* adalah rencana untuk nanti."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tambahkan detail",
+        "text": "Satu kalimat sudah bagus untuk mulai. Sekarang buat ceritamu sedikit lebih panjang.",
+        "body": "Tambahkan **siapa** (*with my family, on my own* = sendirian), **di mana** (*to Ancol, at a warung*) dan **bagaimana rasanya**: **It was** + kata sifat (*fun, delicious, crowded, tiring*). **Seru** itu **fun**, bukan *funny* (funny = lucu). **Macet** itu *The traffic was terrible.* Gabungkan ide dengan **and**, **but**, **because**: *We went to Ancol, but it was very crowded.*",
+        "pairs": [
+          {
+            "en": "fun",
+            "id": "seru"
+          },
+          {
+            "en": "funny",
+            "id": "lucu (bikin ketawa)"
+          },
+          {
+            "en": "delicious",
+            "id": "enak (makanan)"
+          },
+          {
+            "en": "crowded",
+            "id": "ramai, penuh orang"
+          },
+          {
+            "en": "relaxing",
+            "id": "santai, bikin rileks"
+          },
+          {
+            "en": "tiring",
+            "id": "melelahkan, bikin capek"
+          },
+          {
+            "en": "on my own",
+            "id": "sendirian"
+          },
+          {
+            "en": "The traffic was terrible.",
+            "id": "Macet parah."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Senin di kantor",
+        "text": "Ini beberapa cerita akhir pekan yang pendek. Masing-masing punya detail. Baca dengan suara keras.",
+        "body": "**It was tiring** = perjalanannya bikin capek. **I was tired** = kamu merasa capek. Dua-duanya benar, tapi bukan *It was tired*.",
+        "examples": [
+          {
+            "en": "I went to Ancol with my kids. It was fun, but very crowded.",
+            "id": "Saya ke Ancol sama anak-anak. Seru, tapi ramai banget."
+          },
+          {
+            "en": "We ate nasi padang at a warung near the station. It was delicious.",
+            "id": "Kami makan nasi padang di warung dekat stasiun. Enak banget."
+          },
+          {
+            "en": "I went to Bandung on my own. The traffic was terrible!",
+            "id": "Saya ke Bandung sendirian. Macetnya parah!"
+          },
+          {
+            "en": "It was OK. I didn't go out because I was tired.",
+            "id": "Biasa aja. Saya nggak ke mana-mana karena capek."
+          },
+          {
+            "en": "How was your holiday? — Great! I went back to my hometown for Lebaran.",
+            "id": "Liburanmu gimana? — Seru! Saya mudik waktu Lebaran."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Masa lalu atau masa depan?",
+        "text": "Kata waktu di pertanyaannya memberi tahu bentuk mana yang dipakai.",
+        "timeline": {
+          "title": "Akhir pekan lalu → akhir pekan ini",
+          "caption": "Akhir pekan lalu dan kemarin sudah selesai: bentuk lampau (I went, It was great). Akhir pekan ini belum datang: going to, atau I'm + -ing untuk acara yang sudah dijadwalkan dengan orang lain.",
+          "marks": [
+            {
+              "label": "last weekend: I went…",
+              "kind": "past"
+            },
+            {
+              "label": "yesterday: It was…",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            },
+            {
+              "label": "this weekend: I'm going to…",
+              "kind": "future"
+            },
+            {
+              "label": "Saturday at 7: I'm meeting…",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rencanamu",
+        "text": "Hari Jumat, pertanyaannya pindah ke masa depan.",
+        "body": "**What are you going to do this weekend?** → rencanamu sendiri: **I'm going to** + kata kerja: *I'm going to visit my aunt.* **What are you doing on Saturday?** → acara yang sudah dijadwalkan dengan orang lain: **I'm** + kata kerja-**ing** + waktu: *I'm meeting Sari at 7.* Belum ada rencana? **Nothing special.** / **I'm not sure.** **Jebakannya:** *Besok saya ke Bogor* tidak menunjukkan masa depan di kata kerjanya, jadi pelajar bilang *Tomorrow I go to Bogor*. Katakan **Tomorrow I'm going to Bogor.**",
+        "pairs": [
+          {
+            "en": "What are you going to do this weekend?",
+            "id": "Akhir pekan ini mau ngapain?"
+          },
+          {
+            "en": "What are you doing on Saturday?",
+            "id": "Sabtu ada acara apa?"
+          },
+          {
+            "en": "I'm going to…",
+            "id": "Saya mau… / Rencananya…"
+          },
+          {
+            "en": "I'm meeting…",
+            "id": "Saya ketemu… (sudah janjian)"
+          },
+          {
+            "en": "Nothing special.",
+            "id": "Nggak ada yang spesial."
+          },
+          {
+            "en": "I'm not sure.",
+            "id": "Belum tahu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sesuaikan jawabanmu dengan pertanyaannya: rencana atau masa lalu?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "share-plans",
+          "prompt": "Jumat sore. Dimas bertanya: 'What are you going to do this weekend?' Jawaban mana yang benar?",
+          "options": [
+            "I going to wash my motorbike.",
+            "I'm going to wash my motorbike.",
+            "I washed my motorbike."
+          ],
+          "answer": 1,
+          "explanation": "Dimas menanyakan rencana, jadi pakai **am + going to + kata kerja**: *I'm going to wash*. *I going to* tidak punya **am** (kata *mau* dalam bahasa Indonesia tidak punya 'be'), dan *I washed* itu masa lalu: akhir pekannya belum terjadi."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pertanyaan lanjutan",
+        "text": "Orang sering bertanya satu kali lagi. Jawab sedikit lebih dari ya atau tidak.",
+        "body": "Jawab dengan **jawaban singkat** + **satu fakta lagi**: *Was it expensive?* — **No, it wasn't.** *It was only 50,000 rupiah.* Jawaban singkat mengikuti kata pertama pertanyaannya: **Did** → *I did / I didn't*, **Was** → *it was / it wasn't*. Lalu **tanya balik**: *How about you? Where did you go? Who did you go with?* *Sama siapa* ada di akhir, dan **with** dalam bahasa Inggris juga di akhir. Perhatikan urutannya: *Where did you go?*, bukan *Where you went?*",
+        "pairs": [
+          {
+            "en": "Did you have a good time?",
+            "id": "Seneng nggak?"
+          },
+          {
+            "en": "Yes, I did!",
+            "id": "Iya!"
+          },
+          {
+            "en": "No, I didn't.",
+            "id": "Nggak."
+          },
+          {
+            "en": "Was it expensive?",
+            "id": "Mahal nggak?"
+          },
+          {
+            "en": "How about you?",
+            "id": "Kamu sendiri?"
+          },
+          {
+            "en": "Where did you go?",
+            "id": "Kamu ke mana?"
+          },
+          {
+            "en": "Who did you go with?",
+            "id": "Kamu pergi sama siapa?"
+          },
+          {
+            "en": "Really? That's great!",
+            "id": "Oh ya? Keren!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Kamu baru pulang dari Yogyakarta. Temanmu bertanya tentang perjalananmu. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-up-questions",
+          "prompt": "Dengarkan pertanyaan temanmu. Pilih jawaban terbaik.",
+          "listen": "Did you have a good time in Yogyakarta?",
+          "options": [
+            "Yes, I do! We visit Borobudur.",
+            "Yes, I did! We visited Borobudur and ate gudeg.",
+            "No, I didn't. It was really fun!"
+          ],
+          "answer": 1,
+          "explanation": "Pertanyaan **did** dijawab dengan **Yes, I did**, ditambah satu fakta lagi dalam bentuk lampau: *We visited… and ate…*. *Yes, I do* dan *We visit* itu bentuk sekarang, dan *No, I didn't… It was really fun!* mengatakan dua hal yang berlawanan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Tadi malam rekan kerjamu makan malam dengan seseorang. Tanyakan dengan siapa.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "follow-up-questions",
+          "prompt": "Susun kata-katanya: Kamu makan malam sama siapa?",
+          "tokens": [
+            "with",
+            "dinner",
+            "Who",
+            "have",
+            "you",
+            "did"
+          ],
+          "solution": "Who did you have dinner with?",
+          "explanation": "Kata tanya + **did** + you + kata kerja dasar: **have**, bukan *had*, karena did sudah menunjukkan masa lalu. *Sama siapa* ada di akhir kalimat bahasa Indonesia, dan **with** dalam bahasa Inggris juga di akhir."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh percakapannya dalam satu halaman. Simpan untuk Senin pagi.",
+        "artifact": {
+          "title": "Ringkasan · Ngobrol akhir pekan: masa lalu & rencana",
+          "intro": "Pertanyaan yang akan kamu dengar, dan cara menjawabnya: jawab, tambahkan detail, tanya balik.",
+          "headers": [
+            "Pertanyaan",
+            "Jawaban",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "How was your weekend?",
+              "It was great / OK. Not bad.",
+              "Akhir pekanmu gimana?"
+            ],
+            [
+              "What did you do?",
+              "I went to… / I stayed at home.",
+              "Kamu ngapain?"
+            ],
+            [
+              "Who did you go with?",
+              "With my family. / On my own.",
+              "Sama siapa?"
+            ],
+            [
+              "How was it?",
+              "It was fun / delicious / crowded.",
+              "Gimana?"
+            ],
+            [
+              "Did you have a good time?",
+              "Yes, I did! + satu fakta lagi",
+              "Seneng nggak?"
+            ],
+            [
+              "Was it expensive?",
+              "No, it wasn't. + satu fakta lagi",
+              "Mahal nggak?"
+            ],
+            [
+              "What are you going to do this weekend?",
+              "I'm going to… / Nothing special.",
+              "Akhir pekan ini mau ngapain?"
+            ],
+            [
+              "What are you doing on Saturday?",
+              "I'm meeting… at 7.",
+              "Sabtu ada acara apa?"
+            ],
+            [
+              "(tanya balik)",
+              "And you? / How about you?",
+              "Kamu sendiri?"
+            ]
+          ],
+          "tips": [
+            "Waktu yang sudah selesai (last weekend, yesterday) → **semua** kata kerjanya lampau: **I went**, bukan `I go`.",
+            "Pertanyaan **Did** → **Yes, I did / No, I didn't** + satu fakta lagi.",
+            "**seru** = **fun** (funny = lucu)."
+          ],
+          "examples": [
+            {
+              "en": "It was great! I went to Bogor with my family. How about you?",
+              "id": "Seru! Saya ke Bogor sama keluarga. Kamu sendiri?"
+            },
+            {
+              "en": "Was it expensive? — No, it wasn't. The hotel was only 300,000 rupiah.",
+              "id": "Mahal nggak? — Nggak. Hotelnya cuma 300.000 rupiah."
+            },
+            {
+              "en": "Nothing special. I'm going to relax at home.",
+              "id": "Nggak ada yang spesial. Saya mau santai di rumah."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan dengarkan",
+        "text": "Mau latihan lagi? Tonton obrolan pendek dengan reaksi dan dengarkan orang bercerita tentang akhir pekan mereka."
+      }
+    ]
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "en": {
+    "greeting": "Hi, welcome back! Today you read real emails, messages and short stories, and you learn to guess new words. Let's go!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "A plan for reading",
+        "text": "Longer texts can look hard. With a plan, they're not! Here's how to read any everyday text.",
+        "body": "You don't need every word.\n- **Look** at the type of text and its title or **Subject**.\n- **Read the question first.** What does the answer look like: a name, a time, a place, yes/no?\n- **Scan** for it: names have a capital letter, times have **am / pm** or **:**.\n- **Read that sentence carefully.**\nCareful: a wrong answer often uses **the same words** as the text but says something different.",
+        "pairs": [
+          {
+            "en": "Who…?",
+            "id": "Siapa? → cari nama orang"
+          },
+          {
+            "en": "When…? / What time…?",
+            "id": "Kapan? / Jam berapa? → cari hari, am / pm"
+          },
+          {
+            "en": "Where…?",
+            "id": "Di mana? → cari nama tempat"
+          },
+          {
+            "en": "How many…?",
+            "id": "Berapa banyak? → cari angka"
+          },
+          {
+            "en": "Why…?",
+            "id": "Kenapa? → cari because / so"
+          },
+          {
+            "en": "How did he go…?",
+            "id": "Dia naik apa? → cari by bus, took a taxi"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Emails and messages",
+        "text": "Let's start with emails and messages: from a colleague, a hotel, a friend.",
+        "body": "An email starts with **From** (the writer), **To** (the reader) and **Subject** (the topic). The name at the end is the writer: **I** = the writer, **you** = the reader. In an email from a hotel or a company, **we** = the hotel or the company. **Dear Mr Pratama** is just a polite start, like *Yth.*; it doesn't mean 'darling'. Messages often change a plan (*not Monday now: Wednesday*), so read the whole sentence.",
+        "pairs": [
+          {
+            "en": "From / To",
+            "id": "dari / kepada"
+          },
+          {
+            "en": "Subject",
+            "id": "perihal (topik email)"
+          },
+          {
+            "en": "Dear Mr …",
+            "id": "Yth. Bapak …"
+          },
+          {
+            "en": "booking",
+            "id": "pemesanan"
+          },
+          {
+            "en": "Please…",
+            "id": "Mohon… / Tolong…"
+          },
+          {
+            "en": "Can you…?",
+            "id": "Bisa tolong…?"
+          },
+          {
+            "en": "Let me know.",
+            "id": "Kabari aku, ya."
+          },
+          {
+            "en": "Best wishes / Regards",
+            "id": "Salam (penutup email)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Read the question first, then check every option against the email.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emails-messages",
+          "prompt": "Read the email: 'Dear Ms Wulandari, thank you for your booking for 12–14 May. Our airport bus leaves the hotel every hour from 6 am. The swimming pool is open from 7 am to 9 pm, and breakfast is free for all guests. Best wishes, Hotel Pantai Indah, Lombok'. Which sentence is true?",
+          "options": [
+            "The airport bus leaves at 6 am only.",
+            "Breakfast is free for guests.",
+            "The swimming pool opens at 9 pm."
+          ],
+          "answer": 1,
+          "explanation": "The email says 'breakfast is free for all guests'. The bus leaves **every hour** from 6 am, not only at 6, and the pool opens at **7 am** (9 pm is when it closes). The wrong options use words from the email but change the meaning."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Who is who?",
+        "text": "Look at the end of the message first: who wrote it?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emails-messages",
+          "prompt": "Read the message: 'Hi Dimas, Sari and I are at the café near the office. Our table is upstairs, next to the window. The food here is great and not expensive! Can you buy some tissues on the way? There are no tissues on our table. See you soon! Maya'. Who is at the café now?",
+          "options": [
+            "Dimas and Sari",
+            "Maya and Sari",
+            "Dimas, Sari and Maya"
+          ],
+          "answer": 1,
+          "explanation": "The name at the end is the writer, so **I** = Maya: 'Sari and I' = Sari and Maya. Dimas is the reader: he buys tissues **on the way** (di jalan), so he isn't at the café yet."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Stories and short news",
+        "text": "Now let's read stories and short news.",
+        "body": "A news story has a **headline** (title) with the topic. The text answers **who, what, where, when** and **why**. Stories tell you what **happened**, so the verbs are in the past: **-ed** (*started, cleaned*) or an irregular form. Indonesian doesn't change the verb (*kemarin dia pergi*), so in English the verb shows the past. If you see *went*, think **go**. Time words show the order: **at 6 am, in the afternoon, then, after that**.",
+        "pairs": [
+          {
+            "en": "went → go",
+            "id": "pergi"
+          },
+          {
+            "en": "got up → get up",
+            "id": "bangun tidur"
+          },
+          {
+            "en": "had → have",
+            "id": "punya; had lunch = makan siang"
+          },
+          {
+            "en": "saw → see",
+            "id": "melihat"
+          },
+          {
+            "en": "ate → eat",
+            "id": "makan"
+          },
+          {
+            "en": "bought → buy",
+            "id": "membeli (bukan membawa)"
+          },
+          {
+            "en": "took → take",
+            "id": "naik (bus); mengambil"
+          },
+          {
+            "en": "came → come",
+            "id": "datang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Rina's Monday",
+        "text": "Here is a short story about someone's day. Find the time words first.",
+        "body": "The time words (at 6, at 7:30, at lunch, after work) give you the order of the day.",
+        "examples": [
+          {
+            "en": "On Monday Rina got up at 6 and made coffee.",
+            "id": "Hari Senin Rina bangun jam 6 dan membuat kopi."
+          },
+          {
+            "en": "At 7:30 she took the train to her office in Sudirman.",
+            "id": "Jam 7.30 dia naik kereta ke kantornya di Sudirman."
+          },
+          {
+            "en": "At lunch she ate soto with her colleagues.",
+            "id": "Saat makan siang dia makan soto bersama rekan kerjanya."
+          },
+          {
+            "en": "After work she went to the gym, and then she cooked dinner.",
+            "id": "Sepulang kerja dia pergi ke gym, lalu dia memasak makan malam."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Read the question, then find the place in the news.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "articles-stories",
+          "prompt": "Read the news: 'CLEAN BEACH DAY IN BALI · Last Saturday about 500 people cleaned Kuta Beach. They started at 7 am and finished at 11. They collected two tons of plastic, and a truck took it to a recycling centre in Denpasar. After that, everyone had free drinks at a hotel near the beach.' Where did the people have free drinks?",
+          "options": [
+            "on Kuta Beach",
+            "at a hotel near the beach",
+            "at a centre in Denpasar"
+          ],
+          "answer": 1,
+          "explanation": "The last sentence says 'everyone had free drinks **at a hotel near the beach**'. They cleaned Kuta Beach, and the plastic went to the centre in Denpasar: those places are in the text, but not for the drinks."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Answer in a sentence",
+        "text": "Read the story, then build the answer with the past simple.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "articles-stories",
+          "prompt": "Read: 'On Friday Pak Hasan worked late at the office because he had a big report for his boss. He finished at 10 pm and walked to the bus stop, but there were no buses after 9, so he took a taxi to his house.' Arrange the words to answer: How did Pak Hasan go home?",
+          "tokens": [
+            "taxi",
+            "went",
+            "He",
+            "by",
+            "home"
+          ],
+          "solution": "He went home by taxi.",
+          "explanation": "There were no buses, so he **took a taxi** to his house = he went home **by taxi**. *went* is the past of *go*: the story happened on Friday."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Guess new words",
+        "text": "Last skill: what do you do with a word you don't know?",
+        "body": "Don't stop at every new word. When you need one:\n- Is it a **thing**, an **action** or a **description** (how something is)?\n- Read the words **around** it and the **next sentence**: they often explain it.\n- Use small clue words: **and** = a similar idea, **but** = the opposite, **so / because** = a result / a reason.\n- Try your guess in the sentence: does it make sense?",
+        "pairs": [
+          {
+            "en": "The bakery sells fresh bread and cakes.",
+            "id": "bakery = toko roti (petunjuk: bread, cakes)"
+          },
+          {
+            "en": "I was exhausted, so I went to bed at 8.",
+            "id": "exhausted = sangat lelah (petunjuk: so, bed)"
+          },
+          {
+            "en": "The room was tiny, but the bed was big.",
+            "id": "tiny = sangat kecil (petunjuk: but)"
+          },
+          {
+            "en": "and",
+            "id": "petunjuk: ide yang mirip"
+          },
+          {
+            "en": "but",
+            "id": "petunjuk: kebalikannya"
+          },
+          {
+            "en": "so / because",
+            "id": "petunjuk: akibat / alasan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look for the clues around the new word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "guess-from-context",
+          "prompt": "Read: 'Yesterday it rained very hard on my way to work, and I didn't have an umbrella. When I arrived at the office, my shirt and shoes were soaked, so I changed my clothes. My shoes stayed next to the fan all morning to dry.' What does 'soaked' mean?",
+          "options": [
+            "very dirty",
+            "very wet",
+            "very old"
+          ],
+          "answer": 1,
+          "explanation": "The clues: it **rained very hard**, there was **no umbrella**, and **so** (result) he changed his clothes. So soaked = very wet (basah kuyup). Rain doesn't make clothes old, and the text says nothing about dirt."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's a cheat sheet to keep for your everyday reading.",
+        "artifact": {
+          "title": "Cheat sheet · Everyday reading",
+          "intro": "Read the question first, scan for the answer, then read that sentence carefully.",
+          "headers": [
+            "In the text",
+            "What it tells you",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "From / To / Subject",
+              "who writes, to whom, the topic",
+              "dari / kepada / perihal"
+            ],
+            [
+              "Dear Mr / Ms …",
+              "a polite start",
+              "Yth. Bapak / Ibu …"
+            ],
+            [
+              "I / you / we",
+              "the writer / the reader / the writer's group",
+              "penulis / pembaca / pihak penulis"
+            ],
+            [
+              "Please… / Can you…?",
+              "asks for something",
+              "Mohon… / Bisa tolong…?"
+            ],
+            [
+              "Best wishes / Regards",
+              "a polite end",
+              "salam (penutup)"
+            ],
+            [
+              "not Monday now",
+              "a changed plan",
+              "rencananya berubah"
+            ],
+            [
+              "headline",
+              "the topic of a news story",
+              "judul berita"
+            ],
+            [
+              "went / bought / saw / took",
+              "go / buy / see / take in the past",
+              "pergi / membeli / melihat / naik"
+            ],
+            [
+              "last Sunday, at 6 am, then",
+              "when, and in what order",
+              "kapan, dan urutannya"
+            ],
+            [
+              "and / but / so / because",
+              "clues for a new word",
+              "mirip / kebalikan / akibat / alasan"
+            ]
+          ],
+          "tips": [
+            "A wrong option often uses **the same words** as the text but says something different. Check the whole sentence.",
+            "In a message, **I** = the name at the end. In a hotel email, **we** = the hotel.",
+            "New word? Thing, action or description? Read the next sentence, then try your guess in the sentence."
+          ],
+          "examples": [
+            {
+              "en": "Subject: Your booking",
+              "id": "Perihal: Pemesanan Anda"
+            },
+            {
+              "en": "Can you call me after 3? Thanks! – Budi",
+              "id": "Bisa telepon aku setelah jam 3? Makasih! – Budi"
+            },
+            {
+              "en": "Last Sunday a new café opened in Malang.",
+              "id": "Minggu lalu sebuah kafe baru dibuka di Malang."
+            },
+            {
+              "en": "The bakery near my house sells fresh bread and cakes.",
+              "id": "Toko roti dekat rumahku menjual roti dan kue segar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Read two real-style emails from British Council LearnEnglish and try their tasks."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang kembali! Hari ini kamu membaca email, pesan dan cerita pendek sungguhan, dan belajar menebak arti kata baru. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Rencana membaca",
+        "text": "Teks yang lebih panjang bisa terlihat sulit. Kalau punya rencana, tidak! Begini cara membaca teks sehari-hari apa pun.",
+        "body": "Kamu tidak perlu mengerti setiap kata.\n- **Lihat** jenis teksnya dan judul atau **Subject**-nya (perihal).\n- **Baca pertanyaannya dulu.** Seperti apa bentuk jawabannya: nama, jam, tempat, yes/no?\n- **Scan** (cari cepat): nama diawali huruf kapital, jam memakai **am / pm** atau **:**.\n- **Baca kalimat itu dengan teliti.**\nHati-hati: jawaban yang salah sering memakai **kata-kata yang sama** dengan teks, tapi artinya berbeda.",
+        "pairs": [
+          {
+            "en": "Who…?",
+            "id": "Siapa? → cari nama orang"
+          },
+          {
+            "en": "When…? / What time…?",
+            "id": "Kapan? / Jam berapa? → cari hari, am / pm"
+          },
+          {
+            "en": "Where…?",
+            "id": "Di mana? → cari nama tempat"
+          },
+          {
+            "en": "How many…?",
+            "id": "Berapa banyak? → cari angka"
+          },
+          {
+            "en": "Why…?",
+            "id": "Kenapa? → cari because / so"
+          },
+          {
+            "en": "How did he go…?",
+            "id": "Dia naik apa? → cari by bus, took a taxi"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Email dan pesan",
+        "text": "Kita mulai dengan email dan pesan: dari rekan kerja, hotel, atau teman.",
+        "body": "Email diawali **From** (penulisnya), **To** (pembacanya) dan **Subject** (perihal/topiknya). Nama di akhir adalah penulisnya: **I** = penulis, **you** = pembaca. Di email dari hotel atau perusahaan, **we** = pihak hotel atau perusahaan itu. **Dear Mr Pratama** hanya pembuka yang sopan, seperti *Yth.*; artinya bukan 'sayang'. Pesan sering mengubah rencana (*not Monday now: Wednesday* = bukan Senin lagi, tapi Rabu), jadi baca kalimatnya sampai habis.",
+        "pairs": [
+          {
+            "en": "From / To",
+            "id": "dari / kepada"
+          },
+          {
+            "en": "Subject",
+            "id": "perihal (topik email)"
+          },
+          {
+            "en": "Dear Mr …",
+            "id": "Yth. Bapak …"
+          },
+          {
+            "en": "booking",
+            "id": "pemesanan"
+          },
+          {
+            "en": "Please…",
+            "id": "Mohon… / Tolong…"
+          },
+          {
+            "en": "Can you…?",
+            "id": "Bisa tolong…?"
+          },
+          {
+            "en": "Let me know.",
+            "id": "Kabari aku, ya."
+          },
+          {
+            "en": "Best wishes / Regards",
+            "id": "Salam (penutup email)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Baca pertanyaannya dulu, lalu cocokkan setiap pilihan dengan isi email.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emails-messages",
+          "prompt": "Baca email ini: 'Dear Ms Wulandari, thank you for your booking for 12–14 May. Our airport bus leaves the hotel every hour from 6 am. The swimming pool is open from 7 am to 9 pm, and breakfast is free for all guests. Best wishes, Hotel Pantai Indah, Lombok'. Kalimat mana yang benar?",
+          "options": [
+            "The airport bus leaves at 6 am only.",
+            "Breakfast is free for guests.",
+            "The swimming pool opens at 9 pm."
+          ],
+          "answer": 1,
+          "explanation": "Emailnya bilang 'breakfast is free for all guests' (sarapan gratis untuk semua tamu). Bus berangkat **setiap jam** mulai jam 6 pagi, bukan hanya jam 6, dan kolam renang buka jam **7 pagi** (jam 9 malam itu jam tutupnya). Pilihan yang salah memakai kata dari email, tapi artinya diubah."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Siapa itu siapa?",
+        "text": "Lihat akhir pesannya dulu: siapa yang menulis?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "emails-messages",
+          "prompt": "Baca pesan ini: 'Hi Dimas, Sari and I are at the café near the office. Our table is upstairs, next to the window. The food here is great and not expensive! Can you buy some tissues on the way? There are no tissues on our table. See you soon! Maya'. Siapa yang sekarang ada di kafe?",
+          "options": [
+            "Dimas and Sari",
+            "Maya and Sari",
+            "Dimas, Sari and Maya"
+          ],
+          "answer": 1,
+          "explanation": "Nama di akhir adalah penulisnya, jadi **I** = Maya: 'Sari and I' = Sari dan Maya. Dimas adalah pembacanya: dia membeli tisu **on the way** (di jalan), jadi dia belum ada di kafe."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Cerita dan berita pendek",
+        "text": "Sekarang kita baca cerita dan berita pendek.",
+        "body": "Berita punya **headline** (judul berita) yang berisi topiknya. Isinya menjawab **siapa, apa, di mana, kapan** dan **kenapa**. Cerita memberi tahu apa yang sudah **terjadi**, jadi kata kerjanya dalam bentuk lampau: **-ed** (*started, cleaned*) atau bentuk tidak beraturan. Bahasa Indonesia tidak mengubah kata kerja (*kemarin dia pergi*), jadi dalam bahasa Inggris kata kerjanya yang menunjukkan masa lalu. Kalau kamu melihat *went*, ingat **go**. Kata waktu menunjukkan urutannya: **at 6 am, in the afternoon, then, after that**.",
+        "pairs": [
+          {
+            "en": "went → go",
+            "id": "pergi"
+          },
+          {
+            "en": "got up → get up",
+            "id": "bangun tidur"
+          },
+          {
+            "en": "had → have",
+            "id": "punya; had lunch = makan siang"
+          },
+          {
+            "en": "saw → see",
+            "id": "melihat"
+          },
+          {
+            "en": "ate → eat",
+            "id": "makan"
+          },
+          {
+            "en": "bought → buy",
+            "id": "membeli (bukan membawa)"
+          },
+          {
+            "en": "took → take",
+            "id": "naik (bus); mengambil"
+          },
+          {
+            "en": "came → come",
+            "id": "datang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Hari Senin Rina",
+        "text": "Ini cerita pendek tentang hari seseorang. Cari kata waktunya dulu.",
+        "body": "Kata waktu (at 6, at 7:30, at lunch, after work) memberi tahu urutan kegiatannya hari itu.",
+        "examples": [
+          {
+            "en": "On Monday Rina got up at 6 and made coffee.",
+            "id": "Hari Senin Rina bangun jam 6 dan membuat kopi."
+          },
+          {
+            "en": "At 7:30 she took the train to her office in Sudirman.",
+            "id": "Jam 7.30 dia naik kereta ke kantornya di Sudirman."
+          },
+          {
+            "en": "At lunch she ate soto with her colleagues.",
+            "id": "Saat makan siang dia makan soto bersama rekan kerjanya."
+          },
+          {
+            "en": "After work she went to the gym, and then she cooked dinner.",
+            "id": "Sepulang kerja dia pergi ke gym, lalu dia memasak makan malam."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Baca pertanyaannya, lalu cari tempatnya di berita.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "articles-stories",
+          "prompt": "Baca berita ini: 'CLEAN BEACH DAY IN BALI · Last Saturday about 500 people cleaned Kuta Beach. They started at 7 am and finished at 11. They collected two tons of plastic, and a truck took it to a recycling centre in Denpasar. After that, everyone had free drinks at a hotel near the beach.' Di mana orang-orang mendapat minuman gratis?",
+          "options": [
+            "on Kuta Beach",
+            "at a hotel near the beach",
+            "at a centre in Denpasar"
+          ],
+          "answer": 1,
+          "explanation": "Kalimat terakhir bilang 'everyone had free drinks **at a hotel near the beach**' (semua orang minum gratis di hotel dekat pantai). Mereka membersihkan Pantai Kuta, dan plastiknya dibawa ke pusat daur ulang di Denpasar: tempat-tempat itu ada di teks, tapi bukan tempat minumnya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jawab dengan kalimat",
+        "text": "Baca ceritanya, lalu susun jawabannya dengan past simple.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "articles-stories",
+          "prompt": "Baca: 'On Friday Pak Hasan worked late at the office because he had a big report for his boss. He finished at 10 pm and walked to the bus stop, but there were no buses after 9, so he took a taxi to his house.' Susun kata-katanya untuk menjawab: How did Pak Hasan go home?",
+          "tokens": [
+            "taxi",
+            "went",
+            "He",
+            "by",
+            "home"
+          ],
+          "solution": "He went home by taxi.",
+          "explanation": "Tidak ada bus, jadi dia **took a taxi** (naik taksi) ke rumahnya = he went home **by taxi** (dia pulang naik taksi). *went* adalah bentuk lampau dari *go*: ceritanya terjadi hari Jumat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menebak kata baru",
+        "text": "Keterampilan terakhir: apa yang kamu lakukan dengan kata yang tidak kamu tahu?",
+        "body": "Jangan berhenti di setiap kata baru. Kalau kamu memerlukannya:\n- Apakah itu **benda**, **kegiatan**, atau **sifat** (keadaan sesuatu)?\n- Baca kata-kata **di sekitarnya** dan **kalimat berikutnya**: sering ada penjelasannya.\n- Pakai kata petunjuk: **and** = ide yang mirip, **but** = kebalikannya, **so / because** = akibat / alasan.\n- Coba masukkan tebakanmu ke kalimatnya: masuk akal tidak?",
+        "pairs": [
+          {
+            "en": "The bakery sells fresh bread and cakes.",
+            "id": "bakery = toko roti (petunjuk: bread, cakes)"
+          },
+          {
+            "en": "I was exhausted, so I went to bed at 8.",
+            "id": "exhausted = sangat lelah (petunjuk: so, bed)"
+          },
+          {
+            "en": "The room was tiny, but the bed was big.",
+            "id": "tiny = sangat kecil (petunjuk: but)"
+          },
+          {
+            "en": "and",
+            "id": "petunjuk: ide yang mirip"
+          },
+          {
+            "en": "but",
+            "id": "petunjuk: kebalikannya"
+          },
+          {
+            "en": "so / because",
+            "id": "petunjuk: akibat / alasan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cari petunjuk di sekitar kata baru itu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "guess-from-context",
+          "prompt": "Baca: 'Yesterday it rained very hard on my way to work, and I didn't have an umbrella. When I arrived at the office, my shirt and shoes were soaked, so I changed my clothes. My shoes stayed next to the fan all morning to dry.' Apa arti 'soaked'?",
+          "options": [
+            "very dirty",
+            "very wet",
+            "very old"
+          ],
+          "answer": 1,
+          "explanation": "Petunjuknya: hujan **sangat deras**, **tidak ada payung**, dan **so** (akibatnya) dia ganti baju. Jadi soaked = very wet (basah kuyup). Hujan tidak membuat baju jadi tua, dan teksnya tidak bilang apa-apa soal kotor."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan yang bisa kamu simpan untuk membaca sehari-hari.",
+        "artifact": {
+          "title": "Ringkasan · Membaca sehari-hari",
+          "intro": "Baca pertanyaannya dulu, cari jawabannya dengan cepat, lalu baca kalimat itu dengan teliti.",
+          "headers": [
+            "Di teks",
+            "Fungsinya",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "From / To / Subject",
+              "siapa menulis, untuk siapa, topiknya",
+              "dari / kepada / perihal"
+            ],
+            [
+              "Dear Mr / Ms …",
+              "pembuka yang sopan",
+              "Yth. Bapak / Ibu …"
+            ],
+            [
+              "I / you / we",
+              "siapa itu siapa",
+              "penulis / pembaca / pihak penulis"
+            ],
+            [
+              "Please… / Can you…?",
+              "meminta sesuatu",
+              "Mohon… / Bisa tolong…?"
+            ],
+            [
+              "Best wishes / Regards",
+              "penutup yang sopan",
+              "salam (penutup)"
+            ],
+            [
+              "not Monday now",
+              "rencana yang berubah",
+              "rencananya berubah"
+            ],
+            [
+              "headline",
+              "topik berita",
+              "judul berita"
+            ],
+            [
+              "went / bought / saw / took",
+              "go / buy / see / take dalam bentuk lampau",
+              "pergi / membeli / melihat / naik"
+            ],
+            [
+              "last Sunday, at 6 am, then",
+              "kata waktu",
+              "kapan, dan urutannya"
+            ],
+            [
+              "and / but / so / because",
+              "petunjuk untuk kata baru",
+              "mirip / kebalikan / akibat / alasan"
+            ]
+          ],
+          "tips": [
+            "Pilihan yang salah sering memakai **kata-kata yang sama** dengan teks, tapi artinya berbeda. Cek seluruh kalimatnya.",
+            "Di pesan, **I** = nama di akhir. Di email dari hotel, **we** = pihak hotel.",
+            "Ada kata baru? Benda, kegiatan, atau sifat? Baca kalimat berikutnya, lalu coba tebakanmu di kalimatnya."
+          ],
+          "examples": [
+            {
+              "en": "Subject: Your booking",
+              "id": "Perihal: Pemesanan Anda"
+            },
+            {
+              "en": "Can you call me after 3? Thanks! – Budi",
+              "id": "Bisa telepon aku setelah jam 3? Makasih! – Budi"
+            },
+            {
+              "en": "Last Sunday a new café opened in Malang.",
+              "id": "Minggu lalu sebuah kafe baru dibuka di Malang."
+            },
+            {
+              "en": "The bakery near my house sells fresh bread and cakes.",
+              "id": "Toko roti dekat rumahku menjual roti dan kue segar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Baca dua email yang mirip aslinya dari British Council LearnEnglish dan kerjakan latihannya."
+      }
+    ]
+  }
+}

@@ -1,0 +1,616 @@
+{
+  "en": {
+    "greeting": "Hi! Today you write real messages: your news for a friend, a polite email to your boss, and a short story about your weekend. Let's start with the shape of a message.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Four parts of a message",
+        "text": "A short message to a friend is like a mini conversation. It has four parts.",
+        "body": "1. **Greeting**: *Hi Sari!* (Hi + name, then ! or a comma)\n2. **News**: something that happened, so the verb is **past**: *Guess what? I passed my driving test!*\n3. **A question back**: *How are you?* A message with only your news sounds like you don't care about your friend.\n4. **Ending + name**: *See you soon, Rina* (comma before the name).\n\n**Guess what?** (coba tebak!) is a fixed phrase to start news. Capitals and full stops work as in your A1 messages.",
+        "pairs": [
+          {
+            "en": "Hi Sari!",
+            "id": "Hai Sari!"
+          },
+          {
+            "en": "Guess what?",
+            "id": "Coba tebak! (memulai kabar)"
+          },
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "See you soon,",
+            "id": "Sampai ketemu,"
+          },
+          {
+            "en": "Love,",
+            "id": "Peluk sayang, (keluarga, sahabat)"
+          },
+          {
+            "en": "Take care,",
+            "id": "Jaga diri ya,"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Budi's message",
+        "text": "Budi writes to his friend Dimas on WhatsApp. Find the four parts.",
+        "body": "Greeting → news (*started*: past, + **-ed**) → a question back (*Did you watch…?*: did + base verb) → ending + name. *My boss is really nice* is in the present because it's true now.",
+        "examples": [
+          {
+            "en": "Hi Dimas!",
+            "id": "Hai Dimas!"
+          },
+          {
+            "en": "Guess what? I started my new job at a bank on Monday!",
+            "id": "Coba tebak! Aku mulai kerja baru di bank hari Senin!"
+          },
+          {
+            "en": "My boss is really nice.",
+            "id": "Bosku baik banget."
+          },
+          {
+            "en": "How are you? Did you watch the match on Saturday?",
+            "id": "Apa kabar? Kamu nonton pertandingannya hari Sabtu?"
+          },
+          {
+            "en": "Take care, Budi",
+            "id": "Jaga diri ya, Budi"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Friend or boss?",
+        "text": "Now the same kind of message to your boss, a teacher or a client.",
+        "body": "With friends you can be **informal** (santai): *Hi*, *Thanks!*, *btw*, an emoji or two. With a boss you are **formal** (sopan): **Dear** + Pak/Bu/Mr + name, words in full, no emoji, and **Best wishes,** or **Kind regards,** before your name. Indonesian trap: keep **Pak/Bu** (*Dear Pak Hasan,*), don't write only the first name, and don't end a work email with *Bye bye*. (*Mr Brown* is British; American English writes *Mr.*)",
+        "pairs": [
+          {
+            "en": "Thanks!",
+            "id": "Makasih! (santai)"
+          },
+          {
+            "en": "Thank you very much.",
+            "id": "Terima kasih banyak. (sopan)"
+          },
+          {
+            "en": "By the way,",
+            "id": "Ngomong-ngomong, (btw ditulis lengkap)"
+          },
+          {
+            "en": "Dear Pak Hasan,",
+            "id": "Yth. Pak Hasan, (salam pembuka sopan)"
+          },
+          {
+            "en": "Best wishes,",
+            "id": "Salam, (penutup sopan)"
+          },
+          {
+            "en": "Kind regards,",
+            "id": "Salam hormat, (penutup sopan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You start a new job on Monday. You write your first email to your manager.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-a-short",
+          "prompt": "You're writing an email to your new manager, Bu Ratna. Which opening is best?",
+          "options": [
+            "Hey Ratna! 😊",
+            "Dear Bu Ratna,",
+            "Bye bye, Ratna"
+          ],
+          "answer": 1,
+          "explanation": "To a manager, use **Dear + Bu/Pak + name + comma**: **Dear Bu Ratna,**. 'Hey Ratna! 😊' is for friends (no Bu, an emoji), and 'Bye bye' is an ending, not an opening."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "News in the past, then ask back",
+        "text": "Your news already happened, so the verb goes into the past. Then you ask something back.",
+        "body": "Indonesian chat only adds a time word (*Kemarin aku lulus ujian*). English changes the verb too: *Yesterday I **passed** my test*, not 'Yesterday I pass'. Irregular verbs have their own past: *got, had, bought, went*. Don't use *was* as a past marker: not 'I was buy'.\n\nAsk back with **How was…?** or **Did you / What did you + base verb**: *What did you buy?*, not 'What did you bought?'. When a friend gives news, react first: *Congratulations!*",
+        "pairs": [
+          {
+            "en": "How was your weekend?",
+            "id": "Gimana akhir pekanmu?"
+          },
+          {
+            "en": "Did you have a good time?",
+            "id": "Kamu senang?"
+          },
+          {
+            "en": "What did you buy?",
+            "id": "Kamu beli apa?"
+          },
+          {
+            "en": "And you?",
+            "id": "Kalau kamu?"
+          },
+          {
+            "en": "Congratulations!",
+            "id": "Selamat ya!"
+          },
+          {
+            "en": "That's great!",
+            "id": "Keren banget!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina has big news for her friend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "give-simple-news",
+          "prompt": "Which news sentence is correct?",
+          "options": [
+            "Guess what? I get a new job last week!",
+            "Guess what? I got a new job last week!",
+            "Guess what? I was get a new job last week!"
+          ],
+          "answer": 1,
+          "explanation": "**last week** is the past, and **get** is irregular: its past is **got**. 'I get' is the present, and 'was get' is wrong because was can't be a past marker for another verb."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Your friend wrote about her weekend. Ask her what she did.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "give-simple-news",
+          "prompt": "Arrange the words: Kamu ngapain hari Minggu?",
+          "tokens": [
+            "Sunday",
+            "do",
+            "you",
+            "What",
+            "on",
+            "did"
+          ],
+          "solution": "What did you do on Sunday?",
+          "explanation": "A past question with a question word: **What + did + you + base verb**: **What did you do on Sunday?** Here *did* is the helper and *do* means 'melakukan'. Not 'What you did…?': English needs *did* before *you*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "A 47-word story",
+        "text": "Now a short story. Sari wrote about her Sunday in 47 words.",
+        "body": "**Start**: when, where, who. **Middle**: 2–3 things in order, with time words (*in the morning, at one o'clock*). **End**: how it was. **Every verb is past**: *went, took, rented, had, was, came*. Ideas are joined with **and** and **but**. Words like *then* and *so* come in a later lesson. Count everything between spaces: 35–50 words.",
+        "examples": [
+          {
+            "en": "Last Sunday Budi and I went to Kota Tua in Jakarta.",
+            "id": "Minggu lalu aku dan Budi pergi ke Kota Tua di Jakarta."
+          },
+          {
+            "en": "We took the KRL train in the morning.",
+            "id": "Kami naik KRL pagi-pagi."
+          },
+          {
+            "en": "We rented old bikes and took a lot of photos.",
+            "id": "Kami menyewa sepeda tua dan mengambil banyak foto."
+          },
+          {
+            "en": "At one o'clock we had lunch, but the restaurant was very busy.",
+            "id": "Jam satu kami makan siang, tapi restorannya ramai sekali."
+          },
+          {
+            "en": "We came home tired but happy.",
+            "id": "Kami pulang capek tapi senang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dewi is writing a story about her trip last Saturday. One sentence is wrong.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-story",
+          "prompt": "Which sentence does NOT fit a story about last Saturday?",
+          "options": [
+            "We went to Pangandaran by bus.",
+            "We play volleyball on the beach.",
+            "We had grilled fish for dinner."
+          ],
+          "answer": 1,
+          "explanation": "In a story about last Saturday **every verb is past**: *went, had*. 'We play' slips back into the present; it should be **We played volleyball on the beach.**"
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next message.",
+        "artifact": {
+          "title": "Cheat sheet · short messages",
+          "intro": "The four parts of a message, friend or boss, and how to write a 35–50 word story.",
+          "headers": [
+            "Part",
+            "To a friend",
+            "To your boss"
+          ],
+          "rows": [
+            [
+              "Greeting",
+              "Hi Sari! / Hi Sari,",
+              "Dear Pak Hasan, / Dear Mr Brown,"
+            ],
+            [
+              "News",
+              "Guess what? I passed my test!",
+              "The report is ready."
+            ],
+            [
+              "Question back",
+              "How are you? How was your trip?",
+              "Did you get my email?"
+            ],
+            [
+              "Thanks",
+              "Thanks!",
+              "Thank you very much."
+            ],
+            [
+              "By the way",
+              "btw",
+              "By the way,"
+            ],
+            [
+              "Emoji",
+              "OK: one or two",
+              "No emoji"
+            ],
+            [
+              "Ending",
+              "See you soon, / Love, / Take care,",
+              "Best wishes, / Kind regards,"
+            ]
+          ],
+          "tips": [
+            "News and stories: the verb is past, not just the time word: *Yesterday I passed*, not 'Yesterday I pass'.",
+            "Questions back: **Did you / What did you + base verb**: *Did you see…?*, not 'Did you saw…?'.",
+            "Story: start (when, where, who) → 2–3 things with time words → how it was. 35–50 words; join with and, but, because."
+          ],
+          "examples": [
+            {
+              "en": "Guess what? We moved to Bekasi on Saturday!",
+              "id": "Coba tebak! Kami pindah ke Bekasi hari Sabtu!"
+            },
+            {
+              "en": "Did you see Rina at the wedding?",
+              "id": "Kamu ketemu Rina di nikahan?"
+            },
+            {
+              "en": "Last Friday I went to a concert with Sari.",
+              "id": "Jumat lalu aku nonton konser bersama Sari."
+            },
+            {
+              "en": "We were tired but happy.",
+              "id": "Kami capek tapi senang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read more",
+        "text": "Two short British Council pages: a friendly message to read as a model, and a holiday story with writing tips."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu menulis pesan sungguhan: kabarmu untuk teman, email sopan untuk atasan, dan cerita pendek tentang akhir pekanmu. Kita mulai dari bentuk sebuah pesan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Empat bagian pesan",
+        "text": "Pesan singkat untuk teman itu seperti percakapan mini. Ada empat bagian.",
+        "body": "1. **Salam pembuka**: *Hi Sari!* (Hi + nama, lalu ! atau koma)\n2. **Kabar**: sesuatu yang sudah terjadi, jadi kata kerjanya **lampau**: *Guess what? I passed my driving test!*\n3. **Pertanyaan balik**: *How are you?* Pesan yang isinya hanya kabarmu terdengar seperti kamu tidak peduli pada temanmu.\n4. **Penutup + nama**: *See you soon, Rina* (koma sebelum nama).\n\n**Guess what?** (coba tebak!) adalah ungkapan tetap untuk memulai kabar. Huruf kapital dan titik sama seperti pesan A1-mu.",
+        "pairs": [
+          {
+            "en": "Hi Sari!",
+            "id": "Hai Sari!"
+          },
+          {
+            "en": "Guess what?",
+            "id": "Coba tebak! (memulai kabar)"
+          },
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "See you soon,",
+            "id": "Sampai ketemu,"
+          },
+          {
+            "en": "Love,",
+            "id": "Peluk sayang, (keluarga, sahabat)"
+          },
+          {
+            "en": "Take care,",
+            "id": "Jaga diri ya,"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pesan dari Budi",
+        "text": "Budi menulis ke temannya, Dimas, lewat WhatsApp. Temukan keempat bagiannya.",
+        "body": "Salam pembuka → kabar (*started*: lampau, + **-ed**) → pertanyaan balik (*Did you watch…?*: did + kata kerja dasar) → penutup + nama. *My boss is really nice* memakai present karena itu benar sekarang.",
+        "examples": [
+          {
+            "en": "Hi Dimas!",
+            "id": "Hai Dimas!"
+          },
+          {
+            "en": "Guess what? I started my new job at a bank on Monday!",
+            "id": "Coba tebak! Aku mulai kerja baru di bank hari Senin!"
+          },
+          {
+            "en": "My boss is really nice.",
+            "id": "Bosku baik banget."
+          },
+          {
+            "en": "How are you? Did you watch the match on Saturday?",
+            "id": "Apa kabar? Kamu nonton pertandingannya hari Sabtu?"
+          },
+          {
+            "en": "Take care, Budi",
+            "id": "Jaga diri ya, Budi"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Teman atau atasan?",
+        "text": "Sekarang pesan yang sama untuk atasan, guru atau klien.",
+        "body": "Dengan teman kamu boleh **informal** (santai): *Hi*, *Thanks!*, *btw*, satu-dua emoji. Dengan atasan kamu **formal** (sopan): **Dear** + Pak/Bu/Mr + nama, kata-kata lengkap, tanpa emoji, dan **Best wishes,** atau **Kind regards,** sebelum namamu. Jebakan: pertahankan **Pak/Bu** (*Dear Pak Hasan,*), jangan tulis nama depannya saja, dan jangan tutup email kerja dengan *Bye bye*. (*Mr Brown* itu British; bahasa Inggris Amerika menulis *Mr.*)",
+        "pairs": [
+          {
+            "en": "Thanks!",
+            "id": "Makasih! (santai)"
+          },
+          {
+            "en": "Thank you very much.",
+            "id": "Terima kasih banyak. (sopan)"
+          },
+          {
+            "en": "By the way,",
+            "id": "Ngomong-ngomong, (btw ditulis lengkap)"
+          },
+          {
+            "en": "Dear Pak Hasan,",
+            "id": "Yth. Pak Hasan, (salam pembuka sopan)"
+          },
+          {
+            "en": "Best wishes,",
+            "id": "Salam, (penutup sopan)"
+          },
+          {
+            "en": "Kind regards,",
+            "id": "Salam hormat, (penutup sopan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu mulai kerja baru hari Senin. Kamu menulis email pertama untuk manajermu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-a-short",
+          "prompt": "Kamu menulis email untuk manajer barumu, Bu Ratna. Salam pembuka mana yang paling tepat?",
+          "options": [
+            "Hey Ratna! 😊",
+            "Dear Bu Ratna,",
+            "Bye bye, Ratna"
+          ],
+          "answer": 1,
+          "explanation": "Untuk manajer, pakai **Dear + Bu/Pak + nama + koma**: **Dear Bu Ratna,**. 'Hey Ratna! 😊' untuk teman (tanpa Bu, pakai emoji), dan 'Bye bye' itu penutup, bukan pembuka."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kabar lampau, lalu tanya balik",
+        "text": "Kabarmu sudah terjadi, jadi kata kerjanya diubah ke bentuk lampau. Lalu kamu bertanya balik.",
+        "body": "Chat bahasa Indonesia hanya menambah kata waktu (*Kemarin aku lulus ujian*). Bahasa Inggris juga mengubah kata kerjanya: *Yesterday I **passed** my test*, bukan 'Yesterday I pass'. Kata kerja tidak beraturan punya bentuk lampau sendiri: *got, had, bought, went*. Jangan pakai *was* sebagai penanda lampau: bukan 'I was buy'.\n\nTanya balik dengan **How was…?** atau **Did you / What did you + kata kerja dasar**: *What did you buy?*, bukan 'What did you bought?'. Saat teman memberi kabar, tanggapi dulu: *Congratulations!*",
+        "pairs": [
+          {
+            "en": "How was your weekend?",
+            "id": "Gimana akhir pekanmu?"
+          },
+          {
+            "en": "Did you have a good time?",
+            "id": "Kamu senang?"
+          },
+          {
+            "en": "What did you buy?",
+            "id": "Kamu beli apa?"
+          },
+          {
+            "en": "And you?",
+            "id": "Kalau kamu?"
+          },
+          {
+            "en": "Congratulations!",
+            "id": "Selamat ya!"
+          },
+          {
+            "en": "That's great!",
+            "id": "Keren banget!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina punya kabar besar untuk temannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "give-simple-news",
+          "prompt": "Kalimat kabar mana yang benar?",
+          "options": [
+            "Guess what? I get a new job last week!",
+            "Guess what? I got a new job last week!",
+            "Guess what? I was get a new job last week!"
+          ],
+          "answer": 1,
+          "explanation": "**last week** itu masa lalu, dan **get** tidak beraturan: bentuk lampaunya **got**. 'I get' itu bentuk sekarang, dan 'was get' salah karena was tidak bisa menjadi penanda lampau untuk kata kerja lain."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Temanmu bercerita tentang akhir pekannya. Tanyakan apa yang dia lakukan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "give-simple-news",
+          "prompt": "Susun kata-katanya: Kamu ngapain hari Minggu?",
+          "tokens": [
+            "Sunday",
+            "do",
+            "you",
+            "What",
+            "on",
+            "did"
+          ],
+          "solution": "What did you do on Sunday?",
+          "explanation": "Pertanyaan lampau dengan kata tanya: **What + did + you + kata kerja dasar**: **What did you do on Sunday?** Di sini *did* adalah kata bantu dan *do* berarti 'melakukan'. Bukan 'What you did…?': bahasa Inggris butuh *did* sebelum *you*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Cerita 47 kata",
+        "text": "Sekarang cerita pendek. Sari menulis tentang hari Minggunya dalam 47 kata.",
+        "body": "**Awal**: kapan, di mana, dengan siapa. **Tengah**: 2–3 kejadian berurutan, dengan kata waktu (*in the morning, at one o'clock*). **Akhir**: bagaimana rasanya. **Semua kata kerja lampau**: *went, took, rented, had, was, came*. Ide digabung dengan **and** dan **but**. Kata seperti *then* dan *so* ada di pelajaran berikutnya. Hitung semua yang dipisah spasi: 35–50 kata.",
+        "examples": [
+          {
+            "en": "Last Sunday Budi and I went to Kota Tua in Jakarta.",
+            "id": "Minggu lalu aku dan Budi pergi ke Kota Tua di Jakarta."
+          },
+          {
+            "en": "We took the KRL train in the morning.",
+            "id": "Kami naik KRL pagi-pagi."
+          },
+          {
+            "en": "We rented old bikes and took a lot of photos.",
+            "id": "Kami menyewa sepeda tua dan mengambil banyak foto."
+          },
+          {
+            "en": "At one o'clock we had lunch, but the restaurant was very busy.",
+            "id": "Jam satu kami makan siang, tapi restorannya ramai sekali."
+          },
+          {
+            "en": "We came home tired but happy.",
+            "id": "Kami pulang capek tapi senang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dewi menulis cerita tentang perjalanannya Sabtu lalu. Satu kalimat salah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-story",
+          "prompt": "Kalimat mana yang TIDAK cocok untuk cerita tentang Sabtu lalu?",
+          "options": [
+            "We went to Pangandaran by bus.",
+            "We play volleyball on the beach.",
+            "We had grilled fish for dinner."
+          ],
+          "answer": 1,
+          "explanation": "Dalam cerita tentang Sabtu lalu **semua kata kerja lampau**: *went, had*. 'We play' kembali ke bentuk present; seharusnya **We played volleyball on the beach.**"
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk pesanmu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · pesan singkat",
+          "intro": "Empat bagian pesan, untuk teman atau atasan, dan cara menulis cerita 35–50 kata.",
+          "headers": [
+            "Bagian",
+            "Untuk teman",
+            "Untuk atasan"
+          ],
+          "rows": [
+            [
+              "Salam pembuka",
+              "Hi Sari! / Hi Sari,",
+              "Dear Pak Hasan, / Dear Mr Brown,"
+            ],
+            [
+              "Kabar",
+              "Guess what? I passed my test!",
+              "The report is ready."
+            ],
+            [
+              "Pertanyaan balik",
+              "How are you? How was your trip?",
+              "Did you get my email?"
+            ],
+            [
+              "Terima kasih",
+              "Thanks!",
+              "Thank you very much."
+            ],
+            [
+              "Ngomong-ngomong",
+              "btw",
+              "By the way,"
+            ],
+            [
+              "Emoji",
+              "Boleh: satu-dua",
+              "Tanpa emoji"
+            ],
+            [
+              "Penutup",
+              "See you soon, / Love, / Take care,",
+              "Best wishes, / Kind regards,"
+            ]
+          ],
+          "tips": [
+            "Kabar dan cerita: kata kerjanya lampau, bukan hanya kata waktunya: *Yesterday I passed*, bukan 'Yesterday I pass'.",
+            "Pertanyaan balik: **Did you / What did you + kata kerja dasar**: *Did you see…?*, bukan 'Did you saw…?'.",
+            "Cerita: awal (kapan, di mana, dengan siapa) → 2–3 kejadian dengan kata waktu → bagaimana rasanya. 35–50 kata; gabungkan dengan and, but, because."
+          ],
+          "examples": [
+            {
+              "en": "Guess what? We moved to Bekasi on Saturday!",
+              "id": "Coba tebak! Kami pindah ke Bekasi hari Sabtu!"
+            },
+            {
+              "en": "Did you see Rina at the wedding?",
+              "id": "Kamu ketemu Rina di nikahan?"
+            },
+            {
+              "en": "Last Friday I went to a concert with Sari.",
+              "id": "Jumat lalu aku nonton konser bersama Sari."
+            },
+            {
+              "en": "We were tired but happy.",
+              "id": "Kami capek tapi senang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Bacaan tambahan",
+        "text": "Dua halaman pendek dari British Council: pesan ramah untuk dibaca sebagai contoh, dan cerita liburan dengan tips menulis."
+      }
+    ]
+  }
+}

@@ -1,0 +1,694 @@
+{
+  "en": {
+    "greeting": "Hi! Today is all about sound: the three endings of -ed, the short lazy schwa, and the quick small words that natives hardly say. Have your headphones ready and say everything out loud.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Last sound, not last letter",
+        "text": "You know -ed has three sounds. Today's key: listen to the last sound of the verb. Tap each word.",
+        "body": "-ed is **'t'** after sounds with no buzz (p, k, f, s, sh, ch), **'d'** after vowels and buzzing sounds (b, g, j, l, m, n, r, v, z), and an extra beat **'id'** only after **t** or **d**. Spelling can trick you: in *fixed* the x is said 'ks' → 't'; in *laughed* gh = 'f' → 't'; in *closed* the s is 'z' → 'd'. A silent e adds nothing: *lived* = 'livd', one beat.",
+        "pairs": [
+          {
+            "en": "fixed",
+            "id": "memperbaiki · 'fikst' → t"
+          },
+          {
+            "en": "laughed",
+            "id": "tertawa · 'laaft' → t"
+          },
+          {
+            "en": "danced",
+            "id": "menari · 'danst' → t"
+          },
+          {
+            "en": "closed",
+            "id": "menutup · 'klouzd' → d"
+          },
+          {
+            "en": "changed",
+            "id": "mengganti · 'cheinjd' → d"
+          },
+          {
+            "en": "lived",
+            "id": "tinggal · 'livd' → d"
+          },
+          {
+            "en": "waited",
+            "id": "menunggu · 'WEI-tid' → id"
+          },
+          {
+            "en": "decided",
+            "id": "memutuskan · 'di-SAI-did' → id"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: which ending?",
+        "text": "Press play. Listen to the verb, and think about its last sound.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ed-endings",
+          "listen": "Rina smiled at the baby.",
+          "prompt": "Listen. How does the -ed of the verb sound?",
+          "options": [
+            "'t', one beat",
+            "'d', one beat",
+            "'id', an extra beat"
+          ],
+          "answer": 1,
+          "explanation": "You heard **smiled**: 'smaild'. *smile* ends in an **l** sound (the e is silent), and l buzzes, so -ed is **'d'** with no extra beat. 'smai-led' is wrong: 'id' comes only after t or d."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "-ed inside a sentence",
+        "text": "Listen to each sentence, then say it. Don't lose the ending!",
+        "body": "Indonesian says a final t or d very softly, so *I walked* can sound like *I walk*. Before a vowel, join the ending to the next word: *played a* → 'pley-da'. Before a consonant, keep it small and quick, with no extra vowel: 'kukt DIN-nə', not 'kuk-te'.",
+        "examples": [
+          {
+            "en": "I worked in Jakarta last year.",
+            "id": "Saya bekerja di Jakarta tahun lalu."
+          },
+          {
+            "en": "Sari played a game on her phone.",
+            "id": "Sari main game di HP-nya."
+          },
+          {
+            "en": "My mother cooked dinner for us.",
+            "id": "Ibuku memasak makan malam untuk kami."
+          },
+          {
+            "en": "Pak Hasan called his son.",
+            "id": "Pak Hasan menelepon anak laki-lakinya."
+          },
+          {
+            "en": "Budi needed a new phone.",
+            "id": "Budi butuh HP baru."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and count",
+        "text": "Press play and clap the beats of the verb.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ed-endings",
+          "listen": "We wanted a new car.",
+          "prompt": "Listen. How many beats (syllables) does the verb have?",
+          "options": [
+            "one",
+            "two",
+            "three"
+          ],
+          "answer": 1,
+          "explanation": "You heard **wanted**: 'WON-tid', **two** beats. *want* ends in a **t** sound, so -ed adds the extra beat 'id'. Verbs like *worked* or *played* stay at one beat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Schwa: the lazy sound",
+        "text": "Now the most common vowel sound in English. Tap each word and listen to the weak parts.",
+        "body": "The **schwa** is a short, lazy, relaxed sound, like the **e of *emas*** or *besar* (e pepet). Dictionaries write it **ə**, so here 'ə' always means that short e. It's in the **weak syllables**: TEA-cher → 'TII-chə', ba-NA-na → 'bə-NAA-nə'. **Indonesian trap:** we say every vowel clearly (*ba-na-na*); English makes only the strong syllable clear. Americans also say the r: 'TII-chər'.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru · 'TII-chə'"
+          },
+          {
+            "en": "doctor",
+            "id": "dokter · 'DOK-tə'"
+          },
+          {
+            "en": "banana",
+            "id": "pisang · 'bə-NAA-nə'"
+          },
+          {
+            "en": "about",
+            "id": "tentang · 'ə-BAUT'"
+          },
+          {
+            "en": "today",
+            "id": "hari ini · 'tə-DEI'"
+          },
+          {
+            "en": "computer",
+            "id": "komputer · 'kəm-PYUU-tə'"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Weak and strong small words",
+        "text": "Small words like was, can, to and of are weak in the middle of a sentence. Listen, then copy the rhythm.",
+        "body": "Weak (ə = the e of *emas*): **was** 'wəz', **can** 'kn', **to** 'tə', **of** 'əv' or just 'ə'. The important words stay strong: 'ai kn SWIM'. At the **end** and in **short answers** they're strong: *Yes, I was* ('woz'). **can't** is always strong ('kaant' British, 'ként' American), so a strong *can* in the middle can sound like *can't*!",
+        "examples": [
+          {
+            "en": "I can swim.",
+            "id": "Saya bisa berenang."
+          },
+          {
+            "en": "Dimas was at the office.",
+            "id": "Dimas ada di kantor."
+          },
+          {
+            "en": "I want to go home.",
+            "id": "Saya mau pulang."
+          },
+          {
+            "en": "A cup of tea, please.",
+            "id": "Secangkir teh, ya."
+          },
+          {
+            "en": "Were you at home? Yes, I was.",
+            "id": "Kamu tadi di rumah? Ya."
+          },
+          {
+            "en": "I can't drive.",
+            "id": "Saya tidak bisa menyetir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Strong or weak?",
+        "text": "Press play. Listen to the very last word of the answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "schwa-weak-forms",
+          "listen": "Can you cook rendang? Yes, I can.",
+          "prompt": "Listen. How is the last word of the answer said?",
+          "options": [
+            "Weak and short: 'kn'",
+            "Strong and clear: 'kén'",
+            "As can't: 'kaant'"
+          ],
+          "answer": 1,
+          "explanation": "*can* is the **last word** of a **short answer**, so it's **strong**: 'kén'. In the middle of a sentence it would be weak ('ai kn KUK'). It isn't *can't*: the answer is *Yes*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build it, then say it",
+        "text": "Build the sentence, then say it with weak small words.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "schwa-weak-forms",
+          "prompt": "Arrange the words: Saya mau secangkir kopi.",
+          "tokens": [
+            "coffee",
+            "of",
+            "I",
+            "cup",
+            "want",
+            "a"
+          ],
+          "solution": "I want a cup of coffee.",
+          "explanation": "**I want** + **a cup of coffee** (*secangkir kopi* = a cup **of** coffee: English needs *of* between the container and the drink). Now say it: *a* and *of* are both a lazy ə: 'ai WONT ə KAP ə KO-fi'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hear the small words",
+        "text": "Weak words are quick and quiet, so they're easy to miss. Here's how to catch them.",
+        "body": "Listen for the **strong words** first (who, what, where), then fill in the small ones: 'SA-ri wəz at the MAR-ket' = *Sari was at the market*. **can or can't?** 'kn' + a strong verb = **can**. A long, strong vowel = **can't**, even when the t is almost silent. Weak words still have a tiny beat: when you count words, don't forget them.",
+        "pairs": [
+          {
+            "en": "I can",
+            "id": "saya bisa · 'ai kn'"
+          },
+          {
+            "en": "I can't",
+            "id": "saya tidak bisa · 'ai KAANT'"
+          },
+          {
+            "en": "it was",
+            "id": "itu (dulu) · 'it wəz'"
+          },
+          {
+            "en": "need to",
+            "id": "perlu · 'NIID tə'"
+          },
+          {
+            "en": "a glass of",
+            "id": "segelas · 'ə GLAAS ə'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Catch the small word",
+        "text": "Press play. The small word is quick, so listen carefully.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "hear-weak-forms",
+          "listen": "I want to go to the bank.",
+          "prompt": "Listen. How many times do you hear the small word 'to'?",
+          "options": [
+            "one",
+            "two",
+            "three"
+          ],
+          "answer": 1,
+          "explanation": "You heard **I want to go to the bank**: *to* comes **twice**, both times weak and quick: 'ai WONT tə GO tə the BANK'. Weak words are easy to miss, but they're still there."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Everything from today on one page, to keep.",
+        "artifact": {
+          "title": "Cheat sheet · -ed endings & weak forms",
+          "intro": "How to say -ed, what the schwa is, and when was, can, to and of are weak or strong. 'ə' = the short, lazy e of 'emas'; CAPITALS = the strong syllable.",
+          "headers": [
+            "Word / ending",
+            "How it sounds",
+            "Example"
+          ],
+          "rows": [
+            [
+              "-ed after p, k, f, s, sh, ch, x",
+              "'t', 1 beat",
+              "worked, fixed, laughed"
+            ],
+            [
+              "-ed after a vowel or a buzzing sound",
+              "'d', 1 beat",
+              "played, lived, closed"
+            ],
+            [
+              "-ed after t or d",
+              "'id', an extra beat",
+              "wanted, needed, waited"
+            ],
+            [
+              "schwa ə",
+              "short, lazy e of 'emas'",
+              "teacher 'TII-chə'"
+            ],
+            [
+              "was",
+              "weak 'wəz' · strong 'woz'",
+              "I was tired. / Yes, I was."
+            ],
+            [
+              "can",
+              "weak 'kn' · strong 'kén'",
+              "I can swim. / Yes, I can."
+            ],
+            [
+              "can't",
+              "always strong: 'kaant' (UK), 'ként' (US)",
+              "I can't drive."
+            ],
+            [
+              "to",
+              "weak 'tə' ('tu' before a vowel) · strong 'tuu'",
+              "I want to go. / Yes, I want to."
+            ],
+            [
+              "of",
+              "weak 'əv', or 'ə' before a consonant",
+              "a cup of tea"
+            ]
+          ],
+          "tips": [
+            "-ed: check the last **sound**, not the letter. The extra beat 'id' is only after t or d.",
+            "Small words are weak in the middle of a sentence and strong at the end and in short answers.",
+            "can or can't? Short 'kn' = can; long, strong vowel = can't."
+          ],
+          "examples": [
+            {
+              "en": "Budi fixed my laptop.",
+              "id": "Budi memperbaiki laptopku."
+            },
+            {
+              "en": "We waited for the train.",
+              "id": "Kami menunggu kereta."
+            },
+            {
+              "en": "I can swim.",
+              "id": "Saya bisa berenang."
+            },
+            {
+              "en": "A cup of tea, please.",
+              "id": "Secangkir teh, ya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and listen",
+        "text": "Three short BBC videos with transcripts: the schwa, weak can, and weak was."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita fokus ke bunyi: tiga akhiran -ed, schwa yang pendek dan malas, dan kata-kata kecil yang diucapkan cepat sekali oleh penutur asli. Siapkan headphone dan ucapkan semuanya dengan suara keras.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bunyi terakhir, bukan huruf terakhir",
+        "text": "Kamu tahu -ed punya tiga bunyi. Kuncinya hari ini: dengarkan bunyi terakhir kata kerjanya. Ketuk setiap kata.",
+        "body": "-ed dibaca **'t'** setelah bunyi yang tidak bergetar (p, k, f, s, sh, ch), **'d'** setelah vokal dan bunyi yang bergetar (b, g, j, l, m, n, r, v, z), dan menjadi ketukan tambahan **'id'** hanya setelah **t** atau **d**. Ejaannya bisa menipu: di *fixed* x dibaca 'ks' → 't'; di *laughed* gh = 'f' → 't'; di *closed* s-nya 'z' → 'd'. e yang tidak dibaca tidak menambah apa-apa: *lived* = 'livd', satu ketukan.",
+        "pairs": [
+          {
+            "en": "fixed",
+            "id": "memperbaiki · 'fikst' → t"
+          },
+          {
+            "en": "laughed",
+            "id": "tertawa · 'laaft' → t"
+          },
+          {
+            "en": "danced",
+            "id": "menari · 'danst' → t"
+          },
+          {
+            "en": "closed",
+            "id": "menutup · 'klouzd' → d"
+          },
+          {
+            "en": "changed",
+            "id": "mengganti · 'cheinjd' → d"
+          },
+          {
+            "en": "lived",
+            "id": "tinggal · 'livd' → d"
+          },
+          {
+            "en": "waited",
+            "id": "menunggu · 'WEI-tid' → id"
+          },
+          {
+            "en": "decided",
+            "id": "memutuskan · 'di-SAI-did' → id"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: akhiran yang mana?",
+        "text": "Tekan play. Dengarkan kata kerjanya, lalu pikirkan bunyi terakhirnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ed-endings",
+          "listen": "Rina smiled at the baby.",
+          "prompt": "Dengarkan. Bagaimana bunyi -ed pada kata kerjanya?",
+          "options": [
+            "'t', one beat",
+            "'d', one beat",
+            "'id', an extra beat"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar **smiled**: 'smaild'. *smile* berakhiran bunyi **l** (e-nya tidak dibaca), dan l bergetar, jadi -ed dibaca **'d'** tanpa ketukan tambahan. 'smai-led' salah: 'id' hanya muncul setelah t atau d."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "-ed di dalam kalimat",
+        "text": "Dengarkan setiap kalimat, lalu ucapkan. Jangan sampai akhirannya hilang!",
+        "body": "Dalam bahasa Indonesia, t atau d di akhir kata diucapkan sangat lembut, jadi *I walked* bisa terdengar seperti *I walk*. Sebelum vokal, sambungkan akhirannya ke kata berikutnya: *played a* → 'pley-da'. Sebelum konsonan, ucapkan kecil dan cepat, tanpa vokal tambahan: 'kukt DIN-nə', bukan 'kuk-te'.",
+        "examples": [
+          {
+            "en": "I worked in Jakarta last year.",
+            "id": "Saya bekerja di Jakarta tahun lalu."
+          },
+          {
+            "en": "Sari played a game on her phone.",
+            "id": "Sari main game di HP-nya."
+          },
+          {
+            "en": "My mother cooked dinner for us.",
+            "id": "Ibuku memasak makan malam untuk kami."
+          },
+          {
+            "en": "Pak Hasan called his son.",
+            "id": "Pak Hasan menelepon anak laki-lakinya."
+          },
+          {
+            "en": "Budi needed a new phone.",
+            "id": "Budi butuh HP baru."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dan hitung",
+        "text": "Tekan play dan tepuk ketukan kata kerjanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ed-endings",
+          "listen": "We wanted a new car.",
+          "prompt": "Dengarkan. Ada berapa ketukan (suku kata) di kata kerjanya?",
+          "options": [
+            "one",
+            "two",
+            "three"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar **wanted**: 'WON-tid', **dua** ketukan. *want* berakhiran bunyi **t**, jadi -ed menambah ketukan 'id'. Kata kerja seperti *worked* atau *played* tetap satu ketukan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Schwa: bunyi yang malas",
+        "text": "Sekarang bunyi vokal yang paling sering muncul dalam bahasa Inggris. Ketuk setiap kata dan dengarkan bagian yang lemah.",
+        "body": "**Schwa** adalah bunyi pendek, malas dan santai, seperti **e di *emas*** atau *besar* (e pepet). Kamus menulisnya **ə**, jadi di sini 'ə' selalu berarti e pendek itu. Bunyi ini ada di **suku kata yang lemah**: TEA-cher → 'TII-chə', ba-NA-na → 'bə-NAA-nə'. **Jebakan bahasa Indonesia:** kita mengucapkan setiap vokal dengan jelas (*ba-na-na*); bahasa Inggris hanya membuat suku kata yang kuat terdengar jelas. Orang Amerika juga mengucapkan r-nya: 'TII-chər'.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru · 'TII-chə'"
+          },
+          {
+            "en": "doctor",
+            "id": "dokter · 'DOK-tə'"
+          },
+          {
+            "en": "banana",
+            "id": "pisang · 'bə-NAA-nə'"
+          },
+          {
+            "en": "about",
+            "id": "tentang · 'ə-BAUT'"
+          },
+          {
+            "en": "today",
+            "id": "hari ini · 'tə-DEI'"
+          },
+          {
+            "en": "computer",
+            "id": "komputer · 'kəm-PYUU-tə'"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata kecil: lemah dan kuat",
+        "text": "Kata kecil seperti was, can, to dan of diucapkan lemah di tengah kalimat. Dengarkan, lalu tirukan iramanya.",
+        "body": "Lemah (ə = e di *emas*): **was** 'wəz', **can** 'kn', **to** 'tə', **of** 'əv' atau cukup 'ə'. Kata-kata penting tetap kuat: 'ai kn SWIM'. Di **akhir** kalimat dan di **jawaban pendek**, kata-kata ini kuat: *Yes, I was* ('woz'). **can't** selalu kuat ('kaant' British, 'ként' Amerika), jadi *can* yang kuat di tengah kalimat bisa terdengar seperti *can't*!",
+        "examples": [
+          {
+            "en": "I can swim.",
+            "id": "Saya bisa berenang."
+          },
+          {
+            "en": "Dimas was at the office.",
+            "id": "Dimas ada di kantor."
+          },
+          {
+            "en": "I want to go home.",
+            "id": "Saya mau pulang."
+          },
+          {
+            "en": "A cup of tea, please.",
+            "id": "Secangkir teh, ya."
+          },
+          {
+            "en": "Were you at home? Yes, I was.",
+            "id": "Kamu tadi di rumah? Ya."
+          },
+          {
+            "en": "I can't drive.",
+            "id": "Saya tidak bisa menyetir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kuat atau lemah?",
+        "text": "Tekan play. Dengarkan kata paling akhir dari jawabannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "schwa-weak-forms",
+          "listen": "Can you cook rendang? Yes, I can.",
+          "prompt": "Dengarkan. Bagaimana kata terakhir dari jawabannya diucapkan?",
+          "options": [
+            "Weak and short: 'kn'",
+            "Strong and clear: 'kén'",
+            "As can't: 'kaant'"
+          ],
+          "answer": 1,
+          "explanation": "*can* adalah **kata terakhir** dari **jawaban pendek**, jadi diucapkan **kuat**: 'kén'. Di tengah kalimat, *can* akan lemah ('ai kn KUK'). Ini bukan *can't*: jawabannya *Yes*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun, lalu ucapkan",
+        "text": "Susun kalimatnya, lalu ucapkan dengan kata-kata kecil yang lemah.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "schwa-weak-forms",
+          "prompt": "Susun kata-katanya: Saya mau secangkir kopi.",
+          "tokens": [
+            "coffee",
+            "of",
+            "I",
+            "cup",
+            "want",
+            "a"
+          ],
+          "solution": "I want a cup of coffee.",
+          "explanation": "**I want** + **a cup of coffee** (*secangkir kopi* = a cup **of** coffee: bahasa Inggris butuh *of* di antara wadah dan minumannya). Sekarang ucapkan: *a* dan *of* sama-sama ə yang malas: 'ai WONT ə KAP ə KO-fi'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tangkap kata-kata kecil",
+        "text": "Kata-kata lemah itu cepat dan pelan, jadi gampang terlewat. Begini cara menangkapnya.",
+        "body": "Dengarkan dulu **kata-kata yang kuat** (siapa, apa, di mana), lalu isi kata-kata kecilnya: 'SA-ri wəz at the MAR-ket' = *Sari was at the market*. **can atau can't?** 'kn' + kata kerja yang kuat = **can**. Vokal yang panjang dan kuat = **can't**, walaupun t-nya hampir tidak terdengar. Kata lemah tetap punya ketukan kecil: saat menghitung kata, jangan lupakan kata-kata ini.",
+        "pairs": [
+          {
+            "en": "I can",
+            "id": "saya bisa · 'ai kn'"
+          },
+          {
+            "en": "I can't",
+            "id": "saya tidak bisa · 'ai KAANT'"
+          },
+          {
+            "en": "it was",
+            "id": "itu (dulu) · 'it wəz'"
+          },
+          {
+            "en": "need to",
+            "id": "perlu · 'NIID tə'"
+          },
+          {
+            "en": "a glass of",
+            "id": "segelas · 'ə GLAAS ə'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tangkap kata kecilnya",
+        "text": "Tekan play. Kata kecilnya cepat, jadi dengarkan baik-baik.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "hear-weak-forms",
+          "listen": "I want to go to the bank.",
+          "prompt": "Dengarkan. Berapa kali kamu mendengar kata kecil 'to'?",
+          "options": [
+            "one",
+            "two",
+            "three"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar **I want to go to the bank**: *to* muncul **dua kali**, keduanya lemah dan cepat: 'ai WONT tə GO tə the BANK'. Kata-kata lemah gampang terlewat, tapi tetap ada."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semua materi hari ini dalam satu halaman, untuk disimpan.",
+        "artifact": {
+          "title": "Ringkasan · akhiran -ed & weak forms",
+          "intro": "Cara mengucapkan -ed, apa itu schwa, dan kapan was, can, to dan of diucapkan lemah atau kuat. 'ə' = e pendek dan malas seperti di 'emas'; HURUF BESAR = suku kata yang kuat.",
+          "headers": [
+            "Kata / akhiran",
+            "Bunyinya",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "-ed setelah p, k, f, s, sh, ch, x",
+              "'t', 1 ketukan",
+              "worked, fixed, laughed"
+            ],
+            [
+              "-ed setelah vokal atau bunyi bergetar",
+              "'d', 1 ketukan",
+              "played, lived, closed"
+            ],
+            [
+              "-ed setelah t atau d",
+              "'id', ketukan tambahan",
+              "wanted, needed, waited"
+            ],
+            [
+              "schwa ə",
+              "e pendek dan malas seperti di 'emas'",
+              "teacher 'TII-chə'"
+            ],
+            [
+              "was",
+              "lemah 'wəz' · kuat 'woz'",
+              "I was tired. / Yes, I was."
+            ],
+            [
+              "can",
+              "lemah 'kn' · kuat 'kén'",
+              "I can swim. / Yes, I can."
+            ],
+            [
+              "can't",
+              "selalu kuat: 'kaant' (UK), 'ként' (US)",
+              "I can't drive."
+            ],
+            [
+              "to",
+              "lemah 'tə' ('tu' sebelum vokal) · kuat 'tuu'",
+              "I want to go. / Yes, I want to."
+            ],
+            [
+              "of",
+              "lemah 'əv', atau 'ə' sebelum konsonan",
+              "a cup of tea"
+            ]
+          ],
+          "tips": [
+            "-ed: periksa **bunyi** terakhirnya, bukan hurufnya. Ketukan tambahan 'id' hanya setelah t atau d.",
+            "Kata kecil diucapkan lemah di tengah kalimat, dan kuat di akhir kalimat serta di jawaban pendek.",
+            "can atau can't? 'kn' yang pendek = can; vokal yang panjang dan kuat = can't."
+          ],
+          "examples": [
+            {
+              "en": "Budi fixed my laptop.",
+              "id": "Budi memperbaiki laptopku."
+            },
+            {
+              "en": "We waited for the train.",
+              "id": "Kami menunggu kereta."
+            },
+            {
+              "en": "I can swim.",
+              "id": "Saya bisa berenang."
+            },
+            {
+              "en": "A cup of tea, please.",
+              "id": "Secangkir teh, ya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan dengarkan",
+        "text": "Tiga video singkat dari BBC dengan transkrip: schwa, can yang lemah, dan was yang lemah."
+      }
+    ]
+  }
+}

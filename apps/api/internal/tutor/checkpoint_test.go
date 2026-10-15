@@ -3,6 +3,7 @@ package tutor
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -79,5 +80,20 @@ func TestLevelSpread(t *testing.T) {
 		if got := LevelSpread(lessons); got != want {
 			t.Errorf("LevelSpread(%d) = %d, want %d", lessons, got, want)
 		}
+	}
+}
+
+func TestCheckpointPromptsMayQuoteAText(t *testing.T) {
+	text := strings.Repeat("Read the email from the hotel. ", 20) // ~620 characters
+	items := make([]CheckItem, 5)
+	for i := range items {
+		items[i] = CheckItem{Question: Question{Type: QuestionText, ObjectiveID: "o", Prompt: fmt.Sprintf("%s Q%d?", text, i)}, Accepted: []string{"a"}, Rubric: "r"}
+	}
+	if _, err := ValidateCheckpoint(items, map[string]bool{"o": true}, nil); err != nil {
+		t.Fatalf("a checkpoint question with a short text to read: %v", err)
+	}
+	q := Question{Type: QuestionMCQ, ObjectiveID: "o", Prompt: text, Options: []string{"a", "b", "c"}, Explanation: "e"}
+	if _, err := ValidateQuestion(q, map[string]bool{"o": true}); err == nil {
+		t.Fatal("a lesson step's prompt stays short")
 	}
 }

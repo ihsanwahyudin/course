@@ -85,6 +85,9 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
 - **No giveaways:** nothing shown before a question contains its answer sentence; practice questions never reuse checkpoint
   items or their exact answers.
 - **Listening questions** put the English the learner hears in `listen` and never in the prompt.
+  `listen` is read by one voice (at most 300 characters): in a dialogue, the speaker labels ("Rina: …") are read aloud too.
+- **Length:** a step question's prompt is at most 400 characters; a checkpoint item's may be up to 800, so it can quote a
+  short email, message or notice to read.
 - **Hand-written checkpoint items** are short, checkable answers (lowercase, punctuation-free `acceptableAnswers` with the common
   valid variants: contractions both ways, with/without article, "9 45"/"0945" for times, "22 000" for prices) plus a `rubric` for
   partial credit. They are the fallback when the AI can't write a checkpoint and the examples the AI matches in level and style,

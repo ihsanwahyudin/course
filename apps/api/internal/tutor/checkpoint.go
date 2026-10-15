@@ -23,6 +23,9 @@ const (
 	// level's lessons, or from this many when the level is bigger.
 	MaxLevelSpread = 10
 	maxAccepted    = 20
+	// A checkpoint question may quote a short text to read (an email, a
+	// notice), so its prompt can be longer than a lesson step's.
+	maxCheckPrompt = 800
 )
 
 // CheckItem is one checkpoint question. Multiple choice and word order use
@@ -159,7 +162,7 @@ func validateItems(items []CheckItem, objectives map[string]bool, earlier []stri
 			if strings.TrimSpace(it.Explanation) == "" {
 				it.Explanation = "-"
 			}
-			it.Question, err = ValidateQuestion(it.Question, objectives)
+			it.Question, err = validateQuestion(it.Question, objectives, maxCheckPrompt)
 			it.Accepted, it.Rubric = []string{it.Key()}, clean(it.Rubric)
 		}
 		if err != nil {
@@ -202,7 +205,7 @@ func realWords(tokens []string) bool {
 func validateTextItem(it CheckItem, objectives map[string]bool) (CheckItem, error) {
 	it.Prompt, it.ObjectiveID, it.Rubric, it.Listen = clean(it.Prompt), clean(it.ObjectiveID), clean(it.Rubric), clean(it.Listen)
 	it.Explanation = clean(it.Explanation)
-	if badLen(it.Prompt, maxShort*2) || badLen(it.Rubric, maxText) {
+	if badLen(it.Prompt, maxCheckPrompt) || badLen(it.Rubric, maxText) {
 		return it, fmt.Errorf("an open question needs a prompt and a rubric")
 	}
 	if !objectives[it.ObjectiveID] {

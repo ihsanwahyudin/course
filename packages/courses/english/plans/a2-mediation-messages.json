@@ -1,0 +1,730 @@
+{
+  "en": {
+    "greeting": "Hi! Today you're the bridge again, but with bigger messages: a phone call for a colleague who is out, or a long Indonesian announcement in the office group. You'll pass them on in short, clear English. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Who called, then the message",
+        "text": "Your colleague Tom is out. The phone rings: it's Sari, with a message for him. How do you tell Tom later?",
+        "body": "A good message has three parts:\n- **Who + what they did**, in the past, because the call is finished: *Sari **called**.* (not *Sari call*)\n- **The message**, in 1–3 short sentences: *She can't come today. She's sick.*\n- **What they want**: *Please call her back.*\nIndonesian shows the past only with *tadi* or *kemarin*; English changes the verb: call → **called**, come → **came**.",
+        "pairs": [
+          {
+            "en": "called / phoned",
+            "id": "menelepon (tadi)"
+          },
+          {
+            "en": "texted",
+            "id": "kirim pesan / SMS / WA (tadi)"
+          },
+          {
+            "en": "came",
+            "id": "datang (tadi)"
+          },
+          {
+            "en": "She can't come.",
+            "id": "Dia tidak bisa datang."
+          },
+          {
+            "en": "Please call her back.",
+            "id": "Tolong telepon dia kembali."
+          },
+          {
+            "en": "Her number is …",
+            "id": "Nomornya …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Whole messages",
+        "text": "Here are some messages, first in Indonesian, then passed on in English.",
+        "body": "Short sentences, one fact each. **texted** sounds like 'TEK-stid'.",
+        "examples": [
+          {
+            "en": "Sari called. She can't come today. She's sick.",
+            "id": "Sari: 'Saya tidak bisa datang hari ini. Saya sakit.'"
+          },
+          {
+            "en": "Budi texted. He missed the bus. He's late.",
+            "id": "Budi: 'Saya ketinggalan bus. Saya terlambat.'"
+          },
+          {
+            "en": "Pak Hasan came at two. He had a question about the report.",
+            "id": "Pak Hasan datang jam 2. Dia mau tanya soal laporan."
+          },
+          {
+            "en": "Bu Ani called. Please call her back.",
+            "id": "Bu Ani: 'Tolong telepon saya kembali.'"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "I becomes he or she",
+        "text": "Did you notice? Sari said 'saya', but you said 'she'. Here's why.",
+        "body": "The message is in the sender's words. You talk **about** the sender, so: **I → he/she**, **my → his/her**, **me → him/her**, **we → they**. But if the message is **for** your listener, **you** stays you: Pak Hasan to Tom, *'Saya tunggu Bapak di lobi'* → *He's waiting for you.*\nTrap: Indonesian *dia* and *-nya* are the same for a man and a woman. English must choose: look at who sent it.",
+        "pairs": [
+          {
+            "en": "he / she",
+            "id": "saya → dia (laki-laki / perempuan)"
+          },
+          {
+            "en": "his / her",
+            "id": "saya, -ku (pemilik) → -nya"
+          },
+          {
+            "en": "him / her",
+            "id": "saya (setelah call, help) → dia"
+          },
+          {
+            "en": "they",
+            "id": "kami → mereka"
+          },
+          {
+            "en": "you",
+            "id": "Bapak / Ibu / kamu (untuk pendengarmu) → tetap you"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Rudi phones the office. Tom is out, so you take the message.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pass-on-messages",
+          "prompt": "Pak Rudi says: 'Saya tidak bisa datang besok. Istri saya sakit.' Which message do you give Tom?",
+          "options": [
+            "Pak Rudi called. I can't come tomorrow. My wife is sick.",
+            "Pak Rudi called. He can't come tomorrow. Her wife is sick.",
+            "Pak Rudi called. He can't come tomorrow. His wife is sick."
+          ],
+          "answer": 2,
+          "explanation": "Pak Rudi is a man, so *saya* becomes **he**, and *istri saya* (the owner) becomes **his** wife. *I* and *my* would mean you; *her* is for a woman owner (the *-nya* trap)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now Budi texts from the station. Pass it on to Tom.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "pass-on-messages",
+          "prompt": "Budi texts: 'Kereta saya terlambat 30 menit.' Arrange the words for Tom.",
+          "tokens": [
+            "late",
+            "minutes",
+            "His",
+            "is",
+            "thirty",
+            "train"
+          ],
+          "solution": "His train is thirty minutes late.",
+          "explanation": "The message is from Budi, a man, so *kereta saya* becomes **his train**. Then **is** (Indonesian has no 'to be') and the time: **thirty minutes late**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Notices: only the key facts",
+        "text": "Now the second skill. The office group posts a long announcement in Indonesian, and Emma asks: what does it say?",
+        "body": "Don't translate every word. Skip the polite parts (*Dengan hormat, diberitahukan kepada…, Atas perhatiannya kami ucapkan terima kasih*). Ask: **What?** **When?** **Where?** (and sometimes **What do I do?**). Then say it in one or two short sentences.\nWatch the word-for-word traps: **air mati** = *There's no water* (not 'the water is dead'), **sekolah libur** = *There's no school*. You can use the present for tomorrow: *The office **is** closed tomorrow.*",
+        "pairs": [
+          {
+            "en": "There's no water.",
+            "id": "air mati"
+          },
+          {
+            "en": "There's no electricity.",
+            "id": "listrik padam / mati lampu"
+          },
+          {
+            "en": "There's no school.",
+            "id": "sekolah libur"
+          },
+          {
+            "en": "The meeting is now on Wednesday.",
+            "id": "rapat diundur ke hari Rabu"
+          },
+          {
+            "en": "cancelled",
+            "id": "dibatalkan (US: canceled)"
+          },
+          {
+            "en": "a community clean-up",
+            "id": "kerja bakti"
+          },
+          {
+            "en": "from nine to twelve",
+            "id": "pukul 09.00–12.00"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "From notice to English",
+        "text": "Long Indonesian on the right, the short English summary on the left.",
+        "body": "Each summary keeps only what, when and where.",
+        "examples": [
+          {
+            "en": "The clinic is closed on Sunday.",
+            "id": "Diberitahukan kepada seluruh pasien bahwa Klinik Sehat tutup pada hari Minggu. Terima kasih."
+          },
+          {
+            "en": "The meeting is now on Wednesday at two p.m.",
+            "id": "Pengumuman: rapat hari Senin diundur ke hari Rabu jam 14.00."
+          },
+          {
+            "en": "There's no yoga class on Saturday.",
+            "id": "Mohon maaf, kelas yoga hari Sabtu dibatalkan."
+          },
+          {
+            "en": "The train to Bandung is thirty minutes late.",
+            "id": "Mohon maaf, kereta tujuan Bandung mengalami keterlambatan 30 menit."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A message arrives in the office group. Emma asks you about it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-from-indonesian",
+          "prompt": "The group says: 'Selamat siang Bapak/Ibu. Rapat bulanan hari ini pindah ke ruang 5, jam tetap 15.00. Terima kasih 🙏' What do you tell Emma?",
+          "options": [
+            "There's no monthly meeting today.",
+            "The monthly meeting today is in room 5 at three p.m.",
+            "The monthly meeting today is in room 3 at five p.m."
+          ],
+          "answer": 1,
+          "explanation": "The key facts: what (the monthly meeting), where (room **5**) and when (15.00 − 12 = **three p.m.**; *jam tetap* means the time doesn't change). The last option mixes up the 5 and the 15.00; the meeting is not cancelled."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Tom lives in your neighbourhood. The RT group sends a message.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-from-indonesian",
+          "prompt": "The RT group says: 'Info warga: kerja bakti hari Minggu jam 07.00, kumpul di depan masjid. Bawa sapu ya!' What do you tell Tom?",
+          "options": [
+            "The clean-up is on Sunday at seven a.m., in front of the mosque. Bring a broom.",
+            "The clean-up is on Sunday at seven p.m., in the mosque. Bring a broom.",
+            "The clean-up is on Monday at seven a.m., in front of the mosque. Buy a broom."
+          ],
+          "answer": 0,
+          "explanation": "What: a community clean-up. When: **Sunday** (Minggu), 07.00 = **seven a.m.** Where: **in front of** (di depan) the mosque. What to do: **bring** (bawa) a broom. Each wrong option changes one key fact."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Turn the cards: Indonesian on the front, what you say in English on the back.",
+        "flashcards": [
+          {
+            "front": "Sari telepon tadi.",
+            "back": "Sari called."
+          },
+          {
+            "front": "Tolong telepon dia kembali (Bu Ani).",
+            "back": "Please call her back."
+          },
+          {
+            "front": "saya → (pesan dari Budi)",
+            "back": "he / his / him"
+          },
+          {
+            "front": "saya → (pesan dari Rina)",
+            "back": "she / her"
+          },
+          {
+            "front": "air mati",
+            "back": "There's no water. / The water is off."
+          },
+          {
+            "front": "sekolah libur",
+            "back": "There's no school."
+          },
+          {
+            "front": "rapat diundur ke hari Rabu",
+            "back": "The meeting is now on Wednesday."
+          },
+          {
+            "front": "dibatalkan",
+            "back": "cancelled (UK) / canceled (US)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it next to the office phone.",
+        "artifact": {
+          "title": "Cheat sheet · Passing on messages",
+          "intro": "What's in the Indonesian message on the left, what you say in English in the middle.",
+          "headers": [
+            "In the message",
+            "In English",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "Sari telepon tadi",
+              "Sari called.",
+              "past: call + ed"
+            ],
+            [
+              "Budi datang jam 2",
+              "Budi came at two.",
+              "come → came"
+            ],
+            [
+              "saya (from Sari)",
+              "she",
+              "not I"
+            ],
+            [
+              "saya (from Budi)",
+              "he",
+              "dia = he or she: check who"
+            ],
+            [
+              "mobil saya (from Sari)",
+              "her car",
+              "-nya = his or her"
+            ],
+            [
+              "telepon saya",
+              "call her / him back",
+              "not 'call me'"
+            ],
+            [
+              "Bapak / Ibu / kamu (for your listener)",
+              "you",
+              "stays you"
+            ],
+            [
+              "air mati",
+              "There's no water.",
+              "not 'the water is dead'"
+            ],
+            [
+              "listrik padam / mati lampu",
+              "There's no electricity.",
+              "a power cut"
+            ],
+            [
+              "sekolah libur",
+              "There's no school.",
+              "not 'school is holiday'"
+            ],
+            [
+              "diundur ke hari Rabu",
+              "is now on Wednesday",
+              "now = the new day"
+            ],
+            [
+              "dibatalkan",
+              "cancelled",
+              "American: canceled"
+            ],
+            [
+              "Dengan hormat … terima kasih",
+              "(skip it)",
+              "not a key fact"
+            ]
+          ],
+          "tips": [
+            "A message: who + called/texted/came, then 1–3 short sentences, then what they want.",
+            "A notice: What? When? Where? (What do I do?) One or two short sentences, not every word.",
+            "Tomorrow and next week are fine with the present: The office is closed tomorrow."
+          ],
+          "examples": [
+            {
+              "en": "Sari called. She can't come today. She's sick.",
+              "id": "Sari: 'Saya tidak bisa datang hari ini. Saya sakit.'"
+            },
+            {
+              "en": "Bu Ani called. Please call her back.",
+              "id": "Bu Ani: 'Tolong telepon saya kembali.'"
+            },
+            {
+              "en": "The clinic is closed on Sunday.",
+              "id": "Klinik Sehat tutup pada hari Minggu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen and read",
+        "text": "Want more practice? Listen to someone leaving a phone message, and read a real-style notice to find the key facts."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu jadi jembatan lagi, tapi dengan pesan yang lebih panjang: telepon untuk rekan kerja yang sedang keluar, atau pengumuman panjang berbahasa Indonesia di grup kantor. Kamu akan meneruskannya dalam bahasa Inggris yang pendek dan jelas. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Siapa yang menelepon, lalu pesannya",
+        "text": "Rekan kerjamu Tom sedang keluar. Telepon berdering: Sari, dengan pesan untuknya. Bagaimana kamu menyampaikannya ke Tom nanti?",
+        "body": "Pesan yang baik punya tiga bagian:\n- **Siapa + apa yang dia lakukan**, dalam bentuk lampau, karena teleponnya sudah selesai: *Sari **called**.* (bukan *Sari call*)\n- **Isi pesannya**, dalam 1–3 kalimat pendek: *She can't come today. She's sick.*\n- **Apa yang dia minta**: *Please call her back.*\nBahasa Indonesia menunjukkan lampau hanya dengan *tadi* atau *kemarin*; bahasa Inggris mengubah kata kerjanya: call → **called**, come → **came**.",
+        "pairs": [
+          {
+            "en": "called / phoned",
+            "id": "menelepon (tadi)"
+          },
+          {
+            "en": "texted",
+            "id": "kirim pesan / SMS / WA (tadi)"
+          },
+          {
+            "en": "came",
+            "id": "datang (tadi)"
+          },
+          {
+            "en": "She can't come.",
+            "id": "Dia tidak bisa datang."
+          },
+          {
+            "en": "Please call her back.",
+            "id": "Tolong telepon dia kembali."
+          },
+          {
+            "en": "Her number is …",
+            "id": "Nomornya …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pesan utuh",
+        "text": "Ini beberapa pesan, pertama dalam bahasa Indonesia, lalu diteruskan dalam bahasa Inggris.",
+        "body": "Kalimat pendek, satu info per kalimat. **texted** dibaca 'TEK-stid'.",
+        "examples": [
+          {
+            "en": "Sari called. She can't come today. She's sick.",
+            "id": "Sari: 'Saya tidak bisa datang hari ini. Saya sakit.'"
+          },
+          {
+            "en": "Budi texted. He missed the bus. He's late.",
+            "id": "Budi: 'Saya ketinggalan bus. Saya terlambat.'"
+          },
+          {
+            "en": "Pak Hasan came at two. He had a question about the report.",
+            "id": "Pak Hasan datang jam 2. Dia mau tanya soal laporan."
+          },
+          {
+            "en": "Bu Ani called. Please call her back.",
+            "id": "Bu Ani: 'Tolong telepon saya kembali.'"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "I berubah jadi he atau she",
+        "text": "Kamu perhatikan? Sari bilang 'saya', tapi kamu bilang 'she'. Ini alasannya.",
+        "body": "Pesan itu memakai kata-kata pengirimnya. Kamu bicara **tentang** pengirimnya, jadi: **I → he/she**, **my → his/her**, **me → him/her**, **we → they**. Tapi kalau pesannya **untuk** pendengarmu, **you** tetap you: Pak Hasan ke Tom, *'Saya tunggu Bapak di lobi'* → *He's waiting for you.*\nJebakan: *dia* dan *-nya* sama untuk laki-laki dan perempuan. Bahasa Inggris harus memilih: lihat siapa pengirimnya.",
+        "pairs": [
+          {
+            "en": "he / she",
+            "id": "saya → dia (laki-laki / perempuan)"
+          },
+          {
+            "en": "his / her",
+            "id": "saya, -ku (pemilik) → -nya"
+          },
+          {
+            "en": "him / her",
+            "id": "saya (setelah call, help) → dia"
+          },
+          {
+            "en": "they",
+            "id": "kami → mereka"
+          },
+          {
+            "en": "you",
+            "id": "Bapak / Ibu / kamu (untuk pendengarmu) → tetap you"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Rudi menelepon kantor. Tom sedang keluar, jadi kamu yang mencatat pesannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pass-on-messages",
+          "prompt": "Pak Rudi bilang: 'Saya tidak bisa datang besok. Istri saya sakit.' Pesan mana yang kamu sampaikan ke Tom?",
+          "options": [
+            "Pak Rudi called. I can't come tomorrow. My wife is sick.",
+            "Pak Rudi called. He can't come tomorrow. Her wife is sick.",
+            "Pak Rudi called. He can't come tomorrow. His wife is sick."
+          ],
+          "answer": 2,
+          "explanation": "Pak Rudi laki-laki, jadi *saya* berubah jadi **he**, dan *istri saya* (pemilik) jadi **his** wife. *I* dan *my* berarti kamu sendiri; *her* untuk pemilik perempuan (jebakan *-nya*)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang Budi kirim pesan dari stasiun. Teruskan ke Tom.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "pass-on-messages",
+          "prompt": "Budi kirim pesan: 'Kereta saya terlambat 30 menit.' Susun kata-katanya untuk Tom.",
+          "tokens": [
+            "late",
+            "minutes",
+            "His",
+            "is",
+            "thirty",
+            "train"
+          ],
+          "solution": "His train is thirty minutes late.",
+          "explanation": "Pesannya dari Budi, laki-laki, jadi *kereta saya* berubah jadi **his train**. Lalu **is** (bahasa Indonesia tidak punya 'to be') dan waktunya: **thirty minutes late**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pengumuman: info pentingnya saja",
+        "text": "Sekarang keterampilan kedua. Grup kantor mengirim pengumuman panjang berbahasa Indonesia, dan Emma bertanya: isinya apa?",
+        "body": "Jangan terjemahkan setiap kata. Lewati bagian yang sopan (*Dengan hormat, diberitahukan kepada…, Atas perhatiannya kami ucapkan terima kasih*). Tanyakan: **What?** (apa) **When?** (kapan) **Where?** (di mana), dan kadang **What do I do?** Lalu sampaikan dalam satu atau dua kalimat pendek.\nHati-hati jebakan kata per kata: **air mati** = *There's no water* (bukan 'the water is dead'), **sekolah libur** = *There's no school*. Untuk besok boleh pakai present: *The office **is** closed tomorrow.*",
+        "pairs": [
+          {
+            "en": "There's no water.",
+            "id": "air mati"
+          },
+          {
+            "en": "There's no electricity.",
+            "id": "listrik padam / mati lampu"
+          },
+          {
+            "en": "There's no school.",
+            "id": "sekolah libur"
+          },
+          {
+            "en": "The meeting is now on Wednesday.",
+            "id": "rapat diundur ke hari Rabu"
+          },
+          {
+            "en": "cancelled",
+            "id": "dibatalkan (US: canceled)"
+          },
+          {
+            "en": "a community clean-up",
+            "id": "kerja bakti"
+          },
+          {
+            "en": "from nine to twelve",
+            "id": "pukul 09.00–12.00"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dari pengumuman ke bahasa Inggris",
+        "text": "Bahasa Indonesia yang panjang di kanan, ringkasan bahasa Inggris yang pendek di kiri.",
+        "body": "Setiap ringkasan hanya menyimpan apa, kapan dan di mana.",
+        "examples": [
+          {
+            "en": "The clinic is closed on Sunday.",
+            "id": "Diberitahukan kepada seluruh pasien bahwa Klinik Sehat tutup pada hari Minggu. Terima kasih."
+          },
+          {
+            "en": "The meeting is now on Wednesday at two p.m.",
+            "id": "Pengumuman: rapat hari Senin diundur ke hari Rabu jam 14.00."
+          },
+          {
+            "en": "There's no yoga class on Saturday.",
+            "id": "Mohon maaf, kelas yoga hari Sabtu dibatalkan."
+          },
+          {
+            "en": "The train to Bandung is thirty minutes late.",
+            "id": "Mohon maaf, kereta tujuan Bandung mengalami keterlambatan 30 menit."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ada pesan masuk di grup kantor. Emma bertanya padamu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-from-indonesian",
+          "prompt": "Grupnya menulis: 'Selamat siang Bapak/Ibu. Rapat bulanan hari ini pindah ke ruang 5, jam tetap 15.00. Terima kasih 🙏' Apa yang kamu sampaikan ke Emma?",
+          "options": [
+            "There's no monthly meeting today.",
+            "The monthly meeting today is in room 5 at three p.m.",
+            "The monthly meeting today is in room 3 at five p.m."
+          ],
+          "answer": 1,
+          "explanation": "Info pentingnya: apa (rapat bulanan), di mana (ruang **5**) dan kapan (15.00 − 12 = **three p.m.**; *jam tetap* artinya jamnya tidak berubah). Pilihan terakhir mencampur angka 5 dan 15.00; rapatnya juga tidak dibatalkan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tom tinggal di lingkunganmu. Grup RT mengirim pesan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-from-indonesian",
+          "prompt": "Grup RT menulis: 'Info warga: kerja bakti hari Minggu jam 07.00, kumpul di depan masjid. Bawa sapu ya!' Apa yang kamu sampaikan ke Tom?",
+          "options": [
+            "The clean-up is on Sunday at seven a.m., in front of the mosque. Bring a broom.",
+            "The clean-up is on Sunday at seven p.m., in the mosque. Bring a broom.",
+            "The clean-up is on Monday at seven a.m., in front of the mosque. Buy a broom."
+          ],
+          "answer": 0,
+          "explanation": "Apa: kerja bakti (a community clean-up). Kapan: **Sunday** (Minggu), 07.00 = **seven a.m.** Di mana: **in front of** (di depan) masjid. Yang harus dilakukan: **bring** (bawa) sapu (a broom). Setiap pilihan yang salah mengubah satu info penting."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartunya: bahasa Indonesia di depan, yang kamu ucapkan dalam bahasa Inggris di belakang.",
+        "flashcards": [
+          {
+            "front": "Sari telepon tadi.",
+            "back": "Sari called."
+          },
+          {
+            "front": "Tolong telepon dia kembali (Bu Ani).",
+            "back": "Please call her back."
+          },
+          {
+            "front": "saya → (pesan dari Budi)",
+            "back": "he / his / him"
+          },
+          {
+            "front": "saya → (pesan dari Rina)",
+            "back": "she / her"
+          },
+          {
+            "front": "air mati",
+            "back": "There's no water. / The water is off."
+          },
+          {
+            "front": "sekolah libur",
+            "back": "There's no school."
+          },
+          {
+            "front": "rapat diundur ke hari Rabu",
+            "back": "The meeting is now on Wednesday."
+          },
+          {
+            "front": "dibatalkan",
+            "back": "cancelled (UK) / canceled (US)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan di dekat telepon kantor.",
+        "artifact": {
+          "title": "Ringkasan · Meneruskan pesan",
+          "intro": "Isi pesan berbahasa Indonesia di kiri, yang kamu ucapkan dalam bahasa Inggris di tengah.",
+          "headers": [
+            "Di pesannya",
+            "Dalam bahasa Inggris",
+            "Hati-hati"
+          ],
+          "rows": [
+            [
+              "Sari telepon tadi",
+              "Sari called.",
+              "lampau: call + ed"
+            ],
+            [
+              "Budi datang jam 2",
+              "Budi came at two.",
+              "come → came"
+            ],
+            [
+              "saya (dari Sari)",
+              "she",
+              "bukan I"
+            ],
+            [
+              "saya (dari Budi)",
+              "he",
+              "dia = he atau she: cek pengirimnya"
+            ],
+            [
+              "mobil saya (dari Sari)",
+              "her car",
+              "-nya = his atau her"
+            ],
+            [
+              "telepon saya",
+              "call her / him back",
+              "bukan 'call me'"
+            ],
+            [
+              "Bapak / Ibu / kamu (untuk pendengarmu)",
+              "you",
+              "tetap you"
+            ],
+            [
+              "air mati",
+              "There's no water.",
+              "bukan 'the water is dead'"
+            ],
+            [
+              "listrik padam / mati lampu",
+              "There's no electricity.",
+              "a power cut"
+            ],
+            [
+              "sekolah libur",
+              "There's no school.",
+              "bukan 'school is holiday'"
+            ],
+            [
+              "diundur ke hari Rabu",
+              "is now on Wednesday",
+              "now = hari yang baru"
+            ],
+            [
+              "dibatalkan",
+              "cancelled",
+              "Amerika: canceled"
+            ],
+            [
+              "Dengan hormat … terima kasih",
+              "(lewati)",
+              "bukan info penting"
+            ]
+          ],
+          "tips": [
+            "Pesan: siapa + called/texted/came, lalu 1–3 kalimat pendek, lalu apa yang dia minta.",
+            "Pengumuman: What? When? Where? (What do I do?) Satu atau dua kalimat pendek, bukan setiap kata.",
+            "Besok dan minggu depan cukup dengan present: The office is closed tomorrow."
+          ],
+          "examples": [
+            {
+              "en": "Sari called. She can't come today. She's sick.",
+              "id": "Sari: 'Saya tidak bisa datang hari ini. Saya sakit.'"
+            },
+            {
+              "en": "Bu Ani called. Please call her back.",
+              "id": "Bu Ani: 'Tolong telepon saya kembali.'"
+            },
+            {
+              "en": "The clinic is closed on Sunday.",
+              "id": "Klinik Sehat tutup pada hari Minggu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengar dan baca",
+        "text": "Mau latihan lagi? Dengarkan orang yang meninggalkan pesan telepon, dan baca pengumuman bergaya asli untuk mencari info pentingnya."
+      }
+    ]
+  }
+}

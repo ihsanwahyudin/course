@@ -70,6 +70,22 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 		return nil
 	}
 	plans := map[string]Plan{}
+	objectives := map[string]bool{}
+	for _, o := range n.Objectives {
+		objectives[o.ID] = true
+	}
+	for _, lang := range courseLanguages(c) {
+		// The hand-written checkpoint is the fallback when the AI can't write
+		// one, so it has to pass the same checks.
+		items := make([]CheckItem, 0, len(lesson.Assessment))
+		for _, it := range lesson.Assessment {
+			items = append(items, CheckItem{Question: Question{Type: QuestionText, ObjectiveID: it.ObjectiveID,
+				Prompt: lesson.PromptIn(it, lang), Listen: it.Listen}, Accepted: it.AcceptableAnswers, Rubric: it.Rubric})
+		}
+		if _, err := ValidateCheckpoint(items, objectives, nil); err != nil {
+			bad("%s/%s: hand-written checkpoint: %v", n.ID, lang, err)
+		}
+	}
 	for _, lang := range courseLanguages(c) {
 		p, ok, err := AuthoredPlan(c, n.ID, lang)
 		switch {

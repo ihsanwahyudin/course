@@ -1,0 +1,710 @@
+{
+  "en": {
+    "greeting": "Hi! Today we work on whole sentences: which words are strong, how words join together, and how to keep the English beat. Say everything out loud, and clap along when we count beats.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Strong words, weak words",
+        "text": "In a sentence, some words are strong and some are weak. Tap the words and listen.",
+        "body": "**Content words** carry the meaning: nouns (*bank, Rina*), main verbs (*work, buy*), adjectives (*new*), question words (*where*) and **not** (*can't, don't*). They are **stressed**: louder, longer, higher. **Function words** are the small glue words: *a, the, to, of, in, at, is, I, my*. They are **weak** and quick. Indonesian gives every word the same strength; English doesn't: *I WANT to GO to the SHOP*.",
+        "pairs": [
+          {
+            "en": "bank",
+            "id": "bank · kata isi, kuat"
+          },
+          {
+            "en": "works",
+            "id": "bekerja · kata isi, kuat"
+          },
+          {
+            "en": "new",
+            "id": "baru · kata isi, kuat"
+          },
+          {
+            "en": "where",
+            "id": "di mana · kata isi, kuat"
+          },
+          {
+            "en": "can't",
+            "id": "tidak bisa · kata isi, kuat"
+          },
+          {
+            "en": "the",
+            "id": "(penentu) · kata tugas, lemah"
+          },
+          {
+            "en": "to",
+            "id": "ke · kata tugas, lemah"
+          },
+          {
+            "en": "is",
+            "id": "(to be) · kata tugas, lemah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas is at work. Find the strong words.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "content-word-stress",
+          "prompt": "Which words are strong in 'Dimas is at the office'?",
+          "options": [
+            "Dimas · office",
+            "is · at · the",
+            "every word, the same"
+          ],
+          "answer": 0,
+          "explanation": "**Dimas** (a name) and **office** (a noun) carry the meaning: *DI-mas is at the OF-fice*. **is**, **at** and **the** are function words, so they're weak. Giving every word the same strength is the Indonesian habit."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Stress in sentences",
+        "text": "Listen and repeat. Make only the content words strong.",
+        "body": "Strong words: DI-mas WANTS NEW PHONE · WHERE BUS STA-tion · BU-di CAN'T COME to-DAY · SWIM (can is weak: 'kən') · O-pen WIN-dow. A small word at the end is said in full: *Yes, I CAN.*",
+        "examples": [
+          {
+            "en": "Dimas wants a new phone.",
+            "id": "Dimas mau HP baru."
+          },
+          {
+            "en": "Where is the bus station?",
+            "id": "Di mana terminal bus?"
+          },
+          {
+            "en": "Budi can't come today.",
+            "id": "Budi tidak bisa datang hari ini."
+          },
+          {
+            "en": "I can swim.",
+            "id": "Saya bisa berenang."
+          },
+          {
+            "en": "Can you open the window?",
+            "id": "Bisa tolong buka jendelanya?"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Linking: tur-noff",
+        "text": "English speakers don't stop between words. Tap and listen to how the words join.",
+        "body": "When a word **ends in a consonant sound** (huruf mati: n, k, t…) and the next word **starts with a vowel sound** (a, e, i, o, u), the consonant moves over: *turn off* → 'tur-noff', *an apple* → 'a-napple'. Listen to the **sound**, not the letter: *make it* = 'ma-kit' (the e is silent), *an hour* = 'a-nour' (the h is silent). The **-ed** links too: 'clean-dit'. Don't put a little stop before the vowel: not *an | apple*.",
+        "pairs": [
+          {
+            "en": "turn off",
+            "id": "matikan · tur-noff"
+          },
+          {
+            "en": "an apple",
+            "id": "sebuah apel · a-napple"
+          },
+          {
+            "en": "pick it up",
+            "id": "ambil itu · pi-ki-tup"
+          },
+          {
+            "en": "get up",
+            "id": "bangun · ge-tup"
+          },
+          {
+            "en": "make it",
+            "id": "membuatnya · ma-kit"
+          },
+          {
+            "en": "an hour",
+            "id": "satu jam · a-nour"
+          },
+          {
+            "en": "cleaned it",
+            "id": "membersihkannya · clean-dit"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which one links?",
+        "text": "Look for a consonant sound followed by a vowel sound.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "consonant-vowel-linking",
+          "prompt": "In which phrase does the last sound of the first word join the next word?",
+          "options": [
+            "a banana",
+            "an egg",
+            "big bag"
+          ],
+          "answer": 1,
+          "explanation": "**an egg**: *an* ends in an **n** sound and *egg* starts with a vowel, so they link: 'a-negg'. *a banana*: *a* ends in a vowel sound. *big bag*: g and b are both consonants, so nothing moves."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: one word or two?",
+        "text": "Press play. Bu Ani is at the door of the classroom.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "consonant-vowel-linking",
+          "listen": "Please come in.",
+          "prompt": "Listen. What does Bu Ani say?",
+          "options": [
+            "Please come on.",
+            "Please coming.",
+            "Please come in."
+          ],
+          "answer": 2,
+          "explanation": "You heard **Please come in.** (Silakan masuk.) *come* ends in **m** and *in* starts with a vowel, so they link: 'co-min'. It sounds almost like *coming*, but *Please coming* isn't correct English. *come on* has an 'o' sound, not 'i'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Keep the beat",
+        "text": "Clap once on each strong word. Tap each line and clap along.",
+        "body": "In Indonesian every syllable gets about the same time: *sa-ya-mau-ke-pa-sar*. In English the **strong words** come at roughly **regular** beats, and the weak words between them are **squeezed**: said faster and quieter. So *ONE and a TWO and a THREE* still has **3 claps**, and *RI-na is COOK-ing the RICE* has 3 beats, like *RI-na COOKS RICE*. Count the content words to count the beats.",
+        "pairs": [
+          {
+            "en": "One, two, three.",
+            "id": "satu, dua, tiga · 3 ketukan"
+          },
+          {
+            "en": "One and two and three.",
+            "id": "satu dan dua dan tiga · tetap 3"
+          },
+          {
+            "en": "One and a two and a three.",
+            "id": "tetap 3 ketukan"
+          },
+          {
+            "en": "Rina cooks rice.",
+            "id": "Rina memasak nasi · 3 ketukan"
+          },
+          {
+            "en": "Rina is cooking the rice.",
+            "id": "Rina sedang memasak nasinya · tetap 3"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Fix the rhythm",
+        "text": "Pak Hasan is talking about his son. Help him sound natural.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-sentence-rhythm",
+          "prompt": "Pak Hasan says 'My son is at school', giving every word the same time, like in Indonesian. How should it sound?",
+          "options": [
+            "MY SON IS AT SCHOOL: 5 equal beats",
+            "my SON is at SCHOOL: 2 beats, small words squeezed",
+            "my son is at SCHOOL: 1 beat at the end"
+          ],
+          "answer": 1,
+          "explanation": "Only **son** and **school** are content words, so there are **2 beats**: *my SON is at SCHOOL*. *my*, *is* and *at* are squeezed between them. Five equal beats is the Indonesian rhythm, and one beat loses the word *son*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build and say it",
+        "text": "Build the sentence, then say it with the strong words strong.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "content-word-stress",
+          "prompt": "Arrange the words: Sari mau secangkir teh.",
+          "tokens": [
+            "tea",
+            "a",
+            "wants",
+            "of",
+            "Sari",
+            "cup"
+          ],
+          "solution": "Sari wants a cup of tea.",
+          "explanation": "Name first (**Sari**), then the verb (**wants**), then **a cup of tea**. Say it with 4 strong beats: *SA-ri WANTS a CUP of TEA*. **a** and **of** are weak and quick, and *cup_of* links: 'cu-pof'."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip the cards and say each answer out loud.",
+        "flashcards": [
+          {
+            "front": "kata isi (content words)",
+            "back": "nouns, main verbs, adjectives, question words, not: STRONG"
+          },
+          {
+            "front": "kata tugas (function words)",
+            "back": "a, the, to, of, at, in, and, is, can, I, my: weak and quick"
+          },
+          {
+            "front": "matikan (turn off): how does it sound?",
+            "back": "turn off: 'tur-noff', no pause"
+          },
+          {
+            "front": "sebuah apel: how does it sound?",
+            "back": "an apple: 'a-napple'"
+          },
+          {
+            "front": "make it: make ends in e. Why does it link?",
+            "back": "The e is silent: the last sound is k → 'ma-kit'"
+          },
+          {
+            "front": "can or can't: which one is strong?",
+            "back": "can't (I CAN'T SWIM); can is weak ('kən')"
+          },
+          {
+            "front": "How many beats: 'Rina is cooking the rice'?",
+            "back": "3: RI-na, COOK-ing, RICE (is, the squeezed)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Everything from today on one page, to keep.",
+        "artifact": {
+          "title": "Cheat sheet · sentence stress & linking",
+          "intro": "Which words are strong (in CAPITALS), how to join a consonant to the next vowel, and how to keep the English beat.",
+          "headers": [
+            "Rule",
+            "Examples",
+            "How to say it"
+          ],
+          "rows": [
+            [
+              "Content words: strong",
+              "nouns, main verbs, adjectives",
+              "RI-na WORKS at a BANK"
+            ],
+            [
+              "Question words, not: strong",
+              "where, what, don't, can't",
+              "WHERE is the BUS STA-tion"
+            ],
+            [
+              "Function words: weak",
+              "a, the, to, of, in, at, is, I, my",
+              "quick and quiet, often 'uh'"
+            ],
+            [
+              "Small word at the end: full",
+              "Yes, I can.",
+              "Yes, I CAN (not 'kən')"
+            ],
+            [
+              "Consonant + vowel: link",
+              "turn off, an apple",
+              "'tur-noff', 'a-napple'"
+            ],
+            [
+              "Sound, not letter",
+              "make it, an hour",
+              "'ma-kit', 'a-nour'"
+            ],
+            [
+              "-ed + vowel: link",
+              "cleaned it",
+              "'clean-dit'"
+            ],
+            [
+              "Beats = content words",
+              "Rina is cooking the rice.",
+              "3 beats: RI-na COOK RICE"
+            ],
+            [
+              "Weak words: squeeze",
+              "one and a two and a three",
+              "still 3 claps"
+            ]
+          ],
+          "tips": [
+            "Telegram test: the content words alone still make sense (**RINA · WORKS · BANK**). Make them clear.",
+            "Don't stop before a word that starts with a vowel: **a-napple**, not *an | apple*.",
+            "Clap on the strong words and keep the claps even. The small words fit in between."
+          ],
+          "examples": [
+            {
+              "en": "Where is the bus station?",
+              "id": "Di mana terminal bus?"
+            },
+            {
+              "en": "Please turn off the light.",
+              "id": "Tolong matikan lampunya."
+            },
+            {
+              "en": "I'd like an apple, please.",
+              "id": "Saya mau sebuah apel."
+            },
+            {
+              "en": "Dimas works in an office.",
+              "id": "Dimas bekerja di sebuah kantor."
+            },
+            {
+              "en": "Rina is cooking the rice.",
+              "id": "Rina sedang memasak nasinya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and practise",
+        "text": "A short BBC video about linking, with the full transcript. Listen and repeat."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita berlatih kalimat utuh: kata mana yang kuat, bagaimana kata-kata tersambung, dan cara menjaga ketukan bahasa Inggris. Ucapkan semuanya dengan suara keras, dan tepuk tangan saat kita menghitung ketukan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata kuat, kata lemah",
+        "text": "Dalam kalimat, ada kata yang kuat dan ada yang lemah. Ketuk kata-katanya dan dengarkan.",
+        "body": "**Kata isi** (content words) membawa arti: kata benda (*bank, Rina*), kata kerja utama (*work, buy*), kata sifat (*new*), kata tanya (*where*) dan **not** (*can't, don't*). Kata-kata ini **ditekan**: lebih keras, lebih panjang, lebih tinggi. **Kata tugas** (function words) adalah kata kecil perekat: *a, the, to, of, in, at, is, I, my*. Kata-kata ini **lemah** dan cepat. Bahasa Indonesia memberi setiap kata kekuatan yang sama; bahasa Inggris tidak: *I WANT to GO to the SHOP*.",
+        "pairs": [
+          {
+            "en": "bank",
+            "id": "bank · kata isi, kuat"
+          },
+          {
+            "en": "works",
+            "id": "bekerja · kata isi, kuat"
+          },
+          {
+            "en": "new",
+            "id": "baru · kata isi, kuat"
+          },
+          {
+            "en": "where",
+            "id": "di mana · kata isi, kuat"
+          },
+          {
+            "en": "can't",
+            "id": "tidak bisa · kata isi, kuat"
+          },
+          {
+            "en": "the",
+            "id": "(penentu) · kata tugas, lemah"
+          },
+          {
+            "en": "to",
+            "id": "ke · kata tugas, lemah"
+          },
+          {
+            "en": "is",
+            "id": "(to be) · kata tugas, lemah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas sedang di tempat kerja. Cari kata-kata yang kuat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "content-word-stress",
+          "prompt": "Kata mana yang kuat di 'Dimas is at the office'?",
+          "options": [
+            "Dimas · office",
+            "is · at · the",
+            "every word, the same"
+          ],
+          "answer": 0,
+          "explanation": "**Dimas** (nama) dan **office** (kata benda) membawa arti: *DI-mas is at the OF-fice*. **is**, **at** dan **the** adalah kata tugas, jadi lemah. Memberi semua kata kekuatan yang sama adalah kebiasaan dari bahasa Indonesia."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Tekanan dalam kalimat",
+        "text": "Dengarkan dan tirukan. Buat hanya kata isinya yang kuat.",
+        "body": "Kata yang kuat: DI-mas WANTS NEW PHONE · WHERE BUS STA-tion · BU-di CAN'T COME to-DAY · SWIM (can lemah: 'ken') · O-pen WIN-dow. Kata kecil di akhir kalimat diucapkan utuh: *Yes, I CAN.*",
+        "examples": [
+          {
+            "en": "Dimas wants a new phone.",
+            "id": "Dimas mau HP baru."
+          },
+          {
+            "en": "Where is the bus station?",
+            "id": "Di mana terminal bus?"
+          },
+          {
+            "en": "Budi can't come today.",
+            "id": "Budi tidak bisa datang hari ini."
+          },
+          {
+            "en": "I can swim.",
+            "id": "Saya bisa berenang."
+          },
+          {
+            "en": "Can you open the window?",
+            "id": "Bisa tolong buka jendelanya?"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Linking: tur-noff",
+        "text": "Penutur bahasa Inggris tidak berhenti di antara kata. Ketuk dan dengarkan bagaimana kata-katanya tersambung.",
+        "body": "Kalau sebuah kata **berakhir dengan bunyi konsonan** (huruf mati: n, k, t…) dan kata berikutnya **diawali bunyi vokal** (a, e, i, o, u), konsonannya pindah: *turn off* → 'tur-noff', *an apple* → 'a-napple'. Dengarkan **bunyinya**, bukan hurufnya: *make it* = 'ma-kit' (e tidak dibaca), *an hour* = 'a-nour' (h tidak dibaca). Akhiran **-ed** juga tersambung: 'clean-dit'. Jangan buat hentakan kecil sebelum vokal: bukan *an | apple*.",
+        "pairs": [
+          {
+            "en": "turn off",
+            "id": "matikan · tur-noff"
+          },
+          {
+            "en": "an apple",
+            "id": "sebuah apel · a-napple"
+          },
+          {
+            "en": "pick it up",
+            "id": "ambil itu · pi-ki-tup"
+          },
+          {
+            "en": "get up",
+            "id": "bangun · ge-tup"
+          },
+          {
+            "en": "make it",
+            "id": "membuatnya · ma-kit"
+          },
+          {
+            "en": "an hour",
+            "id": "satu jam · a-nour"
+          },
+          {
+            "en": "cleaned it",
+            "id": "membersihkannya · clean-dit"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Mana yang tersambung?",
+        "text": "Cari bunyi konsonan yang diikuti bunyi vokal.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "consonant-vowel-linking",
+          "prompt": "Di frasa mana bunyi terakhir kata pertama bergabung dengan kata berikutnya?",
+          "options": [
+            "a banana",
+            "an egg",
+            "big bag"
+          ],
+          "answer": 1,
+          "explanation": "**an egg**: *an* berakhir bunyi **n** dan *egg* diawali vokal, jadi tersambung: 'a-negg'. *a banana*: *a* berakhir bunyi vokal. *big bag*: g dan b sama-sama konsonan, jadi tidak ada yang pindah."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: satu kata atau dua?",
+        "text": "Tekan play. Bu Ani ada di pintu kelas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "consonant-vowel-linking",
+          "listen": "Please come in.",
+          "prompt": "Dengarkan. Apa yang Bu Ani katakan?",
+          "options": [
+            "Please come on.",
+            "Please coming.",
+            "Please come in."
+          ],
+          "answer": 2,
+          "explanation": "Kamu mendengar **Please come in.** (Silakan masuk.) *come* berakhir **m** dan *in* diawali vokal, jadi tersambung: 'co-min'. Terdengar hampir seperti *coming*, tapi *Please coming* bukan bahasa Inggris yang benar. *come on* berbunyi 'o', bukan 'i'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jaga ketukannya",
+        "text": "Tepuk tangan sekali di setiap kata kuat. Ketuk setiap baris dan ikuti tepukannya.",
+        "body": "Dalam bahasa Indonesia setiap suku kata mendapat waktu yang kira-kira sama: *sa-ya-mau-ke-pa-sar*. Dalam bahasa Inggris **kata-kata kuat** datang dengan ketukan yang kurang lebih **teratur**, dan kata lemah di antaranya **diselipkan**: lebih cepat dan lebih pelan. Jadi *ONE and a TWO and a THREE* tetap **3 tepukan**, dan *RI-na is COOK-ing the RICE* punya 3 ketukan, sama seperti *RI-na COOKS RICE*. Hitung kata isinya untuk menghitung ketukan.",
+        "pairs": [
+          {
+            "en": "One, two, three.",
+            "id": "satu, dua, tiga · 3 ketukan"
+          },
+          {
+            "en": "One and two and three.",
+            "id": "satu dan dua dan tiga · tetap 3"
+          },
+          {
+            "en": "One and a two and a three.",
+            "id": "tetap 3 ketukan"
+          },
+          {
+            "en": "Rina cooks rice.",
+            "id": "Rina memasak nasi · 3 ketukan"
+          },
+          {
+            "en": "Rina is cooking the rice.",
+            "id": "Rina sedang memasak nasinya · tetap 3"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Perbaiki ritmenya",
+        "text": "Pak Hasan sedang bercerita tentang anak laki-lakinya. Bantu dia terdengar alami.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-sentence-rhythm",
+          "prompt": "Pak Hasan mengucapkan 'My son is at school' dengan waktu yang sama untuk setiap kata, seperti bahasa Indonesia. Seharusnya bagaimana?",
+          "options": [
+            "MY SON IS AT SCHOOL: 5 equal beats",
+            "my SON is at SCHOOL: 2 beats, small words squeezed",
+            "my son is at SCHOOL: 1 beat at the end"
+          ],
+          "answer": 1,
+          "explanation": "Hanya **son** dan **school** yang kata isi, jadi ada **2 ketukan**: *my SON is at SCHOOL*. *my*, *is* dan *at* diselipkan di antaranya. Lima ketukan yang sama itu ritme bahasa Indonesia, dan satu ketukan saja menghilangkan kata *son*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun dan ucapkan",
+        "text": "Susun kalimatnya, lalu ucapkan dengan kata-kata kuat yang benar-benar kuat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "content-word-stress",
+          "prompt": "Susun kata-katanya: Sari mau secangkir teh.",
+          "tokens": [
+            "tea",
+            "a",
+            "wants",
+            "of",
+            "Sari",
+            "cup"
+          ],
+          "solution": "Sari wants a cup of tea.",
+          "explanation": "Nama dulu (**Sari**), lalu kata kerjanya (**wants**), lalu **a cup of tea**. Ucapkan dengan 4 ketukan kuat: *SA-ri WANTS a CUP of TEA*. **a** dan **of** lemah dan cepat, dan *cup_of* tersambung: 'cu-pof'."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartunya dan ucapkan setiap jawaban dengan keras.",
+        "flashcards": [
+          {
+            "front": "kata isi (content words)",
+            "back": "nouns, main verbs, adjectives, question words, not: STRONG"
+          },
+          {
+            "front": "kata tugas (function words)",
+            "back": "a, the, to, of, at, in, and, is, can, I, my: weak and quick"
+          },
+          {
+            "front": "matikan (turn off): how does it sound?",
+            "back": "turn off: 'tur-noff', no pause"
+          },
+          {
+            "front": "sebuah apel: how does it sound?",
+            "back": "an apple: 'a-napple'"
+          },
+          {
+            "front": "make it: make ends in e. Why does it link?",
+            "back": "The e is silent: the last sound is k → 'ma-kit'"
+          },
+          {
+            "front": "can or can't: which one is strong?",
+            "back": "can't (I CAN'T SWIM); can is weak ('kən')"
+          },
+          {
+            "front": "How many beats: 'Rina is cooking the rice'?",
+            "back": "3: RI-na, COOK-ing, RICE (is, the squeezed)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semua materi hari ini dalam satu halaman, untuk disimpan.",
+        "artifact": {
+          "title": "Ringkasan · tekanan kalimat & linking",
+          "intro": "Kata mana yang kuat (ditulis HURUF BESAR), cara menyambung konsonan ke vokal berikutnya, dan cara menjaga ketukan bahasa Inggris.",
+          "headers": [
+            "Aturan",
+            "Contoh",
+            "Cara mengucapkan"
+          ],
+          "rows": [
+            [
+              "Kata isi: kuat",
+              "kata benda, kata kerja utama, kata sifat",
+              "RI-na WORKS at a BANK"
+            ],
+            [
+              "Kata tanya, not: kuat",
+              "where, what, don't, can't",
+              "WHERE is the BUS STA-tion"
+            ],
+            [
+              "Kata tugas: lemah",
+              "a, the, to, of, in, at, is, I, my",
+              "cepat dan pelan, sering 'e' lemah"
+            ],
+            [
+              "Kata kecil di akhir: utuh",
+              "Yes, I can.",
+              "Yes, I CAN (bukan 'ken')"
+            ],
+            [
+              "Konsonan + vokal: sambung",
+              "turn off, an apple",
+              "'tur-noff', 'a-napple'"
+            ],
+            [
+              "Bunyi, bukan huruf",
+              "make it, an hour",
+              "'ma-kit', 'a-nour'"
+            ],
+            [
+              "-ed + vokal: sambung",
+              "cleaned it",
+              "'clean-dit'"
+            ],
+            [
+              "Ketukan = kata isi",
+              "Rina is cooking the rice.",
+              "3 ketukan: RI-na COOK RICE"
+            ],
+            [
+              "Kata lemah: selipkan",
+              "one and a two and a three",
+              "tetap 3 tepukan"
+            ]
+          ],
+          "tips": [
+            "Tes telegram: kata isinya saja tetap bisa dipahami (**RINA · WORKS · BANK**). Buat kata-kata itu jelas.",
+            "Jangan berhenti sebelum kata yang diawali vokal: **a-napple**, bukan *an | apple*.",
+            "Tepuk tangan di kata-kata kuat dan jaga jarak tepukannya tetap sama. Kata-kata kecil muat di antaranya."
+          ],
+          "examples": [
+            {
+              "en": "Where is the bus station?",
+              "id": "Di mana terminal bus?"
+            },
+            {
+              "en": "Please turn off the light.",
+              "id": "Tolong matikan lampunya."
+            },
+            {
+              "en": "I'd like an apple, please.",
+              "id": "Saya mau sebuah apel."
+            },
+            {
+              "en": "Dimas works in an office.",
+              "id": "Dimas bekerja di sebuah kantor."
+            },
+            {
+              "en": "Rina is cooking the rice.",
+              "id": "Rina sedang memasak nasinya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan berlatih",
+        "text": "Video pendek BBC tentang linking, dengan transkrip lengkap. Dengarkan dan tirukan."
+      }
+    ]
+  }
+}

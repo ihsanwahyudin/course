@@ -155,8 +155,12 @@ func NormalizeWords(s string) string {
 // ValidateQuestion checks one question against the lesson's objectives and
 // returns a cleaned copy.
 func ValidateQuestion(q Question, objectives map[string]bool) (Question, error) {
+	return validateQuestion(q, objectives, maxShort*2)
+}
+
+func validateQuestion(q Question, objectives map[string]bool, maxPrompt int) (Question, error) {
 	q.Prompt, q.Explanation, q.ObjectiveID = clean(q.Prompt), clean(q.Explanation), clean(q.ObjectiveID)
-	if badLen(q.Prompt, maxShort*2) || badLen(q.Explanation, maxText) {
+	if badLen(q.Prompt, maxPrompt) || badLen(q.Explanation, maxText) {
 		return q, fmt.Errorf("question needs a prompt and an explanation")
 	}
 	if !objectives[q.ObjectiveID] {

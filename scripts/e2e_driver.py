@@ -250,12 +250,12 @@ def learn(api, curriculum):
     if not_done:
         fail(f"not mastered: {not_done}")
     # Locked / coming-soon nodes refuse to start.
-    for nid, want in (("a2-listening-practical", "node_coming_soon"), ("c2-stylistic-nuance", "node_coming_soon")):
+    for nid, want in (("b1-present-perfect", "node_coming_soon"), ("c2-stylistic-nuance", "node_coming_soon")):
         status, body = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": nid})
         if status != 409:
             fail(f"{nid} should not start: {status} {body}")
     print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A}")
-    for ck in ("a0-checkpoint", "a1-checkpoint"):
+    for ck in ("a0-checkpoint", "a1-checkpoint", "a2-checkpoint"):
         level_checkpoint(api, ls, ck)
     sign_in(api, EMAIL_B, register=False)
     _, d = call(api, "GET", "/api/v1/dashboard")

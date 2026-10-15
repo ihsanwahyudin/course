@@ -1,0 +1,778 @@
+{
+  "en": {
+    "greeting": "Hi! Today you train your ears for real life: announcements at the airport and the station, directions, instructions and short conversations. Play each sound as many times as you like.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Listen smart",
+        "text": "Before you press play, a few habits help a lot. Tap each tile to hear it.",
+        "body": "**Read the question first.** It tells you what to listen for: *Which gate?* → a number, *What time?* → a time, *Left or right?* → a direction. Then listen for that **key word**, not every word. Hear a word you don't know? **Don't panic** and don't stop to translate it: keep listening, the key word often comes next. Listen once for the general idea, then again for the detail.",
+        "pairs": [
+          {
+            "en": "Which gate?",
+            "id": "Gate berapa? → dengarkan angka"
+          },
+          {
+            "en": "What time?",
+            "id": "Jam berapa? → dengarkan jam"
+          },
+          {
+            "en": "How long?",
+            "id": "Berapa lama? → dengarkan menit"
+          },
+          {
+            "en": "Left or right?",
+            "id": "Kiri atau kanan? → dengarkan arah"
+          },
+          {
+            "en": "Where are they?",
+            "id": "Mereka di mana? → dengarkan kata tempat"
+          },
+          {
+            "en": "Sorry, can you say that again?",
+            "id": "Maaf, bisa diulang?"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Airport and station announcements",
+        "text": "Announcements follow a pattern, so you know where the key facts are.",
+        "body": "First **Attention, please**. Then *what*: **Flight GA 404 to Bali**, **The train to Bandung** (the city comes right after *to*). Then the key facts: **gate** or **platform** + a number, a time, and the news: **is now boarding**, **is delayed by** + how long, **is cancelled**. Learn these as fixed chunks. Flight numbers are said digit by digit, and 0 is often **oh**: GA 404 = 'G A four oh four'. Careful: thir**TEEN** (13) vs **THIR**ty (30)!",
+        "pairs": [
+          {
+            "en": "Attention, please.",
+            "id": "Mohon perhatian."
+          },
+          {
+            "en": "passengers",
+            "id": "penumpang"
+          },
+          {
+            "en": "is now boarding",
+            "id": "sekarang naik pesawat"
+          },
+          {
+            "en": "gate",
+            "id": "pintu keberangkatan (bandara)"
+          },
+          {
+            "en": "platform",
+            "id": "peron (stasiun)"
+          },
+          {
+            "en": "is delayed by thirty minutes",
+            "id": "terlambat 30 menit"
+          },
+          {
+            "en": "is cancelled",
+            "id": "dibatalkan"
+          },
+          {
+            "en": "final call",
+            "id": "panggilan terakhir"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "How announcements sound",
+        "text": "Tap to listen. Find the city, the number and the time in each one.",
+        "body": "When something is **delayed**, you hear two numbers: *by* + how long, and **now** + the new time.",
+        "examples": [
+          {
+            "en": "Attention, please. The train to Bandung leaves from platform three.",
+            "id": "Mohon perhatian. Kereta ke Bandung berangkat dari peron tiga."
+          },
+          {
+            "en": "The flight to Bali is now boarding at gate seven.",
+            "id": "Penumpang pesawat ke Bali sekarang naik pesawat di gate tujuh."
+          },
+          {
+            "en": "The train to Solo is delayed by twenty minutes.",
+            "id": "Kereta ke Solo terlambat dua puluh menit."
+          },
+          {
+            "en": "It now leaves at eleven forty.",
+            "id": "Sekarang berangkat pukul 11.40."
+          },
+          {
+            "en": "This is the final call for flight G A two one eight to Makassar.",
+            "id": "Ini panggilan terakhir untuk penerbangan GA 218 ke Makassar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a delay",
+        "text": "A flight announcement. Read the question first: it asks **how long**, so listen for minutes.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "announcements",
+          "listen": "Attention, please. Flight G A six oh two to Medan is delayed by fifty minutes. Passengers for Medan, please wait at gate eleven.",
+          "options": [
+            "15 minutes",
+            "11 minutes",
+            "50 minutes"
+          ],
+          "answer": 2,
+          "prompt": "Listen. How long is the delay?",
+          "explanation": "You heard 'delayed **by** FIFty minutes': *by* + how long. **FIF**ty has the stress at the start; fif**TEEN** has it at the end. Eleven is the gate, not the delay."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Directions and instructions",
+        "text": "Now: finding a place, and doing things step by step.",
+        "body": "**Take the second street on the left** = turn left at street number 2: count the streets, don't turn at the first one! Here *second* = kedua (not *detik*), and *take* doesn't mean *ambil*. **Go past** = don't stop or turn there. **Opposite** = di seberang (American: *across from*). **Instructions** start with the verb (the action word): *Press…*, *Take…*. Listen for **first**, **then** and **don't**.",
+        "pairs": [
+          {
+            "en": "Take the second street on the left.",
+            "id": "Belok kiri di jalan kedua."
+          },
+          {
+            "en": "Go past the bank.",
+            "id": "Lewati bank-nya."
+          },
+          {
+            "en": "It's opposite the mosque.",
+            "id": "Tempatnya di seberang masjid."
+          },
+          {
+            "en": "at the end of the street",
+            "id": "di ujung jalan"
+          },
+          {
+            "en": "Cross the road.",
+            "id": "Seberangi jalan."
+          },
+          {
+            "en": "first … then …",
+            "id": "pertama/dulu … lalu …"
+          },
+          {
+            "en": "Don't park here.",
+            "id": "Jangan parkir di sini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the way to the bus station",
+        "text": "Directions to the bus station. Listen for what you do at the bank and which street you take.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "directions-instructions",
+          "listen": "Go straight on, past the bank. Then take the first street on the right. The bus station is at the end of the street.",
+          "options": [
+            "Turn right at the bank, then go to the end of the street.",
+            "Go past the bank, then take the second street on the right.",
+            "Go past the bank, then take the first street on the right."
+          ],
+          "answer": 2,
+          "prompt": "Listen to the directions to the bus station. Which route is correct?",
+          "explanation": "**Go past** the bank = don't turn there, and **the first street on the right** = turn right at street number 1. The bus station is at the end of that street."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the ticket machine",
+        "text": "Instructions at a train station. The question asks what you do **first**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "directions-instructions",
+          "listen": "To buy a ticket, first choose your station. Then put in your money. Take your ticket from the machine. Don't press the red button.",
+          "options": [
+            "Put in your money.",
+            "Choose your station.",
+            "Press the red button."
+          ],
+          "answer": 1,
+          "prompt": "Listen to the instructions at the ticket machine. What do you do first?",
+          "explanation": "The order word **first** comes before *choose your station*. **Then** you put in your money. And **don't** press the red button: don't = jangan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The main point",
+        "text": "Last topic: short conversations. You don't need every word, only the main point.",
+        "body": "The **main point** is the most important idea. Ask: **Where are they?** (place words: *ticket, platform* → a station). **What's the problem?** Listen after **but**, **sorry** and **I can't**. **What do they decide?** It's often at the **end**, after *OK* or *fine*. A soft English 'no' is **Sorry, I can't**, often followed by a new idea: **What about…?**",
+        "pairs": [
+          {
+            "en": "Sorry, I can't.",
+            "id": "Maaf, aku tidak bisa."
+          },
+          {
+            "en": "I'm busy then.",
+            "id": "Aku sibuk waktu itu."
+          },
+          {
+            "en": "What about Saturday?",
+            "id": "Bagaimana kalau hari Sabtu?"
+          },
+          {
+            "en": "Is Monday OK?",
+            "id": "Hari Senin bisa?"
+          },
+          {
+            "en": "That's fine.",
+            "id": "Itu bisa / oke."
+          },
+          {
+            "en": "ticket, platform",
+            "id": "tiket, peron → stasiun"
+          },
+          {
+            "en": "appointment, doctor",
+            "id": "janji temu, dokter → klinik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the main point",
+        "text": "A short phone call. You don't need every word: what is the most important idea?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-points",
+          "listen": "Rina: Hi Dimas, are you at the office? Dimas: No, I'm at home. I'm sick today. Rina: Oh no! Can you send me the report? Dimas: Yes, I can send it this afternoon.",
+          "options": [
+            "Dimas is sick, so he is at home today.",
+            "Dimas is at the office with the report.",
+            "Rina is sick and needs a doctor."
+          ],
+          "answer": 0,
+          "prompt": "Listen to Rina and Dimas. What is the main point?",
+          "explanation": "Dimas says **No, I'm at home. I'm sick today.** That's the main point. He can send the report, but he isn't at the office, and Rina isn't sick."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Try to hear the English in your head first.",
+        "flashcards": [
+          {
+            "front": "pintu keberangkatan di bandara",
+            "back": "gate"
+          },
+          {
+            "front": "peron",
+            "back": "platform"
+          },
+          {
+            "front": "terlambat 20 menit",
+            "back": "is delayed by 20 minutes"
+          },
+          {
+            "front": "dibatalkan",
+            "back": "is cancelled"
+          },
+          {
+            "front": "lewati (bank-nya)",
+            "back": "go past (the bank)"
+          },
+          {
+            "front": "di seberang",
+            "back": "opposite"
+          },
+          {
+            "front": "belok kanan di jalan pertama",
+            "back": "take the first street on the right"
+          },
+          {
+            "front": "Bagaimana kalau hari Sabtu?",
+            "back": "What about Saturday?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "What you hear in announcements, directions and conversations, on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Practical listening",
+          "intro": "The key chunks you hear, what they mean, and what to listen for.",
+          "headers": [
+            "You hear",
+            "It means",
+            "Listen for"
+          ],
+          "rows": [
+            [
+              "Flight GA 404 to Bali",
+              "penerbangan GA 404 ke Bali",
+              "the city after 'to'; 0 = 'oh'"
+            ],
+            [
+              "is now boarding at gate 7",
+              "naik pesawat di gate 7",
+              "the number after 'gate'"
+            ],
+            [
+              "leaves from platform 3",
+              "berangkat dari peron 3",
+              "the number after 'platform'"
+            ],
+            [
+              "is delayed by 30 minutes",
+              "terlambat 30 menit",
+              "'by' + how long"
+            ],
+            [
+              "now leaves at 9:15",
+              "sekarang berangkat pukul 9.15",
+              "the new time after 'now'"
+            ],
+            [
+              "is cancelled",
+              "dibatalkan",
+              "it doesn't go"
+            ],
+            [
+              "final call",
+              "panggilan terakhir",
+              "go to the gate now"
+            ],
+            [
+              "take the second street on the left",
+              "belok kiri di jalan kedua",
+              "count the streets"
+            ],
+            [
+              "go past / opposite",
+              "lewati / di seberang",
+              "don't turn / across the road"
+            ],
+            [
+              "first … then … / don't",
+              "dulu … lalu … / jangan",
+              "the order of the steps"
+            ],
+            [
+              "Sorry, I can't. / What about…?",
+              "Maaf, tidak bisa. / Bagaimana kalau…?",
+              "a 'no' and a new idea"
+            ],
+            [
+              "OK, … is fine.",
+              "Oke, … bisa.",
+              "the decision (often at the end)"
+            ]
+          ],
+          "tips": [
+            "Read the question first, then listen for the key word: a number, a time, a direction or a place.",
+            "Don't stop at a word you don't know: the key information often comes right after it.",
+            "Two numbers in a delay: **by** + how long, **now** + the new time."
+          ],
+          "examples": [
+            {
+              "en": "The train to Bandung leaves from platform three.",
+              "id": "Kereta ke Bandung berangkat dari peron tiga."
+            },
+            {
+              "en": "Take the second street on the left.",
+              "id": "Belok kiri di jalan kedua."
+            },
+            {
+              "en": "Sorry, I can't. What about Saturday?",
+              "id": "Maaf, aku tidak bisa. Bagaimana kalau hari Sabtu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen more",
+        "text": "Two A2 listening lessons with audio, transcripts and exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu melatih telinga untuk kehidupan nyata: pengumuman di bandara dan stasiun, petunjuk arah, instruksi dan percakapan pendek. Putar tiap suara sesering yang kamu mau.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menyimak dengan cerdas",
+        "text": "Sebelum menekan play, beberapa kebiasaan ini sangat membantu. Ketuk tiap kartu untuk mendengarnya.",
+        "body": "**Baca pertanyaannya dulu.** Pertanyaan memberitahu apa yang harus kamu dengarkan: *Which gate?* → angka, *What time?* → jam, *Left or right?* → arah. Lalu dengarkan **kata kunci** itu, bukan setiap kata. Ada kata yang tidak kamu tahu? **Jangan panik** dan jangan berhenti untuk menerjemahkannya: terus dengarkan, kata kuncinya sering datang sesudahnya. Dengarkan sekali untuk gambaran umum, lalu sekali lagi untuk detailnya.",
+        "pairs": [
+          {
+            "en": "Which gate?",
+            "id": "Gate berapa? → dengarkan angka"
+          },
+          {
+            "en": "What time?",
+            "id": "Jam berapa? → dengarkan jam"
+          },
+          {
+            "en": "How long?",
+            "id": "Berapa lama? → dengarkan menit"
+          },
+          {
+            "en": "Left or right?",
+            "id": "Kiri atau kanan? → dengarkan arah"
+          },
+          {
+            "en": "Where are they?",
+            "id": "Mereka di mana? → dengarkan kata tempat"
+          },
+          {
+            "en": "Sorry, can you say that again?",
+            "id": "Maaf, bisa diulang?"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Pengumuman di bandara dan stasiun",
+        "text": "Pengumuman punya pola, jadi kamu tahu di mana info kuncinya.",
+        "body": "Pertama **Attention, please** (mohon perhatian). Lalu *apa*: **Flight GA 404 to Bali**, **The train to Bandung** (nama kota ada tepat setelah *to*). Lalu info kuncinya: **gate** atau **platform** (peron) + nomor, jam, dan kabarnya: **is now boarding** (sekarang naik pesawat), **is delayed by** + berapa lama (terlambat), **is cancelled** (dibatalkan). Hafalkan sebagai satu kesatuan. Nomor penerbangan dibaca per angka, dan 0 sering dibaca **oh**: GA 404 = 'G A four oh four'. Hati-hati: thir**TEEN** (13) vs **THIR**ty (30)!",
+        "pairs": [
+          {
+            "en": "Attention, please.",
+            "id": "Mohon perhatian."
+          },
+          {
+            "en": "passengers",
+            "id": "penumpang"
+          },
+          {
+            "en": "is now boarding",
+            "id": "sekarang naik pesawat"
+          },
+          {
+            "en": "gate",
+            "id": "pintu keberangkatan (bandara)"
+          },
+          {
+            "en": "platform",
+            "id": "peron (stasiun)"
+          },
+          {
+            "en": "is delayed by thirty minutes",
+            "id": "terlambat 30 menit"
+          },
+          {
+            "en": "is cancelled",
+            "id": "dibatalkan"
+          },
+          {
+            "en": "final call",
+            "id": "panggilan terakhir"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bunyi pengumuman",
+        "text": "Ketuk untuk mendengar. Temukan kota, nomor dan jamnya di tiap pengumuman.",
+        "body": "Kalau sesuatu **delayed** (terlambat), kamu mendengar dua angka: *by* + berapa lama, dan **now** + jam yang baru.",
+        "examples": [
+          {
+            "en": "Attention, please. The train to Bandung leaves from platform three.",
+            "id": "Mohon perhatian. Kereta ke Bandung berangkat dari peron tiga."
+          },
+          {
+            "en": "The flight to Bali is now boarding at gate seven.",
+            "id": "Penumpang pesawat ke Bali sekarang naik pesawat di gate tujuh."
+          },
+          {
+            "en": "The train to Solo is delayed by twenty minutes.",
+            "id": "Kereta ke Solo terlambat dua puluh menit."
+          },
+          {
+            "en": "It now leaves at eleven forty.",
+            "id": "Sekarang berangkat pukul 11.40."
+          },
+          {
+            "en": "This is the final call for flight G A two one eight to Makassar.",
+            "id": "Ini panggilan terakhir untuk penerbangan GA 218 ke Makassar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: keterlambatan",
+        "text": "Pengumuman penerbangan. Baca dulu pertanyaannya: yang ditanya **berapa lama**, jadi dengarkan jumlah menitnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "announcements",
+          "listen": "Attention, please. Flight G A six oh two to Medan is delayed by fifty minutes. Passengers for Medan, please wait at gate eleven.",
+          "options": [
+            "15 minutes",
+            "11 minutes",
+            "50 minutes"
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan. Berapa lama keterlambatannya?",
+          "explanation": "Kamu mendengar 'delayed **by** FIFty minutes': *by* + berapa lama. **FIF**ty tekanannya di awal; fif**TEEN** di akhir. Eleven (11) adalah nomor gate, bukan lamanya keterlambatan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Petunjuk arah dan instruksi",
+        "text": "Sekarang: mencari tempat, dan melakukan sesuatu langkah demi langkah.",
+        "body": "**Take the second street on the left** = belok kiri di jalan nomor 2: hitung jalannya, jangan belok di jalan pertama! Di sini *second* = kedua (bukan *detik*), dan *take* bukan *ambil*. **Go past** = lewati, jangan berhenti atau belok di situ. **Opposite** = di seberang (Amerika: *across from*). **Instruksi** diawali kata kerja (kata tindakan): *Press…* (tekan), *Take…* (ambil). Dengarkan **first** (dulu), **then** (lalu) dan **don't** (jangan).",
+        "pairs": [
+          {
+            "en": "Take the second street on the left.",
+            "id": "Belok kiri di jalan kedua."
+          },
+          {
+            "en": "Go past the bank.",
+            "id": "Lewati bank-nya."
+          },
+          {
+            "en": "It's opposite the mosque.",
+            "id": "Tempatnya di seberang masjid."
+          },
+          {
+            "en": "at the end of the street",
+            "id": "di ujung jalan"
+          },
+          {
+            "en": "Cross the road.",
+            "id": "Seberangi jalan."
+          },
+          {
+            "en": "first … then …",
+            "id": "pertama/dulu … lalu …"
+          },
+          {
+            "en": "Don't park here.",
+            "id": "Jangan parkir di sini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: jalan ke terminal bus",
+        "text": "Petunjuk arah ke terminal bus. Dengarkan apa yang kamu lakukan di bank dan jalan mana yang kamu ambil.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "directions-instructions",
+          "listen": "Go straight on, past the bank. Then take the first street on the right. The bus station is at the end of the street.",
+          "options": [
+            "Turn right at the bank, then go to the end of the street.",
+            "Go past the bank, then take the second street on the right.",
+            "Go past the bank, then take the first street on the right."
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan petunjuk arah ke terminal bus. Rute mana yang benar?",
+          "explanation": "**Go past** the bank = lewati bank-nya, jangan belok di sana, dan **the first street on the right** = belok kanan di jalan nomor 1. Terminal busnya ada di ujung jalan itu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: mesin tiket",
+        "text": "Instruksi di stasiun kereta. Yang ditanya adalah apa yang kamu lakukan **pertama kali** (first).",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "directions-instructions",
+          "listen": "To buy a ticket, first choose your station. Then put in your money. Take your ticket from the machine. Don't press the red button.",
+          "options": [
+            "Put in your money.",
+            "Choose your station.",
+            "Press the red button."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan instruksi di mesin tiket. Apa yang kamu lakukan pertama kali?",
+          "explanation": "Kata urutan **first** ada sebelum *choose your station* (pilih stasiunmu). **Then** (lalu) kamu masukkan uangnya. Dan **don't** press the red button: don't = jangan tekan tombol merah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Poin utama",
+        "text": "Topik terakhir: percakapan pendek. Kamu tidak perlu setiap kata, cukup poin utamanya.",
+        "body": "**Poin utama** adalah ide yang paling penting. Tanyakan: **Mereka di mana?** (kata tempat: *ticket, platform* → stasiun). **Apa masalahnya?** Dengarkan setelah **but** (tapi), **sorry** dan **I can't**. **Apa keputusannya?** Sering ada di **akhir**, setelah *OK* atau *fine*. 'Tidak' yang halus dalam bahasa Inggris adalah **Sorry, I can't**, sering diikuti usul baru: **What about…?** (Bagaimana kalau…?)",
+        "pairs": [
+          {
+            "en": "Sorry, I can't.",
+            "id": "Maaf, aku tidak bisa."
+          },
+          {
+            "en": "I'm busy then.",
+            "id": "Aku sibuk waktu itu."
+          },
+          {
+            "en": "What about Saturday?",
+            "id": "Bagaimana kalau hari Sabtu?"
+          },
+          {
+            "en": "Is Monday OK?",
+            "id": "Hari Senin bisa?"
+          },
+          {
+            "en": "That's fine.",
+            "id": "Itu bisa / oke."
+          },
+          {
+            "en": "ticket, platform",
+            "id": "tiket, peron → stasiun"
+          },
+          {
+            "en": "appointment, doctor",
+            "id": "janji temu, dokter → klinik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: poin utama",
+        "text": "Telepon singkat. Kamu tidak perlu menangkap setiap kata: apa ide yang paling penting?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-points",
+          "listen": "Rina: Hi Dimas, are you at the office? Dimas: No, I'm at home. I'm sick today. Rina: Oh no! Can you send me the report? Dimas: Yes, I can send it this afternoon.",
+          "options": [
+            "Dimas is sick, so he is at home today.",
+            "Dimas is at the office with the report.",
+            "Rina is sick and needs a doctor."
+          ],
+          "answer": 0,
+          "prompt": "Dengarkan Rina dan Dimas. Apa poin utamanya?",
+          "explanation": "Dimas bilang **No, I'm at home. I'm sick today.** (Tidak, aku di rumah. Aku sakit hari ini.) Itulah poin utamanya. Dia bisa mengirim laporannya, tapi dia tidak di kantor, dan yang sakit bukan Rina."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan singkat",
+        "text": "Balik tiap kartu. Coba dengar bahasa Inggrisnya di kepalamu dulu.",
+        "flashcards": [
+          {
+            "front": "pintu keberangkatan di bandara",
+            "back": "gate"
+          },
+          {
+            "front": "peron",
+            "back": "platform"
+          },
+          {
+            "front": "terlambat 20 menit",
+            "back": "is delayed by 20 minutes"
+          },
+          {
+            "front": "dibatalkan",
+            "back": "is cancelled"
+          },
+          {
+            "front": "lewati (bank-nya)",
+            "back": "go past (the bank)"
+          },
+          {
+            "front": "di seberang",
+            "back": "opposite"
+          },
+          {
+            "front": "belok kanan di jalan pertama",
+            "back": "take the first street on the right"
+          },
+          {
+            "front": "Bagaimana kalau hari Sabtu?",
+            "back": "What about Saturday?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Yang kamu dengar di pengumuman, petunjuk arah dan percakapan, dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Menyimak praktis",
+          "intro": "Ungkapan kunci yang kamu dengar, artinya, dan apa yang perlu kamu dengarkan.",
+          "headers": [
+            "Yang kamu dengar",
+            "Artinya",
+            "Dengarkan"
+          ],
+          "rows": [
+            [
+              "Flight GA 404 to Bali",
+              "penerbangan GA 404 ke Bali",
+              "kota setelah 'to'; 0 = 'oh'"
+            ],
+            [
+              "is now boarding at gate 7",
+              "naik pesawat di gate 7",
+              "angka setelah 'gate'"
+            ],
+            [
+              "leaves from platform 3",
+              "berangkat dari peron 3",
+              "angka setelah 'platform'"
+            ],
+            [
+              "is delayed by 30 minutes",
+              "terlambat 30 menit",
+              "'by' + berapa lama"
+            ],
+            [
+              "now leaves at 9:15",
+              "sekarang berangkat pukul 9.15",
+              "jam baru setelah 'now'"
+            ],
+            [
+              "is cancelled",
+              "dibatalkan",
+              "tidak berangkat"
+            ],
+            [
+              "final call",
+              "panggilan terakhir",
+              "segera ke gate"
+            ],
+            [
+              "take the second street on the left",
+              "belok kiri di jalan kedua",
+              "hitung jalannya"
+            ],
+            [
+              "go past / opposite",
+              "lewati / di seberang",
+              "jangan belok / di seberang jalan"
+            ],
+            [
+              "first … then … / don't",
+              "dulu … lalu … / jangan",
+              "urutan langkahnya"
+            ],
+            [
+              "Sorry, I can't. / What about…?",
+              "Maaf, tidak bisa. / Bagaimana kalau…?",
+              "'tidak' dan usul baru"
+            ],
+            [
+              "OK, … is fine.",
+              "Oke, … bisa.",
+              "keputusannya (sering di akhir)"
+            ]
+          ],
+          "tips": [
+            "Baca pertanyaannya dulu, lalu dengarkan kata kuncinya: angka, jam, arah atau tempat.",
+            "Jangan berhenti di kata yang tidak kamu tahu: info kuncinya sering datang tepat sesudahnya.",
+            "Dua angka saat ada keterlambatan: **by** + berapa lama, **now** + jam yang baru."
+          ],
+          "examples": [
+            {
+              "en": "The train to Bandung leaves from platform three.",
+              "id": "Kereta ke Bandung berangkat dari peron tiga."
+            },
+            {
+              "en": "Take the second street on the left.",
+              "id": "Belok kiri di jalan kedua."
+            },
+            {
+              "en": "Sorry, I can't. What about Saturday?",
+              "id": "Maaf, aku tidak bisa. Bagaimana kalau hari Sabtu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengar lebih banyak",
+        "text": "Dua pelajaran menyimak A2 dengan audio, transkrip dan latihan."
+      }
+    ]
+  }
+}

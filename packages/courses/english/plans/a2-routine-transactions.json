@@ -1,0 +1,760 @@
+{
+  "en": {
+    "greeting": "Hi! Today we go on a little trip: a hotel, a shop and a doctor. You know the words already; let's use them politely and clearly.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Polite and clear",
+        "text": "In English, a good request is short, polite AND clear. Not too direct, not too indirect.",
+        "body": "The recipe: **Excuse me** + the problem or what you need + **Could you …? / Could I have …? / I'd like to …** + **please**.\n**Too direct:** *Saya mau / minta …* word for word gives **I want a towel** or **Give me a towel**: in English that sounds rude, even with a smile.\n**Too indirect:** a long apology and 'maybe … if possible …' without saying what you want. *Mohon maaf sebelumnya* is not 'Sorry before': say **Excuse me** or **Sorry to bother you**.\n**I'd like to** + verb is a phrase to remember: *I'd like to check in.*",
+        "pairs": [
+          {
+            "en": "Excuse me, …",
+            "id": "Permisi, …"
+          },
+          {
+            "en": "Sorry to bother you.",
+            "id": "Maaf mengganggu."
+          },
+          {
+            "en": "Could you …, please?",
+            "id": "Bisa tolong …?"
+          },
+          {
+            "en": "Could I have …, please?",
+            "id": "Boleh saya minta …?"
+          },
+          {
+            "en": "I'd like to …",
+            "id": "Saya mau … (sopan)"
+          },
+          {
+            "en": "Thank you very much.",
+            "id": "Terima kasih banyak."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "At reception",
+        "text": "Here are the phrases for checking in and asking for help at a hotel.",
+        "body": "**under the name** = atas nama (not 'on the name'). **Here you are** = ini (when you give something).\nSay the problem first: **doesn't work** and **isn't working** are both fine for something broken. Then ask: **Could you …?** = the hotel does it for you.",
+        "examples": [
+          {
+            "en": "Good evening. I have a reservation under the name Sari Lestari.",
+            "id": "Selamat malam. Saya punya reservasi atas nama Sari Lestari."
+          },
+          {
+            "en": "Could I see your passport, please? — Here you are.",
+            "id": "Boleh saya lihat paspor Anda? — Ini."
+          },
+          {
+            "en": "Could I have another pillow, please?",
+            "id": "Boleh saya minta bantal lagi?"
+          },
+          {
+            "en": "The TV in my room doesn't work. Could you send someone, please?",
+            "id": "TV di kamar saya tidak berfungsi. Bisa tolong kirim orang?"
+          },
+          {
+            "en": "Could I have a late check-out, please?",
+            "id": "Boleh saya check-out lebih siang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Phone reception",
+        "text": "You're in room 214 of a hotel in Surabaya. It's very hot: the AC in your room makes no cold air. You phone reception. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "hotel-check-in",
+          "prompt": "Listen to the receptionist. Choose the best reply.",
+          "listen": "Reception, good evening. How can I help you?",
+          "options": [
+            "Room 214. The air conditioner is broken. Come and fix it now.",
+            "Hello, this is room 214. Could I fix the air conditioner, please?",
+            "Hello, this is room 214. The air conditioner isn't working. Could you send someone to look at it, please?"
+          ],
+          "answer": 2,
+          "explanation": "Say the problem (**isn't working**), then ask politely with **Could you … please?** 'Come and fix it now' is an order, so it sounds rude. **Could I fix …?** asks if *you* can fix it yourself."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "In a shop",
+        "text": "Buying clothes, changing them, and a small, polite complaint.",
+        "body": "**too** = terlalu: **It's too small** (a problem). *Very small* only describes.\nExchange or complain: **Excuse me, I'd like to exchange …** + the problem + **Here's my receipt.** Money back = **a refund**.\nOne thing = **it**; jeans, trousers and shoes are plural = **them**: *Do you have them in a 40?*\n**Receipt**: the p is silent, 'ri-SIIT'. British *trousers* = American *pants*.",
+        "pairs": [
+          {
+            "en": "small / medium / large",
+            "id": "ukuran S / M / L"
+          },
+          {
+            "en": "Can I try it on?",
+            "id": "Boleh saya coba?"
+          },
+          {
+            "en": "too big",
+            "id": "terlalu besar, kebesaran"
+          },
+          {
+            "en": "exchange",
+            "id": "menukar"
+          },
+          {
+            "en": "receipt",
+            "id": "struk, nota"
+          },
+          {
+            "en": "a refund",
+            "id": "uang kembali"
+          },
+          {
+            "en": "Here's my receipt.",
+            "id": "Ini struk saya."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "At the mall",
+        "text": "Listen to Budi at a shoe shop in a mall in Jakarta.",
+        "body": "Budi says the problem calmly and asks for one thing. Shoes are plural, so **they / them**.",
+        "examples": [
+          {
+            "en": "Excuse me, I'd like to exchange these shoes. They're too big.",
+            "id": "Permisi, saya mau menukar sepatu ini. Kebesaran."
+          },
+          {
+            "en": "Do you have them in a 41?",
+            "id": "Ada ukuran 41?"
+          },
+          {
+            "en": "Sorry, we don't. Would you like a different colour?",
+            "id": "Maaf, tidak ada. Mau warna lain?"
+          },
+          {
+            "en": "No, thank you. Can I get a refund?",
+            "id": "Tidak, terima kasih. Bisa minta uang saya kembali?"
+          },
+          {
+            "en": "Of course. Do you have the receipt?",
+            "id": "Tentu. Ada struknya?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Your new shirt from this shop is size S, but you need an M. You go back to the shop with the receipt.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shop-exchange-complain",
+          "prompt": "What do you say to the shop assistant?",
+          "options": [
+            "Excuse me, I'd like to exchange this shirt. It's too small.",
+            "This shirt is wrong. Give me a new one.",
+            "Excuse me, sorry before … maybe this shirt … if possible …"
+          ],
+          "answer": 0,
+          "explanation": "**Excuse me** + **I'd like to exchange** + the problem (**too small**) is polite and clear. 'Give me a new one' is an order, so it's too direct. The last one is too indirect: the assistant can't understand what you want."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Refund or exchange?",
+        "text": "The shop assistant looks at your shirt. You still like it; you want the same shirt in a large. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shop-exchange-complain",
+          "prompt": "Listen to the shop assistant. Choose your reply.",
+          "listen": "OK. Would you like a refund or an exchange?",
+          "options": [
+            "Yes, please.",
+            "A refund, please. Do you have it in a large?",
+            "An exchange, please. Do you have it in a large?"
+          ],
+          "answer": 2,
+          "explanation": "She gives you two choices, so choose one: you want the same shirt, so **an exchange**. A refund means your money back. 'Yes, please' doesn't answer an 'A or B?' question."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "At the doctor's",
+        "text": "You know the symptom words. Now tell the doctor where, what and how long.",
+        "body": "**have** an illness: *I have a sore throat.* **hurt** for pain: *My stomach hurts. It hurts here.* **feel**: *I feel dizzy. I feel sick* (British: mual).\n**Pusing** is two words: a pain in your head = **a headache**; the room goes round = **dizzy**.\nThe doctor asks **How long have you had it?** (sudah berapa lama?): just recognise it. Answer: **For three days.** **Since yesterday.** Or the past: **It started …** + ago. Not 'since three days'.",
+        "pairs": [
+          {
+            "en": "It hurts here.",
+            "id": "Sakitnya di sini."
+          },
+          {
+            "en": "dizzy",
+            "id": "pusing (kepala berputar)"
+          },
+          {
+            "en": "I feel sick.",
+            "id": "Saya mual. (British)"
+          },
+          {
+            "en": "How long have you had it?",
+            "id": "Sudah berapa lama?"
+          },
+          {
+            "en": "for three days",
+            "id": "selama tiga hari"
+          },
+          {
+            "en": "since yesterday",
+            "id": "sejak kemarin"
+          },
+          {
+            "en": "It started last night.",
+            "id": "Mulainya tadi malam."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Telling the doctor",
+        "text": "Dimas is at a clinic in Bandung. Read what he tells the doctor.",
+        "body": "Short sentences are perfect at the doctor's. **couldn't** helps too: *I couldn't sleep.*",
+        "examples": [
+          {
+            "en": "What's the matter? — I have a sore throat and a cough.",
+            "id": "Ada keluhan apa? — Saya sakit tenggorokan dan batuk."
+          },
+          {
+            "en": "Where does it hurt? — Here, on the left.",
+            "id": "Sakitnya di mana? — Di sini, di sebelah kiri."
+          },
+          {
+            "en": "How long have you had the cough? — For a week.",
+            "id": "Sudah berapa lama batuknya? — Seminggu."
+          },
+          {
+            "en": "My back hurts. I couldn't sleep last night.",
+            "id": "Punggung saya sakit. Semalam saya tidak bisa tidur."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "It started …",
+        "text": "Today is Wednesday. Your headache started on Monday. Tell the doctor.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "explain-symptoms",
+          "prompt": "Arrange the words: Mulainya dua hari yang lalu.",
+          "tokens": [
+            "two",
+            "It",
+            "ago",
+            "started",
+            "days"
+          ],
+          "solution": "It started two days ago.",
+          "explanation": "**start** is a regular verb, so the past is **started**. **ago** comes after the length of time: **two days ago** (not 'two days before')."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen to the doctor",
+        "text": "Your head hurts and your temperature is 38.5 degrees. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-symptoms",
+          "prompt": "Listen to the doctor. Choose the best answer.",
+          "listen": "Good morning. What's the matter?",
+          "options": [
+            "I am headache and my body is hot.",
+            "I have a headache and a fever.",
+            "I have headache and I am fever."
+          ],
+          "answer": 1,
+          "explanation": "A headache and a fever are things you **have**: **I have a headache and a fever**, with **a**. 'I am headache' and 'I am fever' are word for word from *saya sakit kepala / demam*, and 'my body is hot' only means you feel warm."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next trip!",
+        "artifact": {
+          "title": "Cheat sheet · Hotel, shop & doctor",
+          "intro": "Excuse me + the problem or what you need + Could you …? / Could I have …? / I'd like to … + please.",
+          "headers": [
+            "Situation",
+            "Say this",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Hotel: check in",
+              "I have a reservation under the name …",
+              "Saya punya reservasi atas nama …"
+            ],
+            [
+              "Hotel: give something",
+              "Here you are.",
+              "Ini."
+            ],
+            [
+              "Hotel: ask for a thing",
+              "Could I have another towel, please?",
+              "Boleh saya minta handuk lagi?"
+            ],
+            [
+              "Hotel: a problem",
+              "The shower doesn't work. / The AC isn't working.",
+              "Shower-nya / AC-nya rusak."
+            ],
+            [
+              "Hotel: ask for help",
+              "Could you send someone, please?",
+              "Bisa tolong kirim orang?"
+            ],
+            [
+              "Shop: size",
+              "Do you have it in a medium? (them: shoes, jeans)",
+              "Ada ukuran M?"
+            ],
+            [
+              "Shop: try",
+              "Can I try it on?",
+              "Boleh saya coba?"
+            ],
+            [
+              "Shop: exchange",
+              "I'd like to exchange this. It's too big.",
+              "Saya mau menukar ini. Kebesaran."
+            ],
+            [
+              "Shop: receipt",
+              "Here's my receipt.",
+              "Ini struk saya."
+            ],
+            [
+              "Shop: money back",
+              "Could I have a refund, please?",
+              "Boleh minta uang saya kembali?"
+            ],
+            [
+              "Doctor: what",
+              "I have a sore throat. I feel dizzy. I feel sick.",
+              "Sakit tenggorokan. Pusing. Mual."
+            ],
+            [
+              "Doctor: where",
+              "It hurts here. My back hurts.",
+              "Sakitnya di sini. Punggung saya sakit."
+            ],
+            [
+              "Doctor: how long",
+              "For three days. / Since yesterday. / It started … ago.",
+              "Selama tiga hari. / Sejak kemarin. / Mulainya … yang lalu."
+            ]
+          ],
+          "tips": [
+            "Not too direct: **I want / Give me** sounds rude. Not too indirect: say clearly what you need.",
+            "**too small** = terlalu kecil (a problem); **very small** only describes.",
+            "**for** + a length of time (for two days); **since** + a starting point (since yesterday). Never 'since two days'."
+          ],
+          "examples": [
+            {
+              "en": "Excuse me, could I have the Wi-Fi password, please?",
+              "id": "Permisi, boleh saya minta password Wi-Fi-nya?"
+            },
+            {
+              "en": "These jeans are too small. Do you have them in a medium?",
+              "id": "Jeans ini kekecilan. Ada ukuran M?"
+            },
+            {
+              "en": "My stomach hurts. It started last night.",
+              "id": "Perut saya sakit. Mulainya tadi malam."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita jalan-jalan sebentar: ke hotel, ke toko, dan ke dokter. Kosakatanya sudah kamu tahu; ayo pakai dengan sopan dan jelas.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Sopan dan jelas",
+        "text": "Dalam bahasa Inggris, permintaan yang baik itu pendek, sopan, DAN jelas. Tidak terlalu langsung, tidak berbelit.",
+        "body": "Resepnya: **Excuse me** + masalahnya atau yang kamu perlukan + **Could you …? / Could I have …? / I'd like to …** + **please**.\n**Terlalu langsung:** *Saya mau / minta …* diterjemahkan kata per kata jadi **I want a towel** atau **Give me a towel**: dalam bahasa Inggris itu terdengar kasar, walaupun sambil tersenyum.\n**Terlalu berbelit:** minta maaf panjang dan 'maybe … if possible …' tanpa menyebut apa yang kamu mau. *Mohon maaf sebelumnya* bukan 'Sorry before': ucapkan **Excuse me** atau **Sorry to bother you**.\n**I'd like to** + kata kerja adalah frasa yang dihafal saja: *I'd like to check in.*",
+        "pairs": [
+          {
+            "en": "Excuse me, …",
+            "id": "Permisi, …"
+          },
+          {
+            "en": "Sorry to bother you.",
+            "id": "Maaf mengganggu."
+          },
+          {
+            "en": "Could you …, please?",
+            "id": "Bisa tolong …?"
+          },
+          {
+            "en": "Could I have …, please?",
+            "id": "Boleh saya minta …?"
+          },
+          {
+            "en": "I'd like to …",
+            "id": "Saya mau … (sopan)"
+          },
+          {
+            "en": "Thank you very much.",
+            "id": "Terima kasih banyak."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di meja resepsionis",
+        "text": "Ini frasa untuk check-in dan minta bantuan di hotel.",
+        "body": "**under the name** = atas nama (bukan 'on the name'). **Here you are** = ini (saat memberikan sesuatu).\nSebutkan masalahnya dulu: **doesn't work** dan **isn't working** sama-sama benar untuk barang yang rusak. Lalu minta: **Could you …?** = pihak hotel yang melakukannya untukmu.",
+        "examples": [
+          {
+            "en": "Good evening. I have a reservation under the name Sari Lestari.",
+            "id": "Selamat malam. Saya punya reservasi atas nama Sari Lestari."
+          },
+          {
+            "en": "Could I see your passport, please? — Here you are.",
+            "id": "Boleh saya lihat paspor Anda? — Ini."
+          },
+          {
+            "en": "Could I have another pillow, please?",
+            "id": "Boleh saya minta bantal lagi?"
+          },
+          {
+            "en": "The TV in my room doesn't work. Could you send someone, please?",
+            "id": "TV di kamar saya tidak berfungsi. Bisa tolong kirim orang?"
+          },
+          {
+            "en": "Could I have a late check-out, please?",
+            "id": "Boleh saya check-out lebih siang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Telepon resepsionis",
+        "text": "Kamu di kamar 214 sebuah hotel di Surabaya. Panas sekali: AC di kamarmu tidak mengeluarkan udara dingin. Kamu menelepon resepsionis. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "hotel-check-in",
+          "prompt": "Dengarkan resepsionisnya. Pilih balasan yang paling tepat.",
+          "listen": "Reception, good evening. How can I help you?",
+          "options": [
+            "Room 214. The air conditioner is broken. Come and fix it now.",
+            "Hello, this is room 214. Could I fix the air conditioner, please?",
+            "Hello, this is room 214. The air conditioner isn't working. Could you send someone to look at it, please?"
+          ],
+          "answer": 2,
+          "explanation": "Sebutkan masalahnya (**isn't working**), lalu minta tolong dengan sopan memakai **Could you … please?** 'Come and fix it now' adalah perintah, jadi terdengar kasar. **Could I fix …?** bertanya apakah *kamu* boleh memperbaikinya sendiri."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Di toko",
+        "text": "Membeli baju, menukarnya, dan komplain kecil yang sopan.",
+        "body": "**too** = terlalu: **It's too small** (itu masalah). *Very small* hanya menggambarkan.\nMenukar atau komplain: **Excuse me, I'd like to exchange …** + masalahnya + **Here's my receipt.** Uang kembali = **a refund**.\nSatu barang = **it**; jeans, trousers (celana panjang) dan shoes dianggap jamak = **them**: *Do you have them in a 40?*\n**Receipt**: huruf p tidak dibaca, 'ri-SIIT'. *Trousers* (British) = *pants* (Amerika).",
+        "pairs": [
+          {
+            "en": "small / medium / large",
+            "id": "ukuran S / M / L"
+          },
+          {
+            "en": "Can I try it on?",
+            "id": "Boleh saya coba?"
+          },
+          {
+            "en": "too big",
+            "id": "terlalu besar, kebesaran"
+          },
+          {
+            "en": "exchange",
+            "id": "menukar"
+          },
+          {
+            "en": "receipt",
+            "id": "struk, nota"
+          },
+          {
+            "en": "a refund",
+            "id": "uang kembali"
+          },
+          {
+            "en": "Here's my receipt.",
+            "id": "Ini struk saya."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di mal",
+        "text": "Dengarkan Budi di toko sepatu di sebuah mal di Jakarta.",
+        "body": "Budi menyebutkan masalahnya dengan tenang dan meminta satu hal. Shoes jamak, jadi **they / them**.",
+        "examples": [
+          {
+            "en": "Excuse me, I'd like to exchange these shoes. They're too big.",
+            "id": "Permisi, saya mau menukar sepatu ini. Kebesaran."
+          },
+          {
+            "en": "Do you have them in a 41?",
+            "id": "Ada ukuran 41?"
+          },
+          {
+            "en": "Sorry, we don't. Would you like a different colour?",
+            "id": "Maaf, tidak ada. Mau warna lain?"
+          },
+          {
+            "en": "No, thank you. Can I get a refund?",
+            "id": "Tidak, terima kasih. Bisa minta uang saya kembali?"
+          },
+          {
+            "en": "Of course. Do you have the receipt?",
+            "id": "Tentu. Ada struknya?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kemeja barumu dari toko ini ukuran S, tapi kamu perlu ukuran M. Kamu kembali ke toko dengan membawa struknya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shop-exchange-complain",
+          "prompt": "Apa yang kamu katakan ke pramuniaga?",
+          "options": [
+            "Excuse me, I'd like to exchange this shirt. It's too small.",
+            "This shirt is wrong. Give me a new one.",
+            "Excuse me, sorry before … maybe this shirt … if possible …"
+          ],
+          "answer": 0,
+          "explanation": "**Excuse me** + **I'd like to exchange** + masalahnya (**too small**) itu sopan dan jelas. 'Give me a new one' adalah perintah, jadi terlalu langsung. Pilihan terakhir terlalu berbelit: pramuniaganya tidak paham apa yang kamu mau."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Refund atau tukar?",
+        "text": "Pramuniaga melihat kemejamu. Kamu tetap suka kemejanya; kamu mau kemeja yang sama dalam ukuran large. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shop-exchange-complain",
+          "prompt": "Dengarkan pramuniaganya. Pilih balasanmu.",
+          "listen": "OK. Would you like a refund or an exchange?",
+          "options": [
+            "Yes, please.",
+            "A refund, please. Do you have it in a large?",
+            "An exchange, please. Do you have it in a large?"
+          ],
+          "answer": 2,
+          "explanation": "Dia memberi dua pilihan, jadi pilih salah satu: kamu mau kemeja yang sama, jadi **an exchange** (tukar). A refund artinya uangmu dikembalikan. 'Yes, please' tidak menjawab pertanyaan 'A atau B?'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Di dokter",
+        "text": "Kosakata gejalanya sudah kamu tahu. Sekarang katakan ke dokter di mana, apa, dan sudah berapa lama.",
+        "body": "**have** untuk penyakit: *I have a sore throat.* **hurt** untuk rasa sakit: *My stomach hurts. It hurts here.* **feel**: *I feel dizzy. I feel sick* (British: mual).\n**Pusing** ada dua kata: kepala terasa sakit = **a headache**; ruangan terasa berputar = **dizzy**.\nDokter bertanya **How long have you had it?** (sudah berapa lama?): cukup kenali saja. Jawab: **For three days.** **Since yesterday.** Atau bentuk lampau: **It started …** + ago. Bukan 'since three days'.",
+        "pairs": [
+          {
+            "en": "It hurts here.",
+            "id": "Sakitnya di sini."
+          },
+          {
+            "en": "dizzy",
+            "id": "pusing (kepala berputar)"
+          },
+          {
+            "en": "I feel sick.",
+            "id": "Saya mual. (British)"
+          },
+          {
+            "en": "How long have you had it?",
+            "id": "Sudah berapa lama?"
+          },
+          {
+            "en": "for three days",
+            "id": "selama tiga hari"
+          },
+          {
+            "en": "since yesterday",
+            "id": "sejak kemarin"
+          },
+          {
+            "en": "It started last night.",
+            "id": "Mulainya tadi malam."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bercerita ke dokter",
+        "text": "Dimas di sebuah klinik di Bandung. Baca apa yang dia katakan ke dokter.",
+        "body": "Kalimat pendek sudah pas di dokter. **couldn't** juga membantu: *I couldn't sleep.*",
+        "examples": [
+          {
+            "en": "What's the matter? — I have a sore throat and a cough.",
+            "id": "Ada keluhan apa? — Saya sakit tenggorokan dan batuk."
+          },
+          {
+            "en": "Where does it hurt? — Here, on the left.",
+            "id": "Sakitnya di mana? — Di sini, di sebelah kiri."
+          },
+          {
+            "en": "How long have you had the cough? — For a week.",
+            "id": "Sudah berapa lama batuknya? — Seminggu."
+          },
+          {
+            "en": "My back hurts. I couldn't sleep last night.",
+            "id": "Punggung saya sakit. Semalam saya tidak bisa tidur."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kapan mulainya?",
+        "text": "Hari ini Rabu. Sakit kepalamu mulai hari Senin. Katakan ke dokter.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "explain-symptoms",
+          "prompt": "Susun kata-katanya: Mulainya dua hari yang lalu.",
+          "tokens": [
+            "two",
+            "It",
+            "ago",
+            "started",
+            "days"
+          ],
+          "solution": "It started two days ago.",
+          "explanation": "**start** adalah kata kerja beraturan, jadi bentuk lampaunya **started**. **ago** ditaruh setelah lamanya waktu: **two days ago** (bukan 'two days before')."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dokternya",
+        "text": "Kepalamu sakit dan suhu badanmu 38,5 derajat. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "explain-symptoms",
+          "prompt": "Dengarkan dokternya. Pilih jawaban yang paling tepat.",
+          "listen": "Good morning. What's the matter?",
+          "options": [
+            "I am headache and my body is hot.",
+            "I have a headache and a fever.",
+            "I have headache and I am fever."
+          ],
+          "answer": 1,
+          "explanation": "Sakit kepala dan demam adalah sesuatu yang kamu **have** (punya): **I have a headache and a fever**, dengan **a**. 'I am headache' dan 'I am fever' adalah terjemahan kata per kata dari *saya sakit kepala / demam*, dan 'my body is hot' hanya berarti badanmu terasa hangat."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk perjalananmu berikutnya!",
+        "artifact": {
+          "title": "Contekan · Hotel, toko & dokter",
+          "intro": "Excuse me + masalahnya atau yang kamu perlukan + Could you …? / Could I have …? / I'd like to … + please.",
+          "headers": [
+            "Situasi",
+            "Ucapkan",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Hotel: check-in",
+              "I have a reservation under the name …",
+              "Saya punya reservasi atas nama …"
+            ],
+            [
+              "Hotel: memberikan sesuatu",
+              "Here you are.",
+              "Ini."
+            ],
+            [
+              "Hotel: minta barang",
+              "Could I have another towel, please?",
+              "Boleh saya minta handuk lagi?"
+            ],
+            [
+              "Hotel: ada masalah",
+              "The shower doesn't work. / The AC isn't working.",
+              "Shower-nya / AC-nya rusak."
+            ],
+            [
+              "Hotel: minta tolong",
+              "Could you send someone, please?",
+              "Bisa tolong kirim orang?"
+            ],
+            [
+              "Toko: ukuran",
+              "Do you have it in a medium? (them: shoes, jeans)",
+              "Ada ukuran M?"
+            ],
+            [
+              "Toko: mencoba",
+              "Can I try it on?",
+              "Boleh saya coba?"
+            ],
+            [
+              "Toko: menukar",
+              "I'd like to exchange this. It's too big.",
+              "Saya mau menukar ini. Kebesaran."
+            ],
+            [
+              "Toko: struk",
+              "Here's my receipt.",
+              "Ini struk saya."
+            ],
+            [
+              "Toko: uang kembali",
+              "Could I have a refund, please?",
+              "Boleh minta uang saya kembali?"
+            ],
+            [
+              "Dokter: apa",
+              "I have a sore throat. I feel dizzy. I feel sick.",
+              "Sakit tenggorokan. Pusing. Mual."
+            ],
+            [
+              "Dokter: di mana",
+              "It hurts here. My back hurts.",
+              "Sakitnya di sini. Punggung saya sakit."
+            ],
+            [
+              "Dokter: berapa lama",
+              "For three days. / Since yesterday. / It started … ago.",
+              "Selama tiga hari. / Sejak kemarin. / Mulainya … yang lalu."
+            ]
+          ],
+          "tips": [
+            "Jangan terlalu langsung: **I want / Give me** terdengar kasar. Jangan berbelit: katakan dengan jelas apa yang kamu perlukan.",
+            "**too small** = terlalu kecil (masalah); **very small** hanya menggambarkan.",
+            "**for** + lamanya waktu (for two days); **since** + titik awal (since yesterday). Jangan 'since two days'."
+          ],
+          "examples": [
+            {
+              "en": "Excuse me, could I have the Wi-Fi password, please?",
+              "id": "Permisi, boleh saya minta password Wi-Fi-nya?"
+            },
+            {
+              "en": "These jeans are too small. Do you have them in a medium?",
+              "id": "Jeans ini kekecilan. Ada ukuran M?"
+            },
+            {
+              "en": "My stomach hurts. It started last night.",
+              "id": "Perut saya sakit. Mulainya tadi malam."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

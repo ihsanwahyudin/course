@@ -1,0 +1,666 @@
+{
+  "en": {
+    "greeting": "Hi! Today we make plans together: how to invite someone, how to say yes or no kindly, and how to agree on when and where to meet. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Inviting someone",
+        "text": "First, four ways to invite someone to do something with you.",
+        "body": "An **invitation** (*ajakan*) asks someone to join you.\n- **Would you like to** + verb? Polite, for anyone: your boss, a client.\n- **Do you want to** + verb? Friendly, for friends.\n- **Let's** + verb. You know it: *ayo kita…*\n- **Shall we** + verb? A phrase to remember: *yuk kita…?* (more British).\nAfter *like* and *want* comes **to**. After *Let's* and *Shall we*, no *to*. **Do you like…?** is not an invitation: it asks what someone enjoys (*suka*).",
+        "pairs": [
+          {
+            "en": "Would you like to have lunch with us?",
+            "id": "Mau makan siang bareng kami? (sopan)"
+          },
+          {
+            "en": "Do you want to come to my house?",
+            "id": "Mau main ke rumahku? (akrab)"
+          },
+          {
+            "en": "Let's take a break.",
+            "id": "Yuk, istirahat dulu."
+          },
+          {
+            "en": "Shall we go?",
+            "id": "Yuk, berangkat?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina wants to invite a new colleague. Help her choose.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-and-respond",
+          "prompt": "Rina wants to invite her new colleague, Budi, to play badminton on Sunday. Which invitation is correct?",
+          "options": [
+            "Would you like play badminton on Sunday?",
+            "Would you like to play badminton on Sunday?",
+            "Do you like play badminton on Sunday?"
+          ],
+          "answer": 1,
+          "explanation": "A polite invitation is **Would you like to** + verb: keep **to**. *Do you like…?* asks what Budi enjoys in general (*suka*), and it isn't an invitation."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How about going…?",
+        "text": "One more way to suggest something, with a trap inside.",
+        "body": "**How about …?** = **What about …?** = *Gimana kalau …?* After them comes a **noun** (*kata benda*: *a coffee, Saturday, 7*) or a **verb + -ing**. Why? **about** is a **preposition** (*kata depan*, like *in, on, at*), and after it English needs a 'thing' word. So the verb gets **-ing** and becomes the name of the activity, like *swimming* in *I like swimming*. Indonesian *gimana kalau pergi* doesn't change *pergi*, but 'How about go' is wrong.",
+        "pairs": [
+          {
+            "en": "How about a coffee?",
+            "id": "Gimana kalau ngopi?"
+          },
+          {
+            "en": "How about Saturday?",
+            "id": "Gimana kalau hari Sabtu?"
+          },
+          {
+            "en": "How about going to the cinema?",
+            "id": "Gimana kalau ke bioskop? (cinema: British; Amerika: the movies)"
+          },
+          {
+            "en": "What about cooking at home?",
+            "id": "Gimana kalau masak di rumah?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A hot day in Jakarta. Make a suggestion.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-and-respond",
+          "prompt": "It's very hot today. Complete: How about ___ to the beach?",
+          "options": [
+            "go",
+            "to go",
+            "going"
+          ],
+          "answer": 2,
+          "explanation": "After **about** (a preposition) use a noun or a **verb + -ing**: **How about going…?** 'go' is *gimana kalau pergi* word by word, and there's never *to* after about."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Yes or no, kindly",
+        "text": "Someone invites you. Here's how to answer.",
+        "body": "**Yes:** *Sure, I'd love to!* (I'd = I would). Keep **to**: it stands for the verb (*I'd love to come*), so 'I'd love' alone is wrong. Also: *That sounds great!* (*sound* = kedengarannya), *Good idea!*, *Yes, let's!*\n**No**, in three parts: **I'm sorry, I can't.** + a short **reason** (for a fixed plan, the present continuous: *I'm working on Saturday.*) + **another time**: *Maybe another time?* or *How about Sunday?*\nAvoid *No, I don't want*: it sounds rude.",
+        "pairs": [
+          {
+            "en": "Sure, I'd love to!",
+            "id": "Mau banget!"
+          },
+          {
+            "en": "That sounds great!",
+            "id": "Kedengarannya asyik!"
+          },
+          {
+            "en": "Good idea!",
+            "id": "Ide bagus!"
+          },
+          {
+            "en": "I'm sorry, I can't.",
+            "id": "Maaf, aku nggak bisa."
+          },
+          {
+            "en": "Maybe another time?",
+            "id": "Lain kali, ya?"
+          },
+          {
+            "en": "Thanks for asking.",
+            "id": "Makasih udah ngajak."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A clear no is a kind no",
+        "text": "In Indonesia, a soft answer like *insya Allah* or *lihat nanti, ya* is a polite habit. Here's what an English speaker expects.",
+        "body": "*Insya Allah* is a beautiful phrase, and many Muslim English speakers use it too. But *Maybe* or *We'll see* usually sounds like a possible **yes**, so your friend may wait for you. If you can't come, give a clear, friendly **no + reason**. Not sure yet? Say so, and say when you'll answer.",
+        "examples": [
+          {
+            "en": "Sorry, I can't. I'm meeting a client on Friday.",
+            "id": "Maaf, aku nggak bisa. Hari Jumat aku ketemu klien."
+          },
+          {
+            "en": "Thanks for asking, but I'm busy tonight. How about tomorrow?",
+            "id": "Makasih udah ngajak, tapi malam ini aku sibuk. Gimana kalau besok?"
+          },
+          {
+            "en": "I'm sorry, I can't. I'm working on Sunday. Maybe another time?",
+            "id": "Maaf, aku nggak bisa. Hari Minggu aku kerja. Lain kali, ya?"
+          },
+          {
+            "en": "I'm not sure yet. I'll tell you tomorrow.",
+            "id": "Aku belum tahu. Besok aku kabari, ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas invites you, but you already have a plan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "accept-decline-politely",
+          "prompt": "Dimas: 'Do you want to play futsal tonight?' You can't, because you're visiting your grandma tonight. What's the best answer?",
+          "options": [
+            "Maybe… we'll see.",
+            "No, I don't want.",
+            "Sorry, I can't. I'm visiting my grandma tonight."
+          ],
+          "answer": 2,
+          "explanation": "A kind no in English is clear: **Sorry, I can't** + a reason in the present continuous (a plan you already have). *Maybe… we'll see* makes Dimas think you might come, and *No, I don't want* sounds rude."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen to Sari",
+        "text": "Now you invite Sari. Press play and listen to her answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "accept-decline-politely",
+          "prompt": "You ask Sari: 'Do you want to go to the mall on Saturday?' Listen to her answer. What does she mean?",
+          "listen": "Sorry, I can't go on Saturday. I'm working. How about Sunday?",
+          "options": [
+            "She can come on Saturday.",
+            "She can't come on Saturday, and she suggests Sunday.",
+            "She doesn't want to go to the mall."
+          ],
+          "answer": 1,
+          "explanation": "Sari says **Sorry, I can't** + a reason (**I'm working**), then suggests another day: **How about Sunday?** That's the polite three-part no. She wants to go, just not on Saturday."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "When and where?",
+        "text": "Your friend says yes. Now fix the time and the place.",
+        "body": "Ask: **When shall we meet?** **Where shall we meet?** **Is Saturday OK for you?** Suggest: **How about 7?** **Let's meet at 7 at the station.** Finish: **See you on Saturday!** or **I'll see you there.**\nSmall words from A1: **at** + a clock time (*at 7*) or a meeting point (*at the station*), **on** + a day (*on Saturday morning*), nothing before *tomorrow, tonight, next…*. And careful: *setengah tujuh* = **6:30** = *half past six*.",
+        "pairs": [
+          {
+            "en": "When shall we meet?",
+            "id": "Kapan kita ketemu?"
+          },
+          {
+            "en": "Where shall we meet?",
+            "id": "Kita ketemu di mana?"
+          },
+          {
+            "en": "Are you free on Saturday?",
+            "id": "Sabtu kamu kosong?"
+          },
+          {
+            "en": "Is Saturday OK for you?",
+            "id": "Hari Sabtu bisa?"
+          },
+          {
+            "en": "How about 7?",
+            "id": "Gimana kalau jam 7?"
+          },
+          {
+            "en": "Let's meet at the station.",
+            "id": "Ketemu di stasiun, yuk."
+          },
+          {
+            "en": "See you on Saturday!",
+            "id": "Sampai ketemu hari Sabtu!"
+          },
+          {
+            "en": "I'll see you there.",
+            "id": "Sampai ketemu di sana."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You and Sari have the place. Now ask about the time.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "arrange-a-time",
+          "prompt": "Arrange the words: Kita ketemu jam berapa?",
+          "tokens": [
+            "meet",
+            "shall",
+            "What",
+            "we",
+            "time"
+          ],
+          "solution": "What time shall we meet?",
+          "explanation": "Like *When shall we meet?*: the question word **What time** comes first, then **shall we** + the base verb **meet**. Indonesian puts *jam berapa* at the end; English puts it at the start."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next plan.",
+        "artifact": {
+          "title": "Cheat sheet · Making plans",
+          "intro": "Invite, answer kindly, then fix the time and place.",
+          "headers": [
+            "Situation",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Invite (polite)",
+              "Would you like to have lunch with us?",
+              "Mau makan siang bareng kami?"
+            ],
+            [
+              "Invite (friends)",
+              "Do you want to come to my house?",
+              "Mau main ke rumahku?"
+            ],
+            [
+              "Do it together",
+              "Let's go! / Shall we go?",
+              "Ayo! / Yuk, berangkat?"
+            ],
+            [
+              "Suggest",
+              "How about going to the cinema? / How about 7?",
+              "Gimana kalau ke bioskop? / Gimana kalau jam 7?"
+            ],
+            [
+              "Say yes",
+              "Sure, I'd love to! / That sounds great!",
+              "Mau banget! / Kedengarannya asyik!"
+            ],
+            [
+              "Say no",
+              "I'm sorry, I can't. I'm working on Saturday.",
+              "Maaf, aku nggak bisa. Hari Sabtu aku kerja."
+            ],
+            [
+              "Another time",
+              "Maybe another time? / How about Sunday?",
+              "Lain kali, ya? / Gimana kalau hari Minggu?"
+            ],
+            [
+              "Ask the time",
+              "What time shall we meet? / Is Saturday OK for you?",
+              "Jam berapa kita ketemu? / Hari Sabtu bisa?"
+            ],
+            [
+              "Ask the place",
+              "Where shall we meet?",
+              "Kita ketemu di mana?"
+            ],
+            [
+              "Fix it",
+              "Let's meet at 7 at the station.",
+              "Ketemu jam 7 di stasiun, yuk."
+            ],
+            [
+              "Finish",
+              "See you on Saturday! / I'll see you there.",
+              "Sampai ketemu hari Sabtu! / Sampai ketemu di sana."
+            ]
+          ],
+          "tips": [
+            "**to** after *like* and *want* (Would you like **to** come?), no *to* after *Let's* and *Shall we*. After **How about**: a noun or **verb + -ing** (How about **going**…?).",
+            "A kind no is a clear no: **I'm sorry, I can't** + reason + another time. *Maybe* or *We'll see* sounds like a possible yes.",
+            "**at** 7, **at** the station, **on** Saturday, no word before *tomorrow / tonight / next*. *setengah tujuh* = **6:30** (half past six)."
+          ],
+          "examples": [
+            {
+              "en": "Shall we go to the night market? — Yes, let's!",
+              "id": "Yuk kita ke pasar malam? — Ayo!"
+            },
+            {
+              "en": "Thanks for asking, but I'm busy tonight.",
+              "id": "Makasih udah ngajak, tapi malam ini aku sibuk."
+            },
+            {
+              "en": "Sorry, I'm going to be late. I'll be there at 7:15.",
+              "id": "Maaf, aku bakal telat. Aku sampai jam 7.15."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These two British Council pages show friends making real plans, with short exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar membuat rencana: cara mengajak orang, cara bilang ya atau tidak dengan ramah, dan cara menyepakati kapan dan di mana bertemu. Yuk, kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Mengajak seseorang",
+        "text": "Pertama, empat cara mengajak orang melakukan sesuatu bersamamu.",
+        "body": "**Ajakan** (*invitation*) meminta orang ikut bersamamu.\n- **Would you like to** + kata kerja? Sopan, untuk siapa saja: atasan, klien.\n- **Do you want to** + kata kerja? Akrab, untuk teman.\n- **Let's** + kata kerja. Kamu sudah tahu: *ayo kita…*\n- **Shall we** + kata kerja? Hafalkan sebagai ungkapan: *yuk kita…?* (lebih British).\nSetelah *like* dan *want* ada **to**. Setelah *Let's* dan *Shall we*, tidak ada *to*. **Do you like…?** bukan ajakan: itu bertanya apa yang disukai seseorang.",
+        "pairs": [
+          {
+            "en": "Would you like to have lunch with us?",
+            "id": "Mau makan siang bareng kami? (sopan)"
+          },
+          {
+            "en": "Do you want to come to my house?",
+            "id": "Mau main ke rumahku? (akrab)"
+          },
+          {
+            "en": "Let's take a break.",
+            "id": "Yuk, istirahat dulu."
+          },
+          {
+            "en": "Shall we go?",
+            "id": "Yuk, berangkat?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina mau mengajak rekan kerja barunya. Bantu dia memilih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-and-respond",
+          "prompt": "Rina mau mengajak rekan kerja barunya, Budi, main badminton hari Minggu. Ajakan mana yang benar?",
+          "options": [
+            "Would you like play badminton on Sunday?",
+            "Would you like to play badminton on Sunday?",
+            "Do you like play badminton on Sunday?"
+          ],
+          "answer": 1,
+          "explanation": "Ajakan yang sopan adalah **Would you like to** + kata kerja: **to** jangan dibuang. *Do you like…?* bertanya apa yang Budi sukai secara umum (*suka*), bukan ajakan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How about going…?",
+        "text": "Satu cara lagi untuk mengusulkan sesuatu, dan ada jebakannya.",
+        "body": "**How about …?** = **What about …?** = *Gimana kalau …?* Setelahnya ada **kata benda** (*noun*: *a coffee, Saturday, 7*) atau **kata kerja + -ing**. Kenapa? **about** adalah **kata depan** (*preposition*, seperti *in, on, at*), dan setelahnya bahasa Inggris butuh kata 'benda'. Jadi kata kerjanya diberi **-ing** dan menjadi nama kegiatan, seperti *swimming* di *I like swimming*. *Gimana kalau pergi* tidak mengubah *pergi*, tapi 'How about go' salah.",
+        "pairs": [
+          {
+            "en": "How about a coffee?",
+            "id": "Gimana kalau ngopi?"
+          },
+          {
+            "en": "How about Saturday?",
+            "id": "Gimana kalau hari Sabtu?"
+          },
+          {
+            "en": "How about going to the cinema?",
+            "id": "Gimana kalau ke bioskop? (cinema: British; Amerika: the movies)"
+          },
+          {
+            "en": "What about cooking at home?",
+            "id": "Gimana kalau masak di rumah?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hari yang panas di Jakarta. Buat usulan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-and-respond",
+          "prompt": "Hari ini panas sekali. Lengkapi: How about ___ to the beach?",
+          "options": [
+            "go",
+            "to go",
+            "going"
+          ],
+          "answer": 2,
+          "explanation": "Setelah **about** (kata depan), pakai kata benda atau **kata kerja + -ing**: **How about going…?** 'go' adalah terjemahan kata per kata dari *gimana kalau pergi*, dan tidak pernah ada *to* setelah about."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ya atau tidak, dengan ramah",
+        "text": "Seseorang mengajakmu. Begini cara menjawabnya.",
+        "body": "**Ya:** *Sure, I'd love to!* (I'd = I would). **to** tetap ada: itu mewakili kata kerjanya (*I'd love to come*), jadi 'I'd love' saja salah. Bisa juga: *That sounds great!* (*sound* = kedengarannya), *Good idea!*, *Yes, let's!*\n**Tidak**, dalam tiga bagian: **I'm sorry, I can't.** + **alasan** singkat (untuk rencana yang sudah pasti, pakai present continuous: *I'm working on Saturday.*) + **lain kali**: *Maybe another time?* atau *How about Sunday?*\nHindari *No, I don't want*: terdengar kasar.",
+        "pairs": [
+          {
+            "en": "Sure, I'd love to!",
+            "id": "Mau banget!"
+          },
+          {
+            "en": "That sounds great!",
+            "id": "Kedengarannya asyik!"
+          },
+          {
+            "en": "Good idea!",
+            "id": "Ide bagus!"
+          },
+          {
+            "en": "I'm sorry, I can't.",
+            "id": "Maaf, aku nggak bisa."
+          },
+          {
+            "en": "Maybe another time?",
+            "id": "Lain kali, ya?"
+          },
+          {
+            "en": "Thanks for asking.",
+            "id": "Makasih udah ngajak."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Menolak dengan jelas itu sopan",
+        "text": "Di Indonesia, jawaban lembut seperti *insya Allah* atau *lihat nanti, ya* adalah kebiasaan yang sopan. Ini yang diharapkan penutur bahasa Inggris.",
+        "body": "*Insya Allah* adalah ungkapan yang indah, dan banyak penutur bahasa Inggris yang Muslim juga memakainya. Tapi *Maybe* atau *We'll see* biasanya terdengar seperti **mungkin bisa**, jadi temanmu bisa saja menunggumu. Kalau kamu tidak bisa datang, beri jawaban **tidak + alasan** yang jelas dan ramah. Belum tahu? Katakan itu, dan sebutkan kapan kamu akan menjawab.",
+        "examples": [
+          {
+            "en": "Sorry, I can't. I'm meeting a client on Friday.",
+            "id": "Maaf, aku nggak bisa. Hari Jumat aku ketemu klien."
+          },
+          {
+            "en": "Thanks for asking, but I'm busy tonight. How about tomorrow?",
+            "id": "Makasih udah ngajak, tapi malam ini aku sibuk. Gimana kalau besok?"
+          },
+          {
+            "en": "I'm sorry, I can't. I'm working on Sunday. Maybe another time?",
+            "id": "Maaf, aku nggak bisa. Hari Minggu aku kerja. Lain kali, ya?"
+          },
+          {
+            "en": "I'm not sure yet. I'll tell you tomorrow.",
+            "id": "Aku belum tahu. Besok aku kabari, ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas mengajakmu, tapi kamu sudah punya rencana.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "accept-decline-politely",
+          "prompt": "Dimas: 'Do you want to play futsal tonight?' Kamu tidak bisa karena malam ini kamu mengunjungi nenekmu. Jawaban mana yang paling baik?",
+          "options": [
+            "Maybe… we'll see.",
+            "No, I don't want.",
+            "Sorry, I can't. I'm visiting my grandma tonight."
+          ],
+          "answer": 2,
+          "explanation": "Penolakan yang sopan dalam bahasa Inggris itu jelas: **Sorry, I can't** + alasan dengan present continuous (rencana yang sudah ada). *Maybe… we'll see* membuat Dimas mengira kamu mungkin datang, dan *No, I don't want* terdengar kasar."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan Sari",
+        "text": "Sekarang kamu mengajak Sari. Tekan play dan dengarkan jawabannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "accept-decline-politely",
+          "prompt": "Kamu bertanya ke Sari: 'Do you want to go to the mall on Saturday?' Dengarkan jawabannya. Apa maksudnya?",
+          "listen": "Sorry, I can't go on Saturday. I'm working. How about Sunday?",
+          "options": [
+            "She can come on Saturday.",
+            "She can't come on Saturday, and she suggests Sunday.",
+            "She doesn't want to go to the mall."
+          ],
+          "answer": 1,
+          "explanation": "Sari bilang **Sorry, I can't** + alasan (**I'm working**), lalu mengusulkan hari lain: **How about Sunday?** Itulah penolakan sopan tiga bagian. Dia mau pergi, hanya saja tidak hari Sabtu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kapan dan di mana?",
+        "text": "Temanmu bilang ya. Sekarang tentukan waktu dan tempatnya.",
+        "body": "Tanya: **When shall we meet?** **Where shall we meet?** **Is Saturday OK for you?** Usulkan: **How about 7?** **Let's meet at 7 at the station.** Tutup: **See you on Saturday!** atau **I'll see you there.**\nKata depan dari A1: **at** + jam (*at 7*) atau tempat bertemu (*at the station*), **on** + hari (*on Saturday morning*), tanpa kata depan sebelum *tomorrow, tonight, next…*. Hati-hati: *setengah tujuh* = **6:30** = *half past six*.",
+        "pairs": [
+          {
+            "en": "When shall we meet?",
+            "id": "Kapan kita ketemu?"
+          },
+          {
+            "en": "Where shall we meet?",
+            "id": "Kita ketemu di mana?"
+          },
+          {
+            "en": "Are you free on Saturday?",
+            "id": "Sabtu kamu kosong?"
+          },
+          {
+            "en": "Is Saturday OK for you?",
+            "id": "Hari Sabtu bisa?"
+          },
+          {
+            "en": "How about 7?",
+            "id": "Gimana kalau jam 7?"
+          },
+          {
+            "en": "Let's meet at the station.",
+            "id": "Ketemu di stasiun, yuk."
+          },
+          {
+            "en": "See you on Saturday!",
+            "id": "Sampai ketemu hari Sabtu!"
+          },
+          {
+            "en": "I'll see you there.",
+            "id": "Sampai ketemu di sana."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu dan Sari sudah sepakat tempatnya. Sekarang tanyakan jamnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "arrange-a-time",
+          "prompt": "Susun kata-katanya: Kita ketemu jam berapa?",
+          "tokens": [
+            "meet",
+            "shall",
+            "What",
+            "we",
+            "time"
+          ],
+          "solution": "What time shall we meet?",
+          "explanation": "Sama seperti *When shall we meet?*: kata tanya **What time** di depan, lalu **shall we** + kata kerja dasar **meet**. Bahasa Indonesia menaruh *jam berapa* di akhir; bahasa Inggris di awal."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk rencanamu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Membuat rencana",
+          "intro": "Ajak, jawab dengan ramah, lalu tentukan waktu dan tempatnya.",
+          "headers": [
+            "Situasi",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Mengajak (sopan)",
+              "Would you like to have lunch with us?",
+              "Mau makan siang bareng kami?"
+            ],
+            [
+              "Mengajak (teman)",
+              "Do you want to come to my house?",
+              "Mau main ke rumahku?"
+            ],
+            [
+              "Melakukan bersama",
+              "Let's go! / Shall we go?",
+              "Ayo! / Yuk, berangkat?"
+            ],
+            [
+              "Mengusulkan",
+              "How about going to the cinema? / How about 7?",
+              "Gimana kalau ke bioskop? / Gimana kalau jam 7?"
+            ],
+            [
+              "Bilang ya",
+              "Sure, I'd love to! / That sounds great!",
+              "Mau banget! / Kedengarannya asyik!"
+            ],
+            [
+              "Bilang tidak",
+              "I'm sorry, I can't. I'm working on Saturday.",
+              "Maaf, aku nggak bisa. Hari Sabtu aku kerja."
+            ],
+            [
+              "Lain kali",
+              "Maybe another time? / How about Sunday?",
+              "Lain kali, ya? / Gimana kalau hari Minggu?"
+            ],
+            [
+              "Tanya waktu",
+              "What time shall we meet? / Is Saturday OK for you?",
+              "Jam berapa kita ketemu? / Hari Sabtu bisa?"
+            ],
+            [
+              "Tanya tempat",
+              "Where shall we meet?",
+              "Kita ketemu di mana?"
+            ],
+            [
+              "Memastikan",
+              "Let's meet at 7 at the station.",
+              "Ketemu jam 7 di stasiun, yuk."
+            ],
+            [
+              "Menutup",
+              "See you on Saturday! / I'll see you there.",
+              "Sampai ketemu hari Sabtu! / Sampai ketemu di sana."
+            ]
+          ],
+          "tips": [
+            "**to** setelah *like* dan *want* (Would you like **to** come?), tanpa *to* setelah *Let's* dan *Shall we*. Setelah **How about**: kata benda atau **kata kerja + -ing** (How about **going**…?).",
+            "Penolakan yang sopan itu jelas: **I'm sorry, I can't** + alasan + lain kali. *Maybe* atau *We'll see* terdengar seperti mungkin bisa.",
+            "**at** 7, **at** the station, **on** Saturday, tanpa kata depan sebelum *tomorrow / tonight / next*. *setengah tujuh* = **6:30** (half past six)."
+          ],
+          "examples": [
+            {
+              "en": "Shall we go to the night market? — Yes, let's!",
+              "id": "Yuk kita ke pasar malam? — Ayo!"
+            },
+            {
+              "en": "Thanks for asking, but I'm busy tonight.",
+              "id": "Makasih udah ngajak, tapi malam ini aku sibuk."
+            },
+            {
+              "en": "Sorry, I'm going to be late. I'll be there at 7:15.",
+              "id": "Maaf, aku bakal telat. Aku sampai jam 7.15."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lagi",
+        "text": "Mau latihan lagi? Dua halaman British Council ini menunjukkan teman-teman yang membuat rencana sungguhan, dengan latihan singkat."
+      }
+    ]
+  }
+}
