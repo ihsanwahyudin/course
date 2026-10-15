@@ -1,0 +1,714 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll be a detective: you'll look at the evidence and make smart guesses with must be, might be and can't be. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Detective English",
+        "text": "Quick recap: you know **must** = harus and **might / may / could** = mungkin. Today **must** gets a new job!",
+        "body": "When you see **evidence** (bukti) and make a smart guess about **now**, that's **deduction** (menyimpulkan). Choose the word that shows how sure you are:\n**must be** = *pasti* (almost sure: yes)\n**might / may / could be** = *mungkin* (not sure)\n**can't be** = *tidak mungkin* (almost sure: no)\nCareful: here *must* doesn't mean *harus*. *You must be tired* = Kamu **pasti** capek, not 'you have to be tired'.",
+        "pairs": [
+          {
+            "en": "must be",
+            "id": "pasti"
+          },
+          {
+            "en": "might be",
+            "id": "mungkin"
+          },
+          {
+            "en": "may be / could be",
+            "id": "mungkin juga"
+          },
+          {
+            "en": "can't be",
+            "id": "tidak mungkin"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "a clue",
+            "id": "petunjuk"
+          },
+          {
+            "en": "a guess",
+            "id": "dugaan"
+          },
+          {
+            "en": "a conclusion",
+            "id": "kesimpulan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "From evidence to a conclusion",
+        "text": "Look at the evidence first, then the guess. How sure is each speaker?",
+        "body": "Strong evidence → **must be**. One clue, or many possible reasons → **might be**. The evidence makes it impossible → **can't be**.",
+        "examples": [
+          {
+            "en": "The lights are off. They must be out.",
+            "id": "Lampunya mati. Mereka pasti sedang keluar."
+          },
+          {
+            "en": "There's a long queue at that warung every day. The food must be delicious.",
+            "id": "Warung itu selalu antre panjang setiap hari. Makanannya pasti enak."
+          },
+          {
+            "en": "Sari's phone is off. She might be in a meeting.",
+            "id": "HP Sari mati. Dia mungkin sedang rapat."
+          },
+          {
+            "en": "That can't be Rina. She's in Bali this week.",
+            "id": "Itu tidak mungkin Rina. Minggu ini dia di Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Nobody answers",
+        "text": "You call the Bandung office at 9 pm. Nobody answers. The website says: **Office hours: 8 am – 5 pm**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "infer-from-evidence",
+          "prompt": "What's the best conclusion?",
+          "options": [
+            "The office can't be closed.",
+            "The office must to be closed.",
+            "The office must be closed."
+          ],
+          "answer": 2,
+          "explanation": "9 pm is after office hours: strong evidence, so you're almost sure → **must be closed**. *can't be closed* says the opposite of the evidence, and *must to be* is wrong: must is a helper word, so no *to*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Not mustn't: can't",
+        "text": "This one **looks like a broken rule**. Isn't the opposite of *must be* … *mustn't be*? No!",
+        "body": "You know **mustn't** = *dilarang* (*You mustn't smoke here*). So 'He mustn't be at home' sounds like a rule: he isn't allowed to be at home! For *tidak mungkin*, English uses **can't be** (or **couldn't be**): *He can't be at home. His car isn't there.* Just remember the pair **must be ↔ can't be**.\nAnother trap: *bisa jadi* is **not** 'can be'. For a guess, say *That **might** be Rina's bag*, not 'That can be Rina's bag'. *can be* = sometimes true in general (*Jakarta can be very hot*).",
+        "pairs": [
+          {
+            "en": "can't be",
+            "id": "tidak mungkin"
+          },
+          {
+            "en": "couldn't be",
+            "id": "tidak mungkin (sama dengan can't be)"
+          },
+          {
+            "en": "mustn't",
+            "id": "dilarang (aturan, bukan dugaan)"
+          },
+          {
+            "en": "might be",
+            "id": "bisa jadi / mungkin"
+          },
+          {
+            "en": "can be",
+            "id": "kadang-kadang bisa (umum)"
+          },
+          {
+            "en": "a signature",
+            "id": "tanda tangan"
+          },
+          {
+            "en": "the airport",
+            "id": "bandara"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Where's Budi?",
+        "text": "Sari asks: 'Is Budi still at the office? I need his signature.' But you've just seen Budi at Soekarno-Hatta airport.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "must-might-cant-be",
+          "prompt": "Complete: He ___ at the office.",
+          "options": [
+            "mustn't be",
+            "can be",
+            "can't be"
+          ],
+          "answer": 2,
+          "explanation": "You've just seen him at the airport, so it's impossible → **can't be**. *mustn't be* means dilarang, and *can be* isn't used for a guess."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "+ verb, + be, + be + -ing",
+        "text": "What comes after **must / might / can't**? Always the base verb: no *to*, no *-s*.",
+        "body": "+ **be** + an adjective (kata sifat: *tired, busy*) or a place: *She must be busy. He might be at the gym.*\n+ a **verb**: *He must know the answer. They must live near here.*\n+ **be + -ing** for what's happening **right now** (*sedang*): *They must be having a meeting* = pasti sedang rapat.\nThe Indonesian trap: *Kamu pasti capek* has no to be, but English needs it: **You must be tired**, not 'You must tired'. And *sedang* = **be + -ing**: not 'must driving'.",
+        "pairs": [
+          {
+            "en": "must be busy",
+            "id": "pasti sibuk"
+          },
+          {
+            "en": "must know",
+            "id": "pasti tahu"
+          },
+          {
+            "en": "must live",
+            "id": "pasti tinggal"
+          },
+          {
+            "en": "must be + -ing",
+            "id": "pasti sedang …"
+          },
+          {
+            "en": "might be driving",
+            "id": "mungkin sedang menyetir"
+          },
+          {
+            "en": "can't be studying",
+            "id": "tidak mungkin sedang belajar"
+          },
+          {
+            "en": "a bus stop",
+            "id": "halte bus"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "At the bus stop",
+        "text": "You see Rina and Dimas at the bus stop. They keep looking down the road and checking the time.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "must-might-cant-be",
+          "prompt": "Arrange the words: Mereka pasti sedang menunggu bus.",
+          "tokens": [
+            "bus",
+            "must",
+            "waiting",
+            "They",
+            "the",
+            "be",
+            "for"
+          ],
+          "solution": "They must be waiting for the bus.",
+          "explanation": "*pasti* = **must**, and *sedang* = **be + -ing**: **They must be waiting** … The evidence (looking down the road, checking the time) is strong, so must fits."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How sure are you?",
+        "text": "Now put it all on one scale, from most sure *yes* to most sure *no*.",
+        "body": "**is** = a fact (100% yes)\n**must be** = almost sure: yes\n**might / may / could be** = not sure\n**might not / may not be** = not sure, maybe not\n**can't be** = almost sure: no\n**isn't** = a fact (100% no)\nCareful: *mungkin tidak* = **might not be**, but *tidak mungkin* = **can't be**. If you have no clue, or many reasons are possible, don't say must: say **might**.",
+        "pairs": [
+          {
+            "en": "is",
+            "id": "fakta: ya"
+          },
+          {
+            "en": "must be",
+            "id": "hampir pasti ya"
+          },
+          {
+            "en": "might / may / could be",
+            "id": "tidak yakin"
+          },
+          {
+            "en": "might not / may not be",
+            "id": "mungkin tidak"
+          },
+          {
+            "en": "can't be",
+            "id": "hampir pasti tidak"
+          },
+          {
+            "en": "isn't",
+            "id": "fakta: tidak"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "An unknown number",
+        "text": "Your phone rings. It's a number you don't know, and you aren't expecting a call from anyone.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "degrees-of-certainty",
+          "prompt": "Which sentence matches how sure you are?",
+          "options": [
+            "It must be the bank.",
+            "It might be the bank.",
+            "It can't be the bank."
+          ],
+          "answer": 1,
+          "explanation": "You have no evidence: it could be anyone. So you're **not sure** → **might be**. *must be* needs strong evidence, and *can't be* needs evidence that it's impossible."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Quick review: say the English, then flip the card.",
+        "flashcards": [
+          {
+            "front": "pasti (dugaan dari bukti)",
+            "back": "must be"
+          },
+          {
+            "front": "mungkin (tidak yakin)",
+            "back": "might be / may be / could be"
+          },
+          {
+            "front": "tidak mungkin",
+            "back": "can't be"
+          },
+          {
+            "front": "mungkin tidak",
+            "back": "might not be / may not be"
+          },
+          {
+            "front": "pasti sedang … (sekarang)",
+            "back": "must be + -ing"
+          },
+          {
+            "front": "Correct it: She must to be tired.",
+            "back": "She must be tired."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next detective moment!",
+        "artifact": {
+          "title": "Cheat sheet · must be, might be, can't be",
+          "intro": "Deduction = a smart guess about now, from evidence. The word you choose shows how sure you are.",
+          "headers": [
+            "How sure?",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "100% yes (a fact)",
+              "is / are",
+              "Rina is at home. I can see her."
+            ],
+            [
+              "Almost sure: yes (pasti)",
+              "must be",
+              "Her motorbike is outside. She must be at home."
+            ],
+            [
+              "Not sure (mungkin)",
+              "might / may / could be",
+              "Sari's phone is off. She might be in a meeting."
+            ],
+            [
+              "Not sure, maybe not (mungkin tidak)",
+              "might not / may not be",
+              "He might not be at the office. He often works from home."
+            ],
+            [
+              "Almost sure: no (tidak mungkin)",
+              "can't be / couldn't be",
+              "He can't be at home. His car isn't there."
+            ],
+            [
+              "100% no (a fact)",
+              "isn't / aren't",
+              "Rina isn't at home. I'm at her house now."
+            ],
+            [
+              "Happening now (pasti sedang)",
+              "must / might / can't + be + -ing",
+              "The neighbours must be having a party."
+            ],
+            [
+              "Other verbs",
+              "must / might / can't + verb",
+              "She knows every street. She must live here."
+            ]
+          ],
+          "tips": [
+            "Not mustn't be: mustn't = dilarang. The opposite of must be is **can't be**.",
+            "Not 'That can be Rina's bag': for a guess use **might / may / could**.",
+            "No to, and don't drop be: **She must be tired**, not 'must to be' or 'must tired'."
+          ],
+          "examples": [
+            {
+              "en": "The lights are off. They must be out.",
+              "id": "Lampunya mati. Mereka pasti sedang keluar."
+            },
+            {
+              "en": "That can't be Rina. She's in Bali this week.",
+              "id": "Itu tidak mungkin Rina. Minggu ini dia di Bali."
+            },
+            {
+              "en": "Budi isn't answering. He might be driving.",
+              "id": "Budi tidak menjawab. Dia mungkin sedang menyetir."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read",
+        "text": "Want more? Watch a one-minute BBC video on modals of deduction, and read the British Council page with two practice tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu jadi detektif: kamu melihat bukti dan membuat dugaan cerdas dengan must be, might be dan can't be. Yuk, mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bahasa Inggris ala detektif",
+        "text": "Ulasan singkat: kamu sudah tahu **must** = harus dan **might / may / could** = mungkin. Hari ini **must** dapat tugas baru!",
+        "body": "Kalau kamu melihat **bukti** lalu membuat dugaan cerdas tentang **sekarang**, itu namanya **deduction** (menyimpulkan). Pilih kata yang menunjukkan seberapa yakin kamu:\n**must be** = *pasti* (hampir yakin: ya)\n**might / may / could be** = *mungkin* (tidak yakin)\n**can't be** = *tidak mungkin* (hampir yakin: tidak)\nHati-hati: di sini *must* bukan berarti *harus*. *You must be tired* = Kamu **pasti** capek, bukan 'kamu harus capek'.",
+        "pairs": [
+          {
+            "en": "must be",
+            "id": "pasti"
+          },
+          {
+            "en": "might be",
+            "id": "mungkin"
+          },
+          {
+            "en": "may be / could be",
+            "id": "mungkin juga"
+          },
+          {
+            "en": "can't be",
+            "id": "tidak mungkin"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "a clue",
+            "id": "petunjuk"
+          },
+          {
+            "en": "a guess",
+            "id": "dugaan"
+          },
+          {
+            "en": "a conclusion",
+            "id": "kesimpulan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dari bukti ke kesimpulan",
+        "text": "Lihat buktinya dulu, lalu dugaannya. Seberapa yakin setiap pembicara?",
+        "body": "Bukti kuat → **must be**. Satu petunjuk, atau banyak kemungkinan alasan → **might be**. Buktinya membuat hal itu mustahil → **can't be**.",
+        "examples": [
+          {
+            "en": "The lights are off. They must be out.",
+            "id": "Lampunya mati. Mereka pasti sedang keluar."
+          },
+          {
+            "en": "There's a long queue at that warung every day. The food must be delicious.",
+            "id": "Warung itu selalu antre panjang setiap hari. Makanannya pasti enak."
+          },
+          {
+            "en": "Sari's phone is off. She might be in a meeting.",
+            "id": "HP Sari mati. Dia mungkin sedang rapat."
+          },
+          {
+            "en": "That can't be Rina. She's in Bali this week.",
+            "id": "Itu tidak mungkin Rina. Minggu ini dia di Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tidak ada yang menjawab",
+        "text": "Kamu menelepon kantor Bandung jam 9 malam. Tidak ada yang menjawab. Di situs webnya tertulis: **Office hours: 8 am – 5 pm**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "infer-from-evidence",
+          "prompt": "Apa kesimpulan yang paling tepat?",
+          "options": [
+            "The office can't be closed.",
+            "The office must to be closed.",
+            "The office must be closed."
+          ],
+          "answer": 2,
+          "explanation": "Jam 9 malam sudah lewat jam kantor: bukti kuat, jadi kamu hampir yakin → **must be closed**. *can't be closed* berlawanan dengan buktinya, dan *must to be* salah: must adalah kata bantu, jadi tanpa *to*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bukan mustn't: can't",
+        "text": "Yang ini **kelihatannya melanggar aturan**. Bukankah lawan dari *must be* adalah … *mustn't be*? Bukan!",
+        "body": "Kamu sudah tahu **mustn't** = *dilarang* (*You mustn't smoke here*). Jadi 'He mustn't be at home' terdengar seperti aturan: dia dilarang berada di rumah! Untuk *tidak mungkin*, bahasa Inggris memakai **can't be** (atau **couldn't be**): *He can't be at home. His car isn't there.* Hafalkan saja pasangannya, **must be ↔ can't be**.\nJebakan lain: *bisa jadi* **bukan** 'can be'. Untuk dugaan, katakan *That **might** be Rina's bag*, bukan 'That can be Rina's bag'. *can be* = kadang-kadang benar secara umum (*Jakarta can be very hot*).",
+        "pairs": [
+          {
+            "en": "can't be",
+            "id": "tidak mungkin"
+          },
+          {
+            "en": "couldn't be",
+            "id": "tidak mungkin (sama dengan can't be)"
+          },
+          {
+            "en": "mustn't",
+            "id": "dilarang (aturan, bukan dugaan)"
+          },
+          {
+            "en": "might be",
+            "id": "bisa jadi / mungkin"
+          },
+          {
+            "en": "can be",
+            "id": "kadang-kadang bisa (umum)"
+          },
+          {
+            "en": "a signature",
+            "id": "tanda tangan"
+          },
+          {
+            "en": "the airport",
+            "id": "bandara"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Budi di mana?",
+        "text": "Sari bertanya: 'Is Budi still at the office? I need his signature.' Tapi kamu baru saja melihat Budi di Bandara Soekarno-Hatta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "must-might-cant-be",
+          "prompt": "Lengkapi: He ___ at the office.",
+          "options": [
+            "mustn't be",
+            "can be",
+            "can't be"
+          ],
+          "answer": 2,
+          "explanation": "Kamu baru saja melihatnya di bandara, jadi mustahil → **can't be**. *mustn't be* artinya dilarang, dan *can be* tidak dipakai untuk dugaan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "+ kata kerja, + be, + be + -ing",
+        "text": "Apa yang datang sesudah **must / might / can't**? Selalu kata kerja dasar: tanpa *to*, tanpa *-s*.",
+        "body": "+ **be** + kata sifat (*tired, busy*) atau tempat: *She must be busy. He might be at the gym.*\n+ **kata kerja**: *He must know the answer. They must live near here.*\n+ **be + -ing** untuk yang **sedang** terjadi sekarang: *They must be having a meeting* = pasti sedang rapat.\nJebakan bahasa Indonesia: *Kamu pasti capek* tidak punya to be, tapi bahasa Inggris perlu: **You must be tired**, bukan 'You must tired'. Dan *sedang* = **be + -ing**: bukan 'must driving'.",
+        "pairs": [
+          {
+            "en": "must be busy",
+            "id": "pasti sibuk"
+          },
+          {
+            "en": "must know",
+            "id": "pasti tahu"
+          },
+          {
+            "en": "must live",
+            "id": "pasti tinggal"
+          },
+          {
+            "en": "must be + -ing",
+            "id": "pasti sedang …"
+          },
+          {
+            "en": "might be driving",
+            "id": "mungkin sedang menyetir"
+          },
+          {
+            "en": "can't be studying",
+            "id": "tidak mungkin sedang belajar"
+          },
+          {
+            "en": "a bus stop",
+            "id": "halte bus"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Di halte bus",
+        "text": "Kamu melihat Rina dan Dimas di halte bus. Mereka terus melihat ke arah jalan dan mengecek jam.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "must-might-cant-be",
+          "prompt": "Susun kata-katanya: Mereka pasti sedang menunggu bus.",
+          "tokens": [
+            "bus",
+            "must",
+            "waiting",
+            "They",
+            "the",
+            "be",
+            "for"
+          ],
+          "solution": "They must be waiting for the bus.",
+          "explanation": "*pasti* = **must**, dan *sedang* = **be + -ing**: **They must be waiting** … Buktinya (melihat ke jalan, mengecek jam) kuat, jadi must cocok."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Seberapa yakin kamu?",
+        "text": "Sekarang taruh semuanya di satu skala, dari paling yakin *ya* sampai paling yakin *tidak*.",
+        "body": "**is** = fakta (100% ya)\n**must be** = hampir pasti ya\n**might / may / could be** = tidak yakin\n**might not / may not be** = tidak yakin, mungkin tidak\n**can't be** = hampir pasti tidak\n**isn't** = fakta (100% tidak)\nHati-hati: *mungkin tidak* = **might not be**, tapi *tidak mungkin* = **can't be**. Kalau tidak ada petunjuk, atau banyak alasan mungkin, jangan pakai must: pakai **might**.",
+        "pairs": [
+          {
+            "en": "is",
+            "id": "fakta: ya"
+          },
+          {
+            "en": "must be",
+            "id": "hampir pasti ya"
+          },
+          {
+            "en": "might / may / could be",
+            "id": "tidak yakin"
+          },
+          {
+            "en": "might not / may not be",
+            "id": "mungkin tidak"
+          },
+          {
+            "en": "can't be",
+            "id": "hampir pasti tidak"
+          },
+          {
+            "en": "isn't",
+            "id": "fakta: tidak"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Nomor tak dikenal",
+        "text": "HP-mu berdering. Nomornya tidak kamu kenal, dan kamu tidak sedang menunggu telepon dari siapa pun.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "degrees-of-certainty",
+          "prompt": "Kalimat mana yang sesuai dengan seberapa yakin kamu?",
+          "options": [
+            "It must be the bank.",
+            "It might be the bank.",
+            "It can't be the bank."
+          ],
+          "answer": 1,
+          "explanation": "Kamu tidak punya bukti: bisa siapa saja. Jadi kamu **tidak yakin** → **might be**. *must be* perlu bukti kuat, dan *can't be* perlu bukti bahwa itu mustahil."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Ulasan cepat: ucapkan bahasa Inggrisnya, lalu balik kartunya.",
+        "flashcards": [
+          {
+            "front": "pasti (dugaan dari bukti)",
+            "back": "must be"
+          },
+          {
+            "front": "mungkin (tidak yakin)",
+            "back": "might be / may be / could be"
+          },
+          {
+            "front": "tidak mungkin",
+            "back": "can't be"
+          },
+          {
+            "front": "mungkin tidak",
+            "back": "might not be / may not be"
+          },
+          {
+            "front": "pasti sedang … (sekarang)",
+            "back": "must be + -ing"
+          },
+          {
+            "front": "Perbaiki: She must to be tired.",
+            "back": "She must be tired."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk momen detektifmu berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · must be, might be, can't be",
+          "intro": "Deduction = dugaan cerdas tentang sekarang, dari bukti. Kata yang kamu pilih menunjukkan seberapa yakin kamu.",
+          "headers": [
+            "Seberapa yakin?",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "100% ya (fakta)",
+              "is / are",
+              "Rina is at home. I can see her."
+            ],
+            [
+              "Hampir pasti ya (pasti)",
+              "must be",
+              "Her motorbike is outside. She must be at home."
+            ],
+            [
+              "Tidak yakin (mungkin)",
+              "might / may / could be",
+              "Sari's phone is off. She might be in a meeting."
+            ],
+            [
+              "Tidak yakin, mungkin tidak",
+              "might not / may not be",
+              "He might not be at the office. He often works from home."
+            ],
+            [
+              "Hampir pasti tidak (tidak mungkin)",
+              "can't be / couldn't be",
+              "He can't be at home. His car isn't there."
+            ],
+            [
+              "100% tidak (fakta)",
+              "isn't / aren't",
+              "Rina isn't at home. I'm at her house now."
+            ],
+            [
+              "Sedang terjadi (pasti sedang)",
+              "must / might / can't + be + -ing",
+              "The neighbours must be having a party."
+            ],
+            [
+              "Kata kerja lain",
+              "must / might / can't + kata kerja",
+              "She knows every street. She must live here."
+            ]
+          ],
+          "tips": [
+            "Bukan mustn't be: mustn't = dilarang. Lawan dari must be adalah **can't be**.",
+            "Bukan 'That can be Rina's bag': untuk dugaan pakai **might / may / could**.",
+            "Tanpa to, dan jangan hilangkan be: **She must be tired**, bukan 'must to be' atau 'must tired'."
+          ],
+          "examples": [
+            {
+              "en": "The lights are off. They must be out.",
+              "id": "Lampunya mati. Mereka pasti sedang keluar."
+            },
+            {
+              "en": "That can't be Rina. She's in Bali this week.",
+              "id": "Itu tidak mungkin Rina. Minggu ini dia di Bali."
+            },
+            {
+              "en": "Budi isn't answering. He might be driving.",
+              "id": "Budi tidak menjawab. Dia mungkin sedang menyetir."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca",
+        "text": "Mau lebih? Tonton video BBC satu menit tentang modal untuk menyimpulkan, dan baca halaman British Council dengan dua tes latihan."
+      }
+    ]
+  }
+}

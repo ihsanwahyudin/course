@@ -1,0 +1,808 @@
+{
+  "en": {
+    "greeting": "Hi! Today you learn to build new words from words you already know, and to pick the right form for a sentence.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Prefixes change the meaning",
+        "text": "Let's start at the front of the word.",
+        "body": "A **prefix** is a small piece at the **front** of a word. It changes the meaning, but the kind of word stays the same.\n- **un-** = not: *unhappy, unusual, unemployed*\n- **dis-** = not / the opposite: *dishonest, disagree, dislike*\n- **re-** = again: *redo, rewrite, rebuild*\nIndonesian writes *tidak jujur* as two words; English joins the 'not' to the word: *dishonest*.",
+        "pairs": [
+          {
+            "en": "unhappy",
+            "id": "tidak bahagia"
+          },
+          {
+            "en": "unusual",
+            "id": "tidak biasa"
+          },
+          {
+            "en": "unemployed",
+            "id": "menganggur"
+          },
+          {
+            "en": "dishonest",
+            "id": "tidak jujur"
+          },
+          {
+            "en": "disagree",
+            "id": "tidak setuju"
+          },
+          {
+            "en": "dislike",
+            "id": "tidak suka"
+          },
+          {
+            "en": "redo",
+            "id": "mengerjakan ulang"
+          },
+          {
+            "en": "rebuild",
+            "id": "membangun kembali"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "un- or dis-?",
+        "text": "Read these sentences out loud.",
+        "body": "**There's no rule** for un- or dis-: learn each word with its prefix. That's why 'unhonest' is wrong: the word is **dishonest**. If you must guess, un- is more common, but check a dictionary. Not every 're' word is re + word: *remember* and *report* aren't 'again'. Note: **in-/im-** also mean not: *incorrect, impossible*.",
+        "examples": [
+          {
+            "en": "Sari was unhappy with her old job.",
+            "id": "Sari tidak senang dengan pekerjaan lamanya."
+          },
+          {
+            "en": "My cousin is unemployed. He's looking for a job.",
+            "id": "Sepupu saya menganggur. Dia sedang mencari kerja."
+          },
+          {
+            "en": "I dislike working on Saturdays.",
+            "id": "Saya tidak suka kerja di hari Sabtu."
+          },
+          {
+            "en": "My wallet disappeared on the KRL this morning.",
+            "id": "Dompet saya hilang di KRL tadi pagi."
+          },
+          {
+            "en": "My manager didn't like the slides, so I had to redo them.",
+            "id": "Atasan saya tidak suka slide-nya, jadi saya harus membuatnya ulang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Choose the right word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prefixes",
+          "options": [
+            "unhonest",
+            "dishonest",
+            "inhonest"
+          ],
+          "answer": 1,
+          "prompt": "Don't trust that seller. He's ___: the phone he sold me was fake.",
+          "explanation": "**honest** takes **dis-**: *dishonest*. There's no rule for un- or dis-, so 'unhonest' sounds logical but isn't a word. 'inhonest' doesn't exist either."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Suffixes: people and things",
+        "text": "Now the end of the word.",
+        "body": "A **suffix** is a piece at the **end**. It usually changes the kind of word.\n- **-er / -or** = the person doing it: *teacher, manager, visitor*. Most take -er; learn the -or ones. -er can be a machine too: *charger*.\n- **-tion / -sion** and **-ment** make a **noun** (a thing word) from a verb: *inform → information, decide → decision, pay → payment, develop → development*.\nWatch the spelling: *explain → explanation* (no i). Like Indonesian *bayar → pembayaran*.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru"
+          },
+          {
+            "en": "visitor",
+            "id": "tamu, pengunjung"
+          },
+          {
+            "en": "charger",
+            "id": "pengisi daya (alat)"
+          },
+          {
+            "en": "information",
+            "id": "informasi"
+          },
+          {
+            "en": "invitation",
+            "id": "undangan"
+          },
+          {
+            "en": "decision",
+            "id": "keputusan"
+          },
+          {
+            "en": "payment",
+            "id": "pembayaran"
+          },
+          {
+            "en": "development",
+            "id": "perkembangan, pembangunan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "-ful and -less",
+        "text": "Two endings that make describing words.",
+        "body": "**-ful** = with, full of; **-less** = without: *useful / useless, careful / careless* (ceroboh), *helpful, cashless*. The suffix **-ful** has **one l**; add -ly for an adverb and you get two: *carefully*. Not every -ful word has a -less partner: *beautiful*, and *successful → unsuccessful*.",
+        "examples": [
+          {
+            "en": "This app is really helpful for learning new words.",
+            "id": "Aplikasi ini sangat membantu untuk belajar kata baru."
+          },
+          {
+            "en": "Be careful! The floor is wet.",
+            "id": "Hati-hati! Lantainya basah."
+          },
+          {
+            "en": "I made a careless mistake in the email.",
+            "id": "Saya membuat kesalahan karena ceroboh di email itu."
+          },
+          {
+            "en": "More and more shops in Jakarta are cashless.",
+            "id": "Semakin banyak toko di Jakarta yang nontunai."
+          },
+          {
+            "en": "Please drive carefully.",
+            "id": "Tolong menyetir dengan hati-hati."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pick the right word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "suffixes",
+          "options": [
+            "useless",
+            "usefull",
+            "useful"
+          ],
+          "answer": 2,
+          "prompt": "This map app is really ___. It always shows me the fastest way to the office.",
+          "explanation": "The app helps, so it's **useful** (-ful = with: it has a use). **useless** means the opposite, and 'usefull' has one l too many: the suffix is **-ful**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Word families",
+        "text": "Now the key skill: choosing the right form.",
+        "body": "Words come in families: *decide / decision / decisive*, *succeed / success / successful / successfully*, *employ / employer / employee*. Look around the gap:\n- after **a / the / my** (nothing after) → **noun**: *a decision*\n- after **be** or **very**, or **before a noun** → **adjective**: *very successful, a successful shop*\n- after a **verb** (saying how) → **adverb**: *finished successfully*\n- after **to / can / don't** → **verb**: *I can't decide*\nIndonesian does this too: *memutuskan, keputusan*.",
+        "pairs": [
+          {
+            "en": "decide",
+            "id": "memutuskan"
+          },
+          {
+            "en": "decision",
+            "id": "keputusan"
+          },
+          {
+            "en": "decisive",
+            "id": "tegas"
+          },
+          {
+            "en": "succeed",
+            "id": "berhasil"
+          },
+          {
+            "en": "success",
+            "id": "kesuksesan"
+          },
+          {
+            "en": "successful",
+            "id": "sukses (kata sifat)"
+          },
+          {
+            "en": "successfully",
+            "id": "dengan sukses"
+          },
+          {
+            "en": "employer",
+            "id": "pemberi kerja"
+          },
+          {
+            "en": "employee",
+            "id": "karyawan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Which form?",
+        "text": "Look at the word before or after each family word.",
+        "body": "*my* + noun (decision), *can't* + verb (decide), *a* + adjective + noun (successful shop), verb + object + adverb (passed her test successfully). **employer** gives the job; **employee** (em-ploy-EE) does it.",
+        "examples": [
+          {
+            "en": "It's my decision, not yours.",
+            "id": "Itu keputusan saya, bukan keputusanmu."
+          },
+          {
+            "en": "I can't decide. Can you help me?",
+            "id": "Saya tidak bisa memutuskan. Bisa bantu saya?"
+          },
+          {
+            "en": "My brother runs a successful online shop.",
+            "id": "Kakak saya punya toko online yang sukses."
+          },
+          {
+            "en": "Rina passed her driving test successfully.",
+            "id": "Rina lulus ujian menyetirnya dengan sukses."
+          },
+          {
+            "en": "The factory has five hundred employees.",
+            "id": "Pabrik itu punya lima ratus karyawan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Which form fits the gap?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-families",
+          "options": [
+            "success",
+            "successful",
+            "successfully"
+          ],
+          "answer": 1,
+          "prompt": "Rina's warung is always full of customers. Her business is very ___.",
+          "explanation": "After **is very** you need an **adjective**: *successful*. *success* is a noun ('very success' is a common mistake), and *successfully* is an adverb for how someone does something."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Describe Pak Hasan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "word-families",
+          "tokens": [
+            "manager",
+            "decisive",
+            "Hasan",
+            "is",
+            "very",
+            "a",
+            "Pak"
+          ],
+          "solution": "Pak Hasan is a very decisive manager.",
+          "prompt": "Arrange the words: Pak Hasan manajer yang sangat tegas.",
+          "explanation": "*decisive* (tegas) is the adjective of *decide*. An adjective goes **before the noun**: *a very decisive manager*, not 'a manager very decisive' (Indonesian puts it after: *manajer yang tegas*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Save it!",
+        "artifact": {
+          "title": "Cheat sheet · Word formation",
+          "intro": "Prefixes, suffixes and how to choose the right form.",
+          "headers": [
+            "Part or slot",
+            "Meaning",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "un-",
+              "not",
+              "unhappy, unusual, unemployed"
+            ],
+            [
+              "dis-",
+              "not, the opposite",
+              "dishonest, disagree, dislike"
+            ],
+            [
+              "re-",
+              "again",
+              "redo, rewrite, rebuild"
+            ],
+            [
+              "in- / im- (note)",
+              "not",
+              "incorrect, impossible"
+            ],
+            [
+              "-er / -or",
+              "a person (or a machine)",
+              "teacher, manager, visitor, charger"
+            ],
+            [
+              "-tion / -sion",
+              "noun from a verb",
+              "information, invitation, decision"
+            ],
+            [
+              "-ment",
+              "noun from a verb",
+              "payment, development, agreement"
+            ],
+            [
+              "-ful",
+              "with, full of",
+              "useful, careful, helpful"
+            ],
+            [
+              "-less",
+              "without",
+              "useless, careless, cashless"
+            ],
+            [
+              "a / the / my + ___",
+              "noun",
+              "a decision, my success"
+            ],
+            [
+              "be / very + ___",
+              "adjective",
+              "very successful, so careful"
+            ],
+            [
+              "___ + noun",
+              "adjective",
+              "a successful business"
+            ],
+            [
+              "verb + ___",
+              "adverb (how)",
+              "finished it successfully"
+            ],
+            [
+              "to / can / don't + ___",
+              "verb",
+              "I can't decide."
+            ]
+          ],
+          "tips": [
+            "**un- or dis-?** No rule: learn each word. *dishonest*, never 'unhonest'.",
+            "**-ful** has one l (*useful*), but the adverb has two (*carefully*).",
+            "Look around the gap: *a decision*, *very successful*, *finished successfully*, *I can't decide*."
+          ],
+          "examples": [
+            {
+              "en": "Many people disagree with the new rule.",
+              "id": "Banyak orang tidak setuju dengan aturan baru itu."
+            },
+            {
+              "en": "Please rewrite the first paragraph.",
+              "id": "Tolong tulis ulang paragraf pertama."
+            },
+            {
+              "en": "Thanks for the information.",
+              "id": "Terima kasih atas informasinya."
+            },
+            {
+              "en": "We have to make a decision today.",
+              "id": "Kita harus membuat keputusan hari ini."
+            },
+            {
+              "en": "Her café is very successful.",
+              "id": "Kafenya sangat sukses."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These two engVid videos go a little further than this lesson."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar membuat kata baru dari kata yang sudah kamu tahu, dan memilih bentuk kata yang tepat untuk kalimat.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Prefix mengubah arti",
+        "text": "Kita mulai dari depan kata.",
+        "body": "**Prefix** (awalan) adalah potongan kecil di **depan** kata. Prefix mengubah arti, tapi jenis katanya tetap.\n- **un-** = tidak: *unhappy, unusual, unemployed* (menganggur)\n- **dis-** = tidak / kebalikannya: *dishonest, disagree, dislike*\n- **re-** = lagi, ulang: *redo, rewrite, rebuild*\nBahasa Indonesia menulis *tidak jujur* dua kata; bahasa Inggris menggabungkan 'tidak' ke katanya: *dishonest*.",
+        "pairs": [
+          {
+            "en": "unhappy",
+            "id": "tidak bahagia"
+          },
+          {
+            "en": "unusual",
+            "id": "tidak biasa"
+          },
+          {
+            "en": "unemployed",
+            "id": "menganggur"
+          },
+          {
+            "en": "dishonest",
+            "id": "tidak jujur"
+          },
+          {
+            "en": "disagree",
+            "id": "tidak setuju"
+          },
+          {
+            "en": "dislike",
+            "id": "tidak suka"
+          },
+          {
+            "en": "redo",
+            "id": "mengerjakan ulang"
+          },
+          {
+            "en": "rebuild",
+            "id": "membangun kembali"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "un- atau dis-?",
+        "text": "Baca kalimat-kalimat ini dengan suara keras.",
+        "body": "**Tidak ada aturan** untuk un- atau dis-: hafalkan setiap kata bersama prefix-nya. Karena itu 'unhonest' salah: katanya **dishonest**. Kalau harus menebak, un- lebih sering dipakai, tapi cek kamus. Tidak semua kata 're' itu re + kata: *remember* dan *report* tidak berarti 'lagi'. Catatan: **in-/im-** juga berarti tidak: *incorrect, impossible*.",
+        "examples": [
+          {
+            "en": "Sari was unhappy with her old job.",
+            "id": "Sari tidak senang dengan pekerjaan lamanya."
+          },
+          {
+            "en": "My cousin is unemployed. He's looking for a job.",
+            "id": "Sepupu saya menganggur. Dia sedang mencari kerja."
+          },
+          {
+            "en": "I dislike working on Saturdays.",
+            "id": "Saya tidak suka kerja di hari Sabtu."
+          },
+          {
+            "en": "My wallet disappeared on the KRL this morning.",
+            "id": "Dompet saya hilang di KRL tadi pagi."
+          },
+          {
+            "en": "My manager didn't like the slides, so I had to redo them.",
+            "id": "Atasan saya tidak suka slide-nya, jadi saya harus membuatnya ulang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pilih kata yang benar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prefixes",
+          "options": [
+            "unhonest",
+            "dishonest",
+            "inhonest"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Don't trust that seller. He's ___: the phone he sold me was fake.",
+          "explanation": "**honest** memakai **dis-**: *dishonest* (tidak jujur). Tidak ada aturan untuk un- atau dis-, jadi 'unhonest' kedengarannya logis tapi bukan kata bahasa Inggris. 'inhonest' juga tidak ada."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Suffix: orang dan benda",
+        "text": "Sekarang bagian belakang kata.",
+        "body": "**Suffix** (akhiran) adalah potongan di **belakang** kata. Biasanya suffix mengubah jenis kata.\n- **-er / -or** = orang yang melakukannya: *teacher, manager, visitor*. Kebanyakan pakai -er; yang -or dihafal. -er juga bisa alat: *charger*.\n- **-tion / -sion** dan **-ment** membuat **kata benda** dari kata kerja: *inform → information, decide → decision, pay → payment, develop → development*.\nPerhatikan ejaannya: *explain → explanation* (tanpa i). Mirip *bayar → pembayaran*.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru"
+          },
+          {
+            "en": "visitor",
+            "id": "tamu, pengunjung"
+          },
+          {
+            "en": "charger",
+            "id": "pengisi daya (alat)"
+          },
+          {
+            "en": "information",
+            "id": "informasi"
+          },
+          {
+            "en": "invitation",
+            "id": "undangan"
+          },
+          {
+            "en": "decision",
+            "id": "keputusan"
+          },
+          {
+            "en": "payment",
+            "id": "pembayaran"
+          },
+          {
+            "en": "development",
+            "id": "perkembangan, pembangunan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "-ful dan -less",
+        "text": "Dua akhiran yang membuat kata sifat.",
+        "body": "**-ful** = dengan, penuh; **-less** = tanpa: *useful / useless, careful / careless* (ceroboh), *helpful, cashless* (nontunai). Akhiran **-ful** pakai **satu l**; tambah -ly untuk adverb dan jadi dua: *carefully*. Tidak semua kata -ful punya pasangan -less: *beautiful*, dan *successful → unsuccessful*.",
+        "examples": [
+          {
+            "en": "This app is really helpful for learning new words.",
+            "id": "Aplikasi ini sangat membantu untuk belajar kata baru."
+          },
+          {
+            "en": "Be careful! The floor is wet.",
+            "id": "Hati-hati! Lantainya basah."
+          },
+          {
+            "en": "I made a careless mistake in the email.",
+            "id": "Saya membuat kesalahan karena ceroboh di email itu."
+          },
+          {
+            "en": "More and more shops in Jakarta are cashless.",
+            "id": "Semakin banyak toko di Jakarta yang nontunai."
+          },
+          {
+            "en": "Please drive carefully.",
+            "id": "Tolong menyetir dengan hati-hati."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pilih kata yang tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "suffixes",
+          "options": [
+            "useless",
+            "usefull",
+            "useful"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: This map app is really ___. It always shows me the fastest way to the office.",
+          "explanation": "Aplikasinya membantu, jadi **useful** (berguna; -ful = dengan). **useless** artinya kebalikannya, dan 'usefull' kelebihan satu l: akhirannya **-ful**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Keluarga kata",
+        "text": "Sekarang keterampilan kuncinya: memilih bentuk yang tepat.",
+        "body": "Kata punya keluarga: *decide / decision / decisive*, *succeed / success / successful / successfully*, *employ / employer / employee*. Lihat sekitar titik-titiknya:\n- setelah **a / the / my** (tanpa kata sesudahnya) → **kata benda**: *a decision*\n- setelah **be** atau **very**, atau **sebelum kata benda** → **kata sifat**: *very successful, a successful shop*\n- setelah **kata kerja** (menjelaskan bagaimana) → **adverb**: *finished successfully*\n- setelah **to / can / don't** → **kata kerja**: *I can't decide*\nBahasa Indonesia juga begitu: *memutuskan, keputusan*.",
+        "pairs": [
+          {
+            "en": "decide",
+            "id": "memutuskan"
+          },
+          {
+            "en": "decision",
+            "id": "keputusan"
+          },
+          {
+            "en": "decisive",
+            "id": "tegas"
+          },
+          {
+            "en": "succeed",
+            "id": "berhasil"
+          },
+          {
+            "en": "success",
+            "id": "kesuksesan"
+          },
+          {
+            "en": "successful",
+            "id": "sukses (kata sifat)"
+          },
+          {
+            "en": "successfully",
+            "id": "dengan sukses"
+          },
+          {
+            "en": "employer",
+            "id": "pemberi kerja"
+          },
+          {
+            "en": "employee",
+            "id": "karyawan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bentuk yang mana?",
+        "text": "Perhatikan kata sebelum atau sesudah setiap kata dari keluarga itu.",
+        "body": "*my* + kata benda (decision), *can't* + kata kerja (decide), *a* + kata sifat + kata benda (successful shop), kata kerja + objek + adverb (passed her test successfully). **employer** memberi pekerjaan; **employee** (em-ploy-II) yang bekerja.",
+        "examples": [
+          {
+            "en": "It's my decision, not yours.",
+            "id": "Itu keputusan saya, bukan keputusanmu."
+          },
+          {
+            "en": "I can't decide. Can you help me?",
+            "id": "Saya tidak bisa memutuskan. Bisa bantu saya?"
+          },
+          {
+            "en": "My brother runs a successful online shop.",
+            "id": "Kakak saya punya toko online yang sukses."
+          },
+          {
+            "en": "Rina passed her driving test successfully.",
+            "id": "Rina lulus ujian menyetirnya dengan sukses."
+          },
+          {
+            "en": "The factory has five hundred employees.",
+            "id": "Pabrik itu punya lima ratus karyawan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bentuk mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-families",
+          "options": [
+            "success",
+            "successful",
+            "successfully"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Rina's warung is always full of customers. Her business is very ___.",
+          "explanation": "Setelah **is very** kamu butuh **kata sifat**: *successful*. *success* adalah kata benda ('very success' kesalahan yang sering terjadi), dan *successfully* adalah adverb untuk bagaimana seseorang melakukan sesuatu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Gambarkan Pak Hasan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "word-families",
+          "tokens": [
+            "manager",
+            "decisive",
+            "Hasan",
+            "is",
+            "very",
+            "a",
+            "Pak"
+          ],
+          "solution": "Pak Hasan is a very decisive manager.",
+          "prompt": "Susun kata-katanya: Pak Hasan manajer yang sangat tegas.",
+          "explanation": "*decisive* (tegas) adalah kata sifat dari *decide*. Kata sifat ada **sebelum kata benda**: *a very decisive manager*, bukan 'a manager very decisive' (bahasa Indonesia menaruhnya di belakang: *manajer yang tegas*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan ya!",
+        "artifact": {
+          "title": "Ringkasan · Pembentukan kata",
+          "intro": "Prefix, suffix, dan cara memilih bentuk yang tepat.",
+          "headers": [
+            "Bagian atau posisi",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "un-",
+              "tidak",
+              "unhappy, unusual, unemployed"
+            ],
+            [
+              "dis-",
+              "tidak, kebalikan",
+              "dishonest, disagree, dislike"
+            ],
+            [
+              "re-",
+              "lagi, ulang",
+              "redo, rewrite, rebuild"
+            ],
+            [
+              "in- / im- (catatan)",
+              "tidak",
+              "incorrect, impossible"
+            ],
+            [
+              "-er / -or",
+              "orang (atau alat)",
+              "teacher, manager, visitor, charger"
+            ],
+            [
+              "-tion / -sion",
+              "kata benda dari kata kerja",
+              "information, invitation, decision"
+            ],
+            [
+              "-ment",
+              "kata benda dari kata kerja",
+              "payment, development, agreement"
+            ],
+            [
+              "-ful",
+              "dengan, penuh",
+              "useful, careful, helpful"
+            ],
+            [
+              "-less",
+              "tanpa",
+              "useless, careless, cashless"
+            ],
+            [
+              "a / the / my + ___",
+              "kata benda",
+              "a decision, my success"
+            ],
+            [
+              "be / very + ___",
+              "kata sifat",
+              "very successful, so careful"
+            ],
+            [
+              "___ + kata benda",
+              "kata sifat",
+              "a successful business"
+            ],
+            [
+              "kata kerja + ___",
+              "adverb (bagaimana)",
+              "finished it successfully"
+            ],
+            [
+              "to / can / don't + ___",
+              "kata kerja",
+              "I can't decide."
+            ]
+          ],
+          "tips": [
+            "**un- atau dis-?** Tidak ada aturan: hafalkan per kata. *dishonest*, bukan 'unhonest'.",
+            "**-ful** pakai satu l (*useful*), tapi adverb-nya dua (*carefully*).",
+            "Lihat sekitar titik-titiknya: *a decision*, *very successful*, *finished successfully*, *I can't decide*."
+          ],
+          "examples": [
+            {
+              "en": "Many people disagree with the new rule.",
+              "id": "Banyak orang tidak setuju dengan aturan baru itu."
+            },
+            {
+              "en": "Please rewrite the first paragraph.",
+              "id": "Tolong tulis ulang paragraf pertama."
+            },
+            {
+              "en": "Thanks for the information.",
+              "id": "Terima kasih atas informasinya."
+            },
+            {
+              "en": "We have to make a decision today.",
+              "id": "Kita harus membuat keputusan hari ini."
+            },
+            {
+              "en": "Her café is very successful.",
+              "id": "Kafenya sangat sukses."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Dua video engVid ini membahas sedikit lebih jauh dari pelajaran ini."
+      }
+    ]
+  }
+}

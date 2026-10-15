@@ -1,0 +1,666 @@
+{
+  "en": {
+    "greeting": "Hi! You already know how to say how long with the present perfect. Today you'll talk about activities that are still going on, explain what people can see, and choose between I've read and I've been reading. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Still going on",
+        "text": "Quick recap: you can already say how long with have/has + third form (I've lived here since 2020). Now a new form for activities.",
+        "body": "For an **activity** (kegiatan) that **started in the past and is still going on**, use **have/has + been + -ing**: *I've been waiting for an hour* (and I'm still waiting). **been** is the third form of *be*; the **-ing** says it's still happening. **'s = has** here: *She's been working since 7.* **The trap:** *Saya sudah menunggu dari tadi / sedang menunggu sejak jam 7* is not 'I am waiting here for an hour': *I'm waiting* is only about now and can't take **for** or **since**. Ask: **How long have you been + -ing?**",
+        "pairs": [
+          {
+            "en": "I've been waiting for an hour.",
+            "id": "Saya sudah menunggu satu jam."
+          },
+          {
+            "en": "She's been working since 7 o'clock.",
+            "id": "Dia sudah bekerja sejak jam 7."
+          },
+          {
+            "en": "for twenty minutes",
+            "id": "selama dua puluh menit"
+          },
+          {
+            "en": "since 8 o'clock",
+            "id": "sejak jam 8"
+          },
+          {
+            "en": "all morning",
+            "id": "sepanjang pagi"
+          },
+          {
+            "en": "all day",
+            "id": "seharian"
+          },
+          {
+            "en": "How long have you been learning English?",
+            "id": "Sudah berapa lama kamu belajar bahasa Inggris?"
+          },
+          {
+            "en": "For two years.",
+            "id": "Sudah dua tahun."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Pak Hasan's morning",
+        "text": "Look at Pak Hasan's morning as an ojek online driver. When did the activity start, and is it finished?",
+        "timeline": {
+          "title": "Started in the past, still going on",
+          "caption": "At 6:00 Pak Hasan started driving. It's 11:00 now and he's still driving. So: he has been driving for five hours (since 6:00).",
+          "marks": [
+            {
+              "label": "6:00: Pak Hasan starts driving",
+              "kind": "past"
+            },
+            {
+              "label": "9:00: still driving",
+              "kind": "past"
+            },
+            {
+              "label": "11:00 (now): he has been driving for five hours",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas started studying at the campus library at 8 a.m. Now it's 12 and he's still there, still studying.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-present-perfect",
+          "prompt": "Complete: Dimas ___ at the library for four hours.",
+          "options": [
+            "is studying",
+            "has been studying",
+            "was studying"
+          ],
+          "answer": 1,
+          "explanation": "He started in the past (8 a.m.) and is **still** studying, and the sentence says **how long** (for four hours) → **has been studying**. *is studying* is only about now and can't take *for four hours* (the *sedang* trap). *was studying* is about the past, but he's still there."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Your friend Sari arrives at the café forty minutes late. She says sorry and asks you:",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-present-perfect",
+          "prompt": "Arrange the words: Sudah berapa lama kamu menunggu?",
+          "tokens": [
+            "been",
+            "you",
+            "How",
+            "waiting",
+            "long",
+            "have"
+          ],
+          "solution": "How long have you been waiting?",
+          "explanation": "Question order: **How long + have + you + been + -ing?** The waiting started in the past and is still going on. Not 'How long are you waiting?': the present continuous can't say how long."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "You look tired!",
+        "text": "This form also explains what you can see right now.",
+        "body": "An activity has **just stopped**, and you can **see the result** now (tired, wet, dirty, red eyes): *I'm tired because I've been running.* *Your eyes are red. Have you been crying?* **The trap:** *Capek, habis lari* (habis = baru selesai) is not 'I'm tired because I'm running' (you aren't running now) or 'because I just run'. Say **I've been running**: the activity is over, but the result is here. Ask about what you see: **Have you been + -ing?** — *Yes, I have. / No, I haven't.*",
+        "pairs": [
+          {
+            "en": "I'm tired because I've been running.",
+            "id": "Saya capek karena habis lari."
+          },
+          {
+            "en": "Your eyes are red. Have you been crying?",
+            "id": "Matamu merah. Kamu habis menangis?"
+          },
+          {
+            "en": "Your hands are dirty! Have you been working in the garden?",
+            "id": "Tanganmu kotor! Kamu habis berkebun?"
+          },
+          {
+            "en": "The kitchen smells great. Have you been cooking?",
+            "id": "Dapurnya wangi sekali. Kamu habis masak?"
+          },
+          {
+            "en": "Yes, I have. / No, I haven't.",
+            "id": "Iya. / Tidak."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "What happened?",
+        "text": "You look out of the window. It isn't raining now, but the streets are full of puddles and people are carrying wet umbrellas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "recent-results",
+          "prompt": "Complete: Look at the streets! It ___.",
+          "options": [
+            "has been raining",
+            "is raining",
+            "has been rain"
+          ],
+          "answer": 0,
+          "explanation": "The rain has just stopped and you can see the result (wet streets) → **has been + -ing**: *It has been raining* (it's = it has). *is raining* means it's raining **now**, but it isn't. *has been rain* is missing **-ing**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Result or activity?",
+        "text": "Now the big choice: I've read or I've been reading?",
+        "body": "**Simple** (have/has + third form) = the **result**: **how many**, something **finished**. *I've read three books. I've painted the kitchen* (it's done). **Continuous** (have/has been + -ing) = the **activity**: **how long**, maybe **not finished**. *I've been reading all morning. I've been painting the kitchen* (that's why there's paint on my shirt). A **number** of things done → **simple**: not 'I've been reading three books this month' but **I've read three books this month**. **Both are right** with live, work, study + for/since: *I've lived / I've been living here for ten years.*",
+        "pairs": [
+          {
+            "en": "I've read three books.",
+            "id": "Saya sudah membaca tiga buku."
+          },
+          {
+            "en": "I've been reading all morning.",
+            "id": "Dari pagi saya membaca."
+          },
+          {
+            "en": "I've painted the kitchen.",
+            "id": "Saya sudah selesai mengecat dapur."
+          },
+          {
+            "en": "I've been painting the kitchen.",
+            "id": "Saya habis mengecat dapur."
+          },
+          {
+            "en": "I've lived here for ten years.",
+            "id": "Saya sudah sepuluh tahun tinggal di sini."
+          },
+          {
+            "en": "I've been living here for ten years.",
+            "id": "Saya sudah sepuluh tahun tinggal di sini."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "State verbs",
+        "text": "Some verbs are states, not activities. They stay in the simple form, even for how long.",
+        "body": "**State verbs** (kata kerja keadaan: feelings, thoughts, owning) don't take -ing: **know, like, love, believe, understand, have** (= punya), **be**. Not 'I've been knowing her' but **I've known her for years**. But why *We've been having a meeting*? *have a meeting / have lunch* is an **activity** (something you do), not owning, so -ing is fine.",
+        "examples": [
+          {
+            "en": "I've known Budi for years.",
+            "id": "Saya sudah bertahun-tahun kenal Budi."
+          },
+          {
+            "en": "My parents have had their warung for twenty years.",
+            "id": "Orang tua saya sudah dua puluh tahun punya warung."
+          },
+          {
+            "en": "I've always liked durian.",
+            "id": "Dari dulu saya suka durian."
+          },
+          {
+            "en": "We've been here since 8 o'clock.",
+            "id": "Kami sudah di sini sejak jam 8."
+          },
+          {
+            "en": "We've been having a meeting all morning.",
+            "id": "Kami rapat sepanjang pagi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "How many?",
+        "text": "Bu Ani makes kue for her shop. It's 10 a.m. and the trays are full.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-perfect-simple",
+          "prompt": "Complete: She ___ 200 cakes since 5 a.m.",
+          "options": [
+            "has been making",
+            "is making",
+            "has made"
+          ],
+          "answer": 2,
+          "explanation": "**200 cakes** = **how many** → the result → present perfect **simple**: *has made* (make → made → made). *has been making* talks about the activity, not a number of things done. *is making* is only about now and can't take *since*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "At a party, Sari introduces her best friend, Dewi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-perfect-simple",
+          "prompt": "Complete: I ___ Dewi since we were six years old.",
+          "options": [
+            "have been knowing",
+            "have known",
+            "know"
+          ],
+          "answer": 1,
+          "explanation": "**know** is a state verb, so it stays in the present perfect **simple**, even for how long: **have known**. *have been knowing* adds -ing to a state verb. *know … since* is the Indonesian trap: with since, English needs have/has."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · present perfect continuous",
+          "intro": "have/has + been + -ing: an activity from the past up to now, or one that has just stopped with a result you can see. For results, numbers and state verbs, use the simple: have/has + third form.",
+          "headers": [
+            "When?",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "an activity that started in the past and is still going on",
+              "have/has been + -ing",
+              "I've been waiting for an hour."
+            ],
+            [
+              "asking how long",
+              "How long + have/has … been + -ing?",
+              "How long have you been learning English?"
+            ],
+            [
+              "he/she/it",
+              "'s been = has been",
+              "She's been working since 7 o'clock."
+            ],
+            [
+              "just stopped, result you can see now",
+              "have/has been + -ing",
+              "I'm tired because I've been running."
+            ],
+            [
+              "asking about a result you see",
+              "Have you been + -ing?",
+              "Your eyes are red. Have you been crying?"
+            ],
+            [
+              "how many / finished result",
+              "have/has + third form",
+              "I've read three books this month."
+            ],
+            [
+              "state verbs: know, like, believe, understand, have (= punya), be",
+              "have/has + third form",
+              "I've known her for years."
+            ],
+            [
+              "live, work, study, teach + for/since",
+              "both are fine",
+              "I've lived / I've been living here for ten years."
+            ]
+          ],
+          "tips": [
+            "*Sudah … dari tadi* / *sedang … sejak* → **have/has been + -ing**: *I've been waiting here for an hour*, not 'I am waiting here for an hour'.",
+            "*Habis lari* → **I've been running** (not 'I'm running': you've stopped).",
+            "Counting what's done → simple: **I've read three books**, not 'I've been reading three books'. State verbs → simple: **I've known her**, not 'I've been knowing her'."
+          ],
+          "examples": [
+            {
+              "en": "How long have you been learning English? — For two years.",
+              "id": "Sudah berapa lama kamu belajar bahasa Inggris? — Sudah dua tahun."
+            },
+            {
+              "en": "Rina has been working since 7 o'clock.",
+              "id": "Rina sudah bekerja sejak jam 7."
+            },
+            {
+              "en": "The kitchen smells great. Have you been cooking?",
+              "id": "Dapurnya wangi sekali. Kamu habis masak?"
+            },
+            {
+              "en": "I've been reading all morning. I've read two chapters.",
+              "id": "Dari pagi saya membaca. Saya sudah membaca dua bab."
+            },
+            {
+              "en": "My parents have had their warung for twenty years.",
+              "id": "Orang tua saya sudah dua puluh tahun punya warung."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A short BBC video on the present perfect continuous and a British Council page on choosing simple or continuous, with practice tests. The video is at natural speed, so turn on the subtitles."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu cara mengatakan sudah berapa lama dengan present perfect. Hari ini kamu belajar bicara tentang kegiatan yang masih berlangsung, menjelaskan apa yang terlihat, dan memilih antara I've read dan I've been reading. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Masih berlangsung",
+        "text": "Ulasan singkat: kamu sudah bisa mengatakan berapa lama dengan have/has + bentuk ketiga (I've lived here since 2020). Sekarang ada bentuk baru untuk kegiatan.",
+        "body": "Untuk **kegiatan** yang **dimulai di masa lalu dan masih berlangsung**, pakai **have/has + been + -ing**: *I've been waiting for an hour* (dan saya masih menunggu). **been** adalah bentuk ketiga dari *be*; **-ing** menunjukkan kegiatannya masih berlangsung. Di sini **'s = has**: *She's been working since 7.* **Jebakan:** *Saya sudah menunggu dari tadi / sedang menunggu sejak jam 7* bukan 'I am waiting here for an hour': *I'm waiting* hanya tentang sekarang dan tidak bisa dipakai dengan **for** atau **since**. Bertanya: **How long have you been + -ing?**",
+        "pairs": [
+          {
+            "en": "I've been waiting for an hour.",
+            "id": "Saya sudah menunggu satu jam."
+          },
+          {
+            "en": "She's been working since 7 o'clock.",
+            "id": "Dia sudah bekerja sejak jam 7."
+          },
+          {
+            "en": "for twenty minutes",
+            "id": "selama dua puluh menit"
+          },
+          {
+            "en": "since 8 o'clock",
+            "id": "sejak jam 8"
+          },
+          {
+            "en": "all morning",
+            "id": "sepanjang pagi"
+          },
+          {
+            "en": "all day",
+            "id": "seharian"
+          },
+          {
+            "en": "How long have you been learning English?",
+            "id": "Sudah berapa lama kamu belajar bahasa Inggris?"
+          },
+          {
+            "en": "For two years.",
+            "id": "Sudah dua tahun."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Pagi Pak Hasan",
+        "text": "Lihat pagi Pak Hasan sebagai driver ojek online. Kapan kegiatannya mulai, dan apakah sudah selesai?",
+        "timeline": {
+          "title": "Mulai di masa lalu, masih berlangsung",
+          "caption": "Jam 6:00 Pak Hasan mulai narik. Sekarang jam 11:00 dan dia masih narik. Jadi: he has been driving for five hours (sejak 6:00).",
+          "marks": [
+            {
+              "label": "6:00: Pak Hasan mulai narik",
+              "kind": "past"
+            },
+            {
+              "label": "9:00: masih narik",
+              "kind": "past"
+            },
+            {
+              "label": "11:00 (sekarang): he has been driving for five hours",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas mulai belajar di perpustakaan kampus jam 8 pagi. Sekarang jam 12 dan dia masih di sana, masih belajar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-present-perfect",
+          "prompt": "Lengkapi: Dimas ___ at the library for four hours.",
+          "options": [
+            "is studying",
+            "has been studying",
+            "was studying"
+          ],
+          "answer": 1,
+          "explanation": "Dia mulai di masa lalu (jam 8 pagi) dan **masih** belajar, dan kalimatnya mengatakan **berapa lama** (for four hours) → **has been studying**. *is studying* hanya tentang sekarang dan tidak bisa dipakai dengan *for four hours* (jebakan *sedang*). *was studying* tentang masa lalu, padahal dia masih di sana."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Temanmu Sari datang ke kafe terlambat empat puluh menit. Dia minta maaf dan bertanya:",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-present-perfect",
+          "prompt": "Susun kata-katanya: Sudah berapa lama kamu menunggu?",
+          "tokens": [
+            "been",
+            "you",
+            "How",
+            "waiting",
+            "long",
+            "have"
+          ],
+          "solution": "How long have you been waiting?",
+          "explanation": "Urutan pertanyaan: **How long + have + you + been + -ing?** Menunggunya dimulai di masa lalu dan masih berlangsung. Bukan 'How long are you waiting?': present continuous tidak bisa mengatakan berapa lama."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kamu kelihatan capek!",
+        "text": "Bentuk ini juga menjelaskan apa yang terlihat sekarang.",
+        "body": "Sebuah kegiatan **baru saja berhenti**, dan kamu bisa **melihat hasilnya** sekarang (capek, basah, kotor, mata merah): *I'm tired because I've been running.* *Your eyes are red. Have you been crying?* **Jebakan:** *Capek, habis lari* (habis = baru selesai) bukan 'I'm tired because I'm running' (kamu tidak sedang lari sekarang) atau 'because I just run'. Katakan **I've been running**: kegiatannya sudah selesai, tapi hasilnya ada. Tanyakan apa yang kamu lihat: **Have you been + -ing?** — *Yes, I have. / No, I haven't.*",
+        "pairs": [
+          {
+            "en": "I'm tired because I've been running.",
+            "id": "Saya capek karena habis lari."
+          },
+          {
+            "en": "Your eyes are red. Have you been crying?",
+            "id": "Matamu merah. Kamu habis menangis?"
+          },
+          {
+            "en": "Your hands are dirty! Have you been working in the garden?",
+            "id": "Tanganmu kotor! Kamu habis berkebun?"
+          },
+          {
+            "en": "The kitchen smells great. Have you been cooking?",
+            "id": "Dapurnya wangi sekali. Kamu habis masak?"
+          },
+          {
+            "en": "Yes, I have. / No, I haven't.",
+            "id": "Iya. / Tidak."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apa yang terjadi?",
+        "text": "Kamu melihat ke luar jendela. Sekarang tidak hujan, tapi jalanan penuh genangan air dan orang-orang membawa payung basah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "recent-results",
+          "prompt": "Lengkapi: Look at the streets! It ___.",
+          "options": [
+            "has been raining",
+            "is raining",
+            "has been rain"
+          ],
+          "answer": 0,
+          "explanation": "Hujannya baru saja berhenti dan hasilnya terlihat (jalanan basah) → **has been + -ing**: *It has been raining* (it's = it has). *is raining* berarti sedang hujan **sekarang**, padahal tidak. *has been rain* tidak punya **-ing**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hasil atau kegiatan?",
+        "text": "Sekarang pilihan besarnya: I've read atau I've been reading?",
+        "body": "**Simple** (have/has + bentuk ketiga) = **hasilnya**: **berapa banyak**, sesuatu yang **sudah selesai**. *I've read three books. I've painted the kitchen* (sudah selesai). **Continuous** (have/has been + -ing) = **kegiatannya**: **berapa lama**, mungkin **belum selesai**. *I've been reading all morning. I've been painting the kitchen* (makanya ada cat di bajuku). **Jumlah** hal yang sudah selesai → **simple**: bukan 'I've been reading three books this month', tapi **I've read three books this month** (bulan ini). **Dua-duanya benar** dengan live, work, study + for/since: *I've lived / I've been living here for ten years.*",
+        "pairs": [
+          {
+            "en": "I've read three books.",
+            "id": "Saya sudah membaca tiga buku."
+          },
+          {
+            "en": "I've been reading all morning.",
+            "id": "Dari pagi saya membaca."
+          },
+          {
+            "en": "I've painted the kitchen.",
+            "id": "Saya sudah selesai mengecat dapur."
+          },
+          {
+            "en": "I've been painting the kitchen.",
+            "id": "Saya habis mengecat dapur."
+          },
+          {
+            "en": "I've lived here for ten years.",
+            "id": "Saya sudah sepuluh tahun tinggal di sini."
+          },
+          {
+            "en": "I've been living here for ten years.",
+            "id": "Saya sudah sepuluh tahun tinggal di sini."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata kerja keadaan",
+        "text": "Beberapa kata kerja adalah keadaan, bukan kegiatan. Kata kerja ini tetap dalam bentuk simple, walaupun untuk berapa lama.",
+        "body": "**Kata kerja keadaan** (perasaan, pikiran, kepemilikan) tidak memakai -ing: **know, like, love, believe, understand, have** (= punya), **be**. Bukan 'I've been knowing her', tapi **I've known her for years**. Lalu kenapa *We've been having a meeting*? *have a meeting / have lunch* adalah **kegiatan** (sesuatu yang kamu lakukan), bukan punya, jadi -ing boleh.",
+        "examples": [
+          {
+            "en": "I've known Budi for years.",
+            "id": "Saya sudah bertahun-tahun kenal Budi."
+          },
+          {
+            "en": "My parents have had their warung for twenty years.",
+            "id": "Orang tua saya sudah dua puluh tahun punya warung."
+          },
+          {
+            "en": "I've always liked durian.",
+            "id": "Dari dulu saya suka durian."
+          },
+          {
+            "en": "We've been here since 8 o'clock.",
+            "id": "Kami sudah di sini sejak jam 8."
+          },
+          {
+            "en": "We've been having a meeting all morning.",
+            "id": "Kami rapat sepanjang pagi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Berapa banyak?",
+        "text": "Bu Ani membuat kue untuk tokonya. Sekarang jam 10 pagi dan nampannya sudah penuh.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-perfect-simple",
+          "prompt": "Lengkapi: She ___ 200 cakes since 5 a.m.",
+          "options": [
+            "has been making",
+            "is making",
+            "has made"
+          ],
+          "answer": 2,
+          "explanation": "**200 cakes** = **berapa banyak** → hasilnya → present perfect **simple**: *has made* (make → made → made). *has been making* bicara tentang kegiatannya, bukan jumlah yang sudah selesai. *is making* hanya tentang sekarang dan tidak bisa dipakai dengan *since*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Di sebuah pesta, Sari memperkenalkan sahabatnya, Dewi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-perfect-simple",
+          "prompt": "Lengkapi: I ___ Dewi since we were six years old.",
+          "options": [
+            "have been knowing",
+            "have known",
+            "know"
+          ],
+          "answer": 1,
+          "explanation": "**know** adalah kata kerja keadaan, jadi tetap present perfect **simple**, walaupun untuk berapa lama: **have known**. *have been knowing* memberi -ing pada kata kerja keadaan. *know … since* adalah jebakan bahasa Indonesia: dengan since, bahasa Inggris perlu have/has."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · present perfect continuous",
+          "intro": "have/has + been + -ing: kegiatan dari masa lalu sampai sekarang, atau kegiatan yang baru berhenti dengan hasil yang terlihat. Untuk hasil, jumlah dan kata kerja keadaan, pakai simple: have/has + bentuk ketiga.",
+          "headers": [
+            "Kapan?",
+            "Pakai",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "kegiatan yang dimulai di masa lalu dan masih berlangsung",
+              "have/has been + -ing",
+              "I've been waiting for an hour."
+            ],
+            [
+              "bertanya berapa lama",
+              "How long + have/has … been + -ing?",
+              "How long have you been learning English?"
+            ],
+            [
+              "he/she/it",
+              "'s been = has been",
+              "She's been working since 7 o'clock."
+            ],
+            [
+              "baru berhenti, hasilnya terlihat sekarang",
+              "have/has been + -ing",
+              "I'm tired because I've been running."
+            ],
+            [
+              "bertanya tentang hasil yang kamu lihat",
+              "Have you been + -ing?",
+              "Your eyes are red. Have you been crying?"
+            ],
+            [
+              "berapa banyak / hasil yang sudah selesai",
+              "have/has + bentuk ketiga",
+              "I've read three books this month."
+            ],
+            [
+              "kata kerja keadaan: know, like, believe, understand, have (= punya), be",
+              "have/has + bentuk ketiga",
+              "I've known her for years."
+            ],
+            [
+              "live, work, study, teach + for/since",
+              "dua-duanya benar",
+              "I've lived / I've been living here for ten years."
+            ]
+          ],
+          "tips": [
+            "*Sudah … dari tadi* / *sedang … sejak* → **have/has been + -ing**: *I've been waiting here for an hour*, bukan 'I am waiting here for an hour'.",
+            "*Habis lari* → **I've been running** (bukan 'I'm running': kamu sudah berhenti).",
+            "Menghitung yang sudah selesai → simple: **I've read three books**, bukan 'I've been reading three books'. Kata kerja keadaan → simple: **I've known her**, bukan 'I've been knowing her'."
+          ],
+          "examples": [
+            {
+              "en": "How long have you been learning English? — For two years.",
+              "id": "Sudah berapa lama kamu belajar bahasa Inggris? — Sudah dua tahun."
+            },
+            {
+              "en": "Rina has been working since 7 o'clock.",
+              "id": "Rina sudah bekerja sejak jam 7."
+            },
+            {
+              "en": "The kitchen smells great. Have you been cooking?",
+              "id": "Dapurnya wangi sekali. Kamu habis masak?"
+            },
+            {
+              "en": "I've been reading all morning. I've read two chapters.",
+              "id": "Dari pagi saya membaca. Saya sudah membaca dua bab."
+            },
+            {
+              "en": "My parents have had their warung for twenty years.",
+              "id": "Orang tua saya sudah dua puluh tahun punya warung."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ada video BBC singkat tentang present perfect continuous dan halaman British Council tentang memilih simple atau continuous, dengan tes latihan. Videonya berkecepatan normal, jadi nyalakan subtitelnya."
+      }
+    ]
+  }
+}

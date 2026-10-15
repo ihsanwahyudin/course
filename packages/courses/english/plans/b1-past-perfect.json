@@ -1,0 +1,676 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to show which past event happened first. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "had + the third form",
+        "text": "You know the third form from the present perfect (I've seen, she has finished). Today it comes after had.",
+        "body": "**Past perfect = had + third form**: *I had finished. She had gone out.* **had** is the same for **every** person: no *has*, no -s. Short form **'d**: *I'd seen* (before a third form, 'd = had, not *would*). Negative: **hadn't** + third form. After had, use the **third form**, not the past: *She had forgot her bag* ✗ → **She had forgotten her bag** ✓; *had went* ✗ → **had gone** ✓. Irregular third forms just have to be remembered.",
+        "pairs": [
+          {
+            "en": "I had finished.",
+            "id": "Saya sudah selesai (sebelum itu)."
+          },
+          {
+            "en": "She had gone out.",
+            "id": "Dia sudah pergi keluar."
+          },
+          {
+            "en": "We hadn't seen it.",
+            "id": "Kami belum melihatnya (saat itu)."
+          },
+          {
+            "en": "go, went, gone",
+            "id": "pergi (bentuk 1, 2, 3)"
+          },
+          {
+            "en": "forget, forgot, forgotten",
+            "id": "lupa (bentuk 1, 2, 3)"
+          },
+          {
+            "en": "take, took, taken",
+            "id": "mengambil (bentuk 1, 2, 3)"
+          },
+          {
+            "en": "leave, left, left",
+            "id": "berangkat (bentuk 2 dan 3 sama)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas has a problem at the office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form",
+          "prompt": "Complete: Dimas couldn't call his wife. He had ___ his phone.",
+          "options": [
+            "forgotten",
+            "forgot",
+            "forget"
+          ],
+          "answer": 0,
+          "explanation": "After **had** comes the third form: forget → forgot → **forgotten**. 'had forgot' uses the past form, a very common mistake, and 'forget' is the base form."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Which happened first?",
+        "text": "Now the heart of the lesson: two past events, and one small word that changes their order.",
+        "body": "Use **had + third form** for the event that happened **first**, when you go back to it in a past story.\n**When I arrived, the film had started.** → it started **before** I arrived (I missed the beginning).\n**When I arrived, the film started.** → it started **at that moment**.\nIndonesian trap: **sudah** in a past story → **had**. *Waktu saya sampai, filmnya sudah mulai* → *the film **had already started*** (not *the film already started*). **already** goes between had and the third form.",
+        "pairs": [
+          {
+            "en": "When I arrived, the film had started.",
+            "id": "Waktu saya sampai, filmnya sudah mulai."
+          },
+          {
+            "en": "When I arrived, the film started.",
+            "id": "Waktu saya sampai, filmnya (baru) mulai."
+          },
+          {
+            "en": "had already started",
+            "id": "sudah mulai (lebih dulu)"
+          },
+          {
+            "en": "Budi was sad. He had lost his wallet.",
+            "id": "Budi sedih. Dompetnya hilang (sebelumnya)."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "The film started first",
+        "text": "Picture the evening at the cinema. Which came first?",
+        "timeline": {
+          "title": "When I arrived, the film had started.",
+          "caption": "The film started at 7:00: the earlier event → had started. I arrived at 7:15: the later event → arrived. Compare: When I arrived, the film started = I arrived at 7:00 and it started right then.",
+          "marks": [
+            {
+              "label": "7:00 · the film started",
+              "kind": "past"
+            },
+            {
+              "label": "7:15 · I arrived",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani has an errand at the bank.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sequence-events",
+          "prompt": "The bank closes at 3:00. Bu Ani got there at 3:10. Complete: When Bu Ani got to the bank, it ___.",
+          "options": [
+            "closed",
+            "was closing",
+            "had closed"
+          ],
+          "answer": 2,
+          "explanation": "The bank closed at 3:00, **before** she got there at 3:10 → the earlier event takes had + third form: **had closed**. 'closed' would mean it closed at the moment she arrived, and 'was closing' means it was in the middle of closing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "by the time, before, after",
+        "text": "Three time words help you put past events in order.",
+        "body": "**by the time** + past simple → the other part was **already finished** at that moment: *By the time we got to the restaurant, the kitchen **had closed**.*\n**before** and **after** already show the order, so the past simple is fine too: *After I **had finished** work, I went home* = *After I **finished** work, I went home.* Both are correct.\nWith **when**, only the tense shows the order, so choose carefully there.",
+        "pairs": [
+          {
+            "en": "by the time we got there",
+            "id": "saat kami sampai di sana (hal lain sudah terjadi)"
+          },
+          {
+            "en": "By the time we got to the restaurant, the kitchen had closed.",
+            "id": "Saat kami sampai di restoran, dapurnya sudah tutup."
+          },
+          {
+            "en": "After I had finished work, I went home.",
+            "id": "Setelah selesai kerja, saya pulang."
+          },
+          {
+            "en": "After I finished work, I went home.",
+            "id": "Setelah selesai kerja, saya pulang. (juga benar)"
+          },
+          {
+            "en": "I had sent the email before my boss called.",
+            "id": "Saya sudah mengirim email itu sebelum bos saya menelepon."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "A busy morning at home. Start with By the time.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "time-linkers",
+          "prompt": "Arrange the words. Start with By the time: Saat Budi bangun, Rina sudah berangkat.",
+          "tokens": [
+            "had",
+            "Budi",
+            "left",
+            "time",
+            "Rina",
+            "By",
+            "up",
+            "the",
+            "woke"
+          ],
+          "solution": "By the time Budi woke up, Rina had left.",
+          "explanation": "**By the time** + past simple (*Budi woke up*), then the event that happened first with had + third form (*Rina had left*): Rina left before Budi woke up. The by the time part comes first, so a comma follows it."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Don't overuse it",
+        "text": "One last rule: had is only for going back in time.",
+        "body": "Telling **one** past event, or events **in order**? Use the **past simple**. *Yesterday I had gone to the market* ✗ → *Yesterday I **went** to the market* ✓. 'It was long ago' isn't a reason either. Use **had** only when you go **back** to something that happened **before** another past event. (*had a shower* is just the past of *have*.)",
+        "examples": [
+          {
+            "en": "Yesterday I went to the market.",
+            "id": "Kemarin saya ke pasar. (satu kejadian)"
+          },
+          {
+            "en": "In 2010 my family moved to Jakarta.",
+            "id": "Tahun 2010 keluarga saya pindah ke Jakarta. (sudah lama, tetap past simple)"
+          },
+          {
+            "en": "I got up, had a shower and went to work.",
+            "id": "Saya bangun, mandi, lalu berangkat kerja. (berurutan)"
+          },
+          {
+            "en": "When I got to work, I noticed I had left my phone at home.",
+            "id": "Waktu sampai di kantor, saya sadar HP saya tertinggal di rumah. (kembali ke kejadian sebelumnya)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina tells you about her evening.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sequence-events",
+          "prompt": "Rina is talking about one thing she did last night. Choose the correct sentence.",
+          "options": [
+            "Last night I had cooked fried rice for dinner.",
+            "Last night I cooked fried rice for dinner.",
+            "Last night I have cooked fried rice for dinner."
+          ],
+          "answer": 1,
+          "explanation": "One past event on its own, with nothing later to go back from → past simple: **cooked**. 'had cooked' needs another, later past event in the story, and 'have cooked' doesn't go with a finished time like last night."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards: the form, the order, and when not to use it.",
+        "flashcards": [
+          {
+            "front": "had + ?",
+            "back": "the third form: had gone, had seen, had forgotten (sama untuk semua orang)"
+          },
+          {
+            "front": "Waktu saya sampai, filmnya sudah mulai.",
+            "back": "When I arrived, the film had already started."
+          },
+          {
+            "front": "When I arrived, the film started.",
+            "back": "It started at that moment (filmnya mulai tepat saat saya sampai)."
+          },
+          {
+            "front": "sudah in a past story",
+            "back": "had (already) + third form: When Rina called, I had already eaten."
+          },
+          {
+            "front": "by the time + past simple, …",
+            "back": "… had + third form: By the time we got there, the kitchen had closed."
+          },
+          {
+            "front": "before / after",
+            "back": "The order is already clear: had finished or finished, both correct."
+          },
+          {
+            "front": "She had forgot her bag. ✗",
+            "back": "She had forgotten her bag. ✓"
+          },
+          {
+            "front": "Yesterday I had gone to the market. ✗",
+            "back": "Yesterday I went to the market. ✓ (satu kejadian → past simple)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · past perfect",
+          "intro": "had + third form = the event that happened before another past event.",
+          "headers": [
+            "Pattern",
+            "Use",
+            "Example"
+          ],
+          "rows": [
+            [
+              "had + third form",
+              "the earlier of two past events",
+              "The film had started."
+            ],
+            [
+              "hadn't + third form",
+              "negative",
+              "We hadn't seen the email."
+            ],
+            [
+              "Had … + third form?",
+              "question",
+              "Had you met him before?"
+            ],
+            [
+              "When + past simple, had + third form",
+              "it happened before",
+              "When I arrived, the film had started."
+            ],
+            [
+              "When + past simple, past simple",
+              "at that moment",
+              "When I arrived, the film started."
+            ],
+            [
+              "By the time + past simple, had + third form",
+              "already finished at that moment",
+              "By the time we got to the restaurant, the kitchen had closed."
+            ],
+            [
+              "before / after",
+              "order already clear: both tenses OK",
+              "After I (had) finished work, I went home."
+            ],
+            [
+              "one past event",
+              "past simple only",
+              "Yesterday I went to the market."
+            ]
+          ],
+          "tips": [
+            "After **had**, the third form: 'had forgot' ✗ → **had forgotten**; 'had went' ✗ → **had gone**.",
+            "**sudah** in a past story → **had (already)**: 'the film already started' ✗ → **the film had already started**.",
+            "Don't overuse it: one event, or events in order → past simple."
+          ],
+          "examples": [
+            {
+              "en": "When I got home, my wife had already cooked dinner.",
+              "id": "Waktu saya sampai di rumah, istri saya sudah memasak makan malam."
+            },
+            {
+              "en": "Budi couldn't open the door because he had lost his key.",
+              "id": "Budi tidak bisa membuka pintu karena kuncinya hilang."
+            },
+            {
+              "en": "By the time the doctor came, the pain had gone.",
+              "id": "Saat dokternya datang, rasa sakitnya sudah hilang."
+            },
+            {
+              "en": "Sari cooked dinner before her husband got home.",
+              "id": "Sari memasak makan malam sebelum suaminya pulang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? A grammar page with two tests, and a video lesson all in English."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar menunjukkan kejadian lampau mana yang terjadi lebih dulu. Ayo kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "had + bentuk ketiga",
+        "text": "Kamu sudah kenal bentuk ketiga dari present perfect (I've seen, she has finished). Hari ini bentuk itu muncul setelah had.",
+        "body": "**Past perfect = had + bentuk ketiga**: *I had finished. She had gone out.* **had** sama untuk **semua** orang: tidak ada *has*, tidak ada -s. Bentuk pendek **'d**: *I'd seen* (sebelum bentuk ketiga, 'd = had, bukan *would*). Negatif: **hadn't** + bentuk ketiga. Setelah had, pakai **bentuk ketiga**, bukan bentuk lampau: *She had forgot her bag* ✗ → **She had forgotten her bag** ✓; *had went* ✗ → **had gone** ✓. Bentuk ketiga yang tidak beraturan memang harus dihafal.",
+        "pairs": [
+          {
+            "en": "I had finished.",
+            "id": "Saya sudah selesai (sebelum itu)."
+          },
+          {
+            "en": "She had gone out.",
+            "id": "Dia sudah pergi keluar."
+          },
+          {
+            "en": "We hadn't seen it.",
+            "id": "Kami belum melihatnya (saat itu)."
+          },
+          {
+            "en": "go, went, gone",
+            "id": "pergi (bentuk 1, 2, 3)"
+          },
+          {
+            "en": "forget, forgot, forgotten",
+            "id": "lupa (bentuk 1, 2, 3)"
+          },
+          {
+            "en": "take, took, taken",
+            "id": "mengambil (bentuk 1, 2, 3)"
+          },
+          {
+            "en": "leave, left, left",
+            "id": "berangkat (bentuk 2 dan 3 sama)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas punya masalah di kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form",
+          "prompt": "Lengkapi: Dimas couldn't call his wife. He had ___ his phone.",
+          "options": [
+            "forgotten",
+            "forgot",
+            "forget"
+          ],
+          "answer": 0,
+          "explanation": "Setelah **had** ada bentuk ketiga: forget → forgot → **forgotten**. 'had forgot' memakai bentuk lampau, kesalahan yang sangat sering, dan 'forget' adalah bentuk dasar."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mana yang terjadi lebih dulu?",
+        "text": "Sekarang inti pelajarannya: dua kejadian lampau, dan satu kata kecil yang mengubah urutannya.",
+        "body": "Pakai **had + bentuk ketiga** untuk kejadian yang terjadi **lebih dulu**, saat kamu kembali ke kejadian itu dalam cerita lampau.\n**When I arrived, the film had started.** → filmnya mulai **sebelum** saya sampai (saya ketinggalan awalnya).\n**When I arrived, the film started.** → filmnya mulai **tepat saat itu**.\nJebakan bahasa Indonesia: **sudah** dalam cerita lampau → **had**. *Waktu saya sampai, filmnya sudah mulai* → *the film **had already started*** (bukan *the film already started*). **already** diletakkan di antara had dan bentuk ketiga.",
+        "pairs": [
+          {
+            "en": "When I arrived, the film had started.",
+            "id": "Waktu saya sampai, filmnya sudah mulai."
+          },
+          {
+            "en": "When I arrived, the film started.",
+            "id": "Waktu saya sampai, filmnya (baru) mulai."
+          },
+          {
+            "en": "had already started",
+            "id": "sudah mulai (lebih dulu)"
+          },
+          {
+            "en": "Budi was sad. He had lost his wallet.",
+            "id": "Budi sedih. Dompetnya hilang (sebelumnya)."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Filmnya mulai lebih dulu",
+        "text": "Bayangkan malam itu di bioskop. Mana yang lebih dulu?",
+        "timeline": {
+          "title": "When I arrived, the film had started.",
+          "caption": "Filmnya mulai jam 7.00: kejadian yang lebih dulu → had started. Saya sampai jam 7.15: kejadian yang belakangan → arrived. Bandingkan: When I arrived, the film started = saya sampai jam 7.00 dan filmnya mulai tepat saat itu.",
+          "marks": [
+            {
+              "label": "7.00 · filmnya mulai",
+              "kind": "past"
+            },
+            {
+              "label": "7.15 · saya sampai",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani ada urusan di bank.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sequence-events",
+          "prompt": "Bank tutup jam 3.00. Bu Ani sampai di sana jam 3.10. Lengkapi: When Bu Ani got to the bank, it ___.",
+          "options": [
+            "closed",
+            "was closing",
+            "had closed"
+          ],
+          "answer": 2,
+          "explanation": "Bank tutup jam 3.00, **sebelum** dia sampai jam 3.10 → kejadian yang lebih dulu memakai had + bentuk ketiga: **had closed**. 'closed' berarti bank tutup tepat saat dia sampai, dan 'was closing' berarti bank sedang dalam proses tutup."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "by the time, before, after",
+        "text": "Tiga kata waktu ini membantumu mengurutkan kejadian lampau.",
+        "body": "**by the time** + past simple → bagian yang lain **sudah selesai** pada saat itu: *By the time we got to the restaurant, the kitchen **had closed**.*\n**before** (*sebelum*) dan **after** (*setelah*) sudah menunjukkan urutannya, jadi past simple juga boleh: *After I **had finished** work, I went home* = *After I **finished** work, I went home.* Keduanya benar.\nDengan **when**, hanya bentuk kata kerjanya yang menunjukkan urutan, jadi pilih dengan teliti di situ.",
+        "pairs": [
+          {
+            "en": "by the time we got there",
+            "id": "saat kami sampai di sana (hal lain sudah terjadi)"
+          },
+          {
+            "en": "By the time we got to the restaurant, the kitchen had closed.",
+            "id": "Saat kami sampai di restoran, dapurnya sudah tutup."
+          },
+          {
+            "en": "After I had finished work, I went home.",
+            "id": "Setelah selesai kerja, saya pulang."
+          },
+          {
+            "en": "After I finished work, I went home.",
+            "id": "Setelah selesai kerja, saya pulang. (juga benar)"
+          },
+          {
+            "en": "I had sent the email before my boss called.",
+            "id": "Saya sudah mengirim email itu sebelum bos saya menelepon."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Pagi yang sibuk di rumah. Mulai dengan By the time.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "time-linkers",
+          "prompt": "Susun kata-katanya. Mulai dengan By the time: Saat Budi bangun, Rina sudah berangkat.",
+          "tokens": [
+            "had",
+            "Budi",
+            "left",
+            "time",
+            "Rina",
+            "By",
+            "up",
+            "the",
+            "woke"
+          ],
+          "solution": "By the time Budi woke up, Rina had left.",
+          "explanation": "**By the time** + past simple (*Budi woke up*), lalu kejadian yang lebih dulu dengan had + bentuk ketiga (*Rina had left*): Rina berangkat sebelum Budi bangun. Bagian by the time ada di depan, jadi diikuti koma."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Jangan berlebihan memakainya",
+        "text": "Satu aturan terakhir: had hanya untuk kembali ke waktu yang lebih dulu.",
+        "body": "Menceritakan **satu** kejadian lampau, atau kejadian-kejadian **sesuai urutannya**? Pakai **past simple**. *Yesterday I had gone to the market* ✗ → *Yesterday I **went** to the market* ✓. 'Sudah lama sekali' juga bukan alasan. Pakai **had** hanya kalau kamu kembali ke sesuatu yang terjadi **sebelum** kejadian lampau yang lain. (*had a shower* hanya bentuk lampau dari *have*.)",
+        "examples": [
+          {
+            "en": "Yesterday I went to the market.",
+            "id": "Kemarin saya ke pasar. (satu kejadian)"
+          },
+          {
+            "en": "In 2010 my family moved to Jakarta.",
+            "id": "Tahun 2010 keluarga saya pindah ke Jakarta. (sudah lama, tetap past simple)"
+          },
+          {
+            "en": "I got up, had a shower and went to work.",
+            "id": "Saya bangun, mandi, lalu berangkat kerja. (berurutan)"
+          },
+          {
+            "en": "When I got to work, I noticed I had left my phone at home.",
+            "id": "Waktu sampai di kantor, saya sadar HP saya tertinggal di rumah. (kembali ke kejadian sebelumnya)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina bercerita tentang malamnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sequence-events",
+          "prompt": "Rina menceritakan satu hal yang dia lakukan tadi malam. Pilih kalimat yang benar.",
+          "options": [
+            "Last night I had cooked fried rice for dinner.",
+            "Last night I cooked fried rice for dinner.",
+            "Last night I have cooked fried rice for dinner."
+          ],
+          "answer": 1,
+          "explanation": "Satu kejadian lampau saja, tanpa kejadian lain yang lebih belakangan → past simple: **cooked**. 'had cooked' butuh kejadian lampau lain yang terjadi setelahnya dalam cerita, dan 'have cooked' tidak cocok dengan waktu yang sudah lewat seperti last night."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini: bentuknya, urutannya, dan kapan tidak memakainya.",
+        "flashcards": [
+          {
+            "front": "had + ?",
+            "back": "the third form: had gone, had seen, had forgotten (sama untuk semua orang)"
+          },
+          {
+            "front": "Waktu saya sampai, filmnya sudah mulai.",
+            "back": "When I arrived, the film had already started."
+          },
+          {
+            "front": "When I arrived, the film started.",
+            "back": "It started at that moment (filmnya mulai tepat saat saya sampai)."
+          },
+          {
+            "front": "sudah dalam cerita lampau",
+            "back": "had (already) + third form: When Rina called, I had already eaten."
+          },
+          {
+            "front": "by the time + past simple, …",
+            "back": "… had + third form: By the time we got there, the kitchen had closed."
+          },
+          {
+            "front": "before / after",
+            "back": "The order is already clear: had finished or finished, both correct."
+          },
+          {
+            "front": "She had forgot her bag. ✗",
+            "back": "She had forgotten her bag. ✓"
+          },
+          {
+            "front": "Yesterday I had gone to the market. ✗",
+            "back": "Yesterday I went to the market. ✓ (satu kejadian → past simple)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · past perfect",
+          "intro": "had + bentuk ketiga = kejadian yang terjadi sebelum kejadian lampau yang lain.",
+          "headers": [
+            "Pola",
+            "Pemakaian",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "had + bentuk ketiga",
+              "yang lebih dulu dari dua kejadian lampau",
+              "The film had started."
+            ],
+            [
+              "hadn't + bentuk ketiga",
+              "negatif",
+              "We hadn't seen the email."
+            ],
+            [
+              "Had … + bentuk ketiga?",
+              "pertanyaan",
+              "Had you met him before?"
+            ],
+            [
+              "When + past simple, had + bentuk ketiga",
+              "terjadi sebelumnya",
+              "When I arrived, the film had started."
+            ],
+            [
+              "When + past simple, past simple",
+              "tepat saat itu",
+              "When I arrived, the film started."
+            ],
+            [
+              "By the time + past simple, had + bentuk ketiga",
+              "sudah selesai pada saat itu",
+              "By the time we got to the restaurant, the kitchen had closed."
+            ],
+            [
+              "before / after",
+              "urutannya sudah jelas: keduanya boleh",
+              "After I (had) finished work, I went home."
+            ],
+            [
+              "satu kejadian lampau",
+              "hanya past simple",
+              "Yesterday I went to the market."
+            ]
+          ],
+          "tips": [
+            "Setelah **had**, bentuk ketiga: 'had forgot' ✗ → **had forgotten**; 'had went' ✗ → **had gone**.",
+            "**sudah** dalam cerita lampau → **had (already)**: 'the film already started' ✗ → **the film had already started**.",
+            "Jangan berlebihan: satu kejadian, atau kejadian berurutan → past simple."
+          ],
+          "examples": [
+            {
+              "en": "When I got home, my wife had already cooked dinner.",
+              "id": "Waktu saya sampai di rumah, istri saya sudah memasak makan malam."
+            },
+            {
+              "en": "Budi couldn't open the door because he had lost his key.",
+              "id": "Budi tidak bisa membuka pintu karena kuncinya hilang."
+            },
+            {
+              "en": "By the time the doctor came, the pain had gone.",
+              "id": "Saat dokternya datang, rasa sakitnya sudah hilang."
+            },
+            {
+              "en": "Sari cooked dinner before her husband got home.",
+              "id": "Sari memasak makan malam sebelum suaminya pulang."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ada halaman tata bahasa dengan dua tes, dan video pelajaran yang seluruhnya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

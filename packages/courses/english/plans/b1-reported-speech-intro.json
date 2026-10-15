@@ -1,0 +1,676 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to pass on what people said, even days later: with said and told, and with small changes to tenses, pronouns and time words. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "said or told?",
+        "text": "In A2 you passed on messages right away: *Sari says she's sick.* Now let's report what someone said earlier.",
+        "body": "When you report **later**, use the past: **said** or **told**. **tell** needs a **person** right after it: *She **told me** that…*, *He **told the team** that…*. **say** has no person after it: *She **said** that…* (or *said **to** me*). So *She said me…* ✗ and *He told that…* ✗. **that** can be left out. Indonesian *bilang* works for both, so look for the person.",
+        "pairs": [
+          {
+            "en": "say → said",
+            "id": "bilang, berkata (dibaca 'sed')"
+          },
+          {
+            "en": "tell → told",
+            "id": "bilang ke, memberi tahu (+ orang)"
+          },
+          {
+            "en": "told me / told us",
+            "id": "bilang ke aku / ke kami"
+          },
+          {
+            "en": "said to me",
+            "id": "bilang kepadaku (benar, tapi lebih jarang)"
+          },
+          {
+            "en": "that",
+            "id": "bahwa (boleh dihilangkan)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "said and told in action",
+        "text": "Read these aloud. Look at what comes right after said and told.",
+        "body": "After **told** there's always a person (*me, the team, Pak Hasan*). After **said** there isn't, unless you add **to**. Notice the verbs after them are in the past too (*was*): that's the next step.",
+        "examples": [
+          {
+            "en": "Rina said that she was tired.",
+            "id": "Rina bilang bahwa dia capek."
+          },
+          {
+            "en": "Rina told me that she was tired.",
+            "id": "Rina bilang ke aku bahwa dia capek."
+          },
+          {
+            "en": "Pak Hasan told the team the client was happy.",
+            "id": "Pak Hasan memberi tahu tim bahwa kliennya senang."
+          },
+          {
+            "en": "Budi said the KRL was very crowded.",
+            "id": "Budi bilang KRL-nya penuh sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari asked her manager for a day off. Which word fits?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "say-vs-tell",
+          "prompt": "Yesterday Sari ___ her manager that she needed a day off.",
+          "options": [
+            "said",
+            "told",
+            "say"
+          ],
+          "answer": 1,
+          "explanation": "A person (*her manager*) comes right after the gap, so use **tell → told**. *said her manager* is the classic mistake: **say** has no person after it. *say* is also not past."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One step back",
+        "text": "Now the verb inside the message.",
+        "body": "On Monday Rina says: *'I **am** tired.'* A week later she's fine. If you say *Rina said she **is** tired*, it sounds like she's tired now. The words were said in the past, so the verb moves **one step back**: **am/is → was**, **are → were**, **work → worked**, **don't → didn't**, **will → would**, **can → could**, and past simple → **had + past participle** (*went → had gone*). Indonesian never changes the verb (*Dia bilang dia capek*), so this is easy to forget.",
+        "pairs": [
+          {
+            "en": "am / is → was",
+            "id": "bentuk sekarang → bentuk lampau"
+          },
+          {
+            "en": "are → were",
+            "id": "bentuk sekarang → bentuk lampau"
+          },
+          {
+            "en": "work → worked",
+            "id": "present simple → past simple"
+          },
+          {
+            "en": "don't → didn't",
+            "id": "tidak (sekarang) → tidak (lampau)"
+          },
+          {
+            "en": "will → would",
+            "id": "akan → akan (dilihat dari masa lalu)"
+          },
+          {
+            "en": "can → could",
+            "id": "bisa → bisa (waktu itu)"
+          },
+          {
+            "en": "went → had gone",
+            "id": "past simple → had + past participle"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Then and now",
+        "text": "See why the verb moves back.",
+        "timeline": {
+          "title": "Monday's words, reported a week later",
+          "caption": "Rina spoke on Monday. By Tuesday she was fine. A week later you report her words in the past: she said she was tired.",
+          "marks": [
+            {
+              "label": "Monday: Rina says 'I am tired.'",
+              "kind": "past"
+            },
+            {
+              "label": "Tuesday: Rina is fine again",
+              "kind": "past"
+            },
+            {
+              "label": "Next Monday: you report it",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Reported a week later",
+        "text": "Here's what people said last week, reported today.",
+        "body": "If the person is talking to you **right now**, keep *says* and the present (*Rina says she's in the lobby*), like in A2. If it's **still true** (*He said the office opens at eight*), the present is fine too. But when you report **later** and it's over, move the verb back.",
+        "examples": [
+          {
+            "en": "Pak Hasan said he was in a meeting.",
+            "id": "Pak Hasan: 'Saya sedang rapat.' (am → was)"
+          },
+          {
+            "en": "The interns said they were hungry.",
+            "id": "Anak-anak magang: 'Kami lapar.' (are → were)"
+          },
+          {
+            "en": "Sari said she liked the new office.",
+            "id": "Sari: 'Saya suka kantor baru ini.' (like → liked)"
+          },
+          {
+            "en": "Budi said he would bring the projector.",
+            "id": "Budi: 'Saya akan bawa proyektornya.' (will → would)"
+          },
+          {
+            "en": "Bu Ani said she couldn't find her keys.",
+            "id": "Bu Ani: 'Saya tidak bisa menemukan kunci saya.' (can't → couldn't)"
+          },
+          {
+            "en": "Dimas said he had missed the bus.",
+            "id": "Dimas: 'Saya ketinggalan bus.' (missed → had missed)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Move it back",
+        "text": "Rina couldn't meet Budi last Monday. Now Budi asks you why.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "tense-backshift",
+          "prompt": "Last Monday Rina said: 'I don't have time today.' A week later you tell Budi: Rina said ___",
+          "options": [
+            "she doesn't have time that day.",
+            "she didn't have time that day.",
+            "she didn't had time that day."
+          ],
+          "answer": 1,
+          "explanation": "It was said a week ago, so **don't → didn't**. After *didn't* the verb stays in its base form: **didn't have**, not *didn't had*. *doesn't have* keeps the present, as if it were about now."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now a message in the past simple. Remember: past simple → had + past participle, and the words for people change too.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "tense-backshift",
+          "prompt": "Last Friday Sari called, upset: 'My train left without me!' A week later you tell Emma. Arrange the words.",
+          "tokens": [
+            "left",
+            "her",
+            "Sari",
+            "without",
+            "had",
+            "train",
+            "said",
+            "her"
+          ],
+          "solution": "Sari said her train had left without her.",
+          "explanation": "The train left **before** Sari called, so the past simple moves back to **had left** (had + past participle). *my* and *me* become **her**, because you're talking about Sari."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "People, places and days",
+        "text": "Last thing: the small words for people, time and place.",
+        "body": "Use **your** point of view: **I → he/she**, **my → his/her**, **we → they**, **me → him/her**, and **you → me** if the message was for you. Time and place words change too: on Monday, *tomorrow* meant Tuesday, so a week later say **the next day**. **today → that day**, **yesterday → the day before**, **here → there**. *(A week later) She said she will come tomorrow* ✗ → *She said she **would** come **the next day***.",
+        "pairs": [
+          {
+            "en": "today → that day",
+            "id": "hari ini → hari itu"
+          },
+          {
+            "en": "tomorrow → the next day",
+            "id": "besok → keesokan harinya"
+          },
+          {
+            "en": "yesterday → the day before",
+            "id": "kemarin → sehari sebelumnya"
+          },
+          {
+            "en": "here → there",
+            "id": "di sini → di sana"
+          },
+          {
+            "en": "I → he / she",
+            "id": "saya → dia"
+          },
+          {
+            "en": "my → his / her",
+            "id": "-ku / saya → -nya"
+          },
+          {
+            "en": "we → they",
+            "id": "kami → mereka"
+          },
+          {
+            "en": "you → me",
+            "id": "kamu → aku (kalau pesannya untukmu)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which day?",
+        "text": "Pak Hasan told you about a client meeting last month.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pronouns-time-words",
+          "prompt": "Last month Pak Hasan said: 'I met the client yesterday.' Today you report it: Pak Hasan said he had met the client ___",
+          "options": [
+            "yesterday.",
+            "the next day.",
+            "the day before."
+          ],
+          "answer": 2,
+          "explanation": "His *yesterday* was the day before he spoke, not your yesterday, so **yesterday → the day before**. *the next day* is for *tomorrow*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · reported speech",
+          "intro": "Reporting later: said or told, the verb one step back, and your own words for people, time and place.",
+          "headers": [
+            "They said",
+            "You report it later",
+            "What changes"
+          ],
+          "rows": [
+            [
+              "'I am tired.'",
+              "She said she was tired.",
+              "am/is → was"
+            ],
+            [
+              "'We are late.'",
+              "They said they were late.",
+              "are → were; we → they"
+            ],
+            [
+              "'I don't know.'",
+              "He said he didn't know.",
+              "don't → didn't"
+            ],
+            [
+              "'I'll call you tomorrow.'",
+              "She said she would call me the next day.",
+              "will → would; you → me; tomorrow → the next day"
+            ],
+            [
+              "'I can help.'",
+              "He said he could help.",
+              "can → could"
+            ],
+            [
+              "'I lost my key yesterday.'",
+              "She said she had lost her key the day before.",
+              "past → had + past participle; yesterday → the day before"
+            ],
+            [
+              "'I'm busy today.'",
+              "He told me he was busy that day.",
+              "tell + person; today → that day"
+            ],
+            [
+              "'The food here is great.'",
+              "She said the food there was great.",
+              "here → there"
+            ]
+          ],
+          "tips": [
+            "**tell + person** (told me, told us); **say** + no person (said that…, said to me…). *said me* ✗, *told that* ✗.",
+            "No change when you report **right away** with **says** (*She says she's tired*) or when it's **still true** (*He said the office opens at eight*).",
+            "Reported questions (*She asked where I lived*) and orders (*He told me to wait*) come in a later lesson."
+          ],
+          "examples": [
+            {
+              "en": "She told me that she was tired.",
+              "id": "Dia bilang ke aku bahwa dia capek."
+            },
+            {
+              "en": "He said he would call me the next day.",
+              "id": "Dia bilang dia akan meneleponku keesokan harinya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here's a video on said and told, and a page with exercises on reported statements."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar menyampaikan ulang ucapan orang, bahkan beberapa hari kemudian: dengan said dan told, dan dengan sedikit perubahan pada tense, kata ganti dan keterangan waktu. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "said atau told?",
+        "text": "Di A2 kamu menyampaikan pesan saat itu juga: *Sari says she's sick.* Sekarang kita laporkan apa yang dikatakan seseorang sebelumnya.",
+        "body": "Kalau kamu melapor **belakangan**, pakai bentuk lampau: **said** atau **told**. **tell** harus langsung diikuti **orang**: *She **told me** that…*, *He **told the team** that…*. **say** tidak diikuti orang: *She **said** that…* (atau *said **to** me*). Jadi *She said me…* ✗ dan *He told that…* ✗. **that** (= bahwa) boleh dihilangkan. *bilang* dalam bahasa Indonesia cocok untuk keduanya, jadi perhatikan ada orangnya atau tidak.",
+        "pairs": [
+          {
+            "en": "say → said",
+            "id": "bilang, berkata (dibaca 'sed')"
+          },
+          {
+            "en": "tell → told",
+            "id": "bilang ke, memberi tahu (+ orang)"
+          },
+          {
+            "en": "told me / told us",
+            "id": "bilang ke aku / ke kami"
+          },
+          {
+            "en": "said to me",
+            "id": "bilang kepadaku (benar, tapi lebih jarang)"
+          },
+          {
+            "en": "that",
+            "id": "bahwa (boleh dihilangkan)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "said dan told dalam kalimat",
+        "text": "Baca keras-keras. Perhatikan apa yang datang tepat setelah said dan told.",
+        "body": "Setelah **told** selalu ada orang (*me, the team, Pak Hasan*). Setelah **said** tidak ada, kecuali kamu menambahkan **to**. Perhatikan juga, kata kerja setelahnya juga bentuk lampau (*was*): itu langkah berikutnya.",
+        "examples": [
+          {
+            "en": "Rina said that she was tired.",
+            "id": "Rina bilang bahwa dia capek."
+          },
+          {
+            "en": "Rina told me that she was tired.",
+            "id": "Rina bilang ke aku bahwa dia capek."
+          },
+          {
+            "en": "Pak Hasan told the team the client was happy.",
+            "id": "Pak Hasan memberi tahu tim bahwa kliennya senang."
+          },
+          {
+            "en": "Budi said the KRL was very crowded.",
+            "id": "Budi bilang KRL-nya penuh sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari minta cuti sehari ke manajernya. Kata mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "say-vs-tell",
+          "prompt": "Lengkapi: Yesterday Sari ___ her manager that she needed a day off.",
+          "options": [
+            "said",
+            "told",
+            "say"
+          ],
+          "answer": 1,
+          "explanation": "Ada orang (*her manager*) tepat setelah titik-titiknya, jadi pakai **tell → told**. *said her manager* adalah kesalahan klasik: **say** tidak diikuti orang. *say* juga bukan bentuk lampau."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mundur satu langkah",
+        "text": "Sekarang kata kerja di dalam pesannya.",
+        "body": "Hari Senin Rina bilang: *'I **am** tired.'* Seminggu kemudian dia sudah sehat. Kalau kamu bilang *Rina said she **is** tired*, kedengarannya dia capek sekarang. Kata-katanya diucapkan di masa lalu, jadi kata kerjanya **mundur satu langkah**: **am/is → was**, **are → were**, **work → worked**, **don't → didn't**, **will → would**, **can → could**, dan past simple → **had + past participle** (*went → had gone*). Bahasa Indonesia tidak pernah mengubah kata kerjanya (*Dia bilang dia capek*), jadi ini gampang terlupa.",
+        "pairs": [
+          {
+            "en": "am / is → was",
+            "id": "bentuk sekarang → bentuk lampau"
+          },
+          {
+            "en": "are → were",
+            "id": "bentuk sekarang → bentuk lampau"
+          },
+          {
+            "en": "work → worked",
+            "id": "present simple → past simple"
+          },
+          {
+            "en": "don't → didn't",
+            "id": "tidak (sekarang) → tidak (lampau)"
+          },
+          {
+            "en": "will → would",
+            "id": "akan → akan (dilihat dari masa lalu)"
+          },
+          {
+            "en": "can → could",
+            "id": "bisa → bisa (waktu itu)"
+          },
+          {
+            "en": "went → had gone",
+            "id": "past simple → had + past participle"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Dulu dan sekarang",
+        "text": "Lihat kenapa kata kerjanya mundur.",
+        "timeline": {
+          "title": "Ucapan hari Senin, dilaporkan seminggu kemudian",
+          "caption": "Rina bicara hari Senin. Hari Selasa dia sudah sehat. Seminggu kemudian kamu melaporkan ucapannya dalam bentuk lampau: she said she was tired.",
+          "marks": [
+            {
+              "label": "Senin: Rina bilang 'I am tired.'",
+              "kind": "past"
+            },
+            {
+              "label": "Selasa: Rina sudah sehat",
+              "kind": "past"
+            },
+            {
+              "label": "Senin berikutnya: kamu melapor",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Dilaporkan seminggu kemudian",
+        "text": "Ini ucapan orang-orang minggu lalu, dilaporkan hari ini.",
+        "body": "Kalau orangnya bicara kepadamu **saat ini juga**, tetap pakai *says* dan bentuk sekarang (*Rina says she's in the lobby*), seperti di A2. Kalau **masih benar** (*He said the office opens at eight*), bentuk sekarang juga boleh. Tapi kalau kamu melapor **belakangan** dan situasinya sudah lewat, mundurkan kata kerjanya.",
+        "examples": [
+          {
+            "en": "Pak Hasan said he was in a meeting.",
+            "id": "Pak Hasan: 'Saya sedang rapat.' (am → was)"
+          },
+          {
+            "en": "The interns said they were hungry.",
+            "id": "Anak-anak magang: 'Kami lapar.' (are → were)"
+          },
+          {
+            "en": "Sari said she liked the new office.",
+            "id": "Sari: 'Saya suka kantor baru ini.' (like → liked)"
+          },
+          {
+            "en": "Budi said he would bring the projector.",
+            "id": "Budi: 'Saya akan bawa proyektornya.' (will → would)"
+          },
+          {
+            "en": "Bu Ani said she couldn't find her keys.",
+            "id": "Bu Ani: 'Saya tidak bisa menemukan kunci saya.' (can't → couldn't)"
+          },
+          {
+            "en": "Dimas said he had missed the bus.",
+            "id": "Dimas: 'Saya ketinggalan bus.' (missed → had missed)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Mundurkan",
+        "text": "Rina tidak bisa bertemu Budi Senin lalu. Sekarang Budi bertanya kenapa.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "tense-backshift",
+          "prompt": "Senin lalu Rina bilang: 'I don't have time today.' Seminggu kemudian kamu bilang ke Budi: Rina said ___",
+          "options": [
+            "she doesn't have time that day.",
+            "she didn't have time that day.",
+            "she didn't had time that day."
+          ],
+          "answer": 1,
+          "explanation": "Ucapannya seminggu lalu, jadi **don't → didn't**. Setelah *didn't*, kata kerjanya tetap bentuk dasar: **didn't have**, bukan *didn't had*. *doesn't have* tetap bentuk sekarang, seolah-olah tentang saat ini."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang pesan dalam past simple. Ingat: past simple → had + past participle, dan kata untuk orangnya juga berubah.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "tense-backshift",
+          "prompt": "Jumat lalu Sari menelepon dengan kesal: 'My train left without me!' Seminggu kemudian kamu cerita ke Emma. Susun kata-katanya.",
+          "tokens": [
+            "left",
+            "her",
+            "Sari",
+            "without",
+            "had",
+            "train",
+            "said",
+            "her"
+          ],
+          "solution": "Sari said her train had left without her.",
+          "explanation": "Keretanya berangkat **sebelum** Sari menelepon, jadi past simple mundur menjadi **had left** (had + past participle). *my* dan *me* menjadi **her**, karena kamu sedang membicarakan Sari."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Orang, tempat dan hari",
+        "text": "Terakhir: kata-kata kecil untuk orang, waktu dan tempat.",
+        "body": "Pakai sudut pandang **kamu**: **I → he/she**, **my → his/her**, **we → they**, **me → him/her**, dan **you → me** kalau pesannya untukmu. Keterangan waktu dan tempat juga berubah: hari Senin, *tomorrow* berarti Selasa, jadi seminggu kemudian bilang **the next day**. **today → that day**, **yesterday → the day before**, **here → there**. *(Seminggu kemudian) She said she will come tomorrow* ✗ → *She said she **would** come **the next day***.",
+        "pairs": [
+          {
+            "en": "today → that day",
+            "id": "hari ini → hari itu"
+          },
+          {
+            "en": "tomorrow → the next day",
+            "id": "besok → keesokan harinya"
+          },
+          {
+            "en": "yesterday → the day before",
+            "id": "kemarin → sehari sebelumnya"
+          },
+          {
+            "en": "here → there",
+            "id": "di sini → di sana"
+          },
+          {
+            "en": "I → he / she",
+            "id": "saya → dia"
+          },
+          {
+            "en": "my → his / her",
+            "id": "-ku / saya → -nya"
+          },
+          {
+            "en": "we → they",
+            "id": "kami → mereka"
+          },
+          {
+            "en": "you → me",
+            "id": "kamu → aku (kalau pesannya untukmu)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Hari yang mana?",
+        "text": "Bulan lalu Pak Hasan cerita tentang rapat dengan klien.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pronouns-time-words",
+          "prompt": "Bulan lalu Pak Hasan bilang: 'I met the client yesterday.' Hari ini kamu melaporkannya: Pak Hasan said he had met the client ___",
+          "options": [
+            "yesterday.",
+            "the next day.",
+            "the day before."
+          ],
+          "answer": 2,
+          "explanation": "*Yesterday* menurut Pak Hasan adalah sehari sebelum dia bicara, bukan kemarin menurutmu, jadi **yesterday → the day before**. *the next day* untuk *tomorrow*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · reported speech",
+          "intro": "Melapor belakangan: said atau told, kata kerja mundur satu langkah, dan kata-katamu sendiri untuk orang, waktu dan tempat.",
+          "headers": [
+            "Mereka bilang",
+            "Kamu melapor belakangan",
+            "Yang berubah"
+          ],
+          "rows": [
+            [
+              "'I am tired.'",
+              "She said she was tired.",
+              "am/is → was"
+            ],
+            [
+              "'We are late.'",
+              "They said they were late.",
+              "are → were; we → they"
+            ],
+            [
+              "'I don't know.'",
+              "He said he didn't know.",
+              "don't → didn't"
+            ],
+            [
+              "'I'll call you tomorrow.'",
+              "She said she would call me the next day.",
+              "will → would; you → me; tomorrow → the next day"
+            ],
+            [
+              "'I can help.'",
+              "He said he could help.",
+              "can → could"
+            ],
+            [
+              "'I lost my key yesterday.'",
+              "She said she had lost her key the day before.",
+              "past → had + past participle; yesterday → the day before"
+            ],
+            [
+              "'I'm busy today.'",
+              "He told me he was busy that day.",
+              "tell + orang; today → that day"
+            ],
+            [
+              "'The food here is great.'",
+              "She said the food there was great.",
+              "here → there"
+            ]
+          ],
+          "tips": [
+            "**tell + orang** (told me, told us); **say** + tanpa orang (said that…, said to me…). *said me* ✗, *told that* ✗.",
+            "Tidak berubah kalau kamu melapor **saat itu juga** dengan **says** (*She says she's tired*) atau kalau **masih benar** (*He said the office opens at eight*).",
+            "Pertanyaan yang dilaporkan (*She asked where I lived*) dan perintah (*He told me to wait*) dibahas di pelajaran berikutnya."
+          ],
+          "examples": [
+            {
+              "en": "She told me that she was tired.",
+              "id": "Dia bilang ke aku bahwa dia capek."
+            },
+            {
+              "en": "He said he would call me the next day.",
+              "id": "Dia bilang dia akan meneleponku keesokan harinya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini video tentang said dan told, dan halaman dengan latihan tentang reported statements."
+      }
+    ]
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "en": {
+    "greeting": "Hi! You already know If it rains, I'll stay home. Today we add more kinds of result, three useful words (unless, as soon as, in case) and real warnings and promises at work. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "More results after if",
+        "text": "Quick recap: **if + present simple, will + verb**. Today the result part gets more choices.",
+        "body": "The **if-part** stays in the **present simple**, even about the future: *If it rains*, not 'If it will rain'. The **result** can be:\n- **will / won't**: sure\n- **might**: not sure (*mungkin*)\n- **can**: possible or allowed (*bisa / boleh*), never 'will can' (*akan bisa*)\n- **going to**: quite sure, a plan\n- an **instruction** (*kalimat perintah*): it starts with the verb, with no *you* and no *will*: *If you see Rina, tell her …*",
+        "pairs": [
+          {
+            "en": "If it rains, we'll stay inside.",
+            "id": "Kalau hujan, kita di dalam saja. (pasti)"
+          },
+          {
+            "en": "If the traffic is bad, I might be late.",
+            "id": "Kalau macet, saya mungkin terlambat. (belum pasti)"
+          },
+          {
+            "en": "If you come before 8, you can park in the basement.",
+            "id": "Kalau datang sebelum jam 8, kamu bisa parkir di basement. (bisa/boleh)"
+          },
+          {
+            "en": "If the price goes up again, we're going to look for another supplier.",
+            "id": "Kalau harganya naik lagi, kita akan cari pemasok lain. (rencana)"
+          },
+          {
+            "en": "If you see Rina, tell her the meeting is at 3.",
+            "id": "Kalau ketemu Rina, bilang ke dia rapatnya jam 3. (perintah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Before you go on leave",
+        "text": "You're going on leave tomorrow. You leave a note for your colleague.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-first-conditional",
+          "prompt": "Your note: 'If the printer ___ again, call the IT team on 0812 3344 5566.'",
+          "options": [
+            "will break down",
+            "breaks down",
+            "break down"
+          ],
+          "answer": 1,
+          "explanation": "The if-part stays in the present simple, even about the future: **If the printer breaks down** (the printer = it → -s). The result is an instruction (*call*). 'will break down' is the *kalau nanti* trap, and 'break down' is missing the -s."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "unless = if … not",
+        "text": "Now a short, useful word: **unless** = *kalau … tidak / kecuali kalau*.",
+        "body": "*If you **don't** hurry, you'll miss the bus* = ***Unless** you hurry, you'll miss the bus.*\nThe verb after unless is **positive**, because the *not* is already inside **unless**. 'Unless you don't hurry' says *not* twice and turns the meaning around. Indonesian *kalau kamu **tidak** cepat* has *tidak*: drop it after unless.\nThe rest works like if: present simple, no will. Not sure? **if … not** is always correct; unless is common in rules and warnings.",
+        "pairs": [
+          {
+            "en": "unless",
+            "id": "kalau … tidak / kecuali kalau"
+          },
+          {
+            "en": "Unless you hurry, you'll miss the bus.",
+            "id": "Kalau kamu tidak cepat, kamu akan ketinggalan bus."
+          },
+          {
+            "en": "You can't enter the building unless you have an ID card.",
+            "id": "Kamu tidak bisa masuk gedung kecuali kalau punya kartu identitas."
+          },
+          {
+            "en": "The ojek won't wait unless you pay first.",
+            "id": "Ojeknya tidak akan menunggu kalau kamu tidak bayar dulu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A room in Jogja",
+        "text": "Your friend wants a hotel room in Jogja for the long weekend, but she keeps waiting.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unless-as-soon-as-in-case",
+          "prompt": "Which sentence means 'Kalau kamu tidak pesan hari ini, kamarnya bakal habis'?",
+          "options": [
+            "Unless you don't book today, there won't be any rooms left.",
+            "If you book today, there won't be any rooms left.",
+            "Unless you book today, there won't be any rooms left."
+          ],
+          "answer": 2,
+          "explanation": "unless = if … not, so the verb after it is positive: **Unless you book today**. 'Unless you don't book' says *not* twice (the *tidak* trap), and 'If you book today' says booking makes the rooms disappear."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "as soon as and in case",
+        "text": "Two more words. Both take the **present simple**, never will.",
+        "body": "**as soon as** = *begitu*: the first thing **will** happen, and the result comes **right after**. *As soon as I get the numbers, I'll send you the report.* Not 'as soon as I will get'.\n**in case** = *jaga-jaga kalau / siapa tahu*: you act **first**, as a precaution, because something **might** happen later. *Take an umbrella in case it rains* = take it now, rain or no rain. *Take an umbrella if it rains* = take it only when it's raining. Ask: **Do I do it before, just to be safe?** → in case.",
+        "pairs": [
+          {
+            "en": "as soon as",
+            "id": "begitu / segera setelah"
+          },
+          {
+            "en": "in case",
+            "id": "jaga-jaga kalau / siapa tahu"
+          },
+          {
+            "en": "just in case",
+            "id": "untuk jaga-jaga (di akhir kalimat)"
+          },
+          {
+            "en": "As soon as I get the numbers, I'll send you the report.",
+            "id": "Begitu angkanya saya dapat, laporannya saya kirim ke kamu."
+          },
+          {
+            "en": "I'll give you my number in case you get lost.",
+            "id": "Saya kasih nomor saya, siapa tahu kamu tersesat."
+          },
+          {
+            "en": "Call me if you get lost.",
+            "id": "Telepon saya kalau kamu tersesat."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "in case: you act first",
+        "text": "See when things happen with **in case**: the action comes first.",
+        "timeline": {
+          "title": "Take an umbrella in case it rains.",
+          "caption": "You take the umbrella now, before you know the weather. Later it rains (you're ready) or it doesn't (no problem). With if, you'd take it only when it's raining.",
+          "marks": [
+            {
+              "label": "now: you take the umbrella",
+              "kind": "now"
+            },
+            {
+              "label": "later: rain? You're ready",
+              "kind": "future"
+            },
+            {
+              "label": "or: no rain, no problem",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Packing for Bromo",
+        "text": "Rina is packing her bag for a trip to Mount Bromo. The weather there can change fast.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unless-as-soon-as-in-case",
+          "prompt": "Rina is putting a raincoat in her bag ___ the weather changes on the mountain.",
+          "options": [
+            "if",
+            "as soon as",
+            "in case"
+          ],
+          "answer": 2,
+          "explanation": "She packs the raincoat **now**, before the trip, just to be safe: **in case** the weather changes. 'if' would mean she packs it only when the weather changes, but she's packing now. 'as soon as' means it will surely happen."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Waiting for the payment",
+        "text": "A customer is buying ten laptops. The shop sends them right after the money arrives.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unless-as-soon-as-in-case",
+          "prompt": "The shop writes to the customer: 'We'll send the laptops ___ your payment arrives.'",
+          "options": [
+            "as soon as",
+            "unless",
+            "in case"
+          ],
+          "answer": 0,
+          "explanation": "The payment will arrive, and the laptops go out right after it: **as soon as** (*begitu*). 'unless' = if … not, so they'd send the laptops only if the payment does NOT arrive. 'in case' would mean sending them first, as a precaution."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "At work: consequences, warnings, promises",
+        "text": "At work, these sentences tell people what will happen. Pick the result by how sure you are.",
+        "body": "**will** = sure (a consequence). **might** = not sure, and softer in a warning. **can** = allowed (a deal). **as soon as** + **I'll** = a promise.",
+        "examples": [
+          {
+            "en": "If we miss the deadline, the client will cancel the contract.",
+            "id": "Kalau kita melewatkan tenggat, klien akan membatalkan kontraknya."
+          },
+          {
+            "en": "If you click on that link, you might get a virus.",
+            "id": "Kalau kamu klik tautan itu, bisa-bisa kena virus."
+          },
+          {
+            "en": "Unless you back up your files, you might lose everything.",
+            "id": "Kalau kamu tidak mencadangkan file-mu, kamu bisa-bisa kehilangan semuanya."
+          },
+          {
+            "en": "If you finish the report by Thursday, you can leave early on Friday.",
+            "id": "Kalau laporannya selesai paling lambat Kamis, kamu boleh pulang cepat hari Jumat."
+          },
+          {
+            "en": "As soon as I get approval from Pak Hasan, I'll let you know.",
+            "id": "Begitu dapat persetujuan dari Pak Hasan, saya kabari kamu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Finish the warning",
+        "text": "Your team found a serious bug, and the client is already unhappy. Warn your manager, politely.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "talk-about-likely",
+          "prompt": "Arrange the words to finish the warning: If we don't fix this bug today, … (Kita bisa-bisa kehilangan klien itu.)",
+          "tokens": [
+            "client",
+            "might",
+            "We",
+            "the",
+            "lose"
+          ],
+          "solution": "We might lose the client.",
+          "explanation": "A likely consequence you aren't 100% sure about: **might** + the base form *lose*. might sounds softer and more polite than *will* in a warning."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · First conditional, unless, as soon as, in case",
+          "intro": "Present simple after if, unless, as soon as and in case; choose the result by how sure you are.",
+          "headers": [
+            "Pattern",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "if + present, will / won't + verb",
+              "a sure result",
+              "If it rains, we'll stay inside."
+            ],
+            [
+              "if + present, might + verb",
+              "a possible result (mungkin)",
+              "If the traffic is bad, I might be late."
+            ],
+            [
+              "if + present, can + verb",
+              "possible or allowed (bisa / boleh)",
+              "If you come before 8, you can park in the basement."
+            ],
+            [
+              "if + present, instruction",
+              "tell someone what to do",
+              "If you see Rina, tell her the meeting is at 3."
+            ],
+            [
+              "unless + present (positive)",
+              "if … not (kalau … tidak)",
+              "Unless you hurry, you'll miss the bus."
+            ],
+            [
+              "as soon as + present",
+              "sure, and right after (begitu)",
+              "As soon as I get the numbers, I'll send you the report."
+            ],
+            [
+              "in case + present",
+              "act first, to be safe (jaga-jaga kalau)",
+              "Take an umbrella in case it rains."
+            ]
+          ],
+          "tips": [
+            "No will after if, unless, as soon as or in case: **If it rains**, not 'If it will rain'.",
+            "unless already has *not* inside: **Unless you hurry**, not 'Unless you don't hurry'.",
+            "Done before, to be safe → **in case**. Done only when it happens → **if**."
+          ],
+          "examples": [
+            {
+              "en": "If we miss the deadline, the client will cancel the contract.",
+              "id": "Kalau kita melewatkan tenggat, klien akan membatalkan kontraknya."
+            },
+            {
+              "en": "Unless you back up your files, you might lose everything.",
+              "id": "Kalau kamu tidak mencadangkan file-mu, kamu bisa-bisa kehilangan semuanya."
+            },
+            {
+              "en": "I always bring my charger to work, just in case.",
+              "id": "Saya selalu bawa charger ke kantor, untuk jaga-jaga."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? A British Council page with two short tests, and an engVid video all about in case."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu If it rains, I'll stay home. Hari ini kita tambah jenis hasil yang lain, tiga kata yang berguna (unless, as soon as, in case) dan peringatan serta janji yang nyata di kantor. Ayo kita mulai langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Lebih banyak hasil setelah if",
+        "text": "Ingat lagi: **if + present simple, will + kata kerja**. Hari ini bagian hasilnya punya lebih banyak pilihan.",
+        "body": "**Bagian if** tetap memakai **present simple**, walaupun tentang masa depan: *If it rains*, bukan 'If it will rain'. **Hasilnya** bisa:\n- **will / won't**: pasti\n- **might**: belum pasti (*mungkin*)\n- **can**: bisa atau boleh, jangan 'will can' (*akan bisa*)\n- **going to**: cukup pasti, sebuah rencana\n- **kalimat perintah**: diawali kata kerja, tanpa *you* dan tanpa *will*: *If you see Rina, tell her …*",
+        "pairs": [
+          {
+            "en": "If it rains, we'll stay inside.",
+            "id": "Kalau hujan, kita di dalam saja. (pasti)"
+          },
+          {
+            "en": "If the traffic is bad, I might be late.",
+            "id": "Kalau macet, saya mungkin terlambat. (belum pasti)"
+          },
+          {
+            "en": "If you come before 8, you can park in the basement.",
+            "id": "Kalau datang sebelum jam 8, kamu bisa parkir di basement. (bisa/boleh)"
+          },
+          {
+            "en": "If the price goes up again, we're going to look for another supplier.",
+            "id": "Kalau harganya naik lagi, kita akan cari pemasok lain. (rencana)"
+          },
+          {
+            "en": "If you see Rina, tell her the meeting is at 3.",
+            "id": "Kalau ketemu Rina, bilang ke dia rapatnya jam 3. (perintah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Sebelum cuti",
+        "text": "Besok kamu cuti. Kamu meninggalkan catatan untuk rekan kerjamu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-first-conditional",
+          "prompt": "Catatanmu: 'If the printer ___ again, call the IT team on 0812 3344 5566.'",
+          "options": [
+            "will break down",
+            "breaks down",
+            "break down"
+          ],
+          "answer": 1,
+          "explanation": "Bagian if tetap present simple, walaupun tentang masa depan: **If the printer breaks down** (the printer = it → -s). Hasilnya kalimat perintah (*call*). 'will break down' adalah jebakan *kalau nanti*, dan 'break down' tidak ada -s-nya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "unless = if … not",
+        "text": "Sekarang satu kata pendek yang berguna: **unless** = *kalau … tidak / kecuali kalau*.",
+        "body": "*If you **don't** hurry, you'll miss the bus* = ***Unless** you hurry, you'll miss the bus.*\nKata kerja setelah unless **positif**, karena *not* sudah ada di dalam **unless**. 'Unless you don't hurry' berarti bilang *tidak* dua kali dan artinya jadi terbalik. Bahasa Indonesia *kalau kamu **tidak** cepat* ada *tidak*: buang setelah unless.\nSelebihnya sama seperti if: present simple, tanpa will. Ragu? **if … not** selalu benar; unless umum dalam aturan dan peringatan.",
+        "pairs": [
+          {
+            "en": "unless",
+            "id": "kalau … tidak / kecuali kalau"
+          },
+          {
+            "en": "Unless you hurry, you'll miss the bus.",
+            "id": "Kalau kamu tidak cepat, kamu akan ketinggalan bus."
+          },
+          {
+            "en": "You can't enter the building unless you have an ID card.",
+            "id": "Kamu tidak bisa masuk gedung kecuali kalau punya kartu identitas."
+          },
+          {
+            "en": "The ojek won't wait unless you pay first.",
+            "id": "Ojeknya tidak akan menunggu kalau kamu tidak bayar dulu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kamar di Jogja",
+        "text": "Temanmu mau pesan kamar hotel di Jogja untuk libur panjang, tapi dia terus menunda.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unless-as-soon-as-in-case",
+          "prompt": "Kalimat mana yang artinya 'Kalau kamu tidak pesan hari ini, kamarnya bakal habis'?",
+          "options": [
+            "Unless you don't book today, there won't be any rooms left.",
+            "If you book today, there won't be any rooms left.",
+            "Unless you book today, there won't be any rooms left."
+          ],
+          "answer": 2,
+          "explanation": "unless = if … not, jadi kata kerja setelahnya positif: **Unless you book today**. 'Unless you don't book' berarti bilang *tidak* dua kali (jebakan *tidak*), dan 'If you book today' berarti memesan malah membuat kamarnya habis."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "as soon as dan in case",
+        "text": "Dua kata lagi. Keduanya memakai **present simple**, jangan will.",
+        "body": "**as soon as** = *begitu*: hal pertama **pasti** terjadi, dan hasilnya datang **langsung setelahnya**. *As soon as I get the numbers, I'll send you the report.* Bukan 'as soon as I will get'.\n**in case** = *jaga-jaga kalau / siapa tahu*: kamu bertindak **lebih dulu**, untuk berjaga-jaga, karena sesuatu **mungkin** terjadi nanti. *Take an umbrella in case it rains* = bawa sekarang, hujan atau tidak. *Take an umbrella if it rains* = bawa hanya kalau sedang hujan. Tanya: **Saya lakukan lebih dulu, untuk jaga-jaga?** → in case.",
+        "pairs": [
+          {
+            "en": "as soon as",
+            "id": "begitu / segera setelah"
+          },
+          {
+            "en": "in case",
+            "id": "jaga-jaga kalau / siapa tahu"
+          },
+          {
+            "en": "just in case",
+            "id": "untuk jaga-jaga (di akhir kalimat)"
+          },
+          {
+            "en": "As soon as I get the numbers, I'll send you the report.",
+            "id": "Begitu angkanya saya dapat, laporannya saya kirim ke kamu."
+          },
+          {
+            "en": "I'll give you my number in case you get lost.",
+            "id": "Saya kasih nomor saya, siapa tahu kamu tersesat."
+          },
+          {
+            "en": "Call me if you get lost.",
+            "id": "Telepon saya kalau kamu tersesat."
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "in case: bertindak lebih dulu",
+        "text": "Lihat urutan kejadiannya dengan **in case**: tindakannya datang lebih dulu.",
+        "timeline": {
+          "title": "Take an umbrella in case it rains.",
+          "caption": "Kamu membawa payung sekarang, sebelum tahu cuacanya. Nanti hujan (kamu siap) atau tidak (tidak masalah). Dengan if, kamu baru membawanya kalau sedang hujan.",
+          "marks": [
+            {
+              "label": "sekarang: kamu bawa payung",
+              "kind": "now"
+            },
+            {
+              "label": "nanti: hujan? Kamu siap",
+              "kind": "future"
+            },
+            {
+              "label": "atau: tidak hujan, tidak masalah",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Berkemas ke Bromo",
+        "text": "Rina sedang berkemas untuk perjalanan ke Gunung Bromo. Cuaca di sana bisa berubah cepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unless-as-soon-as-in-case",
+          "prompt": "Lengkapi: Rina is putting a raincoat in her bag ___ the weather changes on the mountain.",
+          "options": [
+            "if",
+            "as soon as",
+            "in case"
+          ],
+          "answer": 2,
+          "explanation": "Dia memasukkan jas hujan **sekarang**, sebelum berangkat, untuk jaga-jaga: **in case** the weather changes. 'if' berarti dia baru memasukkannya kalau cuacanya berubah, padahal dia berkemas sekarang. 'as soon as' berarti pasti terjadi."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Menunggu pembayaran",
+        "text": "Seorang pelanggan membeli sepuluh laptop. Toko mengirimnya langsung setelah uangnya masuk.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "unless-as-soon-as-in-case",
+          "prompt": "Toko menulis ke pelanggan: 'We'll send the laptops ___ your payment arrives.'",
+          "options": [
+            "as soon as",
+            "unless",
+            "in case"
+          ],
+          "answer": 0,
+          "explanation": "Pembayarannya pasti masuk, dan laptopnya dikirim langsung setelahnya: **as soon as** (*begitu*). 'unless' = if … not, jadi laptopnya malah dikirim kalau pembayarannya TIDAK masuk. 'in case' berarti mengirim lebih dulu, untuk jaga-jaga."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Di kantor: akibat, peringatan, janji",
+        "text": "Di kantor, kalimat-kalimat ini memberi tahu orang apa yang akan terjadi. Pilih hasilnya sesuai seberapa yakin kamu.",
+        "body": "**will** = pasti (akibat). **might** = belum pasti, dan lebih halus dalam peringatan. **can** = boleh (kesepakatan). **as soon as** + **I'll** = janji.",
+        "examples": [
+          {
+            "en": "If we miss the deadline, the client will cancel the contract.",
+            "id": "Kalau kita melewatkan tenggat, klien akan membatalkan kontraknya."
+          },
+          {
+            "en": "If you click on that link, you might get a virus.",
+            "id": "Kalau kamu klik tautan itu, bisa-bisa kena virus."
+          },
+          {
+            "en": "Unless you back up your files, you might lose everything.",
+            "id": "Kalau kamu tidak mencadangkan file-mu, kamu bisa-bisa kehilangan semuanya."
+          },
+          {
+            "en": "If you finish the report by Thursday, you can leave early on Friday.",
+            "id": "Kalau laporannya selesai paling lambat Kamis, kamu boleh pulang cepat hari Jumat."
+          },
+          {
+            "en": "As soon as I get approval from Pak Hasan, I'll let you know.",
+            "id": "Begitu dapat persetujuan dari Pak Hasan, saya kabari kamu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Selesaikan peringatannya",
+        "text": "Timmu menemukan bug yang serius, dan kliennya sudah kecewa. Peringatkan manajermu dengan sopan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "talk-about-likely",
+          "prompt": "Susun kata-katanya untuk menyelesaikan peringatan: If we don't fix this bug today, … (Kita bisa-bisa kehilangan klien itu.)",
+          "tokens": [
+            "client",
+            "might",
+            "We",
+            "the",
+            "lose"
+          ],
+          "solution": "We might lose the client.",
+          "explanation": "Akibat yang mungkin terjadi tapi belum 100% pasti: **might** + bentuk dasar *lose*. might terdengar lebih halus dan sopan daripada *will* dalam peringatan."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · First conditional, unless, as soon as, in case",
+          "intro": "Present simple setelah if, unless, as soon as dan in case; pilih hasilnya sesuai seberapa yakin kamu.",
+          "headers": [
+            "Pola",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "if + present, will / won't + kata kerja",
+              "hasil yang pasti",
+              "If it rains, we'll stay inside."
+            ],
+            [
+              "if + present, might + kata kerja",
+              "hasil yang mungkin (mungkin)",
+              "If the traffic is bad, I might be late."
+            ],
+            [
+              "if + present, can + kata kerja",
+              "bisa atau boleh",
+              "If you come before 8, you can park in the basement."
+            ],
+            [
+              "if + present, kalimat perintah",
+              "menyuruh orang melakukan sesuatu",
+              "If you see Rina, tell her the meeting is at 3."
+            ],
+            [
+              "unless + present (positif)",
+              "if … not (kalau … tidak)",
+              "Unless you hurry, you'll miss the bus."
+            ],
+            [
+              "as soon as + present",
+              "pasti, dan langsung setelahnya (begitu)",
+              "As soon as I get the numbers, I'll send you the report."
+            ],
+            [
+              "in case + present",
+              "bertindak lebih dulu, untuk jaga-jaga",
+              "Take an umbrella in case it rains."
+            ]
+          ],
+          "tips": [
+            "Tanpa will setelah if, unless, as soon as atau in case: **If it rains**, bukan 'If it will rain'.",
+            "unless sudah berisi *not*: **Unless you hurry**, bukan 'Unless you don't hurry'.",
+            "Dilakukan lebih dulu, untuk jaga-jaga → **in case**. Dilakukan hanya kalau hal itu terjadi → **if**."
+          ],
+          "examples": [
+            {
+              "en": "If we miss the deadline, the client will cancel the contract.",
+              "id": "Kalau kita melewatkan tenggat, klien akan membatalkan kontraknya."
+            },
+            {
+              "en": "Unless you back up your files, you might lose everything.",
+              "id": "Kalau kamu tidak mencadangkan file-mu, kamu bisa-bisa kehilangan semuanya."
+            },
+            {
+              "en": "I always bring my charger to work, just in case.",
+              "id": "Saya selalu bawa charger ke kantor, untuk jaga-jaga."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ada halaman British Council dengan dua tes singkat, dan video engVid khusus tentang in case."
+      }
+    ]
+  }
+}

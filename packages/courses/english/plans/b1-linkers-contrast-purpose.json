@@ -1,0 +1,646 @@
+{
+  "en": {
+    "greeting": "Hi! You already join ideas with but, because and so. Today you'll add grown-up linkers for a surprise, a reason and a goal: although, however, because of, due to, in order to and so that. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "although / even though",
+        "text": "Quick recap: **but** = tapi, **because** = karena, **so** = jadi. Now a more formal way to say tapi.",
+        "body": "**although** = *meskipun / walaupun*. It shows a surprise: *Although the KRL was crowded, I got a seat.* **even though** is the same, but stronger.\n\nAfter it comes a **clause**: a **subject** (who or what: *I, Budi, the KRL*) + a **verb** (*was, works*). Not `Although the rain`.\n\nThe although-part can go first (comma after it) or second (no comma).",
+        "pairs": [
+          {
+            "en": "although",
+            "id": "meskipun"
+          },
+          {
+            "en": "even though",
+            "id": "walaupun (lebih kuat)"
+          },
+          {
+            "en": "Although the KRL was crowded, I got a seat.",
+            "id": "Meskipun KRL-nya penuh, saya dapat tempat duduk."
+          },
+          {
+            "en": "I got a seat although the KRL was crowded.",
+            "id": "Saya dapat tempat duduk meskipun KRL-nya penuh."
+          },
+          {
+            "en": "Even though Budi was sick, he went to work.",
+            "id": "Walaupun Budi sakit, dia tetap masuk kerja."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "One linker, not two",
+        "text": "Here's the big Indonesian trap.",
+        "body": "In Indonesian we often say *Meskipun …, tetapi …*. In English, one sentence takes **although OR but**, never both: `Although it was raining, but we went out` is wrong.\n\nIt's the same rule as *Karena …, jadi …* (because OR so).",
+        "examples": [
+          {
+            "en": "Although it was raining, we went to the market.",
+            "id": "Meskipun hujan, kami pergi ke pasar."
+          },
+          {
+            "en": "It was raining, but we went to the market.",
+            "id": "Hujan, tapi kami pergi ke pasar."
+          },
+          {
+            "en": "Even though the rent is high, Rina likes her kos.",
+            "id": "Walaupun sewanya mahal, Rina suka kosnya."
+          },
+          {
+            "en": "Rina likes her kos even though the rent is high.",
+            "id": "Rina suka kosnya walaupun sewanya mahal."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas earns a small salary, but he helps his family. Look at what comes after the gap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-linkers",
+          "prompt": "___ Dimas's salary is small, he sends money to his parents every month.",
+          "options": [
+            "But",
+            "Although",
+            "However"
+          ],
+          "answer": 1,
+          "explanation": "After the gap comes a subject + verb (*Dimas's salary is*), a comma, then the rest of the **same sentence**, so use **Although**. *But* goes between the two parts (*…is small, but he sends…*), never at the start of the first part, and *However* needs its own new sentence."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "However: a new sentence",
+        "text": "There's one more contrast word, and it works differently.",
+        "body": "**however** = *namun*. It **starts a new sentence** (after a full stop) and has a **comma after it**: *The hotel was cheap. However, it was very clean.*\n\nIt can't join two parts like but: `The hotel was cheap, however it was clean` is a common mistake. Inside one sentence, use **but** or **although**.\n\nGood news: Indonesian *Namun, …* works the same way.",
+        "pairs": [
+          {
+            "en": "however",
+            "id": "namun"
+          },
+          {
+            "en": "The hotel was cheap. However, it was very clean.",
+            "id": "Hotelnya murah. Namun, hotelnya sangat bersih."
+          },
+          {
+            "en": "The hotel was cheap, but it was very clean.",
+            "id": "Hotelnya murah, tapi sangat bersih."
+          },
+          {
+            "en": "Prices went up. However, sales were still good.",
+            "id": "Harga naik. Namun, penjualan tetap bagus."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Check the punctuation",
+        "text": "Sari is writing an email about her company's new office. Look at the full stops and commas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-linkers",
+          "options": [
+            "The new office is far from my house, however it's close to the KRL station.",
+            "The new office is far from my house. However, it's close to the KRL station.",
+            "The new office is far from my house. Although, it's close to the KRL station."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence is written correctly?",
+          "explanation": "**However** starts a new sentence after a full stop and has a comma after it. The first sentence joins two parts with *however* and a comma, like *but*: that's the common mistake. *Although* never stands alone with a comma: it needs a subject + verb after it."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "karena: because or because of?",
+        "text": "Now reasons. Indonesian karena has two English forms.",
+        "body": "Look at what comes **right after** it:\n- a **subject + verb** (*it was late*) → **because**: *I took an ojek because it was late.*\n- only a **noun** (kata benda: *the rain, the traffic, a problem*) → **because of** or **due to**: *The match stopped because of the rain.*\n\n**due to** = because of, but **formal**: announcements, notices, news, work emails. Not `Because of it was late`.",
+        "pairs": [
+          {
+            "en": "because + subject + verb",
+            "id": "karena + subjek + kata kerja"
+          },
+          {
+            "en": "because of + noun",
+            "id": "karena + kata benda"
+          },
+          {
+            "en": "due to + noun",
+            "id": "karena + kata benda (formal)"
+          },
+          {
+            "en": "We stayed home because of the traffic.",
+            "id": "Kami di rumah saja karena macet."
+          },
+          {
+            "en": "The KRL is late due to a technical problem.",
+            "id": "KRL terlambat karena gangguan teknis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It was a stormy afternoon in Jakarta. Find the verb after the gap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reason-linkers",
+          "prompt": "Pak Hasan took a taxi ___ it was raining hard.",
+          "options": [
+            "because of",
+            "due to",
+            "because"
+          ],
+          "answer": 2,
+          "explanation": "After the gap there's a subject + verb (*it was raining*), so use **because**. *because of* and *due to* only take a noun (*because of the rain*), so `because of it was raining` is the common mistake."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Goals: to, in order to, so that",
+        "text": "Last one: how to say your goal, the reason you do something.",
+        "body": "- **to / in order to** + a **base verb** (plain verb: *buy, pass*): *I went to the bank to get cash.* in order to is more formal.\n- **so that** (*supaya*) + **subject + can / could / will**: *I'll send the file so that you can check it.* Past: *so that I could*.\n\nTraps: *untuk* + verb is not **for** + verb: `for pass the exam` ✗ (*for the exam* is fine). And **so that** (supaya, a goal) isn't **so** (jadi, a result).",
+        "pairs": [
+          {
+            "en": "to get cash",
+            "id": "untuk mengambil uang tunai"
+          },
+          {
+            "en": "in order to register",
+            "id": "untuk mendaftar (formal)"
+          },
+          {
+            "en": "so that you can check it",
+            "id": "supaya kamu bisa memeriksanya"
+          },
+          {
+            "en": "so that I could get a seat",
+            "id": "supaya saya bisa dapat tempat duduk"
+          },
+          {
+            "en": "for the exam",
+            "id": "untuk ujian (for + kata benda)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Sari puts Rp500.000 in the bank every month. Why? She has a goal.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "purpose-linkers",
+          "tokens": [
+            "can",
+            "so",
+            "money",
+            "She",
+            "travel",
+            "that",
+            "saves",
+            "she"
+          ],
+          "solution": "She saves money so that she can travel.",
+          "prompt": "Arrange the words: Dia menabung supaya dia bisa jalan-jalan.",
+          "explanation": "*supaya* = **so that**, then subject + **can** + verb: **so that she can travel**. The goal comes after the action: *She saves money*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani has a goal too. Look at the word right after the gap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "purpose-linkers",
+          "prompt": "Bu Ani walks to the office every morning ___ stay healthy.",
+          "options": [
+            "for",
+            "so that",
+            "in order to"
+          ],
+          "answer": 2,
+          "explanation": "A base verb (*stay*) comes right after the gap, so use **in order to** (= to). *so that* needs a subject + can first (*so that she can stay*). *for* + verb is the *untuk* trap: for only goes before a noun."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · contrast, reason, purpose",
+          "intro": "Look at what comes after the linker: a subject + verb, a noun, or a base verb. That decides which word you need.",
+          "headers": [
+            "Linker",
+            "What comes next",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "although / even though",
+              "subject + verb",
+              "meskipun / walaupun",
+              "Although the KRL was crowded, I got a seat."
+            ],
+            [
+              "but",
+              "subject + verb (one sentence)",
+              "tapi",
+              "The hotel was cheap, but it was clean."
+            ],
+            [
+              "However,",
+              "a new sentence",
+              "namun",
+              "The hotel was cheap. However, it was clean."
+            ],
+            [
+              "because",
+              "subject + verb",
+              "karena",
+              "I took an ojek because it was late."
+            ],
+            [
+              "because of",
+              "noun",
+              "karena",
+              "The match stopped because of the rain."
+            ],
+            [
+              "due to",
+              "noun (formal)",
+              "karena",
+              "The KRL is late due to a technical problem."
+            ],
+            [
+              "to / in order to",
+              "base verb",
+              "untuk",
+              "I went to the bank to get cash."
+            ],
+            [
+              "so that",
+              "subject + can / could / will",
+              "supaya / agar",
+              "I'll send the file so that you can check it."
+            ],
+            [
+              "so",
+              "subject + verb (a result)",
+              "jadi",
+              "It was late, so I took an ojek."
+            ]
+          ],
+          "tips": [
+            "One sentence, one linker: not `Although …, but …` (Meskipun …, tetapi …).",
+            "**However,** starts a new sentence, with a comma after it. Inside one sentence, use **but**.",
+            "**karena** + verb → because; + noun → because of / due to. **untuk** + verb → to, not `for`."
+          ],
+          "examples": [
+            {
+              "en": "Even though Budi was sick, he went to work.",
+              "id": "Walaupun Budi sakit, dia tetap masuk kerja."
+            },
+            {
+              "en": "We stayed home because of the traffic.",
+              "id": "Kami di rumah saja karena macet."
+            },
+            {
+              "en": "I left early so that I could get a seat on the KRL.",
+              "id": "Saya berangkat lebih awal supaya bisa dapat tempat duduk di KRL."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice with although and even though? This British Council page has two short tests. It also shows despite, which comes later."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Kamu sudah bisa menyambung ide dengan but, because dan so. Hari ini kamu akan menambah kata penghubung yang lebih dewasa untuk kejutan, alasan dan tujuan: although, however, because of, due to, in order to dan so that. Yuk kita pelajari langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "although / even though",
+        "text": "Ingat lagi: **but** = tapi, **because** = karena, **so** = jadi. Sekarang cara yang lebih formal untuk bilang tapi.",
+        "body": "**although** = *meskipun / walaupun*. Kata ini menunjukkan hal yang mengejutkan: *Although the KRL was crowded, I got a seat.* **even though** sama, tapi lebih kuat.\n\nSetelahnya harus ada **klausa**: **subjek** (siapa atau apa: *I, Budi, the KRL*) + **kata kerja** (*was, works*). Bukan `Although the rain`.\n\nBagian although bisa di depan (koma setelahnya) atau di belakang (tanpa koma).",
+        "pairs": [
+          {
+            "en": "although",
+            "id": "meskipun"
+          },
+          {
+            "en": "even though",
+            "id": "walaupun (lebih kuat)"
+          },
+          {
+            "en": "Although the KRL was crowded, I got a seat.",
+            "id": "Meskipun KRL-nya penuh, saya dapat tempat duduk."
+          },
+          {
+            "en": "I got a seat although the KRL was crowded.",
+            "id": "Saya dapat tempat duduk meskipun KRL-nya penuh."
+          },
+          {
+            "en": "Even though Budi was sick, he went to work.",
+            "id": "Walaupun Budi sakit, dia tetap masuk kerja."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Satu kata penghubung, bukan dua",
+        "text": "Ini jebakan besar dari bahasa Indonesia.",
+        "body": "Dalam bahasa Indonesia kita sering bilang *Meskipun …, tetapi …*. Dalam bahasa Inggris, satu kalimat memakai **although ATAU but**, jangan dua-duanya: `Although it was raining, but we went out` salah.\n\nIni aturan yang sama dengan *Karena …, jadi …* (because ATAU so).",
+        "examples": [
+          {
+            "en": "Although it was raining, we went to the market.",
+            "id": "Meskipun hujan, kami pergi ke pasar."
+          },
+          {
+            "en": "It was raining, but we went to the market.",
+            "id": "Hujan, tapi kami pergi ke pasar."
+          },
+          {
+            "en": "Even though the rent is high, Rina likes her kos.",
+            "id": "Walaupun sewanya mahal, Rina suka kosnya."
+          },
+          {
+            "en": "Rina likes her kos even though the rent is high.",
+            "id": "Rina suka kosnya walaupun sewanya mahal."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Gaji Dimas kecil, tapi dia membantu keluarganya. Lihat apa yang datang setelah titik-titiknya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-linkers",
+          "prompt": "Lengkapi: ___ Dimas's salary is small, he sends money to his parents every month.",
+          "options": [
+            "But",
+            "Although",
+            "However"
+          ],
+          "answer": 1,
+          "explanation": "Setelah titik-titiknya ada subjek + kata kerja (*Dimas's salary is*), koma, lalu sisa dari **kalimat yang sama**, jadi pakai **Although**. *But* ada di antara dua bagian (*…is small, but he sends…*), tidak pernah di awal bagian pertama, dan *However* butuh kalimat baru sendiri."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "However: kalimat baru",
+        "text": "Ada satu kata kontras lagi, dan cara pakainya berbeda.",
+        "body": "**however** = *namun*. Kata ini **memulai kalimat baru** (setelah titik) dan ada **koma setelahnya**: *The hotel was cheap. However, it was very clean.*\n\nKata ini tidak bisa menyambung dua bagian seperti but: `The hotel was cheap, however it was clean` adalah kesalahan umum. Di dalam satu kalimat, pakai **but** atau **although**.\n\nKabar baiknya: *Namun, …* dalam bahasa Indonesia bekerja dengan cara yang sama.",
+        "pairs": [
+          {
+            "en": "however",
+            "id": "namun"
+          },
+          {
+            "en": "The hotel was cheap. However, it was very clean.",
+            "id": "Hotelnya murah. Namun, hotelnya sangat bersih."
+          },
+          {
+            "en": "The hotel was cheap, but it was very clean.",
+            "id": "Hotelnya murah, tapi sangat bersih."
+          },
+          {
+            "en": "Prices went up. However, sales were still good.",
+            "id": "Harga naik. Namun, penjualan tetap bagus."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Cek tanda bacanya",
+        "text": "Sari menulis email tentang kantor baru perusahaannya. Perhatikan titik dan komanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-linkers",
+          "options": [
+            "The new office is far from my house, however it's close to the KRL station.",
+            "The new office is far from my house. However, it's close to the KRL station.",
+            "The new office is far from my house. Although, it's close to the KRL station."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang ditulis dengan benar?",
+          "explanation": "**However** memulai kalimat baru setelah titik dan ada koma setelahnya. Kalimat pertama menyambung dua bagian dengan *however* dan koma, seperti *but*: itu kesalahan yang umum. *Although* tidak pernah berdiri sendiri dengan koma: setelahnya harus ada subjek + kata kerja."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "karena: because atau because of?",
+        "text": "Sekarang alasan. Kata karena punya dua bentuk dalam bahasa Inggris.",
+        "body": "Lihat apa yang **langsung datang** setelahnya:\n- **subjek + kata kerja** (*it was late*) → **because**: *I took an ojek because it was late.*\n- hanya **kata benda** (noun: *the rain, the traffic, a problem*) → **because of** atau **due to**: *The match stopped because of the rain.*\n\n**due to** = because of, tapi **formal**: pengumuman, berita, email kantor. Bukan `Because of it was late`.",
+        "pairs": [
+          {
+            "en": "because + subject + verb",
+            "id": "karena + subjek + kata kerja"
+          },
+          {
+            "en": "because of + noun",
+            "id": "karena + kata benda"
+          },
+          {
+            "en": "due to + noun",
+            "id": "karena + kata benda (formal)"
+          },
+          {
+            "en": "We stayed home because of the traffic.",
+            "id": "Kami di rumah saja karena macet."
+          },
+          {
+            "en": "The KRL is late due to a technical problem.",
+            "id": "KRL terlambat karena gangguan teknis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sore itu ada badai di Jakarta. Cari kata kerja setelah titik-titiknya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reason-linkers",
+          "prompt": "Lengkapi: Pak Hasan took a taxi ___ it was raining hard.",
+          "options": [
+            "because of",
+            "due to",
+            "because"
+          ],
+          "answer": 2,
+          "explanation": "Setelah titik-titiknya ada subjek + kata kerja (*it was raining*), jadi pakai **because**. *because of* dan *due to* hanya diikuti kata benda (*because of the rain*), jadi `because of it was raining` adalah kesalahan yang umum."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tujuan: to, in order to, so that",
+        "text": "Terakhir: cara mengatakan tujuanmu, alasan kamu melakukan sesuatu.",
+        "body": "- **to / in order to** + **kata kerja dasar** (kata kerja polos: *buy, pass*): *I went to the bank to get cash.* in order to lebih formal.\n- **so that** (*supaya*) + **subjek + can / could / will**: *I'll send the file so that you can check it.* Lampau: *so that I could*.\n\nJebakan: *untuk* + kata kerja bukan **for** + kata kerja: `for pass the exam` ✗ (*for the exam* boleh). Dan **so that** (supaya, tujuan) bukan **so** (jadi, akibat).",
+        "pairs": [
+          {
+            "en": "to get cash",
+            "id": "untuk mengambil uang tunai"
+          },
+          {
+            "en": "in order to register",
+            "id": "untuk mendaftar (formal)"
+          },
+          {
+            "en": "so that you can check it",
+            "id": "supaya kamu bisa memeriksanya"
+          },
+          {
+            "en": "so that I could get a seat",
+            "id": "supaya saya bisa dapat tempat duduk"
+          },
+          {
+            "en": "for the exam",
+            "id": "untuk ujian (for + kata benda)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sari menyisihkan Rp500.000 di bank setiap bulan. Kenapa? Dia punya tujuan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "purpose-linkers",
+          "tokens": [
+            "can",
+            "so",
+            "money",
+            "She",
+            "travel",
+            "that",
+            "saves",
+            "she"
+          ],
+          "solution": "She saves money so that she can travel.",
+          "prompt": "Susun kata-katanya: Dia menabung supaya dia bisa jalan-jalan.",
+          "explanation": "*supaya* = **so that**, lalu subjek + **can** + kata kerja: **so that she can travel**. Tujuannya datang setelah tindakannya: *She saves money*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani juga punya tujuan. Lihat kata yang langsung datang setelah titik-titiknya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "purpose-linkers",
+          "prompt": "Lengkapi: Bu Ani walks to the office every morning ___ stay healthy.",
+          "options": [
+            "for",
+            "so that",
+            "in order to"
+          ],
+          "answer": 2,
+          "explanation": "Kata kerja dasar (*stay*) langsung datang setelah titik-titiknya, jadi pakai **in order to** (= to). *so that* butuh subjek + can dulu (*so that she can stay*). *for* + kata kerja adalah jebakan *untuk*: for hanya dipakai sebelum kata benda."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · kontras, alasan, tujuan",
+          "intro": "Lihat apa yang datang setelah kata penghubungnya: subjek + kata kerja, kata benda, atau kata kerja dasar. Itulah yang menentukan kata mana yang kamu perlukan.",
+          "headers": [
+            "Kata penghubung",
+            "Setelahnya",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "although / even though",
+              "subjek + kata kerja",
+              "meskipun / walaupun",
+              "Although the KRL was crowded, I got a seat."
+            ],
+            [
+              "but",
+              "subjek + kata kerja (satu kalimat)",
+              "tapi",
+              "The hotel was cheap, but it was clean."
+            ],
+            [
+              "However,",
+              "kalimat baru",
+              "namun",
+              "The hotel was cheap. However, it was clean."
+            ],
+            [
+              "because",
+              "subjek + kata kerja",
+              "karena",
+              "I took an ojek because it was late."
+            ],
+            [
+              "because of",
+              "kata benda",
+              "karena",
+              "The match stopped because of the rain."
+            ],
+            [
+              "due to",
+              "kata benda (formal)",
+              "karena",
+              "The KRL is late due to a technical problem."
+            ],
+            [
+              "to / in order to",
+              "kata kerja dasar",
+              "untuk",
+              "I went to the bank to get cash."
+            ],
+            [
+              "so that",
+              "subjek + can / could / will",
+              "supaya / agar",
+              "I'll send the file so that you can check it."
+            ],
+            [
+              "so",
+              "subjek + kata kerja (akibat)",
+              "jadi",
+              "It was late, so I took an ojek."
+            ]
+          ],
+          "tips": [
+            "Satu kalimat, satu kata penghubung: bukan `Although …, but …` (Meskipun …, tetapi …).",
+            "**However,** memulai kalimat baru, dengan koma setelahnya. Di dalam satu kalimat, pakai **but**.",
+            "**karena** + kata kerja → because; + kata benda → because of / due to. **untuk** + kata kerja → to, bukan `for`."
+          ],
+          "examples": [
+            {
+              "en": "Even though Budi was sick, he went to work.",
+              "id": "Walaupun Budi sakit, dia tetap masuk kerja."
+            },
+            {
+              "en": "We stayed home because of the traffic.",
+              "id": "Kami di rumah saja karena macet."
+            },
+            {
+              "en": "I left early so that I could get a seat on the KRL.",
+              "id": "Saya berangkat lebih awal supaya bisa dapat tempat duduk di KRL."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi dengan although dan even though? Halaman British Council ini punya dua tes singkat. Halaman ini juga menunjukkan despite, yang akan dipelajari nanti."
+      }
+    ]
+  }
+}

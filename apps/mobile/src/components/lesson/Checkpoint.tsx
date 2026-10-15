@@ -86,7 +86,9 @@ export function Checkpoint({
   };
   const set = (v: string) => cp && item && setDraft(cp.id, item.id, v);
 
-  const startLabel = cp ? t('checkpoint.resume') : failed || practised ? t('checkpoint.retryNew') : practice ? t('checkpoint.practiceStart') : t('checkpoint.start');
+  // Questions can be prepared before the learner opens them: "resume" only once they've answered something.
+  const resuming = !!cp && Object.keys(drafts).length > 0;
+  const startLabel = resuming ? t('checkpoint.resume') : failed || practised ? t('checkpoint.retryNew') : practice ? t('checkpoint.practiceStart') : t('checkpoint.start');
   const begin = () => {
     setBegunWith(startLabel);
     setPractised(false);

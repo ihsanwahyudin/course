@@ -165,7 +165,9 @@ def drive(api, node_id, lesson, helper=False):
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": wrong})
     if status != 200 or r["passed"] or r["unlocked"]:
         fail(f"{node_id}: failing attempt misbehaved: {status} {r}")
-    if r["session"]["phase"] != "LEARNING" or not r["session"]["canChat"] or r["session"]["checkpoint"]:
+    # The next attempt's questions may already be prepared in the background; the failed one is closed.
+    nxt = r["session"]["checkpoint"]
+    if r["session"]["phase"] != "LEARNING" or not r["session"]["canChat"] or (nxt and nxt["id"] == cp["id"]):
         fail(f"{node_id}: expected the lesson to stay open after failing, got {r['session']['phase']}")
     review = r["attempt"]["review"]["items"]
     if len(review) != len(cp["items"]) or any(not it["explanation"] or it["verdict"] == "correct" for it in review):

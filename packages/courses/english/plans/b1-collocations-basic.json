@@ -1,0 +1,710 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn which words go together in English: make or do, say or tell, take or have. These small verbs cause big mistakes, so let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Word partners",
+        "text": "First, a word you'll hear a lot today: collocation.",
+        "body": "Some English words simply **go together**. We say **make a mistake**, not `do a mistake`; **take a photo**, not `make a photo`. These word partners are called **collocations** (*kolokasi*: words people usually use together). Often there's **no logic**: it's just what English speakers say.\n\nTranslating word by word from Indonesian gives the wrong partner (*melakukan kesalahan* → `do a mistake`). So learn each verb + noun as **one chunk**.",
+        "pairs": [
+          {
+            "en": "make a mistake",
+            "id": "membuat kesalahan"
+          },
+          {
+            "en": "do homework",
+            "id": "mengerjakan PR"
+          },
+          {
+            "en": "take a photo",
+            "id": "memotret, foto"
+          },
+          {
+            "en": "tell the truth",
+            "id": "berkata jujur"
+          },
+          {
+            "en": "have lunch",
+            "id": "makan siang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "make or do?",
+        "text": "Here's a rough guide. It works most of the time, not always.",
+        "body": "**make** ≈ you **create or produce** something: *make coffee, make a plan, make a decision, make money, make noise*. Also just remember **make a mistake** and **make a phone call**.\n**do** ≈ **tasks, jobs and activities**: *do homework, do the dishes, do the shopping, do exercise, do a course, do business, do your best*.\n\nException: **make the bed** is housework, but it's *make*. Indonesian *membuat / melakukan* doesn't match make / do, so trust the chunk.",
+        "examples": [
+          {
+            "en": "We need to make a plan for the launch.",
+            "id": "Kita perlu membuat rencana untuk peluncurannya."
+          },
+          {
+            "en": "Can you make some coffee for the guests?",
+            "id": "Bisa bikinkan kopi untuk para tamu?"
+          },
+          {
+            "en": "I do the shopping on Saturday mornings.",
+            "id": "Saya belanja setiap Sabtu pagi."
+          },
+          {
+            "en": "Don't worry about the result. Just do your best.",
+            "id": "Jangan khawatir soal hasilnya. Berusaha saja sebaik mungkin."
+          },
+          {
+            "en": "Every morning Dimas makes his bed.",
+            "id": "Setiap pagi Dimas merapikan tempat tidurnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Shh! It's 11 p.m., and the neighbours' baby is sleeping.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-vs-do",
+          "prompt": "Complete: Please don't ___ so much noise.",
+          "options": [
+            "do",
+            "make",
+            "have"
+          ],
+          "answer": 1,
+          "explanation": "Noise is something you produce, and the chunk is **make noise** (*berisik*). `do noise` is a word-by-word guess; *have* doesn't go with noise either."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "say, tell, speak, talk",
+        "text": "Indonesian bilang and bicara split into four English verbs.",
+        "body": "- **tell + a person** (who hears): *tell me, tell your boss*. Also **tell a story / a joke / the truth / a lie**.\n- **say + the words**: *say hello, say sorry, say something*. Add the person with **to**: *say sorry to Rina*. Never `say me`.\n- **speak + a language**, or formal: *speak English*, *Can I speak to the manager?*\n- **talk** = a conversation: **talk to** someone, **talk about** something. Not `talk English`.",
+        "pairs": [
+          {
+            "en": "tell me",
+            "id": "kasih tahu aku"
+          },
+          {
+            "en": "tell a lie",
+            "id": "berbohong"
+          },
+          {
+            "en": "say hello",
+            "id": "menyapa"
+          },
+          {
+            "en": "say sorry to Rina",
+            "id": "minta maaf ke Rina"
+          },
+          {
+            "en": "speak English",
+            "id": "berbahasa Inggris"
+          },
+          {
+            "en": "talk to a friend",
+            "id": "ngobrol dengan teman"
+          },
+          {
+            "en": "talk about work",
+            "id": "ngobrol soal kerjaan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari is visiting Rina's flat and wants to connect her laptop.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "say-tell-speak-talk",
+          "prompt": "Complete: Rina, can you ___ me the Wi-Fi password, please?",
+          "options": [
+            "tell",
+            "say",
+            "speak"
+          ],
+          "answer": 0,
+          "explanation": "A person (**me**) comes right after the verb, so use **tell**: *tell me the password*. `say me` is the classic mistake: say goes with the words, not the person. *speak* is for languages."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Budi and his team had a long lunch meeting. Say what they did.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "say-tell-speak-talk",
+          "prompt": "Arrange the words: Kami membicarakan proyek baru itu.",
+          "tokens": [
+            "project",
+            "talked",
+            "the",
+            "We",
+            "new",
+            "about"
+          ],
+          "solution": "We talked about the new project.",
+          "explanation": "A conversation between people is **talk**, and the topic comes after **about**: *talk about something*. Past simple: *talked*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "have, take and get",
+        "text": "Last group: three verbs that don't translate as punya, ambil, dapat.",
+        "body": "- **have** + meals and events: *have lunch, have a meeting, have a good time* (here not *punya*).\n- **take** + photos, transport, medicine, breaks: *take a photo, take the KRL, take a break*.\n- **get** = receive, find, become, arrive: *get a message, get a job, get tired, get home* (no *to* before home).\n\nTrap: *minum obat* is **take** medicine, not `drink medicine`. Some pairs both work: *have / take a shower*, *have / take a break*.",
+        "pairs": [
+          {
+            "en": "have lunch",
+            "id": "makan siang"
+          },
+          {
+            "en": "have a meeting",
+            "id": "rapat"
+          },
+          {
+            "en": "take the KRL",
+            "id": "naik KRL"
+          },
+          {
+            "en": "take medicine",
+            "id": "minum obat"
+          },
+          {
+            "en": "get a job",
+            "id": "dapat kerja"
+          },
+          {
+            "en": "get tired",
+            "id": "jadi capek"
+          },
+          {
+            "en": "get home",
+            "id": "sampai rumah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi has a fever. The doctor gives him some tablets.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "have-take-get",
+          "prompt": "Complete the doctor's advice: ___ this medicine three times a day, after meals.",
+          "options": [
+            "Drink",
+            "Eat",
+            "Take"
+          ],
+          "answer": 2,
+          "explanation": "The English chunk is **take medicine**, even for syrup or tablets. `Drink this medicine` copies Indonesian *minum obat*, and *eat* isn't used with medicine."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari has the flu and can't come to the office. Her colleague sends a message.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "have-take-get",
+          "prompt": "Complete: Take care, Sari! I hope you ___ better soon.",
+          "options": [
+            "take",
+            "get",
+            "have"
+          ],
+          "answer": 1,
+          "explanation": "Here **get** means *become*: **get better** = *membaik, cepat sembuh*. *take better* and *have better* aren't English."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip each card: say the English chunk before you turn it over.",
+        "flashcards": [
+          {
+            "front": "membuat kesalahan",
+            "back": "make a mistake (not 'do a mistake')"
+          },
+          {
+            "front": "mengerjakan PR",
+            "back": "do homework (not 'make homework')"
+          },
+          {
+            "front": "menelepon",
+            "back": "make a phone call"
+          },
+          {
+            "front": "kasih tahu saya",
+            "back": "tell me (not 'say me')"
+          },
+          {
+            "front": "berbahasa Inggris",
+            "back": "speak English (not 'talk English')"
+          },
+          {
+            "front": "minum obat",
+            "back": "take medicine (not 'drink medicine')"
+          },
+          {
+            "front": "memotret",
+            "back": "take a photo (not 'make a photo')"
+          },
+          {
+            "front": "sampai rumah",
+            "back": "get home"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · make/do, say/tell, have/take/get",
+          "intro": "Collocations are word partners: learn each verb + noun as one chunk, not word by word.",
+          "headers": [
+            "Verb",
+            "Use it for",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "make",
+              "create or produce",
+              "make a mistake, a decision, a plan, a phone call, money, noise, coffee"
+            ],
+            [
+              "do",
+              "tasks, jobs, activities",
+              "do homework, the dishes, the shopping, exercise, a course, business, your best"
+            ],
+            [
+              "make (exception)",
+              "housework, but make",
+              "make the bed"
+            ],
+            [
+              "tell",
+              "+ a person; story, joke, truth, lie",
+              "tell me, tell your boss, tell the truth, tell a lie"
+            ],
+            [
+              "say",
+              "+ the words (say … to someone)",
+              "say hello, say sorry to Rina, say something"
+            ],
+            [
+              "speak",
+              "+ a language; formal",
+              "speak English, speak to the manager"
+            ],
+            [
+              "talk",
+              "a conversation",
+              "talk to a friend, talk about work"
+            ],
+            [
+              "have",
+              "meals, events, experiences",
+              "have breakfast, a meeting, a party, a good time, a rest"
+            ],
+            [
+              "take",
+              "photos, transport, medicine, breaks",
+              "take a photo, the KRL, an ojek, medicine, a break, a seat"
+            ],
+            [
+              "get",
+              "receive, find, become, arrive",
+              "get a message, a job, better, tired, home"
+            ]
+          ],
+          "tips": [
+            "Not `make my homework`, `say me`, `make a photo` or `drink medicine`: **do** my homework, **tell** me, **take** a photo, **take** medicine.",
+            "Both are fine: **have / take** a shower, a break, a look, a seat; **get / take** a taxi; **do / take** a course.",
+            "When you learn a new noun, write it down with its verb: not just *decision*, but **make a decision**."
+          ],
+          "examples": [
+            {
+              "en": "I made a mistake in the sales report.",
+              "id": "Saya membuat kesalahan di laporan penjualan."
+            },
+            {
+              "en": "Can you tell me the answer?",
+              "id": "Bisa kasih tahu saya jawabannya?"
+            },
+            {
+              "en": "My manager speaks English and Mandarin.",
+              "id": "Manajer saya bisa berbahasa Inggris dan Mandarin."
+            },
+            {
+              "en": "Let's take a photo in front of the hotel.",
+              "id": "Ayo foto di depan hotel."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These two engVid videos explain make vs do, and say, tell, speak and talk, with quizzes on the engVid site."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan belajar kata-kata mana yang berpasangan dalam bahasa Inggris: make atau do, say atau tell, take atau have. Kata kerja kecil ini sering bikin kesalahan besar, jadi kita jalan pelan-pelan, ya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Pasangan kata",
+        "text": "Pertama, satu istilah yang akan sering kamu dengar hari ini: kolokasi.",
+        "body": "Ada kata-kata bahasa Inggris yang memang **selalu berpasangan**. Orang bilang **make a mistake**, bukan `do a mistake`; **take a photo**, bukan `make a photo`. Pasangan kata ini disebut **kolokasi** (collocation: kata-kata yang biasa dipakai bersama). Sering kali **tidak ada logikanya**: memang begitu cara penutur bahasa Inggris bicara.\n\nMenerjemahkan kata per kata dari bahasa Indonesia sering menghasilkan pasangan yang salah (*melakukan kesalahan* → `do a mistake`). Jadi hafalkan kata kerja + kata benda sebagai **satu paket**.",
+        "pairs": [
+          {
+            "en": "make a mistake",
+            "id": "membuat kesalahan"
+          },
+          {
+            "en": "do homework",
+            "id": "mengerjakan PR"
+          },
+          {
+            "en": "take a photo",
+            "id": "memotret, foto"
+          },
+          {
+            "en": "tell the truth",
+            "id": "berkata jujur"
+          },
+          {
+            "en": "have lunch",
+            "id": "makan siang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "make atau do?",
+        "text": "Ini panduan kasarnya. Berlaku untuk sebagian besar kasus, tapi tidak semuanya.",
+        "body": "**make** ≈ kamu **menciptakan atau menghasilkan** sesuatu: *make coffee, make a plan, make a decision, make money* (cari uang), *make noise* (berisik). Hafalkan juga **make a mistake** dan **make a phone call** (menelepon).\n**do** ≈ **tugas, pekerjaan dan kegiatan**: *do homework, do the dishes* (cuci piring), *do the shopping, do exercise, do a course, do business, do your best*.\n\nPengecualian: **make the bed** (merapikan tempat tidur) itu pekerjaan rumah, tapi pakai *make*. *Membuat / melakukan* tidak pas dengan make / do, jadi percayai paketnya.",
+        "examples": [
+          {
+            "en": "We need to make a plan for the launch.",
+            "id": "Kita perlu membuat rencana untuk peluncurannya."
+          },
+          {
+            "en": "Can you make some coffee for the guests?",
+            "id": "Bisa bikinkan kopi untuk para tamu?"
+          },
+          {
+            "en": "I do the shopping on Saturday mornings.",
+            "id": "Saya belanja setiap Sabtu pagi."
+          },
+          {
+            "en": "Don't worry about the result. Just do your best.",
+            "id": "Jangan khawatir soal hasilnya. Berusaha saja sebaik mungkin."
+          },
+          {
+            "en": "Every morning Dimas makes his bed.",
+            "id": "Setiap pagi Dimas merapikan tempat tidurnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sst! Sudah jam 11 malam, dan bayi tetangga sedang tidur.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-vs-do",
+          "prompt": "Lengkapi: Please don't ___ so much noise.",
+          "options": [
+            "do",
+            "make",
+            "have"
+          ],
+          "answer": 1,
+          "explanation": "Suara berisik adalah sesuatu yang kamu hasilkan, dan paketnya **make noise** (*berisik*). `do noise` itu tebakan kata per kata; *have* juga tidak dipakai dengan noise."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "say, tell, speak, talk",
+        "text": "Bilang dan bicara dalam bahasa Inggris terbagi jadi empat kata kerja.",
+        "body": "- **tell + orang** (yang mendengar): *tell me, tell your boss*. Juga **tell a story / a joke / the truth / a lie** (bercerita, melucu, jujur, berbohong).\n- **say + kata-katanya**: *say hello, say sorry, say something*. Sebut orangnya dengan **to**: *say sorry to Rina*. Jangan pernah `say me`.\n- **speak + bahasa**, atau situasi resmi: *speak English*, *Can I speak to the manager?*\n- **talk** = obrolan: **talk to** seseorang, **talk about** sesuatu. Bukan `talk English`.",
+        "pairs": [
+          {
+            "en": "tell me",
+            "id": "kasih tahu aku"
+          },
+          {
+            "en": "tell a lie",
+            "id": "berbohong"
+          },
+          {
+            "en": "say hello",
+            "id": "menyapa"
+          },
+          {
+            "en": "say sorry to Rina",
+            "id": "minta maaf ke Rina"
+          },
+          {
+            "en": "speak English",
+            "id": "berbahasa Inggris"
+          },
+          {
+            "en": "talk to a friend",
+            "id": "ngobrol dengan teman"
+          },
+          {
+            "en": "talk about work",
+            "id": "ngobrol soal kerjaan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari sedang main ke apartemen Rina dan mau menyambungkan laptopnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "say-tell-speak-talk",
+          "prompt": "Lengkapi: Rina, can you ___ me the Wi-Fi password, please?",
+          "options": [
+            "tell",
+            "say",
+            "speak"
+          ],
+          "answer": 0,
+          "explanation": "Ada orang (**me**) tepat setelah kata kerjanya, jadi pakai **tell**: *tell me the password*. `say me` adalah kesalahan klasik: say dipasangkan dengan kata-katanya, bukan orangnya. *speak* untuk bahasa."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Budi dan timnya rapat sambil makan siang lama. Ceritakan apa yang mereka lakukan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "say-tell-speak-talk",
+          "prompt": "Susun kata-katanya: Kami membicarakan proyek baru itu.",
+          "tokens": [
+            "project",
+            "talked",
+            "the",
+            "We",
+            "new",
+            "about"
+          ],
+          "solution": "We talked about the new project.",
+          "explanation": "Obrolan antar orang pakai **talk**, dan topiknya setelah **about**: *talk about something*. Bentuk lampau: *talked*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "have, take dan get",
+        "text": "Kelompok terakhir: tiga kata kerja yang tidak diterjemahkan jadi punya, ambil, dapat.",
+        "body": "- **have** + makan dan acara: *have lunch, have a meeting, have a good time* (di sini bukan *punya*).\n- **take** + foto, kendaraan, obat, jeda: *take a photo, take the KRL, take a break*.\n- **get** = menerima, mendapat, menjadi, sampai: *get a message, get a job, get tired, get home* (tanpa *to* sebelum home).\n\nJebakan: *minum obat* itu **take** medicine, bukan `drink medicine`. Ada pasangan yang dua-duanya benar: *have / take a shower*, *have / take a break*.",
+        "pairs": [
+          {
+            "en": "have lunch",
+            "id": "makan siang"
+          },
+          {
+            "en": "have a meeting",
+            "id": "rapat"
+          },
+          {
+            "en": "take the KRL",
+            "id": "naik KRL"
+          },
+          {
+            "en": "take medicine",
+            "id": "minum obat"
+          },
+          {
+            "en": "get a job",
+            "id": "dapat kerja"
+          },
+          {
+            "en": "get tired",
+            "id": "jadi capek"
+          },
+          {
+            "en": "get home",
+            "id": "sampai rumah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi demam. Dokter memberinya beberapa tablet.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "have-take-get",
+          "prompt": "Lengkapi saran dokternya: ___ this medicine three times a day, after meals.",
+          "options": [
+            "Drink",
+            "Eat",
+            "Take"
+          ],
+          "answer": 2,
+          "explanation": "Paket bahasa Inggrisnya **take medicine**, baik untuk sirup maupun tablet. `Drink this medicine` meniru *minum obat*, dan *eat* tidak dipakai dengan obat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari kena flu dan tidak bisa ke kantor. Rekan kerjanya mengirim pesan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "have-take-get",
+          "prompt": "Lengkapi: Take care, Sari! I hope you ___ better soon.",
+          "options": [
+            "take",
+            "get",
+            "have"
+          ],
+          "answer": 1,
+          "explanation": "Di sini **get** artinya *menjadi*: **get better** = *membaik, cepat sembuh*. *take better* dan *have better* bukan bahasa Inggris."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik setiap kartu: ucapkan paket bahasa Inggrisnya sebelum kamu membaliknya.",
+        "flashcards": [
+          {
+            "front": "membuat kesalahan",
+            "back": "make a mistake (not 'do a mistake')"
+          },
+          {
+            "front": "mengerjakan PR",
+            "back": "do homework (not 'make homework')"
+          },
+          {
+            "front": "menelepon",
+            "back": "make a phone call"
+          },
+          {
+            "front": "kasih tahu saya",
+            "back": "tell me (not 'say me')"
+          },
+          {
+            "front": "berbahasa Inggris",
+            "back": "speak English (not 'talk English')"
+          },
+          {
+            "front": "minum obat",
+            "back": "take medicine (not 'drink medicine')"
+          },
+          {
+            "front": "memotret",
+            "back": "take a photo (not 'make a photo')"
+          },
+          {
+            "front": "sampai rumah",
+            "back": "get home"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · make/do, say/tell, have/take/get",
+          "intro": "Kolokasi adalah pasangan kata: hafalkan setiap kata kerja + kata benda sebagai satu paket, jangan diterjemahkan kata per kata.",
+          "headers": [
+            "Kata kerja",
+            "Dipakai untuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "make",
+              "menciptakan atau menghasilkan",
+              "make a mistake, a decision, a plan, a phone call, money, noise, coffee"
+            ],
+            [
+              "do",
+              "tugas, pekerjaan, kegiatan",
+              "do homework, the dishes, the shopping, exercise, a course, business, your best"
+            ],
+            [
+              "make (pengecualian)",
+              "pekerjaan rumah, tapi make",
+              "make the bed"
+            ],
+            [
+              "tell",
+              "+ orang; cerita, lelucon, kejujuran, bohong",
+              "tell me, tell your boss, tell the truth, tell a lie"
+            ],
+            [
+              "say",
+              "+ kata-katanya (say … to seseorang)",
+              "say hello, say sorry to Rina, say something"
+            ],
+            [
+              "speak",
+              "+ bahasa; situasi resmi",
+              "speak English, speak to the manager"
+            ],
+            [
+              "talk",
+              "obrolan",
+              "talk to a friend, talk about work"
+            ],
+            [
+              "have",
+              "makan, acara, pengalaman",
+              "have breakfast, a meeting, a party, a good time, a rest"
+            ],
+            [
+              "take",
+              "foto, kendaraan, obat, jeda",
+              "take a photo, the KRL, an ojek, medicine, a break, a seat"
+            ],
+            [
+              "get",
+              "menerima, mendapat, menjadi, sampai",
+              "get a message, a job, better, tired, home"
+            ]
+          ],
+          "tips": [
+            "Bukan `make my homework`, `say me`, `make a photo` atau `drink medicine`: **do** my homework, **tell** me, **take** a photo, **take** medicine.",
+            "Dua-duanya benar: **have / take** a shower, a break, a look, a seat; **get / take** a taxi; **do / take** a course.",
+            "Saat belajar kata benda baru, catat bersama kata kerjanya: jangan cuma *decision*, tapi **make a decision**."
+          ],
+          "examples": [
+            {
+              "en": "I made a mistake in the sales report.",
+              "id": "Saya membuat kesalahan di laporan penjualan."
+            },
+            {
+              "en": "Can you tell me the answer?",
+              "id": "Bisa kasih tahu saya jawabannya?"
+            },
+            {
+              "en": "My manager speaks English and Mandarin.",
+              "id": "Manajer saya bisa berbahasa Inggris dan Mandarin."
+            },
+            {
+              "en": "Let's take a photo in front of the hotel.",
+              "id": "Ayo foto di depan hotel."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Dua video engVid ini menjelaskan make vs do, serta say, tell, speak dan talk, dengan kuis di situs engVid (dalam bahasa Inggris)."
+      }
+    ]
+  }
+}
