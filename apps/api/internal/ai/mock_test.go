@@ -193,6 +193,16 @@ func TestExactMatch(t *testing.T) {
 	}
 }
 
+func TestMatchingFoldsAccents(t *testing.T) {
+	if !ExactMatch("people working in cafes", []string{"people working in cafés"}) || !ExactMatch("Café", []string{"cafe"}) ||
+		!StrictMatch("my résumé", []string{"my resume"}) {
+		t.Fatal("café and cafe are the same answer")
+	}
+	if ExactMatch("caf", []string{"café"}) {
+		t.Fatal("an accented letter is folded, not dropped")
+	}
+}
+
 func TestStrictMatch(t *testing.T) {
 	if !StrictMatch(" My name is Budi. ", []string{"My name is Budi"}) || !StrictMatch("I’m fine", []string{"I'm fine!"}) {
 		t.Fatal("spacing, curly quotes and a final full stop don't matter")

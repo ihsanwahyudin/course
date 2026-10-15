@@ -1,0 +1,780 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn the words for the news: pollution and recycling, tourists and local culture, and extreme weather like floods and droughts. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Environmental problems",
+        "text": "Let's start with the problems you hear about in the news.",
+        "body": "**pollution** = the air, water or land becomes dirty. **rubbish** (British) = **trash / garbage** (American). **waste** is a general word: *plastic waste, food waste*. **climate change** = the world's weather patterns change over many years; **global warming** = the Earth gets hotter (one part of climate change). **deforestation** = people cut down forests. **endangered animals** can disappear for ever: orangutans, the Komodo dragon.\n\npollution, rubbish and waste have **no -s**: *a lot of pollution*, not `many pollutions`.",
+        "pairs": [
+          {
+            "en": "air pollution",
+            "id": "polusi udara"
+          },
+          {
+            "en": "rubbish / trash",
+            "id": "sampah"
+          },
+          {
+            "en": "plastic waste",
+            "id": "sampah plastik"
+          },
+          {
+            "en": "climate change",
+            "id": "perubahan iklim"
+          },
+          {
+            "en": "global warming",
+            "id": "pemanasan global"
+          },
+          {
+            "en": "deforestation",
+            "id": "penggundulan hutan"
+          },
+          {
+            "en": "endangered animals",
+            "id": "hewan yang terancam punah"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Reduce, reuse, recycle",
+        "text": "Now, what can we do about it?",
+        "body": "- **reduce** = use less (take your own bag).\n- **reuse** = use the **same thing** again (fill your bottle again).\n- **recycle** = the material becomes **something new** in a factory (daur ulang).\n- **protect** the forests, **save energy** (turn off the AC).\n\nAfter **must, should, have to, can**, use the **base verb** (no -s, no -ing): *We **must recycle**.* Not `must recycling`: *recycling* is the noun (*Recycling is important.*).",
+        "pairs": [
+          {
+            "en": "reduce",
+            "id": "mengurangi"
+          },
+          {
+            "en": "reuse",
+            "id": "memakai ulang"
+          },
+          {
+            "en": "recycle",
+            "id": "mendaur ulang"
+          },
+          {
+            "en": "protect",
+            "id": "melindungi"
+          },
+          {
+            "en": "save energy",
+            "id": "menghemat energi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari doesn't throw away her glass jars. She washes them and keeps sugar and coffee in them.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "environment-issues",
+          "prompt": "Complete: Sari ___ her glass jars.",
+          "options": [
+            "recycles",
+            "reuses",
+            "reduces"
+          ],
+          "answer": 1,
+          "explanation": "She uses the **same jars** again, so she **reuses** them. **Recycles** would mean the glass goes to a factory and becomes something new, and **reduces** means using less."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "The office manager writes a rule for the kitchen.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "environment-issues",
+          "prompt": "Arrange the words: Kita harus mendaur ulang botol plastik.",
+          "tokens": [
+            "recycle",
+            "bottles",
+            "We",
+            "plastic",
+            "must"
+          ],
+          "solution": "We must recycle plastic bottles.",
+          "explanation": "**must** + base verb: *must recycle*, never `must recycling`. Then what we recycle: *plastic bottles* (the adjective *plastic* comes before *bottles*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tourism and culture",
+        "text": "From A2 you know go sightseeing, buy souvenirs and visit a temple. Now let's talk about tourism like the news does.",
+        "body": "**tourist** = the **person**; two or more = **tourists** (*banyak turis* has no plural mark, English needs -s). **tourism** = the **industry** (pariwisata). *Objek wisata* = **tourist attraction**, not `tourism object`. **Heritage site** = an important place from history: Borobudur is a UNESCO World Heritage Site. **Respect local customs** = follow the habits of the place (at the airport, **Customs** = bea cukai). **Overtourism** = too many tourists in one place.",
+        "pairs": [
+          {
+            "en": "tourist",
+            "id": "wisatawan (orangnya)"
+          },
+          {
+            "en": "tourism",
+            "id": "pariwisata (industrinya)"
+          },
+          {
+            "en": "tourist attraction",
+            "id": "objek wisata"
+          },
+          {
+            "en": "local culture",
+            "id": "budaya setempat"
+          },
+          {
+            "en": "tradition",
+            "id": "tradisi"
+          },
+          {
+            "en": "ceremony",
+            "id": "upacara"
+          },
+          {
+            "en": "heritage site",
+            "id": "situs warisan budaya"
+          },
+          {
+            "en": "respect local customs",
+            "id": "menghormati adat setempat"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Culture and tourism in Indonesia",
+        "text": "Here are the words in real sentences.",
+        "body": "In Balinese temples, visitors wear a sarong and a sash: that's **respecting local customs**.",
+        "examples": [
+          {
+            "en": "Borobudur is a UNESCO World Heritage Site.",
+            "id": "Borobudur adalah Situs Warisan Dunia UNESCO."
+          },
+          {
+            "en": "Tourism brings a lot of jobs to Lombok.",
+            "id": "Pariwisata membawa banyak lapangan kerja ke Lombok."
+          },
+          {
+            "en": "We watched a traditional ceremony at a temple in Ubud.",
+            "id": "Kami menonton upacara adat di sebuah pura di Ubud."
+          },
+          {
+            "en": "In Balinese temples, visitors wear a sarong to respect local customs.",
+            "id": "Di pura Bali, pengunjung memakai sarung untuk menghormati adat setempat."
+          },
+          {
+            "en": "Some people worry about overtourism in parts of Bali.",
+            "id": "Sebagian orang khawatir soal overtourism (terlalu banyak wisatawan) di beberapa daerah di Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Kota Tua in Jakarta is busy on Saturdays and Sundays.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "tourism-culture",
+          "prompt": "Complete: Every weekend, a lot of ___ visit Kota Tua.",
+          "options": [
+            "tourist",
+            "tourists",
+            "tourism"
+          ],
+          "answer": 1,
+          "explanation": "**a lot of** + people you can count needs the plural: **tourists**. `tourist` without -s copies *banyak turis*, and **tourism** is the industry, not the people who visit."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Extreme weather",
+        "text": "Last group: extreme weather. Indonesia knows these words well.",
+        "body": "**flood** (also a verb: *it floods*), **drought** = no rain for a long time (said 'draut'), **heatwave** = much hotter than normal for that place, **storm**, **landslide**, **earthquake**, a **volcano erupts**, **haze** = smoke from forest fires (not fog). *Hujan deras* = **heavy rain**, not `big rain`.\n\nIn English *banjir* is a noun or a verb, never an adjective after *is*: **There was a flood** / **It floods**, not `is flood`.",
+        "pairs": [
+          {
+            "en": "flood",
+            "id": "banjir"
+          },
+          {
+            "en": "drought",
+            "id": "kekeringan"
+          },
+          {
+            "en": "heatwave",
+            "id": "gelombang panas"
+          },
+          {
+            "en": "storm",
+            "id": "badai"
+          },
+          {
+            "en": "landslide",
+            "id": "tanah longsor"
+          },
+          {
+            "en": "earthquake",
+            "id": "gempa bumi"
+          },
+          {
+            "en": "a volcano erupts",
+            "id": "gunung berapi meletus"
+          },
+          {
+            "en": "haze",
+            "id": "kabut asap"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In the news",
+        "text": "Listen to how the news uses these words.",
+        "body": "Look at **flood**: *a flood* (noun) and *it floods* (verb).",
+        "examples": [
+          {
+            "en": "There was a big flood in Semarang last week.",
+            "id": "Ada banjir besar di Semarang minggu lalu."
+          },
+          {
+            "en": "It often floods here in the rainy season.",
+            "id": "Di sini sering banjir saat musim hujan."
+          },
+          {
+            "en": "After the heavy rain, there was a landslide near Puncak.",
+            "id": "Setelah hujan deras, terjadi tanah longsor di dekat Puncak."
+          },
+          {
+            "en": "Mount Merapi erupts quite often.",
+            "id": "Gunung Merapi cukup sering meletus."
+          },
+          {
+            "en": "The haze from the forest fires is very bad today.",
+            "id": "Kabut asap dari kebakaran hutan sangat parah hari ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's raining hard and the streets near Rina's office are under water again. She texts her friend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "extreme-weather",
+          "prompt": "How does she say 'Jakarta banjir lagi' in English?",
+          "options": [
+            "Jakarta is flood again.",
+            "There's a flood in Jakarta again.",
+            "Jakarta flood again."
+          ],
+          "answer": 1,
+          "explanation": "**flood** is a noun here: **There's a flood** in Jakarta again. `Jakarta is flood` uses flood like an adjective, and `Jakarta flood` has no verb (the verb would be *floods*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Environment & Tourism",
+          "intro": "The words for the environment, tourism and culture, and extreme weather, with the traps to avoid.",
+          "headers": [
+            "English",
+            "Indonesian",
+            "Example / watch out"
+          ],
+          "rows": [
+            [
+              "pollution",
+              "polusi, pencemaran",
+              "a lot of air pollution (no -s)"
+            ],
+            [
+              "rubbish / trash / garbage",
+              "sampah",
+              "rubbish = UK; trash, garbage = US"
+            ],
+            [
+              "climate change / global warming",
+              "perubahan iklim / pemanasan global",
+              "global warming is one part of climate change"
+            ],
+            [
+              "deforestation",
+              "penggundulan hutan",
+              "bad news for orangutans"
+            ],
+            [
+              "reduce / reuse / recycle",
+              "mengurangi / memakai ulang / mendaur ulang",
+              "We must recycle (not 'must recycling')"
+            ],
+            [
+              "protect / save energy",
+              "melindungi / menghemat energi",
+              "protect endangered animals"
+            ],
+            [
+              "tourist / tourism",
+              "wisatawan / pariwisata",
+              "many tourists (with -s)"
+            ],
+            [
+              "tourist attraction",
+              "objek wisata",
+              "not 'tourism object'"
+            ],
+            [
+              "local culture, tradition, ceremony",
+              "budaya setempat, tradisi, upacara",
+              "a ceremony at a temple"
+            ],
+            [
+              "heritage site",
+              "situs warisan budaya",
+              "Borobudur, Prambanan (UNESCO)"
+            ],
+            [
+              "respect local customs",
+              "menghormati adat setempat",
+              "customs at the airport = bea cukai"
+            ],
+            [
+              "flood / drought / heatwave",
+              "banjir / kekeringan / gelombang panas",
+              "There's a flood (not 'is flood'); drought = 'draut'"
+            ],
+            [
+              "storm / landslide / earthquake",
+              "badai / tanah longsor / gempa bumi",
+              "heavy rain (not 'big rain')"
+            ],
+            [
+              "a volcano erupts / haze",
+              "gunung berapi meletus / kabut asap",
+              "haze = smoke, fog = water"
+            ]
+          ],
+          "tips": [
+            "After **must, should, have to, can**: base verb. *We must recycle*, not `must recycling`.",
+            "No -s on **pollution, rubbish, waste**; but **tourists** needs -s: *many tourists*.",
+            "*Objek wisata* = **tourist attraction**; *Jakarta banjir* = **There's a flood in Jakarta**."
+          ],
+          "examples": [
+            {
+              "en": "Air pollution is a big problem in Jakarta.",
+              "id": "Polusi udara adalah masalah besar di Jakarta."
+            },
+            {
+              "en": "You should turn off the lights to save energy.",
+              "id": "Sebaiknya kamu mematikan lampu untuk menghemat energi."
+            },
+            {
+              "en": "Many tourists come to Yogyakarta for its culture and food.",
+              "id": "Banyak wisatawan datang ke Yogyakarta karena budaya dan makanannya."
+            },
+            {
+              "en": "There was a strong earthquake in Lombok last night.",
+              "id": "Ada gempa bumi kuat di Lombok tadi malam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A British Council article on World Environment Day (B1), a picture list of disaster words with audio, and a video about overtourism (harder, B2–C1, with a transcript)."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan belajar kata-kata untuk membicarakan berita: polusi dan daur ulang, wisatawan dan budaya setempat, serta cuaca ekstrem seperti banjir dan kekeringan. Kita jalan pelan-pelan, ya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Masalah lingkungan",
+        "text": "Kita mulai dari masalah yang sering kamu dengar di berita.",
+        "body": "**pollution** = polusi: udara, air atau tanah jadi kotor. **rubbish** (British) = **trash / garbage** (Amerika) = sampah. **waste** kata yang umum: *plastic waste* (sampah plastik), *food waste*. **climate change** = perubahan iklim, pola cuaca dunia berubah selama bertahun-tahun; **global warming** = pemanasan global, Bumi makin panas (bagian dari perubahan iklim). **deforestation** = penggundulan hutan. **endangered animals** = hewan yang terancam punah: orangutan, komodo.\n\npollution, rubbish dan waste **tanpa -s**: *a lot of pollution*, bukan `many pollutions`.",
+        "pairs": [
+          {
+            "en": "air pollution",
+            "id": "polusi udara"
+          },
+          {
+            "en": "rubbish / trash",
+            "id": "sampah"
+          },
+          {
+            "en": "plastic waste",
+            "id": "sampah plastik"
+          },
+          {
+            "en": "climate change",
+            "id": "perubahan iklim"
+          },
+          {
+            "en": "global warming",
+            "id": "pemanasan global"
+          },
+          {
+            "en": "deforestation",
+            "id": "penggundulan hutan"
+          },
+          {
+            "en": "endangered animals",
+            "id": "hewan yang terancam punah"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Reduce, reuse, recycle",
+        "text": "Sekarang, apa yang bisa kita lakukan?",
+        "body": "- **reduce** = mengurangi, pakai lebih sedikit (bawa tas sendiri).\n- **reuse** = memakai **barang yang sama** lagi (isi ulang botolmu).\n- **recycle** = mendaur ulang: bahannya jadi **barang baru** di pabrik.\n- **protect** = melindungi hutan, **save energy** = menghemat energi (matikan AC).\n\nSetelah **must, should, have to, can**, pakai **kata kerja bentuk dasar** (tanpa -s, tanpa -ing): *We **must recycle**.* Bukan `must recycling`: *recycling* itu kata benda (*Recycling is important.*).",
+        "pairs": [
+          {
+            "en": "reduce",
+            "id": "mengurangi"
+          },
+          {
+            "en": "reuse",
+            "id": "memakai ulang"
+          },
+          {
+            "en": "recycle",
+            "id": "mendaur ulang"
+          },
+          {
+            "en": "protect",
+            "id": "melindungi"
+          },
+          {
+            "en": "save energy",
+            "id": "menghemat energi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari tidak membuang toples kacanya. Dia mencucinya lalu menyimpan gula dan kopi di dalamnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "environment-issues",
+          "prompt": "Lengkapi: Sari ___ her glass jars.",
+          "options": [
+            "recycles",
+            "reuses",
+            "reduces"
+          ],
+          "answer": 1,
+          "explanation": "Dia memakai **toples yang sama** lagi, jadi dia **reuses** toplesnya. **Recycles** berarti kacanya dibawa ke pabrik dan jadi barang baru, dan **reduces** berarti memakai lebih sedikit."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Manajer kantor menulis aturan untuk dapur.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "environment-issues",
+          "prompt": "Susun kata-katanya: Kita harus mendaur ulang botol plastik.",
+          "tokens": [
+            "recycle",
+            "bottles",
+            "We",
+            "plastic",
+            "must"
+          ],
+          "solution": "We must recycle plastic bottles.",
+          "explanation": "**must** + kata kerja bentuk dasar: *must recycle*, jangan pernah `must recycling`. Lalu apa yang didaur ulang: *plastic bottles* (kata sifat *plastic* di depan *bottles*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pariwisata dan budaya",
+        "text": "Dari A2 kamu sudah tahu go sightseeing, buy souvenirs dan visit a temple. Sekarang kita bicara pariwisata seperti di berita.",
+        "body": "**tourist** = **orangnya** (wisatawan); dua atau lebih = **tourists** (*banyak turis* tidak punya tanda jamak, bahasa Inggris perlu -s). **tourism** = **industrinya** (pariwisata). *Objek wisata* = **tourist attraction**, bukan `tourism object`. **Heritage site** = situs warisan budaya: Borobudur adalah Situs Warisan Dunia UNESCO. **Respect local customs** = menghormati adat setempat (di bandara, **Customs** = bea cukai). **Overtourism** = terlalu banyak wisatawan di satu tempat.",
+        "pairs": [
+          {
+            "en": "tourist",
+            "id": "wisatawan (orangnya)"
+          },
+          {
+            "en": "tourism",
+            "id": "pariwisata (industrinya)"
+          },
+          {
+            "en": "tourist attraction",
+            "id": "objek wisata"
+          },
+          {
+            "en": "local culture",
+            "id": "budaya setempat"
+          },
+          {
+            "en": "tradition",
+            "id": "tradisi"
+          },
+          {
+            "en": "ceremony",
+            "id": "upacara"
+          },
+          {
+            "en": "heritage site",
+            "id": "situs warisan budaya"
+          },
+          {
+            "en": "respect local customs",
+            "id": "menghormati adat setempat"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Budaya dan pariwisata di Indonesia",
+        "text": "Ini kata-katanya dalam kalimat nyata.",
+        "body": "Di pura Bali, pengunjung memakai sarung dan selendang: itulah **respecting local customs**.",
+        "examples": [
+          {
+            "en": "Borobudur is a UNESCO World Heritage Site.",
+            "id": "Borobudur adalah Situs Warisan Dunia UNESCO."
+          },
+          {
+            "en": "Tourism brings a lot of jobs to Lombok.",
+            "id": "Pariwisata membawa banyak lapangan kerja ke Lombok."
+          },
+          {
+            "en": "We watched a traditional ceremony at a temple in Ubud.",
+            "id": "Kami menonton upacara adat di sebuah pura di Ubud."
+          },
+          {
+            "en": "In Balinese temples, visitors wear a sarong to respect local customs.",
+            "id": "Di pura Bali, pengunjung memakai sarung untuk menghormati adat setempat."
+          },
+          {
+            "en": "Some people worry about overtourism in parts of Bali.",
+            "id": "Sebagian orang khawatir soal overtourism (terlalu banyak wisatawan) di beberapa daerah di Bali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kota Tua di Jakarta ramai setiap Sabtu dan Minggu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "tourism-culture",
+          "prompt": "Lengkapi: Every weekend, a lot of ___ visit Kota Tua.",
+          "options": [
+            "tourist",
+            "tourists",
+            "tourism"
+          ],
+          "answer": 1,
+          "explanation": "**a lot of** + orang yang bisa dihitung perlu bentuk jamak: **tourists**. `tourist` tanpa -s meniru *banyak turis*, dan **tourism** itu industrinya, bukan orang yang berkunjung."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Cuaca ekstrem",
+        "text": "Kelompok terakhir: cuaca ekstrem. Indonesia kenal betul kata-kata ini.",
+        "body": "**flood** = banjir (juga kata kerja: *it floods*), **drought** = kekeringan, lama tidak hujan (dibaca 'draut'), **heatwave** = gelombang panas, jauh lebih panas dari biasanya untuk tempat itu, **storm** = badai, **landslide** = tanah longsor, **earthquake** = gempa bumi, **a volcano erupts** = gunung berapi meletus, **haze** = kabut asap dari kebakaran hutan (bukan fog). *Hujan deras* = **heavy rain**, bukan `big rain`.\n\nDalam bahasa Inggris *banjir* itu kata benda atau kata kerja, tidak dipakai setelah *is*: **There was a flood** / **It floods**, bukan `is flood`.",
+        "pairs": [
+          {
+            "en": "flood",
+            "id": "banjir"
+          },
+          {
+            "en": "drought",
+            "id": "kekeringan"
+          },
+          {
+            "en": "heatwave",
+            "id": "gelombang panas"
+          },
+          {
+            "en": "storm",
+            "id": "badai"
+          },
+          {
+            "en": "landslide",
+            "id": "tanah longsor"
+          },
+          {
+            "en": "earthquake",
+            "id": "gempa bumi"
+          },
+          {
+            "en": "a volcano erupts",
+            "id": "gunung berapi meletus"
+          },
+          {
+            "en": "haze",
+            "id": "kabut asap"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di berita",
+        "text": "Dengarkan cara berita memakai kata-kata ini.",
+        "body": "Perhatikan **flood**: *a flood* (kata benda) dan *it floods* (kata kerja).",
+        "examples": [
+          {
+            "en": "There was a big flood in Semarang last week.",
+            "id": "Ada banjir besar di Semarang minggu lalu."
+          },
+          {
+            "en": "It often floods here in the rainy season.",
+            "id": "Di sini sering banjir saat musim hujan."
+          },
+          {
+            "en": "After the heavy rain, there was a landslide near Puncak.",
+            "id": "Setelah hujan deras, terjadi tanah longsor di dekat Puncak."
+          },
+          {
+            "en": "Mount Merapi erupts quite often.",
+            "id": "Gunung Merapi cukup sering meletus."
+          },
+          {
+            "en": "The haze from the forest fires is very bad today.",
+            "id": "Kabut asap dari kebakaran hutan sangat parah hari ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hujan deras dan jalan di dekat kantor Rina tergenang lagi. Dia mengirim pesan ke temannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "extreme-weather",
+          "prompt": "Bagaimana dia bilang 'Jakarta banjir lagi' dalam bahasa Inggris?",
+          "options": [
+            "Jakarta is flood again.",
+            "There's a flood in Jakarta again.",
+            "Jakarta flood again."
+          ],
+          "answer": 1,
+          "explanation": "Di sini **flood** kata benda: **There's a flood** in Jakarta again. `Jakarta is flood` memakai flood seperti kata sifat, dan `Jakarta flood` tidak punya kata kerja (kata kerjanya mestinya *floods*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Lingkungan & Pariwisata",
+          "intro": "Kata-kata tentang lingkungan, pariwisata dan budaya, serta cuaca ekstrem, beserta jebakan yang perlu dihindari.",
+          "headers": [
+            "Bahasa Inggris",
+            "Arti",
+            "Contoh / awas"
+          ],
+          "rows": [
+            [
+              "pollution",
+              "polusi, pencemaran",
+              "a lot of air pollution (tanpa -s)"
+            ],
+            [
+              "rubbish / trash / garbage",
+              "sampah",
+              "rubbish = UK; trash, garbage = US"
+            ],
+            [
+              "climate change / global warming",
+              "perubahan iklim / pemanasan global",
+              "global warming bagian dari climate change"
+            ],
+            [
+              "deforestation",
+              "penggundulan hutan",
+              "kabar buruk bagi orangutan"
+            ],
+            [
+              "reduce / reuse / recycle",
+              "mengurangi / memakai ulang / mendaur ulang",
+              "We must recycle (bukan 'must recycling')"
+            ],
+            [
+              "protect / save energy",
+              "melindungi / menghemat energi",
+              "protect endangered animals"
+            ],
+            [
+              "tourist / tourism",
+              "wisatawan / pariwisata",
+              "many tourists (pakai -s)"
+            ],
+            [
+              "tourist attraction",
+              "objek wisata",
+              "bukan 'tourism object'"
+            ],
+            [
+              "local culture, tradition, ceremony",
+              "budaya setempat, tradisi, upacara",
+              "a ceremony at a temple"
+            ],
+            [
+              "heritage site",
+              "situs warisan budaya",
+              "Borobudur, Prambanan (UNESCO)"
+            ],
+            [
+              "respect local customs",
+              "menghormati adat setempat",
+              "Customs di bandara = bea cukai"
+            ],
+            [
+              "flood / drought / heatwave",
+              "banjir / kekeringan / gelombang panas",
+              "There's a flood (bukan 'is flood'); drought dibaca 'draut'"
+            ],
+            [
+              "storm / landslide / earthquake",
+              "badai / tanah longsor / gempa bumi",
+              "heavy rain (bukan 'big rain')"
+            ],
+            [
+              "a volcano erupts / haze",
+              "gunung berapi meletus / kabut asap",
+              "haze = asap, fog = kabut uap air"
+            ]
+          ],
+          "tips": [
+            "Setelah **must, should, have to, can**: kata kerja bentuk dasar. *We must recycle*, bukan `must recycling`.",
+            "**pollution, rubbish, waste** tanpa -s; tapi **tourists** perlu -s: *many tourists*.",
+            "*Objek wisata* = **tourist attraction**; *Jakarta banjir* = **There's a flood in Jakarta**."
+          ],
+          "examples": [
+            {
+              "en": "Air pollution is a big problem in Jakarta.",
+              "id": "Polusi udara adalah masalah besar di Jakarta."
+            },
+            {
+              "en": "You should turn off the lights to save energy.",
+              "id": "Sebaiknya kamu mematikan lampu untuk menghemat energi."
+            },
+            {
+              "en": "Many tourists come to Yogyakarta for its culture and food.",
+              "id": "Banyak wisatawan datang ke Yogyakarta karena budaya dan makanannya."
+            },
+            {
+              "en": "There was a strong earthquake in Lombok last night.",
+              "id": "Ada gempa bumi kuat di Lombok tadi malam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Artikel British Council tentang Hari Lingkungan Hidup Sedunia (B1), daftar kata bencana bergambar dengan audio, dan video tentang overtourism (lebih sulit, B2–C1, ada transkripnya). Semuanya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

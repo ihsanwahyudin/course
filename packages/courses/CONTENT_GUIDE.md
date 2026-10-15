@@ -90,7 +90,8 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
   short email, message or notice to read.
 - **Hand-written checkpoint items** are short, checkable answers (lowercase, punctuation-free `acceptableAnswers` with the common
   valid variants: contractions both ways, with/without article, "9 45"/"0945" for times, "22 000" for prices) plus a `rubric` for
-  partial credit. They are the fallback when the AI can't write a checkpoint and the examples the AI matches in level and style,
+  partial credit (at most 20 accepted answers: accents don't matter, so *cafe*/*café* is one; leave rarer phrasings to the
+  rubric and the AI grader). They are the fallback when the AI can't write a checkpoint and the examples the AI matches in level and style,
   so make them exemplary.
 - The checkpoint the learner normally sees is **written by the AI for every attempt** from the lesson (see the API README); the
   pass mark is applied on the server.

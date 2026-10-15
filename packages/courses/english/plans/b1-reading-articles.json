@@ -1,0 +1,732 @@
+{
+  "en": {
+    "greeting": "Hi, welcome back! Today you read short articles and opinion pieces: you find the main idea, tell facts from opinions and skim fast. Let's go!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "From everyday texts to articles",
+        "text": "At A2 you read emails, messages and short news, and you scanned them for one answer. Now let's read articles, and start with the most important question: what's the main idea?",
+        "body": "Keep your A2 habits: read the question first, and check the **whole** option, not just the same words.\n**Main idea** = the one big message of a paragraph or article. Every other sentence supports it.\n- It's often the **first** sentence, sometimes the **last** (*So…*, *That's why…*).\n- **Details** = examples, numbers, names, dates, reasons, what people say.\nTest: could it be a short title for the whole text?",
+        "pairs": [
+          {
+            "en": "main idea",
+            "id": "ide pokok, gagasan utama"
+          },
+          {
+            "en": "supporting detail",
+            "id": "detail pendukung (kalimat penjelas)"
+          },
+          {
+            "en": "for example / like",
+            "id": "misalnya / seperti → detail"
+          },
+          {
+            "en": "So… / That's why…",
+            "id": "Jadi… / Itulah sebabnya… → sering ide pokok di akhir"
+          },
+          {
+            "en": "article",
+            "id": "artikel"
+          },
+          {
+            "en": "opinion piece",
+            "id": "tulisan opini"
+          },
+          {
+            "en": "paragraph",
+            "id": "paragraf"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "One paragraph, taken apart",
+        "text": "Here's a short paragraph about remote work. Look at how the sentences work together.",
+        "body": "The first sentence is the main idea. Every other sentence is a detail: Sari's story, times, a number from a survey. Each one shows that working from home **saves time**.",
+        "examples": [
+          {
+            "en": "Working from home saves time for many people in Jakarta.",
+            "id": "Bekerja dari rumah menghemat waktu bagi banyak orang di Jakarta. (ide pokok)"
+          },
+          {
+            "en": "Before 2020, Sari spent three hours a day in traffic.",
+            "id": "Sebelum 2020, Sari menghabiskan tiga jam sehari di kemacetan. (detail: contoh)"
+          },
+          {
+            "en": "Now she works at home three days a week.",
+            "id": "Sekarang dia bekerja di rumah tiga hari seminggu. (detail)"
+          },
+          {
+            "en": "She starts at 8, not 6:30, and has breakfast with her children.",
+            "id": "Dia mulai jam 8, bukan 6.30, dan sarapan bersama anak-anaknya. (detail: jam)"
+          },
+          {
+            "en": "In a survey, 6 in 10 office workers want to work from home two days a week.",
+            "id": "Dalam sebuah survei, 6 dari 10 pekerja kantoran ingin bekerja dari rumah dua hari seminggu. (detail: angka)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Which sentence sums up the whole paragraph? Careful: it isn't always the first one!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-idea-details",
+          "prompt": "Read: 'Pak Dedi opened his small coffee shop in Blok M in 2018. At first he sold only black coffee. Then he started selling es kopi susu and cheap snacks, and he began to take orders online. Now students and office workers queue outside every morning. Small changes turned his tiny shop into a busy business.' What is the main idea?",
+          "options": [
+            "Pak Dedi sells es kopi susu and cheap snacks.",
+            "Students and office workers in Blok M drink black coffee every morning.",
+            "Small changes made Pak Dedi's shop a success."
+          ],
+          "answer": 2,
+          "explanation": "The **last** sentence sums it up: small changes turned his tiny shop into a busy business. Selling es kopi susu is one of those changes, so it's a **detail**. The black-coffee option uses words from the text, but the text doesn't say that: the queue is for his shop, and he sells more than black coffee now."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Say the main idea",
+        "text": "Now build the main idea yourself, in a short sentence.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "main-idea-details",
+          "prompt": "Read: 'For Dimas, working from home is great in some ways and hard in others. He saves two hours a day because he doesn't travel to his office in Sudirman, and he spends less on petrol. But he often feels lonely, and some days he works until 9 pm.' Arrange the words to give the main idea.",
+          "tokens": [
+            "bad",
+            "Working",
+            "points",
+            "has",
+            "and",
+            "home",
+            "good",
+            "from"
+          ],
+          "solution": "Working from home has good and bad points.",
+          "explanation": "The **first** sentence gives the main idea: great in some ways, hard in others = **good and bad points**. Saving two hours and petrol are details (good points); feeling lonely and working until 9 pm are details (bad points)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Fact or opinion?",
+        "text": "Articles often mix facts with what the writer thinks. Let's tell them apart.",
+        "body": "You can check a **fact**: a date, a number, a place, an event.\nAn **opinion** is what someone thinks or feels. Other people can disagree.\nOpinion words: **I think**, **in my opinion**, **should**, **the best**, **terrible**, **too expensive**, **probably**.\nCareful: a number doesn't make a sentence a fact. *Rp50,000 is too much for bakso* is an opinion (**too much**).",
+        "pairs": [
+          {
+            "en": "fact",
+            "id": "fakta (bisa dicek)"
+          },
+          {
+            "en": "opinion",
+            "id": "opini, pendapat"
+          },
+          {
+            "en": "I think / In my opinion",
+            "id": "menurut saya"
+          },
+          {
+            "en": "should",
+            "id": "sebaiknya, seharusnya"
+          },
+          {
+            "en": "the best / the worst",
+            "id": "paling bagus / paling buruk"
+          },
+          {
+            "en": "too expensive",
+            "id": "terlalu mahal (penilaian)"
+          },
+          {
+            "en": "probably",
+            "id": "mungkin, kemungkinan besar (tebakan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Ask yourself about each sentence: can I check this?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fact-vs-opinion",
+          "prompt": "Read three sentences from an article about Sundays in Jakarta. Which one is an opinion?",
+          "options": [
+            "Car Free Day is the best thing to do on a Sunday in Jakarta.",
+            "Car Free Day on Jalan Sudirman is on Sunday mornings.",
+            "Jakarta has more than 10 million people."
+          ],
+          "answer": 0,
+          "explanation": "**the best** is the writer's judgement: other people prefer to sleep late on Sunday! You can check when Car Free Day is and how many people live in Jakarta, so those are facts."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Numbers can trick you",
+        "text": "This time, look for the fact.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fact-vs-opinion",
+          "prompt": "Read Rina's post about a new café: 'A salad bowl at Hijau Café costs Rp65,000. That's too much for a normal lunch. The café has 20 tables and opens at 7 am. I think healthy food will probably get cheaper next year.' Which sentence is a fact?",
+          "options": [
+            "Rp65,000 is too much for a salad.",
+            "Hijau Café has 20 tables.",
+            "Healthy food will probably get cheaper next year."
+          ],
+          "answer": 1,
+          "explanation": "You can go and count the tables, so it's a fact. **too much** is Rina's opinion, even with a number in it. **probably** shows a guess about the future: nobody can check it now."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Skimming: the gist, fast",
+        "text": "Sometimes you only need the general idea, and you need it fast. That's skimming.",
+        "body": "**Skim** = read fast to get the **gist** (the general idea). Give yourself a time limit: about **1 minute** for 120 words.\n- Read the **title**.\n- Read the **first sentence** of each paragraph, and the last sentence.\n- Let your eyes run over names and numbers. Don't stop.\nDon't translate every word or open a dictionary. **Scan** (A2) is different: you look for **one** answer, like a time or a name.",
+        "pairs": [
+          {
+            "en": "skim",
+            "id": "membaca cepat untuk menangkap inti"
+          },
+          {
+            "en": "gist",
+            "id": "inti, gambaran umum"
+          },
+          {
+            "en": "scan",
+            "id": "mencari satu informasi dengan cepat"
+          },
+          {
+            "en": "title / headline",
+            "id": "judul / judul berita"
+          },
+          {
+            "en": "the first sentence",
+            "id": "kalimat pertama"
+          },
+          {
+            "en": "time limit",
+            "id": "batas waktu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "30 seconds!",
+        "text": "You only have time for the title and the first sentences. That's enough for the gist.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "skimming",
+          "prompt": "Skim only the title and the first sentence of each paragraph: 'THE LUNCH BOX IS BACK · More office workers in Jakarta are bringing lunch from home. … / Food delivery costs a lot, and many people want less oil and sugar. … / Some cafés near offices are selling fewer meals at lunchtime. …' What is the article mainly about?",
+          "options": [
+            "Office workers are bringing their own lunch.",
+            "How to cook a healthy lunch box.",
+            "Food delivery apps are getting more expensive."
+          ],
+          "answer": 0,
+          "explanation": "The title and the first sentence give the gist: workers are bringing lunch from home. The article doesn't teach cooking, and the cost of food delivery is one **reason** (a detail), not the topic."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Let's review the key words of this lesson.",
+        "flashcards": [
+          {
+            "front": "ide pokok",
+            "back": "main idea"
+          },
+          {
+            "front": "detail pendukung",
+            "back": "supporting detail"
+          },
+          {
+            "front": "sesuatu yang bisa dicek",
+            "back": "a fact"
+          },
+          {
+            "front": "pendapat seseorang",
+            "back": "an opinion"
+          },
+          {
+            "front": "menurut saya",
+            "back": "in my opinion / I think"
+          },
+          {
+            "front": "sebaiknya",
+            "back": "should"
+          },
+          {
+            "front": "membaca cepat untuk menangkap inti",
+            "back": "skim (skimming)"
+          },
+          {
+            "front": "inti / gambaran umum teks",
+            "back": "the gist"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's a cheat sheet to keep next to your next article.",
+        "artifact": {
+          "title": "Cheat sheet · Reading articles",
+          "intro": "Skim for the gist, find the main idea, then ask about each sentence: fact or opinion?",
+          "headers": [
+            "In the text",
+            "What it is",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "the title + first sentences",
+              "the gist: skim these first",
+              "inti teks"
+            ],
+            [
+              "the first or last sentence",
+              "often the main idea",
+              "ide pokok"
+            ],
+            [
+              "for example, like",
+              "a detail (an example)",
+              "detail: contoh"
+            ],
+            [
+              "numbers, names, dates, because",
+              "details",
+              "detail"
+            ],
+            [
+              "\"…,\" says Budi",
+              "what one person says (often an opinion)",
+              "kata-kata seseorang"
+            ],
+            [
+              "a date, a price, an event",
+              "a fact: you can check it",
+              "fakta"
+            ],
+            [
+              "I think / In my opinion / In my view",
+              "an opinion",
+              "menurut saya"
+            ],
+            [
+              "should / shouldn't",
+              "an opinion (advice)",
+              "sebaiknya"
+            ],
+            [
+              "the best / terrible / amazing",
+              "an opinion (a judgement)",
+              "penilaian"
+            ],
+            [
+              "too expensive / too far",
+              "an opinion",
+              "terlalu …"
+            ],
+            [
+              "probably / maybe",
+              "a guess (an opinion)",
+              "mungkin"
+            ]
+          ],
+          "tips": [
+            "Main idea test: could it be a short title for the whole text?",
+            "A number doesn't make a sentence a fact: **Rp50,000 is too much** is an opinion.",
+            "Skim in about 1 minute: title, first sentences, last sentence. Don't translate."
+          ],
+          "examples": [
+            {
+              "en": "Working from home saves time for many people in Jakarta.",
+              "id": "Bekerja dari rumah menghemat waktu bagi banyak orang di Jakarta. (ide pokok)"
+            },
+            {
+              "en": "The MRT Jakarta opened in 2019.",
+              "id": "MRT Jakarta mulai beroperasi tahun 2019. (fakta)"
+            },
+            {
+              "en": "In my opinion, the MRT is the best way to get to work.",
+              "id": "Menurut saya, MRT adalah cara terbaik untuk berangkat kerja. (opini)"
+            },
+            {
+              "en": "Rp50,000 is too much for a bowl of bakso.",
+              "id": "Rp50.000 terlalu mahal untuk semangkuk bakso. (opini, walaupun ada angkanya)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Three B1 texts from British Council LearnEnglish: an article about phone habits, a book review full of opinions, and tips for checking news online."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang lagi! Hari ini kamu membaca artikel pendek dan tulisan opini: menemukan ide pokok, membedakan fakta dari opini, dan membaca cepat. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Dari teks sehari-hari ke artikel",
+        "text": "Di A2 kamu sudah membaca email, pesan dan berita pendek, lalu mencari satu jawaban di dalamnya (scanning). Sekarang kita membaca artikel, dan mulai dari pertanyaan paling penting: apa ide pokoknya?",
+        "body": "Kebiasaan dari A2 tetap dipakai: baca pertanyaannya dulu, dan cek **seluruh** pilihan jawaban, bukan cuma kata yang sama.\n**Main idea** (ide pokok) = satu pesan besar dari paragraf atau artikel. Kalimat lain mendukungnya.\n- Biasanya di kalimat **pertama**, kadang di kalimat **terakhir** (*So…*, *That's why…*), seperti paragraf deduktif dan induktif di pelajaran Bahasa Indonesia.\n- **Details** (detail) = contoh, angka, nama, tanggal, alasan, kata-kata orang.\nTesnya: bisakah kalimat itu jadi judul pendek untuk seluruh teks?",
+        "pairs": [
+          {
+            "en": "main idea",
+            "id": "ide pokok, gagasan utama"
+          },
+          {
+            "en": "supporting detail",
+            "id": "detail pendukung (kalimat penjelas)"
+          },
+          {
+            "en": "for example / like",
+            "id": "misalnya / seperti → detail"
+          },
+          {
+            "en": "So… / That's why…",
+            "id": "Jadi… / Itulah sebabnya… → sering ide pokok di akhir"
+          },
+          {
+            "en": "article",
+            "id": "artikel"
+          },
+          {
+            "en": "opinion piece",
+            "id": "tulisan opini"
+          },
+          {
+            "en": "paragraph",
+            "id": "paragraf"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Satu paragraf, dibongkar",
+        "text": "Ini paragraf pendek tentang bekerja dari rumah (remote work). Perhatikan bagaimana kalimat-kalimatnya saling bekerja sama.",
+        "body": "Kalimat pertama adalah ide pokoknya. Semua kalimat lain adalah detail: cerita Sari, jam, angka dari survei. Semuanya menunjukkan bahwa bekerja dari rumah **menghemat waktu**.",
+        "examples": [
+          {
+            "en": "Working from home saves time for many people in Jakarta.",
+            "id": "Bekerja dari rumah menghemat waktu bagi banyak orang di Jakarta. (ide pokok)"
+          },
+          {
+            "en": "Before 2020, Sari spent three hours a day in traffic.",
+            "id": "Sebelum 2020, Sari menghabiskan tiga jam sehari di kemacetan. (detail: contoh)"
+          },
+          {
+            "en": "Now she works at home three days a week.",
+            "id": "Sekarang dia bekerja di rumah tiga hari seminggu. (detail)"
+          },
+          {
+            "en": "She starts at 8, not 6:30, and has breakfast with her children.",
+            "id": "Dia mulai jam 8, bukan 6.30, dan sarapan bersama anak-anaknya. (detail: jam)"
+          },
+          {
+            "en": "In a survey, 6 in 10 office workers want to work from home two days a week.",
+            "id": "Dalam sebuah survei, 6 dari 10 pekerja kantoran ingin bekerja dari rumah dua hari seminggu. (detail: angka)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cari kalimat yang merangkum seluruh paragraf. Hati-hati: tidak selalu kalimat pertama!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-idea-details",
+          "prompt": "Baca: 'Pak Dedi opened his small coffee shop in Blok M in 2018. At first he sold only black coffee. Then he started selling es kopi susu and cheap snacks, and he began to take orders online. Now students and office workers queue outside every morning. Small changes turned his tiny shop into a busy business.' Apa ide pokoknya?",
+          "options": [
+            "Pak Dedi sells es kopi susu and cheap snacks.",
+            "Students and office workers in Blok M drink black coffee every morning.",
+            "Small changes made Pak Dedi's shop a success."
+          ],
+          "answer": 2,
+          "explanation": "Kalimat **terakhir** merangkumnya: perubahan kecil mengubah kedai kecilnya jadi usaha yang ramai. Menjual es kopi susu adalah salah satu perubahan itu, jadi itu **detail**. Pilihan tentang kopi hitam memakai kata-kata dari teks, tapi teksnya tidak bilang begitu: antreannya untuk kedainya, dan sekarang dia menjual lebih dari kopi hitam."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Sebutkan ide pokoknya",
+        "text": "Sekarang susun sendiri ide pokoknya, dalam satu kalimat pendek.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "main-idea-details",
+          "prompt": "Baca: 'For Dimas, working from home is great in some ways and hard in others. He saves two hours a day because he doesn't travel to his office in Sudirman, and he spends less on petrol. But he often feels lonely, and some days he works until 9 pm.' Susun kata-katanya menjadi ide pokok teks ini.",
+          "tokens": [
+            "bad",
+            "Working",
+            "points",
+            "has",
+            "and",
+            "home",
+            "good",
+            "from"
+          ],
+          "solution": "Working from home has good and bad points.",
+          "explanation": "Kalimat **pertama** memberi ide pokoknya: great in some ways, hard in others (enak dalam beberapa hal, berat dalam hal lain) = **good and bad points** (sisi baik dan sisi buruk). Hemat dua jam dan hemat bensin adalah detail (sisi baik); merasa kesepian dan bekerja sampai jam 9 malam adalah detail (sisi buruk)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Fakta atau opini?",
+        "text": "Artikel sering mencampur fakta dengan apa yang dipikirkan penulisnya. Ayo kita bedakan.",
+        "body": "**Fakta** (fact) bisa dicek: tanggal, angka, tempat, sesuatu yang terjadi.\n**Opini** (opinion) adalah apa yang dipikirkan atau dirasakan seseorang. Orang lain bisa tidak setuju.\nKata-kata opini: **I think**, **in my opinion** (menurut saya), **should** (sebaiknya), **the best** (paling bagus), **terrible** (buruk sekali), **too expensive** (terlalu mahal), **probably** (mungkin).\nHati-hati: ada angka bukan berarti fakta. *Rp50,000 is too much for bakso* itu opini (**too much** = terlalu mahal).",
+        "pairs": [
+          {
+            "en": "fact",
+            "id": "fakta (bisa dicek)"
+          },
+          {
+            "en": "opinion",
+            "id": "opini, pendapat"
+          },
+          {
+            "en": "I think / In my opinion",
+            "id": "menurut saya"
+          },
+          {
+            "en": "should",
+            "id": "sebaiknya, seharusnya"
+          },
+          {
+            "en": "the best / the worst",
+            "id": "paling bagus / paling buruk"
+          },
+          {
+            "en": "too expensive",
+            "id": "terlalu mahal (penilaian)"
+          },
+          {
+            "en": "probably",
+            "id": "mungkin, kemungkinan besar (tebakan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tanyakan untuk setiap kalimat: bisakah aku mengecek ini?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fact-vs-opinion",
+          "prompt": "Baca tiga kalimat dari artikel tentang hari Minggu di Jakarta. Mana yang merupakan opini?",
+          "options": [
+            "Car Free Day is the best thing to do on a Sunday in Jakarta.",
+            "Car Free Day on Jalan Sudirman is on Sunday mornings.",
+            "Jakarta has more than 10 million people."
+          ],
+          "answer": 0,
+          "explanation": "**the best** (paling asyik) adalah penilaian penulis: ada orang yang lebih suka bangun siang di hari Minggu! Kapan Car Free Day diadakan dan berapa jumlah penduduk Jakarta bisa dicek, jadi itu fakta."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Angka bisa menjebak",
+        "text": "Kali ini, cari faktanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fact-vs-opinion",
+          "prompt": "Baca unggahan Rina tentang kafe baru: 'A salad bowl at Hijau Café costs Rp65,000. That's too much for a normal lunch. The café has 20 tables and opens at 7 am. I think healthy food will probably get cheaper next year.' Kalimat mana yang merupakan fakta?",
+          "options": [
+            "Rp65,000 is too much for a salad.",
+            "Hijau Café has 20 tables.",
+            "Healthy food will probably get cheaper next year."
+          ],
+          "answer": 1,
+          "explanation": "Jumlah mejanya bisa didatangi dan dihitung, jadi itu fakta. **too much** (terlalu mahal) adalah opini Rina, walaupun ada angkanya. **probably** (mungkin) menunjukkan tebakan tentang masa depan: tidak ada yang bisa mengeceknya sekarang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Skimming: inti, dengan cepat",
+        "text": "Kadang kamu hanya perlu gambaran umumnya, dan harus cepat. Itulah skimming.",
+        "body": "**Skim** = membaca cepat untuk menangkap **gist** (inti, gambaran umum). Beri dirimu batas waktu: sekitar **1 menit** untuk 120 kata.\n- Baca **judulnya**.\n- Baca **kalimat pertama** setiap paragraf, dan kalimat terakhir.\n- Biarkan matamu melewati nama dan angka. Jangan berhenti.\nJangan terjemahkan setiap kata atau membuka kamus. **Scan** (A2) itu berbeda: kamu mencari **satu** jawaban, misalnya jam atau nama.",
+        "pairs": [
+          {
+            "en": "skim",
+            "id": "membaca cepat untuk menangkap inti"
+          },
+          {
+            "en": "gist",
+            "id": "inti, gambaran umum"
+          },
+          {
+            "en": "scan",
+            "id": "mencari satu informasi dengan cepat"
+          },
+          {
+            "en": "title / headline",
+            "id": "judul / judul berita"
+          },
+          {
+            "en": "the first sentence",
+            "id": "kalimat pertama"
+          },
+          {
+            "en": "time limit",
+            "id": "batas waktu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "30 detik!",
+        "text": "Waktumu hanya cukup untuk judul dan kalimat-kalimat pertama. Itu cukup untuk menangkap intinya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "skimming",
+          "prompt": "Baca cepat judul dan kalimat pertama setiap paragraf saja: 'THE LUNCH BOX IS BACK · More office workers in Jakarta are bringing lunch from home. … / Food delivery costs a lot, and many people want less oil and sugar. … / Some cafés near offices are selling fewer meals at lunchtime. …' Artikel ini terutama tentang apa?",
+          "options": [
+            "Office workers are bringing their own lunch.",
+            "How to cook a healthy lunch box.",
+            "Food delivery apps are getting more expensive."
+          ],
+          "answer": 0,
+          "explanation": "Judul dan kalimat pertama memberi intinya: para pekerja membawa bekal makan siang dari rumah. Artikelnya tidak mengajari cara memasak, dan mahalnya pesan-antar makanan adalah salah satu **alasan** (detail), bukan topiknya."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Ayo ulang kata-kata kunci dari pelajaran ini.",
+        "flashcards": [
+          {
+            "front": "ide pokok",
+            "back": "main idea"
+          },
+          {
+            "front": "detail pendukung",
+            "back": "supporting detail"
+          },
+          {
+            "front": "sesuatu yang bisa dicek",
+            "back": "a fact"
+          },
+          {
+            "front": "pendapat seseorang",
+            "back": "an opinion"
+          },
+          {
+            "front": "menurut saya",
+            "back": "in my opinion / I think"
+          },
+          {
+            "front": "sebaiknya",
+            "back": "should"
+          },
+          {
+            "front": "membaca cepat untuk menangkap inti",
+            "back": "skim (skimming)"
+          },
+          {
+            "front": "inti / gambaran umum teks",
+            "back": "the gist"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini contekan untuk disimpan di samping artikel berikutnya yang kamu baca.",
+        "artifact": {
+          "title": "Contekan · Membaca artikel",
+          "intro": "Skim untuk menangkap inti, temukan ide pokoknya, lalu tanyakan untuk setiap kalimat: fakta atau opini?",
+          "headers": [
+            "Di teks",
+            "Artinya apa",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "the title + first sentences",
+              "inti: baca ini dulu saat skimming",
+              "inti teks"
+            ],
+            [
+              "the first or last sentence",
+              "sering berisi ide pokok",
+              "ide pokok"
+            ],
+            [
+              "for example, like",
+              "detail (contoh)",
+              "detail: contoh"
+            ],
+            [
+              "numbers, names, dates, because",
+              "detail",
+              "detail"
+            ],
+            [
+              "\"…,\" says Budi",
+              "kata-kata satu orang (sering opini)",
+              "kata-kata seseorang"
+            ],
+            [
+              "a date, a price, an event",
+              "fakta: bisa dicek",
+              "fakta"
+            ],
+            [
+              "I think / In my opinion / In my view",
+              "opini",
+              "menurut saya"
+            ],
+            [
+              "should / shouldn't",
+              "opini (saran)",
+              "sebaiknya"
+            ],
+            [
+              "the best / terrible / amazing",
+              "opini (penilaian)",
+              "penilaian"
+            ],
+            [
+              "too expensive / too far",
+              "opini",
+              "terlalu …"
+            ],
+            [
+              "probably / maybe",
+              "tebakan (opini)",
+              "mungkin"
+            ]
+          ],
+          "tips": [
+            "Tes ide pokok: bisakah kalimat itu jadi judul pendek untuk seluruh teks?",
+            "Ada angka bukan berarti fakta: **Rp50,000 is too much** itu opini.",
+            "Skimming sekitar 1 menit: judul, kalimat-kalimat pertama, kalimat terakhir. Jangan menerjemahkan."
+          ],
+          "examples": [
+            {
+              "en": "Working from home saves time for many people in Jakarta.",
+              "id": "Bekerja dari rumah menghemat waktu bagi banyak orang di Jakarta. (ide pokok)"
+            },
+            {
+              "en": "The MRT Jakarta opened in 2019.",
+              "id": "MRT Jakarta mulai beroperasi tahun 2019. (fakta)"
+            },
+            {
+              "en": "In my opinion, the MRT is the best way to get to work.",
+              "id": "Menurut saya, MRT adalah cara terbaik untuk berangkat kerja. (opini)"
+            },
+            {
+              "en": "Rp50,000 is too much for a bowl of bakso.",
+              "id": "Rp50.000 terlalu mahal untuk semangkuk bakso. (opini, walaupun ada angkanya)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ada tiga teks B1 dari British Council LearnEnglish: artikel tentang kebiasaan memakai HP, ulasan buku yang penuh opini, dan tips mengecek berita online."
+      }
+    ]
+  }
+}

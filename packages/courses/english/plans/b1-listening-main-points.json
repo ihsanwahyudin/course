@@ -1,0 +1,748 @@
+{
+  "en": {
+    "greeting": "Hi! Today you listen to longer, real speech: messages from colleagues, a lecturer's announcement, a hobby, the news and podcasts. You'll find the main point and take quick notes. Play each sound as many times as you like.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "From key words to the main point",
+        "text": "You already listen for key words: a number, a time, a place. Now the speech is longer, so you also need the main point.",
+        "body": "The **main point** is the most important idea, not every detail. While you listen, ask three questions: **Who is talking, and to whom?** **What is the topic?** **What is the main message?** (what changes, what's new, what people have to do, or why). The main point is often in the **first one or two sentences**, and speakers often repeat it at the end. Days, rooms and examples are usually **details**. Don't translate every word: follow the idea.",
+        "pairs": [
+          {
+            "en": "Who is talking?",
+            "id": "Siapa yang bicara? (dan kepada siapa)"
+          },
+          {
+            "en": "What's the topic?",
+            "id": "Topiknya apa?"
+          },
+          {
+            "en": "What's the main message?",
+            "id": "Pesan utamanya apa?"
+          },
+          {
+            "en": "the main point",
+            "id": "poin utama, inti"
+          },
+          {
+            "en": "a detail",
+            "id": "rincian, detail"
+          },
+          {
+            "en": "a change",
+            "id": "perubahan"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Signposts show the way",
+        "text": "Speakers use small words that tell you what's coming next. Tap each tile to hear it.",
+        "body": "**Signposts** are like the signs on a toll road. **First… Then… Finally…** give the order. **The main reason is…** and **The most important thing is…** mean the main point is coming: listen carefully! After **However** or **but**, the direction changes: the new or true information comes **after** it. **Instead** brings the new plan. **So** gives the result. **For example** gives a detail. Wait for the end of the sentence before you decide.",
+        "pairs": [
+          {
+            "en": "First, … Then, … Finally, …",
+            "id": "Pertama… Lalu… Terakhir… → urutan"
+          },
+          {
+            "en": "The main reason is…",
+            "id": "Alasan utamanya… → poin utama!"
+          },
+          {
+            "en": "The most important thing is…",
+            "id": "Hal yang paling penting… → poin utama!"
+          },
+          {
+            "en": "However, …",
+            "id": "Namun… → info baru datang setelahnya"
+          },
+          {
+            "en": "Instead, …",
+            "id": "Sebagai gantinya… → rencana baru"
+          },
+          {
+            "en": "So …",
+            "id": "Jadi… → hasilnya"
+          },
+          {
+            "en": "For example, …",
+            "id": "Misalnya… → detail"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a message at work",
+        "text": "Dimas leaves a voice message for his team. What changes?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-points",
+          "listen": "Hi everyone, it's Dimas. A quick update about our team meeting. From next week, we're going to meet on Tuesday mornings, not Mondays. The main reason is that many of you visit clients on Mondays. The room and the time are the same: room 4, at nine o'clock.",
+          "prompt": "Listen to Dimas's message. What is the main point?",
+          "options": [
+            "The team meeting is moving from Monday to Tuesday.",
+            "The team meeting is moving to a new room.",
+            "Many people are going to visit clients on Tuesday."
+          ],
+          "answer": 0,
+          "explanation": "The main point is the change: **Tuesday mornings, not Mondays**. Visiting clients on **Mondays** is the reason, and the room and the time are the same, so they're only details."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a hobby",
+        "text": "Sari talks about her hobby. Listen for the signposts **However** and **The main reason is**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-points",
+          "listen": "I started running two years ago. At first, I ran to lose weight. However, that isn't the reason now. The main reason is my running group. Every Sunday morning we run together in Senayan, and then we have breakfast. I've made a lot of good friends there.",
+          "prompt": "Listen to Sari. What is the main reason she runs now?",
+          "options": [
+            "She wants to lose weight.",
+            "She wants to run in a big race.",
+            "She enjoys running with her group."
+          ],
+          "answer": 2,
+          "explanation": "Losing weight was the old reason: **However, that isn't the reason now.** Then the signpost **The main reason is** gives the answer: her running group and her new friends there. Nobody talks about a race."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "News reports and podcasts",
+        "text": "News and podcasts have a clear shape, so you know where to listen.",
+        "body": "**News:** the **first sentence** gives the main news (what happened + where). Then come the details (when, how many, how much), and at the end what's **going to** happen or advice (*Drivers should…*). New news often uses the present perfect: *has started*, *have left*. **Podcasts** (audio shows, often one person talking): first the podcast's name and the **host** (pembawa acara), then the topic: *Today's topic is…* or *In this episode, I'm going to talk about…*. Careful: the podcast's name is not today's topic!",
+        "pairs": [
+          {
+            "en": "Here is the news.",
+            "id": "Berikut beritanya."
+          },
+          {
+            "en": "has opened",
+            "id": "sudah dibuka (kabar baru)"
+          },
+          {
+            "en": "this morning",
+            "id": "tadi pagi"
+          },
+          {
+            "en": "Drivers should avoid the main road.",
+            "id": "Pengemudi sebaiknya menghindari jalan utama."
+          },
+          {
+            "en": "Welcome to the podcast.",
+            "id": "Selamat datang di podcast ini."
+          },
+          {
+            "en": "I'm your host.",
+            "id": "Aku pembawa acaramu."
+          },
+          {
+            "en": "Today's topic is…",
+            "id": "Topik hari ini adalah…"
+          },
+          {
+            "en": "In this episode, …",
+            "id": "Di episode ini, …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the local news",
+        "text": "A short news report from Bandung. Remember: the first sentence gives the main news.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "news-podcasts",
+          "listen": "Here is the local news. A new bus line has started in Bandung today. The buses go from the train station to the airport every twenty minutes, and a ticket costs five thousand rupiah. The city is going to add two more lines next year.",
+          "prompt": "Listen to the news report. What is the main news?",
+          "options": [
+            "Bandung is going to build a new airport.",
+            "A new bus line has started in Bandung.",
+            "The train station in Bandung has a new ticket price."
+          ],
+          "answer": 1,
+          "explanation": "The first sentence gives the main news: **A new bus line has started in Bandung today.** The airport and the train station are where the buses go, and five thousand rupiah is the bus ticket: details. Nobody says a new airport."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a podcast",
+        "text": "The start of a podcast. Wait for the words that give the topic of **this** episode.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "news-podcasts",
+          "listen": "Hello and welcome to Work Talk, the podcast for young workers in Indonesia. I'm Rina. In this episode, I'm going to talk about working from home. First, I'll explain how to plan your day. Then I'll give you three tips to stop checking your phone all the time.",
+          "prompt": "Listen to the podcast. What is the topic of this episode?",
+          "options": [
+            "Young workers in Indonesia",
+            "Finding your first job",
+            "Working from home"
+          ],
+          "answer": 2,
+          "explanation": "**In this episode, I'm going to talk about** working from home: that's the topic. *The podcast for young workers in Indonesia* describes the whole podcast, not this episode. Planning your day and the phone tips are points inside the topic."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Notes, not sentences",
+        "text": "Last skill: writing down what you hear, fast.",
+        "body": "You can't write every word, so write **key words**: **who, what, when** (day, date, time), **where** (place, room) and **numbers**. Write numbers as digits and use short forms: *Mon 20, 9:30*. Symbols help: **→** = so, **+** = and. Notes can be in English, Indonesian or a mix. After a change (*not Monday*, *However*, *Instead*), write only the **new** information. Traps: thir**TEEN** vs **THIR**ty; *half past one* = **1:30**, but *setengah satu* = 12:30!",
+        "pairs": [
+          {
+            "en": "who, what, when, where, numbers",
+            "id": "siapa, apa, kapan, di mana, angka"
+          },
+          {
+            "en": "on Monday the twentieth",
+            "id": "hari Senin tanggal 20 → Mon 20"
+          },
+          {
+            "en": "half past one",
+            "id": "1.30 (setengah dua, bukan setengah satu!)"
+          },
+          {
+            "en": "thirteen, thirty",
+            "id": "13 (tekanan di akhir), 30 (tekanan di awal)"
+          },
+          {
+            "en": "fifteen, fifty",
+            "id": "15 (tekanan di akhir), 50 (tekanan di awal)"
+          },
+          {
+            "en": "on Tuesday, not Monday",
+            "id": "hari Selasa, bukan Senin → tulis: Tue"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and take notes",
+        "text": "A lecturer makes an announcement. Imagine you're writing notes: day, date, time, room, what to bring.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "note-key-info",
+          "listen": "Good morning, everyone. Before we start, an important change. The test is not on Thursday the fifteenth any more. It's on Friday the sixteenth, at half past two, in room B twelve. Please bring a pen and your student card.",
+          "prompt": "Listen to the lecturer. Which notes are correct?",
+          "options": [
+            "Test: Thu 15 · 2:30 · room B12 · pen + student card",
+            "Test: Fri 16 · 2:30 · room B12 · pen + student card",
+            "Test: Fri 16 · 1:30 · room B12 · pen + student card"
+          ],
+          "answer": 1,
+          "explanation": "Thursday the fifteenth is the old day (**not on Thursday… any more**): write the new one, **Fri 16**. **Half past two** = 2:30 (setengah tiga). 1:30 is the Indonesian trap: *setengah dua* is 1:30, but *half past two* is 2:30."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Try to say the English before you look.",
+        "flashcards": [
+          {
+            "front": "poin utama, inti",
+            "back": "the main point"
+          },
+          {
+            "front": "Alasan utamanya adalah…",
+            "back": "The main reason is…"
+          },
+          {
+            "front": "namun (info baru datang setelahnya)",
+            "back": "However, …"
+          },
+          {
+            "front": "sebagai gantinya (rencana baru)",
+            "back": "Instead, …"
+          },
+          {
+            "front": "Berikut beritanya.",
+            "back": "Here is the news."
+          },
+          {
+            "front": "Di episode ini, aku akan membahas…",
+            "back": "In this episode, I'm going to talk about…"
+          },
+          {
+            "front": "pukul 7.30 (setengah delapan)",
+            "back": "half past seven"
+          },
+          {
+            "front": "mencatat (kata kunci saja)",
+            "back": "take notes (key words only)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Main points, signposts, news, podcasts and notes on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Listening for main points",
+          "intro": "What you hear, what it tells you, and what to write down.",
+          "headers": [
+            "You hear",
+            "It means",
+            "What to do"
+          ],
+          "rows": [
+            [
+              "The main reason is… / The most important thing is…",
+              "Alasan utamanya… / Hal paling penting…",
+              "the main point is coming: listen!"
+            ],
+            [
+              "First… Then… Finally…",
+              "Pertama… Lalu… Terakhir…",
+              "follow the order of the points"
+            ],
+            [
+              "However, … / but",
+              "Namun… / tapi",
+              "the new or true information comes after it"
+            ],
+            [
+              "Instead, …",
+              "Sebagai gantinya…",
+              "write the new plan, not the old one"
+            ],
+            [
+              "on Tuesday, not Monday",
+              "hari Selasa, bukan Senin",
+              "write only the new day"
+            ],
+            [
+              "So …",
+              "Jadi…",
+              "the result or what to do"
+            ],
+            [
+              "For example, …",
+              "Misalnya…",
+              "a detail, not the main point"
+            ],
+            [
+              "Here is the news. … has opened / has started",
+              "Berikut beritanya. … sudah dibuka / sudah mulai",
+              "the first sentence = the main news"
+            ],
+            [
+              "Today's topic is… / In this episode, …",
+              "Topik hari ini… / Di episode ini…",
+              "today's topic (not the podcast's name)"
+            ],
+            [
+              "thirTEEN / THIRty, fifTEEN / FIFty",
+              "13 / 30, 15 / 50",
+              "listen for the stress"
+            ],
+            [
+              "half past seven",
+              "7.30 (setengah delapan)",
+              "not 6:30!"
+            ]
+          ],
+          "tips": [
+            "Ask: who is talking, what is the topic, what is the main message? The main point is often in the first sentences.",
+            "Notes = key words: who, what, when, where, numbers. Digits, short forms, → for so, + for and.",
+            "Wait for the end of the sentence: after **however**, **instead** or **not**, the old information isn't true any more."
+          ],
+          "examples": [
+            {
+              "en": "The main reason is the price.",
+              "id": "Alasan utamanya adalah harganya."
+            },
+            {
+              "en": "The office usually closes at five. However, today it closes at three.",
+              "id": "Kantor biasanya tutup jam lima. Namun, hari ini tutup jam tiga."
+            },
+            {
+              "en": "Here is the news. A new hospital has opened in Medan.",
+              "id": "Berikut beritanya. Sebuah rumah sakit baru sudah dibuka di Medan."
+            },
+            {
+              "en": "In this episode, I'm going to talk about learning English with films.",
+              "id": "Di episode ini, aku akan membahas belajar bahasa Inggris lewat film."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen more",
+        "text": "Two B1 listening lessons with audio, transcripts and exercises: a lecture introduction and an interview."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu mendengarkan ucapan nyata yang lebih panjang: pesan dari rekan kerja, pengumuman dosen, cerita tentang hobi, berita dan podcast. Kamu akan menangkap poin utamanya dan mencatat dengan cepat. Putar setiap suara sesering yang kamu mau.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Dari kata kunci ke poin utama",
+        "text": "Kamu sudah bisa mendengarkan kata kunci: angka, jam, tempat. Sekarang ucapannya lebih panjang, jadi kamu juga perlu poin utamanya.",
+        "body": "**Poin utama** (main point) adalah ide yang paling penting, bukan setiap detail. Sambil mendengarkan, tanyakan tiga hal: **Siapa yang bicara, dan kepada siapa?** **Topiknya apa?** **Pesan utamanya apa?** (apa yang berubah, apa yang baru, apa yang harus dilakukan, atau kenapa). Poin utama sering ada di **satu-dua kalimat pertama**, dan pembicara sering mengulangnya di akhir. Hari, ruangan dan contoh biasanya hanya **detail**. Jangan terjemahkan setiap kata: ikuti idenya.",
+        "pairs": [
+          {
+            "en": "Who is talking?",
+            "id": "Siapa yang bicara? (dan kepada siapa)"
+          },
+          {
+            "en": "What's the topic?",
+            "id": "Topiknya apa?"
+          },
+          {
+            "en": "What's the main message?",
+            "id": "Pesan utamanya apa?"
+          },
+          {
+            "en": "the main point",
+            "id": "poin utama, inti"
+          },
+          {
+            "en": "a detail",
+            "id": "rincian, detail"
+          },
+          {
+            "en": "a change",
+            "id": "perubahan"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Signpost: penunjuk arah",
+        "text": "Pembicara memakai kata-kata kecil yang memberitahu apa yang akan datang. Ketuk tiap kartu untuk mendengarnya.",
+        "body": "**Signpost** (kata penunjuk) seperti papan petunjuk di jalan tol. **First… Then… Finally…** memberi urutan. **The main reason is…** dan **The most important thing is…** berarti poin utama akan datang: dengarkan baik-baik! Setelah **However** (namun) atau **but**, arahnya berubah: info yang baru atau yang benar datang **setelahnya**. **Instead** (sebagai gantinya) membawa rencana baru. **So** (jadi) memberi hasilnya. **For example** (misalnya) memberi detail. Tunggu sampai kalimatnya selesai sebelum memutuskan.",
+        "pairs": [
+          {
+            "en": "First, … Then, … Finally, …",
+            "id": "Pertama… Lalu… Terakhir… → urutan"
+          },
+          {
+            "en": "The main reason is…",
+            "id": "Alasan utamanya… → poin utama!"
+          },
+          {
+            "en": "The most important thing is…",
+            "id": "Hal yang paling penting… → poin utama!"
+          },
+          {
+            "en": "However, …",
+            "id": "Namun… → info baru datang setelahnya"
+          },
+          {
+            "en": "Instead, …",
+            "id": "Sebagai gantinya… → rencana baru"
+          },
+          {
+            "en": "So …",
+            "id": "Jadi… → hasilnya"
+          },
+          {
+            "en": "For example, …",
+            "id": "Misalnya… → detail"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: pesan di kantor",
+        "text": "Dimas meninggalkan pesan suara untuk timnya. Apa yang berubah?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-points",
+          "listen": "Hi everyone, it's Dimas. A quick update about our team meeting. From next week, we're going to meet on Tuesday mornings, not Mondays. The main reason is that many of you visit clients on Mondays. The room and the time are the same: room 4, at nine o'clock.",
+          "prompt": "Dengarkan pesan Dimas. Apa poin utamanya?",
+          "options": [
+            "The team meeting is moving from Monday to Tuesday.",
+            "The team meeting is moving to a new room.",
+            "Many people are going to visit clients on Tuesday."
+          ],
+          "answer": 0,
+          "explanation": "Poin utamanya adalah perubahannya: **Tuesday mornings, not Mondays** (Selasa pagi, bukan Senin). Mengunjungi klien di hari **Senin** adalah alasannya, dan ruangan serta jamnya tetap sama, jadi itu hanya detail."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: sebuah hobi",
+        "text": "Sari bercerita tentang hobinya. Dengarkan signpost **However** dan **The main reason is**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "main-points",
+          "listen": "I started running two years ago. At first, I ran to lose weight. However, that isn't the reason now. The main reason is my running group. Every Sunday morning we run together in Senayan, and then we have breakfast. I've made a lot of good friends there.",
+          "prompt": "Dengarkan Sari. Apa alasan utama dia berlari sekarang?",
+          "options": [
+            "She wants to lose weight.",
+            "She wants to run in a big race.",
+            "She enjoys running with her group."
+          ],
+          "answer": 2,
+          "explanation": "Menurunkan berat badan adalah alasan yang lama: **However, that isn't the reason now** (Namun, sekarang bukan itu alasannya). Lalu signpost **The main reason is** memberi jawabannya: kelompok larinya dan teman-teman barunya di sana. Tidak ada yang membahas lomba."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Berita dan podcast",
+        "text": "Berita dan podcast punya bentuk yang jelas, jadi kamu tahu di mana harus mendengarkan.",
+        "body": "**Berita:** **kalimat pertama** memberi berita utamanya (apa yang terjadi + di mana). Lalu rinciannya (kapan, berapa banyak, berapa harganya), dan di akhir apa yang **akan** terjadi (*going to*) atau saran (*Drivers should…*). Kabar baru sering memakai present perfect: *has started*, *have left*. **Podcast** (siaran audio, sering satu orang bicara): pertama nama podcast dan **host**-nya (pembawa acara), lalu topiknya: *Today's topic is…* atau *In this episode, I'm going to talk about…*. Hati-hati: nama podcast bukan topik hari ini!",
+        "pairs": [
+          {
+            "en": "Here is the news.",
+            "id": "Berikut beritanya."
+          },
+          {
+            "en": "has opened",
+            "id": "sudah dibuka (kabar baru)"
+          },
+          {
+            "en": "this morning",
+            "id": "tadi pagi"
+          },
+          {
+            "en": "Drivers should avoid the main road.",
+            "id": "Pengemudi sebaiknya menghindari jalan utama."
+          },
+          {
+            "en": "Welcome to the podcast.",
+            "id": "Selamat datang di podcast ini."
+          },
+          {
+            "en": "I'm your host.",
+            "id": "Aku pembawa acaramu."
+          },
+          {
+            "en": "Today's topic is…",
+            "id": "Topik hari ini adalah…"
+          },
+          {
+            "en": "In this episode, …",
+            "id": "Di episode ini, …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: berita lokal",
+        "text": "Berita singkat dari Bandung. Ingat: kalimat pertama memberi berita utamanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "news-podcasts",
+          "listen": "Here is the local news. A new bus line has started in Bandung today. The buses go from the train station to the airport every twenty minutes, and a ticket costs five thousand rupiah. The city is going to add two more lines next year.",
+          "prompt": "Dengarkan beritanya. Apa berita utamanya?",
+          "options": [
+            "Bandung is going to build a new airport.",
+            "A new bus line has started in Bandung.",
+            "The train station in Bandung has a new ticket price."
+          ],
+          "answer": 1,
+          "explanation": "Kalimat pertama memberi berita utamanya: **A new bus line has started in Bandung today** (Jalur bus baru mulai beroperasi di Bandung hari ini). Bandara dan stasiun adalah tujuan busnya, dan lima ribu rupiah adalah harga tiket bus: itu detail. Tidak ada yang menyebut bandara baru."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: sebuah podcast",
+        "text": "Pembukaan sebuah podcast. Tunggu kata-kata yang memberi topik episode **ini**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "news-podcasts",
+          "listen": "Hello and welcome to Work Talk, the podcast for young workers in Indonesia. I'm Rina. In this episode, I'm going to talk about working from home. First, I'll explain how to plan your day. Then I'll give you three tips to stop checking your phone all the time.",
+          "prompt": "Dengarkan podcast-nya. Apa topik episode ini?",
+          "options": [
+            "Young workers in Indonesia",
+            "Finding your first job",
+            "Working from home"
+          ],
+          "answer": 2,
+          "explanation": "**In this episode, I'm going to talk about** working from home (bekerja dari rumah): itulah topiknya. *The podcast for young workers in Indonesia* menjelaskan podcast-nya secara umum, bukan episode ini. Merencanakan hari dan tips soal ponsel adalah poin-poin di dalam topik itu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Catatan, bukan kalimat",
+        "text": "Keterampilan terakhir: menulis apa yang kamu dengar, dengan cepat.",
+        "body": "Kamu tidak bisa menulis setiap kata, jadi tulis **kata kunci**: **siapa, apa, kapan** (hari, tanggal, jam), **di mana** (tempat, ruangan) dan **angka**. Tulis angka sebagai digit dan pakai singkatan: *Mon 20, 9:30*. Simbol membantu: **→** = so (jadi), **+** = and (dan). Catatan boleh dalam bahasa Inggris, Indonesia atau campuran. Setelah ada perubahan (*not Monday*, *However*, *Instead*), tulis hanya info yang **baru**. Jebakan: thir**TEEN** vs **THIR**ty; *half past one* = **1.30**, padahal *setengah satu* = 12.30!",
+        "pairs": [
+          {
+            "en": "who, what, when, where, numbers",
+            "id": "siapa, apa, kapan, di mana, angka"
+          },
+          {
+            "en": "on Monday the twentieth",
+            "id": "hari Senin tanggal 20 → Mon 20"
+          },
+          {
+            "en": "half past one",
+            "id": "1.30 (setengah dua, bukan setengah satu!)"
+          },
+          {
+            "en": "thirteen, thirty",
+            "id": "13 (tekanan di akhir), 30 (tekanan di awal)"
+          },
+          {
+            "en": "fifteen, fifty",
+            "id": "15 (tekanan di akhir), 50 (tekanan di awal)"
+          },
+          {
+            "en": "on Tuesday, not Monday",
+            "id": "hari Selasa, bukan Senin → tulis: Tue"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dan catat",
+        "text": "Seorang dosen memberi pengumuman. Bayangkan kamu sedang mencatat: hari, tanggal, jam, ruangan, apa yang dibawa.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "note-key-info",
+          "listen": "Good morning, everyone. Before we start, an important change. The test is not on Thursday the fifteenth any more. It's on Friday the sixteenth, at half past two, in room B twelve. Please bring a pen and your student card.",
+          "prompt": "Dengarkan dosennya. Catatan mana yang benar?",
+          "options": [
+            "Test: Thu 15 · 2:30 · room B12 · pen + student card",
+            "Test: Fri 16 · 2:30 · room B12 · pen + student card",
+            "Test: Fri 16 · 1:30 · room B12 · pen + student card"
+          ],
+          "answer": 1,
+          "explanation": "Kamis tanggal 15 adalah hari yang lama (**not on Thursday… any more** = sudah tidak hari Kamis lagi): tulis yang baru, **Fri 16**. **Half past two** = 2.30 (setengah tiga). 1.30 adalah jebakan bahasa Indonesia: *setengah dua* itu 1.30, tapi *half past two* itu 2.30."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik tiap kartu. Coba ucapkan bahasa Inggrisnya sebelum melihat.",
+        "flashcards": [
+          {
+            "front": "poin utama, inti",
+            "back": "the main point"
+          },
+          {
+            "front": "Alasan utamanya adalah…",
+            "back": "The main reason is…"
+          },
+          {
+            "front": "namun (info baru datang setelahnya)",
+            "back": "However, …"
+          },
+          {
+            "front": "sebagai gantinya (rencana baru)",
+            "back": "Instead, …"
+          },
+          {
+            "front": "Berikut beritanya.",
+            "back": "Here is the news."
+          },
+          {
+            "front": "Di episode ini, aku akan membahas…",
+            "back": "In this episode, I'm going to talk about…"
+          },
+          {
+            "front": "pukul 7.30 (setengah delapan)",
+            "back": "half past seven"
+          },
+          {
+            "front": "mencatat (kata kunci saja)",
+            "back": "take notes (key words only)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Poin utama, signpost, berita, podcast dan catatan dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Menyimak poin utama",
+          "intro": "Apa yang kamu dengar, apa artinya, dan apa yang perlu kamu tulis.",
+          "headers": [
+            "Yang kamu dengar",
+            "Artinya",
+            "Yang harus dilakukan"
+          ],
+          "rows": [
+            [
+              "The main reason is… / The most important thing is…",
+              "Alasan utamanya… / Hal paling penting…",
+              "poin utama akan datang: dengarkan!"
+            ],
+            [
+              "First… Then… Finally…",
+              "Pertama… Lalu… Terakhir…",
+              "ikuti urutan poinnya"
+            ],
+            [
+              "However, … / but",
+              "Namun… / tapi",
+              "info yang baru atau benar datang setelahnya"
+            ],
+            [
+              "Instead, …",
+              "Sebagai gantinya…",
+              "tulis rencana baru, bukan yang lama"
+            ],
+            [
+              "on Tuesday, not Monday",
+              "hari Selasa, bukan Senin",
+              "tulis hanya hari yang baru"
+            ],
+            [
+              "So …",
+              "Jadi…",
+              "hasilnya atau apa yang harus dilakukan"
+            ],
+            [
+              "For example, …",
+              "Misalnya…",
+              "detail, bukan poin utama"
+            ],
+            [
+              "Here is the news. … has opened / has started",
+              "Berikut beritanya. … sudah dibuka / sudah mulai",
+              "kalimat pertama = berita utama"
+            ],
+            [
+              "Today's topic is… / In this episode, …",
+              "Topik hari ini… / Di episode ini…",
+              "topik hari ini (bukan nama podcast-nya)"
+            ],
+            [
+              "thirTEEN / THIRty, fifTEEN / FIFty",
+              "13 / 30, 15 / 50",
+              "dengarkan tekanannya"
+            ],
+            [
+              "half past seven",
+              "7.30 (setengah delapan)",
+              "bukan 6.30!"
+            ]
+          ],
+          "tips": [
+            "Tanyakan: siapa yang bicara, topiknya apa, pesan utamanya apa? Poin utama sering ada di kalimat-kalimat pertama.",
+            "Catatan = kata kunci: siapa, apa, kapan, di mana, angka. Pakai digit, singkatan, → untuk so, + untuk and.",
+            "Tunggu sampai kalimatnya selesai: setelah **however**, **instead** atau **not**, info yang lama sudah tidak berlaku."
+          ],
+          "examples": [
+            {
+              "en": "The main reason is the price.",
+              "id": "Alasan utamanya adalah harganya."
+            },
+            {
+              "en": "The office usually closes at five. However, today it closes at three.",
+              "id": "Kantor biasanya tutup jam lima. Namun, hari ini tutup jam tiga."
+            },
+            {
+              "en": "Here is the news. A new hospital has opened in Medan.",
+              "id": "Berikut beritanya. Sebuah rumah sakit baru sudah dibuka di Medan."
+            },
+            {
+              "en": "In this episode, I'm going to talk about learning English with films.",
+              "id": "Di episode ini, aku akan membahas belajar bahasa Inggris lewat film."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengarkan lebih banyak",
+        "text": "Dua pelajaran menyimak B1 dengan audio, transkrip dan latihan: pembukaan sebuah kuliah dan sebuah wawancara."
+      }
+    ]
+  }
+}

@@ -1,0 +1,792 @@
+{
+  "en": {
+    "greeting": "Hi! Today we're going online: social media, phone and laptop problems, and the news. Many of these words look like Indonesian, but they're used a little differently in English, so let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Social media words",
+        "text": "You already know email, app, password and log in. Let's add social media.",
+        "body": "Many of these words are both a **thing** (noun) and an **action** (verb): *a post / to post*, *a like / to like*, *a comment / to comment*.\n\nTwo small traps: you **comment on** something (*She commented on my post*: Indonesian *komen fotoku* has no word for **on**). And the people who follow you are your **followers**.",
+        "pairs": [
+          {
+            "en": "post a photo",
+            "id": "unggah foto"
+          },
+          {
+            "en": "share a link",
+            "id": "bagikan tautan"
+          },
+          {
+            "en": "comment on a post",
+            "id": "komen di postingan"
+          },
+          {
+            "en": "follow",
+            "id": "ikuti"
+          },
+          {
+            "en": "followers",
+            "id": "pengikut"
+          },
+          {
+            "en": "send a DM",
+            "id": "kirim pesan langsung"
+          },
+          {
+            "en": "notifications",
+            "id": "notifikasi"
+          },
+          {
+            "en": "privacy settings",
+            "id": "pengaturan privasi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina posts a photo of her new café on Instagram.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "internet-social-media",
+          "prompt": "Dimas writes 'Congratulations!' under Rina's new photo. What did he do?",
+          "options": [
+            "He followed her photo.",
+            "He commented on her photo.",
+            "He posted her photo."
+          ],
+          "answer": 1,
+          "explanation": "Writing something under a post is a comment: **comment on** her photo (don't forget **on**). You follow a **person**, not a photo, and Rina posted the photo, not Dimas."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Going viral, going live",
+        "text": "Now the words for things that get very popular online.",
+        "body": "In Indonesian we say *sangat viral*. In English, viral is something that **happens**: a video **goes viral** (past: **went viral**). So not `is very viral`. Before a noun it's fine: *a viral video*.\n\n*Siaran langsung* is **go live**: *I'm going to go live at 8.* Careful: **live** alone means *tinggal*, so `I'll live on TikTok` means you'll move into TikTok!",
+        "pairs": [
+          {
+            "en": "go viral",
+            "id": "jadi viral"
+          },
+          {
+            "en": "a viral video",
+            "id": "video viral"
+          },
+          {
+            "en": "trending",
+            "id": "sedang tren"
+          },
+          {
+            "en": "an influencer",
+            "id": "influencer"
+          },
+          {
+            "en": "a content creator",
+            "id": "pembuat konten"
+          },
+          {
+            "en": "go live",
+            "id": "siaran langsung"
+          },
+          {
+            "en": "stream",
+            "id": "streaming, siaran"
+          },
+          {
+            "en": "scroll",
+            "id": "menggulir layar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani's small batik shop has just posted its first video on TikTok.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "internet-social-media",
+          "prompt": "Complete: If this video ___ viral, the shop will get a lot of new customers.",
+          "options": [
+            "is very",
+            "goes",
+            "makes"
+          ],
+          "answer": 1,
+          "explanation": "The chunk is **go viral**, and after *if* about the future we use the present: **goes** viral. `is very viral` copies Indonesian *sangat viral*, and *make* doesn't go with viral."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Your phone: charger, battery, signal",
+        "text": "First, a surprise: in English, HP is a computer brand!",
+        "body": "Say **phone**, **mobile** (British) or **cell phone** (American), not *HP*. *Handphone* is used in Singapore and Malaysia, but most English speakers don't say it.\n\nThe **charger** is the thing (alat cas); **charge** is the action (ngecas). The battery is **low**, then it **runs out** (habis). British people also say *my battery is flat*, Americans *my battery is dead*; informally, *my phone died*.",
+        "pairs": [
+          {
+            "en": "phone / mobile",
+            "id": "HP"
+          },
+          {
+            "en": "charger",
+            "id": "alat cas"
+          },
+          {
+            "en": "charge my phone",
+            "id": "ngecas HP"
+          },
+          {
+            "en": "the battery is low",
+            "id": "baterainya lemah"
+          },
+          {
+            "en": "the battery runs out",
+            "id": "baterainya habis"
+          },
+          {
+            "en": "no signal",
+            "id": "tidak ada sinyal"
+          },
+          {
+            "en": "the Wi-Fi password",
+            "id": "kata sandi Wi-Fi"
+          },
+          {
+            "en": "my storage is full",
+            "id": "memoriku penuh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi didn't answer Sari's messages all afternoon. Now he replies.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "devices-tech-problems",
+          "prompt": "Complete: Sorry I didn't reply. My phone battery ___ on the KRL.",
+          "options": [
+            "finished",
+            "was over",
+            "ran out"
+          ],
+          "answer": 2,
+          "explanation": "A battery **runs out** (past: **ran out**) = *baterainya habis*. `finished` and `was over` are word-by-word translations of *habis*: English doesn't use them for batteries."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Problems and fixes",
+        "text": "Now, what to say when something goes wrong, and how to fix it.",
+        "body": "In Indonesian *error* is like a describing word (*laptopnya error*). In English **error** is a **thing** (noun), like a message on the screen. So not `My laptop is error`: say **My laptop isn't working** or **It shows an error**.\n\nAn app **crashes** (closes suddenly); a screen **freezes** (past: **froze**, *nge-hang*). Fixes: **restart**, **update**, **back up** (action, two words) / *a backup* (thing), like *log in / login*.",
+        "examples": [
+          {
+            "en": "My printer isn't working. Can you help me?",
+            "id": "Printer saya error. Bisa bantu saya?"
+          },
+          {
+            "en": "I get an error message when I open the banking app.",
+            "id": "Muncul pesan error waktu saya buka aplikasi bank."
+          },
+          {
+            "en": "The game froze, so I restarted my laptop.",
+            "id": "Gamenya nge-hang, jadi saya nyalakan ulang laptop saya."
+          },
+          {
+            "en": "You should update the app. The old version crashes a lot.",
+            "id": "Sebaiknya kamu perbarui aplikasinya. Versi lamanya sering tiba-tiba tertutup."
+          },
+          {
+            "en": "I back up my work files every Friday.",
+            "id": "Saya mencadangkan file kerja saya setiap Jumat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Sari is calling the IT department at her office. Help her describe the problem.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "devices-tech-problems",
+          "prompt": "Arrange the words: HP saya menampilkan pesan error.",
+          "tokens": [
+            "error",
+            "shows",
+            "My",
+            "message",
+            "an",
+            "phone"
+          ],
+          "solution": "My phone shows an error message.",
+          "explanation": "**error** is a thing, so it needs a verb before it (**shows**) and **an** (error starts with a vowel sound). *error message* = pesan error. And *HP* in English is **phone**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The news",
+        "text": "Last group: words for following the news.",
+        "body": "**news** ends in -s, but it's **not plural**: it's **uncountable** (we don't count it one by one, like *water*). So **the news is** (not `are`), **good news**, never `a news`. **Fake news** (hoaks, berita palsu) is the same. *Hoaks* is **a hoax** in English, but *fake news* is more common.\n\nGive a source with **according to** (menurut): *according to Kompas*. For your own opinion, say **In my opinion**, not `according to me`.",
+        "pairs": [
+          {
+            "en": "headline",
+            "id": "judul berita"
+          },
+          {
+            "en": "article",
+            "id": "artikel"
+          },
+          {
+            "en": "breaking news",
+            "id": "berita terkini"
+          },
+          {
+            "en": "report",
+            "id": "laporan, melaporkan"
+          },
+          {
+            "en": "journalist",
+            "id": "wartawan"
+          },
+          {
+            "en": "current events",
+            "id": "peristiwa terkini"
+          },
+          {
+            "en": "according to",
+            "id": "menurut"
+          },
+          {
+            "en": "fake news",
+            "id": "berita palsu, hoaks"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari's aunt shares a message in the family WhatsApp group: 'Hot water cures dengue!' It isn't true, and there's no source.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "news",
+          "prompt": "Complete Sari's reply: ___ Please check before you share.",
+          "options": [
+            "It's a fake news.",
+            "It's fake news.",
+            "It's breaking news."
+          ],
+          "answer": 1,
+          "explanation": "News is uncountable, and so is **fake news**: no *a*. `It's a fake news` is the classic mistake. Breaking news is real news that is happening now, so it doesn't fit."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Media & technology",
+          "intro": "Social media, phone and laptop problems, and the news: the words and the chunks they go in.",
+          "headers": [
+            "Word",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "post / like / share",
+              "unggah / suka / bagikan",
+              "Rina posted a photo of her café."
+            ],
+            [
+              "comment on",
+              "komen di",
+              "He commented on my post."
+            ],
+            [
+              "follow → followers",
+              "ikuti → pengikut",
+              "She has 10,000 followers."
+            ],
+            [
+              "a DM, notifications",
+              "pesan langsung, notifikasi",
+              "Send me a DM."
+            ],
+            [
+              "go viral (went viral)",
+              "jadi viral",
+              "Her video went viral."
+            ],
+            [
+              "go live",
+              "siaran langsung",
+              "I'm going to go live at 8."
+            ],
+            [
+              "charger / charge",
+              "alat cas / ngecas",
+              "Can I charge my phone here?"
+            ],
+            [
+              "the battery runs out",
+              "baterainya habis",
+              "My battery ran out on the KRL."
+            ],
+            [
+              "no signal, storage is full",
+              "tidak ada sinyal, memori penuh",
+              "There's no signal in the lift."
+            ],
+            [
+              "crash / freeze (froze)",
+              "tiba-tiba tertutup / nge-hang",
+              "The app crashed."
+            ],
+            [
+              "isn't working, shows an error",
+              "error, tidak berfungsi",
+              "My laptop isn't working."
+            ],
+            [
+              "restart, update, back up",
+              "nyalakan ulang, perbarui, cadangkan",
+              "Back up your photos first."
+            ],
+            [
+              "headline, article, journalist",
+              "judul berita, artikel, wartawan",
+              "I read the headlines every morning."
+            ],
+            [
+              "according to",
+              "menurut",
+              "According to Kompas, fuel prices are going up."
+            ]
+          ],
+          "tips": [
+            "Not `very viral`, `is error` or `a news`: the video **went viral**, my laptop **isn't working**, I have **good news**.",
+            "**news** looks plural but is singular: **the news is**. Same for **fake news**: *That's fake news.*",
+            "In English, say **phone** (or mobile / cell phone), not *HP*. **go live**, not *live* (live = tinggal)."
+          ],
+          "examples": [
+            {
+              "en": "I scroll through Instagram on the KRL every morning.",
+              "id": "Saya scroll Instagram di KRL setiap pagi."
+            },
+            {
+              "en": "The app froze, so I restarted my phone.",
+              "id": "Aplikasinya nge-hang, jadi saya nyalakan ulang HP saya."
+            },
+            {
+              "en": "Did you see the breaking news about the flood?",
+              "id": "Kamu lihat berita terkini soal banjir itu?"
+            },
+            {
+              "en": "In my opinion, that article is fake news.",
+              "id": "Menurut saya, artikel itu hoaks."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A BBC Learning English class on talking about social media, and an engVid lesson on computer and internet words. Both are all in English."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita online: media sosial, masalah HP dan laptop, dan berita. Banyak kata di sini mirip bahasa Indonesia, tapi dipakai sedikit berbeda dalam bahasa Inggris, jadi kita jalan pelan-pelan, ya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kosakata media sosial",
+        "text": "Kamu sudah tahu email, app, password dan log in. Sekarang kita tambah media sosial.",
+        "body": "Banyak kata ini bisa jadi **benda** (kata benda) sekaligus **tindakan** (kata kerja): *a post / to post*, *a like / to like*, *a comment / to comment*.\n\nDua jebakan kecil: kamu **comment on** sesuatu (*She commented on my post*: *komen fotoku* dalam bahasa Indonesia tidak punya kata untuk **on**). Dan orang yang mengikutimu adalah **followers**-mu (pengikut).",
+        "pairs": [
+          {
+            "en": "post a photo",
+            "id": "unggah foto"
+          },
+          {
+            "en": "share a link",
+            "id": "bagikan tautan"
+          },
+          {
+            "en": "comment on a post",
+            "id": "komen di postingan"
+          },
+          {
+            "en": "follow",
+            "id": "ikuti"
+          },
+          {
+            "en": "followers",
+            "id": "pengikut"
+          },
+          {
+            "en": "send a DM",
+            "id": "kirim pesan langsung"
+          },
+          {
+            "en": "notifications",
+            "id": "notifikasi"
+          },
+          {
+            "en": "privacy settings",
+            "id": "pengaturan privasi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina mengunggah foto kafe barunya di Instagram.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "internet-social-media",
+          "prompt": "Dimas menulis 'Congratulations!' di bawah foto baru Rina. Apa yang dia lakukan?",
+          "options": [
+            "He followed her photo.",
+            "He commented on her photo.",
+            "He posted her photo."
+          ],
+          "answer": 1,
+          "explanation": "Menulis sesuatu di bawah postingan itu komentar: **comment on** her photo (jangan lupa **on**). Yang di-follow itu **orang**, bukan foto, dan yang mengunggah foto itu Rina, bukan Dimas."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jadi viral, siaran langsung",
+        "text": "Sekarang kata-kata untuk hal yang jadi sangat populer di internet.",
+        "body": "Dalam bahasa Indonesia kita bilang *sangat viral*. Dalam bahasa Inggris, viral adalah sesuatu yang **terjadi**: sebuah video **goes viral** (lampau: **went viral**). Jadi bukan `is very viral`. Sebelum kata benda boleh: *a viral video*.\n\n*Siaran langsung* itu **go live**: *I'm going to go live at 8.* Hati-hati: **live** saja artinya *tinggal*, jadi `I'll live on TikTok` artinya kamu mau pindah tinggal di TikTok!",
+        "pairs": [
+          {
+            "en": "go viral",
+            "id": "jadi viral"
+          },
+          {
+            "en": "a viral video",
+            "id": "video viral"
+          },
+          {
+            "en": "trending",
+            "id": "sedang tren"
+          },
+          {
+            "en": "an influencer",
+            "id": "influencer"
+          },
+          {
+            "en": "a content creator",
+            "id": "pembuat konten"
+          },
+          {
+            "en": "go live",
+            "id": "siaran langsung"
+          },
+          {
+            "en": "stream",
+            "id": "streaming, siaran"
+          },
+          {
+            "en": "scroll",
+            "id": "menggulir layar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Toko batik kecil Bu Ani baru saja mengunggah video pertamanya di TikTok.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "internet-social-media",
+          "prompt": "Lengkapi: If this video ___ viral, the shop will get a lot of new customers.",
+          "options": [
+            "is very",
+            "goes",
+            "makes"
+          ],
+          "answer": 1,
+          "explanation": "Paketnya **go viral**, dan setelah *if* tentang masa depan kita pakai bentuk present: **goes** viral. `is very viral` meniru *sangat viral*, dan *make* tidak dipakai dengan viral."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "HP-mu: charger, baterai, sinyal",
+        "text": "Pertama, satu kejutan: dalam bahasa Inggris, HP itu merek komputer!",
+        "body": "Bilang **phone**, **mobile** (British) atau **cell phone** (Amerika), bukan *HP*. *Handphone* dipakai di Singapura dan Malaysia, tapi kebanyakan penutur bahasa Inggris tidak memakainya.\n\n**Charger** adalah bendanya (alat cas); **charge** adalah tindakannya (ngecas). Baterainya **low** (lemah), lalu **runs out** (habis). Orang Inggris juga bilang *my battery is flat*, orang Amerika *my battery is dead*; dalam obrolan santai, *my phone died*.",
+        "pairs": [
+          {
+            "en": "phone / mobile",
+            "id": "HP"
+          },
+          {
+            "en": "charger",
+            "id": "alat cas"
+          },
+          {
+            "en": "charge my phone",
+            "id": "ngecas HP"
+          },
+          {
+            "en": "the battery is low",
+            "id": "baterainya lemah"
+          },
+          {
+            "en": "the battery runs out",
+            "id": "baterainya habis"
+          },
+          {
+            "en": "no signal",
+            "id": "tidak ada sinyal"
+          },
+          {
+            "en": "the Wi-Fi password",
+            "id": "kata sandi Wi-Fi"
+          },
+          {
+            "en": "my storage is full",
+            "id": "memoriku penuh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi tidak membalas pesan Sari sepanjang sore. Sekarang dia membalas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "devices-tech-problems",
+          "prompt": "Lengkapi: Sorry I didn't reply. My phone battery ___ on the KRL.",
+          "options": [
+            "finished",
+            "was over",
+            "ran out"
+          ],
+          "answer": 2,
+          "explanation": "Baterai itu **runs out** (lampau: **ran out**) = *baterainya habis*. `finished` dan `was over` adalah terjemahan kata per kata dari *habis*: bahasa Inggris tidak memakainya untuk baterai."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Masalah dan solusinya",
+        "text": "Sekarang, apa yang diucapkan kalau ada yang tidak beres, dan cara memperbaikinya.",
+        "body": "Dalam bahasa Indonesia *error* seperti kata sifat (*laptopnya error*). Dalam bahasa Inggris **error** adalah **benda** (kata benda), misalnya pesan di layar. Jadi bukan `My laptop is error`: bilang **My laptop isn't working** atau **It shows an error**.\n\nAplikasi **crashes** (tiba-tiba tertutup); layar **freezes** (lampau: **froze**, *nge-hang*). Solusinya: **restart**, **update**, **back up** (tindakan, dua kata) / *a backup* (benda), seperti *log in / login*.",
+        "examples": [
+          {
+            "en": "My printer isn't working. Can you help me?",
+            "id": "Printer saya error. Bisa bantu saya?"
+          },
+          {
+            "en": "I get an error message when I open the banking app.",
+            "id": "Muncul pesan error waktu saya buka aplikasi bank."
+          },
+          {
+            "en": "The game froze, so I restarted my laptop.",
+            "id": "Gamenya nge-hang, jadi saya nyalakan ulang laptop saya."
+          },
+          {
+            "en": "You should update the app. The old version crashes a lot.",
+            "id": "Sebaiknya kamu perbarui aplikasinya. Versi lamanya sering tiba-tiba tertutup."
+          },
+          {
+            "en": "I back up my work files every Friday.",
+            "id": "Saya mencadangkan file kerja saya setiap Jumat."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sari menelepon bagian IT di kantornya. Bantu dia menjelaskan masalahnya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "devices-tech-problems",
+          "prompt": "Susun kata-katanya: HP saya menampilkan pesan error.",
+          "tokens": [
+            "error",
+            "shows",
+            "My",
+            "message",
+            "an",
+            "phone"
+          ],
+          "solution": "My phone shows an error message.",
+          "explanation": "**error** adalah benda, jadi butuh kata kerja di depannya (**shows**) dan **an** (error diawali bunyi vokal). *error message* = pesan error. Dan *HP* dalam bahasa Inggris adalah **phone**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Berita",
+        "text": "Kelompok terakhir: kata-kata untuk mengikuti berita.",
+        "body": "**news** berakhiran -s, tapi **bukan jamak**: kata ini **uncountable** (tidak dihitung satu per satu, seperti *water*). Jadi **the news is** (bukan `are`), **good news**, tidak pernah `a news`. **Fake news** (hoaks, berita palsu) juga begitu. *Hoaks* dalam bahasa Inggris adalah **a hoax**, tapi *fake news* lebih sering dipakai.\n\nSebut sumbernya dengan **according to** (menurut): *according to Kompas*. Untuk pendapatmu sendiri, bilang **In my opinion**, bukan `according to me`.",
+        "pairs": [
+          {
+            "en": "headline",
+            "id": "judul berita"
+          },
+          {
+            "en": "article",
+            "id": "artikel"
+          },
+          {
+            "en": "breaking news",
+            "id": "berita terkini"
+          },
+          {
+            "en": "report",
+            "id": "laporan, melaporkan"
+          },
+          {
+            "en": "journalist",
+            "id": "wartawan"
+          },
+          {
+            "en": "current events",
+            "id": "peristiwa terkini"
+          },
+          {
+            "en": "according to",
+            "id": "menurut"
+          },
+          {
+            "en": "fake news",
+            "id": "berita palsu, hoaks"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tante Sari membagikan pesan di grup WhatsApp keluarga: 'Hot water cures dengue!' Itu tidak benar, dan tidak ada sumbernya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "news",
+          "prompt": "Lengkapi balasan Sari: ___ Please check before you share.",
+          "options": [
+            "It's a fake news.",
+            "It's fake news.",
+            "It's breaking news."
+          ],
+          "answer": 1,
+          "explanation": "News tidak bisa dihitung, begitu juga **fake news**: tanpa *a*. `It's a fake news` adalah kesalahan klasik. Breaking news adalah berita sungguhan yang sedang terjadi, jadi tidak cocok."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Media & teknologi",
+          "intro": "Media sosial, masalah HP dan laptop, dan berita: kata-katanya dan paket tempat kata itu dipakai.",
+          "headers": [
+            "Kata",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "post / like / share",
+              "unggah / suka / bagikan",
+              "Rina posted a photo of her café."
+            ],
+            [
+              "comment on",
+              "komen di",
+              "He commented on my post."
+            ],
+            [
+              "follow → followers",
+              "ikuti → pengikut",
+              "She has 10,000 followers."
+            ],
+            [
+              "a DM, notifications",
+              "pesan langsung, notifikasi",
+              "Send me a DM."
+            ],
+            [
+              "go viral (went viral)",
+              "jadi viral",
+              "Her video went viral."
+            ],
+            [
+              "go live",
+              "siaran langsung",
+              "I'm going to go live at 8."
+            ],
+            [
+              "charger / charge",
+              "alat cas / ngecas",
+              "Can I charge my phone here?"
+            ],
+            [
+              "the battery runs out",
+              "baterainya habis",
+              "My battery ran out on the KRL."
+            ],
+            [
+              "no signal, storage is full",
+              "tidak ada sinyal, memori penuh",
+              "There's no signal in the lift."
+            ],
+            [
+              "crash / freeze (froze)",
+              "tiba-tiba tertutup / nge-hang",
+              "The app crashed."
+            ],
+            [
+              "isn't working, shows an error",
+              "error, tidak berfungsi",
+              "My laptop isn't working."
+            ],
+            [
+              "restart, update, back up",
+              "nyalakan ulang, perbarui, cadangkan",
+              "Back up your photos first."
+            ],
+            [
+              "headline, article, journalist",
+              "judul berita, artikel, wartawan",
+              "I read the headlines every morning."
+            ],
+            [
+              "according to",
+              "menurut",
+              "According to Kompas, fuel prices are going up."
+            ]
+          ],
+          "tips": [
+            "Bukan `very viral`, `is error` atau `a news`: videonya **went viral**, laptopku **isn't working**, aku punya **good news**.",
+            "**news** kelihatan jamak tapi tunggal: **the news is**. Sama untuk **fake news**: *That's fake news.*",
+            "Dalam bahasa Inggris, bilang **phone** (atau mobile / cell phone), bukan *HP*. **go live**, bukan *live* (live = tinggal)."
+          ],
+          "examples": [
+            {
+              "en": "I scroll through Instagram on the KRL every morning.",
+              "id": "Saya scroll Instagram di KRL setiap pagi."
+            },
+            {
+              "en": "The app froze, so I restarted my phone.",
+              "id": "Aplikasinya nge-hang, jadi saya nyalakan ulang HP saya."
+            },
+            {
+              "en": "Did you see the breaking news about the flood?",
+              "id": "Kamu lihat berita terkini soal banjir itu?"
+            },
+            {
+              "en": "In my opinion, that article is fake news.",
+              "id": "Menurut saya, artikel itu hoaks."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ada kelas BBC Learning English tentang membicarakan media sosial, dan pelajaran engVid tentang kata-kata komputer dan internet. Keduanya seluruhnya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

@@ -136,9 +136,25 @@ func clean(s string) string { return strings.TrimSpace(s) }
 
 func badLen(s string, max int) bool { return s == "" || runes(s) > max }
 
+// accents folds the accented letters English borrows (café, naïve,
+// résumé) so "cafe" and "café" compare equal.
+var accents = strings.NewReplacer(
+	"à", "a", "á", "a", "â", "a", "ä", "a", "ã", "a", "å", "a",
+	"è", "e", "é", "e", "ê", "e", "ë", "e",
+	"ì", "i", "í", "i", "î", "i", "ï", "i",
+	"ò", "o", "ó", "o", "ô", "o", "ö", "o", "õ", "o",
+	"ù", "u", "ú", "u", "û", "u", "ü", "u",
+	"ñ", "n", "ç", "c",
+	"À", "A", "Á", "A", "Â", "A", "Ä", "A", "È", "E", "É", "E", "Ê", "E",
+	"Í", "I", "Ó", "O", "Ö", "O", "Ú", "U", "Ü", "U", "Ñ", "N", "Ç", "C",
+)
+
+// FoldAccents replaces accented Latin letters with plain ones.
+func FoldAccents(s string) string { return accents.Replace(s) }
+
 // NormalizeWords lowercases and strips punctuation for comparing sentences.
 func NormalizeWords(s string) string {
-	s = strings.ToLower(strings.TrimSpace(s))
+	s = strings.ToLower(strings.TrimSpace(FoldAccents(s)))
 	s = strings.NewReplacer("’", "'", "‘", "'").Replace(s)
 	var b strings.Builder
 	for _, r := range s {

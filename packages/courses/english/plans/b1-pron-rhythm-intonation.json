@@ -1,0 +1,640 @@
+{
+  "en": {
+    "greeting": "Hi! Today you take the English beat into longer sentences and add the melody: when your voice goes up ↗ or down ↘, and how it shows your feelings. Say everything out loud, and exaggerate a little!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "The beat in longer sentences",
+        "text": "Quick recap: content words are strong, function words are weak. Now let's make the sentence longer and keep the beat. Tap each line and clap on the strong words.",
+        "body": "English is **stress-timed**: the strong words (content words) come at roughly regular beats, and the weak words between them are **squeezed**. Add more weak words and the beats stay the same: the weak words just get faster. Helper verbs like *has, can, will* are weak (*RI-na has SENT…*), but *can't, don't* are strong. Weak words use a short 'uh': *to* → 'tuh', *can* → 'kuhn'. Counting beats = counting content words, one clap each. Indonesian gives every syllable the same time; English doesn't.",
+        "pairs": [
+          {
+            "en": "Rina sent the emails.",
+            "id": "Rina mengirim email-emailnya · 3 ketukan"
+          },
+          {
+            "en": "Rina has sent the emails.",
+            "id": "Rina sudah mengirim email-emailnya · tetap 3"
+          },
+          {
+            "en": "Rina has sent the emails to her boss.",
+            "id": "… ke atasannya · 4 ketukan"
+          },
+          {
+            "en": "Rina has sent the emails to her boss in Jakarta.",
+            "id": "… di Jakarta · 5 ketukan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and count",
+        "text": "Press play. Sari is talking about her family. Clap on the strong words while you listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "stress-timed-rhythm",
+          "listen": "My sister works at a hospital in Surabaya.",
+          "prompt": "Listen. How many strong beats (claps) are in the sentence?",
+          "options": [
+            "8",
+            "4",
+            "2"
+          ],
+          "answer": 1,
+          "explanation": "You heard *My sister works at a hospital in Surabaya.* The content words are **SIS-ter, WORKS, HOS-pi-tal, Su-ra-BA-ya**: 4 beats. *my, at, a, in* are squeezed between them. 8 would mean every word is strong, the Indonesian habit; 2 misses two content words."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build it, then clap it",
+        "text": "Build the sentence, then say it with 4 even claps.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "stress-timed-rhythm",
+          "prompt": "Arrange the words: Kami perlu menyelesaikan laporannya paling lambat hari Jumat.",
+          "tokens": [
+            "report",
+            "need",
+            "Friday",
+            "the",
+            "We",
+            "to",
+            "by",
+            "finish"
+          ],
+          "solution": "We need to finish the report by Friday.",
+          "explanation": "**We need to finish the report by Friday.** 4 beats: *we NEED to FIN-ish the re-PORT by FRI-day*. *we, to, the, by* are weak and quick ('tuh', 'thuh'), squeezed between the claps."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Voice up ↗, voice down ↘",
+        "text": "Now the melody. Tap each line and listen to the end of the sentence.",
+        "body": "**Intonation** is the melody of your voice: up ↗ or down ↘, mostly at the end. What usually happens:\n- statements go **down** ↘\n- wh-questions (*what, where, how…*) go **down** ↘\n- yes/no questions go **up** ↗, like *Kamu tinggal di Bandung? ↗*\n- lists go **up** on each item and **down** on the last: *apples ↗, bananas ↗ and oranges ↘*. Up = 'more is coming', down = 'finished'.\nThe trap: thinking every question goes up.",
+        "pairs": [
+          {
+            "en": "I live in Bandung.",
+            "id": "Saya tinggal di Bandung. · turun ↘"
+          },
+          {
+            "en": "Where do you live?",
+            "id": "Kamu tinggal di mana? · turun ↘"
+          },
+          {
+            "en": "Do you live in Bandung?",
+            "id": "Kamu tinggal di Bandung? · naik ↗"
+          },
+          {
+            "en": "We need apples, bananas and oranges.",
+            "id": "Kita perlu apel, pisang dan jeruk. · ↗ ↗ ↘"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ordering lunch",
+        "text": "Sari is ordering lunch at a warung near the office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lists-question-tags",
+          "prompt": "Sari says: 'I'd like fried rice, iced tea and a banana.' Which melody sounds natural?",
+          "options": [
+            "fried rice ↘, iced tea ↘ and a banana ↘",
+            "fried rice ↗, iced tea ↗ and a banana ↘",
+            "fried rice ↗, iced tea ↗ and a banana ↗"
+          ],
+          "answer": 1,
+          "explanation": "In a list the voice goes **up** on each item ('wait, there's more') and **down** on the last one ('that's all'). All down sounds as if she finished after *fried rice*; all up sounds as if she hasn't finished ordering."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Question tags: ↘ or ↗?",
+        "text": "The same tag can go down or up, and the meaning changes. Read the notes, then say each tag both ways.",
+        "body": "Voice **down** on the tag ↘ = you're **sure** and want the other person to **agree** (small talk, things you can both see). Voice **up** ↗ = you're **not sure**: a real question. The trap: many learners raise every tag because 'it's a question'. The recording reads each sentence once, naturally, so practise both tunes yourself.",
+        "examples": [
+          {
+            "en": "It's hot today, isn't it?",
+            "id": "Panas ya hari ini? · ↘ kamu yakin, cuma minta setuju"
+          },
+          {
+            "en": "The train leaves at seven, doesn't it?",
+            "id": "Keretanya berangkat jam tujuh, kan? · ↗ kalau kamu belum yakin"
+          },
+          {
+            "en": "You don't eat meat, do you?",
+            "id": "Kamu nggak makan daging, kan? · ↘ yakin / ↗ benar-benar bertanya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "What does Rina mean?",
+        "text": "Rina is talking to her friend about the weekend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lists-question-tags",
+          "prompt": "Rina says: 'You're coming to my party on Saturday, aren't you?' Her voice goes down ↘ on 'aren't you'. What does she mean?",
+          "options": [
+            "She has no idea and really wants to know.",
+            "She's quite sure you're coming and expects a yes.",
+            "She's angry that you're coming."
+          ],
+          "answer": 1,
+          "explanation": "A **falling** tag ↘ isn't a real question: Rina is quite sure and invites you to agree ('Yes, of course!'). If she had no idea, her voice would go **up** ↗. Nothing in a falling tag means anger."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Feelings in your voice",
+        "text": "Your voice also shows how you feel, and English moves the voice much more than Indonesian.",
+        "body": "A **wide range** (the voice travelling far up and down) sounds interested and friendly.\n- **Surprise**: a big jump up, *Really?!* ↗\n- **Interest**: the voice moves and starts higher, *Oh, really? What happened?*\n- **Boredom**: flat and low →, *Oh. That's nice.*\n- **Annoyance**: slow, low, a strong fall ↘, *Not again!*\nThe trap: Indonesian is usually flatter, so a flat English *Really.* → sounds bored or rude. The recordings can't show these feelings, but your voice can: exaggerate when you practise.",
+        "pairs": []
+      },
+      {
+        "kind": "question",
+        "title": "Big news",
+        "text": "Dimas has some big news for you.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "intonation-emotion",
+          "prompt": "Dimas tells you: 'I got a job in Japan!' You want to sound surprised and excited. How do you say 'Wow, really?'",
+          "options": [
+            "Flat and low, on one note →",
+            "A big jump from low to very high ↗",
+            "A short, quick drop ↘"
+          ],
+          "answer": 1,
+          "explanation": "Surprise and excitement need a **wide range**: a big jump up ↗. Flat and low sounds bored, as if the news doesn't interest you; a short, quick drop sounds cold or even annoyed."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Flip the cards and say each example out loud, with the arrows.",
+        "flashcards": [
+          {
+            "front": "intonasi (intonation)",
+            "back": "the melody of your voice: up ↗ or down ↘"
+          },
+          {
+            "front": "stress-timed rhythm",
+            "back": "strong words at regular beats; weak words squeezed in between"
+          },
+          {
+            "front": "Where do you live? (up or down?)",
+            "back": "usually down ↘: a wh-question"
+          },
+          {
+            "front": "Do you live in Bandung? (up or down?)",
+            "back": "usually up ↗: a yes/no question"
+          },
+          {
+            "front": "daftar: apples, bananas and oranges",
+            "back": "apples ↗, bananas ↗ and oranges ↘"
+          },
+          {
+            "front": "tag dengan suara turun ↘",
+            "back": "you're sure and want agreement: It's hot today, isn't it? ↘"
+          },
+          {
+            "front": "tag dengan suara naik ↗",
+            "back": "a real question: you're not sure"
+          },
+          {
+            "front": "'Really.' yang datar →",
+            "back": "sounds bored or rude; for surprise: Really?! ↗ (a big jump up)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Everything from today on one page, to keep.",
+        "artifact": {
+          "title": "Cheat sheet · rhythm & intonation",
+          "intro": "Strong words in CAPITALS, the voice with arrows: ↗ up, ↘ down, → flat. These are what usually happens, not strict laws.",
+          "headers": [
+            "Pattern",
+            "Voice",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Long sentence",
+              "clap on content words, squeeze the rest",
+              "RI-na has SENT the E-mails to her BOSS (4)"
+            ],
+            [
+              "Helper verbs",
+              "has, can, will: weak · can't, don't: strong",
+              "we can MEET · I CAN'T COME"
+            ],
+            [
+              "Statement",
+              "down ↘",
+              "I live in Bandung. ↘"
+            ],
+            [
+              "Wh-question",
+              "usually down ↘",
+              "Where do you live? ↘"
+            ],
+            [
+              "Yes/no question",
+              "usually up ↗",
+              "Do you live in Bandung? ↗"
+            ],
+            [
+              "List",
+              "up ↗ on each item, down ↘ on the last",
+              "apples ↗, bananas ↗ and oranges ↘"
+            ],
+            [
+              "Tag: you're sure",
+              "down ↘",
+              "It's hot today, isn't it? ↘"
+            ],
+            [
+              "Tag: real question",
+              "up ↗",
+              "The train leaves at seven, doesn't it? ↗"
+            ],
+            [
+              "Surprise",
+              "a big jump up ↗",
+              "Really?! ↗"
+            ],
+            [
+              "Interest",
+              "the voice moves, starts higher",
+              "Oh, really? What happened?"
+            ],
+            [
+              "Boredom",
+              "flat and low →",
+              "Oh. That's nice. →"
+            ],
+            [
+              "Annoyance",
+              "slow, low, strong fall ↘",
+              "Not again! ↘"
+            ],
+            [
+              "Sorry",
+              "↗ = say it again · ↘ = an apology",
+              "Sorry? ↗ / Sorry. ↘"
+            ]
+          ],
+          "tips": [
+            "Clap on the content words and keep the claps even. More weak words between two claps = say them faster.",
+            "Ask yourself before a tag: do I already know the answer? **Yes** → down ↘. **No** → up ↗.",
+            "A flat voice sounds bored in English. When you want to sound interested, move your voice **more** than feels natural."
+          ],
+          "examples": [
+            {
+              "en": "Rina has sent the emails to her boss.",
+              "id": "Rina sudah mengirim email-emailnya ke atasannya."
+            },
+            {
+              "en": "Where do you live?",
+              "id": "Kamu tinggal di mana?"
+            },
+            {
+              "en": "Do you live in Bandung?",
+              "id": "Kamu tinggal di Bandung?"
+            },
+            {
+              "en": "We need apples, bananas and oranges.",
+              "id": "Kita perlu apel, pisang dan jeruk."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and practise",
+        "text": "A British Council page on question tags. Read the part about intonation, try the quizzes, and say each tag both ways: ↘ and ↗."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu membawa ketukan bahasa Inggris ke kalimat yang lebih panjang dan menambahkan melodinya: kapan suaramu naik ↗ atau turun ↘, dan bagaimana suaramu menunjukkan perasaan. Ucapkan semuanya dengan suara keras, dan sedikit lebih-lebihkan!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Ketukan di kalimat yang lebih panjang",
+        "text": "Ulasan singkat: kata isi itu kuat, kata tugas itu lemah. Sekarang kita buat kalimatnya lebih panjang dan tetap menjaga ketukannya. Ketuk setiap baris dan tepuk tangan di kata-kata kuat.",
+        "body": "Bahasa Inggris itu **stress-timed** (ritmenya mengikuti tekanan): kata-kata kuat (kata isi) datang dengan ketukan kurang lebih teratur, dan kata-kata lemah di antaranya **diselipkan**. Tambah kata lemah, ketukannya tetap sama: kata lemahnya saja yang jadi lebih cepat. Kata kerja bantu seperti *has, can, will* lemah (*RI-na has SENT…*), tapi *can't, don't* kuat. Kata lemah memakai **e** pendek seperti di *sedang*: *to* → 'te', *can* → 'ken'. Menghitung ketukan = menghitung kata isi, satu tepukan per kata. Bahasa Indonesia memberi setiap suku kata waktu yang sama; bahasa Inggris tidak.",
+        "pairs": [
+          {
+            "en": "Rina sent the emails.",
+            "id": "Rina mengirim email-emailnya · 3 ketukan"
+          },
+          {
+            "en": "Rina has sent the emails.",
+            "id": "Rina sudah mengirim email-emailnya · tetap 3"
+          },
+          {
+            "en": "Rina has sent the emails to her boss.",
+            "id": "… ke atasannya · 4 ketukan"
+          },
+          {
+            "en": "Rina has sent the emails to her boss in Jakarta.",
+            "id": "… di Jakarta · 5 ketukan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan hitung",
+        "text": "Tekan play. Sari sedang bercerita tentang keluarganya. Tepuk tangan di kata-kata kuat sambil mendengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "stress-timed-rhythm",
+          "listen": "My sister works at a hospital in Surabaya.",
+          "prompt": "Dengarkan. Berapa ketukan kuat (tepukan) di kalimat itu?",
+          "options": [
+            "8",
+            "4",
+            "2"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar *My sister works at a hospital in Surabaya.* Kata isinya **SIS-ter, WORKS, HOS-pi-tal, Su-ra-BA-ya**: 4 ketukan. *my, at, a, in* diselipkan di antaranya. 8 berarti semua kata kuat, kebiasaan dari bahasa Indonesia; 2 melewatkan dua kata isi."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun, lalu tepuk",
+        "text": "Susun kalimatnya, lalu ucapkan dengan 4 tepukan yang rata.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "stress-timed-rhythm",
+          "prompt": "Susun kata-katanya: Kami perlu menyelesaikan laporannya paling lambat hari Jumat.",
+          "tokens": [
+            "report",
+            "need",
+            "Friday",
+            "the",
+            "We",
+            "to",
+            "by",
+            "finish"
+          ],
+          "solution": "We need to finish the report by Friday.",
+          "explanation": "**We need to finish the report by Friday.** 4 ketukan: *we NEED to FIN-ish the re-PORT by FRI-day*. *we, to, the, by* lemah dan cepat (*to* → 'te', dengan e lemah seperti di *sedang*), diselipkan di antara tepukan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Suara naik ↗, suara turun ↘",
+        "text": "Sekarang melodinya. Ketuk setiap baris dan dengarkan bagian akhir kalimatnya.",
+        "body": "**Intonasi** adalah melodi suaramu: naik ↗ atau turun ↘, terutama di akhir kalimat. Yang biasanya terjadi:\n- kalimat biasa **turun** ↘\n- wh-question (*what, where, how…*) **turun** ↘\n- pertanyaan ya/tidak **naik** ↗, seperti *Kamu tinggal di Bandung? ↗*\n- daftar **naik** di setiap item dan **turun** di item terakhir: *apples ↗, bananas ↗ and oranges ↘*. Naik = 'masih ada lagi', turun = 'sudah selesai'.\nJebakannya: mengira semua pertanyaan naik.",
+        "pairs": [
+          {
+            "en": "I live in Bandung.",
+            "id": "Saya tinggal di Bandung. · turun ↘"
+          },
+          {
+            "en": "Where do you live?",
+            "id": "Kamu tinggal di mana? · turun ↘"
+          },
+          {
+            "en": "Do you live in Bandung?",
+            "id": "Kamu tinggal di Bandung? · naik ↗"
+          },
+          {
+            "en": "We need apples, bananas and oranges.",
+            "id": "Kita perlu apel, pisang dan jeruk. · ↗ ↗ ↘"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pesan makan siang",
+        "text": "Sari sedang memesan makan siang di warung dekat kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lists-question-tags",
+          "prompt": "Sari bilang: 'I'd like fried rice, iced tea and a banana.' Melodi mana yang terdengar alami?",
+          "options": [
+            "fried rice ↘, iced tea ↘ and a banana ↘",
+            "fried rice ↗, iced tea ↗ and a banana ↘",
+            "fried rice ↗, iced tea ↗ and a banana ↗"
+          ],
+          "answer": 1,
+          "explanation": "Dalam daftar, suara **naik** di setiap item ('tunggu, masih ada lagi') dan **turun** di item terakhir ('itu saja'). Kalau semuanya turun, kedengarannya dia sudah selesai sesudah *fried rice*; kalau semuanya naik, kedengarannya pesanannya belum selesai."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Question tag: ↘ atau ↗?",
+        "text": "Tag yang sama bisa turun atau naik, dan artinya berubah. Baca catatannya, lalu ucapkan setiap tag dengan dua cara.",
+        "body": "Suara **turun** di tag ↘ = kamu **yakin** dan ingin lawan bicara **setuju** (basa-basi, hal yang sama-sama kalian lihat). Suara **naik** ↗ = kamu **tidak yakin**: pertanyaan sungguhan. Jebakannya: banyak pelajar menaikkan setiap tag karena 'kan itu pertanyaan'. Rekamannya membaca setiap kalimat sekali dengan wajar, jadi latih sendiri kedua nadanya.",
+        "examples": [
+          {
+            "en": "It's hot today, isn't it?",
+            "id": "Panas ya hari ini? · ↘ kamu yakin, cuma minta setuju"
+          },
+          {
+            "en": "The train leaves at seven, doesn't it?",
+            "id": "Keretanya berangkat jam tujuh, kan? · ↗ kalau kamu belum yakin"
+          },
+          {
+            "en": "You don't eat meat, do you?",
+            "id": "Kamu nggak makan daging, kan? · ↘ yakin / ↗ benar-benar bertanya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apa maksud Rina?",
+        "text": "Rina sedang mengobrol dengan temannya soal akhir pekan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lists-question-tags",
+          "prompt": "Rina bilang: 'You're coming to my party on Saturday, aren't you?' Suaranya turun ↘ di 'aren't you'. Apa maksudnya?",
+          "options": [
+            "She has no idea and really wants to know.",
+            "She's quite sure you're coming and expects a yes.",
+            "She's angry that you're coming."
+          ],
+          "answer": 1,
+          "explanation": "Tag yang **turun** ↘ bukan pertanyaan sungguhan: Rina cukup yakin dan mengajakmu setuju ('Iya, pasti!'). Kalau dia sama sekali tidak tahu, suaranya akan **naik** ↗. Tag yang turun tidak berarti marah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Perasaan dalam suaramu",
+        "text": "Suaramu juga menunjukkan perasaanmu, dan bahasa Inggris menggerakkan suara jauh lebih banyak daripada bahasa Indonesia.",
+        "body": "**Rentang nada yang lebar** (suara bergerak jauh naik dan turun) terdengar tertarik dan ramah.\n- **Terkejut**: lompatan naik yang besar, *Really?!* ↗\n- **Tertarik**: suaranya bergerak dan mulai lebih tinggi, *Oh, really? What happened?*\n- **Bosan**: datar dan rendah →, *Oh. That's nice.*\n- **Kesal**: pelan, rendah, turun kuat ↘, *Not again!*\nJebakannya: bahasa Indonesia biasanya lebih datar, jadi *Really.* yang datar → terdengar bosan atau tidak sopan dalam bahasa Inggris. Rekaman tidak bisa menunjukkan perasaan ini, tapi suaramu bisa: lebih-lebihkan saat berlatih.",
+        "pairs": []
+      },
+      {
+        "kind": "question",
+        "title": "Kabar besar",
+        "text": "Dimas punya kabar besar untukmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "intonation-emotion",
+          "prompt": "Dimas bilang: 'I got a job in Japan!' Kamu ingin terdengar terkejut dan senang. Bagaimana kamu mengucapkan 'Wow, really?'",
+          "options": [
+            "Flat and low, on one note →",
+            "A big jump from low to very high ↗",
+            "A short, quick drop ↘"
+          ],
+          "answer": 1,
+          "explanation": "Terkejut dan senang butuh **rentang nada yang lebar**: lompatan naik yang besar ↗. Datar dan rendah terdengar bosan, seolah kabarnya tidak menarik bagimu; turun yang pendek dan cepat terdengar dingin atau bahkan kesal."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Balik kartunya dan ucapkan setiap contoh dengan suara keras, mengikuti panahnya.",
+        "flashcards": [
+          {
+            "front": "intonasi (intonation)",
+            "back": "the melody of your voice: up ↗ or down ↘"
+          },
+          {
+            "front": "stress-timed rhythm",
+            "back": "strong words at regular beats; weak words squeezed in between"
+          },
+          {
+            "front": "Where do you live? (up or down?)",
+            "back": "usually down ↘: a wh-question"
+          },
+          {
+            "front": "Do you live in Bandung? (up or down?)",
+            "back": "usually up ↗: a yes/no question"
+          },
+          {
+            "front": "daftar: apples, bananas and oranges",
+            "back": "apples ↗, bananas ↗ and oranges ↘"
+          },
+          {
+            "front": "tag dengan suara turun ↘",
+            "back": "you're sure and want agreement: It's hot today, isn't it? ↘"
+          },
+          {
+            "front": "tag dengan suara naik ↗",
+            "back": "a real question: you're not sure"
+          },
+          {
+            "front": "'Really.' yang datar →",
+            "back": "sounds bored or rude; for surprise: Really?! ↗ (a big jump up)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semua materi hari ini dalam satu halaman, untuk disimpan.",
+        "artifact": {
+          "title": "Ringkasan · ritme & intonasi",
+          "intro": "Kata kuat ditulis HURUF BESAR, suara ditulis dengan panah: ↗ naik, ↘ turun, → datar. Ini yang biasanya terjadi, bukan hukum yang kaku.",
+          "headers": [
+            "Pola",
+            "Suara",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Kalimat panjang",
+              "tepuk di kata isi, selipkan sisanya",
+              "RI-na has SENT the E-mails to her BOSS (4)"
+            ],
+            [
+              "Kata kerja bantu",
+              "has, can, will: lemah · can't, don't: kuat",
+              "we can MEET · I CAN'T COME"
+            ],
+            [
+              "Kalimat biasa",
+              "turun ↘",
+              "I live in Bandung. ↘"
+            ],
+            [
+              "Wh-question",
+              "biasanya turun ↘",
+              "Where do you live? ↘"
+            ],
+            [
+              "Pertanyaan ya/tidak",
+              "biasanya naik ↗",
+              "Do you live in Bandung? ↗"
+            ],
+            [
+              "Daftar",
+              "naik ↗ di setiap item, turun ↘ di item terakhir",
+              "apples ↗, bananas ↗ and oranges ↘"
+            ],
+            [
+              "Tag: kamu yakin",
+              "turun ↘",
+              "It's hot today, isn't it? ↘"
+            ],
+            [
+              "Tag: pertanyaan sungguhan",
+              "naik ↗",
+              "The train leaves at seven, doesn't it? ↗"
+            ],
+            [
+              "Terkejut",
+              "lompatan naik yang besar ↗",
+              "Really?! ↗"
+            ],
+            [
+              "Tertarik",
+              "suara bergerak, mulai lebih tinggi",
+              "Oh, really? What happened?"
+            ],
+            [
+              "Bosan",
+              "datar dan rendah →",
+              "Oh. That's nice. →"
+            ],
+            [
+              "Kesal",
+              "pelan, rendah, turun kuat ↘",
+              "Not again! ↘"
+            ],
+            [
+              "Sorry",
+              "↗ = tolong ulangi · ↘ = minta maaf",
+              "Sorry? ↗ / Sorry. ↘"
+            ]
+          ],
+          "tips": [
+            "Tepuk di kata isi dan jaga tepukannya tetap rata. Makin banyak kata lemah di antara dua tepukan = ucapkan makin cepat.",
+            "Sebelum memakai tag, tanya dirimu: apakah aku sudah tahu jawabannya? **Ya** → turun ↘. **Tidak** → naik ↗.",
+            "Suara datar terdengar bosan dalam bahasa Inggris. Kalau ingin terdengar tertarik, gerakkan suaramu **lebih banyak** dari yang terasa wajar."
+          ],
+          "examples": [
+            {
+              "en": "Rina has sent the emails to her boss.",
+              "id": "Rina sudah mengirim email-emailnya ke atasannya."
+            },
+            {
+              "en": "Where do you live?",
+              "id": "Kamu tinggal di mana?"
+            },
+            {
+              "en": "Do you live in Bandung?",
+              "id": "Kamu tinggal di Bandung?"
+            },
+            {
+              "en": "We need apples, bananas and oranges.",
+              "id": "Kita perlu apel, pisang dan jeruk."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan berlatih",
+        "text": "Halaman British Council tentang question tag. Baca bagian tentang intonasi, coba kuisnya, dan ucapkan setiap tag dengan dua cara: ↘ dan ↗."
+      }
+    ]
+  }
+}

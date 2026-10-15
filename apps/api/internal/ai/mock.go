@@ -277,7 +277,7 @@ var nonWord = regexp.MustCompile(`[^a-z0-9' ]+`)
 
 // Normalize lowercases, strips punctuation and collapses whitespace.
 func Normalize(s string) string {
-	s = strings.ToLower(strings.TrimSpace(s))
+	s = strings.ToLower(strings.TrimSpace(tutor.FoldAccents(s)))
 	s = strings.NewReplacer("’", "'", "‘", "'").Replace(s)
 	s = nonWord.ReplaceAllString(s, " ")
 	return strings.Join(strings.Fields(s), " ")
@@ -304,7 +304,7 @@ func ExactMatch(answer string, expected []string) bool {
 // question about capital letters.
 func StrictMatch(answer string, expected []string) bool {
 	norm := func(s string) string {
-		s = strings.NewReplacer("’", "'", "‘", "'", "“", `"`, "”", `"`).Replace(strings.TrimSpace(s))
+		s = strings.NewReplacer("’", "'", "‘", "'", "“", `"`, "”", `"`).Replace(strings.TrimSpace(tutor.FoldAccents(s)))
 		s = strings.TrimRight(s, ".!? ")
 		return strings.Join(strings.Fields(s), " ")
 	}
