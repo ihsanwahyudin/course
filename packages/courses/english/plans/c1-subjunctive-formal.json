@@ -1,0 +1,726 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn the language of rules, recommendations and formal offers: It is essential that he be on time, I suggest she attend, Should you need any help… Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Rules and requirements",
+        "text": "You know **were** for unreal things (*If I were you…*, *I wish I were…*). Formal English has another special form, for **rules and requirements**.",
+        "body": "The **subjunctive** here = the **base form** of the verb (no -s, no -ed, no *to*), after **essential, vital, important, crucial, necessary** + *that*:\n- *It is essential that he **be** on time.* (not *is*)\n- *It is vital that each team **submit** its report by Friday.*\n**be** for every person. Negative: **not** + base form (*that he **not be** late*). Passive: **be** + third form (*that all forms **be signed***).\nBritish English also says *that he **should** attend* or *that he attends*: fine. Wrong: *that he **will** be*, *that he **to** be*.",
+        "pairs": [
+          {
+            "en": "It is essential that …",
+            "id": "Wajib / sangat penting bahwa …"
+          },
+          {
+            "en": "vital",
+            "id": "sangat penting"
+          },
+          {
+            "en": "crucial",
+            "id": "krusial, sangat menentukan"
+          },
+          {
+            "en": "a requirement",
+            "id": "syarat, ketentuan"
+          },
+          {
+            "en": "a regulation",
+            "id": "peraturan"
+          },
+          {
+            "en": "a circular",
+            "id": "surat edaran"
+          },
+          {
+            "en": "that he not be late",
+            "id": "agar dia tidak terlambat"
+          },
+          {
+            "en": "an induction",
+            "id": "orientasi karyawan baru"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Rules at work and on campus",
+        "text": "Here are some real rules. Look at the verb after *that* each time.",
+        "body": "*wear, submit, be tested, not be interrupted, receive*: no -s, even after *every visitor* or *each school*, and no change after the past *was*. Indonesian *agar / supaya* has no tense, so don't add *will* or *to*.",
+        "examples": [
+          {
+            "en": "It is essential that every visitor wear a helmet on the construction site.",
+            "id": "Setiap tamu wajib memakai helm di lokasi proyek."
+          },
+          {
+            "en": "The ministry requires that each school submit its data by 30 June.",
+            "id": "Kementerian mewajibkan setiap sekolah menyerahkan datanya paling lambat 30 Juni."
+          },
+          {
+            "en": "It is vital that the new payroll system be tested before January.",
+            "id": "Sistem penggajian yang baru harus diuji sebelum Januari."
+          },
+          {
+            "en": "It is important that the speaker not be interrupted.",
+            "id": "Penting agar pembicara tidak disela."
+          },
+          {
+            "en": "It was crucial that the auditor receive the files on time.",
+            "id": "Waktu itu sangat penting auditor menerima berkasnya tepat waktu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The company handbook",
+        "text": "Bu Ani from HR is writing the new employee handbook (buku panduan karyawan).",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "mandative-subjunctive",
+          "prompt": "Complete the policy: It is essential that every new employee ___ the safety induction before their first shift.",
+          "options": [
+            "will complete",
+            "to complete",
+            "complete"
+          ],
+          "answer": 2,
+          "explanation": "After **essential that**, formal English uses the **subjunctive**: the base form, with no -s even after *every new employee*. *will* and *to* are never used in this pattern."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "suggest, recommend, insist",
+        "text": "Verbs that **ask for something** use the same base form.",
+        "body": "**suggest / recommend / insist / demand / propose (that)** + person + **base form**:\n- *I suggest (that) she **attend** the briefing.*\n- *Bu Ani insisted that the report **be** sent today.*\nThe base form stays after a past verb: *He suggested that Rina **lead** the team.*\nNo person? **suggest / recommend + -ing**: *I suggest **leaving** early.*\nTrap: *menyarankan dia **untuk*** → 'I suggest **her to** attend' ✗. *suggest* never takes person + *to*. (British: *I suggest she **attends*** is fine too.)",
+        "pairs": [
+          {
+            "en": "suggest",
+            "id": "menyarankan"
+          },
+          {
+            "en": "recommend",
+            "id": "menganjurkan, merekomendasikan"
+          },
+          {
+            "en": "insist",
+            "id": "bersikeras, menuntut"
+          },
+          {
+            "en": "demand",
+            "id": "menuntut"
+          },
+          {
+            "en": "propose",
+            "id": "mengusulkan"
+          },
+          {
+            "en": "I suggest leaving early.",
+            "id": "Saya sarankan berangkat lebih awal."
+          },
+          {
+            "en": "an invoice",
+            "id": "faktur, tagihan"
+          },
+          {
+            "en": "to shadow someone",
+            "id": "mendampingi seseorang bekerja untuk belajar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A new colleague",
+        "text": "Dimas has just joined a startup in Surabaya. His manager writes to the team leader about his first week.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "suggest-recommend-that",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "I suggest him to shadow Sari for a week.",
+            "I suggest that he shadow Sari for a week.",
+            "I suggest to him shadow Sari for a week."
+          ],
+          "answer": 1,
+          "explanation": "**suggest (that) + person + base form**: *that he shadow* (no -s: it's the subjunctive). 'suggest **him to**' is the classic mistake from *menyarankan dia untuk*, and 'suggest **to him** shadow' isn't English."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "A strict finance manager",
+        "text": "Last month a wrong invoice cost the company Rp40 million. Since then, Pak Hasan has been very strict.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "suggest-recommend-that",
+          "prompt": "Arrange the words: Pak Hasan bersikeras agar setiap faktur diperiksa.",
+          "tokens": [
+            "be",
+            "every",
+            "Hasan",
+            "checked",
+            "insisted",
+            "Pak",
+            "that",
+            "invoice"
+          ],
+          "solution": "Pak Hasan insisted that every invoice be checked.",
+          "explanation": "**insist that** + **base form**. The invoices are checked by someone, so it's passive: **be + third form** (*be checked*). The base form *be* doesn't change, even after the past *insisted*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The formal were",
+        "text": "Now the other subjunctive form: **were**. You've used it since B1: *If I were you, I'd…*",
+        "body": "**were** = something **unreal**, for every person. Formal writing prefers it to *was*:\n- *If the manager **were** less busy, he would reply himself.*\nTwo formal phrases:\n- **as it were** = *kalau boleh dibilang, ibaratnya*: it warns that your words are an image, not literal: *Our IT team is, **as it were**, the engine room of the company.*\n- **were it not for** + noun = *kalau bukan karena*: a phrase to remember (its word order is an inversion, a later lesson).\n*as it were* ≠ *as it was* (the normal past).",
+        "pairs": [
+          {
+            "en": "If I were in your position, …",
+            "id": "Kalau saya di posisimu, …"
+          },
+          {
+            "en": "If he were here, …",
+            "id": "Kalau dia ada di sini, … (tapi tidak)"
+          },
+          {
+            "en": "as it were",
+            "id": "kalau boleh dibilang, ibaratnya"
+          },
+          {
+            "en": "so to speak",
+            "id": "bisa dibilang begitu"
+          },
+          {
+            "en": "were it not for …",
+            "id": "kalau bukan karena …"
+          },
+          {
+            "en": "literally",
+            "id": "secara harfiah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A figure of speech",
+        "text": "At a conference in Yogyakarta, a speaker talks about a small village library.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "were-and-formal-should",
+          "prompt": "'This library is, as it were, the village's window to the world.' What does 'as it were' tell you?",
+          "options": [
+            "The speaker is using an image, not literal words.",
+            "The library was like this in the past, but not now.",
+            "The speaker isn't sure the library exists."
+          ],
+          "answer": 0,
+          "explanation": "**as it were** (= *so to speak, ibaratnya*) is a fixed phrase with the formal **were**: it warns that *window to the world* is an image. It isn't about the past: that would be *as it was*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Polite offers: Should you…",
+        "text": "Last pattern: the most formal way to offer help at the end of an email.",
+        "body": "**Should + subject + base form** = **If** (formal, polite):\n- *If you have any questions, …* → ***Should you have** any questions, please contact us.*\n- ***Should the flight be** delayed, we will inform you by SMS.*\nUse it in HR emails, hotel messages and official letters.\nTrap: here **should ≠ seharusnya**: it means *apabila*.\nAfter *Should you*, the **base form**: 'Should you **needed**' ✗, 'Should you **to need**' ✗; and never '**If should** you' ✗.",
+        "pairs": [
+          {
+            "en": "Should you have any questions, …",
+            "id": "Apabila Anda memiliki pertanyaan, …"
+          },
+          {
+            "en": "Should there be any changes, …",
+            "id": "Apabila ada perubahan, …"
+          },
+          {
+            "en": "please do not hesitate to contact us",
+            "id": "jangan ragu menghubungi kami"
+          },
+          {
+            "en": "require",
+            "id": "memerlukan (formal)"
+          },
+          {
+            "en": "further documents",
+            "id": "dokumen tambahan"
+          },
+          {
+            "en": "the faculty office",
+            "id": "kantor fakultas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "An email to international students",
+        "text": "Dr. Wulan's assistant is writing to international students about their visa documents.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "were-and-formal-should",
+          "prompt": "Which closing line is correct?",
+          "options": [
+            "Should you required any further documents, please contact the faculty office.",
+            "Should you require any further documents, please contact the faculty office.",
+            "If should you require any further documents, please contact the faculty office."
+          ],
+          "answer": 1,
+          "explanation": "**Should + you + base form** (*require*) = *If you require*, very formal. *required* is the classic mistake (after *should*, always the base form), and *if* and *should* are never used together here."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next formal email, report or policy!",
+        "artifact": {
+          "title": "Cheat sheet · Subjunctive & formal structures",
+          "intro": "The subjunctive is the base form (no -s, no -ed, no to) after words of necessity and demand, plus were for unreal situations. Should + subject + base form makes a formal 'if'.",
+          "headers": [
+            "Use",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Requirement / rule",
+              "essential / vital / important / necessary that + base form",
+              "It is essential that he be on time."
+            ],
+            [
+              "Negative",
+              "that + not + base form",
+              "It is important that he not be late."
+            ],
+            [
+              "Passive",
+              "that + be + third form",
+              "It is vital that all forms be signed."
+            ],
+            [
+              "After a past verb",
+              "the base form doesn't change",
+              "It was crucial that the auditor receive the files."
+            ],
+            [
+              "British alternatives",
+              "that + should + base form / normal present",
+              "that he should attend / that he attends"
+            ],
+            [
+              "Recommendation",
+              "suggest / recommend / insist / demand (that) + person + base form",
+              "I suggest (that) she attend the briefing."
+            ],
+            [
+              "No person",
+              "suggest / recommend + -ing",
+              "I suggest leaving early."
+            ],
+            [
+              "Unreal situation",
+              "if + were (every person)",
+              "If I were in your position, I'd accept."
+            ],
+            [
+              "So to speak",
+              "as it were",
+              "She is, as it were, the bridge between the teams."
+            ],
+            [
+              "If it weren't for",
+              "were it not for + noun (phrase to remember)",
+              "Were it not for her help, I'd still be lost."
+            ],
+            [
+              "Formal offer",
+              "Should + subject + base form",
+              "Should you have any questions, please contact us."
+            ]
+          ],
+          "tips": [
+            "**No -s, no to, no will** after words of necessity: *that she attend*, not *to attend* or *will attend*.",
+            "**suggest + person + to** ✗ → *suggest (that) she attend* or *suggest attending*.",
+            "In *Should you …*, **should = apabila**, not *seharusnya*; then the base form: *Should you need*, never *Should you needed*."
+          ],
+          "examples": [
+            {
+              "en": "The committee proposed that the deadline be extended.",
+              "id": "Panitia mengusulkan agar tenggat waktunya diperpanjang."
+            },
+            {
+              "en": "Should there be any changes to the schedule, we will let you know.",
+              "id": "Apabila ada perubahan jadwal, kami akan memberi tahu Anda."
+            },
+            {
+              "en": "If it were up to me, we would hire her.",
+              "id": "Kalau keputusannya di tangan saya, kita akan merekrut dia."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and watch",
+        "text": "Want more? Read the British Council C1 page on reporting verbs (with the subjunctive and two tests), and watch two video lessons on the subjunctive from engVid and Anglo-Link."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan belajar bahasa untuk aturan, rekomendasi dan tawaran formal: It is essential that he be on time, I suggest she attend, Should you need any help… Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Aturan dan syarat",
+        "text": "Kamu sudah kenal **were** untuk hal yang tidak nyata (*If I were you…*, *I wish I were…*). Bahasa Inggris formal punya bentuk khusus lagi, untuk **aturan dan syarat**.",
+        "body": "**Subjunctive** di sini = **bentuk dasar** kata kerja (tanpa -s, tanpa -ed, tanpa *to*), setelah **essential, vital, important, crucial, necessary** + *that*:\n- *It is essential that he **be** on time.* (bukan *is*)\n- *It is vital that each team **submit** its report by Friday.*\n**be** untuk semua orang. Negatif: **not** + bentuk dasar (*that he **not be** late*). Pasif: **be** + bentuk ketiga (*that all forms **be signed***).\nBahasa Inggris Britania juga memakai *that he **should** attend* atau *that he attends*: boleh. Yang salah: *that he **will** be*, *that he **to** be*.",
+        "pairs": [
+          {
+            "en": "It is essential that …",
+            "id": "Wajib / sangat penting bahwa …"
+          },
+          {
+            "en": "vital",
+            "id": "sangat penting"
+          },
+          {
+            "en": "crucial",
+            "id": "krusial, sangat menentukan"
+          },
+          {
+            "en": "a requirement",
+            "id": "syarat, ketentuan"
+          },
+          {
+            "en": "a regulation",
+            "id": "peraturan"
+          },
+          {
+            "en": "a circular",
+            "id": "surat edaran"
+          },
+          {
+            "en": "that he not be late",
+            "id": "agar dia tidak terlambat"
+          },
+          {
+            "en": "an induction",
+            "id": "orientasi karyawan baru"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Aturan di kantor dan kampus",
+        "text": "Ini beberapa aturan sungguhan. Perhatikan kata kerja setelah *that* di setiap kalimat.",
+        "body": "*wear, submit, be tested, not be interrupted, receive*: tanpa -s, walaupun subjeknya *every visitor* atau *each school*, dan tidak berubah setelah *was* (past). *agar / supaya* dalam bahasa Indonesia tidak punya tense, jadi jangan tambahkan *will* atau *to*.",
+        "examples": [
+          {
+            "en": "It is essential that every visitor wear a helmet on the construction site.",
+            "id": "Setiap tamu wajib memakai helm di lokasi proyek."
+          },
+          {
+            "en": "The ministry requires that each school submit its data by 30 June.",
+            "id": "Kementerian mewajibkan setiap sekolah menyerahkan datanya paling lambat 30 Juni."
+          },
+          {
+            "en": "It is vital that the new payroll system be tested before January.",
+            "id": "Sistem penggajian yang baru harus diuji sebelum Januari."
+          },
+          {
+            "en": "It is important that the speaker not be interrupted.",
+            "id": "Penting agar pembicara tidak disela."
+          },
+          {
+            "en": "It was crucial that the auditor receive the files on time.",
+            "id": "Waktu itu sangat penting auditor menerima berkasnya tepat waktu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Buku panduan perusahaan",
+        "text": "Bu Ani dari HR sedang menulis buku panduan karyawan yang baru (employee handbook).",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "mandative-subjunctive",
+          "prompt": "Lengkapi kebijakannya: It is essential that every new employee ___ the safety induction before their first shift.",
+          "options": [
+            "will complete",
+            "to complete",
+            "complete"
+          ],
+          "answer": 2,
+          "explanation": "Setelah **essential that**, bahasa Inggris formal memakai **subjunctive**: bentuk dasar, tanpa -s walaupun subjeknya *every new employee*. *will* dan *to* tidak pernah dipakai dalam pola ini."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "suggest, recommend, insist",
+        "text": "Kata kerja yang **meminta sesuatu** memakai bentuk dasar yang sama.",
+        "body": "**suggest / recommend / insist / demand / propose (that)** + orang + **bentuk dasar**:\n- *I suggest (that) she **attend** the briefing.*\n- *Bu Ani insisted that the report **be** sent today.*\nBentuk dasarnya tetap setelah kata kerja past: *He suggested that Rina **lead** the team.*\nTidak ada orangnya? **suggest / recommend + -ing**: *I suggest **leaving** early.*\nJebakan: *menyarankan dia **untuk*** → 'I suggest **her to** attend' ✗. *suggest* tidak pernah diikuti orang + *to*. (Britania: *I suggest she **attends*** juga boleh.)",
+        "pairs": [
+          {
+            "en": "suggest",
+            "id": "menyarankan"
+          },
+          {
+            "en": "recommend",
+            "id": "menganjurkan, merekomendasikan"
+          },
+          {
+            "en": "insist",
+            "id": "bersikeras, menuntut"
+          },
+          {
+            "en": "demand",
+            "id": "menuntut"
+          },
+          {
+            "en": "propose",
+            "id": "mengusulkan"
+          },
+          {
+            "en": "I suggest leaving early.",
+            "id": "Saya sarankan berangkat lebih awal."
+          },
+          {
+            "en": "an invoice",
+            "id": "faktur, tagihan"
+          },
+          {
+            "en": "to shadow someone",
+            "id": "mendampingi seseorang bekerja untuk belajar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Rekan kerja baru",
+        "text": "Dimas baru bergabung dengan sebuah startup di Surabaya. Manajernya menulis ke ketua tim tentang minggu pertamanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "suggest-recommend-that",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "I suggest him to shadow Sari for a week.",
+            "I suggest that he shadow Sari for a week.",
+            "I suggest to him shadow Sari for a week."
+          ],
+          "answer": 1,
+          "explanation": "**suggest (that) + orang + bentuk dasar**: *that he shadow* (tanpa -s: ini subjunctive). 'suggest **him to**' adalah kesalahan klasik dari *menyarankan dia untuk*, dan 'suggest **to him** shadow' bukan bahasa Inggris."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Manajer keuangan yang tegas",
+        "text": "Bulan lalu satu faktur yang salah membuat perusahaan rugi Rp40 juta. Sejak itu, Pak Hasan sangat ketat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "suggest-recommend-that",
+          "prompt": "Susun kata-katanya: Pak Hasan bersikeras agar setiap faktur diperiksa.",
+          "tokens": [
+            "be",
+            "every",
+            "Hasan",
+            "checked",
+            "insisted",
+            "Pak",
+            "that",
+            "invoice"
+          ],
+          "solution": "Pak Hasan insisted that every invoice be checked.",
+          "explanation": "**insist that** + **bentuk dasar**. Fakturnya diperiksa oleh seseorang, jadi kalimatnya pasif: **be + bentuk ketiga** (*be checked*). Bentuk dasar *be* tidak berubah, walaupun *insisted* berbentuk past."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "were yang formal",
+        "text": "Sekarang bentuk subjunctive yang lain: **were**. Kamu sudah memakainya sejak B1: *If I were you, I'd…*",
+        "body": "**were** = sesuatu yang **tidak nyata**, untuk semua orang. Tulisan formal lebih memilihnya daripada *was*:\n- *If the manager **were** less busy, he would reply himself.*\nDua frasa formal:\n- **as it were** = *kalau boleh dibilang, ibaratnya*: memberi tanda bahwa kata-katamu kiasan, bukan arti harfiah: *Our IT team is, **as it were**, the engine room of the company.*\n- **were it not for** + kata benda = *kalau bukan karena*: frasa tetap untuk diingat (susunan katanya inversi, pelajaran nanti).\n*as it were* ≠ *as it was* (past biasa).",
+        "pairs": [
+          {
+            "en": "If I were in your position, …",
+            "id": "Kalau saya di posisimu, …"
+          },
+          {
+            "en": "If he were here, …",
+            "id": "Kalau dia ada di sini, … (tapi tidak)"
+          },
+          {
+            "en": "as it were",
+            "id": "kalau boleh dibilang, ibaratnya"
+          },
+          {
+            "en": "so to speak",
+            "id": "bisa dibilang begitu"
+          },
+          {
+            "en": "were it not for …",
+            "id": "kalau bukan karena …"
+          },
+          {
+            "en": "literally",
+            "id": "secara harfiah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kiasan",
+        "text": "Di sebuah konferensi di Yogyakarta, seorang pembicara bercerita tentang perpustakaan desa yang kecil.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "were-and-formal-should",
+          "prompt": "'This library is, as it were, the village's window to the world.' Apa yang ditunjukkan oleh 'as it were'?",
+          "options": [
+            "The speaker is using an image, not literal words.",
+            "The library was like this in the past, but not now.",
+            "The speaker isn't sure the library exists."
+          ],
+          "answer": 0,
+          "explanation": "**as it were** (= *so to speak, ibaratnya*) adalah frasa tetap dengan **were** formal: memberi tanda bahwa *window to the world* adalah kiasan. Frasa ini tidak membicarakan masa lalu: itu *as it was*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tawaran sopan: Should you…",
+        "text": "Pola terakhir: cara paling formal menawarkan bantuan di akhir email.",
+        "body": "**Should + subjek + bentuk dasar** = **If** (formal, sopan):\n- *If you have any questions, …* → ***Should you have** any questions, please contact us.*\n- ***Should the flight be** delayed, we will inform you by SMS.*\nPakai di email HR, pesan hotel dan surat resmi.\nJebakan: di sini **should ≠ seharusnya**: artinya *apabila*.\nSetelah *Should you*, pakai **bentuk dasar**: 'Should you **needed**' ✗, 'Should you **to need**' ✗; dan jangan pernah '**If should** you' ✗.",
+        "pairs": [
+          {
+            "en": "Should you have any questions, …",
+            "id": "Apabila Anda memiliki pertanyaan, …"
+          },
+          {
+            "en": "Should there be any changes, …",
+            "id": "Apabila ada perubahan, …"
+          },
+          {
+            "en": "please do not hesitate to contact us",
+            "id": "jangan ragu menghubungi kami"
+          },
+          {
+            "en": "require",
+            "id": "memerlukan (formal)"
+          },
+          {
+            "en": "further documents",
+            "id": "dokumen tambahan"
+          },
+          {
+            "en": "the faculty office",
+            "id": "kantor fakultas"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Email untuk mahasiswa internasional",
+        "text": "Asisten Dr. Wulan sedang menulis email untuk mahasiswa internasional tentang dokumen visa mereka.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "were-and-formal-should",
+          "prompt": "Kalimat penutup mana yang benar?",
+          "options": [
+            "Should you required any further documents, please contact the faculty office.",
+            "Should you require any further documents, please contact the faculty office.",
+            "If should you require any further documents, please contact the faculty office."
+          ],
+          "answer": 1,
+          "explanation": "**Should + you + bentuk dasar** (*require*) = *If you require*, sangat formal. *required* adalah kesalahan klasik (setelah *should*, selalu bentuk dasar), dan *if* dan *should* tidak pernah dipakai bersamaan di sini."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk email, laporan atau kebijakan formalmu berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · Subjunctive & struktur formal",
+          "intro": "Subjunctive adalah bentuk dasar (tanpa -s, tanpa -ed, tanpa to) setelah kata-kata keharusan dan tuntutan, ditambah were untuk situasi yang tidak nyata. Should + subjek + bentuk dasar membentuk 'if' yang formal.",
+          "headers": [
+            "Fungsi",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Syarat / aturan",
+              "essential / vital / important / necessary that + bentuk dasar",
+              "It is essential that he be on time."
+            ],
+            [
+              "Negatif",
+              "that + not + bentuk dasar",
+              "It is important that he not be late."
+            ],
+            [
+              "Pasif",
+              "that + be + bentuk ketiga",
+              "It is vital that all forms be signed."
+            ],
+            [
+              "Setelah kata kerja past",
+              "bentuk dasarnya tidak berubah",
+              "It was crucial that the auditor receive the files."
+            ],
+            [
+              "Alternatif Britania",
+              "that + should + bentuk dasar / present biasa",
+              "that he should attend / that he attends"
+            ],
+            [
+              "Rekomendasi",
+              "suggest / recommend / insist / demand (that) + orang + bentuk dasar",
+              "I suggest (that) she attend the briefing."
+            ],
+            [
+              "Tanpa orang",
+              "suggest / recommend + -ing",
+              "I suggest leaving early."
+            ],
+            [
+              "Situasi tidak nyata",
+              "if + were (semua orang)",
+              "If I were in your position, I'd accept."
+            ],
+            [
+              "Kalau boleh dibilang",
+              "as it were",
+              "She is, as it were, the bridge between the teams."
+            ],
+            [
+              "Kalau bukan karena",
+              "were it not for + kata benda (frasa tetap)",
+              "Were it not for her help, I'd still be lost."
+            ],
+            [
+              "Tawaran formal",
+              "Should + subjek + bentuk dasar",
+              "Should you have any questions, please contact us."
+            ]
+          ],
+          "tips": [
+            "**Tanpa -s, tanpa to, tanpa will** setelah kata-kata keharusan: *that she attend*, bukan *to attend* atau *will attend*.",
+            "**suggest + orang + to** ✗ → *suggest (that) she attend* atau *suggest attending*.",
+            "Di *Should you …*, **should = apabila**, bukan *seharusnya*; lalu bentuk dasar: *Should you need*, jangan *Should you needed*."
+          ],
+          "examples": [
+            {
+              "en": "The committee proposed that the deadline be extended.",
+              "id": "Panitia mengusulkan agar tenggat waktunya diperpanjang."
+            },
+            {
+              "en": "Should there be any changes to the schedule, we will let you know.",
+              "id": "Apabila ada perubahan jadwal, kami akan memberi tahu Anda."
+            },
+            {
+              "en": "If it were up to me, we would hire her.",
+              "id": "Kalau keputusannya di tangan saya, kita akan merekrut dia."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan tonton",
+        "text": "Mau lebih? Baca halaman C1 British Council tentang reporting verbs (dengan subjunctive dan dua tes), dan tonton dua video tentang subjunctive dari engVid dan Anglo-Link."
+      }
+    ]
+  }
+}

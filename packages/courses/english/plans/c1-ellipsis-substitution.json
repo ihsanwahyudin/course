@@ -1,0 +1,748 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn how fluent speakers avoid saying the same thing twice: short replies like *I think so* and *I hope not*, **do so**, **one** and **ones**, and leaving out words everyone already understands. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Say it once",
+        "text": "You already do this! *Me too*, *Yes, I do*, *I'd love to* and *the red one* all avoid repeating words.",
+        "body": "English doesn't like repeating. There are two tools:\n- **substitution**: replace words already said with a short word: *so, not, one, ones, do so*. *Is the shop open? I think **so**.* (so = the shop is open)\n- **ellipsis**: leave out words that are already clear: *I'd like **to**, but I **can't**.* (= I'd like to come, but I can't come)\nIndonesian can drop almost everything (*Bisa? Bisa.*). English usually keeps **one small word**: *so*, *one*, *to* or the auxiliary.",
+        "pairs": [
+          {
+            "en": "substitution",
+            "id": "mengganti kata yang sudah disebut dengan kata pendek"
+          },
+          {
+            "en": "ellipsis",
+            "id": "menghilangkan kata yang sudah jelas"
+          },
+          {
+            "en": "clause",
+            "id": "anak kalimat (subjek + kata kerja: the shop is open)"
+          },
+          {
+            "en": "auxiliary",
+            "id": "kata kerja bantu (be, do, did, have, can, will, might…)"
+          },
+          {
+            "en": "Me too.",
+            "id": "Aku juga."
+          },
+          {
+            "en": "the red one",
+            "id": "yang merah"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "so and not: a whole idea in one word",
+        "text": "After some verbs, **so** = a 'yes' idea and **not** = a 'no' idea. They replace the whole clause.",
+        "body": "Verbs: **think, believe, expect, suppose, guess, hope, be afraid**.\n- yes → **so**: *I think so. I hope so.*\n- no with think / believe / expect → **I don't think so** (*I think not* is correct but formal and rare).\n- no with hope / be afraid → only **not**: *I hope not*, never 'I don't hope so'.\n**be afraid + so / not** = polite bad news (*sayangnya*), not fear.\nTrap: *saya kira iya / semoga tidak* → 'I think **yes**', 'I hope **no**' ✗. Never yes, no or it here.",
+        "pairs": [
+          {
+            "en": "I think so.",
+            "id": "Saya kira iya."
+          },
+          {
+            "en": "I don't think so.",
+            "id": "Sepertinya tidak."
+          },
+          {
+            "en": "I hope so.",
+            "id": "Semoga begitu."
+          },
+          {
+            "en": "I hope not.",
+            "id": "Semoga tidak."
+          },
+          {
+            "en": "I'm afraid not.",
+            "id": "Sayangnya tidak. (sopan)"
+          },
+          {
+            "en": "I believe so.",
+            "id": "Saya rasa begitu. (lebih formal)"
+          },
+          {
+            "en": "I guess so.",
+            "id": "Ya, sepertinya begitu. (santai)"
+          },
+          {
+            "en": "If so, …",
+            "id": "Jika iya, … (formal)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The last train",
+        "text": "It's almost midnight at Manggarai station in Jakarta. The last KRL to Bogor left ten minutes ago. A tourist asks you something. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-not-substitution",
+          "listen": "Excuse me, has the last train to Bogor already left?",
+          "prompt": "You work at a station in Jakarta. The last train to Bogor left ten minutes ago. Listen to the tourist's question. Choose the correct, polite reply.",
+          "options": [
+            "I'm afraid not.",
+            "I'm afraid so.",
+            "I'm afraid yes."
+          ],
+          "answer": 1,
+          "explanation": "The tourist asked if the last train **has already left**. It has, and that's bad news, so: **I'm afraid so** (= sadly, yes). *I'm afraid not* would mean it hasn't left. *I'm afraid yes* copies the Indonesian *sayangnya iya*: after *be afraid*, use **so**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "The broken printer",
+        "text": "Dimas asks you: 'Is the printer on the third floor working again?' You believe it's still broken, but you aren't 100% sure.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-not-substitution",
+          "prompt": "Choose the most natural reply.",
+          "options": [
+            "I think no, but I'll check.",
+            "I don't think so, but I'll check.",
+            "I don't think, but I'll check."
+          ],
+          "answer": 1,
+          "explanation": "Your idea is **no**, so with *think* English puts *not* on the verb and keeps **so**: **I don't think so**. *I think no* copies *saya kira tidak*, and *I don't think* without *so* leaves the idea missing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "do so, one and ones",
+        "text": "Two more short words: one for repeated **actions**, one for repeated **things**.",
+        "body": "**do so** replaces a repeated action in **formal** English: *If you wish to cancel, please **do so** 24 hours in advance.* In speech: **do it / do that**.\n**one / ones** replace a **countable noun** (*kata benda yang bisa dihitung*) already mentioned:\n- *This laptop is slow. I need a faster **one**.*\n- *the **one** on the left, the blue **ones***\nTrap: *yang merah* → **the red one**, not 'the red'.\nNo 'a one' without an adjective, and no *one* for uncountable nouns: *some advice*, never 'an advice one'.",
+        "pairs": [
+          {
+            "en": "do so",
+            "id": "melakukannya (formal)"
+          },
+          {
+            "en": "do it / do that",
+            "id": "melakukannya (percakapan)"
+          },
+          {
+            "en": "failure to do so",
+            "id": "jika tidak melakukannya (pengumuman resmi)"
+          },
+          {
+            "en": "a cheaper one",
+            "id": "yang lebih murah (satu)"
+          },
+          {
+            "en": "the blue ones",
+            "id": "yang biru (beberapa)"
+          },
+          {
+            "en": "which one?",
+            "id": "yang mana?"
+          },
+          {
+            "en": "the one on the left",
+            "id": "yang di sebelah kiri"
+          },
+          {
+            "en": "some advice",
+            "id": "saran (tidak bisa dihitung: tanpa one)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "At work and in the shops",
+        "text": "Look at what **do so**, **do it**, **one** and **ones** replace in each sentence.",
+        "body": "**one** = one thing, **ones** = more than one. **do so** = formal; **do it / do that** = everyday.",
+        "examples": [
+          {
+            "en": "Passengers must show their tickets. Failure to do so may result in a fine.",
+            "id": "Penumpang wajib menunjukkan tiket. Jika tidak, bisa dikenai denda."
+          },
+          {
+            "en": "The company promised to cut plastic waste, and it has done so.",
+            "id": "Perusahaan itu berjanji mengurangi sampah plastik, dan sudah melakukannya."
+          },
+          {
+            "en": "Can you send the invoice today? Sure, I'll do it now.",
+            "id": "Bisa kirim invoice-nya hari ini? Bisa, saya kerjakan sekarang."
+          },
+          {
+            "en": "These mangoes are sweeter than the ones we bought last week.",
+            "id": "Mangga ini lebih manis daripada yang kita beli minggu lalu."
+          },
+          {
+            "en": "Which room is ours? The one at the end of the corridor.",
+            "id": "Ruangan kita yang mana? Yang di ujung lorong."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Chairs for the meeting room",
+        "text": "Bu Ani is choosing chairs for the new meeting room at an office furniture shop in Surabaya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "do-so-one-ones",
+          "prompt": "Complete what Bu Ani says: 'The grey chairs are comfortable, but I prefer the black ___. They match the table.'",
+          "options": [
+            "one",
+            "them",
+            "ones"
+          ],
+          "answer": 2,
+          "explanation": "*chairs* is plural and countable, and *They match* shows more than one, so: **the black ones**. *one* is singular, and *them* can't come after an adjective ('the black them' ✗)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Leave it out, but keep the auxiliary",
+        "text": "The last tool: say less. Keep one small word and drop the rest.",
+        "body": "After an **auxiliary** (be, do, did, have, can, will, might, should…), keep it and drop the rest:\n*Are you coming? I **might**.* / *I didn't go, but Rina **did**.*\nAfter **to**, keep *to* and drop the verb: *I'd like **to**, but I can't.*\nTraps: 'but I couldn't **do**' ✗ (*tidak bisa* needs no *do*), 'Yes, I'd like.' ✗ → *Yes, I'd like **to***.\nAt the end, don't shorten: *I'm not ready, but Sari **is*** (not *Sari's*).",
+        "pairs": [
+          {
+            "en": "I might.",
+            "id": "Mungkin. (= I might come)"
+          },
+          {
+            "en": "I didn't go, but Rina did.",
+            "id": "Saya tidak pergi, tapi Rina pergi."
+          },
+          {
+            "en": "I wanted to help, but I couldn't.",
+            "id": "Saya mau bantu, tapi tidak bisa."
+          },
+          {
+            "en": "I'd like to, but I can't.",
+            "id": "Mau sih, tapi tidak bisa."
+          },
+          {
+            "en": "I haven't read it, but Pak Hasan has.",
+            "id": "Saya belum membacanya, tapi Pak Hasan sudah."
+          },
+          {
+            "en": "You don't have to come if you don't want to.",
+            "id": "Kamu tidak harus datang kalau tidak mau."
+          },
+          {
+            "en": "a workshop",
+            "id": "lokakarya, pelatihan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The Saturday workshop",
+        "text": "Sari's team asked her to join the Saturday workshop, but she had to take her mother to the hospital. On Monday she explains.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ellipsis",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "I wanted to come, but I couldn't.",
+            "I wanted to come, but I couldn't do.",
+            "I wanted, but I couldn't come."
+          ],
+          "answer": 0,
+          "explanation": "**I couldn't** is enough: the auxiliary stands for *couldn't come*. Adding *do* is the Indonesian *tapi tidak bisa* trap. And *want* needs its **to**: *I wanted **to***, not *I wanted*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "A promise kept",
+        "text": "Bu Ani was worried that the report would be late. But Rina kept her promise.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ellipsis",
+          "prompt": "Arrange the words: Rina janji mengirim laporannya, dan dia memang mengirimnya.",
+          "tokens": [
+            "did",
+            "report",
+            "Rina",
+            "she",
+            "to",
+            "the",
+            "and",
+            "promised",
+            "send"
+          ],
+          "solution": "Rina promised to send the report, and she did.",
+          "explanation": "**did** stands for *sent the report*: keep the past auxiliary and drop the rest. Repeating *she sent the report* is correct but heavy."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next meeting, email or chat!",
+        "artifact": {
+          "title": "Cheat sheet · Ellipsis & substitution",
+          "intro": "Say it once. Replace repeated words with a short word (so, not, do so, one, ones), or leave them out and keep the auxiliary or to.",
+          "headers": [
+            "Use",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "'yes' idea",
+              "think / believe / expect / suppose / guess + so",
+              "Is the bank open today? I think so."
+            ],
+            [
+              "'no' idea (think verbs)",
+              "I don't think / believe / expect so",
+              "Is the meeting cancelled? I don't believe so."
+            ],
+            [
+              "hope",
+              "I hope so / I hope not (not: I don't hope so)",
+              "Will it rain at the wedding? I hope not."
+            ],
+            [
+              "polite bad news",
+              "I'm afraid so / I'm afraid not",
+              "Is the flight delayed? I'm afraid so."
+            ],
+            [
+              "formal writing",
+              "if so / if not",
+              "Do you need a visa? If so, apply early."
+            ],
+            [
+              "repeated action (formal)",
+              "do so / did so / has done so",
+              "Please do so 24 hours in advance."
+            ],
+            [
+              "repeated action (speech)",
+              "do it / do that",
+              "Sure, I'll do it now."
+            ],
+            [
+              "one thing",
+              "a / this / the + (adjective) + one",
+              "I need a faster one."
+            ],
+            [
+              "more than one",
+              "the + (adjective) + ones",
+              "The ones on the top shelf are cheaper."
+            ],
+            [
+              "uncountable nouns",
+              "some, never one / ones",
+              "I need some advice."
+            ],
+            [
+              "after an auxiliary",
+              "keep it, drop the rest",
+              "Are you coming? I might."
+            ],
+            [
+              "after to",
+              "keep to, drop the verb",
+              "I'd like to, but I can't."
+            ]
+          ],
+          "tips": [
+            "Never **yes / no / it** after think or hope: *I think so*, *I hope not*.",
+            "Keep the small word: **to** or the **auxiliary**. No extra *do*: *I couldn't* ✓, *I couldn't do* ✗.",
+            "**do so** sounds formal: use it in notices, reports and emails; in conversation say *do it / do that*."
+          ],
+          "examples": [
+            {
+              "en": "Is Pak Hasan in? I'm afraid not. He's in a meeting.",
+              "id": "Pak Hasan ada? Sayangnya tidak. Beliau sedang rapat."
+            },
+            {
+              "en": "Which mangoes do you want? The yellow ones, please.",
+              "id": "Mau mangga yang mana? Yang kuning, ya."
+            },
+            {
+              "en": "She said she'd call, and she did.",
+              "id": "Dia bilang akan menelepon, dan dia memang menelepon."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and practise",
+        "text": "Want more? Two British Council C1 pages, each with two short tests: one on ellipsis, and one on avoiding repetition in writing (with do so)."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan belajar cara penutur yang lancar menghindari mengulang hal yang sama: jawaban pendek seperti *I think so* dan *I hope not*, **do so**, **one** dan **ones**, dan menghilangkan kata yang sudah jelas bagi semua orang. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Cukup sekali",
+        "text": "Kamu sebenarnya sudah melakukannya! *Me too*, *Yes, I do*, *I'd love to* dan *the red one* semuanya menghindari pengulangan kata.",
+        "body": "Bahasa Inggris tidak suka mengulang. Ada dua alat:\n- **substitution** (substitusi): mengganti kata yang sudah disebut dengan kata pendek: *so, not, one, ones, do so*. *Is the shop open? I think **so**.* (so = tokonya buka)\n- **ellipsis** (elipsis): menghilangkan kata yang sudah jelas: *I'd like **to**, but I **can't**.* (= saya mau datang, tapi tidak bisa datang)\nBahasa Indonesia bisa menghilangkan hampir semuanya (*Bisa? Bisa.*). Bahasa Inggris biasanya menyisakan **satu kata kecil**: *so*, *one*, *to* atau kata kerja bantunya.",
+        "pairs": [
+          {
+            "en": "substitution",
+            "id": "mengganti kata yang sudah disebut dengan kata pendek"
+          },
+          {
+            "en": "ellipsis",
+            "id": "menghilangkan kata yang sudah jelas"
+          },
+          {
+            "en": "clause",
+            "id": "anak kalimat (subjek + kata kerja: the shop is open)"
+          },
+          {
+            "en": "auxiliary",
+            "id": "kata kerja bantu (be, do, did, have, can, will, might…)"
+          },
+          {
+            "en": "Me too.",
+            "id": "Aku juga."
+          },
+          {
+            "en": "the red one",
+            "id": "yang merah"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "so dan not: satu ide utuh dalam satu kata",
+        "text": "Setelah beberapa kata kerja, **so** = ide 'iya' dan **not** = ide 'tidak'. Keduanya menggantikan seluruh anak kalimat.",
+        "body": "Kata kerjanya: **think, believe, expect, suppose, guess, hope, be afraid**.\n- iya → **so**: *I think so. I hope so.*\n- tidak dengan think / believe / expect → **I don't think so** (*I think not* benar, tapi formal dan jarang).\n- tidak dengan hope / be afraid → hanya **not**: *I hope not*, tidak pernah 'I don't hope so'.\n**be afraid + so / not** = kabar buruk yang sopan (*sayangnya*), bukan takut.\nJebakan: *saya kira iya / semoga tidak* → 'I think **yes**', 'I hope **no**' ✗. Jangan pakai yes, no atau it di sini.",
+        "pairs": [
+          {
+            "en": "I think so.",
+            "id": "Saya kira iya."
+          },
+          {
+            "en": "I don't think so.",
+            "id": "Sepertinya tidak."
+          },
+          {
+            "en": "I hope so.",
+            "id": "Semoga begitu."
+          },
+          {
+            "en": "I hope not.",
+            "id": "Semoga tidak."
+          },
+          {
+            "en": "I'm afraid not.",
+            "id": "Sayangnya tidak. (sopan)"
+          },
+          {
+            "en": "I believe so.",
+            "id": "Saya rasa begitu. (lebih formal)"
+          },
+          {
+            "en": "I guess so.",
+            "id": "Ya, sepertinya begitu. (santai)"
+          },
+          {
+            "en": "If so, …",
+            "id": "Jika iya, … (formal)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kereta terakhir",
+        "text": "Sudah hampir tengah malam di Stasiun Manggarai, Jakarta. KRL terakhir ke Bogor berangkat sepuluh menit yang lalu. Seorang turis bertanya kepadamu. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-not-substitution",
+          "listen": "Excuse me, has the last train to Bogor already left?",
+          "prompt": "Kamu bekerja di stasiun di Jakarta. Kereta terakhir ke Bogor sudah berangkat sepuluh menit yang lalu. Dengarkan pertanyaan turis itu. Pilih jawaban yang benar dan sopan.",
+          "options": [
+            "I'm afraid not.",
+            "I'm afraid so.",
+            "I'm afraid yes."
+          ],
+          "answer": 1,
+          "explanation": "Turis itu bertanya apakah kereta terakhir **sudah berangkat**. Memang sudah, dan itu kabar buruk, jadi: **I'm afraid so** (= sayangnya iya). *I'm afraid not* berarti keretanya belum berangkat. *I'm afraid yes* meniru *sayangnya iya*: setelah *be afraid*, pakai **so**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Printer yang rusak",
+        "text": "Dimas bertanya kepadamu: 'Is the printer on the third floor working again?' Kamu yakin printernya masih rusak, tapi tidak 100% pasti.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "so-not-substitution",
+          "prompt": "Pilih jawaban yang paling alami.",
+          "options": [
+            "I think no, but I'll check.",
+            "I don't think so, but I'll check.",
+            "I don't think, but I'll check."
+          ],
+          "answer": 1,
+          "explanation": "Idemu adalah **tidak**, jadi dengan *think* bahasa Inggris menaruh *not* pada kata kerjanya dan tetap memakai **so**: **I don't think so**. *I think no* meniru *saya kira tidak*, dan *I don't think* tanpa *so* membuat idenya hilang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "do so, one dan ones",
+        "text": "Dua kata pendek lagi: satu untuk **tindakan** yang diulang, satu untuk **benda** yang diulang.",
+        "body": "**do so** menggantikan tindakan yang diulang dalam bahasa Inggris **formal**: *If you wish to cancel, please **do so** 24 hours in advance.* Dalam percakapan: **do it / do that**.\n**one / ones** menggantikan **countable noun** (*kata benda yang bisa dihitung*) yang sudah disebut:\n- *This laptop is slow. I need a faster **one**.*\n- *the **one** on the left, the blue **ones***\nJebakan: *yang merah* → **the red one**, bukan 'the red'.\nTidak ada 'a one' tanpa kata sifat, dan tidak ada *one* untuk kata benda yang tidak bisa dihitung: *some advice*, bukan 'an advice one'.",
+        "pairs": [
+          {
+            "en": "do so",
+            "id": "melakukannya (formal)"
+          },
+          {
+            "en": "do it / do that",
+            "id": "melakukannya (percakapan)"
+          },
+          {
+            "en": "failure to do so",
+            "id": "jika tidak melakukannya (pengumuman resmi)"
+          },
+          {
+            "en": "a cheaper one",
+            "id": "yang lebih murah (satu)"
+          },
+          {
+            "en": "the blue ones",
+            "id": "yang biru (beberapa)"
+          },
+          {
+            "en": "which one?",
+            "id": "yang mana?"
+          },
+          {
+            "en": "the one on the left",
+            "id": "yang di sebelah kiri"
+          },
+          {
+            "en": "some advice",
+            "id": "saran (tidak bisa dihitung: tanpa one)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di kantor dan di toko",
+        "text": "Perhatikan apa yang digantikan oleh **do so**, **do it**, **one** dan **ones** di setiap kalimat.",
+        "body": "**one** = satu benda, **ones** = lebih dari satu. **do so** = formal; **do it / do that** = sehari-hari.",
+        "examples": [
+          {
+            "en": "Passengers must show their tickets. Failure to do so may result in a fine.",
+            "id": "Penumpang wajib menunjukkan tiket. Jika tidak, bisa dikenai denda."
+          },
+          {
+            "en": "The company promised to cut plastic waste, and it has done so.",
+            "id": "Perusahaan itu berjanji mengurangi sampah plastik, dan sudah melakukannya."
+          },
+          {
+            "en": "Can you send the invoice today? Sure, I'll do it now.",
+            "id": "Bisa kirim invoice-nya hari ini? Bisa, saya kerjakan sekarang."
+          },
+          {
+            "en": "These mangoes are sweeter than the ones we bought last week.",
+            "id": "Mangga ini lebih manis daripada yang kita beli minggu lalu."
+          },
+          {
+            "en": "Which room is ours? The one at the end of the corridor.",
+            "id": "Ruangan kita yang mana? Yang di ujung lorong."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kursi untuk ruang rapat",
+        "text": "Bu Ani sedang memilih kursi untuk ruang rapat baru di sebuah toko furnitur kantor di Surabaya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "do-so-one-ones",
+          "prompt": "Lengkapi ucapan Bu Ani: 'The grey chairs are comfortable, but I prefer the black ___. They match the table.'",
+          "options": [
+            "one",
+            "them",
+            "ones"
+          ],
+          "answer": 2,
+          "explanation": "*chairs* jamak dan bisa dihitung, dan *They match* menunjukkan lebih dari satu, jadi: **the black ones**. *one* tunggal, dan *them* tidak bisa muncul setelah kata sifat ('the black them' ✗)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hilangkan, tapi sisakan kata kerja bantu",
+        "text": "Alat terakhir: bicara lebih sedikit. Sisakan satu kata kecil dan hilangkan sisanya.",
+        "body": "Setelah **kata kerja bantu** (be, do, did, have, can, will, might, should…), sisakan kata itu dan hilangkan sisanya:\n*Are you coming? I **might**.* / *I didn't go, but Rina **did**.*\nSetelah **to**, sisakan *to* dan hilangkan kata kerjanya: *I'd like **to**, but I can't.*\nJebakan: 'but I couldn't **do**' ✗ (*tidak bisa* tidak butuh *do*), 'Yes, I'd like.' ✗ → *Yes, I'd like **to***.\nDi akhir kalimat, jangan disingkat: *I'm not ready, but Sari **is*** (bukan *Sari's*).",
+        "pairs": [
+          {
+            "en": "I might.",
+            "id": "Mungkin. (= I might come)"
+          },
+          {
+            "en": "I didn't go, but Rina did.",
+            "id": "Saya tidak pergi, tapi Rina pergi."
+          },
+          {
+            "en": "I wanted to help, but I couldn't.",
+            "id": "Saya mau bantu, tapi tidak bisa."
+          },
+          {
+            "en": "I'd like to, but I can't.",
+            "id": "Mau sih, tapi tidak bisa."
+          },
+          {
+            "en": "I haven't read it, but Pak Hasan has.",
+            "id": "Saya belum membacanya, tapi Pak Hasan sudah."
+          },
+          {
+            "en": "You don't have to come if you don't want to.",
+            "id": "Kamu tidak harus datang kalau tidak mau."
+          },
+          {
+            "en": "a workshop",
+            "id": "lokakarya, pelatihan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Lokakarya hari Sabtu",
+        "text": "Tim Sari mengajaknya ikut lokakarya hari Sabtu, tapi dia harus mengantar ibunya ke rumah sakit. Hari Senin dia menjelaskan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ellipsis",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "I wanted to come, but I couldn't.",
+            "I wanted to come, but I couldn't do.",
+            "I wanted, but I couldn't come."
+          ],
+          "answer": 0,
+          "explanation": "**I couldn't** sudah cukup: kata kerja bantunya mewakili *couldn't come*. Menambahkan *do* adalah jebakan *tapi tidak bisa*. Dan *want* butuh **to**: *I wanted **to***, bukan *I wanted*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Janji yang ditepati",
+        "text": "Bu Ani khawatir laporannya akan terlambat. Tapi Rina menepati janjinya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ellipsis",
+          "prompt": "Susun kata-katanya: Rina janji mengirim laporannya, dan dia memang mengirimnya.",
+          "tokens": [
+            "did",
+            "report",
+            "Rina",
+            "she",
+            "to",
+            "the",
+            "and",
+            "promised",
+            "send"
+          ],
+          "solution": "Rina promised to send the report, and she did.",
+          "explanation": "**did** mewakili *sent the report*: sisakan kata kerja bantu bentuk lampau dan hilangkan sisanya. Mengulang *she sent the report* memang benar, tapi berat."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk rapat, email atau chat berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · Elipsis & substitusi",
+          "intro": "Cukup sekali. Ganti kata yang diulang dengan kata pendek (so, not, do so, one, ones), atau hilangkan dan sisakan kata kerja bantu atau to.",
+          "headers": [
+            "Fungsi",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "ide 'iya'",
+              "think / believe / expect / suppose / guess + so",
+              "Is the bank open today? I think so."
+            ],
+            [
+              "ide 'tidak' (kata kerja seperti think)",
+              "I don't think / believe / expect so",
+              "Is the meeting cancelled? I don't believe so."
+            ],
+            [
+              "hope",
+              "I hope so / I hope not (bukan: I don't hope so)",
+              "Will it rain at the wedding? I hope not."
+            ],
+            [
+              "kabar buruk yang sopan",
+              "I'm afraid so / I'm afraid not",
+              "Is the flight delayed? I'm afraid so."
+            ],
+            [
+              "tulisan formal",
+              "if so / if not",
+              "Do you need a visa? If so, apply early."
+            ],
+            [
+              "tindakan yang diulang (formal)",
+              "do so / did so / has done so",
+              "Please do so 24 hours in advance."
+            ],
+            [
+              "tindakan yang diulang (lisan)",
+              "do it / do that",
+              "Sure, I'll do it now."
+            ],
+            [
+              "satu benda",
+              "a / this / the + (kata sifat) + one",
+              "I need a faster one."
+            ],
+            [
+              "lebih dari satu",
+              "the + (kata sifat) + ones",
+              "The ones on the top shelf are cheaper."
+            ],
+            [
+              "kata benda tak terhitung",
+              "some, tidak pernah one / ones",
+              "I need some advice."
+            ],
+            [
+              "setelah kata kerja bantu",
+              "sisakan, hilangkan sisanya",
+              "Are you coming? I might."
+            ],
+            [
+              "setelah to",
+              "sisakan to, hilangkan kata kerjanya",
+              "I'd like to, but I can't."
+            ]
+          ],
+          "tips": [
+            "Jangan pakai **yes / no / it** setelah think atau hope: *I think so*, *I hope not*.",
+            "Sisakan kata kecilnya: **to** atau **kata kerja bantu**. Tanpa *do* tambahan: *I couldn't* ✓, *I couldn't do* ✗.",
+            "**do so** terdengar formal: pakai di pengumuman, laporan dan email; dalam percakapan bilang *do it / do that*."
+          ],
+          "examples": [
+            {
+              "en": "Is Pak Hasan in? I'm afraid not. He's in a meeting.",
+              "id": "Pak Hasan ada? Sayangnya tidak. Beliau sedang rapat."
+            },
+            {
+              "en": "Which mangoes do you want? The yellow ones, please.",
+              "id": "Mau mangga yang mana? Yang kuning, ya."
+            },
+            {
+              "en": "She said she'd call, and she did.",
+              "id": "Dia bilang akan menelepon, dan dia memang menelepon."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan latihan",
+        "text": "Mau lebih? Dua halaman C1 dari British Council, masing-masing dengan dua tes singkat: satu tentang elipsis, dan satu tentang menghindari pengulangan dalam tulisan (dengan do so)."
+      }
+    ]
+  }
+}

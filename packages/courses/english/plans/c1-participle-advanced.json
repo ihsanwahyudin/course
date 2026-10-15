@@ -1,0 +1,552 @@
+{
+  "en": {
+    "greeting": "Welcome to C1! You already start sentences with -ing, V3 and Having + V3. Today we add the passive Having been + V3, with + noun + -ing, and the art of spotting a dangling participle. Step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Having told or Having been told?",
+        "text": "A two-line recap, then something new.",
+        "body": "**Recap (B2):** *Walking home, I saw Rina.* / *Built in 1990, the bridge is still strong.* / *Having finished the report, I went home.* The subject after the comma does the action.\n**New:** the passive **having been + V3** = something was done TO the subject first.\n- *Having **told** her manager, Rina felt better.* = she told someone (≈ sudah **me**mberi tahu)\n- *Having **been told** the news, she started to cry.* = someone told her (≈ sudah **di**beri tahu)\n*'Having told the news, she cried'* ✗ says SHE told the news.",
+        "pairs": [
+          {
+            "en": "Having told her manager, Rina felt much better.",
+            "id": "Setelah memberi tahu atasannya, Rina merasa jauh lebih lega. (aktif)"
+          },
+          {
+            "en": "Having been told the news, she started to cry.",
+            "id": "Setelah diberi tahu kabar itu, dia mulai menangis. (pasif)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Active, passive, negative, background",
+        "text": "Ask each time: did the subject do it, or was it done to the subject?",
+        "body": "Negative: **not** goes first (*Not having been invited*). A plain V3 often packs a background fact: *Built in 1920, …* / *Founded in 2015, …*. *Rejected twice, …* and *Having been rejected twice, …* are both correct: having been stresses 'first' and a reason.",
+        "examples": [
+          {
+            "en": "Having been rejected twice, Dimas almost gave up on his startup idea.",
+            "id": "Karena sudah dua kali ditolak, Dimas hampir menyerah pada ide startup-nya. (pasif)"
+          },
+          {
+            "en": "Not having received a reply, I called the supplier again.",
+            "id": "Karena belum menerima balasan, saya menelepon pemasok lagi. (aktif, negatif)"
+          },
+          {
+            "en": "Not having been invited, Budi didn't know about the decision.",
+            "id": "Karena tidak diundang, Budi tidak tahu soal keputusan itu. (pasif, negatif)"
+          },
+          {
+            "en": "Built in 1920, the station is now a museum.",
+            "id": "Dibangun tahun 1920, stasiun itu kini menjadi museum. (fakta latar)"
+          },
+          {
+            "en": "Founded in 2015, the startup now employs 200 people.",
+            "id": "Didirikan tahun 2015, startup itu kini mempekerjakan 200 orang. (fakta latar)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Did the finance team inform someone, or were they informed?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "perfect-passive-participles",
+          "prompt": "___ about the audit only on Friday, the finance team had just two days to prepare.",
+          "options": [
+            "Having informed",
+            "Having been informed",
+            "Having been informing"
+          ],
+          "answer": 1,
+          "explanation": "The team didn't inform anyone; someone informed **them** (diberi tahu). Passive + earlier → **Having been informed**. *Having informed* is active (they told someone), and *Having been informing* would mean they were doing the informing."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "First someone warned us, then we left early.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "perfect-passive-participles",
+          "prompt": "Arrange the words. Start with Having: Karena sudah diperingatkan soal macet, kami berangkat lebih awal.",
+          "tokens": [
+            "we",
+            "about",
+            "early",
+            "Having",
+            "traffic",
+            "warned",
+            "left",
+            "the",
+            "been"
+          ],
+          "solution": "Having been warned about the traffic, we left early.",
+          "explanation": "We **were warned** (diperingatkan): passive and earlier, so **Having been warned**. The people who were warned (**we**) come right after the comma."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "with + noun + -ing",
+        "text": "A handy way to add background, even when the doers are different.",
+        "body": "**with + noun + -ing** = background or a cause still going on: *With prices rising, people are buying less.* **with + noun + V3** = already done: *With the report finished, we went for dinner.* **without + noun + -ing**: *Without anyone noticing, Rina left the room.*\nThe with-clause has its **own subject** (prices, the report), so it doesn't dangle.\n**Indonesian trap:** *dengan harga yang terus naik* → *'With the prices rise'* ✗. After with: noun + -ing/V3, never a full verb.",
+        "pairs": [
+          {
+            "en": "With prices rising, people are buying less.",
+            "id": "Karena harga-harga terus naik, orang-orang membeli lebih sedikit."
+          },
+          {
+            "en": "With the deadline approaching, the whole team worked late.",
+            "id": "Karena tenggat waktunya makin dekat, seluruh tim lembur."
+          },
+          {
+            "en": "With the report finished, we went out for dinner.",
+            "id": "Karena laporannya sudah selesai, kami pergi makan malam."
+          },
+          {
+            "en": "Without anyone noticing, Rina left the room.",
+            "id": "Tanpa ada yang menyadari, Rina keluar dari ruangan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "What comes after with + noun?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "with-noun-ing",
+          "prompt": "With fuel prices ___, many ojek drivers are asking for higher fares.",
+          "options": [
+            "rise",
+            "are rising",
+            "rising"
+          ],
+          "answer": 2,
+          "explanation": "After **with + noun**, use the **-ing** form for something still going on: *With fuel prices rising*. *rise* and *are rising* are full verbs, which can't follow with + noun (the Indonesian *dengan harga yang naik* trap)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dangling participles",
+        "text": "The mistake that makes native speakers laugh.",
+        "body": "The participle's hidden subject = the **first noun or pronoun after the comma**. Get it wrong and the sentence turns funny:\n- *'Arriving late, **the meeting** had already started.'* ✗ (the meeting arrived late?)\n- *'Built in 1920, **my grandfather** worked at the station.'* ✗ (grandpa was built?)\n**Fix 1:** change the main subject: *Arriving late, **I** found that…* **Fix 2:** a full clause: ***When I arrived**, the meeting…*\n**Indonesian trap:** *Setelah tiba, rapat sudah dimulai* sounds fine in Indonesian, not in English.",
+        "pairs": [
+          {
+            "en": "Arriving late, I found that the meeting had already started.",
+            "id": "Karena datang terlambat, saya mendapati rapat sudah dimulai. ✓"
+          },
+          {
+            "en": "When I arrived, the meeting had already started.",
+            "id": "Saat saya tiba, rapat sudah dimulai. ✓ (klausa lengkap)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Watch the passive",
+        "text": "Formal Indonesian loves di-, and that's where many dangling participles come from.",
+        "body": "*Setelah mengecek angka-angkanya, laporan dikirim* → *'Having checked the figures, the report was sent'* ✗ (the report checked the figures?). Make the doer the subject, or make the passive match.",
+        "examples": [
+          {
+            "en": "Having checked the figures, we sent the report.",
+            "id": "Setelah mengecek angka-angkanya, kami mengirim laporan itu. ✓ (kami yang mengecek)"
+          },
+          {
+            "en": "Having been fixed by the technician, my laptop finally works again.",
+            "id": "Setelah diperbaiki teknisi, laptop saya akhirnya berfungsi lagi. ✓ (laptopnya yang diperbaiki)"
+          },
+          {
+            "en": "Walking into the office, we noticed the smell of durian everywhere.",
+            "id": "Saat masuk kantor, kami mencium bau durian di mana-mana. ✓ (bukan baunya yang berjalan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Spot the good one",
+        "text": "Only one sentence has the right doer after the comma.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "avoid-dangling-participles",
+          "prompt": "Which sentence has no dangling participle?",
+          "options": [
+            "Having been checked twice, the director approved the budget.",
+            "Having checked the budget twice, it was approved by the director.",
+            "Having checked the budget twice, the director approved it."
+          ],
+          "answer": 2,
+          "explanation": "The director checked the budget, so **the director** must come right after the comma: *Having checked the budget twice, the director approved it.* The first says the director was checked twice; the second (passive main clause) says the budget (*it*) checked itself."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Fix it",
+        "text": "This time, fix it with a full clause.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "avoid-dangling-participles",
+          "prompt": "Which is the best way to fix this sentence? 'Arriving at the office, the lift was out of order again.'",
+          "options": [
+            "Arriving at the office, the lift was found out of order again.",
+            "When I arrived at the office, the lift was out of order again.",
+            "Arriving at the office, it was out of order again."
+          ],
+          "answer": 1,
+          "explanation": "A full clause gives the arriving its own subject: ***When I arrived** at the office, the lift was out of order again.* The other two still put the lift (*it*) after the comma, so they still say the lift arrived at the office."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "The whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Advanced participle clauses",
+          "intro": "Mostly for formal writing (reports, news, emails). Check who does each action.",
+          "headers": [
+            "Pattern",
+            "Use it for",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Having + V3, …",
+              "the subject did it first (active)",
+              "Having told her manager, Rina felt better."
+            ],
+            [
+              "Having been + V3, …",
+              "it was done to the subject first (passive)",
+              "Having been told the news, she started to cry."
+            ],
+            [
+              "Not having (been) + V3, …",
+              "negative",
+              "Not having been invited, Budi didn't know."
+            ],
+            [
+              "V3, …",
+              "background facts (passive)",
+              "Built in 1920, the station is now a museum."
+            ],
+            [
+              "With + noun + -ing, …",
+              "background / a cause still going on",
+              "With prices rising, people are buying less."
+            ],
+            [
+              "With + noun + V3, …",
+              "something already done",
+              "With the report finished, we went for dinner."
+            ],
+            [
+              "Without + noun + -ing, …",
+              "nobody / nothing did it",
+              "Without anyone noticing, Rina left the room."
+            ]
+          ],
+          "tips": [
+            "Having told = she told someone; Having been told = someone told her. If your Indonesian has di-, you probably need been.",
+            "After with + noun: -ing or V3, never a full verb ('With the prices rise' ✗).",
+            "No dangling: the doer of the participle must come right after the comma, or use a full clause (When I arrived, …)."
+          ],
+          "examples": [
+            {
+              "en": "Having been told the news, she started to cry.",
+              "id": "Setelah diberi tahu kabar itu, dia mulai menangis."
+            },
+            {
+              "en": "With prices rising, people are buying less.",
+              "id": "Karena harga-harga terus naik, orang-orang membeli lebih sedikit."
+            },
+            {
+              "en": "Arriving late, I found that the meeting had already started.",
+              "id": "Karena datang terlambat, saya mendapati rapat sudah dimulai."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These pages explain perfect participles and dangling participles in another way, with extra practice."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Selamat datang di C1! Kamu sudah bisa membuka kalimat dengan -ing, V3 dan Having + V3. Hari ini kita tambah bentuk pasif Having been + V3, with + kata benda + -ing, dan cara mengenali dangling participle. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Having told atau Having been told?",
+        "text": "Ulasan dua baris, lalu hal baru.",
+        "body": "**Ulasan (B2):** *Walking home, I saw Rina.* / *Built in 1990, the bridge is still strong.* / *Having finished the report, I went home.* Subjek setelah koma yang melakukan tindakannya.\n**Baru:** bentuk pasif **having been + V3** = subjek sudah **dikenai** tindakan lebih dulu.\n- *Having **told** her manager, Rina felt better.* = dia memberi tahu orang lain (≈ sudah **me**mberi tahu)\n- *Having **been told** the news, she started to cry.* = orang lain memberi tahu dia (≈ sudah **di**beri tahu)\n*'Having told the news, she cried'* ✗ berarti DIA yang memberi tahu kabar itu.",
+        "pairs": [
+          {
+            "en": "Having told her manager, Rina felt much better.",
+            "id": "Setelah memberi tahu atasannya, Rina merasa jauh lebih lega. (aktif)"
+          },
+          {
+            "en": "Having been told the news, she started to cry.",
+            "id": "Setelah diberi tahu kabar itu, dia mulai menangis. (pasif)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Aktif, pasif, negatif, latar",
+        "text": "Tanya setiap kali: subjeknya yang melakukan, atau subjeknya yang dikenai tindakan?",
+        "body": "Negatif: **not** di depan (*Not having been invited*). V3 saja sering memadatkan fakta latar: *Built in 1920, …* / *Founded in 2015, …*. *Rejected twice, …* dan *Having been rejected twice, …* sama-sama benar: having been menegaskan 'lebih dulu' dan alasan.",
+        "examples": [
+          {
+            "en": "Having been rejected twice, Dimas almost gave up on his startup idea.",
+            "id": "Karena sudah dua kali ditolak, Dimas hampir menyerah pada ide startup-nya. (pasif)"
+          },
+          {
+            "en": "Not having received a reply, I called the supplier again.",
+            "id": "Karena belum menerima balasan, saya menelepon pemasok lagi. (aktif, negatif)"
+          },
+          {
+            "en": "Not having been invited, Budi didn't know about the decision.",
+            "id": "Karena tidak diundang, Budi tidak tahu soal keputusan itu. (pasif, negatif)"
+          },
+          {
+            "en": "Built in 1920, the station is now a museum.",
+            "id": "Dibangun tahun 1920, stasiun itu kini menjadi museum. (fakta latar)"
+          },
+          {
+            "en": "Founded in 2015, the startup now employs 200 people.",
+            "id": "Didirikan tahun 2015, startup itu kini mempekerjakan 200 orang. (fakta latar)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tim keuangan yang memberi tahu, atau tim itu yang diberi tahu?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "perfect-passive-participles",
+          "prompt": "Lengkapi: ___ about the audit only on Friday, the finance team had just two days to prepare.",
+          "options": [
+            "Having informed",
+            "Having been informed",
+            "Having been informing"
+          ],
+          "answer": 1,
+          "explanation": "Tim itu tidak memberi tahu siapa pun; ada yang memberi tahu **mereka** (diberi tahu). Pasif + lebih dulu → **Having been informed**. *Having informed* itu aktif (mereka memberi tahu orang lain), dan *Having been informing* berarti merekalah yang memberi tahu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Pertama ada yang memperingatkan kami, lalu kami berangkat lebih awal.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "perfect-passive-participles",
+          "prompt": "Susun kata-katanya. Mulai dengan Having: Karena sudah diperingatkan soal macet, kami berangkat lebih awal.",
+          "tokens": [
+            "we",
+            "about",
+            "early",
+            "Having",
+            "traffic",
+            "warned",
+            "left",
+            "the",
+            "been"
+          ],
+          "solution": "Having been warned about the traffic, we left early.",
+          "explanation": "Kami **diperingatkan** (were warned): pasif dan lebih dulu, jadi **Having been warned**. Orang yang diperingatkan (**we**) ada tepat setelah koma."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "with + kata benda + -ing",
+        "text": "Cara praktis menambah latar, bahkan kalau pelakunya berbeda.",
+        "body": "**with + kata benda + -ing** = latar atau sebab yang masih berlangsung: *With prices rising, people are buying less.* **with + kata benda + V3** = sudah selesai: *With the report finished, we went for dinner.* **without + kata benda + -ing**: *Without anyone noticing, Rina left the room.*\nKlausa with punya **subjeknya sendiri** (prices, the report), jadi tidak 'menggantung'.\n**Jebakan bahasa Indonesia:** *dengan harga yang terus naik* → *'With the prices rise'* ✗. Setelah with: kata benda + -ing/V3, bukan kata kerja lengkap.",
+        "pairs": [
+          {
+            "en": "With prices rising, people are buying less.",
+            "id": "Karena harga-harga terus naik, orang-orang membeli lebih sedikit."
+          },
+          {
+            "en": "With the deadline approaching, the whole team worked late.",
+            "id": "Karena tenggat waktunya makin dekat, seluruh tim lembur."
+          },
+          {
+            "en": "With the report finished, we went out for dinner.",
+            "id": "Karena laporannya sudah selesai, kami pergi makan malam."
+          },
+          {
+            "en": "Without anyone noticing, Rina left the room.",
+            "id": "Tanpa ada yang menyadari, Rina keluar dari ruangan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Apa yang datang setelah with + kata benda?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "with-noun-ing",
+          "prompt": "Lengkapi: With fuel prices ___, many ojek drivers are asking for higher fares.",
+          "options": [
+            "rise",
+            "are rising",
+            "rising"
+          ],
+          "answer": 2,
+          "explanation": "Setelah **with + kata benda**, pakai bentuk **-ing** untuk sesuatu yang masih berlangsung: *With fuel prices rising*. *rise* dan *are rising* adalah kata kerja lengkap, yang tidak bisa mengikuti with + kata benda (jebakan *dengan harga yang naik*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dangling participle",
+        "text": "Kesalahan yang bikin penutur asli tertawa.",
+        "body": "Subjek tersembunyi partisip = **kata benda atau kata ganti pertama setelah koma**. Kalau salah, kalimatnya jadi lucu:\n- *'Arriving late, **the meeting** had already started.'* ✗ (rapatnya yang datang terlambat?)\n- *'Built in 1920, **my grandfather** worked at the station.'* ✗ (kakek dibangun?)\n**Perbaikan 1:** ganti subjek utama: *Arriving late, **I** found that…* **Perbaikan 2:** klausa lengkap: ***When I arrived**, the meeting…*\n**Jebakan bahasa Indonesia:** *Setelah tiba, rapat sudah dimulai* wajar dalam bahasa Indonesia, tapi tidak dalam bahasa Inggris.",
+        "pairs": [
+          {
+            "en": "Arriving late, I found that the meeting had already started.",
+            "id": "Karena datang terlambat, saya mendapati rapat sudah dimulai. ✓"
+          },
+          {
+            "en": "When I arrived, the meeting had already started.",
+            "id": "Saat saya tiba, rapat sudah dimulai. ✓ (klausa lengkap)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Hati-hati dengan pasif",
+        "text": "Bahasa Indonesia formal suka bentuk di-, dan dari situlah banyak dangling participle muncul.",
+        "body": "*Setelah mengecek angka-angkanya, laporan dikirim* → *'Having checked the figures, the report was sent'* ✗ (laporannya yang mengecek angka?). Jadikan pelakunya subjek, atau buat pasifnya cocok.",
+        "examples": [
+          {
+            "en": "Having checked the figures, we sent the report.",
+            "id": "Setelah mengecek angka-angkanya, kami mengirim laporan itu. ✓ (kami yang mengecek)"
+          },
+          {
+            "en": "Having been fixed by the technician, my laptop finally works again.",
+            "id": "Setelah diperbaiki teknisi, laptop saya akhirnya berfungsi lagi. ✓ (laptopnya yang diperbaiki)"
+          },
+          {
+            "en": "Walking into the office, we noticed the smell of durian everywhere.",
+            "id": "Saat masuk kantor, kami mencium bau durian di mana-mana. ✓ (bukan baunya yang berjalan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Cari yang benar",
+        "text": "Hanya satu kalimat yang punya pelaku yang benar setelah koma.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "avoid-dangling-participles",
+          "prompt": "Kalimat mana yang tidak punya dangling participle?",
+          "options": [
+            "Having been checked twice, the director approved the budget.",
+            "Having checked the budget twice, it was approved by the director.",
+            "Having checked the budget twice, the director approved it."
+          ],
+          "answer": 2,
+          "explanation": "Direkturlah yang mengecek anggaran, jadi **the director** harus ada tepat setelah koma: *Having checked the budget twice, the director approved it.* Kalimat pertama berarti direkturnya yang dicek dua kali; kalimat kedua (klausa utama pasif) berarti anggarannya (*it*) yang mengecek dirinya sendiri."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Perbaiki",
+        "text": "Kali ini, perbaiki dengan klausa lengkap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "avoid-dangling-participles",
+          "prompt": "Mana cara terbaik untuk memperbaiki kalimat ini? 'Arriving at the office, the lift was out of order again.'",
+          "options": [
+            "Arriving at the office, the lift was found out of order again.",
+            "When I arrived at the office, the lift was out of order again.",
+            "Arriving at the office, it was out of order again."
+          ],
+          "answer": 1,
+          "explanation": "Klausa lengkap memberi kegiatan 'tiba' subjeknya sendiri: ***When I arrived** at the office, the lift was out of order again.* Dua pilihan lainnya tetap menaruh lift (*it*) setelah koma, jadi tetap berarti lift-nya yang tiba di kantor."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Participle clause lanjutan",
+          "intro": "Terutama untuk tulisan formal (laporan, berita, email). Cek siapa yang melakukan setiap tindakan.",
+          "headers": [
+            "Pola",
+            "Dipakai untuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Having + V3, …",
+              "subjek sudah melakukan (aktif, ≈ me-)",
+              "Having told her manager, Rina felt better."
+            ],
+            [
+              "Having been + V3, …",
+              "subjek sudah dikenai tindakan (pasif, ≈ di-)",
+              "Having been told the news, she started to cry."
+            ],
+            [
+              "Not having (been) + V3, …",
+              "negatif",
+              "Not having been invited, Budi didn't know."
+            ],
+            [
+              "V3, …",
+              "fakta latar (pasif)",
+              "Built in 1920, the station is now a museum."
+            ],
+            [
+              "With + kata benda + -ing, …",
+              "latar / sebab yang masih berlangsung",
+              "With prices rising, people are buying less."
+            ],
+            [
+              "With + kata benda + V3, …",
+              "sesuatu yang sudah selesai",
+              "With the report finished, we went for dinner."
+            ],
+            [
+              "Without + kata benda + -ing, …",
+              "tidak ada yang melakukannya",
+              "Without anyone noticing, Rina left the room."
+            ]
+          ],
+          "tips": [
+            "Having told = dia memberi tahu orang lain; Having been told = orang lain memberi tahu dia. Kalau kalimat Indonesiamu memakai di-, kemungkinan kamu butuh been.",
+            "Setelah with + kata benda: -ing atau V3, bukan kata kerja lengkap ('With the prices rise' ✗).",
+            "Jangan dangling: pelaku partisip harus ada tepat setelah koma, atau pakai klausa lengkap (When I arrived, …)."
+          ],
+          "examples": [
+            {
+              "en": "Having been told the news, she started to cry.",
+              "id": "Setelah diberi tahu kabar itu, dia mulai menangis."
+            },
+            {
+              "en": "With prices rising, people are buying less.",
+              "id": "Karena harga-harga terus naik, orang-orang membeli lebih sedikit."
+            },
+            {
+              "en": "Arriving late, I found that the meeting had already started.",
+              "id": "Karena datang terlambat, saya mendapati rapat sudah dimulai."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Halaman ini menjelaskan perfect participle dan dangling participle dengan cara lain, plus latihan tambahan."
+      }
+    ]
+  }
+}

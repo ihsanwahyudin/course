@@ -1,0 +1,756 @@
+{
+  "en": {
+    "greeting": "Hi! Today is about sounding careful and credible: softening a claim so it matches the evidence, and saying exactly how sure you are. It's the language of good reports, research and professional emails. Let's start with why it matters.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Why hedge?",
+        "text": "First, a word you'll use all lesson: hedging.",
+        "body": "**Hedging** = softening a **claim** (a statement that something is true) so it matches the evidence: not 100% sure, not true in every case. You know the start from B2: **might have**, **most** instead of *all*, **tend to**.\n\nThe habit to change: in many Indonesian offices people soften a lot when they speak (*mungkin, sepertinya*), but reports say *pasti* or *terbukti* with little data. In English reports, a 100% claim without strong evidence sounds **unscientific**. But don't hedge facts: *The meeting is on Monday.*",
+        "pairs": [
+          {
+            "en": "tend to",
+            "id": "cenderung"
+          },
+          {
+            "en": "appear to / seem to",
+            "id": "tampaknya"
+          },
+          {
+            "en": "it would appear that",
+            "id": "tampaknya (formal)"
+          },
+          {
+            "en": "arguably",
+            "id": "bisa dibilang"
+          },
+          {
+            "en": "to some extent",
+            "id": "sampai batas tertentu"
+          },
+          {
+            "en": "in some cases",
+            "id": "dalam beberapa kasus"
+          },
+          {
+            "en": "a claim",
+            "id": "klaim, pernyataan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Softening a claim",
+        "text": "Here are the softeners at work in real reports.",
+        "body": "**tend to** + base verb is a verb, not an adjective: *They tend to…*, never `They are tend to` (from *mereka cenderung*). In **It would appear that…**, *would* doesn't mean 'if': it just sounds softer and more formal. **arguably** marks an opinion you can defend with reasons.",
+        "examples": [
+          {
+            "en": "Startups in Jakarta tend to hire people through personal networks.",
+            "id": "Startup di Jakarta cenderung merekrut orang lewat jaringan pribadi."
+          },
+          {
+            "en": "The new booking system seems to be faster.",
+            "id": "Sistem pemesanan yang baru tampaknya lebih cepat."
+          },
+          {
+            "en": "It would appear that the shipment was sent to the wrong warehouse.",
+            "id": "Tampaknya kiriman itu dikirim ke gudang yang salah."
+          },
+          {
+            "en": "Arguably, public transport is the city's biggest challenge.",
+            "id": "Bisa dibilang, transportasi umum adalah tantangan terbesar kota ini."
+          },
+          {
+            "en": "The campaign worked to some extent.",
+            "id": "Kampanye itu berhasil sampai batas tertentu."
+          },
+          {
+            "en": "In some cases, patients had to wait more than three hours.",
+            "id": "Dalam beberapa kasus, pasien harus menunggu lebih dari tiga jam."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina is writing an HR report about staff turnover at her company in Bandung.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "soften-claims-with",
+          "prompt": "Arrange the words: Anak muda cenderung lebih sering berganti pekerjaan.",
+          "tokens": [
+            "jobs",
+            "tend",
+            "often",
+            "Young",
+            "change",
+            "to",
+            "more",
+            "people"
+          ],
+          "solution": "Young people tend to change jobs more often.",
+          "explanation": "**tend** is a verb: **tend to** + base verb (**change**), with no *are* before it. It softens the claim: it's a general pattern, not true of every young person."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Not too strong, not too weak",
+        "text": "Now the most important choice in a report: how strong is your verb?",
+        "body": "**proves** (membuktikan): only for very strong, final evidence. One study almost never proves anything. **shows** (menunjukkan): clear evidence. **suggests / indicates** (mengindikasikan): a sign, but more research is needed. Here *suggest* isn't *menyarankan*.\n\nA survey finds that two things happen together; it doesn't show one causes the other. So: `This proves that social media causes depression.` → **This suggests that social media may contribute to depression.**\n\nBut **one hedge is enough**: `It may possibly perhaps be true.` → **It may be true.**",
+        "pairs": [
+          {
+            "en": "proves",
+            "id": "membuktikan"
+          },
+          {
+            "en": "shows",
+            "id": "menunjukkan"
+          },
+          {
+            "en": "suggests",
+            "id": "mengindikasikan"
+          },
+          {
+            "en": "indicates",
+            "id": "menunjukkan, mengindikasikan"
+          },
+          {
+            "en": "may contribute to",
+            "id": "bisa ikut menyebabkan"
+          },
+          {
+            "en": "is linked to",
+            "id": "berkaitan dengan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dr. Wulan asked 120 employees at one bank in Jakarta about their commute. Those with longer commutes reported more stress.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "soften-claims-with",
+          "prompt": "Which sentence fits Dr. Wulan's report best?",
+          "options": [
+            "This proves that long commutes cause stress.",
+            "This suggests that long commutes may contribute to stress.",
+            "This may possibly suggest that long commutes could perhaps be linked to stress."
+          ],
+          "answer": 1,
+          "explanation": "One survey at one bank gives a sign, not proof, and it shows a connection, not a cause: **suggests** + **may contribute to** matches the evidence. `proves … cause` is far too strong; the third sentence piles up four hedges."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Too many hedges",
+        "text": "Sari's supervisor reads her conclusion: 'It might perhaps possibly be the case that flexible hours could improve staff wellbeing.' The evidence is mixed.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "soften-claims-with",
+          "prompt": "Which edit is best?",
+          "options": [
+            "Flexible hours may improve staff wellbeing.",
+            "Flexible hours improve staff wellbeing.",
+            "It might possibly be the case that flexible hours could improve staff wellbeing."
+          ],
+          "answer": 0,
+          "explanation": "With mixed evidence you need a hedge, but **one** is enough: **may improve**. Without any hedge the claim is too strong; the third version still has three hedges (*might, possibly, could*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The certainty scale",
+        "text": "Next: saying exactly how sure you are. Here's the scale, from the strongest to the weakest.",
+        "body": "**almost certainly** and **probably** go after *will* / *be*, before the main verb: *Costs will probably rise.* **likely** is an adjective, so it needs *be*: **It is likely that…** / **Costs are likely to rise**, never `It likely that`.\n\nIt's a guide, not a ruler: *probably* = *it is likely that*. And keep *pasti* honest: in a report, **clearly** and **undoubtedly** are only for very strong evidence.",
+        "pairs": [
+          {
+            "en": "clearly / undoubtedly",
+            "id": "jelas / tidak diragukan lagi"
+          },
+          {
+            "en": "almost certainly",
+            "id": "hampir pasti"
+          },
+          {
+            "en": "it is highly likely that",
+            "id": "sangat mungkin"
+          },
+          {
+            "en": "probably / it is likely that",
+            "id": "kemungkinan besar"
+          },
+          {
+            "en": "possibly / may",
+            "id": "mungkin"
+          },
+          {
+            "en": "it is unlikely that",
+            "id": "kemungkinan kecil"
+          },
+          {
+            "en": "there is little evidence that",
+            "id": "hampir tidak ada bukti bahwa"
+          },
+          {
+            "en": "there is no evidence that",
+            "id": "tidak ada bukti bahwa"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan is writing a risk report and wants to rank four phrases.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-degrees-of",
+          "prompt": "Which list goes from the MOST certain to the LEAST certain?",
+          "options": [
+            "probably → almost certainly → it is unlikely that → possibly",
+            "possibly → probably → almost certainly → it is unlikely that",
+            "almost certainly → probably → possibly → it is unlikely that"
+          ],
+          "answer": 2,
+          "explanation": "**almost certainly** (hampir pasti) → **probably** (kemungkinan besar) → **possibly** (mungkin) → **it is unlikely that** (kemungkinan kecil). The other lists mix up the order."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Certainty in real sentences",
+        "text": "Here's the scale in sentences from work and the news. Watch one tiny word: little.",
+        "body": "**There is little evidence** = almost none (negative). **There is a little evidence** = some (positive): the opposite message! **will likely** (*Costs will likely rise*) is common in American English; British English prefers **will probably** or **are likely to**.",
+        "examples": [
+          {
+            "en": "The new MRT line will almost certainly open later than planned.",
+            "id": "Jalur MRT baru itu hampir pasti dibuka lebih lambat dari rencana."
+          },
+          {
+            "en": "It is highly likely that the board will approve the budget.",
+            "id": "Sangat mungkin dewan direksi akan menyetujui anggaran itu."
+          },
+          {
+            "en": "Rice prices are likely to rise before Lebaran.",
+            "id": "Harga beras kemungkinan besar naik menjelang Lebaran."
+          },
+          {
+            "en": "It is unlikely that the client will sign before Friday.",
+            "id": "Kemungkinan kecil klien itu akan tanda tangan sebelum hari Jumat."
+          },
+          {
+            "en": "There is little evidence that the new logo increased sales.",
+            "id": "Hampir tidak ada bukti bahwa logo baru itu meningkatkan penjualan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Stronger or weaker?",
+        "text": "Budi's forecast says: 'It is likely that office rents in Surabaya will rise next year.' His manager thinks that's too confident and asks for a weaker version.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-degrees-of",
+          "prompt": "Which sentence is WEAKER (less certain) than Budi's?",
+          "options": [
+            "Office rents in Surabaya will almost certainly rise next year.",
+            "Office rents in Surabaya could rise next year.",
+            "It is highly likely that office rents in Surabaya will rise next year."
+          ],
+          "answer": 1,
+          "explanation": "**could** (mungkin) is lower on the scale than **it is likely that** (kemungkinan besar). **almost certainly** and **it is highly likely that** are both stronger, the opposite of what the manager asked for."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page, to keep next to you when you write a report.",
+        "artifact": {
+          "title": "Cheat sheet · Hedging and certainty",
+          "intro": "Match the claim to the evidence: strong evidence, strong words; weak or one-study evidence, one hedge.",
+          "headers": [
+            "English",
+            "Indonesian",
+            "Use it for"
+          ],
+          "rows": [
+            [
+              "clearly / undoubtedly",
+              "jelas / tidak diragukan lagi",
+              "very strong evidence only"
+            ],
+            [
+              "almost certainly",
+              "hampir pasti",
+              "after will / be: It will almost certainly…"
+            ],
+            [
+              "it is highly likely that",
+              "sangat mungkin",
+              "strong evidence, small doubt"
+            ],
+            [
+              "probably / it is likely that",
+              "kemungkinan besar",
+              "more likely than not"
+            ],
+            [
+              "possibly / may / might / could",
+              "mungkin",
+              "a real possibility"
+            ],
+            [
+              "it is unlikely that",
+              "kemungkinan kecil",
+              "a small chance"
+            ],
+            [
+              "there is little evidence that",
+              "hampir tidak ada bukti",
+              "not 'a little' (= some)"
+            ],
+            [
+              "there is no evidence that",
+              "tidak ada bukti",
+              "nothing supports it"
+            ],
+            [
+              "tend to + base verb",
+              "cenderung",
+              "a pattern with exceptions; not 'are tend to'"
+            ],
+            [
+              "appear to / seem to",
+              "tampaknya",
+              "it looks true; appear is more formal"
+            ],
+            [
+              "it would appear that",
+              "tampaknya (formal)",
+              "a formal phrase; would ≠ 'if'"
+            ],
+            [
+              "arguably",
+              "bisa dibilang",
+              "an opinion you can defend"
+            ],
+            [
+              "to some extent / in some cases",
+              "sampai batas tertentu / dalam beberapa kasus",
+              "limiting a claim"
+            ],
+            [
+              "suggests / indicates (not proves)",
+              "mengindikasikan",
+              "one study; may contribute to, not causes"
+            ]
+          ],
+          "tips": [
+            "One hedge per claim: 'may', not 'may possibly perhaps'.",
+            "Don't hedge facts: The meeting is on Monday.",
+            "Keep pasti and terbukti for what you can really prove: in English reports, use clearly or proves only with strong evidence."
+          ],
+          "examples": [
+            {
+              "en": "The survey suggests that long meetings may reduce productivity.",
+              "id": "Survei itu mengindikasikan bahwa rapat yang panjang bisa menurunkan produktivitas."
+            },
+            {
+              "en": "Junior staff tend to stay late before a deadline.",
+              "id": "Staf junior cenderung pulang terlambat menjelang tenggat."
+            },
+            {
+              "en": "Arguably, Bandung has the most creative startup scene in Indonesia.",
+              "id": "Bisa dibilang, Bandung punya ekosistem startup paling kreatif di Indonesia."
+            },
+            {
+              "en": "The new toll road will almost certainly reduce travel time to the airport.",
+              "id": "Jalan tol baru itu hampir pasti mengurangi waktu tempuh ke bandara."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read more",
+        "text": "Two videos and a reference page on hedging in academic writing, all in English, if you'd like more examples."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini tentang terdengar hati-hati dan bisa dipercaya: melunakkan klaim supaya sesuai dengan buktinya, dan menyatakan dengan tepat seberapa yakin kamu. Ini bahasa laporan, riset dan email profesional yang baik. Kita mulai dari kenapa ini penting.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kenapa perlu hedging?",
+        "text": "Pertama, satu kata yang akan kamu pakai sepanjang pelajaran: hedging.",
+        "body": "**Hedging** = melunakkan **klaim** (pernyataan bahwa sesuatu itu benar) supaya sesuai dengan buktinya: tidak 100% yakin, tidak berlaku di semua kasus. Awalnya sudah kamu kenal di B2: **might have**, **most** sebagai ganti *all*, **tend to**.\n\nKebiasaan yang perlu diubah: di banyak kantor di Indonesia orang sangat melunakkan ucapan (*mungkin, sepertinya*), tapi laporan menulis *pasti* atau *terbukti* dengan data yang sedikit. Di laporan berbahasa Inggris, klaim 100% tanpa bukti kuat terdengar **tidak ilmiah**. Tapi jangan melunakkan fakta: *The meeting is on Monday.*",
+        "pairs": [
+          {
+            "en": "tend to",
+            "id": "cenderung"
+          },
+          {
+            "en": "appear to / seem to",
+            "id": "tampaknya"
+          },
+          {
+            "en": "it would appear that",
+            "id": "tampaknya (formal)"
+          },
+          {
+            "en": "arguably",
+            "id": "bisa dibilang"
+          },
+          {
+            "en": "to some extent",
+            "id": "sampai batas tertentu"
+          },
+          {
+            "en": "in some cases",
+            "id": "dalam beberapa kasus"
+          },
+          {
+            "en": "a claim",
+            "id": "klaim, pernyataan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Melunakkan klaim",
+        "text": "Ini contoh pelunak yang dipakai di laporan sungguhan.",
+        "body": "**tend to** + kata kerja dasar adalah kata kerja, bukan kata sifat: *They tend to…*, tidak pernah `They are tend to` (dari *mereka cenderung*). Dalam **It would appear that…**, *would* tidak berarti 'kalau': hanya terdengar lebih lunak dan formal. **arguably** menandai pendapat yang bisa kamu pertahankan dengan alasan.",
+        "examples": [
+          {
+            "en": "Startups in Jakarta tend to hire people through personal networks.",
+            "id": "Startup di Jakarta cenderung merekrut orang lewat jaringan pribadi."
+          },
+          {
+            "en": "The new booking system seems to be faster.",
+            "id": "Sistem pemesanan yang baru tampaknya lebih cepat."
+          },
+          {
+            "en": "It would appear that the shipment was sent to the wrong warehouse.",
+            "id": "Tampaknya kiriman itu dikirim ke gudang yang salah."
+          },
+          {
+            "en": "Arguably, public transport is the city's biggest challenge.",
+            "id": "Bisa dibilang, transportasi umum adalah tantangan terbesar kota ini."
+          },
+          {
+            "en": "The campaign worked to some extent.",
+            "id": "Kampanye itu berhasil sampai batas tertentu."
+          },
+          {
+            "en": "In some cases, patients had to wait more than three hours.",
+            "id": "Dalam beberapa kasus, pasien harus menunggu lebih dari tiga jam."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Rina sedang menulis laporan HR tentang pergantian karyawan di kantornya di Bandung.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "soften-claims-with",
+          "prompt": "Susun kata-katanya: Anak muda cenderung lebih sering berganti pekerjaan.",
+          "tokens": [
+            "jobs",
+            "tend",
+            "often",
+            "Young",
+            "change",
+            "to",
+            "more",
+            "people"
+          ],
+          "solution": "Young people tend to change jobs more often.",
+          "explanation": "**tend** adalah kata kerja: **tend to** + kata kerja dasar (**change**), tanpa *are* di depannya. Klaimnya jadi lebih lunak: ini pola umum, bukan berlaku untuk setiap anak muda."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tidak terlalu kuat, tidak terlalu lemah",
+        "text": "Sekarang pilihan terpenting di laporan: seberapa kuat kata kerjamu?",
+        "body": "**proves** (membuktikan): hanya untuk bukti yang sangat kuat dan final. Satu penelitian hampir tidak pernah membuktikan apa pun. **shows** (menunjukkan): bukti yang jelas. **suggests / indicates** (mengindikasikan): ada tanda, tapi perlu riset lagi. Di sini *suggest* bukan *menyarankan*.\n\nSurvei menemukan dua hal terjadi bersamaan; itu tidak menunjukkan yang satu menyebabkan yang lain. Jadi: `This proves that social media causes depression.` → **This suggests that social media may contribute to depression.**\n\nTapi **satu pelunak sudah cukup**: `It may possibly perhaps be true.` → **It may be true.**",
+        "pairs": [
+          {
+            "en": "proves",
+            "id": "membuktikan"
+          },
+          {
+            "en": "shows",
+            "id": "menunjukkan"
+          },
+          {
+            "en": "suggests",
+            "id": "mengindikasikan"
+          },
+          {
+            "en": "indicates",
+            "id": "menunjukkan, mengindikasikan"
+          },
+          {
+            "en": "may contribute to",
+            "id": "bisa ikut menyebabkan"
+          },
+          {
+            "en": "is linked to",
+            "id": "berkaitan dengan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dr. Wulan bertanya kepada 120 karyawan di satu bank di Jakarta tentang perjalanan mereka ke kantor. Yang perjalanannya lebih lama melaporkan stres yang lebih tinggi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "soften-claims-with",
+          "prompt": "Kalimat mana yang paling cocok untuk laporan Dr. Wulan?",
+          "options": [
+            "This proves that long commutes cause stress.",
+            "This suggests that long commutes may contribute to stress.",
+            "This may possibly suggest that long commutes could perhaps be linked to stress."
+          ],
+          "answer": 1,
+          "explanation": "Satu survei di satu bank memberi tanda, bukan bukti, dan menunjukkan hubungan, bukan sebab: **suggests** + **may contribute to** sesuai dengan buktinya. `proves … cause` terlalu kuat; kalimat ketiga menumpuk empat pelunak."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Terlalu banyak pelunak",
+        "text": "Atasan Sari membaca kesimpulannya: 'It might perhaps possibly be the case that flexible hours could improve staff wellbeing.' Buktinya beragam (ada yang mendukung, ada yang tidak).",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "soften-claims-with",
+          "prompt": "Perbaikan mana yang paling baik?",
+          "options": [
+            "Flexible hours may improve staff wellbeing.",
+            "Flexible hours improve staff wellbeing.",
+            "It might possibly be the case that flexible hours could improve staff wellbeing."
+          ],
+          "answer": 0,
+          "explanation": "Dengan bukti yang beragam kamu butuh pelunak, tapi **satu** saja cukup: **may improve**. Tanpa pelunak sama sekali klaimnya terlalu kuat; versi ketiga masih punya tiga pelunak (*might, possibly, could*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Skala kepastian",
+        "text": "Berikutnya: menyatakan dengan tepat seberapa yakin kamu. Ini skalanya, dari yang paling kuat ke yang paling lemah.",
+        "body": "**almost certainly** dan **probably** diletakkan setelah *will* / *be*, sebelum kata kerja utama: *Costs will probably rise.* **likely** adalah kata sifat, jadi butuh *be*: **It is likely that…** / **Costs are likely to rise**, tidak pernah `It likely that`.\n\nIni panduan, bukan penggaris: *probably* = *it is likely that*. Dan jujurlah dengan *pasti*: di laporan, **clearly** dan **undoubtedly** hanya untuk bukti yang sangat kuat.",
+        "pairs": [
+          {
+            "en": "clearly / undoubtedly",
+            "id": "jelas / tidak diragukan lagi"
+          },
+          {
+            "en": "almost certainly",
+            "id": "hampir pasti"
+          },
+          {
+            "en": "it is highly likely that",
+            "id": "sangat mungkin"
+          },
+          {
+            "en": "probably / it is likely that",
+            "id": "kemungkinan besar"
+          },
+          {
+            "en": "possibly / may",
+            "id": "mungkin"
+          },
+          {
+            "en": "it is unlikely that",
+            "id": "kemungkinan kecil"
+          },
+          {
+            "en": "there is little evidence that",
+            "id": "hampir tidak ada bukti bahwa"
+          },
+          {
+            "en": "there is no evidence that",
+            "id": "tidak ada bukti bahwa"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan sedang menulis laporan risiko dan ingin mengurutkan empat frasa.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-degrees-of",
+          "prompt": "Daftar mana yang urut dari PALING yakin ke PALING TIDAK yakin?",
+          "options": [
+            "probably → almost certainly → it is unlikely that → possibly",
+            "possibly → probably → almost certainly → it is unlikely that",
+            "almost certainly → probably → possibly → it is unlikely that"
+          ],
+          "answer": 2,
+          "explanation": "**almost certainly** (hampir pasti) → **probably** (kemungkinan besar) → **possibly** (mungkin) → **it is unlikely that** (kemungkinan kecil). Daftar lainnya urutannya tercampur."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Kepastian dalam kalimat nyata",
+        "text": "Ini skalanya dalam kalimat dari dunia kerja dan berita. Perhatikan satu kata kecil: little.",
+        "body": "**There is little evidence** = hampir tidak ada bukti (negatif). **There is a little evidence** = ada sedikit bukti (positif): pesannya berlawanan! **will likely** (*Costs will likely rise*) umum dalam bahasa Inggris Amerika; bahasa Inggris British lebih memilih **will probably** atau **are likely to**.",
+        "examples": [
+          {
+            "en": "The new MRT line will almost certainly open later than planned.",
+            "id": "Jalur MRT baru itu hampir pasti dibuka lebih lambat dari rencana."
+          },
+          {
+            "en": "It is highly likely that the board will approve the budget.",
+            "id": "Sangat mungkin dewan direksi akan menyetujui anggaran itu."
+          },
+          {
+            "en": "Rice prices are likely to rise before Lebaran.",
+            "id": "Harga beras kemungkinan besar naik menjelang Lebaran."
+          },
+          {
+            "en": "It is unlikely that the client will sign before Friday.",
+            "id": "Kemungkinan kecil klien itu akan tanda tangan sebelum hari Jumat."
+          },
+          {
+            "en": "There is little evidence that the new logo increased sales.",
+            "id": "Hampir tidak ada bukti bahwa logo baru itu meningkatkan penjualan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Lebih kuat atau lebih lemah?",
+        "text": "Prakiraan Budi berbunyi: 'It is likely that office rents in Surabaya will rise next year.' Manajernya merasa itu terlalu yakin dan meminta versi yang lebih lemah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "express-degrees-of",
+          "prompt": "Kalimat mana yang LEBIH LEMAH (kurang yakin) daripada kalimat Budi?",
+          "options": [
+            "Office rents in Surabaya will almost certainly rise next year.",
+            "Office rents in Surabaya could rise next year.",
+            "It is highly likely that office rents in Surabaya will rise next year."
+          ],
+          "answer": 1,
+          "explanation": "**could** (mungkin) lebih rendah di skala daripada **it is likely that** (kemungkinan besar). **almost certainly** dan **it is highly likely that** sama-sama lebih kuat, kebalikan dari permintaan manajernya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman, untuk disimpan di dekatmu saat menulis laporan.",
+        "artifact": {
+          "title": "Ringkasan · Hedging dan kepastian",
+          "intro": "Sesuaikan klaim dengan buktinya: bukti kuat, kata yang kuat; bukti lemah atau satu penelitian, satu pelunak.",
+          "headers": [
+            "Bahasa Inggris",
+            "Bahasa Indonesia",
+            "Dipakai untuk"
+          ],
+          "rows": [
+            [
+              "clearly / undoubtedly",
+              "jelas / tidak diragukan lagi",
+              "hanya untuk bukti yang sangat kuat"
+            ],
+            [
+              "almost certainly",
+              "hampir pasti",
+              "setelah will / be: It will almost certainly…"
+            ],
+            [
+              "it is highly likely that",
+              "sangat mungkin",
+              "bukti kuat, sedikit keraguan"
+            ],
+            [
+              "probably / it is likely that",
+              "kemungkinan besar",
+              "lebih mungkin terjadi daripada tidak"
+            ],
+            [
+              "possibly / may / might / could",
+              "mungkin",
+              "kemungkinan yang nyata"
+            ],
+            [
+              "it is unlikely that",
+              "kemungkinan kecil",
+              "peluangnya kecil"
+            ],
+            [
+              "there is little evidence that",
+              "hampir tidak ada bukti",
+              "bukan 'a little' (= ada sedikit)"
+            ],
+            [
+              "there is no evidence that",
+              "tidak ada bukti",
+              "tidak ada yang mendukung"
+            ],
+            [
+              "tend to + kata kerja dasar",
+              "cenderung",
+              "pola umum dengan pengecualian; bukan 'are tend to'"
+            ],
+            [
+              "appear to / seem to",
+              "tampaknya",
+              "kelihatannya benar; appear lebih formal"
+            ],
+            [
+              "it would appear that",
+              "tampaknya (formal)",
+              "frasa formal; would ≠ 'kalau'"
+            ],
+            [
+              "arguably",
+              "bisa dibilang",
+              "pendapat yang bisa dipertahankan"
+            ],
+            [
+              "to some extent / in some cases",
+              "sampai batas tertentu / dalam beberapa kasus",
+              "membatasi klaim"
+            ],
+            [
+              "suggests / indicates (not proves)",
+              "mengindikasikan",
+              "satu penelitian; may contribute to, bukan causes"
+            ]
+          ],
+          "tips": [
+            "Satu pelunak per klaim: 'may', bukan 'may possibly perhaps'.",
+            "Jangan melunakkan fakta: The meeting is on Monday.",
+            "Simpan pasti dan terbukti untuk hal yang benar-benar bisa dibuktikan: di laporan berbahasa Inggris, pakai clearly atau proves hanya dengan bukti kuat."
+          ],
+          "examples": [
+            {
+              "en": "The survey suggests that long meetings may reduce productivity.",
+              "id": "Survei itu mengindikasikan bahwa rapat yang panjang bisa menurunkan produktivitas."
+            },
+            {
+              "en": "Junior staff tend to stay late before a deadline.",
+              "id": "Staf junior cenderung pulang terlambat menjelang tenggat."
+            },
+            {
+              "en": "Arguably, Bandung has the most creative startup scene in Indonesia.",
+              "id": "Bisa dibilang, Bandung punya ekosistem startup paling kreatif di Indonesia."
+            },
+            {
+              "en": "The new toll road will almost certainly reduce travel time to the airport.",
+              "id": "Jalan tol baru itu hampir pasti mengurangi waktu tempuh ke bandara."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca lagi",
+        "text": "Dua video dan satu halaman rujukan tentang hedging dalam tulisan akademik, semuanya dalam bahasa Inggris, kalau kamu mau contoh lebih banyak."
+      }
+    ]
+  }
+}

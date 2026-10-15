@@ -1,0 +1,714 @@
+{
+  "en": {
+    "greeting": "Welcome back! You can already guess with must, might and can't. Today we fine-tune: how sure, how expected, and what could or would have happened.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "That'll be the courier",
+        "text": "Quick recap: *must / might / can't be* = guesses about now; *must / might / can't have* + V3 = guesses about the past. Today we go further, starting with an old friend: **will**.",
+        "body": "**will / won't + base verb** can be a **confident assumption about now**, not the future:\n*The doorbell! **That'll be** the courier.* = Pasti kurirnya tuh.\n*She **won't be** at home now. She works till six.*\nThe assumption comes from **what you know**: routines, timetables, habits.\nSomething in progress now → **will be + -ing**: *He'll be driving.*\nTrap: *will* isn't always *akan*. And keep **be**: not 'That'll the courier'.\n*That must be the courier* is also fine: *must* = a conclusion from evidence, *will* = 'I know how things usually are'.",
+        "pairs": [
+          {
+            "en": "That'll be the courier.",
+            "id": "Pasti kurirnya tuh."
+          },
+          {
+            "en": "She won't be at home now.",
+            "id": "Dia pasti tidak di rumah sekarang."
+          },
+          {
+            "en": "He'll be driving.",
+            "id": "Dia pasti sedang menyetir."
+          },
+          {
+            "en": "They'll have landed by now.",
+            "id": "Mereka pasti sudah mendarat sekarang."
+          },
+          {
+            "en": "routine",
+            "id": "kebiasaan, rutinitas"
+          },
+          {
+            "en": "assumption",
+            "id": "asumsi, anggapan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Assumptions about now",
+        "text": "Each sentence is about **now**, based on what the speaker knows.",
+        "body": "**will have + V3** works the same way for something already done: *Their plane will have landed by now.*",
+        "examples": [
+          {
+            "en": "Don't call Pak Hasan now. He'll be driving to the office.",
+            "id": "Jangan telepon Pak Hasan sekarang. Dia pasti sedang menyetir ke kantor."
+          },
+          {
+            "en": "You'll be tired after such a long flight. Sit down.",
+            "id": "Kamu pasti capek setelah penerbangan sepanjang itu. Duduklah."
+          },
+          {
+            "en": "Sari won't be in the office today. It's her day off.",
+            "id": "Sari pasti tidak di kantor hari ini. Hari ini dia libur."
+          },
+          {
+            "en": "It's eight o'clock in Jakarta. Their plane will have landed by now.",
+            "id": "Sudah jam delapan di Jakarta. Pesawat mereka pasti sudah mendarat sekarang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Who's calling?",
+        "text": "Bu Ani's phone rings at 7 pm. She says: 'That'll be my son. He always calls after work.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "will-for-assumptions",
+          "prompt": "What does 'That'll be my son' mean here?",
+          "options": [
+            "Her son is going to call her later tonight.",
+            "She's fairly sure it's her son calling right now.",
+            "She hopes her son will call her soon."
+          ],
+          "answer": 1,
+          "explanation": "The phone is ringing **now**, and she knows his routine, so **That'll be** = a confident assumption about now (*pasti anaknya*). It's not a future event: the call is already happening."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Certain, probable, expected",
+        "text": "Three phrases with **be + … + to + base verb**. Two say how sure you are; one says what's expected.",
+        "body": "**be bound to** = almost certain, often from experience → *pasti (deh)*: *He's bound to be late. He always is.*\n**be likely / unlikely to** = probable / probably not → *kemungkinan besar / kecil kemungkinannya*. Also **It's likely that** + sentence.\n**be supposed to** = expected by a **plan, rule or what people say**, and often it doesn't happen → *seharusnya (menurut rencana / aturan)*, *katanya*. *not supposed to* = not allowed (softer than *mustn't*). *was supposed to* = planned, but it didn't happen.\nForm: **to + base verb**: not 'bound to coming', not 'supposed to finished'.",
+        "pairs": [
+          {
+            "en": "be bound to",
+            "id": "hampir pasti (akan)"
+          },
+          {
+            "en": "be likely to",
+            "id": "kemungkinan besar"
+          },
+          {
+            "en": "be unlikely to",
+            "id": "kecil kemungkinannya"
+          },
+          {
+            "en": "be supposed to",
+            "id": "seharusnya (menurut rencana / aturan)"
+          },
+          {
+            "en": "It's supposed to be good.",
+            "id": "Katanya bagus."
+          },
+          {
+            "en": "a deadline",
+            "id": "tenggat waktu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "How sure? How expected?",
+        "text": "Notice which sentences are about **how sure** and which are about **a plan or rule**.",
+        "body": "*supposed to* sounds like 'su-POHS-tu': the d isn't heard, but write it. Americans also say *He'll likely be late*; British English prefers *probably* or *likely to*.",
+        "examples": [
+          {
+            "en": "He's bound to be late. He always is.",
+            "id": "Dia pasti telat deh. Dia selalu telat."
+          },
+          {
+            "en": "Prices are likely to rise after Lebaran.",
+            "id": "Harga kemungkinan besar naik setelah Lebaran."
+          },
+          {
+            "en": "The minister is unlikely to resign before the election.",
+            "id": "Kecil kemungkinannya menteri itu mundur sebelum pemilu."
+          },
+          {
+            "en": "We're supposed to finish the report by Friday, but the data isn't ready.",
+            "id": "Menurut rencana, kita seharusnya menyelesaikan laporan itu hari Jumat, tapi datanya belum siap."
+          },
+          {
+            "en": "You're not supposed to smoke in this building.",
+            "id": "Tidak boleh merokok di gedung ini."
+          },
+          {
+            "en": "That new ramen place in Bandung is supposed to be excellent.",
+            "id": "Katanya restoran ramen baru di Bandung itu enak sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "In the news",
+        "text": "A news report says: 'Economists say inflation is likely to stay below 3% this year.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "bound-likely-supposed",
+          "prompt": "How sure are the economists?",
+          "options": [
+            "Almost certain: there's no real doubt.",
+            "It's the official plan, but it may not happen.",
+            "Fairly sure: it's probable, but not certain."
+          ],
+          "answer": 2,
+          "explanation": "**likely to** = probable (*kemungkinan besar*), not certain. Almost certain would be **bound to**, and an official plan would be **supposed to**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: at the lobby",
+        "text": "You're the security guard at an office tower in Jakarta. A visitor on a motorbike asks you something. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "bound-likely-supposed",
+          "listen": "Excuse me, can I park my motorbike here, in front of the lobby?",
+          "prompt": "Listen to the visitor's question. Parking in front of the lobby isn't allowed. Choose the right reply.",
+          "options": [
+            "Sorry, you're not supposed to park here. Please use the basement.",
+            "Sorry, you're bound to park here. Please use the basement.",
+            "Sorry, you're unlikely to park here. Please use the basement."
+          ],
+          "answer": 0,
+          "explanation": "A rule → **not supposed to** = not allowed (a polite way to say *you mustn't*). *bound to* would mean he's almost certain to park there, and *unlikely to* would be a guess about the future, not a rule."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "What could or would have happened",
+        "text": "Recap: *needn't have done* = you did it, but it wasn't necessary; *didn't need to do* = not necessary, usually not done; *should have* = seharusnya. Two more, both about things that **didn't happen**.",
+        "body": "**could have + V3** = it was **possible**, but it didn't happen → *bisa saja*: *We could have taken the toll road.* Also **criticism**: *You could have told me!* = kamu kan bisa bilang!\n**would have + V3** = you were **willing**, or it would **certainly** have happened, but it didn't → *sebenarnya mau / pasti akan*: *I'd have called you, but my phone died.* (the third conditional without the *if*-part)\nTrap: not 'I needn't have to bring an umbrella': *needn't* is already the helper → **needn't have brought**.\nSay *could've / would've*, but never write 'could of'.",
+        "pairs": [
+          {
+            "en": "could have + V3",
+            "id": "bisa saja … (tapi tidak terjadi)"
+          },
+          {
+            "en": "You could have told me!",
+            "id": "Kamu kan bisa bilang!"
+          },
+          {
+            "en": "would have + V3",
+            "id": "sebenarnya mau / pasti akan … (tapi tidak terjadi)"
+          },
+          {
+            "en": "I'd have called you, but my phone died.",
+            "id": "Tadinya aku mau meneleponmu, tapi HP-ku mati."
+          },
+          {
+            "en": "needn't have + V3",
+            "id": "ternyata tidak perlu (padahal sudah)"
+          },
+          {
+            "en": "didn't need to + verb",
+            "id": "tidak perlu (biasanya jadi tidak)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The office move",
+        "text": "On Monday, the team talks about last Saturday's move to the new office. Dimas says: 'I would have helped, but nobody asked me.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-modal-nuance",
+          "prompt": "Did Dimas help with the move?",
+          "options": [
+            "Yes, but it turned out his help wasn't necessary.",
+            "No. He was willing to help, but nobody asked him.",
+            "We can't tell: maybe he helped, maybe he didn't."
+          ],
+          "answer": 1,
+          "explanation": "**would have + V3** = willing, but it **didn't happen**: he didn't help. 'Helped, but not necessary' would be **needn't have helped**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Fix Dimas's sentence",
+        "text": "Dimas carried his heavy laptop to a workshop in Bandung, but the organisers gave everyone a tablet. He writes: 'I needn't have to bring my laptop.'",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "past-modal-nuance",
+          "prompt": "Arrange the words to correct his sentence: Ternyata aku tidak perlu bawa laptop (padahal sudah bawa).",
+          "tokens": [
+            "brought",
+            "needn't",
+            "laptop",
+            "I",
+            "my",
+            "have"
+          ],
+          "solution": "I needn't have brought my laptop.",
+          "explanation": "He DID bring it, and it wasn't necessary → **needn't have** + the third form (*brought*). *needn't* is already the helper word, so there's no *have to* after it."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page: how sure, how expected, and what could or would have happened.",
+        "artifact": {
+          "title": "Cheat sheet · will, bound / likely / supposed to, could / would / needn't have",
+          "intro": "will can be about now, the be … to phrases say how sure or how expected something is, and past modals describe what didn't happen (or wasn't necessary).",
+          "headers": [
+            "Meaning",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Confident assumption about now (pasti)",
+              "will / won't + verb",
+              "The doorbell! That'll be the courier."
+            ],
+            [
+              "Assumption: in progress now",
+              "will be + -ing",
+              "Don't call him now. He'll be driving."
+            ],
+            [
+              "Assumption: already done",
+              "will have + V3",
+              "Their plane will have landed by now."
+            ],
+            [
+              "Almost certain (hampir pasti)",
+              "be bound to + verb",
+              "He's bound to be late. He always is."
+            ],
+            [
+              "Probable (kemungkinan besar)",
+              "be likely to + verb / It's likely that …",
+              "Prices are likely to rise after Lebaran."
+            ],
+            [
+              "Probably not (kecil kemungkinannya)",
+              "be unlikely to + verb",
+              "The minister is unlikely to resign."
+            ],
+            [
+              "Expected by a plan (seharusnya)",
+              "be supposed to + verb",
+              "We're supposed to finish by Friday."
+            ],
+            [
+              "Planned, but it didn't happen",
+              "was / were supposed to + verb",
+              "The train was supposed to leave at seven."
+            ],
+            [
+              "Not allowed (soft)",
+              "not supposed to + verb",
+              "You're not supposed to smoke in this building."
+            ],
+            [
+              "What people say (katanya)",
+              "be supposed to be …",
+              "It's supposed to be a great film."
+            ],
+            [
+              "Possible, didn't happen · criticism",
+              "could have + V3",
+              "You could have told me!"
+            ],
+            [
+              "Willing or certain, didn't happen",
+              "would have + V3",
+              "I would have helped, but nobody asked."
+            ],
+            [
+              "Did it, but not necessary",
+              "needn't have + V3",
+              "We needn't have hurried."
+            ],
+            [
+              "Not necessary (usually not done)",
+              "didn't need to + verb",
+              "I didn't need to bring an umbrella."
+            ]
+          ],
+          "tips": [
+            "After bound to, likely to and supposed to comes the base verb: bound to come, supposed to finish (not 'coming', 'finished').",
+            "could have = it was possible; would have = it was wanted or certain. Both = it didn't happen.",
+            "Not 'needn't have to': needn't have + V3 (needn't have brought)."
+          ],
+          "examples": [
+            {
+              "en": "She won't be at home now. She works till six.",
+              "id": "Dia pasti tidak di rumah sekarang. Dia kerja sampai jam enam."
+            },
+            {
+              "en": "It's January in Bogor. It's bound to rain this afternoon.",
+              "id": "Ini bulan Januari di Bogor. Sore ini pasti hujan."
+            },
+            {
+              "en": "We could have taken the toll road, but we chose the old road.",
+              "id": "Kita bisa saja lewat tol, tapi kita memilih jalan lama."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and practise",
+        "text": "Want more? The British Council has a C1 page on modals of probability (with be bound to) and an easier page on degrees of certainty about the future (bound to, likely to), each with two tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Selamat datang lagi! Kamu sudah bisa menduga dengan must, might dan can't. Hari ini kita perhalus: seberapa yakin, seberapa diharapkan, dan apa yang bisa atau akan terjadi (tapi tidak terjadi).",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Pasti kurirnya tuh",
+        "text": "Ulasan singkat: *must / might / can't be* = dugaan tentang sekarang; *must / might / can't have* + V3 = dugaan tentang masa lalu. Hari ini kita melangkah lebih jauh, dimulai dari teman lama: **will**.",
+        "body": "**will / won't + kata kerja dasar** bisa berarti **asumsi yang yakin tentang sekarang**, bukan masa depan:\n*The doorbell! **That'll be** the courier.* = Pasti kurirnya tuh.\n*She **won't be** at home now. She works till six.* = Pasti dia tidak di rumah sekarang.\nAsumsinya datang dari **apa yang kamu tahu**: kebiasaan, jadwal, rutinitas.\nSesuatu yang sedang berlangsung → **will be + -ing**: *He'll be driving* (pasti sedang menyetir).\nJebakan: *will* tidak selalu *akan*. Dan jangan hilangkan **be**: bukan 'That'll the courier'.\n*That must be the courier* juga benar: *must* = kesimpulan dari bukti, *will* = 'aku tahu biasanya begitu'.",
+        "pairs": [
+          {
+            "en": "That'll be the courier.",
+            "id": "Pasti kurirnya tuh."
+          },
+          {
+            "en": "She won't be at home now.",
+            "id": "Dia pasti tidak di rumah sekarang."
+          },
+          {
+            "en": "He'll be driving.",
+            "id": "Dia pasti sedang menyetir."
+          },
+          {
+            "en": "They'll have landed by now.",
+            "id": "Mereka pasti sudah mendarat sekarang."
+          },
+          {
+            "en": "routine",
+            "id": "kebiasaan, rutinitas"
+          },
+          {
+            "en": "assumption",
+            "id": "asumsi, anggapan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Asumsi tentang sekarang",
+        "text": "Setiap kalimat tentang **sekarang**, berdasarkan apa yang diketahui pembicara.",
+        "body": "**will have + V3** bekerja dengan cara yang sama untuk sesuatu yang sudah terjadi: *Their plane will have landed by now* (pesawatnya pasti sudah mendarat).",
+        "examples": [
+          {
+            "en": "Don't call Pak Hasan now. He'll be driving to the office.",
+            "id": "Jangan telepon Pak Hasan sekarang. Dia pasti sedang menyetir ke kantor."
+          },
+          {
+            "en": "You'll be tired after such a long flight. Sit down.",
+            "id": "Kamu pasti capek setelah penerbangan sepanjang itu. Duduklah."
+          },
+          {
+            "en": "Sari won't be in the office today. It's her day off.",
+            "id": "Sari pasti tidak di kantor hari ini. Hari ini dia libur."
+          },
+          {
+            "en": "It's eight o'clock in Jakarta. Their plane will have landed by now.",
+            "id": "Sudah jam delapan di Jakarta. Pesawat mereka pasti sudah mendarat sekarang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Siapa yang menelepon?",
+        "text": "Telepon Bu Ani berdering jam 7 malam. Dia bilang: 'That'll be my son. He always calls after work.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "will-for-assumptions",
+          "prompt": "Apa arti 'That'll be my son' di sini?",
+          "options": [
+            "Her son is going to call her later tonight.",
+            "She's fairly sure it's her son calling right now.",
+            "She hopes her son will call her soon."
+          ],
+          "answer": 1,
+          "explanation": "Teleponnya berdering **sekarang**, dan dia tahu kebiasaan anaknya, jadi **That'll be** = asumsi yang yakin tentang sekarang (*pasti anakku*). Ini bukan kejadian di masa depan: teleponnya sudah berdering."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pasti, kemungkinan besar, seharusnya",
+        "text": "Tiga frasa dengan pola **be + … + to + kata kerja dasar**. Dua menyatakan seberapa yakin kamu; satu menyatakan apa yang diharapkan.",
+        "body": "**be bound to** = hampir pasti, sering dari pengalaman → *pasti (deh)*: *He's bound to be late. He always is.*\n**be likely / unlikely to** = *kemungkinan besar / kecil kemungkinannya*. Juga **It's likely that** + kalimat.\n**be supposed to** = diharapkan oleh **rencana, aturan atau kata orang**, dan sering tidak terjadi → *seharusnya (menurut rencana / aturan)*, *katanya*. *not supposed to* = tidak boleh (lebih halus daripada *mustn't*). *was supposed to* = rencananya begitu, tapi tidak terjadi.\nBentuk: **to + kata kerja dasar**: bukan 'bound to coming', bukan 'supposed to finished'.",
+        "pairs": [
+          {
+            "en": "be bound to",
+            "id": "hampir pasti (akan)"
+          },
+          {
+            "en": "be likely to",
+            "id": "kemungkinan besar"
+          },
+          {
+            "en": "be unlikely to",
+            "id": "kecil kemungkinannya"
+          },
+          {
+            "en": "be supposed to",
+            "id": "seharusnya (menurut rencana / aturan)"
+          },
+          {
+            "en": "It's supposed to be good.",
+            "id": "Katanya bagus."
+          },
+          {
+            "en": "a deadline",
+            "id": "tenggat waktu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Seberapa yakin? Seberapa diharapkan?",
+        "text": "Perhatikan kalimat mana yang tentang **seberapa yakin** dan mana yang tentang **rencana atau aturan**.",
+        "body": "*supposed to* terdengar seperti 'su-POHS-tu': bunyi d tidak terdengar, tapi tetap ditulis. Orang Amerika juga bilang *He'll likely be late*; bahasa Inggris British lebih suka *probably* atau *likely to*.",
+        "examples": [
+          {
+            "en": "He's bound to be late. He always is.",
+            "id": "Dia pasti telat deh. Dia selalu telat."
+          },
+          {
+            "en": "Prices are likely to rise after Lebaran.",
+            "id": "Harga kemungkinan besar naik setelah Lebaran."
+          },
+          {
+            "en": "The minister is unlikely to resign before the election.",
+            "id": "Kecil kemungkinannya menteri itu mundur sebelum pemilu."
+          },
+          {
+            "en": "We're supposed to finish the report by Friday, but the data isn't ready.",
+            "id": "Menurut rencana, kita seharusnya menyelesaikan laporan itu hari Jumat, tapi datanya belum siap."
+          },
+          {
+            "en": "You're not supposed to smoke in this building.",
+            "id": "Tidak boleh merokok di gedung ini."
+          },
+          {
+            "en": "That new ramen place in Bandung is supposed to be excellent.",
+            "id": "Katanya restoran ramen baru di Bandung itu enak sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Di berita",
+        "text": "Sebuah berita bilang: 'Economists say inflation is likely to stay below 3% this year.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "bound-likely-supposed",
+          "prompt": "Seberapa yakin para ekonom itu?",
+          "options": [
+            "Almost certain: there's no real doubt.",
+            "It's the official plan, but it may not happen.",
+            "Fairly sure: it's probable, but not certain."
+          ],
+          "answer": 2,
+          "explanation": "**likely to** = kemungkinan besar, belum pasti. Hampir pasti adalah **bound to**, dan rencana resmi adalah **supposed to**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: di lobi",
+        "text": "Kamu satpam di sebuah gedung perkantoran di Jakarta. Seorang tamu bermotor menanyakan sesuatu. Tekan play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "bound-likely-supposed",
+          "listen": "Excuse me, can I park my motorbike here, in front of the lobby?",
+          "prompt": "Dengarkan pertanyaan tamu itu. Parkir di depan lobi tidak boleh. Pilih jawaban yang tepat.",
+          "options": [
+            "Sorry, you're not supposed to park here. Please use the basement.",
+            "Sorry, you're bound to park here. Please use the basement.",
+            "Sorry, you're unlikely to park here. Please use the basement."
+          ],
+          "answer": 0,
+          "explanation": "Ini aturan → **not supposed to** = tidak boleh (cara sopan untuk bilang *you mustn't*). *bound to* berarti dia hampir pasti akan parkir di situ, dan *unlikely to* adalah dugaan tentang masa depan, bukan aturan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Yang bisa atau akan terjadi (tapi tidak)",
+        "text": "Ulasan: *needn't have done* = sudah dilakukan, tapi ternyata tidak perlu; *didn't need to do* = tidak perlu, biasanya tidak dilakukan; *should have* = seharusnya. Dua lagi, keduanya tentang hal yang **tidak terjadi**.",
+        "body": "**could have + V3** = waktu itu **mungkin / bisa**, tapi tidak terjadi → *bisa saja*: *We could have taken the toll road.* Juga untuk **kritik**: *You could have told me!* = kamu kan bisa bilang!\n**would have + V3** = kamu sebenarnya **mau**, atau itu **pasti** terjadi, tapi tidak terjadi → *sebenarnya mau / pasti akan*: *I'd have called you, but my phone died.* (third conditional tanpa bagian *if*)\nJebakan: bukan 'I needn't have to bring an umbrella': *needn't* sudah kata bantu → **needn't have brought**.\nDiucapkan *could've / would've*, tapi jangan pernah menulis 'could of'.",
+        "pairs": [
+          {
+            "en": "could have + V3",
+            "id": "bisa saja … (tapi tidak terjadi)"
+          },
+          {
+            "en": "You could have told me!",
+            "id": "Kamu kan bisa bilang!"
+          },
+          {
+            "en": "would have + V3",
+            "id": "sebenarnya mau / pasti akan … (tapi tidak terjadi)"
+          },
+          {
+            "en": "I'd have called you, but my phone died.",
+            "id": "Tadinya aku mau meneleponmu, tapi HP-ku mati."
+          },
+          {
+            "en": "needn't have + V3",
+            "id": "ternyata tidak perlu (padahal sudah)"
+          },
+          {
+            "en": "didn't need to + verb",
+            "id": "tidak perlu (biasanya jadi tidak)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pindahan kantor",
+        "text": "Hari Senin, tim membicarakan pindahan ke kantor baru hari Sabtu lalu. Dimas bilang: 'I would have helped, but nobody asked me.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-modal-nuance",
+          "prompt": "Apakah Dimas membantu pindahan itu?",
+          "options": [
+            "Yes, but it turned out his help wasn't necessary.",
+            "No. He was willing to help, but nobody asked him.",
+            "We can't tell: maybe he helped, maybe he didn't."
+          ],
+          "answer": 1,
+          "explanation": "**would have + V3** = sebenarnya mau, tapi **tidak terjadi**: dia tidak membantu. 'Membantu, tapi ternyata tidak perlu' adalah **needn't have helped**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Perbaiki kalimat Dimas",
+        "text": "Dimas membawa laptopnya yang berat ke workshop di Bandung, tapi panitia memberi semua peserta tablet. Dia menulis: 'I needn't have to bring my laptop.'",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "past-modal-nuance",
+          "prompt": "Susun kata-katanya untuk memperbaiki kalimatnya: Ternyata aku tidak perlu bawa laptop (padahal sudah bawa).",
+          "tokens": [
+            "brought",
+            "needn't",
+            "laptop",
+            "I",
+            "my",
+            "have"
+          ],
+          "solution": "I needn't have brought my laptop.",
+          "explanation": "Dia SUDAH membawanya, dan ternyata tidak perlu → **needn't have** + bentuk ketiga (*brought*). *needn't* sudah merupakan kata bantu, jadi tidak ada *have to* sesudahnya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman: seberapa yakin, seberapa diharapkan, dan apa yang bisa atau akan terjadi (tapi tidak).",
+        "artifact": {
+          "title": "Ringkasan · will, bound / likely / supposed to, could / would / needn't have",
+          "intro": "will bisa tentang sekarang, frasa be … to menyatakan seberapa yakin atau seberapa diharapkan sesuatu, dan modal lampau menggambarkan hal yang tidak terjadi (atau ternyata tidak perlu).",
+          "headers": [
+            "Arti",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Asumsi yakin tentang sekarang (pasti)",
+              "will / won't + verb",
+              "The doorbell! That'll be the courier."
+            ],
+            [
+              "Asumsi: sedang berlangsung",
+              "will be + -ing",
+              "Don't call him now. He'll be driving."
+            ],
+            [
+              "Asumsi: sudah terjadi",
+              "will have + V3",
+              "Their plane will have landed by now."
+            ],
+            [
+              "Hampir pasti",
+              "be bound to + verb",
+              "He's bound to be late. He always is."
+            ],
+            [
+              "Kemungkinan besar",
+              "be likely to + verb / It's likely that …",
+              "Prices are likely to rise after Lebaran."
+            ],
+            [
+              "Kecil kemungkinannya",
+              "be unlikely to + verb",
+              "The minister is unlikely to resign."
+            ],
+            [
+              "Seharusnya menurut rencana",
+              "be supposed to + verb",
+              "We're supposed to finish by Friday."
+            ],
+            [
+              "Rencananya begitu, tapi tidak terjadi",
+              "was / were supposed to + verb",
+              "The train was supposed to leave at seven."
+            ],
+            [
+              "Tidak boleh (halus)",
+              "not supposed to + verb",
+              "You're not supposed to smoke in this building."
+            ],
+            [
+              "Kata orang (katanya)",
+              "be supposed to be …",
+              "It's supposed to be a great film."
+            ],
+            [
+              "Bisa saja, tapi tidak terjadi · kritik",
+              "could have + V3",
+              "You could have told me!"
+            ],
+            [
+              "Sebenarnya mau / pasti, tapi tidak terjadi",
+              "would have + V3",
+              "I would have helped, but nobody asked."
+            ],
+            [
+              "Sudah dilakukan, ternyata tidak perlu",
+              "needn't have + V3",
+              "We needn't have hurried."
+            ],
+            [
+              "Tidak perlu (biasanya jadi tidak)",
+              "didn't need to + verb",
+              "I didn't need to bring an umbrella."
+            ]
+          ],
+          "tips": [
+            "Sesudah bound to, likely to dan supposed to datang kata kerja dasar: bound to come, supposed to finish (bukan 'coming', 'finished').",
+            "could have = waktu itu mungkin / bisa; would have = sebenarnya mau atau pasti. Keduanya = tidak terjadi.",
+            "Bukan 'needn't have to': needn't have + V3 (needn't have brought)."
+          ],
+          "examples": [
+            {
+              "en": "She won't be at home now. She works till six.",
+              "id": "Dia pasti tidak di rumah sekarang. Dia kerja sampai jam enam."
+            },
+            {
+              "en": "It's January in Bogor. It's bound to rain this afternoon.",
+              "id": "Ini bulan Januari di Bogor. Sore ini pasti hujan."
+            },
+            {
+              "en": "We could have taken the toll road, but we chose the old road.",
+              "id": "Kita bisa saja lewat tol, tapi kita memilih jalan lama."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan latihan",
+        "text": "Mau lebih? British Council punya halaman level C1 tentang modal untuk kemungkinan (termasuk be bound to) dan halaman yang lebih mudah tentang tingkat kepastian di masa depan (bound to, likely to), masing-masing dengan dua tes."
+      }
+    ]
+  }
+}

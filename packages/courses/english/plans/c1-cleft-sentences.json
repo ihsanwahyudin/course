@@ -1,0 +1,568 @@
+{
+  "en": {
+    "greeting": "Hi! Today you learn to put a spotlight on the most important part of a sentence, the way Indonesian does with 'yang' and '-lah'. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One sentence, split in two",
+        "text": "First: what does 'cleft' mean?",
+        "body": "**Cleft** = split in two. A **cleft sentence** splits one simple sentence into two parts so that **one part gets the spotlight**. *Sari called* → *It was **Sari** who called*. You already do this in Indonesian: *Sari**-lah yang** menelepon*, ***Yang** saya butuhkan **adalah**…*. Recap: **who** for people, **which** for things, **that** for both. In speech, **stress** the part in focus: *It was **SA**ri who called.*",
+        "pairs": [
+          {
+            "en": "It was Sari who called.",
+            "id": "Sari-lah yang menelepon."
+          },
+          {
+            "en": "What I need is more time.",
+            "id": "Yang saya butuhkan adalah lebih banyak waktu."
+          },
+          {
+            "en": "All I want is some peace.",
+            "id": "Yang saya mau cuma sedikit ketenangan."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "What-clefts",
+        "text": "The first pattern puts the spotlight at the end.",
+        "body": "***What** + clause + **is/was** + focus.* (A **clause** = a part with its own subject and verb: *I need*, *worries me*.) Here **what** isn't a question: it means *the thing that* (yang). *Yang saya butuhkan **adalah**…* → *What I need **is**…*: **adalah = is**, with **no extra it**. Present → **is**, past → **was**.",
+        "pairs": [
+          {
+            "en": "What I need is more time.",
+            "id": "Yang saya butuhkan adalah lebih banyak waktu."
+          },
+          {
+            "en": "What worries me is the deadline.",
+            "id": "Yang membuat saya khawatir adalah tenggat waktunya."
+          },
+          {
+            "en": "What I wanted was a window seat.",
+            "id": "Yang saya inginkan adalah kursi dekat jendela. (masa lalu → was)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Watch out for the Indonesian 'adalah' trap.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "what-cleft",
+          "options": [
+            "What I really need it is a quiet place to work.",
+            "That I really need is a quiet place to work.",
+            "What I really need is a quiet place to work."
+          ],
+          "answer": 2,
+          "prompt": "Rina is working in a noisy co-working space. Which sentence is correct?",
+          "explanation": "What-cleft: **What** + clause + **is** + focus. *adalah* becomes **is**, so there's no extra *it*, and the sentence starts with **what** (*the thing that*), not *that*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "More what-clefts",
+        "text": "Read these. Look at the word after was in the action examples.",
+        "body": "For an **action**, use *What … **did** was* + the **base verb** (*call*, not *called*), with or without *to*. After a what-clause, **is** is the safe choice, even before a plural noun.",
+        "examples": [
+          {
+            "en": "What happened was that the server crashed during the demo.",
+            "id": "Yang terjadi adalah servernya mati saat demo."
+          },
+          {
+            "en": "What we did was call the client straight away.",
+            "id": "Yang kami lakukan adalah langsung menelepon klien."
+          },
+          {
+            "en": "What she did was to rewrite the whole proposal.",
+            "id": "Yang dia lakukan adalah menulis ulang seluruh proposal. (to boleh ada)"
+          },
+          {
+            "en": "What we need is more staff.",
+            "id": "Yang kami butuhkan adalah lebih banyak staf. (is: pilihan aman)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "An action is in focus. Which verb form?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "what-cleft",
+          "options": [
+            "send",
+            "sent",
+            "sending"
+          ],
+          "answer": 0,
+          "prompt": "When the power went off at the office, what we did was ___ everyone home early.",
+          "explanation": "After *What … did was*, use the **base verb**: *send*. *sent* is the past form (the past is already in *did*), and *sending* doesn't follow *did*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "It-clefts",
+        "text": "The second pattern puts the spotlight right after It was.",
+        "body": "***It is/It was** + focus + **who/that** + the rest.* A person → **who** or **that**; a thing, time or place → **that**. Great for **correcting a misunderstanding**: *It's **not** the price that worries me, **it's** the delivery time.* Indonesian trap: *Sari-lah **yang**…* → **yang = who/that**, never *she*: *'It was Sari she called me'* ✗.",
+        "pairs": [
+          {
+            "en": "It was Sari who called, not Budi.",
+            "id": "Sari-lah yang menelepon, bukan Budi."
+          },
+          {
+            "en": "It was in 2021 that we moved to Surabaya.",
+            "id": "Justru pada tahun 2021-lah kami pindah ke Surabaya."
+          },
+          {
+            "en": "It's not the price that worries me, it's the delivery time.",
+            "id": "Yang membuat saya khawatir bukan harganya, tapi waktu pengirimannya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Correct the misunderstanding",
+        "text": "Pak Hasan has the wrong person in mind.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "it-cleft",
+          "options": [
+            "No, it was Sari she sent it.",
+            "No, it was Sari who sent it.",
+            "No, it was the contract that Sari sent."
+          ],
+          "answer": 1,
+          "prompt": "Pak Hasan: 'So Budi sent the contract to the client?' In fact Sari sent it, not Budi. Which reply corrects Pak Hasan?",
+          "explanation": "The mistake is about the **person**, so the person goes in focus: *It was **Sari who** sent it* (Sari-lah yang mengirim). *she* can't replace *who*, and *the contract* puts the spotlight on the wrong thing."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the year in the spotlight.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "it-cleft",
+          "tokens": [
+            "that",
+            "met",
+            "2019",
+            "It",
+            "first",
+            "was",
+            "we",
+            "in"
+          ],
+          "solution": "It was in 2019 that we first met.",
+          "prompt": "Arrange the words. The year is the focus: We first met in 2019.",
+          "explanation": "*It was* + the time in focus (*in 2019*) + **that** + the rest (*we first met*). For a time, use **that**, not *who*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "All, the thing, the reason",
+        "text": "Last pattern: like a what-cleft, but the first word adds meaning.",
+        "body": "**All** = *the only thing* (cuma): *All I want is some peace.* Never *'all what'*: say **All I want** or **All that I want** (Indonesian *semua yang* pushes you to *'all what'*). The same pattern works with **the thing that**, **the reason (why)**, **the place (where)** and **the person who**. In formal writing, *The reason … is **that**…* is safer than *is because*.",
+        "pairs": [
+          {
+            "en": "All we did was ask a question.",
+            "id": "Kami cuma bertanya."
+          },
+          {
+            "en": "The thing that worries me is the deadline.",
+            "id": "Hal yang membuat saya khawatir adalah tenggat waktunya."
+          },
+          {
+            "en": "The reason I called is that the invoice is wrong.",
+            "id": "Alasan saya menelepon adalah tagihannya salah."
+          },
+          {
+            "en": "The place where we met was a small café in Bandung.",
+            "id": "Tempat kami bertemu adalah sebuah kafe kecil di Bandung."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina only wants one thing.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "all-thing-cleft",
+          "options": [
+            "All I want is to work from home on Fridays.",
+            "All what I want is to work from home on Fridays.",
+            "All I want it is to work from home on Fridays."
+          ],
+          "answer": 0,
+          "prompt": "Rina's manager offers her a promotion, a bigger desk and a new laptop. She only wants one thing: to work from home on Fridays. Which sentence is correct?",
+          "explanation": "**All** + clause + **is** + focus = the only thing. After *all*, don't add *what* (*All I want*, or *All that I want*), and don't add *it* before *is*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Cleft sentences",
+          "intro": "Three ways to put the spotlight on the important part of a sentence.",
+          "headers": [
+            "Pattern",
+            "Use it for",
+            "Example"
+          ],
+          "rows": [
+            [
+              "What + clause + is/was + focus",
+              "spotlight at the end",
+              "What I need is more time."
+            ],
+            [
+              "What happened was (that) …",
+              "saying what happened",
+              "What happened was that the server crashed."
+            ],
+            [
+              "What … did was + base verb",
+              "focus on an action",
+              "What we did was call the client."
+            ],
+            [
+              "It is/was + person + who/that",
+              "focus on a person",
+              "It was Sari who called."
+            ],
+            [
+              "It is/was + thing/time/place + that",
+              "focus on a thing, time or place",
+              "It was in 2021 that we moved."
+            ],
+            [
+              "It's not X that …, it's Y",
+              "correcting a misunderstanding",
+              "It's not the price that worries me, it's the delivery time."
+            ],
+            [
+              "All + clause + is",
+              "the only thing",
+              "All I want is some peace."
+            ],
+            [
+              "The thing that / The reason …",
+              "a specific thing or reason",
+              "The thing that worries me is the deadline."
+            ]
+          ],
+          "tips": [
+            "No extra it: What I need is…, never 'What I need it is…'.",
+            "yang → who/that: It was Sari who called, never 'Sari she'.",
+            "All I want / All that I want, never 'all what'."
+          ],
+          "examples": [
+            {
+              "en": "What we did was call the client straight away.",
+              "id": "Yang kami lakukan adalah langsung menelepon klien."
+            },
+            {
+              "en": "It was Sari who called, not Budi.",
+              "id": "Sari-lah yang menelepon, bukan Budi."
+            },
+            {
+              "en": "All I want is some peace and quiet.",
+              "id": "Yang saya mau cuma sedikit ketenangan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A C1 page and two short BBC videos on clefts."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar menyorot bagian terpenting dari sebuah kalimat, seperti yang dilakukan bahasa Indonesia dengan 'yang' dan '-lah'. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu kalimat, dibelah dua",
+        "text": "Pertama: apa arti 'cleft'?",
+        "body": "**Cleft** = terbelah dua. **Cleft sentence** membelah satu kalimat sederhana menjadi dua bagian supaya **satu bagian mendapat sorotan**. *Sari called* → *It was **Sari** who called*. Kamu sudah melakukan ini dalam bahasa Indonesia: *Sari**-lah yang** menelepon*, *Yang saya butuhkan **adalah**…*. Pengingat: **who** untuk orang, **which** untuk benda, **that** untuk keduanya. Saat bicara, **tekan** bagian yang disorot: *It was **SA**ri who called.*",
+        "pairs": [
+          {
+            "en": "It was Sari who called.",
+            "id": "Sari-lah yang menelepon."
+          },
+          {
+            "en": "What I need is more time.",
+            "id": "Yang saya butuhkan adalah lebih banyak waktu."
+          },
+          {
+            "en": "All I want is some peace.",
+            "id": "Yang saya mau cuma sedikit ketenangan."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "What-cleft",
+        "text": "Pola pertama menaruh sorotan di bagian akhir.",
+        "body": "***What** + bagian kalimat + **is/was** + fokus.* (**Clause** = bagian kalimat dengan subjek dan kata kerja sendiri: *I need*, *worries me*.) Di sini **what** bukan pertanyaan: artinya *hal yang* (yang). *Yang saya butuhkan **adalah**…* → *What I need **is**…*: **adalah = is**, **tanpa it tambahan**. Masa kini → **is**, masa lalu → **was**.",
+        "pairs": [
+          {
+            "en": "What I need is more time.",
+            "id": "Yang saya butuhkan adalah lebih banyak waktu."
+          },
+          {
+            "en": "What worries me is the deadline.",
+            "id": "Yang membuat saya khawatir adalah tenggat waktunya."
+          },
+          {
+            "en": "What I wanted was a window seat.",
+            "id": "Yang saya inginkan adalah kursi dekat jendela. (masa lalu → was)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hati-hati dengan jebakan 'adalah'.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "what-cleft",
+          "options": [
+            "What I really need it is a quiet place to work.",
+            "That I really need is a quiet place to work.",
+            "What I really need is a quiet place to work."
+          ],
+          "answer": 2,
+          "prompt": "Rina bekerja di co-working space yang berisik. Kalimat mana yang benar?",
+          "explanation": "What-cleft: **What** + bagian kalimat + **is** + fokus. *adalah* menjadi **is**, jadi tidak ada *it* tambahan, dan kalimatnya dimulai dengan **what** (*hal yang*), bukan *that*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "What-cleft lainnya",
+        "text": "Baca contoh ini. Perhatikan kata setelah was pada contoh tindakan.",
+        "body": "Untuk **tindakan**, pakai *What … **did** was* + **kata kerja dasar** (*call*, bukan *called*), boleh dengan atau tanpa *to*. Setelah what-clause, **is** adalah pilihan aman, bahkan sebelum kata benda jamak.",
+        "examples": [
+          {
+            "en": "What happened was that the server crashed during the demo.",
+            "id": "Yang terjadi adalah servernya mati saat demo."
+          },
+          {
+            "en": "What we did was call the client straight away.",
+            "id": "Yang kami lakukan adalah langsung menelepon klien."
+          },
+          {
+            "en": "What she did was to rewrite the whole proposal.",
+            "id": "Yang dia lakukan adalah menulis ulang seluruh proposal. (to boleh ada)"
+          },
+          {
+            "en": "What we need is more staff.",
+            "id": "Yang kami butuhkan adalah lebih banyak staf. (is: pilihan aman)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tindakannya yang disorot. Bentuk kata kerja mana?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "what-cleft",
+          "options": [
+            "send",
+            "sent",
+            "sending"
+          ],
+          "answer": 0,
+          "prompt": "Lengkapi: When the power went off at the office, what we did was ___ everyone home early.",
+          "explanation": "Setelah *What … did was*, pakai **kata kerja dasar**: *send*. *sent* adalah bentuk lampau (masa lalunya sudah ada di *did*), dan *sending* tidak dipakai setelah *did*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "It-cleft",
+        "text": "Pola kedua menaruh sorotan tepat setelah It was.",
+        "body": "***It is/It was** + fokus + **who/that** + sisanya.* Orang → **who** atau **that**; benda, waktu atau tempat → **that**. Sangat cocok untuk **meluruskan salah paham**: *It's **not** the price that worries me, **it's** the delivery time.* Jebakan bahasa Indonesia: *Sari-lah **yang**…* → **yang = who/that**, tidak pernah *she*: *'It was Sari she called me'* ✗.",
+        "pairs": [
+          {
+            "en": "It was Sari who called, not Budi.",
+            "id": "Sari-lah yang menelepon, bukan Budi."
+          },
+          {
+            "en": "It was in 2021 that we moved to Surabaya.",
+            "id": "Justru pada tahun 2021-lah kami pindah ke Surabaya."
+          },
+          {
+            "en": "It's not the price that worries me, it's the delivery time.",
+            "id": "Yang membuat saya khawatir bukan harganya, tapi waktu pengirimannya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Luruskan salah pahamnya",
+        "text": "Pak Hasan mengira orangnya orang lain.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "it-cleft",
+          "options": [
+            "No, it was Sari she sent it.",
+            "No, it was Sari who sent it.",
+            "No, it was the contract that Sari sent."
+          ],
+          "answer": 1,
+          "prompt": "Pak Hasan: 'So Budi sent the contract to the client?' Padahal Sari yang mengirimnya, bukan Budi. Balasan mana yang meluruskan Pak Hasan?",
+          "explanation": "Salah pahamnya soal **orang**, jadi orangnya yang disorot: *It was **Sari who** sent it* (Sari-lah yang mengirim). *she* tidak bisa menggantikan *who*, dan *the contract* menyorot hal yang salah."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Taruh tahunnya di bawah sorotan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "it-cleft",
+          "tokens": [
+            "that",
+            "met",
+            "2019",
+            "It",
+            "first",
+            "was",
+            "we",
+            "in"
+          ],
+          "solution": "It was in 2019 that we first met.",
+          "prompt": "Susun kata-katanya. Tahunnya yang disorot: Kami pertama kali bertemu pada tahun 2019.",
+          "explanation": "*It was* + waktu yang disorot (*in 2019*) + **that** + sisanya (*we first met*). Untuk waktu, pakai **that**, bukan *who*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "All, the thing, the reason",
+        "text": "Pola terakhir: seperti what-cleft, tapi kata pertamanya menambah arti.",
+        "body": "**All** = *satu-satunya hal* (cuma): *All I want is some peace.* Jangan *'all what'*: katakan **All I want** atau **All that I want** (*semua yang* dalam bahasa Indonesia mendorongmu ke *'all what'*). Pola yang sama bisa dipakai dengan **the thing that**, **the reason (why)**, **the place (where)** dan **the person who**. Dalam tulisan formal, *The reason … is **that**…* lebih aman daripada *is because*.",
+        "pairs": [
+          {
+            "en": "All we did was ask a question.",
+            "id": "Kami cuma bertanya."
+          },
+          {
+            "en": "The thing that worries me is the deadline.",
+            "id": "Hal yang membuat saya khawatir adalah tenggat waktunya."
+          },
+          {
+            "en": "The reason I called is that the invoice is wrong.",
+            "id": "Alasan saya menelepon adalah tagihannya salah."
+          },
+          {
+            "en": "The place where we met was a small café in Bandung.",
+            "id": "Tempat kami bertemu adalah sebuah kafe kecil di Bandung."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina cuma mau satu hal.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "all-thing-cleft",
+          "options": [
+            "All I want is to work from home on Fridays.",
+            "All what I want is to work from home on Fridays.",
+            "All I want it is to work from home on Fridays."
+          ],
+          "answer": 0,
+          "prompt": "Manajer Rina menawarinya promosi, meja yang lebih besar dan laptop baru. Rina cuma mau satu hal: bekerja dari rumah setiap Jumat. Kalimat mana yang benar?",
+          "explanation": "**All** + bagian kalimat + **is** + fokus = satu-satunya hal. Setelah *all*, jangan tambahkan *what* (*All I want* atau *All that I want*), dan jangan tambahkan *it* sebelum *is*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Cleft sentences",
+          "intro": "Tiga cara menyorot bagian penting dari sebuah kalimat.",
+          "headers": [
+            "Pola",
+            "Dipakai untuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "What + bagian kalimat + is/was + fokus",
+              "sorotan di bagian akhir",
+              "What I need is more time."
+            ],
+            [
+              "What happened was (that) …",
+              "menceritakan apa yang terjadi",
+              "What happened was that the server crashed."
+            ],
+            [
+              "What … did was + kata kerja dasar",
+              "fokus pada tindakan",
+              "What we did was call the client."
+            ],
+            [
+              "It is/was + orang + who/that",
+              "fokus pada orang",
+              "It was Sari who called."
+            ],
+            [
+              "It is/was + benda/waktu/tempat + that",
+              "fokus pada benda, waktu atau tempat",
+              "It was in 2021 that we moved."
+            ],
+            [
+              "It's not X that …, it's Y",
+              "meluruskan salah paham",
+              "It's not the price that worries me, it's the delivery time."
+            ],
+            [
+              "All + bagian kalimat + is",
+              "satu-satunya hal (cuma)",
+              "All I want is some peace."
+            ],
+            [
+              "The thing that / The reason …",
+              "hal atau alasan yang spesifik",
+              "The thing that worries me is the deadline."
+            ]
+          ],
+          "tips": [
+            "Tanpa it tambahan: What I need is…, bukan 'What I need it is…'.",
+            "yang → who/that: It was Sari who called, bukan 'Sari she'.",
+            "All I want / All that I want, bukan 'all what'."
+          ],
+          "examples": [
+            {
+              "en": "What we did was call the client straight away.",
+              "id": "Yang kami lakukan adalah langsung menelepon klien."
+            },
+            {
+              "en": "It was Sari who called, not Budi.",
+              "id": "Sari-lah yang menelepon, bukan Budi."
+            },
+            {
+              "en": "All I want is some peace and quiet.",
+              "id": "Yang saya mau cuma sedikit ketenangan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ada satu halaman C1 dan dua video BBC singkat tentang cleft."
+      }
+    ]
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to turn English sentences around for emphasis, the way speakers, writers and storytellers do. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Turning a sentence around",
+        "text": "Quick recap: *If I had known, I would have come* (third conditional). Today: a more formal, more dramatic way to say things, called **inversion**.",
+        "body": "**Inversion** = the **auxiliary** (helping verb: *have, has, had, do, does, did, is, was, will, should*) moves **in front of the subject**, like in a question.\nNormal: *I have **never** worked with such a great team.*\nInverted: ***Never have I** worked with such a great team.*\nBut it's **not a question**: it ends with a full stop, and your voice goes down.\nIt happens when a **negative word** opens the sentence: *never, rarely, seldom, not only, under no circumstances…*",
+        "pairs": [
+          {
+            "en": "Never have I…",
+            "id": "Belum pernah saya…"
+          },
+          {
+            "en": "Rarely / Seldom",
+            "id": "jarang / jarang sekali"
+          },
+          {
+            "en": "Not only … but also …",
+            "id": "tidak hanya … tetapi juga …"
+          },
+          {
+            "en": "Under no circumstances",
+            "id": "dalam keadaan apa pun (tidak boleh)"
+          },
+          {
+            "en": "Little did I know",
+            "id": "sama sekali saya tidak tahu"
+          },
+          {
+            "en": "auxiliary",
+            "id": "kata kerja bantu (have, do, will, should…)"
+          },
+          {
+            "en": "subject",
+            "id": "subjek (siapa yang melakukan)"
+          },
+          {
+            "en": "emphasis",
+            "id": "penekanan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "The Indonesian trap",
+        "text": "Indonesian can put *belum pernah* or *jarang* first too, but the rest stays the same: *Belum pernah **saya melihat**…* English also swaps the subject and the auxiliary.",
+        "body": "Wrong (Indonesian order): *Never I have seen such a mess.* Right: ***Never have I** seen such a mess.* Only the auxiliary moves; the main verb stays after the subject.",
+        "examples": [
+          {
+            "en": "Seldom has the city faced such heavy floods.",
+            "id": "Jarang sekali kota ini menghadapi banjir separah ini."
+          },
+          {
+            "en": "Never have we had so many volunteers.",
+            "id": "Belum pernah kami punya relawan sebanyak ini."
+          },
+          {
+            "en": "Under no circumstances should you share your password.",
+            "id": "Dalam keadaan apa pun, jangan bagikan kata sandimu."
+          },
+          {
+            "en": "Not only has Sari finished the report, but she has also checked the figures.",
+            "id": "Sari tidak hanya sudah menyelesaikan laporannya, tetapi juga sudah memeriksa angka-angkanya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A press conference",
+        "text": "Pak Hasan from the Ministry of Education is opening a press conference about a new scholarship programme. He wants to sound strong.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-negative-inversion",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Rarely the ministry has received so many applications.",
+            "Rarely has the ministry received so many applications.",
+            "Rarely has received the ministry so many applications."
+          ],
+          "answer": 1,
+          "explanation": "After a negative word at the start, the **auxiliary** *has* goes **before the subject** *the ministry*, and the main verb *received* stays after it. The first sentence keeps the Indonesian order; the third moves the main verb too."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "No helping verb? Add do",
+        "text": "What if the normal sentence has **no auxiliary**, like *We rarely meet*? Then you borrow **do / does / did**, just like in a question.",
+        "body": "*We rarely meet.* → ***Rarely do we meet.*** (not *Rarely we meet*, not *Rarely meet we*)\n*She speaks French.* → ***Not only does she speak** French, but she also speaks Spanish.*\n*I had no idea.* → ***Little did I know** that…*\nAfter *do / does / did* the verb goes back to its **base form**: *does she **speak***, not *speaks*.\nWith **be**, nothing to add: ***Rarely is** the office this quiet.*",
+        "pairs": [
+          {
+            "en": "we meet → do we meet",
+            "id": "present simple: tambah do"
+          },
+          {
+            "en": "she speaks → does she speak",
+            "id": "he / she / it: tambah does, -s hilang"
+          },
+          {
+            "en": "I knew → did I know",
+            "id": "past simple: tambah did"
+          },
+          {
+            "en": "base form",
+            "id": "bentuk dasar (speak, meet, know)"
+          },
+          {
+            "en": "the office is → is the office",
+            "id": "be: pindah sendiri, tanpa do"
+          },
+          {
+            "en": "feedback",
+            "id": "masukan / umpan balik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Welcoming the interns",
+        "text": "Bu Ani, the head of HR, is giving a speech to welcome this year's interns. She wants to praise their first project.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-negative-inversion",
+          "prompt": "Arrange the words, starting with Rarely: Jarang sekali kami melihat hasil sebagus ini.",
+          "tokens": [
+            "results",
+            "we",
+            "Rarely",
+            "such",
+            "see",
+            "good",
+            "do"
+          ],
+          "solution": "Rarely do we see such good results.",
+          "explanation": "*Rarely* opens the sentence, and *We see* has no auxiliary, so add **do** before the subject: *do we see*. The verb stays in the base form: *see*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Openers with a partner",
+        "text": "Some openers come with a partner word, or put the inversion in the **second** part of the sentence.",
+        "body": "*Hardly … **when***, *No sooner … **than*** (don't swap them). After *Only after / Only when + time*, invert the **second** part. **No inversion** when the negative word belongs to the subject: *Only Budi knew*, *Hardly anyone came*.",
+        "examples": [
+          {
+            "en": "Hardly had I sat down when my manager called me.",
+            "id": "Baru saja saya duduk, atasan saya sudah menelepon."
+          },
+          {
+            "en": "No sooner had the train left than it started to rain.",
+            "id": "Begitu keretanya berangkat, langsung turun hujan."
+          },
+          {
+            "en": "Only after the audit did we see the real problem.",
+            "id": "Baru setelah audit kami melihat masalah yang sebenarnya."
+          },
+          {
+            "en": "Little did Rina know that her boss was listening.",
+            "id": "Rina sama sekali tidak tahu bahwa atasannya sedang mendengarkan."
+          },
+          {
+            "en": "Only Budi knew the password.",
+            "id": "Hanya Budi yang tahu kata sandinya. (tanpa inversi: only Budi = subjek)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "If without if",
+        "text": "Remember *If I had known…* from the third conditional? In formal English you can drop **if** and start with the auxiliary.",
+        "body": "Only three words do this:\n- ***Had** I known*, … = If I had known (imagined past)\n- ***Should** you need* help, … = If you need help (may happen; polite)\n- ***Were** I to accept*, … / ***Were it not for** her*, … = If I were to accept / If it weren't for her (imagined)\nNo *if* with them: *If had I known* ✗.\nNegative: **not** after the subject: *Had I **not** known* (not *Hadn't I known*).\n*Were* for every person: *Were she…*, not *Was she…*",
+        "pairs": [
+          {
+            "en": "Had I known, …",
+            "id": "Seandainya (dulu) saya tahu, …"
+          },
+          {
+            "en": "Had I not known, …",
+            "id": "Seandainya (dulu) saya tidak tahu, …"
+          },
+          {
+            "en": "Should you need any help, …",
+            "id": "Apabila Anda memerlukan bantuan, …"
+          },
+          {
+            "en": "Were I to accept the offer, …",
+            "id": "Seandainya saya menerima tawaran itu, …"
+          },
+          {
+            "en": "Were it not for your help, …",
+            "id": "Kalau bukan karena bantuanmu, …"
+          },
+          {
+            "en": "Had it not been for the rain, …",
+            "id": "Kalau saja waktu itu tidak hujan, …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A missed flight",
+        "text": "You read this in an incident report: *Had Budi checked the schedule, he wouldn't have missed the flight to Makassar.*",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-inverted-conditionals",
+          "prompt": "Which sentence means the same?",
+          "options": [
+            "Budi had checked the schedule, so he didn't miss the flight to Makassar.",
+            "If Budi checked the schedule, he wouldn't have missed the flight to Makassar.",
+            "If Budi had checked the schedule, he wouldn't have missed the flight to Makassar."
+          ],
+          "answer": 2,
+          "explanation": "*Had Budi checked* = **If Budi had checked**: the third conditional with *had* in front and no *if*. It's imagined: Budi **didn't** check, and he **did** miss the flight. *If Budi checked* would be about now."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Powerful or strange?",
+        "text": "Inversion is never required: the normal word order is **always correct**. Inversion is a style choice: it adds emphasis, drama or formality.",
+        "body": "**Sounds natural:** speeches, formal letters and emails, reports, news, telling a story for effect (*Little did I know…*).\n**Sounds strange:** a quick WhatsApp, chatting with friends or family, ordering food. There it sounds dramatic, stiff or like a joke.\n*Should you have any questions, please contact us* fits a company email (= *Apabila ada pertanyaan…*). To a friend, just write *If you have questions, tell me!*",
+        "pairs": [
+          {
+            "en": "formal",
+            "id": "formal, resmi"
+          },
+          {
+            "en": "a speech",
+            "id": "pidato"
+          },
+          {
+            "en": "dramatic",
+            "id": "dramatis, berlebihan"
+          },
+          {
+            "en": "stiff",
+            "id": "kaku"
+          },
+          {
+            "en": "normal word order",
+            "id": "susunan kata biasa"
+          },
+          {
+            "en": "for effect",
+            "id": "supaya berkesan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which setting?",
+        "text": "Look at this sentence: *Never before has our university welcomed so many international students.*",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-when-to-invert",
+          "prompt": "Where does this sentence sound most natural?",
+          "options": [
+            "In a WhatsApp to a classmate about lunch",
+            "In the rector's welcome speech at the start of the academic year",
+            "In a quick chat with your ojek driver"
+          ],
+          "answer": 1,
+          "explanation": "Inversion adds drama and formality, so it suits a **speech**. In a WhatsApp or a chat with the ojek driver it would sound stiff or like a joke: there you'd use the normal order (*We've never had so many…*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next speech, report or formal email!",
+        "artifact": {
+          "title": "Cheat sheet · Inversion for emphasis",
+          "intro": "Inversion = the auxiliary goes before the subject, like in a question, but the sentence is a statement. Use it after a negative opener or instead of if, in formal and dramatic English.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Normal order / meaning"
+          ],
+          "rows": [
+            [
+              "Never have I + third form",
+              "Never have I seen such a crowd.",
+              "I have never seen such a crowd."
+            ],
+            [
+              "Rarely / Seldom do we + base verb",
+              "Rarely do we meet in person.",
+              "We rarely meet in person."
+            ],
+            [
+              "Not only does she …, but she also …",
+              "Not only does she speak French, but she also speaks Spanish.",
+              "She speaks French and Spanish."
+            ],
+            [
+              "Hardly had I … when …",
+              "Hardly had I sat down when the phone rang.",
+              "I had only just sat down when the phone rang."
+            ],
+            [
+              "No sooner had I … than …",
+              "No sooner had we arrived than it rained.",
+              "As soon as we arrived, it rained."
+            ],
+            [
+              "Under no circumstances should …",
+              "Under no circumstances should you open this door.",
+              "You must never open this door."
+            ],
+            [
+              "Only after / when … did I …",
+              "Only when I got home did I notice it.",
+              "I only noticed it when I got home."
+            ],
+            [
+              "Little did I know …",
+              "Little did I know that he was the CEO.",
+              "I had no idea that he was the CEO."
+            ],
+            [
+              "Had I (not) known, …",
+              "Had I known, I would have called you.",
+              "If I had (not) known, …"
+            ],
+            [
+              "Should you need …, …",
+              "Should you need help, please call us.",
+              "If you need help, …"
+            ],
+            [
+              "Were I to …, …",
+              "Were I to move, I would choose Bandung.",
+              "If I were to move / If I moved, …"
+            ],
+            [
+              "Were it not for / Had it not been for …",
+              "Were it not for my family, I would give up.",
+              "If it weren't / hadn't been for …"
+            ]
+          ],
+          "tips": [
+            "No auxiliary in the normal sentence? Add do / does / did and use the base verb: Rarely do we meet.",
+            "Inverted conditionals: no if, not after the subject (Had I not known), were for every person.",
+            "The normal order is always correct. Invert in speeches and formal writing, not in WhatsApp chats."
+          ],
+          "examples": [
+            {
+              "en": "Never before has our city hosted so many guests.",
+              "id": "Belum pernah kota kita menerima tamu sebanyak ini."
+            },
+            {
+              "en": "Should the meeting be cancelled, we will inform you by email.",
+              "id": "Apabila rapatnya dibatalkan, kami akan memberi tahu Anda lewat email."
+            },
+            {
+              "en": "Had Rina left earlier, she wouldn't have missed the opening.",
+              "id": "Seandainya Rina berangkat lebih awal, dia tidak akan ketinggalan pembukaannya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Two clear British Council pages with extra practice: one on negative openers, one on conditionals without if."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar membalik susunan kalimat bahasa Inggris untuk memberi penekanan, seperti yang dilakukan pembicara, penulis, dan pencerita. Yuk, mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Membalik susunan kalimat",
+        "text": "Ulasan singkat: *If I had known, I would have come* (third conditional). Hari ini: cara yang lebih formal dan lebih dramatis untuk mengatakan sesuatu, namanya **inversi**.",
+        "body": "**Inversi** = **kata kerja bantu** (*have, has, had, do, does, did, is, was, will, should*) pindah **ke depan subjek**, seperti di pertanyaan.\nBiasa: *I have **never** worked with such a great team.*\nInversi: ***Never have I** worked with such a great team.*\nTapi ini **bukan pertanyaan**: diakhiri titik, dan suaramu turun.\nInversi muncul kalau **kata negatif** membuka kalimat: *never, rarely, seldom, not only, under no circumstances…*",
+        "pairs": [
+          {
+            "en": "Never have I…",
+            "id": "Belum pernah saya…"
+          },
+          {
+            "en": "Rarely / Seldom",
+            "id": "jarang / jarang sekali"
+          },
+          {
+            "en": "Not only … but also …",
+            "id": "tidak hanya … tetapi juga …"
+          },
+          {
+            "en": "Under no circumstances",
+            "id": "dalam keadaan apa pun (tidak boleh)"
+          },
+          {
+            "en": "Little did I know",
+            "id": "sama sekali saya tidak tahu"
+          },
+          {
+            "en": "auxiliary",
+            "id": "kata kerja bantu (have, do, will, should…)"
+          },
+          {
+            "en": "subject",
+            "id": "subjek (siapa yang melakukan)"
+          },
+          {
+            "en": "emphasis",
+            "id": "penekanan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Jebakan bahasa Indonesia",
+        "text": "Bahasa Indonesia juga bisa menaruh *belum pernah* atau *jarang* di depan, tapi sisanya tetap sama: *Belum pernah **saya melihat**…* Bahasa Inggris juga menukar subjek dan kata kerja bantunya.",
+        "body": "Salah (urutan bahasa Indonesia): *Never I have seen such a mess.* Benar: ***Never have I** seen such a mess.* Hanya kata kerja bantu yang pindah; kata kerja utama tetap setelah subjek.",
+        "examples": [
+          {
+            "en": "Seldom has the city faced such heavy floods.",
+            "id": "Jarang sekali kota ini menghadapi banjir separah ini."
+          },
+          {
+            "en": "Never have we had so many volunteers.",
+            "id": "Belum pernah kami punya relawan sebanyak ini."
+          },
+          {
+            "en": "Under no circumstances should you share your password.",
+            "id": "Dalam keadaan apa pun, jangan bagikan kata sandimu."
+          },
+          {
+            "en": "Not only has Sari finished the report, but she has also checked the figures.",
+            "id": "Sari tidak hanya sudah menyelesaikan laporannya, tetapi juga sudah memeriksa angka-angkanya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Konferensi pers",
+        "text": "Pak Hasan dari Kementerian Pendidikan membuka konferensi pers tentang program beasiswa baru. Dia ingin terdengar tegas dan berkesan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-negative-inversion",
+          "prompt": "Kalimat mana yang benar?",
+          "options": [
+            "Rarely the ministry has received so many applications.",
+            "Rarely has the ministry received so many applications.",
+            "Rarely has received the ministry so many applications."
+          ],
+          "answer": 1,
+          "explanation": "Setelah kata negatif di awal kalimat, **kata kerja bantu** *has* pindah **ke depan subjek** *the ministry*, dan kata kerja utama *received* tetap di belakangnya. Kalimat pertama memakai urutan bahasa Indonesia; kalimat ketiga ikut memindahkan kata kerja utama."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tidak ada kata kerja bantu? Tambah do",
+        "text": "Bagaimana kalau kalimat biasanya **tidak punya kata kerja bantu**, seperti *We rarely meet*? Kamu 'meminjam' **do / does / did**, persis seperti di pertanyaan.",
+        "body": "*We rarely meet.* → ***Rarely do we meet.*** (bukan *Rarely we meet*, bukan *Rarely meet we*)\n*She speaks French.* → ***Not only does she speak** French, but she also speaks Spanish.*\n*I had no idea.* → ***Little did I know** that…*\nSetelah *do / does / did*, kata kerjanya kembali ke **bentuk dasar**: *does she **speak***, bukan *speaks*.\nDengan **be**, tidak perlu tambahan: ***Rarely is** the office this quiet.*",
+        "pairs": [
+          {
+            "en": "we meet → do we meet",
+            "id": "present simple: tambah do"
+          },
+          {
+            "en": "she speaks → does she speak",
+            "id": "he / she / it: tambah does, -s hilang"
+          },
+          {
+            "en": "I knew → did I know",
+            "id": "past simple: tambah did"
+          },
+          {
+            "en": "base form",
+            "id": "bentuk dasar (speak, meet, know)"
+          },
+          {
+            "en": "the office is → is the office",
+            "id": "be: pindah sendiri, tanpa do"
+          },
+          {
+            "en": "feedback",
+            "id": "masukan / umpan balik"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Menyambut peserta magang",
+        "text": "Bu Ani, kepala HR, memberi sambutan untuk peserta magang tahun ini. Dia ingin memuji proyek pertama mereka.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-negative-inversion",
+          "prompt": "Susun kata-katanya, dimulai dengan Rarely: Jarang sekali kami melihat hasil sebagus ini.",
+          "tokens": [
+            "results",
+            "we",
+            "Rarely",
+            "such",
+            "see",
+            "good",
+            "do"
+          ],
+          "solution": "Rarely do we see such good results.",
+          "explanation": "*Rarely* membuka kalimat, dan *We see* tidak punya kata kerja bantu, jadi tambahkan **do** sebelum subjek: *do we see*. Kata kerjanya tetap bentuk dasar: *see*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Pembuka dengan pasangan",
+        "text": "Ada pembuka yang punya pasangan kata, atau yang inversinya ada di bagian **kedua** kalimat.",
+        "body": "*Hardly … **when***, *No sooner … **than*** (jangan tertukar). Setelah *Only after / Only when + waktu*, yang dibalik bagian **kedua**. **Tanpa inversi** kalau kata negatifnya bagian dari subjek: *Only Budi knew*, *Hardly anyone came*.",
+        "examples": [
+          {
+            "en": "Hardly had I sat down when my manager called me.",
+            "id": "Baru saja saya duduk, atasan saya sudah menelepon."
+          },
+          {
+            "en": "No sooner had the train left than it started to rain.",
+            "id": "Begitu keretanya berangkat, langsung turun hujan."
+          },
+          {
+            "en": "Only after the audit did we see the real problem.",
+            "id": "Baru setelah audit kami melihat masalah yang sebenarnya."
+          },
+          {
+            "en": "Little did Rina know that her boss was listening.",
+            "id": "Rina sama sekali tidak tahu bahwa atasannya sedang mendengarkan."
+          },
+          {
+            "en": "Only Budi knew the password.",
+            "id": "Hanya Budi yang tahu kata sandinya. (tanpa inversi: only Budi = subjek)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "If tanpa if",
+        "text": "Ingat *If I had known…* dari third conditional? Dalam bahasa Inggris formal, kamu bisa membuang **if** dan memulai dengan kata kerja bantu.",
+        "body": "Hanya tiga kata yang bisa:\n- ***Had** I known*, … = If I had known (masa lalu khayalan)\n- ***Should** you need* help, … = If you need help (mungkin terjadi; sopan)\n- ***Were** I to accept*, … / ***Were it not for** her*, … = If I were to accept / If it weren't for her (khayalan)\nTanpa *if*: *If had I known* ✗.\nNegatif: **not** setelah subjek: *Had I **not** known* (bukan *Hadn't I known*).\n*Were* untuk semua orang: *Were she…*, bukan *Was she…*",
+        "pairs": [
+          {
+            "en": "Had I known, …",
+            "id": "Seandainya (dulu) saya tahu, …"
+          },
+          {
+            "en": "Had I not known, …",
+            "id": "Seandainya (dulu) saya tidak tahu, …"
+          },
+          {
+            "en": "Should you need any help, …",
+            "id": "Apabila Anda memerlukan bantuan, …"
+          },
+          {
+            "en": "Were I to accept the offer, …",
+            "id": "Seandainya saya menerima tawaran itu, …"
+          },
+          {
+            "en": "Were it not for your help, …",
+            "id": "Kalau bukan karena bantuanmu, …"
+          },
+          {
+            "en": "Had it not been for the rain, …",
+            "id": "Kalau saja waktu itu tidak hujan, …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ketinggalan pesawat",
+        "text": "Kamu membaca ini di laporan kejadian: *Had Budi checked the schedule, he wouldn't have missed the flight to Makassar.*",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-inverted-conditionals",
+          "prompt": "Kalimat mana yang artinya sama?",
+          "options": [
+            "Budi had checked the schedule, so he didn't miss the flight to Makassar.",
+            "If Budi checked the schedule, he wouldn't have missed the flight to Makassar.",
+            "If Budi had checked the schedule, he wouldn't have missed the flight to Makassar."
+          ],
+          "answer": 2,
+          "explanation": "*Had Budi checked* = **If Budi had checked**: third conditional dengan *had* di depan dan tanpa *if*. Ini khayalan: Budi **tidak** memeriksa jadwal, dan dia **memang** ketinggalan pesawat. *If Budi checked* berarti tentang sekarang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Berkesan atau aneh?",
+        "text": "Inversi tidak pernah wajib: susunan kata biasa **selalu benar**. Inversi adalah pilihan gaya: menambah penekanan, kesan dramatis, atau formal.",
+        "body": "**Terdengar alami:** pidato, surat dan email resmi, laporan, berita, bercerita supaya berkesan (*Little did I know…*).\n**Terdengar aneh:** WhatsApp singkat, ngobrol dengan teman atau keluarga, pesan makanan. Di situ terdengar dramatis, kaku, atau seperti bercanda.\n*Should you have any questions, please contact us* cocok untuk email perusahaan (= *Apabila ada pertanyaan…*). Ke teman, cukup tulis *If you have questions, tell me!*",
+        "pairs": [
+          {
+            "en": "formal",
+            "id": "formal, resmi"
+          },
+          {
+            "en": "a speech",
+            "id": "pidato"
+          },
+          {
+            "en": "dramatic",
+            "id": "dramatis, berlebihan"
+          },
+          {
+            "en": "stiff",
+            "id": "kaku"
+          },
+          {
+            "en": "normal word order",
+            "id": "susunan kata biasa"
+          },
+          {
+            "en": "for effect",
+            "id": "supaya berkesan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Situasi yang mana?",
+        "text": "Perhatikan kalimat ini: *Never before has our university welcomed so many international students.*",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "choose-when-to-invert",
+          "prompt": "Di mana kalimat ini terdengar paling alami?",
+          "options": [
+            "In a WhatsApp to a classmate about lunch",
+            "In the rector's welcome speech at the start of the academic year",
+            "In a quick chat with your ojek driver"
+          ],
+          "answer": 1,
+          "explanation": "Inversi menambah kesan dramatis dan formal, jadi cocok untuk **pidato**. Di WhatsApp atau saat ngobrol dengan sopir ojek, kalimat ini terdengar kaku atau seperti bercanda: di situ pakai urutan biasa (*We've never had so many…*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk pidato, laporan, atau email resmimu berikutnya!",
+        "artifact": {
+          "title": "Ringkasan · Inversi untuk penekanan",
+          "intro": "Inversi = kata kerja bantu diletakkan sebelum subjek, seperti di pertanyaan, tapi kalimatnya pernyataan. Pakai setelah pembuka negatif atau sebagai pengganti if, dalam bahasa Inggris yang formal dan dramatis.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Urutan biasa / arti"
+          ],
+          "rows": [
+            [
+              "Never have I + bentuk ketiga",
+              "Never have I seen such a crowd.",
+              "I have never seen such a crowd."
+            ],
+            [
+              "Rarely / Seldom do we + bentuk dasar",
+              "Rarely do we meet in person.",
+              "We rarely meet in person."
+            ],
+            [
+              "Not only does she …, but she also …",
+              "Not only does she speak French, but she also speaks Spanish.",
+              "She speaks French and Spanish."
+            ],
+            [
+              "Hardly had I … when …",
+              "Hardly had I sat down when the phone rang.",
+              "Baru saja saya duduk, telepon berdering."
+            ],
+            [
+              "No sooner had I … than …",
+              "No sooner had we arrived than it rained.",
+              "Begitu kami tiba, langsung hujan."
+            ],
+            [
+              "Under no circumstances should …",
+              "Under no circumstances should you open this door.",
+              "You must never open this door."
+            ],
+            [
+              "Only after / when … did I …",
+              "Only when I got home did I notice it.",
+              "I only noticed it when I got home."
+            ],
+            [
+              "Little did I know …",
+              "Little did I know that he was the CEO.",
+              "I had no idea that he was the CEO."
+            ],
+            [
+              "Had I (not) known, …",
+              "Had I known, I would have called you.",
+              "If I had (not) known, …"
+            ],
+            [
+              "Should you need …, …",
+              "Should you need help, please call us.",
+              "If you need help, …"
+            ],
+            [
+              "Were I to …, …",
+              "Were I to move, I would choose Bandung.",
+              "If I were to move / If I moved, …"
+            ],
+            [
+              "Were it not for / Had it not been for …",
+              "Were it not for my family, I would give up.",
+              "If it weren't / hadn't been for …"
+            ]
+          ],
+          "tips": [
+            "Tidak ada kata kerja bantu di kalimat biasa? Tambahkan do / does / did dan pakai bentuk dasar: Rarely do we meet.",
+            "Conditional dengan inversi: tanpa if, not setelah subjek (Had I not known), were untuk semua orang.",
+            "Urutan biasa selalu benar. Pakai inversi di pidato dan tulisan formal, bukan di chat WhatsApp."
+          ],
+          "examples": [
+            {
+              "en": "Never before has our city hosted so many guests.",
+              "id": "Belum pernah kota kita menerima tamu sebanyak ini."
+            },
+            {
+              "en": "Should the meeting be cancelled, we will inform you by email.",
+              "id": "Apabila rapatnya dibatalkan, kami akan memberi tahu Anda lewat email."
+            },
+            {
+              "en": "Had Rina left earlier, she wouldn't have missed the opening.",
+              "id": "Seandainya Rina berangkat lebih awal, dia tidak akan ketinggalan pembukaannya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Dua halaman British Council yang jelas dengan latihan tambahan: satu tentang pembuka negatif, satu tentang conditional tanpa if."
+      }
+    ]
+  }
+}
