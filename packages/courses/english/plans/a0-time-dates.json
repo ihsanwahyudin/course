@@ -1,0 +1,818 @@
+{
+  "en": {
+    "greeting": "Welcome back! Today we use numbers for time: days, months, clock times and dates. Let's take it one step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Days of the week",
+        "text": "Let's start with the seven days.",
+        "body": "Every day starts with a **capital letter** and ends in **-day**. Use **on** with days: **on Monday**, **on Friday**. Not 'in Monday'. Wednesday sounds like **WENZ-day** — the first d is silent.",
+        "pairs": [
+          {
+            "en": "Monday",
+            "id": "Senin"
+          },
+          {
+            "en": "Tuesday",
+            "id": "Selasa"
+          },
+          {
+            "en": "Wednesday",
+            "id": "Rabu"
+          },
+          {
+            "en": "Thursday",
+            "id": "Kamis"
+          },
+          {
+            "en": "Friday",
+            "id": "Jumat"
+          },
+          {
+            "en": "Saturday",
+            "id": "Sabtu"
+          },
+          {
+            "en": "Sunday",
+            "id": "Minggu"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Months of the year",
+        "text": "Now the twelve months. Many look like Indonesian!",
+        "body": "Months also start with a **capital letter**. Use **in** with months: **in May**, **in December**. Not 'on May'. Watch the ones that change most: Mei → **May**, Juni → **June**, Juli → **July**, Agustus → **August**.",
+        "pairs": [
+          {
+            "en": "January",
+            "id": "Januari"
+          },
+          {
+            "en": "February",
+            "id": "Februari"
+          },
+          {
+            "en": "March",
+            "id": "Maret"
+          },
+          {
+            "en": "April",
+            "id": "April"
+          },
+          {
+            "en": "May",
+            "id": "Mei"
+          },
+          {
+            "en": "June",
+            "id": "Juni"
+          },
+          {
+            "en": "July",
+            "id": "Juli"
+          },
+          {
+            "en": "August",
+            "id": "Agustus"
+          },
+          {
+            "en": "September",
+            "id": "September"
+          },
+          {
+            "en": "October",
+            "id": "Oktober"
+          },
+          {
+            "en": "November",
+            "id": "November"
+          },
+          {
+            "en": "December",
+            "id": "Desember"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Is it a day or a month? That tells you the little word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "days-months",
+          "prompt": "Complete: Rina's party is ___ Saturday.",
+          "options": [
+            "in",
+            "on",
+            "at"
+          ],
+          "answer": 1,
+          "explanation": "Saturday is a day, and days take **on**: on Saturday. **In** is for months (in May) and **at** is for clock times (at seven o'clock)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "What time is it?",
+        "text": "Now let's read the clock.",
+        "body": "Answer with **It's** + the time. Full hours: **o'clock**. **past** = after the hour, **to** = before the next hour. Big warning: Indonesian 'setengah sebelas' is 10:30 = **half past ten**. Indonesian counts towards the next hour; English counts from the hour you just passed. The easy way: just say the numbers, **ten thirty**.",
+        "pairs": [
+          {
+            "en": "What time is it?",
+            "id": "Jam berapa?"
+          },
+          {
+            "en": "ten o'clock",
+            "id": "jam sepuluh (10:00)"
+          },
+          {
+            "en": "quarter past ten",
+            "id": "jam sepuluh lewat seperempat (10:15)"
+          },
+          {
+            "en": "half past ten",
+            "id": "jam setengah sebelas (10:30)"
+          },
+          {
+            "en": "quarter to eleven",
+            "id": "jam sebelas kurang seperempat (10:45)"
+          },
+          {
+            "en": "ten fifteen",
+            "id": "jam sepuluh lima belas (10:15)"
+          },
+          {
+            "en": "ten thirty",
+            "id": "jam sepuluh tiga puluh (10:30)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Think in English: which hour did the clock just pass?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "telling-time",
+          "prompt": "Rina finishes work at 'setengah enam' (5:30). How do you say the time?",
+          "options": [
+            "half past six",
+            "half past five",
+            "half six"
+          ],
+          "answer": 1,
+          "explanation": "5:30 is half an hour **past five**, so **half past five** (or **five thirty**). 'Setengah enam' counts towards six, but English counts from five. 'Half six' means 6:30 in British English."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Press play. Listen for past or to.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "telling-time",
+          "prompt": "Listen. What time is the train?",
+          "listen": "The train is at quarter past four.",
+          "options": [
+            "3:45",
+            "4:45",
+            "4:15"
+          ],
+          "answer": 2,
+          "explanation": "**Quarter past four** = 15 minutes after four = 4:15. 4:45 would be **quarter to five**, and 3:45 is **quarter to four**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "first, second, third…",
+        "text": "Dates need a special kind of number.",
+        "body": "Dates use **ordinal numbers**: say **the first of May** (or **May the first**), never 'the one of May'. Most ordinals just add **-th**: fourth, sixth, tenth. The special ones are **first, second, third, fifth, eighth, ninth, twelfth, twentieth**. Use **on** with dates.",
+        "pairs": [
+          {
+            "en": "first",
+            "id": "kesatu / pertama (1st)"
+          },
+          {
+            "en": "second",
+            "id": "kedua (2nd)"
+          },
+          {
+            "en": "third",
+            "id": "ketiga (3rd)"
+          },
+          {
+            "en": "fourth",
+            "id": "keempat (4th)"
+          },
+          {
+            "en": "fifth",
+            "id": "kelima (5th)"
+          },
+          {
+            "en": "eighth",
+            "id": "kedelapan (8th)"
+          },
+          {
+            "en": "ninth",
+            "id": "kesembilan (9th)"
+          },
+          {
+            "en": "twelfth",
+            "id": "kedua belas (12th)"
+          },
+          {
+            "en": "twentieth",
+            "id": "kedua puluh (20th)"
+          },
+          {
+            "en": "twenty-first",
+            "id": "kedua puluh satu (21st)"
+          },
+          {
+            "en": "thirtieth",
+            "id": "ketiga puluh (30th)"
+          },
+          {
+            "en": "thirty-first",
+            "id": "ketiga puluh satu (31st)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dates in the year",
+        "text": "Here are some dates you know. Read them out loud.",
+        "body": "Pattern: **on** + **the** + ordinal + **of** + month.",
+        "examples": [
+          {
+            "en": "When is your birthday?",
+            "id": "Kapan ulang tahunmu?"
+          },
+          {
+            "en": "Independence Day is on the seventeenth of August.",
+            "id": "Hari Kemerdekaan tanggal 17 Agustus."
+          },
+          {
+            "en": "Kartini Day is on the twenty-first of April.",
+            "id": "Hari Kartini tanggal 21 April."
+          },
+          {
+            "en": "My birthday is on the fifth of June.",
+            "id": "Ulang tahun saya tanggal 5 Juni."
+          },
+          {
+            "en": "The exam is on the thirtieth of November.",
+            "id": "Ujiannya tanggal 30 November."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dates need an ordinal. Which one is 3?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ordinals-dates",
+          "prompt": "How do you say the date 3 July?",
+          "options": [
+            "the three of July",
+            "the thirtieth of July",
+            "the third of July"
+          ],
+          "answer": 2,
+          "explanation": "Dates use ordinals: 3 → **third**, so **the third of July**. 'The three of July' uses a normal number, and **thirtieth** is 30th."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in order: on + the + ordinal + of + month.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ordinals-dates",
+          "prompt": "Arrange the words: Ulang tahun saya tanggal 2 Mei.",
+          "tokens": [
+            "second",
+            "May",
+            "is",
+            "My",
+            "the",
+            "on",
+            "of",
+            "birthday"
+          ],
+          "solution": "My birthday is on the second of May.",
+          "explanation": "Start with **My birthday is**, then **on** for a date, then **the second of May**. 2 becomes the ordinal **second**, not 'two'."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet you can keep and look back at.",
+        "artifact": {
+          "title": "Cheat sheet · Days, months & time",
+          "intro": "Capital letters for days and months. on + day or date, in + month, at + time. Dates use ordinal numbers.",
+          "headers": [
+            "Write",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Mon – Sun",
+              "Monday – Sunday",
+              "Senin – Minggu"
+            ],
+            [
+              "Jan – Dec",
+              "January – December",
+              "Januari – Desember"
+            ],
+            [
+              "7:00",
+              "seven o'clock",
+              "jam tujuh"
+            ],
+            [
+              "7:15",
+              "quarter past seven / seven fifteen",
+              "jam tujuh lewat seperempat"
+            ],
+            [
+              "7:30",
+              "half past seven / seven thirty",
+              "jam setengah delapan"
+            ],
+            [
+              "7:45",
+              "quarter to eight / seven forty-five",
+              "jam delapan kurang seperempat"
+            ],
+            [
+              "1st, 2nd, 3rd",
+              "first, second, third",
+              "pertama, kedua, ketiga"
+            ],
+            [
+              "5th, 8th, 9th, 12th",
+              "fifth, eighth, ninth, twelfth",
+              "kelima, kedelapan, kesembilan, kedua belas"
+            ],
+            [
+              "20th, 21st",
+              "twentieth, twenty-first",
+              "kedua puluh, kedua puluh satu"
+            ],
+            [
+              "on",
+              "on Monday, on the first of May",
+              "hari, tanggal"
+            ],
+            [
+              "in",
+              "in May",
+              "bulan"
+            ],
+            [
+              "at",
+              "at seven o'clock",
+              "jam"
+            ]
+          ],
+          "tips": [
+            "Setengah tujuh = 6:30 = **half past six**, not 'half seven'.",
+            "Dates use ordinals: **the first of May**, not 'the one of May'.",
+            "**on** Monday, **in** May, **at** seven o'clock."
+          ],
+          "examples": [
+            {
+              "en": "What time is it? — It's half past six.",
+              "id": "Jam berapa? — Jam setengah tujuh."
+            },
+            {
+              "en": "The meeting is on Monday at nine o'clock.",
+              "id": "Rapatnya hari Senin jam sembilan."
+            },
+            {
+              "en": "Independence Day is on the seventeenth of August.",
+              "id": "Hari Kemerdekaan tanggal 17 Agustus."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Two short videos and a page with exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Selamat datang kembali! Hari ini kita memakai angka untuk waktu: hari, bulan, jam, dan tanggal. Yuk, satu langkah demi satu langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Nama hari",
+        "text": "Kita mulai dari tujuh nama hari.",
+        "body": "Setiap nama hari diawali **huruf kapital** dan berakhiran **-day**. Pakai **on** untuk hari: **on Monday**, **on Friday**. Bukan 'in Monday'. Wednesday dibaca **WENZ-day** — huruf d pertama tidak dibunyikan.",
+        "pairs": [
+          {
+            "en": "Monday",
+            "id": "Senin"
+          },
+          {
+            "en": "Tuesday",
+            "id": "Selasa"
+          },
+          {
+            "en": "Wednesday",
+            "id": "Rabu"
+          },
+          {
+            "en": "Thursday",
+            "id": "Kamis"
+          },
+          {
+            "en": "Friday",
+            "id": "Jumat"
+          },
+          {
+            "en": "Saturday",
+            "id": "Sabtu"
+          },
+          {
+            "en": "Sunday",
+            "id": "Minggu"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Nama bulan",
+        "text": "Sekarang dua belas nama bulan. Banyak yang mirip bahasa Indonesia!",
+        "body": "Nama bulan juga diawali **huruf kapital**. Pakai **in** untuk bulan: **in May**, **in December**. Bukan 'on May'. Perhatikan yang paling berbeda: Mei → **May**, Juni → **June**, Juli → **July**, Agustus → **August**.",
+        "pairs": [
+          {
+            "en": "January",
+            "id": "Januari"
+          },
+          {
+            "en": "February",
+            "id": "Februari"
+          },
+          {
+            "en": "March",
+            "id": "Maret"
+          },
+          {
+            "en": "April",
+            "id": "April"
+          },
+          {
+            "en": "May",
+            "id": "Mei"
+          },
+          {
+            "en": "June",
+            "id": "Juni"
+          },
+          {
+            "en": "July",
+            "id": "Juli"
+          },
+          {
+            "en": "August",
+            "id": "Agustus"
+          },
+          {
+            "en": "September",
+            "id": "September"
+          },
+          {
+            "en": "October",
+            "id": "Oktober"
+          },
+          {
+            "en": "November",
+            "id": "November"
+          },
+          {
+            "en": "December",
+            "id": "Desember"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ini hari atau bulan? Dari situ kamu tahu kata kecilnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "days-months",
+          "prompt": "Lengkapi: Rina's party is ___ Saturday.",
+          "options": [
+            "in",
+            "on",
+            "at"
+          ],
+          "answer": 1,
+          "explanation": "Saturday adalah nama hari, dan hari memakai **on**: on Saturday. **In** untuk bulan (in May) dan **at** untuk jam (at seven o'clock)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jam berapa?",
+        "text": "Sekarang kita belajar membaca jam.",
+        "body": "Jawab dengan **It's** + jamnya. Jam tepat: **o'clock**. **past** = lewat dari jam itu, **to** = kurang dari jam berikutnya. Awas: 'setengah sebelas' itu 10:30 = **half past ten**. Bahasa Indonesia menghitung menuju jam berikutnya; bahasa Inggris menghitung dari jam yang baru lewat. Cara mudah: sebut saja angkanya, **ten thirty**.",
+        "pairs": [
+          {
+            "en": "What time is it?",
+            "id": "Jam berapa?"
+          },
+          {
+            "en": "ten o'clock",
+            "id": "jam sepuluh (10:00)"
+          },
+          {
+            "en": "quarter past ten",
+            "id": "jam sepuluh lewat seperempat (10:15)"
+          },
+          {
+            "en": "half past ten",
+            "id": "jam setengah sebelas (10:30)"
+          },
+          {
+            "en": "quarter to eleven",
+            "id": "jam sebelas kurang seperempat (10:45)"
+          },
+          {
+            "en": "ten fifteen",
+            "id": "jam sepuluh lima belas (10:15)"
+          },
+          {
+            "en": "ten thirty",
+            "id": "jam sepuluh tiga puluh (10:30)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Berpikirlah dalam bahasa Inggris: jam berapa yang baru saja lewat?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "telling-time",
+          "prompt": "Rina selesai kerja jam setengah enam (5:30). Bagaimana mengucapkan jamnya?",
+          "options": [
+            "half past six",
+            "half past five",
+            "half six"
+          ],
+          "answer": 1,
+          "explanation": "5:30 itu setengah jam **lewat jam lima**, jadi **half past five** (atau **five thirty**). 'Setengah enam' menghitung menuju jam enam, tapi bahasa Inggris menghitung dari jam lima. 'Half six' berarti 6:30 dalam bahasa Inggris British."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Tekan putar. Dengarkan kata past atau to.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "telling-time",
+          "prompt": "Dengarkan. Jam berapa keretanya?",
+          "listen": "The train is at quarter past four.",
+          "options": [
+            "3:45",
+            "4:45",
+            "4:15"
+          ],
+          "answer": 2,
+          "explanation": "**Quarter past four** = 15 menit lewat jam empat = 4:15. 4:45 adalah **quarter to five**, dan 3:45 adalah **quarter to four**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "first, second, third…",
+        "text": "Tanggal butuh jenis angka yang khusus.",
+        "body": "Tanggal memakai **bilangan urutan**: katakan **the first of May** (atau **May the first**), jangan 'the one of May'. Sebagian besar cukup ditambah **-th**: fourth, sixth, tenth. Yang khusus: **first, second, third, fifth, eighth, ninth, twelfth, twentieth**. Pakai **on** untuk tanggal.",
+        "pairs": [
+          {
+            "en": "first",
+            "id": "kesatu / pertama (1st)"
+          },
+          {
+            "en": "second",
+            "id": "kedua (2nd)"
+          },
+          {
+            "en": "third",
+            "id": "ketiga (3rd)"
+          },
+          {
+            "en": "fourth",
+            "id": "keempat (4th)"
+          },
+          {
+            "en": "fifth",
+            "id": "kelima (5th)"
+          },
+          {
+            "en": "eighth",
+            "id": "kedelapan (8th)"
+          },
+          {
+            "en": "ninth",
+            "id": "kesembilan (9th)"
+          },
+          {
+            "en": "twelfth",
+            "id": "kedua belas (12th)"
+          },
+          {
+            "en": "twentieth",
+            "id": "kedua puluh (20th)"
+          },
+          {
+            "en": "twenty-first",
+            "id": "kedua puluh satu (21st)"
+          },
+          {
+            "en": "thirtieth",
+            "id": "ketiga puluh (30th)"
+          },
+          {
+            "en": "thirty-first",
+            "id": "ketiga puluh satu (31st)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tanggal-tanggal dalam setahun",
+        "text": "Ini beberapa tanggal yang kamu kenal. Bacakan dengan suara keras.",
+        "body": "Polanya: **on** + **the** + bilangan urutan + **of** + bulan.",
+        "examples": [
+          {
+            "en": "When is your birthday?",
+            "id": "Kapan ulang tahunmu?"
+          },
+          {
+            "en": "Independence Day is on the seventeenth of August.",
+            "id": "Hari Kemerdekaan tanggal 17 Agustus."
+          },
+          {
+            "en": "Kartini Day is on the twenty-first of April.",
+            "id": "Hari Kartini tanggal 21 April."
+          },
+          {
+            "en": "My birthday is on the fifth of June.",
+            "id": "Ulang tahun saya tanggal 5 Juni."
+          },
+          {
+            "en": "The exam is on the thirtieth of November.",
+            "id": "Ujiannya tanggal 30 November."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tanggal butuh bilangan urutan. Yang mana untuk 3?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ordinals-dates",
+          "prompt": "Bagaimana mengucapkan tanggal 3 Juli (3 July)?",
+          "options": [
+            "the three of July",
+            "the thirtieth of July",
+            "the third of July"
+          ],
+          "answer": 2,
+          "explanation": "Tanggal memakai bilangan urutan: 3 → **third**, jadi **the third of July**. 'The three of July' memakai angka biasa, dan **thirtieth** itu tanggal 30."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kata-katanya: on + the + bilangan urutan + of + bulan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ordinals-dates",
+          "prompt": "Susun kata-katanya: Ulang tahun saya tanggal 2 Mei.",
+          "tokens": [
+            "second",
+            "May",
+            "is",
+            "My",
+            "the",
+            "on",
+            "of",
+            "birthday"
+          ],
+          "solution": "My birthday is on the second of May.",
+          "explanation": "Mulai dengan **My birthday is**, lalu **on** untuk tanggal, lalu **the second of May**. Angka 2 menjadi bilangan urutan **second**, bukan 'two'."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan yang bisa kamu simpan dan buka lagi kapan saja.",
+        "artifact": {
+          "title": "Ringkasan · Hari, bulan & jam",
+          "intro": "Huruf kapital untuk hari dan bulan. on + hari atau tanggal, in + bulan, at + jam. Tanggal memakai bilangan urutan.",
+          "headers": [
+            "Ditulis",
+            "Diucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Mon – Sun",
+              "Monday – Sunday",
+              "Senin – Minggu"
+            ],
+            [
+              "Jan – Dec",
+              "January – December",
+              "Januari – Desember"
+            ],
+            [
+              "7:00",
+              "seven o'clock",
+              "jam tujuh"
+            ],
+            [
+              "7:15",
+              "quarter past seven / seven fifteen",
+              "jam tujuh lewat seperempat"
+            ],
+            [
+              "7:30",
+              "half past seven / seven thirty",
+              "jam setengah delapan"
+            ],
+            [
+              "7:45",
+              "quarter to eight / seven forty-five",
+              "jam delapan kurang seperempat"
+            ],
+            [
+              "1st, 2nd, 3rd",
+              "first, second, third",
+              "pertama, kedua, ketiga"
+            ],
+            [
+              "5th, 8th, 9th, 12th",
+              "fifth, eighth, ninth, twelfth",
+              "kelima, kedelapan, kesembilan, kedua belas"
+            ],
+            [
+              "20th, 21st",
+              "twentieth, twenty-first",
+              "kedua puluh, kedua puluh satu"
+            ],
+            [
+              "on",
+              "on Monday, on the first of May",
+              "hari, tanggal"
+            ],
+            [
+              "in",
+              "in May",
+              "bulan"
+            ],
+            [
+              "at",
+              "at seven o'clock",
+              "jam"
+            ]
+          ],
+          "tips": [
+            "Setengah tujuh = 6:30 = **half past six**, bukan 'half seven'.",
+            "Tanggal memakai bilangan urutan: **the first of May**, bukan 'the one of May'.",
+            "**on** Monday, **in** May, **at** seven o'clock."
+          ],
+          "examples": [
+            {
+              "en": "What time is it? — It's half past six.",
+              "id": "Jam berapa? — Jam setengah tujuh."
+            },
+            {
+              "en": "The meeting is on Monday at nine o'clock.",
+              "id": "Rapatnya hari Senin jam sembilan."
+            },
+            {
+              "en": "Independence Day is on the seventeenth of August.",
+              "id": "Hari Kemerdekaan tanggal 17 Agustus."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ada dua video pendek dan satu halaman dengan latihan soal."
+      }
+    ]
+  }
+}

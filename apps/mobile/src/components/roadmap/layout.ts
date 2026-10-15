@@ -1,4 +1,4 @@
-import type { Level, LevelSummary, RoadmapNode } from '@/lib/api';
+import type { Course, Level, LevelSummary, RoadmapNode } from '@/lib/api';
 
 export type Box = { x: number; y: number; w: number; h: number };
 export type LevelHeader = { level: Level; title: string; y: number; mastered: number; total: number };
@@ -65,4 +65,66 @@ export function edgePath(a: Box, b: Box) {
   const y2 = b.y;
   const dy = Math.max(24, (y2 - y1) / 2);
   return `M${x1},${y1} C${x1},${y1 + dy} ${x2},${y2 - dy} ${x2},${y2}`;
+}
+
+// A side track (TOEFL, IELTS, …) that branches off this roadmap after a
+// level, like roadmap.sh's "relevant tracks", drawn in a lane to the right.
+export type Branch = { anchor: string; level: Level; tracks: Course[] };
+export type BranchLayout = { anchor: string; level: Level; head: Box; cards: { track: Course; box: Box }[] };
+
+// Tracks recommended after a level of this course hang off that level's
+// checkpoint (or its last lesson); the rest have no place on the map.
+export function branchesFor(course: string, nodes: RoadmapNode[], tracks: Course[]): { branches: Branch[]; rest: Course[] } {
+  const branches: Branch[] = [];
+  const rest: Course[] = [];
+  for (const tr of tracks) {
+    const after = tr.recommendedAfter;
+    const inLevel = after && after.course === course ? nodes.filter((n) => n.level === after.level) : [];
+    const anchor = inLevel.find((n) => n.strand === 'CK') ?? inLevel[inLevel.length - 1];
+    if (!anchor) {
+      rest.push(tr);
+      continue;
+    }
+    const b = branches.find((x) => x.anchor === anchor.id);
+    if (b) b.tracks.push(tr);
+    else branches.push({ anchor: anchor.id, level: anchor.level, tracks: [tr] });
+  }
+  return { branches, rest };
+}
+
+export const LANE_GAP = 120;
+const BRANCH_HEAD_H = 92;
+const BRANCH_CARD_H = 84;
+const BRANCH_GAP_Y = 12;
+
+// Stacks each branch's cards in the lane, centred on its anchor's row.
+export function layoutBranches(branches: Branch[], boxes: Record<string, Box>, laneX: number, laneW: number): { lanes: BranchLayout[]; height: number } {
+  let floor = 0;
+  let height = 0;
+  const lanes = branches.map((b) => {
+    const a = boxes[b.anchor];
+    const total = BRANCH_HEAD_H + b.tracks.length * (BRANCH_CARD_H + BRANCH_GAP_Y) - BRANCH_GAP_Y;
+    let y = Math.max(floor, a.y + a.h / 2 - total / 2);
+    const head = { x: laneX, y, w: laneW, h: BRANCH_HEAD_H };
+    y += BRANCH_HEAD_H;
+    const cards = b.tracks.map((track) => {
+      const box = { x: laneX, y, w: laneW, h: BRANCH_CARD_H };
+      y += BRANCH_CARD_H + BRANCH_GAP_Y;
+      return { track, box };
+    });
+    floor = y + 32;
+    height = Math.max(height, y);
+    return { anchor: b.anchor, level: b.level, head, cards };
+  });
+  return { lanes, height };
+}
+
+// Smooth sideways connector from the right of `a` to the left of `b`.
+export function branchPath(a: Box, b: Box) {
+  const x1 = a.x + a.w;
+  const y1 = a.y + a.h / 2;
+  const x2 = b.x;
+  const y2 = b.y + b.h / 2;
+  const dx = (x2 - x1) / 2;
+  return `M${x1},${y1} C${x1 + dx},${y1} ${x2 - dx},${y2} ${x2},${y2}`;
 }

@@ -1,0 +1,818 @@
+{
+  "en": {
+    "greeting": "Hi! Today is all about listening: letters, numbers, greetings and classroom instructions. Play each sound as many times as you like.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Letters you'll hear",
+        "text": "When people spell a name, they use English letter names. Tap each letter to hear it.",
+        "body": "Listen for the pairs that sound alike to Indonesian ears: **A** ('ay') and **R** ('ar'), **E** ('ee') and **I** ('eye'), **G** ('jee') and **J** ('jay'). **W** is 'double-you' and **Y** is 'why'. **Double** means two of the same letter: 'A, double N, A' is Anna.",
+        "pairs": [
+          {
+            "en": "A",
+            "id": "dibaca ei"
+          },
+          {
+            "en": "R",
+            "id": "dibaca ar"
+          },
+          {
+            "en": "E",
+            "id": "dibaca i"
+          },
+          {
+            "en": "I",
+            "id": "dibaca ai"
+          },
+          {
+            "en": "G",
+            "id": "dibaca ji"
+          },
+          {
+            "en": "J",
+            "id": "dibaca jei"
+          },
+          {
+            "en": "H",
+            "id": "dibaca eic"
+          },
+          {
+            "en": "W",
+            "id": "dibaca dabel-yu"
+          },
+          {
+            "en": "Y",
+            "id": "dibaca wai"
+          },
+          {
+            "en": "Z",
+            "id": "dibaca zed / zi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: spell the name",
+        "text": "Press play. Listen to each letter, especially the second one.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letters-numbers-names",
+          "listen": "It's spelled R-E-Z-A.",
+          "options": [
+            "Reza",
+            "Riza",
+            "Resa"
+          ],
+          "answer": 0,
+          "prompt": "Listen. How is the name spelled?",
+          "explanation": "You heard R-**E**-Z-A: the second letter is 'ee', which is **E** (I is 'eye'). The third letter is 'zed', so it's Z, not S ('es')."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Numbers you'll hear",
+        "text": "Numbers are where listening gets tricky. Tap each one and listen to the stress.",
+        "body": "For **13–19** the stress is at the **end** (thir**TEEN**); for **30, 40, 50…** it is at the **start** (**THIR**ty). Phone numbers come **one digit at a time**, often with **oh** for 0 and **double** for two of the same. Prices: *twenty thousand rupiah* = Rp20.000.",
+        "pairs": [
+          {
+            "en": "thirteen",
+            "id": "13 · tekanan di akhir"
+          },
+          {
+            "en": "thirty",
+            "id": "30 · tekanan di awal"
+          },
+          {
+            "en": "fourteen",
+            "id": "14 · tekanan di akhir"
+          },
+          {
+            "en": "forty",
+            "id": "40 · tekanan di awal"
+          },
+          {
+            "en": "oh",
+            "id": "0 (dalam nomor telepon)"
+          },
+          {
+            "en": "double two",
+            "id": "22"
+          },
+          {
+            "en": "twenty thousand rupiah",
+            "id": "Rp20.000"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: how much?",
+        "text": "Listen for the stress: at the start or at the end?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letters-numbers-names",
+          "listen": "The coffee is thirty thousand rupiah.",
+          "options": [
+            "Rp13.000",
+            "Rp30.000",
+            "Rp3.000"
+          ],
+          "answer": 1,
+          "prompt": "Listen. How much is the coffee?",
+          "explanation": "You heard **THIRty thousand**, with the stress at the start: Rp30.000. Thirteen has the stress at the end (thir**TEEN**), and three is a short one-syllable word."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the phone number",
+        "text": "Listen in small groups of digits. Play it again if you need to.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letters-numbers-names",
+          "listen": "My number is 0857 1190 3324.",
+          "options": [
+            "0857 1910 3324",
+            "0857 1190 3342",
+            "0857 1190 3324"
+          ],
+          "answer": 2,
+          "prompt": "Listen. Which phone number do you hear?",
+          "explanation": "The number is **0857 1190 3324**. The other two swap two digits — a very common listening slip, so check each group of four."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Greetings you'll hear",
+        "text": "Now let's listen to people saying hello and goodbye.",
+        "body": "**Good morning / afternoon / evening** are for meeting people. **Good night** means goodbye at night, not hello. To **How are you?** you answer **I'm fine, thanks. And you?** To **Nice to meet you** you answer **Nice to meet you too.**",
+        "pairs": [
+          {
+            "en": "Good morning!",
+            "id": "Selamat pagi!"
+          },
+          {
+            "en": "Good afternoon!",
+            "id": "Selamat siang / sore!"
+          },
+          {
+            "en": "Good evening!",
+            "id": "Selamat malam! (saat bertemu)"
+          },
+          {
+            "en": "Good night!",
+            "id": "Selamat malam! (saat pamit / tidur)"
+          },
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "I'm fine, thanks. And you?",
+            "id": "Baik, terima kasih. Kamu?"
+          },
+          {
+            "en": "Nice to meet you.",
+            "id": "Senang bertemu denganmu."
+          },
+          {
+            "en": "See you tomorrow!",
+            "id": "Sampai jumpa besok!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Listen to what the person says, then choose your answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "greetings-instructions",
+          "listen": "Hi, I'm Dewi. Nice to meet you.",
+          "options": [
+            "Good night.",
+            "Nice to meet you too.",
+            "I'm fine, thanks."
+          ],
+          "answer": 1,
+          "prompt": "Listen. What is a good reply?",
+          "explanation": "Dewi said **Nice to meet you**, so you answer **Nice to meet you too.** 'I'm fine, thanks' answers How are you?, and Good night is for leaving."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Classroom instructions",
+        "text": "Last group: what teachers say in class.",
+        "body": "Instructions start with the **action word**: *listen, repeat, open, close, sit, stand, write, look*. Catch the first word and you know what to do. Watch the opposites: **open ↔ close**, **sit down ↔ stand up**.",
+        "pairs": [
+          {
+            "en": "Listen.",
+            "id": "Dengarkan."
+          },
+          {
+            "en": "Repeat.",
+            "id": "Ulangi."
+          },
+          {
+            "en": "Open your book.",
+            "id": "Buka bukumu."
+          },
+          {
+            "en": "Close your book.",
+            "id": "Tutup bukumu."
+          },
+          {
+            "en": "Sit down.",
+            "id": "Duduk."
+          },
+          {
+            "en": "Stand up.",
+            "id": "Berdiri."
+          },
+          {
+            "en": "Write your name.",
+            "id": "Tulis namamu."
+          },
+          {
+            "en": "Look at the board.",
+            "id": "Lihat papan tulis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: what do you do?",
+        "text": "Two actions this time. Listen for both.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "greetings-instructions",
+          "listen": "Close your books and listen, please.",
+          "options": [
+            "Close the book and listen.",
+            "Open the book and read.",
+            "Close the book and write."
+          ],
+          "answer": 0,
+          "prompt": "Listen to the teacher. What do you do?",
+          "explanation": "The teacher said **Close** your books and **listen**. Open is the opposite of close, and nobody asked you to write."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Try to hear the sound in your head first.",
+        "flashcards": [
+          {
+            "front": "You hear 'jee'",
+            "back": "G"
+          },
+          {
+            "front": "You hear 'jay'",
+            "back": "J"
+          },
+          {
+            "front": "You hear 'ee'",
+            "back": "E"
+          },
+          {
+            "front": "You hear 'eye'",
+            "back": "I"
+          },
+          {
+            "front": "thirTEEN or THIRty: which is 13?",
+            "back": "thirTEEN (stress at the end)"
+          },
+          {
+            "front": "'double eight' in a phone number",
+            "back": "88"
+          },
+          {
+            "front": "selamat malam (saat pamit)",
+            "back": "Good night!"
+          },
+          {
+            "front": "Buka bukumu.",
+            "back": "Open your book."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "What you hear and what it means, on one page.",
+        "artifact": {
+          "title": "Cheat sheet · First listening",
+          "intro": "Letters, numbers, greetings and instructions you'll hear, and what they mean.",
+          "headers": [
+            "You hear",
+            "It means",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "'ee'",
+              "E",
+              "not I"
+            ],
+            [
+              "'eye'",
+              "I",
+              "not E"
+            ],
+            [
+              "'jee'",
+              "G",
+              "not J"
+            ],
+            [
+              "'jay'",
+              "J",
+              "not G"
+            ],
+            [
+              "'double-you'",
+              "W",
+              "two U's"
+            ],
+            [
+              "'why'",
+              "Y",
+              "not W"
+            ],
+            [
+              "'oh' (phone)",
+              "0",
+              "zero"
+            ],
+            [
+              "double five",
+              "55",
+              "two of the same"
+            ],
+            [
+              "thirTEEN / THIRty",
+              "13 / 30",
+              "listen for the stress"
+            ],
+            [
+              "twenty thousand rupiah",
+              "Rp20.000",
+              "thousand, no s"
+            ],
+            [
+              "Good evening!",
+              "hello after 6 p.m.",
+              "not Good night"
+            ],
+            [
+              "Good night!",
+              "goodbye at night",
+              "or before bed"
+            ],
+            [
+              "Open / Close your book.",
+              "buka / tutup bukumu",
+              "opposites"
+            ],
+            [
+              "Sit down / Stand up.",
+              "duduk / berdiri",
+              "opposites"
+            ]
+          ],
+          "tips": [
+            "Listen for **key words** (a name, a number, an action), not every word.",
+            "Stress at the **end** = 13–19; stress at the **start** = 30, 40, 50…",
+            "Didn't catch it? Say **Sorry? Can you repeat that, please?**"
+          ],
+          "examples": [
+            {
+              "en": "It's spelled D-E-W-I.",
+              "id": "Dieja D-E-W-I."
+            },
+            {
+              "en": "My number is oh-eight-one-two…",
+              "id": "Nomor saya 0812…"
+            },
+            {
+              "en": "Sorry? Can you repeat that, please?",
+              "id": "Maaf? Bisa diulang?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen more",
+        "text": "Short A1 listening lessons with audio, transcripts and exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini semuanya tentang menyimak: huruf, angka, salam dan instruksi kelas. Putar setiap suara sesering yang kamu mau.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Huruf yang akan kamu dengar",
+        "text": "Saat orang mengeja nama, mereka memakai nama huruf versi Inggris. Ketuk setiap huruf untuk mendengarnya.",
+        "body": "Dengarkan pasangan yang terdengar mirip bagi telinga Indonesia: **A** ('ay', dibaca ei) dan **R** ('ar'), **E** ('ee', dibaca i) dan **I** ('eye', dibaca ai), **G** ('jee', dibaca ji) dan **J** ('jay', dibaca jei). **W** dibaca 'double-you' dan **Y** dibaca 'why'. **Double** berarti dua huruf yang sama: 'A, double N, A' adalah Anna.",
+        "pairs": [
+          {
+            "en": "A",
+            "id": "dibaca ei"
+          },
+          {
+            "en": "R",
+            "id": "dibaca ar"
+          },
+          {
+            "en": "E",
+            "id": "dibaca i"
+          },
+          {
+            "en": "I",
+            "id": "dibaca ai"
+          },
+          {
+            "en": "G",
+            "id": "dibaca ji"
+          },
+          {
+            "en": "J",
+            "id": "dibaca jei"
+          },
+          {
+            "en": "H",
+            "id": "dibaca eic"
+          },
+          {
+            "en": "W",
+            "id": "dibaca dabel-yu"
+          },
+          {
+            "en": "Y",
+            "id": "dibaca wai"
+          },
+          {
+            "en": "Z",
+            "id": "dibaca zed / zi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: eja namanya",
+        "text": "Tekan play. Dengarkan setiap huruf, terutama huruf kedua.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letters-numbers-names",
+          "listen": "It's spelled R-E-Z-A.",
+          "options": [
+            "Reza",
+            "Riza",
+            "Resa"
+          ],
+          "answer": 0,
+          "prompt": "Dengarkan. Bagaimana ejaan nama itu?",
+          "explanation": "Kamu mendengar R-**E**-Z-A: huruf kedua dibaca 'ee', yaitu **E** (I dibaca 'eye'). Huruf ketiga dibaca 'zed', jadi Z, bukan S ('es')."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Angka yang akan kamu dengar",
+        "text": "Di angka, menyimak jadi lebih menantang. Ketuk satu per satu dan dengarkan tekanannya.",
+        "body": "Untuk **13–19** tekanannya di **akhir** (thir**TEEN**); untuk **30, 40, 50…** tekanannya di **awal** (**THIR**ty). Nomor telepon diucapkan **satu angka demi satu angka**, sering dengan **oh** untuk 0 dan **double** untuk dua angka sama. Harga: *twenty thousand rupiah* = Rp20.000.",
+        "pairs": [
+          {
+            "en": "thirteen",
+            "id": "13 · tekanan di akhir"
+          },
+          {
+            "en": "thirty",
+            "id": "30 · tekanan di awal"
+          },
+          {
+            "en": "fourteen",
+            "id": "14 · tekanan di akhir"
+          },
+          {
+            "en": "forty",
+            "id": "40 · tekanan di awal"
+          },
+          {
+            "en": "oh",
+            "id": "0 (dalam nomor telepon)"
+          },
+          {
+            "en": "double two",
+            "id": "22"
+          },
+          {
+            "en": "twenty thousand rupiah",
+            "id": "Rp20.000"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: berapa harganya?",
+        "text": "Dengarkan tekanannya: di awal atau di akhir?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letters-numbers-names",
+          "listen": "The coffee is thirty thousand rupiah.",
+          "options": [
+            "Rp13.000",
+            "Rp30.000",
+            "Rp3.000"
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan. Berapa harga kopinya?",
+          "explanation": "Kamu mendengar **THIRty thousand**, dengan tekanan di awal: Rp30.000. Thirteen tekanannya di akhir (thir**TEEN**), dan three hanya satu suku kata pendek."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: nomor teleponnya",
+        "text": "Dengarkan per kelompok angka. Putar lagi kalau perlu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "letters-numbers-names",
+          "listen": "My number is 0857 1190 3324.",
+          "options": [
+            "0857 1910 3324",
+            "0857 1190 3342",
+            "0857 1190 3324"
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan. Nomor telepon mana yang kamu dengar?",
+          "explanation": "Nomornya **0857 1190 3324**. Dua pilihan lain menukar dua angka — kesalahan menyimak yang sangat umum, jadi cek setiap kelompok empat angka."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Salam yang akan kamu dengar",
+        "text": "Sekarang kita dengarkan orang menyapa dan berpamitan.",
+        "body": "**Good morning / afternoon / evening** dipakai saat bertemu. **Good night** artinya pamit di malam hari, bukan menyapa. Untuk **How are you?** jawab **I'm fine, thanks. And you?** Untuk **Nice to meet you** jawab **Nice to meet you too.**",
+        "pairs": [
+          {
+            "en": "Good morning!",
+            "id": "Selamat pagi!"
+          },
+          {
+            "en": "Good afternoon!",
+            "id": "Selamat siang / sore!"
+          },
+          {
+            "en": "Good evening!",
+            "id": "Selamat malam! (saat bertemu)"
+          },
+          {
+            "en": "Good night!",
+            "id": "Selamat malam! (saat pamit / tidur)"
+          },
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "I'm fine, thanks. And you?",
+            "id": "Baik, terima kasih. Kamu?"
+          },
+          {
+            "en": "Nice to meet you.",
+            "id": "Senang bertemu denganmu."
+          },
+          {
+            "en": "See you tomorrow!",
+            "id": "Sampai jumpa besok!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan balas",
+        "text": "Dengarkan apa yang diucapkan, lalu pilih jawabanmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "greetings-instructions",
+          "listen": "Hi, I'm Dewi. Nice to meet you.",
+          "options": [
+            "Good night.",
+            "Nice to meet you too.",
+            "I'm fine, thanks."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan. Balasan mana yang tepat?",
+          "explanation": "Dewi bilang **Nice to meet you**, jadi kamu jawab **Nice to meet you too.** 'I'm fine, thanks' menjawab How are you?, dan Good night untuk berpamitan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Instruksi di kelas",
+        "text": "Kelompok terakhir: yang diucapkan guru di kelas.",
+        "body": "Instruksi diawali **kata tindakan**: *listen, repeat, open, close, sit, stand, write, look*. Tangkap kata pertamanya dan kamu tahu apa yang harus dilakukan. Perhatikan pasangan berlawanan: **open ↔ close**, **sit down ↔ stand up**.",
+        "pairs": [
+          {
+            "en": "Listen.",
+            "id": "Dengarkan."
+          },
+          {
+            "en": "Repeat.",
+            "id": "Ulangi."
+          },
+          {
+            "en": "Open your book.",
+            "id": "Buka bukumu."
+          },
+          {
+            "en": "Close your book.",
+            "id": "Tutup bukumu."
+          },
+          {
+            "en": "Sit down.",
+            "id": "Duduk."
+          },
+          {
+            "en": "Stand up.",
+            "id": "Berdiri."
+          },
+          {
+            "en": "Write your name.",
+            "id": "Tulis namamu."
+          },
+          {
+            "en": "Look at the board.",
+            "id": "Lihat papan tulis."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: apa yang kamu lakukan?",
+        "text": "Kali ini ada dua tindakan. Dengarkan keduanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "greetings-instructions",
+          "listen": "Close your books and listen, please.",
+          "options": [
+            "Close the book and listen.",
+            "Open the book and read.",
+            "Close the book and write."
+          ],
+          "answer": 0,
+          "prompt": "Dengarkan gurunya. Apa yang kamu lakukan?",
+          "explanation": "Guru bilang **Close** your books dan **listen**. Open kebalikan dari close, dan tidak ada yang menyuruhmu menulis."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik setiap kartu. Coba bayangkan bunyinya dulu di kepalamu.",
+        "flashcards": [
+          {
+            "front": "You hear 'jee'",
+            "back": "G"
+          },
+          {
+            "front": "You hear 'jay'",
+            "back": "J"
+          },
+          {
+            "front": "You hear 'ee'",
+            "back": "E"
+          },
+          {
+            "front": "You hear 'eye'",
+            "back": "I"
+          },
+          {
+            "front": "thirTEEN or THIRty: which is 13?",
+            "back": "thirTEEN (stress at the end)"
+          },
+          {
+            "front": "'double eight' in a phone number",
+            "back": "88"
+          },
+          {
+            "front": "selamat malam (saat pamit)",
+            "back": "Good night!"
+          },
+          {
+            "front": "Buka bukumu.",
+            "back": "Open your book."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Apa yang kamu dengar dan artinya, dalam satu halaman.",
+        "artifact": {
+          "title": "Contekan · Menyimak pertama",
+          "intro": "Huruf, angka, salam dan instruksi yang akan kamu dengar, beserta artinya.",
+          "headers": [
+            "Kamu dengar",
+            "Artinya",
+            "Hati-hati"
+          ],
+          "rows": [
+            [
+              "'ee'",
+              "E",
+              "bukan I"
+            ],
+            [
+              "'eye'",
+              "I",
+              "bukan E"
+            ],
+            [
+              "'jee'",
+              "G",
+              "bukan J"
+            ],
+            [
+              "'jay'",
+              "J",
+              "bukan G"
+            ],
+            [
+              "'double-you'",
+              "W",
+              "dua U"
+            ],
+            [
+              "'why'",
+              "Y",
+              "bukan W"
+            ],
+            [
+              "'oh' (telepon)",
+              "0",
+              "nol"
+            ],
+            [
+              "double five",
+              "55",
+              "dua angka sama"
+            ],
+            [
+              "thirTEEN / THIRty",
+              "13 / 30",
+              "dengarkan tekanannya"
+            ],
+            [
+              "twenty thousand rupiah",
+              "Rp20.000",
+              "thousand, tanpa s"
+            ],
+            [
+              "Good evening!",
+              "salam bertemu setelah jam 18",
+              "bukan Good night"
+            ],
+            [
+              "Good night!",
+              "pamit di malam hari",
+              "atau mau tidur"
+            ],
+            [
+              "Open / Close your book.",
+              "buka / tutup bukumu",
+              "berlawanan"
+            ],
+            [
+              "Sit down / Stand up.",
+              "duduk / berdiri",
+              "berlawanan"
+            ]
+          ],
+          "tips": [
+            "Dengarkan **kata kunci** (nama, angka, tindakan), bukan setiap kata.",
+            "Tekanan di **akhir** = 13–19; tekanan di **awal** = 30, 40, 50…",
+            "Tidak tertangkap? Bilang **Sorry? Can you repeat that, please?**"
+          ],
+          "examples": [
+            {
+              "en": "It's spelled D-E-W-I.",
+              "id": "Dieja D-E-W-I."
+            },
+            {
+              "en": "My number is oh-eight-one-two…",
+              "id": "Nomor saya 0812…"
+            },
+            {
+              "en": "Sorry? Can you repeat that, please?",
+              "id": "Maaf? Bisa diulang?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengar lebih banyak",
+        "text": "Pelajaran menyimak A1 yang pendek, dengan audio, transkrip dan latihan."
+      }
+    ]
+  }
+}

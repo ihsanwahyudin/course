@@ -1,0 +1,543 @@
+{
+  "nodeId": "a0-writing-basics",
+  "intro": "Welcome! Today you write in English: capital letters, full stops and question marks, your personal details and a simple form. Small things like a capital I make your writing look correct and easy to read. Warm-up: how do you write the English word for 'saya'?",
+  "teachingNotes": [
+    "Capital letters: the first word of a sentence, the word I (always, even in the middle — unlike Indonesian 'saya'), names of people, places (Jalan Braga, Bandung, Indonesia) and nationalities (Indonesian). The most common error is writing everything in small letters, chat style: 'my name is budi and i live in bandung' → 'My name is Budi and I live in Bandung.'",
+    "Basic punctuation only: full stop at the end of a sentence, question mark at the end of a question, comma in lists and addresses (Jalan Braga 10, Bandung), apostrophe in I'm and What's. Don't teach colons, semicolons or other rules.",
+    "Details: email addresses in small letters with no spaces (@ and . in the right place); phone numbers grouped so they are easy to read; from abroad, +62 replaces the first 0 (0812… → +62 812…).",
+    "Forms: first name = nama depan, surname = nama belakang / nama keluarga, date of birth (DOB) as day/month/year in Indonesia and the UK (the USA writes month/day/year). Paper forms often ask for BLOCK CAPITALS, except the email and the signature. Many Indonesians have only one name: forms differ, so tell the learner to follow the form's instructions or ask.",
+    "Limits (A0): no past tense (don't teach 'I was born…' — use the 'Date of birth' field instead), no simple present beyond fixed chunks like 'I live in…'. Keep sentences short."
+  ],
+  "keyPoints": [
+    {
+      "title": "Capital letters and punctuation",
+      "explanation": "Use a capital letter for the first word of a sentence, the word I, names and places. End a sentence with a full stop (.) and a question with a question mark (?).",
+      "examples": [
+        {
+          "en": "My name is Budi and I live in Bandung.",
+          "id": "Nama saya Budi dan saya tinggal di Bandung."
+        },
+        {
+          "en": "Where is Jalan Braga?",
+          "id": "Jalan Braga di mana?"
+        }
+      ]
+    },
+    {
+      "title": "Writing your details",
+      "explanation": "Names and places start with a capital letter. Email addresses are written in small letters with no spaces. Group phone numbers so they are easy to read.",
+      "examples": [
+        {
+          "en": "Jalan Braga 10, Bandung 40111",
+          "id": "alamat: nama jalan dan kota diawali kapital"
+        },
+        {
+          "en": "dewi.anggraini@gmail.com",
+          "id": "email: huruf kecil semua, tanpa spasi"
+        },
+        {
+          "en": "0821 7788 9900",
+          "id": "nomor HP dalam kelompok kecil"
+        }
+      ]
+    },
+    {
+      "title": "Filling in a form",
+      "explanation": "First name is your own name, surname is your family name. Write your date of birth as day/month/year.",
+      "examples": [
+        {
+          "en": "First name: Dewi · Surname: Anggraini",
+          "id": "Nama depan: Dewi · Nama belakang: Anggraini"
+        },
+        {
+          "en": "Date of birth: 17/08/1998",
+          "id": "Tanggal lahir: 17 Agustus 1998"
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "capitals-punctuation",
+      "prompt": "Write the words that need a capital letter: my name is budi.",
+      "expected": [
+        "my budi"
+      ],
+      "hint": "The first word, and a person's name."
+    },
+    {
+      "objectiveId": "capitals-punctuation",
+      "prompt": "Which mark ends this sentence? I'm from Jakarta (Write the name of the mark.)",
+      "expected": [
+        "full stop",
+        "a full stop",
+        "period",
+        "a period"
+      ],
+      "hint": "It's a sentence, not a question."
+    },
+    {
+      "objectiveId": "write-details",
+      "prompt": "A friend in Singapore needs your number. Write 0812 3456 7890 with +62.",
+      "expected": [
+        "+62 812 3456 7890",
+        "62 812 3456 7890",
+        "6281234567890"
+      ],
+      "hint": "+62 replaces the first 0."
+    },
+    {
+      "objectiveId": "fill-form",
+      "prompt": "Your name is Budi Santoso. What do you write in the 'First name' box?",
+      "expected": [
+        "budi"
+      ],
+      "hint": "First name = nama depan."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "capitals-punctuation",
+      "prompt": "Write the words that need a capital letter: i'm from surabaya.",
+      "expected": [
+        "i'm surabaya"
+      ],
+      "hint": "I is always a capital, and so are city names."
+    },
+    {
+      "objectiveId": "write-details",
+      "prompt": "Write the words that need a capital letter in this address: jalan sudirman 10, jakarta",
+      "expected": [
+        "jalan sudirman jakarta"
+      ],
+      "hint": "The street name and the city."
+    },
+    {
+      "objectiveId": "fill-form",
+      "prompt": "Date of birth: 9 March 2002. Write it in numbers (day/month/year).",
+      "expected": [
+        "09/03/2002",
+        "9/3/2002"
+      ],
+      "hint": "Day first, then the month number (March = 3), then the year."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "wb-1",
+      "objectiveId": "capitals-punctuation",
+      "prompt": "Write the words that need a capital letter: this is my friend dewi from bogor.",
+      "acceptableAnswers": [
+        "this dewi bogor",
+        "this dewi and bogor"
+      ],
+      "rubric": "Correct: This, Dewi, Bogor (any order). Each missing or extra word = minus 30."
+    },
+    {
+      "id": "wb-2",
+      "objectiveId": "capitals-punctuation",
+      "prompt": "Write the word that needs a capital letter: My brother and i are students.",
+      "acceptableAnswers": [
+        "i"
+      ],
+      "rubric": "Correct: I. Any other word = 0."
+    },
+    {
+      "id": "wb-3",
+      "objectiveId": "capitals-punctuation",
+      "prompt": "Which punctuation mark ends this question? Where are you from (Write the name of the mark.)",
+      "acceptableAnswers": [
+        "question mark",
+        "a question mark",
+        "the question mark"
+      ],
+      "rubric": "Correct: a question mark (?). Full stop = 0."
+    },
+    {
+      "id": "wb-4",
+      "objectiveId": "write-details",
+      "prompt": "Listen. Write the phone number you hear.",
+      "listen": "My phone number is 0857 2109 4836.",
+      "acceptableAnswers": [
+        "0857 2109 4836",
+        "085721094836"
+      ],
+      "rubric": "Correct: 0857 2109 4836 (spaces or dashes are fine). One wrong digit = 50; two or more = 0."
+    },
+    {
+      "id": "wb-5",
+      "objectiveId": "write-details",
+      "prompt": "Write this email address the way you type it: budiman at yahoo dot com",
+      "acceptableAnswers": [
+        "budiman yahoo com"
+      ],
+      "rubric": "Correct: budiman@yahoo.com. Words 'at'/'dot' instead of @ and . = 30. Spaces inside the address = minus 20."
+    },
+    {
+      "id": "wb-6",
+      "objectiveId": "fill-form",
+      "prompt": "Your name is Rina Kartika. What do you write in the 'Surname' box?",
+      "acceptableAnswers": [
+        "kartika"
+      ],
+      "rubric": "Correct: Kartika. 'Rina' (the first name) = 0. 'Rina Kartika' = 30."
+    },
+    {
+      "id": "wb-7",
+      "objectiveId": "fill-form",
+      "prompt": "On a form, what does 'DOB' mean? Write the words.",
+      "acceptableAnswers": [
+        "date of birth"
+      ],
+      "rubric": "Correct: date of birth. 'birthday' = 60."
+    }
+  ],
+  "material": [
+    {
+      "id": "capitals",
+      "title": "Capital letters",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Use a **capital letter** for: the **first word** of a sentence, the word **I** (always, even in the middle of a sentence), **names** of people (Budi, Sari), **places** (Jalan Braga, Bandung, Indonesia) and **nationalities** (Indonesian). Most of these rules are the same in Indonesian — the new one is **I**.",
+          "i18n": {
+            "id": {
+              "text": "Pakai **huruf kapital** untuk: **kata pertama** kalimat, kata **I** (selalu, bahkan di tengah kalimat), **nama** orang (Budi, Sari), **tempat** (Jalan Braga, Bandung, Indonesia) dan **kebangsaan** (Indonesian). Sebagian besar aturan ini sama dengan bahasa Indonesia — yang baru adalah **I**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "My name is Budi and I live in Bandung.",
+              "id": "Nama saya Budi dan saya tinggal di Bandung.",
+              "note": "not: my name is budi and i live in bandung"
+            },
+            {
+              "en": "Sari and I are Indonesian.",
+              "id": "Sari dan saya orang Indonesia.",
+              "note": "I and Indonesian: capitals"
+            },
+            {
+              "en": "This is Pak Hasan from Medan.",
+              "id": "Ini Pak Hasan dari Medan."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "In chat apps people often type everything in small letters. In emails, forms and at work, use capitals — especially **I**. A small 'i' looks like a mistake.",
+          "i18n": {
+            "id": {
+              "text": "Di aplikasi chat orang sering mengetik semuanya dengan huruf kecil. Di email, formulir dan pekerjaan, pakai huruf kapital — terutama **I**. Huruf 'i' kecil terlihat seperti kesalahan."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which words need a capital letter? my teacher is pak hasan.",
+          "options": [
+            "my, pak, hasan",
+            "teacher, hasan",
+            "my, teacher"
+          ],
+          "answer": 0,
+          "explain": "My is the first word, and Pak Hasan is a person's name (with his title). Teacher is a normal word.",
+          "i18n": {
+            "id": {
+              "explain": "My kata pertama, dan Pak Hasan nama orang (dengan sapaannya). Teacher kata biasa."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Huruf kapital"
+        }
+      }
+    },
+    {
+      "id": "punctuation",
+      "title": "Basic punctuation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "End a sentence with a **full stop** (.) and a question with a **question mark** (?). Use a **comma** (,) between items in a list and between parts of an address. The **apostrophe** (') shows letters are missing: I'm = I am, What's = What is.",
+          "i18n": {
+            "id": {
+              "text": "Akhiri kalimat dengan **full stop** (titik .) dan pertanyaan dengan **question mark** (tanda tanya ?). Pakai **comma** (koma ,) di antara isi daftar dan di antara bagian alamat. **Apostrophe** (') menandai huruf yang hilang: I'm = I am, What's = What is."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I'm a student.",
+              "id": "Saya pelajar.",
+              "note": ". full stop"
+            },
+            {
+              "en": "What's your name?",
+              "id": "Siapa namamu?",
+              "note": "? question mark"
+            },
+            {
+              "en": "I have a pen, a book and a bag.",
+              "id": "Saya punya pulpen, buku dan tas.",
+              "note": ", comma"
+            },
+            {
+              "en": "Jalan Braga 10, Bandung",
+              "id": "Jalan Braga 10, Bandung",
+              "note": ", comma in an address"
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Choose the end mark: How old are you_",
+          "options": [
+            ".",
+            "?",
+            ","
+          ],
+          "answer": 1,
+          "explain": "It's a question, so it ends with a question mark.",
+          "i18n": {
+            "id": {
+              "explain": "Ini pertanyaan, jadi diakhiri tanda tanya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Tanda baca dasar"
+        }
+      }
+    },
+    {
+      "id": "details",
+      "title": "Writing your personal details",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**Names** and **places** start with a capital letter. Write an **address** like this: street and number, then a comma, then the city and postcode. Write an **email address** in small letters with no spaces. Write a **phone number** in small groups so it is easy to read.",
+          "i18n": {
+            "id": {
+              "text": "**Nama** dan **tempat** diawali huruf kapital. Tulis **alamat** seperti ini: nama jalan dan nomor, lalu koma, lalu kota dan kode pos. Tulis **alamat email** dengan huruf kecil tanpa spasi. Tulis **nomor telepon** dalam kelompok kecil supaya mudah dibaca."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Dewi Anggraini",
+              "id": "nama: tiap kata diawali kapital"
+            },
+            {
+              "en": "Jalan Braga 10, Bandung 40111",
+              "id": "alamat: jalan dan kota diawali kapital, koma sebelum kota"
+            },
+            {
+              "en": "dewi.anggraini@gmail.com",
+              "id": "email: huruf kecil semua, tanpa spasi"
+            },
+            {
+              "en": "0821 7788 9900",
+              "id": "nomor HP dalam kelompok kecil"
+            },
+            {
+              "en": "+62 821 7788 9900",
+              "id": "nomor yang sama dari luar negeri: 0 di depan diganti +62"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Check every detail twice. One wrong letter in an email address or one wrong digit in a phone number means nobody can contact you.",
+          "i18n": {
+            "id": {
+              "text": "Periksa setiap data dua kali. Satu huruf salah di alamat email atau satu angka salah di nomor telepon membuat orang tidak bisa menghubungimu."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which email address is written correctly?",
+          "options": [
+            "Sari Dewi@Gmail.com",
+            "sari.dewi@gmail.com",
+            "sari.dewi@gmail,com"
+          ],
+          "answer": 1,
+          "explain": "Email addresses use small letters, no spaces, and a dot (not a comma) before com.",
+          "i18n": {
+            "id": {
+              "explain": "Alamat email memakai huruf kecil, tanpa spasi, dan titik (bukan koma) sebelum com."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menulis data pribadi"
+        }
+      }
+    },
+    {
+      "id": "forms",
+      "title": "Filling in a form",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Forms at a hotel, a school, a gym or an embassy use the same words. **First name** is your own name; **surname** (or *last name*, *family name*) is your family name. Write your **date of birth** as **day/month/year** (17/08/1998) — like in Indonesia. Paper forms often say **BLOCK CAPITALS**: write all the letters as capitals, except your email and your signature.",
+          "i18n": {
+            "id": {
+              "text": "Formulir di hotel, sekolah, tempat gym atau kedutaan memakai kata-kata yang sama. **First name** adalah nama dirimu; **surname** (atau *last name*, *family name*) adalah nama keluarga. Tulis **date of birth** (tanggal lahir) sebagai **hari/bulan/tahun** (17/08/1998) — sama seperti di Indonesia. Formulir kertas sering meminta **BLOCK CAPITALS**: tulis semua huruf dengan kapital, kecuali email dan tanda tangan."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "First name: Dewi",
+              "id": "Nama depan: Dewi"
+            },
+            {
+              "en": "Surname: Anggraini",
+              "id": "Nama belakang / nama keluarga: Anggraini"
+            },
+            {
+              "en": "Date of birth (DOB): 17/08/1998",
+              "id": "Tanggal lahir: 17 Agustus 1998"
+            },
+            {
+              "en": "Nationality: Indonesian",
+              "id": "Kebangsaan: Indonesia"
+            },
+            {
+              "en": "Postcode: 40111",
+              "id": "Kode pos: 40111"
+            },
+            {
+              "en": "Signature: (your signature)",
+              "id": "Tanda tangan"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Careful with dates on American forms: the USA writes **month/day/year**, so 17 August 1998 is 08/17/1998. If you're not sure, write the month as a word: 17 August 1998.",
+          "i18n": {
+            "id": {
+              "text": "Hati-hati dengan tanggal di formulir Amerika: Amerika Serikat menulis **bulan/hari/tahun**, jadi 17 Agustus 1998 ditulis 08/17/1998. Kalau ragu, tulis bulannya dengan kata: 17 August 1998."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Your name is Andi Wijaya. First name: ___",
+          "options": [
+            "Andi",
+            "Wijaya",
+            "Andi Wijaya"
+          ],
+          "answer": 0,
+          "explain": "First name is your own name: Andi. Wijaya goes in the Surname box.",
+          "i18n": {
+            "id": {
+              "explain": "First name adalah nama dirimu: Andi. Wijaya ditulis di kotak Surname."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengisi formulir"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why is I always a capital letter?",
+    "Where do I put commas in an address?",
+    "What do I write in 'Surname' if I have only one name?",
+    "How do I write my date of birth on a form?"
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "How to complete an application form in English – A1 beginner writing lesson",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/writing/a1/how-complete-application-form-english-a1-beginner-writing-lesson-example",
+      "source": "British Council LearnEnglish",
+      "note": "A model form with tips on capitals, dates and checking your details, plus exercises.",
+      "i18n": {
+        "id": {
+          "note": "Contoh formulir dengan tips tentang huruf kapital, tanggal dan memeriksa data, plus latihan."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "10 Rules Of Capitalisation | When To Use Capital Letters In English Writing",
+      "url": "https://www.youtube.com/watch?v=yNK5GRXsLJM",
+      "source": "Learn English | Let's Talk",
+      "note": "When to use capital letters, with clear examples.",
+      "i18n": {
+        "id": {
+          "note": "Kapan memakai huruf kapital, dengan contoh yang jelas."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "titik (.)",
+      "back": "full stop"
+    },
+    {
+      "front": "tanda tanya (?)",
+      "back": "question mark"
+    },
+    {
+      "front": "koma (,)",
+      "back": "comma"
+    },
+    {
+      "front": "nama depan",
+      "back": "first name"
+    },
+    {
+      "front": "nama belakang / nama keluarga",
+      "back": "surname"
+    },
+    {
+      "front": "tanggal lahir",
+      "back": "date of birth"
+    },
+    {
+      "front": "tanda tangan",
+      "back": "signature"
+    },
+    {
+      "front": "Fix it: my name is budi and i live in bandung",
+      "back": "My name is Budi and I live in Bandung."
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Selamat datang! Hari ini kamu menulis dalam bahasa Inggris: huruf kapital, titik dan tanda tanya, data pribadimu, dan formulir sederhana. Hal kecil seperti huruf I kapital membuat tulisanmu terlihat benar dan mudah dibaca. Pemanasan: bagaimana kamu menulis kata bahasa Inggris untuk 'saya'?",
+      "suggestedQuestions": [
+        "Kenapa I selalu ditulis dengan huruf kapital?",
+        "Di mana aku menaruh koma dalam alamat?",
+        "Apa yang kutulis di 'Surname' kalau namaku cuma satu kata?",
+        "Bagaimana menulis tanggal lahirku di formulir?"
+      ]
+    }
+  }
+}

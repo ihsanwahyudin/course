@@ -142,16 +142,16 @@ func TestNextNodePrefersGoal(t *testing.T) {
 	master("a0-alphabet-sounds")
 
 	rm, _ := s.Roadmap(ctx, learnerID, course)
-	if rm.NextNodeID == nil || *rm.NextNodeID != "a0-pronouns" {
+	if rm.NextNodeID == nil || *rm.NextNodeID != "a0-greetings" {
 		t.Fatalf("without a goal, curriculum order: %v", rm.NextNodeID)
 	}
-	// Travel tags a1-questions (still locked) but not the available A0 nodes,
-	// so the suggestion stays in curriculum order rather than jumping ahead.
+	// Travel tags a1-questions (still locked) and a0-greetings, which already
+	// leads the curriculum order, so the suggestion does not jump ahead.
 	rm, err := s.SaveProfile(ctx, learnerID, course, ProfileInput{Answers: map[string]string{"goal": "travel"}})
 	if err != nil {
 		t.Fatal(err)
 	}
-	if rm.NextNodeID == nil || *rm.NextNodeID != "a0-pronouns" {
+	if rm.NextNodeID == nil || *rm.NextNodeID != "a0-greetings" {
 		t.Fatalf("a locked goal node must not be suggested: %v", *rm.NextNodeID)
 	}
 	if rm.Course.Progress == nil || rm.Course.Progress.Goal == nil || rm.Course.Progress.Goal.ID != "travel" {

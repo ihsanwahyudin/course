@@ -1,0 +1,612 @@
+{
+  "nodeId": "a0-sounds-indonesian",
+  "intro": "Welcome! Today we practise the English sounds Indonesian speakers find hardest: short and long vowels (ship or sheep?), th, v and sh, and the last sound of a word. Clear sounds help people understand you the first time. Warm-up: say 'think' and 'this' slowly — where is your tongue?",
+  "teachingNotes": [
+    "Indonesian has one 'i' sound, so ship /ɪ/ and sheep /iː/ often sound the same. Stress that /iː/ is long with the lips spread (like a smile) and /ɪ/ is short and relaxed. The same contrast exists for good /ʊ/ vs food /uː/.",
+    "th does not exist in Indonesian: learners say think as 'tink' (/t/) and this as 'dis' (/d/). Teach the tongue tip lightly between the teeth: /θ/ (think, thank you) with air only, /ð/ (this, mother) with voice.",
+    "v is often said as f ('fery' for very): the top teeth touch the lower lip AND the voice buzzes (hand on the throat). sh /ʃ/ is like Indonesian 'sy' in 'syarat': round lips, not s (she is not see).",
+    "Final consonants: Indonesian speakers often swallow the last sound (ca' for cat) and say a final b/d/g like p/t/k (bed → 'bet'), as in Indonesian 'abad' sounding like 'abat'. Ask learners to finish every word, without adding an extra vowel ('bed-e').",
+    "Describe mouth positions in simple words and use minimal pairs. Keep sentences very short and use no new grammar (only chunks like 'This is…', 'I have…'). Don't teach phonetic symbols beyond /ɪ/, /iː/, /ʊ/, /uː/, /θ/, /ð/, /v/ and /ʃ/."
+  ],
+  "keyPoints": [
+    {
+      "title": "Short and long vowels",
+      "explanation": "English has short and long vowels. Ship has a short, relaxed /ɪ/; sheep has a long /iː/ with the lips spread like a smile. If you change the length, you change the word.",
+      "examples": [
+        {
+          "en": "ship — sheep",
+          "id": "kapal — domba"
+        },
+        {
+          "en": "sit — seat",
+          "id": "duduk — kursi"
+        },
+        {
+          "en": "good — food",
+          "id": "baik (pendek /ʊ/) — makanan (panjang /uː/)"
+        }
+      ]
+    },
+    {
+      "title": "th, v and sh",
+      "explanation": "For th, put the tip of your tongue between your teeth: /θ/ with air only (think), /ð/ with voice (this). For /v/, the top teeth touch the lower lip and your voice buzzes (very). For /ʃ/, round your lips like 'sy' in 'syarat' (she).",
+      "examples": [
+        {
+          "en": "think /θ/ — this /ð/",
+          "id": "berpikir — ini"
+        },
+        {
+          "en": "very /v/",
+          "id": "sangat (bukan 'fery')"
+        },
+        {
+          "en": "she /ʃ/",
+          "id": "dia (perempuan) (bukan 'see')"
+        }
+      ]
+    },
+    {
+      "title": "Finish the word",
+      "explanation": "Say the last consonant clearly. Without it, cat can sound like cap or can. A final d stays d (bed), it does not become t (bet).",
+      "examples": [
+        {
+          "en": "cat — cap — can",
+          "id": "kucing — topi — kaleng"
+        },
+        {
+          "en": "bed",
+          "id": "tempat tidur (akhiri dengan /d/)"
+        },
+        {
+          "en": "bus",
+          "id": "bis (akhiri dengan /s/)"
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "short-long-vowels",
+      "prompt": "Which word has the long 'ee' sound /iː/: sit or seat?",
+      "expected": [
+        "seat"
+      ],
+      "hint": "The long sound has spread lips, like a smile. It's often spelled ee or ea."
+    },
+    {
+      "objectiveId": "th-v-sh",
+      "prompt": "Which word starts with the voiced th /ð/ (tongue between the teeth, with voice): think or this?",
+      "expected": [
+        "this"
+      ],
+      "hint": "Put a hand on your throat: one of the words buzzes."
+    },
+    {
+      "objectiveId": "th-v-sh",
+      "prompt": "Which word ends with the sound /v/: five or fine?",
+      "expected": [
+        "five"
+      ],
+      "hint": "For /v/ the top teeth touch the lower lip."
+    },
+    {
+      "objectiveId": "final-consonants",
+      "prompt": "Which word ends with the sound /d/: bed or bet?",
+      "expected": [
+        "bed"
+      ],
+      "hint": "In English a final d stays d. Don't turn it into t."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "short-long-vowels",
+      "prompt": "Which word has the short sound /ɪ/: cheap or chip?",
+      "expected": [
+        "chip"
+      ],
+      "hint": "The short sound is quick and relaxed."
+    },
+    {
+      "objectiveId": "th-v-sh",
+      "prompt": "Which word starts with the sound /ʃ/: see or she?",
+      "expected": [
+        "she"
+      ],
+      "hint": "/ʃ/ is like 'sy' in 'syarat'."
+    },
+    {
+      "objectiveId": "final-consonants",
+      "prompt": "Write the English word for 'bis' and say its last sound clearly.",
+      "expected": [
+        "bus"
+      ],
+      "hint": "It ends with /s/: bu-s."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "snd-1",
+      "objectiveId": "short-long-vowels",
+      "prompt": "Listen. Do you hear live or leave? Write the word you hear.",
+      "listen": "The word is leave.",
+      "acceptableAnswers": [
+        "leave"
+      ],
+      "rubric": "Correct: leave (long /iː/). 'live' = 0."
+    },
+    {
+      "id": "snd-2",
+      "objectiveId": "short-long-vowels",
+      "prompt": "Which word has the long sound /uː/, like in 'food': full or fool? Write it.",
+      "acceptableAnswers": [
+        "fool"
+      ],
+      "rubric": "Correct: fool (long /uː/). 'full' has the short /ʊ/ = 0."
+    },
+    {
+      "id": "snd-3",
+      "objectiveId": "th-v-sh",
+      "prompt": "Listen. Do you hear tree or three? Write the word you hear.",
+      "listen": "The word is three.",
+      "acceptableAnswers": [
+        "three",
+        "3"
+      ],
+      "rubric": "Correct: three (/θ/). Accept '3'. 'tree' = 0."
+    },
+    {
+      "id": "snd-4",
+      "objectiveId": "th-v-sh",
+      "prompt": "Listen. Do you hear safe or save? Write the word you hear.",
+      "listen": "The word is save.",
+      "acceptableAnswers": [
+        "save"
+      ],
+      "rubric": "Correct: save (ends with /v/). 'safe' = 0."
+    },
+    {
+      "id": "snd-5",
+      "objectiveId": "th-v-sh",
+      "prompt": "Which word starts with the voiced th /ð/ (tongue between the teeth, with voice): thank, they or day? Write it.",
+      "acceptableAnswers": [
+        "they"
+      ],
+      "rubric": "Correct: they. 'thank' has the voiceless /θ/; 'day' starts with /d/ = 0."
+    },
+    {
+      "id": "snd-6",
+      "objectiveId": "final-consonants",
+      "prompt": "Listen. Do you hear back, bag or bad? Write the word you hear.",
+      "listen": "The word is bag.",
+      "acceptableAnswers": [
+        "bag"
+      ],
+      "rubric": "Correct: bag (ends with /g/). 'back' or 'bad' = 0."
+    },
+    {
+      "id": "snd-7",
+      "objectiveId": "final-consonants",
+      "prompt": "Write the English word for 'nasi'. It ends with the sound /s/.",
+      "acceptableAnswers": [
+        "rice"
+      ],
+      "rubric": "Correct: rice. Spelling slips (e.g. 'rise') = 50."
+    }
+  ],
+  "material": [
+    {
+      "id": "vowels",
+      "title": "Short and long vowels",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian has one **i** sound, but English has two: a **short** /ɪ/ (*ship, sit*) and a **long** /iː/ (*sheep, seat*). For the long sound, spread your lips like a smile and hold it a little longer. The same happens with **oo**: short /ʊ/ in *good*, long /uː/ in *food*.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia punya satu bunyi **i**, tapi bahasa Inggris punya dua: **pendek** /ɪ/ (*ship, sit*) dan **panjang** /iː/ (*sheep, seat*). Untuk bunyi panjang, tarik bibirmu seperti tersenyum dan tahan sedikit lebih lama. Hal yang sama terjadi pada **oo**: pendek /ʊ/ di *good*, panjang /uː/ di *food*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "ship /ɪ/ — sheep /iː/",
+              "id": "kapal — domba"
+            },
+            {
+              "en": "sit /ɪ/ — seat /iː/",
+              "id": "duduk — kursi"
+            },
+            {
+              "en": "chip /ɪ/ — cheap /iː/",
+              "id": "keripik — murah"
+            },
+            {
+              "en": "good /ʊ/ — food /uː/",
+              "id": "baik — makanan"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Spelling often helps: **ee** and **ea** usually sound long /iː/ (*see, tea, seat*). One **i** between two consonants usually sounds short /ɪ/ (*sit, big, fish*).",
+          "i18n": {
+            "id": {
+              "text": "Ejaan sering membantu: **ee** dan **ea** biasanya berbunyi panjang /iː/ (*see, tea, seat*). Satu huruf **i** di antara dua konsonan biasanya berbunyi pendek /ɪ/ (*sit, big, fish*)."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which word has the long sound /iː/?",
+          "options": [
+            "fish",
+            "big",
+            "tea"
+          ],
+          "answer": 2,
+          "explain": "Tea has ea, a long /iː/. Fish and big have a short /ɪ/.",
+          "i18n": {
+            "id": {
+              "explain": "Tea ditulis dengan ea, bunyinya panjang /iː/. Fish dan big berbunyi pendek /ɪ/."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Vokal pendek dan panjang"
+        }
+      }
+    },
+    {
+      "id": "th",
+      "title": "The two th sounds",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian has no **th**, so learners often say *tink* for **think** and *dis* for **this**. Put the tip of your tongue **lightly between your teeth** and push air out. For **/θ/** (*think, thank you, bathroom*) there is only air. For **/ð/** (*this, that, the, mother*) your voice buzzes too.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia tidak punya bunyi **th**, jadi pelajar sering mengucapkan *tink* untuk **think** dan *dis* untuk **this**. Letakkan ujung lidah **ringan di antara gigi** lalu hembuskan udara. Untuk **/θ/** (*think, thank you, bathroom*) hanya udara yang keluar. Untuk **/ð/** (*this, that, the, mother*) suaramu ikut bergetar."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "think /θ/",
+              "id": "berpikir",
+              "note": "not 'tink'"
+            },
+            {
+              "en": "thank you /θ/",
+              "id": "terima kasih"
+            },
+            {
+              "en": "this /ð/",
+              "id": "ini",
+              "note": "not 'dis'"
+            },
+            {
+              "en": "mother /ð/",
+              "id": "ibu"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Use a mirror: for th you should see the tip of your tongue. If you can't see it, you are probably saying t or d.",
+          "i18n": {
+            "id": {
+              "text": "Pakai cermin: untuk th, ujung lidahmu harus terlihat. Kalau tidak terlihat, kemungkinan kamu sedang mengucapkan t atau d."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "How do you start the word 'thank'?",
+          "options": [
+            "Tongue tip behind the top teeth, like Indonesian t",
+            "Tongue tip between the teeth, push air out",
+            "Top teeth on the lower lip"
+          ],
+          "answer": 1,
+          "explain": "Thank starts with /θ/: tongue tip between the teeth, air only. Behind the teeth is t; teeth on the lip is f or v.",
+          "i18n": {
+            "id": {
+              "explain": "Thank diawali /θ/: ujung lidah di antara gigi, hanya udara. Lidah di belakang gigi adalah t; gigi di bibir adalah f atau v."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Dua bunyi th"
+        }
+      }
+    },
+    {
+      "id": "v-sh",
+      "title": "v and sh",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**v** is not **f**. For both sounds the top teeth touch the lower lip, but for **/v/** your voice buzzes — put a hand on your throat to feel it: *very, van, seven, five*. Saying *fery* for **very** is a common mistake. **sh /ʃ/** is like **sy** in *syarat* or *masyarakat*: round your lips and push air out: *she, shop, fish*. Don't say **s**: *she* is not *see*.",
+          "i18n": {
+            "id": {
+              "text": "**v** bukan **f**. Untuk kedua bunyi ini gigi atas menyentuh bibir bawah, tapi untuk **/v/** suaramu bergetar — letakkan tangan di leher untuk merasakannya: *very, van, seven, five*. Mengucapkan *fery* untuk **very** adalah kesalahan umum. **sh /ʃ/** mirip **sy** di *syarat* atau *masyarakat*: bulatkan bibir lalu hembuskan udara: *she, shop, fish*. Jangan ucapkan **s**: *she* bukan *see*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "very /v/",
+              "id": "sangat",
+              "note": "not 'fery'"
+            },
+            {
+              "en": "seven /v/",
+              "id": "tujuh"
+            },
+            {
+              "en": "van /v/ — fan /f/",
+              "id": "mobil van — kipas angin"
+            },
+            {
+              "en": "she /ʃ/ — see /s/",
+              "id": "dia (perempuan) — melihat"
+            },
+            {
+              "en": "fish /ʃ/",
+              "id": "ikan"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "The throat test: say *ffff* and then *vvvv* with a hand on your throat. Only /v/ buzzes.",
+          "i18n": {
+            "id": {
+              "text": "Tes leher: ucapkan *ffff* lalu *vvvv* sambil memegang leher. Hanya /v/ yang bergetar."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which word starts with the sound /ʃ/?",
+          "options": [
+            "sea",
+            "shop",
+            "sock"
+          ],
+          "answer": 1,
+          "explain": "Shop starts with sh /ʃ/, round lips. Sea and sock start with /s/.",
+          "i18n": {
+            "id": {
+              "explain": "Shop diawali sh /ʃ/, bibir dibulatkan. Sea dan sock diawali /s/."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "v dan sh"
+        }
+      }
+    },
+    {
+      "id": "final",
+      "title": "Finish the word",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Indonesian the last sound of a word is often soft: *bapak*, or *abad* that sounds like *abat*. In English the **last consonant changes the meaning**: *cat* (kucing), *cap* (topi), *can* (kaleng). Say every word to the end: **ca-t, be-d, bu-s**. A final **d** stays d: *bed*, not *bet*.",
+          "i18n": {
+            "id": {
+              "text": "Dalam bahasa Indonesia bunyi terakhir sebuah kata sering lemah: *bapak*, atau *abad* yang terdengar seperti *abat*. Dalam bahasa Inggris **konsonan terakhir mengubah arti**: *cat* (kucing), *cap* (topi), *can* (kaleng). Ucapkan setiap kata sampai habis: **ca-t, be-d, bu-s**. Huruf **d** di akhir tetap d: *bed*, bukan *bet*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "cat — cap — can",
+              "id": "kucing — topi — kaleng"
+            },
+            {
+              "en": "bed",
+              "id": "tempat tidur",
+              "note": "ends with /d/, not /t/"
+            },
+            {
+              "en": "bus",
+              "id": "bis",
+              "note": "ends with /s/"
+            },
+            {
+              "en": "books",
+              "id": "buku-buku",
+              "note": "ends with /s/"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Finish the sound, but don't add a vowel after it: say *bed*, not *bed-e*.",
+          "i18n": {
+            "id": {
+              "text": "Selesaikan bunyinya, tapi jangan tambahkan vokal sesudahnya: ucapkan *bed*, bukan *bed-e*."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which word means 'kucing'? Say the last sound clearly.",
+          "options": [
+            "cap",
+            "cat",
+            "can"
+          ],
+          "answer": 1,
+          "explain": "Cat ends with a clear /t/. Cap is 'topi' and can is 'kaleng'.",
+          "i18n": {
+            "id": {
+              "explain": "Cat diakhiri /t/ yang jelas. Cap artinya topi dan can artinya kaleng."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Selesaikan katanya"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "In real conversations",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "People can often guess from the situation, but clear sounds save time — at a café, on the phone or at the office. Practise short phrases you use every day, slowly first and then at normal speed.",
+          "i18n": {
+            "id": {
+              "text": "Orang sering bisa menebak dari situasinya, tapi bunyi yang jelas menghemat waktu — di kafe, di telepon atau di kantor. Latih frasa pendek yang kamu pakai setiap hari, pelan dulu lalu dengan kecepatan normal."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Thank you very much.",
+              "id": "Terima kasih banyak.",
+              "note": "th + v"
+            },
+            {
+              "en": "This is my mother.",
+              "id": "Ini ibu saya.",
+              "note": "ð"
+            },
+            {
+              "en": "She is in the shop.",
+              "id": "Dia (perempuan) ada di toko.",
+              "note": "ʃ"
+            },
+            {
+              "en": "Is this your seat?",
+              "id": "Apakah ini kursimu?",
+              "note": "long /iː/"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Record yourself on your phone and compare with the audio. Slow and clear is better than fast.",
+          "i18n": {
+            "id": {
+              "text": "Rekam suaramu di ponsel lalu bandingkan dengan audionya. Pelan dan jelas lebih baik daripada cepat."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Dalam percakapan nyata"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "How can I hear the difference between ship and sheep?",
+    "Where does my tongue go for th?",
+    "Why do I say 'fery' instead of 'very'?",
+    "Why is the last sound of a word so important?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "How to Say Ship or Sheep | Pronunciation /i:/ vs /I/",
+      "url": "https://www.youtube.com/watch?v=YLVhtkEXOyE",
+      "source": "Eat Sleep Dream English",
+      "note": "A short British English lesson on the short and long i sounds.",
+      "i18n": {
+        "id": {
+          "note": "Pelajaran singkat bahasa Inggris British tentang bunyi i pendek dan panjang."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "How to Pronounce TH | The ULTIMATE Guide for English Learners!",
+      "url": "https://www.youtube.com/watch?v=wCkONOv2JJM",
+      "source": "mmmEnglish",
+      "note": "See the tongue position for both th sounds, with lots of practice words.",
+      "i18n": {
+        "id": {
+          "note": "Lihat posisi lidah untuk kedua bunyi th, dengan banyak kata latihan."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "English: How to Pronounce F and V consonants",
+      "url": "https://www.youtube.com/watch?v=EBYpWd0oFjM",
+      "source": "Rachel's English",
+      "note": "Close-up of the teeth and lip for f and v, and how voice makes the difference (American accent).",
+      "i18n": {
+        "id": {
+          "note": "Tampilan dekat gigi dan bibir untuk f dan v, serta bagaimana suara membedakannya (aksen Amerika)."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "kapal / domba",
+      "back": "ship (short /ɪ/) / sheep (long /iː/)"
+    },
+    {
+      "front": "berpikir — tongue between the teeth, air only",
+      "back": "think /θ/"
+    },
+    {
+      "front": "ini — tongue between the teeth, with voice",
+      "back": "this /ð/"
+    },
+    {
+      "front": "sangat — top teeth on the lower lip, with voice",
+      "back": "very /v/ (not 'fery')"
+    },
+    {
+      "front": "dia (perempuan) — round lips, like 'sy'",
+      "back": "she /ʃ/ (not 'see')"
+    },
+    {
+      "front": "kucing — finish with /t/",
+      "back": "cat"
+    },
+    {
+      "front": "tempat tidur — finish with /d/, not /t/",
+      "back": "bed"
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Selamat datang! Hari ini kita berlatih bunyi bahasa Inggris yang paling sulit bagi penutur Indonesia: vokal pendek dan panjang (ship atau sheep?), th, v dan sh, serta bunyi terakhir sebuah kata. Bunyi yang jelas membuat orang langsung paham maksudmu. Pemanasan: ucapkan 'think' dan 'this' pelan-pelan — di mana posisi lidahmu?",
+      "suggestedQuestions": [
+        "Bagaimana cara mendengar beda ship dan sheep?",
+        "Di mana posisi lidah untuk th?",
+        "Kenapa aku mengucapkan 'fery', bukan 'very'?",
+        "Kenapa bunyi terakhir sebuah kata begitu penting?"
+      ]
+    }
+  }
+}

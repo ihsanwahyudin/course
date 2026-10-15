@@ -1,0 +1,760 @@
+{
+  "en": {
+    "greeting": "Hi again! Today we count all the way to 100, then use numbers for your age, your phone number and prices in rupiah. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Counting in tens",
+        "text": "You already know 1 to 20. Let's count in tens.",
+        "body": "The tens all end in **-ty**: twenty, thirty, forty… For the numbers in between, say the ten and then the unit: **twenty-one**, **fifty-six**, **ninety-nine** (with a hyphen in writing). After ninety-nine comes **one hundred**. Watch the spelling: **forty** has no u.",
+        "pairs": [
+          {
+            "en": "twenty",
+            "id": "dua puluh (20)"
+          },
+          {
+            "en": "thirty",
+            "id": "tiga puluh (30)"
+          },
+          {
+            "en": "forty",
+            "id": "empat puluh (40)"
+          },
+          {
+            "en": "fifty",
+            "id": "lima puluh (50)"
+          },
+          {
+            "en": "sixty",
+            "id": "enam puluh (60)"
+          },
+          {
+            "en": "seventy",
+            "id": "tujuh puluh (70)"
+          },
+          {
+            "en": "eighty",
+            "id": "delapan puluh (80)"
+          },
+          {
+            "en": "ninety",
+            "id": "sembilan puluh (90)"
+          },
+          {
+            "en": "one hundred",
+            "id": "seratus (100)"
+          },
+          {
+            "en": "twenty-one",
+            "id": "dua puluh satu (21)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "thirTEEN or THIRty?",
+        "text": "These pairs sound almost the same. The secret is the stress.",
+        "body": "**-teen** numbers (13–19) are stressed at the **end**: thir**TEEN**, four**TEEN**, fif**TEEN**. **-ty** numbers are stressed at the **start**: **THIR**ty, **FOR**ty, **FIF**ty. Play each tile and listen for the strong part. Not sure what you heard? Ask: **One-three or three-zero?**",
+        "pairs": [
+          {
+            "en": "thirteen",
+            "id": "tiga belas (13)"
+          },
+          {
+            "en": "thirty",
+            "id": "tiga puluh (30)"
+          },
+          {
+            "en": "fourteen",
+            "id": "empat belas (14)"
+          },
+          {
+            "en": "forty",
+            "id": "empat puluh (40)"
+          },
+          {
+            "en": "fifteen",
+            "id": "lima belas (15)"
+          },
+          {
+            "en": "fifty",
+            "id": "lima puluh (50)"
+          },
+          {
+            "en": "nineteen",
+            "id": "sembilan belas (19)"
+          },
+          {
+            "en": "ninety",
+            "id": "sembilan puluh (90)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Press play and listen for the stress: start or end?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "numbers-21-100",
+          "prompt": "Listen. Which number do you hear?",
+          "listen": "My house is number fifty.",
+          "options": [
+            "15",
+            "55",
+            "50"
+          ],
+          "answer": 2,
+          "explanation": "You heard **FIF**ty — the stress is at the start, so it is 50. **fifTEEN** (15) has the stress at the end, and 55 is **fifty-five**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Your age and phone number",
+        "text": "Now let's talk about you: your age and your number.",
+        "body": "For age, say **I'm** + the number. You can add **years old**. English doesn't use *have* for age, so never 'I have 25 years'. Read phone numbers **one digit at a time**, in small groups with a pause. Say 0 as **oh** or **zero**, and 55 can be **double five**.",
+        "pairs": [
+          {
+            "en": "How old are you?",
+            "id": "Berapa umurmu?"
+          },
+          {
+            "en": "I'm 25.",
+            "id": "Umur saya 25."
+          },
+          {
+            "en": "I'm 25 years old.",
+            "id": "Umur saya 25 tahun."
+          },
+          {
+            "en": "What's your phone number?",
+            "id": "Berapa nomor teleponmu?"
+          },
+          {
+            "en": "My number is 0812 5567 3490.",
+            "id": "Nomor saya 0812 5567 3490."
+          },
+          {
+            "en": "oh / zero",
+            "id": "0 (nol)"
+          },
+          {
+            "en": "double five",
+            "id": "55 (lima lima)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in English order. Remember: age uses I'm, not have.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "age-phone",
+          "prompt": "Arrange the words: Umur saya dua puluh tiga tahun.",
+          "tokens": [
+            "years",
+            "I'm",
+            "old",
+            "twenty-three"
+          ],
+          "solution": "I'm twenty-three years old.",
+          "explanation": "Age is **I'm** (I am) + the number + **years old**. English doesn't use *have* here, so not 'I have twenty-three years'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Phone numbers come fast. Listen for each digit in each group.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "age-phone",
+          "prompt": "Listen. Which phone number do you hear?",
+          "listen": "My number is 0 8 7 7, 3 0 1 5, 2 2 6 8.",
+          "options": [
+            "0877 3015 2268",
+            "0877 3105 2268",
+            "0877 3015 2286"
+          ],
+          "answer": 0,
+          "explanation": "The speaker reads one digit at a time in three groups: oh-eight-seven-seven, three-oh-one-five, two-two-six-eight. Small groups make a long number easy to follow."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Prices in rupiah",
+        "text": "Time to go shopping!",
+        "body": "Say how many **thousand**, then **rupiah**: Rp25.000 = **twenty-five thousand rupiah**. After a number, **thousand** and **hundred** never take -s, and **rupiah** has no -s. English writes **25,000** with a comma; Indonesian writes 25.000 with a dot. Ask **How much is it?** and answer **It's … rupiah.**",
+        "pairs": [
+          {
+            "en": "thousand",
+            "id": "ribu"
+          },
+          {
+            "en": "hundred",
+            "id": "ratus"
+          },
+          {
+            "en": "a hundred thousand",
+            "id": "seratus ribu"
+          },
+          {
+            "en": "How much is it?",
+            "id": "Berapa harganya?"
+          },
+          {
+            "en": "It's 25,000 rupiah.",
+            "id": "Harganya 25.000 rupiah."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "At the warung",
+        "text": "Read these out loud. Say the price in words each time.",
+        "body": "3,500 = **three thousand five hundred**. 100,000 = **a hundred thousand**.",
+        "examples": [
+          {
+            "en": "How much is the iced tea? — It's 5,000 rupiah.",
+            "id": "Berapa harga es tehnya? — 5.000 rupiah."
+          },
+          {
+            "en": "Nasi goreng is 15,000 rupiah.",
+            "id": "Nasi goreng harganya 15.000 rupiah."
+          },
+          {
+            "en": "The bus ticket is 3,500 rupiah.",
+            "id": "Tiket busnya 3.500 rupiah."
+          },
+          {
+            "en": "This T-shirt is 50,000 rupiah.",
+            "id": "Kaus ini harganya 50.000 rupiah."
+          },
+          {
+            "en": "The book is 100,000 rupiah.",
+            "id": "Buku itu harganya 100.000 rupiah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look closely at the word thousand.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prices",
+          "prompt": "How do you say Rp20.000 in English?",
+          "options": [
+            "twenty thousand rupiah",
+            "twenty thousands rupiah",
+            "two thousand rupiah"
+          ],
+          "answer": 0,
+          "explanation": "After a number, **thousand** has no -s: twenty **thousand**. 'Two thousand' is only Rp2.000."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "You're at a shop. Listen to the price.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prices",
+          "prompt": "Listen to the shop assistant. How much is it?",
+          "listen": "It's sixty thousand rupiah.",
+          "options": [
+            "16,000 rupiah",
+            "60,000 rupiah",
+            "6,000 rupiah"
+          ],
+          "answer": 1,
+          "explanation": "You heard **SIX**ty thousand — the stress is at the start, so it is 60,000. Sixteen thousand would be six**TEEN** thousand, and 6,000 is just six thousand."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet you can keep and look back at.",
+        "artifact": {
+          "title": "Cheat sheet · Numbers & prices",
+          "intro": "The tens end in -ty. Ages use I'm. Phone numbers go digit by digit. Prices: number + thousand + rupiah.",
+          "headers": [
+            "Number",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "13",
+              "thirteen (thirTEEN)",
+              "tiga belas"
+            ],
+            [
+              "20",
+              "twenty",
+              "dua puluh"
+            ],
+            [
+              "30",
+              "thirty (THIRty)",
+              "tiga puluh"
+            ],
+            [
+              "40",
+              "forty (no u)",
+              "empat puluh"
+            ],
+            [
+              "50",
+              "fifty",
+              "lima puluh"
+            ],
+            [
+              "60",
+              "sixty",
+              "enam puluh"
+            ],
+            [
+              "70",
+              "seventy",
+              "tujuh puluh"
+            ],
+            [
+              "80",
+              "eighty",
+              "delapan puluh"
+            ],
+            [
+              "90",
+              "ninety",
+              "sembilan puluh"
+            ],
+            [
+              "100",
+              "one hundred / a hundred",
+              "seratus"
+            ],
+            [
+              "0 (phone)",
+              "oh / zero",
+              "nol"
+            ],
+            [
+              "1,000",
+              "one thousand",
+              "seribu"
+            ],
+            [
+              "25,000",
+              "twenty-five thousand",
+              "dua puluh lima ribu"
+            ]
+          ],
+          "tips": [
+            "Stress: thir**TEEN** (13) but **THIR**ty (30).",
+            "Age: **I'm 25 (years old)** — never 'I have 25 years'.",
+            "Prices: **twenty-five thousand rupiah** — no -s on thousand, and English writes 25,000 with a comma."
+          ],
+          "examples": [
+            {
+              "en": "I'm 25 years old.",
+              "id": "Umur saya 25 tahun."
+            },
+            {
+              "en": "My number is 0812 5567 3490.",
+              "id": "Nomor saya 0812 5567 3490."
+            },
+            {
+              "en": "How much is it? — It's 25,000 rupiah.",
+              "id": "Berapa harganya? — 25.000 rupiah."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These two short videos help with counting and with the teen/ty stress."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai lagi! Hari ini kita berhitung sampai 100, lalu memakai angka untuk umur, nomor telepon, dan harga dalam rupiah. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Berhitung per puluhan",
+        "text": "Kamu sudah tahu 1 sampai 20. Sekarang kita berhitung per puluhan.",
+        "body": "Semua puluhan berakhiran **-ty**: twenty, thirty, forty… Untuk angka di antaranya, sebut puluhannya lalu satuannya: **twenty-one**, **fifty-six**, **ninety-nine** (pakai tanda hubung saat menulis). Setelah ninety-nine ada **one hundred**. Perhatikan ejaannya: **forty** tanpa huruf u.",
+        "pairs": [
+          {
+            "en": "twenty",
+            "id": "dua puluh (20)"
+          },
+          {
+            "en": "thirty",
+            "id": "tiga puluh (30)"
+          },
+          {
+            "en": "forty",
+            "id": "empat puluh (40)"
+          },
+          {
+            "en": "fifty",
+            "id": "lima puluh (50)"
+          },
+          {
+            "en": "sixty",
+            "id": "enam puluh (60)"
+          },
+          {
+            "en": "seventy",
+            "id": "tujuh puluh (70)"
+          },
+          {
+            "en": "eighty",
+            "id": "delapan puluh (80)"
+          },
+          {
+            "en": "ninety",
+            "id": "sembilan puluh (90)"
+          },
+          {
+            "en": "one hundred",
+            "id": "seratus (100)"
+          },
+          {
+            "en": "twenty-one",
+            "id": "dua puluh satu (21)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "thirTEEN atau THIRty?",
+        "text": "Pasangan ini bunyinya hampir sama. Kuncinya ada di tekanan.",
+        "body": "Angka **-teen** (13–19) ditekan di **akhir**: thir**TEEN**, four**TEEN**, fif**TEEN**. Angka **-ty** ditekan di **awal**: **THIR**ty, **FOR**ty, **FIF**ty. Putar tiap kartu dan dengarkan bagian yang paling kuat. Ragu dengan yang kamu dengar? Tanyakan: **One-three or three-zero?**",
+        "pairs": [
+          {
+            "en": "thirteen",
+            "id": "tiga belas (13)"
+          },
+          {
+            "en": "thirty",
+            "id": "tiga puluh (30)"
+          },
+          {
+            "en": "fourteen",
+            "id": "empat belas (14)"
+          },
+          {
+            "en": "forty",
+            "id": "empat puluh (40)"
+          },
+          {
+            "en": "fifteen",
+            "id": "lima belas (15)"
+          },
+          {
+            "en": "fifty",
+            "id": "lima puluh (50)"
+          },
+          {
+            "en": "nineteen",
+            "id": "sembilan belas (19)"
+          },
+          {
+            "en": "ninety",
+            "id": "sembilan puluh (90)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Tekan putar dan dengarkan tekanannya: di awal atau di akhir?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "numbers-21-100",
+          "prompt": "Dengarkan. Angka berapa yang kamu dengar?",
+          "listen": "My house is number fifty.",
+          "options": [
+            "15",
+            "55",
+            "50"
+          ],
+          "answer": 2,
+          "explanation": "Yang kamu dengar **FIF**ty — tekanannya di awal, jadi 50. **fifTEEN** (15) ditekan di akhir, dan 55 adalah **fifty-five**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Umur dan nomor telepon",
+        "text": "Sekarang kita bicara tentang kamu: umur dan nomormu.",
+        "body": "Untuk umur, katakan **I'm** + angkanya. Boleh ditambah **years old**. Bahasa Inggris tidak memakai *have* untuk umur, jadi jangan bilang 'I have 25 years'. Baca nomor telepon **satu angka demi satu angka**, dalam kelompok kecil dengan jeda. Angka 0 dibaca **oh** atau **zero**, dan 55 boleh dibaca **double five**.",
+        "pairs": [
+          {
+            "en": "How old are you?",
+            "id": "Berapa umurmu?"
+          },
+          {
+            "en": "I'm 25.",
+            "id": "Umur saya 25."
+          },
+          {
+            "en": "I'm 25 years old.",
+            "id": "Umur saya 25 tahun."
+          },
+          {
+            "en": "What's your phone number?",
+            "id": "Berapa nomor teleponmu?"
+          },
+          {
+            "en": "My number is 0812 5567 3490.",
+            "id": "Nomor saya 0812 5567 3490."
+          },
+          {
+            "en": "oh / zero",
+            "id": "0 (nol)"
+          },
+          {
+            "en": "double five",
+            "id": "55 (lima lima)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kata-katanya sesuai urutan bahasa Inggris. Ingat: umur memakai I'm, bukan have.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "age-phone",
+          "prompt": "Susun kata-katanya: Umur saya dua puluh tiga tahun.",
+          "tokens": [
+            "years",
+            "I'm",
+            "old",
+            "twenty-three"
+          ],
+          "solution": "I'm twenty-three years old.",
+          "explanation": "Umur memakai **I'm** (I am) + angka + **years old**. Bahasa Inggris tidak memakai *have* di sini, jadi bukan 'I have twenty-three years'."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Nomor telepon diucapkan cepat. Dengarkan tiap angka di tiap kelompok.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "age-phone",
+          "prompt": "Dengarkan. Nomor telepon mana yang kamu dengar?",
+          "listen": "My number is 0 8 7 7, 3 0 1 5, 2 2 6 8.",
+          "options": [
+            "0877 3015 2268",
+            "0877 3105 2268",
+            "0877 3015 2286"
+          ],
+          "answer": 0,
+          "explanation": "Pembicara membaca satu angka demi satu angka dalam tiga kelompok: oh-eight-seven-seven, three-oh-one-five, two-two-six-eight. Kelompok kecil membuat nomor panjang mudah diikuti."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Harga dalam rupiah",
+        "text": "Saatnya belanja!",
+        "body": "Sebut berapa **thousand** (ribu), lalu **rupiah**: Rp25.000 = **twenty-five thousand rupiah**. Setelah angka, **thousand** dan **hundred** tidak pernah diberi -s, dan **rupiah** juga tanpa -s. Bahasa Inggris menulis **25,000** dengan koma; bahasa Indonesia menulis 25.000 dengan titik. Tanyakan **How much is it?** dan jawab **It's … rupiah.**",
+        "pairs": [
+          {
+            "en": "thousand",
+            "id": "ribu"
+          },
+          {
+            "en": "hundred",
+            "id": "ratus"
+          },
+          {
+            "en": "a hundred thousand",
+            "id": "seratus ribu"
+          },
+          {
+            "en": "How much is it?",
+            "id": "Berapa harganya?"
+          },
+          {
+            "en": "It's 25,000 rupiah.",
+            "id": "Harganya 25.000 rupiah."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di warung",
+        "text": "Bacakan dengan suara keras. Sebut harganya dalam kata setiap kali.",
+        "body": "3,500 = **three thousand five hundred**. 100,000 = **a hundred thousand**.",
+        "examples": [
+          {
+            "en": "How much is the iced tea? — It's 5,000 rupiah.",
+            "id": "Berapa harga es tehnya? — 5.000 rupiah."
+          },
+          {
+            "en": "Nasi goreng is 15,000 rupiah.",
+            "id": "Nasi goreng harganya 15.000 rupiah."
+          },
+          {
+            "en": "The bus ticket is 3,500 rupiah.",
+            "id": "Tiket busnya 3.500 rupiah."
+          },
+          {
+            "en": "This T-shirt is 50,000 rupiah.",
+            "id": "Kaus ini harganya 50.000 rupiah."
+          },
+          {
+            "en": "The book is 100,000 rupiah.",
+            "id": "Buku itu harganya 100.000 rupiah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Perhatikan baik-baik kata thousand.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prices",
+          "prompt": "Bagaimana mengucapkan Rp20.000 dalam bahasa Inggris?",
+          "options": [
+            "twenty thousand rupiah",
+            "twenty thousands rupiah",
+            "two thousand rupiah"
+          ],
+          "answer": 0,
+          "explanation": "Setelah angka, **thousand** tidak diberi -s: twenty **thousand**. 'Two thousand' hanya Rp2.000."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Kamu sedang di toko. Dengarkan harganya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "prices",
+          "prompt": "Dengarkan penjaga toko. Berapa harganya?",
+          "listen": "It's sixty thousand rupiah.",
+          "options": [
+            "16,000 rupiah",
+            "60,000 rupiah",
+            "6,000 rupiah"
+          ],
+          "answer": 1,
+          "explanation": "Yang kamu dengar **SIX**ty thousand — tekanannya di awal, jadi 60.000. Enam belas ribu diucapkan six**TEEN** thousand, dan 6.000 cukup six thousand."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan yang bisa kamu simpan dan buka lagi kapan saja.",
+        "artifact": {
+          "title": "Ringkasan · Angka & harga",
+          "intro": "Puluhan berakhiran -ty. Umur memakai I'm. Nomor telepon dibaca per angka. Harga: angka + thousand + rupiah.",
+          "headers": [
+            "Angka",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "13",
+              "thirteen (thirTEEN)",
+              "tiga belas"
+            ],
+            [
+              "20",
+              "twenty",
+              "dua puluh"
+            ],
+            [
+              "30",
+              "thirty (THIRty)",
+              "tiga puluh"
+            ],
+            [
+              "40",
+              "forty (tanpa u)",
+              "empat puluh"
+            ],
+            [
+              "50",
+              "fifty",
+              "lima puluh"
+            ],
+            [
+              "60",
+              "sixty",
+              "enam puluh"
+            ],
+            [
+              "70",
+              "seventy",
+              "tujuh puluh"
+            ],
+            [
+              "80",
+              "eighty",
+              "delapan puluh"
+            ],
+            [
+              "90",
+              "ninety",
+              "sembilan puluh"
+            ],
+            [
+              "100",
+              "one hundred / a hundred",
+              "seratus"
+            ],
+            [
+              "0 (telepon)",
+              "oh / zero",
+              "nol"
+            ],
+            [
+              "1,000",
+              "one thousand",
+              "seribu"
+            ],
+            [
+              "25,000",
+              "twenty-five thousand",
+              "dua puluh lima ribu"
+            ]
+          ],
+          "tips": [
+            "Tekanan: thir**TEEN** (13) tapi **THIR**ty (30).",
+            "Umur: **I'm 25 (years old)** — jangan 'I have 25 years'.",
+            "Harga: **twenty-five thousand rupiah** — thousand tanpa -s, dan bahasa Inggris menulis 25,000 dengan koma."
+          ],
+          "examples": [
+            {
+              "en": "I'm 25 years old.",
+              "id": "Umur saya 25 tahun."
+            },
+            {
+              "en": "My number is 0812 5567 3490.",
+              "id": "Nomor saya 0812 5567 3490."
+            },
+            {
+              "en": "How much is it? — It's 25,000 rupiah.",
+              "id": "Berapa harganya? — 25.000 rupiah."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Dua video pendek ini membantu berhitung dan melatih tekanan teen/ty."
+      }
+    ]
+  }
+}

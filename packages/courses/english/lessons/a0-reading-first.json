@@ -1,0 +1,592 @@
+{
+  "nodeId": "a0-reading-first",
+  "intro": "Hi! Today you start reading real English: menus, signs on doors, business cards and simple forms. You don't need to understand every word. Look for the words you already know, like numbers, food and colours. Warm-up: what does WELCOME mean on a hotel door?",
+  "teachingNotes": [
+    "Reading at A0 means finding key words, not reading every word. Encourage learners to look for nouns, numbers and colours they already know, and to guess the rest from the place (shop door, menu, form).",
+    "Signs in scope: OPEN, CLOSED, ENTRANCE, EXIT / WAY OUT, TOILETS (US: restroom), PUSH, PULL, NO SMOKING, LIFT (US: elevator), STAFF ONLY. Learners often mix up PUSH (dorong) and PULL (tarik), and ENTRANCE (masuk) and EXIT (keluar).",
+    "Business cards: name, job title, company (PT / CV), mobile, email, address. Clues: @ means an email; 08… or +62 8… is a phone number (+62 replaces the first 0).",
+    "Forms: first name vs surname / last name / family name confuses learners because many Indonesian names have no family name. Date of birth is day/month/year in the UK and Indonesia but month/day/year in the US. BLOCK CAPITALS = huruf kapital semua.",
+    "Don't teach grammar here; answers are one word, a short phrase or a number. Learners know numbers to 20 in words; longer numbers stay as digits. Indonesian prices use a dot (Rp 15.000) where English texts often use a comma (15,000)."
+  ],
+  "keyPoints": [
+    {
+      "title": "Read the key words",
+      "explanation": "On menus, posters and notes, find the words you know first: things, numbers, colours. You can understand the message without every word.",
+      "examples": [
+        {
+          "en": "Welcome",
+          "id": "Selamat datang"
+        },
+        {
+          "en": "Drinks: tea, coffee, water",
+          "id": "Minuman: teh, kopi, air putih"
+        },
+        {
+          "en": "Price: Rp 12.000",
+          "id": "Harga: Rp 12.000"
+        }
+      ]
+    },
+    {
+      "title": "Common signs",
+      "explanation": "Signs use one or two words, often in capitals. Learn the pairs: OPEN / CLOSED, ENTRANCE / EXIT, PUSH / PULL.",
+      "examples": [
+        {
+          "en": "OPEN",
+          "id": "Buka"
+        },
+        {
+          "en": "EXIT",
+          "id": "Keluar"
+        },
+        {
+          "en": "PULL",
+          "id": "Tarik"
+        }
+      ]
+    },
+    {
+      "title": "Business cards and forms",
+      "explanation": "A business card shows name, job title, company, phone and email. A form asks for first name, surname, date of birth, address and signature.",
+      "examples": [
+        {
+          "en": "Job title: Sales Manager",
+          "id": "Jabatan: Manajer Penjualan"
+        },
+        {
+          "en": "Surname: Wijaya",
+          "id": "Nama belakang: Wijaya"
+        },
+        {
+          "en": "Date of birth: 12/03/2001",
+          "id": "Tanggal lahir: 12 Maret 2001"
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "words-phrases",
+      "prompt": "Read the shop poster: 'Rice 5 kg · Rp 75.000'. How many kilos of rice are in the bag? Write the number.",
+      "expected": [
+        "5",
+        "five"
+      ],
+      "hint": "Look for the number next to kg."
+    },
+    {
+      "objectiveId": "signs",
+      "prompt": "What does the sign ENTRANCE mean in Indonesian?",
+      "expected": [
+        "masuk",
+        "pintu masuk",
+        "jalan masuk"
+      ],
+      "hint": "It's the opposite of EXIT."
+    },
+    {
+      "objectiveId": "signs",
+      "prompt": "A door says PUSH. Write the Indonesian word for it.",
+      "expected": [
+        "dorong"
+      ],
+      "hint": "The opposite is PULL (tarik)."
+    },
+    {
+      "objectiveId": "cards-forms",
+      "prompt": "Read the card: 'Dewi Lestari · Teacher · SMA Negeri 3 Bandung · dewi.lestari@gmail.com'. What is her email?",
+      "expected": [
+        "dewi.lestari@gmail.com"
+      ],
+      "hint": "Look for the @ sign."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "words-phrases",
+      "prompt": "Read the note: 'Lunch: rice, chicken, tea.' What is the drink?",
+      "expected": [
+        "tea"
+      ],
+      "hint": "Which of the three do you drink?"
+    },
+    {
+      "objectiveId": "cards-forms",
+      "prompt": "A form says 'Signature: ______'. What do you do there? Answer in Indonesian or English.",
+      "expected": [
+        "sign",
+        "sign your name",
+        "tanda tangan"
+      ],
+      "hint": "You do it with a pen at the end of the form, not with your printed name."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "read-1",
+      "objectiveId": "words-phrases",
+      "prompt": "Read the board at a warung: 'Tea Rp 5.000 · Coffee Rp 8.000 · Water Rp 4.000'. Which drink costs Rp 8.000? Write the word.",
+      "acceptableAnswers": [
+        "coffee"
+      ],
+      "rubric": "Correct: coffee. 'kopi' (right meaning, Indonesian) = 70. 'tea' or 'water' = 0."
+    },
+    {
+      "id": "read-2",
+      "objectiveId": "words-phrases",
+      "prompt": "Read the note on the door: 'Meeting today in Room 5.' Which room is the meeting in? Write the number.",
+      "acceptableAnswers": [
+        "5",
+        "five",
+        "room 5",
+        "room five"
+      ],
+      "rubric": "Correct: 5 (or Room 5). Any other number = 0."
+    },
+    {
+      "id": "read-3",
+      "objectiveId": "signs",
+      "prompt": "Fire! You need to leave the building. Which sign do you follow: ENTRANCE, EXIT or LIFT? Write the word.",
+      "acceptableAnswers": [
+        "exit",
+        "fire exit"
+      ],
+      "rubric": "Correct: EXIT. ENTRANCE or LIFT = 0 (you don't use the lift in a fire)."
+    },
+    {
+      "id": "read-4",
+      "objectiveId": "signs",
+      "prompt": "The sign on the pharmacy door says CLOSED. Can you buy medicine there now? Write yes or no.",
+      "acceptableAnswers": [
+        "no",
+        "tidak",
+        "no i can't",
+        "no i cannot"
+      ],
+      "rubric": "Correct: no (CLOSED = tutup). 'yes' = 0."
+    },
+    {
+      "id": "read-5",
+      "objectiveId": "cards-forms",
+      "prompt": "Read the business card: 'Sari Wulandari · Marketing Manager · PT Maju Jaya · Mobile: 0812 3456 7890 · sari@majujaya.co.id'. What is Sari's job? Write it in English.",
+      "acceptableAnswers": [
+        "marketing manager",
+        "manager",
+        "a marketing manager",
+        "she's a marketing manager",
+        "she is a marketing manager"
+      ],
+      "rubric": "Correct: Marketing Manager (accept 'manager'). 'PT Maju Jaya' (the company) = 0. 'Manajer pemasaran' (right meaning, Indonesian) = 70."
+    },
+    {
+      "id": "read-6",
+      "objectiveId": "cards-forms",
+      "prompt": "Read the form: 'First name: Budi · Surname: Santoso · Phone: 0857 1122 3344 · City: Bandung'. What is Budi's surname?",
+      "acceptableAnswers": [
+        "santoso"
+      ],
+      "rubric": "Correct: Santoso. 'Budi' (first name) = 0. 'Budi Santoso' = 50."
+    }
+  ],
+  "material": [
+    {
+      "id": "words",
+      "title": "Read the key words",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You don't need to read every word. On a menu, a poster or a note, first find the words you **already know**: things, numbers, colours. They carry most of the meaning. Big words at the top (like **Welcome** or **Menu**) tell you what the text is.",
+          "i18n": {
+            "id": {
+              "text": "Kamu tidak perlu membaca setiap kata. Di menu, poster atau catatan, cari dulu kata yang **sudah kamu tahu**: benda, angka, warna. Kata-kata itu membawa sebagian besar artinya. Kata besar di atas (seperti **Welcome** atau **Menu**) memberi tahu teks apa itu."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Welcome",
+              "id": "Selamat datang"
+            },
+            {
+              "en": "Food",
+              "id": "Makanan"
+            },
+            {
+              "en": "Drinks",
+              "id": "Minuman"
+            },
+            {
+              "en": "Price",
+              "id": "Harga"
+            },
+            {
+              "en": "Today",
+              "id": "Hari ini"
+            },
+            {
+              "en": "Free Wi-Fi",
+              "id": "Wi-Fi gratis",
+              "note": "free = gratis here"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Prices: Indonesia writes **Rp 15.000** with a dot. Many English texts write **15,000** with a comma. Both mean fifteen thousand.",
+          "i18n": {
+            "id": {
+              "text": "Harga: di Indonesia ditulis **Rp 15.000** dengan titik. Banyak teks bahasa Inggris menulis **15,000** dengan koma. Keduanya artinya lima belas ribu."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "A café menu says: 'Drinks: tea, juice, water'. Which word is NOT on this list?",
+          "options": [
+            "juice",
+            "coffee",
+            "water"
+          ],
+          "answer": 1,
+          "explain": "The list has tea, juice and water. Coffee is not there.",
+          "i18n": {
+            "id": {
+              "explain": "Daftarnya berisi tea, juice dan water. Coffee tidak ada."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Baca kata kuncinya"
+        }
+      }
+    },
+    {
+      "id": "signs",
+      "title": "Common signs",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Signs use one or two words, often in **CAPITAL LETTERS**. Many come in pairs: **OPEN / CLOSED**, **ENTRANCE / EXIT**, **PUSH / PULL**. Learn them as pairs and you can read most doors in a mall, a station or an airport.",
+          "i18n": {
+            "id": {
+              "text": "Papan tanda memakai satu atau dua kata, sering dengan **HURUF KAPITAL**. Banyak yang berpasangan: **OPEN / CLOSED**, **ENTRANCE / EXIT**, **PUSH / PULL**. Pelajari berpasangan, maka kamu bisa membaca sebagian besar pintu di mal, stasiun atau bandara."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "OPEN / CLOSED",
+              "id": "Buka / Tutup"
+            },
+            {
+              "en": "ENTRANCE / EXIT",
+              "id": "Pintu masuk / Pintu keluar"
+            },
+            {
+              "en": "PUSH / PULL",
+              "id": "Dorong / Tarik"
+            },
+            {
+              "en": "TOILETS",
+              "id": "Toilet",
+              "note": "US: Restroom; also LADIES / GENTS"
+            },
+            {
+              "en": "NO SMOKING",
+              "id": "Dilarang merokok"
+            },
+            {
+              "en": "LIFT",
+              "id": "Lift",
+              "note": "US: Elevator"
+            },
+            {
+              "en": "STAFF ONLY",
+              "id": "Khusus karyawan"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Many doors in Indonesia show both languages: **PUSH / DORONG** and **PULL / TARIK**. Read the word before you touch the door!",
+          "i18n": {
+            "id": {
+              "text": "Banyak pintu di Indonesia memakai dua bahasa: **PUSH / DORONG** dan **PULL / TARIK**. Baca kata itu sebelum kamu menyentuh pintunya!"
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "You want to go into a building. Which sign do you look for?",
+          "options": [
+            "EXIT",
+            "STAFF ONLY",
+            "ENTRANCE"
+          ],
+          "answer": 2,
+          "explain": "ENTRANCE = pintu masuk. EXIT is the way out, and STAFF ONLY is only for workers.",
+          "i18n": {
+            "id": {
+              "explain": "ENTRANCE = pintu masuk. EXIT adalah jalan keluar, dan STAFF ONLY hanya untuk karyawan."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Papan tanda umum"
+        }
+      }
+    },
+    {
+      "id": "cards",
+      "title": "Business cards",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A business card (*kartu nama*) has one piece of information on each line: **name**, **job title**, **company**, **phone**, **email** and **address**. Use clues: **@** means an email, **08…** or **+62 8…** is a phone number, **PT** or **CV** is a company, **Jl.** starts an address.",
+          "i18n": {
+            "id": {
+              "text": "Kartu nama berisi satu informasi di setiap baris: **name** (nama), **job title** (jabatan), **company** (perusahaan), **phone** (telepon), **email** dan **address** (alamat). Pakai petunjuk: **@** berarti email, **08…** atau **+62 8…** adalah nomor telepon, **PT** atau **CV** adalah perusahaan, **Jl.** mengawali alamat."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Rina Kusuma",
+              "id": "nama",
+              "note": "name"
+            },
+            {
+              "en": "Sales Manager",
+              "id": "jabatan: manajer penjualan",
+              "note": "job title"
+            },
+            {
+              "en": "PT Cahaya Abadi",
+              "id": "nama perusahaan",
+              "note": "company"
+            },
+            {
+              "en": "Mobile: 0811 2233 4455",
+              "id": "nomor HP",
+              "note": "mobile = HP"
+            },
+            {
+              "en": "rina.k@cahayaabadi.co.id",
+              "id": "alamat email",
+              "note": "email"
+            },
+            {
+              "en": "Jl. Sudirman 25, Jakarta",
+              "id": "alamat kantor",
+              "note": "address"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**+62** is Indonesia's country code. **+62 811 2233 4455** is the same number as **0811 2233 4455**: +62 replaces the first 0.",
+          "i18n": {
+            "id": {
+              "text": "**+62** adalah kode negara Indonesia. **+62 811 2233 4455** sama dengan **0811 2233 4455**: +62 menggantikan angka 0 di depan."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which line on a business card is the email?",
+          "options": [
+            "0812 9988 7766",
+            "budi@tokomaju.com",
+            "Jl. Merdeka 10"
+          ],
+          "answer": 1,
+          "explain": "An email always has @. The numbers are a phone number, and Jl. starts an address.",
+          "i18n": {
+            "id": {
+              "explain": "Email selalu memakai @. Deretan angka itu nomor telepon, dan Jl. mengawali alamat."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kartu nama"
+        }
+      }
+    },
+    {
+      "id": "forms",
+      "title": "Simple forms",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Forms at a hotel, a school or an office ask for the same things. **First name** is your own name; **surname** (also **last name** or **family name**) is the family part, usually at the end. **Date of birth** is your birthday with the year. **Signature** means you sign with a pen. **BLOCK CAPITALS** means write in capital letters.",
+          "i18n": {
+            "id": {
+              "text": "Formulir di hotel, sekolah atau kantor menanyakan hal yang sama. **First name** adalah nama depanmu; **surname** (juga **last name** atau **family name**) adalah nama keluarga, biasanya di akhir. **Date of birth** adalah tanggal lahirmu lengkap dengan tahun. **Signature** artinya tanda tangan dengan pulpen. **BLOCK CAPITALS** artinya tulis dengan huruf kapital semua."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "First name: Rina",
+              "id": "Nama depan: Rina"
+            },
+            {
+              "en": "Surname: Wijaya",
+              "id": "Nama belakang: Wijaya"
+            },
+            {
+              "en": "Date of birth: 12/03/2001",
+              "id": "Tanggal lahir: 12 Maret 2001",
+              "note": "day / month / year"
+            },
+            {
+              "en": "Address: Jl. Melati 7, Bandung",
+              "id": "Alamat: Jl. Melati 7, Bandung"
+            },
+            {
+              "en": "Phone number: 0856 7788 9900",
+              "id": "Nomor telepon: 0856 7788 9900"
+            },
+            {
+              "en": "Signature: ________",
+              "id": "Tanda tangan: ________"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Dates: the UK and Indonesia write **day/month/year**, but the US writes **month/day/year**. On a US form, 05/06/2000 is the 6th of May. If you have only one name, read the notes on the form or ask where to write it.",
+          "i18n": {
+            "id": {
+              "text": "Tanggal: Inggris dan Indonesia menulis **hari/bulan/tahun**, tapi Amerika Serikat menulis **bulan/hari/tahun**. Di formulir AS, 05/06/2000 artinya 6 Mei. Kalau namamu hanya satu kata, baca catatan di formulir atau tanyakan di mana menuliskannya."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Rina Wijaya fills in a form. What does she write next to 'Surname'?",
+          "options": [
+            "Rina",
+            "Wijaya",
+            "Bandung"
+          ],
+          "answer": 1,
+          "explain": "Surname is the family part of the name, at the end: Wijaya. Rina is her first name.",
+          "i18n": {
+            "id": {
+              "explain": "Surname adalah nama keluarga, di bagian akhir: Wijaya. Rina adalah nama depannya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Formulir sederhana"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "What's the difference between first name and surname?",
+    "Why do some signs say Toilets and others Restroom?",
+    "How do I read dates on English forms?",
+    "What does STAFF ONLY mean?"
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "Business cards",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/a1/business-cards",
+      "source": "British Council LearnEnglish",
+      "note": "Read four real-style business cards and answer short questions about them.",
+      "i18n": {
+        "id": {
+          "note": "Baca empat kartu nama yang mirip aslinya dan jawab pertanyaan singkat tentangnya."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Student card application",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/reading/a1/student-card-application",
+      "source": "British Council LearnEnglish",
+      "note": "Practise reading a filled-in application form.",
+      "i18n": {
+        "id": {
+          "note": "Latihan membaca formulir pendaftaran yang sudah diisi."
+        }
+      }
+    },
+    {
+      "kind": "video",
+      "title": "Let's Learn English! Topic: Signs! (Lesson Only)",
+      "url": "https://www.youtube.com/watch?v=3zyRFkZ2zUA",
+      "source": "Learn English with Bob the Canadian",
+      "note": "Bob talks through everyday signs in clear English. Turn on subtitles if it's fast for you.",
+      "i18n": {
+        "id": {
+          "note": "Bob membahas papan tanda sehari-hari dengan bahasa Inggris yang jelas. Nyalakan subtitle kalau terasa cepat."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "pintu keluar",
+      "back": "EXIT"
+    },
+    {
+      "front": "tutup (papan tanda)",
+      "back": "CLOSED"
+    },
+    {
+      "front": "tarik (di pintu)",
+      "back": "PULL"
+    },
+    {
+      "front": "dorong (di pintu)",
+      "back": "PUSH"
+    },
+    {
+      "front": "nama belakang / nama keluarga",
+      "back": "surname / last name"
+    },
+    {
+      "front": "tanggal lahir",
+      "back": "date of birth"
+    },
+    {
+      "front": "tanda tangan",
+      "back": "signature"
+    },
+    {
+      "front": "jabatan (di kartu nama)",
+      "back": "job title"
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Hai! Hari ini kamu mulai membaca bahasa Inggris sungguhan: menu, papan tanda di pintu, kartu nama dan formulir sederhana. Kamu tidak perlu mengerti setiap kata. Cari kata yang sudah kamu tahu, seperti angka, makanan dan warna. Pemanasan: apa arti WELCOME di pintu hotel?",
+      "suggestedQuestions": [
+        "Apa bedanya first name dan surname?",
+        "Kenapa ada papan tanda Toilets dan ada yang Restroom?",
+        "Bagaimana membaca tanggal di formulir bahasa Inggris?",
+        "Apa arti STAFF ONLY?"
+      ]
+    }
+  }
+}

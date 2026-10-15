@@ -1,0 +1,660 @@
+{
+  "en": {
+    "greeting": "Hi! Today we practise writing: capital letters, full stops and question marks, your details and a simple form. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Capital letters",
+        "text": "Let's start with capital letters — they make your writing look correct.",
+        "body": "Use a **capital letter** for the **first word** of a sentence, for **names** of people and **places** (streets, cities, countries) and for **nationalities**. Most of this is the same as in Indonesian. The new rule: the word **I** is always a capital, even in the middle of a sentence.",
+        "pairs": [
+          {
+            "en": "My name is …",
+            "id": "kata pertama kalimat → kapital"
+          },
+          {
+            "en": "I",
+            "id": "saya — selalu kapital, juga di tengah kalimat"
+          },
+          {
+            "en": "Budi, Sari",
+            "id": "nama orang → kapital"
+          },
+          {
+            "en": "Jalan Braga",
+            "id": "nama jalan → kapital"
+          },
+          {
+            "en": "Bandung, Indonesia",
+            "id": "nama kota dan negara → kapital"
+          },
+          {
+            "en": "Indonesian",
+            "id": "kebangsaan → kapital"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look at the first word, the names of places and the word I.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "my, i, jakarta",
+            "friend, jakarta",
+            "my, friend, i"
+          ],
+          "answer": 0,
+          "prompt": "Sari types a message to a new colleague: my friend and i are from jakarta. Which words need a capital letter?",
+          "explanation": "**My** is the first word, **I** is always a capital, and **Jakarta** is a city: **My friend and I are from Jakarta.** 'Friend' is a normal word, so it stays small."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Basic punctuation",
+        "text": "Now the small marks at the end and in the middle of sentences.",
+        "body": "End a sentence with a **full stop** (.) and a question with a **question mark** (?). Use a **comma** (,) in lists and between parts of an address. The **apostrophe** (') shows that letters are missing: **I'm** = I am, **What's** = What is.",
+        "pairs": [
+          {
+            "en": ". full stop",
+            "id": "titik — akhir kalimat"
+          },
+          {
+            "en": "? question mark",
+            "id": "tanda tanya — akhir pertanyaan"
+          },
+          {
+            "en": ", comma",
+            "id": "koma — dalam daftar dan alamat"
+          },
+          {
+            "en": "' apostrophe",
+            "id": "apostrof — I'm = I am, What's = What is"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Is it a sentence or a question? And check the apostrophe.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "What's your phone number.",
+            "What's your phone number?",
+            "Whats your phone number?"
+          ],
+          "answer": 1,
+          "prompt": "Which one is written correctly?",
+          "explanation": "It's a question, so it ends with a **question mark**. **What's** needs the apostrophe because it means *What is*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in order. Notice which words have capital letters.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "capitals-punctuation",
+          "tokens": [
+            "from",
+            "I",
+            "Medan",
+            "Rina",
+            "are",
+            "and"
+          ],
+          "solution": "Rina and I are from Medan.",
+          "prompt": "Arrange the words: Rina dan saya dari Medan.",
+          "explanation": "**Rina** (a name), **I** and **Medan** (a city) always have capitals. The sentence starts with a capital and ends with a full stop: **Rina and I are from Medan.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Writing your details",
+        "text": "Next: your name, address, phone number and email.",
+        "body": "Names and places start with a capital letter. Address: street and number, a comma, then the city and postcode. Email: **small letters, no spaces**. Phone: write it in small groups. For a friend abroad, **+62** replaces the first **0**.",
+        "pairs": [
+          {
+            "en": "Dewi Anggraini",
+            "id": "nama: tiap kata diawali kapital"
+          },
+          {
+            "en": "Jalan Braga 10, Bandung 40111",
+            "id": "alamat: jalan dan kota kapital, koma sebelum kota"
+          },
+          {
+            "en": "dewi.anggraini@gmail.com",
+            "id": "email: huruf kecil semua, tanpa spasi"
+          },
+          {
+            "en": "0821 7788 9900",
+            "id": "nomor HP: dalam kelompok kecil"
+          },
+          {
+            "en": "+62 821 7788 9900",
+            "id": "nomor yang sama dari luar negeri: 0 di depan diganti +62"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Remember what happens to the first 0.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-details",
+          "options": [
+            "+62 813 2244 6688",
+            "+62 0813 2244 6688",
+            "62+ 813 2244 6688"
+          ],
+          "answer": 0,
+          "prompt": "Your number is 0813 2244 6688. A friend in Malaysia needs it. Which one do you write?",
+          "explanation": "**+62** replaces the first **0**, so 0813… becomes **+62 813 2244 6688**. Don't keep the 0 after +62, and the + goes before 62."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "A simple form",
+        "text": "Here is Dewi's form for an English course. Look at each box.",
+        "body": "**First name** = your own name, **surname** = your family name. **Date of birth** is day/month/year, like in Indonesia. If a paper form asks for **BLOCK CAPITALS**, write the letters as capitals — but not your email.",
+        "examples": [
+          {
+            "en": "First name: Dewi",
+            "id": "Nama depan: Dewi"
+          },
+          {
+            "en": "Surname: Anggraini",
+            "id": "Nama belakang / nama keluarga: Anggraini"
+          },
+          {
+            "en": "Date of birth (DOB): 17/08/1998",
+            "id": "Tanggal lahir: 17 Agustus 1998"
+          },
+          {
+            "en": "Nationality: Indonesian",
+            "id": "Kebangsaan: Indonesia"
+          },
+          {
+            "en": "Email: dewi.anggraini@gmail.com",
+            "id": "Email: huruf kecil, walaupun formulirnya minta BLOCK CAPITALS"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Day first, then the month, then the year.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fill-form",
+          "options": [
+            "11/05/1999",
+            "05/11/1999",
+            "05/11"
+          ],
+          "answer": 1,
+          "prompt": "Fajar's date of birth is 5 November 1999. What does he write on the form (day/month/year)?",
+          "explanation": "Day/month/year: day **05**, November is month **11**, year **1999** → **05/11/1999**. 11/05/1999 puts the month first (the American way), and 05/11 has no year."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards and say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "full stop",
+            "back": "titik (.)"
+          },
+          {
+            "front": "question mark",
+            "back": "tanda tanya (?)"
+          },
+          {
+            "front": "comma",
+            "back": "koma (,)"
+          },
+          {
+            "front": "first name",
+            "back": "nama depan"
+          },
+          {
+            "front": "surname",
+            "back": "nama belakang / nama keluarga"
+          },
+          {
+            "front": "date of birth (DOB)",
+            "back": "tanggal lahir"
+          },
+          {
+            "front": "signature",
+            "back": "tanda tangan"
+          },
+          {
+            "front": "BLOCK CAPITALS",
+            "back": "semua huruf kapital"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet to check your writing before you send it.",
+        "artifact": {
+          "title": "Cheat sheet · Writing basics",
+          "intro": "Capitals, punctuation and personal details at a glance.",
+          "headers": [
+            "Rule",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Start of a sentence",
+              "My name is Budi.",
+              "kata pertama → kapital"
+            ],
+            [
+              "The word I",
+              "Rina and I are friends.",
+              "I selalu kapital"
+            ],
+            [
+              "Names and places",
+              "Sari is from Bogor.",
+              "nama orang dan tempat → kapital"
+            ],
+            [
+              "End of a sentence",
+              "I'm from Bali.",
+              "titik (.)"
+            ],
+            [
+              "End of a question",
+              "Where is Jalan Braga?",
+              "tanda tanya (?)"
+            ],
+            [
+              "Address",
+              "Jalan Braga 10, Bandung 40111",
+              "koma sebelum kota"
+            ],
+            [
+              "Email",
+              "dewi.a@gmail.com",
+              "huruf kecil, tanpa spasi"
+            ],
+            [
+              "Phone from abroad",
+              "+62 812 3456 7890",
+              "0 di depan diganti +62"
+            ],
+            [
+              "Date of birth",
+              "17/08/1998",
+              "hari/bulan/tahun"
+            ]
+          ],
+          "tips": [
+            "Capital letters for the first word, **I**, names and places — not chat-style small letters.",
+            "**.** ends a sentence, **?** ends a question.",
+            "Email in small letters with no spaces; date of birth as **day/month/year**."
+          ],
+          "examples": [
+            {
+              "en": "My name is Budi and I live in Bandung.",
+              "id": "Nama saya Budi dan saya tinggal di Bandung."
+            },
+            {
+              "en": "What's your email address?",
+              "id": "Apa alamat emailmu?"
+            },
+            {
+              "en": "My email is budi.s@gmail.com.",
+              "id": "Email saya budi.s@gmail.com."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Try a real form and a short video about capital letters."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita latihan menulis: huruf kapital, titik dan tanda tanya, data dirimu, dan formulir sederhana. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Huruf kapital",
+        "text": "Kita mulai dari huruf kapital — ini membuat tulisanmu terlihat benar.",
+        "body": "Pakai **huruf kapital** untuk **kata pertama** kalimat, **nama** orang dan **tempat** (jalan, kota, negara), serta **kebangsaan**. Sebagian besar sama dengan bahasa Indonesia. Aturan barunya: kata **I** selalu kapital, bahkan di tengah kalimat.",
+        "pairs": [
+          {
+            "en": "My name is …",
+            "id": "kata pertama kalimat → kapital"
+          },
+          {
+            "en": "I",
+            "id": "saya — selalu kapital, juga di tengah kalimat"
+          },
+          {
+            "en": "Budi, Sari",
+            "id": "nama orang → kapital"
+          },
+          {
+            "en": "Jalan Braga",
+            "id": "nama jalan → kapital"
+          },
+          {
+            "en": "Bandung, Indonesia",
+            "id": "nama kota dan negara → kapital"
+          },
+          {
+            "en": "Indonesian",
+            "id": "kebangsaan → kapital"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Perhatikan kata pertama, nama tempat, dan kata I.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "my, i, jakarta",
+            "friend, jakarta",
+            "my, friend, i"
+          ],
+          "answer": 0,
+          "prompt": "Sari mengetik pesan untuk rekan kerja baru: my friend and i are from jakarta. Kata mana yang perlu huruf kapital?",
+          "explanation": "**My** kata pertama, **I** selalu kapital, dan **Jakarta** nama kota: **My friend and I are from Jakarta.** 'Friend' kata biasa, jadi tetap huruf kecil."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tanda baca dasar",
+        "text": "Sekarang tanda-tanda kecil di akhir dan di tengah kalimat.",
+        "body": "Akhiri kalimat dengan **full stop** (titik .) dan pertanyaan dengan **question mark** (tanda tanya ?). Pakai **comma** (koma ,) dalam daftar dan di antara bagian alamat. **Apostrophe** (') menandai huruf yang hilang: **I'm** = I am, **What's** = What is.",
+        "pairs": [
+          {
+            "en": ". full stop",
+            "id": "titik — akhir kalimat"
+          },
+          {
+            "en": "? question mark",
+            "id": "tanda tanya — akhir pertanyaan"
+          },
+          {
+            "en": ", comma",
+            "id": "koma — dalam daftar dan alamat"
+          },
+          {
+            "en": "' apostrophe",
+            "id": "apostrof — I'm = I am, What's = What is"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ini kalimat biasa atau pertanyaan? Cek juga apostrofnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "What's your phone number.",
+            "What's your phone number?",
+            "Whats your phone number?"
+          ],
+          "answer": 1,
+          "prompt": "Mana yang ditulis dengan benar?",
+          "explanation": "Ini pertanyaan, jadi diakhiri **tanda tanya**. **What's** butuh apostrof karena artinya *What is*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kata-katanya. Perhatikan kata mana yang memakai huruf kapital.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "capitals-punctuation",
+          "tokens": [
+            "from",
+            "I",
+            "Medan",
+            "Rina",
+            "are",
+            "and"
+          ],
+          "solution": "Rina and I are from Medan.",
+          "prompt": "Susun kata-katanya: Rina dan saya dari Medan.",
+          "explanation": "**Rina** (nama), **I** dan **Medan** (kota) selalu kapital. Kalimatnya diawali huruf kapital dan diakhiri titik: **Rina and I are from Medan.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menulis data dirimu",
+        "text": "Berikutnya: nama, alamat, nomor telepon dan email.",
+        "body": "Nama dan tempat diawali huruf kapital. Alamat: nama jalan dan nomor, koma, lalu kota dan kode pos. Email: **huruf kecil, tanpa spasi**. Telepon: tulis dalam kelompok kecil. Untuk teman di luar negeri, **+62** menggantikan **0** di depan.",
+        "pairs": [
+          {
+            "en": "Dewi Anggraini",
+            "id": "nama: tiap kata diawali kapital"
+          },
+          {
+            "en": "Jalan Braga 10, Bandung 40111",
+            "id": "alamat: jalan dan kota kapital, koma sebelum kota"
+          },
+          {
+            "en": "dewi.anggraini@gmail.com",
+            "id": "email: huruf kecil semua, tanpa spasi"
+          },
+          {
+            "en": "0821 7788 9900",
+            "id": "nomor HP: dalam kelompok kecil"
+          },
+          {
+            "en": "+62 821 7788 9900",
+            "id": "nomor yang sama dari luar negeri: 0 di depan diganti +62"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ingat apa yang terjadi pada angka 0 di depan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-details",
+          "options": [
+            "+62 813 2244 6688",
+            "+62 0813 2244 6688",
+            "62+ 813 2244 6688"
+          ],
+          "answer": 0,
+          "prompt": "Nomormu 0813 2244 6688. Temanmu di Malaysia memerlukannya. Mana yang kamu tulis?",
+          "explanation": "**+62** menggantikan **0** di depan, jadi 0813… menjadi **+62 813 2244 6688**. Jangan pertahankan 0 setelah +62, dan tanda + ada sebelum 62."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Formulir sederhana",
+        "text": "Ini formulir Dewi untuk kursus bahasa Inggris. Perhatikan setiap kotaknya.",
+        "body": "**First name** = nama dirimu, **surname** = nama keluarga. **Date of birth** ditulis hari/bulan/tahun, sama seperti di Indonesia. Kalau formulir kertas meminta **BLOCK CAPITALS**, tulis hurufnya dengan kapital — tapi tidak untuk email.",
+        "examples": [
+          {
+            "en": "First name: Dewi",
+            "id": "Nama depan: Dewi"
+          },
+          {
+            "en": "Surname: Anggraini",
+            "id": "Nama belakang / nama keluarga: Anggraini"
+          },
+          {
+            "en": "Date of birth (DOB): 17/08/1998",
+            "id": "Tanggal lahir: 17 Agustus 1998"
+          },
+          {
+            "en": "Nationality: Indonesian",
+            "id": "Kebangsaan: Indonesia"
+          },
+          {
+            "en": "Email: dewi.anggraini@gmail.com",
+            "id": "Email: huruf kecil, walaupun formulirnya minta BLOCK CAPITALS"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hari dulu, lalu bulan, lalu tahun.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fill-form",
+          "options": [
+            "11/05/1999",
+            "05/11/1999",
+            "05/11"
+          ],
+          "answer": 1,
+          "prompt": "Tanggal lahir Fajar 5 November 1999. Apa yang dia tulis di formulir (hari/bulan/tahun)?",
+          "explanation": "Hari/bulan/tahun: hari **05**, November bulan ke-**11**, tahun **1999** → **05/11/1999**. 11/05/1999 menaruh bulan di depan (cara Amerika), dan 05/11 tidak ada tahunnya."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartunya dan sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "full stop",
+            "back": "titik (.)"
+          },
+          {
+            "front": "question mark",
+            "back": "tanda tanya (?)"
+          },
+          {
+            "front": "comma",
+            "back": "koma (,)"
+          },
+          {
+            "front": "first name",
+            "back": "nama depan"
+          },
+          {
+            "front": "surname",
+            "back": "nama belakang / nama keluarga"
+          },
+          {
+            "front": "date of birth (DOB)",
+            "back": "tanggal lahir"
+          },
+          {
+            "front": "signature",
+            "back": "tanda tangan"
+          },
+          {
+            "front": "BLOCK CAPITALS",
+            "back": "semua huruf kapital"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan untuk memeriksa tulisanmu sebelum dikirim.",
+        "artifact": {
+          "title": "Ringkasan · Dasar menulis",
+          "intro": "Huruf kapital, tanda baca dan data pribadi dalam satu halaman.",
+          "headers": [
+            "Aturan",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Awal kalimat",
+              "My name is Budi.",
+              "kata pertama → kapital"
+            ],
+            [
+              "Kata I",
+              "Rina and I are friends.",
+              "I selalu kapital"
+            ],
+            [
+              "Nama dan tempat",
+              "Sari is from Bogor.",
+              "nama orang dan tempat → kapital"
+            ],
+            [
+              "Akhir kalimat",
+              "I'm from Bali.",
+              "titik (.)"
+            ],
+            [
+              "Akhir pertanyaan",
+              "Where is Jalan Braga?",
+              "tanda tanya (?)"
+            ],
+            [
+              "Alamat",
+              "Jalan Braga 10, Bandung 40111",
+              "koma sebelum kota"
+            ],
+            [
+              "Email",
+              "dewi.a@gmail.com",
+              "huruf kecil, tanpa spasi"
+            ],
+            [
+              "Telepon dari luar negeri",
+              "+62 812 3456 7890",
+              "0 di depan diganti +62"
+            ],
+            [
+              "Tanggal lahir",
+              "17/08/1998",
+              "hari/bulan/tahun"
+            ]
+          ],
+          "tips": [
+            "Huruf kapital untuk kata pertama, **I**, nama dan tempat — jangan huruf kecil semua seperti di chat.",
+            "**.** mengakhiri kalimat, **?** mengakhiri pertanyaan.",
+            "Email dengan huruf kecil tanpa spasi; tanggal lahir sebagai **hari/bulan/tahun**."
+          ],
+          "examples": [
+            {
+              "en": "My name is Budi and I live in Bandung.",
+              "id": "Nama saya Budi dan saya tinggal di Bandung."
+            },
+            {
+              "en": "What's your email address?",
+              "id": "Apa alamat emailmu?"
+            },
+            {
+              "en": "My email is budi.s@gmail.com.",
+              "id": "Email saya budi.s@gmail.com."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Coba formulir sungguhan dan video pendek tentang huruf kapital."
+      }
+    ]
+  }
+}

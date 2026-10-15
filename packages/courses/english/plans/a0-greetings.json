@@ -1,0 +1,752 @@
+{
+  "en": {
+    "greeting": "Hi, and welcome! Today we learn the first words of every conversation: hello, goodbye, a few magic polite words, and How are you?. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Hello and goodbye",
+        "text": "Let's start with the words you say when you meet people and when you leave.",
+        "body": "Say **Hello** or **Hi** at any time (Hi is for friends). Or use the time of day: **Good morning** until 12 noon, **Good afternoon** until about 6 p.m., **Good evening** after that. To leave, say **Goodbye**, **Bye** or **See you!** At night, when you leave or go to bed, say **Good night**.",
+        "pairs": [
+          {
+            "en": "hello",
+            "id": "halo"
+          },
+          {
+            "en": "hi",
+            "id": "hai"
+          },
+          {
+            "en": "good morning",
+            "id": "selamat pagi"
+          },
+          {
+            "en": "good afternoon",
+            "id": "selamat siang / sore"
+          },
+          {
+            "en": "good evening",
+            "id": "selamat malam (saat datang)"
+          },
+          {
+            "en": "good night",
+            "id": "selamat malam (saat pulang / tidur)"
+          },
+          {
+            "en": "goodbye",
+            "id": "sampai jumpa"
+          },
+          {
+            "en": "see you",
+            "id": "sampai ketemu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Through the day",
+        "text": "Here's one day in Jakarta, from morning to night. Read them out loud.",
+        "body": "Look at the time first, then choose the greeting. **Selamat siang** and **selamat sore** are both **Good afternoon** in English.",
+        "examples": [
+          {
+            "en": "Good morning, Bu Ani!",
+            "id": "Selamat pagi, Bu Ani! (jam 7 pagi)"
+          },
+          {
+            "en": "Good afternoon, Pak Hasan.",
+            "id": "Selamat sore, Pak Hasan. (jam 4 sore)"
+          },
+          {
+            "en": "Bye, Dimas! See you later.",
+            "id": "Dah, Dimas! Sampai nanti."
+          },
+          {
+            "en": "Good evening, everyone.",
+            "id": "Selamat malam, semuanya. (datang jam 8 malam)"
+          },
+          {
+            "en": "Good night, Mum!",
+            "id": "Selamat tidur, Bu! (mau tidur)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Careful: are you arriving or leaving?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "greet-people-and",
+          "prompt": "It's 7 p.m. You arrive at Sari's birthday party. What do you say?",
+          "options": [
+            "Good night, Sari!",
+            "Good evening, Sari!",
+            "Good afternoon, Sari!"
+          ],
+          "answer": 1,
+          "explanation": "You are **arriving** after 6 p.m., so say **Good evening**. **Good night** is only for leaving or going to bed, and **Good afternoon** ends at about 6 p.m."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The magic words",
+        "text": "Now some small words that make you sound kind and polite.",
+        "body": "**Please** makes a request polite, usually at the end: *Two teas, please.* Say **Thank you** (or **Thanks** with friends) when someone helps you; the answer is **You're welcome**. Say **Sorry** after a mistake. Say **Excuse me** before you ask a stranger something or need to pass.",
+        "pairs": [
+          {
+            "en": "please",
+            "id": "tolong / minta / silakan"
+          },
+          {
+            "en": "thank you",
+            "id": "terima kasih"
+          },
+          {
+            "en": "thanks",
+            "id": "makasih"
+          },
+          {
+            "en": "you're welcome",
+            "id": "sama-sama"
+          },
+          {
+            "en": "sorry",
+            "id": "maaf (setelah salah)"
+          },
+          {
+            "en": "excuse me",
+            "id": "permisi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "You're at a café in Bandung. Order politely.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-please-thank",
+          "prompt": "Arrange the words: Minta secangkir kopi.",
+          "tokens": [
+            "please",
+            "coffee",
+            "A",
+            "of",
+            "cup"
+          ],
+          "solution": "A cup of coffee, please.",
+          "explanation": "In a short request, **please** usually goes at the end: **A cup of coffee, please.** Without please, a request can sound rude in English."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Sorry or excuse me?",
+        "text": "Indonesian 'maaf' can be two different English words. Look at when we use each one.",
+        "body": "**Sorry** comes **after** a mistake. **Excuse me** comes **before** you ask something, call someone or pass (like 'permisi').",
+        "examples": [
+          {
+            "en": "Sorry, I'm late!",
+            "id": "Maaf, saya terlambat!"
+          },
+          {
+            "en": "Oh, sorry!",
+            "id": "Aduh, maaf! (menabrak orang)"
+          },
+          {
+            "en": "Excuse me, where is the toilet?",
+            "id": "Permisi, toiletnya di mana?"
+          },
+          {
+            "en": "Excuse me! The bill, please.",
+            "id": "Permisi! Minta bonnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A small accident. Which word fits?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-please-thank",
+          "prompt": "You spill tea on Budi's shirt. What do you say?",
+          "options": [
+            "Excuse me!",
+            "Please!",
+            "I'm so sorry!"
+          ],
+          "answer": 2,
+          "explanation": "You made a mistake, so say **sorry**. **Excuse me** comes before a question or when you need to pass, and **please** is for asking for something."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How are you?",
+        "text": "After hello, people often ask How are you?. Here's how to answer.",
+        "body": "**How are you?** means 'apa kabar?'. Answer short, say thanks, then ask back: **I'm fine, thanks. And you?** You can also say **I'm good**, **Very well** (polite) or **Not bad**. Don't confuse it with **Who are you?** (kamu siapa?).",
+        "pairs": [
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "I'm fine.",
+            "id": "Saya baik."
+          },
+          {
+            "en": "I'm good.",
+            "id": "Aku baik."
+          },
+          {
+            "en": "Very well.",
+            "id": "Baik sekali. (sopan)"
+          },
+          {
+            "en": "Not bad.",
+            "id": "Lumayan."
+          },
+          {
+            "en": "And you?",
+            "id": "Kamu? / Kamu sendiri?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "You ask Rina how she is. Press play and listen to her answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "how-are-you",
+          "prompt": "You say 'Hi, Rina! How are you?' Listen to Rina, then choose your reply.",
+          "listen": "I'm fine, thanks. And you?",
+          "options": [
+            "You're welcome.",
+            "I'm good, thanks.",
+            "Yes, I am."
+          ],
+          "answer": 1,
+          "explanation": "Rina says she is fine and asks **And you?**, so tell her how you are: **I'm good, thanks.** *You're welcome* answers *thank you*, and *Yes, I am* doesn't answer her question."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "good morning",
+            "back": "selamat pagi"
+          },
+          {
+            "front": "good afternoon",
+            "back": "selamat siang / sore"
+          },
+          {
+            "front": "good evening",
+            "back": "selamat malam (saat datang)"
+          },
+          {
+            "front": "good night",
+            "back": "selamat malam (saat pulang / tidur)"
+          },
+          {
+            "front": "you're welcome",
+            "back": "sama-sama"
+          },
+          {
+            "front": "excuse me",
+            "back": "permisi"
+          },
+          {
+            "front": "sorry",
+            "back": "maaf (setelah salah)"
+          },
+          {
+            "front": "How are you?",
+            "back": "Apa kabar?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Save it for your first conversations.",
+        "artifact": {
+          "title": "Cheat sheet · Greetings & polite words",
+          "intro": "What to say, and when.",
+          "headers": [
+            "English",
+            "When",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Good morning",
+              "until 12 noon",
+              "Selamat pagi"
+            ],
+            [
+              "Good afternoon",
+              "12 noon – about 6 p.m.",
+              "Selamat siang / sore"
+            ],
+            [
+              "Good evening",
+              "after 6 p.m., when you arrive",
+              "Selamat malam"
+            ],
+            [
+              "Good night",
+              "leaving at night, bedtime",
+              "Selamat malam / selamat tidur"
+            ],
+            [
+              "Goodbye / Bye / See you!",
+              "when you leave",
+              "Sampai jumpa / dah"
+            ],
+            [
+              "Please",
+              "asking for something",
+              "Tolong / minta / silakan"
+            ],
+            [
+              "Thank you / Thanks",
+              "someone helps you",
+              "Terima kasih / makasih"
+            ],
+            [
+              "You're welcome",
+              "answer to thank you",
+              "Sama-sama"
+            ],
+            [
+              "Sorry",
+              "after a mistake",
+              "Maaf"
+            ],
+            [
+              "Excuse me",
+              "before a question, to pass",
+              "Permisi"
+            ],
+            [
+              "How are you?",
+              "part of hello",
+              "Apa kabar?"
+            ],
+            [
+              "I'm fine, thanks. And you?",
+              "answer, then ask back",
+              "Baik, makasih. Kamu?"
+            ]
+          ],
+          "tips": [
+            "**Good night** is only for leaving or bedtime, never for arriving.",
+            "Answer *How are you?* short, then ask back: **And you?**",
+            "*Sama-sama* is **You're welcome**, not 'same-same'."
+          ],
+          "examples": [
+            {
+              "en": "Good evening, everyone!",
+              "id": "Selamat malam, semuanya!"
+            },
+            {
+              "en": "Two teas, please.",
+              "id": "Minta dua teh."
+            },
+            {
+              "en": "Excuse me, where is the toilet?",
+              "id": "Permisi, toiletnya di mana?"
+            },
+            {
+              "en": "Not bad, thanks. And you?",
+              "id": "Lumayan, makasih. Kamu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and listen",
+        "text": "Want more? Watch a short video and listen to a real conversation with greetings."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang! Hari ini kita belajar kata-kata pertama di setiap percakapan: menyapa, berpamitan, beberapa kata sopan yang ajaib, dan How are you?. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menyapa dan berpamitan",
+        "text": "Kita mulai dari kata-kata saat bertemu orang dan saat pergi.",
+        "body": "Ucapkan **Hello** atau **Hi** kapan saja (Hi untuk teman). Atau pakai salam sesuai waktu: **Good morning** sampai jam 12 siang, **Good afternoon** sampai sekitar jam 6 sore, lalu **Good evening**. Saat pergi, ucapkan **Goodbye**, **Bye** atau **See you!** Malam hari, saat pulang atau mau tidur, ucapkan **Good night**.",
+        "pairs": [
+          {
+            "en": "hello",
+            "id": "halo"
+          },
+          {
+            "en": "hi",
+            "id": "hai"
+          },
+          {
+            "en": "good morning",
+            "id": "selamat pagi"
+          },
+          {
+            "en": "good afternoon",
+            "id": "selamat siang / sore"
+          },
+          {
+            "en": "good evening",
+            "id": "selamat malam (saat datang)"
+          },
+          {
+            "en": "good night",
+            "id": "selamat malam (saat pulang / tidur)"
+          },
+          {
+            "en": "goodbye",
+            "id": "sampai jumpa"
+          },
+          {
+            "en": "see you",
+            "id": "sampai ketemu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dari pagi sampai malam",
+        "text": "Ini satu hari di Jakarta, dari pagi sampai malam. Bacalah dengan suara keras.",
+        "body": "Lihat jamnya dulu, lalu pilih salamnya. **Selamat siang** dan **selamat sore** sama-sama **Good afternoon** dalam bahasa Inggris.",
+        "examples": [
+          {
+            "en": "Good morning, Bu Ani!",
+            "id": "Selamat pagi, Bu Ani! (jam 7 pagi)"
+          },
+          {
+            "en": "Good afternoon, Pak Hasan.",
+            "id": "Selamat sore, Pak Hasan. (jam 4 sore)"
+          },
+          {
+            "en": "Bye, Dimas! See you later.",
+            "id": "Dah, Dimas! Sampai nanti."
+          },
+          {
+            "en": "Good evening, everyone.",
+            "id": "Selamat malam, semuanya. (datang jam 8 malam)"
+          },
+          {
+            "en": "Good night, Mum!",
+            "id": "Selamat tidur, Bu! (mau tidur)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hati-hati: kamu datang atau pergi?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "greet-people-and",
+          "prompt": "Jam 7 malam. Kamu datang ke pesta ulang tahun Sari. Apa yang kamu ucapkan?",
+          "options": [
+            "Good night, Sari!",
+            "Good evening, Sari!",
+            "Good afternoon, Sari!"
+          ],
+          "answer": 1,
+          "explanation": "Kamu **datang** setelah jam 6 sore, jadi ucapkan **Good evening**. **Good night** hanya untuk pulang atau mau tidur, dan **Good afternoon** berakhir sekitar jam 6 sore."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata-kata ajaib",
+        "text": "Sekarang beberapa kata kecil yang membuatmu terdengar ramah dan sopan.",
+        "body": "**Please** membuat permintaan jadi sopan, biasanya di akhir: *Two teas, please.* Ucapkan **Thank you** (atau **Thanks** ke teman) saat dibantu; jawabannya **You're welcome**. Ucapkan **Sorry** setelah berbuat salah. Ucapkan **Excuse me** sebelum bertanya kepada orang asing atau saat mau lewat.",
+        "pairs": [
+          {
+            "en": "please",
+            "id": "tolong / minta / silakan"
+          },
+          {
+            "en": "thank you",
+            "id": "terima kasih"
+          },
+          {
+            "en": "thanks",
+            "id": "makasih"
+          },
+          {
+            "en": "you're welcome",
+            "id": "sama-sama"
+          },
+          {
+            "en": "sorry",
+            "id": "maaf (setelah salah)"
+          },
+          {
+            "en": "excuse me",
+            "id": "permisi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kamu di kafe di Bandung. Pesan dengan sopan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-please-thank",
+          "prompt": "Susun kata-katanya: Minta secangkir kopi.",
+          "tokens": [
+            "please",
+            "coffee",
+            "A",
+            "of",
+            "cup"
+          ],
+          "solution": "A cup of coffee, please.",
+          "explanation": "Dalam permintaan pendek, **please** biasanya di akhir: **A cup of coffee, please.** Tanpa please, permintaan bisa terdengar kasar dalam bahasa Inggris."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Sorry atau excuse me?",
+        "text": "'Maaf' bisa menjadi dua kata bahasa Inggris yang berbeda. Lihat kapan masing-masing dipakai.",
+        "body": "**Sorry** dipakai **setelah** berbuat salah. **Excuse me** dipakai **sebelum** bertanya, memanggil orang, atau saat mau lewat (seperti 'permisi').",
+        "examples": [
+          {
+            "en": "Sorry, I'm late!",
+            "id": "Maaf, saya terlambat!"
+          },
+          {
+            "en": "Oh, sorry!",
+            "id": "Aduh, maaf! (menabrak orang)"
+          },
+          {
+            "en": "Excuse me, where is the toilet?",
+            "id": "Permisi, toiletnya di mana?"
+          },
+          {
+            "en": "Excuse me! The bill, please.",
+            "id": "Permisi! Minta bonnya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ada kecelakaan kecil. Kata mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-please-thank",
+          "prompt": "Kamu menumpahkan teh ke baju Budi. Apa yang kamu ucapkan?",
+          "options": [
+            "Excuse me!",
+            "Please!",
+            "I'm so sorry!"
+          ],
+          "answer": 2,
+          "explanation": "Kamu berbuat salah, jadi ucapkan **sorry**. **Excuse me** dipakai sebelum bertanya atau saat mau lewat, dan **please** untuk meminta sesuatu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How are you?",
+        "text": "Setelah menyapa, orang sering bertanya How are you?. Begini cara menjawabnya.",
+        "body": "**How are you?** artinya 'apa kabar?'. Jawab singkat, ucapkan terima kasih, lalu tanya balik: **I'm fine, thanks. And you?** Kamu juga bisa bilang **I'm good**, **Very well** (sopan) atau **Not bad**. Jangan tertukar dengan **Who are you?** (kamu siapa?).",
+        "pairs": [
+          {
+            "en": "How are you?",
+            "id": "Apa kabar?"
+          },
+          {
+            "en": "I'm fine.",
+            "id": "Saya baik."
+          },
+          {
+            "en": "I'm good.",
+            "id": "Aku baik."
+          },
+          {
+            "en": "Very well.",
+            "id": "Baik sekali. (sopan)"
+          },
+          {
+            "en": "Not bad.",
+            "id": "Lumayan."
+          },
+          {
+            "en": "And you?",
+            "id": "Kamu? / Kamu sendiri?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Kamu menanyakan kabar Rina. Tekan play dan dengarkan jawabannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "how-are-you",
+          "prompt": "Kamu bilang 'Hi, Rina! How are you?' Dengarkan Rina, lalu pilih jawabanmu.",
+          "listen": "I'm fine, thanks. And you?",
+          "options": [
+            "You're welcome.",
+            "I'm good, thanks.",
+            "Yes, I am."
+          ],
+          "answer": 1,
+          "explanation": "Rina bilang dia baik dan bertanya **And you?**, jadi ceritakan kabarmu: **I'm good, thanks.** *You're welcome* adalah jawaban untuk *thank you*, dan *Yes, I am* tidak menjawab pertanyaannya."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartunya. Sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "good morning",
+            "back": "selamat pagi"
+          },
+          {
+            "front": "good afternoon",
+            "back": "selamat siang / sore"
+          },
+          {
+            "front": "good evening",
+            "back": "selamat malam (saat datang)"
+          },
+          {
+            "front": "good night",
+            "back": "selamat malam (saat pulang / tidur)"
+          },
+          {
+            "front": "you're welcome",
+            "back": "sama-sama"
+          },
+          {
+            "front": "excuse me",
+            "back": "permisi"
+          },
+          {
+            "front": "sorry",
+            "back": "maaf (setelah salah)"
+          },
+          {
+            "front": "How are you?",
+            "back": "Apa kabar?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk percakapan pertamamu.",
+        "artifact": {
+          "title": "Contekan · Salam & kata sopan",
+          "intro": "Apa yang diucapkan, dan kapan.",
+          "headers": [
+            "English",
+            "Kapan",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Good morning",
+              "sampai jam 12 siang",
+              "Selamat pagi"
+            ],
+            [
+              "Good afternoon",
+              "jam 12 siang – sekitar jam 6 sore",
+              "Selamat siang / sore"
+            ],
+            [
+              "Good evening",
+              "setelah jam 6 sore, saat datang",
+              "Selamat malam"
+            ],
+            [
+              "Good night",
+              "pulang malam hari, mau tidur",
+              "Selamat malam / selamat tidur"
+            ],
+            [
+              "Goodbye / Bye / See you!",
+              "saat pergi",
+              "Sampai jumpa / dah"
+            ],
+            [
+              "Please",
+              "meminta sesuatu",
+              "Tolong / minta / silakan"
+            ],
+            [
+              "Thank you / Thanks",
+              "saat dibantu",
+              "Terima kasih / makasih"
+            ],
+            [
+              "You're welcome",
+              "jawaban untuk thank you",
+              "Sama-sama"
+            ],
+            [
+              "Sorry",
+              "setelah berbuat salah",
+              "Maaf"
+            ],
+            [
+              "Excuse me",
+              "sebelum bertanya, saat mau lewat",
+              "Permisi"
+            ],
+            [
+              "How are you?",
+              "bagian dari menyapa",
+              "Apa kabar?"
+            ],
+            [
+              "I'm fine, thanks. And you?",
+              "jawab, lalu tanya balik",
+              "Baik, makasih. Kamu?"
+            ]
+          ],
+          "tips": [
+            "**Good night** hanya untuk pulang atau mau tidur, bukan saat datang.",
+            "Jawab *How are you?* singkat saja, lalu tanya balik: **And you?**",
+            "*Sama-sama* adalah **You're welcome**, bukan 'same-same'."
+          ],
+          "examples": [
+            {
+              "en": "Good evening, everyone!",
+              "id": "Selamat malam, semuanya!"
+            },
+            {
+              "en": "Two teas, please.",
+              "id": "Minta dua teh."
+            },
+            {
+              "en": "Excuse me, where is the toilet?",
+              "id": "Permisi, toiletnya di mana?"
+            },
+            {
+              "en": "Not bad, thanks. And you?",
+              "id": "Lumayan, makasih. Kamu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan dengarkan",
+        "text": "Mau lebih? Tonton video pendek dan dengarkan percakapan sungguhan yang memakai salam."
+      }
+    ]
+  }
+}

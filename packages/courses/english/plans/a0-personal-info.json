@@ -1,0 +1,690 @@
+{
+  "en": {
+    "greeting": "Hi! Today you learn to talk about yourself: where you're from, your name, age, address and email. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Countries and nationalities",
+        "text": "Let's start with where people are from.",
+        "body": "A **country** is a place: Indonesia, Japan. A **nationality** describes a person from that country: Indonesian, Japanese. Two ways to say it: **I'm from** + country (I'm from Japan), or **I'm** + nationality, without *from* (I'm Japanese). Both words always start with a **capital letter**.",
+        "pairs": [
+          {
+            "en": "Indonesia → Indonesian",
+            "id": "Indonesia → orang Indonesia"
+          },
+          {
+            "en": "Malaysia → Malaysian",
+            "id": "Malaysia → orang Malaysia"
+          },
+          {
+            "en": "Australia → Australian",
+            "id": "Australia → orang Australia"
+          },
+          {
+            "en": "South Korea → Korean",
+            "id": "Korea Selatan → orang Korea"
+          },
+          {
+            "en": "Japan → Japanese",
+            "id": "Jepang → orang Jepang"
+          },
+          {
+            "en": "China → Chinese",
+            "id": "Tiongkok → orang Tionghoa / Tiongkok"
+          },
+          {
+            "en": "Thailand → Thai",
+            "id": "Thailand → orang Thailand"
+          },
+          {
+            "en": "the UK → British",
+            "id": "Inggris Raya → orang Inggris"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Remember: you are a person, not a country.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "countries-nationalities",
+          "options": [
+            "I am Indonesia.",
+            "I'm Indonesian.",
+            "I'm from Indonesian."
+          ],
+          "answer": 1,
+          "prompt": "Rina meets a new friend from Australia. Which sentence is correct?",
+          "explanation": "**I'm Indonesian** uses the nationality. 'I am Indonesia' uses the country name, and 'from' needs the country: **I'm from Indonesia**, not 'from Indonesian'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Your personal details",
+        "text": "Now let's give your details: name, age, address and email.",
+        "body": "Use short fixed sentences: **My name is** …, **I'm** + age, **My address is** …, **My email is** …, **My phone number is** …. Keep **is**: 'My address in Jalan Merdeka 5' is wrong. For age say **I'm 25**, never 'I have 25 years'. In an email address, **@** is *at* and **.** is *dot*.",
+        "pairs": [
+          {
+            "en": "name",
+            "id": "nama"
+          },
+          {
+            "en": "age",
+            "id": "umur"
+          },
+          {
+            "en": "address",
+            "id": "alamat"
+          },
+          {
+            "en": "email address",
+            "id": "alamat email"
+          },
+          {
+            "en": "phone number",
+            "id": "nomor telepon / HP"
+          },
+          {
+            "en": "@ = at",
+            "id": "tanda @ dibaca 'at'"
+          },
+          {
+            "en": ". = dot",
+            "id": "titik dalam email dibaca 'dot'"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Details in sentences",
+        "text": "Here is Sari giving her details. Notice the little word **is**.",
+        "body": "Read the email out loud: sari **dot** w **at** gmail **dot** com.",
+        "examples": [
+          {
+            "en": "My name is Sari Wulandari.",
+            "id": "Nama saya Sari Wulandari."
+          },
+          {
+            "en": "I'm 28.",
+            "id": "Umur saya 28 tahun."
+          },
+          {
+            "en": "My address is Jalan Gatot Subroto 15, Jakarta.",
+            "id": "Alamat saya Jalan Gatot Subroto 15, Jakarta."
+          },
+          {
+            "en": "My email is sari.w@gmail.com.",
+            "id": "Email saya sari.w@gmail.com (dibaca: sari dot w at gmail dot com)."
+          },
+          {
+            "en": "My phone number is 0812 3345 6789.",
+            "id": "Nomor HP saya 0812 3345 6789."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Press play and listen for **dot** and **at**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "personal-details",
+          "listen": "My email is budi dot santoso at yahoo dot com.",
+          "options": [
+            "budisantoso@yahoo.com",
+            "budi.santoso@gmail.com",
+            "budi.santoso@yahoo.com"
+          ],
+          "answer": 2,
+          "prompt": "Listen. Which email address do you hear?",
+          "explanation": "You heard 'budi **dot** santoso **at** yahoo **dot** com', so there is a dot between budi and santoso, and the provider is yahoo: **budi.santoso@yahoo.com**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in English order. Don't forget the verb.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "personal-details",
+          "tokens": [
+            "Pemuda",
+            "is",
+            "21",
+            "My",
+            "Jalan",
+            "address"
+          ],
+          "solution": "My address is Jalan Pemuda 21.",
+          "prompt": "Arrange the words: Alamat saya Jalan Pemuda 21.",
+          "explanation": "**My address** comes first, then the verb **is**, then the address. Indonesian 'Alamat saya Jalan Pemuda 21' has no verb, but English needs **is**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Fixed questions",
+        "text": "Now the questions people ask you. Learn them as whole chunks.",
+        "body": "You don't need grammar rules here — just learn each question as one piece. **What's** = *What is*: don't drop the **'s**. 'What your name?' is wrong. After you answer, ask back with **And you?**",
+        "pairs": [
+          {
+            "en": "What's your name?",
+            "id": "Siapa namamu?"
+          },
+          {
+            "en": "Where are you from?",
+            "id": "Kamu dari mana?"
+          },
+          {
+            "en": "How old are you?",
+            "id": "Berapa umurmu?"
+          },
+          {
+            "en": "What's your address?",
+            "id": "Alamatmu di mana?"
+          },
+          {
+            "en": "What's your phone number?",
+            "id": "Berapa nomor HP-mu?"
+          },
+          {
+            "en": "And you?",
+            "id": "Kalau kamu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's the same pattern as What's your name?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "set-questions",
+          "options": [
+            "What's your email address?",
+            "What your email address?",
+            "Where your email address?"
+          ],
+          "answer": 0,
+          "prompt": "A hotel receptionist needs your email address. Which question is correct?",
+          "explanation": "Use the fixed chunk **What's your** + detail: **What's your email address?** 'What your…' drops the 's (is), and 'Where' asks about a place."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Press play. Someone asks you a question — choose the best answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "set-questions",
+          "listen": "Where are you from?",
+          "options": [
+            "I'm 24.",
+            "I'm from Surabaya.",
+            "My name is Dewi."
+          ],
+          "answer": 1,
+          "prompt": "Listen to the question. Choose the best answer.",
+          "explanation": "The question was **Where are you from?**, so you answer with a place: **I'm from Surabaya.** 'I'm 24' answers How old are you?, and 'My name is Dewi' answers What's your name?"
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards and say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "Indonesian",
+            "back": "orang Indonesia (kebangsaan)"
+          },
+          {
+            "front": "Japanese",
+            "back": "orang Jepang (kebangsaan)"
+          },
+          {
+            "front": "address",
+            "back": "alamat"
+          },
+          {
+            "front": "@ · .",
+            "back": "at · dot (dalam alamat email)"
+          },
+          {
+            "front": "What's your name?",
+            "back": "Siapa namamu?"
+          },
+          {
+            "front": "Where are you from?",
+            "back": "Kamu dari mana?"
+          },
+          {
+            "front": "How old are you?",
+            "back": "Berapa umurmu?"
+          },
+          {
+            "front": "I'm 25.",
+            "back": "Umur saya 25 tahun."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet with the questions and answers. Keep it for your next check-in or form.",
+        "artifact": {
+          "title": "Cheat sheet · Personal information",
+          "intro": "The fixed questions people ask, with a model answer for each.",
+          "headers": [
+            "Question",
+            "Answer",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "What's your name?",
+              "My name is Budi.",
+              "Siapa namamu? — Nama saya Budi."
+            ],
+            [
+              "Where are you from?",
+              "I'm from Indonesia. / I'm Indonesian.",
+              "Kamu dari mana? — Saya dari Indonesia. / Saya orang Indonesia."
+            ],
+            [
+              "How old are you?",
+              "I'm 25.",
+              "Berapa umurmu? — Umur saya 25 tahun."
+            ],
+            [
+              "What's your address?",
+              "My address is Jalan Merdeka 5.",
+              "Alamatmu di mana? — Alamat saya Jalan Merdeka 5."
+            ],
+            [
+              "What's your email address?",
+              "My email is budi@gmail.com.",
+              "Apa alamat emailmu? — Email saya budi@gmail.com."
+            ],
+            [
+              "What's your phone number?",
+              "It's 0812 5567 3490.",
+              "Berapa nomor HP-mu? — Nomornya 0812 5567 3490."
+            ]
+          ],
+          "tips": [
+            "Country or nationality: **I'm from Indonesia** or **I'm Indonesian** — never 'I am Indonesia'.",
+            "Keep **is**: **My address is** …, **My email is** …. For age: **I'm 25**, not 'I have 25 years'.",
+            "**What's** = What is. Say **What's your name?**, not 'What your name?'."
+          ],
+          "examples": [
+            {
+              "en": "I'm from Indonesia.",
+              "id": "Saya dari Indonesia."
+            },
+            {
+              "en": "My address is Jalan Merdeka 5.",
+              "id": "Alamat saya Jalan Merdeka 5."
+            },
+            {
+              "en": "My email is budi at gmail dot com.",
+              "id": "Email saya budi@gmail.com."
+            },
+            {
+              "en": "What's your name?",
+              "id": "Siapa namamu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These short videos help you hear countries, nationalities and email addresses."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar bercerita tentang dirimu: asal, nama, umur, alamat dan email. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Negara dan kebangsaan",
+        "text": "Kita mulai dari asal seseorang.",
+        "body": "**Country** (negara) adalah tempat: Indonesia, Japan. **Nationality** (kebangsaan) menjelaskan orang dari negara itu: Indonesian, Japanese. Ada dua cara: **I'm from** + negara (I'm from Japan), atau **I'm** + kebangsaan, tanpa *from* (I'm Japanese). Keduanya selalu diawali **huruf kapital**.",
+        "pairs": [
+          {
+            "en": "Indonesia → Indonesian",
+            "id": "Indonesia → orang Indonesia"
+          },
+          {
+            "en": "Malaysia → Malaysian",
+            "id": "Malaysia → orang Malaysia"
+          },
+          {
+            "en": "Australia → Australian",
+            "id": "Australia → orang Australia"
+          },
+          {
+            "en": "South Korea → Korean",
+            "id": "Korea Selatan → orang Korea"
+          },
+          {
+            "en": "Japan → Japanese",
+            "id": "Jepang → orang Jepang"
+          },
+          {
+            "en": "China → Chinese",
+            "id": "Tiongkok → orang Tionghoa / Tiongkok"
+          },
+          {
+            "en": "Thailand → Thai",
+            "id": "Thailand → orang Thailand"
+          },
+          {
+            "en": "the UK → British",
+            "id": "Inggris Raya → orang Inggris"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ingat: kamu orang, bukan negara.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "countries-nationalities",
+          "options": [
+            "I am Indonesia.",
+            "I'm Indonesian.",
+            "I'm from Indonesian."
+          ],
+          "answer": 1,
+          "prompt": "Rina berkenalan dengan teman baru dari Australia. Kalimat mana yang benar?",
+          "explanation": "**I'm Indonesian** memakai kebangsaan. 'I am Indonesia' memakai nama negara, dan 'from' harus diikuti negara: **I'm from Indonesia**, bukan 'from Indonesian'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Data pribadimu",
+        "text": "Sekarang kita sebutkan data diri: nama, umur, alamat dan email.",
+        "body": "Pakai kalimat pendek yang tetap: **My name is** …, **I'm** + umur, **My address is** …, **My email is** …, **My phone number is** …. Jangan hilangkan **is**: 'My address in Jalan Merdeka 5' salah. Untuk umur katakan **I'm 25**, jangan 'I have 25 years'. Dalam alamat email, **@** dibaca *at* dan **.** dibaca *dot*.",
+        "pairs": [
+          {
+            "en": "name",
+            "id": "nama"
+          },
+          {
+            "en": "age",
+            "id": "umur"
+          },
+          {
+            "en": "address",
+            "id": "alamat"
+          },
+          {
+            "en": "email address",
+            "id": "alamat email"
+          },
+          {
+            "en": "phone number",
+            "id": "nomor telepon / HP"
+          },
+          {
+            "en": "@ = at",
+            "id": "tanda @ dibaca 'at'"
+          },
+          {
+            "en": ". = dot",
+            "id": "titik dalam email dibaca 'dot'"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Data diri dalam kalimat",
+        "text": "Ini Sari menyebutkan data dirinya. Perhatikan kata kecil **is**.",
+        "body": "Baca emailnya keras-keras: sari **dot** w **at** gmail **dot** com.",
+        "examples": [
+          {
+            "en": "My name is Sari Wulandari.",
+            "id": "Nama saya Sari Wulandari."
+          },
+          {
+            "en": "I'm 28.",
+            "id": "Umur saya 28 tahun."
+          },
+          {
+            "en": "My address is Jalan Gatot Subroto 15, Jakarta.",
+            "id": "Alamat saya Jalan Gatot Subroto 15, Jakarta."
+          },
+          {
+            "en": "My email is sari.w@gmail.com.",
+            "id": "Email saya sari.w@gmail.com (dibaca: sari dot w at gmail dot com)."
+          },
+          {
+            "en": "My phone number is 0812 3345 6789.",
+            "id": "Nomor HP saya 0812 3345 6789."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Tekan play dan dengarkan kata **dot** dan **at**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "personal-details",
+          "listen": "My email is budi dot santoso at yahoo dot com.",
+          "options": [
+            "budisantoso@yahoo.com",
+            "budi.santoso@gmail.com",
+            "budi.santoso@yahoo.com"
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan. Alamat email mana yang kamu dengar?",
+          "explanation": "Kamu mendengar 'budi **dot** santoso **at** yahoo **dot** com', jadi ada titik di antara budi dan santoso, dan penyedianya yahoo: **budi.santoso@yahoo.com**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kata-katanya dalam urutan bahasa Inggris. Jangan lupa kata kerjanya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "personal-details",
+          "tokens": [
+            "Pemuda",
+            "is",
+            "21",
+            "My",
+            "Jalan",
+            "address"
+          ],
+          "solution": "My address is Jalan Pemuda 21.",
+          "prompt": "Susun kata-katanya: Alamat saya Jalan Pemuda 21.",
+          "explanation": "**My address** di depan, lalu kata kerja **is**, lalu alamatnya. 'Alamat saya Jalan Pemuda 21' tidak punya kata kerja, tapi bahasa Inggris butuh **is**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pertanyaan tetap",
+        "text": "Sekarang pertanyaan yang biasa ditanyakan orang. Hafalkan sebagai satu paket utuh.",
+        "body": "Di sini kamu tidak perlu aturan tata bahasa — cukup hafalkan setiap pertanyaan sebagai satu kesatuan. **What's** = *What is*: jangan hilangkan **'s**. 'What your name?' salah. Setelah menjawab, balik bertanya dengan **And you?**",
+        "pairs": [
+          {
+            "en": "What's your name?",
+            "id": "Siapa namamu?"
+          },
+          {
+            "en": "Where are you from?",
+            "id": "Kamu dari mana?"
+          },
+          {
+            "en": "How old are you?",
+            "id": "Berapa umurmu?"
+          },
+          {
+            "en": "What's your address?",
+            "id": "Alamatmu di mana?"
+          },
+          {
+            "en": "What's your phone number?",
+            "id": "Berapa nomor HP-mu?"
+          },
+          {
+            "en": "And you?",
+            "id": "Kalau kamu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Polanya sama dengan What's your name?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "set-questions",
+          "options": [
+            "What's your email address?",
+            "What your email address?",
+            "Where your email address?"
+          ],
+          "answer": 0,
+          "prompt": "Resepsionis hotel perlu alamat emailmu. Pertanyaan mana yang benar?",
+          "explanation": "Pakai paket tetap **What's your** + data: **What's your email address?** 'What your…' kehilangan 's (is), dan 'Where' menanyakan tempat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dan jawab",
+        "text": "Tekan play. Seseorang bertanya padamu — pilih jawaban yang paling tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "set-questions",
+          "listen": "Where are you from?",
+          "options": [
+            "I'm 24.",
+            "I'm from Surabaya.",
+            "My name is Dewi."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan pertanyaannya. Pilih jawaban yang paling tepat.",
+          "explanation": "Pertanyaannya **Where are you from?**, jadi jawab dengan tempat: **I'm from Surabaya.** 'I'm 24' menjawab How old are you?, dan 'My name is Dewi' menjawab What's your name?"
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartunya dan sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "Indonesian",
+            "back": "orang Indonesia (kebangsaan)"
+          },
+          {
+            "front": "Japanese",
+            "back": "orang Jepang (kebangsaan)"
+          },
+          {
+            "front": "address",
+            "back": "alamat"
+          },
+          {
+            "front": "@ · .",
+            "back": "at · dot (dalam alamat email)"
+          },
+          {
+            "front": "What's your name?",
+            "back": "Siapa namamu?"
+          },
+          {
+            "front": "Where are you from?",
+            "back": "Kamu dari mana?"
+          },
+          {
+            "front": "How old are you?",
+            "back": "Berapa umurmu?"
+          },
+          {
+            "front": "I'm 25.",
+            "back": "Umur saya 25 tahun."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan pertanyaan dan jawabannya. Simpan untuk check-in atau mengisi data berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Data pribadi",
+          "intro": "Pertanyaan tetap yang sering ditanyakan, dengan contoh jawaban untuk masing-masing.",
+          "headers": [
+            "Pertanyaan",
+            "Jawaban",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "What's your name?",
+              "My name is Budi.",
+              "Siapa namamu? — Nama saya Budi."
+            ],
+            [
+              "Where are you from?",
+              "I'm from Indonesia. / I'm Indonesian.",
+              "Kamu dari mana? — Saya dari Indonesia. / Saya orang Indonesia."
+            ],
+            [
+              "How old are you?",
+              "I'm 25.",
+              "Berapa umurmu? — Umur saya 25 tahun."
+            ],
+            [
+              "What's your address?",
+              "My address is Jalan Merdeka 5.",
+              "Alamatmu di mana? — Alamat saya Jalan Merdeka 5."
+            ],
+            [
+              "What's your email address?",
+              "My email is budi@gmail.com.",
+              "Apa alamat emailmu? — Email saya budi@gmail.com."
+            ],
+            [
+              "What's your phone number?",
+              "It's 0812 5567 3490.",
+              "Berapa nomor HP-mu? — Nomornya 0812 5567 3490."
+            ]
+          ],
+          "tips": [
+            "Negara atau kebangsaan: **I'm from Indonesia** atau **I'm Indonesian** — jangan 'I am Indonesia'.",
+            "Jangan hilangkan **is**: **My address is** …, **My email is** …. Untuk umur: **I'm 25**, bukan 'I have 25 years'.",
+            "**What's** = What is. Katakan **What's your name?**, bukan 'What your name?'."
+          ],
+          "examples": [
+            {
+              "en": "I'm from Indonesia.",
+              "id": "Saya dari Indonesia."
+            },
+            {
+              "en": "My address is Jalan Merdeka 5.",
+              "id": "Alamat saya Jalan Merdeka 5."
+            },
+            {
+              "en": "My email is budi at gmail dot com.",
+              "id": "Email saya budi@gmail.com."
+            },
+            {
+              "en": "What's your name?",
+              "id": "Siapa namamu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Video pendek ini membantu kamu mendengar nama negara, kebangsaan dan alamat email."
+      }
+    ]
+  }
+}

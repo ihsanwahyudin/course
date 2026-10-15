@@ -1,0 +1,708 @@
+{
+  "en": {
+    "greeting": "Welcome back! Today we learn the questions that save you in class: how to ask someone to repeat, what a word means, how to spell it, and the instructions teachers give. Let's start.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "When you miss something",
+        "text": "Missing words in class is normal. Here's how to ask for help politely.",
+        "body": "**Can you repeat that, please?** asks someone to say it again. If someone talks too fast, ask them to speak more **slowly** (not 'more slow'). For a quick check, just say **Sorry?** or **Pardon?** with your voice going up. Always add **please**: 'Repeat!' alone sounds like an order.",
+        "pairs": [
+          {
+            "en": "Can you repeat that, please?",
+            "id": "Bisa diulang?"
+          },
+          {
+            "en": "Can you say that again, please?",
+            "id": "Bisa diucapkan lagi?"
+          },
+          {
+            "en": "Sorry?",
+            "id": "Maaf, apa tadi? (nada naik)"
+          },
+          {
+            "en": "Pardon?",
+            "id": "Maaf, apa tadi? (lebih formal)"
+          },
+          {
+            "en": "slowly",
+            "id": "pelan-pelan"
+          },
+          {
+            "en": "I don't understand.",
+            "id": "Saya tidak mengerti."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In class",
+        "text": "Here's how these sound in a real class. Read them out loud.",
+        "examples": [
+          {
+            "en": "Sorry? Can you repeat that, please?",
+            "id": "Maaf? Bisa diulang?"
+          },
+          {
+            "en": "Pardon?",
+            "id": "Maaf, apa tadi?"
+          },
+          {
+            "en": "Sorry, I don't understand.",
+            "id": "Maaf, saya tidak mengerti."
+          },
+          {
+            "en": "Speak slowly, please.",
+            "id": "Tolong bicara pelan-pelan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Which word tells someone HOW to speak?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-someone-to",
+          "prompt": "Pak Joko speaks English very fast. Complete: Can you speak more ___, please?",
+          "options": [
+            "slow",
+            "slowly",
+            "fast"
+          ],
+          "answer": 1,
+          "explanation": "After **speak** we need **slowly**, the word for *how* someone speaks. 'More slow' is a common mistake, and **fast** asks for the opposite!"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking about a word",
+        "text": "Now let's ask about words: what they mean and how to write them.",
+        "body": "Meaning: **What does** + word + **mean?** Letters: **How do you spell** + word**?** The English word: **What's** + word + **in English?** Don't say 'How to spell…?'. It's a direct translation of 'Bagaimana mengeja…' and it isn't a correct English question.",
+        "pairs": [
+          {
+            "en": "What does … mean?",
+            "id": "Apa arti …?"
+          },
+          {
+            "en": "It means …",
+            "id": "Artinya …"
+          },
+          {
+            "en": "How do you spell …?",
+            "id": "Bagaimana mengeja …?"
+          },
+          {
+            "en": "What's … in English?",
+            "id": "Apa bahasa Inggrisnya …?"
+          },
+          {
+            "en": "spell",
+            "id": "mengeja"
+          },
+          {
+            "en": "mean",
+            "id": "berarti"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "One of these is the real English question. Which one?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-what-a",
+          "prompt": "The teacher says the word 'chair'. You want to know the letters. What do you ask?",
+          "options": [
+            "How to spell 'chair'?",
+            "How you spell 'chair'?",
+            "How do you spell 'chair'?"
+          ],
+          "answer": 2,
+          "explanation": "The question is **How do you spell** + word? 'How to spell…?' is a direct translation, and 'How you spell…?' is missing **do**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Now ask about meaning. Put the words in order.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-what-a",
+          "prompt": "Arrange the words: Apa arti 'hungry'?",
+          "tokens": [
+            "mean",
+            "hungry",
+            "What",
+            "does"
+          ],
+          "solution": "What does hungry mean?",
+          "explanation": "The pattern is **What does** + word + **mean?** The word you ask about sits in the middle, and **mean** comes last."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Classroom instructions",
+        "text": "Teachers also give you short instructions. Let's learn the common ones.",
+        "body": "Instructions start with the action word and don't say 'you': **Listen.** **Repeat.** **Read.** **Write.** Learn them in pairs of opposites: **open** and **close**, **stand up** and **sit down**. **Please** makes them softer.",
+        "pairs": [
+          {
+            "en": "listen",
+            "id": "dengarkan"
+          },
+          {
+            "en": "repeat",
+            "id": "ulangi"
+          },
+          {
+            "en": "open",
+            "id": "buka"
+          },
+          {
+            "en": "close",
+            "id": "tutup"
+          },
+          {
+            "en": "look at",
+            "id": "lihat (ke)"
+          },
+          {
+            "en": "stand up",
+            "id": "berdiri"
+          },
+          {
+            "en": "sit down",
+            "id": "duduk"
+          },
+          {
+            "en": "work in pairs",
+            "id": "kerjakan berdua"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "What the teacher says",
+        "text": "Read them and imagine doing each one.",
+        "examples": [
+          {
+            "en": "Listen and repeat.",
+            "id": "Dengarkan dan ulangi."
+          },
+          {
+            "en": "Repeat after me.",
+            "id": "Ikuti (ucapkan) setelah saya."
+          },
+          {
+            "en": "Open your books, please.",
+            "id": "Silakan buka buku kalian."
+          },
+          {
+            "en": "Write your name here.",
+            "id": "Tulis namamu di sini."
+          },
+          {
+            "en": "Work in pairs.",
+            "id": "Kerjakan berdua."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen to the teacher",
+        "text": "Press play. Listen carefully to the first word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-instructions",
+          "prompt": "Listen to the teacher. What does she say?",
+          "listen": "Close your books, please.",
+          "options": [
+            "Open your books.",
+            "Look at your books.",
+            "Close your books."
+          ],
+          "answer": 2,
+          "explanation": "She says **Close your books** (tutup buku kalian). **Open** is the opposite, and **look at** means lihat."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the English before you check.",
+        "flashcards": [
+          {
+            "front": "Bisa diulang?",
+            "back": "Can you repeat that, please?"
+          },
+          {
+            "front": "Apa arti 'busy'?",
+            "back": "What does 'busy' mean?"
+          },
+          {
+            "front": "Bagaimana mengeja namamu?",
+            "back": "How do you spell your name?"
+          },
+          {
+            "front": "Apa bahasa Inggrisnya 'meja'?",
+            "back": "What's 'meja' in English?"
+          },
+          {
+            "front": "Dengarkan dan ulangi.",
+            "back": "Listen and repeat."
+          },
+          {
+            "front": "Buka buku kalian.",
+            "back": "Open your books."
+          },
+          {
+            "front": "Kerjakan berdua.",
+            "back": "Work in pairs."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Keep this next to you in class.",
+        "artifact": {
+          "title": "Cheat sheet · Classroom language",
+          "intro": "Questions to ask, and instructions to follow.",
+          "headers": [
+            "English",
+            "Indonesian",
+            "Use it when"
+          ],
+          "rows": [
+            [
+              "Can you repeat that, please?",
+              "Bisa diulang?",
+              "you missed something"
+            ],
+            [
+              "Can you speak more slowly, please?",
+              "Bisa bicara lebih pelan?",
+              "someone talks too fast"
+            ],
+            [
+              "Sorry? / Pardon?",
+              "Maaf, apa tadi?",
+              "a quick check, voice going up"
+            ],
+            [
+              "What does … mean?",
+              "Apa arti …?",
+              "you don't know a word"
+            ],
+            [
+              "How do you spell …?",
+              "Bagaimana mengeja …?",
+              "you want the letters"
+            ],
+            [
+              "What's … in English?",
+              "Apa bahasa Inggrisnya …?",
+              "you need the English word"
+            ],
+            [
+              "Listen. / Repeat.",
+              "Dengarkan. / Ulangi.",
+              "the teacher says it"
+            ],
+            [
+              "Open / Close your book.",
+              "Buka / Tutup bukumu.",
+              "the teacher says it"
+            ],
+            [
+              "Stand up. / Sit down.",
+              "Berdiri. / Duduk.",
+              "the teacher says it"
+            ],
+            [
+              "Work in pairs.",
+              "Kerjakan berdua.",
+              "the teacher says it"
+            ]
+          ],
+          "tips": [
+            "Never 'How to spell…?'. Say **How do you spell…?**",
+            "Add **please** to your questions; 'Repeat!' alone sounds like an order."
+          ],
+          "examples": [
+            {
+              "en": "Sorry? Can you say that again, please?",
+              "id": "Maaf? Bisa diucapkan lagi?"
+            },
+            {
+              "en": "What does 'busy' mean? — It means 'sibuk'.",
+              "id": "Apa arti 'busy'? — Artinya 'sibuk'."
+            },
+            {
+              "en": "How do you spell 'Bandung'? — B-A-N-D-U-N-G.",
+              "id": "Bagaimana mengeja 'Bandung'? — B-A-N-D-U-N-G."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and listen",
+        "text": "Want more? These two short videos show the phrases and instructions in real classrooms."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Selamat datang kembali! Hari ini kita belajar pertanyaan penyelamat di kelas: meminta orang mengulang, menanyakan arti kata, cara mengejanya, dan instruksi dari guru. Yuk, mulai.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Saat kamu ketinggalan",
+        "text": "Ketinggalan kata di kelas itu biasa. Begini cara minta bantuan dengan sopan.",
+        "body": "**Can you repeat that, please?** meminta orang mengulang ucapannya. Kalau orang bicara terlalu cepat, minta dia bicara lebih **slowly** (bukan 'more slow'). Untuk pertanyaan singkat, cukup bilang **Sorry?** atau **Pardon?** dengan nada naik. Selalu tambahkan **please**: 'Repeat!' saja terdengar seperti perintah.",
+        "pairs": [
+          {
+            "en": "Can you repeat that, please?",
+            "id": "Bisa diulang?"
+          },
+          {
+            "en": "Can you say that again, please?",
+            "id": "Bisa diucapkan lagi?"
+          },
+          {
+            "en": "Sorry?",
+            "id": "Maaf, apa tadi? (nada naik)"
+          },
+          {
+            "en": "Pardon?",
+            "id": "Maaf, apa tadi? (lebih formal)"
+          },
+          {
+            "en": "slowly",
+            "id": "pelan-pelan"
+          },
+          {
+            "en": "I don't understand.",
+            "id": "Saya tidak mengerti."
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di kelas",
+        "text": "Begini bunyinya di kelas sungguhan. Bacalah dengan suara keras.",
+        "examples": [
+          {
+            "en": "Sorry? Can you repeat that, please?",
+            "id": "Maaf? Bisa diulang?"
+          },
+          {
+            "en": "Pardon?",
+            "id": "Maaf, apa tadi?"
+          },
+          {
+            "en": "Sorry, I don't understand.",
+            "id": "Maaf, saya tidak mengerti."
+          },
+          {
+            "en": "Speak slowly, please.",
+            "id": "Tolong bicara pelan-pelan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kata mana yang menjelaskan BAGAIMANA orang berbicara?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-someone-to",
+          "prompt": "Pak Joko bicara bahasa Inggris sangat cepat. Lengkapi: Can you speak more ___, please?",
+          "options": [
+            "slow",
+            "slowly",
+            "fast"
+          ],
+          "answer": 1,
+          "explanation": "Setelah **speak** kita butuh **slowly**, kata yang menjelaskan *bagaimana* orang berbicara. 'More slow' adalah kesalahan umum, dan **fast** malah meminta kebalikannya!"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bertanya tentang kata",
+        "text": "Sekarang kita bertanya tentang kata: artinya dan cara menulisnya.",
+        "body": "Arti: **What does** + kata + **mean?** Huruf: **How do you spell** + kata**?** Kata bahasa Inggrisnya: **What's** + kata + **in English?** Jangan bilang 'How to spell…?'. Itu terjemahan langsung dari 'Bagaimana mengeja…' dan bukan pertanyaan bahasa Inggris yang benar.",
+        "pairs": [
+          {
+            "en": "What does … mean?",
+            "id": "Apa arti …?"
+          },
+          {
+            "en": "It means …",
+            "id": "Artinya …"
+          },
+          {
+            "en": "How do you spell …?",
+            "id": "Bagaimana mengeja …?"
+          },
+          {
+            "en": "What's … in English?",
+            "id": "Apa bahasa Inggrisnya …?"
+          },
+          {
+            "en": "spell",
+            "id": "mengeja"
+          },
+          {
+            "en": "mean",
+            "id": "berarti"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Salah satunya pertanyaan bahasa Inggris yang benar. Yang mana?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-what-a",
+          "prompt": "Guru menyebut kata 'chair'. Kamu ingin tahu hurufnya. Apa yang kamu tanyakan?",
+          "options": [
+            "How to spell 'chair'?",
+            "How you spell 'chair'?",
+            "How do you spell 'chair'?"
+          ],
+          "answer": 2,
+          "explanation": "Pertanyaannya adalah **How do you spell** + kata? 'How to spell…?' adalah terjemahan langsung, dan 'How you spell…?' kurang **do**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Sekarang tanyakan arti. Susun kata-katanya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-what-a",
+          "prompt": "Susun kata-katanya: Apa arti 'hungry'?",
+          "tokens": [
+            "mean",
+            "hungry",
+            "What",
+            "does"
+          ],
+          "solution": "What does hungry mean?",
+          "explanation": "Polanya **What does** + kata + **mean?** Kata yang ditanyakan ada di tengah, dan **mean** di akhir."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Instruksi di kelas",
+        "text": "Guru juga memberi instruksi pendek. Yuk, pelajari yang sering dipakai.",
+        "body": "Instruksi dimulai dengan kata kerja dan tanpa 'you': **Listen.** **Repeat.** **Read.** **Write.** Pelajari berpasangan dengan lawan katanya: **open** dan **close**, **stand up** dan **sit down**. **Please** membuatnya lebih halus.",
+        "pairs": [
+          {
+            "en": "listen",
+            "id": "dengarkan"
+          },
+          {
+            "en": "repeat",
+            "id": "ulangi"
+          },
+          {
+            "en": "open",
+            "id": "buka"
+          },
+          {
+            "en": "close",
+            "id": "tutup"
+          },
+          {
+            "en": "look at",
+            "id": "lihat (ke)"
+          },
+          {
+            "en": "stand up",
+            "id": "berdiri"
+          },
+          {
+            "en": "sit down",
+            "id": "duduk"
+          },
+          {
+            "en": "work in pairs",
+            "id": "kerjakan berdua"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata guru",
+        "text": "Bacalah dan bayangkan kamu melakukannya.",
+        "examples": [
+          {
+            "en": "Listen and repeat.",
+            "id": "Dengarkan dan ulangi."
+          },
+          {
+            "en": "Repeat after me.",
+            "id": "Ikuti (ucapkan) setelah saya."
+          },
+          {
+            "en": "Open your books, please.",
+            "id": "Silakan buka buku kalian."
+          },
+          {
+            "en": "Write your name here.",
+            "id": "Tulis namamu di sini."
+          },
+          {
+            "en": "Work in pairs.",
+            "id": "Kerjakan berdua."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan guru",
+        "text": "Tekan play. Dengarkan baik-baik kata pertamanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-instructions",
+          "prompt": "Dengarkan gurunya. Apa yang dia katakan?",
+          "listen": "Close your books, please.",
+          "options": [
+            "Open your books.",
+            "Look at your books.",
+            "Close your books."
+          ],
+          "answer": 2,
+          "explanation": "Dia bilang **Close your books** (tutup buku kalian). **Open** adalah kebalikannya, dan **look at** artinya lihat."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartunya. Sebutkan bahasa Inggrisnya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "Bisa diulang?",
+            "back": "Can you repeat that, please?"
+          },
+          {
+            "front": "Apa arti 'busy'?",
+            "back": "What does 'busy' mean?"
+          },
+          {
+            "front": "Bagaimana mengeja namamu?",
+            "back": "How do you spell your name?"
+          },
+          {
+            "front": "Apa bahasa Inggrisnya 'meja'?",
+            "back": "What's 'meja' in English?"
+          },
+          {
+            "front": "Dengarkan dan ulangi.",
+            "back": "Listen and repeat."
+          },
+          {
+            "front": "Buka buku kalian.",
+            "back": "Open your books."
+          },
+          {
+            "front": "Kerjakan berdua.",
+            "back": "Work in pairs."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Simpan ini di dekatmu saat di kelas.",
+        "artifact": {
+          "title": "Contekan · Bahasa di kelas",
+          "intro": "Pertanyaan yang bisa kamu ajukan, dan instruksi yang perlu kamu ikuti.",
+          "headers": [
+            "English",
+            "Bahasa Indonesia",
+            "Dipakai saat"
+          ],
+          "rows": [
+            [
+              "Can you repeat that, please?",
+              "Bisa diulang?",
+              "kamu ketinggalan"
+            ],
+            [
+              "Can you speak more slowly, please?",
+              "Bisa bicara lebih pelan?",
+              "orang bicara terlalu cepat"
+            ],
+            [
+              "Sorry? / Pardon?",
+              "Maaf, apa tadi?",
+              "cek singkat, nada naik"
+            ],
+            [
+              "What does … mean?",
+              "Apa arti …?",
+              "kamu tidak tahu sebuah kata"
+            ],
+            [
+              "How do you spell …?",
+              "Bagaimana mengeja …?",
+              "kamu ingin tahu hurufnya"
+            ],
+            [
+              "What's … in English?",
+              "Apa bahasa Inggrisnya …?",
+              "kamu butuh kata bahasa Inggrisnya"
+            ],
+            [
+              "Listen. / Repeat.",
+              "Dengarkan. / Ulangi.",
+              "guru mengatakannya"
+            ],
+            [
+              "Open / Close your book.",
+              "Buka / Tutup bukumu.",
+              "guru mengatakannya"
+            ],
+            [
+              "Stand up. / Sit down.",
+              "Berdiri. / Duduk.",
+              "guru mengatakannya"
+            ],
+            [
+              "Work in pairs.",
+              "Kerjakan berdua.",
+              "guru mengatakannya"
+            ]
+          ],
+          "tips": [
+            "Jangan 'How to spell…?'. Ucapkan **How do you spell…?**",
+            "Tambahkan **please** pada pertanyaanmu; 'Repeat!' saja terdengar seperti perintah."
+          ],
+          "examples": [
+            {
+              "en": "Sorry? Can you say that again, please?",
+              "id": "Maaf? Bisa diucapkan lagi?"
+            },
+            {
+              "en": "What does 'busy' mean? — It means 'sibuk'.",
+              "id": "Apa arti 'busy'? — Artinya 'sibuk'."
+            },
+            {
+              "en": "How do you spell 'Bandung'? — B-A-N-D-U-N-G.",
+              "id": "Bagaimana mengeja 'Bandung'? — B-A-N-D-U-N-G."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan dengarkan",
+        "text": "Mau lebih? Dua video pendek ini menunjukkan frasa dan instruksi di kelas sungguhan."
+      }
+    ]
+  }
+}

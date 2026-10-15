@@ -161,7 +161,7 @@ func TestStepStateMachine(t *testing.T) {
 		t.Fatalf("checkpoint: %+v %v", res, err)
 	}
 	sum := res.Session.Lesson.Summary
-	if sum == nil || len(sum.Mastered) == 0 || sum.FlashcardsAdded != 2 || sum.NextOpening == "" || sum.Next == nil || sum.Next.ID != "a0-pronouns" {
+	if sum == nil || len(sum.Mastered) == 0 || sum.FlashcardsAdded != 2 || sum.NextOpening == "" || sum.Next == nil || sum.Next.ID != "a0-sounds-indonesian" {
 		t.Fatalf("lesson summary: %+v", sum)
 	}
 	if mock.Calls.Summary != 1 {

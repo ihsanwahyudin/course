@@ -1,0 +1,608 @@
+{
+  "en": {
+    "greeting": "Hi, welcome back! Today you build your first real English sentences: who you are, where you're from, and what things are. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "I'm = I am",
+        "text": "Let's start with you: your name and your city.",
+        "body": "Indonesian says *Saya Budi*, with no verb. English needs **am**: **I am Budi**. When we speak, we usually join them: **I'm**. For your city or country, add **from**: **I'm from Bandung**.",
+        "pairs": [
+          {
+            "en": "I am",
+            "id": "saya (adalah)"
+          },
+          {
+            "en": "I'm",
+            "id": "saya (bentuk pendek dari I am)"
+          },
+          {
+            "en": "I'm from …",
+            "id": "saya dari …"
+          },
+          {
+            "en": "a student",
+            "id": "(seorang) pelajar"
+          },
+          {
+            "en": "a teacher",
+            "id": "(seorang) guru"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Introduce yourself",
+        "text": "Here is how people say their name, job and city.",
+        "body": "Every sentence starts with **I'm**. Never just *I*.",
+        "examples": [
+          {
+            "en": "I'm Dimas.",
+            "id": "Saya Dimas."
+          },
+          {
+            "en": "I'm a student.",
+            "id": "Saya pelajar."
+          },
+          {
+            "en": "I'm from Palembang.",
+            "id": "Saya dari Palembang."
+          },
+          {
+            "en": "Hi, I'm Sari. I'm a teacher.",
+            "id": "Hai, saya Sari. Saya guru."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Put the words in English order. Who first, then where from.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "introduce-yourself",
+          "prompt": "Arrange the words: Saya dari Makassar.",
+          "tokens": [
+            "from",
+            "Makassar",
+            "I'm"
+          ],
+          "solution": "I'm from Makassar.",
+          "explanation": "Start with **I'm** (= I am), then **from** + the city. 'Saya dari Makassar' has no verb, but English needs the **'m**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "This is … and It's …",
+        "text": "Now let's talk about things around you.",
+        "body": "*Ini kunci saya* has no verb, but English needs **is**: **This is my key.** Use **This is** to show something near you. Then say more about the same thing with **It's** (= it is): **It's small.** Careful: **its** without an apostrophe means '-nya' (owner), not 'it is'.",
+        "pairs": [
+          {
+            "en": "this is",
+            "id": "ini (adalah)"
+          },
+          {
+            "en": "it's",
+            "id": "it is: (benda itu) adalah"
+          },
+          {
+            "en": "What's this?",
+            "id": "Ini apa?"
+          },
+          {
+            "en": "my key",
+            "id": "kunci saya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Show and tell",
+        "text": "First show the thing with This is, then describe it with It's.",
+        "body": "**This is** names the thing. **It's** tells you more about it.",
+        "examples": [
+          {
+            "en": "This is my phone. It's black.",
+            "id": "Ini HP saya. Warnanya hitam."
+          },
+          {
+            "en": "This is my office. It's small.",
+            "id": "Ini kantor saya. Kantornya kecil."
+          },
+          {
+            "en": "What's this? It's a pen.",
+            "id": "Ini apa? Ini pulpen."
+          },
+          {
+            "en": "This is my friend, Eko.",
+            "id": "Ini teman saya, Eko."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look closely at each sentence. Is the small verb there? Is the apostrophe right?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "this-is-its",
+          "prompt": "Budi shows his new motorbike. Which is correct?",
+          "options": [
+            "This my motorbike. It new.",
+            "This is my motorbike. It's new.",
+            "This is my motorbike. Its new."
+          ],
+          "answer": 1,
+          "explanation": "Both sentences need **is**: **This is** and **It's** (= it is). 'Its' without an apostrophe means '-nya', so 'Its new' is wrong."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Never drop be",
+        "text": "This is the most important rule of the lesson.",
+        "body": "Indonesian often has no verb: *Dia guru. Saya dari Surabaya. Ini tas saya.* English always needs **be** after the subject. So: *She teacher* ✗ → **She's a teacher** ✓. *I from Surabaya* ✗ → **I'm from Surabaya** ✓. *This my bag* ✗ → **This is my bag** ✓. Use **is** after a name too: **Budi is a student.**",
+        "pairs": [
+          {
+            "en": "I'm",
+            "id": "I am: saya (adalah)"
+          },
+          {
+            "en": "he's",
+            "id": "he is: dia (laki-laki) adalah"
+          },
+          {
+            "en": "she's",
+            "id": "she is: dia (perempuan) adalah"
+          },
+          {
+            "en": "it's",
+            "id": "it is: (benda itu) adalah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Find the sentence that keeps be.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "keep-be",
+          "prompt": "Pak Joko seorang sopir. Which is correct?",
+          "options": [
+            "Pak Joko a driver.",
+            "Pak Joko driver is.",
+            "Pak Joko is a driver."
+          ],
+          "answer": 2,
+          "explanation": "After the subject (Pak Joko) comes **is**, then the job: **Pak Joko is a driver.** Without **is** the sentence is incomplete, and **is** can't go at the end."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Subject first, then be, then the rest.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "keep-be",
+          "prompt": "Arrange the words: Dia (laki-laki) guru saya.",
+          "tokens": [
+            "my",
+            "He",
+            "teacher",
+            "is"
+          ],
+          "solution": "He is my teacher.",
+          "explanation": "Subject (**He**) + be (**is**) + the rest (**my teacher**). 'Dia guru saya' has no verb, but English needs **is**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards and say the English before you check.",
+        "flashcards": [
+          {
+            "front": "I am",
+            "back": "I'm: saya (adalah)"
+          },
+          {
+            "front": "it is",
+            "back": "it's: (benda itu) adalah"
+          },
+          {
+            "front": "Saya dari Bandung.",
+            "back": "I'm from Bandung."
+          },
+          {
+            "front": "Ini HP saya.",
+            "back": "This is my phone."
+          },
+          {
+            "front": "Dia (perempuan) guru.",
+            "back": "She's a teacher."
+          },
+          {
+            "front": "Ini apa?",
+            "back": "What's this?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is a cheat sheet you can keep and look back at.",
+        "artifact": {
+          "title": "Cheat sheet · First sentences with be",
+          "intro": "English needs be (am / is) where Indonesian has no verb. Use the short forms when you speak.",
+          "headers": [
+            "Full form",
+            "Short form",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "I am",
+              "I'm",
+              "saya (adalah)"
+            ],
+            [
+              "I am from …",
+              "I'm from …",
+              "saya dari …"
+            ],
+            [
+              "he is",
+              "he's",
+              "dia (laki-laki) adalah"
+            ],
+            [
+              "she is",
+              "she's",
+              "dia (perempuan) adalah"
+            ],
+            [
+              "it is",
+              "it's",
+              "(benda itu) adalah"
+            ],
+            [
+              "this is",
+              "this is",
+              "ini (adalah)"
+            ]
+          ],
+          "tips": [
+            "Subject + **be** + the rest: *I'm* a student, *Rina is* my friend.",
+            "Show a thing with **This is …**, then describe it with **It's …**.",
+            "**it's** = it is; **its** (no apostrophe) = '-nya'."
+          ],
+          "examples": [
+            {
+              "en": "I'm from Bandung.",
+              "id": "Saya dari Bandung."
+            },
+            {
+              "en": "This is my phone. It's black.",
+              "id": "Ini HP saya. Warnanya hitam."
+            },
+            {
+              "en": "She's a teacher.",
+              "id": "Dia (perempuan) guru."
+            },
+            {
+              "en": "This is my bag.",
+              "id": "Ini tas saya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This short video and reference page help."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang kembali! Hari ini kamu membuat kalimat bahasa Inggris pertamamu: siapa kamu, dari mana asalmu, dan benda apa itu. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "I'm = I am",
+        "text": "Kita mulai dari dirimu: nama dan kotamu.",
+        "body": "Bahasa Indonesia bilang *Saya Budi*, tanpa kata kerja. Bahasa Inggris butuh **am**: **I am Budi**. Saat berbicara, biasanya digabung: **I'm**. Untuk kota atau negaramu, tambahkan **from**: **I'm from Bandung**.",
+        "pairs": [
+          {
+            "en": "I am",
+            "id": "saya (adalah)"
+          },
+          {
+            "en": "I'm",
+            "id": "saya (bentuk pendek dari I am)"
+          },
+          {
+            "en": "I'm from …",
+            "id": "saya dari …"
+          },
+          {
+            "en": "a student",
+            "id": "(seorang) pelajar"
+          },
+          {
+            "en": "a teacher",
+            "id": "(seorang) guru"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Memperkenalkan diri",
+        "text": "Begini cara orang menyebut nama, pekerjaan dan kotanya.",
+        "body": "Setiap kalimat dimulai dengan **I'm**. Jangan cuma *I*.",
+        "examples": [
+          {
+            "en": "I'm Dimas.",
+            "id": "Saya Dimas."
+          },
+          {
+            "en": "I'm a student.",
+            "id": "Saya pelajar."
+          },
+          {
+            "en": "I'm from Palembang.",
+            "id": "Saya dari Palembang."
+          },
+          {
+            "en": "Hi, I'm Sari. I'm a teacher.",
+            "id": "Hai, saya Sari. Saya guru."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kata-katanya dalam urutan bahasa Inggris. Siapa dulu, lalu dari mana.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "introduce-yourself",
+          "prompt": "Susun kata-katanya: Saya dari Makassar.",
+          "tokens": [
+            "from",
+            "Makassar",
+            "I'm"
+          ],
+          "solution": "I'm from Makassar.",
+          "explanation": "Mulai dengan **I'm** (= I am), lalu **from** + nama kota. 'Saya dari Makassar' tidak punya kata kerja, tapi bahasa Inggris butuh **'m**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "This is … dan It's …",
+        "text": "Sekarang kita bicara tentang benda di sekitarmu.",
+        "body": "*Ini kunci saya* tidak punya kata kerja, tapi bahasa Inggris butuh **is**: **This is my key.** Pakai **This is** untuk menunjukkan sesuatu di dekatmu. Lalu jelaskan benda yang sama dengan **It's** (= it is): **It's small.** Hati-hati: **its** tanpa apostrof artinya '-nya' (pemilik), bukan 'it is'.",
+        "pairs": [
+          {
+            "en": "this is",
+            "id": "ini (adalah)"
+          },
+          {
+            "en": "it's",
+            "id": "it is: (benda itu) adalah"
+          },
+          {
+            "en": "What's this?",
+            "id": "Ini apa?"
+          },
+          {
+            "en": "my key",
+            "id": "kunci saya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tunjukkan dan jelaskan",
+        "text": "Tunjukkan bendanya dulu dengan This is, lalu jelaskan dengan It's.",
+        "body": "**This is** menyebut bendanya. **It's** menjelaskan lebih lanjut.",
+        "examples": [
+          {
+            "en": "This is my phone. It's black.",
+            "id": "Ini HP saya. Warnanya hitam."
+          },
+          {
+            "en": "This is my office. It's small.",
+            "id": "Ini kantor saya. Kantornya kecil."
+          },
+          {
+            "en": "What's this? It's a pen.",
+            "id": "Ini apa? Ini pulpen."
+          },
+          {
+            "en": "This is my friend, Eko.",
+            "id": "Ini teman saya, Eko."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Perhatikan setiap kalimat. Ada kata kerja kecilnya? Apostrofnya benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "this-is-its",
+          "prompt": "Budi menunjukkan motor barunya. Mana yang benar?",
+          "options": [
+            "This my motorbike. It new.",
+            "This is my motorbike. It's new.",
+            "This is my motorbike. Its new."
+          ],
+          "answer": 1,
+          "explanation": "Kedua kalimat butuh **is**: **This is** dan **It's** (= it is). 'Its' tanpa apostrof artinya '-nya', jadi 'Its new' salah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jangan hilangkan be",
+        "text": "Ini aturan paling penting di pelajaran ini.",
+        "body": "Bahasa Indonesia sering tanpa kata kerja: *Dia guru. Saya dari Surabaya. Ini tas saya.* Bahasa Inggris selalu butuh **be** setelah subjek. Jadi: *She teacher* ✗ → **She's a teacher** ✓. *I from Surabaya* ✗ → **I'm from Surabaya** ✓. *This my bag* ✗ → **This is my bag** ✓. Setelah nama juga pakai **is**: **Budi is a student.**",
+        "pairs": [
+          {
+            "en": "I'm",
+            "id": "I am: saya (adalah)"
+          },
+          {
+            "en": "he's",
+            "id": "he is: dia (laki-laki) adalah"
+          },
+          {
+            "en": "she's",
+            "id": "she is: dia (perempuan) adalah"
+          },
+          {
+            "en": "it's",
+            "id": "it is: (benda itu) adalah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cari kalimat yang tetap memakai be.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "keep-be",
+          "prompt": "Pak Joko seorang sopir. Mana yang benar?",
+          "options": [
+            "Pak Joko a driver.",
+            "Pak Joko driver is.",
+            "Pak Joko is a driver."
+          ],
+          "answer": 2,
+          "explanation": "Setelah subjek (Pak Joko) datang **is**, lalu pekerjaannya: **Pak Joko is a driver.** Tanpa **is** kalimatnya tidak lengkap, dan **is** tidak boleh di akhir."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Subjek dulu, lalu be, lalu sisanya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "keep-be",
+          "prompt": "Susun kata-katanya: Dia (laki-laki) guru saya.",
+          "tokens": [
+            "my",
+            "He",
+            "teacher",
+            "is"
+          ],
+          "solution": "He is my teacher.",
+          "explanation": "Subjek (**He**) + be (**is**) + sisanya (**my teacher**). 'Dia guru saya' tidak punya kata kerja, tapi bahasa Inggris butuh **is**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartunya dan ucapkan bahasa Inggrisnya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "I am",
+            "back": "I'm: saya (adalah)"
+          },
+          {
+            "front": "it is",
+            "back": "it's: (benda itu) adalah"
+          },
+          {
+            "front": "Saya dari Bandung.",
+            "back": "I'm from Bandung."
+          },
+          {
+            "front": "Ini HP saya.",
+            "back": "This is my phone."
+          },
+          {
+            "front": "Dia (perempuan) guru.",
+            "back": "She's a teacher."
+          },
+          {
+            "front": "Ini apa?",
+            "back": "What's this?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan yang bisa kamu simpan dan buka lagi kapan saja.",
+        "artifact": {
+          "title": "Ringkasan · Kalimat pertama dengan be",
+          "intro": "Bahasa Inggris butuh be (am / is) di tempat bahasa Indonesia tidak memakai kata kerja. Pakai bentuk pendek saat berbicara.",
+          "headers": [
+            "Bentuk lengkap",
+            "Bentuk pendek",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "I am",
+              "I'm",
+              "saya (adalah)"
+            ],
+            [
+              "I am from …",
+              "I'm from …",
+              "saya dari …"
+            ],
+            [
+              "he is",
+              "he's",
+              "dia (laki-laki) adalah"
+            ],
+            [
+              "she is",
+              "she's",
+              "dia (perempuan) adalah"
+            ],
+            [
+              "it is",
+              "it's",
+              "(benda itu) adalah"
+            ],
+            [
+              "this is",
+              "this is",
+              "ini (adalah)"
+            ]
+          ],
+          "tips": [
+            "Subjek + **be** + sisanya: *I'm* a student, *Rina is* my friend.",
+            "Tunjukkan benda dengan **This is …**, lalu jelaskan dengan **It's …**.",
+            "**it's** = it is; **its** (tanpa apostrof) = '-nya'."
+          ],
+          "examples": [
+            {
+              "en": "I'm from Bandung.",
+              "id": "Saya dari Bandung."
+            },
+            {
+              "en": "This is my phone. It's black.",
+              "id": "Ini HP saya. Warnanya hitam."
+            },
+            {
+              "en": "She's a teacher.",
+              "id": "Dia (perempuan) guru."
+            },
+            {
+              "en": "This is my bag.",
+              "id": "Ini tas saya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Video pendek dan halaman referensi ini bisa membantu."
+      }
+    ]
+  }
+}

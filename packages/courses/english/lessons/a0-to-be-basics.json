@@ -1,0 +1,513 @@
+{
+  "nodeId": "a0-to-be-basics",
+  "intro": "Hi! Today you make your first real English sentences: I'm Budi. I'm from Bandung. This is my phone. It's new. In Indonesian we often say 'Saya Budi' with no extra word, but English always needs a small verb here: am or is. Warm-up: can you say your name in English?",
+  "teachingNotes": [
+    "Core interference: Indonesian has no linking verb ('Saya guru', 'Ini tas saya'), so learners drop be. Always model the full sentence: I'm a teacher, This is my bag, She's a teacher.",
+    "Common errors to correct gently: 'She teacher.' → 'She's a teacher.'; 'I from Surabaya.' → 'I'm from Surabaya.'; 'This my bag.' → 'This is my bag.'",
+    "Forms in scope: I'm / I am, he's / she's / it's (he is / she is / it is) and This is. Accept short and full forms. Do NOT teach negatives or questions with be (only the fixed chunk 'What's this?'); they come in the A1 lesson 'The Verb To Be'.",
+    "Teach 'a' only as part of a chunk (I'm a student, It's a pen); the a/an rule comes in Basic Sentences. Avoid jobs that need 'an' (engineer, artist).",
+    "it's (= it is) vs its (= -nya, owner): point out the apostrophe. Use This is to show or name something, then It's to say more about the same thing.",
+    "A0 limits: no simple present beyond fixed chunks like 'I like…', no past tense. Keep sentences 2–5 words."
+  ],
+  "keyPoints": [
+    {
+      "title": "I'm … and I'm from …",
+      "explanation": "Say your name or job with I'm (= I am). For your city or country, use I'm from …. Indonesian 'Saya Budi' has no verb, but English needs am.",
+      "examples": [
+        {
+          "en": "I'm Budi.",
+          "id": "Saya Budi."
+        },
+        {
+          "en": "I'm from Bandung.",
+          "id": "Saya dari Bandung."
+        },
+        {
+          "en": "I'm a student.",
+          "id": "Saya pelajar."
+        }
+      ]
+    },
+    {
+      "title": "This is … and It's …",
+      "explanation": "Use This is to show or name something near you. Then use It's (= it is) to say more about the same thing.",
+      "examples": [
+        {
+          "en": "This is my phone. It's black.",
+          "id": "Ini HP saya. Warnanya hitam."
+        },
+        {
+          "en": "This is my office. It's small.",
+          "id": "Ini kantor saya. Kantornya kecil."
+        }
+      ]
+    },
+    {
+      "title": "Never drop be",
+      "explanation": "Indonesian says 'Dia guru', but English needs am or is after the subject: She's a teacher. If a sentence has no am / is, add it.",
+      "examples": [
+        {
+          "en": "She's a teacher.",
+          "id": "Dia (perempuan) guru."
+        },
+        {
+          "en": "He's a driver.",
+          "id": "Dia (laki-laki) sopir."
+        },
+        {
+          "en": "This is my bag.",
+          "id": "Ini tas saya."
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "introduce-yourself",
+      "prompt": "Complete: Hi, ___ Sari. I'm a nurse.",
+      "expected": [
+        "i'm",
+        "i am"
+      ],
+      "hint": "You are talking about yourself, and you need the verb too."
+    },
+    {
+      "objectiveId": "introduce-yourself",
+      "prompt": "Translate: Saya dari Surabaya.",
+      "expected": [
+        "i'm from surabaya",
+        "i am from surabaya"
+      ],
+      "hint": "Use I'm from …"
+    },
+    {
+      "objectiveId": "this-is-its",
+      "prompt": "Complete: ___ is my laptop. It's new.",
+      "expected": [
+        "this"
+      ],
+      "hint": "You are showing something near you."
+    },
+    {
+      "objectiveId": "keep-be",
+      "prompt": "Fix the sentence: This my bag.",
+      "expected": [
+        "this is my bag"
+      ],
+      "hint": "A small word is missing after This."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "this-is-its",
+      "prompt": "Translate: Ini kantor saya. Kantornya besar.",
+      "expected": [
+        "this is my office it's big",
+        "this is my office it is big"
+      ],
+      "hint": "First This is …, then It's …"
+    },
+    {
+      "objectiveId": "keep-be",
+      "prompt": "Translate: Dia (laki-laki) seorang dokter.",
+      "expected": [
+        "he's a doctor",
+        "he is a doctor"
+      ],
+      "hint": "He + is + a + job."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "tbb-1",
+      "objectiveId": "introduce-yourself",
+      "prompt": "Write in English: Saya Dewi.",
+      "acceptableAnswers": [
+        "i'm dewi",
+        "i am dewi"
+      ],
+      "rubric": "Correct: I'm Dewi / I am Dewi. 'My name is Dewi' is good English but not the target form = 70. 'I Dewi' = 0 (be missing)."
+    },
+    {
+      "id": "tbb-2",
+      "objectiveId": "introduce-yourself",
+      "prompt": "Write in English: Saya dari Medan.",
+      "acceptableAnswers": [
+        "i'm from medan",
+        "i am from medan"
+      ],
+      "rubric": "Correct: I'm from Medan / I am from Medan. 'I from Medan' = 0 (be missing). Missing 'from' = 30."
+    },
+    {
+      "id": "tbb-3",
+      "objectiveId": "this-is-its",
+      "prompt": "Write in English: Ini buku saya.",
+      "acceptableAnswers": [
+        "this is my book"
+      ],
+      "rubric": "Correct: This is my book. 'This my book' = 0 (be missing). 'This is book my' = 30 (word order)."
+    },
+    {
+      "id": "tbb-4",
+      "objectiveId": "this-is-its",
+      "prompt": "Complete the second sentence: This is my car. ___ red.",
+      "acceptableAnswers": [
+        "it's",
+        "it is",
+        "it's red",
+        "it is red"
+      ],
+      "rubric": "Correct: It's / It is. 'Its' (no apostrophe) = 50. 'It' alone = 0 (be missing)."
+    },
+    {
+      "id": "tbb-5",
+      "objectiveId": "keep-be",
+      "prompt": "Correct the sentence: My mother nurse.",
+      "acceptableAnswers": [
+        "my mother is a nurse",
+        "my mother's a nurse"
+      ],
+      "rubric": "Correct: My mother is a nurse. 'My mother is nurse' (no a) = 70. Any answer without is = 0."
+    },
+    {
+      "id": "tbb-6",
+      "objectiveId": "keep-be",
+      "prompt": "Write in English: Dia (perempuan) dari Bali.",
+      "acceptableAnswers": [
+        "she's from bali",
+        "she is from bali"
+      ],
+      "rubric": "Correct: She's from Bali / She is from Bali. 'She from Bali' = 0 (be missing). 'He's from Bali' = 40 (wrong pronoun)."
+    }
+  ],
+  "material": [
+    {
+      "id": "im",
+      "title": "Introduce yourself: I'm …",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Indonesian you can say *Saya Budi* with no verb. English needs **am**: **I am Budi**. When we speak, we join them: **I'm** (= I am). For your city or country, add **from**: **I'm from Bandung**.",
+          "i18n": {
+            "id": {
+              "text": "Dalam bahasa Indonesia kamu bisa bilang *Saya Budi* tanpa kata kerja. Bahasa Inggris butuh **am**: **I am Budi**. Saat berbicara, keduanya digabung: **I'm** (= I am). Untuk kota atau negaramu, tambahkan **from**: **I'm from Bandung**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "I'm Budi.",
+              "id": "Saya Budi."
+            },
+            {
+              "en": "I'm a student.",
+              "id": "Saya pelajar.",
+              "note": "a = seorang"
+            },
+            {
+              "en": "I'm from Bandung.",
+              "id": "Saya dari Bandung."
+            },
+            {
+              "en": "Hi, I'm Rina. I'm from Jakarta.",
+              "id": "Hai, saya Rina. Saya dari Jakarta."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Don't say *I from Surabaya*. Say **I'm from Surabaya**. The **'m** in I'm is the verb you need.",
+          "i18n": {
+            "id": {
+              "text": "Jangan bilang *I from Surabaya*. Bilang **I'm from Surabaya**. **'m** dalam I'm adalah kata kerja yang kamu perlukan."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Hello, ___ Andi. I'm from Bogor.",
+          "options": [
+            "I",
+            "I'm",
+            "Me"
+          ],
+          "answer": 1,
+          "explain": "I'm = I am. 'I' alone has no verb, and 'Me' can't start this sentence.",
+          "i18n": {
+            "id": {
+              "explain": "I'm = I am. 'I' saja tidak punya kata kerja, dan 'Me' tidak bisa membuka kalimat ini."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Memperkenalkan diri: I'm …"
+        }
+      }
+    },
+    {
+      "id": "this-it",
+      "title": "Show things: This is … and It's …",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "*Ini HP saya* has no verb, but English needs **is**: **This is my phone.** Use **This is** to show or name something near you. Then use **It's** (= it is) to say more about the same thing: **It's black.**",
+          "i18n": {
+            "id": {
+              "text": "*Ini HP saya* tidak punya kata kerja, tapi bahasa Inggris butuh **is**: **This is my phone.** Pakai **This is** untuk menunjukkan atau menyebut sesuatu di dekatmu. Lalu pakai **It's** (= it is) untuk menjelaskan benda yang sama: **It's black.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "This is my phone. It's black.",
+              "id": "Ini HP saya. Warnanya hitam."
+            },
+            {
+              "en": "This is my office. It's small.",
+              "id": "Ini kantor saya. Kantornya kecil."
+            },
+            {
+              "en": "What's this? It's a pen.",
+              "id": "Ini apa? Ini pulpen.",
+              "note": "What's this? is a fixed question"
+            },
+            {
+              "en": "This is my friend, Sari.",
+              "id": "Ini teman saya, Sari.",
+              "note": "This is also introduces a person"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**It's** with an apostrophe means **it is**. **its** without an apostrophe means '-nya' (owner). After *This is …*, the next sentence almost always needs **It's**.",
+          "i18n": {
+            "id": {
+              "text": "**It's** dengan apostrof artinya **it is**. **its** tanpa apostrof artinya '-nya' (pemilik). Setelah *This is …*, kalimat berikutnya hampir selalu butuh **It's**."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which sentence means 'Ini rumah saya'?",
+          "options": [
+            "This my house.",
+            "This is my house.",
+            "This house my."
+          ],
+          "answer": 1,
+          "explain": "English needs is after This, and my goes before the noun: This is my house.",
+          "i18n": {
+            "id": {
+              "explain": "Bahasa Inggris butuh is setelah This, dan my ada sebelum kata benda: This is my house."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menunjukkan benda: This is … dan It's …"
+        }
+      }
+    },
+    {
+      "id": "keep-be",
+      "title": "Never drop be",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian often has no verb in these sentences: *Dia guru. Saya dari Surabaya. Ini tas saya.* English always needs a form of **be** after the subject: **I'm** (I am), **he's / she's / it's** (he is / she is / it is), **This is**.",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia sering tidak memakai kata kerja di kalimat seperti ini: *Dia guru. Saya dari Surabaya. Ini tas saya.* Bahasa Inggris selalu butuh bentuk **be** setelah subjek: **I'm** (I am), **he's / she's / it's** (he is / she is / it is), **This is**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "She's a teacher.",
+              "id": "Dia (perempuan) guru.",
+              "note": "not: She teacher."
+            },
+            {
+              "en": "I'm from Surabaya.",
+              "id": "Saya dari Surabaya.",
+              "note": "not: I from Surabaya."
+            },
+            {
+              "en": "This is my bag.",
+              "id": "Ini tas saya.",
+              "note": "not: This my bag."
+            },
+            {
+              "en": "He's a driver.",
+              "id": "Dia (laki-laki) sopir.",
+              "note": "not: He driver."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Check every sentence: subject + **be** + the rest. *Budi* + **is** + *a student*. If there is no am / is, add it.",
+          "i18n": {
+            "id": {
+              "text": "Cek setiap kalimat: subjek + **be** + sisanya. *Budi* + **is** + *a student*. Kalau tidak ada am / is, tambahkan."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Andi my brother.",
+            "Andi brother is.",
+            "Andi is my brother."
+          ],
+          "answer": 2,
+          "explain": "After the subject (Andi) comes be (is), then the rest: Andi is my brother.",
+          "i18n": {
+            "id": {
+              "explain": "Setelah subjek (Andi) datang be (is), lalu sisanya: Andi is my brother."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jangan hilangkan be"
+        }
+      }
+    },
+    {
+      "id": "real-life",
+      "title": "Your first conversation",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In a new class, a new office or a hostel you meet new people. With just **I'm**, **This is** and **It's** you can already say a lot. **Nice to meet you** is a polite fixed phrase for the first meeting.",
+          "i18n": {
+            "id": {
+              "text": "Di kelas baru, kantor baru atau hostel kamu bertemu orang baru. Hanya dengan **I'm**, **This is** dan **It's** kamu sudah bisa bilang banyak hal. **Nice to meet you** adalah frasa sopan yang tetap untuk pertemuan pertama."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Hi, I'm Dimas.",
+              "id": "Hai, saya Dimas."
+            },
+            {
+              "en": "Hi, Dimas. I'm Putri. I'm from Lombok.",
+              "id": "Hai, Dimas. Saya Putri. Saya dari Lombok."
+            },
+            {
+              "en": "Nice to meet you. This is my friend, Eko.",
+              "id": "Senang bertemu denganmu. Ini teman saya, Eko."
+            },
+            {
+              "en": "Nice to meet you, Eko.",
+              "id": "Senang bertemu denganmu, Eko."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Keep it short. Two sentences are enough for a first hello: **I'm Putri. I'm from Lombok.**",
+          "i18n": {
+            "id": {
+              "text": "Buat singkat saja. Dua kalimat sudah cukup untuk sapaan pertama: **I'm Putri. I'm from Lombok.**"
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Percakapan pertamamu"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why does English need 'am' and 'is'?",
+    "What's the difference between it's and its?",
+    "When do I use This is and when It's?",
+    "Can I say 'My name is …' instead of 'I'm …'?"
+  ],
+  "resources": [
+    {
+      "kind": "video",
+      "title": "VERY, VERY BEGINNER LESSON 1 The verb \"TO BE\" Present",
+      "url": "https://www.youtube.com/watch?v=rC6bmDuHsWE",
+      "source": "Dave's Very, Very, Very Beginner ESL Lessons",
+      "note": "A slow, clear first lesson on the verb to be for complete beginners.",
+      "i18n": {
+        "id": {
+          "note": "Pelajaran pertama yang pelan dan jelas tentang kata kerja to be untuk pemula sekali."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Present simple: 'to be'",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple-be",
+      "source": "British Council LearnEnglish",
+      "note": "Read the first part (I'm, he's, it's) and try the first test. Questions and negatives come in a later lesson.",
+      "i18n": {
+        "id": {
+          "note": "Baca bagian pertama (I'm, he's, it's) dan coba tes pertamanya. Kalimat tanya dan negatif ada di pelajaran berikutnya."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "Saya dari Bandung.",
+      "back": "I'm from Bandung."
+    },
+    {
+      "front": "Ini HP saya.",
+      "back": "This is my phone."
+    },
+    {
+      "front": "I'm = ?",
+      "back": "I am"
+    },
+    {
+      "front": "it's = ?",
+      "back": "it is"
+    },
+    {
+      "front": "Dia (perempuan) guru.",
+      "back": "She's a teacher."
+    },
+    {
+      "front": "Ini apa?",
+      "back": "What's this?"
+    },
+    {
+      "front": "Fix it: I from Surabaya.",
+      "back": "I'm from Surabaya."
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Hai! Hari ini kamu membuat kalimat bahasa Inggris pertamamu yang sungguhan: I'm Budi. I'm from Bandung. This is my phone. It's new. Dalam bahasa Indonesia kita sering bilang 'Saya Budi' tanpa kata tambahan, tapi bahasa Inggris selalu butuh kata kerja kecil di sini: am atau is. Pemanasan: bisakah kamu menyebut namamu dalam bahasa Inggris?",
+      "suggestedQuestions": [
+        "Kenapa bahasa Inggris butuh 'am' dan 'is'?",
+        "Apa bedanya it's dan its?",
+        "Kapan pakai This is dan kapan It's?",
+        "Boleh bilang 'My name is …' sebagai ganti 'I'm …'?"
+      ]
+    }
+  }
+}

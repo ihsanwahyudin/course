@@ -108,7 +108,7 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	if sess.Lesson == nil || len(sess.Lesson.Steps) != 1 || sess.Lesson.TotalSteps < tutor.MinSteps || sess.Material == nil || len(sess.Assessment) == 0 || sess.Phase != string(tutor.PhaseLearning) {
 		t.Fatalf("a new lesson opens on its first step with the material at hand: %+v", sess)
 	}
-	if sess.Prev != nil || sess.Next == nil || sess.Next.ID != "a0-pronouns" {
+	if sess.Prev == nil || sess.Prev.ID != "a0-greetings" || sess.Next == nil || sess.Next.ID != "a0-sounds-indonesian" {
 		t.Fatalf("lesson navigation: prev %v next %v", sess.Prev, sess.Next)
 	}
 	again, err := s.StartSession(ctx, learnerID, course, "a0-alphabet-sounds")
@@ -131,7 +131,7 @@ func TestFullLoopMastersAndUnlocks(t *testing.T) {
 	for _, n := range res.Unlocked {
 		unlocked[n.ID] = true
 	}
-	if !unlocked["a0-pronouns"] || !unlocked["a0-common-vocabulary"] || len(unlocked) != 2 {
+	if !unlocked["a0-sounds-indonesian"] || !unlocked["a0-pronouns"] || !unlocked["a0-common-vocabulary"] || len(unlocked) != 3 {
 		t.Fatalf("unexpected unlocks: %v", unlocked)
 	}
 	if res.Session.Phase != string(tutor.PhaseMastered) || res.Session.EndedAt == nil {
@@ -213,13 +213,13 @@ func TestCannotStartLockedOrComingSoon(t *testing.T) {
 	if _, err := s.StartSession(ctx, learnerID, course, "a1-to-be"); code(err) != "node_locked" {
 		t.Fatalf("locked: got %v", err)
 	}
-	if _, err := s.StartSession(ctx, learnerID, course, "a0-greetings"); code(err) != "node_coming_soon" && code(err) != "node_locked" {
+	if _, err := s.StartSession(ctx, learnerID, course, "a1-adjectives"); code(err) != "node_coming_soon" && code(err) != "node_locked" {
 		t.Fatalf("coming soon: got %v", err)
 	}
 	if _, err := s.StartSession(ctx, learnerID, course, "nope"); code(err) != "node_not_found" {
 		t.Fatalf("unknown: got %v", err)
 	}
-	d, err := s.Node(ctx, learnerID, course, "a0-greetings")
+	d, err := s.Node(ctx, learnerID, course, "a1-adjectives")
 	if err != nil || d.CanStart || d.Status != progress.StatusComingSoon {
 		t.Fatalf("coming soon detail: %+v %v", d, err)
 	}
@@ -310,7 +310,7 @@ func TestConcurrentSubmissionsMasterOnce(t *testing.T) {
 func TestFiveLessonsEndToEnd(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
-	for _, id := range []string{"a0-alphabet-sounds", "a0-pronouns", "a0-common-vocabulary", "a0-basic-sentences", "a1-to-be", "a1-simple-present", "a1-questions"} {
+	for _, id := range []string{"a0-alphabet-sounds", "a0-pronouns", "a0-common-vocabulary", "a0-to-be-basics", "a0-basic-sentences", "a1-to-be", "a1-simple-present", "a1-questions"} {
 		sess := startDone(t, s, ctx, id)
 		res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers(s, id, true))
 		if err != nil || !res.NewlyMastered {
@@ -321,14 +321,15 @@ func TestFiveLessonsEndToEnd(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(p.Mastered) != 7 || p.Course.Progress.CurrentLevel != "A1" {
+	// Ready A0 lessons (greetings, numbers, …) are still open, so the learner is A0.
+	if len(p.Mastered) != 8 || p.Course.Progress.CurrentLevel != "A0" {
 		t.Fatalf("progress: %d mastered, level %s", len(p.Mastered), p.Course.Progress.CurrentLevel)
 	}
 	d, err := s.Dashboard(ctx, storage.User{ID: learnerID})
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(d.Courses) != 1 || d.TotalMastered != 7 || d.Weekly.Steps == 0 || d.Streak.Current != 1 || !d.Streak.ActiveToday || len(d.Activity) != 28 {
+	if len(d.Courses) != 1 || d.TotalMastered != 8 || d.Weekly.Steps == 0 || d.Streak.Current != 1 || !d.Streak.ActiveToday || len(d.Activity) != 28 {
 		t.Fatalf("dashboard: %+v", d)
 	}
 }
