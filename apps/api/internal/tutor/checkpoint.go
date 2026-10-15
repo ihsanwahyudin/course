@@ -22,7 +22,7 @@ const (
 	// A level checkpoint's questions come from at least two thirds of the
 	// level's lessons, or from this many when the level is bigger.
 	MaxLevelSpread = 10
-	maxAccepted        = 20
+	maxAccepted    = 20
 )
 
 // CheckItem is one checkpoint question. Multiple choice and word order use

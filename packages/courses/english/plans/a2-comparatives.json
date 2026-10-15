@@ -1,0 +1,740 @@
+{
+  "en": {
+    "greeting": "Hi! Today we compare things: cheaper, more expensive, the best, as big as. Perfect for travel and shopping. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Cheaper than",
+        "text": "When we compare two things, English changes the adjective (the describing word).",
+        "body": "Indonesian puts **lebih** in front: *lebih murah*. With short words, English adds **-er** at the end: cheap → **cheaper**. Then **than** = *daripada*: **A bus is cheaper than a taxi.** -er already means *lebih*, so don't add **more** too ('more cheaper' is wrong). And it's **than**, never 'from'.",
+        "pairs": [
+          {
+            "en": "cheap",
+            "id": "murah"
+          },
+          {
+            "en": "cheaper",
+            "id": "lebih murah"
+          },
+          {
+            "en": "old",
+            "id": "tua / lama"
+          },
+          {
+            "en": "older",
+            "id": "lebih tua"
+          },
+          {
+            "en": "small",
+            "id": "kecil"
+          },
+          {
+            "en": "smaller",
+            "id": "lebih kecil"
+          },
+          {
+            "en": "fast",
+            "id": "cepat"
+          },
+          {
+            "en": "than",
+            "id": "daripada"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Short or long? Count the beats",
+        "text": "Not every word takes -er. The length of the word decides.",
+        "body": "We count **syllables** (*suku kata*): the beats of sound. Clap once per beat: cheap (1), ea-sy (2), beau-ti-ful (3).\n- **1 syllable** → **-er**: cheaper.\n- **2 syllables ending in -y** → **-ier**: easier.\n- **Other words, 2 syllables or more** → **more**: more famous.\nCount sounds, not letters: **nice** ('nais') is 1 syllable, because the final e is silent.",
+        "pairs": [
+          {
+            "en": "cheaper",
+            "id": "lebih murah · cheap: 1 suku kata"
+          },
+          {
+            "en": "easier",
+            "id": "lebih mudah · ea-sy: 2, berakhiran -y"
+          },
+          {
+            "en": "busier",
+            "id": "lebih sibuk · bu-sy: 2, berakhiran -y"
+          },
+          {
+            "en": "more famous",
+            "id": "lebih terkenal · fa-mous: 2"
+          },
+          {
+            "en": "more beautiful",
+            "id": "lebih indah · beau-ti-ful: 3"
+          },
+          {
+            "en": "more comfortable",
+            "id": "lebih nyaman · com-for-ta-ble: kata panjang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're planning a holiday and checking hotel prices.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-two-things",
+          "prompt": "A room in Bali costs Rp 2.000.000 a night. A room in Yogyakarta costs Rp 500.000. Complete: The room in Bali is ___ the room in Yogyakarta.",
+          "options": [
+            "expensiver than",
+            "more expensive than",
+            "more expensive from"
+          ],
+          "answer": 1,
+          "explanation": "**expensive** is a long word (ex-pen-sive, 3 syllables), so it takes **more**, not -er. After a comparative we use **than** (*daripada*), never 'from'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Spelling and two exceptions",
+        "text": "Some short words change their spelling a little, and two words change completely.",
+        "body": "- Ends in **e** → just **-r**: nicer.\n- **One vowel + one consonant** at the end (b-i-g) → double the last letter: **bigger**. Not after two vowels (cheaper) or w (newer).\n- **Consonant + y** → **-ier**: happier.\n**Exceptions** (no rule, just remember them): **good → better**, **bad → worse**. Never 'gooder' or 'more bad'.",
+        "pairs": [
+          {
+            "en": "nice → nicer",
+            "id": "bagus → lebih bagus"
+          },
+          {
+            "en": "big → bigger",
+            "id": "besar → lebih besar"
+          },
+          {
+            "en": "thin → thinner",
+            "id": "kurus → lebih kurus"
+          },
+          {
+            "en": "new → newer",
+            "id": "baru → lebih baru"
+          },
+          {
+            "en": "happy → happier",
+            "id": "senang → lebih senang"
+          },
+          {
+            "en": "good → better",
+            "id": "baik → lebih baik"
+          },
+          {
+            "en": "bad → worse",
+            "id": "buruk → lebih buruk"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "There are two warungs near your office.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-two-things",
+          "prompt": "The coffee at Warung A is bad. The coffee at Warung B is ___ than the coffee at Warung A. Nobody drinks it!",
+          "options": [
+            "badder",
+            "worse",
+            "more bad"
+          ],
+          "answer": 1,
+          "explanation": "**bad** is an exception: bad → **worse** → the worst. It doesn't follow the -er or more rule, so 'badder' and 'more bad' are wrong."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The cheapest, the most expensive",
+        "text": "Now for *paling*: one thing out of a group.",
+        "body": "Same rule, with **the**:\n- Short words: **the + -est** (same spelling changes): the cheapest, the hottest.\n- Long words: **the most**: the most expensive.\n- Exceptions: **the best**, **the worst**.\nAdd **in** + place or group: the best warung **in** Bandung. *paling murah* is **the cheapest**, not 'the most cheap', and don't forget **the**.",
+        "pairs": [
+          {
+            "en": "the cheapest",
+            "id": "paling murah / termurah"
+          },
+          {
+            "en": "the hottest",
+            "id": "paling panas / terpanas"
+          },
+          {
+            "en": "the easiest",
+            "id": "paling mudah / termudah"
+          },
+          {
+            "en": "the most expensive",
+            "id": "paling mahal / termahal"
+          },
+          {
+            "en": "the most beautiful",
+            "id": "paling indah / terindah"
+          },
+          {
+            "en": "the best",
+            "id": "paling baik / terbaik"
+          },
+          {
+            "en": "the worst",
+            "id": "paling buruk / terburuk"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A friend from abroad asks about Indonesian cities.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-extremes-with",
+          "prompt": "Complete: Jakarta is ___ city in Indonesia.",
+          "options": [
+            "the most big",
+            "biggest",
+            "the biggest"
+          ],
+          "answer": 2,
+          "explanation": "**big** is short (1 syllable), so 'paling' is **the + -est**, with a double g: **the biggest**. 'most' is only for long words, and 'paling' always needs **the**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "as … as",
+        "text": "Last one: saying two things are the same, or not the same.",
+        "body": "**as + adjective + as** = the same, like Indonesian **se-**: *semurah* = **as cheap as**. Use the plain adjective (no -er) and end with **as**, not than.\n**not as … as** (isn't / aren't as … as) = *tidak se-*, so it means **less**: *Bandung tidak sepanas Jakarta* = **Bandung isn't as hot as Jakarta** (Jakarta is hotter).",
+        "pairs": [
+          {
+            "en": "as old as",
+            "id": "seumur dengan"
+          },
+          {
+            "en": "as cheap as",
+            "id": "semurah"
+          },
+          {
+            "en": "as big as",
+            "id": "sebesar"
+          },
+          {
+            "en": "as good as",
+            "id": "sebagus / sebaik"
+          },
+          {
+            "en": "not as hot as",
+            "id": "tidak sepanas"
+          },
+          {
+            "en": "not as fast as",
+            "id": "tidak secepat"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're reading a travel guide.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "as-as",
+          "prompt": "Read: 'The train isn't as fast as the plane.' What does it mean?",
+          "options": [
+            "The train is faster.",
+            "They are the same speed.",
+            "The plane is faster."
+          ],
+          "answer": 2,
+          "explanation": "**not as fast as** = *tidak secepat*. The train is less fast, so **the plane is faster**. Only **as fast as** (without not) means the same speed."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Tell a friend about your family.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "as-as",
+          "prompt": "Arrange the words: Saya tidak setinggi kakak laki-laki saya.",
+          "tokens": [
+            "as",
+            "brother",
+            "not",
+            "tall",
+            "my",
+            "I'm",
+            "as"
+          ],
+          "solution": "I'm not as tall as my brother.",
+          "explanation": "*tidak setinggi* = **not as tall as**: **not** comes after I'm, then **as + tall + as**. Use the plain adjective **tall** between the two as, not taller."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · comparing things",
+          "intro": "-er or more, the -est or the most, and as … as.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "1 syllable + -er + than",
+              "cheaper than",
+              "lebih murah daripada"
+            ],
+            [
+              "ends in e: + r",
+              "nice → nicer",
+              "lebih bagus"
+            ],
+            [
+              "vowel + consonant: double it",
+              "big → bigger",
+              "lebih besar"
+            ],
+            [
+              "consonant + y → -ier",
+              "easy → easier",
+              "lebih mudah"
+            ],
+            [
+              "long word: more + adjective + than",
+              "more expensive than",
+              "lebih mahal daripada"
+            ],
+            [
+              "the + short word + -est",
+              "the cheapest",
+              "paling murah"
+            ],
+            [
+              "the most + long word",
+              "the most expensive",
+              "paling mahal"
+            ],
+            [
+              "exception: good",
+              "better → the best",
+              "lebih baik → terbaik"
+            ],
+            [
+              "exception: bad",
+              "worse → the worst",
+              "lebih buruk → terburuk"
+            ],
+            [
+              "as + adjective + as",
+              "as cheap as",
+              "semurah"
+            ],
+            [
+              "not as + adjective + as",
+              "isn't as hot as",
+              "tidak sepanas"
+            ]
+          ],
+          "tips": [
+            "Count syllables (sound beats), not letters: 1 syllable → -er/-est; 2 syllables ending in -y → -ier/-iest; other long words → more/most.",
+            "Never use both: **bigger**, not 'more bigger'; **the cheapest**, not 'the most cheap'. After -er/more use **than**, not from.",
+            "**not as … as** means less: Bandung isn't as hot as Jakarta = Jakarta is hotter."
+          ],
+          "examples": [
+            {
+              "en": "A bus is cheaper than a taxi.",
+              "id": "Bus lebih murah daripada taksi."
+            },
+            {
+              "en": "This phone is better than my old phone.",
+              "id": "HP ini lebih bagus daripada HP lamaku."
+            },
+            {
+              "en": "It's the most beautiful beach in Lombok.",
+              "id": "Itu pantai paling indah di Lombok."
+            },
+            {
+              "en": "Bandung isn't as hot as Jakarta.",
+              "id": "Bandung tidak sepanas Jakarta."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These pages explain the same rules, with exercises and audio."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membandingkan: cheaper, more expensive, the best, as big as. Pas sekali untuk jalan-jalan dan belanja. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Cheaper than",
+        "text": "Saat membandingkan dua hal, bahasa Inggris mengubah kata sifatnya (kata yang menggambarkan sesuatu).",
+        "body": "Bahasa Indonesia menaruh **lebih** di depan: *lebih murah*. Untuk kata pendek, bahasa Inggris menambahkan **-er** di belakang: cheap → **cheaper**. Lalu **than** = *daripada*: **A bus is cheaper than a taxi.** -er sudah berarti *lebih*, jadi jangan tambah **more** lagi ('more cheaper' salah). Dan pakai **than**, bukan 'from'.",
+        "pairs": [
+          {
+            "en": "cheap",
+            "id": "murah"
+          },
+          {
+            "en": "cheaper",
+            "id": "lebih murah"
+          },
+          {
+            "en": "old",
+            "id": "tua / lama"
+          },
+          {
+            "en": "older",
+            "id": "lebih tua"
+          },
+          {
+            "en": "small",
+            "id": "kecil"
+          },
+          {
+            "en": "smaller",
+            "id": "lebih kecil"
+          },
+          {
+            "en": "fast",
+            "id": "cepat"
+          },
+          {
+            "en": "than",
+            "id": "daripada"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Pendek atau panjang? Hitung ketukannya",
+        "text": "Tidak semua kata memakai -er. Panjang katanya yang menentukan.",
+        "body": "Kita hitung **suku kata** (syllable): ketukan bunyi dalam kata. Tepuk tangan sekali per ketukan: cheap (1), ea-sy (2), beau-ti-ful (3).\n- **1 suku kata** → **-er**: cheaper.\n- **2 suku kata berakhiran -y** → **-ier**: easier.\n- **Kata lain, 2 suku kata atau lebih** → **more**: more famous.\nHitung bunyinya, bukan hurufnya: **nice** ('nais') hanya 1 suku kata, karena e di akhir tidak dibaca.",
+        "pairs": [
+          {
+            "en": "cheaper",
+            "id": "lebih murah · cheap: 1 suku kata"
+          },
+          {
+            "en": "easier",
+            "id": "lebih mudah · ea-sy: 2, berakhiran -y"
+          },
+          {
+            "en": "busier",
+            "id": "lebih sibuk · bu-sy: 2, berakhiran -y"
+          },
+          {
+            "en": "more famous",
+            "id": "lebih terkenal · fa-mous: 2"
+          },
+          {
+            "en": "more beautiful",
+            "id": "lebih indah · beau-ti-ful: 3"
+          },
+          {
+            "en": "more comfortable",
+            "id": "lebih nyaman · com-for-ta-ble: kata panjang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu sedang merencanakan liburan dan mengecek harga hotel.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-two-things",
+          "prompt": "Kamar di Bali harganya Rp 2.000.000 per malam. Kamar di Yogyakarta Rp 500.000. Lengkapi: The room in Bali is ___ the room in Yogyakarta.",
+          "options": [
+            "expensiver than",
+            "more expensive than",
+            "more expensive from"
+          ],
+          "answer": 1,
+          "explanation": "**expensive** kata panjang (ex-pen-sive, 3 suku kata), jadi pakai **more**, bukan -er. Setelah bentuk perbandingan kita pakai **than** (*daripada*), bukan 'from'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ejaan dan dua pengecualian",
+        "text": "Beberapa kata pendek sedikit berubah ejaannya, dan dua kata berubah total.",
+        "body": "- Berakhiran **e** → cukup **-r**: nicer.\n- **Satu vokal + satu konsonan** di akhir (b-i-g) → huruf terakhir digandakan: **bigger**. Tidak setelah dua vokal (cheaper) atau w (newer).\n- **Konsonan + y** → **-ier**: happier.\n**Pengecualian** (tanpa aturan, cukup dihafal): **good → better**, **bad → worse**. Bukan 'gooder' atau 'more bad'.",
+        "pairs": [
+          {
+            "en": "nice → nicer",
+            "id": "bagus → lebih bagus"
+          },
+          {
+            "en": "big → bigger",
+            "id": "besar → lebih besar"
+          },
+          {
+            "en": "thin → thinner",
+            "id": "kurus → lebih kurus"
+          },
+          {
+            "en": "new → newer",
+            "id": "baru → lebih baru"
+          },
+          {
+            "en": "happy → happier",
+            "id": "senang → lebih senang"
+          },
+          {
+            "en": "good → better",
+            "id": "baik → lebih baik"
+          },
+          {
+            "en": "bad → worse",
+            "id": "buruk → lebih buruk"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ada dua warung di dekat kantormu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-two-things",
+          "prompt": "Lengkapi: The coffee at Warung A is bad. The coffee at Warung B is ___ than the coffee at Warung A. Nobody drinks it!",
+          "options": [
+            "badder",
+            "worse",
+            "more bad"
+          ],
+          "answer": 1,
+          "explanation": "**bad** adalah pengecualian: bad → **worse** → the worst. Kata ini tidak ikut aturan -er atau more, jadi 'badder' dan 'more bad' salah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The cheapest, the most expensive",
+        "text": "Sekarang untuk *paling*: satu hal dari sebuah kelompok.",
+        "body": "Aturannya sama, ditambah **the**:\n- Kata pendek: **the + -est** (perubahan ejaannya sama): the cheapest, the hottest.\n- Kata panjang: **the most**: the most expensive.\n- Pengecualian: **the best**, **the worst**.\nTambahkan **in** + tempat atau kelompok: the best warung **in** Bandung. *paling murah* adalah **the cheapest**, bukan 'the most cheap', dan jangan lupa **the**.",
+        "pairs": [
+          {
+            "en": "the cheapest",
+            "id": "paling murah / termurah"
+          },
+          {
+            "en": "the hottest",
+            "id": "paling panas / terpanas"
+          },
+          {
+            "en": "the easiest",
+            "id": "paling mudah / termudah"
+          },
+          {
+            "en": "the most expensive",
+            "id": "paling mahal / termahal"
+          },
+          {
+            "en": "the most beautiful",
+            "id": "paling indah / terindah"
+          },
+          {
+            "en": "the best",
+            "id": "paling baik / terbaik"
+          },
+          {
+            "en": "the worst",
+            "id": "paling buruk / terburuk"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Teman dari luar negeri bertanya tentang kota-kota di Indonesia.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-extremes-with",
+          "prompt": "Lengkapi: Jakarta is ___ city in Indonesia.",
+          "options": [
+            "the most big",
+            "biggest",
+            "the biggest"
+          ],
+          "answer": 2,
+          "explanation": "**big** kata pendek (1 suku kata), jadi 'paling' memakai **the + -est**, dengan g ganda: **the biggest**. 'most' hanya untuk kata panjang, dan 'paling' selalu butuh **the**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "as … as",
+        "text": "Terakhir: menyatakan dua hal sama, atau tidak sama.",
+        "body": "**as + kata sifat + as** = sama, seperti awalan **se-**: *semurah* = **as cheap as**. Pakai kata sifat biasa (tanpa -er) dan akhiri dengan **as**, bukan than.\n**not as … as** (isn't / aren't as … as) = *tidak se-*, jadi artinya **kurang**: *Bandung tidak sepanas Jakarta* = **Bandung isn't as hot as Jakarta** (Jakarta lebih panas).",
+        "pairs": [
+          {
+            "en": "as old as",
+            "id": "seumur dengan"
+          },
+          {
+            "en": "as cheap as",
+            "id": "semurah"
+          },
+          {
+            "en": "as big as",
+            "id": "sebesar"
+          },
+          {
+            "en": "as good as",
+            "id": "sebagus / sebaik"
+          },
+          {
+            "en": "not as hot as",
+            "id": "tidak sepanas"
+          },
+          {
+            "en": "not as fast as",
+            "id": "tidak secepat"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu sedang membaca buku panduan wisata.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "as-as",
+          "prompt": "Baca: 'The train isn't as fast as the plane.' Apa artinya?",
+          "options": [
+            "The train is faster.",
+            "They are the same speed.",
+            "The plane is faster."
+          ],
+          "answer": 2,
+          "explanation": "**not as fast as** = *tidak secepat*. Keretanya kurang cepat, jadi **pesawatnya lebih cepat**. Hanya **as fast as** (tanpa not) yang berarti sama cepat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Ceritakan tentang keluargamu kepada teman.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "as-as",
+          "prompt": "Susun kata-katanya: Saya tidak setinggi kakak laki-laki saya.",
+          "tokens": [
+            "as",
+            "brother",
+            "not",
+            "tall",
+            "my",
+            "I'm",
+            "as"
+          ],
+          "solution": "I'm not as tall as my brother.",
+          "explanation": "*tidak setinggi* = **not as tall as**: **not** setelah I'm, lalu **as + tall + as**. Pakai kata sifat biasa **tall** di antara dua as, bukan taller."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · membandingkan",
+          "intro": "-er atau more, the -est atau the most, dan as … as.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "1 suku kata + -er + than",
+              "cheaper than",
+              "lebih murah daripada"
+            ],
+            [
+              "berakhiran e: + r",
+              "nice → nicer",
+              "lebih bagus"
+            ],
+            [
+              "vokal + konsonan: digandakan",
+              "big → bigger",
+              "lebih besar"
+            ],
+            [
+              "konsonan + y → -ier",
+              "easy → easier",
+              "lebih mudah"
+            ],
+            [
+              "kata panjang: more + kata sifat + than",
+              "more expensive than",
+              "lebih mahal daripada"
+            ],
+            [
+              "the + kata pendek + -est",
+              "the cheapest",
+              "paling murah"
+            ],
+            [
+              "the most + kata panjang",
+              "the most expensive",
+              "paling mahal"
+            ],
+            [
+              "pengecualian: good",
+              "better → the best",
+              "lebih baik → terbaik"
+            ],
+            [
+              "pengecualian: bad",
+              "worse → the worst",
+              "lebih buruk → terburuk"
+            ],
+            [
+              "as + kata sifat + as",
+              "as cheap as",
+              "semurah"
+            ],
+            [
+              "not as + kata sifat + as",
+              "isn't as hot as",
+              "tidak sepanas"
+            ]
+          ],
+          "tips": [
+            "Hitung suku kata (ketukan bunyi), bukan huruf: 1 suku kata → -er/-est; 2 suku kata berakhiran -y → -ier/-iest; kata panjang lainnya → more/most.",
+            "Jangan pakai dua-duanya: **bigger**, bukan 'more bigger'; **the cheapest**, bukan 'the most cheap'. Setelah -er/more pakai **than**, bukan from.",
+            "**not as … as** artinya kurang: Bandung isn't as hot as Jakarta = Jakarta lebih panas."
+          ],
+          "examples": [
+            {
+              "en": "A bus is cheaper than a taxi.",
+              "id": "Bus lebih murah daripada taksi."
+            },
+            {
+              "en": "This phone is better than my old phone.",
+              "id": "HP ini lebih bagus daripada HP lamaku."
+            },
+            {
+              "en": "It's the most beautiful beach in Lombok.",
+              "id": "Itu pantai paling indah di Lombok."
+            },
+            {
+              "en": "Bandung isn't as hot as Jakarta.",
+              "id": "Bandung tidak sepanas Jakarta."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman-halaman ini menjelaskan aturan yang sama, dengan latihan dan audio."
+      }
+    ]
+  }
+}

@@ -1,0 +1,678 @@
+{
+  "en": {
+    "greeting": "Hi! Today you learn how English says banyak, sedikit and terlalu banyak. One Indonesian word, but a few English ones. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One word, three words",
+        "text": "Indonesian says banyak for everything. English has to choose.",
+        "body": "English looks at the **noun** after it (the name of a thing):\n- **many** + **plural countable** nouns (you count them one by one): many cars.\n- **much** + **uncountable** nouns (no -s, like rice, water, money): much money.\n- **a lot of** + **both**: a lot of cars, a lot of money.\n**people** is plural (one person, two people), so not `How much people?` but **How many people?**",
+        "pairs": [
+          {
+            "en": "many cars",
+            "id": "banyak mobil (bisa dihitung)"
+          },
+          {
+            "en": "many people",
+            "id": "banyak orang (people = jamak dari person)"
+          },
+          {
+            "en": "much money",
+            "id": "banyak uang (tidak bisa dihitung)"
+          },
+          {
+            "en": "much water",
+            "id": "banyak air (tidak bisa dihitung)"
+          },
+          {
+            "en": "a lot of cars",
+            "id": "banyak mobil"
+          },
+          {
+            "en": "a lot of money",
+            "id": "banyak uang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Where do they go?",
+        "text": "There's one more rule: what kind of sentence is it?",
+        "body": "In **positive** sentences, say **a lot of**: `I have much money` sounds strange. Use **much** in **questions** and **negatives** (sentences with *not*). **many** works everywhere, but in positive sentences **a lot of** sounds more natural.",
+        "examples": [
+          {
+            "en": "There are a lot of tourists in Bali.",
+            "id": "Ada banyak turis di Bali."
+          },
+          {
+            "en": "Pak Hasan has a lot of money.",
+            "id": "Pak Hasan punya banyak uang."
+          },
+          {
+            "en": "I don't have much time today.",
+            "id": "Saya tidak punya banyak waktu hari ini."
+          },
+          {
+            "en": "Do you drink much water?",
+            "id": "Kamu minum banyak air?"
+          },
+          {
+            "en": "How many people work in your office?",
+            "id": "Berapa orang yang bekerja di kantormu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani is getting the meeting room ready. There are only two chairs!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "much-many-a-lot-of",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "answer": 1,
+          "prompt": "Complete: There aren't ___ chairs in the meeting room.",
+          "explanation": "**chairs** is a plural countable noun, so **many**. **much** is for uncountable nouns like water, and **a lot** needs **of** before a noun."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your brother is very popular. Say it in English.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "much-many-a-lot-of",
+          "tokens": [
+            "friends",
+            "has",
+            "lot",
+            "My",
+            "of",
+            "brother",
+            "a"
+          ],
+          "solution": "My brother has a lot of friends.",
+          "prompt": "Arrange the words: Kakak laki-lakiku punya banyak teman.",
+          "explanation": "It's a positive sentence, so use **a lot of** (not *much*). **friends** is plural, and a lot of works with plurals too."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Words to remember",
+        "text": "Watch out: some words you count in Indonesian are uncountable in English.",
+        "body": "These five are **uncountable** in English: **no a/an, no -s**, and they take **much** and **a little**, not *many* and *a few*. There's no trick: just remember them. Not `informations` or `an advice`. To count, count something else: 20,000 **rupiah**, two **chairs**, a lot of **cars**, **a piece of** advice.",
+        "pairs": [
+          {
+            "en": "money",
+            "id": "uang (hitung rupiahnya)"
+          },
+          {
+            "en": "information",
+            "id": "informasi (tanpa -s)"
+          },
+          {
+            "en": "advice",
+            "id": "saran, nasihat (tanpa -s)"
+          },
+          {
+            "en": "furniture",
+            "id": "perabot, mebel (hitung kursi, meja)"
+          },
+          {
+            "en": "traffic",
+            "id": "lalu lintas (hitung mobilnya)"
+          },
+          {
+            "en": "a piece of advice",
+            "id": "satu saran"
+          },
+          {
+            "en": "How much money?",
+            "id": "Berapa banyak uang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina wants to book a hotel in Yogyakarta, but the website is very short.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "much-many-a-lot-of",
+          "options": [
+            "many",
+            "a few",
+            "much"
+          ],
+          "answer": 2,
+          "prompt": "Complete: I don't have ___ information about the hotel.",
+          "explanation": "**information** is uncountable in English (no -s), so **much**. **many** and **a few** are only for plural nouns."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "a few or a little?",
+        "text": "Now sedikit. It has two English words too.",
+        "body": "**a few** + plural countable nouns: a few eggs. **a little** + uncountable nouns: a little oil. Both mean 'not many / not much, but some, and that's OK'. Not `a few money`: money is uncountable. Note: without **a**, *few* and *little* mean 'not enough' (*hampir tidak ada*). For now, use **a few** and **a little**.",
+        "pairs": [
+          {
+            "en": "a few eggs",
+            "id": "beberapa telur"
+          },
+          {
+            "en": "a few friends",
+            "id": "beberapa teman"
+          },
+          {
+            "en": "a few minutes",
+            "id": "beberapa menit"
+          },
+          {
+            "en": "a little oil",
+            "id": "sedikit minyak"
+          },
+          {
+            "en": "a little time",
+            "id": "sedikit waktu"
+          },
+          {
+            "en": "a little English",
+            "id": "sedikit bahasa Inggris"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You and Sari walk past a coffee shop.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "a-few-a-little",
+          "options": [
+            "a few",
+            "a little",
+            "many"
+          ],
+          "answer": 1,
+          "prompt": "Complete: Let's buy a coffee. I have ___ money.",
+          "explanation": "**money** is uncountable, so **a little** money. **a few** is for plurals (a few eggs), and **many** is for plurals too."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "too much, too many",
+        "text": "Last one: terlalu banyak.",
+        "body": "**too** = more than you want: a **problem**. **too many** + plural countable nouns, **too much** + uncountable nouns. Not `too much cars`, but **too many cars**. **a lot of** is neutral (a lot of friends is nice!); **too** is a complaint. And yes, **too much** is fine in positive sentences: only *much* alone sounds strange there.",
+        "pairs": [
+          {
+            "en": "too many cars",
+            "id": "terlalu banyak mobil"
+          },
+          {
+            "en": "too many people",
+            "id": "terlalu banyak orang"
+          },
+          {
+            "en": "too much noise",
+            "id": "terlalu berisik"
+          },
+          {
+            "en": "too much sugar",
+            "id": "terlalu banyak gula"
+          },
+          {
+            "en": "a lot of friends",
+            "id": "banyak teman (netral, bukan masalah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "You taste Budi's soup. Oh no, it's very salty!",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "too-much-too-many",
+          "tokens": [
+            "salt",
+            "too",
+            "soup",
+            "has",
+            "This",
+            "much"
+          ],
+          "solution": "This soup has too much salt.",
+          "prompt": "Arrange the words: Sup ini terlalu asin.",
+          "explanation": "**salt** is uncountable, so **too much** salt. In English you say the soup *has too much salt*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next trip to the market!",
+        "artifact": {
+          "title": "Cheat sheet · much, many, a few, a little, too",
+          "intro": "Plural countable nouns take many, a few, too many. Uncountable nouns take much, a little, too much. a lot of goes with both, and it's the best choice in positive sentences.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "many + plural",
+              "How many people work here?",
+              "Berapa orang yang bekerja di sini?"
+            ],
+            [
+              "much + uncountable (questions, negatives)",
+              "I don't have much time.",
+              "Saya tidak punya banyak waktu."
+            ],
+            [
+              "a lot of + both (positive sentences)",
+              "There are a lot of cars. There is a lot of rice.",
+              "Ada banyak mobil. Ada banyak nasi."
+            ],
+            [
+              "a few + plural",
+              "a few eggs, a few minutes",
+              "beberapa telur, beberapa menit"
+            ],
+            [
+              "a little + uncountable",
+              "a little oil, a little time",
+              "sedikit minyak, sedikit waktu"
+            ],
+            [
+              "too many + plural",
+              "too many people on the bus",
+              "terlalu banyak orang di bus"
+            ],
+            [
+              "too much + uncountable",
+              "too much noise, too much sugar",
+              "terlalu berisik, terlalu banyak gula"
+            ],
+            [
+              "words to remember (uncountable)",
+              "money, information, advice, furniture, traffic",
+              "uang, informasi, saran, perabot, lalu lintas"
+            ],
+            [
+              "a piece of + advice / information",
+              "a piece of advice",
+              "satu saran"
+            ]
+          ],
+          "tips": [
+            "Positive sentence? Say **a lot of**: `I have much money` → **I have a lot of money**.",
+            "Plural → many, a few, too many. Uncountable → much, a little, too much: `too much cars` → **too many cars**, `a few money` → **a little money**.",
+            "No -s on money, information, advice, furniture, traffic: `informations` → **information**."
+          ],
+          "examples": [
+            {
+              "en": "There aren't many buses at night.",
+              "id": "Tidak banyak bus di malam hari."
+            },
+            {
+              "en": "Can I have a little milk in my coffee?",
+              "id": "Boleh minta sedikit susu di kopiku?"
+            },
+            {
+              "en": "There are too many people at the station.",
+              "id": "Terlalu banyak orang di stasiun."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A short video and two pages with extra practice."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar cara bahasa Inggris mengatakan banyak, sedikit dan terlalu banyak. Satu kata dalam bahasa Indonesia, tapi beberapa kata dalam bahasa Inggris. Ayo pelan-pelan, satu langkah demi satu langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu kata, tiga kata",
+        "text": "Bahasa Indonesia memakai banyak untuk semuanya. Bahasa Inggris harus memilih.",
+        "body": "Bahasa Inggris melihat **kata benda** sesudahnya (nama benda):\n- **many** + kata benda **jamak yang bisa dihitung** (dihitung satu per satu): many cars.\n- **much** + kata benda **yang tidak bisa dihitung** (tanpa -s, seperti rice, water, money): much money.\n- **a lot of** + **keduanya**: a lot of cars, a lot of money.\n**people** itu jamak (one person, two people), jadi bukan `How much people?` tapi **How many people?**",
+        "pairs": [
+          {
+            "en": "many cars",
+            "id": "banyak mobil (bisa dihitung)"
+          },
+          {
+            "en": "many people",
+            "id": "banyak orang (people = jamak dari person)"
+          },
+          {
+            "en": "much money",
+            "id": "banyak uang (tidak bisa dihitung)"
+          },
+          {
+            "en": "much water",
+            "id": "banyak air (tidak bisa dihitung)"
+          },
+          {
+            "en": "a lot of cars",
+            "id": "banyak mobil"
+          },
+          {
+            "en": "a lot of money",
+            "id": "banyak uang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dipakai di mana?",
+        "text": "Ada satu aturan lagi: kalimatnya kalimat apa?",
+        "body": "Di kalimat **positif**, pakai **a lot of**: `I have much money` terdengar aneh. Pakai **much** di **pertanyaan** dan kalimat **negatif** (kalimat dengan *not*). **many** boleh di mana saja, tapi di kalimat positif **a lot of** terdengar lebih alami.",
+        "examples": [
+          {
+            "en": "There are a lot of tourists in Bali.",
+            "id": "Ada banyak turis di Bali."
+          },
+          {
+            "en": "Pak Hasan has a lot of money.",
+            "id": "Pak Hasan punya banyak uang."
+          },
+          {
+            "en": "I don't have much time today.",
+            "id": "Saya tidak punya banyak waktu hari ini."
+          },
+          {
+            "en": "Do you drink much water?",
+            "id": "Kamu minum banyak air?"
+          },
+          {
+            "en": "How many people work in your office?",
+            "id": "Berapa orang yang bekerja di kantormu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani sedang menyiapkan ruang rapat. Kursinya cuma dua!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "much-many-a-lot-of",
+          "options": [
+            "much",
+            "many",
+            "a lot"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: There aren't ___ chairs in the meeting room.",
+          "explanation": "**chairs** adalah kata benda jamak yang bisa dihitung, jadi **many**. **much** untuk kata benda yang tidak bisa dihitung seperti water, dan **a lot** perlu **of** sebelum kata benda."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kakak laki-lakimu punya banyak teman. Katakan dalam bahasa Inggris.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "much-many-a-lot-of",
+          "tokens": [
+            "friends",
+            "has",
+            "lot",
+            "My",
+            "of",
+            "brother",
+            "a"
+          ],
+          "solution": "My brother has a lot of friends.",
+          "prompt": "Susun kata-katanya: Kakak laki-lakiku punya banyak teman.",
+          "explanation": "Ini kalimat positif, jadi pakai **a lot of** (bukan *much*). **friends** itu jamak, dan a lot of juga bisa dipakai dengan kata jamak."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata yang perlu dihafal",
+        "text": "Hati-hati: ada kata yang bisa dihitung dalam bahasa Indonesia, tapi tidak bisa dihitung dalam bahasa Inggris.",
+        "body": "Lima kata ini **tidak bisa dihitung** dalam bahasa Inggris: **tanpa a/an, tanpa -s**, dan memakai **much** dan **a little**, bukan *many* dan *a few*. Tidak ada triknya: hafalkan saja. Bukan `informations` atau `an advice`. Untuk menghitung, hitung benda lain: 20.000 **rupiah**, dua **kursi**, banyak **mobil**, **a piece of** advice (satu saran).",
+        "pairs": [
+          {
+            "en": "money",
+            "id": "uang (hitung rupiahnya)"
+          },
+          {
+            "en": "information",
+            "id": "informasi (tanpa -s)"
+          },
+          {
+            "en": "advice",
+            "id": "saran, nasihat (tanpa -s)"
+          },
+          {
+            "en": "furniture",
+            "id": "perabot, mebel (hitung kursi, meja)"
+          },
+          {
+            "en": "traffic",
+            "id": "lalu lintas (hitung mobilnya)"
+          },
+          {
+            "en": "a piece of advice",
+            "id": "satu saran"
+          },
+          {
+            "en": "How much money?",
+            "id": "Berapa banyak uang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina mau memesan hotel di Yogyakarta, tapi keterangan di situsnya sedikit sekali.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "much-many-a-lot-of",
+          "options": [
+            "many",
+            "a few",
+            "much"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: I don't have ___ information about the hotel.",
+          "explanation": "**information** tidak bisa dihitung dalam bahasa Inggris (tanpa -s), jadi **much**. **many** dan **a few** hanya untuk kata benda jamak."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "a few atau a little?",
+        "text": "Sekarang sedikit. Kata ini juga punya dua kata dalam bahasa Inggris.",
+        "body": "**a few** + kata benda jamak yang bisa dihitung: a few eggs. **a little** + kata benda yang tidak bisa dihitung: a little oil. Keduanya berarti 'tidak banyak, tapi ada, dan itu tidak masalah'. Bukan `a few money`: money tidak bisa dihitung. Catatan: tanpa **a**, *few* dan *little* berarti 'tidak cukup' (hampir tidak ada). Untuk sekarang, pakai **a few** dan **a little** saja.",
+        "pairs": [
+          {
+            "en": "a few eggs",
+            "id": "beberapa telur"
+          },
+          {
+            "en": "a few friends",
+            "id": "beberapa teman"
+          },
+          {
+            "en": "a few minutes",
+            "id": "beberapa menit"
+          },
+          {
+            "en": "a little oil",
+            "id": "sedikit minyak"
+          },
+          {
+            "en": "a little time",
+            "id": "sedikit waktu"
+          },
+          {
+            "en": "a little English",
+            "id": "sedikit bahasa Inggris"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu dan Sari lewat di depan kedai kopi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "a-few-a-little",
+          "options": [
+            "a few",
+            "a little",
+            "many"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Let's buy a coffee. I have ___ money.",
+          "explanation": "**money** tidak bisa dihitung, jadi **a little** money. **a few** untuk kata jamak (a few eggs), dan **many** juga untuk kata jamak."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "too much, too many",
+        "text": "Yang terakhir: terlalu banyak.",
+        "body": "**too** = lebih dari yang kamu mau: ini **masalah**. **too many** + kata benda jamak yang bisa dihitung, **too much** + kata benda yang tidak bisa dihitung. Bukan `too much cars`, tapi **too many cars**. **a lot of** itu netral (a lot of friends itu asyik!); **too** itu keluhan. Dan ya, **too much** boleh di kalimat positif: hanya *much* sendirian yang terdengar aneh di sana.",
+        "pairs": [
+          {
+            "en": "too many cars",
+            "id": "terlalu banyak mobil"
+          },
+          {
+            "en": "too many people",
+            "id": "terlalu banyak orang"
+          },
+          {
+            "en": "too much noise",
+            "id": "terlalu berisik"
+          },
+          {
+            "en": "too much sugar",
+            "id": "terlalu banyak gula"
+          },
+          {
+            "en": "a lot of friends",
+            "id": "banyak teman (netral, bukan masalah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kamu mencicipi sup buatan Budi. Waduh, asin sekali!",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "too-much-too-many",
+          "tokens": [
+            "salt",
+            "too",
+            "soup",
+            "has",
+            "This",
+            "much"
+          ],
+          "solution": "This soup has too much salt.",
+          "prompt": "Susun kata-katanya: Sup ini terlalu asin.",
+          "explanation": "**salt** tidak bisa dihitung, jadi **too much** salt. Dalam bahasa Inggris, supnya *has too much salt* (punya terlalu banyak garam)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Rangkuman",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk belanja ke pasar berikutnya!",
+        "artifact": {
+          "title": "Rangkuman · much, many, a few, a little, too",
+          "intro": "Kata benda jamak yang bisa dihitung memakai many, a few, too many. Kata benda yang tidak bisa dihitung memakai much, a little, too much. a lot of dipakai dengan keduanya, dan paling tepat di kalimat positif.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "many + jamak",
+              "How many people work here?",
+              "Berapa orang yang bekerja di sini?"
+            ],
+            [
+              "much + tidak bisa dihitung (pertanyaan, negatif)",
+              "I don't have much time.",
+              "Saya tidak punya banyak waktu."
+            ],
+            [
+              "a lot of + keduanya (kalimat positif)",
+              "There are a lot of cars. There is a lot of rice.",
+              "Ada banyak mobil. Ada banyak nasi."
+            ],
+            [
+              "a few + jamak",
+              "a few eggs, a few minutes",
+              "beberapa telur, beberapa menit"
+            ],
+            [
+              "a little + tidak bisa dihitung",
+              "a little oil, a little time",
+              "sedikit minyak, sedikit waktu"
+            ],
+            [
+              "too many + jamak",
+              "too many people on the bus",
+              "terlalu banyak orang di bus"
+            ],
+            [
+              "too much + tidak bisa dihitung",
+              "too much noise, too much sugar",
+              "terlalu berisik, terlalu banyak gula"
+            ],
+            [
+              "kata yang perlu dihafal (tidak bisa dihitung)",
+              "money, information, advice, furniture, traffic",
+              "uang, informasi, saran, perabot, lalu lintas"
+            ],
+            [
+              "a piece of + advice / information",
+              "a piece of advice",
+              "satu saran"
+            ]
+          ],
+          "tips": [
+            "Kalimat positif? Pakai **a lot of**: `I have much money` → **I have a lot of money**.",
+            "Jamak → many, a few, too many. Tidak bisa dihitung → much, a little, too much: `too much cars` → **too many cars**, `a few money` → **a little money**.",
+            "Tanpa -s untuk money, information, advice, furniture, traffic: `informations` → **information**."
+          ],
+          "examples": [
+            {
+              "en": "There aren't many buses at night.",
+              "id": "Tidak banyak bus di malam hari."
+            },
+            {
+              "en": "Can I have a little milk in my coffee?",
+              "id": "Boleh minta sedikit susu di kopiku?"
+            },
+            {
+              "en": "There are too many people at the station.",
+              "id": "Terlalu banyak orang di stasiun."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau belajar lagi? Ada satu video pendek dan dua halaman dengan latihan tambahan."
+      }
+    ]
+  }
+}

@@ -1,0 +1,714 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn how to give good advice and talk about rules in English. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Good advice: should",
+        "text": "When you tell a friend *sebaiknya …*, English uses **should**.",
+        "body": "Pattern: **should + base verb** (the verb as in the dictionary: no -s, no -ing, no to). **You should drink more water.** For a bad idea, use **shouldn't** (= should not): **You shouldn't stay up late.**\nshould is a helper word like *can*: it never changes, and nothing goes between it and the verb. So **she should go**, not 'she shoulds go' or 'she should to go'.",
+        "pairs": [
+          {
+            "en": "should",
+            "id": "sebaiknya"
+          },
+          {
+            "en": "shouldn't",
+            "id": "sebaiknya jangan"
+          },
+          {
+            "en": "rest",
+            "id": "istirahat"
+          },
+          {
+            "en": "see a doctor",
+            "id": "periksa ke dokter"
+          },
+          {
+            "en": "take medicine",
+            "id": "minum obat"
+          },
+          {
+            "en": "stay up late",
+            "id": "begadang"
+          },
+          {
+            "en": "go to bed early",
+            "id": "tidur lebih awal"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari is very tired after a long day at the office. What's good advice for her?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "advice-should",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "Sari should to go to bed early.",
+            "Sari shoulds go to bed early.",
+            "Sari should go to bed early."
+          ],
+          "answer": 2,
+          "explanation": "**should + base verb**: should go. There's no **to** after should, and should never takes -s, even with Sari (= she)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rules and duties: have to and must",
+        "text": "When something is **necessary** (*harus, wajib*), English uses **have to** or **must**.",
+        "body": "**have to** + base verb changes like the verb *have* you know: **I / you / we / they have to**, but **he / she has to** (like *she has a car*). So 'she have to' is a mistake.\n**must** + base verb never changes, like can: **I must, she must**, with no to after it.\nBoth mean *harus*. **have to** is the most common when you speak; **must** is common on signs and in written rules.",
+        "pairs": [
+          {
+            "en": "have to",
+            "id": "harus (I / you / we / they)"
+          },
+          {
+            "en": "has to",
+            "id": "harus (he / she / it)"
+          },
+          {
+            "en": "must",
+            "id": "harus / wajib"
+          },
+          {
+            "en": "wear a uniform",
+            "id": "memakai seragam"
+          },
+          {
+            "en": "pay in cash",
+            "id": "bayar tunai"
+          },
+          {
+            "en": "show",
+            "id": "menunjukkan"
+          },
+          {
+            "en": "ID card",
+            "id": "KTP / kartu identitas"
+          },
+          {
+            "en": "security guard",
+            "id": "satpam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "have to or has to?",
+        "text": "Pak Hasan is a security guard at a bank in Surabaya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "obligation-have-to-must",
+          "prompt": "Complete: Pak Hasan ___ work at night on Fridays.",
+          "options": [
+            "have to",
+            "has to",
+            "must to"
+          ],
+          "answer": 1,
+          "explanation": "Pak Hasan = he, so **has to** (like *he has*). 'have to' is for I / you / we / they, and there's never a **to** after must."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the rule",
+        "text": "A new office has a rule for all visitors. The receptionist tells you the rule.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "obligation-have-to-must",
+          "prompt": "Arrange the words: Kamu harus menunjukkan KTP-mu.",
+          "tokens": [
+            "ID",
+            "must",
+            "card",
+            "You",
+            "your",
+            "show"
+          ],
+          "solution": "You must show your ID card.",
+          "explanation": "**must + base verb**, with no to: **You must show** … Then what you show: **your ID card**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "mustn't or don't have to?",
+        "text": "Careful! In **negative** sentences, must and have to mean very different things.",
+        "body": "**mustn't** (= must not) = *dilarang, tidak boleh*: there's a rule, or it's dangerous.\n**don't have to** = *tidak perlu, tidak harus*: it isn't necessary, you can choose. With he / she: **doesn't have to** (not 'doesn't has to').\nThe trap: word by word, *tidak harus* looks like 'must not'. But **mustn't** means *dilarang*! *Tidak harus / tidak perlu* = **don't have to**.",
+        "pairs": [
+          {
+            "en": "mustn't",
+            "id": "dilarang / tidak boleh"
+          },
+          {
+            "en": "don't have to",
+            "id": "tidak perlu / tidak harus"
+          },
+          {
+            "en": "doesn't have to",
+            "id": "tidak perlu (he / she / it)"
+          },
+          {
+            "en": "a rule",
+            "id": "aturan"
+          },
+          {
+            "en": "a sign",
+            "id": "papan tanda"
+          },
+          {
+            "en": "a holiday",
+            "id": "hari libur"
+          },
+          {
+            "en": "free",
+            "id": "gratis"
+          },
+          {
+            "en": "dangerous",
+            "id": "berbahaya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Not allowed or not necessary?",
+        "text": "Look at these pairs. Ask yourself: is it a rule, or just not needed?",
+        "body": "Rules, signs and danger → **mustn't**. Free things, holidays, choices → **don't / doesn't have to**.",
+        "examples": [
+          {
+            "en": "You mustn't use your phone in the exam.",
+            "id": "Dilarang memakai HP saat ujian."
+          },
+          {
+            "en": "You mustn't touch the cables. It's dangerous.",
+            "id": "Jangan sentuh kabelnya. Berbahaya."
+          },
+          {
+            "en": "The seminar is free. You don't have to pay.",
+            "id": "Seminarnya gratis. Kamu tidak perlu bayar."
+          },
+          {
+            "en": "Sari doesn't have to cook tonight. Her mother is cooking.",
+            "id": "Sari tidak perlu masak malam ini. Ibunya sedang masak."
+          },
+          {
+            "en": "Come to my house on Sunday! You don't have to bring anything.",
+            "id": "Datang ke rumahku hari Minggu! Tidak usah bawa apa-apa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A free morning",
+        "text": "Rina works in an office from Monday to Friday. Today is Sunday.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "mustnt-vs-dont-have-to",
+          "prompt": "It's Sunday. Rina ___ get up early today.",
+          "options": [
+            "mustn't",
+            "doesn't have to",
+            "don't have to"
+          ],
+          "answer": 1,
+          "explanation": "Getting up early isn't forbidden; it just isn't necessary today, so **doesn't have to**. Rina = she, so **doesn't**. 'mustn't' would mean she is not allowed to get up early."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Read the sign",
+        "text": "You're at a swimming pool in Bandung. There's a sign on the wall: **NO RUNNING**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "mustnt-vs-dont-have-to",
+          "prompt": "What does the sign mean?",
+          "options": [
+            "You don't have to run here.",
+            "You have to run here.",
+            "You mustn't run here."
+          ],
+          "answer": 2,
+          "explanation": "A sign with a rule means it's not allowed: **mustn't** (= dilarang). 'You don't have to run' only means running isn't necessary."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the English before you check.",
+        "flashcards": [
+          {
+            "front": "sebaiknya",
+            "back": "should"
+          },
+          {
+            "front": "sebaiknya jangan",
+            "back": "shouldn't"
+          },
+          {
+            "front": "harus (I / you / we / they)",
+            "back": "have to"
+          },
+          {
+            "front": "harus (he / she / it)",
+            "back": "has to"
+          },
+          {
+            "front": "harus (aturan tertulis, papan tanda)",
+            "back": "must"
+          },
+          {
+            "front": "dilarang / tidak boleh",
+            "back": "mustn't"
+          },
+          {
+            "front": "tidak perlu / tidak harus",
+            "back": "don't have to"
+          },
+          {
+            "front": "Correct it: Dimas have to study.",
+            "back": "Dimas has to study."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for the next time you give advice or read a sign!",
+        "artifact": {
+          "title": "Cheat sheet · should, have to, must",
+          "intro": "should = advice. have to / must = necessary. mustn't = not allowed. don't have to = not necessary.",
+          "headers": [
+            "Meaning",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Advice (sebaiknya)",
+              "should + verb",
+              "You should drink more water."
+            ],
+            [
+              "Bad idea (sebaiknya jangan)",
+              "shouldn't + verb",
+              "You shouldn't stay up late."
+            ],
+            [
+              "Necessary (harus)",
+              "I / you / we / they have to + verb",
+              "We have to pay in cash."
+            ],
+            [
+              "Necessary, he / she / it",
+              "has to + verb",
+              "Rina has to take the KRL."
+            ],
+            [
+              "Rule, sign (wajib)",
+              "must + verb",
+              "Passengers must wear a seatbelt."
+            ],
+            [
+              "Not allowed (dilarang)",
+              "mustn't + verb",
+              "You mustn't touch the cables."
+            ],
+            [
+              "Not necessary (tidak perlu)",
+              "don't / doesn't have to + verb",
+              "The seminar is free. You don't have to pay."
+            ],
+            [
+              "Questions",
+              "Should I …? / Do I have to …?",
+              "Do I have to pay for parking? — Yes, you do."
+            ]
+          ],
+          "tips": [
+            "**No to** after should and must: You should rest. You must stop. (have to already has its to.)",
+            "**has to** with he / she / it, like *she has*; but **doesn't have to**, not 'doesn't has to'.",
+            "**tidak harus / tidak perlu = don't have to**. mustn't means *dilarang*."
+          ],
+          "examples": [
+            {
+              "en": "Should I bring a jacket? — Yes, you should.",
+              "id": "Sebaiknya saya bawa jaket? — Ya, sebaiknya."
+            },
+            {
+              "en": "I must call my mother tonight.",
+              "id": "Saya harus menelepon ibu saya nanti malam."
+            },
+            {
+              "en": "Come to my house on Sunday! You don't have to bring anything.",
+              "id": "Datang ke rumahku hari Minggu! Tidak usah bawa apa-apa."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and practise",
+        "text": "Want more? Watch a short video about mustn't and don't have to, and try the British Council exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar memberi saran yang baik dan membicarakan aturan dalam bahasa Inggris. Yuk, mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Saran yang baik: should",
+        "text": "Kalau kamu bilang *sebaiknya …* ke teman, bahasa Inggrisnya **should**.",
+        "body": "Polanya: **should + kata kerja dasar** (kata kerja seperti di kamus: tanpa -s, tanpa -ing, tanpa to). **You should drink more water.** Untuk ide yang buruk, pakai **shouldn't** (= should not): **You shouldn't stay up late.**\nshould adalah kata bantu seperti *can*: tidak pernah berubah, dan tidak ada apa-apa di antara should dan kata kerjanya. Jadi **she should go**, bukan 'she shoulds go' atau 'she should to go'.",
+        "pairs": [
+          {
+            "en": "should",
+            "id": "sebaiknya"
+          },
+          {
+            "en": "shouldn't",
+            "id": "sebaiknya jangan"
+          },
+          {
+            "en": "rest",
+            "id": "istirahat"
+          },
+          {
+            "en": "see a doctor",
+            "id": "periksa ke dokter"
+          },
+          {
+            "en": "take medicine",
+            "id": "minum obat"
+          },
+          {
+            "en": "stay up late",
+            "id": "begadang"
+          },
+          {
+            "en": "go to bed early",
+            "id": "tidur lebih awal"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari capek sekali setelah seharian di kantor. Apa saran yang baik untuknya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "advice-should",
+          "prompt": "Pilih kalimat yang benar.",
+          "options": [
+            "Sari should to go to bed early.",
+            "Sari shoulds go to bed early.",
+            "Sari should go to bed early."
+          ],
+          "answer": 2,
+          "explanation": "**should + kata kerja dasar**: should go. Tidak ada **to** sesudah should, dan should tidak pernah diberi -s, walaupun subjeknya Sari (= she)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Aturan dan kewajiban: have to dan must",
+        "text": "Kalau sesuatu **perlu** dilakukan (*harus, wajib*), bahasa Inggris memakai **have to** atau **must**.",
+        "body": "**have to** + kata kerja dasar berubah seperti kata kerja *have* yang sudah kamu kenal: **I / you / we / they have to**, tapi **he / she has to** (seperti *she has a car*). Jadi 'she have to' itu salah.\n**must** + kata kerja dasar tidak pernah berubah, seperti can: **I must, she must**, tanpa to sesudahnya.\nKeduanya berarti *harus*. **have to** paling sering dipakai saat bicara; **must** sering muncul di papan tanda dan aturan tertulis.",
+        "pairs": [
+          {
+            "en": "have to",
+            "id": "harus (I / you / we / they)"
+          },
+          {
+            "en": "has to",
+            "id": "harus (he / she / it)"
+          },
+          {
+            "en": "must",
+            "id": "harus / wajib"
+          },
+          {
+            "en": "wear a uniform",
+            "id": "memakai seragam"
+          },
+          {
+            "en": "pay in cash",
+            "id": "bayar tunai"
+          },
+          {
+            "en": "show",
+            "id": "menunjukkan"
+          },
+          {
+            "en": "ID card",
+            "id": "KTP / kartu identitas"
+          },
+          {
+            "en": "security guard",
+            "id": "satpam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "have to atau has to?",
+        "text": "Pak Hasan seorang satpam di sebuah bank di Surabaya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "obligation-have-to-must",
+          "prompt": "Lengkapi: Pak Hasan ___ work at night on Fridays.",
+          "options": [
+            "have to",
+            "has to",
+            "must to"
+          ],
+          "answer": 1,
+          "explanation": "Pak Hasan = he, jadi **has to** (seperti *he has*). 'have to' untuk I / you / we / they, dan sesudah must tidak pernah ada **to**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun aturannya",
+        "text": "Sebuah kantor baru punya aturan untuk semua tamu. Resepsionis memberi tahu aturannya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "obligation-have-to-must",
+          "prompt": "Susun kata-katanya: Kamu harus menunjukkan KTP-mu.",
+          "tokens": [
+            "ID",
+            "must",
+            "card",
+            "You",
+            "your",
+            "show"
+          ],
+          "solution": "You must show your ID card.",
+          "explanation": "**must + kata kerja dasar**, tanpa to: **You must show** … Lalu apa yang ditunjukkan: **your ID card**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "mustn't atau don't have to?",
+        "text": "Hati-hati! Dalam kalimat **negatif**, must dan have to artinya sangat berbeda.",
+        "body": "**mustn't** (= must not) = *dilarang, tidak boleh*: ada aturan, atau berbahaya.\n**don't have to** = *tidak perlu, tidak harus*: tidak wajib, kamu boleh memilih. Untuk he / she: **doesn't have to** (bukan 'doesn't has to').\nJebakannya: kalau diterjemahkan kata per kata, *tidak harus* kelihatannya 'must not'. Padahal **mustn't** artinya *dilarang*! *Tidak harus / tidak perlu* = **don't have to**.",
+        "pairs": [
+          {
+            "en": "mustn't",
+            "id": "dilarang / tidak boleh"
+          },
+          {
+            "en": "don't have to",
+            "id": "tidak perlu / tidak harus"
+          },
+          {
+            "en": "doesn't have to",
+            "id": "tidak perlu (he / she / it)"
+          },
+          {
+            "en": "a rule",
+            "id": "aturan"
+          },
+          {
+            "en": "a sign",
+            "id": "papan tanda"
+          },
+          {
+            "en": "a holiday",
+            "id": "hari libur"
+          },
+          {
+            "en": "free",
+            "id": "gratis"
+          },
+          {
+            "en": "dangerous",
+            "id": "berbahaya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dilarang atau tidak perlu?",
+        "text": "Perhatikan contoh-contoh ini. Tanya dirimu: ini aturan, atau hanya tidak perlu?",
+        "body": "Aturan, papan tanda dan bahaya → **mustn't**. Barang gratis, hari libur, pilihan → **don't / doesn't have to**.",
+        "examples": [
+          {
+            "en": "You mustn't use your phone in the exam.",
+            "id": "Dilarang memakai HP saat ujian."
+          },
+          {
+            "en": "You mustn't touch the cables. It's dangerous.",
+            "id": "Jangan sentuh kabelnya. Berbahaya."
+          },
+          {
+            "en": "The seminar is free. You don't have to pay.",
+            "id": "Seminarnya gratis. Kamu tidak perlu bayar."
+          },
+          {
+            "en": "Sari doesn't have to cook tonight. Her mother is cooking.",
+            "id": "Sari tidak perlu masak malam ini. Ibunya sedang masak."
+          },
+          {
+            "en": "Come to my house on Sunday! You don't have to bring anything.",
+            "id": "Datang ke rumahku hari Minggu! Tidak usah bawa apa-apa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pagi yang santai",
+        "text": "Rina kerja di kantor dari Senin sampai Jumat. Hari ini hari Minggu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "mustnt-vs-dont-have-to",
+          "prompt": "Lengkapi: It's Sunday. Rina ___ get up early today.",
+          "options": [
+            "mustn't",
+            "doesn't have to",
+            "don't have to"
+          ],
+          "answer": 1,
+          "explanation": "Bangun pagi tidak dilarang; hari ini hanya tidak perlu, jadi **doesn't have to**. Rina = she, jadi **doesn't**. 'mustn't' artinya dia dilarang bangun pagi."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Baca papannya",
+        "text": "Kamu di kolam renang di Bandung. Di dinding ada papan: **NO RUNNING**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "mustnt-vs-dont-have-to",
+          "prompt": "Apa arti papan itu?",
+          "options": [
+            "You don't have to run here.",
+            "You have to run here.",
+            "You mustn't run here."
+          ],
+          "answer": 2,
+          "explanation": "Papan berisi aturan artinya tidak boleh: **mustn't** (= dilarang). 'You don't have to run' hanya berarti tidak perlu berlari."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartunya. Ucapkan bahasa Inggrisnya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "sebaiknya",
+            "back": "should"
+          },
+          {
+            "front": "sebaiknya jangan",
+            "back": "shouldn't"
+          },
+          {
+            "front": "harus (I / you / we / they)",
+            "back": "have to"
+          },
+          {
+            "front": "harus (he / she / it)",
+            "back": "has to"
+          },
+          {
+            "front": "harus (aturan tertulis, papan tanda)",
+            "back": "must"
+          },
+          {
+            "front": "dilarang / tidak boleh",
+            "back": "mustn't"
+          },
+          {
+            "front": "tidak perlu / tidak harus",
+            "back": "don't have to"
+          },
+          {
+            "front": "Perbaiki: Dimas have to study.",
+            "back": "Dimas has to study."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk saat kamu memberi saran atau membaca papan tanda!",
+        "artifact": {
+          "title": "Ringkasan · should, have to, must",
+          "intro": "should = saran. have to / must = harus. mustn't = dilarang. don't have to = tidak perlu.",
+          "headers": [
+            "Arti",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Saran (sebaiknya)",
+              "should + kata kerja",
+              "You should drink more water."
+            ],
+            [
+              "Ide buruk (sebaiknya jangan)",
+              "shouldn't + kata kerja",
+              "You shouldn't stay up late."
+            ],
+            [
+              "Harus",
+              "I / you / we / they have to + kata kerja",
+              "We have to pay in cash."
+            ],
+            [
+              "Harus, he / she / it",
+              "has to + kata kerja",
+              "Rina has to take the KRL."
+            ],
+            [
+              "Aturan, papan (wajib)",
+              "must + kata kerja",
+              "Passengers must wear a seatbelt."
+            ],
+            [
+              "Dilarang",
+              "mustn't + kata kerja",
+              "You mustn't touch the cables."
+            ],
+            [
+              "Tidak perlu",
+              "don't / doesn't have to + kata kerja",
+              "The seminar is free. You don't have to pay."
+            ],
+            [
+              "Pertanyaan",
+              "Should I …? / Do I have to …?",
+              "Do I have to pay for parking? — Yes, you do."
+            ]
+          ],
+          "tips": [
+            "**Tanpa to** sesudah should dan must: You should rest. You must stop. (have to memang sudah punya to.)",
+            "**has to** untuk he / she / it, seperti *she has*; tapi **doesn't have to**, bukan 'doesn't has to'.",
+            "**tidak harus / tidak perlu = don't have to**. mustn't artinya *dilarang*."
+          ],
+          "examples": [
+            {
+              "en": "Should I bring a jacket? — Yes, you should.",
+              "id": "Sebaiknya saya bawa jaket? — Ya, sebaiknya."
+            },
+            {
+              "en": "I must call my mother tonight.",
+              "id": "Saya harus menelepon ibu saya nanti malam."
+            },
+            {
+              "en": "Come to my house on Sunday! You don't have to bring anything.",
+              "id": "Datang ke rumahku hari Minggu! Tidak usah bawa apa-apa."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan latihan",
+        "text": "Mau lebih banyak? Tonton video pendek tentang mustn't dan don't have to, lalu coba latihan dari British Council."
+      }
+    ]
+  }
+}

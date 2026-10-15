@@ -1,0 +1,686 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll start telling stories about the past with one small ending: -ed. Let's take it step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One ending for the past: -ed",
+        "text": "You know was and were. Now let's talk about actions in the past: I walked, I cooked, I worked.",
+        "body": "In Indonesian the **verb** (the doing word) never changes: *Kemarin saya jalan kaki ke kantor*. Only *kemarin* shows it's the past. English changes the verb itself: add **-ed**. **Yesterday I walked to the office.** This is the **past simple**: an action that finished at a time in the past.\n- It's the **same for everyone**: *I walked, she walked, they walked* (no -s).\n- **No was before it**: 'I was cook dinner' ✗ → **I cooked dinner**. *was/were* is only the past of am/is/are.",
+        "pairs": [
+          {
+            "en": "walk → walked",
+            "id": "jalan kaki"
+          },
+          {
+            "en": "work → worked",
+            "id": "bekerja"
+          },
+          {
+            "en": "cook → cooked",
+            "id": "memasak"
+          },
+          {
+            "en": "clean → cleaned",
+            "id": "membersihkan"
+          },
+          {
+            "en": "call → called",
+            "id": "menelepon, memanggil"
+          },
+          {
+            "en": "watch → watched",
+            "id": "menonton"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Spelling the -ed",
+        "text": "Most verbs just take -ed, but a few endings change the spelling.",
+        "body": "(**Vowels** = a, e, i, o, u; **consonants** = all other letters.)\n- Ends in **e** → just **+ d**: *lived, danced*.\n- **Consonant + y** → **y → ied**: *try → tried*. But **vowel + y** just takes -ed: *played, stayed*.\n- **Short verb of one beat** ending in **one vowel + one consonant** → **double** the last letter: *stop → stopped*. Why? 'stoped' would look like *hoped* ('houpt').\n- Longer verbs said strong at the front just add -ed: *VI-sit → visited*, *O-pen → opened*. And w, x, y are never doubled: *fixed*.\n\nBritish *travelled*, American *traveled*: both are correct.",
+        "pairs": [
+          {
+            "en": "live → lived",
+            "id": "tinggal (+ d)"
+          },
+          {
+            "en": "dance → danced",
+            "id": "menari (+ d)"
+          },
+          {
+            "en": "try → tried",
+            "id": "mencoba (y → ied)"
+          },
+          {
+            "en": "play → played",
+            "id": "bermain (vokal + y → + ed)"
+          },
+          {
+            "en": "stop → stopped",
+            "id": "berhenti (p digandakan)"
+          },
+          {
+            "en": "visit → visited",
+            "id": "mengunjungi (tidak digandakan)"
+          },
+          {
+            "en": "fix → fixed",
+            "id": "memperbaiki (x tidak digandakan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas has an English test today. Think about yesterday.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-regular-past",
+          "options": [
+            "was study",
+            "studyed",
+            "studied"
+          ],
+          "answer": 2,
+          "prompt": "Complete: Yesterday Dimas ___ for his English test.",
+          "explanation": "**study** ends in a consonant (d) + y, so **y → ied**: **studied**. 'studyed' keeps the y, and 'was study' is wrong: was is only the past of am/is, not a sign for every verb."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How -ed sounds",
+        "text": "-ed is always written the same, but it has three sounds. It's like the -s ending (works, plays, watches).",
+        "body": "Listen to the **last sound** of the verb:\n- **'t'** after sounds with **no buzz** in your throat (p, k, f, s, sh, ch, x): *worked* = 'workt', *liked* = 'laikt'.\n- **'d'** after vowel sounds and sounds **with a buzz** (b, g, l, m, n, r, v, z): *played* = 'pleid', *lived* = 'livd'.\n- **'id'**, one extra **beat** (syllable, *suku kata*), **only after t or d**: *wanted* = 'WON-tid', *needed* = 'NII-did'.\n\nDon't add a beat everywhere ('work-ed' ✗), and don't drop the ending: *I walk* and *I walked* must sound different.",
+        "pairs": [
+          {
+            "en": "worked",
+            "id": "bekerja · dibaca 'workt'"
+          },
+          {
+            "en": "liked",
+            "id": "suka · dibaca 'laikt'"
+          },
+          {
+            "en": "played",
+            "id": "bermain · dibaca 'pleid'"
+          },
+          {
+            "en": "lived",
+            "id": "tinggal · dibaca 'livd'"
+          },
+          {
+            "en": "wanted",
+            "id": "ingin · dibaca 'WON-tid'"
+          },
+          {
+            "en": "needed",
+            "id": "butuh · dibaca 'NII-did'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen to the ending",
+        "text": "Say each verb out loud before you choose.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-regular-past",
+          "options": [
+            "cooked",
+            "waited",
+            "cleaned"
+          ],
+          "answer": 1,
+          "prompt": "In which past verb is -ed an extra beat, 'id'?",
+          "explanation": "**wait** ends in a **t** sound, so -ed is said 'id' and adds a beat: **WEI-tid**. *cooked* is one beat ('kukt'), and *cleaned* is one beat too ('kliind')."
+        }
+      },
+      {
+        "kind": "timeline",
+        "title": "Finished, before now",
+        "text": "These time words tell you the action is finished: use verb + -ed.",
+        "timeline": {
+          "title": "Before now and now",
+          "caption": "last year, last month, a week ago, yesterday → verb + -ed. ago counts back from now: a week ago = seven days back from today.",
+          "marks": [
+            {
+              "label": "last year",
+              "kind": "past"
+            },
+            {
+              "label": "last month",
+              "kind": "past"
+            },
+            {
+              "label": "a week ago",
+              "kind": "past"
+            },
+            {
+              "label": "yesterday",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "last or ago?",
+        "text": "Indonesian says *lalu* for both. English has two words.",
+        "body": "- **No number** → **last**: *minggu lalu* = **last week**, *hari Minggu lalu* = **last Sunday**. No *the* and no *on* before it.\n- **A number** (or *a / an*) → **ago**, after the length of time: *dua hari yang lalu* = **two days ago**, *sejam yang lalu* = **an hour ago**.\n\nNot 'two years before': *before* needs something after it (*before lunch*). And *tadi malam / kemarin malam* = **last night**, *tadi pagi* = **this morning**. The time word can go at the end or at the start of the sentence.",
+        "pairs": [
+          {
+            "en": "yesterday",
+            "id": "kemarin"
+          },
+          {
+            "en": "yesterday morning",
+            "id": "kemarin pagi"
+          },
+          {
+            "en": "this morning",
+            "id": "tadi pagi"
+          },
+          {
+            "en": "last night",
+            "id": "tadi malam / semalam"
+          },
+          {
+            "en": "last week",
+            "id": "minggu lalu"
+          },
+          {
+            "en": "last Sunday",
+            "id": "hari Minggu lalu"
+          },
+          {
+            "en": "two days ago",
+            "id": "dua hari yang lalu"
+          },
+          {
+            "en": "an hour ago",
+            "id": "sejam yang lalu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In real sentences",
+        "text": "Here are -ed verbs and time words together.",
+        "body": "Look at the time words: **last weekend** (no number), **a week ago** / **an hour ago** (a length of time + ago), **yesterday afternoon**.",
+        "examples": [
+          {
+            "en": "Rina stayed at home last weekend.",
+            "id": "Rina di rumah saja akhir pekan lalu."
+          },
+          {
+            "en": "My father painted the fence yesterday afternoon.",
+            "id": "Ayahku mengecat pagar kemarin sore."
+          },
+          {
+            "en": "We booked the train tickets a week ago.",
+            "id": "Kami memesan tiket kereta seminggu yang lalu."
+          },
+          {
+            "en": "It rained all day yesterday.",
+            "id": "Kemarin hujan seharian."
+          },
+          {
+            "en": "Bu Ani opened her warung an hour ago.",
+            "id": "Bu Ani membuka warungnya sejam yang lalu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Count back",
+        "text": "Today is Friday. Count back from now.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-markers",
+          "options": [
+            "Budi visited the dentist three days ago.",
+            "Budi visited the dentist three days before.",
+            "Budi visited the dentist ago three days."
+          ],
+          "answer": 0,
+          "prompt": "Today is Friday. Budi visited the dentist on Tuesday. Which sentence is right?",
+          "explanation": "From Tuesday to Friday is **three days**, counted back from now, so: **three days ago**. **ago** comes after the length of time, and *before* isn't used to count back from now."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina tells you about her weekend.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-markers",
+          "options": [
+            "Rina cooked rendang on last Sunday.",
+            "Rina cooked rendang last Sunday.",
+            "Rina cooked rendang Sunday ago."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence means 'Rina memasak rendang hari Minggu lalu'?",
+          "explanation": "No number, so *lalu* = **last**: **last Sunday**, with no *on* before it (you say *on Sunday*, but just *last Sunday*). **ago** needs a length of time: *three days ago*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Past simple (regular)",
+          "intro": "Finished actions in the past: verb + -ed, the same for everyone.",
+          "headers": [
+            "Rule",
+            "Verb",
+            "Past"
+          ],
+          "rows": [
+            [
+              "most verbs: + ed",
+              "work",
+              "worked"
+            ],
+            [
+              "vowel + y: + ed",
+              "play",
+              "played"
+            ],
+            [
+              "ends in e: + d",
+              "live",
+              "lived"
+            ],
+            [
+              "consonant + y: y → ied",
+              "study",
+              "studied"
+            ],
+            [
+              "one beat, 1 vowel + 1 consonant: double",
+              "stop",
+              "stopped"
+            ],
+            [
+              "strong at the front: just + ed",
+              "visit",
+              "visited"
+            ]
+          ],
+          "tips": [
+            "Say -ed as **'t'** after p, k, f, s, sh, ch, x (worked = 'workt'), **'d'** after vowels and buzzing sounds (played = 'pleid'), and **'id'**, an extra beat, only after t or d (wanted = 'WON-tid').",
+            "**last** + night / week / month / Sunday, with no *the* and no *on*. A length of time + **ago**: *two days ago*, not 'two days before'.",
+            "Same form for everyone, and no *was*: **I walked, she walked**, not 'she was walk'."
+          ],
+          "examples": [
+            {
+              "en": "I worked late last night.",
+              "id": "Saya kerja sampai larut tadi malam."
+            },
+            {
+              "en": "My parents travelled to Lombok last year.",
+              "id": "Orang tuaku pergi ke Lombok tahun lalu."
+            },
+            {
+              "en": "The shop opened an hour ago.",
+              "id": "Tokonya buka sejam yang lalu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This page has extra exercises, and the video practises the three -ed sounds."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu mulai bercerita tentang masa lalu dengan satu akhiran kecil: -ed. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu akhiran untuk masa lalu: -ed",
+        "text": "Kamu sudah tahu was dan were. Sekarang kita ceritakan apa yang kamu **lakukan**: I walked, I cooked, I worked.",
+        "body": "Dalam bahasa Indonesia, **kata kerja** (kata yang menunjukkan kegiatan) tidak pernah berubah: *Kemarin saya jalan kaki ke kantor*. Hanya *kemarin* yang menunjukkan masa lalu. Bahasa Inggris mengubah kata kerjanya sendiri: tambahkan **-ed**. **Yesterday I walked to the office.** Ini namanya **past simple**: kegiatan yang sudah selesai pada suatu waktu di masa lalu.\n- Bentuknya **sama untuk semua orang**: *I walked, she walked, they walked* (tanpa -s).\n- **Tanpa was di depannya**: 'I was cook dinner' ✗ → **I cooked dinner**. *was/were* hanya bentuk lampau dari am/is/are.",
+        "pairs": [
+          {
+            "en": "walk → walked",
+            "id": "jalan kaki"
+          },
+          {
+            "en": "work → worked",
+            "id": "bekerja"
+          },
+          {
+            "en": "cook → cooked",
+            "id": "memasak"
+          },
+          {
+            "en": "clean → cleaned",
+            "id": "membersihkan"
+          },
+          {
+            "en": "call → called",
+            "id": "menelepon, memanggil"
+          },
+          {
+            "en": "watch → watched",
+            "id": "menonton"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Ejaan -ed",
+        "text": "Kebanyakan kata kerja cukup ditambah -ed, tapi beberapa akhiran mengubah ejaannya.",
+        "body": "(**Vokal** = a, e, i, o, u; **konsonan** = semua huruf lainnya.)\n- Berakhiran **e** → cukup **+ d**: *lived, danced*.\n- **Konsonan + y** → **y → ied**: *try → tried*. Tapi **vokal + y** cukup + ed: *played, stayed*.\n- **Kata kerja pendek satu ketukan** yang berakhiran **satu vokal + satu konsonan** → huruf terakhirnya **digandakan**: *stop → stopped*. Kenapa? 'stoped' akan terlihat seperti *hoped* ('houpt').\n- Kata kerja yang lebih panjang dan diucapkan kuat di depan cukup + ed: *VI-sit → visited*, *O-pen → opened*. Dan w, x, y tidak pernah digandakan: *fixed*.\n\nInggris (British) *travelled*, Amerika *traveled*: keduanya benar.",
+        "pairs": [
+          {
+            "en": "live → lived",
+            "id": "tinggal (+ d)"
+          },
+          {
+            "en": "dance → danced",
+            "id": "menari (+ d)"
+          },
+          {
+            "en": "try → tried",
+            "id": "mencoba (y → ied)"
+          },
+          {
+            "en": "play → played",
+            "id": "bermain (vokal + y → + ed)"
+          },
+          {
+            "en": "stop → stopped",
+            "id": "berhenti (p digandakan)"
+          },
+          {
+            "en": "visit → visited",
+            "id": "mengunjungi (tidak digandakan)"
+          },
+          {
+            "en": "fix → fixed",
+            "id": "memperbaiki (x tidak digandakan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hari ini Dimas ujian bahasa Inggris. Bagaimana dengan kemarin?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-regular-past",
+          "options": [
+            "was study",
+            "studyed",
+            "studied"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: Yesterday Dimas ___ for his English test.",
+          "explanation": "**study** berakhiran konsonan (d) + y, jadi **y → ied**: **studied**. 'studyed' masih memakai y, dan 'was study' salah: was hanya bentuk lampau dari am/is, bukan tanda masa lalu untuk semua kata kerja."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bunyi -ed",
+        "text": "-ed selalu ditulis sama, tapi punya tiga bunyi. Mirip akhiran -s (works, plays, watches).",
+        "body": "Dengarkan **bunyi terakhir** kata kerjanya:\n- **'t'** setelah bunyi yang **tidak bergetar** di tenggorokan (p, k, f, s, sh, ch, x): *worked* = 'workt', *liked* = 'laikt'.\n- **'d'** setelah bunyi vokal dan bunyi yang **bergetar** (b, g, l, m, n, r, v, z): *played* = 'pleid', *lived* = 'livd'.\n- **'id'**, tambah satu **ketukan** (suku kata), **hanya setelah t atau d**: *wanted* = 'WON-tid', *needed* = 'NII-did'.\n\nJangan menambah ketukan di semua kata ('work-ed' ✗), dan jangan hilangkan akhirannya: *I walk* dan *I walked* harus terdengar berbeda.",
+        "pairs": [
+          {
+            "en": "worked",
+            "id": "bekerja · dibaca 'workt'"
+          },
+          {
+            "en": "liked",
+            "id": "suka · dibaca 'laikt'"
+          },
+          {
+            "en": "played",
+            "id": "bermain · dibaca 'pleid'"
+          },
+          {
+            "en": "lived",
+            "id": "tinggal · dibaca 'livd'"
+          },
+          {
+            "en": "wanted",
+            "id": "ingin · dibaca 'WON-tid'"
+          },
+          {
+            "en": "needed",
+            "id": "butuh · dibaca 'NII-did'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan akhirannya",
+        "text": "Ucapkan setiap kata kerja dengan suara keras sebelum memilih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-regular-past",
+          "options": [
+            "cooked",
+            "waited",
+            "cleaned"
+          ],
+          "answer": 1,
+          "prompt": "Kata kerja lampau mana yang -ed-nya menambah satu ketukan, 'id'?",
+          "explanation": "**wait** berakhiran bunyi **t**, jadi -ed dibaca 'id' dan menambah satu ketukan: **WEI-tid**. *cooked* satu ketukan ('kukt'), dan *cleaned* juga satu ketukan ('kliind')."
+        }
+      },
+      {
+        "kind": "timeline",
+        "title": "Sudah selesai, sebelum sekarang",
+        "text": "Kata-kata waktu ini memberi tanda bahwa kegiatannya sudah selesai: pakai kata kerja + -ed.",
+        "timeline": {
+          "title": "Sebelum sekarang dan sekarang",
+          "caption": "last year, last month, a week ago, yesterday → kata kerja + -ed. ago dihitung mundur dari sekarang: a week ago = tujuh hari sebelum hari ini.",
+          "marks": [
+            {
+              "label": "last year",
+              "kind": "past"
+            },
+            {
+              "label": "last month",
+              "kind": "past"
+            },
+            {
+              "label": "a week ago",
+              "kind": "past"
+            },
+            {
+              "label": "yesterday",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "last atau ago?",
+        "text": "Bahasa Indonesia memakai *lalu* untuk keduanya. Bahasa Inggris punya dua kata.",
+        "body": "- **Tanpa angka** → **last**: *minggu lalu* = **last week**, *hari Minggu lalu* = **last Sunday**. Tanpa *the* dan tanpa *on* di depannya.\n- **Dengan angka** (atau *a / an*) → **ago**, sesudah lamanya waktu: *dua hari yang lalu* = **two days ago**, *sejam yang lalu* = **an hour ago**.\n\nBukan 'two years before': *before* butuh sesuatu sesudahnya (*before lunch* = sebelum makan siang). Lalu *tadi malam / kemarin malam* = **last night**, *tadi pagi* = **this morning**. Kata waktunya bisa di akhir atau di awal kalimat.",
+        "pairs": [
+          {
+            "en": "yesterday",
+            "id": "kemarin"
+          },
+          {
+            "en": "yesterday morning",
+            "id": "kemarin pagi"
+          },
+          {
+            "en": "this morning",
+            "id": "tadi pagi"
+          },
+          {
+            "en": "last night",
+            "id": "tadi malam / semalam"
+          },
+          {
+            "en": "last week",
+            "id": "minggu lalu"
+          },
+          {
+            "en": "last Sunday",
+            "id": "hari Minggu lalu"
+          },
+          {
+            "en": "two days ago",
+            "id": "dua hari yang lalu"
+          },
+          {
+            "en": "an hour ago",
+            "id": "sejam yang lalu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dalam kalimat sehari-hari",
+        "text": "Ini kata kerja -ed dan kata waktu bersama-sama.",
+        "body": "Perhatikan kata waktunya: **last weekend** (tanpa angka), **a week ago** / **an hour ago** (lamanya waktu + ago), **yesterday afternoon**.",
+        "examples": [
+          {
+            "en": "Rina stayed at home last weekend.",
+            "id": "Rina di rumah saja akhir pekan lalu."
+          },
+          {
+            "en": "My father painted the fence yesterday afternoon.",
+            "id": "Ayahku mengecat pagar kemarin sore."
+          },
+          {
+            "en": "We booked the train tickets a week ago.",
+            "id": "Kami memesan tiket kereta seminggu yang lalu."
+          },
+          {
+            "en": "It rained all day yesterday.",
+            "id": "Kemarin hujan seharian."
+          },
+          {
+            "en": "Bu Ani opened her warung an hour ago.",
+            "id": "Bu Ani membuka warungnya sejam yang lalu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Hitung mundur",
+        "text": "Hari ini hari Jumat. Hitung mundur dari sekarang.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-markers",
+          "options": [
+            "Budi visited the dentist three days ago.",
+            "Budi visited the dentist three days before.",
+            "Budi visited the dentist ago three days."
+          ],
+          "answer": 0,
+          "prompt": "Hari ini hari Jumat. Budi ke dokter gigi hari Selasa. Kalimat mana yang benar?",
+          "explanation": "Dari Selasa ke Jumat itu **tiga hari**, dihitung mundur dari sekarang, jadi: **three days ago**. **ago** ada sesudah lamanya waktu, dan *before* tidak dipakai untuk menghitung mundur dari sekarang."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina bercerita tentang akhir pekannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-markers",
+          "options": [
+            "Rina cooked rendang on last Sunday.",
+            "Rina cooked rendang last Sunday.",
+            "Rina cooked rendang Sunday ago."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang artinya 'Rina memasak rendang hari Minggu lalu'?",
+          "explanation": "Tidak ada angka, jadi *lalu* = **last**: **last Sunday**, tanpa *on* di depannya (kamu bilang *on Sunday*, tapi cukup *last Sunday*). **ago** butuh lamanya waktu: *three days ago*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Past simple (beraturan)",
+          "intro": "Kegiatan yang sudah selesai di masa lalu: kata kerja + -ed, sama untuk semua orang.",
+          "headers": [
+            "Aturan",
+            "Kata kerja",
+            "Lampau"
+          ],
+          "rows": [
+            [
+              "kebanyakan kata kerja: + ed",
+              "work",
+              "worked"
+            ],
+            [
+              "vokal + y: + ed",
+              "play",
+              "played"
+            ],
+            [
+              "berakhiran e: + d",
+              "live",
+              "lived"
+            ],
+            [
+              "konsonan + y: y → ied",
+              "study",
+              "studied"
+            ],
+            [
+              "satu ketukan, 1 vokal + 1 konsonan: gandakan",
+              "stop",
+              "stopped"
+            ],
+            [
+              "kuat di depan: cukup + ed",
+              "visit",
+              "visited"
+            ]
+          ],
+          "tips": [
+            "Ucapkan -ed sebagai **'t'** setelah p, k, f, s, sh, ch, x (worked = 'workt'), **'d'** setelah vokal dan bunyi yang bergetar (played = 'pleid'), dan **'id'**, tambah satu ketukan, hanya setelah t atau d (wanted = 'WON-tid').",
+            "**last** + night / week / month / Sunday, tanpa *the* dan tanpa *on*. Lamanya waktu + **ago**: *two days ago*, bukan 'two days before'.",
+            "Bentuknya sama untuk semua orang, dan tanpa *was*: **I walked, she walked**, bukan 'she was walk'."
+          ],
+          "examples": [
+            {
+              "en": "I worked late last night.",
+              "id": "Saya kerja sampai larut tadi malam."
+            },
+            {
+              "en": "My parents travelled to Lombok last year.",
+              "id": "Orang tuaku pergi ke Lombok tahun lalu."
+            },
+            {
+              "en": "The shop opened an hour ago.",
+              "id": "Tokonya buka sejam yang lalu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Halaman ini punya latihan tambahan, dan videonya melatih tiga bunyi -ed."
+      }
+    ]
+  }
+}

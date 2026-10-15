@@ -52,6 +52,9 @@ explanation, a table of words with how they're said, the trick to remember, and 
 - A lesson may only use grammar the learner has already met: every A0 lesson plus the lessons in its prerequisite chain
   (see the node's `prerequisiteIds` in `<level>.json`).
 - A1: no past simple (except *was/were* in its own lesson), no future forms, no perfect tenses, no comparatives.
+- A2: A0/A1 grammar plus the A2 grammar of the node's prerequisite chain only (no past simple without
+  `a2-past-simple-regular` in the chain, no *will* without `a2-will`, no present perfect before `a2-present-perfect-intro`).
+- Tense lessons (past, future) show when the action happens with a `timeline` step where it helps.
 - The node's `objectives` and their ids are fixed: teach and test exactly those. Use its `commonErrors` in teaching notes, tips
   and distractors.
 

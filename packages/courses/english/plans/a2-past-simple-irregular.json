@@ -1,0 +1,756 @@
+{
+  "en": {
+    "greeting": "Hi! You already know walked and watched. Today: the common verbs that don't take -ed, plus didn't and Did you…? Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Verbs with their own past",
+        "text": "Most verbs add -ed for the past. But the verbs we use most often have their own past form.",
+        "body": "Verbs that add -ed are **regular**: *walk → walked*. These ten are **irregular** (tidak beraturan): each has its **own past form**, and there's no rule. Learn them like new words, in pairs: *go–went, eat–ate*. Never add -ed to them (not 'goed', 'eated'). Indonesian never changes the verb (*kemarin saya pergi*), but English does: **Yesterday I went**, not 'Yesterday I go'. Say them out loud: **said** sounds like 'sed', and in **bought** the gh is silent ('bot').",
+        "pairs": [
+          {
+            "en": "go → went",
+            "id": "pergi"
+          },
+          {
+            "en": "have → had",
+            "id": "punya; makan (have lunch)"
+          },
+          {
+            "en": "get → got",
+            "id": "mendapat; sampai; bangun (get up)"
+          },
+          {
+            "en": "see → saw",
+            "id": "melihat"
+          },
+          {
+            "en": "eat → ate",
+            "id": "makan"
+          },
+          {
+            "en": "buy → bought",
+            "id": "membeli"
+          },
+          {
+            "en": "make → made",
+            "id": "membuat"
+          },
+          {
+            "en": "come → came",
+            "id": "datang"
+          },
+          {
+            "en": "take → took",
+            "id": "mengambil; naik (bus, ojek)"
+          },
+          {
+            "en": "say → said",
+            "id": "berkata, bilang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Last Sunday",
+        "text": "Here is Rina's family day out last Sunday. Spot the irregular verbs.",
+        "body": "The past form is the **same for every person**: *I got, we went, my son said*. No -ed, and no -s for he/she: *she went*, not 'she wents'. **take** is also for transport (*took a taxi* = naik taksi), and **have** is also for meals (*had dinner* = makan malam).",
+        "examples": [
+          {
+            "en": "On Sunday I got up at seven.",
+            "id": "Hari Minggu saya bangun jam tujuh."
+          },
+          {
+            "en": "We went to Ragunan Zoo.",
+            "id": "Kami pergi ke Kebun Binatang Ragunan."
+          },
+          {
+            "en": "We took a taxi from our house.",
+            "id": "Kami naik taksi dari rumah."
+          },
+          {
+            "en": "The children saw the elephants.",
+            "id": "Anak-anak melihat gajah."
+          },
+          {
+            "en": "My husband bought es kelapa for everyone.",
+            "id": "Suamiku membeli es kelapa untuk semua orang."
+          },
+          {
+            "en": "We had dinner at my mother's house and came home at nine.",
+            "id": "Kami makan malam di rumah ibuku dan pulang jam sembilan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani is back from her holiday. Which verb fits?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-common-irregular",
+          "prompt": "Complete: Bu Ani ___ a lot of photos in Bali last month.",
+          "options": [
+            "taked",
+            "took",
+            "takes"
+          ],
+          "answer": 1,
+          "explanation": "**last month** is the past, and **take** is irregular: its past is **took**. 'taked' adds -ed to an irregular verb, and 'takes' is the present."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina cooked for her friends last night.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-common-irregular",
+          "prompt": "Arrange the words: Rina membuatkan nasi goreng untuk kami.",
+          "tokens": [
+            "fried",
+            "us",
+            "Rina",
+            "for",
+            "made",
+            "rice"
+          ],
+          "solution": "Rina made fried rice for us.",
+          "explanation": "**make** is irregular: the past is **made** (not 'maked'). The order is who + verb + what + for whom: **Rina made fried rice for us.** Notice *fried rice*: the describing word comes first (nasi goreng → fried rice)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Saying no: didn't + base verb",
+        "text": "To say something didn't happen, English uses one helper word: didn't.",
+        "body": "**didn't** (= did not) + the **base verb** (kata kerja dasar, the dictionary form: *go, eat, see*): *I went* → **I didn't go**. Why not 'didn't went'? **did** is the past of *do*, so **did already shows the past**; the main verb goes back to its base. You know this from *She doesn't work* (does takes the -s). The same works for regular verbs: *didn't watch*, not 'didn't watched'. Don't just add *not* like Indonesian *tidak pergi*: 'I not went' is wrong.",
+        "pairs": [
+          {
+            "en": "went → didn't go",
+            "id": "tidak pergi"
+          },
+          {
+            "en": "ate → didn't eat",
+            "id": "tidak makan"
+          },
+          {
+            "en": "saw → didn't see",
+            "id": "tidak melihat"
+          },
+          {
+            "en": "had → didn't have",
+            "id": "tidak punya / tidak makan"
+          },
+          {
+            "en": "came → didn't come",
+            "id": "tidak datang"
+          },
+          {
+            "en": "watched → didn't watch",
+            "id": "tidak menonton"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas was late for a concert on Saturday. What happened?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "did-negatives-questions",
+          "prompt": "Which sentence means 'Dimas tidak membeli tiket'?",
+          "options": [
+            "Dimas didn't buy a ticket.",
+            "Dimas didn't bought a ticket.",
+            "Dimas not bought a ticket."
+          ],
+          "answer": 0,
+          "explanation": "**didn't + base verb**: did already shows the past, so the verb goes back to **buy**. 'didn't bought' shows the past twice, and 'not bought' is missing **did**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking with Did",
+        "text": "Questions about the past use did too.",
+        "body": "Put **Did** before the **subject** (who you ask about), then the **base verb**: *She went home.* → **Did she go home?** Not 'Did she went' (did already shows the past). With a question word, it goes first: **What did you eat?** Indonesian asks with normal order (*Kamu makan apa?*), but English needs did. Short answers use did, not the main verb: **Yes, she did.** / **No, they didn't.** Don't mix in was/were: 'Were you go…?' is wrong.",
+        "pairs": [
+          {
+            "en": "Did you go…?",
+            "id": "Apakah kamu pergi…?"
+          },
+          {
+            "en": "Did she see…?",
+            "id": "Apakah dia (perempuan) melihat…?"
+          },
+          {
+            "en": "Yes, she did.",
+            "id": "Ya."
+          },
+          {
+            "en": "No, they didn't.",
+            "id": "Tidak."
+          },
+          {
+            "en": "What did you eat?",
+            "id": "Kamu makan apa?"
+          },
+          {
+            "en": "When did they come?",
+            "id": "Kapan mereka datang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You want to ask a colleague about Sari's trip on Friday.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "did-negatives-questions",
+          "prompt": "Which question is correct?",
+          "options": [
+            "Did she took the train to Bandung?",
+            "Was she take the train to Bandung?",
+            "Did she take the train to Bandung?"
+          ],
+          "answer": 2,
+          "explanation": "**Did + subject + base verb**: **Did she take…?** 'Did she took' shows the past twice, and **was** can't go with another verb like *take*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and answer",
+        "text": "Your friend Budi asks you something. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "did-negatives-questions",
+          "listen": "Did you get my message last night?",
+          "prompt": "Listen to Budi's question. The answer is yes. Choose your short answer.",
+          "options": [
+            "Yes, I was.",
+            "Yes, I did.",
+            "Yes, she did."
+          ],
+          "answer": 1,
+          "explanation": "Budi asks **Did you get my message last night?** A **Did you…?** question is about you, so answer with **I** + **did**: **Yes, I did.** 'Yes, I was' answers a *Were you…?* question, and 'she' is someone else."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in the past forms.",
+        "flashcards": [
+          {
+            "front": "go · have · get",
+            "back": "went · had · got"
+          },
+          {
+            "front": "see · eat · buy",
+            "back": "saw · ate · bought"
+          },
+          {
+            "front": "make · come · take · say",
+            "back": "made · came · took · said"
+          },
+          {
+            "front": "Negative: He ate the cake.",
+            "back": "He didn't eat the cake. (Dia tidak makan kuenya.)"
+          },
+          {
+            "front": "Question: They had fun.",
+            "back": "Did they have fun? (Mereka senang?)"
+          },
+          {
+            "front": "Short answer (no): Did Rina call you?",
+            "back": "No, she didn't. (Tidak.)"
+          },
+          {
+            "front": "Kamu ngapain kemarin?",
+            "back": "What did you do yesterday?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · irregular past + did",
+          "intro": "Twelve common verbs with their own past form, and how to make negatives and questions with did.",
+          "headers": [
+            "Verb",
+            "Past",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "go",
+              "went",
+              "pergi"
+            ],
+            [
+              "have",
+              "had",
+              "punya; makan (have lunch)"
+            ],
+            [
+              "get",
+              "got",
+              "mendapat; sampai; bangun (get up)"
+            ],
+            [
+              "see",
+              "saw",
+              "melihat"
+            ],
+            [
+              "eat",
+              "ate",
+              "makan"
+            ],
+            [
+              "drink",
+              "drank",
+              "minum"
+            ],
+            [
+              "buy",
+              "bought",
+              "membeli"
+            ],
+            [
+              "make",
+              "made",
+              "membuat"
+            ],
+            [
+              "come",
+              "came",
+              "datang"
+            ],
+            [
+              "take",
+              "took",
+              "mengambil; naik (bus, ojek)"
+            ],
+            [
+              "say",
+              "said",
+              "berkata, bilang"
+            ],
+            [
+              "do",
+              "did",
+              "melakukan, mengerjakan"
+            ]
+          ],
+          "tips": [
+            "The past form is the same for every person, with no -ed and no -s: **I went, she went, they went**.",
+            "Negative: **didn't + base verb**: **I didn't go** (not 'didn't went'). did already shows the past.",
+            "Question: **Did + subject + base verb**: **Did you see it?** Short answers: **Yes, I did. / No, I didn't.**"
+          ],
+          "examples": [
+            {
+              "en": "I drank three cups of coffee yesterday.",
+              "id": "Kemarin saya minum tiga cangkir kopi."
+            },
+            {
+              "en": "She didn't come to class on Monday.",
+              "id": "Dia (perempuan) tidak masuk kelas hari Senin."
+            },
+            {
+              "en": "What did you do at the weekend?",
+              "id": "Kamu ngapain akhir pekan kemarin?"
+            },
+            {
+              "en": "Did they get home late? — Yes, they did.",
+              "id": "Mereka sampai rumah larut? — Ya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This page explains irregular verbs and questions with did in another way, with a short video and exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu walked dan watched. Hari ini: kata kerja umum yang tidak memakai -ed, ditambah didn't dan Did you…? Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata kerja dengan bentuk lampau sendiri",
+        "text": "Kebanyakan kata kerja ditambah -ed untuk masa lalu. Tapi kata kerja yang paling sering dipakai punya bentuk lampau sendiri.",
+        "body": "Kata kerja yang ditambah -ed disebut **regular** (beraturan): *walk → walked*. Sepuluh kata ini **irregular** (tidak beraturan): masing-masing punya **bentuk lampau sendiri**, tanpa aturan. Hafalkan seperti kosakata baru, berpasangan: *go–went, eat–ate*. Jangan pernah ditambah -ed (bukan 'goed', 'eated'). Bahasa Indonesia tidak mengubah kata kerja (*kemarin saya pergi*), tapi bahasa Inggris mengubahnya: **Yesterday I went**, bukan 'Yesterday I go'. Ucapkan keras-keras: **said** dibaca 'sed', dan di **bought** huruf gh tidak dibaca ('bot').",
+        "pairs": [
+          {
+            "en": "go → went",
+            "id": "pergi"
+          },
+          {
+            "en": "have → had",
+            "id": "punya; makan (have lunch)"
+          },
+          {
+            "en": "get → got",
+            "id": "mendapat; sampai; bangun (get up)"
+          },
+          {
+            "en": "see → saw",
+            "id": "melihat"
+          },
+          {
+            "en": "eat → ate",
+            "id": "makan"
+          },
+          {
+            "en": "buy → bought",
+            "id": "membeli"
+          },
+          {
+            "en": "make → made",
+            "id": "membuat"
+          },
+          {
+            "en": "come → came",
+            "id": "datang"
+          },
+          {
+            "en": "take → took",
+            "id": "mengambil; naik (bus, ojek)"
+          },
+          {
+            "en": "say → said",
+            "id": "berkata, bilang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Minggu lalu",
+        "text": "Ini cerita jalan-jalan keluarga Rina hari Minggu lalu. Cari kata kerja tidak beraturannya.",
+        "body": "Bentuk lampaunya **sama untuk semua orang**: *I got, we went, my son said*. Tanpa -ed, dan tanpa -s untuk he/she: *she went*, bukan 'she wents'. **take** juga dipakai untuk kendaraan (*took a taxi* = naik taksi), dan **have** juga untuk makan (*had dinner* = makan malam).",
+        "examples": [
+          {
+            "en": "On Sunday I got up at seven.",
+            "id": "Hari Minggu saya bangun jam tujuh."
+          },
+          {
+            "en": "We went to Ragunan Zoo.",
+            "id": "Kami pergi ke Kebun Binatang Ragunan."
+          },
+          {
+            "en": "We took a taxi from our house.",
+            "id": "Kami naik taksi dari rumah."
+          },
+          {
+            "en": "The children saw the elephants.",
+            "id": "Anak-anak melihat gajah."
+          },
+          {
+            "en": "My husband bought es kelapa for everyone.",
+            "id": "Suamiku membeli es kelapa untuk semua orang."
+          },
+          {
+            "en": "We had dinner at my mother's house and came home at nine.",
+            "id": "Kami makan malam di rumah ibuku dan pulang jam sembilan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani baru pulang liburan. Kata kerja mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-common-irregular",
+          "prompt": "Lengkapi: Bu Ani ___ a lot of photos in Bali last month.",
+          "options": [
+            "taked",
+            "took",
+            "takes"
+          ],
+          "answer": 1,
+          "explanation": "**last month** itu masa lalu, dan **take** tidak beraturan: bentuk lampaunya **took**. 'taked' menambah -ed pada kata kerja tidak beraturan, dan 'takes' itu bentuk sekarang."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Tadi malam Rina memasak untuk teman-temannya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-common-irregular",
+          "prompt": "Susun kata-katanya: Rina membuatkan nasi goreng untuk kami.",
+          "tokens": [
+            "fried",
+            "us",
+            "Rina",
+            "for",
+            "made",
+            "rice"
+          ],
+          "solution": "Rina made fried rice for us.",
+          "explanation": "**make** tidak beraturan: bentuk lampaunya **made** (bukan 'maked'). Urutannya siapa + kata kerja + apa + untuk siapa: **Rina made fried rice for us.** Perhatikan *fried rice*: kata sifatnya di depan (nasi goreng → fried rice)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kalimat negatif: didn't + kata kerja dasar",
+        "text": "Untuk bilang sesuatu tidak terjadi, bahasa Inggris memakai satu kata bantu: didn't.",
+        "body": "**didn't** (= did not) + **kata kerja dasar** (bentuk kamus: *go, eat, see*): *I went* → **I didn't go**. Kenapa bukan 'didn't went'? **did** adalah bentuk lampau dari *do*, jadi **did sudah menunjukkan masa lalu**; kata kerja utamanya kembali ke bentuk dasar. Kamu sudah tahu ini dari *She doesn't work* (does mengambil -s). Kata kerja beraturan juga sama: *didn't watch*, bukan 'didn't watched'. Jangan hanya menambah *not* seperti *tidak pergi*: 'I not went' itu salah.",
+        "pairs": [
+          {
+            "en": "went → didn't go",
+            "id": "tidak pergi"
+          },
+          {
+            "en": "ate → didn't eat",
+            "id": "tidak makan"
+          },
+          {
+            "en": "saw → didn't see",
+            "id": "tidak melihat"
+          },
+          {
+            "en": "had → didn't have",
+            "id": "tidak punya / tidak makan"
+          },
+          {
+            "en": "came → didn't come",
+            "id": "tidak datang"
+          },
+          {
+            "en": "watched → didn't watch",
+            "id": "tidak menonton"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas terlambat datang ke konser hari Sabtu. Apa yang terjadi?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "did-negatives-questions",
+          "prompt": "Kalimat mana yang artinya 'Dimas tidak membeli tiket'?",
+          "options": [
+            "Dimas didn't buy a ticket.",
+            "Dimas didn't bought a ticket.",
+            "Dimas not bought a ticket."
+          ],
+          "answer": 0,
+          "explanation": "**didn't + kata kerja dasar**: did sudah menunjukkan masa lalu, jadi kata kerjanya kembali ke **buy**. 'didn't bought' menunjukkan masa lalu dua kali, dan 'not bought' tidak memakai **did**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bertanya dengan Did",
+        "text": "Pertanyaan tentang masa lalu juga memakai did.",
+        "body": "Taruh **Did** di depan **subjek** (siapa yang kamu tanyakan), lalu **kata kerja dasar**: *She went home.* → **Did she go home?** Bukan 'Did she went' (did sudah menunjukkan masa lalu). Kalau ada kata tanya, kata tanyanya di depan: **What did you eat?** Bahasa Indonesia bertanya dengan urutan biasa (*Kamu makan apa?*), tapi bahasa Inggris perlu did. Jawaban singkat memakai did, bukan kata kerja utamanya: **Yes, she did.** / **No, they didn't.** Jangan dicampur dengan was/were: 'Were you go…?' itu salah.",
+        "pairs": [
+          {
+            "en": "Did you go…?",
+            "id": "Apakah kamu pergi…?"
+          },
+          {
+            "en": "Did she see…?",
+            "id": "Apakah dia (perempuan) melihat…?"
+          },
+          {
+            "en": "Yes, she did.",
+            "id": "Ya."
+          },
+          {
+            "en": "No, they didn't.",
+            "id": "Tidak."
+          },
+          {
+            "en": "What did you eat?",
+            "id": "Kamu makan apa?"
+          },
+          {
+            "en": "When did they come?",
+            "id": "Kapan mereka datang?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu ingin bertanya ke rekan kerja tentang perjalanan Sari hari Jumat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "did-negatives-questions",
+          "prompt": "Pertanyaan mana yang benar?",
+          "options": [
+            "Did she took the train to Bandung?",
+            "Was she take the train to Bandung?",
+            "Did she take the train to Bandung?"
+          ],
+          "answer": 2,
+          "explanation": "**Did + subjek + kata kerja dasar**: **Did she take…?** 'Did she took' menunjukkan masa lalu dua kali, dan **was** tidak bisa dipakai bersama kata kerja lain seperti *take*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Temanmu Budi menanyakan sesuatu. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "did-negatives-questions",
+          "listen": "Did you get my message last night?",
+          "prompt": "Dengarkan pertanyaan Budi. Jawabannya ya. Pilih jawaban singkatmu.",
+          "options": [
+            "Yes, I was.",
+            "Yes, I did.",
+            "Yes, she did."
+          ],
+          "answer": 1,
+          "explanation": "Budi bertanya **Did you get my message last night?** Pertanyaan **Did you…?** itu tentang kamu, jadi jawab dengan **I** + **did**: **Yes, I did.** 'Yes, I was' menjawab pertanyaan *Were you…?*, dan 'she' itu orang lain."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan singkat",
+        "text": "Balik kartu-kartu ini supaya bentuk lampaunya makin melekat.",
+        "flashcards": [
+          {
+            "front": "go · have · get",
+            "back": "went · had · got"
+          },
+          {
+            "front": "see · eat · buy",
+            "back": "saw · ate · bought"
+          },
+          {
+            "front": "make · come · take · say",
+            "back": "made · came · took · said"
+          },
+          {
+            "front": "Negative: He ate the cake.",
+            "back": "He didn't eat the cake. (Dia tidak makan kuenya.)"
+          },
+          {
+            "front": "Question: They had fun.",
+            "back": "Did they have fun? (Mereka senang?)"
+          },
+          {
+            "front": "Short answer (no): Did Rina call you?",
+            "back": "No, she didn't. (Tidak.)"
+          },
+          {
+            "front": "Kamu ngapain kemarin?",
+            "back": "What did you do yesterday?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · bentuk lampau tidak beraturan + did",
+          "intro": "Dua belas kata kerja umum dengan bentuk lampau sendiri, dan cara membuat kalimat negatif dan pertanyaan dengan did.",
+          "headers": [
+            "Kata kerja",
+            "Bentuk lampau",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "go",
+              "went",
+              "pergi"
+            ],
+            [
+              "have",
+              "had",
+              "punya; makan (have lunch)"
+            ],
+            [
+              "get",
+              "got",
+              "mendapat; sampai; bangun (get up)"
+            ],
+            [
+              "see",
+              "saw",
+              "melihat"
+            ],
+            [
+              "eat",
+              "ate",
+              "makan"
+            ],
+            [
+              "drink",
+              "drank",
+              "minum"
+            ],
+            [
+              "buy",
+              "bought",
+              "membeli"
+            ],
+            [
+              "make",
+              "made",
+              "membuat"
+            ],
+            [
+              "come",
+              "came",
+              "datang"
+            ],
+            [
+              "take",
+              "took",
+              "mengambil; naik (bus, ojek)"
+            ],
+            [
+              "say",
+              "said",
+              "berkata, bilang"
+            ],
+            [
+              "do",
+              "did",
+              "melakukan, mengerjakan"
+            ]
+          ],
+          "tips": [
+            "Bentuk lampaunya sama untuk semua orang, tanpa -ed dan tanpa -s: **I went, she went, they went**.",
+            "Negatif: **didn't + kata kerja dasar**: **I didn't go** (bukan 'didn't went'). did sudah menunjukkan masa lalu.",
+            "Pertanyaan: **Did + subjek + kata kerja dasar**: **Did you see it?** Jawaban singkat: **Yes, I did. / No, I didn't.**"
+          ],
+          "examples": [
+            {
+              "en": "I drank three cups of coffee yesterday.",
+              "id": "Kemarin saya minum tiga cangkir kopi."
+            },
+            {
+              "en": "She didn't come to class on Monday.",
+              "id": "Dia (perempuan) tidak masuk kelas hari Senin."
+            },
+            {
+              "en": "What did you do at the weekend?",
+              "id": "Kamu ngapain akhir pekan kemarin?"
+            },
+            {
+              "en": "Did they get home late? — Yes, they did.",
+              "id": "Mereka sampai rumah larut? — Ya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman ini menjelaskan kata kerja tidak beraturan dan pertanyaan dengan did dengan cara lain, lengkap dengan video pendek dan latihan."
+      }
+    ]
+  }
+}

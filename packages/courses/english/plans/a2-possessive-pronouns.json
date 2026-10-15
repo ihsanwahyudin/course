@@ -1,0 +1,672 @@
+{
+  "en": {
+    "greeting": "Hi! You already know my bag and Rina's phone. Today we'll learn mine, yours and theirs, ask Whose …? and write 's and s' the right way. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "my bag → mine",
+        "text": "In Indonesian you can say 'Tas ini punya saya'. English needs a special word for that.",
+        "body": "**my, your, his, her, our, their** always need a thing right after them: **my bag**. When we don't say the thing again, we use **mine, yours, his, hers, ours, theirs** with **nothing after**: *This bag is **mine***. Not 'This bag is my': **my** can't end a sentence. **his** doesn't change. No apostrophe: **yours, hers** (not 'your's').",
+        "pairs": [
+          {
+            "en": "my bag → mine",
+            "id": "tas saya → punya saya"
+          },
+          {
+            "en": "your bag → yours",
+            "id": "tasmu → punyamu"
+          },
+          {
+            "en": "his bag → his",
+            "id": "tasnya (laki-laki) → punya dia"
+          },
+          {
+            "en": "her bag → hers",
+            "id": "tasnya (perempuan) → punya dia"
+          },
+          {
+            "en": "our bag → ours",
+            "id": "tas kami → punya kami"
+          },
+          {
+            "en": "their bag → theirs",
+            "id": "tas mereka → punya mereka"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In real sentences",
+        "text": "Look: nothing comes after mine, yours, his, hers or theirs.",
+        "body": "*Mine is black* = my umbrella is black. **yours** is for one person and for a group (kamu / kalian). Careful who is talking: Budi and Sari say 'It's **ours**', but you say about them 'It's **theirs**'.",
+        "examples": [
+          {
+            "en": "That umbrella isn't mine. Mine is black.",
+            "id": "Payung itu bukan punya saya. Punya saya hitam."
+          },
+          {
+            "en": "Is this coffee yours, Bu Ani?",
+            "id": "Kopi ini punya Ibu, Bu Ani?"
+          },
+          {
+            "en": "The blue motorbike is his.",
+            "id": "Motor biru itu punya dia (laki-laki)."
+          },
+          {
+            "en": "This seat is hers.",
+            "id": "Kursi ini punya dia (perempuan)."
+          },
+          {
+            "en": "Our office is small, but theirs is big.",
+            "id": "Kantor kami kecil, tapi kantor mereka besar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "At the office, a colleague holds up a phone charger. It belongs to you.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "possessive-pronouns",
+          "options": [
+            "my",
+            "mine",
+            "mines"
+          ],
+          "answer": 1,
+          "prompt": "Is this your charger? — Yes, it's ___.",
+          "explanation": "Nothing comes after the word (the charger is already clear), so we use **mine**. **my** needs a thing after it (my charger), and **mines** doesn't exist here."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "You and your family have a white car. Someone thinks the red one is yours.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "possessive-pronouns",
+          "tokens": [
+            "ours",
+            "red",
+            "That",
+            "isn't",
+            "car"
+          ],
+          "solution": "That red car isn't ours.",
+          "prompt": "Arrange the words: Mobil merah itu bukan punya kami.",
+          "explanation": "**punya kami** with no thing after it = **ours**. The describing word comes before the thing (**red car**), and **ours** ends the sentence: **That red car isn't ours.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Whose …?",
+        "text": "Now let's ask about the owner, for one thing or many.",
+        "body": "One thing: **Whose + thing + is this?** More than one (plural): **Whose + things + are these?** Answer with a name + 's or with **mine, yours, his, hers…**: *It's Rina's.* / *They're his.* For many things, start with **They're**. **who's** sounds the same but means **who is**: *Who's that man?* Trick: if 'who is' fits the gap, write **who's**.",
+        "pairs": [
+          {
+            "en": "Whose phone is this?",
+            "id": "HP siapa ini?"
+          },
+          {
+            "en": "Whose keys are these?",
+            "id": "Kunci siapa ini? (lebih dari satu)"
+          },
+          {
+            "en": "Whose is this?",
+            "id": "Ini punya siapa?"
+          },
+          {
+            "en": "It's Rina's.",
+            "id": "Punya Rina."
+          },
+          {
+            "en": "It's mine.",
+            "id": "Punya saya."
+          },
+          {
+            "en": "They're his.",
+            "id": "Punya dia (laki-laki). (lebih dari satu benda)"
+          },
+          {
+            "en": "Who's that man?",
+            "id": "Siapa laki-laki itu? (who's = who is)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ask about the owner",
+        "text": "After prayers at the musholla, there are many shoes at the door. You want to know who they belong to.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "whose-questions",
+          "options": [
+            "Who's shoes are these?",
+            "Whose shoes are these?",
+            "Whose shoes is this?"
+          ],
+          "answer": 1,
+          "prompt": "Which question is correct?",
+          "explanation": "We ask about the owner, so **whose**. **Shoes** is more than one, so **are these**: **Whose shoes are these?** 'Who's' means 'who is', and 'is this' is for one thing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "'s or s'?",
+        "text": "Last part: one owner or more than one?",
+        "body": "**One owner**: add **'s** → *my sister's room*. **More than one**, and the word already ends in s: add only **'** → *my parents' house* (mother and father). **More than one** but no s at the end (*children, people, men, women*): add **'s** → *the children's toys*. The owner comes first: **my friend's book**, not 'the book of my friend' (*buku teman saya*). You can't hear the difference; only the writing shows it.",
+        "pairs": [
+          {
+            "en": "my friend's book",
+            "id": "buku teman saya (satu teman)"
+          },
+          {
+            "en": "my sister's room",
+            "id": "kamar saudara perempuan saya (satu orang)"
+          },
+          {
+            "en": "my parents' house",
+            "id": "rumah orang tua saya (ayah dan ibu)"
+          },
+          {
+            "en": "the teachers' room",
+            "id": "ruang guru (untuk banyak guru)"
+          },
+          {
+            "en": "the children's toys",
+            "id": "mainan anak-anak"
+          },
+          {
+            "en": "the women's toilet",
+            "id": "toilet perempuan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina has two brothers. They share one bedroom. Rina shows you the door.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "apostrophe-s",
+          "options": [
+            "brother's",
+            "brothers'",
+            "brothers"
+          ],
+          "answer": 1,
+          "prompt": "Rina says: 'This is my ___ room.'",
+          "explanation": "Two brothers = more than one owner, and **brothers** already ends in s, so add only **'**: **my brothers' room**. **brother's** means only one brother, and **brothers** without ' doesn't show the owner."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your friend's kids share a bedroom. It's not very big.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "apostrophe-s",
+          "tokens": [
+            "room",
+            "is",
+            "The",
+            "small",
+            "children's"
+          ],
+          "solution": "The children's room is small.",
+          "prompt": "Arrange the words: Kamar anak-anak kecil.",
+          "explanation": "The owners come first: **children** is more than one but doesn't end in s, so it takes **'s**: **the children's room**. Then **is small**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards to remember the forms.",
+        "flashcards": [
+          {
+            "front": "Tas ini punya saya.",
+            "back": "This bag is mine."
+          },
+          {
+            "front": "your → (no thing after)",
+            "back": "yours (not your's)"
+          },
+          {
+            "front": "our → (no thing after)",
+            "back": "ours"
+          },
+          {
+            "front": "their → (no thing after)",
+            "back": "theirs"
+          },
+          {
+            "front": "Kunci siapa ini? (lebih dari satu)",
+            "back": "Whose keys are these?"
+          },
+          {
+            "front": "who's = ?",
+            "back": "who is (not whose)"
+          },
+          {
+            "front": "rumah orang tua saya (ayah dan ibu)",
+            "back": "my parents' house"
+          },
+          {
+            "front": "Fix it: the book of my friend",
+            "back": "my friend's book"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · mine, whose, 's and s'",
+          "intro": "With a thing after it: my, your, his… With nothing after it: mine, yours, his… Plus Whose …? and where to put the apostrophe (').",
+          "headers": [
+            "+ thing",
+            "No thing after",
+            "Example"
+          ],
+          "rows": [
+            [
+              "my",
+              "mine",
+              "It's mine."
+            ],
+            [
+              "your",
+              "yours",
+              "Is this yours?"
+            ],
+            [
+              "his",
+              "his",
+              "The blue bike is his."
+            ],
+            [
+              "her",
+              "hers",
+              "This seat is hers."
+            ],
+            [
+              "our",
+              "ours",
+              "The car is ours."
+            ],
+            [
+              "their",
+              "theirs",
+              "That house is theirs."
+            ]
+          ],
+          "tips": [
+            "**This bag is mine**, not 'This bag is my'. No apostrophe in **yours, hers, ours, theirs**.",
+            "**Whose bag is this?** / **Whose keys are these?** — **who's** = who is.",
+            "One owner **'s** (my sister's), more than one **s'** (my parents'), but **children's, people's, men's, women's**."
+          ],
+          "examples": [
+            {
+              "en": "Whose phone is this? — It's Rina's.",
+              "id": "HP siapa ini? — Punya Rina."
+            },
+            {
+              "en": "Whose glasses are these? — They're his.",
+              "id": "Kacamata siapa ini? — Punya dia (laki-laki)."
+            },
+            {
+              "en": "My parents' house is in Bandung.",
+              "id": "Rumah orang tua saya di Bandung."
+            },
+            {
+              "en": "Where is the women's toilet?",
+              "id": "Toilet perempuan di mana?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and these pages explain mine/yours and 's/s' in a different way, with exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah tahu my bag dan Rina's phone. Hari ini kita belajar mine, yours dan theirs, bertanya Whose …?, dan menulis 's dan s' dengan benar. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "my bag → mine",
+        "text": "Dalam bahasa Indonesia kamu bisa bilang 'Tas ini punya saya'. Bahasa Inggris butuh kata khusus untuk itu.",
+        "body": "**my, your, his, her, our, their** selalu harus langsung diikuti benda: **my bag**. Kalau bendanya tidak disebut lagi, pakai **mine, yours, his, hers, ours, theirs** **tanpa kata sesudahnya**: *This bag is **mine***. Bukan 'This bag is my': **my** tidak bisa jadi akhir kalimat. **his** tidak berubah. Tanpa apostrof: **yours, hers** (bukan 'your's').",
+        "pairs": [
+          {
+            "en": "my bag → mine",
+            "id": "tas saya → punya saya"
+          },
+          {
+            "en": "your bag → yours",
+            "id": "tasmu → punyamu"
+          },
+          {
+            "en": "his bag → his",
+            "id": "tasnya (laki-laki) → punya dia"
+          },
+          {
+            "en": "her bag → hers",
+            "id": "tasnya (perempuan) → punya dia"
+          },
+          {
+            "en": "our bag → ours",
+            "id": "tas kami → punya kami"
+          },
+          {
+            "en": "their bag → theirs",
+            "id": "tas mereka → punya mereka"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dalam kalimat nyata",
+        "text": "Perhatikan: tidak ada kata sesudah mine, yours, his, hers atau theirs.",
+        "body": "*Mine is black* = payung saya hitam. **yours** dipakai untuk satu orang dan untuk banyak orang (kamu / kalian). Perhatikan siapa yang bicara: Budi dan Sari bilang 'It's **ours**' (punya kami), tapi kamu bilang tentang mereka 'It's **theirs**' (punya mereka).",
+        "examples": [
+          {
+            "en": "That umbrella isn't mine. Mine is black.",
+            "id": "Payung itu bukan punya saya. Punya saya hitam."
+          },
+          {
+            "en": "Is this coffee yours, Bu Ani?",
+            "id": "Kopi ini punya Ibu, Bu Ani?"
+          },
+          {
+            "en": "The blue motorbike is his.",
+            "id": "Motor biru itu punya dia (laki-laki)."
+          },
+          {
+            "en": "This seat is hers.",
+            "id": "Kursi ini punya dia (perempuan)."
+          },
+          {
+            "en": "Our office is small, but theirs is big.",
+            "id": "Kantor kami kecil, tapi kantor mereka besar."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Di kantor, rekan kerjamu mengangkat sebuah charger HP. Itu punyamu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "possessive-pronouns",
+          "options": [
+            "my",
+            "mine",
+            "mines"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Is this your charger? — Yes, it's ___.",
+          "explanation": "Tidak ada kata sesudahnya (chargernya sudah jelas), jadi kita pakai **mine**. **my** harus diikuti benda (my charger), dan **mines** tidak dipakai di sini."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kamu dan keluargamu punya mobil putih. Ada yang mengira mobil merah itu punya kalian.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "possessive-pronouns",
+          "tokens": [
+            "ours",
+            "red",
+            "That",
+            "isn't",
+            "car"
+          ],
+          "solution": "That red car isn't ours.",
+          "prompt": "Susun kata-katanya: Mobil merah itu bukan punya kami.",
+          "explanation": "**punya kami** tanpa benda sesudahnya = **ours**. Kata sifat ada sebelum bendanya (**red car**), dan **ours** ada di akhir kalimat: **That red car isn't ours.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Whose …?",
+        "text": "Sekarang kita bertanya tentang pemiliknya, untuk satu benda atau banyak.",
+        "body": "Satu benda: **Whose + benda + is this?** Lebih dari satu (jamak): **Whose + benda + are these?** Jawab dengan nama + 's atau dengan **mine, yours, his, hers…**: *It's Rina's.* / *They're his.* Untuk banyak benda, awali dengan **They're**. **who's** bunyinya sama tapi artinya **who is**: *Who's that man?* Trik: kalau 'who is' cocok di tempat kosong, tulis **who's**.",
+        "pairs": [
+          {
+            "en": "Whose phone is this?",
+            "id": "HP siapa ini?"
+          },
+          {
+            "en": "Whose keys are these?",
+            "id": "Kunci siapa ini? (lebih dari satu)"
+          },
+          {
+            "en": "Whose is this?",
+            "id": "Ini punya siapa?"
+          },
+          {
+            "en": "It's Rina's.",
+            "id": "Punya Rina."
+          },
+          {
+            "en": "It's mine.",
+            "id": "Punya saya."
+          },
+          {
+            "en": "They're his.",
+            "id": "Punya dia (laki-laki). (lebih dari satu benda)"
+          },
+          {
+            "en": "Who's that man?",
+            "id": "Siapa laki-laki itu? (who's = who is)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tanyakan pemiliknya",
+        "text": "Selesai salat di musala, ada banyak sepatu di depan pintu. Kamu ingin tahu sepatu itu punya siapa.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "whose-questions",
+          "options": [
+            "Who's shoes are these?",
+            "Whose shoes are these?",
+            "Whose shoes is this?"
+          ],
+          "answer": 1,
+          "prompt": "Pertanyaan mana yang benar?",
+          "explanation": "Kita menanyakan pemiliknya, jadi **whose**. **Shoes** lebih dari satu, jadi **are these**: **Whose shoes are these?** 'Who's' artinya 'who is', dan 'is this' untuk satu benda."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "'s atau s'?",
+        "text": "Bagian terakhir: pemiliknya satu atau lebih dari satu?",
+        "body": "**Satu pemilik**: tambahkan **'s** → *my sister's room*. **Lebih dari satu**, dan katanya sudah berakhiran s: tambahkan **'** saja → *my parents' house* (ayah dan ibu). **Lebih dari satu** tapi tidak berakhiran s (*children, people, men, women*): tambahkan **'s** → *the children's toys*. Pemilik di depan: **my friend's book**, bukan 'the book of my friend' (*buku teman saya*). Bedanya tidak terdengar; hanya tulisannya yang menunjukkan.",
+        "pairs": [
+          {
+            "en": "my friend's book",
+            "id": "buku teman saya (satu teman)"
+          },
+          {
+            "en": "my sister's room",
+            "id": "kamar saudara perempuan saya (satu orang)"
+          },
+          {
+            "en": "my parents' house",
+            "id": "rumah orang tua saya (ayah dan ibu)"
+          },
+          {
+            "en": "the teachers' room",
+            "id": "ruang guru (untuk banyak guru)"
+          },
+          {
+            "en": "the children's toys",
+            "id": "mainan anak-anak"
+          },
+          {
+            "en": "the women's toilet",
+            "id": "toilet perempuan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina punya dua saudara laki-laki. Mereka tidur di satu kamar. Rina menunjukkan pintunya kepadamu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "apostrophe-s",
+          "options": [
+            "brother's",
+            "brothers'",
+            "brothers"
+          ],
+          "answer": 1,
+          "prompt": "Rina bilang: 'This is my ___ room.'",
+          "explanation": "Dua saudara = pemiliknya lebih dari satu, dan **brothers** sudah berakhiran s, jadi tambahkan **'** saja: **my brothers' room**. **brother's** artinya hanya satu saudara, dan **brothers** tanpa ' tidak menunjukkan pemilik."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Anak-anak temanmu tidur di satu kamar. Kamarnya tidak terlalu besar.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "apostrophe-s",
+          "tokens": [
+            "room",
+            "is",
+            "The",
+            "small",
+            "children's"
+          ],
+          "solution": "The children's room is small.",
+          "prompt": "Susun kata-katanya: Kamar anak-anak kecil.",
+          "explanation": "Pemiliknya di depan: **children** artinya lebih dari satu tapi tidak berakhiran s, jadi pakai **'s**: **the children's room**. Lalu **is small**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartunya untuk mengingat bentuk-bentuknya.",
+        "flashcards": [
+          {
+            "front": "Tas ini punya saya.",
+            "back": "This bag is mine."
+          },
+          {
+            "front": "your → (no thing after)",
+            "back": "yours (not your's)"
+          },
+          {
+            "front": "our → (no thing after)",
+            "back": "ours"
+          },
+          {
+            "front": "their → (no thing after)",
+            "back": "theirs"
+          },
+          {
+            "front": "Kunci siapa ini? (lebih dari satu)",
+            "back": "Whose keys are these?"
+          },
+          {
+            "front": "who's = ?",
+            "back": "who is (not whose)"
+          },
+          {
+            "front": "rumah orang tua saya (ayah dan ibu)",
+            "back": "my parents' house"
+          },
+          {
+            "front": "Fix it: the book of my friend",
+            "back": "my friend's book"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Contekan · mine, whose, 's dan s'",
+          "intro": "Diikuti benda: my, your, his… Tanpa benda sesudahnya: mine, yours, his… Ditambah Whose …? dan letak apostrof (').",
+          "headers": [
+            "+ benda",
+            "Tanpa benda",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "my",
+              "mine",
+              "It's mine."
+            ],
+            [
+              "your",
+              "yours",
+              "Is this yours?"
+            ],
+            [
+              "his",
+              "his",
+              "The blue bike is his."
+            ],
+            [
+              "her",
+              "hers",
+              "This seat is hers."
+            ],
+            [
+              "our",
+              "ours",
+              "The car is ours."
+            ],
+            [
+              "their",
+              "theirs",
+              "That house is theirs."
+            ]
+          ],
+          "tips": [
+            "**This bag is mine**, bukan 'This bag is my'. Tanpa apostrof di **yours, hers, ours, theirs**.",
+            "**Whose bag is this?** / **Whose keys are these?** — **who's** = who is.",
+            "Satu pemilik **'s** (my sister's), lebih dari satu **s'** (my parents'), tapi **children's, people's, men's, women's**."
+          ],
+          "examples": [
+            {
+              "en": "Whose phone is this? — It's Rina's.",
+              "id": "HP siapa ini? — Punya Rina."
+            },
+            {
+              "en": "Whose glasses are these? — They're his.",
+              "id": "Kacamata siapa ini? — Punya dia (laki-laki)."
+            },
+            {
+              "en": "My parents' house is in Bandung.",
+              "id": "Rumah orang tua saya di Bandung."
+            },
+            {
+              "en": "Where is the women's toilet?",
+              "id": "Toilet perempuan di mana?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Video dan halaman ini menjelaskan mine/yours dan 's/s' dengan cara lain, lengkap dengan latihan."
+      }
+    ]
+  }
+}

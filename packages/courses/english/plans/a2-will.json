@@ -1,0 +1,674 @@
+{
+  "en": {
+    "greeting": "Hi! Today we meet will: one small word for guessing the future, offering help, making promises and deciding things on the spot. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "will + verb",
+        "text": "You know going to for plans. Now meet its partner, **will**.",
+        "body": "After **will**, use the **base form** of the verb (the verb as in the dictionary): **no to**, **no -ing**, **no -s**. *I will call*, *she will call*: the same for every **subject** (who does it: *I, Rina, my parents*). **am/is/are** become **be**: *It will be hot*, not 'It will is hot'. When speaking, **will → 'll** (*I'll, she'll*). **will not → won't**: an exception (not 'willn't'). Say it like *don't* with a w ('wount'), not like *want* (mau).",
+        "pairs": [
+          {
+            "en": "I'll",
+            "id": "saya akan (= I will)"
+          },
+          {
+            "en": "you'll",
+            "id": "kamu akan"
+          },
+          {
+            "en": "he'll",
+            "id": "dia (laki-laki) akan"
+          },
+          {
+            "en": "she'll",
+            "id": "dia (perempuan) akan"
+          },
+          {
+            "en": "it'll",
+            "id": "itu akan"
+          },
+          {
+            "en": "we'll",
+            "id": "kami / kita akan"
+          },
+          {
+            "en": "they'll",
+            "id": "mereka akan"
+          },
+          {
+            "en": "won't",
+            "id": "tidak akan (= will not)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Guessing the future",
+        "text": "A **prediction** is what you think will happen. Start with **I think**, **Maybe** or **I'm sure**.",
+        "body": "**Maybe** goes at the start. *I don't think Budi will come* sounds more natural than *I think Budi won't come*: English puts the *not* on *think*, even though Indonesian says *Saya rasa Budi tidak akan datang*.",
+        "examples": [
+          {
+            "en": "I think it will rain this afternoon.",
+            "id": "Saya rasa nanti sore akan hujan."
+          },
+          {
+            "en": "Maybe the bus will be late.",
+            "id": "Mungkin busnya akan terlambat."
+          },
+          {
+            "en": "I'm sure you'll like Bandung.",
+            "id": "Saya yakin kamu akan suka Bandung."
+          },
+          {
+            "en": "Jakarta will be very hot tomorrow.",
+            "id": "Besok Jakarta akan sangat panas."
+          },
+          {
+            "en": "I don't think Budi will come to the party.",
+            "id": "Saya rasa Budi tidak akan datang ke pesta."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Make a prediction about Rina.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "predictions",
+          "prompt": "Rina is sick today. Complete: I think she ___ at home tomorrow.",
+          "options": [
+            "will stays",
+            "will stay",
+            "will staying"
+          ],
+          "answer": 1,
+          "explanation": "After **will**, always use the base form: **will stay**. No -s, even with *she* ('will stays'), and no -ing ('will staying')."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Offers and promises",
+        "text": "**will** also helps people. Offer help, or give your word.",
+        "body": "**Offer** (menawarkan bantuan): you see a problem and say **I'll** + verb: *You're busy? I'll help you.* **Promise** (janji): **I'll** … or **I won't** …, and **I promise** makes it stronger. Indonesian trap: we say *Nanti saya telepon* or *Biar saya yang bayar* with no *akan*, so learners say 'I call you later'. In English, offers and promises need will: **I'll call you later. I'll pay.**",
+        "pairs": [
+          {
+            "en": "I'll help you.",
+            "id": "Saya bantu, ya."
+          },
+          {
+            "en": "I'll pay.",
+            "id": "Biar saya yang bayar."
+          },
+          {
+            "en": "I'll call you later.",
+            "id": "Nanti saya telepon."
+          },
+          {
+            "en": "I won't forget.",
+            "id": "Saya tidak akan lupa."
+          },
+          {
+            "en": "I promise.",
+            "id": "Saya janji."
+          },
+          {
+            "en": "Don't worry.",
+            "id": "Jangan khawatir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the promise",
+        "text": "You arrive at the office at 9:30. Your boss is not happy.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "offers-promises",
+          "prompt": "Arrange the words: Saya tidak akan terlambat lagi.",
+          "tokens": [
+            "late",
+            "won't",
+            "again",
+            "I",
+            "be"
+          ],
+          "solution": "I won't be late again.",
+          "explanation": "A promise with **won't** (will not) + the base form **be**: you need *be* before *late*, like *I am late* now. **again** goes at the end."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Deciding right now",
+        "text": "Use **will** when you decide **at the moment you speak**: something happens, and you choose what to do.",
+        "body": "The phone is ringing → *I'll answer it.* Your friend says *There's no sugar* → *Oh, I'll buy some.* At a warung, you look at the menu → *I'll have the soto ayam, please.* Indonesian trap: we say *Saya angkat* or *Saya beli* with no future word, but English needs **'ll** here: 'The phone's ringing. I answer it' is wrong.",
+        "pairs": [
+          {
+            "en": "I'll answer it.",
+            "id": "Saya angkat."
+          },
+          {
+            "en": "I'll buy some.",
+            "id": "Saya beli."
+          },
+          {
+            "en": "I'll have the soto ayam, please.",
+            "id": "Saya pesan soto ayam, ya."
+          },
+          {
+            "en": "I'll ask Pak Hasan.",
+            "id": "Saya tanya Pak Hasan."
+          },
+          {
+            "en": "I'll take a taxi.",
+            "id": "Saya naik taksi saja."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're buying a shirt at a shop in Bandung.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spontaneous-decisions",
+          "prompt": "Shop assistant: 'The blue shirt is Rp150.000 and the white one is Rp120.000.' You: 'Hmm… ___ the white one, please.'",
+          "options": [
+            "I take",
+            "I'll take",
+            "I will to take"
+          ],
+          "answer": 1,
+          "explanation": "You look at the prices and decide **now**, so use **will**: **I'll take the white one.** 'I take' is *saya ambil* word by word, with no future, and there's never *to* after will."
+        }
+      },
+      {
+        "kind": "timeline",
+        "title": "Now or before?",
+        "text": "Indonesian **akan** covers both will and going to. So don't look at the Indonesian word: look at **when you decide**.",
+        "timeline": {
+          "title": "When do you decide?",
+          "caption": "Plan from before (you already have the tickets) → going to. Decision right now (the phone is ringing) → will. Both talk about later.",
+          "marks": [
+            {
+              "label": "before: you make a plan → going to",
+              "kind": "past"
+            },
+            {
+              "label": "now: you decide → will",
+              "kind": "now"
+            },
+            {
+              "label": "later: you do it",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Plan or new decision?",
+        "text": "Budi sees plane tickets in Rina's hand.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spontaneous-decisions",
+          "prompt": "Budi: 'Wow! What are these for?' Rina: 'I ___ my aunt in Bali next month.'",
+          "options": [
+            "will to visit",
+            "am going to visit",
+            "visit"
+          ],
+          "answer": 1,
+          "explanation": "Rina already has the tickets: the plan is **from before**, so use **going to**: *I'm going to visit my aunt.* (**will** is for deciding at this moment, and it never takes *to*.) 'I visit' doesn't show the future."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in will.",
+        "flashcards": [
+          {
+            "front": "will + ? (no to, no -ing, no -s)",
+            "back": "the base form: will go, will be, will call (bentuk dasar)"
+          },
+          {
+            "front": "will not (short form)",
+            "back": "won't (tidak akan), said like 'don't' with a w"
+          },
+          {
+            "front": "Prediction: Saya rasa besok akan cerah.",
+            "back": "I think it will be sunny tomorrow."
+          },
+          {
+            "front": "Offer: Saya bantu, ya.",
+            "back": "I'll help you."
+          },
+          {
+            "front": "Promise: Saya janji tidak akan lupa.",
+            "back": "I promise I won't forget. (Saya janji tidak akan lupa.)"
+          },
+          {
+            "front": "Decision now: HP-nya bunyi. Saya angkat.",
+            "back": "The phone's ringing. I'll answer it."
+          },
+          {
+            "front": "Plan from before: I have the tickets. We ___ (watch) the film on Saturday.",
+            "back": "We're going to watch the film on Saturday. (rencana dari sebelumnya)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · will",
+          "intro": "will + base form, for predictions, offers, promises and decisions made right now.",
+          "headers": [
+            "Use",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Prediction",
+              "I think it will rain.",
+              "Saya rasa akan hujan."
+            ],
+            [
+              "Prediction (no)",
+              "I don't think Budi will come.",
+              "Saya rasa Budi tidak akan datang."
+            ],
+            [
+              "Offer",
+              "I'll help you.",
+              "Saya bantu, ya."
+            ],
+            [
+              "Promise",
+              "I'll call you tonight.",
+              "Nanti malam saya telepon."
+            ],
+            [
+              "Promise (no)",
+              "I won't forget.",
+              "Saya tidak akan lupa."
+            ],
+            [
+              "Decision now",
+              "The phone's ringing. I'll answer it.",
+              "HP-nya bunyi. Saya angkat."
+            ],
+            [
+              "Plan from before",
+              "I have the tickets. I'm going to watch the film.",
+              "Saya sudah punya tiketnya. Saya akan nonton filmnya."
+            ]
+          ],
+          "tips": [
+            "After **will**: base form, no to, no -ing, no -s. **am/is/are → be**: *It will be hot.*",
+            "**'ll** = will, **won't** = will not (say it like *don't* with a w, not like *want*).",
+            "**akan** covers both: decide now → **will**; plan from before → **going to**. Offers, promises and quick decisions need **'ll** even when Indonesian has no *akan*."
+          ],
+          "examples": [
+            {
+              "en": "Maybe she'll be late.",
+              "id": "Mungkin dia akan terlambat."
+            },
+            {
+              "en": "I'll have the soto ayam, please.",
+              "id": "Saya pesan soto ayam, ya."
+            },
+            {
+              "en": "I promise I'll pay you tomorrow.",
+              "id": "Saya janji besok saya bayar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and this page explain will in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita berkenalan dengan will: satu kata kecil untuk menebak masa depan, menawarkan bantuan, berjanji, dan memutuskan sesuatu saat itu juga. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "will + kata kerja",
+        "text": "Kamu sudah tahu going to untuk rencana. Sekarang kenalan dengan pasangannya, **will**.",
+        "body": "Setelah **will**, pakai **bentuk dasar** kata kerja (kata kerja seperti di kamus): **tanpa to**, **tanpa -ing**, **tanpa -s**. *I will call*, *she will call*: sama untuk semua **subjek** (siapa yang melakukan: *I, Rina, my parents*). **am/is/are** menjadi **be**: *It will be hot*, bukan 'It will is hot'. Saat bicara, **will → 'll** (*I'll, she'll*). **will not → won't**: ini pengecualian (bukan 'willn't'). Ucapkan seperti *don't* dengan w ('wount'), bukan seperti *want* (mau).",
+        "pairs": [
+          {
+            "en": "I'll",
+            "id": "saya akan (= I will)"
+          },
+          {
+            "en": "you'll",
+            "id": "kamu akan"
+          },
+          {
+            "en": "he'll",
+            "id": "dia (laki-laki) akan"
+          },
+          {
+            "en": "she'll",
+            "id": "dia (perempuan) akan"
+          },
+          {
+            "en": "it'll",
+            "id": "itu akan"
+          },
+          {
+            "en": "we'll",
+            "id": "kami / kita akan"
+          },
+          {
+            "en": "they'll",
+            "id": "mereka akan"
+          },
+          {
+            "en": "won't",
+            "id": "tidak akan (= will not)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Menebak masa depan",
+        "text": "**Prediksi** adalah apa yang menurutmu akan terjadi. Awali dengan **I think** (saya rasa), **Maybe** (mungkin) atau **I'm sure** (saya yakin).",
+        "body": "**Maybe** ditaruh di awal kalimat. *I don't think Budi will come* terdengar lebih alami daripada *I think Budi won't come*: bahasa Inggris menaruh *not* pada *think*, walaupun bahasa Indonesia bilang *Saya rasa Budi tidak akan datang*.",
+        "examples": [
+          {
+            "en": "I think it will rain this afternoon.",
+            "id": "Saya rasa nanti sore akan hujan."
+          },
+          {
+            "en": "Maybe the bus will be late.",
+            "id": "Mungkin busnya akan terlambat."
+          },
+          {
+            "en": "I'm sure you'll like Bandung.",
+            "id": "Saya yakin kamu akan suka Bandung."
+          },
+          {
+            "en": "Jakarta will be very hot tomorrow.",
+            "id": "Besok Jakarta akan sangat panas."
+          },
+          {
+            "en": "I don't think Budi will come to the party.",
+            "id": "Saya rasa Budi tidak akan datang ke pesta."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Buat prediksi tentang Rina.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "predictions",
+          "prompt": "Rina sakit hari ini. Lengkapi: I think she ___ at home tomorrow.",
+          "options": [
+            "will stays",
+            "will stay",
+            "will staying"
+          ],
+          "answer": 1,
+          "explanation": "Setelah **will**, selalu pakai bentuk dasar: **will stay**. Tanpa -s, walaupun subjeknya *she* ('will stays'), dan tanpa -ing ('will staying')."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menawarkan bantuan dan berjanji",
+        "text": "**will** juga dipakai untuk membantu orang. Tawarkan bantuan, atau berikan janjimu.",
+        "body": "**Offer** (menawarkan bantuan): kamu melihat ada masalah dan bilang **I'll** + kata kerja: *You're busy? I'll help you.* **Promise** (janji): **I'll** … atau **I won't** …, dan **I promise** membuatnya lebih kuat. Jebakan bahasa Indonesia: kita bilang *Nanti saya telepon* atau *Biar saya yang bayar* tanpa *akan*, jadi pelajar bilang 'I call you later'. Dalam bahasa Inggris, tawaran dan janji butuh will: **I'll call you later. I'll pay.**",
+        "pairs": [
+          {
+            "en": "I'll help you.",
+            "id": "Saya bantu, ya."
+          },
+          {
+            "en": "I'll pay.",
+            "id": "Biar saya yang bayar."
+          },
+          {
+            "en": "I'll call you later.",
+            "id": "Nanti saya telepon."
+          },
+          {
+            "en": "I won't forget.",
+            "id": "Saya tidak akan lupa."
+          },
+          {
+            "en": "I promise.",
+            "id": "Saya janji."
+          },
+          {
+            "en": "Don't worry.",
+            "id": "Jangan khawatir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun janjinya",
+        "text": "Kamu sampai di kantor jam 9.30. Atasanmu tidak senang.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "offers-promises",
+          "prompt": "Susun kata-katanya: Saya tidak akan terlambat lagi.",
+          "tokens": [
+            "late",
+            "won't",
+            "again",
+            "I",
+            "be"
+          ],
+          "solution": "I won't be late again.",
+          "explanation": "Janji dengan **won't** (will not) + bentuk dasar **be**: kamu butuh *be* sebelum *late*, seperti *I am late* untuk sekarang. **again** ditaruh di akhir."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Memutuskan saat itu juga",
+        "text": "Pakai **will** saat kamu memutuskan **tepat saat berbicara**: sesuatu terjadi, lalu kamu memilih apa yang mau kamu lakukan.",
+        "body": "HP berdering → *I'll answer it.* Temanmu bilang *There's no sugar* → *Oh, I'll buy some.* Di warung, kamu melihat menu → *I'll have the soto ayam, please.* Jebakan bahasa Indonesia: kita bilang *Saya angkat* atau *Saya beli* tanpa kata masa depan, tapi bahasa Inggris butuh **'ll** di sini: 'The phone's ringing. I answer it' itu salah.",
+        "pairs": [
+          {
+            "en": "I'll answer it.",
+            "id": "Saya angkat."
+          },
+          {
+            "en": "I'll buy some.",
+            "id": "Saya beli."
+          },
+          {
+            "en": "I'll have the soto ayam, please.",
+            "id": "Saya pesan soto ayam, ya."
+          },
+          {
+            "en": "I'll ask Pak Hasan.",
+            "id": "Saya tanya Pak Hasan."
+          },
+          {
+            "en": "I'll take a taxi.",
+            "id": "Saya naik taksi saja."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu sedang membeli kemeja di sebuah toko di Bandung.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spontaneous-decisions",
+          "prompt": "Pramuniaga: 'The blue shirt is Rp150.000 and the white one is Rp120.000.' Kamu: 'Hmm… ___ the white one, please.'",
+          "options": [
+            "I take",
+            "I'll take",
+            "I will to take"
+          ],
+          "answer": 1,
+          "explanation": "Kamu melihat harganya lalu memutuskan **sekarang**, jadi pakai **will**: **I'll take the white one.** 'I take' adalah terjemahan kata per kata dari *saya ambil*, tanpa masa depan, dan setelah will tidak pernah ada *to*."
+        }
+      },
+      {
+        "kind": "timeline",
+        "title": "Sekarang atau sebelumnya?",
+        "text": "Kata **akan** dalam bahasa Indonesia mencakup will dan going to. Jadi jangan lihat kata Indonesianya: lihat **kapan kamu memutuskan**.",
+        "timeline": {
+          "title": "Kapan kamu memutuskan?",
+          "caption": "Rencana dari sebelumnya (kamu sudah punya tiketnya) → going to. Keputusan saat ini juga (HP sedang berdering) → will. Keduanya membicarakan nanti.",
+          "marks": [
+            {
+              "label": "sebelumnya: kamu membuat rencana → going to",
+              "kind": "past"
+            },
+            {
+              "label": "sekarang: kamu memutuskan → will",
+              "kind": "now"
+            },
+            {
+              "label": "nanti: kamu melakukannya",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Rencana atau keputusan baru?",
+        "text": "Budi melihat tiket pesawat di tangan Rina.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spontaneous-decisions",
+          "prompt": "Budi: 'Wow! What are these for?' Rina: 'I ___ my aunt in Bali next month.'",
+          "options": [
+            "will to visit",
+            "am going to visit",
+            "visit"
+          ],
+          "answer": 1,
+          "explanation": "Rina sudah punya tiketnya: rencananya **dari sebelumnya**, jadi pakai **going to**: *I'm going to visit my aunt.* (**will** untuk keputusan saat itu juga, dan tidak pernah diikuti *to*.) 'I visit' tidak menunjukkan masa depan."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan singkat",
+        "text": "Balik kartu-kartu ini supaya will makin melekat.",
+        "flashcards": [
+          {
+            "front": "will + ? (tanpa to, tanpa -ing, tanpa -s)",
+            "back": "the base form: will go, will be, will call (bentuk dasar)"
+          },
+          {
+            "front": "will not (bentuk pendek)",
+            "back": "won't (tidak akan), said like 'don't' with a w"
+          },
+          {
+            "front": "Prediksi: Saya rasa besok akan cerah.",
+            "back": "I think it will be sunny tomorrow."
+          },
+          {
+            "front": "Tawaran: Saya bantu, ya.",
+            "back": "I'll help you."
+          },
+          {
+            "front": "Janji: Saya janji tidak akan lupa.",
+            "back": "I promise I won't forget. (Saya janji tidak akan lupa.)"
+          },
+          {
+            "front": "Keputusan saat ini: HP-nya bunyi. Saya angkat.",
+            "back": "The phone's ringing. I'll answer it."
+          },
+          {
+            "front": "Rencana dari sebelumnya: I have the tickets. We ___ (watch) the film on Saturday.",
+            "back": "We're going to watch the film on Saturday. (rencana dari sebelumnya)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · will",
+          "intro": "will + bentuk dasar, untuk prediksi, tawaran, janji, dan keputusan yang diambil saat itu juga.",
+          "headers": [
+            "Pemakaian",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Prediksi",
+              "I think it will rain.",
+              "Saya rasa akan hujan."
+            ],
+            [
+              "Prediksi (tidak)",
+              "I don't think Budi will come.",
+              "Saya rasa Budi tidak akan datang."
+            ],
+            [
+              "Tawaran",
+              "I'll help you.",
+              "Saya bantu, ya."
+            ],
+            [
+              "Janji",
+              "I'll call you tonight.",
+              "Nanti malam saya telepon."
+            ],
+            [
+              "Janji (tidak)",
+              "I won't forget.",
+              "Saya tidak akan lupa."
+            ],
+            [
+              "Keputusan saat ini",
+              "The phone's ringing. I'll answer it.",
+              "HP-nya bunyi. Saya angkat."
+            ],
+            [
+              "Rencana dari sebelumnya",
+              "I have the tickets. I'm going to watch the film.",
+              "Saya sudah punya tiketnya. Saya akan nonton filmnya."
+            ]
+          ],
+          "tips": [
+            "Setelah **will**: bentuk dasar, tanpa to, tanpa -ing, tanpa -s. **am/is/are → be**: *It will be hot.*",
+            "**'ll** = will, **won't** = will not (ucapkan seperti *don't* dengan w, bukan seperti *want*).",
+            "**akan** mencakup keduanya: memutuskan sekarang → **will**; rencana dari sebelumnya → **going to**. Tawaran, janji, dan keputusan cepat butuh **'ll** walaupun bahasa Indonesia tidak memakai *akan*."
+          ],
+          "examples": [
+            {
+              "en": "Maybe she'll be late.",
+              "id": "Mungkin dia akan terlambat."
+            },
+            {
+              "en": "I'll have the soto ayam, please.",
+              "id": "Saya pesan soto ayam, ya."
+            },
+            {
+              "en": "I promise I'll pay you tomorrow.",
+              "id": "Saya janji besok saya bayar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau belajar lagi? Video dan halaman ini menjelaskan will dengan cara yang berbeda."
+      }
+    ]
+  }
+}

@@ -1,0 +1,632 @@
+{
+  "en": {
+    "greeting": "Hi! You already know can. Today you'll meet its polite, past-time partner: could. Let's go!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Could: can in the past",
+        "text": "Can is for now: **I can swim.** To talk about the past, English changes the word to **could**.",
+        "body": "**could** = *dulu bisa*, **couldn't** (could not) = *dulu tidak bisa*. Like can, could is a helper word: the same for everyone, and the verb after it stays in the base form (no -s, no -ed, no to): **When I was five, I could swim.**\nThe trap: in Indonesian *bisa* never changes (*dulu saya bisa …*). In English the word changes: can → **could**.\nSay it 'kud': the **l** is silent, like in *would*.",
+        "pairs": [
+          {
+            "en": "could",
+            "id": "dulu bisa"
+          },
+          {
+            "en": "couldn't / could not",
+            "id": "dulu tidak bisa"
+          },
+          {
+            "en": "when I was five",
+            "id": "waktu umur lima tahun"
+          },
+          {
+            "en": "when I was a child",
+            "id": "waktu saya kecil"
+          },
+          {
+            "en": "ride a bicycle",
+            "id": "naik sepeda"
+          },
+          {
+            "en": "climb trees",
+            "id": "memanjat pohon"
+          },
+          {
+            "en": "ten years ago",
+            "id": "sepuluh tahun yang lalu"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Then and now",
+        "text": "Look at Dimas's life. **could / couldn't** for the past, **can** for now.",
+        "timeline": {
+          "title": "Dimas: then and now",
+          "caption": "Past = could / couldn't. Now = can / can't.",
+          "marks": [
+            {
+              "label": "When I was five: I could swim",
+              "kind": "past"
+            },
+            {
+              "label": "Last year: I couldn't drive",
+              "kind": "past"
+            },
+            {
+              "label": "Now: I can drive",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani is talking about her grandmother. Which word fits?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-ability",
+          "prompt": "When my grandmother was young, she ___ dance very well.",
+          "options": [
+            "can",
+            "could",
+            "could to"
+          ],
+          "answer": 1,
+          "explanation": "**When my grandmother was young** is the past, so use **could**, not can. And the verb comes straight after it, with no **to**: **could dance**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Couldn't and questions",
+        "text": "**Couldn't** is great for telling problems on a trip. Notice the verb after it.",
+        "body": "The verb after could/couldn't always stays in the base form: **couldn't open**, not 'couldn't opened'. Could already shows the past, so you don't show it twice.\nQuestions: **Could** + subject + verb? Short answers: **Yes, I could. / No, I couldn't.** No do/did with could.",
+        "examples": [
+          {
+            "en": "I couldn't open the door, so I called reception.",
+            "id": "Saya tidak bisa membuka pintunya, jadi saya menelepon resepsionis."
+          },
+          {
+            "en": "We couldn't find a taxi, so we walked to the hotel.",
+            "id": "Kami tidak bisa menemukan taksi, jadi kami jalan kaki ke hotel."
+          },
+          {
+            "en": "My grandfather couldn't read, but he could fix any motorbike.",
+            "id": "Kakek saya tidak bisa membaca, tapi dia bisa memperbaiki motor apa saja."
+          },
+          {
+            "en": "Could you swim when you were five? — Yes, I could.",
+            "id": "Kamu sudah bisa berenang waktu umur lima tahun? — Ya, bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A rainy holiday",
+        "text": "Sari and her friends were in Bali, but the weather was bad.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-ability",
+          "prompt": "It rained all day, so we ___ to the beach.",
+          "options": [
+            "didn't could go",
+            "couldn't went",
+            "couldn't go"
+          ],
+          "answer": 2,
+          "explanation": "After **couldn't** the verb stays in the base form: **couldn't go**. *Went* is the past of go, but could already shows the past, so 'couldn't went' is wrong. And there is no did with could."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Polite requests: Could you …?",
+        "text": "Could has another job. **Could you …?** asks someone to help you, like **Can you …?**, but more politely.",
+        "body": "Pattern: **Could you** + base verb … **please**? Use it with strangers, hotel staff or your boss.\nIsn't could the past? Not here: a request is about **now**. A past-looking word makes the question softer, so it sounds more polite, like adding *kira-kira* in Indonesian. Past ability has a past time (*when you were five*); a request doesn't.\nYes: **Sure. / Of course.** No: **Sorry, I can't** + a reason.",
+        "pairs": [
+          {
+            "en": "Could you help me, please?",
+            "id": "Bisa tolong bantu saya? (sopan)"
+          },
+          {
+            "en": "Could you say that again, please?",
+            "id": "Bisa tolong ulangi?"
+          },
+          {
+            "en": "suitcase",
+            "id": "koper"
+          },
+          {
+            "en": "Sure.",
+            "id": "Oke. / Boleh."
+          },
+          {
+            "en": "Of course.",
+            "id": "Tentu saja."
+          },
+          {
+            "en": "No problem.",
+            "id": "Tidak masalah."
+          },
+          {
+            "en": "Sorry, I can't.",
+            "id": "Maaf, saya tidak bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build a request",
+        "text": "You're on holiday in Bandung with your family. You want a stranger to take a picture of all of you.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "polite-requests",
+          "prompt": "Arrange the words: Bisa tolong fotokan kami?",
+          "tokens": [
+            "take",
+            "of",
+            "Could",
+            "a",
+            "us",
+            "photo",
+            "you"
+          ],
+          "solution": "Could you take a photo of us?",
+          "explanation": "A polite request is **Could you** + base verb …? So: **Could you take a photo of us?** *Us* = kami, after *of*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Saying no",
+        "text": "At the airport, a man with two big suitcases asks you: 'Could you help me with my bags?' But your flight leaves in ten minutes.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "polite-requests",
+          "prompt": "Choose the best answer.",
+          "options": [
+            "Sorry, I can't. I'm late for my flight.",
+            "Sorry, I couldn't. I'm late for my flight.",
+            "Sorry, you can't. I'm late for my flight."
+          ],
+          "answer": 0,
+          "explanation": "The request is about **now**, so say no with **Sorry, I can't**. 'I couldn't' sounds like the past, and 'you can't' refuses permission, which is not what he asked."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking permission: Could I …?",
+        "text": "And with **I**, could asks for permission politely, like *boleh saya …?*",
+        "body": "Pattern: **Could I** + base verb …? It's about **now** too: *Could I open the window?* = *Boleh saya buka jendelanya?* Could just makes **Can I …?** more polite.\nYes: **Yes, of course. / Sure, go ahead.** (*go ahead* = silakan) or **Yes, you can.**\nNo: **Sorry, you can't** + a reason.\nAnswer with **can**, not could, and with **you**, not I.",
+        "pairs": [
+          {
+            "en": "Could I open the window?",
+            "id": "Boleh saya buka jendelanya?"
+          },
+          {
+            "en": "Could I pay by card?",
+            "id": "Boleh saya bayar pakai kartu?"
+          },
+          {
+            "en": "Sure, go ahead.",
+            "id": "Silakan."
+          },
+          {
+            "en": "Yes, of course.",
+            "id": "Ya, tentu."
+          },
+          {
+            "en": "Yes, you can.",
+            "id": "Ya, boleh."
+          },
+          {
+            "en": "Sorry, you can't.",
+            "id": "Maaf, tidak boleh."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "At the homestay",
+        "text": "You're staying at a homestay in Bali. You want to cook some noodles in the owner's kitchen. What do you ask the owner?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-permission",
+          "prompt": "Choose the best question.",
+          "options": [
+            "Could you use the kitchen?",
+            "Do I could use the kitchen?",
+            "Could I use the kitchen?"
+          ],
+          "answer": 2,
+          "explanation": "You ask permission for yourself, so use **Could I** …? There is no **do** with could, and **Could you** …? asks the owner to do something."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Take it on your next trip!",
+        "artifact": {
+          "title": "Cheat sheet · could",
+          "intro": "Could has two jobs: past ability (dulu bisa) and polite requests or permission (now). Always could + base verb.",
+          "headers": [
+            "Job",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Past ability (dulu bisa)",
+              "subject + could + verb",
+              "When I was five, I could swim."
+            ],
+            [
+              "Past ability, negative",
+              "subject + couldn't + verb",
+              "We couldn't find a taxi."
+            ],
+            [
+              "Past ability, question",
+              "Could + subject + verb?",
+              "Could you swim when you were five? — Yes, I could."
+            ],
+            [
+              "Polite request (now)",
+              "Could you + verb … please?",
+              "Could you help me, please? — Sure. / Sorry, I can't."
+            ],
+            [
+              "Polite permission (now)",
+              "Could I + verb …?",
+              "Could I open the window? — Sure, go ahead."
+            ],
+            [
+              "Say no to permission",
+              "Sorry, you can't + reason",
+              "Sorry, you can't. It's for guests only."
+            ]
+          ],
+          "tips": [
+            "Could + base verb: **could go**, **couldn't open** (not 'couldn't went', not 'could to go').",
+            "**Could you / Could I** are about now: could only makes them more polite than can.",
+            "Answer with **can**: Sorry, I can't. / Yes, you can (not 'Yes, you could')."
+          ],
+          "examples": [
+            {
+              "en": "My grandfather couldn't read, but he could fix any motorbike.",
+              "id": "Kakek saya tidak bisa membaca, tapi dia bisa memperbaiki motor apa saja."
+            },
+            {
+              "en": "Could you say that again, please?",
+              "id": "Bisa tolong ulangi?"
+            },
+            {
+              "en": "Could I pay by card? — Yes, of course.",
+              "id": "Boleh saya bayar pakai kartu? — Ya, tentu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and practise",
+        "text": "Want more? These British Council pages explain could for the past, polite requests and permission, with exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah kenal can. Hari ini kamu bertemu pasangannya yang sopan dan bisa untuk masa lalu: could. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Could: can di masa lalu",
+        "text": "Can untuk sekarang: **I can swim.** Untuk masa lalu, bahasa Inggris mengganti katanya menjadi **could**.",
+        "body": "**could** = *dulu bisa*, **couldn't** (could not) = *dulu tidak bisa*. Seperti can, could adalah kata bantu: sama untuk semua orang, dan kata kerja sesudahnya tetap bentuk dasar (tanpa -s, tanpa -ed, tanpa to): **When I was five, I could swim.**\nJebakannya: dalam bahasa Indonesia *bisa* tidak pernah berubah (*dulu saya bisa …*). Dalam bahasa Inggris katanya berubah: can → **could**.\nDibaca 'kud': huruf **l** tidak dibaca, sama seperti *would*.",
+        "pairs": [
+          {
+            "en": "could",
+            "id": "dulu bisa"
+          },
+          {
+            "en": "couldn't / could not",
+            "id": "dulu tidak bisa"
+          },
+          {
+            "en": "when I was five",
+            "id": "waktu umur lima tahun"
+          },
+          {
+            "en": "when I was a child",
+            "id": "waktu saya kecil"
+          },
+          {
+            "en": "ride a bicycle",
+            "id": "naik sepeda"
+          },
+          {
+            "en": "climb trees",
+            "id": "memanjat pohon"
+          },
+          {
+            "en": "ten years ago",
+            "id": "sepuluh tahun yang lalu"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Dulu dan sekarang",
+        "text": "Lihat kehidupan Dimas. **could / couldn't** untuk masa lalu, **can** untuk sekarang.",
+        "timeline": {
+          "title": "Dimas: dulu dan sekarang",
+          "caption": "Masa lalu = could / couldn't. Sekarang = can / can't.",
+          "marks": [
+            {
+              "label": "When I was five: I could swim",
+              "kind": "past"
+            },
+            {
+              "label": "Last year: I couldn't drive",
+              "kind": "past"
+            },
+            {
+              "label": "Now: I can drive",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani bercerita tentang neneknya. Kata mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-ability",
+          "prompt": "Lengkapi: When my grandmother was young, she ___ dance very well.",
+          "options": [
+            "can",
+            "could",
+            "could to"
+          ],
+          "answer": 1,
+          "explanation": "**When my grandmother was young** (waktu nenek saya masih muda) adalah masa lalu, jadi pakai **could**, bukan can. Dan kata kerjanya langsung sesudahnya, tanpa **to**: **could dance**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Couldn't dan pertanyaan",
+        "text": "**Couldn't** sangat pas untuk menceritakan masalah dalam perjalanan. Perhatikan kata kerja sesudahnya.",
+        "body": "Kata kerja sesudah could/couldn't selalu tetap bentuk dasar: **couldn't open**, bukan 'couldn't opened'. Could sudah menunjukkan masa lalu, jadi masa lalunya tidak ditunjukkan dua kali.\nPertanyaan: **Could** + subjek + kata kerja? Jawaban singkat: **Yes, I could. / No, I couldn't.** Tidak ada do/did kalau memakai could.",
+        "examples": [
+          {
+            "en": "I couldn't open the door, so I called reception.",
+            "id": "Saya tidak bisa membuka pintunya, jadi saya menelepon resepsionis."
+          },
+          {
+            "en": "We couldn't find a taxi, so we walked to the hotel.",
+            "id": "Kami tidak bisa menemukan taksi, jadi kami jalan kaki ke hotel."
+          },
+          {
+            "en": "My grandfather couldn't read, but he could fix any motorbike.",
+            "id": "Kakek saya tidak bisa membaca, tapi dia bisa memperbaiki motor apa saja."
+          },
+          {
+            "en": "Could you swim when you were five? — Yes, I could.",
+            "id": "Kamu sudah bisa berenang waktu umur lima tahun? — Ya, bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Liburan yang hujan",
+        "text": "Sari dan teman-temannya di Bali, tapi cuacanya buruk.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "past-ability",
+          "prompt": "Lengkapi: It rained all day, so we ___ to the beach.",
+          "options": [
+            "didn't could go",
+            "couldn't went",
+            "couldn't go"
+          ],
+          "answer": 2,
+          "explanation": "Sesudah **couldn't**, kata kerjanya tetap bentuk dasar: **couldn't go**. *Went* memang bentuk lampau dari go, tapi could sudah menunjukkan masa lalu, jadi 'couldn't went' salah. Dan tidak ada did kalau memakai could."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Meminta tolong dengan sopan: Could you …?",
+        "text": "Could punya tugas lain. **Could you …?** meminta orang membantumu, seperti **Can you …?**, tapi lebih sopan.",
+        "body": "Pola: **Could you** + kata kerja dasar … **please**? Pakai untuk orang yang tidak dikenal, petugas hotel atau atasanmu.\nBukankah could itu masa lalu? Di sini bukan: permintaan tolong itu tentang **sekarang**. Kata yang bentuknya seperti masa lalu membuat pertanyaan lebih lembut, jadi terdengar lebih sopan, mirip menambahkan *kira-kira*. Kemampuan masa lalu punya keterangan waktu lampau (*when you were five*); permintaan tolong tidak.\nYa: **Sure. / Of course.** Tidak: **Sorry, I can't** + alasan.",
+        "pairs": [
+          {
+            "en": "Could you help me, please?",
+            "id": "Bisa tolong bantu saya? (sopan)"
+          },
+          {
+            "en": "Could you say that again, please?",
+            "id": "Bisa tolong ulangi?"
+          },
+          {
+            "en": "suitcase",
+            "id": "koper"
+          },
+          {
+            "en": "Sure.",
+            "id": "Oke. / Boleh."
+          },
+          {
+            "en": "Of course.",
+            "id": "Tentu saja."
+          },
+          {
+            "en": "No problem.",
+            "id": "Tidak masalah."
+          },
+          {
+            "en": "Sorry, I can't.",
+            "id": "Maaf, saya tidak bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun permintaannya",
+        "text": "Kamu sedang berlibur di Bandung bersama keluargamu. Kamu ingin minta tolong orang yang tidak dikenal untuk memotret kalian semua.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "polite-requests",
+          "prompt": "Susun kata-katanya: Bisa tolong fotokan kami?",
+          "tokens": [
+            "take",
+            "of",
+            "Could",
+            "a",
+            "us",
+            "photo",
+            "you"
+          ],
+          "solution": "Could you take a photo of us?",
+          "explanation": "Permintaan tolong yang sopan = **Could you** + kata kerja dasar …? Jadi: **Could you take a photo of us?** *Us* = kami, sesudah *of*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Menolak dengan sopan",
+        "text": "Di bandara, seorang laki-laki dengan dua koper besar bertanya kepadamu: 'Could you help me with my bags?' Tapi pesawatmu berangkat sepuluh menit lagi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "polite-requests",
+          "prompt": "Pilih jawaban terbaik.",
+          "options": [
+            "Sorry, I can't. I'm late for my flight.",
+            "Sorry, I couldn't. I'm late for my flight.",
+            "Sorry, you can't. I'm late for my flight."
+          ],
+          "answer": 0,
+          "explanation": "Permintaannya tentang **sekarang**, jadi tolak dengan **Sorry, I can't**. 'I couldn't' terdengar seperti masa lalu, dan 'you can't' berarti tidak memberi izin, padahal dia tidak meminta izin."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Meminta izin: Could I …?",
+        "text": "Dan dengan **I**, could meminta izin dengan sopan, seperti *boleh saya …?*",
+        "body": "Pola: **Could I** + kata kerja dasar …? Ini juga tentang **sekarang**: *Could I open the window?* = *Boleh saya buka jendelanya?* Could hanya membuat **Can I …?** lebih sopan.\nYa: **Yes, of course. / Sure, go ahead.** (*go ahead* = silakan) atau **Yes, you can.**\nTidak: **Sorry, you can't** + alasan.\nJawab dengan **can**, bukan could, dan dengan **you**, bukan I.",
+        "pairs": [
+          {
+            "en": "Could I open the window?",
+            "id": "Boleh saya buka jendelanya?"
+          },
+          {
+            "en": "Could I pay by card?",
+            "id": "Boleh saya bayar pakai kartu?"
+          },
+          {
+            "en": "Sure, go ahead.",
+            "id": "Silakan."
+          },
+          {
+            "en": "Yes, of course.",
+            "id": "Ya, tentu."
+          },
+          {
+            "en": "Yes, you can.",
+            "id": "Ya, boleh."
+          },
+          {
+            "en": "Sorry, you can't.",
+            "id": "Maaf, tidak boleh."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Di homestay",
+        "text": "Kamu menginap di sebuah homestay di Bali. Kamu ingin memasak mi di dapur pemiliknya. Apa yang kamu tanyakan kepada pemiliknya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-permission",
+          "prompt": "Pilih pertanyaan terbaik.",
+          "options": [
+            "Could you use the kitchen?",
+            "Do I could use the kitchen?",
+            "Could I use the kitchen?"
+          ],
+          "answer": 2,
+          "explanation": "Kamu meminta izin untuk dirimu sendiri, jadi pakai **Could I** …? Tidak ada **do** kalau memakai could, dan **Could you** …? meminta pemiliknya melakukan sesuatu."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Bawa saat kamu bepergian nanti!",
+        "artifact": {
+          "title": "Ringkasan · could",
+          "intro": "Could punya dua tugas: kemampuan di masa lalu (dulu bisa) dan permintaan tolong atau izin yang sopan (sekarang). Selalu could + kata kerja dasar.",
+          "headers": [
+            "Tugas",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Kemampuan masa lalu (dulu bisa)",
+              "subjek + could + kata kerja",
+              "When I was five, I could swim."
+            ],
+            [
+              "Kemampuan masa lalu, negatif",
+              "subjek + couldn't + kata kerja",
+              "We couldn't find a taxi."
+            ],
+            [
+              "Kemampuan masa lalu, pertanyaan",
+              "Could + subjek + kata kerja?",
+              "Could you swim when you were five? — Yes, I could."
+            ],
+            [
+              "Minta tolong dengan sopan (sekarang)",
+              "Could you + kata kerja … please?",
+              "Could you help me, please? — Sure. / Sorry, I can't."
+            ],
+            [
+              "Minta izin dengan sopan (sekarang)",
+              "Could I + kata kerja …?",
+              "Could I open the window? — Sure, go ahead."
+            ],
+            [
+              "Menolak memberi izin",
+              "Sorry, you can't + alasan",
+              "Sorry, you can't. It's for guests only."
+            ]
+          ],
+          "tips": [
+            "Could + kata kerja dasar: **could go**, **couldn't open** (bukan 'couldn't went', bukan 'could to go').",
+            "**Could you / Could I** tentang sekarang: could hanya membuatnya lebih sopan daripada can.",
+            "Jawab dengan **can**: Sorry, I can't. / Yes, you can (bukan 'Yes, you could')."
+          ],
+          "examples": [
+            {
+              "en": "My grandfather couldn't read, but he could fix any motorbike.",
+              "id": "Kakek saya tidak bisa membaca, tapi dia bisa memperbaiki motor apa saja."
+            },
+            {
+              "en": "Could you say that again, please?",
+              "id": "Bisa tolong ulangi?"
+            },
+            {
+              "en": "Could I pay by card? — Yes, of course.",
+              "id": "Boleh saya bayar pakai kartu? — Ya, tentu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan berlatih",
+        "text": "Mau lebih banyak? Halaman British Council ini menjelaskan could untuk masa lalu, permintaan tolong yang sopan dan izin, dengan latihan."
+      }
+    ]
+  }
+}

@@ -149,3 +149,14 @@ func TestEveryLessonSentenceHasRecordedAudio(t *testing.T) {
 		}
 	}
 }
+
+func TestFitCutsLongMaterialAtABoundary(t *testing.T) {
+	long := strings.Repeat("One short sentence. ", 80)
+	got := fit(long, maxText)
+	if runes(got) > maxText || !strings.HasSuffix(got, ".") {
+		t.Fatalf("fit: %d runes, ends %q", runes(got), got[len(got)-10:])
+	}
+	if fit("Short.", maxText) != "Short." {
+		t.Fatal("short text should stay as it is")
+	}
+}

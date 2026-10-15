@@ -1,0 +1,668 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn what comes after verbs like want and enjoy, and how to say why you do something. Let's go one small step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Two verbs together: want to",
+        "text": "Sometimes two verbs come together: I want + go home. Let's see how English joins them.",
+        "body": "A **verb** is an action word: *go, eat, buy*. When two verbs meet, the **first verb decides** the form of the second. After **want, need, would like, hope, plan, decide, learn**, use **to + base form** (the plain verb from the dictionary, no -s, no -ing): I want **to go** home. Indonesian says *mau pulang* with nothing in between, but English needs **to**: not `I want go home`. Only the first verb takes -s: Rina **wants to go**, not `wants to goes`.",
+        "pairs": [
+          {
+            "en": "want to",
+            "id": "mau, ingin"
+          },
+          {
+            "en": "need to",
+            "id": "perlu"
+          },
+          {
+            "en": "would like to",
+            "id": "mau (sopan)"
+          },
+          {
+            "en": "hope to",
+            "id": "berharap"
+          },
+          {
+            "en": "plan to",
+            "id": "berencana"
+          },
+          {
+            "en": "decide to",
+            "id": "memutuskan"
+          },
+          {
+            "en": "learn to",
+            "id": "belajar (supaya bisa)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Wants, needs and plans",
+        "text": "Here are some real sentences. Look for the to after the first verb.",
+        "body": "Negative: **don't / doesn't want to**. Question: **Do you need to ...?** After to, always the base form.",
+        "examples": [
+          {
+            "en": "I want to go home.",
+            "id": "Saya mau pulang."
+          },
+          {
+            "en": "We need to leave at seven.",
+            "id": "Kami perlu berangkat jam tujuh."
+          },
+          {
+            "en": "Sari hopes to work in Singapore one day.",
+            "id": "Sari berharap bisa bekerja di Singapura suatu hari nanti."
+          },
+          {
+            "en": "Every year, many people decide to learn English.",
+            "id": "Setiap tahun, banyak orang memutuskan untuk belajar bahasa Inggris."
+          },
+          {
+            "en": "Rina doesn't want to cook tonight.",
+            "id": "Rina tidak mau masak malam ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's try one. What comes after need?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-to-infinitive",
+          "prompt": "My laptop is very old. Complete: I need ___ a new one.",
+          "options": [
+            "buy",
+            "buying",
+            "to buy"
+          ],
+          "answer": 2,
+          "explanation": "need is followed by **to + base form**: I need **to buy** a new one. Without to (`I need buy`) is the Indonesian *perlu beli* pattern, and need doesn't take -ing here."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Verb + -ing: enjoy, finish, don't mind",
+        "text": "Now the other list: verbs that want -ing after them.",
+        "body": "After **enjoy** (senang, menikmati), **finish** (selesai) and **don't mind** (tidak keberatan), use **verb + -ing**: I enjoy **swimming**. Not `I enjoy to swim`: these verbs never take to. **like, love, hate** can take both: *I like swimming* = *I like to swim*. But **would like** takes only to: I'd like **to** swim. There's no rule you can see, so **memorise the two lists**: learn each verb with its partner (*want to, enjoy -ing*).",
+        "pairs": [
+          {
+            "en": "enjoy + -ing",
+            "id": "senang, menikmati"
+          },
+          {
+            "en": "finish + -ing",
+            "id": "selesai"
+          },
+          {
+            "en": "don't mind + -ing",
+            "id": "tidak keberatan"
+          },
+          {
+            "en": "like / love / hate + -ing or to",
+            "id": "suka / sangat suka / benci (keduanya boleh)"
+          },
+          {
+            "en": "would like + to",
+            "id": "mau (sopan), hanya + to"
+          },
+          {
+            "en": "When I finish eating, I wash my plate.",
+            "id": "Kalau sudah selesai makan, saya mencuci piring saya."
+          },
+          {
+            "en": "My mother doesn't mind cooking for ten people.",
+            "id": "Ibu saya tidak keberatan memasak untuk sepuluh orang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Which form comes after enjoy?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-ing",
+          "prompt": "Sari loves books. Complete: She enjoys ___ before bed.",
+          "options": [
+            "to read",
+            "reading",
+            "read"
+          ],
+          "answer": 1,
+          "explanation": "enjoy is followed by **verb + -ing**: She enjoys **reading**. `enjoys to read` is a very common mistake, because Indonesian *senang membaca* doesn't change the verb."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your friend is late and says sorry. Tell her it's OK.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "verb-ing",
+          "prompt": "Arrange the words: Tidak apa-apa, saya tidak keberatan menunggu kamu.",
+          "tokens": [
+            "waiting",
+            "you",
+            "I",
+            "for",
+            "mind",
+            "don't"
+          ],
+          "solution": "I don't mind waiting for you.",
+          "explanation": "**don't mind** (tidak keberatan) is followed by **-ing**: don't mind **waiting**. *wait for* = menunggu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "to = untuk: saying why",
+        "text": "Last part: how to say why you do something.",
+        "body": "To say **why** you do something, use **to + base form**: I go to the bank **to get** money. It answers *Why?*: Why do you go to the bank? — **To get** money. Indonesian *untuk* makes many learners say `for get money`. But **for** comes before a **noun**, a thing (*for lunch, for my son*), and **to** before a **verb**. Two to's in one sentence? *to the bank* = **ke**, *to get* = **untuk**.",
+        "pairs": [
+          {
+            "en": "to + verb",
+            "id": "untuk + kata kerja"
+          },
+          {
+            "en": "for + noun",
+            "id": "untuk + kata benda"
+          },
+          {
+            "en": "to the bank",
+            "id": "ke bank"
+          },
+          {
+            "en": "to get money",
+            "id": "untuk mengambil uang"
+          },
+          {
+            "en": "for lunch",
+            "id": "untuk makan siang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Why? To ...",
+        "text": "Here are some reasons. Look at to + verb, and at for + noun in the last one.",
+        "examples": [
+          {
+            "en": "Pak Hasan works on Saturdays to earn extra money.",
+            "id": "Pak Hasan bekerja hari Sabtu untuk mendapat uang tambahan."
+          },
+          {
+            "en": "Rina is learning English to get a job in a hotel.",
+            "id": "Rina sedang belajar bahasa Inggris untuk mendapat pekerjaan di hotel."
+          },
+          {
+            "en": "Why do you get up at five? — To catch the first train.",
+            "id": "Kenapa kamu bangun jam lima? — Untuk naik kereta pertama."
+          },
+          {
+            "en": "I go to the warung for lunch.",
+            "id": "Saya ke warung untuk makan siang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani's son is sick. Why does she go to the pharmacy?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "to-for-purpose",
+          "prompt": "Complete: Bu Ani goes to the pharmacy ___ medicine for her son.",
+          "options": [
+            "for get",
+            "to get",
+            "getting"
+          ],
+          "answer": 1,
+          "explanation": "This says **why** she goes, so use **to + base form**: to get. `for get` comes from *untuk*, but for goes before a noun (like *for her son*), not before a verb."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Budi wants a motorbike. Say why he saves money.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "to-for-purpose",
+          "prompt": "Arrange the words: Budi menabung untuk membeli motor.",
+          "tokens": [
+            "a",
+            "buy",
+            "saves",
+            "Budi",
+            "motorbike",
+            "money",
+            "to"
+          ],
+          "solution": "Budi saves money to buy a motorbike.",
+          "explanation": "First what Budi does (**saves money**), then why: **to + base form** (*to buy* = untuk membeli). *saves money* = menabung."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is everything on one page. Keep it and learn the two lists.",
+        "artifact": {
+          "title": "Cheat sheet · Verb + to / verb + -ing",
+          "intro": "The first verb decides the form of the second: to + base form or -ing. Learn each verb with its partner.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "want / need / would like + to",
+              "I want to go home.",
+              "Saya mau pulang."
+            ],
+            [
+              "hope / plan / decide / learn + to",
+              "We plan to visit Yogyakarta.",
+              "Kami berencana mengunjungi Yogyakarta."
+            ],
+            [
+              "he / she: -s on the first verb only",
+              "Rina wants to go.",
+              "Rina mau pergi."
+            ],
+            [
+              "negative",
+              "I don't want to cook tonight.",
+              "Saya tidak mau masak malam ini."
+            ],
+            [
+              "enjoy / finish / don't mind + -ing",
+              "I enjoy swimming.",
+              "Saya senang berenang."
+            ],
+            [
+              "like / love / hate + -ing or to",
+              "I like swimming. = I like to swim.",
+              "Saya suka berenang."
+            ],
+            [
+              "would like + to only",
+              "I'd like to pay, please.",
+              "Saya mau bayar, ya."
+            ],
+            [
+              "why? to + verb",
+              "I go to the bank to get money.",
+              "Saya ke bank untuk mengambil uang."
+            ],
+            [
+              "for + noun",
+              "I go to the warung for lunch.",
+              "Saya ke warung untuk makan siang."
+            ]
+          ],
+          "tips": [
+            "No rule to see: learn each verb with its partner, **want to**, **enjoy -ing**.",
+            "*untuk* + verb = **to**, not `for`: I go to the bank **to get** money.",
+            "After to, always the base form: She wants to **go**, not `to goes`."
+          ],
+          "examples": [
+            {
+              "en": "We need to leave at seven.",
+              "id": "Kami perlu berangkat jam tujuh."
+            },
+            {
+              "en": "Dimas enjoys playing football with his friends.",
+              "id": "Dimas senang bermain sepak bola dengan teman-temannya."
+            },
+            {
+              "en": "Why do you get up at five? — To catch the first train.",
+              "id": "Kenapa kamu bangun jam lima? — Untuk naik kereta pertama."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and these two pages explain verbs + to, verbs + -ing and to for purpose, with short tests."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar apa yang datang setelah kata kerja seperti want dan enjoy, dan cara menjelaskan kenapa kamu melakukan sesuatu. Kita pelajari pelan-pelan, satu langkah kecil setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Dua kata kerja berurutan: want to",
+        "text": "Kadang dua kata kerja muncul berurutan: I want + go home. Yuk lihat cara bahasa Inggris menggabungkannya.",
+        "body": "**Kata kerja** adalah kata untuk kegiatan: *go, eat, buy*. Kalau dua kata kerja bertemu, **kata kerja pertama menentukan** bentuk kata kerja kedua. Setelah **want, need, would like, hope, plan, decide, learn**, pakai **to + bentuk dasar** (kata kerja polos seperti di kamus, tanpa -s, tanpa -ing): I want **to go** home. Bahasa Indonesia bilang *mau pulang* tanpa kata di tengahnya, tapi bahasa Inggris perlu **to**: bukan `I want go home`. Hanya kata kerja pertama yang diberi -s: Rina **wants to go**, bukan `wants to goes`.",
+        "pairs": [
+          {
+            "en": "want to",
+            "id": "mau, ingin"
+          },
+          {
+            "en": "need to",
+            "id": "perlu"
+          },
+          {
+            "en": "would like to",
+            "id": "mau (sopan)"
+          },
+          {
+            "en": "hope to",
+            "id": "berharap"
+          },
+          {
+            "en": "plan to",
+            "id": "berencana"
+          },
+          {
+            "en": "decide to",
+            "id": "memutuskan"
+          },
+          {
+            "en": "learn to",
+            "id": "belajar (supaya bisa)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Keinginan, kebutuhan dan rencana",
+        "text": "Ini beberapa kalimat nyata. Cari to setelah kata kerja pertama.",
+        "body": "Negatif: **don't / doesn't want to**. Pertanyaan: **Do you need to ...?** Setelah to, selalu bentuk dasar.",
+        "examples": [
+          {
+            "en": "I want to go home.",
+            "id": "Saya mau pulang."
+          },
+          {
+            "en": "We need to leave at seven.",
+            "id": "Kami perlu berangkat jam tujuh."
+          },
+          {
+            "en": "Sari hopes to work in Singapore one day.",
+            "id": "Sari berharap bisa bekerja di Singapura suatu hari nanti."
+          },
+          {
+            "en": "Every year, many people decide to learn English.",
+            "id": "Setiap tahun, banyak orang memutuskan untuk belajar bahasa Inggris."
+          },
+          {
+            "en": "Rina doesn't want to cook tonight.",
+            "id": "Rina tidak mau masak malam ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Yuk coba satu. Apa yang datang setelah need?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-to-infinitive",
+          "prompt": "Laptop-ku sudah sangat tua. Lengkapi: I need ___ a new one.",
+          "options": [
+            "buy",
+            "buying",
+            "to buy"
+          ],
+          "answer": 2,
+          "explanation": "need diikuti **to + bentuk dasar**: I need **to buy** a new one. Tanpa to (`I need buy`) itu pola bahasa Indonesia *perlu beli*, dan need tidak memakai -ing di sini."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata kerja + -ing: enjoy, finish, don't mind",
+        "text": "Sekarang daftar yang lain: kata kerja yang diikuti -ing.",
+        "body": "Setelah **enjoy** (senang, menikmati), **finish** (selesai) dan **don't mind** (tidak keberatan), pakai **kata kerja + -ing**: I enjoy **swimming**. Bukan `I enjoy to swim`: kata kerja ini tidak pernah memakai to. **like, love, hate** bisa memakai keduanya: *I like swimming* = *I like to swim*. Tapi **would like** hanya memakai to: I'd like **to** swim. Tidak ada aturan yang kelihatan, jadi **hafalkan dua daftar ini**: pelajari setiap kata kerja bersama pasangannya (*want to, enjoy -ing*).",
+        "pairs": [
+          {
+            "en": "enjoy + -ing",
+            "id": "senang, menikmati"
+          },
+          {
+            "en": "finish + -ing",
+            "id": "selesai"
+          },
+          {
+            "en": "don't mind + -ing",
+            "id": "tidak keberatan"
+          },
+          {
+            "en": "like / love / hate + -ing or to",
+            "id": "suka / sangat suka / benci (keduanya boleh)"
+          },
+          {
+            "en": "would like + to",
+            "id": "mau (sopan), hanya + to"
+          },
+          {
+            "en": "When I finish eating, I wash my plate.",
+            "id": "Kalau sudah selesai makan, saya mencuci piring saya."
+          },
+          {
+            "en": "My mother doesn't mind cooking for ten people.",
+            "id": "Ibu saya tidak keberatan memasak untuk sepuluh orang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bentuk apa yang datang setelah enjoy?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "verb-ing",
+          "prompt": "Sari suka buku. Lengkapi: She enjoys ___ before bed.",
+          "options": [
+            "to read",
+            "reading",
+            "read"
+          ],
+          "answer": 1,
+          "explanation": "enjoy diikuti **kata kerja + -ing**: She enjoys **reading**. `enjoys to read` adalah kesalahan yang sangat umum, karena *senang membaca* dalam bahasa Indonesia tidak mengubah kata kerjanya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Temanmu terlambat dan minta maaf. Bilang bahwa tidak apa-apa.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "verb-ing",
+          "prompt": "Susun kata-katanya: Tidak apa-apa, saya tidak keberatan menunggu kamu.",
+          "tokens": [
+            "waiting",
+            "you",
+            "I",
+            "for",
+            "mind",
+            "don't"
+          ],
+          "solution": "I don't mind waiting for you.",
+          "explanation": "**don't mind** (tidak keberatan) diikuti **-ing**: don't mind **waiting**. *wait for* = menunggu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "to = untuk: menjelaskan tujuan",
+        "text": "Bagian terakhir: cara bilang kenapa kamu melakukan sesuatu.",
+        "body": "Untuk bilang **kenapa** kamu melakukan sesuatu, pakai **to + bentuk dasar**: I go to the bank **to get** money. Ini menjawab *Why?*: Why do you go to the bank? — **To get** money. Kata *untuk* membuat banyak orang bilang `for get money`. Padahal **for** dipakai sebelum **kata benda**, yaitu benda (*for lunch, for my son*), dan **to** sebelum **kata kerja**. Ada dua to dalam satu kalimat? *to the bank* = **ke**, *to get* = **untuk**.",
+        "pairs": [
+          {
+            "en": "to + verb",
+            "id": "untuk + kata kerja"
+          },
+          {
+            "en": "for + noun",
+            "id": "untuk + kata benda"
+          },
+          {
+            "en": "to the bank",
+            "id": "ke bank"
+          },
+          {
+            "en": "to get money",
+            "id": "untuk mengambil uang"
+          },
+          {
+            "en": "for lunch",
+            "id": "untuk makan siang"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Why? To ...",
+        "text": "Ini beberapa alasan. Perhatikan to + kata kerja, dan for + kata benda di contoh terakhir.",
+        "examples": [
+          {
+            "en": "Pak Hasan works on Saturdays to earn extra money.",
+            "id": "Pak Hasan bekerja hari Sabtu untuk mendapat uang tambahan."
+          },
+          {
+            "en": "Rina is learning English to get a job in a hotel.",
+            "id": "Rina sedang belajar bahasa Inggris untuk mendapat pekerjaan di hotel."
+          },
+          {
+            "en": "Why do you get up at five? — To catch the first train.",
+            "id": "Kenapa kamu bangun jam lima? — Untuk naik kereta pertama."
+          },
+          {
+            "en": "I go to the warung for lunch.",
+            "id": "Saya ke warung untuk makan siang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Anak Bu Ani sakit. Kenapa dia pergi ke apotek?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "to-for-purpose",
+          "prompt": "Lengkapi: Bu Ani goes to the pharmacy ___ medicine for her son.",
+          "options": [
+            "for get",
+            "to get",
+            "getting"
+          ],
+          "answer": 1,
+          "explanation": "Ini menjelaskan **kenapa** dia pergi, jadi pakai **to + bentuk dasar**: to get. `for get` datang dari kata *untuk*, padahal for dipakai sebelum kata benda (seperti *for her son*), bukan sebelum kata kerja."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Budi ingin punya motor. Bilang kenapa dia menabung.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "to-for-purpose",
+          "prompt": "Susun kata-katanya: Budi menabung untuk membeli motor.",
+          "tokens": [
+            "a",
+            "buy",
+            "saves",
+            "Budi",
+            "motorbike",
+            "money",
+            "to"
+          ],
+          "solution": "Budi saves money to buy a motorbike.",
+          "explanation": "Pertama apa yang Budi lakukan (**saves money**), lalu kenapa: **to + bentuk dasar** (*to buy* = untuk membeli). *saves money* = menabung."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan dan hafalkan dua daftarnya, ya.",
+        "artifact": {
+          "title": "Ringkasan · Kata kerja + to / kata kerja + -ing",
+          "intro": "Kata kerja pertama menentukan bentuk kata kerja kedua: to + bentuk dasar atau -ing. Hafalkan setiap kata kerja bersama pasangannya.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "want / need / would like + to",
+              "I want to go home.",
+              "Saya mau pulang."
+            ],
+            [
+              "hope / plan / decide / learn + to",
+              "We plan to visit Yogyakarta.",
+              "Kami berencana mengunjungi Yogyakarta."
+            ],
+            [
+              "he / she: -s hanya di kata kerja pertama",
+              "Rina wants to go.",
+              "Rina mau pergi."
+            ],
+            [
+              "negatif",
+              "I don't want to cook tonight.",
+              "Saya tidak mau masak malam ini."
+            ],
+            [
+              "enjoy / finish / don't mind + -ing",
+              "I enjoy swimming.",
+              "Saya senang berenang."
+            ],
+            [
+              "like / love / hate + -ing atau to",
+              "I like swimming. = I like to swim.",
+              "Saya suka berenang."
+            ],
+            [
+              "would like + to saja",
+              "I'd like to pay, please.",
+              "Saya mau bayar, ya."
+            ],
+            [
+              "kenapa? to + kata kerja",
+              "I go to the bank to get money.",
+              "Saya ke bank untuk mengambil uang."
+            ],
+            [
+              "for + kata benda",
+              "I go to the warung for lunch.",
+              "Saya ke warung untuk makan siang."
+            ]
+          ],
+          "tips": [
+            "Tidak ada aturan yang kelihatan: hafalkan setiap kata kerja bersama pasangannya, **want to**, **enjoy -ing**.",
+            "*untuk* + kata kerja = **to**, bukan `for`: I go to the bank **to get** money.",
+            "Setelah to, selalu bentuk dasar: She wants to **go**, bukan `to goes`."
+          ],
+          "examples": [
+            {
+              "en": "We need to leave at seven.",
+              "id": "Kami perlu berangkat jam tujuh."
+            },
+            {
+              "en": "Dimas enjoys playing football with his friends.",
+              "id": "Dimas senang bermain sepak bola dengan teman-temannya."
+            },
+            {
+              "en": "Why do you get up at five? — To catch the first train.",
+              "id": "Kenapa kamu bangun jam lima? — Untuk naik kereta pertama."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Video dan dua halaman ini menjelaskan kata kerja + to, kata kerja + -ing dan to untuk tujuan, lengkap dengan tes singkat."
+      }
+    ]
+  }
+}

@@ -15,6 +15,22 @@ var fallbackText = map[string]map[string]string{
 		"resources": "Lihat di dunia nyata", "resourcesText": "Video dan halaman nyata untuk pelajaran ini.", "topic": "Topik", "meaning": "Arti"},
 }
 
+// fit shortens reading material (which may be long) to a step's limit,
+// cutting after the last whole paragraph or sentence that fits.
+func fit(s string, max int) string {
+	r := []rune(strings.TrimSpace(s))
+	if len(r) <= max {
+		return string(r)
+	}
+	head := string(r[:max-1])
+	for _, sep := range []string{"\n", ". "} {
+		if i := strings.LastIndex(head, sep); i > len(head)/2 {
+			return strings.TrimSpace(head[:i+len(sep)])
+		}
+	}
+	return strings.TrimSpace(head) + "…"
+}
+
 func ft(lang, key string) string {
 	if m, ok := fallbackText[lang]; ok {
 		return m[key]
@@ -89,11 +105,11 @@ func FallbackPlan(node *curriculum.Node, lesson *curriculum.Lesson, mat *curricu
 			switch b.Type {
 			case curriculum.BlockText:
 				if st.Body == "" {
-					st.Body = b.Text
+					st.Body = fit(b.Text, maxText)
 				}
 			case curriculum.BlockTip:
 				if st.Text == "" {
-					st.Text = b.Text
+					st.Text = fit(b.Text, maxText)
 				}
 			case curriculum.BlockExamples:
 				for _, r := range b.Rows {

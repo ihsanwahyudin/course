@@ -1,0 +1,680 @@
+{
+  "en": {
+    "greeting": "Hi! Today we talk about the future: your plans, things you can see coming, and things already in your calendar. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Plans with going to",
+        "text": "Let's start with plans: things you have in your head now for later.",
+        "body": "Form: **am / is / are + going to + verb**: I'm going to cook. She's going to buy a car. Indonesian just says *saya akan / mau*, with no *be*, but English always needs **am / is / are**: not `I going to cook`. After **to**, the verb never changes (no -s, no -ing): `going to buys` is wrong. Here *going to* doesn't mean *pergi*: it just shows the future. Negative: **I'm not going to…** Question: **Are you going to…?**",
+        "pairs": [
+          {
+            "en": "I'm going to cook.",
+            "id": "Saya mau (akan) masak."
+          },
+          {
+            "en": "She's going to buy a car.",
+            "id": "Dia (perempuan) mau beli mobil."
+          },
+          {
+            "en": "They're going to move to Bandung.",
+            "id": "Mereka mau pindah ke Bandung."
+          },
+          {
+            "en": "I'm not going to work tomorrow.",
+            "id": "Besok saya tidak akan kerja."
+          },
+          {
+            "en": "Are you going to study tonight?",
+            "id": "Kamu mau belajar nanti malam?"
+          },
+          {
+            "en": "What are you going to do?",
+            "id": "Kamu mau ngapain?"
+          },
+          {
+            "en": "next week",
+            "id": "minggu depan"
+          },
+          {
+            "en": "next year",
+            "id": "tahun depan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Two parts again: the right be, and the plain verb after to.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-plans",
+          "options": [
+            "going to buy",
+            "is going to buys",
+            "is going to buy"
+          ],
+          "answer": 2,
+          "prompt": "Dimas is saving money. His plan: a new motorbike. Complete: Next month Dimas ___ a new motorbike.",
+          "explanation": "Dimas = he → **is**, then **going to** + the plain verb: **is going to buy**. `going to buy` has no be, and `buys` is wrong after to: the verb never changes there."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now a negative plan. Where does **not** go?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "talk-about-plans",
+          "tokens": [
+            "sell",
+            "going",
+            "We",
+            "house",
+            "to",
+            "aren't",
+            "our"
+          ],
+          "solution": "We aren't going to sell our house.",
+          "prompt": "Arrange the words: Kami tidak akan menjual rumah kami.",
+          "explanation": "Negative = **aren't** (are not) + going to + verb: We **aren't going to sell** our house. *Tidak akan* is just **not** after are: `We don't going to` is wrong."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "I can see it coming",
+        "text": "Going to has a second job: predictions.",
+        "body": "Use **going to** for a **prediction** (a guess about the future) when you can **see the reason now**: dark clouds → **It's going to rain.** A glass at the edge of the table → **It's going to fall.** In *It's going to rain*, **it** means nothing: English just needs a word at the start. Before words that aren't verbs (late, hot, tired) add **be**: **It's going to be a hot day**, not `going to hot`.",
+        "pairs": [
+          {
+            "en": "Look at the clouds!",
+            "id": "Lihat awannya!"
+          },
+          {
+            "en": "It's going to rain.",
+            "id": "Bakal hujan."
+          },
+          {
+            "en": "Watch out!",
+            "id": "Awas!"
+          },
+          {
+            "en": "That glass is going to fall.",
+            "id": "Gelas itu bakal jatuh."
+          },
+          {
+            "en": "It's going to be a hot day.",
+            "id": "Hari ini bakal panas."
+          },
+          {
+            "en": "He's going to be tired.",
+            "id": "Dia (laki-laki) bakal capek."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "You're in a taxi with Rina. Press play and listen to her.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-predictions-from",
+          "listen": "Look at the traffic! The cars aren't moving.",
+          "options": [
+            "Oh no. We going to be late.",
+            "Oh no. We're going to be late.",
+            "Oh no. We're going to late."
+          ],
+          "answer": 1,
+          "prompt": "Your plane is at 3 p.m. It's 2:30, and you're still in the taxi. Listen to Rina, then choose your reply.",
+          "explanation": "You can see the traffic now, so it's a prediction with **going to**. **Late** is not a verb, so add **be**: **We're going to be late.** `We going to` has no are, and `going to late` has no be."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "It's in my calendar",
+        "text": "Last part: things fixed with another person, like a meeting or a ticket.",
+        "body": "When a time (and often a place) is **fixed with another person**, English often uses the **present continuous** you know (**am / is / are + verb-ing**) with a **future time word**: I'm meeting Budi at 5. Without a time word it can mean *right now*. Indonesian *Besok saya ketemu Budi* tempts you to say `Tomorrow I meet Budi`, but *I meet* is for habits. Your own idea, nothing fixed with anyone? **Going to** is best.",
+        "pairs": [
+          {
+            "en": "I'm meeting Budi at the cafe at 5.",
+            "id": "Saya ketemu Budi di kafe jam 5. (sudah janjian)"
+          },
+          {
+            "en": "We're having dinner with Bu Ani on Saturday.",
+            "id": "Kami makan malam bersama Bu Ani hari Sabtu."
+          },
+          {
+            "en": "Dimas is flying to Bali on Friday.",
+            "id": "Dimas terbang ke Bali hari Jumat. (sudah ada tiket)"
+          },
+          {
+            "en": "I'm playing badminton with Sari on Sunday.",
+            "id": "Saya main bulu tangkis dengan Sari hari Minggu."
+          },
+          {
+            "en": "What are you doing this weekend?",
+            "id": "Kamu ada acara apa akhir pekan ini?"
+          },
+          {
+            "en": "tomorrow at 9",
+            "id": "besok jam 9"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Budi's week",
+        "text": "Here is Budi's calendar. Everything in it is fixed with other people.",
+        "timeline": {
+          "title": "Fixed in the calendar",
+          "caption": "Today is Monday. He's meeting a client on Wednesday, he's having dinner with Sari on Friday, and he's taking the train to Bandung on Saturday.",
+          "marks": [
+            {
+              "label": "Monday (now)",
+              "kind": "now"
+            },
+            {
+              "label": "Wednesday: client meeting",
+              "kind": "future"
+            },
+            {
+              "label": "Friday: dinner with Sari",
+              "kind": "future"
+            },
+            {
+              "label": "Saturday: train to Bandung",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Now or later?",
+        "text": "Look for the time word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fixed-arrangements",
+          "options": [
+            "Right now.",
+            "On Thursday.",
+            "Every Thursday."
+          ],
+          "answer": 1,
+          "prompt": "It's Monday. Rina says: 'I'm flying to Medan on Thursday.' When is Rina flying to Medan?",
+          "explanation": "**I'm flying** + **on Thursday** = a fixed future arrangement (she has a ticket). The time word shows it's not right now, and it's one trip, not a habit."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas is writing a message. Help him.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fixed-arrangements",
+          "options": [
+            "I meet",
+            "I meeting",
+            "I'm meeting"
+          ],
+          "answer": 2,
+          "prompt": "Dimas and Sari have a table for two at a restaurant at 7 tonight. Dimas texts a friend: 'Sorry, I can't play futsal tonight. ___ Sari at 7.'",
+          "explanation": "It's fixed with Sari (time and place), so use the present continuous: **I'm meeting** Sari at 7. `I meet` is for habits, and `I meeting` has no am."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "I'm going to cook.",
+            "back": "Saya mau (akan) masak."
+          },
+          {
+            "front": "She's going to buy a car.",
+            "back": "Dia (perempuan) mau beli mobil."
+          },
+          {
+            "front": "I'm not going to work tomorrow.",
+            "back": "Besok saya tidak akan kerja."
+          },
+          {
+            "front": "What are you going to do?",
+            "back": "Kamu mau ngapain?"
+          },
+          {
+            "front": "It's going to rain.",
+            "back": "Bakal hujan. (kelihatan dari awannya)"
+          },
+          {
+            "front": "It's going to be hot.",
+            "back": "Bakal panas. (+ be sebelum hot)"
+          },
+          {
+            "front": "I'm meeting Budi on Friday.",
+            "back": "Saya ketemu Budi hari Jumat. (sudah janjian)"
+          },
+          {
+            "front": "What are you doing this weekend?",
+            "back": "Kamu ada acara apa akhir pekan ini?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Going to & arrangements",
+          "intro": "Plans and predictions: going to. Things fixed with other people: present continuous + a time.",
+          "headers": [
+            "Use",
+            "Form",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Plan (your idea)",
+              "am / is / are + going to + verb",
+              "I'm going to paint my room."
+            ],
+            [
+              "Negative",
+              "am / is / are + not going to + verb",
+              "She isn't going to come."
+            ],
+            [
+              "Question",
+              "Am / Is / Are + who + going to + verb?",
+              "Are you going to cook tonight?"
+            ],
+            [
+              "Prediction (you can see it)",
+              "am / is / are + going to + verb",
+              "Look at the clouds! It's going to rain."
+            ],
+            [
+              "Not a verb (late, hot)",
+              "going to + be + word",
+              "It's going to be hot."
+            ],
+            [
+              "Fixed with someone",
+              "am / is / are + verb-ing + time",
+              "I'm meeting Sari on Friday."
+            ]
+          ],
+          "tips": [
+            "Never drop am / is / are: **I'm going to…**, not `I going to…`.",
+            "After **to**, the plain verb: **going to buy**, not `going to buys`.",
+            "Fixed with someone + a time → **I'm meeting…**, not `I meet…` (that's for habits)."
+          ],
+          "examples": [
+            {
+              "en": "I'm going to save money for a new laptop.",
+              "id": "Saya mau menabung untuk beli laptop baru."
+            },
+            {
+              "en": "Watch out! You're going to fall.",
+              "id": "Awas! Kamu bakal jatuh."
+            },
+            {
+              "en": "We're having dinner with Bu Ani on Saturday.",
+              "id": "Kami makan malam bersama Bu Ani hari Sabtu."
+            },
+            {
+              "en": "What are you doing this weekend? — I'm visiting my parents.",
+              "id": "Kamu ada acara apa akhir pekan ini? — Saya mengunjungi orang tua."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This page has a short video and exercises. It's a bit above your level, so focus on going to and the present continuous."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membicarakan masa depan: rencanamu, hal yang sudah kelihatan akan terjadi, dan acara yang sudah masuk kalender. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Rencana dengan going to",
+        "text": "Kita mulai dari rencana: hal yang sudah ada di kepalamu sekarang untuk nanti.",
+        "body": "Bentuknya: **am / is / are + going to + kata kerja**: I'm going to cook. She's going to buy a car. Bahasa Indonesia cukup bilang *saya akan / mau* tanpa *be*, tapi bahasa Inggris selalu butuh **am / is / are**: bukan `I going to cook`. Setelah **to**, kata kerjanya tidak berubah (tanpa -s, tanpa -ing): `going to buys` salah. Di sini *going to* bukan berarti *pergi*: itu hanya penanda masa depan. Negatif: **I'm not going to…** Pertanyaan: **Are you going to…?**",
+        "pairs": [
+          {
+            "en": "I'm going to cook.",
+            "id": "Saya mau (akan) masak."
+          },
+          {
+            "en": "She's going to buy a car.",
+            "id": "Dia (perempuan) mau beli mobil."
+          },
+          {
+            "en": "They're going to move to Bandung.",
+            "id": "Mereka mau pindah ke Bandung."
+          },
+          {
+            "en": "I'm not going to work tomorrow.",
+            "id": "Besok saya tidak akan kerja."
+          },
+          {
+            "en": "Are you going to study tonight?",
+            "id": "Kamu mau belajar nanti malam?"
+          },
+          {
+            "en": "What are you going to do?",
+            "id": "Kamu mau ngapain?"
+          },
+          {
+            "en": "next week",
+            "id": "minggu depan"
+          },
+          {
+            "en": "next year",
+            "id": "tahun depan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dua bagian lagi: be yang tepat, dan kata kerja dasar setelah to.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-plans",
+          "options": [
+            "going to buy",
+            "is going to buys",
+            "is going to buy"
+          ],
+          "answer": 2,
+          "prompt": "Dimas sedang menabung. Rencananya: motor baru. Lengkapi: Next month Dimas ___ a new motorbike.",
+          "explanation": "Dimas = he → **is**, lalu **going to** + kata kerja dasar: **is going to buy**. `going to buy` tidak punya be, dan `buys` salah setelah to: kata kerjanya tidak pernah berubah di situ."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang rencana dalam bentuk negatif. **Not** ditaruh di mana?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "talk-about-plans",
+          "tokens": [
+            "sell",
+            "going",
+            "We",
+            "house",
+            "to",
+            "aren't",
+            "our"
+          ],
+          "solution": "We aren't going to sell our house.",
+          "prompt": "Susun kata-katanya: Kami tidak akan menjual rumah kami.",
+          "explanation": "Negatif = **aren't** (are not) + going to + kata kerja: We **aren't going to sell** our house. *Tidak akan* cukup jadi **not** setelah are: `We don't going to` salah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sudah kelihatan",
+        "text": "Going to punya tugas kedua: prediksi.",
+        "body": "Pakai **going to** untuk **prediksi** (tebakan tentang masa depan) kalau kamu **bisa melihat alasannya sekarang**: awan gelap → **It's going to rain.** Gelas di pinggir meja → **It's going to fall.** Dalam *It's going to rain*, **it** tidak ada artinya: bahasa Inggris hanya butuh kata di awal. Sebelum kata yang bukan kata kerja (late, hot, tired), tambahkan **be**: **It's going to be a hot day**, bukan `going to hot`.",
+        "pairs": [
+          {
+            "en": "Look at the clouds!",
+            "id": "Lihat awannya!"
+          },
+          {
+            "en": "It's going to rain.",
+            "id": "Bakal hujan."
+          },
+          {
+            "en": "Watch out!",
+            "id": "Awas!"
+          },
+          {
+            "en": "That glass is going to fall.",
+            "id": "Gelas itu bakal jatuh."
+          },
+          {
+            "en": "It's going to be a hot day.",
+            "id": "Hari ini bakal panas."
+          },
+          {
+            "en": "He's going to be tired.",
+            "id": "Dia (laki-laki) bakal capek."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Kamu di taksi bersama Rina. Tekan play dan dengarkan dia.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-predictions-from",
+          "listen": "Look at the traffic! The cars aren't moving.",
+          "options": [
+            "Oh no. We going to be late.",
+            "Oh no. We're going to be late.",
+            "Oh no. We're going to late."
+          ],
+          "answer": 1,
+          "prompt": "Pesawatmu jam 3 sore. Sekarang jam 2.30 dan kamu masih di taksi. Dengarkan Rina, lalu pilih jawabanmu.",
+          "explanation": "Kamu bisa melihat kemacetannya sekarang, jadi ini prediksi dengan **going to**. **Late** bukan kata kerja, jadi tambahkan **be**: **We're going to be late.** `We going to` tidak punya are, dan `going to late` tidak punya be."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sudah masuk kalender",
+        "text": "Bagian terakhir: hal yang sudah dijadwalkan dengan orang lain, seperti rapat atau tiket.",
+        "body": "Kalau waktunya (sering juga tempatnya) **sudah dijadwalkan dengan orang lain**, bahasa Inggris sering memakai **present continuous** yang sudah kamu kenal (**am / is / are + kata kerja-ing**) dengan **kata waktu masa depan**: I'm meeting Budi at 5. Tanpa kata waktu, artinya bisa *sekarang*. *Besok saya ketemu Budi* bikin kamu ingin bilang `Tomorrow I meet Budi`, padahal *I meet* untuk kebiasaan. Masih idemu sendiri, belum janjian dengan siapa pun? **Going to** paling pas.",
+        "pairs": [
+          {
+            "en": "I'm meeting Budi at the cafe at 5.",
+            "id": "Saya ketemu Budi di kafe jam 5. (sudah janjian)"
+          },
+          {
+            "en": "We're having dinner with Bu Ani on Saturday.",
+            "id": "Kami makan malam bersama Bu Ani hari Sabtu."
+          },
+          {
+            "en": "Dimas is flying to Bali on Friday.",
+            "id": "Dimas terbang ke Bali hari Jumat. (sudah ada tiket)"
+          },
+          {
+            "en": "I'm playing badminton with Sari on Sunday.",
+            "id": "Saya main bulu tangkis dengan Sari hari Minggu."
+          },
+          {
+            "en": "What are you doing this weekend?",
+            "id": "Kamu ada acara apa akhir pekan ini?"
+          },
+          {
+            "en": "tomorrow at 9",
+            "id": "besok jam 9"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Minggu Budi",
+        "text": "Ini kalender Budi. Semua acaranya sudah dijadwalkan dengan orang lain.",
+        "timeline": {
+          "title": "Sudah masuk kalender",
+          "caption": "Hari ini Senin. He's meeting a client on Wednesday, he's having dinner with Sari on Friday, dan he's taking the train to Bandung on Saturday.",
+          "marks": [
+            {
+              "label": "Senin (sekarang)",
+              "kind": "now"
+            },
+            {
+              "label": "Rabu: rapat dengan klien",
+              "kind": "future"
+            },
+            {
+              "label": "Jumat: makan malam dengan Sari",
+              "kind": "future"
+            },
+            {
+              "label": "Sabtu: kereta ke Bandung",
+              "kind": "future"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Sekarang atau nanti?",
+        "text": "Cari kata waktunya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fixed-arrangements",
+          "options": [
+            "Right now.",
+            "On Thursday.",
+            "Every Thursday."
+          ],
+          "answer": 1,
+          "prompt": "Hari ini Senin. Rina bilang: 'I'm flying to Medan on Thursday.' Kapan Rina terbang ke Medan?",
+          "explanation": "**I'm flying** + **on Thursday** = janji terjadwal di masa depan (dia sudah punya tiket). Kata waktunya menunjukkan bukan sekarang, dan ini satu perjalanan, bukan kebiasaan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas sedang menulis pesan. Bantu dia.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "fixed-arrangements",
+          "options": [
+            "I meet",
+            "I meeting",
+            "I'm meeting"
+          ],
+          "answer": 2,
+          "prompt": "Dimas dan Sari sudah pesan meja untuk berdua di restoran jam 7 malam ini. Dimas mengirim pesan ke temannya: 'Sorry, I can't play futsal tonight. ___ Sari at 7.'",
+          "explanation": "Sudah dijadwalkan dengan Sari (jam dan tempatnya), jadi pakai present continuous: **I'm meeting** Sari at 7. `I meet` untuk kebiasaan, dan `I meeting` tidak punya am."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartunya. Sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "I'm going to cook.",
+            "back": "Saya mau (akan) masak."
+          },
+          {
+            "front": "She's going to buy a car.",
+            "back": "Dia (perempuan) mau beli mobil."
+          },
+          {
+            "front": "I'm not going to work tomorrow.",
+            "back": "Besok saya tidak akan kerja."
+          },
+          {
+            "front": "What are you going to do?",
+            "back": "Kamu mau ngapain?"
+          },
+          {
+            "front": "It's going to rain.",
+            "back": "Bakal hujan. (kelihatan dari awannya)"
+          },
+          {
+            "front": "It's going to be hot.",
+            "back": "Bakal panas. (+ be sebelum hot)"
+          },
+          {
+            "front": "I'm meeting Budi on Friday.",
+            "back": "Saya ketemu Budi hari Jumat. (sudah janjian)"
+          },
+          {
+            "front": "What are you doing this weekend?",
+            "back": "Kamu ada acara apa akhir pekan ini?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Going to & janji terjadwal",
+          "intro": "Rencana dan prediksi: going to. Yang sudah dijadwalkan dengan orang lain: present continuous + waktu.",
+          "headers": [
+            "Fungsi",
+            "Bentuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Rencana (idemu)",
+              "am / is / are + going to + kata kerja",
+              "I'm going to paint my room."
+            ],
+            [
+              "Negatif",
+              "am / is / are + not going to + kata kerja",
+              "She isn't going to come."
+            ],
+            [
+              "Pertanyaan",
+              "Am / Is / Are + siapa + going to + kata kerja?",
+              "Are you going to cook tonight?"
+            ],
+            [
+              "Prediksi (sudah kelihatan)",
+              "am / is / are + going to + kata kerja",
+              "Look at the clouds! It's going to rain."
+            ],
+            [
+              "Bukan kata kerja (late, hot)",
+              "going to + be + kata",
+              "It's going to be hot."
+            ],
+            [
+              "Sudah janjian",
+              "am / is / are + kata kerja-ing + waktu",
+              "I'm meeting Sari on Friday."
+            ]
+          ],
+          "tips": [
+            "Jangan hilangkan am / is / are: **I'm going to…**, bukan `I going to…`.",
+            "Setelah **to**, kata kerja dasar: **going to buy**, bukan `going to buys`.",
+            "Sudah janjian + ada waktunya → **I'm meeting…**, bukan `I meet…` (itu untuk kebiasaan)."
+          ],
+          "examples": [
+            {
+              "en": "I'm going to save money for a new laptop.",
+              "id": "Saya mau menabung untuk beli laptop baru."
+            },
+            {
+              "en": "Watch out! You're going to fall.",
+              "id": "Awas! Kamu bakal jatuh."
+            },
+            {
+              "en": "We're having dinner with Bu Ani on Saturday.",
+              "id": "Kami makan malam bersama Bu Ani hari Sabtu."
+            },
+            {
+              "en": "What are you doing this weekend? — I'm visiting my parents.",
+              "id": "Kamu ada acara apa akhir pekan ini? — Saya mengunjungi orang tua."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lagi",
+        "text": "Mau lebih? Halaman ini punya video pendek dan latihan. Levelnya sedikit di atasmu, jadi fokus saja pada going to dan present continuous."
+      }
+    ]
+  }
+}
