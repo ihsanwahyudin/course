@@ -1,0 +1,570 @@
+{
+  "nodeId": "a1-imperatives",
+  "intro": "Welcome! Today you learn how to tell people what to do (Turn left. Wait here.), what not to do (Don't run.), and how to invite friends with Let's (Let's go!). You'll also practise understanding simple directions in the street. Warm-up: what does your teacher say when the class starts?",
+  "teachingNotes": [
+    "An instruction starts with the base verb and has no subject: 'Turn left.', not *'You turn left.' Indonesian also drops the subject (Belok kiri!), so build on that. Add 'please' (start or end) to sound polite.",
+    "Negative instructions: Don't + base verb ('Don't run.'), like Indonesian 'jangan'. Common errors: *'Not run!', *'No run!', *'Don't to run.' 'NO SMOKING' / 'NO PARKING' are sign language only; in speech say 'Don't smoke here.' With adjectives use be: 'Be careful.', 'Don't be shy.'",
+    "Let's = Let us: the speaker joins in (ajakan, 'ayo kita'). Let's + base verb, with no 'to' and no subject: *'Let's to go', *'Let's going', *'Let's we go' (a direct translation of 'Ayo kita pergi') are all wrong. Typical replies: 'OK!', 'Good idea!', 'Sorry, I'm busy.'",
+    "Directions: go straight on, turn left / turn right (at the traffic lights, at the bank), cross the road, go past the mosque, and the position 'It's on your left / right.' Stress the difference: 'turn left' is a movement, 'on your left' is where something is.",
+    "Limits: the learner only knows the A0 lessons (and maybe to be / simple present). Don't teach 'Let's not', 'Do + imperative' for emphasis, modals (could/would/should) or 'take the second left'. Keep instructions to 1–2 short sentences; use places they know (bank, mosque, school, warung, station, traffic lights)."
+  ],
+  "keyPoints": [
+    {
+      "title": "Instructions: verb first, don't for negatives",
+      "explanation": "Start with the base verb and no 'you': Turn left. Wait here. For 'jangan', put Don't before the verb: Don't run. With adjectives use be: Be careful. Add please to be polite.",
+      "examples": [
+        {
+          "en": "Wait here, please.",
+          "id": "Tolong tunggu di sini."
+        },
+        {
+          "en": "Don't touch the cake!",
+          "id": "Jangan sentuh kuenya!"
+        },
+        {
+          "en": "Be careful. The floor is wet.",
+          "id": "Hati-hati. Lantainya basah."
+        }
+      ]
+    },
+    {
+      "title": "Let's + verb",
+      "explanation": "Let's (= let us) invites someone to do something with you, like 'ayo kita'. Use the base verb right after it: no 'to', no 'we'.",
+      "examples": [
+        {
+          "en": "Let's go home.",
+          "id": "Ayo kita pulang."
+        },
+        {
+          "en": "Let's start the meeting.",
+          "id": "Ayo kita mulai rapatnya."
+        },
+        {
+          "en": "Let's take a break. — Good idea!",
+          "id": "Ayo istirahat sebentar. — Ide bagus!"
+        }
+      ]
+    },
+    {
+      "title": "Understanding instructions and directions",
+      "explanation": "Listen for the verb (go, turn, cross, stop) and for don't, then the place words. 'Turn left' is a movement; 'on your left' tells you where the place is.",
+      "examples": [
+        {
+          "en": "Go straight on and turn right at the traffic lights.",
+          "id": "Jalan terus lurus, lalu belok kanan di lampu merah."
+        },
+        {
+          "en": "The station is on your left.",
+          "id": "Stasiunnya ada di sebelah kirimu."
+        }
+      ]
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "imperatives",
+      "prompt": "Make it negative: Close the door.",
+      "expected": [
+        "don't close the door",
+        "do not close the door"
+      ],
+      "hint": "Put Don't before the verb."
+    },
+    {
+      "objectiveId": "imperatives",
+      "prompt": "Correct the instruction: You turn right here.",
+      "expected": [
+        "turn right here"
+      ],
+      "hint": "An instruction has no 'you'. Start with the verb."
+    },
+    {
+      "objectiveId": "lets",
+      "prompt": "Make a suggestion with Let's: (go home)",
+      "expected": [
+        "let's go home",
+        "let us go home"
+      ],
+      "hint": "Let's + verb."
+    },
+    {
+      "objectiveId": "follow-instructions",
+      "prompt": "Read: 'Go straight on. Turn right at the mosque. The café is on your left.' Is the café on the left or on the right?",
+      "expected": [
+        "left",
+        "on the left",
+        "on your left",
+        "the left"
+      ],
+      "hint": "'Turn right' is the movement. Look at the last sentence."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "imperatives",
+      "prompt": "Translate into English: Jangan merokok di sini.",
+      "expected": [
+        "don't smoke here",
+        "do not smoke here",
+        "please don't smoke here",
+        "don't smoke here please"
+      ],
+      "hint": "Jangan = Don't."
+    },
+    {
+      "objectiveId": "lets",
+      "prompt": "Correct the sentence: Let's we go to the mall.",
+      "expected": [
+        "let's go to the mall"
+      ],
+      "hint": "Let's already means 'let us'. Don't add we."
+    },
+    {
+      "objectiveId": "follow-instructions",
+      "prompt": "Your friend says: 'Don't take the 3 o'clock train. Take the 4 o'clock train.' Which train do you take? Write the time.",
+      "expected": [
+        "4",
+        "4 o'clock",
+        "four",
+        "four o'clock",
+        "the 4 o'clock train"
+      ],
+      "hint": "Don't take = jangan naik."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "imp-1",
+      "objectiveId": "imperatives",
+      "prompt": "Make it negative: Open the window.",
+      "acceptableAnswers": [
+        "don't open the window",
+        "do not open the window",
+        "please don't open the window",
+        "don't open the window please"
+      ],
+      "rubric": "Correct: Don't / Do not open the window. 'Not open the window' or 'No open the window' = 20. 'Don't to open' = 50. 'You don't open the window' = 40 (a statement, not an instruction)."
+    },
+    {
+      "id": "imp-2",
+      "objectiveId": "imperatives",
+      "prompt": "Your friend is often late. Translate into English: Jangan terlambat!",
+      "acceptableAnswers": [
+        "don't be late",
+        "do not be late",
+        "please don't be late",
+        "don't be late please",
+        "don't come late",
+        "do not come late"
+      ],
+      "rubric": "Correct: Don't be late (also accept 'Don't come late'). Missing 'be' ('Don't late') = 40. 'Not late!' = 20. 'You don't late' = 10."
+    },
+    {
+      "id": "imp-3",
+      "objectiveId": "lets",
+      "prompt": "You and your friend are hungry. Translate into English: Ayo kita makan!",
+      "acceptableAnswers": [
+        "let's eat",
+        "let us eat",
+        "let's eat now",
+        "let's eat something",
+        "let's eat together"
+      ],
+      "rubric": "Correct: Let's eat. 'Let's have lunch/dinner' = 90 (fine meaning). 'Let's we eat' = 40. 'Let's to eat' or 'Let's eating' = 40. 'Eat!' = 30 (an order, not an invitation)."
+    },
+    {
+      "id": "imp-4",
+      "objectiveId": "lets",
+      "prompt": "Correct the sentence: Let's to take a taxi.",
+      "acceptableAnswers": [
+        "let's take a taxi",
+        "let us take a taxi"
+      ],
+      "rubric": "Correct: Let's take a taxi (no 'to'). 'Let's taking a taxi' = 30. 'Lets take a taxi' without the apostrophe = 90."
+    },
+    {
+      "id": "imp-5",
+      "objectiveId": "follow-instructions",
+      "prompt": "Listen to the directions. Is the bank on the left or on the right? Write one word.",
+      "listen": "Go straight on and turn left at the traffic lights. The bank is on your right.",
+      "acceptableAnswers": [
+        "right",
+        "on the right",
+        "on your right",
+        "the right"
+      ],
+      "rubric": "Correct: right. 'Left' = 0 (that is where you turn, not where the bank is)."
+    },
+    {
+      "id": "imp-6",
+      "objectiveId": "follow-instructions",
+      "prompt": "You are at a bus stop in Jakarta. Listen to the man. Which bus do you take? Write the number.",
+      "listen": "Take bus number 12 to Blok M. Don't take bus number 20.",
+      "acceptableAnswers": [
+        "12",
+        "twelve",
+        "bus 12",
+        "number 12",
+        "bus number 12",
+        "bus twelve",
+        "number twelve"
+      ],
+      "rubric": "Correct: 12. '20' = 0 (that bus is the one NOT to take). '2' or '21' = 0."
+    }
+  ],
+  "material": [
+    {
+      "id": "instructions",
+      "title": "Instructions start with the verb",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To tell someone what to do, start with the **base verb** (the dictionary form). There is **no 'you'**: **Turn left.** **Wait here.** **Sit down.** Indonesian works the same way: *Belok kiri! Tunggu di sini!* With adjectives, use **be**: **Be careful.** **Be quiet.**",
+          "i18n": {
+            "id": {
+              "text": "Untuk menyuruh seseorang melakukan sesuatu, mulai dengan **kata kerja dasar** (bentuk di kamus). **Tidak ada 'you'**: **Turn left.** **Wait here.** **Sit down.** Bahasa Indonesia juga begitu: *Belok kiri! Tunggu di sini!* Dengan kata sifat, pakai **be**: **Be careful.** **Be quiet.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Turn left.",
+              "id": "Belok kiri."
+            },
+            {
+              "en": "Wait here, please.",
+              "id": "Tolong tunggu di sini."
+            },
+            {
+              "en": "Please sit down.",
+              "id": "Silakan duduk."
+            },
+            {
+              "en": "Call me tonight.",
+              "id": "Telepon aku nanti malam."
+            },
+            {
+              "en": "Be careful!",
+              "id": "Hati-hati!"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "An instruction alone can sound strong. Add **please** at the start or the end to be polite: **Please wait here.** / **Wait here, please.** Don't say 'You wait here': that sounds like a statement, not an instruction.",
+          "i18n": {
+            "id": {
+              "text": "Kalimat perintah saja bisa terdengar keras. Tambahkan **please** di awal atau di akhir supaya sopan: **Please wait here.** / **Wait here, please.** Jangan bilang 'You wait here': itu terdengar seperti pernyataan, bukan perintah."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "A driver asks you the way to the hotel. Which is correct?",
+          "options": [
+            "You turn right.",
+            "Turn right.",
+            "Turning right."
+          ],
+          "answer": 1,
+          "explain": "An instruction starts with the base verb and has no subject: Turn right.",
+          "i18n": {
+            "id": {
+              "explain": "Kalimat perintah dimulai dengan kata kerja dasar dan tanpa subjek: Turn right."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat perintah dimulai dengan kata kerja"
+        }
+      }
+    },
+    {
+      "id": "dont",
+      "title": "Don't = jangan",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To tell someone **not** to do something, put **Don't** (= do not) before the base verb: **Don't run.** **Don't worry.** **Don't touch the cake.** With adjectives: **Don't be shy.**",
+          "i18n": {
+            "id": {
+              "text": "Untuk melarang, letakkan **Don't** (= do not) sebelum kata kerja dasar: **Don't run.** **Don't worry.** **Don't touch the cake.** Dengan kata sifat: **Don't be shy.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Don't run!",
+              "id": "Jangan lari!"
+            },
+            {
+              "en": "Don't worry.",
+              "id": "Jangan khawatir."
+            },
+            {
+              "en": "Please don't park here.",
+              "id": "Tolong jangan parkir di sini."
+            },
+            {
+              "en": "Don't be shy.",
+              "id": "Jangan malu-malu."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Never say **'Not run!'** or **'No run!'** Say **Don't run!** You see **NO SMOKING** and **NO PARKING** on signs, but when you speak, say **Don't smoke here** or **Please don't park here**.",
+          "i18n": {
+            "id": {
+              "text": "Jangan pernah bilang **'Not run!'** atau **'No run!'** Ucapkan **Don't run!** Tulisan **NO SMOKING** dan **NO PARKING** ada di papan tanda, tapi saat berbicara, ucapkan **Don't smoke here** atau **Please don't park here**."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "We're in the library. ___ shout, please.",
+          "options": [
+            "Not",
+            "No",
+            "Don't"
+          ],
+          "answer": 2,
+          "explain": "For 'jangan', use Don't + verb: Don't shout.",
+          "i18n": {
+            "id": {
+              "explain": "Untuk 'jangan', pakai Don't + kata kerja: Don't shout."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Don't = jangan"
+        }
+      }
+    },
+    {
+      "id": "lets",
+      "title": "Let's: inviting people",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**Let's** (= let us) means you want to do something **together** with the other person, like *ayo kita*. After Let's, use the **base verb**: **Let's go.** **Let's start.** **Let's take a break.** Answer with **OK!**, **Good idea!** or **Sorry, I'm busy.**",
+          "i18n": {
+            "id": {
+              "text": "**Let's** (= let us) artinya kamu ingin melakukan sesuatu **bersama** orang lain, seperti *ayo kita*. Setelah Let's, pakai **kata kerja dasar**: **Let's go.** **Let's start.** **Let's take a break.** Jawab dengan **OK!**, **Good idea!** atau **Sorry, I'm busy.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Let's go home.",
+              "id": "Ayo kita pulang."
+            },
+            {
+              "en": "Let's start the meeting.",
+              "id": "Ayo kita mulai rapatnya."
+            },
+            {
+              "en": "Let's watch a film tonight. — Good idea!",
+              "id": "Ayo nonton film nanti malam. — Ide bagus!"
+            },
+            {
+              "en": "Let's play football. — Sorry, I'm busy.",
+              "id": "Ayo main bola. — Maaf, aku sibuk."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Let's** already has 'us' inside, so don't add **we**: *Ayo kita pergi* is **Let's go**, not 'Let's we go'. And no **to** or **-ing**: not 'Let's to go' or 'Let's going'.",
+          "i18n": {
+            "id": {
+              "text": "**Let's** sudah berisi 'us', jadi jangan tambah **we**: *Ayo kita pergi* adalah **Let's go**, bukan 'Let's we go'. Juga tanpa **to** atau **-ing**: bukan 'Let's to go' atau 'Let's going'."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "It's hot. ___ to the beach!",
+          "options": [
+            "Let's go",
+            "Let's we go",
+            "Let's going"
+          ],
+          "answer": 0,
+          "explain": "Let's + base verb: Let's go. No 'we', no -ing.",
+          "i18n": {
+            "id": {
+              "explain": "Let's + kata kerja dasar: Let's go. Tanpa 'we', tanpa -ing."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Let's: mengajak orang"
+        }
+      }
+    },
+    {
+      "id": "directions",
+      "title": "Following directions",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Directions are a chain of short instructions. Listen for the **verbs**: **go straight on** (jalan terus lurus), **turn left / turn right** (belok kiri / kanan), **cross the road** (seberangi jalan), **go past** (lewati). Then listen for the place: **at the traffic lights**, **at the mosque**. The last sentence often tells you where the place is: **It's on your left.**",
+          "i18n": {
+            "id": {
+              "text": "Petunjuk arah adalah rangkaian perintah pendek. Dengarkan **kata kerjanya**: **go straight on** (jalan terus lurus), **turn left / turn right** (belok kiri / kanan), **cross the road** (seberangi jalan), **go past** (lewati). Lalu dengarkan tempatnya: **at the traffic lights** (di lampu merah), **at the mosque** (di masjid). Kalimat terakhir biasanya memberi tahu letak tempatnya: **It's on your left.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Go straight on.",
+              "id": "Jalan terus lurus."
+            },
+            {
+              "en": "Turn right at the traffic lights.",
+              "id": "Belok kanan di lampu merah."
+            },
+            {
+              "en": "Cross the road and go past the school.",
+              "id": "Seberangi jalan dan lewati sekolah."
+            },
+            {
+              "en": "The warung is on your left.",
+              "id": "Warungnya ada di sebelah kirimu."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "**Turn left** is a movement (belok kiri). **On your left** is a position (di sebelah kiri). You can turn left and then find the place on your right!",
+          "i18n": {
+            "id": {
+              "text": "**Turn left** adalah gerakan (belok kiri). **On your left** adalah posisi (di sebelah kiri). Kamu bisa belok kiri lalu menemukan tempatnya di sebelah kanan!"
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "'Turn right at the school. The pharmacy is on your left.' Where is the pharmacy?",
+          "options": [
+            "on the right",
+            "on the left",
+            "at the school"
+          ],
+          "answer": 1,
+          "explain": "'Turn right' is where you go. 'On your left' is where the pharmacy is.",
+          "i18n": {
+            "id": {
+              "explain": "'Turn right' adalah arah jalanmu. 'On your left' adalah letak apoteknya."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengikuti petunjuk arah"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why is there no 'you' in 'Turn left'?",
+    "What's the difference between 'Don't smoke' and 'No smoking'?",
+    "Can I say 'Let's we go'?",
+    "How do I ask for directions politely?"
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "Imperatives",
+      "url": "https://learnenglishkids.britishcouncil.org/grammar-vocabulary/grammar-practice/imperatives",
+      "source": "British Council LearnEnglish Kids",
+      "note": "A very simple explanation of instructions with don't and please, plus games. Made for young learners, but clear for any beginner.",
+      "i18n": {
+        "id": {
+          "note": "Penjelasan sangat sederhana tentang kalimat perintah dengan don't dan please, plus permainan. Dibuat untuk anak-anak, tapi jelas untuk semua pemula."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Giving directions (listening)",
+      "url": "https://learnenglishteens.britishcouncil.org/skills/listening/a2-listening/giving-directions",
+      "source": "British Council LearnEnglish Teens",
+      "note": "Listen to four short directions, follow them on a map and do the exercises. A little above A1: a good challenge.",
+      "i18n": {
+        "id": {
+          "note": "Dengarkan empat petunjuk arah pendek, ikuti di peta, lalu kerjakan latihannya. Sedikit di atas A1: tantangan yang bagus."
+        }
+      }
+    }
+  ],
+  "flashcards": [
+    {
+      "front": "belok kiri",
+      "back": "turn left"
+    },
+    {
+      "front": "jalan terus lurus",
+      "back": "go straight on"
+    },
+    {
+      "front": "jangan lari",
+      "back": "don't run"
+    },
+    {
+      "front": "jangan khawatir",
+      "back": "don't worry"
+    },
+    {
+      "front": "hati-hati",
+      "back": "be careful"
+    },
+    {
+      "front": "ayo kita pergi",
+      "back": "let's go (not: let's we go)"
+    },
+    {
+      "front": "di sebelah kananmu",
+      "back": "on your right"
+    },
+    {
+      "front": "di lampu merah",
+      "back": "at the traffic lights"
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Selamat datang! Hari ini kamu belajar cara menyuruh orang melakukan sesuatu (Turn left. Wait here.), melarang (Don't run.), dan mengajak teman dengan Let's (Let's go!). Kamu juga berlatih memahami petunjuk arah sederhana di jalan. Pemanasan: apa yang guru kamu ucapkan saat kelas dimulai?",
+      "suggestedQuestions": [
+        "Kenapa tidak ada 'you' di 'Turn left'?",
+        "Apa bedanya 'Don't smoke' dan 'No smoking'?",
+        "Boleh bilang 'Let's we go'?",
+        "Bagaimana cara bertanya arah dengan sopan?"
+      ],
+      "assessment": {
+        "imp-1": "Ubah ke kalimat larangan (negatif): Open the window.",
+        "imp-2": "Temanmu sering terlambat. Terjemahkan ke bahasa Inggris: Jangan terlambat!",
+        "imp-3": "Kamu dan temanmu lapar. Terjemahkan ke bahasa Inggris: Ayo kita makan!",
+        "imp-4": "Perbaiki kalimat ini: Let's to take a taxi.",
+        "imp-5": "Dengarkan petunjuk arahnya. Bank ada di kiri atau di kanan? Tulis satu kata dalam bahasa Inggris.",
+        "imp-6": "Kamu di halte bus di Jakarta. Dengarkan pria itu. Bus nomor berapa yang kamu naiki? Tulis angkanya."
+      }
+    }
+  }
+}

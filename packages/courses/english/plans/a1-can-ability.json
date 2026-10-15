@@ -1,0 +1,666 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn one small word with three big jobs: can. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "What you can do",
+        "text": "In Indonesian you say 'bisa'. In English the word is **can**, and it's very easy to use.",
+        "body": "Put **can** before a verb in its base form: **I can swim.** The negative is **can't** (or **cannot**, one word): **I can't swim.**\nCan is the same for every subject: **she can**, not 'she cans'. And there is no **to** after it: **I can swim**, not 'I can to swim'.",
+        "pairs": [
+          {
+            "en": "can",
+            "id": "bisa"
+          },
+          {
+            "en": "can't / cannot",
+            "id": "tidak bisa"
+          },
+          {
+            "en": "swim",
+            "id": "berenang"
+          },
+          {
+            "en": "cook",
+            "id": "memasak"
+          },
+          {
+            "en": "dance",
+            "id": "menari"
+          },
+          {
+            "en": "drive",
+            "id": "menyetir (mobil)"
+          },
+          {
+            "en": "ride a motorbike",
+            "id": "naik motor"
+          },
+          {
+            "en": "play the guitar",
+            "id": "main gitar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan has a small workshop in Bandung. Which sentence is correct?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-abilities",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "Pak Hasan can to fix motorbikes.",
+            "Pak Hasan cans fix motorbikes.",
+            "Pak Hasan can fix motorbikes."
+          ],
+          "answer": 2,
+          "explanation": "**Can** never changes: no -s with he/she, even though Pak Hasan = he. And the verb comes straight after it, with no **to**: **can fix**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Can, can't and questions",
+        "text": "Here are some people talking about what they can and can't do. Notice the questions and short answers.",
+        "body": "Questions start with **can**, with no do: **Can you cook?** Short answers: **Yes, I can. / No, I can't.**\nListen for the difference: **can** is short and quiet (almost 'kn'), but **can't** is long and strong.",
+        "examples": [
+          {
+            "en": "Sari can sing very well.",
+            "id": "Sari bisa menyanyi dengan sangat bagus."
+          },
+          {
+            "en": "My grandmother can't read English.",
+            "id": "Nenek saya tidak bisa membaca bahasa Inggris."
+          },
+          {
+            "en": "I can't dance, but I can sing.",
+            "id": "Saya tidak bisa menari, tapi saya bisa menyanyi."
+          },
+          {
+            "en": "Can you cook? — Yes, I can.",
+            "id": "Kamu bisa masak? — Ya, bisa."
+          },
+          {
+            "en": "Can Budi play the guitar? — No, he can't.",
+            "id": "Budi bisa main gitar? — Tidak, dia tidak bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: can or can't?",
+        "text": "Budi is talking about the kitchen. Press play and listen carefully for **can** and **can't**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-abilities",
+          "prompt": "Listen to Budi. Which sentence is true?",
+          "listen": "I can't cook, but I can make coffee.",
+          "options": [
+            "Budi can cook.",
+            "Budi can make coffee.",
+            "Budi can't make coffee."
+          ],
+          "answer": 1,
+          "explanation": "Budi says **I can't cook** (long, strong 'can't') and **I can make coffee** (short, quiet 'can'). So he can make coffee, but he can't cook."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking for help",
+        "text": "**Can** has a second job. With **you**, it asks someone to do something for you, like 'tolong' or 'bisa tolong …?'.",
+        "body": "Pattern: **Can you** + verb … **please**? This is a request, not a question about ability. Say yes with **Sure!** or **Of course.** Say no with **Sorry, I can't.**\nCareful: there is no **do** with can. Say **Can you help me?**, not 'Do you can help me?'.",
+        "pairs": [
+          {
+            "en": "Can you help me, please?",
+            "id": "Bisa tolong bantu saya?"
+          },
+          {
+            "en": "Can you pass the salt, please?",
+            "id": "Tolong ambilkan garamnya."
+          },
+          {
+            "en": "please",
+            "id": "tolong / ya (biar sopan)"
+          },
+          {
+            "en": "Sure!",
+            "id": "Oke! / Tentu!"
+          },
+          {
+            "en": "Of course.",
+            "id": "Tentu saja."
+          },
+          {
+            "en": "Sorry, I can't.",
+            "id": "Maaf, nggak bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build a request",
+        "text": "You're at the office and you need a file from your colleague Rina. Ask her politely.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-polite-requests",
+          "prompt": "Arrange the words: Bisa tolong kirim filenya ke saya?",
+          "tokens": [
+            "the",
+            "me",
+            "Can",
+            "file",
+            "please",
+            "send",
+            "you"
+          ],
+          "solution": "Can you send me the file, please?",
+          "explanation": "A request is **Can you** + verb + **please**? The order is **Can you send me the file, please?** Please usually goes at the end."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking permission",
+        "text": "And the third job: with **I**, can asks for permission, like 'boleh saya …?'.",
+        "body": "Pattern: **Can I** + verb …? To say yes: **Yes, you can. / Sure. / Of course.** To say no: **Sorry, you can't.**\nAnswer with **you**, not I: the other person asks about themselves.\nRules and signs use the same words: **You can't smoke here.**",
+        "pairs": [
+          {
+            "en": "Can I come in?",
+            "id": "Boleh saya masuk?"
+          },
+          {
+            "en": "Can I sit here?",
+            "id": "Boleh saya duduk di sini?"
+          },
+          {
+            "en": "Yes, you can.",
+            "id": "Ya, boleh."
+          },
+          {
+            "en": "Sorry, you can't.",
+            "id": "Maaf, tidak boleh."
+          },
+          {
+            "en": "You can't smoke here.",
+            "id": "Dilarang merokok di sini."
+          },
+          {
+            "en": "borrow",
+            "id": "meminjam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Your child is sick, so you want to leave work early today. What do you ask your manager?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-permission",
+          "prompt": "Choose the best question for your manager.",
+          "options": [
+            "Can I go home early today?",
+            "Do I can go home early today?",
+            "Can you go home early today?"
+          ],
+          "answer": 0,
+          "explanation": "You ask permission for yourself, so use **Can I** …? There is no **do** with can, and **Can you** …? asks the manager to do something."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Say yes",
+        "text": "Now you give permission. Your classmate Rina needs a pen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-permission",
+          "prompt": "Rina asks: 'Can I borrow your pen?' You say yes. Choose the best answer.",
+          "options": [
+            "Yes, I can.",
+            "Yes, you do.",
+            "Sure, you can."
+          ],
+          "answer": 2,
+          "explanation": "Rina asks about herself (**Can I**), so you answer with **you**: **Sure, you can.** 'Yes, I can' talks about you, and 'Yes, you do' answers a do-question."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "can",
+            "back": "bisa"
+          },
+          {
+            "front": "can't / cannot",
+            "back": "tidak bisa / tidak boleh"
+          },
+          {
+            "front": "Can you help me, please?",
+            "back": "Bisa tolong bantu saya?"
+          },
+          {
+            "front": "Sure! / Of course.",
+            "back": "Oke! / Tentu saja."
+          },
+          {
+            "front": "Can I come in?",
+            "back": "Boleh saya masuk?"
+          },
+          {
+            "front": "Yes, you can.",
+            "back": "Ya, boleh."
+          },
+          {
+            "front": "Sorry, you can't.",
+            "back": "Maaf, tidak boleh."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for when you need help or permission!",
+        "artifact": {
+          "title": "Cheat sheet · can",
+          "intro": "One word, three jobs: ability, requests and permission. Can + base verb, the same for everyone.",
+          "headers": [
+            "Job",
+            "Pattern",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Ability (bisa)",
+              "subject + can + verb",
+              "Sari can sing."
+            ],
+            [
+              "Ability, negative",
+              "subject + can't / cannot + verb",
+              "I can't dance."
+            ],
+            [
+              "Ability, question",
+              "Can + subject + verb?",
+              "Can you cook? — Yes, I can. / No, I can't."
+            ],
+            [
+              "Request (tolong)",
+              "Can you + verb … please?",
+              "Can you help me, please? — Sure!"
+            ],
+            [
+              "Ask permission (boleh)",
+              "Can I + verb …?",
+              "Can I come in? — Yes, you can."
+            ],
+            [
+              "Refuse / rules",
+              "You can't + verb",
+              "Sorry, you can't. / You can't smoke here."
+            ]
+          ],
+          "tips": [
+            "No **to** and no **-s**: I can swim, she can swim.",
+            "No **do** with can: **Can you help me?**, not 'Do you can help me?'.",
+            "Answer **Can I …?** with **you**: Yes, you can."
+          ],
+          "examples": [
+            {
+              "en": "My grandmother can't read English.",
+              "id": "Nenek saya tidak bisa membaca bahasa Inggris."
+            },
+            {
+              "en": "Can you pass the salt, please?",
+              "id": "Tolong ambilkan garamnya."
+            },
+            {
+              "en": "Can I sit here? — Sure.",
+              "id": "Boleh saya duduk di sini? — Silakan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and practise",
+        "text": "Want more? Watch a video lesson about can and can't, and try the British Council exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu belajar satu kata kecil dengan tiga tugas besar: can. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Apa yang bisa kamu lakukan",
+        "text": "Dalam bahasa Indonesia kita bilang 'bisa'. Dalam bahasa Inggris katanya **can**, dan cara pakainya mudah sekali.",
+        "body": "Letakkan **can** sebelum kata kerja bentuk dasar: **I can swim.** Bentuk negatifnya **can't** (atau **cannot**, satu kata): **I can't swim.**\nCan sama untuk semua subjek: **she can**, bukan 'she cans'. Dan tidak ada **to** sesudahnya: **I can swim**, bukan 'I can to swim'.",
+        "pairs": [
+          {
+            "en": "can",
+            "id": "bisa"
+          },
+          {
+            "en": "can't / cannot",
+            "id": "tidak bisa"
+          },
+          {
+            "en": "swim",
+            "id": "berenang"
+          },
+          {
+            "en": "cook",
+            "id": "memasak"
+          },
+          {
+            "en": "dance",
+            "id": "menari"
+          },
+          {
+            "en": "drive",
+            "id": "menyetir (mobil)"
+          },
+          {
+            "en": "ride a motorbike",
+            "id": "naik motor"
+          },
+          {
+            "en": "play the guitar",
+            "id": "main gitar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan punya bengkel kecil di Bandung. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-abilities",
+          "prompt": "Pilih kalimat yang benar.",
+          "options": [
+            "Pak Hasan can to fix motorbikes.",
+            "Pak Hasan cans fix motorbikes.",
+            "Pak Hasan can fix motorbikes."
+          ],
+          "answer": 2,
+          "explanation": "**Can** tidak pernah berubah: tanpa -s untuk he/she, walaupun Pak Hasan = he. Dan kata kerjanya langsung sesudahnya, tanpa **to**: **can fix**."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Can, can't dan pertanyaan",
+        "text": "Ini beberapa orang yang bercerita tentang apa yang bisa dan tidak bisa mereka lakukan. Perhatikan pertanyaan dan jawaban singkatnya.",
+        "body": "Pertanyaan dimulai dengan **can**, tanpa do: **Can you cook?** Jawaban singkat: **Yes, I can. / No, I can't.**\nDengarkan bedanya: **can** pendek dan pelan (hampir 'kn'), tapi **can't** panjang dan tegas.",
+        "examples": [
+          {
+            "en": "Sari can sing very well.",
+            "id": "Sari bisa menyanyi dengan sangat bagus."
+          },
+          {
+            "en": "My grandmother can't read English.",
+            "id": "Nenek saya tidak bisa membaca bahasa Inggris."
+          },
+          {
+            "en": "I can't dance, but I can sing.",
+            "id": "Saya tidak bisa menari, tapi saya bisa menyanyi."
+          },
+          {
+            "en": "Can you cook? — Yes, I can.",
+            "id": "Kamu bisa masak? — Ya, bisa."
+          },
+          {
+            "en": "Can Budi play the guitar? — No, he can't.",
+            "id": "Budi bisa main gitar? — Tidak, dia tidak bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: can atau can't?",
+        "text": "Budi bercerita tentang dapur. Tekan play dan dengarkan baik-baik **can** dan **can't**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-abilities",
+          "prompt": "Dengarkan Budi. Kalimat mana yang benar?",
+          "listen": "I can't cook, but I can make coffee.",
+          "options": [
+            "Budi can cook.",
+            "Budi can make coffee.",
+            "Budi can't make coffee."
+          ],
+          "answer": 1,
+          "explanation": "Budi bilang **I can't cook** ('can't' panjang dan tegas) dan **I can make coffee** ('can' pendek dan pelan). Jadi dia bisa membuat kopi, tapi tidak bisa memasak."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Minta tolong",
+        "text": "**Can** punya tugas kedua. Dengan **you**, can dipakai untuk meminta orang melakukan sesuatu, seperti 'tolong' atau 'bisa tolong …?'.",
+        "body": "Polanya: **Can you** + kata kerja … **please**? Ini permintaan, bukan pertanyaan tentang kemampuan. Untuk bilang ya: **Sure!** atau **Of course.** Untuk bilang tidak: **Sorry, I can't.**\nHati-hati: tidak ada **do** kalau memakai can. Ucapkan **Can you help me?**, bukan 'Do you can help me?'.",
+        "pairs": [
+          {
+            "en": "Can you help me, please?",
+            "id": "Bisa tolong bantu saya?"
+          },
+          {
+            "en": "Can you pass the salt, please?",
+            "id": "Tolong ambilkan garamnya."
+          },
+          {
+            "en": "please",
+            "id": "tolong / ya (biar sopan)"
+          },
+          {
+            "en": "Sure!",
+            "id": "Oke! / Tentu!"
+          },
+          {
+            "en": "Of course.",
+            "id": "Tentu saja."
+          },
+          {
+            "en": "Sorry, I can't.",
+            "id": "Maaf, nggak bisa."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun permintaannya",
+        "text": "Kamu di kantor dan butuh file dari rekan kerjamu, Rina. Minta dengan sopan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-polite-requests",
+          "prompt": "Susun kata-katanya: Bisa tolong kirim filenya ke saya?",
+          "tokens": [
+            "the",
+            "me",
+            "Can",
+            "file",
+            "please",
+            "send",
+            "you"
+          ],
+          "solution": "Can you send me the file, please?",
+          "explanation": "Permintaan memakai pola **Can you** + kata kerja + **please**? Urutannya **Can you send me the file, please?** Please biasanya di akhir."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Minta izin",
+        "text": "Dan tugas ketiga: dengan **I**, can dipakai untuk minta izin, seperti 'boleh saya …?'.",
+        "body": "Polanya: **Can I** + kata kerja …? Untuk bilang ya: **Yes, you can. / Sure. / Of course.** Untuk bilang tidak: **Sorry, you can't.**\nJawab dengan **you**, bukan I: orang itu bertanya tentang dirinya sendiri.\nAturan dan tanda juga memakai kata yang sama: **You can't smoke here.**",
+        "pairs": [
+          {
+            "en": "Can I come in?",
+            "id": "Boleh saya masuk?"
+          },
+          {
+            "en": "Can I sit here?",
+            "id": "Boleh saya duduk di sini?"
+          },
+          {
+            "en": "Yes, you can.",
+            "id": "Ya, boleh."
+          },
+          {
+            "en": "Sorry, you can't.",
+            "id": "Maaf, tidak boleh."
+          },
+          {
+            "en": "You can't smoke here.",
+            "id": "Dilarang merokok di sini."
+          },
+          {
+            "en": "borrow",
+            "id": "meminjam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Anakmu sakit, jadi kamu mau pulang kerja lebih awal hari ini. Apa yang kamu tanyakan ke manajermu?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-permission",
+          "prompt": "Pilih pertanyaan yang paling tepat untuk manajermu.",
+          "options": [
+            "Can I go home early today?",
+            "Do I can go home early today?",
+            "Can you go home early today?"
+          ],
+          "answer": 0,
+          "explanation": "Kamu minta izin untuk dirimu sendiri, jadi pakai **Can I** …? Tidak ada **do** kalau memakai can, dan **Can you** …? meminta manajer melakukan sesuatu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Bilang ya",
+        "text": "Sekarang kamu yang memberi izin. Teman sekelasmu, Rina, butuh pulpen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-permission",
+          "prompt": "Rina bertanya: 'Can I borrow your pen?' Kamu mengizinkan. Pilih jawaban yang paling tepat.",
+          "options": [
+            "Yes, I can.",
+            "Yes, you do.",
+            "Sure, you can."
+          ],
+          "answer": 2,
+          "explanation": "Rina bertanya tentang dirinya (**Can I**), jadi jawab dengan **you**: **Sure, you can.** 'Yes, I can' membicarakan dirimu, dan 'Yes, you do' adalah jawaban untuk pertanyaan dengan do."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartunya. Sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "can",
+            "back": "bisa"
+          },
+          {
+            "front": "can't / cannot",
+            "back": "tidak bisa / tidak boleh"
+          },
+          {
+            "front": "Can you help me, please?",
+            "back": "Bisa tolong bantu saya?"
+          },
+          {
+            "front": "Sure! / Of course.",
+            "back": "Oke! / Tentu saja."
+          },
+          {
+            "front": "Can I come in?",
+            "back": "Boleh saya masuk?"
+          },
+          {
+            "front": "Yes, you can.",
+            "back": "Ya, boleh."
+          },
+          {
+            "front": "Sorry, you can't.",
+            "back": "Maaf, tidak boleh."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk saat kamu butuh bantuan atau izin!",
+        "artifact": {
+          "title": "Contekan · can",
+          "intro": "Satu kata, tiga tugas: kemampuan, permintaan dan izin. Can + kata kerja dasar, sama untuk semua subjek.",
+          "headers": [
+            "Tugas",
+            "Pola",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Kemampuan (bisa)",
+              "subjek + can + kata kerja",
+              "Sari can sing."
+            ],
+            [
+              "Kemampuan, negatif",
+              "subjek + can't / cannot + kata kerja",
+              "I can't dance."
+            ],
+            [
+              "Kemampuan, tanya",
+              "Can + subjek + kata kerja?",
+              "Can you cook? — Yes, I can. / No, I can't."
+            ],
+            [
+              "Permintaan (tolong)",
+              "Can you + kata kerja … please?",
+              "Can you help me, please? — Sure!"
+            ],
+            [
+              "Minta izin (boleh)",
+              "Can I + kata kerja …?",
+              "Can I come in? — Yes, you can."
+            ],
+            [
+              "Menolak / aturan",
+              "You can't + kata kerja",
+              "Sorry, you can't. / You can't smoke here."
+            ]
+          ],
+          "tips": [
+            "Tanpa **to** dan tanpa **-s**: I can swim, she can swim.",
+            "Tidak ada **do** dengan can: **Can you help me?**, bukan 'Do you can help me?'.",
+            "Jawab **Can I …?** dengan **you**: Yes, you can."
+          ],
+          "examples": [
+            {
+              "en": "My grandmother can't read English.",
+              "id": "Nenek saya tidak bisa membaca bahasa Inggris."
+            },
+            {
+              "en": "Can you pass the salt, please?",
+              "id": "Tolong ambilkan garamnya."
+            },
+            {
+              "en": "Can I sit here? — Sure.",
+              "id": "Boleh saya duduk di sini? — Silakan."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan latihan",
+        "text": "Mau lebih? Tonton video pelajaran tentang can dan can't, lalu coba latihan dari British Council."
+      }
+    ]
+  }
+}

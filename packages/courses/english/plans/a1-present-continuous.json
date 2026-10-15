@@ -1,0 +1,684 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn the present continuous, the way to say what is happening right now. Let's take it one small step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Happening now",
+        "text": "Let's talk about what is happening right now. In Indonesian you say **sedang**; English uses **am / is / are + -ing**.",
+        "body": "Form: **am / is / are + verb-ing**. Short forms: `I'm`, `he's`, `she's`, `it's`, `we're`, `they're`. English **always** needs am/is/are: say **I'm cooking**, not `I cooking`. Negative: add **not** (I'm not, she isn't, they aren't). Question: put **am / is / are** first: Are you listening? — Yes, I am.",
+        "pairs": [
+          {
+            "en": "I'm cooking.",
+            "id": "Saya sedang memasak."
+          },
+          {
+            "en": "She's reading.",
+            "id": "Dia (perempuan) sedang membaca."
+          },
+          {
+            "en": "They're working.",
+            "id": "Mereka sedang bekerja."
+          },
+          {
+            "en": "I'm not sleeping.",
+            "id": "Saya tidak sedang tidur."
+          },
+          {
+            "en": "Are you listening?",
+            "id": "Kamu sedang mendengarkan?"
+          },
+          {
+            "en": "What are you doing?",
+            "id": "Kamu sedang apa?"
+          },
+          {
+            "en": "now / right now",
+            "id": "sekarang"
+          },
+          {
+            "en": "Look! / Listen!",
+            "id": "Lihat! / Dengar!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's try one. Remember: two parts, be + -ing.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-present-continuous",
+          "prompt": "Complete: Rina is at the warung. She ___ lunch now.",
+          "options": [
+            "eating",
+            "is eat",
+            "is eating"
+          ],
+          "answer": 2,
+          "explanation": "It's happening **now**, so we need both parts: **is** + **eating**. `eating` alone has no be, and `is eat` has no -ing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Spelling the -ing",
+        "text": "Now the spelling. Most verbs are easy, but some change a little.",
+        "body": "Most verbs just add **-ing**: cook → cooking, study → studying. Verb ends in **-e**? Drop the e: make → making, write → writing. Short verb ending **consonant + vowel + consonant**? Double the last letter: run → running, sit → sitting. But never double w, x or y: play → playing, fix → fixing.",
+        "pairs": [
+          {
+            "en": "cook → cooking",
+            "id": "memasak"
+          },
+          {
+            "en": "study → studying",
+            "id": "belajar"
+          },
+          {
+            "en": "play → playing",
+            "id": "bermain"
+          },
+          {
+            "en": "make → making",
+            "id": "membuat"
+          },
+          {
+            "en": "write → writing",
+            "id": "menulis"
+          },
+          {
+            "en": "run → running",
+            "id": "berlari"
+          },
+          {
+            "en": "sit → sitting",
+            "id": "duduk"
+          },
+          {
+            "en": "get → getting",
+            "id": "mendapat / menjadi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Spell it",
+        "text": "Swim is a short verb. Look at its last three letters: w-i-m.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-present-continuous",
+          "prompt": "Complete: Look! The children are ___ in the pool.",
+          "options": [
+            "swiming",
+            "swimming",
+            "swim"
+          ],
+          "answer": 1,
+          "explanation": "Swim ends consonant + vowel + consonant (w-i-m), so double the m: **swimming**. After **are** we need the -ing form, not `swim`."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build a sentence",
+        "text": "Now build a full sentence. Subject, then is, then the -ing verb.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "form-present-continuous",
+          "prompt": "Arrange the words: Budi sedang mencuci mobilnya.",
+          "tokens": [
+            "car",
+            "washing",
+            "Budi",
+            "his",
+            "is"
+          ],
+          "solution": "Budi is washing his car.",
+          "explanation": "Subject + **is** + verb-ing + the rest: Budi **is washing** his car. *Sedang* becomes is + -ing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Now or every day?",
+        "text": "You already know the simple present for habits. Now let's put the two side by side.",
+        "body": "**Simple present** = habits and routines: `every day`, `usually`, `on Sundays`. I work in Bandung. **Present continuous** = happening now: `now`, `right now`, `at the moment`, `today`, `Look!`. I'm working at home today. Don't mix them: say **I go to school every day**, not `I am go to school every day`. And **What do you do?** asks about your job; **What are you doing?** asks about now.",
+        "pairs": [
+          {
+            "en": "every day",
+            "id": "setiap hari"
+          },
+          {
+            "en": "usually",
+            "id": "biasanya"
+          },
+          {
+            "en": "on Sundays",
+            "id": "setiap hari Minggu"
+          },
+          {
+            "en": "at the moment",
+            "id": "saat ini"
+          },
+          {
+            "en": "today",
+            "id": "hari ini"
+          },
+          {
+            "en": "I work in Bandung.",
+            "id": "Saya bekerja di Bandung. (rutin)"
+          },
+          {
+            "en": "I'm working at home today.",
+            "id": "Hari ini saya bekerja di rumah."
+          },
+          {
+            "en": "What do you do?",
+            "id": "Apa pekerjaanmu?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Usually… but now…",
+        "text": "Here are both tenses together. Look at the time words.",
+        "body": "Time words are your best clue: habit words → simple present, now words → present continuous.",
+        "examples": [
+          {
+            "en": "I usually walk to school, but today I'm taking the bus.",
+            "id": "Saya biasanya jalan kaki ke sekolah, tapi hari ini saya naik bus."
+          },
+          {
+            "en": "Sari works in a bank. Right now she's having lunch.",
+            "id": "Sari bekerja di bank. Sekarang dia sedang makan siang."
+          },
+          {
+            "en": "We watch TV every evening.",
+            "id": "Kami menonton TV setiap malam."
+          },
+          {
+            "en": "Is Pak Hasan working today? — No, he isn't. He's at home.",
+            "id": "Apakah Pak Hasan bekerja hari ini? — Tidak. Dia di rumah."
+          },
+          {
+            "en": "Look! It's raining.",
+            "id": "Lihat! Hujan turun."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Your phone rings. Press play and listen carefully to the question.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-now-with",
+          "prompt": "It's 8 p.m. You are at your desk with your English homework. Your friend calls. Listen, then choose your reply.",
+          "listen": "Hi! What are you doing?",
+          "options": [
+            "I'm doing my homework.",
+            "I'm a student.",
+            "I do my homework."
+          ],
+          "answer": 0,
+          "explanation": "Your friend asks **What are you doing?**, a question about **now**, so answer with the present continuous: **I'm doing my homework.** `I'm a student` answers *What do you do?*, and `I do my homework` is a habit."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Find the time words first. Is this now or a routine?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-now-with",
+          "prompt": "Complete: Dewi ___ English every Tuesday.",
+          "options": [
+            "is studying",
+            "studies",
+            "is study"
+          ],
+          "answer": 1,
+          "explanation": "`Every Tuesday` is a routine, so use the simple present. Dewi = she, and study → **studies**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip these cards to review the key forms.",
+        "flashcards": [
+          {
+            "front": "make + -ing",
+            "back": "making (membuat)"
+          },
+          {
+            "front": "run + -ing",
+            "back": "running (berlari)"
+          },
+          {
+            "front": "study + -ing",
+            "back": "studying (belajar)"
+          },
+          {
+            "front": "What are you doing?",
+            "back": "Kamu sedang apa?"
+          },
+          {
+            "front": "Negative: She is sleeping.",
+            "back": "She isn't sleeping. (Dia tidak sedang tidur.)"
+          },
+          {
+            "front": "Short answer: Are you listening? (yes)",
+            "back": "Yes, I am. (Ya.)"
+          },
+          {
+            "front": "I work every day. / I'm working now.",
+            "back": "Saya bekerja setiap hari. / Saya sedang bekerja sekarang."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Present continuous",
+          "intro": "Use am / is / are + verb-ing for what is happening now. Use the simple present for habits.",
+          "headers": [
+            "Form",
+            "I",
+            "he / she / it",
+            "you / we / they"
+          ],
+          "rows": [
+            [
+              "Positive",
+              "I'm working.",
+              "She's working.",
+              "They're working."
+            ],
+            [
+              "Negative",
+              "I'm not working.",
+              "She isn't working.",
+              "They aren't working."
+            ],
+            [
+              "Question",
+              "Am I working?",
+              "Is she working?",
+              "Are they working?"
+            ],
+            [
+              "Short answer",
+              "Yes, I am. / No, I'm not.",
+              "Yes, she is. / No, she isn't.",
+              "Yes, they are. / No, they aren't."
+            ]
+          ],
+          "tips": [
+            "Spelling: most verbs + **-ing** (cooking); drop a final **e** (making); double the last letter of short verbs like run → **running**.",
+            "`now`, `today`, `Look!` → present continuous. `every day`, `usually` → simple present.",
+            "Never drop am/is/are: **I'm cooking**, not `I cooking`."
+          ],
+          "examples": [
+            {
+              "en": "What are you doing? — I'm studying English.",
+              "id": "Kamu sedang apa? — Saya sedang belajar bahasa Inggris."
+            },
+            {
+              "en": "I usually walk to school, but today I'm taking the bus.",
+              "id": "Saya biasanya jalan kaki ke sekolah, tapi hari ini saya naik bus."
+            },
+            {
+              "en": "Ibu isn't sleeping. She's reading.",
+              "id": "Ibu tidak sedang tidur. Dia sedang membaca."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This page has exercises, and the BBC video compares 'I work' and 'I'm working'."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar present continuous, cara mengatakan apa yang sedang terjadi sekarang. Kita pelajari pelan-pelan, satu langkah kecil setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Sedang terjadi sekarang",
+        "text": "Yuk bicara tentang apa yang sedang terjadi sekarang. Dalam bahasa Indonesia kamu bilang **sedang**; bahasa Inggris memakai **am / is / are + -ing**.",
+        "body": "Bentuknya: **am / is / are + kata kerja-ing**. Bentuk pendek: `I'm`, `he's`, `she's`, `it's`, `we're`, `they're`. Bahasa Inggris **selalu** butuh am/is/are: ucapkan **I'm cooking**, bukan `I cooking`. Negatif: tambahkan **not** (I'm not, she isn't, they aren't). Pertanyaan: taruh **am / is / are** di depan: Are you listening? — Yes, I am.",
+        "pairs": [
+          {
+            "en": "I'm cooking.",
+            "id": "Saya sedang memasak."
+          },
+          {
+            "en": "She's reading.",
+            "id": "Dia (perempuan) sedang membaca."
+          },
+          {
+            "en": "They're working.",
+            "id": "Mereka sedang bekerja."
+          },
+          {
+            "en": "I'm not sleeping.",
+            "id": "Saya tidak sedang tidur."
+          },
+          {
+            "en": "Are you listening?",
+            "id": "Kamu sedang mendengarkan?"
+          },
+          {
+            "en": "What are you doing?",
+            "id": "Kamu sedang apa?"
+          },
+          {
+            "en": "now / right now",
+            "id": "sekarang"
+          },
+          {
+            "en": "Look! / Listen!",
+            "id": "Lihat! / Dengar!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Yuk coba satu. Ingat: dua bagian, be + -ing.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-present-continuous",
+          "prompt": "Lengkapi: Rina is at the warung. She ___ lunch now.",
+          "options": [
+            "eating",
+            "is eat",
+            "is eating"
+          ],
+          "answer": 2,
+          "explanation": "Ini terjadi **sekarang**, jadi kita perlu dua bagian: **is** + **eating**. `eating` saja tidak punya be, dan `is eat` tidak punya -ing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ejaan -ing",
+        "text": "Sekarang ejaannya. Kebanyakan kata kerja mudah, tapi ada yang sedikit berubah.",
+        "body": "Kebanyakan kata kerja cukup ditambah **-ing**: cook → cooking, study → studying. Berakhiran **-e**? Buang e-nya: make → making, write → writing. Kata kerja pendek berakhiran **konsonan + vokal + konsonan**? Gandakan huruf terakhir: run → running, sit → sitting. Tapi w, x dan y tidak pernah digandakan: play → playing, fix → fixing.",
+        "pairs": [
+          {
+            "en": "cook → cooking",
+            "id": "memasak"
+          },
+          {
+            "en": "study → studying",
+            "id": "belajar"
+          },
+          {
+            "en": "play → playing",
+            "id": "bermain"
+          },
+          {
+            "en": "make → making",
+            "id": "membuat"
+          },
+          {
+            "en": "write → writing",
+            "id": "menulis"
+          },
+          {
+            "en": "run → running",
+            "id": "berlari"
+          },
+          {
+            "en": "sit → sitting",
+            "id": "duduk"
+          },
+          {
+            "en": "get → getting",
+            "id": "mendapat / menjadi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Eja dengan benar",
+        "text": "Swim adalah kata kerja pendek. Lihat tiga huruf terakhirnya: w-i-m.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "form-present-continuous",
+          "prompt": "Lengkapi: Look! The children are ___ in the pool.",
+          "options": [
+            "swiming",
+            "swimming",
+            "swim"
+          ],
+          "answer": 1,
+          "explanation": "Swim berakhiran konsonan + vokal + konsonan (w-i-m), jadi m-nya digandakan: **swimming**. Setelah **are** kita perlu bentuk -ing, bukan `swim`."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Sekarang susun kalimat lengkap. Subjek, lalu is, lalu kata kerja -ing.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "form-present-continuous",
+          "prompt": "Susun kata-katanya: Budi sedang mencuci mobilnya.",
+          "tokens": [
+            "car",
+            "washing",
+            "Budi",
+            "his",
+            "is"
+          ],
+          "solution": "Budi is washing his car.",
+          "explanation": "Subjek + **is** + kata kerja-ing + sisanya: Budi **is washing** his car. *Sedang* menjadi is + -ing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sekarang atau setiap hari?",
+        "text": "Kamu sudah tahu simple present untuk kebiasaan. Sekarang kita bandingkan keduanya.",
+        "body": "**Simple present** = kebiasaan dan rutinitas: `every day`, `usually`, `on Sundays`. I work in Bandung. **Present continuous** = sedang terjadi: `now`, `right now`, `at the moment`, `today`, `Look!`. I'm working at home today. Jangan dicampur: ucapkan **I go to school every day**, bukan `I am go to school every day`. Dan **What do you do?** menanyakan pekerjaanmu; **What are you doing?** menanyakan apa yang sedang kamu lakukan.",
+        "pairs": [
+          {
+            "en": "every day",
+            "id": "setiap hari"
+          },
+          {
+            "en": "usually",
+            "id": "biasanya"
+          },
+          {
+            "en": "on Sundays",
+            "id": "setiap hari Minggu"
+          },
+          {
+            "en": "at the moment",
+            "id": "saat ini"
+          },
+          {
+            "en": "today",
+            "id": "hari ini"
+          },
+          {
+            "en": "I work in Bandung.",
+            "id": "Saya bekerja di Bandung. (rutin)"
+          },
+          {
+            "en": "I'm working at home today.",
+            "id": "Hari ini saya bekerja di rumah."
+          },
+          {
+            "en": "What do you do?",
+            "id": "Apa pekerjaanmu?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Biasanya… tapi sekarang…",
+        "text": "Ini kedua tense bersama-sama. Perhatikan kata waktunya.",
+        "body": "Kata waktu adalah petunjuk terbaikmu: kata kebiasaan → simple present, kata 'sekarang' → present continuous.",
+        "examples": [
+          {
+            "en": "I usually walk to school, but today I'm taking the bus.",
+            "id": "Saya biasanya jalan kaki ke sekolah, tapi hari ini saya naik bus."
+          },
+          {
+            "en": "Sari works in a bank. Right now she's having lunch.",
+            "id": "Sari bekerja di bank. Sekarang dia sedang makan siang."
+          },
+          {
+            "en": "We watch TV every evening.",
+            "id": "Kami menonton TV setiap malam."
+          },
+          {
+            "en": "Is Pak Hasan working today? — No, he isn't. He's at home.",
+            "id": "Apakah Pak Hasan bekerja hari ini? — Tidak. Dia di rumah."
+          },
+          {
+            "en": "Look! It's raining.",
+            "id": "Lihat! Hujan turun."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Teleponmu berbunyi. Tekan putar dan dengarkan pertanyaannya baik-baik.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-now-with",
+          "prompt": "Jam 8 malam. Kamu sedang duduk di meja dengan PR bahasa Inggrismu. Temanmu menelepon. Dengarkan, lalu pilih jawabanmu.",
+          "listen": "Hi! What are you doing?",
+          "options": [
+            "I'm doing my homework.",
+            "I'm a student.",
+            "I do my homework."
+          ],
+          "answer": 0,
+          "explanation": "Temanmu bertanya **What are you doing?**, pertanyaan tentang **sekarang**, jadi jawab dengan present continuous: **I'm doing my homework.** `I'm a student` menjawab *What do you do?*, dan `I do my homework` adalah kebiasaan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cari kata waktunya dulu. Ini sekarang atau rutinitas?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrast-now-with",
+          "prompt": "Lengkapi: Dewi ___ English on Tuesdays and Thursdays.",
+          "options": [
+            "is studying",
+            "studies",
+            "is study"
+          ],
+          "answer": 1,
+          "explanation": "`Every Tuesday` adalah rutinitas, jadi pakai simple present. Dewi = she, dan study → **studies**."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartu-kartu ini untuk mengulang bentuk-bentuk pentingnya.",
+        "flashcards": [
+          {
+            "front": "make + -ing",
+            "back": "making (membuat)"
+          },
+          {
+            "front": "run + -ing",
+            "back": "running (berlari)"
+          },
+          {
+            "front": "study + -ing",
+            "back": "studying (belajar)"
+          },
+          {
+            "front": "What are you doing?",
+            "back": "Kamu sedang apa?"
+          },
+          {
+            "front": "Kalimat negatif: She is sleeping.",
+            "back": "She isn't sleeping. (Dia tidak sedang tidur.)"
+          },
+          {
+            "front": "Jawaban singkat: Are you listening? (ya)",
+            "back": "Yes, I am. (Ya.)"
+          },
+          {
+            "front": "I work every day. / I'm working now.",
+            "back": "Saya bekerja setiap hari. / Saya sedang bekerja sekarang."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · Present continuous",
+          "intro": "Pakai am / is / are + kata kerja-ing untuk hal yang sedang terjadi. Pakai simple present untuk kebiasaan.",
+          "headers": [
+            "Bentuk",
+            "I",
+            "he / she / it",
+            "you / we / they"
+          ],
+          "rows": [
+            [
+              "Positif",
+              "I'm working.",
+              "She's working.",
+              "They're working."
+            ],
+            [
+              "Negatif",
+              "I'm not working.",
+              "She isn't working.",
+              "They aren't working."
+            ],
+            [
+              "Pertanyaan",
+              "Am I working?",
+              "Is she working?",
+              "Are they working?"
+            ],
+            [
+              "Jawaban singkat",
+              "Yes, I am. / No, I'm not.",
+              "Yes, she is. / No, she isn't.",
+              "Yes, they are. / No, they aren't."
+            ]
+          ],
+          "tips": [
+            "Ejaan: kebanyakan kata kerja + **-ing** (cooking); buang **e** di akhir (making); gandakan huruf terakhir kata kerja pendek seperti run → **running**.",
+            "`now`, `today`, `Look!` → present continuous. `every day`, `usually` → simple present.",
+            "Jangan pernah hilangkan am/is/are: **I'm cooking**, bukan `I cooking`."
+          ],
+          "examples": [
+            {
+              "en": "What are you doing? — I'm studying English.",
+              "id": "Kamu sedang apa? — Saya sedang belajar bahasa Inggris."
+            },
+            {
+              "en": "I usually walk to school, but today I'm taking the bus.",
+              "id": "Saya biasanya jalan kaki ke sekolah, tapi hari ini saya naik bus."
+            },
+            {
+              "en": "Ibu isn't sleeping. She's reading.",
+              "id": "Ibu tidak sedang tidur. Dia sedang membaca."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman ini punya latihan, dan video BBC membandingkan 'I work' dan 'I'm working'."
+      }
+    ]
+  }
+}

@@ -1,0 +1,630 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn how to say how often you do things, and how to ask others. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "How often?",
+        "text": "Some small words tell us **how often** something happens. Let's put them on a line from 100% to 0%.",
+        "body": "**always** = every time (100%). **usually** = almost every time. **often** = many times. **sometimes** = some times, not many. **never** = not one time (0%). **Never** is already negative, so don't add don't: `I never eat meat`, not `I don't never eat meat`.",
+        "pairs": [
+          {
+            "en": "always",
+            "id": "selalu (100%)"
+          },
+          {
+            "en": "usually",
+            "id": "biasanya (± 90%)"
+          },
+          {
+            "en": "often",
+            "id": "sering (± 70%)"
+          },
+          {
+            "en": "sometimes",
+            "id": "kadang-kadang (± 50%)"
+          },
+          {
+            "en": "never",
+            "id": "tidak pernah (0%)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "On the scale",
+        "text": "Here are the five words in real sentences, from 100% down to 0%.",
+        "body": "With he/she/it the verb still has **-s**: Dimas never **drinks**.",
+        "examples": [
+          {
+            "en": "I always get up at five.",
+            "id": "Saya selalu bangun jam lima."
+          },
+          {
+            "en": "Rina usually takes an ojek to the office.",
+            "id": "Rina biasanya naik ojek ke kantor."
+          },
+          {
+            "en": "My father often reads the newspaper.",
+            "id": "Ayah saya sering membaca koran."
+          },
+          {
+            "en": "Budi sometimes plays futsal after school.",
+            "id": "Budi kadang-kadang main futsal sepulang sekolah."
+          },
+          {
+            "en": "Dimas never drinks coffee.",
+            "id": "Dimas tidak pernah minum kopi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Count the days. How often is that?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "frequency-words",
+          "options": [
+            "always",
+            "sometimes",
+            "never"
+          ],
+          "answer": 1,
+          "prompt": "Lia goes swimming on Monday, Wednesday and Friday. On the other days she doesn't. Complete: Lia ___ goes swimming.",
+          "explanation": "Three days out of seven is not every day and not zero, so: **sometimes**. Always = every day, never = no days."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Where does it go?",
+        "text": "Now the important part: the position of the word in the sentence.",
+        "body": "Put the frequency word **before the main verb**: I usually walk to school. With **am / is / are**, put it **after** the verb: They are always busy. In a do/does question it comes after the subject: Do you often cook? Common mistakes: `I go always`, `She always is late`.",
+        "pairs": [
+          {
+            "en": "I usually walk",
+            "id": "saya biasanya berjalan kaki"
+          },
+          {
+            "en": "she often cooks",
+            "id": "dia sering memasak"
+          },
+          {
+            "en": "he never eats",
+            "id": "dia tidak pernah makan"
+          },
+          {
+            "en": "I am sometimes late",
+            "id": "saya kadang-kadang terlambat"
+          },
+          {
+            "en": "they are always busy",
+            "id": "mereka selalu sibuk"
+          },
+          {
+            "en": "Do you often cook?",
+            "id": "Apakah kamu sering memasak?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Look for am, is or are first.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-adverbs-of",
+          "options": [
+            "Pak Joko always is tired after work.",
+            "Pak Joko is tired always after work.",
+            "Pak Joko is always tired after work."
+          ],
+          "answer": 2,
+          "prompt": "Which sentence is correct?",
+          "explanation": "The verb here is **is**, so the frequency word comes **after** it: is always tired. 'always is' is a common mistake."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build a sentence",
+        "text": "Now a main verb. Where does always go?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-adverbs-of",
+          "tokens": [
+            "by",
+            "go",
+            "always",
+            "work",
+            "I",
+            "bus",
+            "to"
+          ],
+          "solution": "I always go to work by bus.",
+          "prompt": "Arrange the words: Saya selalu naik bus ke kantor.",
+          "explanation": "**always** goes before the main verb **go**: I always go to work by bus. Not 'I go always'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking How often …?",
+        "text": "To ask about someone's habits, start with **How often**.",
+        "body": "**How often + do/does + subject + base verb**: How often do you play futsal? How often does she cook? Answer with a frequency word, or with **every day**, **once a week** (1 time), **twice a week** (2 times), **three times a month**. These phrases go at the **end**: I go jogging every day.",
+        "pairs": [
+          {
+            "en": "How often do you …?",
+            "id": "Seberapa sering kamu …?"
+          },
+          {
+            "en": "How often does she …?",
+            "id": "Seberapa sering dia …?"
+          },
+          {
+            "en": "every day",
+            "id": "setiap hari"
+          },
+          {
+            "en": "once a week",
+            "id": "seminggu sekali"
+          },
+          {
+            "en": "twice a week",
+            "id": "dua kali seminggu"
+          },
+          {
+            "en": "three times a month",
+            "id": "tiga kali sebulan"
+          },
+          {
+            "en": "Never.",
+            "id": "Tidak pernah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build a question",
+        "text": "Your sister is one person: do or does?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-how-often",
+          "tokens": [
+            "call",
+            "How",
+            "you",
+            "sister",
+            "does",
+            "often",
+            "your"
+          ],
+          "solution": "How often does your sister call you?",
+          "prompt": "Arrange the words: Seberapa sering kakak perempuanmu meneleponmu?",
+          "explanation": "How often + **does** (your sister = she) + subject + base verb: How often does your sister **call** you? No -s after does."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip these cards to review the words and patterns.",
+        "flashcards": [
+          {
+            "front": "always",
+            "back": "selalu (100%)"
+          },
+          {
+            "front": "usually",
+            "back": "biasanya"
+          },
+          {
+            "front": "often",
+            "back": "sering"
+          },
+          {
+            "front": "sometimes",
+            "back": "kadang-kadang"
+          },
+          {
+            "front": "never",
+            "back": "tidak pernah (0%)"
+          },
+          {
+            "front": "Fix it: I go always to the gym.",
+            "back": "I always go to the gym."
+          },
+          {
+            "front": "Fix it: She always is late.",
+            "back": "She is always late."
+          },
+          {
+            "front": "twice a week",
+            "back": "dua kali seminggu"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Adverbs of frequency",
+          "intro": "Five words for how often, from 100% to 0%, and how to ask How often …?",
+          "headers": [
+            "Word",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "always",
+              "selalu",
+              "I always get up at five."
+            ],
+            [
+              "usually",
+              "biasanya",
+              "She usually takes the bus."
+            ],
+            [
+              "often",
+              "sering",
+              "We often eat at the warung."
+            ],
+            [
+              "sometimes",
+              "kadang-kadang",
+              "He sometimes works on Saturdays."
+            ],
+            [
+              "never",
+              "tidak pernah",
+              "They never eat pork."
+            ],
+            [
+              "How often …?",
+              "Seberapa sering …?",
+              "How often do you cook? — Twice a week."
+            ]
+          ],
+          "tips": [
+            "Before the main verb: I **always go**. After am/is/are: She **is always** late.",
+            "**Never** is already negative: I never eat meat (no don't).",
+            "Answers: every day, **once** a week, **twice** a week, three times a month."
+          ],
+          "examples": [
+            {
+              "en": "I usually start work at eight.",
+              "id": "Saya biasanya mulai kerja jam delapan."
+            },
+            {
+              "en": "The bus is often late.",
+              "id": "Busnya sering terlambat."
+            },
+            {
+              "en": "How often do you go to the gym? — Twice a week.",
+              "id": "Seberapa sering kamu ke gym? — Dua kali seminggu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? A one-minute BBC video, a BBC video on daily routines and a short British Council page."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar cara mengatakan seberapa sering kamu melakukan sesuatu, dan cara menanyakannya ke orang lain. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Seberapa sering?",
+        "text": "Ada kata-kata kecil yang menyatakan **seberapa sering** sesuatu terjadi. Yuk, kita taruh di garis dari 100% ke 0%.",
+        "body": "**always** = setiap kali (100%). **usually** = hampir setiap kali. **often** = banyak kali. **sometimes** = beberapa kali, tidak banyak. **never** = tidak sekali pun (0%). **Never** sudah bermakna negatif, jadi jangan tambahkan don't: `I never eat meat`, bukan `I don't never eat meat`.",
+        "pairs": [
+          {
+            "en": "always",
+            "id": "selalu (100%)"
+          },
+          {
+            "en": "usually",
+            "id": "biasanya (± 90%)"
+          },
+          {
+            "en": "often",
+            "id": "sering (± 70%)"
+          },
+          {
+            "en": "sometimes",
+            "id": "kadang-kadang (± 50%)"
+          },
+          {
+            "en": "never",
+            "id": "tidak pernah (0%)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di garis frekuensi",
+        "text": "Ini kelima kata itu dalam kalimat nyata, dari 100% turun ke 0%.",
+        "body": "Dengan he/she/it kata kerjanya tetap pakai **-s**: Dimas never **drinks**.",
+        "examples": [
+          {
+            "en": "I always get up at five.",
+            "id": "Saya selalu bangun jam lima."
+          },
+          {
+            "en": "Rina usually takes an ojek to the office.",
+            "id": "Rina biasanya naik ojek ke kantor."
+          },
+          {
+            "en": "My father often reads the newspaper.",
+            "id": "Ayah saya sering membaca koran."
+          },
+          {
+            "en": "Budi sometimes plays futsal after school.",
+            "id": "Budi kadang-kadang main futsal sepulang sekolah."
+          },
+          {
+            "en": "Dimas never drinks coffee.",
+            "id": "Dimas tidak pernah minum kopi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hitung harinya. Seberapa sering itu?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "frequency-words",
+          "options": [
+            "always",
+            "sometimes",
+            "never"
+          ],
+          "answer": 1,
+          "prompt": "Lia berenang hari Senin, Rabu dan Jumat. Di hari lain dia tidak berenang. Lengkapi: Lia ___ goes swimming.",
+          "explanation": "Tiga hari dari tujuh bukan setiap hari dan bukan nol, jadi: **sometimes**. Always = setiap hari, never = tidak ada hari sama sekali."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Di mana letaknya?",
+        "text": "Sekarang bagian pentingnya: letak kata itu dalam kalimat.",
+        "body": "Taruh kata frekuensi **sebelum kata kerja utama**: I usually walk to school. Dengan **am / is / are**, taruh **setelah** kata kerjanya: They are always busy. Dalam pertanyaan do/does, kata itu ada setelah subjek: Do you often cook? Kesalahan yang sering terjadi: `I go always`, `She always is late`.",
+        "pairs": [
+          {
+            "en": "I usually walk",
+            "id": "saya biasanya berjalan kaki"
+          },
+          {
+            "en": "she often cooks",
+            "id": "dia sering memasak"
+          },
+          {
+            "en": "he never eats",
+            "id": "dia tidak pernah makan"
+          },
+          {
+            "en": "I am sometimes late",
+            "id": "saya kadang-kadang terlambat"
+          },
+          {
+            "en": "they are always busy",
+            "id": "mereka selalu sibuk"
+          },
+          {
+            "en": "Do you often cook?",
+            "id": "Apakah kamu sering memasak?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cari dulu am, is atau are.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-adverbs-of",
+          "options": [
+            "Pak Joko always is tired after work.",
+            "Pak Joko is tired always after work.",
+            "Pak Joko is always tired after work."
+          ],
+          "answer": 2,
+          "prompt": "Kalimat mana yang benar?",
+          "explanation": "Kata kerjanya **is**, jadi kata frekuensi ada **setelah**nya: is always tired. 'always is' adalah kesalahan yang sering terjadi."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Sekarang dengan kata kerja utama. Di mana letak always?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-adverbs-of",
+          "tokens": [
+            "by",
+            "go",
+            "always",
+            "work",
+            "I",
+            "bus",
+            "to"
+          ],
+          "solution": "I always go to work by bus.",
+          "prompt": "Susun kata-katanya: Saya selalu naik bus ke kantor.",
+          "explanation": "**always** ditaruh sebelum kata kerja utama **go**: I always go to work by bus. Bukan 'I go always'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bertanya How often …?",
+        "text": "Untuk menanyakan kebiasaan seseorang, mulai dengan **How often**.",
+        "body": "**How often + do/does + subjek + kata kerja dasar**: How often do you play futsal? How often does she cook? Jawab dengan kata frekuensi, atau dengan **every day**, **once a week** (1 kali), **twice a week** (2 kali), **three times a month**. Frasa ini ada di **akhir** kalimat: I go jogging every day.",
+        "pairs": [
+          {
+            "en": "How often do you …?",
+            "id": "Seberapa sering kamu …?"
+          },
+          {
+            "en": "How often does she …?",
+            "id": "Seberapa sering dia …?"
+          },
+          {
+            "en": "every day",
+            "id": "setiap hari"
+          },
+          {
+            "en": "once a week",
+            "id": "seminggu sekali"
+          },
+          {
+            "en": "twice a week",
+            "id": "dua kali seminggu"
+          },
+          {
+            "en": "three times a month",
+            "id": "tiga kali sebulan"
+          },
+          {
+            "en": "Never.",
+            "id": "Tidak pernah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaan",
+        "text": "Kakak perempuanmu satu orang: do atau does?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-how-often",
+          "tokens": [
+            "call",
+            "How",
+            "you",
+            "sister",
+            "does",
+            "often",
+            "your"
+          ],
+          "solution": "How often does your sister call you?",
+          "prompt": "Susun kata-katanya: Seberapa sering kakak perempuanmu meneleponmu?",
+          "explanation": "How often + **does** (your sister = she) + subjek + kata kerja dasar: How often does your sister **call** you? Tanpa -s setelah does."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulangan cepat",
+        "text": "Balik kartu-kartu ini untuk mengulang kata dan polanya.",
+        "flashcards": [
+          {
+            "front": "always",
+            "back": "selalu (100%)"
+          },
+          {
+            "front": "usually",
+            "back": "biasanya"
+          },
+          {
+            "front": "often",
+            "back": "sering"
+          },
+          {
+            "front": "sometimes",
+            "back": "kadang-kadang"
+          },
+          {
+            "front": "never",
+            "back": "tidak pernah (0%)"
+          },
+          {
+            "front": "Perbaiki: I go always to the gym.",
+            "back": "I always go to the gym."
+          },
+          {
+            "front": "Perbaiki: She always is late.",
+            "back": "She is always late."
+          },
+          {
+            "front": "twice a week",
+            "back": "dua kali seminggu"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · Kata keterangan frekuensi",
+          "intro": "Lima kata untuk seberapa sering, dari 100% ke 0%, dan cara bertanya How often …?",
+          "headers": [
+            "Kata",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "always",
+              "selalu",
+              "I always get up at five."
+            ],
+            [
+              "usually",
+              "biasanya",
+              "She usually takes the bus."
+            ],
+            [
+              "often",
+              "sering",
+              "We often eat at the warung."
+            ],
+            [
+              "sometimes",
+              "kadang-kadang",
+              "He sometimes works on Saturdays."
+            ],
+            [
+              "never",
+              "tidak pernah",
+              "They never eat pork."
+            ],
+            [
+              "How often …?",
+              "Seberapa sering …?",
+              "How often do you cook? — Twice a week."
+            ]
+          ],
+          "tips": [
+            "Sebelum kata kerja utama: I **always go**. Setelah am/is/are: She **is always** late.",
+            "**Never** sudah negatif: I never eat meat (tanpa don't).",
+            "Jawaban: every day, **once** a week, **twice** a week, three times a month."
+          ],
+          "examples": [
+            {
+              "en": "I usually start work at eight.",
+              "id": "Saya biasanya mulai kerja jam delapan."
+            },
+            {
+              "en": "The bus is often late.",
+              "id": "Busnya sering terlambat."
+            },
+            {
+              "en": "How often do you go to the gym? — Twice a week.",
+              "id": "Seberapa sering kamu ke gym? — Dua kali seminggu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau belajar lagi? Ada video satu menit dari BBC, video BBC tentang rutinitas harian dan halaman singkat dari British Council."
+      }
+    ]
+  }
+}

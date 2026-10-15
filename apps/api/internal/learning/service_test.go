@@ -218,13 +218,13 @@ func TestCannotStartLockedOrComingSoon(t *testing.T) {
 	if _, err := s.StartSession(ctx, learnerID, course, "a1-to-be"); code(err) != "node_locked" {
 		t.Fatalf("locked: got %v", err)
 	}
-	if _, err := s.StartSession(ctx, learnerID, course, "a1-adjectives"); code(err) != "node_coming_soon" && code(err) != "node_locked" {
+	if _, err := s.StartSession(ctx, learnerID, course, "a1-there-is-are"); code(err) != "node_coming_soon" && code(err) != "node_locked" {
 		t.Fatalf("coming soon: got %v", err)
 	}
 	if _, err := s.StartSession(ctx, learnerID, course, "nope"); code(err) != "node_not_found" {
 		t.Fatalf("unknown: got %v", err)
 	}
-	d, err := s.Node(ctx, learnerID, course, "a1-adjectives")
+	d, err := s.Node(ctx, learnerID, course, "a1-there-is-are")
 	if err != nil || d.CanStart || d.Status != progress.StatusComingSoon {
 		t.Fatalf("coming soon detail: %+v %v", d, err)
 	}

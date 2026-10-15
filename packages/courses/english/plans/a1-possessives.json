@@ -1,0 +1,662 @@
+{
+  "en": {
+    "greeting": "Hi! Today we'll talk about who things belong to, and learn me, him, her, us and them. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Rina's phone",
+        "text": "In Indonesian you say 'HP Rina'. English turns it around.",
+        "body": "To show the owner, put the **owner first**, add **'s**, then the thing: **Rina's phone**. Not 'phone Rina' and not 'Rina phone'. It works with any person: **my mother's name**, **Pak Hadi's office**.",
+        "pairs": [
+          {
+            "en": "Rina's phone",
+            "id": "HP Rina"
+          },
+          {
+            "en": "Budi's car",
+            "id": "mobil Budi"
+          },
+          {
+            "en": "my mother's name",
+            "id": "nama ibu saya"
+          },
+          {
+            "en": "the teacher's desk",
+            "id": "meja guru"
+          },
+          {
+            "en": "Pak Hadi's office",
+            "id": "kantor Pak Hadi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dewi can't find her phone. You can see it. Which sentence is right?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "possessive-s",
+          "options": [
+            "Phone Dewi is on the table.",
+            "Dewi's phone is on the table.",
+            "Dewi phone's is on the table."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence is correct?",
+          "explanation": "The owner comes first, then **'s**, then the thing: **Dewi's phone**. 'Phone Dewi' is Indonesian word order, and the 's goes on the owner, not on the thing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "me, him, her, us, them",
+        "text": "Now, people after a verb. Indonesian uses 'dia' or '-nya' here; English changes the word.",
+        "body": "Before the verb: **I, he, she, we, they**. **After** a verb, or after small words like **with, for, to**: **me, him, her, us, them**. So Sari loves Budi → **Sari loves him**, not 'Sari loves he'. **you** and **it** don't change. No 'to' after call or help: **Call me**, not 'Call to me'.",
+        "pairs": [
+          {
+            "en": "I → me",
+            "id": "saya"
+          },
+          {
+            "en": "you → you",
+            "id": "kamu / Anda"
+          },
+          {
+            "en": "he → him",
+            "id": "dia (laki-laki) / -nya"
+          },
+          {
+            "en": "she → her",
+            "id": "dia (perempuan) / -nya"
+          },
+          {
+            "en": "it → it",
+            "id": "itu (benda / hewan) / -nya"
+          },
+          {
+            "en": "we → us",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they → them",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In real sentences",
+        "text": "Look at the word right after the verb or after with.",
+        "body": "In each sentence the object pronoun comes after the verb or after **with**: **her, us, me, it, them**.",
+        "examples": [
+          {
+            "en": "Rina is my best friend. I call her every day.",
+            "id": "Rina sahabat saya. Saya meneleponnya setiap hari."
+          },
+          {
+            "en": "Mr. Hadi teaches us English.",
+            "id": "Pak Hadi mengajari kami bahasa Inggris."
+          },
+          {
+            "en": "Budi works with me.",
+            "id": "Budi bekerja dengan saya."
+          },
+          {
+            "en": "This coffee is good. I like it.",
+            "id": "Kopi ini enak. Saya suka."
+          },
+          {
+            "en": "My shoes are old. I don't like them.",
+            "id": "Sepatu saya sudah tua. Saya tidak suka."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Think: is the missing word before or after the verb?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "object-pronouns",
+          "options": [
+            "he",
+            "him",
+            "his"
+          ],
+          "answer": 1,
+          "prompt": "Andi is in my class. I sit next to ___.",
+          "explanation": "The word comes after **next to**, so we need the object pronoun. Andi is a man: **he → him**. **his** is for things he owns (his bag)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Your friends from the office eat with you every day. Say it in English.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "object-pronouns",
+          "tokens": [
+            "with",
+            "lunch",
+            "them",
+            "We",
+            "have"
+          ],
+          "solution": "We have lunch with them.",
+          "prompt": "Arrange the words: Kami makan siang bersama mereka.",
+          "explanation": "**We** is the subject, before the verb. After **with** we need the object pronoun: **they → them**. So: **We have lunch with them.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Whose …?",
+        "text": "What if you don't know the owner? Ask with **Whose**.",
+        "body": "Ask **Whose + thing + is this?** Answer with 's: **It's Andi's.** or **It's Andi's pen.** You can also say **It's my pen.** Careful: **whose** sounds like **who's**, but **who's** = **who is**.",
+        "pairs": [
+          {
+            "en": "Whose …?",
+            "id": "… siapa? / Milik siapa …?"
+          },
+          {
+            "en": "Whose pen is this?",
+            "id": "Pulpen siapa ini?"
+          },
+          {
+            "en": "It's Andi's.",
+            "id": "Punya Andi."
+          },
+          {
+            "en": "It's Andi's pen.",
+            "id": "Itu pulpen Andi."
+          },
+          {
+            "en": "It's my pen.",
+            "id": "Itu pulpen saya."
+          },
+          {
+            "en": "who's = who is",
+            "id": "siapa (who is)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ask about the owner",
+        "text": "You find a phone on your desk at the office. It isn't yours.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "whose",
+          "options": [
+            "Who's phone is this?",
+            "Whose phone is this?",
+            "Whose is phone this?"
+          ],
+          "answer": 1,
+          "prompt": "Which question is correct?",
+          "explanation": "We ask about the owner, so **whose**, and the thing comes right after it: **Whose phone is this?** 'Who's' means 'who is', and 'Whose is phone this' has the words in the wrong order."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Answer the question",
+        "text": "Your friend shows you a helmet and asks you. Choose the right answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "whose",
+          "options": [
+            "It's Sari.",
+            "It's of Sari.",
+            "It's Sari's."
+          ],
+          "answer": 2,
+          "prompt": "Whose helmet is this? (Helm ini punya Sari.)",
+          "explanation": "To answer Whose, use the owner + **'s**: **It's Sari's.** 'It's Sari' means the helmet is Sari herself, and 'of Sari' isn't used for people's things."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards to remember the forms.",
+        "flashcards": [
+          {
+            "front": "HP Rina",
+            "back": "Rina's phone"
+          },
+          {
+            "front": "he → ?",
+            "back": "him (I like him.)"
+          },
+          {
+            "front": "she → ?",
+            "back": "her (I call her.)"
+          },
+          {
+            "front": "we → ?",
+            "back": "us (Mr. Hadi teaches us.)"
+          },
+          {
+            "front": "they → ?",
+            "back": "them (I visit them.)"
+          },
+          {
+            "front": "Fix it: She loves he.",
+            "back": "She loves him."
+          },
+          {
+            "front": "Milik siapa? (question word)",
+            "back": "Whose …? (Whose pen is this?)"
+          },
+          {
+            "front": "who's = ?",
+            "back": "who is (not whose)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · 's, whose & object pronouns",
+          "intro": "Owner + 's, Whose …? questions and the pronouns we use after a verb.",
+          "headers": [
+            "Subject",
+            "Object",
+            "Example"
+          ],
+          "rows": [
+            [
+              "I",
+              "me",
+              "Call me later."
+            ],
+            [
+              "you",
+              "you",
+              "I miss you."
+            ],
+            [
+              "he",
+              "him",
+              "She loves him."
+            ],
+            [
+              "she",
+              "her",
+              "We visit her on Sunday."
+            ],
+            [
+              "it",
+              "it",
+              "This tea is good. I like it."
+            ],
+            [
+              "we",
+              "us",
+              "Mr. Hadi teaches us."
+            ],
+            [
+              "they",
+              "them",
+              "Sari helps them."
+            ]
+          ],
+          "tips": [
+            "Owner first, then **'s**: **Rina's phone**, not 'phone Rina'.",
+            "Ask **Whose + thing + is this?** and answer **It's Andi's.** **Who's** = who is.",
+            "No **to** after call or help: **Call me**, not 'Call to me'."
+          ],
+          "examples": [
+            {
+              "en": "Rina's phone is new.",
+              "id": "HP Rina baru."
+            },
+            {
+              "en": "Whose pen is this? — It's Andi's.",
+              "id": "Pulpen siapa ini? — Punya Andi."
+            },
+            {
+              "en": "Budi works with me.",
+              "id": "Budi bekerja dengan saya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and these pages explain 's, whose and object pronouns in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kita belajar cara bilang milik siapa sebuah benda, dan berkenalan dengan me, him, her, us dan them. Pelan-pelan saja, ya.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Rina's phone",
+        "text": "Dalam bahasa Indonesia kamu bilang 'HP Rina'. Bahasa Inggris membaliknya.",
+        "body": "Untuk menunjukkan pemilik, letakkan **pemiliknya dulu**, tambahkan **'s**, lalu bendanya: **Rina's phone**. Bukan 'phone Rina' dan bukan 'Rina phone'. Ini berlaku untuk siapa saja: **my mother's name**, **Pak Hadi's office**.",
+        "pairs": [
+          {
+            "en": "Rina's phone",
+            "id": "HP Rina"
+          },
+          {
+            "en": "Budi's car",
+            "id": "mobil Budi"
+          },
+          {
+            "en": "my mother's name",
+            "id": "nama ibu saya"
+          },
+          {
+            "en": "the teacher's desk",
+            "id": "meja guru"
+          },
+          {
+            "en": "Pak Hadi's office",
+            "id": "kantor Pak Hadi"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dewi tidak menemukan HP-nya. Kamu melihatnya. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "possessive-s",
+          "options": [
+            "Phone Dewi is on the table.",
+            "Dewi's phone is on the table.",
+            "Dewi phone's is on the table."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang benar?",
+          "explanation": "Pemilik ditulis dulu, lalu **'s**, lalu bendanya: **Dewi's phone**. 'Phone Dewi' adalah urutan bahasa Indonesia, dan 's ditempel pada pemiliknya, bukan pada bendanya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "me, him, her, us, them",
+        "text": "Sekarang, orang yang ada setelah kata kerja. Bahasa Indonesia memakai 'dia' atau '-nya'; bahasa Inggris mengganti katanya.",
+        "body": "Sebelum kata kerja: **I, he, she, we, they**. **Setelah** kata kerja, atau setelah kata kecil seperti **with, for, to**: **me, him, her, us, them**. Jadi Sari loves Budi → **Sari loves him**, bukan 'Sari loves he'. **you** dan **it** tidak berubah. Tidak ada 'to' setelah call atau help: **Call me**, bukan 'Call to me'.",
+        "pairs": [
+          {
+            "en": "I → me",
+            "id": "saya"
+          },
+          {
+            "en": "you → you",
+            "id": "kamu / Anda"
+          },
+          {
+            "en": "he → him",
+            "id": "dia (laki-laki) / -nya"
+          },
+          {
+            "en": "she → her",
+            "id": "dia (perempuan) / -nya"
+          },
+          {
+            "en": "it → it",
+            "id": "itu (benda / hewan) / -nya"
+          },
+          {
+            "en": "we → us",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they → them",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dalam kalimat nyata",
+        "text": "Perhatikan kata tepat setelah kata kerja atau setelah with.",
+        "body": "Di setiap kalimat, object pronoun ada setelah kata kerja atau setelah **with**: **her, us, me, it, them**.",
+        "examples": [
+          {
+            "en": "Rina is my best friend. I call her every day.",
+            "id": "Rina sahabat saya. Saya meneleponnya setiap hari."
+          },
+          {
+            "en": "Mr. Hadi teaches us English.",
+            "id": "Pak Hadi mengajari kami bahasa Inggris."
+          },
+          {
+            "en": "Budi works with me.",
+            "id": "Budi bekerja dengan saya."
+          },
+          {
+            "en": "This coffee is good. I like it.",
+            "id": "Kopi ini enak. Saya suka."
+          },
+          {
+            "en": "My shoes are old. I don't like them.",
+            "id": "Sepatu saya sudah tua. Saya tidak suka."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pikirkan: kata yang hilang ada sebelum atau sesudah kata kerja?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "object-pronouns",
+          "options": [
+            "he",
+            "him",
+            "his"
+          ],
+          "answer": 1,
+          "prompt": "Lengkapi: Andi is in my class. I sit next to ___.",
+          "explanation": "Katanya ada setelah **next to**, jadi kita butuh object pronoun. Andi laki-laki: **he → him**. **his** untuk benda miliknya (his bag)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Teman-teman kantormu makan bersamamu setiap hari. Katakan dalam bahasa Inggris.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "object-pronouns",
+          "tokens": [
+            "with",
+            "lunch",
+            "them",
+            "We",
+            "have"
+          ],
+          "solution": "We have lunch with them.",
+          "prompt": "Susun kata-katanya: Kami makan siang bersama mereka.",
+          "explanation": "**We** adalah subjek, sebelum kata kerja. Setelah **with** kita butuh object pronoun: **they → them**. Jadi: **We have lunch with them.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Whose …?",
+        "text": "Bagaimana kalau kamu tidak tahu pemiliknya? Tanyakan dengan **Whose**.",
+        "body": "Tanyakan **Whose + benda + is this?** Jawab dengan 's: **It's Andi's.** atau **It's Andi's pen.** Kamu juga bisa bilang **It's my pen.** Hati-hati: **whose** bunyinya seperti **who's**, tapi **who's** = **who is**.",
+        "pairs": [
+          {
+            "en": "Whose …?",
+            "id": "… siapa? / Milik siapa …?"
+          },
+          {
+            "en": "Whose pen is this?",
+            "id": "Pulpen siapa ini?"
+          },
+          {
+            "en": "It's Andi's.",
+            "id": "Punya Andi."
+          },
+          {
+            "en": "It's Andi's pen.",
+            "id": "Itu pulpen Andi."
+          },
+          {
+            "en": "It's my pen.",
+            "id": "Itu pulpen saya."
+          },
+          {
+            "en": "who's = who is",
+            "id": "siapa (who is)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tanyakan pemiliknya",
+        "text": "Kamu menemukan HP di mejamu di kantor. Itu bukan HP-mu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "whose",
+          "options": [
+            "Who's phone is this?",
+            "Whose phone is this?",
+            "Whose is phone this?"
+          ],
+          "answer": 1,
+          "prompt": "Pertanyaan mana yang benar?",
+          "explanation": "Kita menanyakan pemiliknya, jadi **whose**, dan bendanya langsung setelahnya: **Whose phone is this?** 'Who's' artinya 'who is', dan 'Whose is phone this' urutannya salah."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jawab pertanyaannya",
+        "text": "Temanmu menunjukkan sebuah helm. Pilih jawaban yang benar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "whose",
+          "options": [
+            "It's Sari.",
+            "It's of Sari.",
+            "It's Sari's."
+          ],
+          "answer": 2,
+          "prompt": "Whose helmet is this? (Helm ini punya Sari.)",
+          "explanation": "Untuk menjawab Whose, pakai pemilik + **'s**: **It's Sari's.** 'It's Sari' artinya helmnya adalah Sari sendiri, dan 'of Sari' tidak dipakai untuk barang milik orang."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartunya supaya bentuknya makin nempel.",
+        "flashcards": [
+          {
+            "front": "HP Rina",
+            "back": "Rina's phone"
+          },
+          {
+            "front": "he → ?",
+            "back": "him (I like him.)"
+          },
+          {
+            "front": "she → ?",
+            "back": "her (I call her.)"
+          },
+          {
+            "front": "we → ?",
+            "back": "us (Mr. Hadi teaches us.)"
+          },
+          {
+            "front": "they → ?",
+            "back": "them (I visit them.)"
+          },
+          {
+            "front": "Perbaiki: She loves he.",
+            "back": "She loves him."
+          },
+          {
+            "front": "Milik siapa? (kata tanya)",
+            "back": "Whose …? (Whose pen is this?)"
+          },
+          {
+            "front": "who's = ?",
+            "back": "who is (bukan whose)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · 's, whose & object pronoun",
+          "intro": "Pemilik + 's, pertanyaan Whose …? dan kata ganti yang dipakai setelah kata kerja.",
+          "headers": [
+            "Subjek",
+            "Objek",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "I",
+              "me",
+              "Call me later."
+            ],
+            [
+              "you",
+              "you",
+              "I miss you."
+            ],
+            [
+              "he",
+              "him",
+              "She loves him."
+            ],
+            [
+              "she",
+              "her",
+              "We visit her on Sunday."
+            ],
+            [
+              "it",
+              "it",
+              "This tea is good. I like it."
+            ],
+            [
+              "we",
+              "us",
+              "Mr. Hadi teaches us."
+            ],
+            [
+              "they",
+              "them",
+              "Sari helps them."
+            ]
+          ],
+          "tips": [
+            "Pemilik dulu, lalu **'s**: **Rina's phone**, bukan 'phone Rina'.",
+            "Tanyakan **Whose + benda + is this?** dan jawab **It's Andi's.** **Who's** = who is.",
+            "Tidak ada **to** setelah call atau help: **Call me**, bukan 'Call to me'."
+          ],
+          "examples": [
+            {
+              "en": "Rina's phone is new.",
+              "id": "HP Rina baru."
+            },
+            {
+              "en": "Whose pen is this? — It's Andi's.",
+              "id": "Pulpen siapa ini? — Punya Andi."
+            },
+            {
+              "en": "Budi works with me.",
+              "id": "Budi bekerja dengan saya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih banyak? Video dan halaman ini menjelaskan 's, whose dan object pronoun dengan cara lain."
+      }
+    ]
+  }
+}

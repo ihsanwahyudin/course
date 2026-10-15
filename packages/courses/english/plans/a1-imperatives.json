@@ -1,0 +1,642 @@
+{
+  "en": {
+    "greeting": "Hi! Today we'll learn how to give instructions, say 'don't', invite friends with Let's, and follow directions in the street. Let's begin!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Start with the verb",
+        "text": "In Indonesian you say 'Belok kiri!' with no 'kamu'. English instructions work the same way.",
+        "body": "To tell someone what to do, start with the **base verb** and don't use **you**: **Turn left.** **Sit down.** With adjectives, use **be**: **Be careful.** Add **please** at the start or the end to sound polite.",
+        "pairs": [
+          {
+            "en": "turn left",
+            "id": "belok kiri"
+          },
+          {
+            "en": "turn right",
+            "id": "belok kanan"
+          },
+          {
+            "en": "stop",
+            "id": "berhenti"
+          },
+          {
+            "en": "wait",
+            "id": "tunggu"
+          },
+          {
+            "en": "sit down",
+            "id": "duduk"
+          },
+          {
+            "en": "be careful",
+            "id": "hati-hati"
+          },
+          {
+            "en": "please",
+            "id": "tolong / silakan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're in a taxi with Pak Budi, and he doesn't know the way.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "imperatives",
+          "options": [
+            "You turn left at the bank, please.",
+            "Turn left at the bank, please.",
+            "To turn left at the bank, please."
+          ],
+          "answer": 1,
+          "prompt": "Which instruction is correct?",
+          "explanation": "An instruction starts with the base verb and has **no subject**: **Turn left** at the bank, please. 'You turn left' sounds like a statement, and 'To turn' is not an instruction."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Don't = jangan",
+        "text": "Now the negative. For 'jangan', just put **Don't** before the verb.",
+        "body": "**Don't + base verb**: Don't run. Never 'Not run!' or 'No run!'. Signs say **NO PARKING**, but when you speak, say **Please don't park here**. With adjectives: **Don't be shy.**",
+        "examples": [
+          {
+            "en": "Don't run!",
+            "id": "Jangan lari!"
+          },
+          {
+            "en": "Don't worry.",
+            "id": "Jangan khawatir."
+          },
+          {
+            "en": "Please don't park here.",
+            "id": "Tolong jangan parkir di sini."
+          },
+          {
+            "en": "Don't touch the cake!",
+            "id": "Jangan sentuh kuenya!"
+          },
+          {
+            "en": "Don't be shy.",
+            "id": "Jangan malu-malu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "In class, the teacher sees Budi with a snack. What does she say?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "imperatives",
+          "tokens": [
+            "classroom",
+            "eat",
+            "the",
+            "Don't",
+            "in"
+          ],
+          "solution": "Don't eat in the classroom.",
+          "prompt": "Arrange the words: Jangan makan di dalam kelas.",
+          "explanation": "'Jangan' = **Don't**, then the base verb **eat**, then the place: **Don't eat in the classroom.** No 'you', no 'not'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Let's: doing it together",
+        "text": "Sometimes you don't want to give an order. You want to invite someone to do something with you.",
+        "body": "**Let's** (= let us) is like **ayo kita**. Put the **base verb** right after it: **Let's go.** **Let's start.** Don't add **we** ('Let's we go'), **to** ('Let's to go') or **-ing** ('Let's going'). Reply with **OK!**, **Good idea!** or **Sorry, I'm busy.**",
+        "pairs": [
+          {
+            "en": "Let's go.",
+            "id": "Ayo pergi."
+          },
+          {
+            "en": "Let's start.",
+            "id": "Ayo mulai."
+          },
+          {
+            "en": "Let's take a break.",
+            "id": "Ayo istirahat sebentar."
+          },
+          {
+            "en": "OK!",
+            "id": "Oke!"
+          },
+          {
+            "en": "Good idea!",
+            "id": "Ide bagus!"
+          },
+          {
+            "en": "Sorry, I'm busy.",
+            "id": "Maaf, aku sibuk."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's Saturday morning. You and Rina are at home, and you're both bored.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lets",
+          "options": [
+            "Let's to play badminton.",
+            "Let's we play badminton.",
+            "Let's play badminton."
+          ],
+          "answer": 2,
+          "prompt": "Which suggestion is correct?",
+          "explanation": "After **Let's** comes the base verb: **Let's play** badminton. Let's already means 'let us', so there is no 'we', and there is no 'to'."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Following directions",
+        "text": "Directions are just short instructions in a row. Listen for the verb first, then the place.",
+        "body": "**Turn left** is a movement (belok kiri). **On your left** is a position (di sebelah kiri). The last sentence usually tells you where the place is.",
+        "examples": [
+          {
+            "en": "Go straight on.",
+            "id": "Jalan terus lurus."
+          },
+          {
+            "en": "Turn right at the traffic lights.",
+            "id": "Belok kanan di lampu merah."
+          },
+          {
+            "en": "Cross the road.",
+            "id": "Seberangi jalan."
+          },
+          {
+            "en": "Go past the school.",
+            "id": "Lewati sekolah."
+          },
+          {
+            "en": "The station is on your left.",
+            "id": "Stasiunnya ada di sebelah kirimu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and choose",
+        "text": "You're looking for a pharmacy in Bandung, so you ask a woman on the street.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-instructions",
+          "listen": "Cross the road and turn left at the mosque. The pharmacy is on your right.",
+          "options": [
+            "Turn left at the mosque. It's on your right.",
+            "Turn right at the mosque. It's on your left.",
+            "Turn left at the mosque. It's on your left."
+          ],
+          "answer": 0,
+          "prompt": "Listen to the directions. Which summary is right?",
+          "explanation": "She says **turn left** at the mosque (the movement), and the pharmacy is **on your right** (the position). Listen for both parts."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to remember the key phrases.",
+        "flashcards": [
+          {
+            "front": "belok kiri",
+            "back": "turn left"
+          },
+          {
+            "front": "jalan terus lurus",
+            "back": "go straight on"
+          },
+          {
+            "front": "seberangi jalan",
+            "back": "cross the road"
+          },
+          {
+            "front": "jangan khawatir",
+            "back": "don't worry"
+          },
+          {
+            "front": "hati-hati",
+            "back": "be careful"
+          },
+          {
+            "front": "ayo kita pulang",
+            "back": "let's go home (not: let's we go home)"
+          },
+          {
+            "front": "ide bagus!",
+            "back": "good idea!"
+          },
+          {
+            "front": "di sebelah kananmu",
+            "back": "on your right"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page. Keep it for your next trip!",
+        "artifact": {
+          "title": "Cheat sheet · Imperatives & Let's",
+          "intro": "How to give instructions, say don't, invite with Let's, and follow directions.",
+          "headers": [
+            "Use",
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Instruction",
+              "verb (+ please)",
+              "Sit down, please.",
+              "Silakan duduk."
+            ],
+            [
+              "Don't do it",
+              "Don't + verb",
+              "Don't run!",
+              "Jangan lari!"
+            ],
+            [
+              "With adjectives",
+              "Be / Don't be + adjective",
+              "Be careful.",
+              "Hati-hati."
+            ],
+            [
+              "Invitation",
+              "Let's + verb",
+              "Let's go home.",
+              "Ayo kita pulang."
+            ],
+            [
+              "Directions",
+              "go straight on / turn left / cross / go past",
+              "Go past the mosque.",
+              "Lewati masjid."
+            ],
+            [
+              "Where it is",
+              "on your left / on your right",
+              "It's on your right.",
+              "Ada di sebelah kananmu."
+            ]
+          ],
+          "tips": [
+            "No **you** in an instruction: **Turn left**, not 'You turn left'.",
+            "For 'jangan' say **Don't + verb**, never 'Not run!' or 'No run!'.",
+            "**Let's + verb** only: not 'Let's we go', 'Let's to go' or 'Let's going'."
+          ],
+          "examples": [
+            {
+              "en": "Wait here, please.",
+              "id": "Tolong tunggu di sini."
+            },
+            {
+              "en": "Don't worry.",
+              "id": "Jangan khawatir."
+            },
+            {
+              "en": "Let's start the meeting. — Good idea!",
+              "id": "Ayo kita mulai rapatnya. — Ide bagus!"
+            },
+            {
+              "en": "Turn right at the traffic lights. The bank is on your left.",
+              "id": "Belok kanan di lampu merah. Banknya ada di sebelah kirimu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These pages explain instructions again and let you follow directions on a map."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kita belajar memberi perintah, melarang dengan 'don't', mengajak teman dengan Let's, dan mengikuti petunjuk arah di jalan. Yuk, mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Mulai dengan kata kerja",
+        "text": "Dalam bahasa Indonesia kamu bilang 'Belok kiri!' tanpa 'kamu'. Kalimat perintah bahasa Inggris juga begitu.",
+        "body": "Untuk menyuruh seseorang, mulai dengan **kata kerja dasar** dan jangan pakai **you**: **Turn left.** **Sit down.** Dengan kata sifat, pakai **be**: **Be careful.** Tambahkan **please** di awal atau di akhir supaya sopan.",
+        "pairs": [
+          {
+            "en": "turn left",
+            "id": "belok kiri"
+          },
+          {
+            "en": "turn right",
+            "id": "belok kanan"
+          },
+          {
+            "en": "stop",
+            "id": "berhenti"
+          },
+          {
+            "en": "wait",
+            "id": "tunggu"
+          },
+          {
+            "en": "sit down",
+            "id": "duduk"
+          },
+          {
+            "en": "be careful",
+            "id": "hati-hati"
+          },
+          {
+            "en": "please",
+            "id": "tolong / silakan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu naik taksi Pak Budi, dan dia tidak tahu jalannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "imperatives",
+          "options": [
+            "You turn left at the bank, please.",
+            "Turn left at the bank, please.",
+            "To turn left at the bank, please."
+          ],
+          "answer": 1,
+          "prompt": "Perintah mana yang benar?",
+          "explanation": "Kalimat perintah dimulai dengan kata kerja dasar dan **tanpa subjek**: **Turn left** at the bank, please. 'You turn left' terdengar seperti pernyataan, dan 'To turn' bukan kalimat perintah."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Don't = jangan",
+        "text": "Sekarang bentuk larangan. Untuk 'jangan', cukup letakkan **Don't** sebelum kata kerjanya.",
+        "body": "**Don't + kata kerja dasar**: Don't run. Jangan pernah 'Not run!' atau 'No run!'. Papan tanda bertuliskan **NO PARKING**, tapi saat berbicara, ucapkan **Please don't park here**. Dengan kata sifat: **Don't be shy.**",
+        "examples": [
+          {
+            "en": "Don't run!",
+            "id": "Jangan lari!"
+          },
+          {
+            "en": "Don't worry.",
+            "id": "Jangan khawatir."
+          },
+          {
+            "en": "Please don't park here.",
+            "id": "Tolong jangan parkir di sini."
+          },
+          {
+            "en": "Don't touch the cake!",
+            "id": "Jangan sentuh kuenya!"
+          },
+          {
+            "en": "Don't be shy.",
+            "id": "Jangan malu-malu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Di kelas, guru melihat Budi membawa camilan. Apa yang dia katakan?",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "imperatives",
+          "tokens": [
+            "classroom",
+            "eat",
+            "the",
+            "Don't",
+            "in"
+          ],
+          "solution": "Don't eat in the classroom.",
+          "prompt": "Susun kata-katanya: Jangan makan di dalam kelas.",
+          "explanation": "'Jangan' = **Don't**, lalu kata kerja dasar **eat**, lalu tempatnya: **Don't eat in the classroom.** Tanpa 'you', tanpa 'not'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Let's: melakukannya bersama",
+        "text": "Kadang kamu tidak ingin menyuruh. Kamu ingin mengajak seseorang melakukan sesuatu bersamamu.",
+        "body": "**Let's** (= let us) seperti **ayo kita**. Letakkan **kata kerja dasar** langsung setelahnya: **Let's go.** **Let's start.** Jangan tambah **we** ('Let's we go'), **to** ('Let's to go') atau **-ing** ('Let's going'). Jawab dengan **OK!**, **Good idea!** atau **Sorry, I'm busy.**",
+        "pairs": [
+          {
+            "en": "Let's go.",
+            "id": "Ayo pergi."
+          },
+          {
+            "en": "Let's start.",
+            "id": "Ayo mulai."
+          },
+          {
+            "en": "Let's take a break.",
+            "id": "Ayo istirahat sebentar."
+          },
+          {
+            "en": "OK!",
+            "id": "Oke!"
+          },
+          {
+            "en": "Good idea!",
+            "id": "Ide bagus!"
+          },
+          {
+            "en": "Sorry, I'm busy.",
+            "id": "Maaf, aku sibuk."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hari Sabtu pagi. Kamu dan Rina di rumah, dan kalian berdua bosan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "lets",
+          "options": [
+            "Let's to play badminton.",
+            "Let's we play badminton.",
+            "Let's play badminton."
+          ],
+          "answer": 2,
+          "prompt": "Ajakan mana yang benar?",
+          "explanation": "Setelah **Let's** langsung kata kerja dasar: **Let's play** badminton. Let's sudah berarti 'let us', jadi tidak pakai 'we', dan tidak pakai 'to'."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Mengikuti petunjuk arah",
+        "text": "Petunjuk arah hanyalah beberapa perintah pendek berurutan. Dengarkan kata kerjanya dulu, lalu tempatnya.",
+        "body": "**Turn left** adalah gerakan (belok kiri). **On your left** adalah posisi (di sebelah kiri). Kalimat terakhir biasanya memberi tahu letak tempatnya.",
+        "examples": [
+          {
+            "en": "Go straight on.",
+            "id": "Jalan terus lurus."
+          },
+          {
+            "en": "Turn right at the traffic lights.",
+            "id": "Belok kanan di lampu merah."
+          },
+          {
+            "en": "Cross the road.",
+            "id": "Seberangi jalan."
+          },
+          {
+            "en": "Go past the school.",
+            "id": "Lewati sekolah."
+          },
+          {
+            "en": "The station is on your left.",
+            "id": "Stasiunnya ada di sebelah kirimu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan pilih",
+        "text": "Kamu mencari apotek di Bandung, jadi kamu bertanya kepada seorang ibu di jalan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-instructions",
+          "listen": "Cross the road and turn left at the mosque. The pharmacy is on your right.",
+          "options": [
+            "Turn left at the mosque. It's on your right.",
+            "Turn right at the mosque. It's on your left.",
+            "Turn left at the mosque. It's on your left."
+          ],
+          "answer": 0,
+          "prompt": "Dengarkan petunjuk arahnya. Ringkasan mana yang benar?",
+          "explanation": "Dia bilang **turn left** di masjid (gerakan), dan apoteknya **on your right** (posisi). Dengarkan kedua bagian itu."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini supaya frasa pentingnya makin nempel.",
+        "flashcards": [
+          {
+            "front": "belok kiri",
+            "back": "turn left"
+          },
+          {
+            "front": "jalan terus lurus",
+            "back": "go straight on"
+          },
+          {
+            "front": "seberangi jalan",
+            "back": "cross the road"
+          },
+          {
+            "front": "jangan khawatir",
+            "back": "don't worry"
+          },
+          {
+            "front": "hati-hati",
+            "back": "be careful"
+          },
+          {
+            "front": "ayo kita pulang",
+            "back": "let's go home (not: let's we go home)"
+          },
+          {
+            "front": "ide bagus!",
+            "back": "good idea!"
+          },
+          {
+            "front": "di sebelah kananmu",
+            "back": "on your right"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman. Simpan untuk perjalananmu berikutnya, ya!",
+        "artifact": {
+          "title": "Ringkasan · Kalimat Perintah & Let's",
+          "intro": "Cara memberi perintah, melarang dengan don't, mengajak dengan Let's, dan mengikuti petunjuk arah.",
+          "headers": [
+            "Fungsi",
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Perintah",
+              "kata kerja (+ please)",
+              "Sit down, please.",
+              "Silakan duduk."
+            ],
+            [
+              "Larangan",
+              "Don't + kata kerja",
+              "Don't run!",
+              "Jangan lari!"
+            ],
+            [
+              "Dengan kata sifat",
+              "Be / Don't be + kata sifat",
+              "Be careful.",
+              "Hati-hati."
+            ],
+            [
+              "Ajakan",
+              "Let's + kata kerja",
+              "Let's go home.",
+              "Ayo kita pulang."
+            ],
+            [
+              "Petunjuk arah",
+              "go straight on / turn left / cross / go past",
+              "Go past the mosque.",
+              "Lewati masjid."
+            ],
+            [
+              "Letak tempat",
+              "on your left / on your right",
+              "It's on your right.",
+              "Ada di sebelah kananmu."
+            ]
+          ],
+          "tips": [
+            "Tanpa **you** dalam kalimat perintah: **Turn left**, bukan 'You turn left'.",
+            "Untuk 'jangan' ucapkan **Don't + kata kerja**, jangan 'Not run!' atau 'No run!'.",
+            "Hanya **Let's + kata kerja**: bukan 'Let's we go', 'Let's to go' atau 'Let's going'."
+          ],
+          "examples": [
+            {
+              "en": "Wait here, please.",
+              "id": "Tolong tunggu di sini."
+            },
+            {
+              "en": "Don't worry.",
+              "id": "Jangan khawatir."
+            },
+            {
+              "en": "Let's start the meeting. — Good idea!",
+              "id": "Ayo kita mulai rapatnya. — Ide bagus!"
+            },
+            {
+              "en": "Turn right at the traffic lights. The bank is on your left.",
+              "id": "Belok kanan di lampu merah. Banknya ada di sebelah kirimu."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman ini menjelaskan kalimat perintah sekali lagi dan mengajakmu mengikuti petunjuk arah di peta."
+      }
+    ]
+  }
+}

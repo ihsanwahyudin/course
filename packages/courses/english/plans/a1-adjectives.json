@@ -1,0 +1,690 @@
+{
+  "en": {
+    "greeting": "Hi! Today we'll learn to describe people, places and things: a red car, a busy day, a very hot afternoon. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Adjective first",
+        "text": "Adjectives are describing words, like big, new and cheap. Let's see where they go.",
+        "body": "In Indonesian the adjective comes **after** the noun: *mobil merah*. In English it comes **before**: **a red car**. **a/an** goes before the adjective and follows its sound: **a** new bike, **an** old bike. Adjectives never take **-s**: two **big** boxes.",
+        "pairs": [
+          {
+            "en": "big",
+            "id": "besar"
+          },
+          {
+            "en": "small",
+            "id": "kecil"
+          },
+          {
+            "en": "new",
+            "id": "baru"
+          },
+          {
+            "en": "old",
+            "id": "lama / tua"
+          },
+          {
+            "en": "cheap",
+            "id": "murah"
+          },
+          {
+            "en": "expensive",
+            "id": "mahal"
+          },
+          {
+            "en": "black",
+            "id": "hitam"
+          },
+          {
+            "en": "a red car",
+            "id": "mobil merah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're shopping at a market in Bandung.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-before-noun",
+          "prompt": "You want to say 'Saya mau tas hitam.' Which sentence is correct?",
+          "options": [
+            "I want a bag black.",
+            "I want a black bag.",
+            "I want a blacks bag."
+          ],
+          "answer": 1,
+          "explanation": "In English the adjective goes **before** the noun: **a black bag**. 'a bag black' is Indonesian order, and adjectives never take -s."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "be + adjective",
+        "text": "An adjective can also come after the person or thing. Then you need am, is or are.",
+        "body": "*Rina sibuk* has no verb in Indonesian, but English needs one: **Rina is busy.** Use **am / is / are** + adjective. Don't put **a** before an adjective on its own: **She is tired**, not 'She is a tired'.",
+        "pairs": [
+          {
+            "en": "happy",
+            "id": "senang"
+          },
+          {
+            "en": "sad",
+            "id": "sedih"
+          },
+          {
+            "en": "tired",
+            "id": "capek / lelah"
+          },
+          {
+            "en": "busy",
+            "id": "sibuk"
+          },
+          {
+            "en": "hungry",
+            "id": "lapar"
+          },
+          {
+            "en": "clean",
+            "id": "bersih"
+          },
+          {
+            "en": "dirty",
+            "id": "kotor"
+          },
+          {
+            "en": "full",
+            "id": "penuh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Tell a friend about your parents.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "be-adjective",
+          "prompt": "Arrange the words: Orang tuaku senang.",
+          "tokens": [
+            "happy",
+            "are",
+            "My",
+            "parents"
+          ],
+          "solution": "My parents are happy.",
+          "explanation": "**My parents** = they, so the verb is **are**, and the adjective **happy** comes after it."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're eating at a warung in Jakarta, but your soto isn't hot any more.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-adjective",
+          "prompt": "'Sotonya dingin.' Which sentence is correct?",
+          "options": [
+            "The soto cold.",
+            "The soto is a cold.",
+            "The soto is cold."
+          ],
+          "answer": 2,
+          "explanation": "English needs **is** before the adjective: **The soto is cold.** Don't use **a** before an adjective on its own."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "very and really",
+        "text": "Now let's make adjectives stronger.",
+        "body": "Put **very** or **really** right **before** the adjective: **very hot, really cheap**. With a noun: **a very small room**. Indonesian *sekali* comes after (*panas sekali*), but **very** always comes before. Before a verb, use only **really**: I **really like** it, never 'I very like it'.",
+        "pairs": [
+          {
+            "en": "very",
+            "id": "sangat / sekali"
+          },
+          {
+            "en": "really",
+            "id": "benar-benar / sekali"
+          },
+          {
+            "en": "very cold",
+            "id": "dingin sekali"
+          },
+          {
+            "en": "really cheap",
+            "id": "murah sekali"
+          },
+          {
+            "en": "a very small room",
+            "id": "kamar yang sangat kecil"
+          },
+          {
+            "en": "really like",
+            "id": "suka sekali"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Stronger sentences",
+        "text": "Here are very and really in everyday sentences. Look at where they go.",
+        "body": "**very / really + adjective**, and **really + verb**.",
+        "examples": [
+          {
+            "en": "Bandung is very cold at night.",
+            "id": "Bandung dingin sekali di malam hari."
+          },
+          {
+            "en": "These shoes are really cheap.",
+            "id": "Sepatu ini murah sekali."
+          },
+          {
+            "en": "We are very busy today.",
+            "id": "Kami sangat sibuk hari ini."
+          },
+          {
+            "en": "It's a really big market.",
+            "id": "Itu pasar yang besar sekali."
+          },
+          {
+            "en": "I really like this café.",
+            "id": "Saya suka sekali kafe ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You try Rina's rendang. You love it!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "very-really",
+          "prompt": "What do you say to Rina?",
+          "options": [
+            "I very like it!",
+            "I like very it!",
+            "I really like it!"
+          ],
+          "answer": 2,
+          "explanation": "**like** is a verb, and only **really** can go before a verb: **I really like it!** 'very like' is a common mistake."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "You see a new car in a showroom in Jakarta. Look at the price!",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "very-really",
+          "prompt": "Arrange the words: Ini mobil yang sangat mahal.",
+          "tokens": [
+            "expensive",
+            "This",
+            "car",
+            "very",
+            "a",
+            "is"
+          ],
+          "solution": "This is a very expensive car.",
+          "explanation": "The order is **a + very + adjective + noun**: **a very expensive car**. **very** goes right before the adjective."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in the patterns.",
+        "flashcards": [
+          {
+            "front": "mobil merah",
+            "back": "a red car"
+          },
+          {
+            "front": "rumah tua",
+            "back": "an old house"
+          },
+          {
+            "front": "two bigs bags ✗",
+            "back": "two big bags"
+          },
+          {
+            "front": "Dia (perempuan) capek.",
+            "back": "She's tired. / She is tired."
+          },
+          {
+            "front": "dingin sekali",
+            "back": "very cold / really cold"
+          },
+          {
+            "front": "kamar yang sangat kecil",
+            "back": "a very small room"
+          },
+          {
+            "front": "I very like it. ✗",
+            "back": "I really like it."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · adjectives & very",
+          "intro": "Where adjectives go, and how to make them stronger.",
+          "headers": [
+            "Pattern",
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "a/an + adjective + noun",
+              "a red car / an old bike",
+              "mobil merah / sepeda tua"
+            ],
+            [
+              "adjective + plural noun",
+              "two big bags",
+              "dua tas besar"
+            ],
+            [
+              "be + adjective",
+              "She's tired.",
+              "Dia capek."
+            ],
+            [
+              "be + not + adjective",
+              "The room isn't clean.",
+              "Kamarnya tidak bersih."
+            ],
+            [
+              "very / really + adjective",
+              "very cold / really cheap",
+              "dingin sekali / murah sekali"
+            ],
+            [
+              "a + very + adjective + noun",
+              "a very small room",
+              "kamar yang sangat kecil"
+            ],
+            [
+              "really + verb",
+              "I really like it.",
+              "Saya suka sekali."
+            ]
+          ],
+          "tips": [
+            "Indonesian puts the adjective after the noun (*mobil merah*); English puts it **before**: **a red car**.",
+            "After a person or thing, don't forget **am / is / are**: **She's tired**, not 'She tired'.",
+            "**very** goes before adjectives only. Before a verb use **really**: **I really like it**."
+          ],
+          "examples": [
+            {
+              "en": "We have a small house.",
+              "id": "Kami punya rumah kecil."
+            },
+            {
+              "en": "The bus isn't full.",
+              "id": "Busnya tidak penuh."
+            },
+            {
+              "en": "The coffee is very hot.",
+              "id": "Kopinya sangat panas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here's a short page with two online exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar mendeskripsikan orang, tempat dan benda: a red car, a busy day, a very hot afternoon. Yuk, kita mulai pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kata sifat di depan",
+        "text": "Kata sifat adalah kata untuk mendeskripsikan, seperti big, new dan cheap. Yuk lihat posisinya.",
+        "body": "Dalam bahasa Indonesia kata sifat ada **setelah** kata benda: *mobil merah*. Dalam bahasa Inggris kata sifat ada **sebelum** kata benda: **a red car**. **a/an** ada sebelum kata sifat dan mengikuti bunyinya: **a** new bike, **an** old bike. Kata sifat tidak pernah diberi **-s**: two **big** boxes.",
+        "pairs": [
+          {
+            "en": "big",
+            "id": "besar"
+          },
+          {
+            "en": "small",
+            "id": "kecil"
+          },
+          {
+            "en": "new",
+            "id": "baru"
+          },
+          {
+            "en": "old",
+            "id": "lama / tua"
+          },
+          {
+            "en": "cheap",
+            "id": "murah"
+          },
+          {
+            "en": "expensive",
+            "id": "mahal"
+          },
+          {
+            "en": "black",
+            "id": "hitam"
+          },
+          {
+            "en": "a red car",
+            "id": "mobil merah"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu sedang belanja di pasar di Bandung.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjective-before-noun",
+          "prompt": "Kamu mau bilang 'Saya mau tas hitam.' Kalimat mana yang benar?",
+          "options": [
+            "I want a bag black.",
+            "I want a black bag.",
+            "I want a blacks bag."
+          ],
+          "answer": 1,
+          "explanation": "Dalam bahasa Inggris kata sifat ada **sebelum** kata benda: **a black bag**. 'a bag black' memakai urutan bahasa Indonesia, dan kata sifat tidak pernah diberi -s."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "be + kata sifat",
+        "text": "Kata sifat juga bisa ada setelah orang atau benda. Kalau begitu, kamu butuh am, is atau are.",
+        "body": "*Rina sibuk* tidak punya kata kerja dalam bahasa Indonesia, tapi bahasa Inggris butuh: **Rina is busy.** Pakai **am / is / are** + kata sifat. Jangan taruh **a** sebelum kata sifat yang berdiri sendiri: **She is tired**, bukan 'She is a tired'.",
+        "pairs": [
+          {
+            "en": "happy",
+            "id": "senang"
+          },
+          {
+            "en": "sad",
+            "id": "sedih"
+          },
+          {
+            "en": "tired",
+            "id": "capek / lelah"
+          },
+          {
+            "en": "busy",
+            "id": "sibuk"
+          },
+          {
+            "en": "hungry",
+            "id": "lapar"
+          },
+          {
+            "en": "clean",
+            "id": "bersih"
+          },
+          {
+            "en": "dirty",
+            "id": "kotor"
+          },
+          {
+            "en": "full",
+            "id": "penuh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Ceritakan tentang orang tuamu kepada teman.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "be-adjective",
+          "prompt": "Susun kata-katanya: Orang tuaku senang.",
+          "tokens": [
+            "happy",
+            "are",
+            "My",
+            "parents"
+          ],
+          "solution": "My parents are happy.",
+          "explanation": "**My parents** = they, jadi kata kerjanya **are**, lalu kata sifat **happy** ada setelahnya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu makan di warung di Jakarta, tapi sotomu sudah tidak panas lagi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "be-adjective",
+          "prompt": "'Sotonya dingin.' Kalimat mana yang benar?",
+          "options": [
+            "The soto cold.",
+            "The soto is a cold.",
+            "The soto is cold."
+          ],
+          "answer": 2,
+          "explanation": "Bahasa Inggris butuh **is** sebelum kata sifat: **The soto is cold.** Jangan pakai **a** sebelum kata sifat yang berdiri sendiri."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "very dan really",
+        "text": "Sekarang kita buat kata sifat jadi lebih kuat.",
+        "body": "Taruh **very** atau **really** tepat **sebelum** kata sifat: **very hot, really cheap**. Dengan kata benda: **a very small room**. *Sekali* dalam bahasa Indonesia ada di belakang (*panas sekali*), tapi **very** selalu di depan. Sebelum kata kerja, pakai hanya **really**: I **really like** it, jangan 'I very like it'.",
+        "pairs": [
+          {
+            "en": "very",
+            "id": "sangat / sekali"
+          },
+          {
+            "en": "really",
+            "id": "benar-benar / sekali"
+          },
+          {
+            "en": "very cold",
+            "id": "dingin sekali"
+          },
+          {
+            "en": "really cheap",
+            "id": "murah sekali"
+          },
+          {
+            "en": "a very small room",
+            "id": "kamar yang sangat kecil"
+          },
+          {
+            "en": "really like",
+            "id": "suka sekali"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kalimat yang lebih kuat",
+        "text": "Ini very dan really dalam kalimat sehari-hari. Perhatikan posisinya.",
+        "body": "**very / really + kata sifat**, dan **really + kata kerja**.",
+        "examples": [
+          {
+            "en": "Bandung is very cold at night.",
+            "id": "Bandung dingin sekali di malam hari."
+          },
+          {
+            "en": "These shoes are really cheap.",
+            "id": "Sepatu ini murah sekali."
+          },
+          {
+            "en": "We are very busy today.",
+            "id": "Kami sangat sibuk hari ini."
+          },
+          {
+            "en": "It's a really big market.",
+            "id": "Itu pasar yang besar sekali."
+          },
+          {
+            "en": "I really like this café.",
+            "id": "Saya suka sekali kafe ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu mencoba rendang buatan Rina. Enak sekali!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "very-really",
+          "prompt": "Apa yang kamu katakan kepada Rina?",
+          "options": [
+            "I very like it!",
+            "I like very it!",
+            "I really like it!"
+          ],
+          "answer": 2,
+          "explanation": "**like** adalah kata kerja, dan hanya **really** yang bisa ada sebelum kata kerja: **I really like it!** 'very like' adalah kesalahan yang sering terjadi."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Kamu melihat mobil baru di showroom di Jakarta. Lihat harganya!",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "very-really",
+          "prompt": "Susun kata-katanya: Ini mobil yang sangat mahal.",
+          "tokens": [
+            "expensive",
+            "This",
+            "car",
+            "very",
+            "a",
+            "is"
+          ],
+          "solution": "This is a very expensive car.",
+          "explanation": "Urutannya **a + very + kata sifat + kata benda**: **a very expensive car**. **very** ada tepat sebelum kata sifat."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini supaya polanya makin melekat.",
+        "flashcards": [
+          {
+            "front": "mobil merah",
+            "back": "a red car"
+          },
+          {
+            "front": "rumah tua",
+            "back": "an old house"
+          },
+          {
+            "front": "two bigs bags ✗",
+            "back": "two big bags"
+          },
+          {
+            "front": "Dia (perempuan) capek.",
+            "back": "She's tired. / She is tired."
+          },
+          {
+            "front": "dingin sekali",
+            "back": "very cold / really cold"
+          },
+          {
+            "front": "kamar yang sangat kecil",
+            "back": "a very small room"
+          },
+          {
+            "front": "I very like it. ✗",
+            "back": "I really like it."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · kata sifat & very",
+          "intro": "Posisi kata sifat, dan cara membuatnya lebih kuat.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "a/an + kata sifat + kata benda",
+              "a red car / an old bike",
+              "mobil merah / sepeda tua"
+            ],
+            [
+              "kata sifat + kata benda jamak",
+              "two big bags",
+              "dua tas besar"
+            ],
+            [
+              "be + kata sifat",
+              "She's tired.",
+              "Dia capek."
+            ],
+            [
+              "be + not + kata sifat",
+              "The room isn't clean.",
+              "Kamarnya tidak bersih."
+            ],
+            [
+              "very / really + kata sifat",
+              "very cold / really cheap",
+              "dingin sekali / murah sekali"
+            ],
+            [
+              "a + very + kata sifat + kata benda",
+              "a very small room",
+              "kamar yang sangat kecil"
+            ],
+            [
+              "really + kata kerja",
+              "I really like it.",
+              "Saya suka sekali."
+            ]
+          ],
+          "tips": [
+            "Bahasa Indonesia menaruh kata sifat setelah kata benda (*mobil merah*); bahasa Inggris menaruhnya **sebelum**: **a red car**.",
+            "Setelah orang atau benda, jangan lupa **am / is / are**: **She's tired**, bukan 'She tired'.",
+            "**very** hanya sebelum kata sifat. Sebelum kata kerja pakai **really**: **I really like it**."
+          ],
+          "examples": [
+            {
+              "en": "We have a small house.",
+              "id": "Kami punya rumah kecil."
+            },
+            {
+              "en": "The bus isn't full.",
+              "id": "Busnya tidak penuh."
+            },
+            {
+              "en": "The coffee is very hot.",
+              "id": "Kopinya sangat panas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini halaman singkat dengan dua latihan online."
+      }
+    ]
+  }
+}

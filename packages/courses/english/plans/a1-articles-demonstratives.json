@@ -1,0 +1,686 @@
+{
+  "en": {
+    "greeting": "Hi! Today we learn small words with a big job: a/an, the, and this, that, these, those. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "a or an?",
+        "text": "Indonesian can say 'Saya punya mobil'. English needs one more word. Let's see it.",
+        "body": "One countable thing needs a small word in front: **a**, **an**, **my**, **this**, **the** … So: **I have a car**, not 'I have car'. Choose by the first **sound**: **an** before a vowel sound (*an egg, an hour*), **a** before a consonant sound (*a book, a university*). With two or more, use **-s** and no a/an: *two cars*.",
+        "pairs": [
+          {
+            "en": "a book",
+            "id": "sebuah buku"
+          },
+          {
+            "en": "a teacher",
+            "id": "seorang guru"
+          },
+          {
+            "en": "a university",
+            "id": "sebuah universitas"
+          },
+          {
+            "en": "an egg",
+            "id": "sebutir telur"
+          },
+          {
+            "en": "an orange",
+            "id": "sebuah jeruk"
+          },
+          {
+            "en": "an hour",
+            "id": "satu jam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Check two things: is there an article, and is it a or an?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "no-missing-article",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "Dimas is office worker.",
+            "Dimas is an office worker.",
+            "Dimas is a office worker."
+          ],
+          "answer": 1,
+          "explanation": "One job, so we need **a/an**. **Office** starts with a vowel sound, so it's **an office worker**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "the: we know which one",
+        "text": "Now the word **the**. It means: you and I know which one.",
+        "body": "Use **the** when 1) you said it before (first **a**, then **the**), 2) there is **only one** (*the sun, the moon, the sky*), or 3) it's clear in the place (*Please close **the** door.*). Indonesian **-nya** often does the same job: *pintunya* = **the door**.",
+        "pairs": [
+          {
+            "en": "the sun",
+            "id": "matahari"
+          },
+          {
+            "en": "the moon",
+            "id": "bulan"
+          },
+          {
+            "en": "the sky",
+            "id": "langit"
+          },
+          {
+            "en": "the door",
+            "id": "pintunya"
+          },
+          {
+            "en": "the toilet",
+            "id": "toiletnya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "First a, then the",
+        "text": "Look at how a changes to the in the second sentence.",
+        "body": "The first time, the listener doesn't know the thing yet: **a**. After that, they know it: **the**.",
+        "examples": [
+          {
+            "en": "Budi has a car. The car is red.",
+            "id": "Budi punya mobil. Mobilnya merah."
+          },
+          {
+            "en": "We have a new teacher. The teacher is from Medan.",
+            "id": "Kami punya guru baru. Gurunya dari Medan."
+          },
+          {
+            "en": "The moon is beautiful tonight.",
+            "id": "Bulannya indah malam ini."
+          },
+          {
+            "en": "Excuse me, where is the toilet?",
+            "id": "Permisi, toiletnya di mana?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Rina says: 'I have a cat and a dog.' Now you know the animals, so use **the**.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-the",
+          "prompt": "Arrange the words: Kucingnya hitam dan anjingnya putih.",
+          "tokens": [
+            "dog",
+            "is",
+            "the",
+            "black",
+            "The",
+            "white",
+            "and",
+            "cat",
+            "is"
+          ],
+          "solution": "The cat is black and the dog is white.",
+          "explanation": "Rina said **a cat** and **a dog** before. Now we know which ones, so it's **the cat** and **the dog**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "this, that, these, those",
+        "text": "Now let's point at things.",
+        "body": "**Near** you: **this** (one) and **these** (two or more) = *ini*. **Far** from you: **that** (one) and **those** (two or more) = *itu*. The word goes **before** the noun: *buku ini* = **this book**. Plural noun → plural word: **these books**, not 'this books'.",
+        "pairs": [
+          {
+            "en": "this",
+            "id": "ini (satu, dekat)"
+          },
+          {
+            "en": "these",
+            "id": "ini (banyak, dekat)"
+          },
+          {
+            "en": "that",
+            "id": "itu (satu, jauh)"
+          },
+          {
+            "en": "those",
+            "id": "itu (banyak, jauh)"
+          },
+          {
+            "en": "this book",
+            "id": "buku ini"
+          },
+          {
+            "en": "those cars",
+            "id": "mobil-mobil itu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Near and far",
+        "text": "Imagine you are at a market in Bandung. Read them out loud.",
+        "body": "Ask two questions: near or far? One or many?",
+        "examples": [
+          {
+            "en": "This bag is heavy.",
+            "id": "Tas ini berat."
+          },
+          {
+            "en": "That building is my office.",
+            "id": "Gedung itu kantor saya."
+          },
+          {
+            "en": "These bananas are cheap.",
+            "id": "Pisang-pisang ini murah."
+          },
+          {
+            "en": "Those students are from Surabaya.",
+            "id": "Siswa-siswa itu dari Surabaya."
+          },
+          {
+            "en": "Is this your phone? — Yes, it is.",
+            "id": "Ini ponselmu? — Ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Near or far? One or many?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "demonstratives",
+          "prompt": "You point at some houses far away on a hill. ___ houses are very old.",
+          "options": [
+            "That",
+            "These",
+            "Those"
+          ],
+          "answer": 2,
+          "explanation": "The houses are **far** and there are **many**, so it's **those**. **That** is for one thing, and **these** is for things near you."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "Some keys are on a table across the room. Ask your friend about them.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "demonstratives",
+          "prompt": "Arrange the words: Apakah itu kunci-kuncimu?",
+          "tokens": [
+            "your",
+            "Are",
+            "keys",
+            "those"
+          ],
+          "solution": "Are those your keys?",
+          "explanation": "The keys are **far** and there are **many**: **those**. In a question with be, **are** comes first."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "this book",
+            "back": "buku ini"
+          },
+          {
+            "front": "that house",
+            "back": "rumah itu"
+          },
+          {
+            "front": "these bags",
+            "back": "tas-tas ini"
+          },
+          {
+            "front": "those cars",
+            "back": "mobil-mobil itu"
+          },
+          {
+            "front": "a teacher",
+            "back": "seorang guru"
+          },
+          {
+            "front": "an egg",
+            "back": "sebutir telur"
+          },
+          {
+            "front": "the sun",
+            "back": "matahari"
+          },
+          {
+            "front": "the door",
+            "back": "pintunya"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · a/an, the, this/that",
+          "intro": "Which small word goes before the noun?",
+          "headers": [
+            "Word",
+            "Use it for",
+            "Example"
+          ],
+          "rows": [
+            [
+              "a",
+              "one thing, consonant sound",
+              "a car, a university"
+            ],
+            [
+              "an",
+              "one thing, vowel sound",
+              "an egg, an hour"
+            ],
+            [
+              "the",
+              "said before, only one, or clear which one",
+              "the sun, the door"
+            ],
+            [
+              "this",
+              "one thing, near (ini)",
+              "this phone"
+            ],
+            [
+              "these",
+              "two or more, near (ini)",
+              "these bananas"
+            ],
+            [
+              "that",
+              "one thing, far (itu)",
+              "that building"
+            ],
+            [
+              "those",
+              "two or more, far (itu)",
+              "those cars"
+            ]
+          ],
+          "tips": [
+            "One countable thing never stands alone: **I have a car**, not 'I have car'.",
+            "Listen to the sound: **an engineer**, **an hour**, but **a university**.",
+            "Plural noun → **these/those**: **these books**, not 'this books'."
+          ],
+          "examples": [
+            {
+              "en": "She is an engineer.",
+              "id": "Dia (perempuan) seorang insinyur."
+            },
+            {
+              "en": "Budi has a car. The car is red.",
+              "id": "Budi punya mobil. Mobilnya merah."
+            },
+            {
+              "en": "These bananas are cheap.",
+              "id": "Pisang-pisang ini murah."
+            },
+            {
+              "en": "That building is my office.",
+              "id": "Gedung itu kantor saya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read",
+        "text": "Want more? Watch a short video about this, that, these and those, and read a simple page about a, an and the."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar kata-kata kecil dengan tugas besar: a/an, the, serta this, that, these, those. Yuk, pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "a atau an?",
+        "text": "Bahasa Indonesia bisa bilang 'Saya punya mobil'. Bahasa Inggris butuh satu kata lagi. Yuk lihat.",
+        "body": "Satu benda yang bisa dihitung butuh kata kecil di depannya: **a**, **an**, **my**, **this**, **the** … Jadi: **I have a car**, bukan 'I have car'. Pilih berdasarkan **bunyi** pertama: **an** sebelum bunyi vokal (*an egg, an hour*), **a** sebelum bunyi konsonan (*a book, a university*). Kalau dua atau lebih, pakai **-s** tanpa a/an: *two cars*.",
+        "pairs": [
+          {
+            "en": "a book",
+            "id": "sebuah buku"
+          },
+          {
+            "en": "a teacher",
+            "id": "seorang guru"
+          },
+          {
+            "en": "a university",
+            "id": "sebuah universitas"
+          },
+          {
+            "en": "an egg",
+            "id": "sebutir telur"
+          },
+          {
+            "en": "an orange",
+            "id": "sebuah jeruk"
+          },
+          {
+            "en": "an hour",
+            "id": "satu jam"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Cek dua hal: ada artikelnya atau tidak, dan a atau an?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "no-missing-article",
+          "prompt": "Pilih kalimat yang benar.",
+          "options": [
+            "Dimas is office worker.",
+            "Dimas is an office worker.",
+            "Dimas is a office worker."
+          ],
+          "answer": 1,
+          "explanation": "Satu pekerjaan, jadi butuh **a/an**. **Office** diawali bunyi vokal, jadi **an office worker**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "the: kita tahu yang mana",
+        "text": "Sekarang kata **the**. Artinya: kamu dan aku tahu yang mana.",
+        "body": "Pakai **the** kalau 1) sudah disebut sebelumnya (pertama **a**, lalu **the**), 2) hanya ada **satu** (*the sun, the moon, the sky*), atau 3) jelas yang mana di tempat itu (*Please close **the** door.*). Dalam bahasa Indonesia, **-nya** sering punya fungsi yang sama: *pintunya* = **the door**.",
+        "pairs": [
+          {
+            "en": "the sun",
+            "id": "matahari"
+          },
+          {
+            "en": "the moon",
+            "id": "bulan"
+          },
+          {
+            "en": "the sky",
+            "id": "langit"
+          },
+          {
+            "en": "the door",
+            "id": "pintunya"
+          },
+          {
+            "en": "the toilet",
+            "id": "toiletnya"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pertama a, lalu the",
+        "text": "Lihat bagaimana a berubah jadi the di kalimat kedua.",
+        "body": "Pertama kali, pendengar belum tahu bendanya: **a**. Setelah itu, mereka sudah tahu: **the**.",
+        "examples": [
+          {
+            "en": "Budi has a car. The car is red.",
+            "id": "Budi punya mobil. Mobilnya merah."
+          },
+          {
+            "en": "We have a new teacher. The teacher is from Medan.",
+            "id": "Kami punya guru baru. Gurunya dari Medan."
+          },
+          {
+            "en": "The moon is beautiful tonight.",
+            "id": "Bulannya indah malam ini."
+          },
+          {
+            "en": "Excuse me, where is the toilet?",
+            "id": "Permisi, toiletnya di mana?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Rina bilang: 'I have a cat and a dog.' Sekarang kamu sudah tahu hewannya, jadi pakai **the**.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "use-the",
+          "prompt": "Susun kata-katanya: Kucingnya hitam dan anjingnya putih.",
+          "tokens": [
+            "dog",
+            "is",
+            "the",
+            "black",
+            "The",
+            "white",
+            "and",
+            "cat",
+            "is"
+          ],
+          "solution": "The cat is black and the dog is white.",
+          "explanation": "Rina sudah menyebut **a cat** dan **a dog**. Sekarang kita tahu yang mana, jadi **the cat** dan **the dog**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "this, that, these, those",
+        "text": "Sekarang kita menunjuk benda.",
+        "body": "**Dekat** denganmu: **this** (satu) dan **these** (dua atau lebih) = *ini*. **Jauh** darimu: **that** (satu) dan **those** (dua atau lebih) = *itu*. Katanya ada **sebelum** kata benda: *buku ini* = **this book**. Kata benda jamak → kata penunjuk jamak: **these books**, bukan 'this books'.",
+        "pairs": [
+          {
+            "en": "this",
+            "id": "ini (satu, dekat)"
+          },
+          {
+            "en": "these",
+            "id": "ini (banyak, dekat)"
+          },
+          {
+            "en": "that",
+            "id": "itu (satu, jauh)"
+          },
+          {
+            "en": "those",
+            "id": "itu (banyak, jauh)"
+          },
+          {
+            "en": "this book",
+            "id": "buku ini"
+          },
+          {
+            "en": "those cars",
+            "id": "mobil-mobil itu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dekat dan jauh",
+        "text": "Bayangkan kamu di pasar di Bandung. Baca dengan suara keras.",
+        "body": "Tanyakan dua hal: dekat atau jauh? Satu atau banyak?",
+        "examples": [
+          {
+            "en": "This bag is heavy.",
+            "id": "Tas ini berat."
+          },
+          {
+            "en": "That building is my office.",
+            "id": "Gedung itu kantor saya."
+          },
+          {
+            "en": "These bananas are cheap.",
+            "id": "Pisang-pisang ini murah."
+          },
+          {
+            "en": "Those students are from Surabaya.",
+            "id": "Siswa-siswa itu dari Surabaya."
+          },
+          {
+            "en": "Is this your phone? — Yes, it is.",
+            "id": "Ini ponselmu? — Ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dekat atau jauh? Satu atau banyak?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "demonstratives",
+          "prompt": "Kamu menunjuk beberapa rumah yang jauh di atas bukit. ___ houses are very old.",
+          "options": [
+            "That",
+            "These",
+            "Those"
+          ],
+          "answer": 2,
+          "explanation": "Rumahnya **jauh** dan jumlahnya **banyak**, jadi **those**. **That** untuk satu benda, dan **these** untuk benda yang dekat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Ada beberapa kunci di meja di seberang ruangan. Tanyakan kepada temanmu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "demonstratives",
+          "prompt": "Susun kata-katanya: Apakah itu kunci-kuncimu?",
+          "tokens": [
+            "your",
+            "Are",
+            "keys",
+            "those"
+          ],
+          "solution": "Are those your keys?",
+          "explanation": "Kuncinya **jauh** dan jumlahnya **banyak**: **those**. Dalam pertanyaan dengan be, **are** ada di depan."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartunya. Sebutkan artinya sebelum kamu cek.",
+        "flashcards": [
+          {
+            "front": "this book",
+            "back": "buku ini"
+          },
+          {
+            "front": "that house",
+            "back": "rumah itu"
+          },
+          {
+            "front": "these bags",
+            "back": "tas-tas ini"
+          },
+          {
+            "front": "those cars",
+            "back": "mobil-mobil itu"
+          },
+          {
+            "front": "a teacher",
+            "back": "seorang guru"
+          },
+          {
+            "front": "an egg",
+            "back": "sebutir telur"
+          },
+          {
+            "front": "the sun",
+            "back": "matahari"
+          },
+          {
+            "front": "the door",
+            "back": "pintunya"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · a/an, the, this/that",
+          "intro": "Kata kecil mana yang ada sebelum kata benda?",
+          "headers": [
+            "Kata",
+            "Dipakai untuk",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "a",
+              "satu benda, bunyi konsonan",
+              "a car, a university"
+            ],
+            [
+              "an",
+              "satu benda, bunyi vokal",
+              "an egg, an hour"
+            ],
+            [
+              "the",
+              "sudah disebut, hanya satu, atau jelas yang mana",
+              "the sun, the door"
+            ],
+            [
+              "this",
+              "satu benda, dekat (ini)",
+              "this phone"
+            ],
+            [
+              "these",
+              "dua atau lebih, dekat (ini)",
+              "these bananas"
+            ],
+            [
+              "that",
+              "satu benda, jauh (itu)",
+              "that building"
+            ],
+            [
+              "those",
+              "dua atau lebih, jauh (itu)",
+              "those cars"
+            ]
+          ],
+          "tips": [
+            "Satu benda yang bisa dihitung tidak boleh berdiri sendiri: **I have a car**, bukan 'I have car'.",
+            "Dengarkan bunyinya: **an engineer**, **an hour**, tapi **a university**.",
+            "Kata benda jamak → **these/those**: **these books**, bukan 'this books'."
+          ],
+          "examples": [
+            {
+              "en": "She is an engineer.",
+              "id": "Dia (perempuan) seorang insinyur."
+            },
+            {
+              "en": "Budi has a car. The car is red.",
+              "id": "Budi punya mobil. Mobilnya merah."
+            },
+            {
+              "en": "These bananas are cheap.",
+              "id": "Pisang-pisang ini murah."
+            },
+            {
+              "en": "That building is my office.",
+              "id": "Gedung itu kantor saya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca",
+        "text": "Mau lebih? Tonton video singkat tentang this, that, these dan those, dan baca halaman sederhana tentang a, an dan the."
+      }
+    ]
+  }
+}

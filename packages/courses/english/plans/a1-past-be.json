@@ -1,0 +1,684 @@
+{
+  "en": {
+    "greeting": "Hi! Today we go back in time a little: was and were, the past of am, is and are. Let's take it step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "was and were",
+        "text": "You know am, is and are for now. For the past, English uses just two words.",
+        "body": "**am** and **is** become **was**; **are** becomes **were**. So **I was**, **he/she/it was**, but **you were**, **we were**, **they were**. Indonesian only adds a time word (*Kemarin saya sakit*), but English changes the verb: **Yesterday I was sick**, not 'Yesterday I am sick'.",
+        "pairs": [
+          {
+            "en": "I was",
+            "id": "saya"
+          },
+          {
+            "en": "you were",
+            "id": "kamu / Anda"
+          },
+          {
+            "en": "he was",
+            "id": "dia (laki-laki)"
+          },
+          {
+            "en": "she was",
+            "id": "dia (perempuan)"
+          },
+          {
+            "en": "it was",
+            "id": "itu (benda / hewan)"
+          },
+          {
+            "en": "we were",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they were",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Past time words",
+        "text": "These time words tell you: use was or were.",
+        "timeline": {
+          "title": "Before now and now",
+          "caption": "Before now (last year, last week, yesterday, last night) → was / were. Now → am / is / are.",
+          "marks": [
+            {
+              "label": "last year",
+              "kind": "past"
+            },
+            {
+              "label": "last week",
+              "kind": "past"
+            },
+            {
+              "label": "yesterday",
+              "kind": "past"
+            },
+            {
+              "label": "last night",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "In real sentences",
+        "text": "Here are was and were in everyday sentences. Look at the subject, then the verb.",
+        "body": "**you** always takes **were**, even for one person. Two names, like Rina and Budi, = **they** → **were**.",
+        "examples": [
+          {
+            "en": "I was at the office yesterday.",
+            "id": "Kemarin saya di kantor."
+          },
+          {
+            "en": "My mother was in Surabaya last week.",
+            "id": "Ibu saya di Surabaya minggu lalu."
+          },
+          {
+            "en": "The nasi goreng was delicious.",
+            "id": "Nasi gorengnya enak."
+          },
+          {
+            "en": "We were tired last night.",
+            "id": "Kami capek tadi malam."
+          },
+          {
+            "en": "You were late this morning.",
+            "id": "Kamu terlambat tadi pagi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Two friends, one weekend. Which verb fits?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "affirmative",
+          "options": [
+            "was",
+            "are",
+            "were"
+          ],
+          "answer": 2,
+          "prompt": "Complete: Rina and Dewi ___ at the market last Saturday.",
+          "explanation": "**Rina and Dewi** are two people = **they**, so the verb is **were**. **last Saturday** is the past, so not **are**, and **was** is only for one person or thing."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Saying no: wasn't and weren't",
+        "text": "Negatives are easy: just add **not** after was or were.",
+        "body": "**was not → wasn't**, **were not → weren't**. Don't add any other word, and don't put not first: 'She not was busy' is wrong.",
+        "examples": [
+          {
+            "en": "I wasn't at work yesterday.",
+            "id": "Kemarin saya tidak masuk kerja."
+          },
+          {
+            "en": "The bus wasn't full this morning.",
+            "id": "Busnya tidak penuh tadi pagi."
+          },
+          {
+            "en": "Rina and Budi weren't at school on Monday.",
+            "id": "Rina dan Budi tidak masuk sekolah hari Senin."
+          },
+          {
+            "en": "The rooms weren't clean.",
+            "id": "Kamar-kamarnya tidak bersih."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Budi tells you about a concert last Saturday.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "negative",
+          "tokens": [
+            "expensive",
+            "concert",
+            "weren't",
+            "The",
+            "tickets"
+          ],
+          "solution": "The concert tickets weren't expensive.",
+          "prompt": "Arrange the words: Tiket konsernya tidak mahal.",
+          "explanation": "**The concert tickets** are more than one = they, so the negative is **weren't** (were not). It goes right after the subject: **The concert tickets weren't expensive.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking questions",
+        "text": "To ask a yes/no question, move was or were to the front.",
+        "body": "Put **Was/Were before the subject**: He was at home → **Was he at home?** Don't just add a question mark to a normal sentence. Answer with a short answer that repeats was/were: **Yes, he was.** / **No, it wasn't.** If someone asks **Were you…?**, they ask about you, so answer with **I**.",
+        "pairs": [
+          {
+            "en": "Was he…?",
+            "id": "Apakah dia (laki-laki)…?"
+          },
+          {
+            "en": "Was she…?",
+            "id": "Apakah dia (perempuan)…?"
+          },
+          {
+            "en": "Was it…?",
+            "id": "Apakah itu…?"
+          },
+          {
+            "en": "Were you…?",
+            "id": "Apakah kamu…?"
+          },
+          {
+            "en": "Were they…?",
+            "id": "Apakah mereka…?"
+          },
+          {
+            "en": "Yes, he was.",
+            "id": "Ya."
+          },
+          {
+            "en": "No, it wasn't.",
+            "id": "Tidak."
+          },
+          {
+            "en": "Yes, we were.",
+            "id": "Ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You want to ask a colleague about Sari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "questions",
+          "options": [
+            "Sari was at the office yesterday?",
+            "Were Sari at the office yesterday?",
+            "Was Sari at the office yesterday?"
+          ],
+          "answer": 2,
+          "prompt": "Which question means 'Apakah Sari di kantor kemarin?'",
+          "explanation": "In a question, **was/were** comes before the subject. **Sari** = she → **was**: **Was Sari at the office yesterday?** The first option is statement order, and **were** doesn't go with one person (except you)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and answer",
+        "text": "Your friend Budi asks you a question. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "questions",
+          "listen": "Were you at the cinema last night?",
+          "options": [
+            "Yes, he was.",
+            "Yes, I was.",
+            "Yes, you were."
+          ],
+          "answer": 1,
+          "prompt": "Listen to Budi's question. The answer is yes. Choose your short answer.",
+          "explanation": "Budi asks **Were you at the cinema last night?** It's a question about you, so answer with **I** + **was**: **Yes, I was.** 'Yes, you were' talks about Budi, and 'he' is someone else."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to lock in was and were.",
+        "flashcards": [
+          {
+            "front": "I / he / she / it ___",
+            "back": "was (I was, she was, it was)"
+          },
+          {
+            "front": "you / we / they ___",
+            "back": "were (you were, we were, they were)"
+          },
+          {
+            "front": "kemarin · tadi malam · minggu lalu",
+            "back": "yesterday · last night · last week"
+          },
+          {
+            "front": "Negative: He was hungry.",
+            "back": "He wasn't hungry. (Dia tidak lapar.)"
+          },
+          {
+            "front": "Negative: They were ready.",
+            "back": "They weren't ready. (Mereka tidak siap.)"
+          },
+          {
+            "front": "Question: The film was good.",
+            "back": "Was the film good? (Filmnya bagus?)"
+          },
+          {
+            "front": "Short answer (no): Were you busy?",
+            "back": "No, I wasn't. (Tidak.)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · was / were",
+          "intro": "The past of am, is and are: positive sentences, negatives and questions.",
+          "headers": [
+            "Subject",
+            "Positive",
+            "Negative",
+            "Question"
+          ],
+          "rows": [
+            [
+              "I",
+              "I was",
+              "I wasn't",
+              "Was I…?"
+            ],
+            [
+              "you",
+              "you were",
+              "you weren't",
+              "Were you…?"
+            ],
+            [
+              "he / she / it",
+              "she was",
+              "she wasn't",
+              "Was she…?"
+            ],
+            [
+              "we",
+              "we were",
+              "we weren't",
+              "Were we…?"
+            ],
+            [
+              "they",
+              "they were",
+              "they weren't",
+              "Were they…?"
+            ]
+          ],
+          "tips": [
+            "A past time word (yesterday, last night, last week) means **was/were**, not am/is/are.",
+            "**you** always takes **were**: **You were late**, not 'You was late'.",
+            "Questions start with **Was/Were**: **Were they busy?** Short answers repeat it: **Yes, they were.** / **No, it wasn't.**"
+          ],
+          "examples": [
+            {
+              "en": "How was your weekend? — It was great!",
+              "id": "Bagaimana akhir pekanmu? — Seru sekali!"
+            },
+            {
+              "en": "My phone wasn't cheap.",
+              "id": "HP-ku tidak murah."
+            },
+            {
+              "en": "Was the film good? — Yes, it was.",
+              "id": "Filmnya bagus? — Ya, bagus."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? This video and these games explain was and were in a different way."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita sedikit kembali ke masa lalu: was dan were, bentuk lampau dari am, is dan are. Ayo kita pelajari pelan-pelan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "was dan were",
+        "text": "Kamu sudah tahu am, is dan are untuk sekarang. Untuk masa lalu, bahasa Inggris hanya memakai dua kata.",
+        "body": "**am** dan **is** menjadi **was**; **are** menjadi **were**. Jadi **I was**, **he/she/it was**, tapi **you were**, **we were**, **they were**. Bahasa Indonesia cukup menambah kata waktu (*Kemarin saya sakit*), tapi bahasa Inggris mengubah kata kerjanya: **Yesterday I was sick**, bukan 'Yesterday I am sick'.",
+        "pairs": [
+          {
+            "en": "I was",
+            "id": "saya"
+          },
+          {
+            "en": "you were",
+            "id": "kamu / Anda"
+          },
+          {
+            "en": "he was",
+            "id": "dia (laki-laki)"
+          },
+          {
+            "en": "she was",
+            "id": "dia (perempuan)"
+          },
+          {
+            "en": "it was",
+            "id": "itu (benda / hewan)"
+          },
+          {
+            "en": "we were",
+            "id": "kami / kita"
+          },
+          {
+            "en": "they were",
+            "id": "mereka"
+          }
+        ]
+      },
+      {
+        "kind": "timeline",
+        "title": "Kata waktu lampau",
+        "text": "Kata-kata waktu ini memberi tanda: pakai was atau were.",
+        "timeline": {
+          "title": "Sebelum sekarang dan sekarang",
+          "caption": "Sebelum sekarang (last year, last week, yesterday, last night) → was / were. Sekarang → am / is / are.",
+          "marks": [
+            {
+              "label": "last year",
+              "kind": "past"
+            },
+            {
+              "label": "last week",
+              "kind": "past"
+            },
+            {
+              "label": "yesterday",
+              "kind": "past"
+            },
+            {
+              "label": "last night",
+              "kind": "past"
+            },
+            {
+              "label": "now",
+              "kind": "now"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Dalam kalimat nyata",
+        "text": "Ini contoh was dan were dalam kalimat sehari-hari. Lihat dulu subjeknya, lalu kata kerjanya.",
+        "body": "**you** selalu memakai **were**, walaupun hanya satu orang. Dua nama, seperti Rina dan Budi, = **they** → **were**.",
+        "examples": [
+          {
+            "en": "I was at the office yesterday.",
+            "id": "Kemarin saya di kantor."
+          },
+          {
+            "en": "My mother was in Surabaya last week.",
+            "id": "Ibu saya di Surabaya minggu lalu."
+          },
+          {
+            "en": "The nasi goreng was delicious.",
+            "id": "Nasi gorengnya enak."
+          },
+          {
+            "en": "We were tired last night.",
+            "id": "Kami capek tadi malam."
+          },
+          {
+            "en": "You were late this morning.",
+            "id": "Kamu terlambat tadi pagi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dua teman, satu akhir pekan. Kata kerja mana yang cocok?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "affirmative",
+          "options": [
+            "was",
+            "are",
+            "were"
+          ],
+          "answer": 2,
+          "prompt": "Lengkapi: Rina and Dewi ___ at the market last Saturday.",
+          "explanation": "**Rina and Dewi** itu dua orang = **they**, jadi kata kerjanya **were**. **last Saturday** itu masa lalu, jadi bukan **are**, dan **was** hanya untuk satu orang atau benda."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Kalimat negatif: wasn't dan weren't",
+        "text": "Kalimat negatif itu mudah: cukup tambahkan **not** setelah was atau were.",
+        "body": "**was not → wasn't**, **were not → weren't**. Jangan tambah kata lain, dan jangan taruh not di depan: 'She not was busy' itu salah.",
+        "examples": [
+          {
+            "en": "I wasn't at work yesterday.",
+            "id": "Kemarin saya tidak masuk kerja."
+          },
+          {
+            "en": "The bus wasn't full this morning.",
+            "id": "Busnya tidak penuh tadi pagi."
+          },
+          {
+            "en": "Rina and Budi weren't at school on Monday.",
+            "id": "Rina dan Budi tidak masuk sekolah hari Senin."
+          },
+          {
+            "en": "The rooms weren't clean.",
+            "id": "Kamar-kamarnya tidak bersih."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Budi bercerita tentang konser hari Sabtu lalu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "negative",
+          "tokens": [
+            "expensive",
+            "concert",
+            "weren't",
+            "The",
+            "tickets"
+          ],
+          "solution": "The concert tickets weren't expensive.",
+          "prompt": "Susun kata-katanya: Tiket konsernya tidak mahal.",
+          "explanation": "**The concert tickets** lebih dari satu = they, jadi bentuk negatifnya **weren't** (were not), langsung setelah subjek: **The concert tickets weren't expensive.**"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membuat pertanyaan",
+        "text": "Untuk pertanyaan ya/tidak, pindahkan was atau were ke depan.",
+        "body": "Taruh **Was/Were di depan subjek**: He was at home → **Was he at home?** Jangan hanya menambah tanda tanya di akhir kalimat biasa. Jawab dengan jawaban singkat yang mengulang was/were: **Yes, he was.** / **No, it wasn't.** Kalau ada yang bertanya **Were you…?**, dia bertanya tentang kamu, jadi jawab dengan **I**.",
+        "pairs": [
+          {
+            "en": "Was he…?",
+            "id": "Apakah dia (laki-laki)…?"
+          },
+          {
+            "en": "Was she…?",
+            "id": "Apakah dia (perempuan)…?"
+          },
+          {
+            "en": "Was it…?",
+            "id": "Apakah itu…?"
+          },
+          {
+            "en": "Were you…?",
+            "id": "Apakah kamu…?"
+          },
+          {
+            "en": "Were they…?",
+            "id": "Apakah mereka…?"
+          },
+          {
+            "en": "Yes, he was.",
+            "id": "Ya."
+          },
+          {
+            "en": "No, it wasn't.",
+            "id": "Tidak."
+          },
+          {
+            "en": "Yes, we were.",
+            "id": "Ya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu mau bertanya kepada rekan kerja tentang Sari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "questions",
+          "options": [
+            "Sari was at the office yesterday?",
+            "Were Sari at the office yesterday?",
+            "Was Sari at the office yesterday?"
+          ],
+          "answer": 2,
+          "prompt": "Pertanyaan mana yang artinya 'Apakah Sari di kantor kemarin?'",
+          "explanation": "Dalam pertanyaan, **was/were** ada di depan subjek. **Sari** = she → **was**: **Was Sari at the office yesterday?** Pilihan pertama masih susunan kalimat biasa, dan **were** tidak dipakai untuk satu orang (kecuali you)."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan jawab",
+        "text": "Temanmu Budi bertanya sesuatu. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "questions",
+          "listen": "Were you at the cinema last night?",
+          "options": [
+            "Yes, he was.",
+            "Yes, I was.",
+            "Yes, you were."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan pertanyaan Budi. Jawabannya ya. Pilih jawaban singkatmu.",
+          "explanation": "Budi bertanya **Were you at the cinema last night?** Itu pertanyaan tentang kamu, jadi jawab dengan **I** + **was**: **Yes, I was.** 'Yes, you were' berarti tentang Budi, dan 'he' orang lain."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini supaya was dan were makin melekat.",
+        "flashcards": [
+          {
+            "front": "I / he / she / it ___",
+            "back": "was (I was, she was, it was)"
+          },
+          {
+            "front": "you / we / they ___",
+            "back": "were (you were, we were, they were)"
+          },
+          {
+            "front": "kemarin · tadi malam · minggu lalu",
+            "back": "yesterday · last night · last week"
+          },
+          {
+            "front": "Negative: He was hungry.",
+            "back": "He wasn't hungry. (Dia tidak lapar.)"
+          },
+          {
+            "front": "Negative: They were ready.",
+            "back": "They weren't ready. (Mereka tidak siap.)"
+          },
+          {
+            "front": "Question: The film was good.",
+            "back": "Was the film good? (Filmnya bagus?)"
+          },
+          {
+            "front": "Short answer (no): Were you busy?",
+            "back": "No, I wasn't. (Tidak.)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · was / were",
+          "intro": "Bentuk lampau dari am, is dan are: kalimat positif, negatif dan pertanyaan.",
+          "headers": [
+            "Subjek",
+            "Positif",
+            "Negatif",
+            "Pertanyaan"
+          ],
+          "rows": [
+            [
+              "I",
+              "I was",
+              "I wasn't",
+              "Was I…?"
+            ],
+            [
+              "you",
+              "you were",
+              "you weren't",
+              "Were you…?"
+            ],
+            [
+              "he / she / it",
+              "she was",
+              "she wasn't",
+              "Was she…?"
+            ],
+            [
+              "we",
+              "we were",
+              "we weren't",
+              "Were we…?"
+            ],
+            [
+              "they",
+              "they were",
+              "they weren't",
+              "Were they…?"
+            ]
+          ],
+          "tips": [
+            "Ada kata waktu lampau (yesterday, last night, last week) berarti pakai **was/were**, bukan am/is/are.",
+            "**you** selalu memakai **were**: **You were late**, bukan 'You was late'.",
+            "Pertanyaan diawali **Was/Were**: **Were they busy?** Jawaban singkat mengulangnya: **Yes, they were.** / **No, it wasn't.**"
+          ],
+          "examples": [
+            {
+              "en": "How was your weekend? — It was great!",
+              "id": "Bagaimana akhir pekanmu? — Seru sekali!"
+            },
+            {
+              "en": "My phone wasn't cheap.",
+              "id": "HP-ku tidak murah."
+            },
+            {
+              "en": "Was the film good? — Yes, it was.",
+              "id": "Filmnya bagus? — Ya, bagus."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Video dan game ini menjelaskan was dan were dengan cara lain."
+      }
+    ]
+  }
+}
