@@ -1,4 +1,4 @@
-import Svg, { Circle, Path } from 'react-native-svg';
+import Svg, { Circle, Path, Rect } from 'react-native-svg';
 
 import { colors } from '@/theme/tokens';
 
@@ -59,6 +59,9 @@ export function Icon({ name, size = 18, color = colors.ink, strokeWidth = 1.75 }
           <Circle cx="18" cy="18" r="3" />
           <Path d="M8.5 7.5l7 8" />
         </>
+      ) : name === 'stop' ? (
+        // Filled, like a media player's stop: an outlined square reads as a missing character.
+        <Rect x="6" y="6" width="12" height="12" rx="2" fill={color} />
       ) : name === 'target' ? (
         <>
           <Circle cx="12" cy="12" r="9" />
