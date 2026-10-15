@@ -1,0 +1,722 @@
+{
+  "en": {
+    "greeting": "Hi! Today is all about the first few minutes with someone new: how to start a conversation at an event, keep it going, choose safe topics, and leave politely. You already have two great tools from B1: question tags and polite questions.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "The first sentence",
+        "text": "Small talk is how work relationships start: at a conference, a coffee break or a networking event (an event for meeting new contacts for work).",
+        "body": "The easiest opener is about **what you both share right now**: the event, the place, the food, the traffic.\n- **So, what brings you here?** = a friendly *why did you come?*\n- **How do you know the host?** (**host** = who organised the event)\n- **Have you been to one of these before?**\n- A **question tag** from B1, voice down: *Great venue, isn't it?*\n\nTraps: *Sudah makan?* → `Have you eaten?` sounds like an invitation to eat. *Kenapa ada di sini?* → `Why are you here?` sounds like you're challenging the person.",
+        "pairs": [
+          {
+            "en": "So, what brings you here?",
+            "id": "Jadi, apa yang membawamu ke sini? (= kenapa datang, versi ramah)"
+          },
+          {
+            "en": "How do you know the host?",
+            "id": "Kamu kenal tuan rumahnya dari mana?"
+          },
+          {
+            "en": "Have you been to one of these before?",
+            "id": "Kamu pernah datang ke acara seperti ini sebelumnya?"
+          },
+          {
+            "en": "Great venue, isn't it?",
+            "id": "Tempatnya bagus, ya?"
+          },
+          {
+            "en": "Hi, I don't think we've met. I'm Rina.",
+            "id": "Hai, sepertinya kita belum kenalan. Saya Rina."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "It's the coffee break at a tech conference in Jakarta. You're standing next to someone you don't know.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "start-keep-conversation",
+          "prompt": "Which is the best way to start a conversation?",
+          "options": [
+            "Have you eaten yet?",
+            "Hi! Is this your first time at this conference?",
+            "Why are you here?"
+          ],
+          "answer": 1,
+          "explanation": "A good opener is about **what you both share**: the conference. *Have you eaten yet?* is *Sudah makan?* word for word, and in English it sounds like an invitation. *Why are you here?* sounds like the person shouldn't be there."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Keep it going",
+        "text": "Now the hard part: a conversation dies when the answers are one word. Four tools keep it alive.",
+        "body": "- **Open questions**: start with *What / How / Where…*, so the answer can't be just *yes* or *no*: *What kind of work do you do?*, not only *Do you work in IT?*\n- **Follow-up questions** about what the person just said: *How did you get into that?* (*get into* = mulai menekuni)\n- **A short detail + ask back**: *I'm in marketing at a bank. How about you?*\n- **Show interest**: *Really? That sounds interesting!*\n\nTrap: answering politely and then waiting in silence. Aim for 50/50: not an interview, not a speech.",
+        "pairs": [
+          {
+            "en": "What kind of work do you do?",
+            "id": "Kamu kerja di bidang apa?"
+          },
+          {
+            "en": "How did you get into that?",
+            "id": "Gimana awalnya kamu masuk ke bidang itu?"
+          },
+          {
+            "en": "What's that like?",
+            "id": "Seperti apa rasanya?"
+          },
+          {
+            "en": "How about you?",
+            "id": "Kalau kamu?"
+          },
+          {
+            "en": "That sounds interesting!",
+            "id": "Kedengarannya menarik!"
+          },
+          {
+            "en": "That must be busy!",
+            "id": "Pasti sibuk, ya!"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A coffee break chat",
+        "text": "Listen to Sari and Mark at a fintech conference in Jakarta.",
+        "body": "Notice the moves: a tag and a name, an open question, a detail plus *How about you?*, then showing interest.",
+        "examples": [
+          {
+            "en": "Sari: The coffee here is great, isn't it? I'm Sari, by the way.",
+            "id": "Sari: Kopinya enak, ya? Omong-omong, saya Sari."
+          },
+          {
+            "en": "Mark: Hi, Sari, I'm Mark. Yes, much better than at most conferences!",
+            "id": "Mark: Hai, Sari, saya Mark. Iya, jauh lebih enak daripada di kebanyakan konferensi!"
+          },
+          {
+            "en": "Sari: So, what brings you to Jakarta, Mark?",
+            "id": "Sari: Jadi, apa yang membawamu ke Jakarta, Mark?"
+          },
+          {
+            "en": "Mark: My company is opening an office here. I'm in charge of the new team. How about you?",
+            "id": "Mark: Perusahaan saya membuka kantor di sini. Saya memimpin tim barunya. Kalau kamu?"
+          },
+          {
+            "en": "Sari: I work for a digital bank in Surabaya. Oh, a new team? That must be exciting!",
+            "id": "Sari: Saya kerja di sebuah bank digital di Surabaya. Oh, tim baru? Pasti seru, ya!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Keep it going",
+        "text": "At a networking event in Bandung, Dimas tells you: 'I work for a startup. We make an app for small warungs.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "start-keep-conversation",
+          "prompt": "Which reply keeps the conversation going best?",
+          "options": [
+            "Oh, OK.",
+            "I work for a bank in Jakarta.",
+            "Oh, interesting! What does the app do?"
+          ],
+          "answer": 2,
+          "explanation": "It **shows interest** and asks an open **follow-up question** about what Dimas just said. *Oh, OK.* stops the conversation, and *I work for a bank* only talks about you without reacting to him."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build a follow-up question",
+        "text": "Mark tells Sari that his company sent him to Jakarta. Sari wants to know how long he has been working here.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "start-keep-conversation",
+          "prompt": "Arrange the words: Sudah berapa lama kamu bekerja di Jakarta?",
+          "tokens": [
+            "working",
+            "you",
+            "Jakarta",
+            "How",
+            "been",
+            "in",
+            "have",
+            "long"
+          ],
+          "solution": "How long have you been working in Jakarta?",
+          "explanation": "**How long** + **have you been** + **-ing** asks about the time from the start until now (the present perfect continuous from B1). It's an open question about work in general: a perfect small-talk question."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Safe topics, sensitive topics",
+        "text": "Some questions that are friendly in Indonesia can feel too personal in English. This is a cultural difference, not good or bad manners.",
+        "body": "**Safe** with someone new: the event, work in general, travel, food, the city, weather and traffic, hobbies.\n**Sensitive**: salary and money, age, weight and body, religion, politics, marriage and children.\n\nIn Indonesia, *Umurnya berapa? Sudah nikah? Gajinya berapa?* or *Gendutan, ya!* often show friendly attention. In many English-speaking workplaces, the same questions from someone new feel **intrusive** (too personal). It's a tendency: if the other person brings the topic up first, you can follow it.",
+        "pairs": [
+          {
+            "en": "So, how much is your salary? ✗",
+            "id": "Gajimu berapa? (terlalu pribadi)"
+          },
+          {
+            "en": "So, how long have you been working there? ✓",
+            "id": "Sudah berapa lama kerja di sana? (aman)"
+          },
+          {
+            "en": "How old are you? ✗",
+            "id": "Umurnya berapa? (terlalu pribadi)"
+          },
+          {
+            "en": "Are you married? ✗",
+            "id": "Sudah menikah? (terlalu pribadi untuk kenalan baru)"
+          },
+          {
+            "en": "You look fatter! ✗",
+            "id": "Gendutan, ya! (menyinggung)"
+          },
+          {
+            "en": "What religion are you? ✗",
+            "id": "Agamamu apa? (terlalu pribadi)"
+          },
+          {
+            "en": "How was your trip? ✓",
+            "id": "Perjalananmu gimana? (aman)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Spot the sensitive question",
+        "text": "Rina meets Mark, a project manager from Australia, at a conference in Bali. They've been talking for two minutes.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "safe-sensitive-topics",
+          "prompt": "Which question will most likely make Mark uncomfortable?",
+          "options": [
+            "Is this your first time in Bali?",
+            "So, when are you getting married?",
+            "Have you tried the food here?"
+          ],
+          "answer": 1,
+          "explanation": "Marriage is a **sensitive** topic with a new contact: *Kapan nikah?* is friendly in Indonesia, but in English from someone new it feels intrusive. Travel (*first time in Bali*) and food are **safe** topics."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Leaving politely",
+        "text": "At a networking event people move around, so ending a conversation is normal. Just don't walk away.",
+        "body": "A good exit has three parts:\n1. **Signal + reason**: *Well, I should let you go.* (polite: it's about **their** time) / *Anyway, I need to find my colleague.*\n2. **Something nice**: *It was great talking to you.*\n3. **Next step**: *Let's keep in touch. Here's my card.* / *Let's connect on LinkedIn.*\n\nTrap: *Saya duluan, ya* → `I go first` isn't English for leaving. Say **I should get going** or **I have to go now**.",
+        "pairs": [
+          {
+            "en": "Well, I should let you go.",
+            "id": "Yah, aku nggak mau menyita waktumu lagi."
+          },
+          {
+            "en": "Anyway, I need to find my colleague.",
+            "id": "Ngomong-ngomong, aku harus cari rekanku."
+          },
+          {
+            "en": "It was great talking to you.",
+            "id": "Senang sekali ngobrol denganmu."
+          },
+          {
+            "en": "Let's keep in touch. Here's my card.",
+            "id": "Mari tetap berhubungan. Ini kartu nama saya."
+          },
+          {
+            "en": "Let's connect on LinkedIn.",
+            "id": "Yuk, terhubung di LinkedIn."
+          },
+          {
+            "en": "I should get going.",
+            "id": "Saya duluan, ya. (bukan 'I go first')"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Budi has been chatting with a new contact for fifteen minutes. He wants to end the conversation politely.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "close-politely",
+          "prompt": "What should Budi say?",
+          "options": [
+            "Well, I'm going to grab another coffee. It was really nice meeting you!",
+            "OK, I go first, ya.",
+            "OK. Bye."
+          ],
+          "answer": 0,
+          "explanation": "A polite exit: a signal (*Well,*), a reason (another coffee; *grab* = informal *get*) and something nice (*It was really nice meeting you!*). *I go first* is *saya duluan* word for word, and *OK. Bye.* is too sudden after fifteen minutes."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page, for your next event.",
+        "artifact": {
+          "title": "Cheat sheet · small talk & networking",
+          "intro": "Open with what you share, keep it 50/50 with open questions and follow-ups, stay on safe topics, and leave with a reason, something nice and a next step.",
+          "headers": [
+            "Move",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Open",
+              "So, what brings you here?",
+              "Apa yang membawamu ke sini?"
+            ],
+            [
+              "Open",
+              "How do you know the host?",
+              "Kenal tuan rumahnya dari mana?"
+            ],
+            [
+              "Open",
+              "Have you been to one of these before?",
+              "Pernah datang ke acara seperti ini?"
+            ],
+            [
+              "Open with a tag",
+              "Great venue, isn't it?",
+              "Tempatnya bagus, ya?"
+            ],
+            [
+              "Open question",
+              "What kind of work do you do?",
+              "Kerja di bidang apa?"
+            ],
+            [
+              "Follow up",
+              "How did you get into that? / What's that like?",
+              "Gimana awalnya? / Seperti apa rasanya?"
+            ],
+            [
+              "Detail + ask back",
+              "I'm in marketing at a bank. How about you?",
+              "Saya di marketing di bank. Kalau kamu?"
+            ],
+            [
+              "Show interest",
+              "Really? That sounds interesting!",
+              "Oh, ya? Kedengarannya menarik!"
+            ],
+            [
+              "Safe topics",
+              "the event, work in general, travel, food, the city, weather, traffic, hobbies",
+              "topik aman dengan kenalan baru"
+            ],
+            [
+              "Sensitive topics",
+              "salary, age, weight, religion, politics, marriage",
+              "topik sensitif: hindari dengan kenalan baru"
+            ],
+            [
+              "Close: signal",
+              "Well, I should let you go.",
+              "Aku nggak mau menyita waktumu lagi."
+            ],
+            [
+              "Close: something nice",
+              "It was great talking to you.",
+              "Senang sekali ngobrol denganmu."
+            ],
+            [
+              "Close: next step",
+              "Let's keep in touch. Here's my card. / Let's connect on LinkedIn.",
+              "Mari tetap berhubungan. / Yuk, terhubung di LinkedIn."
+            ]
+          ],
+          "tips": [
+            "After you answer, add one detail or ask back (How about you?): silence sounds like 'I don't want to talk'.",
+            "Ask about their work, not their salary: So, how long have you been working there?",
+            "Not 'I go first' (saya duluan): say I should get going or I have to go now."
+          ],
+          "examples": [
+            {
+              "en": "The coffee here is great, isn't it? I'm Sari, by the way.",
+              "id": "Kopinya enak, ya? Omong-omong, saya Sari."
+            },
+            {
+              "en": "Oh, a new team? That must be exciting!",
+              "id": "Oh, tim baru? Pasti seru, ya!"
+            },
+            {
+              "en": "Ha, enough to pay the bills! Anyway, how's the conference so far?",
+              "id": "Haha, cukup buat bayar tagihan! Ngomong-ngomong, konferensinya sejauh ini gimana?"
+            },
+            {
+              "en": "Well, I should let you go. Enjoy the rest of the conference!",
+              "id": "Yah, aku nggak mau menyita waktumu lagi. Selamat menikmati sisa konferensinya!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? Here's a guide to small talk topics and openers, and a video about small talk with colleagues."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita fokus pada beberapa menit pertama dengan orang baru: cara memulai obrolan di sebuah acara, menjaganya tetap berjalan, memilih topik yang aman, dan pamit dengan sopan. Kamu sudah punya dua alat bagus dari B1: question tag dan pertanyaan yang sopan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kalimat pertama",
+        "text": "Small talk adalah awal dari hubungan kerja: di konferensi, saat coffee break, atau di networking event (acara untuk bertemu kenalan baru untuk urusan pekerjaan).",
+        "body": "Pembuka yang paling mudah adalah tentang **sesuatu yang sedang sama-sama kalian alami**: acaranya, tempatnya, makanannya, macetnya.\n- **So, what brings you here?** = *kenapa kamu datang?* versi ramah\n- **How do you know the host?** (**host** = yang mengadakan acara, tuan rumah)\n- **Have you been to one of these before?**\n- **Question tag** dari B1, nada turun: *Great venue, isn't it?*\n\nJebakan: *Sudah makan?* → `Have you eaten?` terdengar seperti ajakan makan. *Kenapa ada di sini?* → `Why are you here?` terdengar seperti kamu mempertanyakan orang itu.",
+        "pairs": [
+          {
+            "en": "So, what brings you here?",
+            "id": "Jadi, apa yang membawamu ke sini? (= kenapa datang, versi ramah)"
+          },
+          {
+            "en": "How do you know the host?",
+            "id": "Kamu kenal tuan rumahnya dari mana?"
+          },
+          {
+            "en": "Have you been to one of these before?",
+            "id": "Kamu pernah datang ke acara seperti ini sebelumnya?"
+          },
+          {
+            "en": "Great venue, isn't it?",
+            "id": "Tempatnya bagus, ya?"
+          },
+          {
+            "en": "Hi, I don't think we've met. I'm Rina.",
+            "id": "Hai, sepertinya kita belum kenalan. Saya Rina."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sedang coffee break di sebuah konferensi teknologi di Jakarta. Kamu berdiri di samping orang yang belum kamu kenal.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "start-keep-conversation",
+          "prompt": "Mana cara terbaik untuk memulai obrolan?",
+          "options": [
+            "Have you eaten yet?",
+            "Hi! Is this your first time at this conference?",
+            "Why are you here?"
+          ],
+          "answer": 1,
+          "explanation": "Pembuka yang baik adalah tentang **sesuatu yang sama-sama kalian alami**: konferensinya. *Have you eaten yet?* adalah *Sudah makan?* kata per kata, dan dalam bahasa Inggris terdengar seperti ajakan makan. *Why are you here?* terdengar seolah-olah orang itu tidak seharusnya ada di situ."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jaga obrolannya",
+        "text": "Sekarang bagian yang sulit: obrolan mati kalau jawabannya cuma satu kata. Ada empat alat untuk menjaganya tetap hidup.",
+        "body": "- **Pertanyaan terbuka** (open question): mulai dengan *What / How / Where…*, jadi jawabannya tidak bisa cuma *yes* atau *no*: *What kind of work do you do?*, bukan hanya *Do you work in IT?*\n- **Pertanyaan lanjutan** (follow-up) tentang yang baru saja dia katakan: *How did you get into that?* (*get into* = mulai menekuni)\n- **Satu detail + bertanya balik**: *I'm in marketing at a bank. How about you?*\n- **Tunjukkan minat**: *Really? That sounds interesting!*\n\nJebakan: menjawab dengan sopan lalu diam menunggu. Usahakan 50/50: bukan wawancara, bukan pidato.",
+        "pairs": [
+          {
+            "en": "What kind of work do you do?",
+            "id": "Kamu kerja di bidang apa?"
+          },
+          {
+            "en": "How did you get into that?",
+            "id": "Gimana awalnya kamu masuk ke bidang itu?"
+          },
+          {
+            "en": "What's that like?",
+            "id": "Seperti apa rasanya?"
+          },
+          {
+            "en": "How about you?",
+            "id": "Kalau kamu?"
+          },
+          {
+            "en": "That sounds interesting!",
+            "id": "Kedengarannya menarik!"
+          },
+          {
+            "en": "That must be busy!",
+            "id": "Pasti sibuk, ya!"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Obrolan saat coffee break",
+        "text": "Dengarkan Sari dan Mark di sebuah konferensi fintech di Jakarta.",
+        "body": "Perhatikan langkah-langkahnya: tag dan nama, pertanyaan terbuka, satu detail plus *How about you?*, lalu menunjukkan minat.",
+        "examples": [
+          {
+            "en": "Sari: The coffee here is great, isn't it? I'm Sari, by the way.",
+            "id": "Sari: Kopinya enak, ya? Omong-omong, saya Sari."
+          },
+          {
+            "en": "Mark: Hi, Sari, I'm Mark. Yes, much better than at most conferences!",
+            "id": "Mark: Hai, Sari, saya Mark. Iya, jauh lebih enak daripada di kebanyakan konferensi!"
+          },
+          {
+            "en": "Sari: So, what brings you to Jakarta, Mark?",
+            "id": "Sari: Jadi, apa yang membawamu ke Jakarta, Mark?"
+          },
+          {
+            "en": "Mark: My company is opening an office here. I'm in charge of the new team. How about you?",
+            "id": "Mark: Perusahaan saya membuka kantor di sini. Saya memimpin tim barunya. Kalau kamu?"
+          },
+          {
+            "en": "Sari: I work for a digital bank in Surabaya. Oh, a new team? That must be exciting!",
+            "id": "Sari: Saya kerja di sebuah bank digital di Surabaya. Oh, tim baru? Pasti seru, ya!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Jaga obrolannya",
+        "text": "Di sebuah networking event di Bandung, Dimas bercerita: 'I work for a startup. We make an app for small warungs.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "start-keep-conversation",
+          "prompt": "Balasan mana yang paling baik untuk menjaga obrolan tetap berjalan?",
+          "options": [
+            "Oh, OK.",
+            "I work for a bank in Jakarta.",
+            "Oh, interesting! What does the app do?"
+          ],
+          "answer": 2,
+          "explanation": "Balasan ini **menunjukkan minat** dan mengajukan **pertanyaan lanjutan** yang terbuka tentang apa yang baru saja Dimas katakan. *Oh, OK.* menghentikan obrolan, dan *I work for a bank* hanya bercerita tentang dirimu tanpa menanggapi dia."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaan lanjutan",
+        "text": "Mark bercerita bahwa perusahaannya mengirimnya ke Jakarta. Sari ingin tahu sudah berapa lama dia bekerja di sini.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "start-keep-conversation",
+          "prompt": "Susun kata-katanya: Sudah berapa lama kamu bekerja di Jakarta?",
+          "tokens": [
+            "working",
+            "you",
+            "Jakarta",
+            "How",
+            "been",
+            "in",
+            "have",
+            "long"
+          ],
+          "solution": "How long have you been working in Jakarta?",
+          "explanation": "**How long** + **have you been** + **-ing** menanyakan waktu dari awal sampai sekarang (present perfect continuous dari B1). Ini pertanyaan terbuka tentang pekerjaan secara umum: pertanyaan small talk yang sempurna."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Topik aman, topik sensitif",
+        "text": "Beberapa pertanyaan yang ramah di Indonesia bisa terasa terlalu pribadi dalam bahasa Inggris. Ini perbedaan budaya, bukan soal sopan atau tidak sopan.",
+        "body": "**Aman** dengan kenalan baru: acaranya, pekerjaan secara umum, perjalanan, makanan, kotanya, cuaca dan macet, hobi.\n**Sensitif**: gaji dan uang, umur, berat badan dan tubuh, agama, politik, pernikahan dan anak.\n\nDi Indonesia, *Umurnya berapa? Sudah nikah? Gajinya berapa?* atau *Gendutan, ya!* sering menunjukkan perhatian yang ramah. Di banyak tempat kerja berbahasa Inggris, pertanyaan yang sama dari orang baru terasa **intrusive** (terlalu mencampuri). Ini kecenderungan: kalau dia sendiri yang membuka topiknya, kamu boleh mengikutinya.",
+        "pairs": [
+          {
+            "en": "So, how much is your salary? ✗",
+            "id": "Gajimu berapa? (terlalu pribadi)"
+          },
+          {
+            "en": "So, how long have you been working there? ✓",
+            "id": "Sudah berapa lama kerja di sana? (aman)"
+          },
+          {
+            "en": "How old are you? ✗",
+            "id": "Umurnya berapa? (terlalu pribadi)"
+          },
+          {
+            "en": "Are you married? ✗",
+            "id": "Sudah menikah? (terlalu pribadi untuk kenalan baru)"
+          },
+          {
+            "en": "You look fatter! ✗",
+            "id": "Gendutan, ya! (menyinggung)"
+          },
+          {
+            "en": "What religion are you? ✗",
+            "id": "Agamamu apa? (terlalu pribadi)"
+          },
+          {
+            "en": "How was your trip? ✓",
+            "id": "Perjalananmu gimana? (aman)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Temukan pertanyaan yang sensitif",
+        "text": "Rina bertemu Mark, seorang project manager dari Australia, di sebuah konferensi di Bali. Mereka baru mengobrol dua menit.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "safe-sensitive-topics",
+          "prompt": "Pertanyaan mana yang paling mungkin membuat Mark tidak nyaman?",
+          "options": [
+            "Is this your first time in Bali?",
+            "So, when are you getting married?",
+            "Have you tried the food here?"
+          ],
+          "answer": 1,
+          "explanation": "Pernikahan adalah topik **sensitif** dengan kenalan baru: *Kapan nikah?* terasa ramah di Indonesia, tapi dalam bahasa Inggris, dari orang yang baru dikenal, terasa terlalu mencampuri. Perjalanan (*first time in Bali*) dan makanan adalah topik **aman**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pamit dengan sopan",
+        "text": "Di networking event orang berpindah-pindah, jadi mengakhiri obrolan itu biasa. Asal jangan langsung pergi begitu saja.",
+        "body": "Penutup yang baik punya tiga bagian:\n1. **Tanda + alasan**: *Well, I should let you go.* (sopan: tentang waktu **dia**) / *Anyway, I need to find my colleague.*\n2. **Sesuatu yang menyenangkan**: *It was great talking to you.*\n3. **Langkah berikutnya**: *Let's keep in touch. Here's my card.* / *Let's connect on LinkedIn.*\n\nJebakan: *Saya duluan, ya* → `I go first` tidak berarti pamit dalam bahasa Inggris. Katakan **I should get going** atau **I have to go now**.",
+        "pairs": [
+          {
+            "en": "Well, I should let you go.",
+            "id": "Yah, aku nggak mau menyita waktumu lagi."
+          },
+          {
+            "en": "Anyway, I need to find my colleague.",
+            "id": "Ngomong-ngomong, aku harus cari rekanku."
+          },
+          {
+            "en": "It was great talking to you.",
+            "id": "Senang sekali ngobrol denganmu."
+          },
+          {
+            "en": "Let's keep in touch. Here's my card.",
+            "id": "Mari tetap berhubungan. Ini kartu nama saya."
+          },
+          {
+            "en": "Let's connect on LinkedIn.",
+            "id": "Yuk, terhubung di LinkedIn."
+          },
+          {
+            "en": "I should get going.",
+            "id": "Saya duluan, ya. (bukan 'I go first')"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Budi sudah mengobrol lima belas menit dengan kenalan baru. Dia ingin mengakhiri obrolan dengan sopan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "close-politely",
+          "prompt": "Apa yang sebaiknya Budi katakan?",
+          "options": [
+            "Well, I'm going to grab another coffee. It was really nice meeting you!",
+            "OK, I go first, ya.",
+            "OK. Bye."
+          ],
+          "answer": 0,
+          "explanation": "Penutup yang sopan: tanda (*Well,*), alasan (ambil kopi lagi; *grab* = *get* versi santai) dan sesuatu yang menyenangkan (*It was really nice meeting you!*). *I go first* adalah *saya duluan* kata per kata, dan *OK. Bye.* terlalu mendadak setelah lima belas menit."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman, untuk acara berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · small talk & networking",
+          "intro": "Buka dengan sesuatu yang sama-sama kalian alami, jaga 50/50 dengan pertanyaan terbuka dan pertanyaan lanjutan, pilih topik aman, lalu pamit dengan alasan, sesuatu yang menyenangkan, dan langkah berikutnya.",
+          "headers": [
+            "Langkah",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Membuka",
+              "So, what brings you here?",
+              "Apa yang membawamu ke sini?"
+            ],
+            [
+              "Membuka",
+              "How do you know the host?",
+              "Kenal tuan rumahnya dari mana?"
+            ],
+            [
+              "Membuka",
+              "Have you been to one of these before?",
+              "Pernah datang ke acara seperti ini?"
+            ],
+            [
+              "Membuka dengan tag",
+              "Great venue, isn't it?",
+              "Tempatnya bagus, ya?"
+            ],
+            [
+              "Pertanyaan terbuka",
+              "What kind of work do you do?",
+              "Kerja di bidang apa?"
+            ],
+            [
+              "Pertanyaan lanjutan",
+              "How did you get into that? / What's that like?",
+              "Gimana awalnya? / Seperti apa rasanya?"
+            ],
+            [
+              "Detail + bertanya balik",
+              "I'm in marketing at a bank. How about you?",
+              "Saya di marketing di bank. Kalau kamu?"
+            ],
+            [
+              "Tunjukkan minat",
+              "Really? That sounds interesting!",
+              "Oh, ya? Kedengarannya menarik!"
+            ],
+            [
+              "Topik aman",
+              "the event, work in general, travel, food, the city, weather, traffic, hobbies",
+              "topik aman dengan kenalan baru"
+            ],
+            [
+              "Topik sensitif",
+              "salary, age, weight, religion, politics, marriage",
+              "topik sensitif: hindari dengan kenalan baru"
+            ],
+            [
+              "Menutup: tanda",
+              "Well, I should let you go.",
+              "Aku nggak mau menyita waktumu lagi."
+            ],
+            [
+              "Menutup: sesuatu yang menyenangkan",
+              "It was great talking to you.",
+              "Senang sekali ngobrol denganmu."
+            ],
+            [
+              "Menutup: langkah berikutnya",
+              "Let's keep in touch. Here's my card. / Let's connect on LinkedIn.",
+              "Mari tetap berhubungan. / Yuk, terhubung di LinkedIn."
+            ]
+          ],
+          "tips": [
+            "Setelah menjawab, tambahkan satu detail atau bertanya balik (How about you?): diam saja terdengar seperti 'aku nggak mau ngobrol'.",
+            "Tanyakan pekerjaannya, bukan gajinya: So, how long have you been working there?",
+            "Bukan 'I go first' (saya duluan): katakan I should get going atau I have to go now."
+          ],
+          "examples": [
+            {
+              "en": "The coffee here is great, isn't it? I'm Sari, by the way.",
+              "id": "Kopinya enak, ya? Omong-omong, saya Sari."
+            },
+            {
+              "en": "Oh, a new team? That must be exciting!",
+              "id": "Oh, tim baru? Pasti seru, ya!"
+            },
+            {
+              "en": "Ha, enough to pay the bills! Anyway, how's the conference so far?",
+              "id": "Haha, cukup buat bayar tagihan! Ngomong-ngomong, konferensinya sejauh ini gimana?"
+            },
+            {
+              "en": "Well, I should let you go. Enjoy the rest of the conference!",
+              "id": "Yah, aku nggak mau menyita waktumu lagi. Selamat menikmati sisa konferensinya!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lebih? Ini panduan tentang topik dan pembuka small talk, dan video tentang small talk dengan rekan kerja."
+      }
+    ]
+  }
+}

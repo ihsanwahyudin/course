@@ -1,0 +1,682 @@
+{
+  "en": {
+    "greeting": "Hi! Today your voice does more than go up and down: it shows doubt, surprise and politeness, corrects people with one strong word, and makes a presentation easy to follow. The recordings are read in a calm, natural voice, so you add the melody: say every example out loud and exaggerate a little.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Doubtful or surprised?",
+        "text": "Quick recap: ↗ up, ↘ down, a big jump up = surprised, flat → = bored. Now a new tune. Tap each line, then say it with the melody in the note.",
+        "body": "The **fall-rise ↘↗**: the voice goes **down and then up again**, often on one slow, stretched word. It means 'I'm not sure' or 'yes, **but**…':\n- *Really…? ↘↗* = 'I don't really believe it' (*Masa sih…?*)\n- *The plan is good… ↘↗* = good, **but** there's a problem\n**Surprise** is fast, with a **wide jump** from low to very high: *Really?! ↗* (*Hah? Masa?!*). Repeating what you heard with a big rise also shows surprise: *You finished it already? ↗*\nThe trap: one flat, Indonesian-style tune for everything, so the listener can't tell what you mean.",
+        "pairs": [
+          {
+            "en": "Really? You got the contract?",
+            "id": "Masa? Kamu dapat kontraknya? · terkejut: lompatan naik besar ↗"
+          },
+          {
+            "en": "Really? I'm not so sure.",
+            "id": "Masa sih? Aku nggak terlalu yakin. · ragu: pelan, turun lalu naik ↘↗"
+          },
+          {
+            "en": "Maybe. Let me check.",
+            "id": "Mungkin. Aku cek dulu. · Maybe… ↘↗ = belum yakin"
+          },
+          {
+            "en": "The plan is good, but it's expensive.",
+            "id": "Rencananya bagus, tapi mahal. · good… ↘↗ lalu 'but'"
+          },
+          {
+            "en": "You finished it already?",
+            "id": "Kamu sudah selesai? · urutan kalimat biasa + naik besar ↗ = terkejut"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Not so sure, Sari?",
+        "text": "Dimas makes a big promise the evening before a deadline.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "intonation-attitude",
+          "prompt": "Dimas says: 'Don't worry, I'll finish all forty slides tonight.' Sari doesn't really believe him. How does she say 'Really?'",
+          "options": [
+            "A big, quick jump from low to very high ↗",
+            "Slowly, the voice going down and then up again ↘↗",
+            "Short, flat and low →"
+          ],
+          "answer": 1,
+          "explanation": "Sari **doubts** him, so she uses a slow **fall-rise** ↘↗, like *Masa sih…?*. A big, quick jump up would mean she's surprised (and believes him); flat and low sounds bored, as if she doesn't care."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Polite requests and offers",
+        "text": "Polite words are only half the job. Tap each request and offer, and copy the melody in the note.",
+        "body": "In English a lot of politeness is in the **melody**.\n- **Requests** and **offers**: start fairly **high** and finish with a **gentle rise** ↗: *Could you send me the file? ↗* It sounds friendly and gives the other person room to say no.\n- A **low, flat** voice with a **quick fall** (*Could you send me the file. ↘*) can sound **impatient**, like an order, even with *please*.\nThe trap: in Indonesian, politeness lives in the words (*tolong, mohon, Pak/Bu*, a soft *ya*). In English, the gentle rise does the job of that friendly *ya*.\nNote: *Thanks a lot. ↘* said flat and low can be **sarcasm** (it means the opposite). Recognise it; don't use it at work.",
+        "pairs": [
+          {
+            "en": "Could you send me the file?",
+            "id": "Bisa tolong kirim filenya? · mulai agak tinggi, naik pelan ↗"
+          },
+          {
+            "en": "Can you help me with this?",
+            "id": "Bisa bantu aku dengan ini? · naik pelan ↗"
+          },
+          {
+            "en": "Would you like some tea?",
+            "id": "Mau teh? · tawaran: naik pelan ↗ = hangat"
+          },
+          {
+            "en": "What would you like to drink?",
+            "id": "Mau minum apa? · wh-question: tetap turun ↘, tapi lembut"
+          },
+          {
+            "en": "Thanks a lot.",
+            "id": "Makasih banyak. · hangat = tulus; datar dan rendah = menyindir"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Welcoming guests",
+        "text": "Budi has visitors from a client in Surabaya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "intonation-attitude",
+          "prompt": "Budi welcomes two visitors from a client in Surabaya and offers: 'Can I get you something to drink?' Which melody sounds warm and friendly?",
+          "options": [
+            "Starting higher, with a gentle rise at the end ↗",
+            "Low and flat, with a quick fall at the end ↘",
+            "Very slowly, down and then up again ↘↗"
+          ],
+          "answer": 0,
+          "explanation": "An offer sounds warm with a voice that starts higher and a **gentle rise** ↗. Low, flat and falling quickly sounds as if he doesn't really want to offer, or is in a hurry. A slow fall-rise ↘↗ sounds doubtful, as if a 'but…' is coming."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Stress what's different",
+        "text": "Now the strongest word in the sentence moves. Tap each correction: the words in CAPITALS in the note are the ones to hit hard.",
+        "body": "Normally the strongest stress falls on the **last** content word: *The meeting's on THURSday.* When you **correct** someone or **compare** two things, move the strongest stress to the word that is **different** and keep the rest low: this is **contrastive stress**.\n*No, I said TUESday, not THURSday.*\n**Looks like it breaks the rule:** small words like *my, your, I* are usually weak, but in a contrast they become **strong**: *It's MY bag, not YOURS.*\nThe trap: Indonesian shows contrast with words (*bukan… tapi…*, *Saya **yang** bayar*). English uses the voice: say it flat and the correction gets lost.",
+        "pairs": [
+          {
+            "en": "No, I said Tuesday, not Thursday.",
+            "id": "Bukan, aku bilang Selasa, bukan Kamis. · TUESday … THURSday"
+          },
+          {
+            "en": "Hey, that's my bag, not yours!",
+            "id": "Hei, itu tasku, bukan tasmu! · MY … YOURS"
+          },
+          {
+            "en": "No, three coffees, not two.",
+            "id": "Bukan, tiga kopi, bukan dua. · THREE … TWO"
+          },
+          {
+            "en": "I didn't call him. I emailed him.",
+            "id": "Aku nggak menelepon dia. Aku mengirim email ke dia. · CALL … EMAILED"
+          },
+          {
+            "en": "The office is in Bandung, not Jakarta.",
+            "id": "Kantornya di Bandung, bukan Jakarta. · BAN-dung … ja-KAR-ta"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: Budi checks",
+        "text": "Budi is booking a taxi to the airport for Rina. Press play and listen to his question.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrastive-stress",
+          "listen": "Rina, is your flight on Friday morning?",
+          "prompt": "Listen to Budi's question. Rina's flight is on Friday evening. She answers: 'No, on Friday evening.' Which word does she stress most?",
+          "options": [
+            "Friday",
+            "on",
+            "evening"
+          ],
+          "answer": 2,
+          "explanation": "Budi asked about Friday **morning**. *Friday* is right; only the time of day is wrong, so Rina stresses the word that corrects it: *No, on Friday EVEning.* Stressing *FRIday* would sound as if he got the day wrong, and *on* is a small word with nothing to correct."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Move the stress, change the meaning",
+        "text": "The same five words can send five different messages. The second sentence in each line shows what the stress means.",
+        "body": "The word in CAPITALS (in the meaning) is the part being corrected. Everything else stays true.",
+        "examples": [
+          {
+            "en": "I didn't say she stole it. Budi said it.",
+            "id": "Bukan aku yang bilang dia mencurinya; Budi yang bilang. (tekan I)"
+          },
+          {
+            "en": "I didn't say she stole it. I only thought it.",
+            "id": "Aku nggak bilang dia mencurinya; aku cuma berpikir begitu. (tekan SAY)"
+          },
+          {
+            "en": "I didn't say she stole it. Her brother did.",
+            "id": "Aku nggak bilang dia yang mencurinya; saudara laki-lakinya yang mencuri. (tekan SHE)"
+          },
+          {
+            "en": "I didn't say she stole it. She borrowed it.",
+            "id": "Aku nggak bilang dia mencurinya; dia meminjamnya. (tekan STOLE)"
+          },
+          {
+            "en": "I didn't say she stole it. She stole the charger.",
+            "id": "Aku nggak bilang dia mencuri barang itu; dia mencuri chargernya. (tekan IT)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "What does Sari mean?",
+        "text": "Sari is talking to her manager about a business trip to Makassar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrastive-stress",
+          "prompt": "Sari says: 'I didn't book the HOTEL for Friday.' (HOTEL has extra stress.) What does she mean?",
+          "options": [
+            "Someone else booked the hotel for Friday.",
+            "She booked something else for Friday, like the flight.",
+            "She booked the hotel for a different day."
+          ],
+          "answer": 1,
+          "explanation": "The stressed word is the part being corrected: not the **hotel**, but something else (the flight, a car). *Someone else booked it* needs extra stress on **I**; *a different day* needs extra stress on **FRIday**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Chunks and pauses",
+        "text": "Now presenting. Tap each slide sentence; in the note, | marks a short pause.",
+        "body": "A **chunk** is a group of words that belong together, said as one unit with a short pause after it: *Last year | our sales | rose by ten percent.*\n**Pause:** at commas and full stops, after a time or place phrase at the start, after a long subject, and before *but / because / so*.\n**Don't pause** inside a group: *the | report* ✗, *in | Bandung* ✗, *ten | percent* ✗.\nEach chunk has one main stress, and the voice falls ↘ only at the end of the sentence.\nThe trap: reading the slide fast in one breath, pausing only when you run out of air, or filling pauses with *eee…*. A short silence sounds confident.",
+        "pairs": [
+          {
+            "en": "Last year, our sales rose by ten percent.",
+            "id": "Tahun lalu, penjualan kami naik sepuluh persen. · Last year | our sales | rose by ten percent"
+          },
+          {
+            "en": "In Surabaya, we opened two new stores.",
+            "id": "Di Surabaya, kami membuka dua toko baru. · In Surabaya | we opened two new stores"
+          },
+          {
+            "en": "Our two new branches in Medan opened in May.",
+            "id": "Dua cabang baru kami di Medan dibuka bulan Mei. · Our two new branches in Medan | opened in May"
+          },
+          {
+            "en": "Our new app is fast, but it uses a lot of data.",
+            "id": "Aplikasi baru kami cepat, tapi memakai banyak kuota. · Our new app is fast | but it uses a lot of data"
+          },
+          {
+            "en": "Most customers are happy because delivery is faster.",
+            "id": "Sebagian besar pelanggan senang karena pengirimannya lebih cepat. · Most customers are happy | because delivery is faster"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which reading is clear?",
+        "text": "Rina is practising her presentation for the marketing team.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pausing-chunking",
+          "prompt": "Rina marks the pauses in her script with |. Which version is chunked clearly?",
+          "options": [
+            "Next month our | new product goes on | sale in Jakarta.",
+            "Next | month our new | product | goes on sale in | Jakarta.",
+            "Next month | our new product | goes on sale in Jakarta."
+          ],
+          "answer": 2,
+          "explanation": "The third version keeps every group together: the time phrase (*Next month*), the subject (*our new product*), then the rest. The first splits *our | new product* and *on | sale*; the second pauses in random places, as if Rina runs out of air."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Today's attitudes, corrections and chunks on one page, to keep for your next meeting or presentation.",
+        "artifact": {
+          "title": "Cheat sheet · attitude, contrast and chunks",
+          "intro": "Your voice at work: how to sound doubtful, surprised and polite, how to correct with one strong word, and how to present in chunks. These are tendencies, not strict rules.",
+          "headers": [
+            "Goal",
+            "How",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Surprised",
+              "fast, wide jump up ↗",
+              "Really?! · You finished it already? ↗"
+            ],
+            [
+              "Doubtful",
+              "slow, down then up ↘↗",
+              "Really…? ↘↗ · Maybe… ↘↗"
+            ],
+            [
+              "Yes, but…",
+              "fall-rise on the key word",
+              "The plan is good… ↘↗ but it's expensive."
+            ],
+            [
+              "Bored (avoid!)",
+              "flat and low →",
+              "Really. →"
+            ],
+            [
+              "Polite request",
+              "start higher, gentle rise ↗",
+              "Could you send me the file? ↗"
+            ],
+            [
+              "Warm offer",
+              "gentle rise ↗",
+              "Would you like some tea? ↗"
+            ],
+            [
+              "Sounds impatient",
+              "low, flat, quick fall ↘",
+              "Could you send me the file. ↘"
+            ],
+            [
+              "Sarcasm (recognise it)",
+              "positive words, flat and low ↘",
+              "Thanks a lot. ↘ · Great. ↘"
+            ],
+            [
+              "Correct a detail",
+              "stress only the word that's different",
+              "No, I said TUESday, not THURSday."
+            ],
+            [
+              "Contrast people or owners",
+              "small words become strong",
+              "It's MY bag, not YOURS."
+            ],
+            [
+              "Present clearly",
+              "short pause between chunks |",
+              "Last year | our sales | rose by ten percent"
+            ],
+            [
+              "Where to pause",
+              "after an opening phrase or a long subject; before but, because, so",
+              "In Surabaya | we opened two new stores"
+            ],
+            [
+              "Don't pause",
+              "inside a group",
+              "the | report ✗ · ten | percent ✗"
+            ]
+          ],
+          "tips": [
+            "Same word, three tunes: Really?! ↗ surprised · Really…? ↘↗ doubtful · Really. → bored.",
+            "Correcting someone? Hit only the word that's different, keep the rest low, and keep your voice friendly.",
+            "Before a presentation, mark your script with | and underline the main word in each chunk. Pause in silence, not with eee…"
+          ],
+          "examples": [
+            {
+              "en": "Could you check this for me?",
+              "id": "Bisa tolong cek ini untukku?"
+            },
+            {
+              "en": "No, the meeting is on Tuesday, not Thursday.",
+              "id": "Bukan, rapatnya hari Selasa, bukan Kamis."
+            },
+            {
+              "en": "The idea is good, but we need more time.",
+              "id": "Idenya bagus, tapi kita butuh waktu lebih banyak."
+            },
+            {
+              "en": "Last year, our sales rose by ten percent.",
+              "id": "Tahun lalu, penjualan kami naik sepuluh persen."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read and listen",
+        "text": "A short VOA lesson with audio: one sentence, seven meanings, depending on the stressed word. Listen, then say each version aloud."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini suaramu melakukan lebih dari sekadar naik dan turun: menunjukkan ragu, terkejut dan sopan, mengoreksi orang dengan satu kata yang kuat, dan membuat presentasi mudah diikuti. Rekamannya dibaca dengan suara yang tenang dan alami, jadi melodinya kamu yang tambahkan: ucapkan setiap contoh dengan suara keras dan sedikit dilebih-lebihkan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Ragu atau terkejut?",
+        "text": "Ulasan singkat: ↗ naik, ↘ turun, lompatan naik besar = terkejut, datar → = bosan. Sekarang ada nada baru. Ketuk setiap baris, lalu ucapkan dengan melodi yang ada di catatannya.",
+        "body": "**Nada turun-naik ↘↗ (fall-rise)**: suaranya **turun lalu naik lagi**, sering pada satu kata yang diucapkan pelan dan panjang. Artinya 'aku nggak yakin' atau 'iya, **tapi**…':\n- *Really…? ↘↗* = 'aku nggak terlalu percaya' (*Masa sih…?*)\n- *The plan is good… ↘↗* = bagus, **tapi** ada masalah\n**Terkejut** itu cepat, dengan **lompatan lebar** dari rendah ke sangat tinggi: *Really?! ↗* (*Hah? Masa?!*). Mengulang yang kamu dengar dengan nada naik besar juga menunjukkan terkejut: *You finished it already? ↗*\nJebakannya: satu nada datar ala bahasa Indonesia untuk semuanya, jadi pendengar tidak tahu maksudmu.",
+        "pairs": [
+          {
+            "en": "Really? You got the contract?",
+            "id": "Masa? Kamu dapat kontraknya? · terkejut: lompatan naik besar ↗"
+          },
+          {
+            "en": "Really? I'm not so sure.",
+            "id": "Masa sih? Aku nggak terlalu yakin. · ragu: pelan, turun lalu naik ↘↗"
+          },
+          {
+            "en": "Maybe. Let me check.",
+            "id": "Mungkin. Aku cek dulu. · Maybe… ↘↗ = belum yakin"
+          },
+          {
+            "en": "The plan is good, but it's expensive.",
+            "id": "Rencananya bagus, tapi mahal. · good… ↘↗ lalu 'but'"
+          },
+          {
+            "en": "You finished it already?",
+            "id": "Kamu sudah selesai? · urutan kalimat biasa + naik besar ↗ = terkejut"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Nggak yakin, Sari?",
+        "text": "Dimas membuat janji besar pada malam sebelum tenggat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "intonation-attitude",
+          "prompt": "Dimas bilang: 'Don't worry, I'll finish all forty slides tonight.' Sari tidak terlalu percaya. Bagaimana dia mengucapkan 'Really?'",
+          "options": [
+            "A big, quick jump from low to very high ↗",
+            "Slowly, the voice going down and then up again ↘↗",
+            "Short, flat and low →"
+          ],
+          "answer": 1,
+          "explanation": "Sari **ragu**, jadi dia memakai **nada turun-naik** ↘↗ yang pelan, seperti *Masa sih…?*. Lompatan naik yang besar dan cepat berarti dia terkejut (dan percaya); datar dan rendah terdengar bosan, seolah dia tidak peduli."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Permintaan dan tawaran yang sopan",
+        "text": "Kata-kata sopan baru separuh pekerjaan. Ketuk setiap permintaan dan tawaran, lalu tirukan melodi di catatannya.",
+        "body": "Dalam bahasa Inggris, banyak kesopanan ada di **melodi**.\n- **Permintaan** dan **tawaran**: mulai agak **tinggi** dan akhiri dengan **naik pelan** ↗: *Could you send me the file? ↗* Terdengar ramah dan memberi ruang bagi orang itu untuk menolak.\n- Suara **rendah dan datar** dengan **turun cepat** (*Could you send me the file. ↘*) bisa terdengar **tidak sabar**, seperti perintah, walaupun pakai *please*.\nJebakannya: dalam bahasa Indonesia, kesopanan ada di kata-kata (*tolong, mohon, Pak/Bu*, *ya* yang lembut). Dalam bahasa Inggris, naik yang pelan menggantikan tugas *ya* yang ramah itu.\nCatatan: *Thanks a lot. ↘* yang datar dan rendah bisa jadi **sarkasme** (sindiran, artinya kebalikannya). Kenali, tapi jangan dipakai di kantor.",
+        "pairs": [
+          {
+            "en": "Could you send me the file?",
+            "id": "Bisa tolong kirim filenya? · mulai agak tinggi, naik pelan ↗"
+          },
+          {
+            "en": "Can you help me with this?",
+            "id": "Bisa bantu aku dengan ini? · naik pelan ↗"
+          },
+          {
+            "en": "Would you like some tea?",
+            "id": "Mau teh? · tawaran: naik pelan ↗ = hangat"
+          },
+          {
+            "en": "What would you like to drink?",
+            "id": "Mau minum apa? · wh-question: tetap turun ↘, tapi lembut"
+          },
+          {
+            "en": "Thanks a lot.",
+            "id": "Makasih banyak. · hangat = tulus; datar dan rendah = menyindir"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Menyambut tamu",
+        "text": "Budi kedatangan tamu dari klien di Surabaya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "intonation-attitude",
+          "prompt": "Budi menyambut dua tamu dari klien di Surabaya dan menawarkan: 'Can I get you something to drink?' Melodi mana yang terdengar hangat dan ramah?",
+          "options": [
+            "Starting higher, with a gentle rise at the end ↗",
+            "Low and flat, with a quick fall at the end ↘",
+            "Very slowly, down and then up again ↘↗"
+          ],
+          "answer": 0,
+          "explanation": "Tawaran terdengar hangat dengan suara yang mulai lebih tinggi dan **naik pelan** ↗. Rendah, datar dan turun cepat terdengar seolah dia tidak benar-benar ingin menawarkan, atau sedang terburu-buru. Nada turun-naik ↘↗ yang pelan terdengar ragu, seolah akan ada 'tapi…'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tekan yang berbeda",
+        "text": "Sekarang kata terkuat dalam kalimat berpindah. Ketuk setiap koreksi: kata berhuruf KAPITAL di catatannya adalah kata yang ditekan kuat.",
+        "body": "Biasanya tekanan terkuat jatuh di kata isi yang **terakhir**: *The meeting's on THURSday.* Saat kamu **mengoreksi** orang atau **membandingkan** dua hal, pindahkan tekanan terkuat ke kata yang **berbeda** dan sisanya tetap rendah: ini disebut **contrastive stress** (tekanan kontras).\n*No, I said TUESday, not THURSday.*\n**Kelihatannya melanggar aturan:** kata kecil seperti *my, your, I* biasanya lemah, tapi dalam kontras kata-kata itu jadi **kuat**: *It's MY bag, not YOURS.*\nJebakannya: bahasa Indonesia menunjukkan kontras dengan kata (*bukan… tapi…*, *Saya **yang** bayar*). Bahasa Inggris memakai suara: kalau diucapkan datar, koreksinya tidak tertangkap.",
+        "pairs": [
+          {
+            "en": "No, I said Tuesday, not Thursday.",
+            "id": "Bukan, aku bilang Selasa, bukan Kamis. · TUESday … THURSday"
+          },
+          {
+            "en": "Hey, that's my bag, not yours!",
+            "id": "Hei, itu tasku, bukan tasmu! · MY … YOURS"
+          },
+          {
+            "en": "No, three coffees, not two.",
+            "id": "Bukan, tiga kopi, bukan dua. · THREE … TWO"
+          },
+          {
+            "en": "I didn't call him. I emailed him.",
+            "id": "Aku nggak menelepon dia. Aku mengirim email ke dia. · CALL … EMAILED"
+          },
+          {
+            "en": "The office is in Bandung, not Jakarta.",
+            "id": "Kantornya di Bandung, bukan Jakarta. · BAN-dung … ja-KAR-ta"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: Budi memastikan",
+        "text": "Budi sedang memesan taksi ke bandara untuk Rina. Tekan play dan dengarkan pertanyaannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrastive-stress",
+          "listen": "Rina, is your flight on Friday morning?",
+          "prompt": "Dengarkan pertanyaan Budi. Penerbangan Rina hari Jumat malam. Dia menjawab: 'No, on Friday evening.' Kata mana yang paling dia tekan?",
+          "options": [
+            "Friday",
+            "on",
+            "evening"
+          ],
+          "answer": 2,
+          "explanation": "Budi bertanya tentang Jumat **pagi** (*morning*). *Friday* sudah benar; yang salah hanya waktunya, jadi Rina menekan kata yang mengoreksinya: *No, on Friday EVEning.* Menekan *FRIday* terdengar seolah harinya yang salah, dan *on* adalah kata kecil yang tidak perlu dikoreksi."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Pindah tekanan, ganti arti",
+        "text": "Lima kata yang sama bisa membawa lima pesan yang berbeda. Kalimat kedua di setiap baris menunjukkan arti tekanannya.",
+        "body": "Kata berhuruf KAPITAL (di artinya) adalah bagian yang dikoreksi. Sisanya tetap benar.",
+        "examples": [
+          {
+            "en": "I didn't say she stole it. Budi said it.",
+            "id": "Bukan aku yang bilang dia mencurinya; Budi yang bilang. (tekan I)"
+          },
+          {
+            "en": "I didn't say she stole it. I only thought it.",
+            "id": "Aku nggak bilang dia mencurinya; aku cuma berpikir begitu. (tekan SAY)"
+          },
+          {
+            "en": "I didn't say she stole it. Her brother did.",
+            "id": "Aku nggak bilang dia yang mencurinya; saudara laki-lakinya yang mencuri. (tekan SHE)"
+          },
+          {
+            "en": "I didn't say she stole it. She borrowed it.",
+            "id": "Aku nggak bilang dia mencurinya; dia meminjamnya. (tekan STOLE)"
+          },
+          {
+            "en": "I didn't say she stole it. She stole the charger.",
+            "id": "Aku nggak bilang dia mencuri barang itu; dia mencuri chargernya. (tekan IT)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apa maksud Sari?",
+        "text": "Sari sedang bicara dengan manajernya tentang perjalanan dinas ke Makassar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "contrastive-stress",
+          "prompt": "Sari bilang: 'I didn't book the HOTEL for Friday.' (HOTEL diberi tekanan ekstra.) Apa maksudnya?",
+          "options": [
+            "Someone else booked the hotel for Friday.",
+            "She booked something else for Friday, like the flight.",
+            "She booked the hotel for a different day."
+          ],
+          "answer": 1,
+          "explanation": "Kata yang ditekan adalah bagian yang dikoreksi: bukan **hotelnya**, tapi hal lain (tiket pesawat, mobil). *Orang lain yang memesan* butuh tekanan ekstra pada **I**; *hari yang berbeda* butuh tekanan ekstra pada **FRIday**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Potongan dan jeda",
+        "text": "Sekarang presentasi. Ketuk setiap kalimat slide; di catatannya, | menandai jeda singkat.",
+        "body": "**Chunk** (potongan) adalah sekelompok kata yang satu kesatuan, diucapkan sebagai satu unit dengan jeda singkat setelahnya: *Last year | our sales | rose by ten percent.*\n**Beri jeda:** di koma dan titik, setelah keterangan waktu atau tempat di awal, setelah subjek yang panjang, dan sebelum *but / because / so*.\n**Jangan berhenti** di tengah kelompok: *the | report* ✗, *in | Bandung* ✗, *ten | percent* ✗.\nSetiap potongan punya satu tekanan utama, dan suara turun ↘ hanya di akhir kalimat.\nJebakannya: membaca slide cepat dalam satu tarikan napas, berhenti hanya saat kehabisan napas, atau mengisi jeda dengan *eee…*. Diam sebentar terdengar percaya diri.",
+        "pairs": [
+          {
+            "en": "Last year, our sales rose by ten percent.",
+            "id": "Tahun lalu, penjualan kami naik sepuluh persen. · Last year | our sales | rose by ten percent"
+          },
+          {
+            "en": "In Surabaya, we opened two new stores.",
+            "id": "Di Surabaya, kami membuka dua toko baru. · In Surabaya | we opened two new stores"
+          },
+          {
+            "en": "Our two new branches in Medan opened in May.",
+            "id": "Dua cabang baru kami di Medan dibuka bulan Mei. · Our two new branches in Medan | opened in May"
+          },
+          {
+            "en": "Our new app is fast, but it uses a lot of data.",
+            "id": "Aplikasi baru kami cepat, tapi memakai banyak kuota. · Our new app is fast | but it uses a lot of data"
+          },
+          {
+            "en": "Most customers are happy because delivery is faster.",
+            "id": "Sebagian besar pelanggan senang karena pengirimannya lebih cepat. · Most customers are happy | because delivery is faster"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Mana yang jelas?",
+        "text": "Rina sedang berlatih presentasi untuk tim marketing.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pausing-chunking",
+          "prompt": "Rina menandai jeda di naskahnya dengan |. Versi mana yang dipotong dengan jelas?",
+          "options": [
+            "Next month our | new product goes on | sale in Jakarta.",
+            "Next | month our new | product | goes on sale in | Jakarta.",
+            "Next month | our new product | goes on sale in Jakarta."
+          ],
+          "answer": 2,
+          "explanation": "Versi ketiga menjaga setiap kelompok tetap utuh: keterangan waktu (*Next month*), subjek (*our new product*), lalu sisanya. Versi pertama memecah *our | new product* dan *on | sale*; versi kedua berhenti di tempat acak, seolah Rina kehabisan napas."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Sikap, koreksi dan potongan hari ini dalam satu halaman, untuk disimpan sebelum rapat atau presentasi berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · sikap, kontras dan potongan",
+          "intro": "Suaramu di tempat kerja: cara terdengar ragu, terkejut dan sopan, cara mengoreksi dengan satu kata yang kuat, dan cara presentasi dalam potongan. Ini kecenderungan, bukan aturan yang kaku.",
+          "headers": [
+            "Tujuan",
+            "Caranya",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Terkejut",
+              "cepat, lompatan naik lebar ↗",
+              "Really?! · You finished it already? ↗"
+            ],
+            [
+              "Ragu",
+              "pelan, turun lalu naik ↘↗",
+              "Really…? ↘↗ · Maybe… ↘↗"
+            ],
+            [
+              "Iya, tapi…",
+              "turun-naik pada kata kunci",
+              "The plan is good… ↘↗ but it's expensive."
+            ],
+            [
+              "Bosan (hindari!)",
+              "datar dan rendah →",
+              "Really. →"
+            ],
+            [
+              "Permintaan sopan",
+              "mulai lebih tinggi, naik pelan ↗",
+              "Could you send me the file? ↗"
+            ],
+            [
+              "Tawaran yang hangat",
+              "naik pelan ↗",
+              "Would you like some tea? ↗"
+            ],
+            [
+              "Terdengar tidak sabar",
+              "rendah, datar, turun cepat ↘",
+              "Could you send me the file. ↘"
+            ],
+            [
+              "Sarkasme (kenali saja)",
+              "kata positif, datar dan rendah ↘",
+              "Thanks a lot. ↘ · Great. ↘"
+            ],
+            [
+              "Mengoreksi detail",
+              "tekan hanya kata yang berbeda",
+              "No, I said TUESday, not THURSday."
+            ],
+            [
+              "Membandingkan orang atau pemilik",
+              "kata kecil jadi kuat",
+              "It's MY bag, not YOURS."
+            ],
+            [
+              "Presentasi yang jelas",
+              "jeda singkat di antara potongan |",
+              "Last year | our sales | rose by ten percent"
+            ],
+            [
+              "Di mana memberi jeda",
+              "setelah keterangan di awal atau subjek panjang; sebelum but, because, so",
+              "In Surabaya | we opened two new stores"
+            ],
+            [
+              "Jangan berhenti",
+              "di tengah kelompok kata",
+              "the | report ✗ · ten | percent ✗"
+            ]
+          ],
+          "tips": [
+            "Satu kata, tiga nada: Really?! ↗ terkejut · Really…? ↘↗ ragu · Really. → bosan.",
+            "Mengoreksi orang? Tekan hanya kata yang berbeda, sisanya rendah, dan suaramu tetap ramah.",
+            "Sebelum presentasi, tandai naskahmu dengan | dan garis bawahi kata utama di setiap potongan. Berhenti dengan diam, bukan dengan eee…"
+          ],
+          "examples": [
+            {
+              "en": "Could you check this for me?",
+              "id": "Bisa tolong cek ini untukku?"
+            },
+            {
+              "en": "No, the meeting is on Tuesday, not Thursday.",
+              "id": "Bukan, rapatnya hari Selasa, bukan Kamis."
+            },
+            {
+              "en": "The idea is good, but we need more time.",
+              "id": "Idenya bagus, tapi kita butuh waktu lebih banyak."
+            },
+            {
+              "en": "Last year, our sales rose by ten percent.",
+              "id": "Tahun lalu, penjualan kami naik sepuluh persen."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca dan dengarkan",
+        "text": "Pelajaran pendek dari VOA dengan audio: satu kalimat, tujuh arti, tergantung kata yang ditekan. Dengarkan, lalu ucapkan setiap versinya dengan suara keras."
+      }
+    ]
+  }
+}

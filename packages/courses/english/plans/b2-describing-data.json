@@ -1,0 +1,758 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll describe graphs and data: how figures rise, fall and peak, how to compare them precisely, and how to write an IELTS Task 1 report. You already know comparatives and linkers, so you're ready.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Which way is the line going?",
+        "text": "Graphs tell a story with numbers. First you need the words for the five ways a line can move.",
+        "body": "- **Up:** *rise (rose), increase, grow (grew), go up (went up)*\n- **Down:** *fall (fell), decrease, decline, drop*\n- **The top:** *peak at 400*\n- **Flat:** *level off, remain stable*\n- **Up and down many times:** *fluctuate*\n\nA chart shows the past, so use the **past simple**. And a number moves **by itself**: *The number of users increased*, not `was increase`: the past is already in *-ed*, so don't add *was* to mean *sudah*. Here, the app can't show pictures, so charts come as small tables.",
+        "pairs": [
+          {
+            "en": "rise / rose / risen",
+            "id": "naik"
+          },
+          {
+            "en": "increase / grow / go up",
+            "id": "meningkat / bertambah / naik"
+          },
+          {
+            "en": "fall / fell / fallen",
+            "id": "turun"
+          },
+          {
+            "en": "decrease / decline / drop",
+            "id": "menurun / berkurang / turun"
+          },
+          {
+            "en": "peak at",
+            "id": "mencapai puncak di (angka tertinggi)"
+          },
+          {
+            "en": "level off",
+            "id": "mulai mendatar (berhenti naik atau turun)"
+          },
+          {
+            "en": "remain stable",
+            "id": "tetap stabil"
+          },
+          {
+            "en": "fluctuate",
+            "id": "naik-turun berkali-kali"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina is writing a monthly report for her manager at a startup in Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "trend-vocabulary",
+          "options": [
+            "was increase",
+            "increased",
+            "increase"
+          ],
+          "answer": 1,
+          "prompt": "Visits to the company website went up in 2024. Complete Rina's sentence: The number of visits ___ in 2024.",
+          "explanation": "A number goes up by itself, so use the active past simple: **increased**. `was increase` adds *was* as if it meant *sudah*, but the past is already in *-ed*; and *increase* has no past tense for 2024."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "to, by, from … to: how far did it go?",
+        "text": "Tiny words, big difference in meaning. Watch the numbers.",
+        "body": "- **to** + the **new level**: 500 → 800 = *rose **to** 800*\n- **by** + the **size of the change**: 500 → 800 = *rose **by** 300*\n- **from … to …**: *from 500 to 800*\n- **at** a point: *peaked at 400*; **between** a range: *fluctuated between …*\n\nIndonesian trap: *naik **sampai** 20%* is never `increased until 20%`. **until** is only for **time**: *remained stable until 2024*.",
+        "pairs": [
+          {
+            "en": "Sales rose to 800 cups.",
+            "id": "Penjualan naik menjadi 800 cangkir. (to = level baru)"
+          },
+          {
+            "en": "Sales rose by 300 cups.",
+            "id": "Penjualan naik sebanyak 300 cangkir. (by = selisihnya)"
+          },
+          {
+            "en": "from 500 to 800",
+            "id": "dari 500 menjadi 800"
+          },
+          {
+            "en": "peaked at 400",
+            "id": "mencapai puncak di 400"
+          },
+          {
+            "en": "fluctuated between 38,000 and 70,000",
+            "id": "naik-turun antara 38.000 dan 70.000"
+          },
+          {
+            "en": "remained stable until 2024",
+            "id": "tetap stabil sampai 2024 (until hanya untuk waktu)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Look at the numbers",
+        "text": "Budi runs a small café near a campus in Bandung. Is the number after the gap the new level or the difference?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "trend-vocabulary",
+          "options": [
+            "until",
+            "by",
+            "to"
+          ],
+          "answer": 2,
+          "prompt": "Budi's café sold 200 cups of iced tea a day in 2022 and 350 in 2024. Complete: Between 2022 and 2024, sales rose ___ 350 cups a day.",
+          "explanation": "350 is where sales ended, the **new level**, so use **to**. *by* would mean the difference, which is 150 (350 − 200), not 350. *until* is only for time, never for a number."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How big, how fast: sharply or a sharp rise",
+        "text": "Good reports don't just say up or down: they say how much and how fast.",
+        "body": "Two ways to say the same thing:\n- verb + **adverb** (kata keterangan, -ly): *Sales **rose sharply**.*\n- *There was* + a + **adjective** (kata sifat) + **noun** (kata benda): *There was **a sharp rise** in sales.*\n\nBig: *sharply, dramatically, significantly* · slow and regular: *steadily, gradually* · small: *slightly*.\nWith a noun: **a rise in** + what changed, **a rise of** + the amount.",
+        "pairs": [
+          {
+            "en": "Sales rose sharply.",
+            "id": "Penjualan naik tajam. (kata kerja + kata keterangan)"
+          },
+          {
+            "en": "There was a sharp rise in sales.",
+            "id": "Ada kenaikan tajam dalam penjualan. (a + kata sifat + kata benda)"
+          },
+          {
+            "en": "dramatically / a dramatic increase",
+            "id": "secara drastis / kenaikan drastis (sangat besar)"
+          },
+          {
+            "en": "steadily / a steady rise",
+            "id": "terus dengan teratur / kenaikan yang teratur"
+          },
+          {
+            "en": "gradually / a gradual decline",
+            "id": "perlahan-lahan / penurunan bertahap"
+          },
+          {
+            "en": "slightly / a slight drop",
+            "id": "sedikit / penurunan kecil"
+          },
+          {
+            "en": "a rise of 300 cups",
+            "id": "kenaikan sebanyak 300 cangkir (of + jumlah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Sari works in the sales team of a bookshop in Surabaya. March sales were a little lower than February's.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "trend-vocabulary",
+          "tokens": [
+            "fall",
+            "sales",
+            "There",
+            "a",
+            "in",
+            "slight",
+            "was"
+          ],
+          "solution": "There was a slight fall in sales.",
+          "prompt": "Arrange the words: Ada sedikit penurunan pada penjualan.",
+          "explanation": "*There was* + a + adjective + noun: **a slight fall**, then **in** + what changed: **in sales**. It means the same as *Sales fell slightly*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Comparing figures precisely",
+        "text": "Quick recap from A2: *bigger than*, *the biggest*, *as big as*. With numbers, you also say **how much** bigger.",
+        "body": "- **Multiples:** *twice / three times / half* + **as … as**: *twice as high as*. Indonesian *dua kali lipat* is not `twice higher than`.\n- **The difference:** *slightly* (small) or *much* (big) + comparative + **than** (not *from*): *slightly lower than*.\n- **Not exact:** *about, roughly, nearly, just over*; fractions *a quarter* (25%), *a third*, *half*.\n- **many** + things you can count (users), **much** + things you can't (money).",
+        "pairs": [
+          {
+            "en": "twice as high as",
+            "id": "dua kali lipat (bukan twice higher than)"
+          },
+          {
+            "en": "three times as many as",
+            "id": "tiga kali lipat (benda yang bisa dihitung)"
+          },
+          {
+            "en": "half as much as",
+            "id": "setengahnya (benda yang tidak bisa dihitung)"
+          },
+          {
+            "en": "slightly lower than",
+            "id": "sedikit lebih rendah daripada"
+          },
+          {
+            "en": "much higher than",
+            "id": "jauh lebih tinggi daripada"
+          },
+          {
+            "en": "the second highest",
+            "id": "tertinggi kedua"
+          },
+          {
+            "en": "roughly / just over / nearly",
+            "id": "kurang lebih / sedikit di atas / hampir"
+          },
+          {
+            "en": "a quarter / a third / half",
+            "id": "seperempat (25%) / sepertiga (±33%) / setengah (50%)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan is comparing the results of a staff survey in two offices.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-figures",
+          "options": [
+            "much lower than",
+            "slightly lower than",
+            "slightly lower from"
+          ],
+          "answer": 1,
+          "prompt": "In a staff survey, 78% of the Medan team said they were happy at work, and 80% of the Makassar team. Complete: The figure for Medan was ___ the figure for Makassar.",
+          "explanation": "78% vs 80% is a small difference, so **slightly lower than**. *much lower* would mean a big gap, and a comparative takes **than**, not *from*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "A full Task 1 report",
+        "text": "Now let's put it all together. In IELTS Academic Writing Task 1 you have about 20 minutes to write at least 150 words about a chart. Here's a 165-word model.",
+        "body": "Cups sold per day at a café chain in Bandung (practice figures):\n- Coffee: 2019: 400 · 2020: 350 · 2021: 450 · 2022: 600 · 2023: 750 · 2024: 800\n- Tea: 300 · 300 · 300 · 310 · 290 · 300\n- Fruit juice: 100 · 150 · 250 · 400 · 250 · 200\n\n1) **Introduction**: what, where, when, in your own words. 2) **Overview**: *Overall,* + the main trends, **no numbers**. 3–4) **Two body paragraphs** that group the features, with numbers and comparisons. **No opinion, no reasons why.**",
+        "examples": [
+          {
+            "en": "The table shows how many cups of coffee, tea and fruit juice a café chain in Bandung sold per day between 2019 and 2024.",
+            "id": "Tabel ini menunjukkan berapa cangkir kopi, teh dan jus buah yang terjual per hari di sebuah jaringan kafe di Bandung antara 2019 dan 2024."
+          },
+          {
+            "en": "Overall, coffee was the most popular drink throughout the period, and its sales rose considerably. Tea sales hardly changed, whereas juice sales rose and then fell again.",
+            "id": "Secara keseluruhan, kopi adalah minuman paling laris sepanjang periode itu, dan penjualannya naik cukup besar. Penjualan teh hampir tidak berubah, sedangkan penjualan jus naik lalu turun lagi."
+          },
+          {
+            "en": "In 2019, the chain sold 400 cups of coffee a day. This figure fell slightly to 350 in 2020, but it then rose steadily and reached 800 cups in 2024, twice as many as in 2019.",
+            "id": "Pada 2019, jaringan kafe itu menjual 400 cangkir kopi per hari. Angka ini sedikit turun menjadi 350 pada 2020, tetapi kemudian naik dengan teratur dan mencapai 800 cangkir pada 2024, dua kali lipat dari 2019."
+          },
+          {
+            "en": "Tea sales remained stable at about 300 cups a day for the whole period. By 2024, coffee sales were almost three times as high as tea sales.",
+            "id": "Penjualan teh tetap stabil di sekitar 300 cangkir per hari sepanjang periode. Pada 2024, penjualan kopi hampir tiga kali lipat penjualan teh."
+          },
+          {
+            "en": "Juice sales followed a different pattern. They started at only 100 cups a day in 2019, but they grew rapidly and peaked at 400 cups in 2022.",
+            "id": "Penjualan jus punya pola yang berbeda. Awalnya hanya 100 cangkir per hari pada 2019, tetapi naik dengan cepat dan mencapai puncak 400 cangkir pada 2022."
+          },
+          {
+            "en": "After that, they fell sharply to 200 cups in 2024. Nevertheless, the final figure was still twice as high as the figure for 2019.",
+            "id": "Setelah itu, penjualannya turun tajam menjadi 200 cangkir pada 2024. Meskipun begitu, angka terakhirnya masih dua kali lipat angka 2019."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Choose the overview",
+        "text": "Dimas is practising for IELTS. He has the introduction, and now he needs the overview.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "graph-report",
+          "options": [
+            "In 2019, 70% of shoppers paid in cash, and 15% used an e-wallet.",
+            "Overall, e-wallets are better than cash because they are faster.",
+            "Overall, fewer shoppers paid in cash, while e-wallets grew much more popular."
+          ],
+          "answer": 2,
+          "prompt": "A table shows how shoppers in a survey paid in shops (practice figures). Cash: 2019: 70% · 2024: 35%. E-wallet: 2019: 15% · 2024: 55%. Which sentence is the best overview?",
+          "explanation": "An overview gives the **main trends** with **no numbers**: cash went down, e-wallets went up. The first sentence is a detail with figures (it belongs in a body paragraph), and the second gives an opinion and a reason, which Task 1 never does."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · describing graphs and data",
+          "intro": "Trend words, the small words that carry the numbers, comparisons, and the four-paragraph report.",
+          "headers": [
+            "What",
+            "How",
+            "Example"
+          ],
+          "rows": [
+            [
+              "up",
+              "rise (rose), increase, grow (grew), go up (went up)",
+              "Sales rose to 800 cups."
+            ],
+            [
+              "down",
+              "fall (fell), decrease, decline, drop",
+              "Ticket sales fell in 2020."
+            ],
+            [
+              "top · flat · up and down",
+              "peak at · level off, remain stable · fluctuate between",
+              "Juice sales peaked at 400 cups in 2022."
+            ],
+            [
+              "no passive",
+              "a number moves by itself: increased, not 'was increase'",
+              "The number of members increased."
+            ],
+            [
+              "to / by",
+              "to + new level · by + size of the change",
+              "rose from 500 to 800 = rose by 300"
+            ],
+            [
+              "until",
+              "only for time, never for a number",
+              "remained stable until 2024"
+            ],
+            [
+              "how much / how fast",
+              "verb + adverb · a + adjective + noun",
+              "rose sharply · a sharp rise in sales"
+            ],
+            [
+              "multiples",
+              "twice / three times / half + as … as",
+              "twice as high as · three times as many as"
+            ],
+            [
+              "the difference",
+              "slightly / much + comparative + than",
+              "slightly lower than · much higher than"
+            ],
+            [
+              "not exact",
+              "about, roughly, nearly, just over, a quarter, a third, half",
+              "Just over a third of the staff cycle."
+            ],
+            [
+              "report plan",
+              "introduction → overview → body 1 → body 2",
+              "Overall, coffee was the most popular drink."
+            ],
+            [
+              "report rules",
+              "150+ words · ~20 min · no opinion, no reasons",
+              "Describe, don't explain."
+            ]
+          ],
+          "tips": [
+            "to = the new level, by = the difference; until only with time.",
+            "Not 'was increase', not 'increased until 20%', not 'twice higher than'.",
+            "Overview = Overall, + main trends, no numbers. Body paragraphs = grouped details with numbers. No opinion, no reasons."
+          ],
+          "examples": [
+            {
+              "en": "The number of members rose from 500 to 800.",
+              "id": "Jumlah anggota naik dari 500 menjadi 800."
+            },
+            {
+              "en": "There was a dramatic increase in online sales in 2020.",
+              "id": "Ada peningkatan drastis dalam penjualan online pada 2020."
+            },
+            {
+              "en": "The Jakarta branch had three times as many customers as the Bogor branch.",
+              "id": "Cabang Jakarta punya pelanggan tiga kali lipat cabang Bogor."
+            },
+            {
+              "en": "Overall, coffee was the most popular drink, and its sales rose considerably.",
+              "id": "Secara keseluruhan, kopi adalah minuman paling laris, dan penjualannya naik cukup besar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Two British Council B2 writing pages: a model summary of a line graph, and a model text comparing two charts, each with tips and tasks."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan mendeskripsikan grafik dan data: bagaimana angka naik, turun dan mencapai puncak, cara membandingkannya dengan tepat, dan cara menulis laporan IELTS Task 1. Kamu sudah tahu bentuk perbandingan dan kata penghubung, jadi kamu siap.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Garisnya bergerak ke mana?",
+        "text": "Grafik bercerita dengan angka. Pertama, kamu butuh kata-kata untuk lima cara garis bergerak.",
+        "body": "- **Naik:** *rise (rose), increase, grow (grew), go up (went up)*\n- **Turun:** *fall (fell), decrease, decline, drop*\n- **Puncak:** *peak at 400*\n- **Datar:** *level off, remain stable*\n- **Naik-turun berkali-kali:** *fluctuate*\n\nGrafik menunjukkan masa lalu, jadi pakai **past simple**. Dan angka bergerak **dengan sendirinya**: *The number of users increased*, bukan `was increase`: makna lampaunya sudah ada di *-ed*, jadi jangan tambah *was* untuk arti *sudah*. Di sini aplikasi tidak bisa menampilkan gambar, jadi grafik diberikan sebagai tabel kecil.",
+        "pairs": [
+          {
+            "en": "rise / rose / risen",
+            "id": "naik"
+          },
+          {
+            "en": "increase / grow / go up",
+            "id": "meningkat / bertambah / naik"
+          },
+          {
+            "en": "fall / fell / fallen",
+            "id": "turun"
+          },
+          {
+            "en": "decrease / decline / drop",
+            "id": "menurun / berkurang / turun"
+          },
+          {
+            "en": "peak at",
+            "id": "mencapai puncak di (angka tertinggi)"
+          },
+          {
+            "en": "level off",
+            "id": "mulai mendatar (berhenti naik atau turun)"
+          },
+          {
+            "en": "remain stable",
+            "id": "tetap stabil"
+          },
+          {
+            "en": "fluctuate",
+            "id": "naik-turun berkali-kali"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina sedang menulis laporan bulanan untuk manajernya di sebuah startup di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "trend-vocabulary",
+          "options": [
+            "was increase",
+            "increased",
+            "increase"
+          ],
+          "answer": 1,
+          "prompt": "Kunjungan ke situs perusahaan naik pada 2024. Lengkapi kalimat Rina: The number of visits ___ in 2024.",
+          "explanation": "Angka naik dengan sendirinya, jadi pakai past simple aktif: **increased**. `was increase` menambahkan *was* seolah-olah berarti *sudah*, padahal makna lampaunya sudah ada di *-ed*; dan *increase* tidak berbentuk lampau untuk 2024."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "to, by, from … to: seberapa jauh?",
+        "text": "Kata-kata kecil, beda artinya besar. Perhatikan angkanya.",
+        "body": "- **to** + **level barunya**: 500 → 800 = *rose **to** 800*\n- **by** + **besarnya perubahan**: 500 → 800 = *rose **by** 300*\n- **from … to …**: *from 500 to 800*\n- **at** satu titik: *peaked at 400*; **between** rentang: *fluctuated between …*\n\nJebakan bahasa Indonesia: *naik **sampai** 20%* tidak pernah `increased until 20%`. **until** hanya untuk **waktu**: *remained stable until 2024*.",
+        "pairs": [
+          {
+            "en": "Sales rose to 800 cups.",
+            "id": "Penjualan naik menjadi 800 cangkir. (to = level baru)"
+          },
+          {
+            "en": "Sales rose by 300 cups.",
+            "id": "Penjualan naik sebanyak 300 cangkir. (by = selisihnya)"
+          },
+          {
+            "en": "from 500 to 800",
+            "id": "dari 500 menjadi 800"
+          },
+          {
+            "en": "peaked at 400",
+            "id": "mencapai puncak di 400"
+          },
+          {
+            "en": "fluctuated between 38,000 and 70,000",
+            "id": "naik-turun antara 38.000 dan 70.000"
+          },
+          {
+            "en": "remained stable until 2024",
+            "id": "tetap stabil sampai 2024 (until hanya untuk waktu)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Lihat angkanya",
+        "text": "Budi punya kafe kecil dekat kampus di Bandung. Angka setelah titik-titiknya itu level baru atau selisihnya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "trend-vocabulary",
+          "options": [
+            "until",
+            "by",
+            "to"
+          ],
+          "answer": 2,
+          "prompt": "Kafe Budi menjual 200 gelas es teh per hari pada 2022 dan 350 pada 2024. Lengkapi: Between 2022 and 2024, sales rose ___ 350 cups a day.",
+          "explanation": "350 adalah titik akhir penjualannya, **level barunya**, jadi pakai **to**. *by* berarti selisihnya, yaitu 150 (350 − 200), bukan 350. *until* hanya untuk waktu, tidak pernah untuk angka."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Seberapa besar, seberapa cepat: sharply atau a sharp rise",
+        "text": "Laporan yang bagus tidak hanya bilang naik atau turun: laporan itu bilang seberapa besar dan seberapa cepat.",
+        "body": "Dua cara untuk mengatakan hal yang sama:\n- kata kerja + **kata keterangan** (adverb, -ly): *Sales **rose sharply**.*\n- *There was* + a + **kata sifat** (adjective) + **kata benda** (noun): *There was **a sharp rise** in sales.*\n\nBesar: *sharply, dramatically, significantly* · pelan dan teratur: *steadily, gradually* · kecil: *slightly*.\nDengan kata benda: **a rise in** + apa yang berubah, **a rise of** + jumlahnya.",
+        "pairs": [
+          {
+            "en": "Sales rose sharply.",
+            "id": "Penjualan naik tajam. (kata kerja + kata keterangan)"
+          },
+          {
+            "en": "There was a sharp rise in sales.",
+            "id": "Ada kenaikan tajam dalam penjualan. (a + kata sifat + kata benda)"
+          },
+          {
+            "en": "dramatically / a dramatic increase",
+            "id": "secara drastis / kenaikan drastis (sangat besar)"
+          },
+          {
+            "en": "steadily / a steady rise",
+            "id": "terus dengan teratur / kenaikan yang teratur"
+          },
+          {
+            "en": "gradually / a gradual decline",
+            "id": "perlahan-lahan / penurunan bertahap"
+          },
+          {
+            "en": "slightly / a slight drop",
+            "id": "sedikit / penurunan kecil"
+          },
+          {
+            "en": "a rise of 300 cups",
+            "id": "kenaikan sebanyak 300 cangkir (of + jumlah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sari bekerja di tim penjualan sebuah toko buku di Surabaya. Penjualan Maret sedikit lebih rendah daripada Februari.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "trend-vocabulary",
+          "tokens": [
+            "fall",
+            "sales",
+            "There",
+            "a",
+            "in",
+            "slight",
+            "was"
+          ],
+          "solution": "There was a slight fall in sales.",
+          "prompt": "Susun kata-katanya: Ada sedikit penurunan pada penjualan.",
+          "explanation": "*There was* + a + kata sifat + kata benda: **a slight fall**, lalu **in** + apa yang berubah: **in sales**. Artinya sama dengan *Sales fell slightly*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membandingkan angka dengan tepat",
+        "text": "Ulasan singkat dari A2: *bigger than*, *the biggest*, *as big as*. Dengan angka, kamu juga mengatakan **seberapa** lebih besar.",
+        "body": "- **Kelipatan:** *twice / three times / half* + **as … as**: *twice as high as*. *Dua kali lipat* bukan `twice higher than`.\n- **Bedanya:** *slightly* (kecil) atau *much* (besar) + bentuk perbandingan + **than** (bukan *from*): *slightly lower than*.\n- **Tidak tepat:** *about, roughly, nearly, just over*; pecahan *a quarter* (25%), *a third*, *half*.\n- **many** + benda yang bisa dihitung (users), **much** + yang tidak bisa dihitung (money).",
+        "pairs": [
+          {
+            "en": "twice as high as",
+            "id": "dua kali lipat (bukan twice higher than)"
+          },
+          {
+            "en": "three times as many as",
+            "id": "tiga kali lipat (benda yang bisa dihitung)"
+          },
+          {
+            "en": "half as much as",
+            "id": "setengahnya (benda yang tidak bisa dihitung)"
+          },
+          {
+            "en": "slightly lower than",
+            "id": "sedikit lebih rendah daripada"
+          },
+          {
+            "en": "much higher than",
+            "id": "jauh lebih tinggi daripada"
+          },
+          {
+            "en": "the second highest",
+            "id": "tertinggi kedua"
+          },
+          {
+            "en": "roughly / just over / nearly",
+            "id": "kurang lebih / sedikit di atas / hampir"
+          },
+          {
+            "en": "a quarter / a third / half",
+            "id": "seperempat (25%) / sepertiga (±33%) / setengah (50%)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan sedang membandingkan hasil survei karyawan di dua kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "compare-figures",
+          "options": [
+            "much lower than",
+            "slightly lower than",
+            "slightly lower from"
+          ],
+          "answer": 1,
+          "prompt": "Dalam survei karyawan, 78% tim Medan bilang mereka bahagia di tempat kerja, dan 80% tim Makassar. Lengkapi: The figure for Medan was ___ the figure for Makassar.",
+          "explanation": "78% vs 80% bedanya kecil, jadi **slightly lower than**. *much lower* berarti selisihnya besar, dan bentuk perbandingan memakai **than**, bukan *from*."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Laporan Task 1 yang lengkap",
+        "text": "Sekarang kita gabungkan semuanya. Di IELTS Academic Writing Task 1 kamu punya sekitar 20 menit untuk menulis minimal 150 kata tentang sebuah grafik. Ini contoh 165 kata.",
+        "body": "Cangkir yang terjual per hari di sebuah jaringan kafe di Bandung (angka latihan):\n- Coffee: 2019: 400 · 2020: 350 · 2021: 450 · 2022: 600 · 2023: 750 · 2024: 800\n- Tea: 300 · 300 · 300 · 310 · 290 · 300\n- Fruit juice: 100 · 150 · 250 · 400 · 250 · 200\n\n1) **Pendahuluan**: apa, di mana, kapan, dengan kata-katamu sendiri. 2) **Overview** (gambaran umum): *Overall,* + tren utama, **tanpa angka**. 3–4) **Dua paragraf isi** yang mengelompokkan ciri-cirinya, dengan angka dan perbandingan. **Tanpa opini, tanpa alasan kenapa.**",
+        "examples": [
+          {
+            "en": "The table shows how many cups of coffee, tea and fruit juice a café chain in Bandung sold per day between 2019 and 2024.",
+            "id": "Tabel ini menunjukkan berapa cangkir kopi, teh dan jus buah yang terjual per hari di sebuah jaringan kafe di Bandung antara 2019 dan 2024."
+          },
+          {
+            "en": "Overall, coffee was the most popular drink throughout the period, and its sales rose considerably. Tea sales hardly changed, whereas juice sales rose and then fell again.",
+            "id": "Secara keseluruhan, kopi adalah minuman paling laris sepanjang periode itu, dan penjualannya naik cukup besar. Penjualan teh hampir tidak berubah, sedangkan penjualan jus naik lalu turun lagi."
+          },
+          {
+            "en": "In 2019, the chain sold 400 cups of coffee a day. This figure fell slightly to 350 in 2020, but it then rose steadily and reached 800 cups in 2024, twice as many as in 2019.",
+            "id": "Pada 2019, jaringan kafe itu menjual 400 cangkir kopi per hari. Angka ini sedikit turun menjadi 350 pada 2020, tetapi kemudian naik dengan teratur dan mencapai 800 cangkir pada 2024, dua kali lipat dari 2019."
+          },
+          {
+            "en": "Tea sales remained stable at about 300 cups a day for the whole period. By 2024, coffee sales were almost three times as high as tea sales.",
+            "id": "Penjualan teh tetap stabil di sekitar 300 cangkir per hari sepanjang periode. Pada 2024, penjualan kopi hampir tiga kali lipat penjualan teh."
+          },
+          {
+            "en": "Juice sales followed a different pattern. They started at only 100 cups a day in 2019, but they grew rapidly and peaked at 400 cups in 2022.",
+            "id": "Penjualan jus punya pola yang berbeda. Awalnya hanya 100 cangkir per hari pada 2019, tetapi naik dengan cepat dan mencapai puncak 400 cangkir pada 2022."
+          },
+          {
+            "en": "After that, they fell sharply to 200 cups in 2024. Nevertheless, the final figure was still twice as high as the figure for 2019.",
+            "id": "Setelah itu, penjualannya turun tajam menjadi 200 cangkir pada 2024. Meskipun begitu, angka terakhirnya masih dua kali lipat angka 2019."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih overview-nya",
+        "text": "Dimas sedang berlatih untuk IELTS. Pendahuluannya sudah ada, sekarang ia butuh overview.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "graph-report",
+          "options": [
+            "In 2019, 70% of shoppers paid in cash, and 15% used an e-wallet.",
+            "Overall, e-wallets are better than cash because they are faster.",
+            "Overall, fewer shoppers paid in cash, while e-wallets grew much more popular."
+          ],
+          "answer": 2,
+          "prompt": "Sebuah tabel menunjukkan cara pembeli dalam survei membayar di toko (angka latihan). Cash: 2019: 70% · 2024: 35%. E-wallet: 2019: 15% · 2024: 55%. Kalimat mana yang paling cocok sebagai overview?",
+          "explanation": "Overview memberi **tren utama** **tanpa angka**: tunai turun, e-wallet naik. Kalimat pertama adalah detail dengan angka (tempatnya di paragraf isi), dan kalimat kedua memberi opini dan alasan, yang tidak pernah ada di Task 1."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · mendeskripsikan grafik dan data",
+          "intro": "Kata-kata tren, kata-kata kecil yang membawa angka, perbandingan, dan laporan empat paragraf.",
+          "headers": [
+            "Apa",
+            "Caranya",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "naik",
+              "rise (rose), increase, grow (grew), go up (went up)",
+              "Sales rose to 800 cups."
+            ],
+            [
+              "turun",
+              "fall (fell), decrease, decline, drop",
+              "Ticket sales fell in 2020."
+            ],
+            [
+              "puncak · datar · naik-turun",
+              "peak at · level off, remain stable · fluctuate between",
+              "Juice sales peaked at 400 cups in 2022."
+            ],
+            [
+              "tanpa pasif",
+              "angka bergerak sendiri: increased, bukan 'was increase'",
+              "The number of members increased."
+            ],
+            [
+              "to / by",
+              "to + level baru · by + besarnya perubahan",
+              "rose from 500 to 800 = rose by 300"
+            ],
+            [
+              "until",
+              "hanya untuk waktu, tidak pernah untuk angka",
+              "remained stable until 2024"
+            ],
+            [
+              "seberapa besar / cepat",
+              "kata kerja + kata keterangan · a + kata sifat + kata benda",
+              "rose sharply · a sharp rise in sales"
+            ],
+            [
+              "kelipatan",
+              "twice / three times / half + as … as",
+              "twice as high as · three times as many as"
+            ],
+            [
+              "bedanya",
+              "slightly / much + bentuk perbandingan + than",
+              "slightly lower than · much higher than"
+            ],
+            [
+              "tidak tepat",
+              "about, roughly, nearly, just over, a quarter, a third, half",
+              "Just over a third of the staff cycle."
+            ],
+            [
+              "susunan laporan",
+              "pendahuluan → overview → isi 1 → isi 2",
+              "Overall, coffee was the most popular drink."
+            ],
+            [
+              "aturan laporan",
+              "150+ kata · ±20 menit · tanpa opini, tanpa alasan",
+              "Describe, don't explain."
+            ]
+          ],
+          "tips": [
+            "to = level baru, by = selisihnya; until hanya dengan waktu.",
+            "Bukan 'was increase', bukan 'increased until 20%', bukan 'twice higher than'.",
+            "Overview = Overall, + tren utama, tanpa angka. Paragraf isi = detail yang dikelompokkan, dengan angka. Tanpa opini, tanpa alasan."
+          ],
+          "examples": [
+            {
+              "en": "The number of members rose from 500 to 800.",
+              "id": "Jumlah anggota naik dari 500 menjadi 800."
+            },
+            {
+              "en": "There was a dramatic increase in online sales in 2020.",
+              "id": "Ada peningkatan drastis dalam penjualan online pada 2020."
+            },
+            {
+              "en": "The Jakarta branch had three times as many customers as the Bogor branch.",
+              "id": "Cabang Jakarta punya pelanggan tiga kali lipat cabang Bogor."
+            },
+            {
+              "en": "Overall, coffee was the most popular drink, and its sales rose considerably.",
+              "id": "Secara keseluruhan, kopi adalah minuman paling laris, dan penjualannya naik cukup besar."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Dua halaman menulis B2 dari British Council: contoh ringkasan grafik garis, dan contoh teks yang membandingkan dua diagram, masing-masing dengan tips dan latihan."
+      }
+    ]
+  }
+}

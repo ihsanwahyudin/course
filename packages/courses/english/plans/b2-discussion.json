@@ -1,0 +1,704 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to take an active part in a real discussion: think on your feet, weigh up both sides, make careful guesses and take turns. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Joining a real discussion",
+        "text": "Quick recap from B1: you can give an opinion with a reason, agree (*I agree*, never *I am agree*) and disagree politely. Now let's join a fast, real discussion.",
+        "body": "Nobody waits while you prepare. Two skills help.\n**1. Buy time** when someone asks you a question, instead of going silent or saying *eee… apa ya…*: *That's a good question.* / *Let me think …* / *It's hard to say, but …*.\n**2. Build on what others said** to show you're listening: *Following on from what Rina said, …* / *To add to that, …* / *Going back to Budi's point, …*. These add a point in the **same direction**. To go the other way, use your B1 phrases (*That's true, but …*).",
+        "pairs": [
+          {
+            "en": "That's a good question.",
+            "id": "Pertanyaan bagus."
+          },
+          {
+            "en": "Let me think …",
+            "id": "Saya pikir dulu …"
+          },
+          {
+            "en": "It's hard to say, but …",
+            "id": "Susah dibilang, tapi …"
+          },
+          {
+            "en": "Following on from what Rina said, …",
+            "id": "Melanjutkan apa yang Rina bilang, …"
+          },
+          {
+            "en": "To add to that, …",
+            "id": "Menambahkan itu, …"
+          },
+          {
+            "en": "Going back to Budi's point, …",
+            "id": "Kembali ke poin Budi, …"
+          },
+          {
+            "en": "As Sari said, …",
+            "id": "Seperti kata Sari, …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "In a team meeting",
+        "text": "Bu Ani asks her team: should the company run a shuttle bus from the KRL station? Notice how people buy time and build on each other.",
+        "body": "**Following on from …**, **To add to that** and **Going back to …** all add to someone else's point. Remember: **On the other hand** is NOT *selain itu*: it only shows a contrast.",
+        "examples": [
+          {
+            "en": "That's a good question. Let me think for a moment.",
+            "id": "Pertanyaan bagus. Saya pikir sebentar."
+          },
+          {
+            "en": "It's hard to say, but I think a lot of people need it.",
+            "id": "Susah dibilang, tapi menurut saya banyak orang membutuhkannya."
+          },
+          {
+            "en": "Following on from what Rina said, the walk from the station takes twenty minutes.",
+            "id": "Melanjutkan apa yang Rina bilang, jalan kaki dari stasiun makan waktu dua puluh menit."
+          },
+          {
+            "en": "To add to that, it gets really hot in the afternoon.",
+            "id": "Menambahkan itu, siang hari panasnya luar biasa."
+          },
+          {
+            "en": "Going back to Budi's point, a shuttle could help people who come by KRL.",
+            "id": "Kembali ke poin Budi, bus antar-jemput bisa membantu orang yang datang naik KRL."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Weighing up pros and cons",
+        "text": "Big decisions have two sides. Here's how to show both, and then decide.",
+        "body": "**pros** = advantages (*kelebihan*), **cons** = disadvantages (*kekurangan*).\nPros: *On the plus side, …* / *One advantage is that …*. Cons: *The downside is that …* / *On the other hand, …* (contrast only).\nDecide: *On balance, …* (after weighing everything).\nNot simple? *It depends on* + a thing: *It depends on the price.* **depend** is a verb, like *agree*: *It depends*, not `It's depend` ✗, and **on**, not *of / from* (*tergantung dari*). After *how much / when*, use normal order, as in B1 indirect questions.",
+        "pairs": [
+          {
+            "en": "On the plus side, …",
+            "id": "Sisi positifnya, …"
+          },
+          {
+            "en": "One advantage is that …",
+            "id": "Salah satu kelebihannya adalah …"
+          },
+          {
+            "en": "The downside is that …",
+            "id": "Kekurangannya adalah …"
+          },
+          {
+            "en": "On the other hand, …",
+            "id": "Di sisi lain, … (kontras)"
+          },
+          {
+            "en": "On balance, …",
+            "id": "Setelah menimbang semuanya, …"
+          },
+          {
+            "en": "It depends on …",
+            "id": "Tergantung …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "There's no *is* in the tiles. That's on purpose.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "pros-cons",
+          "prompt": "Sari asks: 'Should we fly or take the train to Surabaya?' You want to say: 'Tergantung berapa harga tiketnya.' Arrange the words.",
+          "tokens": [
+            "cost",
+            "how",
+            "It",
+            "tickets",
+            "on",
+            "the",
+            "much",
+            "depends"
+          ],
+          "solution": "It depends on how much the tickets cost.",
+          "explanation": "**depend** is a verb, so it's **It depends** (no *is*, and -s for *it*), followed by **on**. After *how much*, use normal sentence order (*the tickets cost*), not question order (*do the tickets cost*), like the indirect questions you learnt in B1."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "The team is planning the company trip.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pros-cons",
+          "prompt": "Your team is choosing a place for the company trip. Pak Hasan asks: 'What do you think about Bali?' Which reply weighs up the pros and cons?",
+          "options": [
+            "On the plus side, the flights to Bali are expensive.",
+            "On the plus side, Bali has great beaches. The downside is that the flights are expensive.",
+            "Bali is the best, and Bandung is the worst."
+          ],
+          "answer": 1,
+          "explanation": "It gives a pro with **On the plus side** and a con with **The downside is that**: both sides. Expensive flights are a disadvantage, so they don't go after *On the plus side*. *Bali is the best* gives only one side, with no reasons."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Making careful guesses",
+        "text": "In discussions we often talk about things nobody knows for sure. Show that it's a guess, not a fact.",
+        "body": "From **more sure** to **less sure**:\n*There's a good chance that …* (*kemungkinan besar*)\n*I'd imagine …* (*saya kira*: a sensible guess; here *imagine* isn't *membayangkan* a dream)\n*I suspect …* (*saya menduga*, often about a problem)\n*It could be that …* (*bisa jadi*: one possible reason)\nPlus **might / may / could** from B1.\n**suspect** is a verb: *I suspect*, not `I am suspect` ✗. And don't start every sentence with *Maybe* (*mungkin*): mix it up.",
+        "pairs": [
+          {
+            "en": "There's a good chance that …",
+            "id": "Kemungkinan besar …"
+          },
+          {
+            "en": "I'd imagine …",
+            "id": "Saya kira …"
+          },
+          {
+            "en": "I suspect …",
+            "id": "Saya menduga …"
+          },
+          {
+            "en": "It could be that …",
+            "id": "Bisa jadi …"
+          },
+          {
+            "en": "might / may / could",
+            "id": "mungkin"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Something is wrong with your company's app, and nobody knows why yet.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "speculate",
+          "prompt": "Your team is discussing why many customers stopped using your app this month. Nobody knows for sure. Which is the best way to speculate?",
+          "options": [
+            "The new update is too slow. That's 100% the reason.",
+            "I am suspect the new update is too slow.",
+            "I'd imagine the new update is too slow for older phones."
+          ],
+          "answer": 2,
+          "explanation": "**I'd imagine …** shows it's a sensible guess. The first option states a guess as a fact, but nobody knows. *I am suspect* is wrong: **suspect** is a verb, so it's *I suspect* (no *am*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Taking turns",
+        "text": "Who speaks when? Many Indonesian meetings and many English-speaking groups do this differently.",
+        "body": "In many Indonesian meetings, people wait for the most senior person to speak first, and juniors wait to be asked: that's respect. In many English-speaking groups, everyone is expected to **join in without being asked**, and silence can look like *no ideas* or *I agree*. Neither is better: adapt, and stay polite.\n**Take a turn** at a pause. **Invite** someone with their name + an open question. **Hand back** when you've finished. Don't say *Why are you so quiet?*: it embarrasses people.",
+        "pairs": [
+          {
+            "en": "Can I come in here?",
+            "id": "Boleh saya ikut bicara?"
+          },
+          {
+            "en": "Sorry to interrupt, but …",
+            "id": "Maaf menyela, tapi …"
+          },
+          {
+            "en": "What do you think, Sari?",
+            "id": "Bagaimana menurutmu, Sari?"
+          },
+          {
+            "en": "We haven't heard from Dimas yet.",
+            "id": "Kita belum dengar pendapat Dimas."
+          },
+          {
+            "en": "Sorry, go ahead.",
+            "id": "Maaf, silakan duluan."
+          },
+          {
+            "en": "Anyway, that's my view. What about you?",
+            "id": "Yah, itu pendapat saya. Kalau kamu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're leading the meeting today.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "turn-taking",
+          "prompt": "You're leading a project meeting. Budi, a new junior colleague, hasn't said anything for 20 minutes, but you'd like to hear his ideas. What's the best thing to say?",
+          "options": [
+            "Budi, we haven't heard from you yet. What do you think?",
+            "Budi, why are you so quiet? Say something!",
+            "Nobody has any more ideas, so let's move on."
+          ],
+          "answer": 0,
+          "explanation": "His **name** + **an open question** invites Budi kindly and gives him space to speak. *Why are you so quiet?* puts him on the spot. Moving on means you never hear his ideas: as a junior, he may be waiting to be asked."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "A colleague shares an opinion. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spontaneous-discussion",
+          "listen": "I think we should move our team lunch to Fridays. Most people are in the office on Friday, and the canteen is much quieter then.",
+          "prompt": "Listen to your colleague's opinion. You agree. Choose the reply that builds on what you heard.",
+          "options": [
+            "I am agree. Friday is good.",
+            "To add to that, we could celebrate the end of the week together.",
+            "To add to that, Monday is a better day for the lunch."
+          ],
+          "answer": 1,
+          "explanation": "Your colleague wants the lunch on **Fridays**. **To add to that, …** adds another reason in the same direction: celebrating the end of the week. *I am agree* is wrong (agree is a verb: *I agree*). The Monday reply goes the opposite way, so *To add to that* doesn't fit."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next meeting or seminar.",
+        "artifact": {
+          "title": "Cheat sheet · discussions",
+          "intro": "Buy time, build on others, weigh both sides, guess carefully, and share the turns.",
+          "headers": [
+            "Job",
+            "Say",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Buy time",
+              "That's a good question. / Let me think … / It's hard to say, but …",
+              "Hmm, that's a good question. Let me see."
+            ],
+            [
+              "Build on others",
+              "Following on from what Rina said, … / To add to that, … / Going back to Budi's point, …",
+              "To add to that, parking there is very expensive."
+            ],
+            [
+              "Pros",
+              "On the plus side, … / One advantage is that …",
+              "On the plus side, the new office is near the MRT."
+            ],
+            [
+              "Cons",
+              "The downside is that … / On the other hand, … (contrast)",
+              "The downside is that the rent is higher."
+            ],
+            [
+              "Not simple",
+              "It depends on + noun / how much, when, who + normal order",
+              "It depends on the budget."
+            ],
+            [
+              "Your final view",
+              "On balance, …",
+              "On balance, I think we should move."
+            ],
+            [
+              "Fairly sure",
+              "There's a good chance that … / I'd imagine …",
+              "There's a good chance that prices will go up."
+            ],
+            [
+              "Less sure",
+              "I suspect … / It could be that … / might, may, could",
+              "It could be that the client is very busy."
+            ],
+            [
+              "Take a turn",
+              "Can I come in here? / Sorry to interrupt, but …",
+              "Sorry to interrupt, but can I add something?"
+            ],
+            [
+              "Invite someone",
+              "What do you think, Sari? / We haven't heard from Dimas yet.",
+              "Dimas, what's your view?"
+            ],
+            [
+              "Hand back",
+              "Sorry, go ahead. / Anyway, that's my view. What about you?",
+              "Sorry, go ahead, Rina."
+            ]
+          ],
+          "tips": [
+            "**agree, depend, suspect** are verbs: *I agree, It depends, I suspect*, never `I am agree`, `It's depend`, `I am suspect`.",
+            "**On the other hand** = *di sisi lain* (contrast). For adding a point, say **To add to that**.",
+            "Waiting for the senior person is respectful in Indonesia. In many English-speaking groups, join in at a pause and invite quiet people by name."
+          ],
+          "examples": [
+            {
+              "en": "Following on from what Sari said, the KRL is often late in the rain.",
+              "id": "Melanjutkan apa yang Sari bilang, KRL sering telat saat hujan."
+            },
+            {
+              "en": "One advantage is that we'd save time. On the other hand, it costs more.",
+              "id": "Salah satu kelebihannya adalah kita akan hemat waktu. Di sisi lain, biayanya lebih mahal."
+            },
+            {
+              "en": "I suspect the Wi-Fi is the real problem.",
+              "id": "Saya menduga Wi-Fi-nya masalah yang sebenarnya."
+            },
+            {
+              "en": "Can I come in here? I have a quick point about the budget.",
+              "id": "Boleh saya ikut bicara? Saya punya poin singkat soal anggaran."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Here's a B2 speaking lesson from the British Council and a video on interrupting politely, all in English."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu akan belajar berperan aktif dalam diskusi sungguhan: berpikir cepat, menimbang dua sisi, menebak dengan hati-hati dan bergiliran bicara. Yuk, langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Ikut diskusi sungguhan",
+        "text": "Ulasan singkat dari B1: kamu sudah bisa memberi pendapat dengan alasan, menyatakan setuju (*I agree*, jangan pernah *I am agree*) dan tidak setuju dengan sopan. Sekarang yuk ikut diskusi sungguhan yang cepat.",
+        "body": "Tidak ada yang menunggu kamu bersiap. Dua keterampilan ini membantu.\n**1. Ulur waktu** saat seseorang bertanya padamu, daripada diam atau bilang *eee… apa ya…*: *That's a good question.* / *Let me think …* / *It's hard to say, but …*.\n**2. Lanjutkan apa yang dikatakan orang lain** untuk menunjukkan kamu mendengarkan: *Following on from what Rina said, …* / *To add to that, …* / *Going back to Budi's point, …*. Semuanya menambahkan poin ke **arah yang sama**. Untuk arah sebaliknya, pakai frasa B1-mu (*That's true, but …*).",
+        "pairs": [
+          {
+            "en": "That's a good question.",
+            "id": "Pertanyaan bagus."
+          },
+          {
+            "en": "Let me think …",
+            "id": "Saya pikir dulu …"
+          },
+          {
+            "en": "It's hard to say, but …",
+            "id": "Susah dibilang, tapi …"
+          },
+          {
+            "en": "Following on from what Rina said, …",
+            "id": "Melanjutkan apa yang Rina bilang, …"
+          },
+          {
+            "en": "To add to that, …",
+            "id": "Menambahkan itu, …"
+          },
+          {
+            "en": "Going back to Budi's point, …",
+            "id": "Kembali ke poin Budi, …"
+          },
+          {
+            "en": "As Sari said, …",
+            "id": "Seperti kata Sari, …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di rapat tim",
+        "text": "Bu Ani bertanya ke timnya: apakah perusahaan sebaiknya menyediakan bus antar-jemput dari stasiun KRL? Perhatikan bagaimana orang-orang mengulur waktu dan melanjutkan poin satu sama lain.",
+        "body": "**Following on from …**, **To add to that** dan **Going back to …** semuanya menambahkan poin orang lain. Ingat: **On the other hand** BUKAN *selain itu*: artinya hanya kontras (di sisi lain).",
+        "examples": [
+          {
+            "en": "That's a good question. Let me think for a moment.",
+            "id": "Pertanyaan bagus. Saya pikir sebentar."
+          },
+          {
+            "en": "It's hard to say, but I think a lot of people need it.",
+            "id": "Susah dibilang, tapi menurut saya banyak orang membutuhkannya."
+          },
+          {
+            "en": "Following on from what Rina said, the walk from the station takes twenty minutes.",
+            "id": "Melanjutkan apa yang Rina bilang, jalan kaki dari stasiun makan waktu dua puluh menit."
+          },
+          {
+            "en": "To add to that, it gets really hot in the afternoon.",
+            "id": "Menambahkan itu, siang hari panasnya luar biasa."
+          },
+          {
+            "en": "Going back to Budi's point, a shuttle could help people who come by KRL.",
+            "id": "Kembali ke poin Budi, bus antar-jemput bisa membantu orang yang datang naik KRL."
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Menimbang kelebihan dan kekurangan",
+        "text": "Keputusan besar punya dua sisi. Begini cara menunjukkan keduanya, lalu memutuskan.",
+        "body": "**pros** = kelebihan, **cons** = kekurangan.\nKelebihan: *On the plus side, …* / *One advantage is that …*. Kekurangan: *The downside is that …* / *On the other hand, …* (hanya untuk kontras).\nMemutuskan: *On balance, …* (setelah menimbang semuanya).\nTidak sederhana? *It depends on* + sesuatu: *It depends on the price.* **depend** adalah kata kerja, seperti *agree*: *It depends*, bukan `It's depend` ✗, dan **on**, bukan *of / from* (*tergantung dari*). Setelah *how much / when*, pakai urutan biasa, seperti pertanyaan tidak langsung di B1.",
+        "pairs": [
+          {
+            "en": "On the plus side, …",
+            "id": "Sisi positifnya, …"
+          },
+          {
+            "en": "One advantage is that …",
+            "id": "Salah satu kelebihannya adalah …"
+          },
+          {
+            "en": "The downside is that …",
+            "id": "Kekurangannya adalah …"
+          },
+          {
+            "en": "On the other hand, …",
+            "id": "Di sisi lain, … (kontras)"
+          },
+          {
+            "en": "On balance, …",
+            "id": "Setelah menimbang semuanya, …"
+          },
+          {
+            "en": "It depends on …",
+            "id": "Tergantung …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Tidak ada *is* di kotak-kotak katanya. Itu disengaja.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "pros-cons",
+          "prompt": "Sari bertanya: 'Should we fly or take the train to Surabaya?' Kamu ingin bilang: 'Tergantung berapa harga tiketnya.' Susun kata-katanya.",
+          "tokens": [
+            "cost",
+            "how",
+            "It",
+            "tickets",
+            "on",
+            "the",
+            "much",
+            "depends"
+          ],
+          "solution": "It depends on how much the tickets cost.",
+          "explanation": "**depend** adalah kata kerja, jadi **It depends** (tanpa *is*, dan dapat -s karena *it*), lalu **on**. Setelah *how much*, pakai urutan kalimat biasa (*the tickets cost*), bukan urutan pertanyaan (*do the tickets cost*), seperti pertanyaan tidak langsung yang kamu pelajari di B1."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tim sedang merencanakan liburan kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pros-cons",
+          "prompt": "Timmu sedang memilih tempat untuk liburan kantor. Pak Hasan bertanya: 'What do you think about Bali?' Balasan mana yang menimbang kelebihan dan kekurangannya?",
+          "options": [
+            "On the plus side, the flights to Bali are expensive.",
+            "On the plus side, Bali has great beaches. The downside is that the flights are expensive.",
+            "Bali is the best, and Bandung is the worst."
+          ],
+          "answer": 1,
+          "explanation": "Balasan ini memberi kelebihan dengan **On the plus side** dan kekurangan dengan **The downside is that**: dua sisi. Tiket pesawat yang mahal adalah kekurangan, jadi tidak cocok setelah *On the plus side*. *Bali is the best* hanya memberi satu sisi, tanpa alasan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menebak dengan hati-hati",
+        "text": "Dalam diskusi kita sering membicarakan hal yang tidak diketahui pasti. Tunjukkan bahwa itu tebakan, bukan fakta.",
+        "body": "Dari **lebih yakin** ke **kurang yakin**:\n*There's a good chance that …* (*kemungkinan besar*)\n*I'd imagine …* (*saya kira*: tebakan masuk akal; di sini *imagine* bukan *membayangkan* mimpi)\n*I suspect …* (*saya menduga*, sering tentang suatu masalah)\n*It could be that …* (*bisa jadi*: salah satu kemungkinan alasan)\nDitambah **might / may / could** dari B1.\n**suspect** adalah kata kerja: *I suspect*, bukan `I am suspect` ✗. Dan jangan mulai setiap kalimat dengan *Maybe* (*mungkin*): variasikan.",
+        "pairs": [
+          {
+            "en": "There's a good chance that …",
+            "id": "Kemungkinan besar …"
+          },
+          {
+            "en": "I'd imagine …",
+            "id": "Saya kira …"
+          },
+          {
+            "en": "I suspect …",
+            "id": "Saya menduga …"
+          },
+          {
+            "en": "It could be that …",
+            "id": "Bisa jadi …"
+          },
+          {
+            "en": "might / may / could",
+            "id": "mungkin"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Ada yang salah dengan aplikasi perusahaanmu, dan belum ada yang tahu kenapa.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "speculate",
+          "prompt": "Timmu sedang membahas kenapa banyak pelanggan berhenti memakai aplikasi kalian bulan ini. Tidak ada yang tahu pasti. Mana cara terbaik untuk berspekulasi?",
+          "options": [
+            "The new update is too slow. That's 100% the reason.",
+            "I am suspect the new update is too slow.",
+            "I'd imagine the new update is too slow for older phones."
+          ],
+          "answer": 2,
+          "explanation": "**I'd imagine …** menunjukkan itu tebakan yang masuk akal. Pilihan pertama menyampaikan tebakan sebagai fakta, padahal tidak ada yang tahu. *I am suspect* salah: **suspect** adalah kata kerja, jadi *I suspect* (tanpa *am*)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bergiliran bicara",
+        "text": "Siapa bicara kapan? Banyak rapat di Indonesia dan banyak kelompok berbahasa Inggris melakukannya dengan cara berbeda.",
+        "body": "Di banyak rapat di Indonesia, orang menunggu orang yang paling senior bicara dulu, dan yang junior menunggu ditanya: itu tanda hormat. Di banyak kelompok berbahasa Inggris, semua orang diharapkan **ikut bicara tanpa ditanya**, dan diam bisa terlihat seperti *tidak punya ide* atau *saya setuju*. Tidak ada yang lebih baik: sesuaikan diri, dan tetap sopan.\n**Ambil giliran** saat ada jeda. **Ajak** seseorang dengan namanya + pertanyaan terbuka. **Kembalikan giliran** setelah selesai. Jangan bilang *Why are you so quiet?*: itu bikin malu.",
+        "pairs": [
+          {
+            "en": "Can I come in here?",
+            "id": "Boleh saya ikut bicara?"
+          },
+          {
+            "en": "Sorry to interrupt, but …",
+            "id": "Maaf menyela, tapi …"
+          },
+          {
+            "en": "What do you think, Sari?",
+            "id": "Bagaimana menurutmu, Sari?"
+          },
+          {
+            "en": "We haven't heard from Dimas yet.",
+            "id": "Kita belum dengar pendapat Dimas."
+          },
+          {
+            "en": "Sorry, go ahead.",
+            "id": "Maaf, silakan duluan."
+          },
+          {
+            "en": "Anyway, that's my view. What about you?",
+            "id": "Yah, itu pendapat saya. Kalau kamu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Hari ini kamu yang memimpin rapat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "turn-taking",
+          "prompt": "Kamu memimpin rapat proyek. Budi, rekan junior yang baru, belum bicara apa-apa selama 20 menit, padahal kamu ingin mendengar idenya. Apa yang paling baik kamu katakan?",
+          "options": [
+            "Budi, we haven't heard from you yet. What do you think?",
+            "Budi, why are you so quiet? Say something!",
+            "Nobody has any more ideas, so let's move on."
+          ],
+          "answer": 0,
+          "explanation": "**Namanya** + **pertanyaan terbuka** mengajak Budi dengan ramah dan memberinya ruang untuk bicara. *Why are you so quiet?* bikin dia malu di depan semua orang. Langsung lanjut berarti kamu tidak pernah mendengar idenya: sebagai junior, dia mungkin sedang menunggu ditanya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan balas",
+        "text": "Seorang rekan kerja menyampaikan pendapat. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spontaneous-discussion",
+          "listen": "I think we should move our team lunch to Fridays. Most people are in the office on Friday, and the canteen is much quieter then.",
+          "prompt": "Dengarkan pendapat rekan kerjamu. Kamu setuju. Pilih balasan yang melanjutkan apa yang kamu dengar.",
+          "options": [
+            "I am agree. Friday is good.",
+            "To add to that, we could celebrate the end of the week together.",
+            "To add to that, Monday is a better day for the lunch."
+          ],
+          "answer": 1,
+          "explanation": "Rekan kerjamu ingin makan siang tim di hari **Jumat**. **To add to that, …** menambahkan alasan lain ke arah yang sama: merayakan akhir minggu. *I am agree* salah (agree adalah kata kerja: *I agree*). Balasan tentang Senin justru berlawanan arah, jadi *To add to that* tidak cocok."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk rapat atau seminarmu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · diskusi",
+          "intro": "Ulur waktu, lanjutkan poin orang lain, timbang dua sisi, tebak dengan hati-hati, dan berbagi giliran.",
+          "headers": [
+            "Fungsi",
+            "Katakan",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Mengulur waktu",
+              "That's a good question. / Let me think … / It's hard to say, but …",
+              "Hmm, that's a good question. Let me see."
+            ],
+            [
+              "Melanjutkan poin orang lain",
+              "Following on from what Rina said, … / To add to that, … / Going back to Budi's point, …",
+              "To add to that, parking there is very expensive."
+            ],
+            [
+              "Kelebihan",
+              "On the plus side, … / One advantage is that …",
+              "On the plus side, the new office is near the MRT."
+            ],
+            [
+              "Kekurangan",
+              "The downside is that … / On the other hand, … (kontras)",
+              "The downside is that the rent is higher."
+            ],
+            [
+              "Tidak sederhana",
+              "It depends on + kata benda / how much, when, who + urutan biasa",
+              "It depends on the budget."
+            ],
+            [
+              "Pendapat akhirmu",
+              "On balance, …",
+              "On balance, I think we should move."
+            ],
+            [
+              "Cukup yakin",
+              "There's a good chance that … / I'd imagine …",
+              "There's a good chance that prices will go up."
+            ],
+            [
+              "Kurang yakin",
+              "I suspect … / It could be that … / might, may, could",
+              "It could be that the client is very busy."
+            ],
+            [
+              "Mengambil giliran",
+              "Can I come in here? / Sorry to interrupt, but …",
+              "Sorry to interrupt, but can I add something?"
+            ],
+            [
+              "Mengajak orang lain",
+              "What do you think, Sari? / We haven't heard from Dimas yet.",
+              "Dimas, what's your view?"
+            ],
+            [
+              "Mengembalikan giliran",
+              "Sorry, go ahead. / Anyway, that's my view. What about you?",
+              "Sorry, go ahead, Rina."
+            ]
+          ],
+          "tips": [
+            "**agree, depend, suspect** adalah kata kerja: *I agree, It depends, I suspect*, jangan pernah `I am agree`, `It's depend`, `I am suspect`.",
+            "**On the other hand** = *di sisi lain* (kontras). Untuk menambahkan poin, katakan **To add to that**.",
+            "Menunggu orang yang senior itu sopan di Indonesia. Di banyak kelompok berbahasa Inggris, ikutlah bicara saat ada jeda dan ajak orang yang pendiam dengan menyebut namanya."
+          ],
+          "examples": [
+            {
+              "en": "Following on from what Sari said, the KRL is often late in the rain.",
+              "id": "Melanjutkan apa yang Sari bilang, KRL sering telat saat hujan."
+            },
+            {
+              "en": "One advantage is that we'd save time. On the other hand, it costs more.",
+              "id": "Salah satu kelebihannya adalah kita akan hemat waktu. Di sisi lain, biayanya lebih mahal."
+            },
+            {
+              "en": "I suspect the Wi-Fi is the real problem.",
+              "id": "Saya menduga Wi-Fi-nya masalah yang sebenarnya."
+            },
+            {
+              "en": "Can I come in here? I have a quick point about the budget.",
+              "id": "Boleh saya ikut bicara? Saya punya poin singkat soal anggaran."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Ini pelajaran speaking B2 dari British Council dan video tentang cara menyela dengan sopan, seluruhnya dalam bahasa Inggris."
+      }
+    ]
+  }
+}

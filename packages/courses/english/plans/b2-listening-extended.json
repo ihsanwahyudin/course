@@ -1,0 +1,782 @@
+{
+  "en": {
+    "greeting": "Hi! Today you practise with extracts from long talks, lectures and podcasts: following the structure, hearing the speaker's opinion, recognising accents and taking fast notes. Play each recording as many times as you like.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Long talks: listen in parts",
+        "text": "You already find the main point and follow signposts like **However** and **Instead**. Now the talks are long: lectures, podcasts, conference talks.",
+        "body": "Nobody understands every word of a 20-minute talk. Do three things: **predict from the title** (think of 3–4 words you expect), **follow the signposts** that open and close each part, and **keep a map in your head**: which part are we in, what comes next? Our recordings are **extracts** (short parts) of longer talks, so read where each one comes from. Careful: an example is not the key point, and the part that has just finished is not the next one.",
+        "pairs": [
+          {
+            "en": "Firstly, … Secondly, … Finally, …",
+            "id": "Pertama… Kedua… Terakhir… → urutan bagian"
+          },
+          {
+            "en": "Moving on, …",
+            "id": "Lanjut… → bagian baru dimulai"
+          },
+          {
+            "en": "Let me turn to…",
+            "id": "Sekarang saya beralih ke… → topik baru"
+          },
+          {
+            "en": "The key point is…",
+            "id": "Poin kuncinya adalah… → ide utama!"
+          },
+          {
+            "en": "For instance, …",
+            "id": "Misalnya… → contoh, detail"
+          },
+          {
+            "en": "In other words, …",
+            "id": "Dengan kata lain… → ide yang sama, lebih mudah"
+          },
+          {
+            "en": "To sum up, …",
+            "id": "Singkatnya… → ringkasan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the middle of a podcast",
+        "text": "This extract comes from the middle of a 30-minute podcast about life in big cities. Listen for the signposts.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "long-talks-podcasts",
+          "listen": "So that's why rents in Jakarta are rising so fast. To sum up this part: most young workers now spend almost half their salary on housing. OK, let me turn to the second big problem, and you all know it: the traffic, and the hours we lose on the road every day.",
+          "prompt": "Listen to the podcast extract. What is the next part of the episode going to be about?",
+          "options": [
+            "Why rents in Jakarta are rising",
+            "Traffic and the time people lose on the road",
+            "How much young workers earn"
+          ],
+          "answer": 1,
+          "explanation": "**To sum up this part** closes the part about rents and housing. Then **let me turn to** opens the next part: the traffic and the hours lost on the road. Salaries are only mentioned as a detail of the housing part."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build a signpost sentence",
+        "text": "Speakers use these sentences to start a new part. Build one.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "long-talks-podcasts",
+          "prompt": "Arrange the words: Lanjut, sekarang saya beralih ke biayanya.",
+          "tokens": [
+            "the",
+            "me",
+            "Moving",
+            "costs",
+            "turn",
+            "let",
+            "to",
+            "on"
+          ],
+          "solution": "Moving on, let me turn to the costs.",
+          "explanation": "**Moving on** and **let me turn to** both tell you a new part is starting; the new topic comes right after **turn to**: *the costs*. *Let me* + verb = izinkan saya / sekarang saya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Facts, opinions and attitude",
+        "text": "In a talk, the speaker gives facts and also says what they think about them.",
+        "body": "**Facts** can be checked: numbers, dates, events. The speaker's **attitude** is their opinion of the facts. Opinion words: **I'm not convinced** (doubt), **Frankly** / **To be honest** (a strong, honest opinion), **Surprisingly** (not what people expected), **Admittedly** (the speaker accepts one point, but a *but* is coming). After **however**, **but** or **that said**, the direction changes: the real opinion usually comes there. Trap: *admittedly* sounds positive, but the speaker often disagrees in the next sentence.",
+        "pairs": [
+          {
+            "en": "I'm not convinced.",
+            "id": "Saya tidak yakin. → ragu"
+          },
+          {
+            "en": "Frankly, …",
+            "id": "Terus terang… → opini yang kuat"
+          },
+          {
+            "en": "To be honest, …",
+            "id": "Jujur saja… → opini yang kuat"
+          },
+          {
+            "en": "Surprisingly, …",
+            "id": "Di luar dugaan… → hasil yang tak terduga"
+          },
+          {
+            "en": "Admittedly, …",
+            "id": "Memang harus diakui… → tapi-nya akan datang"
+          },
+          {
+            "en": "That said, …",
+            "id": "Meskipun begitu… → opini sebenarnya setelah ini"
+          },
+          {
+            "en": "On the other hand, …",
+            "id": "Di sisi lain…"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a teacher's opinion",
+        "text": "This extract comes from a podcast about learning languages. Listen for **admittedly** and **that said**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-argument-attitude",
+          "listen": "Online courses are cheap and flexible, and admittedly, some of my students have done very well with them. That said, I'm not convinced they work for everyone. Frankly, most people need a teacher and a class to keep going. Without them, they simply stop after a few weeks.",
+          "prompt": "Listen to the teacher. What is the teacher's main opinion of online courses?",
+          "options": [
+            "They're the best choice for most learners.",
+            "They're too expensive for most students.",
+            "They help some people, but most people need a teacher and a class."
+          ],
+          "answer": 2,
+          "explanation": "**Admittedly** accepts a good point: some students do well. After **That said** comes the real opinion: the teacher is **not convinced** they work for everyone, because most people need a teacher and a class. The teacher says the courses are **cheap**, so 'too expensive' is wrong."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "UK, US and Australian accents",
+        "text": "In lectures and podcasts you hear British, American and Australian speakers. Here are the main differences.",
+        "body": "These are tendencies, not rules. **r after a vowel:** Americans say it (*car*); most English and Australian speakers don't (*car* = 'kaa'). It's the same word, nothing is missing. **t between vowels:** Americans (and often Australians) say a soft d: *water* = 'wadder', *city* = 'ciddy'. **Australian 'ay'** sounds like 'ai': *day* = 'die', *mate* = 'mite'. Our audio uses **one voice**, so you can't hear the accents here: hear them in the video in the resources.",
+        "pairs": [
+          {
+            "en": "car",
+            "id": "mobil · US 'kar' · UK/AU 'kaa'"
+          },
+          {
+            "en": "park",
+            "id": "taman · US 'park' · UK/AU 'paak'"
+          },
+          {
+            "en": "water",
+            "id": "air · US 'wadder' · UK 'wo-teu'"
+          },
+          {
+            "en": "better",
+            "id": "lebih baik · US/AU 'bedder' · UK 'be-teu'"
+          },
+          {
+            "en": "Good day, mate.",
+            "id": "Halo, kawan. · AU 'day' ≈ 'die', 'mate' ≈ 'mite'"
+          },
+          {
+            "en": "hot",
+            "id": "panas · US 'haht' · UK 'hot'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "An Australian colleague",
+        "text": "No audio this time: use what you know about the Australian accent.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "uk-us-au-accents",
+          "prompt": "Jess, your colleague from Melbourne, calls: 'Sorry, I missed the meeting. The train was ___ again.' The missing word sounds to you like 'light'. Which word did she really say?",
+          "options": [
+            "light",
+            "late",
+            "let"
+          ],
+          "answer": 1,
+          "explanation": "In many Australian accents the 'ay' sound moves towards 'ai', like *day* → 'die' and *mate* → 'mite'. So *late* sounds like 'light'. The context helps too: she missed the meeting because the train was **late**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Notes for long talks",
+        "text": "Last skill: notes that are fast enough for a long lecture.",
+        "body": "Write **key words only**, never sentences, and numbers as digits. Use **abbreviations**: *e.g.* = for example, *approx.* or *~* = about, *govt* = government, *b/c* = because, *w/* = with. Use **symbols**: **↑** goes up, **↓** goes down, **→** leads to / so, **=** is / means, **≠** is not, **×2** doubled. An idea: **Cornell notes**. Notes in a wide right column, key words or questions in a narrow left column, and a 1–2 sentence summary at the bottom after the talk.",
+        "pairs": [
+          {
+            "en": "goes up, increases",
+            "id": "↑ naik, bertambah"
+          },
+          {
+            "en": "goes down, decreases",
+            "id": "↓ turun, berkurang"
+          },
+          {
+            "en": "leads to, so",
+            "id": "→ menyebabkan, jadi"
+          },
+          {
+            "en": "is not the same as",
+            "id": "≠ tidak sama dengan"
+          },
+          {
+            "en": "has doubled",
+            "id": "×2 naik dua kali lipat"
+          },
+          {
+            "en": "approximately",
+            "id": "approx. / ~ kira-kira"
+          },
+          {
+            "en": "for example",
+            "id": "e.g. misalnya"
+          },
+          {
+            "en": "because",
+            "id": "b/c karena"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and take notes",
+        "text": "This extract comes from a business lecture. Imagine your notes: what goes up, what goes down, what's the result?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "note-taking",
+          "listen": "Let me give you the main numbers on coffee shops in Surabaya. Since 2020, the number of coffee shops in the city has doubled. However, the price of a coffee has gone up by about twenty percent, so many students now make their coffee at home instead.",
+          "prompt": "Listen to the lecture extract. Which notes are correct?",
+          "options": [
+            "coffee shops ↓ since 2020 · price ↑ ~20% → students make coffee at home",
+            "coffee shops ×2 since 2020 · price ↑ ~20% → students make coffee at home",
+            "coffee shops ×2 since 2020 · price ↓ ~20% → students buy more coffee"
+          ],
+          "answer": 1,
+          "explanation": "The number of coffee shops **has doubled** = ×2. The price **has gone up by about twenty percent** = ↑ ~20%. **so** gives the result (→): students make coffee at home. ↓ would mean the number or the price went down."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Try to say the English before you look.",
+        "flashcards": [
+          {
+            "front": "Sekarang saya beralih ke… (bagian baru)",
+            "back": "Let me turn to…"
+          },
+          {
+            "front": "Singkatnya… (ringkasan)",
+            "back": "To sum up, …"
+          },
+          {
+            "front": "Dengan kata lain… (ide yang sama, lebih sederhana)",
+            "back": "In other words, …"
+          },
+          {
+            "front": "Saya tidak yakin…",
+            "back": "I'm not convinced…"
+          },
+          {
+            "front": "Memang harus diakui… (tapi-nya akan datang)",
+            "back": "Admittedly, …"
+          },
+          {
+            "front": "Meskipun begitu…",
+            "back": "That said, …"
+          },
+          {
+            "front": "US 'wadder' / UK 'wo-tuh'",
+            "back": "water"
+          },
+          {
+            "front": "↑  ↓  →  ≠",
+            "back": "goes up · goes down · leads to / so · is not"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Signposts, attitude words, accents and note symbols on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Extended listening & accents",
+          "intro": "What you hear, what it means, and what to do with it.",
+          "headers": [
+            "You hear / write",
+            "It means",
+            "What to do"
+          ],
+          "rows": [
+            [
+              "Firstly… Secondly… Finally…",
+              "Pertama… Kedua… Terakhir…",
+              "follow the order of the parts"
+            ],
+            [
+              "Moving on, … / Let me turn to…",
+              "Lanjut… / Sekarang saya beralih ke…",
+              "a new part starts: the topic comes after 'turn to'"
+            ],
+            [
+              "The key point is…",
+              "Poin kuncinya adalah…",
+              "the main idea is coming: listen!"
+            ],
+            [
+              "For instance, … / For example, …",
+              "Misalnya…",
+              "a detail, not the key point"
+            ],
+            [
+              "In other words, …",
+              "Dengan kata lain…",
+              "the same idea again: a second chance"
+            ],
+            [
+              "To sum up, …",
+              "Singkatnya…",
+              "the summary, often the main point again"
+            ],
+            [
+              "Admittedly, … That said, …",
+              "Memang harus diakui… Meskipun begitu…",
+              "the real opinion comes after 'that said'"
+            ],
+            [
+              "I'm not convinced / Frankly / Surprisingly",
+              "Saya tidak yakin / Terus terang / Di luar dugaan",
+              "the speaker's attitude, not a fact"
+            ],
+            [
+              "car, park (UK/AU)",
+              "'kaa', 'paak'",
+              "no r after a vowel: same word"
+            ],
+            [
+              "water, city (US)",
+              "'wadder', 'ciddy'",
+              "t between vowels sounds like a soft d"
+            ],
+            [
+              "day, mate (AU)",
+              "'die', 'mite'",
+              "Australian 'ay' sounds like 'ai'"
+            ],
+            [
+              "↑ ↓ → = ≠ ×2",
+              "naik, turun, jadi, adalah, bukan, dua kali lipat",
+              "symbols for fast notes"
+            ],
+            [
+              "e.g. · approx. / ~ · b/c · w/",
+              "misalnya · kira-kira · karena · dengan",
+              "abbreviations for fast notes"
+            ]
+          ],
+          "tips": [
+            "Long talk: predict from the title, follow the signposts, keep a map: which part are we in?",
+            "After **admittedly** comes a *but*: the real opinion follows **however** or **that said**.",
+            "Accents are tendencies. The app uses one voice: hear real UK, US and AU speakers in the resources."
+          ],
+          "examples": [
+            {
+              "en": "Let me turn to the cost of the project.",
+              "id": "Sekarang saya beralih ke biaya proyeknya."
+            },
+            {
+              "en": "To sum up, the city needs more buses, not more roads.",
+              "id": "Singkatnya, kota ini butuh lebih banyak bus, bukan lebih banyak jalan."
+            },
+            {
+              "en": "Admittedly, the buses are cheap. That said, they're often late.",
+              "id": "Memang harus diakui, busnya murah. Meskipun begitu, busnya sering terlambat."
+            },
+            {
+              "en": "Fewer people are taking the bus because tickets are more expensive.",
+              "id": "Makin sedikit orang naik bus karena tiketnya lebih mahal. (Catatan: bus users ↓ b/c tickets ↑)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen more",
+        "text": "Real voices: a video comparing UK, US and Australian pronunciation, plus two B2 talks with transcripts to practise argument and notes."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu berlatih dengan cuplikan dari talk, kuliah dan podcast yang panjang: mengikuti strukturnya, menangkap opini pembicara, mengenali aksen dan mencatat dengan cepat. Putar setiap rekaman sesering yang kamu mau.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Ucapan panjang: dengarkan per bagian",
+        "text": "Kamu sudah bisa menangkap poin utama dan mengikuti signpost seperti **However** dan **Instead**. Sekarang talk-nya panjang: kuliah, podcast, presentasi konferensi.",
+        "body": "Tidak ada yang mengerti setiap kata dari talk 20 menit. Lakukan tiga hal: **tebak dari judulnya** (pikirkan 3–4 kata yang kamu duga akan muncul), **ikuti signpost** (kata penunjuk) yang membuka dan menutup tiap bagian, dan **simpan peta di kepala**: sekarang di bagian mana, apa berikutnya? Rekaman kita adalah **cuplikan** (bagian pendek) dari talk yang lebih panjang, jadi baca dulu dari mana cuplikannya. Hati-hati: contoh bukan poin kunci, dan bagian yang baru selesai bukan bagian berikutnya.",
+        "pairs": [
+          {
+            "en": "Firstly, … Secondly, … Finally, …",
+            "id": "Pertama… Kedua… Terakhir… → urutan bagian"
+          },
+          {
+            "en": "Moving on, …",
+            "id": "Lanjut… → bagian baru dimulai"
+          },
+          {
+            "en": "Let me turn to…",
+            "id": "Sekarang saya beralih ke… → topik baru"
+          },
+          {
+            "en": "The key point is…",
+            "id": "Poin kuncinya adalah… → ide utama!"
+          },
+          {
+            "en": "For instance, …",
+            "id": "Misalnya… → contoh, detail"
+          },
+          {
+            "en": "In other words, …",
+            "id": "Dengan kata lain… → ide yang sama, lebih mudah"
+          },
+          {
+            "en": "To sum up, …",
+            "id": "Singkatnya… → ringkasan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: bagian tengah podcast",
+        "text": "Cuplikan ini dari bagian tengah podcast 30 menit tentang hidup di kota besar. Dengarkan signpost-nya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "long-talks-podcasts",
+          "listen": "So that's why rents in Jakarta are rising so fast. To sum up this part: most young workers now spend almost half their salary on housing. OK, let me turn to the second big problem, and you all know it: the traffic, and the hours we lose on the road every day.",
+          "prompt": "Dengarkan cuplikan podcast-nya. Bagian episode berikutnya akan membahas apa?",
+          "options": [
+            "Why rents in Jakarta are rising",
+            "Traffic and the time people lose on the road",
+            "How much young workers earn"
+          ],
+          "answer": 1,
+          "explanation": "**To sum up this part** (singkatnya, untuk bagian ini) menutup bagian tentang sewa dan perumahan. Lalu **let me turn to** (sekarang saya beralih ke) membuka bagian berikutnya: kemacetan dan jam yang hilang di jalan. Gaji hanya disebut sebagai detail di bagian perumahan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat signpost",
+        "text": "Pembicara memakai kalimat seperti ini untuk memulai bagian baru. Coba susun satu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "long-talks-podcasts",
+          "prompt": "Susun kata-katanya: Lanjut, sekarang saya beralih ke biayanya.",
+          "tokens": [
+            "the",
+            "me",
+            "Moving",
+            "costs",
+            "turn",
+            "let",
+            "to",
+            "on"
+          ],
+          "solution": "Moving on, let me turn to the costs.",
+          "explanation": "**Moving on** (lanjut) dan **let me turn to** (sekarang saya beralih ke) sama-sama menandakan bagian baru dimulai; topik barunya datang tepat setelah **turn to**: *the costs* (biayanya). *Let me* + kata kerja = izinkan saya / sekarang saya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Fakta, opini dan sikap",
+        "text": "Dalam sebuah talk, pembicara memberi fakta dan juga mengatakan apa yang ia pikirkan tentang fakta itu.",
+        "body": "**Fakta** bisa dicek: angka, tanggal, kejadian. **Sikap** (attitude) pembicara adalah pendapatnya tentang fakta itu. Kata-kata opini: **I'm not convinced** (ragu), **Frankly** / **To be honest** (terus terang: opini yang kuat dan jujur), **Surprisingly** (di luar dugaan), **Admittedly** (memang harus diakui: pembicara menerima satu poin, tapi 'tapi'-nya akan datang). Setelah **however**, **but** atau **that said** (meskipun begitu), arahnya berubah: opini sebenarnya biasanya ada di situ. Jebakan: *admittedly* terdengar positif, tapi sering pembicara justru tidak setuju di kalimat berikutnya.",
+        "pairs": [
+          {
+            "en": "I'm not convinced.",
+            "id": "Saya tidak yakin. → ragu"
+          },
+          {
+            "en": "Frankly, …",
+            "id": "Terus terang… → opini yang kuat"
+          },
+          {
+            "en": "To be honest, …",
+            "id": "Jujur saja… → opini yang kuat"
+          },
+          {
+            "en": "Surprisingly, …",
+            "id": "Di luar dugaan… → hasil yang tak terduga"
+          },
+          {
+            "en": "Admittedly, …",
+            "id": "Memang harus diakui… → tapi-nya akan datang"
+          },
+          {
+            "en": "That said, …",
+            "id": "Meskipun begitu… → opini sebenarnya setelah ini"
+          },
+          {
+            "en": "On the other hand, …",
+            "id": "Di sisi lain…"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: opini seorang guru",
+        "text": "Cuplikan ini dari podcast tentang belajar bahasa. Dengarkan **admittedly** dan **that said**.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "follow-argument-attitude",
+          "listen": "Online courses are cheap and flexible, and admittedly, some of my students have done very well with them. That said, I'm not convinced they work for everyone. Frankly, most people need a teacher and a class to keep going. Without them, they simply stop after a few weeks.",
+          "prompt": "Dengarkan gurunya. Apa opini utama guru itu tentang kursus online?",
+          "options": [
+            "They're the best choice for most learners.",
+            "They're too expensive for most students.",
+            "They help some people, but most people need a teacher and a class."
+          ],
+          "answer": 2,
+          "explanation": "**Admittedly** menerima satu poin baik: ada murid yang berhasil. Setelah **That said** (meskipun begitu) datang opini sebenarnya: guru itu **tidak yakin** kursus online cocok untuk semua orang, karena kebanyakan orang butuh guru dan kelas. Guru itu bilang kursusnya **murah** (cheap), jadi 'too expensive' (terlalu mahal) salah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Aksen Inggris, Amerika dan Australia",
+        "text": "Di kuliah dan podcast kamu mendengar penutur Inggris, Amerika dan Australia. Ini perbedaan utamanya.",
+        "body": "Ini kecenderungan, bukan aturan pasti. **r setelah vokal:** orang Amerika membacanya (*car*); kebanyakan orang Inggris dan Australia tidak (*car* = 'kaa'). Itu kata yang sama, tidak ada yang hilang. **t di antara vokal:** orang Amerika (dan sering orang Australia) mengucapkannya seperti d yang lembut: *water* = 'wadder', *city* = 'ciddy'. **Bunyi 'ei' Australia** terdengar seperti 'ai': *day* = 'die', *mate* = 'mite'. Audio kita hanya **satu suara**, jadi kamu tidak bisa mendengar aksennya di sini: dengarkan di video pada bagian sumber.",
+        "pairs": [
+          {
+            "en": "car",
+            "id": "mobil · US 'kar' · UK/AU 'kaa'"
+          },
+          {
+            "en": "park",
+            "id": "taman · US 'park' · UK/AU 'paak'"
+          },
+          {
+            "en": "water",
+            "id": "air · US 'wadder' · UK 'wo-teu'"
+          },
+          {
+            "en": "better",
+            "id": "lebih baik · US/AU 'bedder' · UK 'be-teu'"
+          },
+          {
+            "en": "Good day, mate.",
+            "id": "Halo, kawan. · AU 'day' ≈ 'die', 'mate' ≈ 'mite'"
+          },
+          {
+            "en": "hot",
+            "id": "panas · US 'haht' · UK 'hot'"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Rekan kerja dari Australia",
+        "text": "Kali ini tanpa audio: pakai pengetahuanmu tentang aksen Australia.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "uk-us-au-accents",
+          "prompt": "Jess, rekan kerjamu dari Melbourne, menelepon: 'Sorry, I missed the meeting. The train was ___ again.' Kata yang hilang terdengar di telingamu seperti 'light'. Kata apa yang sebenarnya ia ucapkan?",
+          "options": [
+            "light",
+            "late",
+            "let"
+          ],
+          "answer": 1,
+          "explanation": "Di banyak aksen Australia, bunyi 'ei' bergeser ke arah 'ai', seperti *day* → 'die' dan *mate* → 'mite'. Jadi *late* (terlambat) terdengar seperti 'light'. Konteksnya juga membantu: ia melewatkan rapat karena keretanya **terlambat**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mencatat ucapan yang panjang",
+        "text": "Keterampilan terakhir: catatan yang cukup cepat untuk kuliah yang panjang.",
+        "body": "Tulis **kata kunci saja**, jangan kalimat, dan angka sebagai digit. Pakai **singkatan**: *e.g.* = misalnya, *approx.* atau *~* = kira-kira, *govt* = pemerintah, *b/c* = karena, *w/* = dengan. Pakai **simbol**: **↑** naik, **↓** turun, **→** menyebabkan / jadi, **=** adalah / artinya, **≠** bukan, **×2** dua kali lipat. Sebuah ide: **catatan Cornell**. Catatan di kolom kanan yang lebar, kata kunci atau pertanyaan di kolom kiri yang sempit, dan ringkasan 1–2 kalimat di bagian bawah setelah talk selesai.",
+        "pairs": [
+          {
+            "en": "goes up, increases",
+            "id": "↑ naik, bertambah"
+          },
+          {
+            "en": "goes down, decreases",
+            "id": "↓ turun, berkurang"
+          },
+          {
+            "en": "leads to, so",
+            "id": "→ menyebabkan, jadi"
+          },
+          {
+            "en": "is not the same as",
+            "id": "≠ tidak sama dengan"
+          },
+          {
+            "en": "has doubled",
+            "id": "×2 naik dua kali lipat"
+          },
+          {
+            "en": "approximately",
+            "id": "approx. / ~ kira-kira"
+          },
+          {
+            "en": "for example",
+            "id": "e.g. misalnya"
+          },
+          {
+            "en": "because",
+            "id": "b/c karena"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan dan buat catatan",
+        "text": "Cuplikan ini dari kuliah bisnis. Bayangkan catatanmu: apa yang naik, apa yang turun, apa hasilnya?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "note-taking",
+          "listen": "Let me give you the main numbers on coffee shops in Surabaya. Since 2020, the number of coffee shops in the city has doubled. However, the price of a coffee has gone up by about twenty percent, so many students now make their coffee at home instead.",
+          "prompt": "Dengarkan cuplikan kuliahnya. Catatan mana yang benar?",
+          "options": [
+            "coffee shops ↓ since 2020 · price ↑ ~20% → students make coffee at home",
+            "coffee shops ×2 since 2020 · price ↑ ~20% → students make coffee at home",
+            "coffee shops ×2 since 2020 · price ↓ ~20% → students buy more coffee"
+          ],
+          "answer": 1,
+          "explanation": "Jumlah kedai kopi **has doubled** (naik dua kali lipat) = ×2. Harganya **has gone up by about twenty percent** (naik sekitar 20 persen) = ↑ ~20%. **so** memberi hasilnya (→): mahasiswa membuat kopi sendiri di rumah. ↓ berarti jumlah atau harganya turun."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik setiap kartu. Coba ucapkan bahasa Inggrisnya sebelum melihat.",
+        "flashcards": [
+          {
+            "front": "Sekarang saya beralih ke… (bagian baru)",
+            "back": "Let me turn to…"
+          },
+          {
+            "front": "Singkatnya… (ringkasan)",
+            "back": "To sum up, …"
+          },
+          {
+            "front": "Dengan kata lain… (ide yang sama, lebih sederhana)",
+            "back": "In other words, …"
+          },
+          {
+            "front": "Saya tidak yakin…",
+            "back": "I'm not convinced…"
+          },
+          {
+            "front": "Memang harus diakui… (tapi-nya akan datang)",
+            "back": "Admittedly, …"
+          },
+          {
+            "front": "Meskipun begitu…",
+            "back": "That said, …"
+          },
+          {
+            "front": "US 'wadder' / UK 'wo-tuh'",
+            "back": "water"
+          },
+          {
+            "front": "↑  ↓  →  ≠",
+            "back": "goes up · goes down · leads to / so · is not"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Signpost, kata sikap, aksen dan simbol catatan dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Menyimak panjang & aksen",
+          "intro": "Apa yang kamu dengar, artinya, dan apa yang harus dilakukan.",
+          "headers": [
+            "Yang kamu dengar / tulis",
+            "Artinya",
+            "Yang harus dilakukan"
+          ],
+          "rows": [
+            [
+              "Firstly… Secondly… Finally…",
+              "Pertama… Kedua… Terakhir…",
+              "ikuti urutan bagiannya"
+            ],
+            [
+              "Moving on, … / Let me turn to…",
+              "Lanjut… / Sekarang saya beralih ke…",
+              "bagian baru dimulai: topiknya setelah 'turn to'"
+            ],
+            [
+              "The key point is…",
+              "Poin kuncinya adalah…",
+              "ide utama akan datang: dengarkan!"
+            ],
+            [
+              "For instance, … / For example, …",
+              "Misalnya…",
+              "detail, bukan poin kunci"
+            ],
+            [
+              "In other words, …",
+              "Dengan kata lain…",
+              "ide yang sama lagi: kesempatan kedua"
+            ],
+            [
+              "To sum up, …",
+              "Singkatnya…",
+              "ringkasan, sering poin utamanya lagi"
+            ],
+            [
+              "Admittedly, … That said, …",
+              "Memang harus diakui… Meskipun begitu…",
+              "opini sebenarnya datang setelah 'that said'"
+            ],
+            [
+              "I'm not convinced / Frankly / Surprisingly",
+              "Saya tidak yakin / Terus terang / Di luar dugaan",
+              "sikap pembicara, bukan fakta"
+            ],
+            [
+              "car, park (UK/AU)",
+              "'kaa', 'paak'",
+              "r setelah vokal tidak dibaca: kata yang sama"
+            ],
+            [
+              "water, city (US)",
+              "'wadder', 'ciddy'",
+              "t di antara vokal terdengar seperti d lembut"
+            ],
+            [
+              "day, mate (AU)",
+              "'die', 'mite'",
+              "bunyi 'ei' Australia terdengar seperti 'ai'"
+            ],
+            [
+              "↑ ↓ → = ≠ ×2",
+              "naik, turun, jadi, adalah, bukan, dua kali lipat",
+              "simbol untuk catatan cepat"
+            ],
+            [
+              "e.g. · approx. / ~ · b/c · w/",
+              "misalnya · kira-kira · karena · dengan",
+              "singkatan untuk catatan cepat"
+            ]
+          ],
+          "tips": [
+            "Talk panjang: tebak dari judulnya, ikuti signpost-nya, simpan peta: sekarang di bagian mana?",
+            "Setelah **admittedly** datang 'tapi': opini sebenarnya menyusul setelah **however** atau **that said**.",
+            "Aksen itu kecenderungan. Aplikasi ini memakai satu suara: dengarkan penutur asli UK, US dan AU di bagian sumber."
+          ],
+          "examples": [
+            {
+              "en": "Let me turn to the cost of the project.",
+              "id": "Sekarang saya beralih ke biaya proyeknya."
+            },
+            {
+              "en": "To sum up, the city needs more buses, not more roads.",
+              "id": "Singkatnya, kota ini butuh lebih banyak bus, bukan lebih banyak jalan."
+            },
+            {
+              "en": "Admittedly, the buses are cheap. That said, they're often late.",
+              "id": "Memang harus diakui, busnya murah. Meskipun begitu, busnya sering terlambat."
+            },
+            {
+              "en": "Fewer people are taking the bus because tickets are more expensive.",
+              "id": "Makin sedikit orang naik bus karena tiketnya lebih mahal. (Catatan: bus users ↓ b/c tickets ↑)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengarkan lebih banyak",
+        "text": "Suara asli: video yang membandingkan pengucapan Inggris, Amerika dan Australia, plus dua talk B2 dengan transkrip untuk berlatih mengikuti argumen dan mencatat."
+      }
+    ]
+  }
+}

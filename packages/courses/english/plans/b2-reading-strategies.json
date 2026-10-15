@@ -1,0 +1,752 @@
+{
+  "en": {
+    "greeting": "Hi, welcome back! Today you read like a B2 reader: fast when you can, slow when you must, and between the lines. Let's start!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Skim or scan?",
+        "text": "At B1 you found the main idea, told facts from opinions and skimmed short articles in about a minute. Now the texts get longer, so you need two fast speeds.",
+        "body": "- **Skim** = the **gist** in **30–60 seconds** (a one-page article): title, summary, first sentences, last paragraph.\n- **Scan** = **one fact** in **10–20 seconds**: know what it looks like (a date, a number with % or Rp, a name with a capital letter), find the key word or a word with the same meaning, stop, then read that sentence carefully.\nThe task decides: **What is it about?** → skim. **When? How many? Who?** → scan.\nCareful with numbers: English **2,400** = 2.400 and **6.5** = 6,5.",
+        "pairs": [
+          {
+            "en": "skim",
+            "id": "membaca cepat untuk menangkap inti"
+          },
+          {
+            "en": "the gist",
+            "id": "inti, gambaran umum"
+          },
+          {
+            "en": "scan",
+            "id": "mencari satu fakta dengan cepat"
+          },
+          {
+            "en": "key word",
+            "id": "kata kunci"
+          },
+          {
+            "en": "survey",
+            "id": "survei"
+          },
+          {
+            "en": "passengers",
+            "id": "penumpang"
+          },
+          {
+            "en": "percentage",
+            "id": "persentase"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Scan it: 15 seconds",
+        "text": "Here's a survey summary. Don't read it all: decide what the answer looks like, then find it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "skim-scan",
+          "prompt": "Scan for one number: 'SURABAYA BUS SURVEY · In May, 2,400 people answered our survey. 64% use a city bus at least once a week. The biggest problem was waiting time: 41% said they often wait more than 20 minutes. Only 9% said tickets were too expensive.' What percentage often wait more than 20 minutes?",
+          "options": [
+            "64%",
+            "41%",
+            "9%"
+          ],
+          "answer": 1,
+          "explanation": "You scan for a % next to the key words **wait** and **20 minutes**: **41%**. 64% is how many people take a bus every week, and 9% is about ticket prices. A text often has several numbers: always read the sentence around the one you find."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Reading between the lines",
+        "text": "Good writers don't always say everything. Part of the message is between the lines.",
+        "body": "**Inference** = what the writer **implies** (suggests) but doesn't say: makna **tersirat**, not tersurat.\nClues:\n- **Tone words**: only, just, finally, still, even, yet again.\n- **Emphasis**: what is repeated, put first or last, or put side by side (big money + small results).\n- **What is left out**: lots about rent, almost nothing about \"trust\".\n- **Quotation marks**: HR calls it “normal” = the writer doesn't think so.\nTest: **which words show it?** No words, no inference.",
+        "pairs": [
+          {
+            "en": "imply",
+            "id": "menyiratkan"
+          },
+          {
+            "en": "suggest",
+            "id": "mengisyaratkan, memberi kesan"
+          },
+          {
+            "en": "inference",
+            "id": "kesimpulan dari yang tersirat"
+          },
+          {
+            "en": "emphasise",
+            "id": "menekankan"
+          },
+          {
+            "en": "left out",
+            "id": "tidak disebut, dihilangkan"
+          },
+          {
+            "en": "even",
+            "id": "bahkan"
+          },
+          {
+            "en": "yet again",
+            "id": "lagi-lagi"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Small words, big meaning",
+        "text": "Look at how one small word or one comparison changes what a sentence tells you.",
+        "body": "Each sentence says more than its words. The part in brackets is the inference. The clues: **only**, **finally**, **three weeks after**, **even**, **ten pages vs one line**.",
+        "examples": [
+          {
+            "en": "Only 40 people came to the “big” public meeting.",
+            "id": "Hanya 40 orang yang datang ke rapat umum yang “besar” itu. (tersirat: rapatnya sama sekali tidak besar)"
+          },
+          {
+            "en": "The new app finally works on older phones.",
+            "id": "Aplikasi baru itu akhirnya bisa dipakai di HP lama. (tersirat: pengguna menunggu terlalu lama)"
+          },
+          {
+            "en": "The minister visited the flood area three weeks after the water went down.",
+            "id": "Menteri mengunjungi daerah banjir tiga minggu setelah airnya surut. (tersirat: dia datang terlambat)"
+          },
+          {
+            "en": "Even the company's own staff prefer the old model.",
+            "id": "Bahkan staf perusahaan itu sendiri lebih suka model lama. (tersirat: model barunya kurang bagus)"
+          },
+          {
+            "en": "The report has ten pages about the design and one line about the battery.",
+            "id": "Laporan itu punya sepuluh halaman tentang desain dan satu baris tentang baterai. (tersirat: baterainya mungkin bukan kelebihan ponsel ini)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "What does the writer suggest?",
+        "text": "Read the report extract. Choose the answer you can point to in the words, not the one that only sounds possible.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "inference-attitude",
+          "prompt": "Read part of a report: 'Since the “office first” rule started in January, Fajar's team has lost three of its eight engineers. HR calls this “normal”. In the five years before the rule, the team lost about one engineer a year.' What does the writer suggest?",
+          "options": [
+            "Fajar's team has too many engineers.",
+            "HR is worried about the engineers who left.",
+            "The new rule is probably making engineers leave."
+          ],
+          "answer": 2,
+          "explanation": "The writer puts **three in a few months** next to **about one a year** before the rule, and puts “normal” in quotation marks: the writer doesn't agree with HR. Nothing says the team is too big, and HR isn't worried: it calls the situation normal."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Say what's between the lines",
+        "text": "Now put an implied meaning into words yourself. Compare the two numbers the writer puts side by side.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "inference-attitude",
+          "prompt": "Read: 'The NusaPhone 5 went on sale with the biggest advertising budget in the company's history: Rp20 billion. In its first month it sold 30,000 phones. The NusaPhone 4 sold 75,000 in its first month, with half the budget.' Arrange the words to say what the writer implies.",
+          "tokens": [
+            "sales",
+            "advertising",
+            "not",
+            "The",
+            "help",
+            "did",
+            "expensive"
+          ],
+          "solution": "The expensive advertising did not help sales.",
+          "explanation": "The writer puts the **biggest budget** next to **lower sales** than the cheaper launch before. The report never says the advertising failed, but the comparison shows it: that's an inference."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The writer's attitude",
+        "text": "Inference also tells you how the writer feels about the topic: their attitude.",
+        "body": "- **Positive**: welcome, impressive, a real step forward. Very positive = **enthusiastic**.\n- **Critical**: disappointing, fails to, yet again, too little, too late.\n- **Cautious**: may, might, so far, promising but…, it is too early to say → hopeful, but not sure yet.\n- **Neutral**: only facts and numbers (typical of reports).\nThe words after **but** or **however** often carry the real attitude. Cautious isn't critical: the writer isn't against it, just not sure.\n**Irony** = saying the opposite: \"Great news: the drains are ready, just in time for the dry season\" is critical.",
+        "pairs": [
+          {
+            "en": "attitude",
+            "id": "sikap (penulis)"
+          },
+          {
+            "en": "critical",
+            "id": "kritis: menentang atau melihat masalah"
+          },
+          {
+            "en": "cautious",
+            "id": "hati-hati, belum yakin"
+          },
+          {
+            "en": "enthusiastic",
+            "id": "sangat bersemangat, antusias"
+          },
+          {
+            "en": "a welcome change",
+            "id": "perubahan yang patut disambut baik"
+          },
+          {
+            "en": "it is too early to say",
+            "id": "masih terlalu dini untuk mengatakan"
+          },
+          {
+            "en": "so far",
+            "id": "sejauh ini"
+          },
+          {
+            "en": "irony",
+            "id": "ironi, sindiran"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "How does the writer feel?",
+        "text": "Here's a comment on a city flood plan. Find the attitude words, and look carefully at what comes after However.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "inference-attitude",
+          "prompt": "Read: 'The city's new flood plan includes 300 new water pumps and bigger drains in North Jakarta. It is a promising start. However, it is too early to say if it will work: the pumps are not ready yet, and the plan may need more money than the city has.' What is the writer's attitude to the plan?",
+          "options": [
+            "Cautious",
+            "Enthusiastic",
+            "Critical"
+          ],
+          "answer": 0,
+          "explanation": "**a promising start** is positive, but **However**, **too early to say** and **may** show the writer isn't sure yet: cautious. It isn't enthusiastic (no strong excitement), and it isn't critical: the writer never says the plan is bad."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Long reports and opinion articles",
+        "text": "A 20-page report or a long opinion article comes with a map. Use it, and you won't need to read every word.",
+        "body": "Read in this order:\n- Title + **summary** (or the first paragraph).\n- The **conclusion** or last paragraph: now you know where the text goes.\n- **Headings**: jump to the section you need.\n- **Topic sentences** of those paragraphs, then the details.\nOpinion article: the writer's view is in the **first and last** paragraphs. \"Some people say…\" or \"Critics argue…\" = someone else's view. Look for **in my view**, **should**, and what comes after **But**.\nDon't translate every word: if your task doesn't need it, skip it.",
+        "pairs": [
+          {
+            "en": "summary",
+            "id": "ringkasan"
+          },
+          {
+            "en": "conclusion",
+            "id": "kesimpulan"
+          },
+          {
+            "en": "findings",
+            "id": "temuan"
+          },
+          {
+            "en": "recommendations",
+            "id": "rekomendasi, saran"
+          },
+          {
+            "en": "heading",
+            "id": "judul bagian, subjudul"
+          },
+          {
+            "en": "topic sentence",
+            "id": "kalimat utama (kalimat topik)"
+          },
+          {
+            "en": "Critics argue that…",
+            "id": "Para pengkritik berpendapat bahwa…"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Whose view is it?",
+        "text": "Here's a short opinion article. Read the title, then the first and last paragraphs first.\n\nTHE OFFICE ISN'T THE PROBLEM\nShould staff work at home or in the office? Companies in Jakarta are arguing about it, but I think they are asking the wrong question.\nMany managers say that people work harder when the boss can see them. Some workers say they will quit before they sit in traffic for three hours a day again. Of course, both sides have a point: teams do need to meet, and nobody enjoys a long trip to work.\nBut a bad manager is bad on Zoom and bad in the office. Before companies make new rules about desks, they should train their managers.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "long-reports-opinion",
+          "prompt": "Read the opinion article 'The office isn't the problem' above. What is the writer's own view?",
+          "options": [
+            "Staff should come back to the office every day.",
+            "Good management matters more than where people work.",
+            "Workers should quit if they have to sit in traffic."
+          ],
+          "answer": 1,
+          "explanation": "The first paragraph (**the wrong question**) and the last (**they should train their managers**) give the writer's view. Coming back to the office and quitting are the views of **managers** and **workers**: the writer reports them with \"Many managers say\" and \"Some workers say\", then answers with **But**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's a cheat sheet to keep next to your next long text.",
+        "artifact": {
+          "title": "Cheat sheet · Reading strategies & inference",
+          "intro": "Choose your speed, read between the lines, and use the map of long texts.",
+          "headers": [
+            "Task or clue",
+            "What to do / what it shows",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "What is it about?",
+              "skim: title, summary, first sentences, last paragraph (30–60 s)",
+              "cari inti"
+            ],
+            [
+              "When? How many? Who?",
+              "scan: know what the answer looks like, find it, read that sentence (10–20 s)",
+              "cari satu fakta"
+            ],
+            [
+              "2,400 · 6.5 · 12.5%",
+              "comma = thousands, point = decimals",
+              "2.400 · 6,5 · 12,5%"
+            ],
+            [
+              "only, just, even, still",
+              "a judgement hides in a small word",
+              "hanya, cuma, bahkan, masih"
+            ],
+            [
+              "finally, yet again",
+              "people waited / it happened before: often critical",
+              "akhirnya, lagi-lagi"
+            ],
+            [
+              "a word in “quotation marks”",
+              "the writer may doubt it",
+              "tanda kutip = ragu"
+            ],
+            [
+              "big cost + small result side by side",
+              "emphasis: it didn't work",
+              "penekanan"
+            ],
+            [
+              "welcome, impressive, a step forward",
+              "positive",
+              "positif"
+            ],
+            [
+              "disappointing, fails to, too little too late",
+              "critical",
+              "kritis"
+            ],
+            [
+              "may, so far, too early to say, promising but",
+              "cautious",
+              "hati-hati"
+            ],
+            [
+              "Great news: … (+ bad facts)",
+              "irony: means the opposite = critical",
+              "sindiran"
+            ],
+            [
+              "Summary → Conclusion → Headings",
+              "the order for long reports",
+              "urutan membaca laporan"
+            ],
+            [
+              "Some people say… / Critics argue…",
+              "someone else's view, not the writer's",
+              "pendapat orang lain"
+            ]
+          ],
+          "tips": [
+            "An inference needs words in the text: **which words show it?**",
+            "**Cautious ≠ critical**: the writer is not sure yet, not against it.",
+            "Don't translate every word: skip what your task doesn't need."
+          ],
+          "examples": [
+            {
+              "en": "So far, the results look promising.",
+              "id": "Sejauh ini, hasilnya terlihat menjanjikan. (hati-hati)"
+            },
+            {
+              "en": "Yet again, the project is late.",
+              "id": "Lagi-lagi, proyeknya terlambat. (kritis)"
+            },
+            {
+              "en": "Critics argue that the plan is too expensive.",
+              "id": "Para pengkritik berpendapat bahwa rencana itu terlalu mahal. (pendapat orang lain)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read more",
+        "text": "Want real B2 texts? Three from British Council LearnEnglish: a report with headings about young workers, a film review with a clear attitude, and an article about the sharing economy with both sides."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai, selamat datang kembali! Hari ini kamu membaca seperti pembaca B2: cepat kalau bisa, pelan kalau perlu, dan membaca yang tersirat. Ayo mulai!",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Skim atau scan?",
+        "text": "Di B1 kamu sudah menemukan ide pokok, membedakan fakta dan opini, dan skimming artikel pendek dalam sekitar satu menit. Sekarang teksnya lebih panjang, jadi kamu butuh dua kecepatan.",
+        "body": "- **Skim** = menangkap **inti** (gist) dalam **30–60 detik** (artikel satu halaman): judul, ringkasan, kalimat-kalimat pertama, paragraf terakhir.\n- **Scan** = mencari **satu fakta** dalam **10–20 detik**: bayangkan bentuknya (tanggal, angka dengan % atau Rp, nama dengan huruf kapital), cari kata kuncinya atau kata lain yang artinya sama, berhenti, lalu baca kalimat itu dengan teliti.\nTugasnya yang menentukan: **What is it about?** (tentang apa?) → skim. **When? How many? Who?** (kapan? berapa? siapa?) → scan.\nHati-hati dengan angka: **2,400** dalam bahasa Inggris = 2.400 dan **6.5** = 6,5.",
+        "pairs": [
+          {
+            "en": "skim",
+            "id": "membaca cepat untuk menangkap inti"
+          },
+          {
+            "en": "the gist",
+            "id": "inti, gambaran umum"
+          },
+          {
+            "en": "scan",
+            "id": "mencari satu fakta dengan cepat"
+          },
+          {
+            "en": "key word",
+            "id": "kata kunci"
+          },
+          {
+            "en": "survey",
+            "id": "survei"
+          },
+          {
+            "en": "passengers",
+            "id": "penumpang"
+          },
+          {
+            "en": "percentage",
+            "id": "persentase"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Scan: 15 detik",
+        "text": "Ini ringkasan sebuah survei. Jangan baca semuanya: bayangkan dulu bentuk jawabannya, lalu cari.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "skim-scan",
+          "prompt": "Scan untuk satu angka: 'SURABAYA BUS SURVEY · In May, 2,400 people answered our survey. 64% use a city bus at least once a week. The biggest problem was waiting time: 41% said they often wait more than 20 minutes. Only 9% said tickets were too expensive.' Berapa persen yang sering menunggu lebih dari 20 menit?",
+          "options": [
+            "64%",
+            "41%",
+            "9%"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mencari % di dekat kata kunci **wait** (menunggu) dan **20 minutes**: **41%**. 64% adalah jumlah orang yang naik bus setiap minggu, dan 9% tentang harga tiket. Teks sering punya beberapa angka: selalu baca kalimat di sekitar angka yang kamu temukan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membaca yang tersirat",
+        "text": "Penulis yang baik tidak selalu mengatakan semuanya. Sebagian pesannya ada di antara baris-baris kalimat.",
+        "body": "**Inferensi** (inference) = apa yang **disiratkan** penulis (imply) tapi tidak ditulis: makna **tersirat**, bukan tersurat.\nPetunjuknya:\n- **Kata-kata nada**: only (hanya), just (cuma), finally (akhirnya), still (masih), even (bahkan), yet again (lagi-lagi).\n- **Penekanan**: apa yang diulang, diletakkan di awal atau akhir, atau diletakkan berdampingan (uang besar + hasil kecil).\n- **Apa yang tidak disebut**: banyak soal sewa kantor, hampir tidak ada soal \"kepercayaan\".\n- **Tanda kutip**: HR calls it “normal” = penulis tidak menganggapnya normal.\nTesnya: **kata-kata mana yang menunjukkannya?** Tidak ada kata, tidak ada inferensi.",
+        "pairs": [
+          {
+            "en": "imply",
+            "id": "menyiratkan"
+          },
+          {
+            "en": "suggest",
+            "id": "mengisyaratkan, memberi kesan"
+          },
+          {
+            "en": "inference",
+            "id": "kesimpulan dari yang tersirat"
+          },
+          {
+            "en": "emphasise",
+            "id": "menekankan"
+          },
+          {
+            "en": "left out",
+            "id": "tidak disebut, dihilangkan"
+          },
+          {
+            "en": "even",
+            "id": "bahkan"
+          },
+          {
+            "en": "yet again",
+            "id": "lagi-lagi"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Kata kecil, makna besar",
+        "text": "Lihat bagaimana satu kata kecil atau satu perbandingan mengubah apa yang disampaikan sebuah kalimat.",
+        "body": "Setiap kalimat mengatakan lebih dari kata-katanya. Bagian dalam kurung adalah inferensinya. Petunjuknya: **only**, **finally**, **three weeks after**, **even**, **sepuluh halaman vs satu baris**.",
+        "examples": [
+          {
+            "en": "Only 40 people came to the “big” public meeting.",
+            "id": "Hanya 40 orang yang datang ke rapat umum yang “besar” itu. (tersirat: rapatnya sama sekali tidak besar)"
+          },
+          {
+            "en": "The new app finally works on older phones.",
+            "id": "Aplikasi baru itu akhirnya bisa dipakai di HP lama. (tersirat: pengguna menunggu terlalu lama)"
+          },
+          {
+            "en": "The minister visited the flood area three weeks after the water went down.",
+            "id": "Menteri mengunjungi daerah banjir tiga minggu setelah airnya surut. (tersirat: dia datang terlambat)"
+          },
+          {
+            "en": "Even the company's own staff prefer the old model.",
+            "id": "Bahkan staf perusahaan itu sendiri lebih suka model lama. (tersirat: model barunya kurang bagus)"
+          },
+          {
+            "en": "The report has ten pages about the design and one line about the battery.",
+            "id": "Laporan itu punya sepuluh halaman tentang desain dan satu baris tentang baterai. (tersirat: baterainya mungkin bukan kelebihan ponsel ini)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apa yang disiratkan penulis?",
+        "text": "Baca kutipan laporan ini. Pilih jawaban yang bisa kamu tunjukkan buktinya di kata-kata teks, bukan yang hanya terdengar mungkin.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "inference-attitude",
+          "prompt": "Baca bagian laporan ini: 'Since the “office first” rule started in January, Fajar's team has lost three of its eight engineers. HR calls this “normal”. In the five years before the rule, the team lost about one engineer a year.' Apa yang disiratkan penulis?",
+          "options": [
+            "Fajar's team has too many engineers.",
+            "HR is worried about the engineers who left.",
+            "The new rule is probably making engineers leave."
+          ],
+          "answer": 2,
+          "explanation": "Penulis meletakkan **tiga orang dalam beberapa bulan** di sebelah **sekitar satu orang per tahun** sebelum aturan itu, dan memberi tanda kutip pada “normal”: penulis tidak setuju dengan HR. Tidak ada yang bilang timnya kebanyakan orang, dan HR tidak khawatir: HR menyebut situasinya normal."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Ucapkan yang tersirat",
+        "text": "Sekarang ungkapkan sendiri makna yang tersirat. Bandingkan dua angka yang diletakkan penulis berdampingan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "inference-attitude",
+          "prompt": "Baca: 'The NusaPhone 5 went on sale with the biggest advertising budget in the company's history: Rp20 billion. In its first month it sold 30,000 phones. The NusaPhone 4 sold 75,000 in its first month, with half the budget.' Susun kata-katanya untuk mengatakan apa yang disiratkan penulis.",
+          "tokens": [
+            "sales",
+            "advertising",
+            "not",
+            "The",
+            "help",
+            "did",
+            "expensive"
+          ],
+          "solution": "The expensive advertising did not help sales.",
+          "explanation": "Penulis meletakkan **anggaran terbesar** di sebelah **penjualan yang lebih rendah** daripada peluncuran sebelumnya yang lebih murah. Laporannya tidak pernah bilang iklannya gagal, tapi perbandingan itu menunjukkannya: itulah inferensi."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sikap penulis",
+        "text": "Inferensi juga memberi tahu perasaan penulis tentang topiknya: sikapnya (attitude).",
+        "body": "- **Positive** (positif): welcome (patut disambut baik), impressive (mengesankan), a real step forward (langkah maju yang nyata). Sangat positif = **enthusiastic** (antusias).\n- **Critical** (kritis): disappointing (mengecewakan), fails to (gagal), yet again (lagi-lagi), too little, too late.\n- **Cautious** (hati-hati): may, might, so far, promising but…, it is too early to say → berharap, tapi belum yakin.\n- **Neutral** (netral): hanya fakta dan angka (khas laporan).\nKata-kata setelah **but** atau **however** sering membawa sikap yang sebenarnya. Cautious bukan critical: penulis tidak menentang, hanya belum yakin.\n**Ironi** = mengatakan kebalikannya (menyindir): \"Great news: the drains are ready, just in time for the dry season\" itu kritis.",
+        "pairs": [
+          {
+            "en": "attitude",
+            "id": "sikap (penulis)"
+          },
+          {
+            "en": "critical",
+            "id": "kritis: menentang atau melihat masalah"
+          },
+          {
+            "en": "cautious",
+            "id": "hati-hati, belum yakin"
+          },
+          {
+            "en": "enthusiastic",
+            "id": "sangat bersemangat, antusias"
+          },
+          {
+            "en": "a welcome change",
+            "id": "perubahan yang patut disambut baik"
+          },
+          {
+            "en": "it is too early to say",
+            "id": "masih terlalu dini untuk mengatakan"
+          },
+          {
+            "en": "so far",
+            "id": "sejauh ini"
+          },
+          {
+            "en": "irony",
+            "id": "ironi, sindiran"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Bagaimana perasaan penulis?",
+        "text": "Ini komentar tentang rencana banjir sebuah kota. Cari kata-kata sikapnya, dan perhatikan baik-baik apa yang muncul setelah However.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "inference-attitude",
+          "prompt": "Baca: 'The city's new flood plan includes 300 new water pumps and bigger drains in North Jakarta. It is a promising start. However, it is too early to say if it will work: the pumps are not ready yet, and the plan may need more money than the city has.' Bagaimana sikap penulis terhadap rencana itu?",
+          "options": [
+            "Cautious",
+            "Enthusiastic",
+            "Critical"
+          ],
+          "answer": 0,
+          "explanation": "**a promising start** (awal yang menjanjikan) itu positif, tapi **However**, **too early to say** dan **may** menunjukkan penulis belum yakin: cautious (hati-hati). Bukan enthusiastic (tidak ada semangat yang kuat), dan bukan critical: penulis tidak pernah bilang rencananya buruk."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Laporan panjang dan artikel opini",
+        "text": "Laporan 20 halaman atau artikel opini yang panjang selalu punya peta. Pakai peta itu, dan kamu tidak perlu membaca setiap kata.",
+        "body": "Baca dengan urutan ini:\n- Judul + **ringkasan** (summary) atau paragraf pertama.\n- **Kesimpulan** (conclusion) atau paragraf terakhir: sekarang kamu tahu arah teksnya.\n- **Judul bagian** (headings): lompat ke bagian yang kamu perlukan.\n- **Kalimat utama** (topic sentence) paragraf-paragraf itu, baru detailnya.\nArtikel opini: pendapat penulis ada di paragraf **pertama dan terakhir**. \"Some people say…\" atau \"Critics argue…\" = pendapat orang lain. Cari **in my view** (menurut saya), **should** (sebaiknya), dan apa yang muncul setelah **But**.\nJangan menerjemahkan setiap kata: kalau tidak dibutuhkan tugasmu, lewati saja.",
+        "pairs": [
+          {
+            "en": "summary",
+            "id": "ringkasan"
+          },
+          {
+            "en": "conclusion",
+            "id": "kesimpulan"
+          },
+          {
+            "en": "findings",
+            "id": "temuan"
+          },
+          {
+            "en": "recommendations",
+            "id": "rekomendasi, saran"
+          },
+          {
+            "en": "heading",
+            "id": "judul bagian, subjudul"
+          },
+          {
+            "en": "topic sentence",
+            "id": "kalimat utama (kalimat topik)"
+          },
+          {
+            "en": "Critics argue that…",
+            "id": "Para pengkritik berpendapat bahwa…"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pendapat siapa?",
+        "text": "Ini artikel opini pendek. Baca judulnya, lalu paragraf pertama dan terakhir lebih dulu.\n\nTHE OFFICE ISN'T THE PROBLEM\nShould staff work at home or in the office? Companies in Jakarta are arguing about it, but I think they are asking the wrong question.\nMany managers say that people work harder when the boss can see them. Some workers say they will quit before they sit in traffic for three hours a day again. Of course, both sides have a point: teams do need to meet, and nobody enjoys a long trip to work.\nBut a bad manager is bad on Zoom and bad in the office. Before companies make new rules about desks, they should train their managers.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "long-reports-opinion",
+          "prompt": "Baca artikel opini 'The office isn't the problem' di atas. Apa pendapat penulis sendiri?",
+          "options": [
+            "Staff should come back to the office every day.",
+            "Good management matters more than where people work.",
+            "Workers should quit if they have to sit in traffic."
+          ],
+          "answer": 1,
+          "explanation": "Paragraf pertama (**the wrong question** = pertanyaan yang salah) dan terakhir (**they should train their managers** = mereka sebaiknya melatih manajernya) memberi pendapat penulis. Kembali ke kantor dan berhenti kerja adalah pendapat **para manajer** dan **para pekerja**: penulis melaporkannya dengan \"Many managers say\" dan \"Some workers say\", lalu menjawabnya dengan **But**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini ringkasan untuk kamu simpan di samping teks panjangmu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Strategi membaca & inferensi",
+          "intro": "Pilih kecepatanmu, baca yang tersirat, dan pakai peta teks panjang.",
+          "headers": [
+            "Tugas atau petunjuk",
+            "Yang dilakukan / yang ditunjukkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "What is it about?",
+              "skim: judul, ringkasan, kalimat pertama, paragraf terakhir (30–60 detik)",
+              "cari inti"
+            ],
+            [
+              "When? How many? Who?",
+              "scan: bayangkan bentuk jawabannya, temukan, baca kalimatnya (10–20 detik)",
+              "cari satu fakta"
+            ],
+            [
+              "2,400 · 6.5 · 12.5%",
+              "koma = ribuan, titik = desimal",
+              "2.400 · 6,5 · 12,5%"
+            ],
+            [
+              "only, just, even, still",
+              "penilaian tersembunyi di kata kecil",
+              "hanya, cuma, bahkan, masih"
+            ],
+            [
+              "finally, yet again",
+              "orang sudah menunggu / sudah pernah terjadi: sering kritis",
+              "akhirnya, lagi-lagi"
+            ],
+            [
+              "a word in “quotation marks”",
+              "penulis mungkin meragukannya",
+              "tanda kutip = ragu"
+            ],
+            [
+              "big cost + small result side by side",
+              "penekanan: tidak berhasil",
+              "penekanan"
+            ],
+            [
+              "welcome, impressive, a step forward",
+              "positif",
+              "positif"
+            ],
+            [
+              "disappointing, fails to, too little too late",
+              "kritis",
+              "kritis"
+            ],
+            [
+              "may, so far, too early to say, promising but",
+              "hati-hati (cautious)",
+              "hati-hati"
+            ],
+            [
+              "Great news: … (+ bad facts)",
+              "ironi: maksudnya kebalikannya = kritis",
+              "sindiran"
+            ],
+            [
+              "Summary → Conclusion → Headings",
+              "urutan membaca laporan panjang",
+              "urutan membaca laporan"
+            ],
+            [
+              "Some people say… / Critics argue…",
+              "pendapat orang lain, bukan penulis",
+              "pendapat orang lain"
+            ]
+          ],
+          "tips": [
+            "Inferensi butuh bukti di teks: **kata-kata mana yang menunjukkannya?**",
+            "**Cautious ≠ critical**: penulis belum yakin, bukan menentang.",
+            "Jangan menerjemahkan setiap kata: lewati yang tidak dibutuhkan tugasmu."
+          ],
+          "examples": [
+            {
+              "en": "So far, the results look promising.",
+              "id": "Sejauh ini, hasilnya terlihat menjanjikan. (hati-hati)"
+            },
+            {
+              "en": "Yet again, the project is late.",
+              "id": "Lagi-lagi, proyeknya terlambat. (kritis)"
+            },
+            {
+              "en": "Critics argue that the plan is too expensive.",
+              "id": "Para pengkritik berpendapat bahwa rencana itu terlalu mahal. (pendapat orang lain)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca lebih lanjut",
+        "text": "Mau teks B2 yang asli? Tiga dari British Council LearnEnglish: laporan dengan judul-judul bagian tentang pekerja muda, ulasan film dengan sikap penulis yang jelas, dan artikel tentang sharing economy yang membahas dua sisi."
+      }
+    ]
+  }
+}
