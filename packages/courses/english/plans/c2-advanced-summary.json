@@ -1,0 +1,780 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll handle several complex sources at once: map them, retell each argument exactly as its author meant it, and squeeze one long text into a short précis. Let's start with a map.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Map each source first",
+        "text": "Quick recap, then the new part.",
+        "body": "At C1 you synthesised sources **by theme**, with attribution. With long, complex sources, **map** each one first:\n**Claim:** what it says is true or should happen\n**Evidence:** what it's based on\n**Stance:** for, against or mixed, and how sure\nThen find the **debate**: where they agree, where they conflict, and **why** (different evidence, priorities or scope). Write **by issue**, and keep your own view out unless you're asked for it.",
+        "pairs": [
+          {
+            "en": "claim",
+            "id": "klaim (pernyataan utama)"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "stance",
+            "id": "sikap, posisi"
+          },
+          {
+            "en": "the debate",
+            "id": "inti perdebatan"
+          },
+          {
+            "en": "issue",
+            "id": "persoalan, isu"
+          },
+          {
+            "en": "scope",
+            "id": "cakupan"
+          },
+          {
+            "en": "attribution",
+            "id": "menyebut sumber (siapa bilang apa)"
+          },
+          {
+            "en": "synthesis",
+            "id": "sintesis (gabungan beberapa sumber)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A synthesis by issue",
+        "text": "Three invented sources on a congestion fee for central Jakarta: an institute's traffic model, an economist's column and a statement from online drivers. Here's how a summary links them.",
+        "body": "Agreement first, then the conflict with both sides attributed, then **why** they disagree: the economist and the drivers are talking about different people.",
+        "examples": [
+          {
+            "en": "All three sources expect a congestion fee to reduce traffic in central Jakarta.",
+            "id": "Ketiga sumber memperkirakan biaya kemacetan akan mengurangi lalu lintas di pusat Jakarta."
+          },
+          {
+            "en": "The institute's model puts the fall at 15–20% in the first year.",
+            "id": "Model lembaga itu memperkirakan penurunannya 15–20% pada tahun pertama."
+          },
+          {
+            "en": "They disagree on who would bear the cost.",
+            "id": "Mereka berbeda pendapat soal siapa yang akan menanggung biayanya."
+          },
+          {
+            "en": "The economist argues that low-income workers would be exempt, whereas the drivers' association says its members would pay up to Rp 600,000 a month.",
+            "id": "Ekonom itu berargumen bahwa pekerja berpenghasilan rendah akan dibebaskan, sedangkan asosiasi pengemudi mengatakan anggotanya akan membayar hingga Rp600.000 per bulan."
+          },
+          {
+            "en": "The difference is largely one of scope: the economist has commuters in mind, the association people who drive for a living.",
+            "id": "Perbedaannya sebagian besar soal cakupan: ekonom itu memikirkan para komuter, asosiasi itu memikirkan orang yang mencari nafkah dengan menyetir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani has to brief her director on three practice sources about hybrid work at a ministry in Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-sources",
+          "prompt": "An HR survey finds that most staff prefer hybrid work; a director's memo warns that it weakens training for new staff; the staff union supports it but asks for clear rules. Which opening sentence organises Bu Ani's summary by issue?",
+          "options": [
+            "The HR survey is about preferences. The director's memo is about training. The union's statement is about rules.",
+            "Hybrid work is clearly popular, and the director's worries about training are exaggerated.",
+            "The sources point to wide support for hybrid work among staff, but raise two concerns: training for new staff and the need for clear rules."
+          ],
+          "answer": 2,
+          "explanation": "The last sentence names what the sources share (support among staff) and then the **issues** they raise, so the reader sees the debate at once. The first goes **source by source** with no link. The second gives **Bu Ani's own opinion** (*clearly, exaggerated*) and attributes nothing."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Verbs that carry the stance",
+        "text": "In a summary, the reporting verb tells the reader where each source stands.",
+        "body": "**argues** gives reasons (the neutral default)\n**maintains** holds firmly, often against criticism\n**concedes / acknowledges** grants a point against its own side\n**rejects / disputes** says a view or figure is wrong\n**cautions / warns** points to a risk\n**questions** doubts\nCareful: **claims** can sound doubtful, **admits** sounds like a confession, and **shows / proves / points out** say *you* accept it. Indonesian *mengatakan* for everything = *says* for everything: correct, but flat.",
+        "pairs": [
+          {
+            "en": "argues",
+            "id": "berargumen (netral)"
+          },
+          {
+            "en": "maintains",
+            "id": "tetap berpendapat"
+          },
+          {
+            "en": "concedes",
+            "id": "mengakui (poin pihak lain)"
+          },
+          {
+            "en": "acknowledges",
+            "id": "mengakui"
+          },
+          {
+            "en": "rejects",
+            "id": "menolak (sebuah pandangan)"
+          },
+          {
+            "en": "disputes",
+            "id": "membantah (angka atau pandangan)"
+          },
+          {
+            "en": "cautions",
+            "id": "mengingatkan akan risiko"
+          },
+          {
+            "en": "questions",
+            "id": "mempertanyakan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Choose the stance verb",
+        "text": "Dr. Wulan, a health researcher in Yogyakarta, has written a practice report on banning phones in schools.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-sources",
+          "prompt": "Her report says: 'Schools that ban phones should not expect test scores to rise quickly; any effect is likely to take years.' She isn't answering anyone or admitting a weakness: she's warning readers. Which summary sentence matches her stance?",
+          "options": [
+            "Dr. Wulan cautions that any effect on test scores is likely to take years.",
+            "Dr. Wulan concedes that any effect on test scores is likely to take years.",
+            "Dr. Wulan rejects the idea that any effect on test scores is likely to take years."
+          ],
+          "answer": 0,
+          "explanation": "Dr. Wulan points to a **risk** (expecting quick results), so she **cautions** (mengingatkan). *concedes* would mean she grants a point against her own side, which she isn't doing. *rejects the idea* says the opposite of what she wrote."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rebuild the argument, don't bend it",
+        "text": "Now the accuracy test: would the author say 'Yes, that's what I said'?",
+        "body": "**Shape:** claim + reason (*because*) + condition (*unless, only if, until*)\n**Hedges at the same strength:** *may contribute to* ≠ *causes*; *appears to* ≠ *shows*; *some* ≠ *most*\n**Scope:** *for under-25s, in urban areas, in the first year*\n**Counter-arguments** the source answers: *acknowledges X but argues Y*\nA **straw man** (*orang-orangan sawah*) is a weaker or more extreme version of an argument, easy to knock down. Indonesian trap: *bisa menyebabkan* is a hedge, not *causes*.",
+        "pairs": [
+          {
+            "en": "may contribute to",
+            "id": "mungkin ikut menyebabkan"
+          },
+          {
+            "en": "appears to",
+            "id": "tampaknya"
+          },
+          {
+            "en": "tends to",
+            "id": "cenderung"
+          },
+          {
+            "en": "unless",
+            "id": "kecuali jika"
+          },
+          {
+            "en": "only if",
+            "id": "hanya jika"
+          },
+          {
+            "en": "among",
+            "id": "di kalangan"
+          },
+          {
+            "en": "a straw man",
+            "id": "orang-orangan sawah (argumen yang dipelintir)"
+          },
+          {
+            "en": "misrepresent",
+            "id": "menggambarkan secara keliru"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which summary is faithful?",
+        "text": "Sari is summarising a practice transport study (Source B) for a city planning meeting in Bandung.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reconstruct-arguments",
+          "prompt": "Source B says: 'Among commuters under 25 in Bandung, the new bike lanes appear to have slightly reduced short car trips.' Which summary sentence represents Source B accurately?",
+          "options": [
+            "Source B shows that the new bike lanes have reduced short car trips among commuters under 25 in Bandung.",
+            "According to Source B, the new bike lanes appear to have slightly reduced short car trips in Bandung.",
+            "Source B rightly reports that the new bike lanes appear to have slightly reduced short car trips among commuters under 25 in Bandung.",
+            "Source B reports that the new bike lanes appear to have slightly reduced short car trips among commuters under 25 in Bandung."
+          ],
+          "answer": 3,
+          "explanation": "The last sentence keeps the **hedge** (*appear to, slightly*), the **scope** (*among commuters under 25*) and a neutral verb. The first **overstates** it (*shows, have reduced*); the second **drops the qualification** *under 25*; the third adds **Sari's own opinion** with *rightly*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Spot the straw man",
+        "text": "Pak Hasan has written a practice opinion article on new shopping malls in central Jakarta. A critic wants to summarise his view before replying.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reconstruct-arguments",
+          "prompt": "Pak Hasan writes: 'The city should pause permits for new malls in the centre until the MRT can carry the extra visitors.' Which summary is fair, not a straw man?",
+          "options": [
+            "Pak Hasan argues that new malls in the centre should wait until the MRT can carry the extra visitors.",
+            "Pak Hasan wants to ban malls because he is against shopping and development.",
+            "Pak Hasan argues that new malls cause traffic jams in the centre."
+          ],
+          "answer": 0,
+          "explanation": "The first sentence keeps his **condition** (*until the MRT can carry the extra visitors*): he wants to wait, not to stop malls for ever. The second is a **straw man**: a more extreme view (*ban malls*) with a motive he never gave. The third changes his claim into a cause he didn't state."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The précis",
+        "text": "Last skill: compressing ONE text faithfully.",
+        "body": "A **précis** (said PRAY-see) is a short, accurate summary of **one** text in your own words:\n**Length:** often about a quarter to a third of the original\n**Same order and proportion** as the original\n**No** examples, quotations or opinions\n**Third person, present tense:** *The author argues …*\nMethod: read → underline the thesis and main points → outline → draft → cut → check against the original.",
+        "pairs": [
+          {
+            "en": "a précis",
+            "id": "ringkasan padat satu teks"
+          },
+          {
+            "en": "the thesis",
+            "id": "tesis, klaim utama"
+          },
+          {
+            "en": "an outline",
+            "id": "kerangka"
+          },
+          {
+            "en": "a draft",
+            "id": "draf"
+          },
+          {
+            "en": "proportion",
+            "id": "proporsi"
+          },
+          {
+            "en": "an anecdote",
+            "id": "cerita contoh, anekdot"
+          },
+          {
+            "en": "the gist",
+            "id": "intinya, garis besarnya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Choose the best précis",
+        "text": "Budi has to write a précis of a practice opinion article for a transport course at his university.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-precis",
+          "prompt": "The 600-word article argues that Jakarta should replace the odd-even number-plate rule with a congestion fee: odd-even is easy to dodge (the writer's neighbour bought a second car), and a fee would raise money for buses. It accepts that poorer drivers would pay more, but proposes exemptions. Which is the best précis?",
+          "options": [
+            "'Odd-even is a joke,' says the writer, whose neighbour bought a second car just to dodge it. A fee would clearly be better for everyone.",
+            "The article argues that Jakarta should swap odd-even for a congestion fee, as odd-even is easy to dodge and a fee would fund buses. It accepts poorer drivers would pay more, but proposes exemptions.",
+            "The article makes a convincing case for a congestion fee. I agree: odd-even has failed, and the city should introduce the fee next year."
+          ],
+          "answer": 1,
+          "explanation": "The middle one keeps the **thesis, both reasons and the concession** in the original's order, in the third person and present tense, without the example. The first uses a **quotation** and the **neighbour anecdote** and adds *clearly*. The last gives **Budi's opinion** (*convincing, I agree*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page, for your next report, literature review or briefing.",
+        "artifact": {
+          "title": "Cheat sheet · Summarising and reconstructing arguments",
+          "intro": "Map the sources, summarise the debate by issue, rebuild each argument exactly, and compress one text into a précis.",
+          "headers": [
+            "Task",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Map each source",
+              "claim · evidence · stance (for / against / mixed; how sure)",
+              "klaim · bukti · sikap (mendukung / menolak / campuran; seberapa yakin)"
+            ],
+            [
+              "Find the debate",
+              "agree / conflict / why: evidence, priorities or scope",
+              "sepakat / bertentangan / kenapa: bukti, prioritas atau cakupan"
+            ],
+            [
+              "Write by issue",
+              "All three sources expect … / They disagree on … / Neither … mentions …",
+              "per persoalan, bukan per sumber"
+            ],
+            [
+              "Stance verbs",
+              "argues, maintains, concedes, acknowledges, rejects, disputes, cautions, questions",
+              "kata kerja pelapor yang menunjukkan sikap sumber"
+            ],
+            [
+              "Words with YOUR view",
+              "claims, admits, shows, proves, points out, refutes, rightly, convincingly",
+              "kata yang membawa pendapat si peringkas: hindari"
+            ],
+            [
+              "Keep the shape",
+              "claim + because + unless / only if / until",
+              "klaim + alasan + syarat"
+            ],
+            [
+              "Keep the hedges",
+              "may contribute to ≠ causes; appears to ≠ shows; some ≠ most",
+              "kekuatan kata pelunak tetap sama"
+            ],
+            [
+              "Keep the scope",
+              "for under-25s, in urban areas, in the first year",
+              "batasan dan cakupan tetap ada"
+            ],
+            [
+              "Counter-arguments",
+              "X acknowledges … but argues …",
+              "cantumkan argumen tandingan yang dijawab sumber"
+            ],
+            [
+              "Avoid",
+              "a straw man: a weaker or more extreme version of the argument",
+              "orang-orangan sawah: versi yang lebih lemah atau ekstrem"
+            ],
+            [
+              "Précis length",
+              "often a quarter to a third of the original (a set word count wins)",
+              "sering seperempat sampai sepertiga dari aslinya"
+            ],
+            [
+              "Précis content",
+              "same order and proportion; no examples, quotations or opinions",
+              "urutan dan proporsi sama; tanpa contoh, kutipan, pendapat"
+            ],
+            [
+              "Précis style",
+              "third person, present tense: The author argues … She adds …",
+              "orang ketiga, present tense"
+            ],
+            [
+              "Précis method",
+              "read → underline → outline → draft → cut → check",
+              "baca → garis bawahi → kerangka → draf → pangkas → cek"
+            ]
+          ],
+          "tips": [
+            "Before writing, map each source: claim, evidence, stance. Then ask why the sources disagree.",
+            "Underline every hedge, number and 'for / among / unless' phrase in the original: each one must survive in your summary.",
+            "Your own view stays out of a summary or précis unless the task asks for it."
+          ],
+          "examples": [
+            {
+              "en": "The researchers caution against drawing conclusions from one year of data.",
+              "id": "Para peneliti mengingatkan agar tidak menarik kesimpulan dari data satu tahun saja."
+            },
+            {
+              "en": "She acknowledges that the sample was small, but maintains that the trend is clear.",
+              "id": "Dia mengakui bahwa sampelnya kecil, tapi tetap berpendapat bahwa trennya jelas."
+            },
+            {
+              "en": "The study suggests that longer commutes may contribute to staff turnover.",
+              "id": "Studi itu mengindikasikan bahwa perjalanan kerja yang lebih lama mungkin ikut menyebabkan tingginya pergantian karyawan."
+            },
+            {
+              "en": "The report concludes that the programme should continue, provided that funding is secured.",
+              "id": "Laporan itu menyimpulkan bahwa program tersebut sebaiknya dilanjutkan, asalkan dananya terjamin."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read more",
+        "text": "Two university writing guides: one on summarising in your own words, and one on the précis as an assignment."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu akan menangani beberapa sumber kompleks sekaligus: memetakannya, menceritakan ulang tiap argumen persis seperti maksud penulisnya, dan memadatkan satu teks panjang menjadi précis yang pendek. Kita mulai dari peta.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Petakan tiap sumber dulu",
+        "text": "Ulasan singkat dulu, lalu bagian barunya.",
+        "body": "Di C1 kamu menyintesis sumber **per tema**, dengan menyebut sumbernya. Dengan sumber yang panjang dan kompleks, **petakan** dulu masing-masing:\n**Klaim:** apa yang menurutnya benar atau harus terjadi\n**Bukti:** apa dasarnya\n**Sikap:** mendukung, menolak atau campuran, dan seberapa yakin\nLalu temukan **perdebatannya**: di mana mereka sepakat, di mana bertentangan, dan **kenapa** (bukti, prioritas atau cakupan yang berbeda). Tulis **per persoalan**, dan jangan masukkan pendapatmu kecuali diminta.",
+        "pairs": [
+          {
+            "en": "claim",
+            "id": "klaim (pernyataan utama)"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti"
+          },
+          {
+            "en": "stance",
+            "id": "sikap, posisi"
+          },
+          {
+            "en": "the debate",
+            "id": "inti perdebatan"
+          },
+          {
+            "en": "issue",
+            "id": "persoalan, isu"
+          },
+          {
+            "en": "scope",
+            "id": "cakupan"
+          },
+          {
+            "en": "attribution",
+            "id": "menyebut sumber (siapa bilang apa)"
+          },
+          {
+            "en": "synthesis",
+            "id": "sintesis (gabungan beberapa sumber)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Sintesis per persoalan",
+        "text": "Tiga sumber karangan tentang biaya kemacetan di pusat Jakarta: model lalu lintas sebuah lembaga, kolom seorang ekonom dan pernyataan pengemudi online. Begini cara ringkasan menghubungkannya.",
+        "body": "Kesamaan dulu, lalu pertentangannya dengan kedua pihak disebut sumbernya, lalu **kenapa** mereka berbeda: ekonom dan para pengemudi sedang membicarakan orang yang berbeda.",
+        "examples": [
+          {
+            "en": "All three sources expect a congestion fee to reduce traffic in central Jakarta.",
+            "id": "Ketiga sumber memperkirakan biaya kemacetan akan mengurangi lalu lintas di pusat Jakarta."
+          },
+          {
+            "en": "The institute's model puts the fall at 15–20% in the first year.",
+            "id": "Model lembaga itu memperkirakan penurunannya 15–20% pada tahun pertama."
+          },
+          {
+            "en": "They disagree on who would bear the cost.",
+            "id": "Mereka berbeda pendapat soal siapa yang akan menanggung biayanya."
+          },
+          {
+            "en": "The economist argues that low-income workers would be exempt, whereas the drivers' association says its members would pay up to Rp 600,000 a month.",
+            "id": "Ekonom itu berargumen bahwa pekerja berpenghasilan rendah akan dibebaskan, sedangkan asosiasi pengemudi mengatakan anggotanya akan membayar hingga Rp600.000 per bulan."
+          },
+          {
+            "en": "The difference is largely one of scope: the economist has commuters in mind, the association people who drive for a living.",
+            "id": "Perbedaannya sebagian besar soal cakupan: ekonom itu memikirkan para komuter, asosiasi itu memikirkan orang yang mencari nafkah dengan menyetir."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani harus memberi pengarahan kepada direkturnya tentang tiga sumber latihan mengenai kerja hybrid di sebuah kementerian di Jakarta.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-sources",
+          "prompt": "Survei SDM menemukan bahwa sebagian besar pegawai lebih suka kerja hybrid; memo seorang direktur memperingatkan bahwa kerja hybrid melemahkan pelatihan pegawai baru; serikat pegawai mendukungnya tapi meminta aturan yang jelas. Kalimat pembuka mana yang menyusun ringkasan Bu Ani per persoalan?",
+          "options": [
+            "The HR survey is about preferences. The director's memo is about training. The union's statement is about rules.",
+            "Hybrid work is clearly popular, and the director's worries about training are exaggerated.",
+            "The sources point to wide support for hybrid work among staff, but raise two concerns: training for new staff and the need for clear rules."
+          ],
+          "answer": 2,
+          "explanation": "Kalimat terakhir menyebut kesamaan sumber-sumber itu (dukungan di kalangan pegawai) lalu **persoalan-persoalan** yang mereka angkat, jadi pembaca langsung melihat perdebatannya. Kalimat pertama **per sumber** tanpa penghubung. Kalimat kedua berisi **pendapat Bu Ani sendiri** (*clearly, exaggerated*) dan tidak menyebut sumber apa pun."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kata kerja yang membawa sikap",
+        "text": "Dalam ringkasan, kata kerja pelapor memberi tahu pembaca di mana posisi tiap sumber.",
+        "body": "**argues** memberi alasan (pilihan netral)\n**maintains** bertahan dengan kuat, sering meski dikritik\n**concedes / acknowledges** mengakui poin yang menguntungkan pihak lain\n**rejects / disputes** mengatakan pandangan atau angka salah\n**cautions / warns** menunjuk sebuah risiko\n**questions** meragukan\nHati-hati: **claims** bisa terdengar ragu, **admits** terdengar seperti pengakuan bersalah, dan **shows / proves / points out** berarti *kamu* menerimanya. *mengatakan* untuk semuanya = *says* untuk semuanya: benar, tapi datar.",
+        "pairs": [
+          {
+            "en": "argues",
+            "id": "berargumen (netral)"
+          },
+          {
+            "en": "maintains",
+            "id": "tetap berpendapat"
+          },
+          {
+            "en": "concedes",
+            "id": "mengakui (poin pihak lain)"
+          },
+          {
+            "en": "acknowledges",
+            "id": "mengakui"
+          },
+          {
+            "en": "rejects",
+            "id": "menolak (sebuah pandangan)"
+          },
+          {
+            "en": "disputes",
+            "id": "membantah (angka atau pandangan)"
+          },
+          {
+            "en": "cautions",
+            "id": "mengingatkan akan risiko"
+          },
+          {
+            "en": "questions",
+            "id": "mempertanyakan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih kata kerja sikapnya",
+        "text": "Dr. Wulan, peneliti kesehatan di Yogyakarta, menulis laporan latihan tentang larangan HP di sekolah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "summarise-sources",
+          "prompt": "Laporannya berbunyi: 'Schools that ban phones should not expect test scores to rise quickly; any effect is likely to take years.' Dia tidak sedang menjawab siapa pun atau mengakui kelemahan: dia memperingatkan pembaca. Kalimat ringkasan mana yang sesuai dengan sikapnya?",
+          "options": [
+            "Dr. Wulan cautions that any effect on test scores is likely to take years.",
+            "Dr. Wulan concedes that any effect on test scores is likely to take years.",
+            "Dr. Wulan rejects the idea that any effect on test scores is likely to take years."
+          ],
+          "answer": 0,
+          "explanation": "Dr. Wulan menunjuk sebuah **risiko** (mengharapkan hasil cepat), jadi dia **cautions** (mengingatkan). *concedes* berarti dia mengakui poin yang menguntungkan pihak lain, padahal tidak. *rejects the idea* justru kebalikan dari yang dia tulis."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Susun ulang argumennya, jangan dibelokkan",
+        "text": "Sekarang uji ketepatannya: apakah penulisnya akan bilang 'Ya, memang itu yang saya katakan'?",
+        "body": "**Bentuk:** klaim + alasan (*because*) + syarat (*unless, only if, until*)\n**Kata pelunak dengan kekuatan sama:** *may contribute to* ≠ *causes*; *appears to* ≠ *shows*; *some* ≠ *most*\n**Cakupan:** *for under-25s, in urban areas, in the first year*\n**Argumen tandingan** yang dijawab sumber: *acknowledges X but argues Y*\n**Straw man** (*orang-orangan sawah*) adalah versi argumen yang lebih lemah atau ekstrem, supaya mudah dijatuhkan. Jebakan bahasa Indonesia: *bisa menyebabkan* itu kata pelunak, bukan *causes*.",
+        "pairs": [
+          {
+            "en": "may contribute to",
+            "id": "mungkin ikut menyebabkan"
+          },
+          {
+            "en": "appears to",
+            "id": "tampaknya"
+          },
+          {
+            "en": "tends to",
+            "id": "cenderung"
+          },
+          {
+            "en": "unless",
+            "id": "kecuali jika"
+          },
+          {
+            "en": "only if",
+            "id": "hanya jika"
+          },
+          {
+            "en": "among",
+            "id": "di kalangan"
+          },
+          {
+            "en": "a straw man",
+            "id": "orang-orangan sawah (argumen yang dipelintir)"
+          },
+          {
+            "en": "misrepresent",
+            "id": "menggambarkan secara keliru"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Ringkasan mana yang setia?",
+        "text": "Sari sedang meringkas sebuah studi transportasi latihan (Sumber B) untuk rapat perencanaan kota di Bandung.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reconstruct-arguments",
+          "prompt": "Sumber B berbunyi: 'Among commuters under 25 in Bandung, the new bike lanes appear to have slightly reduced short car trips.' Kalimat ringkasan mana yang menggambarkan Sumber B dengan akurat?",
+          "options": [
+            "Source B shows that the new bike lanes have reduced short car trips among commuters under 25 in Bandung.",
+            "According to Source B, the new bike lanes appear to have slightly reduced short car trips in Bandung.",
+            "Source B rightly reports that the new bike lanes appear to have slightly reduced short car trips among commuters under 25 in Bandung.",
+            "Source B reports that the new bike lanes appear to have slightly reduced short car trips among commuters under 25 in Bandung."
+          ],
+          "answer": 3,
+          "explanation": "Kalimat terakhir mempertahankan **kata pelunak** (*appear to, slightly*), **cakupannya** (*among commuters under 25*) dan kata kerja yang netral. Kalimat pertama **melebih-lebihkan** (*shows, have reduced*); yang kedua **membuang batasan** *under 25*; yang ketiga menambahkan **pendapat Sari sendiri** lewat *rightly*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Temukan straw man-nya",
+        "text": "Pak Hasan menulis artikel opini latihan tentang mal-mal baru di pusat Jakarta. Seorang pengkritik ingin meringkas pandangannya sebelum menanggapi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "reconstruct-arguments",
+          "prompt": "Pak Hasan menulis: 'The city should pause permits for new malls in the centre until the MRT can carry the extra visitors.' Ringkasan mana yang adil, bukan straw man?",
+          "options": [
+            "Pak Hasan argues that new malls in the centre should wait until the MRT can carry the extra visitors.",
+            "Pak Hasan wants to ban malls because he is against shopping and development.",
+            "Pak Hasan argues that new malls cause traffic jams in the centre."
+          ],
+          "answer": 0,
+          "explanation": "Kalimat pertama mempertahankan **syaratnya** (*until the MRT can carry the extra visitors*): dia ingin menunggu, bukan menghentikan mal selamanya. Kalimat kedua adalah **straw man**: pandangan yang lebih ekstrem (*ban malls*) dengan motif yang tidak pernah dia sebut. Kalimat ketiga mengubah klaimnya menjadi sebab-akibat yang tidak dia nyatakan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Précis",
+        "text": "Keterampilan terakhir: memadatkan SATU teks dengan setia.",
+        "body": "**Précis** (dibaca kira-kira PRÉ-si) adalah ringkasan pendek dan akurat dari **satu** teks dengan kata-katamu sendiri:\n**Panjang:** sering kira-kira seperempat sampai sepertiga dari aslinya\n**Urutan dan proporsi sama** dengan aslinya\n**Tanpa** contoh, kutipan atau pendapat\n**Orang ketiga, present tense:** *The author argues …*\nCaranya: baca → garis bawahi tesis dan poin utama → kerangka → draf → pangkas → cek dengan aslinya.",
+        "pairs": [
+          {
+            "en": "a précis",
+            "id": "ringkasan padat satu teks"
+          },
+          {
+            "en": "the thesis",
+            "id": "tesis, klaim utama"
+          },
+          {
+            "en": "an outline",
+            "id": "kerangka"
+          },
+          {
+            "en": "a draft",
+            "id": "draf"
+          },
+          {
+            "en": "proportion",
+            "id": "proporsi"
+          },
+          {
+            "en": "an anecdote",
+            "id": "cerita contoh, anekdot"
+          },
+          {
+            "en": "the gist",
+            "id": "intinya, garis besarnya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih précis terbaik",
+        "text": "Budi harus menulis précis dari sebuah artikel opini latihan untuk mata kuliah transportasi di kampusnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "write-precis",
+          "prompt": "Artikel 600 kata itu berargumen bahwa Jakarta sebaiknya mengganti aturan ganjil-genap dengan biaya kemacetan: ganjil-genap mudah diakali (tetangga penulis membeli mobil kedua), dan biaya itu akan menghasilkan dana untuk bus. Artikel itu mengakui bahwa pengemudi yang kurang mampu akan membayar lebih, tapi mengusulkan pengecualian. Précis mana yang terbaik?",
+          "options": [
+            "'Odd-even is a joke,' says the writer, whose neighbour bought a second car just to dodge it. A fee would clearly be better for everyone.",
+            "The article argues that Jakarta should swap odd-even for a congestion fee, as odd-even is easy to dodge and a fee would fund buses. It accepts poorer drivers would pay more, but proposes exemptions.",
+            "The article makes a convincing case for a congestion fee. I agree: odd-even has failed, and the city should introduce the fee next year."
+          ],
+          "answer": 1,
+          "explanation": "Pilihan tengah mempertahankan **tesis, kedua alasan dan pengakuannya** sesuai urutan aslinya, dengan orang ketiga dan present tense, tanpa contoh. Pilihan pertama memakai **kutipan** dan **anekdot tetangga**, lalu menambahkan *clearly*. Pilihan terakhir berisi **pendapat Budi** (*convincing, I agree*)."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan materi",
+        "text": "Ini seluruh pelajaran dalam satu halaman, untuk laporan, tinjauan pustaka atau pengarahanmu berikutnya.",
+        "artifact": {
+          "title": "Ringkasan materi · Meringkas dan merekonstruksi argumen",
+          "intro": "Petakan sumbernya, ringkas perdebatannya per persoalan, susun ulang tiap argumen dengan tepat, dan padatkan satu teks menjadi précis.",
+          "headers": [
+            "Tugas",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Petakan tiap sumber",
+              "claim · evidence · stance (for / against / mixed; how sure)",
+              "klaim · bukti · sikap (mendukung / menolak / campuran; seberapa yakin)"
+            ],
+            [
+              "Temukan perdebatannya",
+              "agree / conflict / why: evidence, priorities or scope",
+              "sepakat / bertentangan / kenapa: bukti, prioritas atau cakupan"
+            ],
+            [
+              "Tulis per persoalan",
+              "All three sources expect … / They disagree on … / Neither … mentions …",
+              "per persoalan, bukan per sumber"
+            ],
+            [
+              "Kata kerja sikap",
+              "argues, maintains, concedes, acknowledges, rejects, disputes, cautions, questions",
+              "kata kerja pelapor yang menunjukkan sikap sumber"
+            ],
+            [
+              "Kata yang membawa pendapatMU",
+              "claims, admits, shows, proves, points out, refutes, rightly, convincingly",
+              "kata yang membawa pendapat si peringkas: hindari"
+            ],
+            [
+              "Pertahankan bentuknya",
+              "claim + because + unless / only if / until",
+              "klaim + alasan + syarat"
+            ],
+            [
+              "Pertahankan kata pelunak",
+              "may contribute to ≠ causes; appears to ≠ shows; some ≠ most",
+              "kekuatan kata pelunak tetap sama"
+            ],
+            [
+              "Pertahankan cakupan",
+              "for under-25s, in urban areas, in the first year",
+              "batasan dan cakupan tetap ada"
+            ],
+            [
+              "Argumen tandingan",
+              "X acknowledges … but argues …",
+              "cantumkan argumen tandingan yang dijawab sumber"
+            ],
+            [
+              "Hindari",
+              "a straw man: a weaker or more extreme version of the argument",
+              "orang-orangan sawah: versi yang lebih lemah atau ekstrem"
+            ],
+            [
+              "Panjang précis",
+              "often a quarter to a third of the original (a set word count wins)",
+              "sering seperempat sampai sepertiga dari aslinya"
+            ],
+            [
+              "Isi précis",
+              "same order and proportion; no examples, quotations or opinions",
+              "urutan dan proporsi sama; tanpa contoh, kutipan, pendapat"
+            ],
+            [
+              "Gaya précis",
+              "third person, present tense: The author argues … She adds …",
+              "orang ketiga, present tense"
+            ],
+            [
+              "Cara menulis précis",
+              "read → underline → outline → draft → cut → check",
+              "baca → garis bawahi → kerangka → draf → pangkas → cek"
+            ]
+          ],
+          "tips": [
+            "Sebelum menulis, petakan tiap sumber: klaim, bukti, sikap. Lalu tanyakan kenapa sumber-sumber itu berbeda pendapat.",
+            "Garis bawahi setiap kata pelunak, angka dan frasa 'for / among / unless' di teks asli: semuanya harus tetap ada di ringkasanmu.",
+            "Pendapatmu sendiri tidak masuk ringkasan atau précis kecuali tugasnya memintanya."
+          ],
+          "examples": [
+            {
+              "en": "The researchers caution against drawing conclusions from one year of data.",
+              "id": "Para peneliti mengingatkan agar tidak menarik kesimpulan dari data satu tahun saja."
+            },
+            {
+              "en": "She acknowledges that the sample was small, but maintains that the trend is clear.",
+              "id": "Dia mengakui bahwa sampelnya kecil, tapi tetap berpendapat bahwa trennya jelas."
+            },
+            {
+              "en": "The study suggests that longer commutes may contribute to staff turnover.",
+              "id": "Studi itu mengindikasikan bahwa perjalanan kerja yang lebih lama mungkin ikut menyebabkan tingginya pergantian karyawan."
+            },
+            {
+              "en": "The report concludes that the programme should continue, provided that funding is secured.",
+              "id": "Laporan itu menyimpulkan bahwa program tersebut sebaiknya dilanjutkan, asalkan dananya terjamin."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Bacaan lanjutan",
+        "text": "Dua panduan menulis dari universitas: satu tentang meringkas dengan kata-katamu sendiri, dan satu tentang précis sebagai tugas."
+      }
+    ]
+  }
+}

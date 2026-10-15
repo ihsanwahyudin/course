@@ -1,0 +1,756 @@
+{
+  "en": {
+    "greeting": "Hi! Today you take your stories, your rhetoric and your voice onto a stage: a keynote built on one big idea, devices that work for the ear, and reading the room as you speak. One honest note: the recordings are one plain voice, so the pauses and stresses are written in the notes. Say every line out loud.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One big idea, one clear shape",
+        "text": "Quick recap: you have hooks and stories (C1), devices on the page (Rhetoric & Persuasion) and a voice that fits the room (Natural Prosody). Now: the keynote.",
+        "body": "A **keynote** is built on **one big idea**: one sentence the audience can repeat at home. Cut whatever doesn't serve it.\n- **A shape for 15–20 minutes:** hook (about 1 min) → the idea in one sentence → **three parts**, each a point + a story or evidence → **the close**.\n- **The close returns to the opening** (a **callback**): the same story or image, now changed, then the idea and *Thank you.* No new material at the end.\n**The trap:** a long protocol greeting (*Yang terhormat …*) and *Sekian, terima kasih* waste your best minutes. One line: *Good morning, everyone.*",
+        "pairs": [
+          {
+            "en": "keynote",
+            "id": "pidato utama di sebuah acara"
+          },
+          {
+            "en": "the big idea",
+            "id": "satu gagasan besar yang bisa diulang audiens"
+          },
+          {
+            "en": "a hook",
+            "id": "pengait di awal pidato"
+          },
+          {
+            "en": "three parts",
+            "id": "tiga bagian: poin + cerita atau bukti"
+          },
+          {
+            "en": "a callback",
+            "id": "kembali ke cerita atau gambaran pembuka"
+          },
+          {
+            "en": "to cut",
+            "id": "membuang (bagian dari pidato)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Close the circle",
+        "text": "Pak Hasan is giving the graduation speech at the university in Yogyakarta where he studied.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "keynote-talk",
+          "options": [
+            "Before I finish, here are three more tips for your careers, and a story from my years in Singapore.",
+            "That's all from me. Thank you for listening, and congratulations once again.",
+            "Twenty-eight years ago, I stood at that gate holding a map upside down. Today, you hold yours the right way up. Go and use it."
+          ],
+          "answer": 2,
+          "prompt": "He opened with his first day on this campus in 1998: lost at the main gate, holding a campus map upside down. Which closing calls back to the opening?",
+          "explanation": "The third closing returns to the **opening image** (the gate, the upside-down map) and shows what has changed: a **callback** that ends on the idea. The first adds **new material** at the very end. The second is the flat *That's all* ending, with nothing for the audience to take home."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Built for the ear",
+        "text": "A reader can re-read a sentence. A listener can't, so a talk needs help a text doesn't.",
+        "body": "- **Preview** the map: *I'll tell you three stories.*\n- **Signpost** every turn: *Now, the second story.*\n- **Recap**, and **repeat the key line** word for word two or three times.\n**Write for the ear:** short sentences (one idea each), concrete words (*forty orders*, not *a significant increase*), **active voice** (*Our drivers delivered it*, not *It was delivered by our drivers*), and talk to the audience with *you* and questions.\n**The trap:** a *naskah pidato* full of passives (*telah dilaksanakan* → *has been carried out*) is correct but heavy to hear.",
+        "pairs": [
+          {
+            "en": "a preview",
+            "id": "gambaran awal isi pidato"
+          },
+          {
+            "en": "a signpost",
+            "id": "penanda arah antarbagian"
+          },
+          {
+            "en": "a recap",
+            "id": "rangkuman singkat"
+          },
+          {
+            "en": "the key line",
+            "id": "kalimat kunci yang diulang"
+          },
+          {
+            "en": "concrete",
+            "id": "konkret, bisa dibayangkan"
+          },
+          {
+            "en": "active voice",
+            "id": "kalimat aktif: siapa melakukan apa"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Turn to the audience",
+        "text": "Sari has just finished her opening story at a startup summit in Jakarta. Now she turns the story towards the audience with a short question.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "keynote-talk",
+          "tokens": [
+            "mean",
+            "So",
+            "you",
+            "does",
+            "for",
+            "what",
+            "this"
+          ],
+          "solution": "So what does this mean for you?",
+          "prompt": "Arrange the words: Jadi, apa artinya ini bagi Anda?",
+          "explanation": "**So what does this mean for you?** is short, uses *you* and moves the talk from her story to the listeners: a spoken signpost. Question order: *what* + *does* + *this* + *mean*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rhetoric for the ear",
+        "text": "You know these devices from the page. Spoken, timing does half the work.",
+        "body": "Notation: CAPITALS = stress · | = pause · || = long pause (the app's voice can't do these: say them yourself).\n- **Rule of three:** short, same shape, a pause before the third, fall ↘ on it.\n- **Anaphora:** the same opening each time; stress what changes.\n- **Rhetorical question:** ask, then **stop** for 2–3 seconds.\n- **Power pause** before the key word: *…was || trust.*\n- **Contrast pair:** stress both opposites.\n- **Callback:** an image from the opening returns.\n**Delivery:** eye contact for a whole sentence, move on transitions, stand still for the key line, vary your voice. Key moments only.",
+        "pairs": [
+          {
+            "en": "a pause",
+            "id": "jeda"
+          },
+          {
+            "en": "a power pause",
+            "id": "jeda tepat sebelum kata kunci"
+          },
+          {
+            "en": "a rhetorical question",
+            "id": "pertanyaan retoris: jawabannya sudah jelas"
+          },
+          {
+            "en": "a contrast pair",
+            "id": "pasangan kontras (antitesis)"
+          },
+          {
+            "en": "eye contact",
+            "id": "kontak mata"
+          },
+          {
+            "en": "movement with purpose",
+            "id": "bergerak dengan tujuan"
+          },
+          {
+            "en": "voice variety",
+            "id": "variasi suara: tempo, volume, nada"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Say it aloud",
+        "text": "Tap each line. The recording is plain; the note shows where to pause and what to stress. Then say it yourself, with the timing.",
+        "body": "Notice how the last line answers the first: that's a callback. In a real talk there would be fifteen minutes between them.",
+        "examples": [
+          {
+            "en": "Who here has ever waited three days for a parcel that never came?",
+            "id": "Siapa di sini yang pernah menunggu tiga hari untuk paket yang tidak pernah datang? · pertanyaan retoris: lalu diam || 2–3 detik"
+          },
+          {
+            "en": "It was slow, it was expensive, and it was dangerous.",
+            "id": "Lambat, mahal, dan berbahaya. · rule of three + anafora: jeda | sebelum yang ketiga, nada turun ↘ di DANgerous"
+          },
+          {
+            "en": "And the one thing that changed everything was trust.",
+            "id": "Dan satu hal yang mengubah segalanya adalah kepercayaan. · power pause: …was || TRUST"
+          },
+          {
+            "en": "We don't need smarter phones. We need simpler apps.",
+            "id": "Kita tidak butuh ponsel yang lebih pintar. Kita butuh aplikasi yang lebih sederhana. · pasangan kontras: tekan SMARTER dan SIMPLER"
+          },
+          {
+            "en": "Remember the parcel that never came? This morning, it arrived in two hours.",
+            "id": "Ingat paket yang tidak pernah datang itu? Pagi ini, paketnya tiba dalam dua jam. · callback ke pertanyaan pembuka"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a TEDx-style talk",
+        "text": "Dimas is giving a TEDx-style talk in Bandung about learning after university. Press play.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spoken-rhetoric",
+          "listen": "A degree does not prove what you know. It proves that you can keep learning.",
+          "options": [
+            "the rule of three",
+            "a contrast pair (antithesis)",
+            "a callback to the opening"
+          ],
+          "answer": 1,
+          "prompt": "Listen to one line from his talk. Which device does it use?",
+          "explanation": "Two opposite ideas in a balanced pair, what a degree does **not** prove and what it **does** prove: a **contrast pair** (antithesis). Spoken, he'd stress KNOW and LEARNing, with a pause | between the sentences. There are only two parts, not three, and nothing returns from an opening."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Read the room",
+        "text": "Last part: watch your audience while you speak, and adapt. A keynote is a plan, not a script.",
+        "body": "- **Puzzled faces, whispering** → plain words + an example: *Let me put that another way.*\n- **Phones out, restless** → cut the section short, go to a story, or ask a show of hands.\n- **Leaning forward at the back** → speak up, speak to the back row.\n- **'Could you repeat that?'** → slow down, repeat the number.\n- **Laughter, nodding** → it's working: let it land.\n- **Silence after 'Any questions?'** → often shyness (*sungkan*): give them a moment.\n- **Running late** → cut calmly: *In the interest of time, …* Never speed up.\n- **A joke falls flat** → don't explain it, don't keep apologising: smile and move on.",
+        "pairs": [
+          {
+            "en": "read the room",
+            "id": "membaca suasana audiens"
+          },
+          {
+            "en": "puzzled",
+            "id": "bingung"
+          },
+          {
+            "en": "restless",
+            "id": "gelisah"
+          },
+          {
+            "en": "a show of hands",
+            "id": "angkat tangan"
+          },
+          {
+            "en": "speak up",
+            "id": "bicara lebih keras"
+          },
+          {
+            "en": "in the interest of time",
+            "id": "mengingat waktu (waktu hampir habis)"
+          },
+          {
+            "en": "to fall flat",
+            "id": "(lelucon) garing, tidak lucu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Puzzled faces",
+        "text": "Dr. Wulan is speaking at a TEDx-style evening in Bandung about clean water.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "read-the-room",
+          "options": [
+            "Repeat the same sentence, more slowly and more loudly.",
+            "Carry on with the script: they can look the term up after the talk.",
+            "Say it in plain words with a quick example: 'In other words, clean water the city produces but never sells, mostly because it leaks from old pipes.'"
+          ],
+          "answer": 2,
+          "prompt": "She says: 'This is a classic case of non-revenue water.' Many faces look puzzled, and two people whisper to each other. What's the best move?",
+          "explanation": "Puzzled faces after a technical term mean the audience has lost her, so she **says it again in plain words with an example**. Repeating the same jargon more slowly and loudly doesn't make it clearer, and carrying on loses the room for the rest of the section."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "When the joke falls flat",
+        "text": "Budi, the founder of a logistics startup, opens his keynote at a startup summit in Jakarta with a joke about investors.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "read-the-room",
+          "options": [
+            "Smile, say 'OK, I'll stick to logistics', and move straight on to his opening story.",
+            "Explain the joke, so that the audience understands why it was funny.",
+            "Apologise several times: 'Sorry, sorry, that was a bad joke, I'm really not funny.'"
+          ],
+          "answer": 0,
+          "prompt": "Silence. Nobody laughs. What should he do?",
+          "explanation": "**Smile, one light line, move on**: if he doesn't make it a big moment, the audience forgets it in seconds. Explaining a joke never makes it funny, and apologising again and again makes everyone uncomfortable and costs him the confident start."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "The shape, the devices and the signs on one page, to check before you go on stage.",
+        "artifact": {
+          "title": "Cheat sheet · keynote, spoken rhetoric, reading the room",
+          "intro": "CAPITALS = stressed word · | = short pause · || = long pause · ↘ = the voice falls. The app's voice reads plain text and can't make these pauses: practise them aloud, and hear real speakers in the videos. Most of this is style: these are strong guidelines, not laws.",
+          "headers": [
+            "Part, device or sign",
+            "What to do",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Big idea",
+              "one sentence; cut what doesn't serve it",
+              "Build for the person with the cheapest phone."
+            ],
+            [
+              "Hook (about 1 min)",
+              "a short story, a surprising number or a question",
+              "Last March, Bu Ratna lost three orders in one morning."
+            ],
+            [
+              "Three parts (4–5 min each)",
+              "a point + a story or evidence + a link to the idea",
+              "Let's start with the signal."
+            ],
+            [
+              "Close (1–2 min)",
+              "callback to the opening, then the idea, then 'Thank you'",
+              "Remember Bu Ratna? Last month she took forty orders."
+            ],
+            [
+              "Signposts",
+              "preview, turns, recap; repeat the key line",
+              "That's the first wall. Now, the second: words."
+            ],
+            [
+              "For the ear",
+              "short sentences, concrete words, active voice, 'you'",
+              "We tested it in forty villages, and it worked."
+            ],
+            [
+              "Rule of three",
+              "short, same shape, a pause | before the third, fall ↘",
+              "slow, | expensive | and DANgerous ↘"
+            ],
+            [
+              "Rhetorical question",
+              "ask, then pause || 2–3 seconds; don't answer at once",
+              "Who here has ever waited three days for a parcel? ||"
+            ],
+            [
+              "Power pause",
+              "pause right before the key word",
+              "…was || TRUST."
+            ],
+            [
+              "Contrast pair",
+              "stress both opposites",
+              "not SMARTER phones, | SIMPLER apps"
+            ],
+            [
+              "Puzzled faces",
+              "plain words + a quick example",
+              "Let me put that another way."
+            ],
+            [
+              "Phones out, restless",
+              "cut short, go to a story, or a show of hands",
+              "Hands up if you've ever …"
+            ],
+            [
+              "Running late",
+              "cut calmly; never speed up or run over",
+              "In the interest of time, I'll skip …"
+            ],
+            [
+              "Joke falls flat",
+              "smile and move on; don't explain or keep apologising",
+              "OK, back to the story."
+            ]
+          ],
+          "tips": [
+            "One big idea, three parts, and a close that returns to the opening.",
+            "Listeners can't re-read: preview, signpost, recap and repeat the key line.",
+            "Plan your adaptations: one section to cut, one extra example, one show-of-hands question."
+          ],
+          "examples": [
+            {
+              "en": "Here's my one idea for today: build for the person with the cheapest phone.",
+              "id": "Ini satu gagasan saya hari ini: buatlah untuk orang dengan ponsel termurah."
+            },
+            {
+              "en": "That's the first wall. Now, the second: words.",
+              "id": "Itu tembok pertama. Sekarang, yang kedua: kata-kata."
+            },
+            {
+              "en": "And the one thing that changed everything was trust.",
+              "id": "Dan satu hal yang mengubah segalanya adalah kepercayaan."
+            },
+            {
+              "en": "Let me put that another way.",
+              "id": "Saya jelaskan dengan cara lain."
+            },
+            {
+              "en": "In the interest of time, I'll go straight to the last story.",
+              "id": "Mengingat waktu, saya langsung ke cerita terakhir."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch real speakers",
+        "text": "Two TED talks with real voices: why a talk needs one idea, and how pace, pitch, volume and silence work. Watch them for the pauses the app's voice can't make."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini cerita, retorika dan suaramu kamu bawa ke atas panggung: keynote yang dibangun di atas satu gagasan besar, gaya bahasa yang bekerja untuk telinga, dan membaca suasana selagi kamu bicara. Catatan jujur: rekamannya satu suara biasa, jadi jeda dan tekanan ditulis di catatan. Ucapkan setiap kalimat dengan suara keras.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu gagasan besar, satu bentuk yang jelas",
+        "text": "Kilas balik singkat: kamu sudah punya hook dan cerita (C1), gaya bahasa di atas kertas (Rhetoric & Persuasion) dan suara yang cocok dengan ruangan (Natural Prosody). Sekarang: keynote.",
+        "body": "**Keynote** dibangun di atas **satu gagasan besar**: satu kalimat yang bisa diulang audiens di rumah. Buang apa pun yang tidak mendukungnya.\n- **Bentuk untuk 15–20 menit:** hook (sekitar 1 menit) → gagasan dalam satu kalimat → **tiga bagian**, masing-masing poin + cerita atau bukti → **penutup**.\n- **Penutup kembali ke pembukaan** (**callback**): cerita atau gambaran yang sama, yang kini sudah berubah, lalu gagasannya dan *Thank you.* Tidak ada materi baru di akhir.\n**Jebakannya:** salam protokoler yang panjang (*Yang terhormat …*) dan *Sekian, terima kasih* menghabiskan menit-menit terbaikmu. Satu baris saja: *Good morning, everyone.*",
+        "pairs": [
+          {
+            "en": "keynote",
+            "id": "pidato utama di sebuah acara"
+          },
+          {
+            "en": "the big idea",
+            "id": "satu gagasan besar yang bisa diulang audiens"
+          },
+          {
+            "en": "a hook",
+            "id": "pengait di awal pidato"
+          },
+          {
+            "en": "three parts",
+            "id": "tiga bagian: poin + cerita atau bukti"
+          },
+          {
+            "en": "a callback",
+            "id": "kembali ke cerita atau gambaran pembuka"
+          },
+          {
+            "en": "to cut",
+            "id": "membuang (bagian dari pidato)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tutup lingkarannya",
+        "text": "Pak Hasan menyampaikan pidato wisuda di universitas di Yogyakarta tempat dia dulu kuliah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "keynote-talk",
+          "options": [
+            "Before I finish, here are three more tips for your careers, and a story from my years in Singapore.",
+            "That's all from me. Thank you for listening, and congratulations once again.",
+            "Twenty-eight years ago, I stood at that gate holding a map upside down. Today, you hold yours the right way up. Go and use it."
+          ],
+          "answer": 2,
+          "prompt": "Dia membuka dengan hari pertamanya di kampus ini pada 1998: tersesat di gerbang utama, memegang peta kampus terbalik. Penutup mana yang kembali ke pembukaan (callback)?",
+          "explanation": "Penutup ketiga kembali ke **gambaran pembuka** (gerbang, peta yang terbalik) dan menunjukkan apa yang sudah berubah: sebuah **callback** yang diakhiri dengan gagasannya. Penutup pertama menambah **materi baru** tepat di akhir. Penutup kedua adalah akhir datar *That's all*, tanpa apa pun untuk dibawa pulang audiens."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Dibuat untuk telinga",
+        "text": "Pembaca bisa membaca ulang sebuah kalimat. Pendengar tidak bisa, jadi pidato butuh bantuan yang tidak dibutuhkan tulisan.",
+        "body": "- **Preview** peta pidatomu: *I'll tell you three stories.*\n- **Signpost** setiap perpindahan: *Now, the second story.*\n- **Recap**, dan **ulangi kalimat kunci** kata per kata dua atau tiga kali.\n**Tulis untuk didengar:** kalimat pendek (satu gagasan per kalimat), kata yang konkret (*forty orders*, bukan *a significant increase*), **kalimat aktif** (*Our drivers delivered it*, bukan *It was delivered by our drivers*), dan ajak audiens bicara dengan *you* dan pertanyaan.\n**Jebakannya:** *naskah pidato* yang penuh kalimat pasif (*telah dilaksanakan* → *has been carried out*) memang benar, tapi berat didengar.",
+        "pairs": [
+          {
+            "en": "a preview",
+            "id": "gambaran awal isi pidato"
+          },
+          {
+            "en": "a signpost",
+            "id": "penanda arah antarbagian"
+          },
+          {
+            "en": "a recap",
+            "id": "rangkuman singkat"
+          },
+          {
+            "en": "the key line",
+            "id": "kalimat kunci yang diulang"
+          },
+          {
+            "en": "concrete",
+            "id": "konkret, bisa dibayangkan"
+          },
+          {
+            "en": "active voice",
+            "id": "kalimat aktif: siapa melakukan apa"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Arahkan ke audiens",
+        "text": "Sari baru saja menyelesaikan cerita pembukanya di sebuah startup summit di Jakarta. Sekarang dia mengarahkan ceritanya ke audiens dengan sebuah pertanyaan singkat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "keynote-talk",
+          "tokens": [
+            "mean",
+            "So",
+            "you",
+            "does",
+            "for",
+            "what",
+            "this"
+          ],
+          "solution": "So what does this mean for you?",
+          "prompt": "Susun kata-katanya: Jadi, apa artinya ini bagi Anda?",
+          "explanation": "**So what does this mean for you?** pendek, memakai *you*, dan memindahkan pidato dari ceritanya ke para pendengar: sebuah penanda arah lisan. Urutan kata tanya: *what* + *does* + *this* + *mean*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Retorika untuk telinga",
+        "text": "Gaya bahasa ini sudah kamu kenal dari tulisan. Saat diucapkan, waktu yang tepat melakukan separuh pekerjaan.",
+        "body": "Notasi: HURUF BESAR = tekanan · | = jeda · || = jeda panjang (suara aplikasi tidak bisa membuatnya: ucapkan sendiri).\n- **Rule of three:** pendek, bentuk sama, jeda sebelum yang ketiga, nada turun ↘ di situ.\n- **Anafora:** pembuka yang sama setiap kali; tekan bagian yang berubah.\n- **Pertanyaan retoris:** tanyakan, lalu **diam** 2–3 detik.\n- **Power pause** sebelum kata kunci: *…was || trust.*\n- **Pasangan kontras:** tekan kedua kata yang berlawanan.\n- **Callback:** gambaran dari pembukaan muncul lagi.\n**Cara membawakan:** kontak mata selama satu kalimat penuh, bergerak saat pindah bagian, diam saat kalimat kunci, suara yang bervariasi. Hanya di saat penting.",
+        "pairs": [
+          {
+            "en": "a pause",
+            "id": "jeda"
+          },
+          {
+            "en": "a power pause",
+            "id": "jeda tepat sebelum kata kunci"
+          },
+          {
+            "en": "a rhetorical question",
+            "id": "pertanyaan retoris: jawabannya sudah jelas"
+          },
+          {
+            "en": "a contrast pair",
+            "id": "pasangan kontras (antitesis)"
+          },
+          {
+            "en": "eye contact",
+            "id": "kontak mata"
+          },
+          {
+            "en": "movement with purpose",
+            "id": "bergerak dengan tujuan"
+          },
+          {
+            "en": "voice variety",
+            "id": "variasi suara: tempo, volume, nada"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Ucapkan dengan suara keras",
+        "text": "Ketuk setiap kalimat. Rekamannya polos; catatannya menunjukkan di mana berhenti dan kata mana yang ditekan. Lalu ucapkan sendiri, dengan jedanya.",
+        "body": "Perhatikan bagaimana kalimat terakhir menjawab kalimat pertama: itulah callback. Dalam pidato sungguhan, ada lima belas menit di antara keduanya.",
+        "examples": [
+          {
+            "en": "Who here has ever waited three days for a parcel that never came?",
+            "id": "Siapa di sini yang pernah menunggu tiga hari untuk paket yang tidak pernah datang? · pertanyaan retoris: lalu diam || 2–3 detik"
+          },
+          {
+            "en": "It was slow, it was expensive, and it was dangerous.",
+            "id": "Lambat, mahal, dan berbahaya. · rule of three + anafora: jeda | sebelum yang ketiga, nada turun ↘ di DANgerous"
+          },
+          {
+            "en": "And the one thing that changed everything was trust.",
+            "id": "Dan satu hal yang mengubah segalanya adalah kepercayaan. · power pause: …was || TRUST"
+          },
+          {
+            "en": "We don't need smarter phones. We need simpler apps.",
+            "id": "Kita tidak butuh ponsel yang lebih pintar. Kita butuh aplikasi yang lebih sederhana. · pasangan kontras: tekan SMARTER dan SIMPLER"
+          },
+          {
+            "en": "Remember the parcel that never came? This morning, it arrived in two hours.",
+            "id": "Ingat paket yang tidak pernah datang itu? Pagi ini, paketnya tiba dalam dua jam. · callback ke pertanyaan pembuka"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: pidato bergaya TEDx",
+        "text": "Dimas menyampaikan pidato bergaya TEDx di Bandung tentang belajar setelah lulus kuliah. Tekan putar.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "spoken-rhetoric",
+          "listen": "A degree does not prove what you know. It proves that you can keep learning.",
+          "options": [
+            "the rule of three",
+            "a contrast pair (antithesis)",
+            "a callback to the opening"
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan satu kalimat dari pidatonya. Gaya bahasa apa yang dipakainya?",
+          "explanation": "Dua gagasan berlawanan dalam pasangan yang seimbang, apa yang **tidak** dibuktikan oleh gelar dan apa yang **justru** dibuktikannya: **pasangan kontras** (antitesis). Saat diucapkan, dia akan menekan KNOW dan LEARNing, dengan jeda | di antara kedua kalimat. Hanya ada dua bagian, bukan tiga, dan tidak ada yang kembali dari pembukaan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Membaca suasana",
+        "text": "Bagian terakhir: perhatikan audiensmu selagi bicara, lalu sesuaikan. Keynote adalah rencana, bukan naskah.",
+        "body": "- **Wajah bingung, berbisik** → kata-kata sederhana + contoh: *Let me put that another way.*\n- **Ponsel keluar, gelisah** → persingkat bagian itu, pindah ke cerita, atau minta angkat tangan.\n- **Yang di belakang mencondongkan badan** → bicara lebih keras, arahkan ke barisan belakang.\n- **'Could you repeat that?'** → pelankan tempo, ulangi angkanya.\n- **Tawa, anggukan** → berhasil: biarkan meresap.\n- **Hening setelah 'Any questions?'** → sering karena sungkan: beri waktu sebentar.\n- **Waktu hampir habis** → potong dengan tenang: *In the interest of time, …* Jangan bicara lebih cepat.\n- **Lelucon garing** → jangan dijelaskan, jangan minta maaf terus: tersenyum dan lanjutkan.",
+        "pairs": [
+          {
+            "en": "read the room",
+            "id": "membaca suasana audiens"
+          },
+          {
+            "en": "puzzled",
+            "id": "bingung"
+          },
+          {
+            "en": "restless",
+            "id": "gelisah"
+          },
+          {
+            "en": "a show of hands",
+            "id": "angkat tangan"
+          },
+          {
+            "en": "speak up",
+            "id": "bicara lebih keras"
+          },
+          {
+            "en": "in the interest of time",
+            "id": "mengingat waktu (waktu hampir habis)"
+          },
+          {
+            "en": "to fall flat",
+            "id": "(lelucon) garing, tidak lucu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Wajah-wajah bingung",
+        "text": "Dr. Wulan berbicara di sebuah malam bergaya TEDx di Bandung tentang air bersih.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "read-the-room",
+          "options": [
+            "Repeat the same sentence, more slowly and more loudly.",
+            "Carry on with the script: they can look the term up after the talk.",
+            "Say it in plain words with a quick example: 'In other words, clean water the city produces but never sells, mostly because it leaks from old pipes.'"
+          ],
+          "answer": 2,
+          "prompt": "Dia berkata: 'This is a classic case of non-revenue water.' Banyak wajah terlihat bingung, dan dua orang saling berbisik. Apa langkah terbaik?",
+          "explanation": "Wajah bingung setelah istilah teknis berarti audiens tertinggal, jadi dia **mengulanginya dengan kata-kata sederhana dan contoh**. Mengulang istilah yang sama dengan lebih pelan dan lebih keras tidak membuatnya lebih jelas, dan meneruskan naskah membuat ruangan tertinggal sampai akhir bagian itu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Saat lelucon garing",
+        "text": "Budi, pendiri sebuah startup logistik, membuka keynote-nya di sebuah startup summit di Jakarta dengan lelucon tentang investor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "read-the-room",
+          "options": [
+            "Smile, say 'OK, I'll stick to logistics', and move straight on to his opening story.",
+            "Explain the joke, so that the audience understands why it was funny.",
+            "Apologise several times: 'Sorry, sorry, that was a bad joke, I'm really not funny.'"
+          ],
+          "answer": 0,
+          "prompt": "Hening. Tidak ada yang tertawa. Apa yang sebaiknya dia lakukan?",
+          "explanation": "**Tersenyum, satu kalimat ringan, lanjutkan**: kalau dia tidak membesar-besarkannya, audiens melupakannya dalam beberapa detik. Menjelaskan lelucon tidak pernah membuatnya lucu, dan minta maaf berulang-ulang membuat semua orang canggung dan menghilangkan pembukaan yang percaya diri."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Bentuk pidato, gaya bahasa dan sinyal audiens dalam satu halaman, untuk dicek sebelum naik panggung.",
+        "artifact": {
+          "title": "Ringkasan · keynote, retorika lisan, membaca suasana",
+          "intro": "HURUF BESAR = kata yang ditekan · | = jeda pendek · || = jeda panjang · ↘ = nada turun. Suara aplikasi membaca teks polos dan tidak bisa membuat jeda ini: latih dengan suara keras, dan dengarkan pembicara sungguhan di video. Sebagian besar ini soal gaya: pedoman yang kuat, bukan hukum.",
+          "headers": [
+            "Bagian, gaya bahasa atau sinyal",
+            "Yang dilakukan",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "Gagasan besar",
+              "satu kalimat; buang yang tidak mendukungnya",
+              "Build for the person with the cheapest phone."
+            ],
+            [
+              "Hook (sekitar 1 menit)",
+              "cerita singkat, angka mengejutkan atau pertanyaan",
+              "Last March, Bu Ratna lost three orders in one morning."
+            ],
+            [
+              "Tiga bagian (4–5 menit)",
+              "poin + cerita atau bukti + kaitan ke gagasan",
+              "Let's start with the signal."
+            ],
+            [
+              "Penutup (1–2 menit)",
+              "callback ke pembukaan, lalu gagasan, lalu 'Thank you'",
+              "Remember Bu Ratna? Last month she took forty orders."
+            ],
+            [
+              "Penanda arah",
+              "preview, perpindahan, recap; ulangi kalimat kunci",
+              "That's the first wall. Now, the second: words."
+            ],
+            [
+              "Untuk telinga",
+              "kalimat pendek, kata konkret, kalimat aktif, 'you'",
+              "We tested it in forty villages, and it worked."
+            ],
+            [
+              "Rule of three",
+              "pendek, bentuk sama, jeda | sebelum yang ketiga, nada turun ↘",
+              "slow, | expensive | and DANgerous ↘"
+            ],
+            [
+              "Pertanyaan retoris",
+              "tanyakan, lalu diam || 2–3 detik; jangan langsung dijawab",
+              "Who here has ever waited three days for a parcel? ||"
+            ],
+            [
+              "Power pause",
+              "jeda tepat sebelum kata kunci",
+              "…was || TRUST."
+            ],
+            [
+              "Pasangan kontras",
+              "tekan kedua kata yang berlawanan",
+              "not SMARTER phones, | SIMPLER apps"
+            ],
+            [
+              "Wajah bingung",
+              "kata-kata sederhana + contoh singkat",
+              "Let me put that another way."
+            ],
+            [
+              "Ponsel keluar, gelisah",
+              "persingkat, pindah ke cerita, atau angkat tangan",
+              "Hands up if you've ever …"
+            ],
+            [
+              "Waktu hampir habis",
+              "potong dengan tenang; jangan mempercepat atau melewati waktu",
+              "In the interest of time, I'll skip …"
+            ],
+            [
+              "Lelucon garing",
+              "tersenyum dan lanjutkan; jangan dijelaskan atau minta maaf terus",
+              "OK, back to the story."
+            ]
+          ],
+          "tips": [
+            "Satu gagasan besar, tiga bagian, dan penutup yang kembali ke pembukaan.",
+            "Pendengar tidak bisa membaca ulang: preview, signpost, recap, dan ulangi kalimat kunci.",
+            "Rencanakan penyesuaianmu: satu bagian untuk dipotong, satu contoh tambahan, satu pertanyaan angkat tangan."
+          ],
+          "examples": [
+            {
+              "en": "Here's my one idea for today: build for the person with the cheapest phone.",
+              "id": "Ini satu gagasan saya hari ini: buatlah untuk orang dengan ponsel termurah."
+            },
+            {
+              "en": "That's the first wall. Now, the second: words.",
+              "id": "Itu tembok pertama. Sekarang, yang kedua: kata-kata."
+            },
+            {
+              "en": "And the one thing that changed everything was trust.",
+              "id": "Dan satu hal yang mengubah segalanya adalah kepercayaan."
+            },
+            {
+              "en": "Let me put that another way.",
+              "id": "Saya jelaskan dengan cara lain."
+            },
+            {
+              "en": "In the interest of time, I'll go straight to the last story.",
+              "id": "Mengingat waktu, saya langsung ke cerita terakhir."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton pembicara sungguhan",
+        "text": "Dua pidato TED dengan suara asli: kenapa pidato butuh satu gagasan, dan bagaimana tempo, nada, volume dan keheningan bekerja. Tonton untuk mendengar jeda yang tidak bisa dibuat oleh suara aplikasi."
+      }
+    ]
+  }
+}

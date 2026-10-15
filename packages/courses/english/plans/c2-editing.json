@@ -1,0 +1,610 @@
+{
+  "en": {
+    "greeting": "Welcome! Today you edit like a professional: from the big picture to the last comma, cutting what repeats, keeping everything consistent, following a house style and giving feedback that really helps. Step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Edit from big to small",
+        "text": "Editors don't start with the commas. They start with the big picture.",
+        "body": "**Editing** (menyunting) has four levels, from big to small:\n- **Structural edit:** the purpose, missing parts, the order of sections.\n- **Line edit:** each sentence clear, concise and in the right tone.\n- **Copy-edit:** correctness and consistency, checked against a style guide (spelling, terms, numbers, dates).\n- **Proofread:** the last check before it goes out (typos, missing words, page numbers).\nFix the big things first: why polish the commas in a paragraph you're going to delete?",
+        "pairs": [
+          {
+            "en": "structural edit",
+            "id": "suntingan struktur (urutan, bagian yang hilang)"
+          },
+          {
+            "en": "line edit",
+            "id": "suntingan kalimat (jelas, ringkas, nada)"
+          },
+          {
+            "en": "copy-edit",
+            "id": "suntingan ketepatan dan konsistensi"
+          },
+          {
+            "en": "proofread",
+            "id": "pemeriksaan akhir (salah ketik)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Cut what repeats",
+        "text": "You already cut filler like 'in order to'. Now cut three more kinds of extra words.",
+        "body": "**Recap (C1):** *In order to be able to make a decision regarding the budget* → *To decide on the budget*.\nNow look for **redundancy** (*return back*, *the end result*, *each and every*), **empty openers** (*I would like to inform you that …*, *There are many people who …*) and a **weak verb + noun** (*carry out an investigation into* → *investigate*).\nConcise isn't rude: keep *please* and full sentences.",
+        "examples": [
+          {
+            "en": "Please return the form by Friday.",
+            "id": "Mohon kembalikan formulirnya paling lambat Jumat. (bukan return back)"
+          },
+          {
+            "en": "The office is closed on Friday.",
+            "id": "Kantor tutup hari Jumat. (bukan I would like to inform you that …)"
+          },
+          {
+            "en": "Many people prefer to pay by QRIS.",
+            "id": "Banyak orang lebih suka membayar dengan QRIS. (bukan There are many people who …)"
+          },
+          {
+            "en": "The auditors will investigate the missing payments.",
+            "id": "Auditor akan menyelidiki pembayaran yang hilang. (bukan carry out an investigation into)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan's draft memo is twice as long as it needs to be. Find the version that keeps the meaning.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concise-consistent",
+          "prompt": "Which version is the most concise and keeps the full meaning? 'The committee will carry out an investigation into the complaint and give an explanation of the end result to each and every member.'",
+          "options": [
+            "Committee to investigate complaint, explain result to members.",
+            "The committee will investigate the complaint and explain the result to every member.",
+            "The committee will carry out an investigation into the complaint and explain the end result to each member."
+          ],
+          "answer": 1,
+          "explanation": "*carry out an investigation into* → *investigate*, *give an explanation of* → *explain*, *the end result* → *the result*, *each and every* → *every*. The third still keeps two of those, and the first is telegraphic: it drops words a full sentence needs."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Consistency: choose, then keep it",
+        "text": "A reader notices when a text changes its mind. Make each choice once.",
+        "body": "- **Spelling:** British *organise, colour* or American *organize, color*\n- **Terms:** one name for one thing (*customers*, not *clients* on page 5)\n- **Tense** and **person** (*we* or *the company*)\n- **Headings:** Title Case or sentence case\n- **Numbers:** many guides write *one* to *nine* in words, *10* and up in figures\n- **Dates:** *15 March 2026* (UK) or *March 15, 2026* (US)\n- **Serial comma:** *A, B, and C* or *A, B and C*\n- **Abbreviations:** full form first, then the short form\n**Indonesian trap:** varying words for style (*pelanggan, konsumen, pembeli*) confuses an English reader.",
+        "pairs": [
+          {
+            "en": "15 March 2026",
+            "id": "gaya British: tanggal, bulan, tahun"
+          },
+          {
+            "en": "March 15, 2026",
+            "id": "gaya Amerika: bulan, tanggal, koma, tahun"
+          },
+          {
+            "en": "micro, small and medium enterprises (MSMEs)",
+            "id": "usaha mikro, kecil dan menengah (UMKM): bentuk lengkap dulu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Three names for one group",
+        "text": "Bu Ani is checking a paragraph of her course report.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concise-consistent",
+          "prompt": "Bu Ani's report: 'All 40 participants finished the course. Most trainees found the videos useful, and several students asked for a second course.' Which edit makes it consistent?",
+          "options": [
+            "Keep all three words: the variety makes the report more interesting.",
+            "Change 'participants' to 'students' in the first sentence.",
+            "Change 'trainees' and 'students' to 'participants'."
+          ],
+          "answer": 2,
+          "explanation": "The same 40 people have three names, so a reader may think they are three groups. One term for one thing: *participants*. Changing only the first word still leaves *trainees*, and variety for its own sake is a school habit that confuses readers of a report."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Follow the house style",
+        "text": "Many organisations have already made those choices for you, in a style guide.",
+        "body": "A **style guide** (gaya selingkung) lists the writing rules an organisation chooses: spelling, dates, numbers, commas, terms, headings. Well-known ones: **APA** (social sciences), **Chicago** (US book publishing), **AP** (US news), and the **Guardian** and **Economist** guides (British journalism). Many companies, journals and NGOs have a house style of their own.\n**The house style wins**, even when your own habit is also correct. Check one rule at a time. No guide? Write a short **style sheet** and stick to it.",
+        "pairs": [
+          {
+            "en": "house style",
+            "id": "gaya selingkung (aturan tulis sebuah kantor, penerbit atau jurnal)"
+          },
+          {
+            "en": "style sheet",
+            "id": "daftar keputusan gaya untuk satu dokumen"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apply the guide",
+        "text": "Read the three rules first, then check every sentence against all three.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "style-guide",
+          "prompt": "Bu Ani's NGO style guide: British spelling; dates like 15 March 2026; numbers one to nine in words, 10 and above in figures. Which sentence follows all three rules?",
+          "options": [
+            "On 4 June 2026, three trainers organized 15 workshops.",
+            "On 4 June 2026, three trainers organised 15 workshops.",
+            "On 4 June 2026, 3 trainers organised 15 workshops.",
+            "On June 4, 2026, three trainers organised fifteen workshops."
+          ],
+          "answer": 1,
+          "explanation": "British *organised*, the date as day–month–year, *three* in words and *15* in figures. The first uses American *organized*, the third writes 3 as a figure, and the fourth has the American date and spells out 15."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Feedback that helps",
+        "text": "Now you're the reader of someone else's draft. What makes a comment useful?",
+        "body": "Useful feedback is **specific** (where and why), **prioritised** (structure and missing information first, typos last) and **kind and actionable** (what to do next).\nA pattern: **what works / what could be stronger / a suggestion**.\nWrite comments as questions or suggestions: *Could this paragraph come first?* · *Consider cutting the first two sentences.*\nTalk about the text, not the person: *This sentence is hard to follow*, not *You're confusing*.\n**Indonesian habits:** *bagus kok* (too vague) or the red pen on everything (too much).",
+        "pairs": [
+          {
+            "en": "What works: the summary is short and clear.",
+            "id": "Yang sudah bagus: ringkasannya pendek dan jelas."
+          },
+          {
+            "en": "What could be stronger: the budget has no total.",
+            "id": "Yang bisa lebih kuat: anggarannya belum ada totalnya."
+          },
+          {
+            "en": "A suggestion: could you add a total row?",
+            "id": "Saran: bisakah kamu menambahkan baris total?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Choose the useful comment",
+        "text": "Rina is about to send her proposal to a donor and asks you for comments.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "give-feedback",
+          "prompt": "Rina asks you to comment on her draft proposal before she sends it to a donor. Which comment is the most useful?",
+          "options": [
+            "The objectives are clear and measurable. The budget has no total yet: could you add one at the bottom of the table?",
+            "Bagus kok, looks good to me!",
+            "You made a lot of mistakes. I've marked every one of them in red."
+          ],
+          "answer": 0,
+          "explanation": "The first says what works and why, points to one specific problem and suggests an action, as a question. The second is kind but tells Rina nothing; the third is about the person and doesn't show what matters most."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Make it a suggestion",
+        "text": "Consider + -ing turns an order into a suggestion.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "give-feedback",
+          "prompt": "Arrange the words: Pertimbangkan untuk memindahkan paragraf ini ke bagian akhir.",
+          "tokens": [
+            "paragraph",
+            "the",
+            "Consider",
+            "end",
+            "this",
+            "to",
+            "moving"
+          ],
+          "solution": "Consider moving this paragraph to the end.",
+          "explanation": "*Consider* + the -ing form (*moving*) is a polite suggestion: the writer decides. *Move this paragraph to the end* would be an order."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "The whole lesson on one page. Keep it open when you edit.",
+        "artifact": {
+          "title": "Cheat sheet · Editing and feedback",
+          "intro": "Big to small: structure → sentences → consistency → typos. Then comment the way you'd like to be commented on.",
+          "headers": [
+            "Check",
+            "✗",
+            "✓"
+          ],
+          "rows": [
+            [
+              "Filler (C1)",
+              "In order to be able to make a decision regarding the budget",
+              "To decide on the budget"
+            ],
+            [
+              "Redundancy",
+              "return back · the end result · each and every",
+              "return · the result · every"
+            ],
+            [
+              "Empty opener",
+              "I would like to inform you that the office is closed.",
+              "The office is closed."
+            ],
+            [
+              "Weak verb + noun",
+              "carry out an investigation into",
+              "investigate"
+            ],
+            [
+              "Spelling variety",
+              "organise … color",
+              "organise … colour (or organize … color)"
+            ],
+            [
+              "Terminology",
+              "customers … clients … users",
+              "customers … customers … customers"
+            ],
+            [
+              "Tense",
+              "Sales rose in March but fall in April.",
+              "Sales rose in March but fell in April."
+            ],
+            [
+              "Headings",
+              "Annual sales report · Market Overview",
+              "Annual sales report · Market overview"
+            ],
+            [
+              "Numbers (many guides)",
+              "3 branches, twelve staff",
+              "three branches, 12 staff"
+            ],
+            [
+              "Dates",
+              "March 15, 2026 … 2 April 2026",
+              "15 March 2026 … 2 April 2026"
+            ],
+            [
+              "Serial comma",
+              "A, B, and C … D, E and F",
+              "A, B and C … D, E and F"
+            ],
+            [
+              "Abbreviations",
+              "MSMEs (never explained)",
+              "micro, small and medium enterprises (MSMEs)"
+            ],
+            [
+              "Feedback",
+              "Bagus kok! · You're confusing.",
+              "What works … · Could …? · Consider + -ing"
+            ]
+          ],
+          "tips": [
+            "Edit in passes: structure, then sentences, then consistency, then typos.",
+            "The house style wins. No guide? Write a style sheet and keep to it.",
+            "Feedback: specific, prioritised, kind; questions and suggestions; the text, not the person."
+          ],
+          "examples": [
+            {
+              "en": "To decide on the budget, we need more data.",
+              "id": "Untuk memutuskan anggarannya, kita butuh data lebih banyak."
+            },
+            {
+              "en": "The workshop will take place on 15 March 2026.",
+              "id": "Lokakarya itu akan diadakan pada 15 Maret 2026."
+            },
+            {
+              "en": "Could this paragraph come first?",
+              "id": "Bagaimana kalau paragraf ini ditaruh paling depan?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more? These university writing-centre pages cover editing your own draft level by level, and concise writing."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Selamat datang! Hari ini kamu menyunting seperti profesional: dari gambaran besar sampai koma terakhir, membuang yang berulang, menjaga semuanya konsisten, mengikuti gaya selingkung dan memberi feedback yang benar-benar membantu. Langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menyunting dari besar ke kecil",
+        "text": "Editor tidak mulai dari koma. Mereka mulai dari gambaran besar.",
+        "body": "**Menyunting** (editing) punya empat tingkat, dari besar ke kecil:\n- **Structural edit:** tujuan, bagian yang hilang, urutan bagian.\n- **Line edit:** setiap kalimat jelas, ringkas dan nadanya pas.\n- **Copy-edit:** ketepatan dan konsistensi, dicek dengan style guide (ejaan, istilah, angka, tanggal).\n- **Proofread:** pemeriksaan terakhir sebelum dikirim (salah ketik, kata yang hilang, nomor halaman).\nPerbaiki yang besar dulu: buat apa merapikan koma di paragraf yang nanti akan kamu hapus?",
+        "pairs": [
+          {
+            "en": "structural edit",
+            "id": "suntingan struktur (urutan, bagian yang hilang)"
+          },
+          {
+            "en": "line edit",
+            "id": "suntingan kalimat (jelas, ringkas, nada)"
+          },
+          {
+            "en": "copy-edit",
+            "id": "suntingan ketepatan dan konsistensi"
+          },
+          {
+            "en": "proofread",
+            "id": "pemeriksaan akhir (salah ketik)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Buang yang berulang",
+        "text": "Kamu sudah membuang kata pengisi seperti 'in order to'. Sekarang buang tiga jenis kata berlebih lagi.",
+        "body": "**Ulasan (C1):** *In order to be able to make a decision regarding the budget* → *To decide on the budget*.\nSekarang cari **redundansi** (*return back*, *the end result*, *each and every*), **pembuka kosong** (*I would like to inform you that …*, *There are many people who …*) dan **kata kerja lemah + kata benda** (*carry out an investigation into* → *investigate*).\nRingkas bukan berarti kasar: tetap pakai *please* dan kalimat lengkap.",
+        "examples": [
+          {
+            "en": "Please return the form by Friday.",
+            "id": "Mohon kembalikan formulirnya paling lambat Jumat. (bukan return back)"
+          },
+          {
+            "en": "The office is closed on Friday.",
+            "id": "Kantor tutup hari Jumat. (bukan I would like to inform you that …)"
+          },
+          {
+            "en": "Many people prefer to pay by QRIS.",
+            "id": "Banyak orang lebih suka membayar dengan QRIS. (bukan There are many people who …)"
+          },
+          {
+            "en": "The auditors will investigate the missing payments.",
+            "id": "Auditor akan menyelidiki pembayaran yang hilang. (bukan carry out an investigation into)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Draf memo Pak Hasan dua kali lebih panjang dari yang perlu. Cari versi yang tetap mempertahankan artinya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concise-consistent",
+          "prompt": "Versi mana yang paling ringkas dan tetap utuh artinya? 'The committee will carry out an investigation into the complaint and give an explanation of the end result to each and every member.'",
+          "options": [
+            "Committee to investigate complaint, explain result to members.",
+            "The committee will investigate the complaint and explain the result to every member.",
+            "The committee will carry out an investigation into the complaint and explain the end result to each member."
+          ],
+          "answer": 1,
+          "explanation": "*carry out an investigation into* → *investigate*, *give an explanation of* → *explain*, *the end result* → *the result*, *each and every* → *every*. Pilihan ketiga masih menyimpan dua di antaranya, dan pilihan pertama bergaya telegram: membuang kata yang dibutuhkan kalimat lengkap."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Konsistensi: pilih, lalu pertahankan",
+        "text": "Pembaca sadar kalau teks 'berubah pikiran'. Buat setiap pilihan sekali saja.",
+        "body": "- **Ejaan:** British *organise, colour* atau Amerika *organize, color*\n- **Istilah:** satu nama untuk satu hal (*customers*, bukan *clients* di halaman 5)\n- **Tense** dan **sudut pandang** (*we* atau *the company*)\n- **Judul bagian:** Title Case atau sentence case\n- **Angka:** banyak panduan: *one*–*nine* dengan kata, *10* ke atas dengan angka\n- **Tanggal:** *15 March 2026* (UK) atau *March 15, 2026* (US)\n- **Serial comma:** *A, B, and C* atau *A, B and C*\n- **Singkatan:** bentuk lengkap dulu, lalu singkatannya\n**Jebakan:** variasi kata (*pelanggan, konsumen, pembeli*) membingungkan pembaca.",
+        "pairs": [
+          {
+            "en": "15 March 2026",
+            "id": "gaya British: tanggal, bulan, tahun"
+          },
+          {
+            "en": "March 15, 2026",
+            "id": "gaya Amerika: bulan, tanggal, koma, tahun"
+          },
+          {
+            "en": "micro, small and medium enterprises (MSMEs)",
+            "id": "usaha mikro, kecil dan menengah (UMKM): bentuk lengkap dulu"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Tiga nama untuk satu kelompok",
+        "text": "Bu Ani sedang memeriksa satu paragraf laporan kursusnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concise-consistent",
+          "prompt": "Laporan Bu Ani: 'All 40 participants finished the course. Most trainees found the videos useful, and several students asked for a second course.' Suntingan mana yang membuatnya konsisten?",
+          "options": [
+            "Keep all three words: the variety makes the report more interesting.",
+            "Change 'participants' to 'students' in the first sentence.",
+            "Change 'trainees' and 'students' to 'participants'."
+          ],
+          "answer": 2,
+          "explanation": "Ke-40 orang yang sama punya tiga nama, jadi pembaca bisa mengira ada tiga kelompok. Satu istilah untuk satu hal: *participants*. Mengganti kata pertama saja masih menyisakan *trainees*, dan variasi demi variasi adalah kebiasaan sekolah yang membingungkan pembaca laporan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ikuti gaya selingkung",
+        "text": "Banyak organisasi sudah membuat pilihan-pilihan itu untukmu, dalam sebuah style guide.",
+        "body": "**Style guide** (gaya selingkung) berisi aturan menulis yang dipilih sebuah organisasi: ejaan, tanggal, angka, koma, istilah, judul bagian. Yang terkenal: **APA** (ilmu sosial), **Chicago** (penerbitan buku di AS), **AP** (berita AS), serta panduan **The Guardian** dan **The Economist** (jurnalisme Inggris). Banyak perusahaan, jurnal dan LSM punya gaya selingkung sendiri.\n**Gaya selingkung yang menang**, meskipun kebiasaanmu juga benar. Periksa satu aturan sekaligus. Tidak ada panduan? Tulis **style sheet** singkat dan patuhi.",
+        "pairs": [
+          {
+            "en": "house style",
+            "id": "gaya selingkung (aturan tulis sebuah kantor, penerbit atau jurnal)"
+          },
+          {
+            "en": "style sheet",
+            "id": "daftar keputusan gaya untuk satu dokumen"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Terapkan panduannya",
+        "text": "Baca ketiga aturannya dulu, lalu cek setiap kalimat dengan ketiganya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "style-guide",
+          "prompt": "Style guide LSM Bu Ani: ejaan British; tanggal seperti 15 March 2026; angka one sampai nine dengan kata, 10 ke atas dengan angka. Kalimat mana yang mengikuti ketiga aturan itu?",
+          "options": [
+            "On 4 June 2026, three trainers organized 15 workshops.",
+            "On 4 June 2026, three trainers organised 15 workshops.",
+            "On 4 June 2026, 3 trainers organised 15 workshops.",
+            "On June 4, 2026, three trainers organised fifteen workshops."
+          ],
+          "answer": 1,
+          "explanation": "*organised* (British), tanggal dengan urutan tanggal–bulan–tahun, *three* dengan kata dan *15* dengan angka. Pilihan pertama memakai *organized* (Amerika), yang ketiga menulis 3 dengan angka, dan yang keempat memakai tanggal gaya Amerika serta menulis 15 dengan kata."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Feedback yang membantu",
+        "text": "Sekarang kamu pembaca draf orang lain. Apa yang membuat komentar berguna?",
+        "body": "Feedback yang berguna itu **spesifik** (di mana dan kenapa), **berurutan prioritas** (struktur dan informasi yang hilang dulu, salah ketik terakhir) serta **sopan dan bisa ditindaklanjuti** (apa langkah berikutnya).\nPolanya: **yang sudah bagus / yang bisa lebih kuat / satu saran**.\nTulis komentar sebagai pertanyaan atau saran: *Could this paragraph come first?* · *Consider cutting the first two sentences.*\nBicarakan teksnya, bukan orangnya: *This sentence is hard to follow*, bukan *You're confusing*.\n**Kebiasaan kita:** *bagus kok* (terlalu umum) atau mencoret semuanya (terlalu banyak).",
+        "pairs": [
+          {
+            "en": "What works: the summary is short and clear.",
+            "id": "Yang sudah bagus: ringkasannya pendek dan jelas."
+          },
+          {
+            "en": "What could be stronger: the budget has no total.",
+            "id": "Yang bisa lebih kuat: anggarannya belum ada totalnya."
+          },
+          {
+            "en": "A suggestion: could you add a total row?",
+            "id": "Saran: bisakah kamu menambahkan baris total?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih komentar yang berguna",
+        "text": "Rina akan mengirim proposalnya ke donor dan minta komentarmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "give-feedback",
+          "prompt": "Rina memintamu mengomentari draf proposalnya sebelum dikirim ke donor. Komentar mana yang paling berguna?",
+          "options": [
+            "The objectives are clear and measurable. The budget has no total yet: could you add one at the bottom of the table?",
+            "Bagus kok, looks good to me!",
+            "You made a lot of mistakes. I've marked every one of them in red."
+          ],
+          "answer": 0,
+          "explanation": "Komentar pertama menyebut apa yang sudah bagus dan kenapa, menunjuk satu masalah yang spesifik dan menyarankan tindakan, dalam bentuk pertanyaan. Yang kedua ramah tapi tidak memberi tahu Rina apa pun; yang ketiga membahas orangnya dan tidak menunjukkan mana yang paling penting."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jadikan saran",
+        "text": "Consider + bentuk -ing mengubah perintah menjadi saran.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "give-feedback",
+          "prompt": "Susun kata-katanya: Pertimbangkan untuk memindahkan paragraf ini ke bagian akhir.",
+          "tokens": [
+            "paragraph",
+            "the",
+            "Consider",
+            "end",
+            "this",
+            "to",
+            "moving"
+          ],
+          "solution": "Consider moving this paragraph to the end.",
+          "explanation": "*Consider* + bentuk -ing (*moving*) adalah saran yang sopan: penulisnya yang memutuskan. *Move this paragraph to the end* akan terdengar sebagai perintah."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Seluruh pelajaran dalam satu halaman. Buka saat kamu menyunting.",
+        "artifact": {
+          "title": "Ringkasan · Menyunting dan feedback",
+          "intro": "Dari besar ke kecil: struktur → kalimat → konsistensi → salah ketik. Lalu beri komentar seperti yang ingin kamu terima.",
+          "headers": [
+            "Cek",
+            "✗",
+            "✓"
+          ],
+          "rows": [
+            [
+              "Kata pengisi (C1)",
+              "In order to be able to make a decision regarding the budget",
+              "To decide on the budget"
+            ],
+            [
+              "Redundansi",
+              "return back · the end result · each and every",
+              "return · the result · every"
+            ],
+            [
+              "Pembuka kosong",
+              "I would like to inform you that the office is closed.",
+              "The office is closed."
+            ],
+            [
+              "Kata kerja lemah + kata benda",
+              "carry out an investigation into",
+              "investigate"
+            ],
+            [
+              "Ragam ejaan",
+              "organise … color",
+              "organise … colour (atau organize … color)"
+            ],
+            [
+              "Istilah",
+              "customers … clients … users",
+              "customers … customers … customers"
+            ],
+            [
+              "Tense",
+              "Sales rose in March but fall in April.",
+              "Sales rose in March but fell in April."
+            ],
+            [
+              "Judul bagian",
+              "Annual sales report · Market Overview",
+              "Annual sales report · Market overview"
+            ],
+            [
+              "Angka (banyak panduan)",
+              "3 branches, twelve staff",
+              "three branches, 12 staff"
+            ],
+            [
+              "Tanggal",
+              "March 15, 2026 … 2 April 2026",
+              "15 March 2026 … 2 April 2026"
+            ],
+            [
+              "Serial comma",
+              "A, B, and C … D, E and F",
+              "A, B and C … D, E and F"
+            ],
+            [
+              "Singkatan",
+              "MSMEs (tidak pernah dijelaskan)",
+              "micro, small and medium enterprises (MSMEs)"
+            ],
+            [
+              "Feedback",
+              "Bagus kok! · You're confusing.",
+              "What works … · Could …? · Consider + -ing"
+            ]
+          ],
+          "tips": [
+            "Sunting dalam beberapa putaran: struktur, lalu kalimat, lalu konsistensi, lalu salah ketik.",
+            "Gaya selingkung yang menang. Tidak ada panduan? Tulis style sheet dan patuhi.",
+            "Feedback: spesifik, berurutan prioritas, sopan; pertanyaan dan saran; teksnya, bukan orangnya."
+          ],
+          "examples": [
+            {
+              "en": "To decide on the budget, we need more data.",
+              "id": "Untuk memutuskan anggarannya, kita butuh data lebih banyak."
+            },
+            {
+              "en": "The workshop will take place on 15 March 2026.",
+              "id": "Lokakarya itu akan diadakan pada 15 Maret 2026."
+            },
+            {
+              "en": "Could this paragraph come first?",
+              "id": "Bagaimana kalau paragraf ini ditaruh paling depan?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Pelajari lebih lanjut",
+        "text": "Mau lebih? Halaman dari pusat penulisan universitas ini membahas cara menyunting draf sendiri tingkat demi tingkat, dan cara menulis ringkas."
+      }
+    ]
+  }
+}

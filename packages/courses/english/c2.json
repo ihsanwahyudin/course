@@ -199,7 +199,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "daily"
       ],
@@ -581,7 +581,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career"
       ],
@@ -624,7 +624,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "study"
       ],
@@ -668,7 +668,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "i18n": {
         "id": {
           "title": "Nuansa Gaya",
@@ -708,7 +708,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "commonErrors": [
         {
           "wrong": "She was very sad.",
@@ -754,7 +754,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career",
         "tech"
@@ -804,7 +804,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "study"
       ],
@@ -848,7 +848,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career"
       ],
@@ -898,7 +898,7 @@
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "focus": [
         "career"
       ],
@@ -925,7 +925,7 @@
       "id": "c2-checkpoint",
       "level": "C2",
       "title": "C2 Checkpoint",
-      "summary": "Mixed test of all C2 strands (format similar to C2 Proficiency / IELTS 8.5+). Pass: 70+ in every strand, 80+ overall.",
+      "summary": "A mixed test of every C2 strand in a format similar to C2 Proficiency and IELTS band 8.5+.",
       "strand": "CK",
       "canDo": "Can show C2-level proficiency across grammar, vocabulary, listening, reading, speaking, writing and mediation.",
       "estimatedMinutes": 90,
@@ -946,31 +946,51 @@
       ],
       "objectives": [
         {
-          "id": "all-strands",
-          "text": "Complete a mixed test of every C2 strand, in a format similar to C2 Proficiency / IELTS 8.5+"
-        },
-        {
           "id": "language-precision",
-          "text": "Use C2 grammar and vocabulary accurately and flexibly"
+          "text": "Use C2 grammar and vocabulary accurately and flexibly",
+          "from": [
+            "c2-grammar-for-style",
+            "c2-complex-sentences",
+            "c2-idiomatic-mastery",
+            "c2-colloquial-slang",
+            "c2-figurative-language",
+            "c2-reformulation",
+            "c2-stylistic-nuance",
+            "c2-editing"
+          ]
         },
         {
           "id": "implicit-meaning",
-          "text": "Understand implied meaning in demanding texts and recordings"
+          "text": "Understand implied meaning in demanding texts and recordings",
+          "from": [
+            "c2-implied-meaning",
+            "c2-pron-natural",
+            "c2-listening-native-speed",
+            "c2-reading-literary"
+          ]
         },
         {
           "id": "productive-tasks",
-          "text": "Speak, write and mediate at length with precision and nuance"
+          "text": "Speak, write and mediate at length with precision and nuance",
+          "from": [
+            "c2-rhetoric",
+            "c2-public-speaking",
+            "c2-critical-review",
+            "c2-creative-writing",
+            "c2-advanced-summary",
+            "c2-high-stakes-communication",
+            "c2-cross-cultural-mediation"
+          ]
         }
       ],
       "masteryThreshold": 80,
-      "contentStatus": "coming_soon",
+      "contentStatus": "ready",
       "i18n": {
         "id": {
           "title": "Checkpoint C2",
-          "summary": "Tes campuran semua strand C2 (format mirip C2 Proficiency / IELTS 8.5+). Lulus: minimal 70 di tiap strand dan rata-rata 80.",
+          "summary": "Tes campuran semua strand C2 dengan format mirip C2 Proficiency dan IELTS band 8.5+.",
           "canDo": "Bisa menunjukkan kemampuan setara C2 di grammar, kosakata, listening, reading, speaking, writing dan mediasi.",
           "objectives": {
-            "all-strands": "Menyelesaikan tes campuran semua strand C2 dengan format mirip C2 Proficiency / IELTS 8.5+",
             "language-precision": "Memakai grammar dan kosakata C2 dengan akurat dan luwes",
             "implicit-meaning": "Memahami makna tersirat dalam teks dan rekaman yang menantang",
             "productive-tasks": "Berbicara, menulis dan melakukan mediasi secara panjang dengan presisi dan nuansa"

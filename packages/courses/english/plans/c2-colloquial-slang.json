@@ -1,0 +1,840 @@
+{
+  "en": {
+    "greeting": "Hi! You already understand fast, casual English. Today you start using it yourself: informal words that make you sound relaxed, slang you can (and can't) use, and the British and American words that can save you from an embarrassing moment. Let's start with gonna and wanna.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Informal, but still grammatical",
+        "text": "You understand gonna and wanna at speed. Now let's use them correctly.",
+        "body": "**gonna** replaces only *going to*, so the **be** stays: **I'm gonna**, **she's gonna**, **they're gonna**. Indonesian has no *to be* (*aku mau telepon*), so *I gonna call you* is the classic slip: to a native ear it's a mistake, not relaxed English.\n\n**wanna** = *want to*: *I wanna*, but *she **wants to*** (never *she wanna*). **gotta** is the exception: *I gotta go* is normal, because it comes from *I've got to*.\n\nAll three are for speech and chats with friends, never emails.",
+        "pairs": [
+          {
+            "en": "I'm gonna",
+            "id": "aku bakal / mau (= I'm going to)"
+          },
+          {
+            "en": "she's gonna",
+            "id": "dia bakal (be tetap ada: 's = is)"
+          },
+          {
+            "en": "Do you wanna …?",
+            "id": "kamu mau …? (= Do you want to …?)"
+          },
+          {
+            "en": "he wants to",
+            "id": "dia mau (bukan 'he wanna')"
+          },
+          {
+            "en": "I gotta go",
+            "id": "aku harus pergi (= I've got to go)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Hedges and vague words",
+        "text": "In casual talk, native speakers rarely sound 100% exact. These small words make you sound relaxed instead of blunt.",
+        "body": "**kind of / sort of** = agak, semacam · **-ish** = sekitar (*sevenish*, *fortyish*) · **a bit** = agak (British speakers use it for understatement: *a bit annoyed* can mean quite angry) · **or something** = atau semacamnya · **and stuff** = dan lain-lain. Great in chats and conversation; in a report, be precise instead (*at approximately 7 p.m.*).",
+        "examples": [
+          {
+            "en": "The new office is kind of far from the station.",
+            "id": "Kantor barunya agak jauh dari stasiun."
+          },
+          {
+            "en": "Let's meet at the café at sevenish.",
+            "id": "Ketemu di kafe sekitar jam tujuh, ya."
+          },
+          {
+            "en": "I'm a bit tired, to be honest.",
+            "id": "Jujur, aku agak capek."
+          },
+          {
+            "en": "We could get bakso or something.",
+            "id": "Kita bisa makan bakso atau apa gitu."
+          },
+          {
+            "en": "We talked about the budget, the deadline and stuff.",
+            "id": "Kami membahas anggaran, tenggat waktu, dan lain-lain."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the voice note",
+        "text": "Rina is driving to a friend's birthday dinner in Bandung, and the traffic on the toll road is terrible. She sends a quick voice note to the group.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "informal-spoken",
+          "prompt": "Build her message: Kami bakal agak telat.",
+          "tokens": [
+            "late",
+            "gonna",
+            "a",
+            "We're",
+            "bit",
+            "be"
+          ],
+          "solution": "We're gonna be a bit late.",
+          "explanation": "**We're gonna** keeps the *be* ('re = are), just like *we're going to*. **a bit** softens *late*: agak telat. Without the 're (*We gonna be late*) it sounds like a mistake, not like relaxed English."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Everyday informal words",
+        "text": "Some informal words are everywhere in casual English, and some belong more to one country.",
+        "body": "**reckon** = think (British/Australian; in the US it can sound rural). **fancy** (British) = want: *Fancy a coffee?* Careful: *I fancy him* = aku naksir dia! **cheers** (British) = thanks, bye, or a toast. **mate** (UK/Australia) = friend. **guys** = everyone, women included (*Hi guys!*), but in written work messages *Hi all / Hi everyone* is safer. **no worries** = no problem. **my bad** = my mistake (small ones only). **to be fair** (British) = adds a point on the other side.",
+        "pairs": [
+          {
+            "en": "I reckon …",
+            "id": "kayaknya / menurutku … (UK, Australia)"
+          },
+          {
+            "en": "Fancy a coffee?",
+            "id": "Mau ngopi? (UK)"
+          },
+          {
+            "en": "Cheers!",
+            "id": "makasih! / dah! / bersulang! (UK)"
+          },
+          {
+            "en": "mate",
+            "id": "teman, bro (UK, Australia)"
+          },
+          {
+            "en": "Hi guys!",
+            "id": "Halo semuanya! (laki-laki dan perempuan)"
+          },
+          {
+            "en": "No worries.",
+            "id": "Nggak masalah. / Sama-sama."
+          },
+          {
+            "en": "My bad.",
+            "id": "Salahku. (kesalahan kecil)"
+          },
+          {
+            "en": "To be fair, …",
+            "id": "Tapi harus diakui, …"
+          },
+          {
+            "en": "You know what I mean?",
+            "id": "Ngerti kan maksudku?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Chat or email?",
+        "text": "Rina writes two messages this morning: a WhatsApp to Tom, a friend from her master's course in Leeds, and an email to Mr Clarke, a client in London she has never met.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "informal-spoken",
+          "prompt": "Which pair is right for each reader?",
+          "options": [
+            "To Tom: 'Wanna grab lunch on Saturday?' · To Mr Clarke: 'Wanna have a quick call tomorrow?'",
+            "To Tom: 'Would you be available for lunch on Saturday?' · To Mr Clarke: 'Fancy a quick call tomorrow, mate?'",
+            "To Tom: 'Wanna grab lunch on Saturday?' · To Mr Clarke: 'Would you be available for a short call tomorrow?'"
+          ],
+          "answer": 2,
+          "explanation": "**wanna** is perfect in a chat with a friend, but it never goes in an email to a client you've never met: that needs **Would you be available …?** The middle option has it backwards: stiff with a friend, and *Fancy … mate?* is far too casual for a new client."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Slang: know it, use it with care",
+        "text": "Slang is the most informal layer of English. You already know how it works from Indonesian.",
+        "body": "Think of **bahasa gaul**: *mager*, *gabut* or *anjay* are fine with friends, but you wouldn't tell a director *Maaf, Pak, saya mager*. English slang is the same. Some is common and fairly safe in casual talk (*cool, awesome, broke, a rip-off*); some belongs to younger people or the internet (*sus, lowkey, vibe*) and dates fast; some is offensive, and we don't teach it. Rule: understand lots, use a little. **When in doubt, leave it out.**",
+        "pairs": [
+          {
+            "en": "cool",
+            "id": "oke, keren (That's cool = nggak apa-apa)"
+          },
+          {
+            "en": "awesome",
+            "id": "keren banget"
+          },
+          {
+            "en": "chill",
+            "id": "santai"
+          },
+          {
+            "en": "broke",
+            "id": "bokek, nggak punya uang"
+          },
+          {
+            "en": "a rip-off",
+            "id": "kemahalan, harga nggak masuk akal"
+          },
+          {
+            "en": "a buck · a quid",
+            "id": "1 dolar (US) · 1 pound (UK): ten bucks, ten quid"
+          },
+          {
+            "en": "FOMO",
+            "id": "takut ketinggalan (fear of missing out)"
+          },
+          {
+            "en": "vibe",
+            "id": "suasana, 'feel'-nya"
+          },
+          {
+            "en": "sus",
+            "id": "mencurigakan (dari suspicious)"
+          },
+          {
+            "en": "lowkey · highkey",
+            "id": "agak, diam-diam · terang-terangan, banget"
+          },
+          {
+            "en": "ghost someone",
+            "id": "menghilang tanpa kabar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "What happened?",
+        "text": "Budi had two interviews with a startup in Bandung. They promised him an answer 'next week'. That was two months ago: no email, no call, nothing. He tells a friend: 'Honestly, they totally ghosted me.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "slang-with-care",
+          "prompt": "What did the startup do?",
+          "options": [
+            "They frightened him during the interviews.",
+            "They suddenly stopped all contact, with no explanation.",
+            "They told him politely that he didn't get the job."
+          ],
+          "answer": 1,
+          "explanation": "**ghost someone** = stop replying and disappear without explaining (menghilang tanpa kabar). It has nothing to do with being scary, and a polite 'no' is the opposite of ghosting: they would have explained."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Safe at work?",
+        "text": "Sari is posting in her company's Slack channel. The members are her team and the new regional director from Singapore, whom she hasn't met yet. The client has just approved the team's design.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "slang-with-care",
+          "prompt": "Which post fits best?",
+          "options": [
+            "Guys!! The client was totally vibing with our design, lowkey obsessed 🔥🔥",
+            "Great news, everyone: the client has approved our design. Thanks for all your hard work!",
+            "Client approved it. Kinda sus how fast, but whatever lol."
+          ],
+          "answer": 1,
+          "explanation": "A work channel with a senior person you haven't met calls for neutral English: **Great news, everyone** is warm but professional. *vibing*, *lowkey* and *sus* are youth and internet slang: fine with friends, but at work they can sound unprofessional or like trying too hard, and *whatever lol* sounds as if you don't care."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "British and American words",
+        "text": "British and American English share almost everything, but some everyday words differ, and a few can embarrass you.",
+        "body": "Indonesians already say **lift** and **CV**, like the British; Americans say *elevator* and *résumé*. Understand both, and choose one variety for your own writing. Watch the traps: in the UK **pants** = underwear (celana dalam), so say **trousers**. The UK **first floor** is one level above the street (the *ground floor*): the American *second floor*. In the US a **biscuit** is a soft savoury bread roll, and **football** means American football.",
+        "pairs": [
+          {
+            "en": "flat (UK) · apartment (US)",
+            "id": "apartemen, unit hunian"
+          },
+          {
+            "en": "lift · elevator",
+            "id": "lift"
+          },
+          {
+            "en": "holiday · vacation",
+            "id": "liburan"
+          },
+          {
+            "en": "queue · line",
+            "id": "antrean"
+          },
+          {
+            "en": "rubbish · trash",
+            "id": "sampah"
+          },
+          {
+            "en": "biscuit · cookie",
+            "id": "biskuit, kue kering"
+          },
+          {
+            "en": "pavement · sidewalk",
+            "id": "trotoar"
+          },
+          {
+            "en": "mobile · cell phone",
+            "id": "HP, ponsel"
+          },
+          {
+            "en": "petrol · gas",
+            "id": "bensin"
+          },
+          {
+            "en": "trousers · pants",
+            "id": "celana panjang (UK pants = celana dalam!)"
+          },
+          {
+            "en": "CV · résumé",
+            "id": "CV, daftar riwayat hidup"
+          },
+          {
+            "en": "the bill · the check",
+            "id": "tagihan (di restoran)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "A compliment in Manchester",
+        "text": "Dimas is on a work trip in Manchester. His British colleague James arrives at the office in smart new grey trousers, and Dimas wants to compliment him.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "uk-us-vocabulary",
+          "prompt": "What should Dimas say?",
+          "options": [
+            "Nice pants, James!",
+            "Nice trousers, James!",
+            "Nice pant, James!"
+          ],
+          "answer": 1,
+          "explanation": "In British English **pants** means underwear (celana dalam), so 'Nice pants!' would get a laugh or an awkward silence. Say **trousers**. In the US, *pants* would be fine. 'pant' is wrong in everyday English: like *jeans*, the word is always plural."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Everything on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Colloquial language & slang",
+          "intro": "Informal words that are still grammatical, slang with care, and the UK/US words that differ.",
+          "headers": [
+            "Word or phrase",
+            "Meaning",
+            "Where / careful"
+          ],
+          "rows": [
+            [
+              "I'm gonna · she's gonna",
+              "= going to",
+              "keep the be: never 'I gonna' · speech and chats only"
+            ],
+            [
+              "wanna · gotta",
+              "= want to · = (have) got to",
+              "she wants to (not she wanna) · I gotta go is fine"
+            ],
+            [
+              "kind of · sort of · -ish · a bit",
+              "agak · sekitar",
+              "relaxed; in reports be precise"
+            ],
+            [
+              "or something · and stuff",
+              "atau semacamnya · dan lain-lain",
+              "casual talk only"
+            ],
+            [
+              "reckon · fancy",
+              "think · want",
+              "mostly British · I fancy him = aku naksir dia"
+            ],
+            [
+              "cheers · mate",
+              "thanks / bye · friend",
+              "UK (mate also Australia)"
+            ],
+            [
+              "guys · no worries · my bad",
+              "everyone · no problem · my mistake",
+              "casual; in work messages write Hi all / Hi everyone"
+            ],
+            [
+              "to be fair · you know what I mean?",
+              "tapi harus diakui · ngerti kan?",
+              "spoken; don't overuse"
+            ],
+            [
+              "cool · awesome · chill · broke · a rip-off",
+              "oke · keren banget · santai · bokek · kemahalan",
+              "fairly safe in casual talk, not in formal writing"
+            ],
+            [
+              "sus · lowkey · highkey · vibe · ghost someone · FOMO",
+              "mencurigakan · diam-diam · banget · suasana · menghilang tanpa kabar · takut ketinggalan",
+              "younger / online; dates fast; not in work posts"
+            ],
+            [
+              "a buck (US) · a quid (UK)",
+              "1 dolar · 1 pound",
+              "ten bucks, but ten quid"
+            ],
+            [
+              "flat/apartment · lift/elevator · holiday/vacation · queue/line · rubbish/trash",
+              "apartemen · lift · liburan · antrean · sampah",
+              "UK / US"
+            ],
+            [
+              "biscuit/cookie · pavement/sidewalk · mobile/cell phone · petrol/gas · CV/résumé · autumn/fall",
+              "biskuit · trotoar · HP · bensin · CV · musim gugur",
+              "UK / US · US biscuit = soft bread roll · US pavement = road surface"
+            ],
+            [
+              "trousers/pants · football/soccer · first floor/second floor · the bill/the check",
+              "celana panjang · sepak bola · satu lantai di atas lantai jalan · tagihan",
+              "UK / US · UK pants = celana dalam · US football = American football"
+            ]
+          ],
+          "tips": [
+            "gonna replaces going to, not the be: I'm gonna, she's gonna. Never in emails: write Dear Sir or Madam, I am writing to ask …",
+            "Slang: understand lots, use a little. Youth and internet slang dates fast, and some slang is offensive. When in doubt, leave it out.",
+            "Understand both UK and US words; pick one variety for your own writing and stay consistent."
+          ],
+          "examples": [
+            {
+              "en": "I'm gonna grab a coffee. Fancy one?",
+              "id": "Aku mau beli kopi. Mau juga?"
+            },
+            {
+              "en": "To be fair, the traffic was terrible.",
+              "id": "Tapi harus diakui, macetnya memang parah."
+            },
+            {
+              "en": "I'm totally broke till payday.",
+              "id": "Aku bokek banget sampai gajian."
+            },
+            {
+              "en": "Dear Sir or Madam, I am writing to ask about the vacancy.",
+              "id": "Dengan hormat, saya menulis untuk menanyakan lowongan tersebut."
+            },
+            {
+              "en": "We queued for an hour. (US: We waited in line for an hour.)",
+              "id": "Kami mengantre selama satu jam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read more",
+        "text": "Two short reads: VOA on British vs American English (with audio), and Oxford's 2020 list of Gen Z slang. Notice how fast some of that slang has already dated."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Kamu sudah memahami bahasa Inggris yang cepat dan santai. Hari ini kamu mulai memakainya sendiri: kata-kata santai yang membuatmu terdengar rileks, slang yang boleh (dan tidak boleh) kamu pakai, serta kata-kata Inggris dan Amerika yang bisa menyelamatkanmu dari momen memalukan. Kita mulai dari gonna dan wanna.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Santai, tapi tetap benar",
+        "text": "Kamu sudah paham gonna dan wanna dalam ucapan cepat. Sekarang kita pakai dengan benar.",
+        "body": "**gonna** hanya menggantikan *going to*, jadi **be**-nya tetap ada: **I'm gonna**, **she's gonna**, **they're gonna**. Bahasa Indonesia tidak punya *to be* (*aku mau telepon*), jadi *I gonna call you* adalah kekeliruan klasik: bagi penutur asli itu salah, bukan santai.\n\n**wanna** = *want to*: *I wanna*, tapi *she **wants to*** (tidak pernah *she wanna*). **gotta** adalah pengecualian: *I gotta go* itu wajar, karena berasal dari *I've got to*.\n\nKetiganya untuk ucapan dan chat dengan teman, tidak pernah untuk email.",
+        "pairs": [
+          {
+            "en": "I'm gonna",
+            "id": "aku bakal / mau (= I'm going to)"
+          },
+          {
+            "en": "she's gonna",
+            "id": "dia bakal (be tetap ada: 's = is)"
+          },
+          {
+            "en": "Do you wanna …?",
+            "id": "kamu mau …? (= Do you want to …?)"
+          },
+          {
+            "en": "he wants to",
+            "id": "dia mau (bukan 'he wanna')"
+          },
+          {
+            "en": "I gotta go",
+            "id": "aku harus pergi (= I've got to go)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pelunak dan kata-kata samar",
+        "text": "Dalam obrolan santai, penutur asli jarang terdengar 100% persis. Kata-kata kecil ini membuatmu terdengar rileks, tidak blak-blakan.",
+        "body": "**kind of / sort of** = agak, semacam · **-ish** = sekitar (*sevenish*, *fortyish*) · **a bit** = agak (orang Inggris memakainya untuk mengecilkan: *a bit annoyed* bisa berarti cukup marah) · **or something** = atau semacamnya · **and stuff** = dan lain-lain. Pas untuk chat dan obrolan; di laporan, tulislah dengan persis (*at approximately 7 p.m.*).",
+        "examples": [
+          {
+            "en": "The new office is kind of far from the station.",
+            "id": "Kantor barunya agak jauh dari stasiun."
+          },
+          {
+            "en": "Let's meet at the café at sevenish.",
+            "id": "Ketemu di kafe sekitar jam tujuh, ya."
+          },
+          {
+            "en": "I'm a bit tired, to be honest.",
+            "id": "Jujur, aku agak capek."
+          },
+          {
+            "en": "We could get bakso or something.",
+            "id": "Kita bisa makan bakso atau apa gitu."
+          },
+          {
+            "en": "We talked about the budget, the deadline and stuff.",
+            "id": "Kami membahas anggaran, tenggat waktu, dan lain-lain."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pesan suaranya",
+        "text": "Rina sedang menyetir ke acara makan malam ulang tahun temannya di Bandung, dan jalan tolnya macet parah. Ia mengirim pesan suara singkat ke grup.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "informal-spoken",
+          "prompt": "Susun pesannya: Kami bakal agak telat.",
+          "tokens": [
+            "late",
+            "gonna",
+            "a",
+            "We're",
+            "bit",
+            "be"
+          ],
+          "solution": "We're gonna be a bit late.",
+          "explanation": "**We're gonna** mempertahankan *be*-nya ('re = are), sama seperti *we're going to*. **a bit** memperlunak *late*: agak telat. Tanpa 're (*We gonna be late*) kalimatnya terdengar salah, bukan santai."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kosakata santai sehari-hari",
+        "text": "Sebagian kata santai ada di mana-mana dalam bahasa Inggris sehari-hari, dan sebagian lebih milik satu negara.",
+        "body": "**reckon** = kira (Inggris/Australia; di AS bisa terdengar seperti orang desa). **fancy** (Inggris) = mau: *Fancy a coffee?* Hati-hati: *I fancy him* = aku naksir dia! **cheers** (Inggris) = makasih, dah, atau bersulang. **mate** (Inggris/Australia) = teman. **guys** = semuanya, termasuk perempuan (*Hi guys!*), tapi di pesan tertulis di kantor *Hi all / Hi everyone* lebih aman. **no worries** = nggak masalah. **my bad** = salahku (kesalahan kecil saja). **to be fair** (Inggris) = menambah poin dari sisi lain.",
+        "pairs": [
+          {
+            "en": "I reckon …",
+            "id": "kayaknya / menurutku … (UK, Australia)"
+          },
+          {
+            "en": "Fancy a coffee?",
+            "id": "Mau ngopi? (UK)"
+          },
+          {
+            "en": "Cheers!",
+            "id": "makasih! / dah! / bersulang! (UK)"
+          },
+          {
+            "en": "mate",
+            "id": "teman, bro (UK, Australia)"
+          },
+          {
+            "en": "Hi guys!",
+            "id": "Halo semuanya! (laki-laki dan perempuan)"
+          },
+          {
+            "en": "No worries.",
+            "id": "Nggak masalah. / Sama-sama."
+          },
+          {
+            "en": "My bad.",
+            "id": "Salahku. (kesalahan kecil)"
+          },
+          {
+            "en": "To be fair, …",
+            "id": "Tapi harus diakui, …"
+          },
+          {
+            "en": "You know what I mean?",
+            "id": "Ngerti kan maksudku?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Chat atau email?",
+        "text": "Pagi ini Rina menulis dua pesan: WhatsApp ke Tom, teman kuliah S2-nya di Leeds, dan email ke Mr Clarke, klien di London yang belum pernah ia temui.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "informal-spoken",
+          "prompt": "Pasangan mana yang tepat untuk masing-masing pembaca?",
+          "options": [
+            "To Tom: 'Wanna grab lunch on Saturday?' · To Mr Clarke: 'Wanna have a quick call tomorrow?'",
+            "To Tom: 'Would you be available for lunch on Saturday?' · To Mr Clarke: 'Fancy a quick call tomorrow, mate?'",
+            "To Tom: 'Wanna grab lunch on Saturday?' · To Mr Clarke: 'Would you be available for a short call tomorrow?'"
+          ],
+          "answer": 2,
+          "explanation": "**wanna** pas sekali di chat dengan teman, tapi tidak pernah masuk ke email untuk klien yang belum pernah kamu temui: di situ perlu **Would you be available …?** Pilihan tengah terbalik: kaku untuk teman, dan *Fancy … mate?* terlalu santai untuk klien baru."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Slang: pahami, lalu pakai dengan hati-hati",
+        "text": "Slang adalah lapisan paling santai dari bahasa Inggris. Kamu sudah tahu cara kerjanya dari bahasa Indonesia.",
+        "body": "Ingat **bahasa gaul**: *mager*, *gabut* atau *anjay* tidak masalah dengan teman, tapi kamu tidak akan bilang *Maaf, Pak, saya mager* ke direktur. Slang bahasa Inggris juga begitu. Sebagian umum dan cukup aman di obrolan santai (*cool, awesome, broke, a rip-off*); sebagian milik anak muda atau internet (*sus, lowkey, vibe*) dan cepat basi; sebagian kasar, dan tidak kami ajarkan. Aturannya: pahami banyak, pakai sedikit. **Kalau ragu, jangan dipakai.**",
+        "pairs": [
+          {
+            "en": "cool",
+            "id": "oke, keren (That's cool = nggak apa-apa)"
+          },
+          {
+            "en": "awesome",
+            "id": "keren banget"
+          },
+          {
+            "en": "chill",
+            "id": "santai"
+          },
+          {
+            "en": "broke",
+            "id": "bokek, nggak punya uang"
+          },
+          {
+            "en": "a rip-off",
+            "id": "kemahalan, harga nggak masuk akal"
+          },
+          {
+            "en": "a buck · a quid",
+            "id": "1 dolar (US) · 1 pound (UK): ten bucks, ten quid"
+          },
+          {
+            "en": "FOMO",
+            "id": "takut ketinggalan (fear of missing out)"
+          },
+          {
+            "en": "vibe",
+            "id": "suasana, 'feel'-nya"
+          },
+          {
+            "en": "sus",
+            "id": "mencurigakan (dari suspicious)"
+          },
+          {
+            "en": "lowkey · highkey",
+            "id": "agak, diam-diam · terang-terangan, banget"
+          },
+          {
+            "en": "ghost someone",
+            "id": "menghilang tanpa kabar"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Apa yang terjadi?",
+        "text": "Budi dua kali wawancara di sebuah startup di Bandung. Mereka menjanjikan jawaban 'minggu depan'. Itu dua bulan lalu: tidak ada email, tidak ada telepon, tidak ada apa-apa. Ia bercerita ke temannya: 'Honestly, they totally ghosted me.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "slang-with-care",
+          "prompt": "Apa yang dilakukan startup itu?",
+          "options": [
+            "They frightened him during the interviews.",
+            "They suddenly stopped all contact, with no explanation.",
+            "They told him politely that he didn't get the job."
+          ],
+          "answer": 1,
+          "explanation": "**ghost someone** = berhenti membalas dan menghilang tanpa penjelasan (menghilang tanpa kabar). Tidak ada hubungannya dengan menakut-nakuti, dan penolakan yang sopan justru kebalikan dari ghosting: mereka akan memberi penjelasan."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Aman di kantor?",
+        "text": "Sari menulis di kanal Slack kantornya. Anggotanya adalah timnya dan direktur regional baru dari Singapura yang belum pernah ia temui. Klien baru saja menyetujui desain tim.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "slang-with-care",
+          "prompt": "Unggahan mana yang paling cocok?",
+          "options": [
+            "Guys!! The client was totally vibing with our design, lowkey obsessed 🔥🔥",
+            "Great news, everyone: the client has approved our design. Thanks for all your hard work!",
+            "Client approved it. Kinda sus how fast, but whatever lol."
+          ],
+          "answer": 1,
+          "explanation": "Kanal kerja dengan atasan senior yang belum kamu kenal butuh bahasa Inggris netral: **Great news, everyone** hangat tapi profesional. *vibing*, *lowkey* dan *sus* adalah slang anak muda dan internet: tidak masalah dengan teman, tapi di kantor bisa terdengar tidak profesional atau terlalu memaksa, dan *whatever lol* terdengar seolah kamu tidak peduli."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kosakata Inggris dan Amerika",
+        "text": "Bahasa Inggris versi Inggris dan Amerika hampir sama, tapi beberapa kata sehari-hari berbeda, dan beberapa bisa membuatmu malu.",
+        "body": "Orang Indonesia sudah bilang **lift** dan **CV**, seperti orang Inggris; orang Amerika bilang *elevator* dan *résumé*. Pahami keduanya, dan pilih satu ragam untuk tulisanmu sendiri. Awas jebakannya: di Inggris **pants** = celana dalam, jadi bilang **trousers**. **First floor** versi Inggris adalah satu lantai di atas level jalan (*ground floor*): *second floor* versi Amerika. Di AS, **biscuit** adalah roti kecil yang lembut dan gurih, dan **football** berarti American football.",
+        "pairs": [
+          {
+            "en": "flat (UK) · apartment (US)",
+            "id": "apartemen, unit hunian"
+          },
+          {
+            "en": "lift · elevator",
+            "id": "lift"
+          },
+          {
+            "en": "holiday · vacation",
+            "id": "liburan"
+          },
+          {
+            "en": "queue · line",
+            "id": "antrean"
+          },
+          {
+            "en": "rubbish · trash",
+            "id": "sampah"
+          },
+          {
+            "en": "biscuit · cookie",
+            "id": "biskuit, kue kering"
+          },
+          {
+            "en": "pavement · sidewalk",
+            "id": "trotoar"
+          },
+          {
+            "en": "mobile · cell phone",
+            "id": "HP, ponsel"
+          },
+          {
+            "en": "petrol · gas",
+            "id": "bensin"
+          },
+          {
+            "en": "trousers · pants",
+            "id": "celana panjang (UK pants = celana dalam!)"
+          },
+          {
+            "en": "CV · résumé",
+            "id": "CV, daftar riwayat hidup"
+          },
+          {
+            "en": "the bill · the check",
+            "id": "tagihan (di restoran)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pujian di Manchester",
+        "text": "Dimas sedang dinas ke Manchester. Rekan kerjanya dari Inggris, James, datang ke kantor dengan celana panjang abu-abu baru yang rapi, dan Dimas ingin memujinya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "uk-us-vocabulary",
+          "prompt": "Apa yang sebaiknya Dimas katakan?",
+          "options": [
+            "Nice pants, James!",
+            "Nice trousers, James!",
+            "Nice pant, James!"
+          ],
+          "answer": 1,
+          "explanation": "Dalam bahasa Inggris Inggris **pants** berarti celana dalam, jadi 'Nice pants!' akan membuat orang tertawa atau suasana jadi canggung. Bilang **trousers**. Di AS, *pants* tidak masalah. 'pant' salah dalam bahasa Inggris sehari-hari: seperti *jeans*, katanya selalu jamak."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semuanya dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Bahasa kolokial & slang",
+          "intro": "Kata-kata santai yang tetap benar, slang yang dipakai dengan hati-hati, dan kata-kata UK/US yang berbeda.",
+          "headers": [
+            "Kata atau frasa",
+            "Arti",
+            "Di mana / hati-hati"
+          ],
+          "rows": [
+            [
+              "I'm gonna · she's gonna",
+              "= going to",
+              "be tetap ada: tidak pernah 'I gonna' · hanya lisan dan chat"
+            ],
+            [
+              "wanna · gotta",
+              "= want to · = (have) got to",
+              "she wants to (bukan she wanna) · I gotta go tidak masalah"
+            ],
+            [
+              "kind of · sort of · -ish · a bit",
+              "agak · sekitar",
+              "santai; di laporan tulis dengan persis"
+            ],
+            [
+              "or something · and stuff",
+              "atau semacamnya · dan lain-lain",
+              "hanya obrolan santai"
+            ],
+            [
+              "reckon · fancy",
+              "kira · mau",
+              "kebanyakan Inggris · I fancy him = aku naksir dia"
+            ],
+            [
+              "cheers · mate",
+              "makasih / dah · teman",
+              "Inggris (mate juga Australia)"
+            ],
+            [
+              "guys · no worries · my bad",
+              "semuanya · nggak masalah · salahku",
+              "santai; di pesan kerja tulis Hi all / Hi everyone"
+            ],
+            [
+              "to be fair · you know what I mean?",
+              "tapi harus diakui · ngerti kan?",
+              "lisan; jangan berlebihan"
+            ],
+            [
+              "cool · awesome · chill · broke · a rip-off",
+              "oke · keren banget · santai · bokek · kemahalan",
+              "cukup aman di obrolan santai, bukan di tulisan formal"
+            ],
+            [
+              "sus · lowkey · highkey · vibe · ghost someone · FOMO",
+              "mencurigakan · diam-diam · banget · suasana · menghilang tanpa kabar · takut ketinggalan",
+              "anak muda / online; cepat basi; jangan di unggahan kerja"
+            ],
+            [
+              "a buck (US) · a quid (UK)",
+              "1 dolar · 1 pound",
+              "ten bucks, tapi ten quid"
+            ],
+            [
+              "flat/apartment · lift/elevator · holiday/vacation · queue/line · rubbish/trash",
+              "apartemen · lift · liburan · antrean · sampah",
+              "UK / US"
+            ],
+            [
+              "biscuit/cookie · pavement/sidewalk · mobile/cell phone · petrol/gas · CV/résumé · autumn/fall",
+              "biskuit · trotoar · HP · bensin · CV · musim gugur",
+              "UK / US · biscuit versi AS = roti kecil lembut · pavement versi AS = permukaan jalan"
+            ],
+            [
+              "trousers/pants · football/soccer · first floor/second floor · the bill/the check",
+              "celana panjang · sepak bola · satu lantai di atas lantai jalan · tagihan",
+              "UK / US · pants versi UK = celana dalam · football versi AS = American football"
+            ]
+          ],
+          "tips": [
+            "gonna menggantikan going to, bukan be-nya: I'm gonna, she's gonna. Tidak pernah di email: tulis Dear Sir or Madam, I am writing to ask …",
+            "Slang: pahami banyak, pakai sedikit. Slang anak muda dan internet cepat basi, dan sebagian slang itu kasar. Kalau ragu, jangan dipakai.",
+            "Pahami kata versi UK dan US; pilih satu ragam untuk tulisanmu sendiri dan konsistenlah."
+          ],
+          "examples": [
+            {
+              "en": "I'm gonna grab a coffee. Fancy one?",
+              "id": "Aku mau beli kopi. Mau juga?"
+            },
+            {
+              "en": "To be fair, the traffic was terrible.",
+              "id": "Tapi harus diakui, macetnya memang parah."
+            },
+            {
+              "en": "I'm totally broke till payday.",
+              "id": "Aku bokek banget sampai gajian."
+            },
+            {
+              "en": "Dear Sir or Madam, I am writing to ask about the vacancy.",
+              "id": "Dengan hormat, saya menulis untuk menanyakan lowongan tersebut."
+            },
+            {
+              "en": "We queued for an hour. (US: We waited in line for an hour.)",
+              "id": "Kami mengantre selama satu jam."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Bacaan tambahan",
+        "text": "Dua bacaan singkat: VOA tentang bahasa Inggris versi Inggris dan Amerika (dengan audio), dan daftar slang Gen Z tahun 2020 dari Oxford. Perhatikan betapa cepatnya sebagian slang itu sudah basi."
+      }
+    ]
+  }
+}

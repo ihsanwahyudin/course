@@ -1,0 +1,720 @@
+{
+  "en": {
+    "greeting": "Hi! Today is about how your English sounds, not just what it says: setting your tone precisely, keeping one voice, and rewriting one message for very different readers.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Tone has dials",
+        "text": "You can already shift register, choose words for their feeling and decode the polite code. Now: tone as a set of dials you control.",
+        "body": "**Tone** is your attitude to the reader and the subject. Five dials: **formal ↔ casual**, **warm ↔ cool**, **confident ↔ tentative**, **serious ↔ playful**, **direct ↔ indirect**. The levers: word choice, sentence length, contractions, pronouns (*we / you* or *the company*), **hedges** (*perhaps, just, might*: one is polite, many sound unsure) and punctuation (one *!* is friendly, *!!!* is shouting). **Indonesian trap:** English has no *ya / dong / sih*, so don't replace them with *!!!*.",
+        "pairs": [
+          {
+            "en": "We are unable to …",
+            "id": "formal → We can't … (santai)"
+          },
+          {
+            "en": "Please be advised that …",
+            "id": "dingin, berjarak → Thanks for your patience (hangat)"
+          },
+          {
+            "en": "We were wondering if maybe …",
+            "id": "ragu-ragu → We recommend … (yakin)"
+          },
+          {
+            "en": "It would be great to have it today.",
+            "id": "tidak langsung → Please send it by 3 p.m. (langsung)"
+          },
+          {
+            "en": "Quick heads-up: we've moved the meeting to Thursday!",
+            "id": "Info singkat: rapatnya kami pindah ke Kamis! (hangat, santai)"
+          },
+          {
+            "en": "The meeting has been moved to Thursday.",
+            "id": "Rapatnya dipindah ke Kamis. (netral, dingin: pasif, tanpa orang)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: find the dial",
+        "text": "Read Rina's email to a new client and decide which dial is turned too far.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjust-style-and",
+          "options": [
+            "Too casual: the contraction makes it sound careless.",
+            "Too tentative: so many hedges make her sound unsure of her own quote.",
+            "Too playful: it sounds as if she's joking."
+          ],
+          "answer": 1,
+          "prompt": "Rina emails a new client in Singapore about a quote she's proud of: 'Hi Mr Lim, I was just wondering if you might possibly have had a chance to maybe look at the quote, if that's OK?' What's wrong with the tone?",
+          "explanation": "Count the hedges: **just, wondering, might, possibly, maybe, if that's OK**. One would be polite; six make her sound unsure of her own quote. Better: *Hi Mr Lim, have you had a chance to look at the quote? I'm happy to go through it on a call.* One contraction (*that's*) is normal in a neutral email, and nothing in it is a joke."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "When tone backfires",
+        "text": "Polite words can still carry the wrong tone. Two kinds do real damage at work.",
+        "body": "**The defensive apology** says *sorry* but takes no responsibility: *sorry you feel …*, *sorry if …*, then *However, as clearly stated …*. A real apology names the problem, owns it and says what you'll do.\n**Passive-aggressive phrases** (pasif-agresif: annoyance hidden behind polite words) look polite, but many readers hear the sting. These are tendencies: some people use them innocently, so a careful writer avoids them. The fix: **neutral and specific**, a clear request + a reason.",
+        "pairs": [
+          {
+            "en": "We're sorry you feel the delivery was slow.",
+            "id": "maaf atas perasaanmu, bukan keterlambatannya → defensif"
+          },
+          {
+            "en": "However, as clearly stated on our website, …",
+            "id": "membatalkan maaf + 'kamu tidak membaca' → defensif"
+          },
+          {
+            "en": "We're sorry your order was late. That was our mistake.",
+            "id": "menyebut masalah + mengakuinya → tulus"
+          },
+          {
+            "en": "As per my last email, …",
+            "id": "aku sudah bilang; baca email-mu → pasif-agresif"
+          },
+          {
+            "en": "Just a gentle reminder …",
+            "id": "(kedua kalinya / setelah tenggat) kamu terlambat, aku kesal"
+          },
+          {
+            "en": "Not sure if you saw my previous email …",
+            "id": "kamu mengabaikanku"
+          },
+          {
+            "en": "As I'm sure you're aware, …",
+            "id": "harusnya kamu sudah tahu"
+          },
+          {
+            "en": "Could you send the figures by 3 p.m.? I need them for the board pack.",
+            "id": "netral dan spesifik: permintaan + alasan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: read the signal",
+        "text": "A missed deadline in a Jakarta office. What is Pak Hasan really saying?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjust-style-and",
+          "options": [
+            "Nothing extra: it's simply a formal way to say 'in my previous email'.",
+            "He's sorry for sending Dimas so many emails.",
+            "I've already told you this, and I'm annoyed that I have to repeat it."
+          ],
+          "answer": 2,
+          "prompt": "On Monday, Pak Hasan asked Dimas to send the sales figures by Wednesday. On Thursday morning he emails: 'Hi Dimas, as per my last email, I need the figures today.' What does 'as per my last email' signal here?",
+          "explanation": "Literally it means 'as I said in my last email', but after a missed deadline readers hear **I already told you, and I'm annoyed**. It's not neutral here: the request is repeated and late. Nothing in it is an apology. A kinder version: *Could you send the figures this morning? I need them for the 2 p.m. meeting.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One voice, precise words",
+        "text": "Next: the personality of a text, and the words that keep it steady.",
+        "body": "**Voice** (suara tulisan) stays the same; **tone** shifts with the situation. A startup app's voice is casual and warm; a bank's is calm and precise. Keep **one voice through the whole text**: a chatty message that suddenly says *hereby*, or a bank letter that suddenly says *Awesome, right?*, sounds as if two people wrote it.\n**Precise verbs:** one exact verb beats a weak verb + an adverb, and it tells the mood. **Clichés:** cut them, or replace them with a fact.",
+        "pairs": [
+          {
+            "en": "Your card's on its way!",
+            "id": "Kartumu sedang dikirim! (suara startup: santai, hangat)"
+          },
+          {
+            "en": "Your new card has been sent.",
+            "id": "Kartu baru Anda telah dikirim. (suara bank: tenang, tepat)"
+          },
+          {
+            "en": "strolled",
+            "id": "berjalan santai sambil menikmati (= walked slowly, relaxed)"
+          },
+          {
+            "en": "trudged",
+            "id": "berjalan lambat dengan langkah berat, capek"
+          },
+          {
+            "en": "marched",
+            "id": "berjalan dengan langkah tegas dan kuat"
+          },
+          {
+            "en": "whispered",
+            "id": "berbisik (= said very quietly)"
+          },
+          {
+            "en": "soared / plunged",
+            "id": "melonjak / anjlok (= rose / fell very sharply)"
+          },
+          {
+            "en": "at the end of the day",
+            "id": "klise: hapus, atau ganti dengan fakta"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: keep the voice",
+        "text": "Jajan is a food delivery app in Jakarta with a friendly, casual voice.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rhythm-word-choice",
+          "options": [
+            "Hey Sari, welcome to Jajan! Your first delivery's on us. Pick something tasty and we'll do the rest.",
+            "Hey Sari, welcome to Jajan! Your first delivery's on us. The user is hereby advised that this promotion is subject to availability.",
+            "Dear Ms Wulandari, welcome to Jajan. We are pleased to inform you that your first delivery is complimentary. Have fun, yeah?"
+          ],
+          "answer": 0,
+          "prompt": "Which welcome message keeps Jajan's friendly, casual voice all the way through?",
+          "explanation": "The first message stays casual and warm to the end: *Hey*, *delivery's*, *on us*, *we'll do the rest*. The second jumps into legal language (*The user is hereby advised … subject to availability*). The third starts stiff and formal, then ends in slang (*Have fun, yeah?*): two voices in one message."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rhythm: end on the strong word",
+        "text": "You already vary sentence length. Two more habits give a text a steady rhythm.",
+        "body": "**Read it aloud.** Where you run out of breath, split the sentence; where every sentence has the same shape, change one.\n**End on the strong word.** The end of a sentence is the spotlight, so don't leave a weak tail there (*to be honest*, *I think*, *as well*, *etc.*): move it to the front or cut it. Finish the paragraph on the point you want remembered.",
+        "pairs": [
+          {
+            "en": "The results were disappointing, to be honest.",
+            "id": "lemah: berakhir pada ekor 'to be honest'"
+          },
+          {
+            "en": "To be honest, the results were disappointing.",
+            "id": "kuat: berakhir pada 'disappointing'"
+          },
+          {
+            "en": "In the third quarter, profits fell by forty per cent.",
+            "id": "kuat: berakhir pada beritanya (40%)"
+          },
+          {
+            "en": "We need your support, and we need it now.",
+            "id": "pengulangan pendek, berakhir pada kata terkuat"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: the precise verb",
+        "text": "A practice short story set in a Surabaya hospital. Choose the verb that carries the mood.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rhythm-word-choice",
+          "options": [
+            "strolled",
+            "marched",
+            "trudged"
+          ],
+          "answer": 2,
+          "prompt": "'After a twelve-hour shift at the hospital, Sari ___ home through the rain, too tired to lift her umbrella.' Which ONE verb is the most precise?",
+          "explanation": "**Trudged** = walked slowly with heavy steps because you're tired: exactly Sari after twelve hours. **Strolled** is slow too, but relaxed and pleasant: the wrong mood. **Marched** is firm and determined: the wrong energy for someone too tired to lift an umbrella."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One message, many readers",
+        "text": "Last skill: rewriting the same news for very different readers. One practice incident: the payment app BayarKu was down for two hours on Friday.",
+        "body": "In the register lesson you changed the greeting and the verbs. For a really different reader you change the **content** and its **order**. Ask: **who** reads it and what do they know? What's their **first question**? What must they **do or feel**? **Where** will they read it? Customers need an apology and *your money is safe*; the CEO needs the impact; engineers need the cause; the press needs formal, accountable sentences and a named quote.",
+        "pairs": [
+          {
+            "en": "Sorry, payments aren't working right now. Your money is safe, and we're fixing it.",
+            "id": "pelanggan (notifikasi): Maaf, pembayaran sedang tidak bisa. Uangmu aman, kami sedang memperbaikinya."
+          },
+          {
+            "en": "Payments were down for two hours on Friday: about 48,000 failed transactions, no money lost.",
+            "id": "CEO: Pembayaran mati dua jam hari Jumat: sekitar 48.000 transaksi gagal, tidak ada uang hilang."
+          },
+          {
+            "en": "Migration 412 locked the transactions table at 19:10; rollback completed at 20:52.",
+            "id": "engineer: Migrasi 412 mengunci tabel transaksi pukul 19.10; rollback selesai pukul 20.52."
+          },
+          {
+            "en": "No customer funds were affected, said CEO Dimas Pratama.",
+            "id": "siaran pers: Dana pelanggan tidak terdampak, kata CEO Dimas Pratama."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: choose the reader",
+        "text": "A coffee chain in Bandung has to raise its membership price. Three versions, three readers.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rewrite-for-reader",
+          "options": [
+            "From 1 March, membership revenue is expected to grow by about 20%, with churn projected below 3%.",
+            "Thank you for being with us. From 1 March, membership will be Rp 55,000 a month because our coffee and milk costs have risen. Your free birthday drink stays.",
+            "Membership price: Rp 55,000 from 1 March. Update the till settings before opening that day."
+          ],
+          "answer": 1,
+          "prompt": "Kopi Nusantara is raising its membership from Rp 45,000 to Rp 55,000 a month. Which version is written for its loyal members?",
+          "explanation": "Loyal members get **thanks**, the **new price**, an **honest reason** and **what stays the same**, in warm, plain words. The first version talks about revenue and churn (members who leave): that's for investors. The third is an instruction for the staff at the till."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Tone dials, the phrases that backfire, voice, rhythm and readers on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Stylistic nuance",
+          "intro": "Set the dials, keep one voice, end strong, and write for the reader in front of you.",
+          "headers": [
+            "Tool",
+            "What it does",
+            "Example"
+          ],
+          "rows": [
+            [
+              "formal ↔ casual",
+              "word choice, contractions",
+              "We are unable to … / We can't …"
+            ],
+            [
+              "warm ↔ cool",
+              "we / you, thanks, a reason",
+              "Thanks for your patience / Please be advised …"
+            ],
+            [
+              "confident ↔ tentative",
+              "hedges: one is polite, many sound unsure",
+              "We recommend … / We were wondering if maybe …"
+            ],
+            [
+              "serious ↔ playful",
+              "jokes, emoji, !",
+              "a plain fact / a light joke"
+            ],
+            [
+              "direct ↔ indirect",
+              "a request or a hint",
+              "Please send it by 3 p.m. / It would be great to have it today."
+            ],
+            [
+              "Defensive apology (avoid)",
+              "sorry for feelings, then defends",
+              "We're sorry you feel … However, as clearly stated …"
+            ],
+            [
+              "Real apology",
+              "name it + own it + action",
+              "We're sorry your order was late. We've refunded the fee."
+            ],
+            [
+              "Passive-aggressive (avoid)",
+              "annoyance hidden in polite words",
+              "As per my last email … / Just a gentle reminder (again) …"
+            ],
+            [
+              "Voice vs tone",
+              "voice stays the same; tone shifts",
+              "startup: casual, warm · bank: calm, precise"
+            ],
+            [
+              "Precise verb",
+              "one verb, not verb + adverb",
+              "strolled, trudged, marched, whispered, soared"
+            ],
+            [
+              "Clichés (cut)",
+              "delete, or replace with a fact",
+              "at the end of the day, think outside the box"
+            ],
+            [
+              "Rhythm",
+              "read aloud; end on the strong word",
+              "To be honest, the results were disappointing."
+            ],
+            [
+              "New reader",
+              "change the content and its order",
+              "customers · CEO · engineers · press"
+            ]
+          ],
+          "tips": [
+            "One hedge is polite; three sound unsure. One ! is friendly; !!! is shouting.",
+            "Before sending a reminder, delete 'As per my last email' and 'gentle': write a clear request and a reason.",
+            "For a new reader, change the content and its order, not just the greeting."
+          ],
+          "examples": [
+            {
+              "en": "Could you send your timesheet today? Payroll closes at 5 p.m.",
+              "id": "Bisa kirim timesheet-mu hari ini? Penggajian ditutup pukul 17.00. (netral, bukan pasif-agresif)"
+            },
+            {
+              "en": "We're sorry your order arrived five days late. That was our mistake, and we've refunded the delivery fee.",
+              "id": "Kami minta maaf pesananmu terlambat lima hari. Itu kesalahan kami, dan ongkos kirimnya sudah kami kembalikan. (maaf yang sungguhan)"
+            },
+            {
+              "en": "After the night shift, Sari trudged home through the rain.",
+              "id": "Setelah sif malam, Sari berjalan pulang dengan langkah berat di tengah hujan. (kata kerja yang tepat)"
+            },
+            {
+              "en": "In the third quarter, profits fell by forty per cent.",
+              "id": "Di kuartal ketiga, laba turun empat puluh persen. (berakhir pada kata yang kuat)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Read more",
+        "text": "Two short reads from professional writers: tone as dials, and one company's voice-and-tone guide."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membahas bagaimana bahasa Inggrismu terdengar, bukan hanya apa isinya: mengatur nada dengan tepat, menjaga satu suara, dan menulis ulang satu pesan untuk pembaca yang sangat berbeda.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Nada punya kenop",
+        "text": "Kamu sudah bisa menggeser register, memilih kata dari rasanya dan membaca kode sopan. Sekarang: nada sebagai beberapa kenop yang kamu kendalikan.",
+        "body": "**Nada** (tone) adalah sikapmu terhadap pembaca dan topiknya. Lima kenop: **formal ↔ santai**, **hangat ↔ dingin**, **yakin ↔ ragu-ragu**, **serius ↔ jenaka**, **langsung ↔ tidak langsung**. Tuasnya: pilihan kata, panjang kalimat, bentuk singkat, kata ganti (*we / you* atau *the company*), **pelunak** (*perhaps, just, might*: satu sopan, banyak terdengar ragu) dan tanda baca (satu *!* ramah, *!!!* seperti berteriak). **Jebakan:** bahasa Inggris tidak punya *ya / dong / sih*, jadi jangan menggantinya dengan *!!!*.",
+        "pairs": [
+          {
+            "en": "We are unable to …",
+            "id": "formal → We can't … (santai)"
+          },
+          {
+            "en": "Please be advised that …",
+            "id": "dingin, berjarak → Thanks for your patience (hangat)"
+          },
+          {
+            "en": "We were wondering if maybe …",
+            "id": "ragu-ragu → We recommend … (yakin)"
+          },
+          {
+            "en": "It would be great to have it today.",
+            "id": "tidak langsung → Please send it by 3 p.m. (langsung)"
+          },
+          {
+            "en": "Quick heads-up: we've moved the meeting to Thursday!",
+            "id": "Info singkat: rapatnya kami pindah ke Kamis! (hangat, santai)"
+          },
+          {
+            "en": "The meeting has been moved to Thursday.",
+            "id": "Rapatnya dipindah ke Kamis. (netral, dingin: pasif, tanpa orang)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: temukan kenopnya",
+        "text": "Baca email Rina untuk klien baru dan tentukan kenop mana yang diputar terlalu jauh.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjust-style-and",
+          "options": [
+            "Too casual: the contraction makes it sound careless.",
+            "Too tentative: so many hedges make her sound unsure of her own quote.",
+            "Too playful: it sounds as if she's joking."
+          ],
+          "answer": 1,
+          "prompt": "Rina mengirim email ke klien baru di Singapura tentang penawaran harga yang ia banggakan: 'Hi Mr Lim, I was just wondering if you might possibly have had a chance to maybe look at the quote, if that's OK?' Apa masalah nadanya?",
+          "explanation": "Hitung pelunaknya: **just, wondering, might, possibly, maybe, if that's OK**. Satu saja sudah sopan; enam membuatnya terdengar tidak yakin dengan penawarannya sendiri. Lebih baik: *Hi Mr Lim, have you had a chance to look at the quote? I'm happy to go through it on a call.* Satu bentuk singkat (*that's*) wajar di email netral, dan tidak ada candaan di dalamnya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Saat nada jadi bumerang",
+        "text": "Kata-kata sopan tetap bisa membawa nada yang salah. Dua jenis ini benar-benar merusak di tempat kerja.",
+        "body": "**Permintaan maaf yang defensif** berkata *sorry* tapi tidak mengambil tanggung jawab: *sorry you feel …*, *sorry if …*, lalu *However, as clearly stated …*. Maaf yang sungguhan menyebut masalahnya, mengakuinya dan mengatakan apa yang akan dilakukan.\n**Frasa pasif-agresif** (kesal yang disamarkan kata-kata sopan) tampak sopan, tapi banyak pembaca merasakan sindirannya. Ini kecenderungan: ada yang memakainya tanpa maksud apa-apa, jadi penulis yang cermat menghindarinya. Solusinya: **netral dan spesifik**, permintaan yang jelas + alasan.",
+        "pairs": [
+          {
+            "en": "We're sorry you feel the delivery was slow.",
+            "id": "maaf atas perasaanmu, bukan keterlambatannya → defensif"
+          },
+          {
+            "en": "However, as clearly stated on our website, …",
+            "id": "membatalkan maaf + 'kamu tidak membaca' → defensif"
+          },
+          {
+            "en": "We're sorry your order was late. That was our mistake.",
+            "id": "menyebut masalah + mengakuinya → tulus"
+          },
+          {
+            "en": "As per my last email, …",
+            "id": "aku sudah bilang; baca email-mu → pasif-agresif"
+          },
+          {
+            "en": "Just a gentle reminder …",
+            "id": "(kedua kalinya / setelah tenggat) kamu terlambat, aku kesal"
+          },
+          {
+            "en": "Not sure if you saw my previous email …",
+            "id": "kamu mengabaikanku"
+          },
+          {
+            "en": "As I'm sure you're aware, …",
+            "id": "harusnya kamu sudah tahu"
+          },
+          {
+            "en": "Could you send the figures by 3 p.m.? I need them for the board pack.",
+            "id": "netral dan spesifik: permintaan + alasan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: baca sinyalnya",
+        "text": "Tenggat yang terlewat di kantor Jakarta. Sebenarnya apa yang dikatakan Pak Hasan?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "adjust-style-and",
+          "options": [
+            "Nothing extra: it's simply a formal way to say 'in my previous email'.",
+            "He's sorry for sending Dimas so many emails.",
+            "I've already told you this, and I'm annoyed that I have to repeat it."
+          ],
+          "answer": 2,
+          "prompt": "Hari Senin, Pak Hasan meminta Dimas mengirim angka penjualan paling lambat hari Rabu. Kamis pagi ia mengirim email: 'Hi Dimas, as per my last email, I need the figures today.' Apa sinyal 'as per my last email' di sini?",
+          "explanation": "Secara harfiah artinya 'seperti yang kusampaikan di email terakhir', tapi setelah tenggat lewat pembaca mendengar **aku sudah bilang, dan aku kesal**. Di sini tidak netral: permintaannya diulang dan sudah terlambat. Tidak ada permintaan maaf di dalamnya. Versi yang lebih ramah: *Could you send the figures this morning? I need them for the 2 p.m. meeting.*"
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Satu suara, kata yang tepat",
+        "text": "Berikutnya: kepribadian sebuah tulisan, dan kata-kata yang menjaganya tetap stabil.",
+        "body": "**Suara** (voice) tetap sama; **nada** (tone) berubah sesuai situasi. Suara aplikasi startup santai dan hangat; suara bank tenang dan tepat. Jaga **satu suara di seluruh tulisan**: pesan santai yang tiba-tiba memakai *hereby*, atau surat bank yang tiba-tiba berkata *Awesome, right?*, terdengar seperti ditulis dua orang.\n**Kata kerja yang tepat:** satu kata kerja yang pas lebih baik daripada kata kerja lemah + kata keterangan, dan ia menunjukkan suasananya. **Klise:** buang, atau ganti dengan fakta.",
+        "pairs": [
+          {
+            "en": "Your card's on its way!",
+            "id": "Kartumu sedang dikirim! (suara startup: santai, hangat)"
+          },
+          {
+            "en": "Your new card has been sent.",
+            "id": "Kartu baru Anda telah dikirim. (suara bank: tenang, tepat)"
+          },
+          {
+            "en": "strolled",
+            "id": "berjalan santai sambil menikmati (= walked slowly, relaxed)"
+          },
+          {
+            "en": "trudged",
+            "id": "berjalan lambat dengan langkah berat, capek"
+          },
+          {
+            "en": "marched",
+            "id": "berjalan dengan langkah tegas dan kuat"
+          },
+          {
+            "en": "whispered",
+            "id": "berbisik (= said very quietly)"
+          },
+          {
+            "en": "soared / plunged",
+            "id": "melonjak / anjlok (= rose / fell very sharply)"
+          },
+          {
+            "en": "at the end of the day",
+            "id": "klise: hapus, atau ganti dengan fakta"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: jaga suaranya",
+        "text": "Jajan adalah aplikasi pesan-antar makanan di Jakarta dengan suara yang ramah dan santai.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rhythm-word-choice",
+          "options": [
+            "Hey Sari, welcome to Jajan! Your first delivery's on us. Pick something tasty and we'll do the rest.",
+            "Hey Sari, welcome to Jajan! Your first delivery's on us. The user is hereby advised that this promotion is subject to availability.",
+            "Dear Ms Wulandari, welcome to Jajan. We are pleased to inform you that your first delivery is complimentary. Have fun, yeah?"
+          ],
+          "answer": 0,
+          "prompt": "Pesan sambutan mana yang menjaga suara Jajan yang ramah dan santai dari awal sampai akhir?",
+          "explanation": "Pesan pertama tetap santai dan hangat sampai akhir: *Hey*, *delivery's*, *on us*, *we'll do the rest*. Pesan kedua melompat ke bahasa hukum (*The user is hereby advised … subject to availability*). Pesan ketiga mulai kaku dan formal, lalu berakhir dengan bahasa gaul (*Have fun, yeah?*): dua suara dalam satu pesan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Ritme: akhiri dengan kata yang kuat",
+        "text": "Kamu sudah memvariasikan panjang kalimat. Dua kebiasaan lagi membuat ritme tulisan terjaga.",
+        "body": "**Bacakan dengan suara keras.** Di mana napasmu habis, pecah kalimatnya; kalau setiap kalimat punya bentuk yang sama, ubah satu.\n**Akhiri dengan kata yang kuat.** Akhir kalimat adalah lampu sorot, jadi jangan tinggalkan ekor yang lemah di sana (*to be honest*, *I think*, *as well*, *etc.*): pindahkan ke depan atau buang. Tutup paragraf dengan poin yang ingin diingat.",
+        "pairs": [
+          {
+            "en": "The results were disappointing, to be honest.",
+            "id": "lemah: berakhir pada ekor 'to be honest'"
+          },
+          {
+            "en": "To be honest, the results were disappointing.",
+            "id": "kuat: berakhir pada 'disappointing'"
+          },
+          {
+            "en": "In the third quarter, profits fell by forty per cent.",
+            "id": "kuat: berakhir pada beritanya (40%)"
+          },
+          {
+            "en": "We need your support, and we need it now.",
+            "id": "pengulangan pendek, berakhir pada kata terkuat"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: kata kerja yang tepat",
+        "text": "Cerita pendek latihan berlatar rumah sakit di Surabaya. Pilih kata kerja yang membawa suasananya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rhythm-word-choice",
+          "options": [
+            "strolled",
+            "marched",
+            "trudged"
+          ],
+          "answer": 2,
+          "prompt": "'After a twelve-hour shift at the hospital, Sari ___ home through the rain, too tired to lift her umbrella.' SATU kata kerja mana yang paling tepat?",
+          "explanation": "**Trudged** = berjalan lambat dengan langkah berat karena capek: persis Sari setelah dua belas jam. **Strolled** juga lambat, tapi santai dan menyenangkan: suasananya salah. **Marched** tegas dan bersemangat: energinya salah untuk orang yang terlalu capek untuk mengangkat payung."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Satu pesan, banyak pembaca",
+        "text": "Keterampilan terakhir: menulis ulang berita yang sama untuk pembaca yang sangat berbeda. Satu kejadian latihan: aplikasi pembayaran BayarKu mati dua jam pada hari Jumat.",
+        "body": "Di pelajaran register kamu mengganti salam dan kata kerjanya. Untuk pembaca yang benar-benar berbeda, kamu mengubah **isi** dan **urutannya**. Tanyakan: **siapa** yang membaca dan apa yang sudah mereka tahu? Apa **pertanyaan pertama** mereka? Apa yang harus mereka **lakukan atau rasakan**? **Di mana** mereka membacanya? Pelanggan perlu maaf dan *your money is safe*; CEO perlu dampaknya; engineer perlu penyebabnya; pers perlu kalimat formal yang bertanggung jawab dan kutipan dari orang yang disebut namanya.",
+        "pairs": [
+          {
+            "en": "Sorry, payments aren't working right now. Your money is safe, and we're fixing it.",
+            "id": "pelanggan (notifikasi): Maaf, pembayaran sedang tidak bisa. Uangmu aman, kami sedang memperbaikinya."
+          },
+          {
+            "en": "Payments were down for two hours on Friday: about 48,000 failed transactions, no money lost.",
+            "id": "CEO: Pembayaran mati dua jam hari Jumat: sekitar 48.000 transaksi gagal, tidak ada uang hilang."
+          },
+          {
+            "en": "Migration 412 locked the transactions table at 19:10; rollback completed at 20:52.",
+            "id": "engineer: Migrasi 412 mengunci tabel transaksi pukul 19.10; rollback selesai pukul 20.52."
+          },
+          {
+            "en": "No customer funds were affected, said CEO Dimas Pratama.",
+            "id": "siaran pers: Dana pelanggan tidak terdampak, kata CEO Dimas Pratama."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: pilih pembacanya",
+        "text": "Sebuah jaringan kedai kopi di Bandung harus menaikkan harga keanggotaannya. Tiga versi, tiga pembaca.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "rewrite-for-reader",
+          "options": [
+            "From 1 March, membership revenue is expected to grow by about 20%, with churn projected below 3%.",
+            "Thank you for being with us. From 1 March, membership will be Rp 55,000 a month because our coffee and milk costs have risen. Your free birthday drink stays.",
+            "Membership price: Rp 55,000 from 1 March. Update the till settings before opening that day."
+          ],
+          "answer": 1,
+          "prompt": "Kopi Nusantara menaikkan harga keanggotaannya dari Rp 45.000 menjadi Rp 55.000 per bulan. Versi mana yang ditulis untuk anggota setianya?",
+          "explanation": "Anggota setia mendapat **ucapan terima kasih**, **harga baru**, **alasan yang jujur** dan **apa yang tetap sama**, dengan kata-kata yang hangat dan sederhana. Versi pertama membahas pendapatan dan churn (anggota yang berhenti): itu untuk investor. Versi ketiga adalah instruksi untuk staf di kasir."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Kenop nada, frasa yang jadi bumerang, suara, ritme dan pembaca dalam satu halaman.",
+        "artifact": {
+          "title": "Contekan · Nuansa gaya",
+          "intro": "Atur kenopnya, jaga satu suara, akhiri dengan kuat, dan tulis untuk pembaca yang ada di depanmu.",
+          "headers": [
+            "Alat",
+            "Fungsinya",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "formal ↔ casual",
+              "pilihan kata, bentuk singkat",
+              "We are unable to … / We can't …"
+            ],
+            [
+              "warm ↔ cool",
+              "we / you, terima kasih, alasan",
+              "Thanks for your patience / Please be advised …"
+            ],
+            [
+              "confident ↔ tentative",
+              "pelunak: satu sopan, banyak terdengar ragu",
+              "We recommend … / We were wondering if maybe …"
+            ],
+            [
+              "serious ↔ playful",
+              "candaan, emoji, !",
+              "a plain fact / a light joke"
+            ],
+            [
+              "direct ↔ indirect",
+              "permintaan atau isyarat",
+              "Please send it by 3 p.m. / It would be great to have it today."
+            ],
+            [
+              "Maaf defensif (hindari)",
+              "maaf atas perasaan, lalu membela diri",
+              "We're sorry you feel … However, as clearly stated …"
+            ],
+            [
+              "Maaf sungguhan",
+              "sebut + akui + tindakan",
+              "We're sorry your order was late. We've refunded the fee."
+            ],
+            [
+              "Pasif-agresif (hindari)",
+              "kesal yang disamarkan kata sopan",
+              "As per my last email … / Just a gentle reminder (again) …"
+            ],
+            [
+              "Suara vs nada",
+              "suara tetap; nada berubah",
+              "startup: casual, warm · bank: calm, precise"
+            ],
+            [
+              "Kata kerja tepat",
+              "satu kata kerja, bukan kata kerja + keterangan",
+              "strolled, trudged, marched, whispered, soared"
+            ],
+            [
+              "Klise (buang)",
+              "hapus, atau ganti dengan fakta",
+              "at the end of the day, think outside the box"
+            ],
+            [
+              "Ritme",
+              "bacakan; akhiri dengan kata yang kuat",
+              "To be honest, the results were disappointing."
+            ],
+            [
+              "Pembaca baru",
+              "ubah isi dan urutannya",
+              "customers · CEO · engineers · press"
+            ]
+          ],
+          "tips": [
+            "Satu pelunak itu sopan; tiga terdengar ragu. Satu ! ramah; !!! seperti berteriak.",
+            "Sebelum mengirim pengingat, hapus 'As per my last email' dan 'gentle': tulis permintaan yang jelas dan alasannya.",
+            "Untuk pembaca baru, ubah isi dan urutannya, bukan hanya salamnya."
+          ],
+          "examples": [
+            {
+              "en": "Could you send your timesheet today? Payroll closes at 5 p.m.",
+              "id": "Bisa kirim timesheet-mu hari ini? Penggajian ditutup pukul 17.00. (netral, bukan pasif-agresif)"
+            },
+            {
+              "en": "We're sorry your order arrived five days late. That was our mistake, and we've refunded the delivery fee.",
+              "id": "Kami minta maaf pesananmu terlambat lima hari. Itu kesalahan kami, dan ongkos kirimnya sudah kami kembalikan. (maaf yang sungguhan)"
+            },
+            {
+              "en": "After the night shift, Sari trudged home through the rain.",
+              "id": "Setelah sif malam, Sari berjalan pulang dengan langkah berat di tengah hujan. (kata kerja yang tepat)"
+            },
+            {
+              "en": "In the third quarter, profits fell by forty per cent.",
+              "id": "Di kuartal ketiga, laba turun empat puluh persen. (berakhir pada kata yang kuat)"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Baca lebih lanjut",
+        "text": "Dua bacaan singkat dari penulis profesional: nada sebagai kenop, dan panduan suara dan nada dari sebuah perusahaan."
+      }
+    ]
+  }
+}

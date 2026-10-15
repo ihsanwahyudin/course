@@ -17,6 +17,8 @@ func testCurriculum(t *testing.T) *curriculum.Curriculum {
 
 func TestDeriveFreshLearner(t *testing.T) {
 	c := testCurriculum(t)
+	unbuilt, _ := c.Node("c2-stylistic-nuance")
+	unbuilt.ContentStatus = curriculum.ContentComingSoon // every English node is ready now
 	st := Derive(c, nil)
 	for _, root := range []string{"a0-greetings", "a0-alphabet-sounds"} {
 		if st[root] != StatusAvailable {

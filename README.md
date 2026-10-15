@@ -231,7 +231,7 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
   - `lessons/<nodeId>.json`: content for every node marked `ready`.
 - At startup the API validates every course: unique slugs and IDs, valid prerequisites, no cycles, a ready root, and assessment coverage for every objective. It refuses to start if a course is broken.
 - English follows a reviewed CEFR roadmap (version 2026.11.0): **194 nodes** across A0–C2, each with a skill **strand** (GR grammar, VO vocabulary, PR pronunciation, LI listening, RE reading, SP speaking, WR writing, FN real-life situations, ME mediation, CK checkpoint), a CEFR-style **can-do** statement, an estimated study time and, for grammar/vocabulary/pronunciation, the **common mistakes** of Indonesian learners (shown on the node page and given to the tutor). Each level ends with a checkpoint node. References: CEFR + Companion Volume 2020, British Council–EAQUALS Core Inventory, English Grammar/Vocabulary Profile, Oxford 3000/5000, Academic Word List, Cambridge English Qualifications and IELTS.
-- **38 nodes are ready**: all 14 A0 lessons and the A0 level checkpoint, and 23 of the A1 lessons. The rest show as **Coming soon**. Lesson content follows [`packages/courses/CONTENT_GUIDE.md`](packages/courses/CONTENT_GUIDE.md).
+- **All 194 nodes are ready**: every lesson from A0 to C2 has hand-written steps and a checkpoint, and every level ends with its level checkpoint. Lesson audio for A1–C2 is recorded only after the owner has reviewed the content (`audio/pending.json`). Lesson content follows [`packages/courses/CONTENT_GUIDE.md`](packages/courses/CONTENT_GUIDE.md).
 - **Test-prep tracks** (TOEFL ITP, TOEIC, IELTS, TOEFL iBT) are separate coming-soon courses whose roadmaps follow each test's current official format (see each course's README for sources). The English roadmap ends with a "Continue with these tracks" box, and track lessons link to the English lessons they build on.
 - **Adding a course:** copy the `english` folder structure, write `course.json` and the level files, and run the Go tests. The new course then appears in the catalog automatically.
 
@@ -248,6 +248,6 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 
 1. Voice roleplay and more widgets (slider, chart).
 2. Password reset and email verification.
-3. More ready lessons: the rest of A1 (self-introduction, daily routines, everyday conversation, …) and the A1 checkpoint, then A2.
+3. Review the A1–C2 lessons and record their audio; then the test-prep tracks (TOEFL ITP, TOEIC, IELTS, TOEFL iBT).
 4. Spaced repetition and a placement test.
 5. Deploy: Go API + managed Postgres, and the Expo Web export (`npx expo export -p web`).

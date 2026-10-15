@@ -215,6 +215,9 @@ func TestFailedAssessmentReturnsToReviewWithoutUnlocking(t *testing.T) {
 func TestCannotStartLockedOrComingSoon(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	ctx := context.Background()
+	en, _ := s.Catalog.Course(course)
+	unbuilt, _ := en.Node("c2-stylistic-nuance")
+	unbuilt.ContentStatus = curriculum.ContentComingSoon // every English node is ready now
 	if _, err := s.StartSession(ctx, learnerID, course, "a1-to-be"); code(err) != "node_locked" {
 		t.Fatalf("locked: got %v", err)
 	}

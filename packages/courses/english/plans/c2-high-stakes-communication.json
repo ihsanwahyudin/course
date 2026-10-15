@@ -1,0 +1,758 @@
+{
+  "en": {
+    "greeting": "Hi! Today is about the conversations people dread: giving bad news, speaking for your organisation in a crisis, and telling a senior person or a client that you disagree. For each one you'll get a clear structure, so you can be honest and kind at the same time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Bad news: say it early, say it clearly",
+        "text": "Quick recap: in negotiation you said no with I'm afraid + reason + alternative, and in meetings you set action points with who, what and by when. Now the hardest version: news nobody wants to hear.",
+        "body": "Two big mistakes: **burying** the news under ten minutes of background, and **shrinking** it. *Maybe there's a little problem with the deadline, but it's okay* (often from *ada sedikit kendala*) sounds like **no** problem, so the client keeps planning around the old date. Give the news in **one clear sentence** near the start, then: **reason** (brief, no excuses) → **impact** → **what you're doing / options** → **next step**.",
+        "pairs": [
+          {
+            "en": "I'm afraid I have some difficult news.",
+            "id": "Mohon maaf, ada kabar kurang baik. → sinyal (satu kalimat saja)"
+          },
+          {
+            "en": "We won't meet the 15 March deadline.",
+            "id": "Kami tidak akan bisa memenuhi tenggat 15 Maret. → kabarnya, satu kalimat jelas"
+          },
+          {
+            "en": "The steel arrived six weeks late.",
+            "id": "Bajanya datang terlambat enam minggu. → alasan singkat"
+          },
+          {
+            "en": "That means you can't move in before April.",
+            "id": "Artinya Anda belum bisa pindah sebelum April. → dampak"
+          },
+          {
+            "en": "Here's what we can do instead.",
+            "id": "Ini yang bisa kami lakukan sebagai gantinya. → pilihan / solusi"
+          },
+          {
+            "en": "I'll send you a new schedule by Friday.",
+            "id": "Saya kirim jadwal baru paling lambat Jumat. → langkah berikutnya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: the opening",
+        "text": "Which opening gets the news across clearly and early?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "deliver-bad-news",
+          "options": [
+            "Thank you for your time. Before anything else, I want to say how hard the team has worked, and the requirements changed several times, and our vendor was late, so…",
+            "I'm afraid we won't be ready for the 1 May launch: we need three more weeks. Let me explain why, and what we can do in the meantime.",
+            "Maybe there's a small issue with the timeline, but it's okay, don't worry."
+          ],
+          "answer": 1,
+          "prompt": "Dimas manages a software project for a bank in Jakarta. The bank's new app won't be ready for the 1 May launch: the team needs three more weeks. He calls the bank's IT director. Which opening is best?",
+          "explanation": "The second opening gives the news in the first sentence (**I'm afraid we won't be ready …**) with the new timing, then promises the reason and the options. The first buries the news under excuses and blame. The third shrinks it: *a small issue … it's okay* sounds like the app will launch on time."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Empathy, responsibility, one sorry",
+        "text": "Clear doesn't mean cold. Three habits make bad news easier to hear.",
+        "body": "**Empathy without false comfort:** show you understand the impact, but don't say *Don't worry, it'll all be fine* if you don't know that. **Responsibility with *we*:** *We made a mistake*, not *Mistakes were made* (like *telah terjadi kesalahan*, a passive hides who). **One sincere apology, then action:** five sorries sound like panic. **No blame:** *Our supplier was late, and we should have had a backup.*",
+        "pairs": [
+          {
+            "en": "I know this isn't what you were hoping for.",
+            "id": "Saya tahu ini bukan yang Anda harapkan. → empati"
+          },
+          {
+            "en": "I can imagine how frustrating this is.",
+            "id": "Saya bisa membayangkan betapa menjengkelkannya ini. → empati"
+          },
+          {
+            "en": "We made a mistake, and that's on us.",
+            "id": "Kami melakukan kesalahan, dan itu tanggung jawab kami."
+          },
+          {
+            "en": "Our supplier was late, and we should have had a backup.",
+            "id": "Pemasok kami terlambat, dan seharusnya kami punya cadangan. → alasan tanpa menyalahkan"
+          },
+          {
+            "en": "I'm sorry. Here's how we'll put it right.",
+            "id": "Saya minta maaf. Begini cara kami memperbaikinya. → satu maaf, lalu tindakan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build an empathy line",
+        "text": "Put the words in order to make a sentence that shows you understand the impact on the client.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "deliver-bad-news",
+          "tokens": [
+            "problems",
+            "this",
+            "your",
+            "I",
+            "for",
+            "causes",
+            "understand",
+            "real",
+            "team"
+          ],
+          "solution": "I understand this causes real problems for your team.",
+          "prompt": "Arrange the words: Saya mengerti ini menimbulkan masalah serius bagi tim Anda.",
+          "explanation": "**I understand + this causes + real problems + for your team**: you name the impact on *them*, without promising that everything will be fine. *Real* is stronger than *some*: it takes their problem seriously."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Crisis: four questions",
+        "text": "A crisis is bad news in public, fast, with only half the facts. Four questions keep you clear.",
+        "body": "Every update answers: **what happened** (facts only: what you know **and** what you don't know yet), **what we're doing**, **what people should do**, and **when the next update comes** (a time, not *soon*). Short sentences. No guessing the cause. One **spokesperson** (juru bicara). If you know almost nothing yet, give a **holding statement**: you're aware, you're investigating, and when you'll update. Avoid *No comment* (sounds like hiding) and *We apologise for any inconvenience* when people are really hurt.",
+        "pairs": [
+          {
+            "en": "Since 8 a.m., customers haven't been able to log in.",
+            "id": "Sejak pukul 08.00, nasabah tidak bisa masuk. → apa yang terjadi"
+          },
+          {
+            "en": "We don't yet know the cause.",
+            "id": "Kami belum tahu penyebabnya. → jujur soal yang belum diketahui"
+          },
+          {
+            "en": "Our engineers are working to restore the service.",
+            "id": "Teknisi kami sedang memulihkan layanan. → apa yang kami lakukan"
+          },
+          {
+            "en": "In the meantime, please use our ATMs.",
+            "id": "Sementara itu, silakan gunakan ATM kami. → apa yang perlu dilakukan orang"
+          },
+          {
+            "en": "Our next update will be at 11 a.m.",
+            "id": "Kabar berikutnya pukul 11.00. → kapan kabar berikutnya"
+          },
+          {
+            "en": "We're aware of reports of … and are investigating.",
+            "id": "Kami mengetahui adanya laporan … dan sedang menyelidikinya. → holding statement"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: the first statement",
+        "text": "Rumours are spreading, and the facts aren't known yet. What should the company say first?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "crisis-communication",
+          "options": [
+            "We're aware of reports that some customer data may have been exposed, and we're investigating. We'll post an update by 3 p.m. today.",
+            "No comment at this time.",
+            "It was probably a hacker from overseas, but don't worry: your data is 100% safe."
+          ],
+          "answer": 0,
+          "prompt": "Posts on social media claim that customer data from Belanjaku, an online shop in Jakarta, has leaked. The team doesn't know yet whether it's true. Which is the best first public statement?",
+          "explanation": "The first option is a model **holding statement**: we know about the reports (**We're aware of reports …**), we're acting (**we're investigating**), and here's when we'll update (**by 3 p.m.**). *No comment* sounds like hiding. The third guesses the cause and promises *100% safe* before anyone knows: if either turns out wrong, nobody trusts the next update."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Disagreeing upward",
+        "text": "From the implied-meaning lesson you know soften + reason + alternative. With a manager or a client, add evidence, and leave the final decision with them.",
+        "body": "Four moves: **acknowledge their goal** → **state your concern with evidence** (a number, what happened last time) → **propose an alternative** → **leave the decision with them** (*It's your call, but I'd recommend …*). Raise it privately first if you can. Respect for seniors is a strength, but *sungkan* and *asal bapak senang* (telling the boss only what pleases him) turn it into silence, and in English *Yes, Pak* sounds like full agreement. Exception: when **safety, the law or ethics** are at stake, be respectful but **direct**.",
+        "pairs": [
+          {
+            "en": "I can see why you want to …",
+            "id": "Saya paham kenapa Bapak/Ibu ingin … → akui tujuannya"
+          },
+          {
+            "en": "My concern is that …",
+            "id": "Yang saya khawatirkan, … → kekhawatiran"
+          },
+          {
+            "en": "Last year, the same plan cost us …",
+            "id": "Tahun lalu, rencana yang sama membuat kita rugi … → bukti"
+          },
+          {
+            "en": "Could we consider …?",
+            "id": "Bagaimana kalau kita pertimbangkan …? → alternatif"
+          },
+          {
+            "en": "It's your call, but I'd recommend …",
+            "id": "Keputusannya di tangan Bapak/Ibu, tapi saran saya … → serahkan keputusan"
+          },
+          {
+            "en": "Could I have five minutes after the meeting?",
+            "id": "Boleh minta waktu lima menit setelah rapat? → empat mata dulu"
+          },
+          {
+            "en": "I can't sign this off: it isn't safe.",
+            "id": "Saya tidak bisa menyetujui ini: tidak aman. → keselamatan / etika: langsung"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: the director's plan",
+        "text": "Your director announces a decision in a team meeting in Jakarta. Listen, then choose your reply.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "disagree-diplomatically",
+          "listen": "Right, everyone. I've decided we'll launch the new app on the first of November, two weeks early. The client will be delighted, and we can finish the testing after the launch. Any questions?",
+          "options": [
+            "Yes, of course, Pak. Whatever you think is best.",
+            "With respect, Pak, that's a terrible plan. Testing after launch is just asking for trouble.",
+            "I can see why an early launch appeals, Pak. My worry is that last time we launched early, we had 300 bug reports in week one. Could we keep the fifteenth? It's your decision, of course."
+          ],
+          "answer": 2,
+          "prompt": "Listen to Pak Hendra's announcement. You think the plan is risky. Which reply disagrees diplomatically?",
+          "explanation": "The third reply uses all four moves: it **acknowledges** the goal (*an early launch appeals*), gives a **concern with evidence** (300 bug reports last time), proposes an **alternative** (keep the fifteenth) and **leaves the decision** with him (*It's your decision, of course*). The first is *asal bapak senang*: he'll hear full agreement. The second is clear but far too blunt for a director in front of the team, and offers no alternative."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "When to be direct",
+        "text": "Sometimes the soft code is the wrong tool. Which reply fits here?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "disagree-diplomatically",
+          "options": [
+            "Yes, Pak. I'll cook it now.",
+            "Pak, I can't serve this chicken. It's been at 15 degrees all night, and it isn't safe. We need to throw it away, and I'll order a fresh delivery for lunch.",
+            "I'm not sure that's the best idea, Pak. Perhaps we could think about it later?"
+          ],
+          "answer": 1,
+          "prompt": "In a restaurant kitchen in Surabaya, the fridge broke overnight and the chicken was at 15°C for ten hours. The regional manager, Pak Joko, says: 'It's probably fine. Cook it today, we can't waste it.' What should the head chef, Sari, say?",
+          "explanation": "Food safety is at stake, so Sari is respectful (**Pak**) but **direct**: a clear no, the evidence (15 degrees all night) and a solution (a fresh delivery). The soft code (*I'm not sure that's the best idea … later?*) can be heard as *maybe*, and customers could get sick. *Yes, Pak* is the *asal bapak senang* trap."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip each card. Say the English before you look.",
+        "flashcards": [
+          {
+            "front": "Kabar buruk: pembuka yang jelas (tenggat 15 Maret)",
+            "back": "I'm afraid we won't meet the 15 March deadline."
+          },
+          {
+            "front": "Struktur kabar buruk",
+            "back": "signal → news → reason → impact → options → next step"
+          },
+          {
+            "front": "Ambil tanggung jawab (bukan 'Mistakes were made')",
+            "back": "We made a mistake, and that's on us."
+          },
+          {
+            "front": "Minta maaf berapa kali?",
+            "back": "Once, sincerely. Then the plan."
+          },
+          {
+            "front": "Empat pertanyaan kabar krisis",
+            "back": "what happened · what we're doing · what you should do · next update"
+          },
+          {
+            "front": "Penyebabnya belum diketahui (saat krisis)",
+            "back": "We don't yet know the cause."
+          },
+          {
+            "front": "Tidak setuju dengan atasan: empat langkah",
+            "back": "acknowledge → concern + evidence → alternative → leave the decision"
+          },
+          {
+            "front": "Keselamatan, hukum atau etika dipertaruhkan?",
+            "back": "Drop the soft code: be respectful but direct."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Bad news, crisis updates and disagreeing upward on one page.",
+        "artifact": {
+          "title": "Cheat sheet · High-stakes communication",
+          "intro": "The move, the phrase, and the thing to watch.",
+          "headers": [
+            "Move",
+            "Say",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "Bad news: signal",
+              "I'm afraid I have some difficult news.",
+              "satu kalimat peringatan, bukan basa-basi panjang"
+            ],
+            [
+              "Bad news: the news",
+              "We won't meet the 15 March deadline.",
+              "di awal, satu kalimat, jangan dikecilkan"
+            ],
+            [
+              "Bad news: reason → impact",
+              "The steel arrived late. That means …",
+              "singkat, tanpa dalih"
+            ],
+            [
+              "Bad news: options → next step",
+              "Here's what we can do instead. I'll send … by Friday.",
+              "siapa + apa + paling lambat kapan"
+            ],
+            [
+              "Empathy",
+              "I know this isn't what you were hoping for.",
+              "tanpa penghiburan palsu"
+            ],
+            [
+              "Responsibility",
+              "We made a mistake, and that's on us.",
+              "bukan 'Mistakes were made'"
+            ],
+            [
+              "Apology",
+              "I'm sorry. Here's how we'll put it right.",
+              "sekali, tulus, lalu tindakan"
+            ],
+            [
+              "Crisis: what happened",
+              "Since 8 a.m., … We don't yet know the cause.",
+              "fakta saja, tanpa tebakan"
+            ],
+            [
+              "Crisis: doing / you should",
+              "Our engineers are … In the meantime, please …",
+              "kalimat pendek, satu juru bicara"
+            ],
+            [
+              "Crisis: next update",
+              "Our next update will be at 11 a.m.",
+              "sebutkan jamnya"
+            ],
+            [
+              "Holding statement",
+              "We're aware of reports of … and are investigating.",
+              "saat fakta belum ada; bukan 'No comment'"
+            ],
+            [
+              "Disagree: acknowledge + concern",
+              "I can see why … My concern is that …",
+              "dengan bukti: angka, kejadian lalu"
+            ],
+            [
+              "Disagree: alternative + decision",
+              "Could we consider …? It's your call, but I'd recommend …",
+              "bukan 'terserah' dan bukan 'Yes, Pak'"
+            ],
+            [
+              "Safety / ethics",
+              "I can't sign this off. It isn't safe.",
+              "langsung, dan eskalasikan kalau perlu"
+            ]
+          ],
+          "tips": [
+            "Bad news: the news in one clear sentence near the start. Don't bury it, don't shrink it.",
+            "Crisis: what happened, what we're doing, what you should do, when the next update comes. Facts only, short sentences.",
+            "Disagreeing upward: acknowledge, concern + evidence, alternative, leave the decision. Safety, law or ethics: be direct."
+          ],
+          "examples": [
+            {
+              "en": "I'm afraid we won't meet the 15 March deadline. Here's what we can do instead.",
+              "id": "Mohon maaf, kami tidak akan bisa memenuhi tenggat 15 Maret. Ini yang bisa kami lakukan sebagai gantinya."
+            },
+            {
+              "en": "We're sorry. This should not have happened.",
+              "id": "Kami minta maaf. Ini seharusnya tidak terjadi."
+            },
+            {
+              "en": "We're aware of reports of a fire at our Cikarang warehouse and are investigating. We'll update you by 3 p.m.",
+              "id": "Kami mengetahui adanya laporan kebakaran di gudang kami di Cikarang dan sedang menyelidikinya. Kami akan memberi kabar terbaru paling lambat pukul 15.00."
+            },
+            {
+              "en": "I can see why you want a national launch. My concern is the budget. Could we consider a pilot first?",
+              "id": "Saya paham kenapa Ibu ingin peluncuran nasional. Yang saya khawatirkan anggarannya. Bagaimana kalau uji coba dulu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read more",
+        "text": "An easy video of bad-news phrases, an article with a step-by-step method, and a lesson on disagreeing politely."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membahas percakapan yang paling bikin deg-degan: menyampaikan kabar buruk, berbicara atas nama organisasimu saat krisis, dan menyampaikan kepada atasan senior atau klien bahwa kamu tidak setuju. Untuk masing-masing kamu dapat struktur yang jelas, supaya kamu bisa jujur dan tetap baik sekaligus.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Kabar buruk: di awal, dengan jelas",
+        "text": "Ulang singkat: di negosiasi kamu menolak dengan I'm afraid + alasan + alternatif, dan di rapat kamu membuat poin tindak lanjut dengan siapa, apa dan paling lambat kapan. Sekarang versi paling sulit: kabar yang tidak ingin didengar siapa pun.",
+        "body": "Dua kesalahan besar: **mengubur** kabarnya di bawah sepuluh menit latar belakang, dan **mengecilkannya**. *Maybe there's a little problem with the deadline, but it's okay* (sering dari *ada sedikit kendala*) terdengar seperti **tidak ada** masalah, jadi klien tetap merencanakan dengan tanggal lama. Sampaikan kabarnya dalam **satu kalimat jelas** di awal, lalu: **alasan** (singkat, tanpa dalih) → **dampak** → **apa yang kamu lakukan / pilihannya** → **langkah berikutnya**.",
+        "pairs": [
+          {
+            "en": "I'm afraid I have some difficult news.",
+            "id": "Mohon maaf, ada kabar kurang baik. → sinyal (satu kalimat saja)"
+          },
+          {
+            "en": "We won't meet the 15 March deadline.",
+            "id": "Kami tidak akan bisa memenuhi tenggat 15 Maret. → kabarnya, satu kalimat jelas"
+          },
+          {
+            "en": "The steel arrived six weeks late.",
+            "id": "Bajanya datang terlambat enam minggu. → alasan singkat"
+          },
+          {
+            "en": "That means you can't move in before April.",
+            "id": "Artinya Anda belum bisa pindah sebelum April. → dampak"
+          },
+          {
+            "en": "Here's what we can do instead.",
+            "id": "Ini yang bisa kami lakukan sebagai gantinya. → pilihan / solusi"
+          },
+          {
+            "en": "I'll send you a new schedule by Friday.",
+            "id": "Saya kirim jadwal baru paling lambat Jumat. → langkah berikutnya"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: pembukanya",
+        "text": "Pembuka mana yang menyampaikan kabarnya dengan jelas dan di awal?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "deliver-bad-news",
+          "options": [
+            "Thank you for your time. Before anything else, I want to say how hard the team has worked, and the requirements changed several times, and our vendor was late, so…",
+            "I'm afraid we won't be ready for the 1 May launch: we need three more weeks. Let me explain why, and what we can do in the meantime.",
+            "Maybe there's a small issue with the timeline, but it's okay, don't worry."
+          ],
+          "answer": 1,
+          "prompt": "Dimas mengelola proyek perangkat lunak untuk sebuah bank di Jakarta. Aplikasi baru bank itu tidak akan siap untuk peluncuran 1 Mei: timnya butuh tiga minggu lagi. Ia menelepon direktur TI bank tersebut. Pembuka mana yang paling tepat?",
+          "explanation": "Pembuka kedua menyampaikan kabarnya di kalimat pertama (**I'm afraid we won't be ready …**) beserta perkiraan waktunya, lalu menjanjikan alasan dan pilihannya. Pembuka pertama mengubur kabarnya di bawah dalih dan menyalahkan pihak lain. Pembuka ketiga mengecilkannya: *a small issue … it's okay* terdengar seperti aplikasinya akan meluncur tepat waktu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Empati, tanggung jawab, satu maaf",
+        "text": "Jelas bukan berarti dingin. Tiga kebiasaan ini membuat kabar buruk lebih mudah diterima.",
+        "body": "**Empati tanpa penghiburan palsu:** tunjukkan kamu paham dampaknya, tapi jangan bilang *Don't worry, it'll all be fine* kalau kamu sendiri belum tahu. **Tanggung jawab dengan *we*:** *We made a mistake*, bukan *Mistakes were made* (seperti *telah terjadi kesalahan*, kalimat pasif menyembunyikan pelakunya). **Satu permintaan maaf yang tulus, lalu tindakan:** lima kali minta maaf terdengar panik. **Jangan menyalahkan:** *Our supplier was late, and we should have had a backup.*",
+        "pairs": [
+          {
+            "en": "I know this isn't what you were hoping for.",
+            "id": "Saya tahu ini bukan yang Anda harapkan. → empati"
+          },
+          {
+            "en": "I can imagine how frustrating this is.",
+            "id": "Saya bisa membayangkan betapa menjengkelkannya ini. → empati"
+          },
+          {
+            "en": "We made a mistake, and that's on us.",
+            "id": "Kami melakukan kesalahan, dan itu tanggung jawab kami."
+          },
+          {
+            "en": "Our supplier was late, and we should have had a backup.",
+            "id": "Pemasok kami terlambat, dan seharusnya kami punya cadangan. → alasan tanpa menyalahkan"
+          },
+          {
+            "en": "I'm sorry. Here's how we'll put it right.",
+            "id": "Saya minta maaf. Begini cara kami memperbaikinya. → satu maaf, lalu tindakan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat empati",
+        "text": "Susun kata-katanya menjadi kalimat yang menunjukkan kamu paham dampaknya bagi klien.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "deliver-bad-news",
+          "tokens": [
+            "problems",
+            "this",
+            "your",
+            "I",
+            "for",
+            "causes",
+            "understand",
+            "real",
+            "team"
+          ],
+          "solution": "I understand this causes real problems for your team.",
+          "prompt": "Susun kata-katanya: Saya mengerti ini menimbulkan masalah serius bagi tim Anda.",
+          "explanation": "**I understand + this causes + real problems + for your team**: kamu menyebut dampaknya bagi *mereka*, tanpa menjanjikan semuanya akan baik-baik saja. *Real* lebih kuat daripada *some*: kamu menganggap serius masalah mereka."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Krisis: empat pertanyaan",
+        "text": "Krisis adalah kabar buruk di depan publik, serba cepat, dengan fakta yang baru setengah. Empat pertanyaan ini menjaga pesanmu tetap jelas.",
+        "body": "Setiap kabar terbaru menjawab: **apa yang terjadi** (fakta saja: apa yang sudah kamu ketahui **dan** yang belum), **apa yang sedang kami lakukan**, **apa yang perlu dilakukan orang**, dan **kapan kabar berikutnya** (sebutkan jamnya, bukan *soon*). Kalimat pendek. Jangan menebak penyebabnya. Satu **juru bicara**. Kalau kamu hampir belum tahu apa-apa, sampaikan **holding statement** (pernyataan sementara): kamu tahu, kamu sedang menyelidiki, dan kapan kabar berikutnya. Hindari *No comment* (terdengar menyembunyikan sesuatu) dan *We apologise for any inconvenience* kalau orang benar-benar dirugikan.",
+        "pairs": [
+          {
+            "en": "Since 8 a.m., customers haven't been able to log in.",
+            "id": "Sejak pukul 08.00, nasabah tidak bisa masuk. → apa yang terjadi"
+          },
+          {
+            "en": "We don't yet know the cause.",
+            "id": "Kami belum tahu penyebabnya. → jujur soal yang belum diketahui"
+          },
+          {
+            "en": "Our engineers are working to restore the service.",
+            "id": "Teknisi kami sedang memulihkan layanan. → apa yang kami lakukan"
+          },
+          {
+            "en": "In the meantime, please use our ATMs.",
+            "id": "Sementara itu, silakan gunakan ATM kami. → apa yang perlu dilakukan orang"
+          },
+          {
+            "en": "Our next update will be at 11 a.m.",
+            "id": "Kabar berikutnya pukul 11.00. → kapan kabar berikutnya"
+          },
+          {
+            "en": "We're aware of reports of … and are investigating.",
+            "id": "Kami mengetahui adanya laporan … dan sedang menyelidikinya. → holding statement"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: pernyataan pertama",
+        "text": "Kabar burung menyebar, dan faktanya belum diketahui. Apa yang sebaiknya disampaikan perusahaan lebih dulu?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "crisis-communication",
+          "options": [
+            "We're aware of reports that some customer data may have been exposed, and we're investigating. We'll post an update by 3 p.m. today.",
+            "No comment at this time.",
+            "It was probably a hacker from overseas, but don't worry: your data is 100% safe."
+          ],
+          "answer": 0,
+          "prompt": "Unggahan di media sosial menyebutkan data pelanggan Belanjaku, sebuah toko online di Jakarta, bocor. Timnya belum tahu apakah itu benar. Mana pernyataan publik pertama yang paling tepat?",
+          "explanation": "Pilihan pertama adalah contoh **holding statement** yang baik: kami tahu ada laporannya (**We're aware of reports …**), kami bertindak (**we're investigating**), dan inilah kapan kabar berikutnya (**by 3 p.m.**). *No comment* terdengar seperti menyembunyikan sesuatu. Pilihan ketiga menebak penyebabnya dan menjanjikan *100% safe* sebelum ada yang tahu: kalau salah satunya ternyata keliru, tidak ada yang percaya kabar berikutnya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tidak setuju dengan atasan",
+        "text": "Dari pelajaran makna tersirat kamu tahu: lunakkan + alasan + alternatif. Dengan atasan atau klien, tambahkan bukti, dan serahkan keputusan akhirnya kepada mereka.",
+        "body": "Empat langkah: **akui tujuan mereka** → **sampaikan kekhawatiran dengan bukti** (angka, kejadian sebelumnya) → **usulkan alternatif** → **serahkan keputusan** (*It's your call, but I'd recommend …*). Kalau bisa, sampaikan empat mata dulu. Menghormati atasan itu kekuatan, tapi rasa *sungkan* dan budaya *asal bapak senang* mengubahnya menjadi diam, dan dalam bahasa Inggris *Yes, Pak* terdengar seperti setuju sepenuhnya. Pengecualian: kalau **keselamatan, hukum atau etika** dipertaruhkan, tetap hormat tapi **langsung**.",
+        "pairs": [
+          {
+            "en": "I can see why you want to …",
+            "id": "Saya paham kenapa Bapak/Ibu ingin … → akui tujuannya"
+          },
+          {
+            "en": "My concern is that …",
+            "id": "Yang saya khawatirkan, … → kekhawatiran"
+          },
+          {
+            "en": "Last year, the same plan cost us …",
+            "id": "Tahun lalu, rencana yang sama membuat kita rugi … → bukti"
+          },
+          {
+            "en": "Could we consider …?",
+            "id": "Bagaimana kalau kita pertimbangkan …? → alternatif"
+          },
+          {
+            "en": "It's your call, but I'd recommend …",
+            "id": "Keputusannya di tangan Bapak/Ibu, tapi saran saya … → serahkan keputusan"
+          },
+          {
+            "en": "Could I have five minutes after the meeting?",
+            "id": "Boleh minta waktu lima menit setelah rapat? → empat mata dulu"
+          },
+          {
+            "en": "I can't sign this off: it isn't safe.",
+            "id": "Saya tidak bisa menyetujui ini: tidak aman. → keselamatan / etika: langsung"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: rencana direktur",
+        "text": "Direkturmu mengumumkan keputusan dalam rapat tim di Jakarta. Dengarkan, lalu pilih jawabanmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "disagree-diplomatically",
+          "listen": "Right, everyone. I've decided we'll launch the new app on the first of November, two weeks early. The client will be delighted, and we can finish the testing after the launch. Any questions?",
+          "options": [
+            "Yes, of course, Pak. Whatever you think is best.",
+            "With respect, Pak, that's a terrible plan. Testing after launch is just asking for trouble.",
+            "I can see why an early launch appeals, Pak. My worry is that last time we launched early, we had 300 bug reports in week one. Could we keep the fifteenth? It's your decision, of course."
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan pengumuman Pak Hendra. Menurutmu rencananya berisiko. Jawaban mana yang menyatakan tidak setuju secara diplomatis?",
+          "explanation": "Jawaban ketiga memakai keempat langkah: **mengakui** tujuannya (*an early launch appeals*), menyampaikan **kekhawatiran dengan bukti** (300 laporan bug terakhir kali), mengusulkan **alternatif** (tetap tanggal 15) dan **menyerahkan keputusan** kepadanya (*It's your decision, of course*). Jawaban pertama adalah *asal bapak senang*: ia akan mendengar persetujuan penuh. Jawaban kedua jelas, tapi terlalu kasar untuk direktur di depan tim, dan tidak menawarkan alternatif."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Kapan harus langsung",
+        "text": "Kadang kode halus justru alat yang salah. Jawaban mana yang pas di sini?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "disagree-diplomatically",
+          "options": [
+            "Yes, Pak. I'll cook it now.",
+            "Pak, I can't serve this chicken. It's been at 15 degrees all night, and it isn't safe. We need to throw it away, and I'll order a fresh delivery for lunch.",
+            "I'm not sure that's the best idea, Pak. Perhaps we could think about it later?"
+          ],
+          "answer": 1,
+          "prompt": "Di dapur sebuah restoran di Surabaya, kulkasnya rusak semalaman dan ayamnya berada di suhu 15°C selama sepuluh jam. Manajer regional, Pak Joko, berkata: 'It's probably fine. Cook it today, we can't waste it.' Apa yang sebaiknya dikatakan kepala koki, Sari?",
+          "explanation": "Ini soal keamanan pangan, jadi Sari tetap hormat (**Pak**) tapi **langsung**: penolakan yang jelas, buktinya (15 derajat semalaman) dan solusinya (kiriman baru). Kode halus (*I'm not sure that's the best idea … later?*) bisa terdengar seperti *mungkin*, dan pelanggan bisa sakit. *Yes, Pak* adalah jebakan *asal bapak senang*."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan singkat",
+        "text": "Balik setiap kartu. Ucapkan bahasa Inggrisnya sebelum melihat.",
+        "flashcards": [
+          {
+            "front": "Kabar buruk: pembuka yang jelas (tenggat 15 Maret)",
+            "back": "I'm afraid we won't meet the 15 March deadline."
+          },
+          {
+            "front": "Struktur kabar buruk",
+            "back": "signal → news → reason → impact → options → next step"
+          },
+          {
+            "front": "Ambil tanggung jawab (bukan 'Mistakes were made')",
+            "back": "We made a mistake, and that's on us."
+          },
+          {
+            "front": "Minta maaf berapa kali?",
+            "back": "Once, sincerely. Then the plan."
+          },
+          {
+            "front": "Empat pertanyaan kabar krisis",
+            "back": "what happened · what we're doing · what you should do · next update"
+          },
+          {
+            "front": "Penyebabnya belum diketahui (saat krisis)",
+            "back": "We don't yet know the cause."
+          },
+          {
+            "front": "Tidak setuju dengan atasan: empat langkah",
+            "back": "acknowledge → concern + evidence → alternative → leave the decision"
+          },
+          {
+            "front": "Keselamatan, hukum atau etika dipertaruhkan?",
+            "back": "Drop the soft code: be respectful but direct."
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Kabar buruk, kabar krisis dan cara tidak setuju dengan atasan dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Komunikasi berisiko tinggi",
+          "intro": "Langkahnya, ungkapannya, dan hal yang perlu diwaspadai.",
+          "headers": [
+            "Langkah",
+            "Ucapkan",
+            "Perhatikan"
+          ],
+          "rows": [
+            [
+              "Bad news: signal",
+              "I'm afraid I have some difficult news.",
+              "satu kalimat peringatan, bukan basa-basi panjang"
+            ],
+            [
+              "Bad news: the news",
+              "We won't meet the 15 March deadline.",
+              "di awal, satu kalimat, jangan dikecilkan"
+            ],
+            [
+              "Bad news: reason → impact",
+              "The steel arrived late. That means …",
+              "singkat, tanpa dalih"
+            ],
+            [
+              "Bad news: options → next step",
+              "Here's what we can do instead. I'll send … by Friday.",
+              "siapa + apa + paling lambat kapan"
+            ],
+            [
+              "Empathy",
+              "I know this isn't what you were hoping for.",
+              "tanpa penghiburan palsu"
+            ],
+            [
+              "Responsibility",
+              "We made a mistake, and that's on us.",
+              "bukan 'Mistakes were made'"
+            ],
+            [
+              "Apology",
+              "I'm sorry. Here's how we'll put it right.",
+              "sekali, tulus, lalu tindakan"
+            ],
+            [
+              "Crisis: what happened",
+              "Since 8 a.m., … We don't yet know the cause.",
+              "fakta saja, tanpa tebakan"
+            ],
+            [
+              "Crisis: doing / you should",
+              "Our engineers are … In the meantime, please …",
+              "kalimat pendek, satu juru bicara"
+            ],
+            [
+              "Crisis: next update",
+              "Our next update will be at 11 a.m.",
+              "sebutkan jamnya"
+            ],
+            [
+              "Holding statement",
+              "We're aware of reports of … and are investigating.",
+              "saat fakta belum ada; bukan 'No comment'"
+            ],
+            [
+              "Disagree: acknowledge + concern",
+              "I can see why … My concern is that …",
+              "dengan bukti: angka, kejadian lalu"
+            ],
+            [
+              "Disagree: alternative + decision",
+              "Could we consider …? It's your call, but I'd recommend …",
+              "bukan 'terserah' dan bukan 'Yes, Pak'"
+            ],
+            [
+              "Safety / ethics",
+              "I can't sign this off. It isn't safe.",
+              "langsung, dan eskalasikan kalau perlu"
+            ]
+          ],
+          "tips": [
+            "Kabar buruk: sampaikan kabarnya dalam satu kalimat jelas di awal. Jangan dikubur, jangan dikecilkan.",
+            "Krisis: apa yang terjadi, apa yang kami lakukan, apa yang perlu kamu lakukan, kapan kabar berikutnya. Fakta saja, kalimat pendek.",
+            "Tidak setuju dengan atasan: akui tujuannya, kekhawatiran + bukti, alternatif, serahkan keputusan. Keselamatan, hukum atau etika: bicara langsung."
+          ],
+          "examples": [
+            {
+              "en": "I'm afraid we won't meet the 15 March deadline. Here's what we can do instead.",
+              "id": "Mohon maaf, kami tidak akan bisa memenuhi tenggat 15 Maret. Ini yang bisa kami lakukan sebagai gantinya."
+            },
+            {
+              "en": "We're sorry. This should not have happened.",
+              "id": "Kami minta maaf. Ini seharusnya tidak terjadi."
+            },
+            {
+              "en": "We're aware of reports of a fire at our Cikarang warehouse and are investigating. We'll update you by 3 p.m.",
+              "id": "Kami mengetahui adanya laporan kebakaran di gudang kami di Cikarang dan sedang menyelidikinya. Kami akan memberi kabar terbaru paling lambat pukul 15.00."
+            },
+            {
+              "en": "I can see why you want a national launch. My concern is the budget. Could we consider a pilot first?",
+              "id": "Saya paham kenapa Ibu ingin peluncuran nasional. Yang saya khawatirkan anggarannya. Bagaimana kalau uji coba dulu?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca lebih lanjut",
+        "text": "Video mudah tentang ungkapan kabar buruk, artikel dengan langkah-langkahnya, dan pelajaran tentang cara tidak setuju dengan sopan."
+      }
+    ]
+  }
+}
