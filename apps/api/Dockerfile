@@ -8,7 +8,7 @@ RUN go mod download
 COPY apps/api/ ./
 RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/server ./cmd/server
 
-FROM node:22-alpine AS web
+FROM node:24-alpine AS web
 WORKDIR /web
 COPY apps/mobile/package.json apps/mobile/package-lock.json ./
 RUN npm ci --no-audit --no-fund
