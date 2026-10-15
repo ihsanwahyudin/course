@@ -1,0 +1,792 @@
+{
+  "en": {
+    "greeting": "Hi! Today we take English out into the street: a café, a shop and a busy road. Let's practise the phrases you need, step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Ordering food and drinks",
+        "text": "Let's start in a café. Here are the phrases you hear and say when you order.",
+        "body": "Order with **I'd like ..., please** (I'd = I would, a polite 'mau', not 'akan') or **Can I have ..., please?** Both are polite. Avoid **I want coffee** and **Give me coffee**: they sound too direct to a waiter. Keep **a/an** for one item: *a coffee* = one cup. The waiter may ask **Anything else?** If you have everything, say **That's all, thanks.** **Eat in or take away?** and **the bill** are British; Americans say **For here or to go?** and **the check**.",
+        "pairs": [
+          {
+            "en": "What would you like?",
+            "id": "Mau pesan apa?"
+          },
+          {
+            "en": "I'd like ..., please.",
+            "id": "Saya pesan ..., ya."
+          },
+          {
+            "en": "Can I have ..., please?",
+            "id": "Boleh minta ...?"
+          },
+          {
+            "en": "Anything else?",
+            "id": "Ada lagi?"
+          },
+          {
+            "en": "That's all, thanks.",
+            "id": "Itu saja, makasih."
+          },
+          {
+            "en": "Eat in or take away?",
+            "id": "Makan di sini atau dibungkus?"
+          },
+          {
+            "en": "The bill, please.",
+            "id": "Minta bonnya. (Amerika: the check)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "At a café in Jakarta",
+        "text": "Rina orders a drink and a snack. Read the lines out loud.",
+        "body": "Look at **please** at the end of each order. **an** iced coffee: *iced* starts with a vowel sound ('ais'), so **an**.",
+        "examples": [
+          {
+            "en": "Good morning! What would you like?",
+            "id": "Selamat pagi! Mau pesan apa?"
+          },
+          {
+            "en": "I'd like an iced coffee, please.",
+            "id": "Saya pesan es kopi satu, ya."
+          },
+          {
+            "en": "Anything else?",
+            "id": "Ada lagi?"
+          },
+          {
+            "en": "Yes. Can I have a piece of banana cake, please?",
+            "id": "Ya. Boleh minta sepotong bolu pisang?"
+          },
+          {
+            "en": "Eat in or take away?",
+            "id": "Makan di sini atau dibungkus?"
+          },
+          {
+            "en": "Eat in, please. Thank you!",
+            "id": "Makan di sini. Terima kasih!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Now you're the customer. Choose the best way to order.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "order-food-and",
+          "prompt": "A waiter at a restaurant in Bandung asks: 'What would you like?' Which answer is polite and correct?",
+          "options": [
+            "I want tea.",
+            "I like a tea, please.",
+            "I'd like a tea, please."
+          ],
+          "answer": 2,
+          "explanation": "**I'd like ..., please** is the polite way to order something now. **I want tea** sounds too direct to a waiter, and **I like a tea** talks about what you enjoy in general (suka), so it isn't an order."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How much is it?",
+        "text": "Next stop: the shop and the market. Let's ask the price.",
+        "body": "For **one** thing: **How much is it?** / **How much is this?** For **more than one**: **How much are they?** / **How much are these?** *Berapa harganya?* is NOT 'How much the price?': English needs **is / are**. The answer: **It's 25,000 rupiah** (twenty-five thousand). English writes 25,000 with a comma, Indonesian 25.000 with a dot. Listen carefully: **thirteen** (13) and **thirty** (30) sound similar.",
+        "pairs": [
+          {
+            "en": "How much is it?",
+            "id": "Berapa harganya? (satu barang)"
+          },
+          {
+            "en": "How much is this?",
+            "id": "Yang ini berapa?"
+          },
+          {
+            "en": "How much are they?",
+            "id": "Berapa harganya? (lebih dari satu)"
+          },
+          {
+            "en": "How much are these?",
+            "id": "Yang ini berapa? (lebih dari satu)"
+          },
+          {
+            "en": "It's 25,000 rupiah.",
+            "id": "Harganya 25.000 rupiah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "At the market",
+        "text": "Mangoes look good today. Ask how much they cost.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-for-prices",
+          "prompt": "At the market you point at some mangoes. Ask the seller the price.",
+          "options": [
+            "Excuse me, how much the price these mangoes?",
+            "Excuse me, how much is these mangoes?",
+            "Excuse me, how much are these mangoes?"
+          ],
+          "answer": 2,
+          "explanation": "*Mangoes* means more than one, so use **are**: **How much are these mangoes?** **How much is** is for one thing, and 'how much the price' is a word-for-word translation of *berapa harganya* with no verb."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Asking the way",
+        "text": "Now you're lost in town. Here's how to ask the way, and what you'll hear back.",
+        "body": "Start with **Excuse me**, then ask **Where is the ...?** or **Is there a ... near here?** English puts **where** at the **start**; Indonesian puts *di mana* at the end. Answers to understand: **Go straight on**, **Turn left**, **Turn right**, **It's on the left / right**. Say **turn left**, not 'turn to left' (*belok ke kiri* has *ke*, English doesn't). **Go straight on** is British; Americans say **go straight ahead**.",
+        "pairs": [
+          {
+            "en": "Excuse me, where is the ...?",
+            "id": "Permisi, ... di mana?"
+          },
+          {
+            "en": "Is there a ... near here?",
+            "id": "Ada ... di dekat sini?"
+          },
+          {
+            "en": "Go straight on.",
+            "id": "Jalan lurus terus."
+          },
+          {
+            "en": "Turn left.",
+            "id": "Belok kiri."
+          },
+          {
+            "en": "Turn right.",
+            "id": "Belok kanan."
+          },
+          {
+            "en": "It's on the left.",
+            "id": "Ada di sebelah kiri."
+          },
+          {
+            "en": "It's on the right.",
+            "id": "Ada di sebelah kanan."
+          },
+          {
+            "en": "hospital",
+            "id": "rumah sakit"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the question",
+        "text": "You need a hospital in a city you don't know. Ask a stranger.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-for-prices",
+          "prompt": "Arrange the words: Permisi, rumah sakitnya di mana?",
+          "tokens": [
+            "hospital",
+            "is",
+            "Excuse",
+            "the",
+            "where",
+            "me"
+          ],
+          "solution": "Excuse me, where is the hospital?",
+          "explanation": "Start politely with **Excuse me**, then the question word **where**, then **is**, then the place: **where is the hospital?** Indonesian puts *di mana* at the end, but English puts **where** first."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Keep the chat going",
+        "text": "A conversation is like badminton: when the ball comes to you, hit it back! These small phrases help.",
+        "body": "Show interest with **Really?** (your voice goes **up**), **That's great!** or **Oh, I see.** Ask back with **And you?** or **What about you?** Agree with **Me too.** *Aku juga* is **me too**, not 'me also' or 'I also'. It's for positive sentences; after a sentence with *not*, people say *Me neither* (later). Didn't understand? **Sorry? Can you say that again, please?**",
+        "pairs": [
+          {
+            "en": "Really?",
+            "id": "Oh ya? / Masa?"
+          },
+          {
+            "en": "That's great!",
+            "id": "Bagus! / Keren!"
+          },
+          {
+            "en": "Oh, I see.",
+            "id": "Oh, begitu."
+          },
+          {
+            "en": "And you?",
+            "id": "Kamu sendiri?"
+          },
+          {
+            "en": "What about you?",
+            "id": "Kalau kamu?"
+          },
+          {
+            "en": "Me too.",
+            "id": "Aku juga."
+          },
+          {
+            "en": "Sorry? Can you say that again, please?",
+            "id": "Maaf? Bisa diulang?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "A chat at the office",
+        "text": "Sari and Dimas are new colleagues. Watch how they keep the chat going.",
+        "body": "Each answer ends with a question back (**And you?**, **What about you?**) or a reaction (**Really?**, **That's great!**). That's how the chat keeps going.",
+        "examples": [
+          {
+            "en": "I'm Sari. I'm from Medan. And you?",
+            "id": "Aku Sari, dari Medan. Kamu sendiri?"
+          },
+          {
+            "en": "I'm Dimas, from Bandung. I live in Depok now.",
+            "id": "Aku Dimas, dari Bandung. Sekarang aku tinggal di Depok."
+          },
+          {
+            "en": "Really? I live in Depok too!",
+            "id": "Oh ya? Aku juga tinggal di Depok!"
+          },
+          {
+            "en": "That's great! What do you do?",
+            "id": "Keren! Kamu kerja apa?"
+          },
+          {
+            "en": "I'm an accountant. What about you?",
+            "id": "Aku akuntan. Kalau kamu?"
+          },
+          {
+            "en": "I'm a designer.",
+            "id": "Aku desainer."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Press play and listen to your friend Dimas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "keep-a-short",
+          "prompt": "Dimas says something. Listen. You feel the same way. What do you say?",
+          "listen": "I love nasi padang!",
+          "options": [
+            "Oh, me also!",
+            "Oh, me too!",
+            "Oh, I also!"
+          ],
+          "answer": 1,
+          "explanation": "**Me too** = *aku juga*: it agrees with a positive sentence like Dimas's. 'Me also' and 'I also' are word-for-word translations of *aku juga* and aren't used like this."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here are all the phrases on one page. Keep it for your next café or shop.",
+        "artifact": {
+          "title": "Cheat sheet · Everyday conversation",
+          "intro": "Phrases for cafés, shops and the street.",
+          "headers": [
+            "Situation",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Ordering",
+              "I'd like a coffee, please.",
+              "Saya pesan kopi satu, ya."
+            ],
+            [
+              "Ordering",
+              "Can I have a tea, please?",
+              "Boleh minta teh satu?"
+            ],
+            [
+              "Waiter asks",
+              "Anything else?",
+              "Ada lagi?"
+            ],
+            [
+              "Nothing more",
+              "No, that's all, thanks.",
+              "Tidak, itu saja, makasih."
+            ],
+            [
+              "Waiter asks",
+              "Eat in or take away? (US: For here or to go?)",
+              "Makan di sini atau dibungkus?"
+            ],
+            [
+              "Paying",
+              "The bill, please. (US: The check, please.)",
+              "Minta bonnya."
+            ],
+            [
+              "Price of one thing",
+              "How much is it? / How much is this?",
+              "Berapa harganya? / Yang ini berapa?"
+            ],
+            [
+              "Price of more than one",
+              "How much are they? / How much are these?",
+              "Berapa harganya? / Yang ini berapa?"
+            ],
+            [
+              "Asking the way",
+              "Excuse me, where is the ...?",
+              "Permisi, ... di mana?"
+            ],
+            [
+              "Asking the way",
+              "Is there a ... near here?",
+              "Ada ... di dekat sini?"
+            ],
+            [
+              "Directions",
+              "Go straight on. / Turn left. / Turn right.",
+              "Lurus terus. / Belok kiri. / Belok kanan."
+            ],
+            [
+              "Directions",
+              "It's on the left. / It's on the right.",
+              "Ada di sebelah kiri. / Ada di sebelah kanan."
+            ],
+            [
+              "Showing interest, agreeing",
+              "Really? / That's great! / Me too!",
+              "Oh ya? / Keren! / Aku juga!"
+            ],
+            [
+              "Asking back",
+              "And you? / What about you?",
+              "Kamu sendiri? / Kalau kamu?"
+            ]
+          ],
+          "tips": [
+            "Order with **I'd like ..., please** or **Can I have ..., please?**, not 'I want ...'.",
+            "**How much is it?** for one thing, **How much are they?** for more; never 'How much the price?'.",
+            "*Aku juga* = **Me too**, not 'me also'. Say **turn left**, not 'turn to left'."
+          ],
+          "examples": [
+            {
+              "en": "I'd like two iced teas, please.",
+              "id": "Saya pesan dua es teh, ya."
+            },
+            {
+              "en": "How much is a kilo of rice?",
+              "id": "Berapa harga beras sekilo?"
+            },
+            {
+              "en": "Excuse me, is there a bank near here?",
+              "id": "Permisi, ada bank di dekat sini?"
+            },
+            {
+              "en": "Really? Me too!",
+              "id": "Oh ya? Aku juga!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen to a real café",
+        "text": "Want more? Listen to people ordering in a café and try the exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita bawa bahasa Inggris ke jalan: kafe, toko, dan jalan raya yang ramai. Yuk, latih frasa yang kamu perlukan, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Memesan makanan dan minuman",
+        "text": "Kita mulai di kafe. Ini frasa yang kamu dengar dan ucapkan saat memesan.",
+        "body": "Pesan dengan **I'd like ..., please** (I'd = I would, artinya *mau* yang sopan, bukan *akan*) atau **Can I have ..., please?** Keduanya sopan. Hindari **I want coffee** dan **Give me coffee**: terdengar terlalu langsung untuk pelayan. Tetap pakai **a/an** untuk satu barang: *a coffee* = satu cangkir. Pelayan mungkin bertanya **Anything else?** (ada lagi?). Kalau sudah cukup, bilang **That's all, thanks.** **Eat in or take away?** dan **the bill** adalah bahasa British; orang Amerika bilang **For here or to go?** dan **the check**.",
+        "pairs": [
+          {
+            "en": "What would you like?",
+            "id": "Mau pesan apa?"
+          },
+          {
+            "en": "I'd like ..., please.",
+            "id": "Saya pesan ..., ya."
+          },
+          {
+            "en": "Can I have ..., please?",
+            "id": "Boleh minta ...?"
+          },
+          {
+            "en": "Anything else?",
+            "id": "Ada lagi?"
+          },
+          {
+            "en": "That's all, thanks.",
+            "id": "Itu saja, makasih."
+          },
+          {
+            "en": "Eat in or take away?",
+            "id": "Makan di sini atau dibungkus?"
+          },
+          {
+            "en": "The bill, please.",
+            "id": "Minta bonnya. (Amerika: the check)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Di kafe di Jakarta",
+        "text": "Rina memesan minuman dan camilan. Baca kalimatnya dengan suara keras.",
+        "body": "Perhatikan **please** di akhir setiap pesanan. **an** iced coffee: *iced* diawali bunyi vokal ('ais'), jadi pakai **an**.",
+        "examples": [
+          {
+            "en": "Good morning! What would you like?",
+            "id": "Selamat pagi! Mau pesan apa?"
+          },
+          {
+            "en": "I'd like an iced coffee, please.",
+            "id": "Saya pesan es kopi satu, ya."
+          },
+          {
+            "en": "Anything else?",
+            "id": "Ada lagi?"
+          },
+          {
+            "en": "Yes. Can I have a piece of banana cake, please?",
+            "id": "Ya. Boleh minta sepotong bolu pisang?"
+          },
+          {
+            "en": "Eat in or take away?",
+            "id": "Makan di sini atau dibungkus?"
+          },
+          {
+            "en": "Eat in, please. Thank you!",
+            "id": "Makan di sini. Terima kasih!"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sekarang kamu pelanggannya. Pilih cara memesan yang paling tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "order-food-and",
+          "prompt": "Pelayan restoran di Bandung bertanya: 'What would you like?' Jawaban mana yang sopan dan benar?",
+          "options": [
+            "I want tea.",
+            "I like a tea, please.",
+            "I'd like a tea, please."
+          ],
+          "answer": 2,
+          "explanation": "**I'd like ..., please** adalah cara sopan untuk memesan sesuatu sekarang. **I want tea** terdengar terlalu langsung untuk pelayan, dan **I like a tea** membicarakan apa yang kamu suka secara umum, jadi bukan pesanan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How much is it?",
+        "text": "Berikutnya: toko dan pasar. Yuk, tanya harga.",
+        "body": "Untuk **satu** barang: **How much is it?** / **How much is this?** Untuk **lebih dari satu**: **How much are they?** / **How much are these?** *Berapa harganya?* BUKAN 'How much the price?': bahasa Inggris perlu **is / are**. Jawabannya: **It's 25,000 rupiah** (twenty-five thousand). Bahasa Inggris menulis 25,000 dengan koma, bahasa Indonesia 25.000 dengan titik. Dengarkan baik-baik: **thirteen** (13) dan **thirty** (30) bunyinya mirip.",
+        "pairs": [
+          {
+            "en": "How much is it?",
+            "id": "Berapa harganya? (satu barang)"
+          },
+          {
+            "en": "How much is this?",
+            "id": "Yang ini berapa?"
+          },
+          {
+            "en": "How much are they?",
+            "id": "Berapa harganya? (lebih dari satu)"
+          },
+          {
+            "en": "How much are these?",
+            "id": "Yang ini berapa? (lebih dari satu)"
+          },
+          {
+            "en": "It's 25,000 rupiah.",
+            "id": "Harganya 25.000 rupiah."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Di pasar",
+        "text": "Mangganya kelihatan bagus hari ini. Tanyakan harganya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "ask-for-prices",
+          "prompt": "Di pasar, kamu menunjuk beberapa mangga. Tanyakan harganya kepada penjual.",
+          "options": [
+            "Excuse me, how much the price these mangoes?",
+            "Excuse me, how much is these mangoes?",
+            "Excuse me, how much are these mangoes?"
+          ],
+          "answer": 2,
+          "explanation": "*Mangoes* artinya lebih dari satu, jadi pakai **are**: **How much are these mangoes?** **How much is** untuk satu barang, dan 'how much the price' adalah terjemahan kata per kata dari *berapa harganya* tanpa kata kerja."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menanyakan arah",
+        "text": "Sekarang kamu tersesat di kota. Begini cara bertanya arah, dan jawaban yang akan kamu dengar.",
+        "body": "Mulai dengan **Excuse me**, lalu tanya **Where is the ...?** atau **Is there a ... near here?** Bahasa Inggris menaruh **where** di **awal**; bahasa Indonesia menaruh *di mana* di akhir. Jawaban yang perlu kamu pahami: **Go straight on**, **Turn left**, **Turn right**, **It's on the left / right**. Ucapkan **turn left**, bukan 'turn to left' (*belok ke kiri* memakai *ke*, bahasa Inggris tidak). **Go straight on** itu British; orang Amerika bilang **go straight ahead**.",
+        "pairs": [
+          {
+            "en": "Excuse me, where is the ...?",
+            "id": "Permisi, ... di mana?"
+          },
+          {
+            "en": "Is there a ... near here?",
+            "id": "Ada ... di dekat sini?"
+          },
+          {
+            "en": "Go straight on.",
+            "id": "Jalan lurus terus."
+          },
+          {
+            "en": "Turn left.",
+            "id": "Belok kiri."
+          },
+          {
+            "en": "Turn right.",
+            "id": "Belok kanan."
+          },
+          {
+            "en": "It's on the left.",
+            "id": "Ada di sebelah kiri."
+          },
+          {
+            "en": "It's on the right.",
+            "id": "Ada di sebelah kanan."
+          },
+          {
+            "en": "hospital",
+            "id": "rumah sakit"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun pertanyaannya",
+        "text": "Kamu perlu rumah sakit di kota yang tidak kamu kenal. Tanya orang di jalan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "ask-for-prices",
+          "prompt": "Susun kata-katanya: Permisi, rumah sakitnya di mana?",
+          "tokens": [
+            "hospital",
+            "is",
+            "Excuse",
+            "the",
+            "where",
+            "me"
+          ],
+          "solution": "Excuse me, where is the hospital?",
+          "explanation": "Mulai dengan sopan memakai **Excuse me**, lalu kata tanya **where**, lalu **is**, lalu tempatnya: **where is the hospital?** Bahasa Indonesia menaruh *di mana* di akhir, tapi bahasa Inggris menaruh **where** di depan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jaga obrolan tetap jalan",
+        "text": "Percakapan itu seperti bulu tangkis: kalau kok datang, pukul balik! Frasa kecil ini membantumu.",
+        "body": "Tunjukkan minat dengan **Really?** (nada suaramu **naik**), **That's great!** atau **Oh, I see.** Tanya balik dengan **And you?** atau **What about you?** Setujui dengan **Me too.** *Aku juga* adalah **me too**, bukan 'me also' atau 'I also'. Ini untuk kalimat positif; setelah kalimat dengan *not*, orang bilang *Me neither* (nanti). Tidak paham? **Sorry? Can you say that again, please?**",
+        "pairs": [
+          {
+            "en": "Really?",
+            "id": "Oh ya? / Masa?"
+          },
+          {
+            "en": "That's great!",
+            "id": "Bagus! / Keren!"
+          },
+          {
+            "en": "Oh, I see.",
+            "id": "Oh, begitu."
+          },
+          {
+            "en": "And you?",
+            "id": "Kamu sendiri?"
+          },
+          {
+            "en": "What about you?",
+            "id": "Kalau kamu?"
+          },
+          {
+            "en": "Me too.",
+            "id": "Aku juga."
+          },
+          {
+            "en": "Sorry? Can you say that again, please?",
+            "id": "Maaf? Bisa diulang?"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Ngobrol di kantor",
+        "text": "Sari dan Dimas rekan kerja baru. Lihat cara mereka menjaga obrolan tetap jalan.",
+        "body": "Setiap jawaban diakhiri pertanyaan balik (**And you?**, **What about you?**) atau reaksi (**Really?**, **That's great!**). Begitulah obrolan terus berjalan.",
+        "examples": [
+          {
+            "en": "I'm Sari. I'm from Medan. And you?",
+            "id": "Aku Sari, dari Medan. Kamu sendiri?"
+          },
+          {
+            "en": "I'm Dimas, from Bandung. I live in Depok now.",
+            "id": "Aku Dimas, dari Bandung. Sekarang aku tinggal di Depok."
+          },
+          {
+            "en": "Really? I live in Depok too!",
+            "id": "Oh ya? Aku juga tinggal di Depok!"
+          },
+          {
+            "en": "That's great! What do you do?",
+            "id": "Keren! Kamu kerja apa?"
+          },
+          {
+            "en": "I'm an accountant. What about you?",
+            "id": "Aku akuntan. Kalau kamu?"
+          },
+          {
+            "en": "I'm a designer.",
+            "id": "Aku desainer."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan balas",
+        "text": "Tekan play dan dengarkan temanmu, Dimas.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "keep-a-short",
+          "prompt": "Dimas mengatakan sesuatu. Dengarkan. Kamu merasakan hal yang sama. Apa yang kamu ucapkan?",
+          "listen": "I love nasi padang!",
+          "options": [
+            "Oh, me also!",
+            "Oh, me too!",
+            "Oh, I also!"
+          ],
+          "answer": 1,
+          "explanation": "**Me too** = *aku juga*: menyetujui kalimat positif seperti kalimat Dimas. 'Me also' dan 'I also' adalah terjemahan kata per kata dari *aku juga* dan tidak dipakai seperti ini."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semua frasanya dalam satu halaman. Simpan untuk kunjunganmu berikutnya ke kafe atau toko.",
+        "artifact": {
+          "title": "Ringkasan · Percakapan sehari-hari",
+          "intro": "Frasa untuk kafe, toko dan jalan.",
+          "headers": [
+            "Situasi",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Memesan",
+              "I'd like a coffee, please.",
+              "Saya pesan kopi satu, ya."
+            ],
+            [
+              "Memesan",
+              "Can I have a tea, please?",
+              "Boleh minta teh satu?"
+            ],
+            [
+              "Pelayan bertanya",
+              "Anything else?",
+              "Ada lagi?"
+            ],
+            [
+              "Tidak pesan lagi",
+              "No, that's all, thanks.",
+              "Tidak, itu saja, makasih."
+            ],
+            [
+              "Pelayan bertanya",
+              "Eat in or take away? (US: For here or to go?)",
+              "Makan di sini atau dibungkus?"
+            ],
+            [
+              "Membayar",
+              "The bill, please. (US: The check, please.)",
+              "Minta bonnya."
+            ],
+            [
+              "Harga satu barang",
+              "How much is it? / How much is this?",
+              "Berapa harganya? / Yang ini berapa?"
+            ],
+            [
+              "Harga lebih dari satu",
+              "How much are they? / How much are these?",
+              "Berapa harganya? / Yang ini berapa?"
+            ],
+            [
+              "Menanyakan arah",
+              "Excuse me, where is the ...?",
+              "Permisi, ... di mana?"
+            ],
+            [
+              "Menanyakan arah",
+              "Is there a ... near here?",
+              "Ada ... di dekat sini?"
+            ],
+            [
+              "Petunjuk arah",
+              "Go straight on. / Turn left. / Turn right.",
+              "Lurus terus. / Belok kiri. / Belok kanan."
+            ],
+            [
+              "Petunjuk arah",
+              "It's on the left. / It's on the right.",
+              "Ada di sebelah kiri. / Ada di sebelah kanan."
+            ],
+            [
+              "Menunjukkan minat, setuju",
+              "Really? / That's great! / Me too!",
+              "Oh ya? / Keren! / Aku juga!"
+            ],
+            [
+              "Tanya balik",
+              "And you? / What about you?",
+              "Kamu sendiri? / Kalau kamu?"
+            ]
+          ],
+          "tips": [
+            "Pesan dengan **I'd like ..., please** atau **Can I have ..., please?**, bukan 'I want ...'.",
+            "**How much is it?** untuk satu barang, **How much are they?** untuk lebih dari satu; jangan 'How much the price?'.",
+            "*Aku juga* = **Me too**, bukan 'me also'. Ucapkan **turn left**, bukan 'turn to left'."
+          ],
+          "examples": [
+            {
+              "en": "I'd like two iced teas, please.",
+              "id": "Saya pesan dua es teh, ya."
+            },
+            {
+              "en": "How much is a kilo of rice?",
+              "id": "Berapa harga beras sekilo?"
+            },
+            {
+              "en": "Excuse me, is there a bank near here?",
+              "id": "Permisi, ada bank di dekat sini?"
+            },
+            {
+              "en": "Really? Me too!",
+              "id": "Oh ya? Aku juga!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengarkan kafe sungguhan",
+        "text": "Mau lebih? Dengarkan orang memesan di kafe dan coba latihannya."
+      }
+    ]
+  }
+}

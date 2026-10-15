@@ -1,0 +1,740 @@
+{
+  "en": {
+    "greeting": "Hi! Today we go into town. You'll learn the names of places, how to say how you travel, and how to follow simple directions.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Places in town",
+        "text": "Let's start with the places you see every day in town.",
+        "body": "Many names **flip** the Indonesian order: kantor pos = **post office**, pom bensin = **petrol station**. In English the main word (office, station) comes **last**. **Station** alone usually means the train station; a **bus stop** is the halte on the street. Rumah sakit is one word: **hospital**. British vs American: petrol station (UK) = gas station (US).",
+        "pairs": [
+          {
+            "en": "bank",
+            "id": "bank"
+          },
+          {
+            "en": "post office",
+            "id": "kantor pos"
+          },
+          {
+            "en": "station",
+            "id": "stasiun kereta"
+          },
+          {
+            "en": "bus stop",
+            "id": "halte bus"
+          },
+          {
+            "en": "hospital",
+            "id": "rumah sakit"
+          },
+          {
+            "en": "pharmacy",
+            "id": "apotek"
+          },
+          {
+            "en": "market",
+            "id": "pasar"
+          },
+          {
+            "en": "petrol station",
+            "id": "pom bensin"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Places in sentences",
+        "text": "Now use the places with words you already know: there's, next to, between, behind.",
+        "body": "**Near** = dekat. *Is there a … near here?* = Apakah ada … di dekat sini?",
+        "examples": [
+          {
+            "en": "There's a bank next to the station.",
+            "id": "Ada bank di sebelah stasiun."
+          },
+          {
+            "en": "The pharmacy is between the market and the mosque.",
+            "id": "Apoteknya di antara pasar dan masjid."
+          },
+          {
+            "en": "My sister is a nurse at the hospital.",
+            "id": "Kakak perempuan saya perawat di rumah sakit."
+          },
+          {
+            "en": "Is there a bus stop near here?",
+            "id": "Apakah ada halte bus di dekat sini?"
+          },
+          {
+            "en": "The police station is behind the park.",
+            "id": "Kantor polisinya di belakang taman."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Where does Dewi go?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "places-in-town",
+          "options": [
+            "At the post office.",
+            "At the pharmacy.",
+            "At the petrol station."
+          ],
+          "answer": 1,
+          "prompt": "Dewi has a headache. She needs some medicine. Where can she buy it?",
+          "explanation": "You buy medicine (obat) at the **pharmacy** (apotek). The **post office** is for letters and parcels, the **petrol station** for petrol (bensin)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "How do you travel?",
+        "text": "Now let's talk about how you get there.",
+        "body": "Naik bus = **by bus**: use **by** + the transport, with no a or the. Not 'with bus': *with* is for a person you're with (*with my friend*). Walking is the exception: jalan kaki = **on foot** (not 'by foot'), or just *I walk*. Pulang = **go home**, with no 'to'. British vs American: motorbike (UK) = motorcycle (US).",
+        "pairs": [
+          {
+            "en": "by bus",
+            "id": "naik bus"
+          },
+          {
+            "en": "by train",
+            "id": "naik kereta"
+          },
+          {
+            "en": "by car",
+            "id": "naik mobil"
+          },
+          {
+            "en": "by motorbike",
+            "id": "naik motor"
+          },
+          {
+            "en": "by taxi",
+            "id": "naik taksi"
+          },
+          {
+            "en": "by plane",
+            "id": "naik pesawat"
+          },
+          {
+            "en": "on foot",
+            "id": "jalan kaki"
+          },
+          {
+            "en": "go home",
+            "id": "pulang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Pak Hasan takes the KRL every morning.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "transport",
+          "options": [
+            "with train",
+            "by the train",
+            "by train"
+          ],
+          "answer": 2,
+          "prompt": "Pak Hasan lives in Bogor and works in Jakarta. Every day he goes to work ___.",
+          "explanation": "Naik kereta = **by train**: **by** + the transport, with no a or the. 'With train' is a word-for-word translation of 'naik', and 'by the train' adds an extra word."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now say how you get home.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "transport",
+          "tokens": [
+            "taxi",
+            "home",
+            "We",
+            "by",
+            "go"
+          ],
+          "solution": "We go home by taxi.",
+          "prompt": "Arrange the words: Kami pulang naik taksi.",
+          "explanation": "Pulang = **go home**, with no 'to' before home. Then say how: **by taxi**. Order: who (**We**) + **go home** + **by taxi**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Left, right, straight on",
+        "text": "Now the words for directions.",
+        "body": "Directions start with the action word, like *Open your book* in class: **Go straight on**, **Turn left**. Say **turn left**, not 'turn to left'. **Turn left** is what you do (belok); **on the left** is where the place is (letaknya). Lampu merah = **traffic lights** (all the lights), not 'red light'. British vs American: go straight on (UK) = go straight / go straight ahead (US).",
+        "pairs": [
+          {
+            "en": "left",
+            "id": "kiri"
+          },
+          {
+            "en": "right",
+            "id": "kanan"
+          },
+          {
+            "en": "go straight on",
+            "id": "jalan lurus terus"
+          },
+          {
+            "en": "turn left",
+            "id": "belok kiri"
+          },
+          {
+            "en": "turn right",
+            "id": "belok kanan"
+          },
+          {
+            "en": "on the left",
+            "id": "di sebelah kiri"
+          },
+          {
+            "en": "at the traffic lights",
+            "id": "di lampu merah"
+          },
+          {
+            "en": "at the corner",
+            "id": "di tikungan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "A man asks you the way to the mosque.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "direction-words",
+          "options": [
+            "Go straight on and turn left.",
+            "Go straight on and turn to left.",
+            "Go straight on and turn the left."
+          ],
+          "answer": 0,
+          "prompt": "Which directions are correct?",
+          "explanation": "It's **turn left**, with no little word in the middle: not 'turn to left' (a word-for-word 'belok ke kiri') and not 'turn the left'."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Asking the way",
+        "text": "Here's how people ask the way and answer. Read them out loud.",
+        "body": "Start with **Excuse me** (permisi). The answer has two parts: **how to go** (Go straight on…) and **where it is** (It's on the right…). Too fast? Say *Sorry, can you repeat that, please?*",
+        "examples": [
+          {
+            "en": "Excuse me, where's the post office?",
+            "id": "Permisi, kantor posnya di mana?"
+          },
+          {
+            "en": "Excuse me, is there a pharmacy near here?",
+            "id": "Permisi, apakah ada apotek di dekat sini?"
+          },
+          {
+            "en": "Go straight on to the traffic lights.",
+            "id": "Jalan lurus terus sampai lampu merah."
+          },
+          {
+            "en": "Cross the road at the corner.",
+            "id": "Menyeberanglah di tikungan."
+          },
+          {
+            "en": "It's on the right, next to the bank.",
+            "id": "Letaknya di sebelah kanan, di samping bank."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen",
+        "text": "Ask the way to the station. Press play and listen to the answer.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "direction-words",
+          "listen": "Turn right at the corner. The station is on your left, next to the market.",
+          "options": [
+            "On your right, next to the market.",
+            "On your left, next to the market.",
+            "On your left, next to the bank."
+          ],
+          "answer": 1,
+          "prompt": "Listen. Where is the station?",
+          "explanation": "You hear **turn right** (what you do), then **The station is on your left, next to the market** (where it is). Don't mix the turn with the place."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for your next trip into town.",
+        "artifact": {
+          "title": "Cheat sheet · Town & Transport",
+          "intro": "Places in town, how you travel, and direction words.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Places",
+              "bank / post office",
+              "bank / kantor pos"
+            ],
+            [
+              "Places",
+              "station (train station) / bus station / bus stop",
+              "stasiun kereta / terminal bus / halte"
+            ],
+            [
+              "Places",
+              "hospital / pharmacy",
+              "rumah sakit / apotek"
+            ],
+            [
+              "Places",
+              "market / supermarket / mosque / park",
+              "pasar / supermarket / masjid / taman"
+            ],
+            [
+              "Places",
+              "petrol station / police station",
+              "pom bensin / kantor polisi"
+            ],
+            [
+              "Transport",
+              "by bus / by train / by car",
+              "naik bus / kereta / mobil"
+            ],
+            [
+              "Transport",
+              "by motorbike / by taxi / by plane / by bike",
+              "naik motor / taksi / pesawat / sepeda"
+            ],
+            [
+              "Transport",
+              "on foot",
+              "jalan kaki"
+            ],
+            [
+              "Directions",
+              "go straight on",
+              "jalan lurus terus"
+            ],
+            [
+              "Directions",
+              "turn left / turn right",
+              "belok kiri / belok kanan"
+            ],
+            [
+              "Directions",
+              "on the left / on the right",
+              "di sebelah kiri / kanan"
+            ],
+            [
+              "Directions",
+              "at the traffic lights / at the corner",
+              "di lampu merah / di tikungan"
+            ]
+          ],
+          "tips": [
+            "The order flips: kantor pos = **post office**, pom bensin = **petrol station**.",
+            "Naik bus = **by bus** (not `with bus`, no a/the). Jalan kaki = **on foot** (not `by foot`). Pulang = **go home**.",
+            "**Turn left** (not `turn to left`) is what you do; **on the left** is where the place is."
+          ],
+          "examples": [
+            {
+              "en": "I go to work by motorbike.",
+              "id": "Saya berangkat kerja naik motor."
+            },
+            {
+              "en": "Excuse me, is there a bank near here?",
+              "id": "Permisi, apakah ada bank di dekat sini?"
+            },
+            {
+              "en": "Go straight on and turn right. It's on the left.",
+              "id": "Jalan lurus terus lalu belok kanan. Letaknya di sebelah kiri."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? Try these exercises on places, transport and directions."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita jalan-jalan ke kota. Kamu akan belajar nama-nama tempat, cara bilang naik apa, dan cara mengikuti petunjuk arah sederhana.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Tempat di kota",
+        "text": "Kita mulai dari tempat-tempat yang kamu lihat setiap hari di kota.",
+        "body": "Banyak nama tempat urutannya **terbalik** dari bahasa Indonesia: kantor pos = **post office**, pom bensin = **petrol station**. Di bahasa Inggris kata utamanya (office, station) ada di **belakang**. **Station** saja biasanya berarti stasiun kereta; **bus stop** adalah halte di pinggir jalan. Rumah sakit cukup satu kata: **hospital**. Inggris (UK) vs Amerika (US): petrol station (UK) = gas station (US).",
+        "pairs": [
+          {
+            "en": "bank",
+            "id": "bank"
+          },
+          {
+            "en": "post office",
+            "id": "kantor pos"
+          },
+          {
+            "en": "station",
+            "id": "stasiun kereta"
+          },
+          {
+            "en": "bus stop",
+            "id": "halte bus"
+          },
+          {
+            "en": "hospital",
+            "id": "rumah sakit"
+          },
+          {
+            "en": "pharmacy",
+            "id": "apotek"
+          },
+          {
+            "en": "market",
+            "id": "pasar"
+          },
+          {
+            "en": "petrol station",
+            "id": "pom bensin"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tempat dalam kalimat",
+        "text": "Sekarang pakai nama tempat dengan kata yang sudah kamu tahu: there's, next to, between, behind.",
+        "body": "**Near** = dekat. *Is there a … near here?* = Apakah ada … di dekat sini?",
+        "examples": [
+          {
+            "en": "There's a bank next to the station.",
+            "id": "Ada bank di sebelah stasiun."
+          },
+          {
+            "en": "The pharmacy is between the market and the mosque.",
+            "id": "Apoteknya di antara pasar dan masjid."
+          },
+          {
+            "en": "My sister is a nurse at the hospital.",
+            "id": "Kakak perempuan saya perawat di rumah sakit."
+          },
+          {
+            "en": "Is there a bus stop near here?",
+            "id": "Apakah ada halte bus di dekat sini?"
+          },
+          {
+            "en": "The police station is behind the park.",
+            "id": "Kantor polisinya di belakang taman."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dewi pergi ke mana?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "places-in-town",
+          "options": [
+            "At the post office.",
+            "At the pharmacy.",
+            "At the petrol station."
+          ],
+          "answer": 1,
+          "prompt": "Dewi sakit kepala dan perlu obat. Di mana dia bisa membelinya?",
+          "explanation": "Obat (medicine) dibeli di **pharmacy** (apotek). **Post office** untuk surat dan paket, **petrol station** untuk bensin."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kamu naik apa?",
+        "text": "Sekarang kita bahas cara ke sana.",
+        "body": "Naik bus = **by bus**: pakai **by** + kendaraannya, tanpa a atau the. Bukan 'with bus': *with* untuk orang yang bersamamu (*with my friend*). Jalan kaki itu pengecualian: **on foot** (bukan 'by foot'), atau cukup *I walk*. Pulang = **go home**, tanpa 'to'. Inggris (UK) vs Amerika (US): motorbike (UK) = motorcycle (US).",
+        "pairs": [
+          {
+            "en": "by bus",
+            "id": "naik bus"
+          },
+          {
+            "en": "by train",
+            "id": "naik kereta"
+          },
+          {
+            "en": "by car",
+            "id": "naik mobil"
+          },
+          {
+            "en": "by motorbike",
+            "id": "naik motor"
+          },
+          {
+            "en": "by taxi",
+            "id": "naik taksi"
+          },
+          {
+            "en": "by plane",
+            "id": "naik pesawat"
+          },
+          {
+            "en": "on foot",
+            "id": "jalan kaki"
+          },
+          {
+            "en": "go home",
+            "id": "pulang"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Pak Hasan naik KRL setiap pagi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "transport",
+          "options": [
+            "with train",
+            "by the train",
+            "by train"
+          ],
+          "answer": 2,
+          "prompt": "Pak Hasan tinggal di Bogor dan bekerja di Jakarta. Lengkapi: Every day he goes to work ___.",
+          "explanation": "Naik kereta = **by train**: **by** + kendaraannya, tanpa a atau the. 'With train' adalah terjemahan kata per kata dari 'naik', dan 'by the train' menambah kata yang tidak perlu."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang katakan cara kamu pulang.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "transport",
+          "tokens": [
+            "taxi",
+            "home",
+            "We",
+            "by",
+            "go"
+          ],
+          "solution": "We go home by taxi.",
+          "prompt": "Susun kata-katanya: Kami pulang naik taksi.",
+          "explanation": "Pulang = **go home**, tanpa 'to' sebelum home. Lalu sebutkan naik apa: **by taxi**. Urutannya: siapa (**We**) + **go home** + **by taxi**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Kiri, kanan, lurus",
+        "text": "Sekarang kata-kata untuk petunjuk arah.",
+        "body": "Petunjuk arah diawali kata tindakan, seperti *Open your book* di kelas: **Go straight on**, **Turn left**. Katakan **turn left**, bukan 'turn to left'. **Turn left** = yang kamu lakukan (belok); **on the left** = letak tempatnya. Lampu merah = **traffic lights** (semua lampunya), bukan 'red light'. Inggris (UK) vs Amerika (US): go straight on (UK) = go straight / go straight ahead (US).",
+        "pairs": [
+          {
+            "en": "left",
+            "id": "kiri"
+          },
+          {
+            "en": "right",
+            "id": "kanan"
+          },
+          {
+            "en": "go straight on",
+            "id": "jalan lurus terus"
+          },
+          {
+            "en": "turn left",
+            "id": "belok kiri"
+          },
+          {
+            "en": "turn right",
+            "id": "belok kanan"
+          },
+          {
+            "en": "on the left",
+            "id": "di sebelah kiri"
+          },
+          {
+            "en": "at the traffic lights",
+            "id": "di lampu merah"
+          },
+          {
+            "en": "at the corner",
+            "id": "di tikungan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Seorang bapak menanyakan jalan ke masjid.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "direction-words",
+          "options": [
+            "Go straight on and turn left.",
+            "Go straight on and turn to left.",
+            "Go straight on and turn the left."
+          ],
+          "answer": 0,
+          "prompt": "Petunjuk arah mana yang benar?",
+          "explanation": "Yang benar **turn left**, tanpa kata kecil di tengah: bukan 'turn to left' (terjemahan kata per kata 'belok ke kiri') dan bukan 'turn the left'."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Menanyakan jalan",
+        "text": "Begini cara orang menanyakan jalan dan menjawabnya. Baca dengan suara keras.",
+        "body": "Mulai dengan **Excuse me** (permisi). Jawabannya punya dua bagian: **cara ke sana** (Go straight on…) dan **letaknya** (It's on the right…). Terlalu cepat? Katakan *Sorry, can you repeat that, please?*",
+        "examples": [
+          {
+            "en": "Excuse me, where's the post office?",
+            "id": "Permisi, kantor posnya di mana?"
+          },
+          {
+            "en": "Excuse me, is there a pharmacy near here?",
+            "id": "Permisi, apakah ada apotek di dekat sini?"
+          },
+          {
+            "en": "Go straight on to the traffic lights.",
+            "id": "Jalan lurus terus sampai lampu merah."
+          },
+          {
+            "en": "Cross the road at the corner.",
+            "id": "Menyeberanglah di tikungan."
+          },
+          {
+            "en": "It's on the right, next to the bank.",
+            "id": "Letaknya di sebelah kanan, di samping bank."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan",
+        "text": "Kamu menanyakan jalan ke stasiun. Tekan play dan dengarkan jawabannya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "direction-words",
+          "listen": "Turn right at the corner. The station is on your left, next to the market.",
+          "options": [
+            "On your right, next to the market.",
+            "On your left, next to the market.",
+            "On your left, next to the bank."
+          ],
+          "answer": 1,
+          "prompt": "Dengarkan. Stasiunnya di mana?",
+          "explanation": "Kamu mendengar **turn right** (yang kamu lakukan), lalu **The station is on your left, next to the market** (letaknya). Jangan campur arah belok dengan letak tempatnya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk perjalananmu berikutnya ke kota.",
+        "artifact": {
+          "title": "Ringkasan · Kota & Transportasi",
+          "intro": "Tempat di kota, cara bepergian, dan kata penunjuk arah.",
+          "headers": [
+            "Kelompok",
+            "Inggris",
+            "Indonesia"
+          ],
+          "rows": [
+            [
+              "Tempat",
+              "bank / post office",
+              "bank / kantor pos"
+            ],
+            [
+              "Tempat",
+              "station (train station) / bus station / bus stop",
+              "stasiun kereta / terminal bus / halte"
+            ],
+            [
+              "Tempat",
+              "hospital / pharmacy",
+              "rumah sakit / apotek"
+            ],
+            [
+              "Tempat",
+              "market / supermarket / mosque / park",
+              "pasar / supermarket / masjid / taman"
+            ],
+            [
+              "Tempat",
+              "petrol station / police station",
+              "pom bensin / kantor polisi"
+            ],
+            [
+              "Transportasi",
+              "by bus / by train / by car",
+              "naik bus / kereta / mobil"
+            ],
+            [
+              "Transportasi",
+              "by motorbike / by taxi / by plane / by bike",
+              "naik motor / taksi / pesawat / sepeda"
+            ],
+            [
+              "Transportasi",
+              "on foot",
+              "jalan kaki"
+            ],
+            [
+              "Arah",
+              "go straight on",
+              "jalan lurus terus"
+            ],
+            [
+              "Arah",
+              "turn left / turn right",
+              "belok kiri / belok kanan"
+            ],
+            [
+              "Arah",
+              "on the left / on the right",
+              "di sebelah kiri / kanan"
+            ],
+            [
+              "Arah",
+              "at the traffic lights / at the corner",
+              "di lampu merah / di tikungan"
+            ]
+          ],
+          "tips": [
+            "Urutannya terbalik: kantor pos = **post office**, pom bensin = **petrol station**.",
+            "Naik bus = **by bus** (bukan `with bus`, tanpa a/the). Jalan kaki = **on foot** (bukan `by foot`). Pulang = **go home**.",
+            "**Turn left** (bukan `turn to left`) = yang kamu lakukan; **on the left** = letak tempatnya."
+          ],
+          "examples": [
+            {
+              "en": "I go to work by motorbike.",
+              "id": "Saya berangkat kerja naik motor."
+            },
+            {
+              "en": "Excuse me, is there a bank near here?",
+              "id": "Permisi, apakah ada bank di dekat sini?"
+            },
+            {
+              "en": "Go straight on and turn right. It's on the left.",
+              "id": "Jalan lurus terus lalu belok kanan. Letaknya di sebelah kiri."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lagi",
+        "text": "Mau latihan lagi? Coba latihan tentang tempat, transportasi dan petunjuk arah ini."
+      }
+    ]
+  }
+}

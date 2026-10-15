@@ -3,6 +3,7 @@ package ai
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"strings"
 	"testing"
 
@@ -198,5 +199,21 @@ func TestStrictMatch(t *testing.T) {
 	}
 	if StrictMatch("my name is budi", []string{"My name is Budi."}) || StrictMatch("C-O-F-E-E", []string{"C-O-F-F-E-E"}) || StrictMatch("", []string{""}) {
 		t.Fatal("case and letters do")
+	}
+}
+
+func TestLevelFallbackFitsALargeLevel(t *testing.T) {
+	var lessons []LevelLesson
+	for i := 0; i < 31; i++ {
+		o := []string{"receptive", "receptive", "receptive", "spoken", "written"}[i%5]
+		lessons = append(lessons, LevelLesson{ID: fmt.Sprintf("l%d", i), Objective: o, SamplePrompt: "p", Sample: curriculum.AssessmentItem{AcceptableAnswers: []string{"a"}, Rubric: "r"}})
+	}
+	items := LevelFallback(lessons)
+	seen := map[string]bool{}
+	for _, it := range items {
+		seen[it.ObjectiveID] = true
+	}
+	if len(items) != tutor.MaxLevelCheckItems-1 || len(seen) != 3 {
+		t.Fatalf("a 31-lesson level gives %d questions covering %v", len(items), seen)
 	}
 }

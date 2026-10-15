@@ -336,7 +336,7 @@ func levelCheckpointTask(in CheckpointInput, earlier string) string {
 	examples, _ := json.Marshal(samples)
 	return fmt.Sprintf(`Write the level checkpoint: %d to %d questions that show whether the learner can use everything this level teaches,
 together. Give each question the "lessonId" of the lesson it tests and that lesson's checkpoint objective as "objectiveId" (see the list
-above). Spread them over the lessons: at least two thirds of them, no lesson more than twice. Mix in a few questions that combine skills
+above). Spread them over the lessons: at least %d different lessons, no lesson more than twice, and every objective covered. Mix in a few questions that combine skills
 from two lessons (e.g. greet someone and give your phone number), named after the lesson they lean on most.
 - Same rules as a lesson checkpoint. "mcq": 2–4 options with exactly ONE correct answer, copied into "correctOption", every other option
   clearly wrong. "word_order": a natural sentence of 3–8 words, tokens shuffled — never letters to spell. "text": an open answer, with
@@ -348,14 +348,33 @@ from two lessons (e.g. greet someone and give your phone number), named after th
 - Fields a type doesn't use: empty string, empty list or 0.
 - Match the level of these hand-written questions (one per lesson), but never copy or lightly reword them: %s
 - The learner has already answered these checkpoint questions; don't repeat or lightly reword them: %s%s`,
-		tutor.MinLevelCheckItems+2, tutor.MaxLevelCheckItems-1, examples, earlier, problems(in.Problems))
+		tutor.MinLevelCheckItems+2, tutor.MaxLevelCheckItems-1, tutor.LevelSpread(len(in.LevelLessons)), examples, earlier, problems(in.Problems))
 }
 
-// LevelFallback is the level checkpoint from each lesson's first
-// hand-written question (when the AI's doesn't validate, and the mock's).
+// LevelFallback is the level checkpoint from the lessons' first
+// hand-written questions (when the AI's doesn't validate, and the mock's):
+// one per lesson, taking turns across the objectives when the level has
+// more lessons than a checkpoint has questions.
 func LevelFallback(lessons []LevelLesson) []tutor.CheckItem {
-	items := make([]tutor.CheckItem, 0, len(lessons))
+	var order []string
+	groups := map[string][]LevelLesson{}
 	for _, l := range lessons {
+		if len(groups[l.Objective]) == 0 {
+			order = append(order, l.Objective)
+		}
+		groups[l.Objective] = append(groups[l.Objective], l)
+	}
+	var picked []LevelLesson
+	for len(picked) < len(lessons) && len(picked) < tutor.MaxLevelCheckItems-1 {
+		for _, o := range order {
+			if len(groups[o]) > 0 && len(picked) < tutor.MaxLevelCheckItems-1 {
+				picked = append(picked, groups[o][0])
+				groups[o] = groups[o][1:]
+			}
+		}
+	}
+	items := make([]tutor.CheckItem, 0, len(picked))
+	for _, l := range picked {
 		items = append(items, tutor.CheckItem{
 			LessonID: l.ID,
 			Question: tutor.Question{Type: tutor.QuestionText, ObjectiveID: l.Objective, Prompt: l.SamplePrompt, Listen: l.Sample.Listen, Explanation: l.Sample.Rubric},

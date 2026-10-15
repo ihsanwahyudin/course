@@ -1,0 +1,686 @@
+{
+  "nodeId": "a1-mediation-basic",
+  "intro": "Sometimes you are the bridge: a menu, a sign or a WhatsApp message is in Indonesian, and the person next to you only speaks English. In this lesson you learn to pass on names, numbers, times and prices in short, clear English. Warm-up: how do you say Rp20.000 in English?",
+  "teachingNotes": [
+    "Relaying here means reading (or hearing) something in Indonesian and passing on only the key facts in simple English: who, what, when, how much. Don't translate word by word; answer the question the other person asks, in a short sentence (It's…, The meeting is…, Budi says…).",
+    "The node's common error: Rp50.000 read as 'fifty point zero zero zero rupiah'. The Indonesian dot separates thousands, like the English comma (50,000); in English a dot is a decimal point, so 50.000 would mean just fifty. Say 'fifty thousand rupiah'. Chat shorthand 50rb / 50k also means fifty thousand. No -s on thousand, hundred or rupiah. Keep prices at or below a hundred thousand (the learner hasn't met millions).",
+    "Times: 19.00 is 'seven p.m.' or 'seven in the evening', never 'nineteen'. Setengah tujuh is 6:30 = half past six (one hour less than the Indonesian number); never 'half seven', which means 7:30 in British English. 'Six thirty' is always safe. Days and dates: hari Senin → on Monday (capital letter), tanggal 5 → the fifth (ordinal), at + clock time.",
+    "Names and places stay as they are (Budi, Jalan Sudirman). Pak/Bu can stay or become Mr / Ms (Mrs for a married woman); Mr without a dot is British, Mr. with a dot is American. Phone numbers: one digit at a time in groups, 0 = oh or zero. 'Nomor HP' = mobile number (British) or cell phone number (American).",
+    "Passing on a message: name the source + 'says' + the fact: 'Budi says he is late.' Three traps: 'says' (say + s for he/she, pronounced like 'sez'); 'saya' in the message becomes he or she (Indonesian 'dia' doesn't show which, so check who wrote it); Indonesian has no 'to be', so add is/are (Saya sakit → she is sick). Encourage repeating numbers back to check: 'Sorry, fifteen or fifty?'",
+    "Limits: no reported-speech tense changes, no 'told me', no will/going to, no past simple. Keep everything in the present: 'X says + present sentence', 'It's…', 'The … is at …'."
+  ],
+  "keyPoints": [
+    {
+      "title": "Change the numbers into English, keep the names",
+      "explanation": "Read the Indonesian, find the key facts and say them the English way. Prices: Rp50.000 = fifty thousand rupiah (the dot is not a 'point'). Times: 19.00 = seven p.m.; setengah tujuh = half past six. Days and dates: hari Senin = on Monday, tanggal 5 = the fifth. Phone numbers: one digit at a time. Names stay the same.",
+      "examples": [
+        {
+          "en": "It's fifty thousand rupiah.",
+          "id": "Harganya Rp50.000."
+        },
+        {
+          "en": "The bus is at seven p.m.",
+          "id": "Bisnya jam 19.00."
+        },
+        {
+          "en": "The class is on Monday at half past six.",
+          "id": "Kelasnya hari Senin jam setengah tujuh."
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Ubah angkanya ke bahasa Inggris, namanya tetap",
+          "explanation": "Baca teks bahasa Indonesianya, cari info pentingnya, lalu ucapkan dengan cara bahasa Inggris. Harga: Rp50.000 = fifty thousand rupiah (titiknya bukan 'point'). Jam: 19.00 = seven p.m.; setengah tujuh = half past six. Hari dan tanggal: hari Senin = on Monday, tanggal 5 = the fifth. Nomor telepon: satu angka demi satu angka. Nama tidak berubah."
+        }
+      }
+    },
+    {
+      "title": "Say who, then pass on the fact",
+      "explanation": "To pass on a message, say who it is from, then says, then the fact: Budi says he is late. Says is say + s (for he and she) and sounds like 'sez'. Saya in the message becomes he or she, and don't forget is or are: Indonesian has no 'to be'. If a number is not clear, repeat it back to check.",
+      "examples": [
+        {
+          "en": "Budi says he is late.",
+          "id": "Kata Budi, dia terlambat. (pesan Budi: 'Saya terlambat.')"
+        },
+        {
+          "en": "Pak Hasan says the meeting is at ten a.m.",
+          "id": "Kata Pak Hasan, rapatnya jam 10 pagi."
+        },
+        {
+          "en": "Sorry, fifteen or fifty?",
+          "id": "Maaf, lima belas atau lima puluh?"
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Sebut siapa, lalu sampaikan infonya",
+          "explanation": "Untuk meneruskan pesan, sebutkan dari siapa, lalu says, lalu infonya: Budi says he is late. Says adalah say + s (untuk he dan she) dan dibaca seperti 'sez'. Saya di pesan itu berubah jadi he atau she, dan jangan lupa is atau are: bahasa Indonesia tidak punya 'to be'. Kalau angkanya kurang jelas, ulangi untuk mengecek."
+        }
+      }
+    }
+  ],
+  "guidedPractice": [
+    {
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "The price tag says Rp12.000. Tom asks: How much is it? Write the price in words.",
+      "expected": [
+        "twelve thousand rupiah",
+        "twelve thousand",
+        "it's twelve thousand rupiah",
+        "it is twelve thousand rupiah"
+      ],
+      "hint": "The dot separates the thousands: 12.000 = dua belas ribu."
+    },
+    {
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "The poster says: Pertunjukan jam 20.00. Tom asks: What time is the show? Answer with a.m. or p.m.",
+      "expected": [
+        "8 pm",
+        "eight pm",
+        "at 8 pm",
+        "at eight pm",
+        "it's at 8 pm",
+        "it's at eight pm",
+        "eight in the evening",
+        "at eight in the evening"
+      ],
+      "hint": "20 − 12 = 8, and it's in the evening."
+    },
+    {
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "Rina writes: 'Bisnya jam setengah delapan pagi.' Tom asks: What time is the bus?",
+      "expected": [
+        "half past seven",
+        "at half past seven",
+        "seven thirty",
+        "at seven thirty",
+        "7 30",
+        "at 7 30",
+        "7 30 am",
+        "it's at half past seven"
+      ],
+      "hint": "Setengah delapan is one hour less: 7:30."
+    },
+    {
+      "objectiveId": "pass-on-information",
+      "prompt": "Budi writes: 'Saya di kantor.' Pass it on. Complete: Budi says ___ at the office.",
+      "expected": [
+        "he is",
+        "he's"
+      ],
+      "hint": "Budi is a man, and English needs a 'to be' verb."
+    }
+  ],
+  "independentPractice": [
+    {
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "The office calendar says: Rapat tanggal 2 Juni. Tom asks: When is the meeting? Say the date in English.",
+      "expected": [
+        "the second of june",
+        "on the second of june",
+        "june the second",
+        "june second",
+        "on june second",
+        "it's on the second of june"
+      ],
+      "hint": "Dates use ordinal numbers: 1 = first, 2 = second."
+    },
+    {
+      "objectiveId": "pass-on-information",
+      "prompt": "Sari writes: 'Harga tiketnya Rp75.000.' Tell Tom. Complete: Sari says the ticket is ___.",
+      "expected": [
+        "seventy five thousand rupiah",
+        "seventy five thousand"
+      ],
+      "hint": "75.000 = tujuh puluh lima ribu. No -s on thousand."
+    }
+  ],
+  "assessment": [
+    {
+      "id": "med-1",
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "The menu says: Sate ayam Rp28.000. Tom asks: How much is the chicken satay? Write the price in words.",
+      "acceptableAnswers": [
+        "twenty eight thousand rupiah",
+        "twenty eight thousand",
+        "it's twenty eight thousand rupiah",
+        "it is twenty eight thousand rupiah",
+        "its twenty eight thousand rupiah",
+        "twentyeight thousand rupiah"
+      ],
+      "rubric": "Correct: twenty-eight thousand rupiah ('rupiah' may be left out). 'twenty-eight thousands' or 'rupiahs' = 70. 'twenty-eight point zero zero zero' or 'twenty-eight' alone = 0."
+    },
+    {
+      "id": "med-2",
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "A WhatsApp message says: Kelas yoga mulai jam 18.00. Tom asks: What time does the yoga class start? Answer with a.m. or p.m.",
+      "acceptableAnswers": [
+        "6 pm",
+        "6pm",
+        "six pm",
+        "at 6 pm",
+        "at six pm",
+        "it's at 6 pm",
+        "it's at six pm",
+        "it is at six pm",
+        "it starts at 6 pm",
+        "it starts at six pm",
+        "6 00 pm",
+        "at 6 00 pm",
+        "six in the evening",
+        "at six in the evening",
+        "it starts at six in the evening"
+      ],
+      "rubric": "Correct: six p.m. / six in the evening. 'six o'clock' without p.m. = 60. 'six a.m.' or 'eighteen' = 0."
+    },
+    {
+      "id": "med-3",
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "Your boss writes: Rapat jam setengah sepuluh pagi. Tom asks: What time is the meeting? Write the time in English words.",
+      "acceptableAnswers": [
+        "half past nine",
+        "at half past nine",
+        "it's at half past nine",
+        "it is at half past nine",
+        "half past nine in the morning",
+        "at half past nine in the morning",
+        "nine thirty",
+        "at nine thirty",
+        "it's at nine thirty",
+        "nine thirty am",
+        "at nine thirty am",
+        "half past nine am"
+      ],
+      "rubric": "Correct: half past nine / nine thirty (9:30). 'half past ten' or 'ten thirty' = 0 (that is setengah sebelas). 'half nine' = 50 (British only, and easy to misunderstand). Digits only (9:30) = 70."
+    },
+    {
+      "id": "med-4",
+      "objectiveId": "relay-from-indonesian",
+      "prompt": "Pak Hasan's business card says: HP 0857 1234 6612. Tom asks for his number. Write the first part, 0857, in words, the way you say it.",
+      "acceptableAnswers": [
+        "oh eight five seven",
+        "zero eight five seven",
+        "o eight five seven"
+      ],
+      "rubric": "Correct: oh / zero, eight, five, seven (one digit at a time). 'eight hundred and fifty-seven' or 'eight five seven' without the 0 = 0."
+    },
+    {
+      "id": "med-5",
+      "objectiveId": "pass-on-information",
+      "prompt": "Rina writes in the office group: 'Saya sakit hari ini.' Your boss doesn't read Indonesian. Complete: Rina says ___ sick today.",
+      "acceptableAnswers": [
+        "she is",
+        "she's"
+      ],
+      "rubric": "Correct: she is / she's (Rina is a woman, and English needs 'is'). 'she' alone = 50 (is missing). 'I am' or 'he is' = 0."
+    },
+    {
+      "id": "med-6",
+      "objectiveId": "pass-on-information",
+      "prompt": "Your teacher Bu Ani writes: 'Kelas bahasa Inggris hari Jumat.' Pass it on to Tom in one English sentence. Start with: Bu Ani says",
+      "acceptableAnswers": [
+        "bu ani says the english class is on friday",
+        "bu ani says the english class is friday",
+        "bu ani says english class is on friday",
+        "bu ani says the class is on friday",
+        "bu ani says it's on friday",
+        "bu ani says the english lesson is on friday",
+        "ms ani says the english class is on friday",
+        "mrs ani says the english class is on friday"
+      ],
+      "rubric": "Needs 'says', the class, 'is' and Friday. 'say' instead of 'says' = 70. Missing 'is' = 60. Missing 'on' = 90. Wrong day or no day = 0."
+    }
+  ],
+  "material": [
+    {
+      "id": "be-the-bridge",
+      "title": "Be the bridge",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Sometimes the information is in Indonesian (a menu, a sign, a WhatsApp message, a business card) and the person next to you only speaks English: a new colleague, a guest, a tourist. You don't need to **translate every word**. Find the **key facts** (name, number, time, price) and say them in short, simple English. Answer the question the person asks: *How much is it?* → **It's twenty-five thousand rupiah.**",
+          "i18n": {
+            "id": {
+              "text": "Kadang infonya dalam bahasa Indonesia (menu, papan pengumuman, pesan WhatsApp, kartu nama) dan orang di sebelahmu hanya bisa bahasa Inggris: rekan kerja baru, tamu, turis. Kamu **tidak perlu menerjemahkan setiap kata**. Cari **info pentingnya** (nama, angka, jam, harga) lalu sampaikan dalam bahasa Inggris yang pendek dan sederhana. Jawab pertanyaan yang ditanyakan: *How much is it?* → **It's twenty-five thousand rupiah.**"
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "It's twenty-five thousand rupiah.",
+              "id": "Menu: Nasi goreng Rp25.000",
+              "note": "How much is the nasi goreng?",
+              "i18n": {
+                "id": {
+                  "note": "Berapa harga nasi gorengnya?"
+                }
+              }
+            },
+            {
+              "en": "The shop opens at eight a.m.",
+              "id": "Papan: Buka jam 08.00",
+              "note": "What time does the shop open?",
+              "i18n": {
+                "id": {
+                  "note": "Tokonya buka jam berapa?"
+                }
+              }
+            },
+            {
+              "en": "His name is Dimas. D-I-M-A-S.",
+              "id": "Kartu nama: Dimas Pratama",
+              "note": "What's his name?",
+              "i18n": {
+                "id": {
+                  "note": "Siapa namanya?"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Not sure you got a number right? **Repeat it back** to check: *Sorry, fifteen or fifty?* English speakers do this all the time, so it isn't rude.",
+          "i18n": {
+            "id": {
+              "text": "Tidak yakin angkanya benar? **Ulangi untuk mengecek**: *Sorry, fifteen or fifty?* Penutur bahasa Inggris juga sering begitu, jadi ini sama sekali tidak kasar."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jadi jembatan"
+        }
+      }
+    },
+    {
+      "id": "prices",
+      "title": "Prices: the dot is not a point",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian writes **Rp50.000** with a **dot** to separate the thousands. English writes the same number with a **comma**: **50,000**. In English, a dot is a **decimal point** (koma desimal, read *point*), so '50.000' in English would mean just **fifty**! That's why *fifty point zero zero zero* is wrong. Say how many **thousand**, then **rupiah**: Rp50.000 = **fifty thousand rupiah** (lima puluh ribu).",
+          "i18n": {
+            "id": {
+              "text": "Bahasa Indonesia menulis **Rp50.000** dengan **titik** untuk memisahkan ribuan. Bahasa Inggris menulis angka yang sama dengan **koma**: **50,000**. Dalam bahasa Inggris, titik adalah **koma desimal** (dibaca *point*), jadi '50.000' dalam bahasa Inggris artinya hanya **lima puluh**! Karena itu *fifty point zero zero zero* salah. Sebutkan berapa **thousand** (ribu), lalu **rupiah**: Rp50.000 = **fifty thousand rupiah** (lima puluh ribu)."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "five thousand rupiah",
+              "id": "Rp5.000 (lima ribu)"
+            },
+            {
+              "en": "fifteen thousand rupiah",
+              "id": "Rp15.000 (lima belas ribu)"
+            },
+            {
+              "en": "fifty thousand rupiah",
+              "id": "Rp50.000 (lima puluh ribu)"
+            },
+            {
+              "en": "twenty thousand",
+              "id": "20rb / 20k (dua puluh ribu)",
+              "note": "chat shorthand: rb = ribu, k = thousand",
+              "i18n": {
+                "id": {
+                  "note": "singkatan di chat: rb = ribu, k = thousand"
+                }
+              }
+            },
+            {
+              "en": "a hundred thousand rupiah",
+              "id": "Rp100.000 (seratus ribu)",
+              "note": "a = one, like se- in seratus",
+              "i18n": {
+                "id": {
+                  "note": "a = satu, seperti se- di seratus"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "No **-s** on **thousand**, **hundred** or **rupiah**: *twenty-five thousand rupiah*, not *twenty-five thousands rupiahs*. Thousand is part of the number here, like *ribu* in *dua puluh lima ribu*.",
+          "i18n": {
+            "id": {
+              "text": "Tidak ada **-s** di **thousand**, **hundred** atau **rupiah**: *twenty-five thousand rupiah*, bukan *twenty-five thousands rupiahs*. Di sini thousand adalah bagian dari angka, seperti *ribu* di *dua puluh lima ribu*."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "The menu says: Es jeruk Rp8.000. How do you say the price?",
+          "options": [
+            "eight point zero zero zero rupiah",
+            "eight thousand rupiah",
+            "eighty thousand rupiah"
+          ],
+          "answer": 1,
+          "explain": "The dot separates the thousands: 8.000 = delapan ribu = eight thousand. 'Point' is only for decimals, and eighty thousand would be 80.000.",
+          "i18n": {
+            "id": {
+              "prompt": "Di menu tertulis: Es jeruk Rp8.000. Bagaimana menyebut harganya?",
+              "explain": "Titiknya memisahkan ribuan: 8.000 = delapan ribu = eight thousand. 'Point' hanya untuk desimal, dan eighty thousand itu 80.000."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Harga: titik bukan 'point'"
+        }
+      }
+    },
+    {
+      "id": "times-days",
+      "title": "Times, days and dates",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Indonesian messages often use the 24-hour clock: **19.00**. In speech, English counts from 1 to 12 and adds **a.m.** (pagi, from midnight to midday) or **p.m.** (from midday to midnight). For 13.00–23.00, take away 12: **19.00 → seven p.m.** (not *nineteen*). You can also say *seven in the evening*.\n\nDays and dates: **hari Senin → on Monday** (capital letter), **tanggal 5 → the fifth** (an ordinal number, like *kelima*), and **at** before a clock time: *on Monday at seven p.m.*",
+          "i18n": {
+            "id": {
+              "text": "Pesan dalam bahasa Indonesia sering memakai jam 24: **19.00**. Saat bicara, bahasa Inggris menghitung dari 1 sampai 12 dan menambahkan **a.m.** (pagi, dari tengah malam sampai jam 12 siang) atau **p.m.** (dari jam 12 siang sampai tengah malam). Untuk 13.00–23.00, kurangi 12: **19.00 → seven p.m.** (bukan *nineteen*). Bisa juga *seven in the evening*.\n\nHari dan tanggal: **hari Senin → on Monday** (huruf besar), **tanggal 5 → the fifth** (angka urutan, seperti *kelima*), dan **at** sebelum jam: *on Monday at seven p.m.*"
+            }
+          }
+        },
+        {
+          "type": "tip",
+          "text": "**Setengah is one hour less!** *Setengah tujuh* is **6:30** = **half past six**: Indonesian counts the half towards the next hour, English counts from the hour that has passed. Don't say *half seven*: in British English that means **7:30**. Not sure? Just say the numbers: **six thirty**.",
+          "i18n": {
+            "id": {
+              "text": "**Setengah itu satu jam lebih sedikit!** *Setengah tujuh* adalah **6:30** = **half past six**: bahasa Indonesia menghitung setengah menuju jam berikutnya, bahasa Inggris menghitung dari jam yang sudah lewat. Jangan bilang *half seven*: dalam bahasa Inggris British artinya **7:30**. Ragu? Sebut saja angkanya: **six thirty**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "The bus is at seven a.m.",
+              "id": "Bisnya jam 07.00."
+            },
+            {
+              "en": "The meeting is on Wednesday at two p.m.",
+              "id": "Rapatnya hari Rabu jam 14.00."
+            },
+            {
+              "en": "The train is at half past four.",
+              "id": "Keretanya jam setengah lima.",
+              "note": "4:30, one hour less",
+              "i18n": {
+                "id": {
+                  "note": "4:30, satu jam lebih sedikit"
+                }
+              }
+            },
+            {
+              "en": "The party is on the tenth of May.",
+              "id": "Pestanya tanggal 10 Mei."
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "The poster says: Konser hari Sabtu jam 20.00. Tom asks when the concert is. What do you say?",
+          "options": [
+            "On Saturday at eight p.m.",
+            "On Saturday at twenty o'clock.",
+            "In Saturday at eight a.m."
+          ],
+          "answer": 0,
+          "explain": "20.00 − 12 = 8, in the evening, so eight p.m. Use on with days. English doesn't say 'twenty o'clock'.",
+          "i18n": {
+            "id": {
+              "prompt": "Di poster tertulis: Konser hari Sabtu jam 20.00. Tom bertanya kapan konsernya. Apa jawabanmu?",
+              "explain": "20.00 − 12 = 8, malam hari, jadi eight p.m. Pakai on untuk hari. Bahasa Inggris tidak bilang 'twenty o'clock'."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jam, hari dan tanggal"
+        }
+      }
+    },
+    {
+      "id": "names-numbers",
+      "title": "Names and phone numbers",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "**Names don't change**: Budi is Budi, Jalan Sudirman is Jalan Sudirman. If the other person doesn't know the name, **spell it** letter by letter: *S-A-R-I*. You can keep **Pak** and **Bu**, or say **Mr** (for Pak) and **Ms** (for Bu; **Mrs** for a married woman): *Mr Hasan, Ms Ani*. British English writes *Mr*, American English *Mr.* with a dot.\n\nRead a **phone number one digit at a time**, in small groups, never as a big number. Say 0 as **oh** or **zero**. *Nomor HP* is a **mobile number** in British English and a **cell phone number** in American English.",
+          "i18n": {
+            "id": {
+              "text": "**Nama tidak berubah**: Budi tetap Budi, Jalan Sudirman tetap Jalan Sudirman. Kalau orangnya tidak tahu namanya, **eja** huruf demi huruf: *S-A-R-I*. Kamu boleh tetap memakai **Pak** dan **Bu**, atau bilang **Mr** (untuk Pak) dan **Ms** (untuk Bu; **Mrs** untuk perempuan yang sudah menikah): *Mr Hasan, Ms Ani*. Bahasa Inggris British menulis *Mr*, Amerika *Mr.* dengan titik.\n\nBaca **nomor telepon satu angka demi satu angka**, dalam kelompok kecil, jangan sebagai satu angka besar. Angka 0 dibaca **oh** atau **zero**. *Nomor HP* adalah **mobile number** dalam bahasa Inggris British dan **cell phone number** dalam bahasa Inggris Amerika."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "This is Mr Hasan.",
+              "id": "Ini Pak Hasan."
+            },
+            {
+              "en": "Her name is Wulan. W-U-L-A-N.",
+              "id": "Namanya Wulan.",
+              "note": "spell new names",
+              "i18n": {
+                "id": {
+                  "note": "eja nama yang baru didengar"
+                }
+              }
+            },
+            {
+              "en": "Her number is oh-eight-one-three, five-five-two-one, seven-oh-four-six.",
+              "id": "Nomornya 0813 5521 7046."
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Indonesian **dia** can be a man or a woman, but English must choose: **he** for a man (Pak Hasan, Budi), **she** for a woman (Bu Ani, Rina). The same with **his** / **her** (-nya): *his number, her name*.",
+          "i18n": {
+            "id": {
+              "text": "**Dia** dalam bahasa Indonesia bisa laki-laki atau perempuan, tapi bahasa Inggris harus memilih: **he** untuk laki-laki (Pak Hasan, Budi), **she** untuk perempuan (Bu Ani, Rina). Begitu juga **his** / **her** (-nya): *his number, her name*."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Bu Ani's number is 0821 3300 4567. How do you start reading it?",
+          "options": [
+            "Oh-eight-two-one…",
+            "Eight hundred twenty-one…",
+            "Zero eight hundred twenty-one…"
+          ],
+          "answer": 0,
+          "explain": "Phone numbers are read one digit at a time: oh (or zero), eight, two, one. Never as a big number.",
+          "i18n": {
+            "id": {
+              "prompt": "Nomor Bu Ani 0821 3300 4567. Bagaimana kamu mulai membacanya?",
+              "explain": "Nomor telepon dibaca satu angka demi satu angka: oh (atau zero), eight, two, one. Jangan sebagai angka besar."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nama dan nomor telepon"
+        }
+      }
+    },
+    {
+      "id": "passing-on",
+      "title": "Passing on a message",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To pass on a message, say **who it's from**, then **says**, then the fact: *Budi says he is late.* (= Kata Budi, dia terlambat.) Three things to check:\n- **says**, not *say*: it's *say* + **s** for he and she, like *works*. It sounds like **'sez'**.\n- **saya** in the message becomes **he** or **she**: the message is from Budi, so *I* becomes **he**.\n- Add **is** or **are**. Indonesian has no 'to be': *Saya terlambat* → *he **is** late*.",
+          "i18n": {
+            "id": {
+              "text": "Untuk meneruskan pesan, sebutkan **dari siapa**, lalu **says**, lalu infonya: *Budi says he is late.* (= Kata Budi, dia terlambat.) Tiga hal yang perlu dicek:\n- **says**, bukan *say*: ini *say* + **s** untuk he dan she, seperti *works*. Dibaca seperti **'sez'**.\n- **saya** di pesan itu berubah jadi **he** atau **she**: pesannya dari Budi, jadi *I* berubah jadi **he**.\n- Tambahkan **is** atau **are**. Bahasa Indonesia tidak punya 'to be': *Saya terlambat* → *he **is** late*."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "Budi says he is late.",
+              "id": "Kata Budi, dia terlambat.",
+              "note": "message: 'Saya terlambat.'",
+              "i18n": {
+                "id": {
+                  "note": "pesannya: 'Saya terlambat.'"
+                }
+              }
+            },
+            {
+              "en": "Sari says she is at home.",
+              "id": "Kata Sari, dia di rumah.",
+              "note": "message: 'Saya di rumah.'",
+              "i18n": {
+                "id": {
+                  "note": "pesannya: 'Saya di rumah.'"
+                }
+              }
+            },
+            {
+              "en": "Pak Hasan says the meeting is at ten a.m.",
+              "id": "Kata Pak Hasan, rapatnya jam 10 pagi."
+            },
+            {
+              "en": "The sign says the shop opens at eight a.m.",
+              "id": "Di papan tertulis tokonya buka jam 8 pagi.",
+              "note": "signs and messages 'say' things too",
+              "i18n": {
+                "id": {
+                  "note": "papan dan pesan juga bisa 'says'"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "check",
+          "prompt": "Budi writes: 'Saya terlambat.' Which sentence passes it on correctly?",
+          "options": [
+            "Budi say he is late.",
+            "Budi says he is late.",
+            "Budi says I am late."
+          ],
+          "answer": 1,
+          "explain": "Budi is one person, so says (+s). The message is from Budi, so 'I' becomes he.",
+          "i18n": {
+            "id": {
+              "prompt": "Budi menulis: 'Saya terlambat.' Kalimat mana yang meneruskannya dengan benar?",
+              "explain": "Budi satu orang, jadi says (+s). Pesannya dari Budi, jadi 'I' berubah jadi he."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Meneruskan pesan"
+        }
+      }
+    }
+  ],
+  "suggestedQuestions": [
+    "Why is Rp50.000 not 'fifty point zero zero zero'?",
+    "How do I say 19.00 in English?",
+    "Can I keep Pak and Bu when I speak English?",
+    "What if I don't understand the Indonesian message?"
+  ],
+  "flashcards": [
+    {
+      "front": "Rp50.000",
+      "back": "fifty thousand rupiah"
+    },
+    {
+      "front": "20rb / 20k",
+      "back": "twenty thousand"
+    },
+    {
+      "front": "jam 19.00",
+      "back": "seven p.m. / seven in the evening"
+    },
+    {
+      "front": "jam setengah tujuh",
+      "back": "half past six (6:30)"
+    },
+    {
+      "front": "hari Rabu",
+      "back": "on Wednesday"
+    },
+    {
+      "front": "nomor HP",
+      "back": "mobile number (UK) / cell phone number (US)"
+    },
+    {
+      "front": "Kata Budi, …",
+      "back": "Budi says …"
+    },
+    {
+      "front": "dia (laki-laki) / dia (perempuan)",
+      "back": "he / she"
+    }
+  ],
+  "resources": [
+    {
+      "kind": "article",
+      "title": "A voicemail message (A1 listening)",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/listening/a1/voicemail-message",
+      "source": "British Council LearnEnglish",
+      "note": "Listen to a short phone message with a name, a phone number and a spelled email address, then do the exercises. A few phrases (like I'll call you back) are above this lesson: focus on the names and numbers.",
+      "i18n": {
+        "id": {
+          "note": "Dengarkan pesan telepon pendek berisi nama, nomor telepon dan alamat email yang dieja, lalu kerjakan latihannya. Beberapa ungkapan (seperti I'll call you back) di atas level pelajaran ini: fokus saja pada nama dan angkanya."
+        }
+      }
+    },
+    {
+      "kind": "article",
+      "title": "Booking a table (A1 listening)",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/listening/a1/booking-table",
+      "source": "British Council LearnEnglish",
+      "note": "A short phone call to book a restaurant table: listen for the times and the number of people.",
+      "i18n": {
+        "id": {
+          "note": "Telepon singkat untuk memesan meja di restoran: dengarkan jam dan jumlah orangnya."
+        }
+      }
+    }
+  ],
+  "i18n": {
+    "id": {
+      "intro": "Kadang kamu jadi jembatan: menu, papan pengumuman atau pesan WhatsApp dalam bahasa Indonesia, dan orang di sebelahmu hanya bisa bahasa Inggris. Di pelajaran ini kamu belajar menyampaikan nama, angka, jam dan harga dalam bahasa Inggris yang pendek dan jelas. Pemanasan: apa bahasa Inggrisnya Rp20.000?",
+      "suggestedQuestions": [
+        "Kenapa Rp50.000 bukan 'fifty point zero zero zero'?",
+        "Bagaimana mengucapkan jam 19.00 dalam bahasa Inggris?",
+        "Boleh tetap pakai Pak dan Bu saat bicara bahasa Inggris?",
+        "Bagaimana kalau aku tidak paham pesan bahasa Indonesianya?"
+      ],
+      "assessment": {
+        "med-1": "Di menu tertulis: Sate ayam Rp28.000. Tom bertanya: How much is the chicken satay? Tulis harganya dengan kata-kata dalam bahasa Inggris.",
+        "med-2": "Pesan WhatsApp: Kelas yoga mulai jam 18.00. Tom bertanya: What time does the yoga class start? Jawab dalam bahasa Inggris dengan a.m. atau p.m.",
+        "med-3": "Atasanmu menulis: Rapat jam setengah sepuluh pagi. Tom bertanya: What time is the meeting? Tulis jamnya dengan kata-kata bahasa Inggris.",
+        "med-4": "Di kartu nama Pak Hasan tertulis: HP 0857 1234 6612. Tom menanyakan nomornya. Tulis bagian pertama, 0857, dengan kata-kata bahasa Inggris, seperti cara kamu mengucapkannya.",
+        "med-5": "Rina menulis di grup kantor: 'Saya sakit hari ini.' Atasanmu tidak bisa membaca bahasa Indonesia. Lengkapi: Rina says ___ sick today.",
+        "med-6": "Gurumu, Bu Ani, menulis: 'Kelas bahasa Inggris hari Jumat.' Sampaikan ke Tom dalam satu kalimat bahasa Inggris. Mulai dengan: Bu Ani says"
+      }
+    }
+  }
+}

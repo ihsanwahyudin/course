@@ -1,0 +1,750 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to tell someone about your normal day, step by step and with times. Let's start.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Your day in English",
+        "text": "Let's start with the words for a normal day. You already know the grammar: it's the simple present.",
+        "body": "A **routine** is what you do (almost) every day. Most routine words are **chunks**: small groups of words you learn together. **have** breakfast / lunch / dinner: here *have* = makan, not punya. **go home** = pulang, with **no** *to*; but go **to** work, go **to** bed. With he/she, only the first word takes -s: she **gets** up, he **has** breakfast, she **goes** home.",
+        "pairs": [
+          {
+            "en": "wake up",
+            "id": "bangun (mata terbuka)"
+          },
+          {
+            "en": "get up",
+            "id": "bangun dari tempat tidur"
+          },
+          {
+            "en": "have a shower",
+            "id": "mandi"
+          },
+          {
+            "en": "have breakfast",
+            "id": "sarapan"
+          },
+          {
+            "en": "go to work",
+            "id": "berangkat kerja"
+          },
+          {
+            "en": "have lunch",
+            "id": "makan siang"
+          },
+          {
+            "en": "go home",
+            "id": "pulang"
+          },
+          {
+            "en": "go to bed",
+            "id": "tidur (pergi tidur)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "First, then, after that",
+        "text": "Now let's put your day in order. English uses small order words to show what comes first and what comes next.",
+        "body": "Start each sentence with an order word: **First** (the first thing), **Then**, **After that**, **Finally** (the last thing). Use *then* and *after that* in turns so you don't repeat one word. A comma after *First, After that* and *Finally* is common; after *Then* usually not. To join two actions of one person, use **and** (or **and then**).",
+        "pairs": [
+          {
+            "en": "First",
+            "id": "pertama-tama"
+          },
+          {
+            "en": "Then",
+            "id": "lalu / kemudian"
+          },
+          {
+            "en": "After that",
+            "id": "setelah itu"
+          },
+          {
+            "en": "Finally",
+            "id": "terakhir"
+          },
+          {
+            "en": "and then",
+            "id": "lalu (menyambung dua kegiatan)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Rina's morning, in order",
+        "text": "Rina works at a bank in Jakarta. Here's her morning. Look at the order words at the start.",
+        "body": "In *I have a shower and get dressed* there's one person and two actions: say **I** once and join with **and**. Don't add am/is/are before an action word: 'and I am get dressed' is wrong.",
+        "examples": [
+          {
+            "en": "First, I get up at five.",
+            "id": "Pertama-tama, saya bangun jam lima."
+          },
+          {
+            "en": "Then I have a shower and get dressed.",
+            "id": "Lalu saya mandi dan berpakaian."
+          },
+          {
+            "en": "After that, I have breakfast with my family.",
+            "id": "Setelah itu, saya sarapan bersama keluarga."
+          },
+          {
+            "en": "Then I go to work by train.",
+            "id": "Lalu saya berangkat kerja naik kereta."
+          },
+          {
+            "en": "Finally, I start work at eight.",
+            "id": "Terakhir, saya mulai kerja jam delapan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build a sentence",
+        "text": "What does Budi do after breakfast? Build a sentence about him.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-a-typical",
+          "prompt": "Arrange the words: Budi naik bus ke kantor.",
+          "tokens": [
+            "work",
+            "takes",
+            "the",
+            "Budi",
+            "to",
+            "bus"
+          ],
+          "solution": "Budi takes the bus to work.",
+          "explanation": "Normal order: person (**Budi**) + action (**takes the bus**) + where (**to work**). Budi is one other person (he), so the action word gets **-s**: take → **takes**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "One person, two actions. Which sentence is right?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-a-typical",
+          "prompt": "Dimas finishes work at five. Choose the correct sentence.",
+          "options": [
+            "He goes home and is cook dinner.",
+            "He goes home and cooks dinner.",
+            "He goes home and cook dinner."
+          ],
+          "answer": 1,
+          "explanation": "**cook** is an action word, so there's no *is* before it. And it's still Dimas (he), so the second action takes **-s** too: goes … and **cooks**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Saying when",
+        "text": "Now let's say *when* you do things. You met these small words before; here they are for your day.",
+        "body": "**at** + a clock time: *at six*. **in the** morning / afternoon / evening, but **at night** (just remember it). **on** + a day: *on Saturdays* (= every Saturday). **every** day / morning: **no** at/on/in before *every*. Careful: *setengah enam* is 5:30 = **half past five**, not 'half past six': English counts from the hour that has passed.",
+        "pairs": [
+          {
+            "en": "at six",
+            "id": "jam enam"
+          },
+          {
+            "en": "at half past five",
+            "id": "jam setengah enam (5:30)"
+          },
+          {
+            "en": "in the morning",
+            "id": "pagi hari"
+          },
+          {
+            "en": "in the afternoon",
+            "id": "siang / sore hari"
+          },
+          {
+            "en": "in the evening",
+            "id": "malam hari (masih bangun)"
+          },
+          {
+            "en": "at night",
+            "id": "malam hari (waktu tidur)"
+          },
+          {
+            "en": "every day",
+            "id": "setiap hari"
+          },
+          {
+            "en": "on Saturdays",
+            "id": "setiap hari Sabtu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Time words in real sentences",
+        "text": "See where the time words go: usually at the end, or at the start to set the scene.",
+        "body": "With a clock time and a part of the day, say the clock time first: *at six in the morning*, the same order as *jam enam pagi*. And *19.00* is **seven p.m.** or **seven in the evening**, not 'nineteen'.",
+        "examples": [
+          {
+            "en": "Pak Hasan opens his warung at six in the morning.",
+            "id": "Pak Hasan membuka warungnya jam enam pagi."
+          },
+          {
+            "en": "We have dinner at seven in the evening.",
+            "id": "Kami makan malam jam tujuh malam."
+          },
+          {
+            "en": "Bu Ani works from eight to four.",
+            "id": "Bu Ani bekerja dari jam delapan sampai jam empat."
+          },
+          {
+            "en": "In the afternoon, the children play football.",
+            "id": "Siang/sore hari, anak-anak bermain sepak bola."
+          },
+          {
+            "en": "My parents visit us on Saturdays.",
+            "id": "Orang tua saya mengunjungi kami setiap hari Sabtu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Careful with setengah",
+        "text": "Dewi tells you when she starts work. Watch the *setengah* trap!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-expressions",
+          "prompt": "Dewi says: 'Saya mulai kerja jam setengah delapan.' Complete: I start work ___.",
+          "options": [
+            "at half past eight",
+            "on half past seven",
+            "at half past seven"
+          ],
+          "answer": 2,
+          "explanation": "*Setengah delapan* is 7:30. English counts from the hour that has passed: **half past seven**. A clock time takes **at**, not *on*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Night work is a little different. Choose the right time words.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-expressions",
+          "prompt": "Pak Joko sleeps in the morning. Complete: He works ___.",
+          "options": [
+            "at night",
+            "in night",
+            "on night"
+          ],
+          "answer": 0,
+          "explanation": "Parts of the day take *in the* (in the morning, in the evening), but night is the exception: **at night**. Remember it as one chunk."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip through these cards to remember the order words and time words.",
+        "flashcards": [
+          {
+            "front": "pertama-tama (kegiatan pertama)",
+            "back": "First"
+          },
+          {
+            "front": "lalu / kemudian",
+            "back": "Then"
+          },
+          {
+            "front": "setelah itu",
+            "back": "After that"
+          },
+          {
+            "front": "terakhir (kegiatan terakhir)",
+            "back": "Finally"
+          },
+          {
+            "front": "pulang",
+            "back": "go home (no 'to')"
+          },
+          {
+            "front": "jam setengah enam",
+            "back": "at half past five (5:30)"
+          },
+          {
+            "front": "malam hari (waktu tidur)",
+            "back": "at night"
+          },
+          {
+            "front": "setiap hari",
+            "back": "every day (no at/on/in)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's your day on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Describing your day",
+          "intro": "Order words and time words for a typical day, in the simple present.",
+          "headers": [
+            "Words",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              "First",
+              "pertama-tama",
+              "First, I make coffee."
+            ],
+            [
+              "Then",
+              "lalu, kemudian",
+              "Then I read the news."
+            ],
+            [
+              "After that",
+              "setelah itu",
+              "After that, I go to work."
+            ],
+            [
+              "Finally",
+              "terakhir",
+              "Finally, I go to bed."
+            ],
+            [
+              "and",
+              "dan (satu orang, dua kegiatan)",
+              "I get up and pray."
+            ],
+            [
+              "at + clock time",
+              "jam …",
+              "at six, at half past five"
+            ],
+            [
+              "in the morning / afternoon / evening",
+              "pagi / siang-sore / malam",
+              "in the evening"
+            ],
+            [
+              "at night",
+              "malam (waktu tidur)",
+              "The street is quiet at night."
+            ],
+            [
+              "on + day",
+              "pada hari …",
+              "on Saturdays"
+            ],
+            [
+              "every day / every Friday",
+              "setiap hari / setiap Jumat",
+              "every morning (no at/on/in)"
+            ],
+            [
+              "from … to …",
+              "dari jam … sampai jam …",
+              "from eight to four"
+            ]
+          ],
+          "tips": [
+            "One person, two actions: join with **and** and don't add am/is/are: *I wake up and pray*, not 'and I am pray'. With he/she both actions take -s.",
+            "*Setengah enam* = 5:30 = **half past five**: take one hour less than the Indonesian number.",
+            "**go home** has no *to*; **at night** but **in the** morning/evening; no at/on/in before **every**."
+          ],
+          "examples": [
+            {
+              "en": "I usually get up at six in the morning.",
+              "id": "Saya biasanya bangun jam enam pagi."
+            },
+            {
+              "en": "After that, she goes to work by ojek.",
+              "id": "Setelah itu, dia berangkat kerja naik ojek."
+            },
+            {
+              "en": "We watch TV in the evening.",
+              "id": "Kami menonton TV malam hari."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? This page has routine words, order words and time words with online exercises."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu belajar menceritakan hari biasamu kepada orang lain, langkah demi langkah dan lengkap dengan jamnya. Yuk, mulai.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Harimu dalam bahasa Inggris",
+        "text": "Kita mulai dari kata-kata untuk hari biasa. Tata bahasanya sudah kamu tahu: simple present.",
+        "body": "**Rutinitas** (routine) adalah hal yang kamu lakukan (hampir) setiap hari. Kebanyakan kata rutinitas adalah **chunk**: kelompok kecil kata yang dipelajari bersama. **have** breakfast / lunch / dinner: di sini *have* = makan, bukan punya. **go home** = pulang, **tanpa** *to*; tapi go **to** work, go **to** bed. Dengan he/she, hanya kata pertama yang mendapat -s: she **gets** up, he **has** breakfast, she **goes** home.",
+        "pairs": [
+          {
+            "en": "wake up",
+            "id": "bangun (mata terbuka)"
+          },
+          {
+            "en": "get up",
+            "id": "bangun dari tempat tidur"
+          },
+          {
+            "en": "have a shower",
+            "id": "mandi"
+          },
+          {
+            "en": "have breakfast",
+            "id": "sarapan"
+          },
+          {
+            "en": "go to work",
+            "id": "berangkat kerja"
+          },
+          {
+            "en": "have lunch",
+            "id": "makan siang"
+          },
+          {
+            "en": "go home",
+            "id": "pulang"
+          },
+          {
+            "en": "go to bed",
+            "id": "tidur (pergi tidur)"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "First, then, after that",
+        "text": "Sekarang kita urutkan harimu. Bahasa Inggris memakai kata urutan kecil untuk menunjukkan apa yang pertama dan apa yang berikutnya.",
+        "body": "Mulai tiap kalimat dengan kata urutan: **First** (yang pertama), **Then** (lalu), **After that** (setelah itu), **Finally** (yang terakhir). Pakai *then* dan *after that* bergantian supaya tidak mengulang satu kata. Koma setelah *First, After that* dan *Finally* itu biasa; setelah *Then* biasanya tidak. Untuk menyambung dua kegiatan satu orang, pakai **and** (atau **and then**).",
+        "pairs": [
+          {
+            "en": "First",
+            "id": "pertama-tama"
+          },
+          {
+            "en": "Then",
+            "id": "lalu / kemudian"
+          },
+          {
+            "en": "After that",
+            "id": "setelah itu"
+          },
+          {
+            "en": "Finally",
+            "id": "terakhir"
+          },
+          {
+            "en": "and then",
+            "id": "lalu (menyambung dua kegiatan)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Pagi Rina, secara berurutan",
+        "text": "Rina bekerja di bank di Jakarta. Ini pagi harinya. Perhatikan kata urutan di awal kalimat.",
+        "body": "Di *I have a shower and get dressed* ada satu orang dan dua kegiatan: sebut **I** sekali saja lalu sambung dengan **and**. Jangan tambahkan am/is/are sebelum kata kegiatan: 'and I am get dressed' itu salah.",
+        "examples": [
+          {
+            "en": "First, I get up at five.",
+            "id": "Pertama-tama, saya bangun jam lima."
+          },
+          {
+            "en": "Then I have a shower and get dressed.",
+            "id": "Lalu saya mandi dan berpakaian."
+          },
+          {
+            "en": "After that, I have breakfast with my family.",
+            "id": "Setelah itu, saya sarapan bersama keluarga."
+          },
+          {
+            "en": "Then I go to work by train.",
+            "id": "Lalu saya berangkat kerja naik kereta."
+          },
+          {
+            "en": "Finally, I start work at eight.",
+            "id": "Terakhir, saya mulai kerja jam delapan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Apa yang Budi lakukan setelah sarapan? Susun kalimat tentang dia.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "describe-a-typical",
+          "prompt": "Susun kata-katanya: Budi naik bus ke kantor.",
+          "tokens": [
+            "work",
+            "takes",
+            "the",
+            "Budi",
+            "to",
+            "bus"
+          ],
+          "solution": "Budi takes the bus to work.",
+          "explanation": "Urutan biasa: orang (**Budi**) + kegiatan (**takes the bus**) + tujuan (**to work**). Budi itu satu orang lain (he), jadi kata kegiatannya dapat **-s**: take → **takes**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Satu orang, dua kegiatan. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "describe-a-typical",
+          "prompt": "Dimas selesai kerja jam lima. Pilih kalimat yang benar.",
+          "options": [
+            "He goes home and is cook dinner.",
+            "He goes home and cooks dinner.",
+            "He goes home and cook dinner."
+          ],
+          "answer": 1,
+          "explanation": "**cook** adalah kata kegiatan, jadi tidak ada *is* sebelumnya. Dan orangnya tetap Dimas (he), jadi kegiatan kedua juga mendapat **-s**: goes … and **cooks**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menyebut waktu",
+        "text": "Sekarang kita sebut *kapan* kamu melakukannya. Kata-kata kecil ini sudah pernah kamu temui; ini cara memakainya untuk harimu.",
+        "body": "**at** + jam: *at six*. **in the** morning / afternoon / evening, tapi **at night** (hafalkan saja). **on** + nama hari: *on Saturdays* (= setiap Sabtu). **every** day / morning: **tidak ada** at/on/in sebelum *every*. Hati-hati: *setengah enam* itu 5:30 = **half past five**, bukan 'half past six': bahasa Inggris menghitung dari jam yang sudah lewat.",
+        "pairs": [
+          {
+            "en": "at six",
+            "id": "jam enam"
+          },
+          {
+            "en": "at half past five",
+            "id": "jam setengah enam (5:30)"
+          },
+          {
+            "en": "in the morning",
+            "id": "pagi hari"
+          },
+          {
+            "en": "in the afternoon",
+            "id": "siang / sore hari"
+          },
+          {
+            "en": "in the evening",
+            "id": "malam hari (masih bangun)"
+          },
+          {
+            "en": "at night",
+            "id": "malam hari (waktu tidur)"
+          },
+          {
+            "en": "every day",
+            "id": "setiap hari"
+          },
+          {
+            "en": "on Saturdays",
+            "id": "setiap hari Sabtu"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Keterangan waktu dalam kalimat",
+        "text": "Lihat letak keterangan waktunya: biasanya di akhir, atau di awal untuk membuka cerita.",
+        "body": "Kalau ada jam dan bagian hari, sebut jamnya dulu: *at six in the morning*, urutannya sama dengan *jam enam pagi*. Dan *19.00* adalah **seven p.m.** atau **seven in the evening**, bukan 'nineteen'.",
+        "examples": [
+          {
+            "en": "Pak Hasan opens his warung at six in the morning.",
+            "id": "Pak Hasan membuka warungnya jam enam pagi."
+          },
+          {
+            "en": "We have dinner at seven in the evening.",
+            "id": "Kami makan malam jam tujuh malam."
+          },
+          {
+            "en": "Bu Ani works from eight to four.",
+            "id": "Bu Ani bekerja dari jam delapan sampai jam empat."
+          },
+          {
+            "en": "In the afternoon, the children play football.",
+            "id": "Siang/sore hari, anak-anak bermain sepak bola."
+          },
+          {
+            "en": "My parents visit us on Saturdays.",
+            "id": "Orang tua saya mengunjungi kami setiap hari Sabtu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Hati-hati dengan setengah",
+        "text": "Dewi memberi tahu jam berapa dia mulai kerja. Awas jebakan *setengah*!",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-expressions",
+          "prompt": "Dewi bilang: 'Saya mulai kerja jam setengah delapan.' Lengkapi: I start work ___.",
+          "options": [
+            "at half past eight",
+            "on half past seven",
+            "at half past seven"
+          ],
+          "answer": 2,
+          "explanation": "*Setengah delapan* itu 7:30. Bahasa Inggris menghitung dari jam yang sudah lewat: **half past seven**. Jam memakai **at**, bukan *on*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kerja malam sedikit berbeda. Pilih keterangan waktu yang tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "use-time-expressions",
+          "prompt": "Pak Joko tidur pagi hari. Lengkapi: He works ___.",
+          "options": [
+            "at night",
+            "in night",
+            "on night"
+          ],
+          "answer": 0,
+          "explanation": "Bagian hari memakai *in the* (in the morning, in the evening), tapi night itu pengecualian: **at night**. Hafalkan sebagai satu chunk."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulasan cepat",
+        "text": "Balik kartu-kartu ini supaya kata urutan dan keterangan waktunya makin nempel.",
+        "flashcards": [
+          {
+            "front": "pertama-tama (kegiatan pertama)",
+            "back": "First"
+          },
+          {
+            "front": "lalu / kemudian",
+            "back": "Then"
+          },
+          {
+            "front": "setelah itu",
+            "back": "After that"
+          },
+          {
+            "front": "terakhir (kegiatan terakhir)",
+            "back": "Finally"
+          },
+          {
+            "front": "pulang",
+            "back": "go home (tanpa 'to')"
+          },
+          {
+            "front": "jam setengah enam",
+            "back": "at half past five (5:30)"
+          },
+          {
+            "front": "malam hari (waktu tidur)",
+            "back": "at night"
+          },
+          {
+            "front": "setiap hari",
+            "back": "every day (tanpa at/on/in)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini harimu dalam satu halaman. Simpan untuk nanti, ya.",
+        "artifact": {
+          "title": "Ringkasan · Menceritakan harimu",
+          "intro": "Kata urutan dan keterangan waktu untuk hari biasa, dalam simple present.",
+          "headers": [
+            "Kata",
+            "Arti",
+            "Contoh"
+          ],
+          "rows": [
+            [
+              "First",
+              "pertama-tama",
+              "First, I make coffee."
+            ],
+            [
+              "Then",
+              "lalu, kemudian",
+              "Then I read the news."
+            ],
+            [
+              "After that",
+              "setelah itu",
+              "After that, I go to work."
+            ],
+            [
+              "Finally",
+              "terakhir",
+              "Finally, I go to bed."
+            ],
+            [
+              "and",
+              "dan (satu orang, dua kegiatan)",
+              "I get up and pray."
+            ],
+            [
+              "at + jam",
+              "jam …",
+              "at six, at half past five"
+            ],
+            [
+              "in the morning / afternoon / evening",
+              "pagi / siang-sore / malam",
+              "in the evening"
+            ],
+            [
+              "at night",
+              "malam (waktu tidur)",
+              "The street is quiet at night."
+            ],
+            [
+              "on + nama hari",
+              "pada hari …",
+              "on Saturdays"
+            ],
+            [
+              "every day / every Friday",
+              "setiap hari / setiap Jumat",
+              "every morning (tanpa at/on/in)"
+            ],
+            [
+              "from … to …",
+              "dari jam … sampai jam …",
+              "from eight to four"
+            ]
+          ],
+          "tips": [
+            "Satu orang, dua kegiatan: sambung dengan **and** dan jangan tambahkan am/is/are: *I wake up and pray*, bukan 'and I am pray'. Dengan he/she kedua kegiatan mendapat -s.",
+            "*Setengah enam* = 5:30 = **half past five**: ambil satu jam lebih kecil dari angka Indonesianya.",
+            "**go home** tanpa *to*; **at night** tapi **in the** morning/evening; tidak ada at/on/in sebelum **every**."
+          ],
+          "examples": [
+            {
+              "en": "I usually get up at six in the morning.",
+              "id": "Saya biasanya bangun jam enam pagi."
+            },
+            {
+              "en": "After that, she goes to work by ojek.",
+              "id": "Setelah itu, dia berangkat kerja naik ojek."
+            },
+            {
+              "en": "We watch TV in the evening.",
+              "id": "Kami menonton TV malam hari."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman ini berisi kata rutinitas, kata urutan dan keterangan waktu, lengkap dengan latihan online."
+      }
+    ]
+  }
+}

@@ -250,12 +250,13 @@ def learn(api, curriculum):
     if not_done:
         fail(f"not mastered: {not_done}")
     # Locked / coming-soon nodes refuse to start.
-    for nid, want in (("a2-past-simple-regular", "node_coming_soon"), ("a1-self-introduction", "node_coming_soon")):
+    for nid, want in (("a2-past-simple-regular", "node_coming_soon"), ("c2-stylistic-nuance", "node_coming_soon")):
         status, body = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": nid})
         if status != 409:
             fail(f"{nid} should not start: {status} {body}")
     print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A}")
-    level_checkpoint(api, ls)
+    for ck in ("a0-checkpoint", "a1-checkpoint"):
+        level_checkpoint(api, ls, ck)
     sign_in(api, EMAIL_B, register=False)
     _, d = call(api, "GET", "/api/v1/dashboard")
     if d["courses"] or d["openSessions"] or d["totalMastered"]:
@@ -263,15 +264,15 @@ def learn(api, curriculum):
     print(f"  ✓ {EMAIL_B} sees none of it")
 
 
-def level_checkpoint(api, ls):
-    # The A0 checkpoint: no steps, questions from every A0 lesson.
-    status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": "a0-checkpoint"})
+def level_checkpoint(api, ls, ck):
+    # A level checkpoint: no steps, questions spread over the level's lessons.
+    status, s = call(api, "POST", "/api/v1/sessions", {"course": COURSE, "nodeId": ck})
     if status != 200 or s["lesson"] or not s["level"] or any(l["status"] != "mastered" for l in s["level"]["lessons"]):
-        fail(f"a0-checkpoint should open with its mastered lessons: {status} {s.get('level')}")
+        fail(f"{ck} should open with its mastered lessons: {status} {s.get('level')}")
     status, cp = call(api, "POST", f"/api/v1/sessions/{s['id']}/checkpoint")
-    if status != 200 or len(cp["items"]) < 10 or not all(it.get("lessonId") for it in cp["items"]):
-        fail(f"level checkpoint: {status} {cp}")
-    # The offline provider uses one hand-written question per lesson.
+    if status != 200 or not 10 <= len(cp["items"]) <= 15 or not all(it.get("lessonId") for it in cp["items"]):
+        fail(f"{ck}: {status} {cp}")
+    # The offline provider uses hand-written questions from the level's lessons.
     def key(it):
         for a in ls[it["lessonId"]]["assessment"]:
             if a["prompt"] == it["prompt"]:
@@ -280,9 +281,11 @@ def level_checkpoint(api, ls):
     right = [{"itemId": it["id"], "answer": key(it)} for it in cp["items"]]
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": right})
     lessons_scored = r.get("attempt", {}).get("review", {}).get("lessons", {}) if status == 200 else {}
-    if status != 200 or not r["passed"] or len(lessons_scored) != len(cp["items"]) or r["session"]["node"]["status"] != "mastered":
-        fail(f"level checkpoint should pass: {status} {r}")
-    print(f"  ✓ a0-checkpoint: {len(cp['items'])} questions from {len(lessons_scored)} lessons, {r['attempt']['score']}/100, level A0 complete")
+    asked = {it["lessonId"] for it in cp["items"]}
+    if status != 200 or not r["passed"] or set(lessons_scored) != asked or r["session"]["node"]["status"] != "mastered":
+        fail(f"{ck} should pass: {status} {r}")
+    print(f"  ✓ {ck}: {len(cp['items'])} questions from {len(asked)} lessons, {r['attempt']['score']}/100, "
+          f"level {s['node']['level']} complete")
 
 
 def verify(api, curriculum):

@@ -1,0 +1,692 @@
+{
+  "en": {
+    "greeting": "Hi! Today you write about yourself in English: you, your family and your day, and then a short message or postcard. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Writing about you",
+        "text": "Let's start with the sentences you need to write about yourself.",
+        "body": "You need two things you know. **am / is / are** says who someone is: *I'm a nurse.* The **simple present** says what someone does: *I live in Bandung.* For one other person (he, she, my sister) add **-s**: *my sister lives*; **have** becomes **has**. Never both together: not *I am work*. A good order: **me → my family → my day**.",
+        "pairs": [
+          {
+            "en": "I'm 24 years old.",
+            "id": "Umurku 24 tahun."
+          },
+          {
+            "en": "I'm a nurse.",
+            "id": "Aku perawat."
+          },
+          {
+            "en": "I live in Bandung.",
+            "id": "Aku tinggal di Bandung."
+          },
+          {
+            "en": "I have two brothers.",
+            "id": "Aku punya dua saudara laki-laki."
+          },
+          {
+            "en": "My sister lives in Bogor.",
+            "id": "Kakak perempuanku tinggal di Bogor."
+          },
+          {
+            "en": "My father has a small shop.",
+            "id": "Ayahku punya toko kecil."
+          },
+          {
+            "en": "I get up at six every day.",
+            "id": "Aku bangun jam enam setiap hari."
+          },
+          {
+            "en": "I go to work by bus.",
+            "id": "Aku berangkat kerja naik bus."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina writes about her father. Check the verb.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sentences-about-me",
+          "options": [
+            "My father work in a hotel.",
+            "My father is work in a hotel.",
+            "My father works in a hotel."
+          ],
+          "answer": 2,
+          "prompt": "Which sentence is correct?",
+          "explanation": "**My father** = he, one person, so the verb takes **-s**: **works**. *is work* is wrong because am/is/are never goes before another verb."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now write about a mother. Tap the words in order.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "sentences-about-me",
+          "tokens": [
+            "school",
+            "teaches",
+            "a",
+            "My",
+            "English",
+            "at",
+            "mother"
+          ],
+          "solution": "My mother teaches English at a school.",
+          "prompt": "Arrange the words: Ibu saya mengajar bahasa Inggris di sebuah sekolah.",
+          "explanation": "**My mother** = she, so **teach** takes **-es**: **teaches** (like watch → watches). **English** is a language, so it always has a capital."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Capital letters",
+        "text": "Your sentences are right. Now let's make them look right.",
+        "body": "Capitals for: the **first word**, **I** (always), **names** (Rina, Pak Hasan), **places** (Bandung), **days** and **months** (Monday, June), **languages** and **nationalities** (English, Indonesian). Most is like Indonesian; the new one is **I**. Jobs (*teacher*), seasons (*summer*) and *my/me* stay small. In chat people type *i live in bandung*; in a message or postcard write **I live in Bandung.**",
+        "pairs": [
+          {
+            "en": "I",
+            "id": "saya / aku (selalu kapital)"
+          },
+          {
+            "en": "Monday",
+            "id": "Senin"
+          },
+          {
+            "en": "June",
+            "id": "Juni"
+          },
+          {
+            "en": "English",
+            "id": "bahasa Inggris / orang Inggris"
+          },
+          {
+            "en": "Indonesian",
+            "id": "bahasa Indonesia / orang Indonesia"
+          },
+          {
+            "en": "teacher",
+            "id": "guru (pekerjaan: huruf kecil)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas writes about his week in small letters, chat style. Fix it.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "i, english, mondays",
+            "i, study, mondays",
+            "english, mondays"
+          ],
+          "answer": 0,
+          "prompt": "Which words need a capital letter? i study english on mondays.",
+          "explanation": "**i** is the first word and always a capital (**I**), **English** is a language and **Mondays** is a day. *study* is a normal verb, so it stays small."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "One idea, one sentence",
+        "text": "Next: full stops and commas.",
+        "body": "End each idea with a **full stop** and start the next with a **capital**. Don't join two sentences with a comma, like *aku tinggal di Medan, kerja di bank* in chat: write two sentences, or join them with **and**. Put a **comma** after the greeting (*Dear Mum,*) and after the ending word (*Love,*) before your name. One **!** sounds friendly; not on every sentence.",
+        "pairs": [
+          {
+            "en": "I live in Medan. I work in a bank.",
+            "id": "Aku tinggal di Medan. Aku bekerja di bank."
+          },
+          {
+            "en": "I live in Medan and I work in a bank.",
+            "id": "Aku tinggal di Medan dan bekerja di bank."
+          },
+          {
+            "en": "Dear Mum,",
+            "id": "Ibu tersayang, (koma setelah salam)"
+          },
+          {
+            "en": "See you soon!",
+            "id": "Sampai ketemu! (tanda seru: ramah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina sends a quick message to her friend. Something is wrong.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "Two sentences are joined with a comma.",
+            "'station' needs a capital letter.",
+            "There's no mistake."
+          ],
+          "answer": 0,
+          "prompt": "Rina writes: 'Hi Sari, I'm at the station, the train is late.' What's the mistake?",
+          "explanation": "*I'm at the station* and *the train is late* are two complete ideas, so they need a **full stop** and a capital: *I'm at the station. The train is late.* *station* is not a name, so it stays small."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "A postcard from Bali",
+        "text": "Here's Rina's postcard to her mum, line by line.",
+        "body": "Three parts: a **greeting**, **2–4 short sentences** (where you are, what it's like, what you do), and an **ending** with your name. **Love,** is for family and close friends; **Best wishes,** is fine for anyone. With all the lines, Rina's card is 35 words: *I'm* counts as one word.",
+        "examples": [
+          {
+            "en": "Dear Mum,",
+            "id": "Ibu tersayang, (Mum = ibu; Amerika: Mom)"
+          },
+          {
+            "en": "I'm in Bali with Sari.",
+            "id": "Aku di Bali bersama Sari."
+          },
+          {
+            "en": "The hotel is small but nice.",
+            "id": "Hotelnya kecil tapi bagus."
+          },
+          {
+            "en": "Every morning we swim in the sea.",
+            "id": "Setiap pagi kami berenang di laut."
+          },
+          {
+            "en": "The food is delicious!",
+            "id": "Makanannya enak sekali!"
+          },
+          {
+            "en": "Love, Rina",
+            "id": "Peluk sayang, Rina (penutup untuk keluarga)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Now a postcard for someone at work.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-message",
+          "options": [
+            "Love, Rina",
+            "Bye bye, Rina",
+            "Best wishes, Rina"
+          ],
+          "answer": 2,
+          "prompt": "You write a postcard to your boss, Pak Hasan. Which ending is best?",
+          "explanation": "**Best wishes,** is polite and fine for anyone, also a boss. **Love,** is only for family and close friends, and *Bye bye* is spoken and sounds like a child."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Quick review",
+        "text": "Flip the cards. Say the meaning before you check.",
+        "flashcards": [
+          {
+            "front": "Dear Mum,",
+            "back": "Ibu tersayang, (salam pembuka)"
+          },
+          {
+            "front": "Hi Andi,",
+            "back": "Hai Andi, (untuk teman)"
+          },
+          {
+            "front": "Love, Rina",
+            "back": "Peluk sayang, Rina (keluarga / sahabat)"
+          },
+          {
+            "front": "Best wishes, Rina",
+            "back": "Salam, Rina (untuk siapa saja)"
+          },
+          {
+            "front": "Write soon!",
+            "back": "Balas ya!"
+          },
+          {
+            "front": "Monday · June · English",
+            "back": "Senin · Juni · bahasa Inggris (selalu kapital)"
+          },
+          {
+            "front": "full stop (.)",
+            "back": "titik: satu ide, satu kalimat"
+          },
+          {
+            "front": "My sister lives in Bogor.",
+            "back": "Kakak perempuanku tinggal di Bogor. (she → lives)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Use it when you write your next message.",
+        "artifact": {
+          "title": "Cheat sheet · Writing about yourself",
+          "intro": "Sentences about you, capitals, full stops and the parts of a postcard.",
+          "headers": [
+            "Part",
+            "Example",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Me",
+              "I'm 24. I'm a nurse.",
+              "am / is / are + who you are"
+            ],
+            [
+              "My family",
+              "My sister lives in Bogor.",
+              "one person → verb + s (have → has)"
+            ],
+            [
+              "My day",
+              "I get up at six every day.",
+              "I + verb, no -s"
+            ],
+            [
+              "Capitals",
+              "I, Rina, Bandung, Monday, June, English",
+              "always a capital letter"
+            ],
+            [
+              "Small letters",
+              "teacher, summer, my, me",
+              "jobs, seasons, my/me"
+            ],
+            [
+              "Two sentences",
+              "I live in Medan. I work in a bank.",
+              "full stop + capital, not a comma"
+            ],
+            [
+              "Greeting",
+              "Dear Mum, / Hi Andi,",
+              "comma after the name"
+            ],
+            [
+              "Ending",
+              "Love, / Best wishes, + your name",
+              "Love = family and friends"
+            ]
+          ],
+          "tips": [
+            "Check every sentence: **am/is/are** OR another verb, never both (not *I am work*).",
+            "Read your text aloud: where your voice stops, put a **full stop**, then a capital.",
+            "A message of 25–35 words = greeting + 2–4 short sentences + ending and name."
+          ],
+          "examples": [
+            {
+              "en": "I'm in Bali with Sari.",
+              "id": "Aku di Bali bersama Sari."
+            },
+            {
+              "en": "The hotel is small but nice.",
+              "id": "Hotelnya kecil tapi bagus."
+            },
+            {
+              "en": "Every morning we swim in the sea.",
+              "id": "Setiap pagi kami berenang di laut."
+            },
+            {
+              "en": "Write soon!",
+              "id": "Balas ya!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want to see more? Here people introduce themselves in short A1 posts."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu menulis tentang dirimu dalam bahasa Inggris: dirimu, keluargamu dan harimu, lalu pesan pendek atau kartu pos. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Menulis tentang dirimu",
+        "text": "Kita mulai dengan kalimat yang kamu perlukan untuk menulis tentang dirimu.",
+        "body": "Kamu butuh dua hal yang sudah kamu kenal. **am / is / are** untuk mengatakan siapa seseorang: *I'm a nurse.* **Simple present** untuk mengatakan apa yang dia lakukan: *I live in Bandung.* Untuk satu orang lain (he, she, my sister) tambahkan **-s**: *my sister lives*; **have** menjadi **has**. Jangan dipakai bersama: bukan *I am work*. Urutan yang enak: **aku → keluargaku → hariku**.",
+        "pairs": [
+          {
+            "en": "I'm 24 years old.",
+            "id": "Umurku 24 tahun."
+          },
+          {
+            "en": "I'm a nurse.",
+            "id": "Aku perawat."
+          },
+          {
+            "en": "I live in Bandung.",
+            "id": "Aku tinggal di Bandung."
+          },
+          {
+            "en": "I have two brothers.",
+            "id": "Aku punya dua saudara laki-laki."
+          },
+          {
+            "en": "My sister lives in Bogor.",
+            "id": "Kakak perempuanku tinggal di Bogor."
+          },
+          {
+            "en": "My father has a small shop.",
+            "id": "Ayahku punya toko kecil."
+          },
+          {
+            "en": "I get up at six every day.",
+            "id": "Aku bangun jam enam setiap hari."
+          },
+          {
+            "en": "I go to work by bus.",
+            "id": "Aku berangkat kerja naik bus."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina menulis tentang ayahnya. Periksa kata kerjanya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "sentences-about-me",
+          "options": [
+            "My father work in a hotel.",
+            "My father is work in a hotel.",
+            "My father works in a hotel."
+          ],
+          "answer": 2,
+          "prompt": "Kalimat mana yang benar?",
+          "explanation": "**My father** = he, satu orang, jadi kata kerjanya ditambah **-s**: **works**. *is work* salah karena am/is/are tidak pernah diletakkan sebelum kata kerja lain."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang tulis tentang seorang ibu. Ketuk kata-katanya sesuai urutan.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "sentences-about-me",
+          "tokens": [
+            "school",
+            "teaches",
+            "a",
+            "My",
+            "English",
+            "at",
+            "mother"
+          ],
+          "solution": "My mother teaches English at a school.",
+          "prompt": "Susun kata-katanya: Ibu saya mengajar bahasa Inggris di sebuah sekolah.",
+          "explanation": "**My mother** = she, jadi **teach** ditambah **-es**: **teaches** (seperti watch → watches). **English** adalah nama bahasa, jadi selalu diawali huruf kapital."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Huruf kapital",
+        "text": "Kalimatmu sudah benar. Sekarang kita buat tulisannya rapi.",
+        "body": "Huruf kapital untuk: **kata pertama**, **I** (selalu), **nama** (Rina, Pak Hasan), **tempat** (Bandung), **hari** dan **bulan** (Monday, June), **bahasa** dan **kebangsaan** (English, Indonesian). Sebagian besar sama dengan bahasa Indonesia; yang baru adalah **I**. Pekerjaan (*teacher*), musim (*summer*) dan *my/me* tetap huruf kecil. Di chat orang mengetik *i live in bandung*; di pesan atau kartu pos tulis **I live in Bandung.**",
+        "pairs": [
+          {
+            "en": "I",
+            "id": "saya / aku (selalu kapital)"
+          },
+          {
+            "en": "Monday",
+            "id": "Senin"
+          },
+          {
+            "en": "June",
+            "id": "Juni"
+          },
+          {
+            "en": "English",
+            "id": "bahasa Inggris / orang Inggris"
+          },
+          {
+            "en": "Indonesian",
+            "id": "bahasa Indonesia / orang Indonesia"
+          },
+          {
+            "en": "teacher",
+            "id": "guru (pekerjaan: huruf kecil)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas menulis tentang minggunya dengan huruf kecil semua, gaya chat. Perbaiki.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "i, english, mondays",
+            "i, study, mondays",
+            "english, mondays"
+          ],
+          "answer": 0,
+          "prompt": "Kata mana yang perlu huruf kapital? i study english on mondays.",
+          "explanation": "**i** adalah kata pertama dan selalu kapital (**I**), **English** adalah bahasa dan **Mondays** adalah hari. *study* kata kerja biasa, jadi tetap huruf kecil."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Satu ide, satu kalimat",
+        "text": "Berikutnya: titik dan koma.",
+        "body": "Akhiri setiap ide dengan **titik** (full stop) dan mulai ide berikutnya dengan **huruf kapital**. Jangan gabungkan dua kalimat dengan koma, seperti *aku tinggal di Medan, kerja di bank* di chat: tulis dua kalimat, atau gabungkan dengan **and**. Taruh **koma** setelah salam pembuka (*Dear Mum,*) dan setelah kata penutup (*Love,*) sebelum namamu. Satu **!** terdengar ramah; jangan di setiap kalimat.",
+        "pairs": [
+          {
+            "en": "I live in Medan. I work in a bank.",
+            "id": "Aku tinggal di Medan. Aku bekerja di bank."
+          },
+          {
+            "en": "I live in Medan and I work in a bank.",
+            "id": "Aku tinggal di Medan dan bekerja di bank."
+          },
+          {
+            "en": "Dear Mum,",
+            "id": "Ibu tersayang, (koma setelah salam)"
+          },
+          {
+            "en": "See you soon!",
+            "id": "Sampai ketemu! (tanda seru: ramah)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina mengirim pesan singkat ke temannya. Ada yang salah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "capitals-punctuation",
+          "options": [
+            "Two sentences are joined with a comma.",
+            "'station' needs a capital letter.",
+            "There's no mistake."
+          ],
+          "answer": 0,
+          "prompt": "Rina menulis: 'Hi Sari, I'm at the station, the train is late.' Apa kesalahannya?",
+          "explanation": "*I'm at the station* dan *the train is late* adalah dua ide lengkap, jadi butuh **titik** dan huruf kapital: *I'm at the station. The train is late.* *station* bukan nama, jadi tetap huruf kecil."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Kartu pos dari Bali",
+        "text": "Ini kartu pos Rina untuk ibunya, baris demi baris.",
+        "body": "Tiga bagian: **salam pembuka**, **2–4 kalimat pendek** (kamu di mana, tempatnya seperti apa, apa yang kamu lakukan), dan **penutup** dengan namamu. **Love,** untuk keluarga dan sahabat; **Best wishes,** cocok untuk siapa saja. Dengan semua barisnya, kartu Rina berisi 35 kata: *I'm* dihitung satu kata.",
+        "examples": [
+          {
+            "en": "Dear Mum,",
+            "id": "Ibu tersayang, (Mum = ibu; Amerika: Mom)"
+          },
+          {
+            "en": "I'm in Bali with Sari.",
+            "id": "Aku di Bali bersama Sari."
+          },
+          {
+            "en": "The hotel is small but nice.",
+            "id": "Hotelnya kecil tapi bagus."
+          },
+          {
+            "en": "Every morning we swim in the sea.",
+            "id": "Setiap pagi kami berenang di laut."
+          },
+          {
+            "en": "The food is delicious!",
+            "id": "Makanannya enak sekali!"
+          },
+          {
+            "en": "Love, Rina",
+            "id": "Peluk sayang, Rina (penutup untuk keluarga)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sekarang kartu pos untuk orang di kantor.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "short-message",
+          "options": [
+            "Love, Rina",
+            "Bye bye, Rina",
+            "Best wishes, Rina"
+          ],
+          "answer": 2,
+          "prompt": "Kamu menulis kartu pos untuk atasanmu, Pak Hasan. Penutup mana yang paling tepat?",
+          "explanation": "**Best wishes,** sopan dan cocok untuk siapa saja, termasuk atasan. **Love,** hanya untuk keluarga dan sahabat, dan *Bye bye* itu bahasa lisan dan terdengar seperti anak kecil."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Ulang cepat",
+        "text": "Balik kartunya. Sebutkan artinya dulu sebelum mengecek.",
+        "flashcards": [
+          {
+            "front": "Dear Mum,",
+            "back": "Ibu tersayang, (salam pembuka)"
+          },
+          {
+            "front": "Hi Andi,",
+            "back": "Hai Andi, (untuk teman)"
+          },
+          {
+            "front": "Love, Rina",
+            "back": "Peluk sayang, Rina (keluarga / sahabat)"
+          },
+          {
+            "front": "Best wishes, Rina",
+            "back": "Salam, Rina (untuk siapa saja)"
+          },
+          {
+            "front": "Write soon!",
+            "back": "Balas ya!"
+          },
+          {
+            "front": "Monday · June · English",
+            "back": "Senin · Juni · bahasa Inggris (selalu kapital)"
+          },
+          {
+            "front": "full stop (.)",
+            "back": "titik: satu ide, satu kalimat"
+          },
+          {
+            "front": "My sister lives in Bogor.",
+            "back": "Kakak perempuanku tinggal di Bogor. (she → lives)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Pakai saat kamu menulis pesan berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Menulis tentang dirimu",
+          "intro": "Kalimat tentang dirimu, huruf kapital, titik dan bagian-bagian kartu pos.",
+          "headers": [
+            "Bagian",
+            "Contoh",
+            "Aturan"
+          ],
+          "rows": [
+            [
+              "Aku",
+              "I'm 24. I'm a nurse.",
+              "am / is / are + siapa kamu"
+            ],
+            [
+              "Keluargaku",
+              "My sister lives in Bogor.",
+              "satu orang → kata kerja + s (have → has)"
+            ],
+            [
+              "Hariku",
+              "I get up at six every day.",
+              "I + kata kerja, tanpa -s"
+            ],
+            [
+              "Huruf kapital",
+              "I, Rina, Bandung, Monday, June, English",
+              "selalu kapital"
+            ],
+            [
+              "Huruf kecil",
+              "teacher, summer, my, me",
+              "pekerjaan, musim, my/me"
+            ],
+            [
+              "Dua kalimat",
+              "I live in Medan. I work in a bank.",
+              "titik + kapital, bukan koma"
+            ],
+            [
+              "Salam pembuka",
+              "Dear Mum, / Hi Andi,",
+              "koma setelah nama"
+            ],
+            [
+              "Penutup",
+              "Love, / Best wishes, + namamu",
+              "Love = keluarga dan sahabat"
+            ]
+          ],
+          "tips": [
+            "Periksa setiap kalimat: **am/is/are** ATAU kata kerja lain, jangan keduanya (bukan *I am work*).",
+            "Baca tulisanmu dengan suara keras: di tempat suaramu berhenti, taruh **titik**, lalu huruf kapital.",
+            "Pesan 25–35 kata = salam pembuka + 2–4 kalimat pendek + penutup dan nama."
+          ],
+          "examples": [
+            {
+              "en": "I'm in Bali with Sari.",
+              "id": "Aku di Bali bersama Sari."
+            },
+            {
+              "en": "The hotel is small but nice.",
+              "id": "Hotelnya kecil tapi bagus."
+            },
+            {
+              "en": "Every morning we swim in the sea.",
+              "id": "Setiap pagi kami berenang di laut."
+            },
+            {
+              "en": "Write soon!",
+              "id": "Balas ya!"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau lihat lebih banyak? Di sini orang memperkenalkan diri dalam tulisan pendek level A1."
+      }
+    ]
+  }
+}

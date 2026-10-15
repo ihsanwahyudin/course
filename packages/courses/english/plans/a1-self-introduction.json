@@ -1,0 +1,662 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll learn to introduce yourself in English and to reply when someone introduces themselves. Let's build it one small piece at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Name, origin and job",
+        "text": "Let's build your English introduction, one piece at a time.",
+        "body": "A short introduction goes **name → where you're from → job**. Name: **I'm** Rina or **My name is** Rina. From: **I'm from** + a city or country (*I'm from Bandung*). Or say your **nationality** (the word for a person from a country) without *from*: **I'm Indonesian**. Job: **I'm a / an** + job (*an* before a vowel sound). Where you work: **I work in** + place, with no *am* before *work*. *Saya perawat* has no *am* and no *a*, but English needs both: *I'm a nurse*.",
+        "pairs": [
+          {
+            "en": "I'm ...",
+            "id": "saya ..."
+          },
+          {
+            "en": "My name is ...",
+            "id": "nama saya ..."
+          },
+          {
+            "en": "I'm from ...",
+            "id": "saya dari ..."
+          },
+          {
+            "en": "I'm Indonesian.",
+            "id": "saya orang Indonesia"
+          },
+          {
+            "en": "I'm a nurse.",
+            "id": "saya perawat"
+          },
+          {
+            "en": "I'm an accountant.",
+            "id": "saya akuntan"
+          },
+          {
+            "en": "I work in an office.",
+            "id": "saya bekerja di kantor"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Three short introductions",
+        "text": "Here are three people introducing themselves. Listen to the order: name, from, job.",
+        "body": "**from** goes with a place (Malang, Bali). A nationality like *Indonesian* goes without *from*. With friends say **Hi, I'm …**; in a formal meeting say **Good morning. My name is …** and your full name.",
+        "examples": [
+          {
+            "en": "Hi, I'm Sari. I'm from Malang. I'm a student.",
+            "id": "Hai, saya Sari. Saya dari Malang. Saya pelajar."
+          },
+          {
+            "en": "Good morning. My name is Hasan Basri. I'm a bus driver.",
+            "id": "Selamat pagi. Nama saya Hasan Basri. Saya sopir bus."
+          },
+          {
+            "en": "Hi! I'm Maya. I'm from Bali. I work in a hotel.",
+            "id": "Hai! Saya Maya. Saya dari Bali. Saya bekerja di hotel."
+          },
+          {
+            "en": "Hello, I'm Lina. I'm Indonesian. I'm an accountant.",
+            "id": "Halo, saya Lina. Saya orang Indonesia. Saya akuntan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Let's try one. Country or nationality?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "introduce-yourself-with",
+          "prompt": "Kenji is from Japan. Complete what he says: 'Hi, I'm Kenji. I'm ___.'",
+          "options": [
+            "Japan",
+            "Japanese",
+            "from Japanese"
+          ],
+          "answer": 1,
+          "explanation": "**Japanese** is the nationality, so say **I'm Japanese**, without *from*. *I'm Japan* says Kenji is a country. *from* goes with the country: *I'm from Japan*, never *from Japanese*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now put a job and a city together in one sentence.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "introduce-yourself-with",
+          "prompt": "Arrange the words: Saya seorang insinyur dari Surabaya.",
+          "tokens": [
+            "from",
+            "engineer",
+            "I",
+            "Surabaya",
+            "an",
+            "am"
+          ],
+          "solution": "I am an engineer from Surabaya.",
+          "explanation": "**I am** + **an** + job, then **from** + city. *Engineer* starts with a vowel sound, so it's **an** engineer. English needs *am* and *an* even though *Saya insinyur* has neither."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Likes and interests",
+        "text": "After your job, add something you like. People love this part!",
+        "body": "Use **like / love** + a thing (*I like music*) or + **verb-ing** for an activity (*I love cooking*). Or say **My hobby is** + -ing (*My hobby is reading*); more than one hobby: **My hobbies are** … You can also say **In my free time, I** + verb (*In my free time, I play badminton*). *Saya sangat suka* is **I really like** or **I like … very much**, not `I very like`.",
+        "pairs": [
+          {
+            "en": "I like music.",
+            "id": "saya suka musik"
+          },
+          {
+            "en": "I love cooking.",
+            "id": "saya suka sekali memasak"
+          },
+          {
+            "en": "My hobby is reading.",
+            "id": "hobi saya membaca"
+          },
+          {
+            "en": "in my free time",
+            "id": "di waktu luang"
+          },
+          {
+            "en": "I really like ...",
+            "id": "saya sangat suka ..."
+          },
+          {
+            "en": "... very much",
+            "id": "sangat (di akhir kalimat)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina talks about her hobby. Which sentence is right?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-your",
+          "prompt": "Rina loves making food at home. Which sentence is correct?",
+          "options": [
+            "My hobby is cook.",
+            "My hobby cooking.",
+            "My hobby is cooking."
+          ],
+          "answer": 2,
+          "explanation": "After **My hobby is**, an activity needs **-ing**: *cooking*. *My hobby is cook* drops the -ing (Indonesian *memasak* doesn't change), and *My hobby cooking* drops **is**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "When someone introduces themselves",
+        "text": "Now the other side: someone tells you about themselves. What do you say?",
+        "body": "Reply in three small parts. 1) If they say *Nice to meet you*, answer **Nice to meet you too** (or **You too**) and say your name. If **you** speak first, no *too*. 2) Show interest: **Oh, nice!** **Really?** **Me too!** (*saya juga*, not `I also`). 3) Ask one question back: **What do you do?** **Do you like …?** or just **And you?** Don't answer *Nice to meet you* with *I'm fine, thanks*: that answers *How are you?*",
+        "pairs": [
+          {
+            "en": "Nice to meet you.",
+            "id": "senang berkenalan"
+          },
+          {
+            "en": "You too.",
+            "id": "kamu juga (balasan singkat)"
+          },
+          {
+            "en": "Oh, nice!",
+            "id": "oh, bagus!"
+          },
+          {
+            "en": "Really?",
+            "id": "oh ya?"
+          },
+          {
+            "en": "And you?",
+            "id": "kalau kamu?"
+          },
+          {
+            "en": "What do you do?",
+            "id": "apa pekerjaanmu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen carefully",
+        "text": "It's the first day of a new class in Bandung. Press play and listen to your classmate.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "respond-when-someone",
+          "prompt": "Listen. Which reply is best?",
+          "listen": "Hi! I'm Fajar. I'm a chef.",
+          "options": [
+            "Hi, Fajar! I'm Rina. Nice to meet you.",
+            "I'm fine, thanks. And how are you?",
+            "Yes, I am a chef. Who are you?"
+          ],
+          "answer": 0,
+          "explanation": "Fajar says his **name** and his **job**. A good reply says hi, gives **your name** and **Nice to meet you** (no *too*, because you say it first). *I'm fine, thanks* answers *How are you?*, which he didn't ask, and he already told you who he is."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Flashcards",
+        "text": "Quick review. Say the English out loud, then flip the card.",
+        "flashcards": [
+          {
+            "front": "Hai, saya Budi.",
+            "back": "Hi, I'm Budi."
+          },
+          {
+            "front": "Saya dari Surabaya.",
+            "back": "I'm from Surabaya."
+          },
+          {
+            "front": "Saya perawat.",
+            "back": "I'm a nurse."
+          },
+          {
+            "front": "Saya bekerja di kantor.",
+            "back": "I work in an office."
+          },
+          {
+            "front": "Hobi saya membaca.",
+            "back": "My hobby is reading."
+          },
+          {
+            "front": "Saya sangat suka memasak.",
+            "back": "I really like cooking."
+          },
+          {
+            "front": "Senang berkenalan.",
+            "back": "Nice to meet you."
+          },
+          {
+            "front": "Apa pekerjaanmu?",
+            "back": "What do you do?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here is your whole introduction on one page. Keep it for later.",
+        "artifact": {
+          "title": "Cheat sheet · Introducing yourself",
+          "intro": "Say your name, where you're from, your job and what you like. Then reply to the other person and ask back.",
+          "headers": [
+            "Part",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Name",
+              "Hi, I'm Rina. / My name is Rina.",
+              "Hai, saya Rina. / Nama saya Rina."
+            ],
+            [
+              "From (a place)",
+              "I'm from Bandung.",
+              "Saya dari Bandung."
+            ],
+            [
+              "Nationality",
+              "I'm Indonesian.",
+              "Saya orang Indonesia."
+            ],
+            [
+              "Job",
+              "I'm a nurse. / I'm an accountant.",
+              "Saya perawat. / Saya akuntan."
+            ],
+            [
+              "Workplace",
+              "I work in an office.",
+              "Saya bekerja di kantor."
+            ],
+            [
+              "Likes",
+              "I love cooking. / I really like music.",
+              "Saya suka sekali memasak. / Saya sangat suka musik."
+            ],
+            [
+              "Hobby",
+              "My hobby is reading. / My hobbies are ...",
+              "Hobi saya membaca. / Hobi-hobi saya ..."
+            ],
+            [
+              "Reply",
+              "Nice to meet you too. / You too.",
+              "Senang berkenalan juga."
+            ],
+            [
+              "Show interest",
+              "Oh, nice! / Really? / Me too!",
+              "Oh, bagus! / Oh ya? / Saya juga!"
+            ],
+            [
+              "Ask back",
+              "What do you do? / And you?",
+              "Apa pekerjaanmu? / Kalau kamu?"
+            ]
+          ],
+          "tips": [
+            "From + country, nationality without from: `I'm from Malaysia` or `I'm Malaysian`, never `I'm from Malaysian`.",
+            "Keep **am** and **a/an** before a job (`I'm a driver`), but no *am* before *work* (`I work in a bank`).",
+            "*Saya juga* = **Me too!**, and *sangat suka* = **I really like**, not `I very like`."
+          ],
+          "examples": [
+            {
+              "en": "Hi, I'm Dimas. I'm from Medan. I'm a designer. I love playing futsal.",
+              "id": "Hai, saya Dimas. Saya dari Medan. Saya desainer. Saya suka sekali main futsal."
+            },
+            {
+              "en": "Nice to meet you. — You too.",
+              "id": "Senang berkenalan. — Kamu juga."
+            },
+            {
+              "en": "I'm a teacher. — Oh, nice! Where do you teach?",
+              "id": "Saya guru. — Oh, bagus! Kamu mengajar di mana?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? In this short British Council video, people meet new colleagues at work. Listen and repeat the phrases."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu belajar memperkenalkan diri dalam bahasa Inggris dan menanggapi saat orang lain memperkenalkan diri. Kita susun pelan-pelan, satu bagian kecil setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Nama, asal dan pekerjaan",
+        "text": "Yuk susun perkenalanmu dalam bahasa Inggris, satu bagian demi satu bagian.",
+        "body": "Perkenalan singkat urutannya **nama → asal → pekerjaan**. Nama: **I'm** Rina atau **My name is** Rina. Asal: **I'm from** + kota atau negara (*I'm from Bandung*). Atau sebut **kebangsaanmu** (kata untuk orang dari suatu negara) tanpa *from*: **I'm Indonesian**. Pekerjaan: **I'm a / an** + pekerjaan (*an* sebelum bunyi vokal). Tempat kerja: **I work in** + tempat, tanpa *am* sebelum *work*. *Saya perawat* tidak punya *am* dan *a*, tapi bahasa Inggris butuh keduanya: *I'm a nurse*.",
+        "pairs": [
+          {
+            "en": "I'm ...",
+            "id": "saya ..."
+          },
+          {
+            "en": "My name is ...",
+            "id": "nama saya ..."
+          },
+          {
+            "en": "I'm from ...",
+            "id": "saya dari ..."
+          },
+          {
+            "en": "I'm Indonesian.",
+            "id": "saya orang Indonesia"
+          },
+          {
+            "en": "I'm a nurse.",
+            "id": "saya perawat"
+          },
+          {
+            "en": "I'm an accountant.",
+            "id": "saya akuntan"
+          },
+          {
+            "en": "I work in an office.",
+            "id": "saya bekerja di kantor"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tiga perkenalan singkat",
+        "text": "Ini tiga orang yang memperkenalkan diri. Perhatikan urutannya: nama, asal, pekerjaan.",
+        "body": "**from** dipakai dengan tempat (Malang, Bali). Kebangsaan seperti *Indonesian* dipakai tanpa *from*. Dengan teman bilang **Hi, I'm …**; di pertemuan formal bilang **Good morning. My name is …** dan nama lengkapmu.",
+        "examples": [
+          {
+            "en": "Hi, I'm Sari. I'm from Malang. I'm a student.",
+            "id": "Hai, saya Sari. Saya dari Malang. Saya pelajar."
+          },
+          {
+            "en": "Good morning. My name is Hasan Basri. I'm a bus driver.",
+            "id": "Selamat pagi. Nama saya Hasan Basri. Saya sopir bus."
+          },
+          {
+            "en": "Hi! I'm Maya. I'm from Bali. I work in a hotel.",
+            "id": "Hai! Saya Maya. Saya dari Bali. Saya bekerja di hotel."
+          },
+          {
+            "en": "Hello, I'm Lina. I'm Indonesian. I'm an accountant.",
+            "id": "Halo, saya Lina. Saya orang Indonesia. Saya akuntan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Coba satu, ya. Negara atau kebangsaan?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "introduce-yourself-with",
+          "prompt": "Kenji berasal dari Jepang. Lengkapi ucapannya: 'Hi, I'm Kenji. I'm ___.'",
+          "options": [
+            "Japan",
+            "Japanese",
+            "from Japanese"
+          ],
+          "answer": 1,
+          "explanation": "**Japanese** adalah kebangsaan, jadi bilang **I'm Japanese**, tanpa *from*. *I'm Japan* artinya Kenji adalah sebuah negara. *from* dipakai dengan nama negara: *I'm from Japan*, tidak pernah *from Japanese*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sekarang gabungkan pekerjaan dan kota dalam satu kalimat.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "introduce-yourself-with",
+          "prompt": "Susun kata-katanya: Saya seorang insinyur dari Surabaya.",
+          "tokens": [
+            "from",
+            "engineer",
+            "I",
+            "Surabaya",
+            "an",
+            "am"
+          ],
+          "solution": "I am an engineer from Surabaya.",
+          "explanation": "**I am** + **an** + pekerjaan, lalu **from** + kota. *Engineer* diawali bunyi vokal, jadi **an** engineer. Bahasa Inggris butuh *am* dan *an*, walaupun *Saya insinyur* tidak memakai keduanya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Hal yang disukai dan minat",
+        "text": "Setelah pekerjaan, tambahkan sesuatu yang kamu suka. Bagian ini yang paling seru!",
+        "body": "Pakai **like / love** + benda (*I like music*) atau + **kata kerja-ing** untuk kegiatan (*I love cooking*). Atau bilang **My hobby is** + -ing (*My hobby is reading*); kalau hobinya lebih dari satu: **My hobbies are** … Kamu juga bisa bilang **In my free time, I** + kata kerja (*In my free time, I play badminton*). *Saya sangat suka* adalah **I really like** atau **I like … very much**, bukan `I very like`.",
+        "pairs": [
+          {
+            "en": "I like music.",
+            "id": "saya suka musik"
+          },
+          {
+            "en": "I love cooking.",
+            "id": "saya suka sekali memasak"
+          },
+          {
+            "en": "My hobby is reading.",
+            "id": "hobi saya membaca"
+          },
+          {
+            "en": "in my free time",
+            "id": "di waktu luang"
+          },
+          {
+            "en": "I really like ...",
+            "id": "saya sangat suka ..."
+          },
+          {
+            "en": "... very much",
+            "id": "sangat (di akhir kalimat)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina bercerita tentang hobinya. Kalimat mana yang benar?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "talk-about-your",
+          "prompt": "Rina suka sekali membuat makanan di rumah. Kalimat mana yang benar?",
+          "options": [
+            "My hobby is cook.",
+            "My hobby cooking.",
+            "My hobby is cooking."
+          ],
+          "answer": 2,
+          "explanation": "Setelah **My hobby is**, kegiatan butuh **-ing**: *cooking*. *My hobby is cook* tidak memakai -ing (kata *memasak* memang tidak berubah dalam bahasa Indonesia), dan *My hobby cooking* tidak memakai **is**."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Saat orang lain memperkenalkan diri",
+        "text": "Sekarang sisi lainnya: seseorang bercerita tentang dirinya. Apa yang kamu ucapkan?",
+        "body": "Tanggapi dalam tiga bagian kecil. 1) Kalau dia bilang *Nice to meet you*, jawab **Nice to meet you too** (atau **You too**) dan sebut namamu. Kalau **kamu** yang bicara duluan, tanpa *too*. 2) Tunjukkan minat: **Oh, nice!** **Really?** **Me too!** (*saya juga*, bukan `I also`). 3) Ajukan satu pertanyaan balik: **What do you do?** **Do you like …?** atau cukup **And you?** Jangan jawab *Nice to meet you* dengan *I'm fine, thanks*: itu jawaban untuk *How are you?*",
+        "pairs": [
+          {
+            "en": "Nice to meet you.",
+            "id": "senang berkenalan"
+          },
+          {
+            "en": "You too.",
+            "id": "kamu juga (balasan singkat)"
+          },
+          {
+            "en": "Oh, nice!",
+            "id": "oh, bagus!"
+          },
+          {
+            "en": "Really?",
+            "id": "oh ya?"
+          },
+          {
+            "en": "And you?",
+            "id": "kalau kamu?"
+          },
+          {
+            "en": "What do you do?",
+            "id": "apa pekerjaanmu?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan baik-baik",
+        "text": "Ini hari pertama kelas baru di Bandung. Tekan play dan dengarkan teman sekelasmu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "respond-when-someone",
+          "prompt": "Dengarkan. Tanggapan mana yang paling tepat?",
+          "listen": "Hi! I'm Fajar. I'm a chef.",
+          "options": [
+            "Hi, Fajar! I'm Rina. Nice to meet you.",
+            "I'm fine, thanks. And how are you?",
+            "Yes, I am a chef. Who are you?"
+          ],
+          "answer": 0,
+          "explanation": "Fajar menyebut **nama** dan **pekerjaannya**. Tanggapan yang baik menyapa, menyebut **namamu**, dan **Nice to meet you** (tanpa *too*, karena kamu yang bilang duluan). *I'm fine, thanks* menjawab *How are you?*, padahal dia tidak menanyakan itu, dan dia sudah bilang siapa dirinya."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Kartu hafalan",
+        "text": "Ulangan cepat. Ucapkan bahasa Inggrisnya dengan suara keras, lalu balik kartunya.",
+        "flashcards": [
+          {
+            "front": "Hai, saya Budi.",
+            "back": "Hi, I'm Budi."
+          },
+          {
+            "front": "Saya dari Surabaya.",
+            "back": "I'm from Surabaya."
+          },
+          {
+            "front": "Saya perawat.",
+            "back": "I'm a nurse."
+          },
+          {
+            "front": "Saya bekerja di kantor.",
+            "back": "I work in an office."
+          },
+          {
+            "front": "Hobi saya membaca.",
+            "back": "My hobby is reading."
+          },
+          {
+            "front": "Saya sangat suka memasak.",
+            "back": "I really like cooking."
+          },
+          {
+            "front": "Senang berkenalan.",
+            "back": "Nice to meet you."
+          },
+          {
+            "front": "Apa pekerjaanmu?",
+            "back": "What do you do?"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh perkenalanmu dalam satu halaman. Simpan untuk nanti.",
+        "artifact": {
+          "title": "Ringkasan · Memperkenalkan diri",
+          "intro": "Sebut nama, asal, pekerjaan, dan hal yang kamu suka. Lalu tanggapi lawan bicaramu dan tanya balik.",
+          "headers": [
+            "Bagian",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Nama",
+              "Hi, I'm Rina. / My name is Rina.",
+              "Hai, saya Rina. / Nama saya Rina."
+            ],
+            [
+              "Asal (tempat)",
+              "I'm from Bandung.",
+              "Saya dari Bandung."
+            ],
+            [
+              "Kebangsaan",
+              "I'm Indonesian.",
+              "Saya orang Indonesia."
+            ],
+            [
+              "Pekerjaan",
+              "I'm a nurse. / I'm an accountant.",
+              "Saya perawat. / Saya akuntan."
+            ],
+            [
+              "Tempat kerja",
+              "I work in an office.",
+              "Saya bekerja di kantor."
+            ],
+            [
+              "Yang disukai",
+              "I love cooking. / I really like music.",
+              "Saya suka sekali memasak. / Saya sangat suka musik."
+            ],
+            [
+              "Hobi",
+              "My hobby is reading. / My hobbies are ...",
+              "Hobi saya membaca. / Hobi-hobi saya ..."
+            ],
+            [
+              "Membalas",
+              "Nice to meet you too. / You too.",
+              "Senang berkenalan juga."
+            ],
+            [
+              "Menunjukkan minat",
+              "Oh, nice! / Really? / Me too!",
+              "Oh, bagus! / Oh ya? / Saya juga!"
+            ],
+            [
+              "Tanya balik",
+              "What do you do? / And you?",
+              "Apa pekerjaanmu? / Kalau kamu?"
+            ]
+          ],
+          "tips": [
+            "From + negara, kebangsaan tanpa from: `I'm from Malaysia` atau `I'm Malaysian`, jangan pernah `I'm from Malaysian`.",
+            "Pakai **am** dan **a/an** sebelum pekerjaan (`I'm a driver`), tapi tanpa *am* sebelum *work* (`I work in a bank`).",
+            "*Saya juga* = **Me too!**, dan *sangat suka* = **I really like**, bukan `I very like`."
+          ],
+          "examples": [
+            {
+              "en": "Hi, I'm Dimas. I'm from Medan. I'm a designer. I love playing futsal.",
+              "id": "Hai, saya Dimas. Saya dari Medan. Saya desainer. Saya suka sekali main futsal."
+            },
+            {
+              "en": "Nice to meet you. — You too.",
+              "id": "Senang berkenalan. — Kamu juga."
+            },
+            {
+              "en": "I'm a teacher. — Oh, nice! Where do you teach?",
+              "id": "Saya guru. — Oh, bagus! Kamu mengajar di mana?"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Di video pendek British Council ini, orang-orang berkenalan dengan rekan kerja baru. Dengarkan dan ulangi ungkapannya."
+      }
+    ]
+  }
+}

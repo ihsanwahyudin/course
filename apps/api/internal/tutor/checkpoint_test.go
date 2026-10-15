@@ -73,3 +73,11 @@ func TestWordOrderNeedsWords(t *testing.T) {
 		t.Fatal("spelling letters isn't a word-order question")
 	}
 }
+
+func TestLevelSpread(t *testing.T) {
+	for lessons, want := range map[int]int{6: 4, 14: 10, 31: 10} {
+		if got := LevelSpread(lessons); got != want {
+			t.Errorf("LevelSpread(%d) = %d, want %d", lessons, got, want)
+		}
+	}
+}

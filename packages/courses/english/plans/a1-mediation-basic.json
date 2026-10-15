@@ -1,0 +1,638 @@
+{
+  "en": {
+    "greeting": "Hi! Today you are the bridge between Indonesian and English. You'll pass on prices, times, names and numbers to someone who only speaks English. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Prices: the dot is not a point",
+        "text": "Imagine a new colleague, Tom, who only speaks English. He can't read Indonesian menus and signs, so you help. Let's start with prices.",
+        "body": "Indonesian writes **Rp50.000** with a dot between the thousands; English writes **50,000** with a comma. In English a dot is a decimal point (*point*), so never say *fifty point zero zero zero*. Say how many **thousand**, then **rupiah**: **fifty thousand rupiah**. Chat shorthand *20rb* or *20k* = twenty thousand. No -s on *thousand* or *rupiah*.",
+        "pairs": [
+          {
+            "en": "five thousand rupiah",
+            "id": "Rp5.000"
+          },
+          {
+            "en": "fifteen thousand rupiah",
+            "id": "Rp15.000"
+          },
+          {
+            "en": "fifty thousand rupiah",
+            "id": "Rp50.000"
+          },
+          {
+            "en": "twenty thousand",
+            "id": "20rb / 20k"
+          },
+          {
+            "en": "a hundred thousand rupiah",
+            "id": "Rp100.000 (seratus ribu)"
+          },
+          {
+            "en": "How much is it?",
+            "id": "Berapa harganya?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Tom is hungry. Help him with the menu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "relay-from-indonesian",
+          "prompt": "Tom asks: 'How much is the nasi goreng?' The menu says: Nasi goreng Rp30.000. You say: It's…",
+          "options": [
+            "thirty point zero zero zero rupiah.",
+            "thirty thousand rupiah.",
+            "thirty thousands rupiahs."
+          ],
+          "answer": 1,
+          "explanation": "The dot separates the thousands: 30.000 = tiga puluh ribu = **thirty thousand**. 'Point' is only for decimals, and *thousand* and *rupiah* never take -s after a number."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Times and days",
+        "text": "Now times and days. Messages in Indonesia often use the 24-hour clock.",
+        "body": "For 13.00–23.00, take away 12 and add **p.m.**: **19.00 → seven p.m.** (not *nineteen*). Morning times take **a.m.** Careful with **setengah**: it's one hour less. *Setengah tujuh* = 6:30 = **half past six**. Don't say *half seven* (in British English that's 7:30). Days and dates: **hari Senin → on Monday**, **tanggal 5 → the fifth**, and **at** before a time.",
+        "pairs": [
+          {
+            "en": "seven a.m.",
+            "id": "jam 07.00 (pagi)"
+          },
+          {
+            "en": "seven p.m.",
+            "id": "jam 19.00 (malam)"
+          },
+          {
+            "en": "half past six",
+            "id": "jam setengah tujuh (6:30)"
+          },
+          {
+            "en": "on Monday",
+            "id": "hari Senin"
+          },
+          {
+            "en": "the fifth of May",
+            "id": "tanggal 5 Mei"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina sends a message about the train. Tom asks you what it says.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "relay-from-indonesian",
+          "prompt": "Rina writes: 'Kereta ke Bandung jam setengah tiga.' Tom asks: 'What time is the train?'",
+          "options": [
+            "At half past three.",
+            "At two o'clock.",
+            "At half past two."
+          ],
+          "answer": 2,
+          "explanation": "**Setengah tiga** is one hour less than three: 2:30 = **half past two**. *Half past three* is 3:30 (setengah empat), the most common mistake."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Names and phone numbers",
+        "text": "Next: names and phone numbers, for example from a business card.",
+        "body": "**Names don't change**: Budi is Budi. Spell new names: *W-U-L-A-N*. Keep **Pak** and **Bu**, or say **Mr** and **Ms** (Mrs for a married woman). Read phone numbers **one digit at a time**, in small groups; 0 = **oh** or **zero**. *Nomor HP* = **mobile number** (British) or **cell phone number** (American). And choose: *dia* is **he** for a man, **she** for a woman.",
+        "pairs": [
+          {
+            "en": "Mr Hasan",
+            "id": "Pak Hasan"
+          },
+          {
+            "en": "Ms Ani",
+            "id": "Bu Ani"
+          },
+          {
+            "en": "oh / zero",
+            "id": "0 (nol)"
+          },
+          {
+            "en": "double five",
+            "id": "55 (lima lima)"
+          },
+          {
+            "en": "mobile number",
+            "id": "nomor HP"
+          },
+          {
+            "en": "his / her",
+            "id": "-nya (laki-laki / perempuan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and help",
+        "text": "Tom asks you a question. Press play and listen.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "relay-from-indonesian",
+          "prompt": "Pak Hasan's business card says: HP 0812 7730 5146. Listen to Tom, then choose your answer.",
+          "listen": "What's Pak Hasan's mobile number?",
+          "options": [
+            "It's oh-eight-one-two, seven-seven-three-oh, five-one-four-six.",
+            "It's eight hundred and twelve, seven thousand seven hundred and thirty, five thousand one hundred and forty-six.",
+            "It's oh-eight-one-two, seven-three-seven-oh, five-one-four-six."
+          ],
+          "answer": 0,
+          "explanation": "Phone numbers are read **one digit at a time**, in groups: oh-eight-one-two, seven-seven-three-oh… Never as big numbers. The last option swaps two digits (7730 is seven-seven-three-oh)."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Passing on a message",
+        "text": "Often you pass on a whole message. Say who it's from, then says, then the fact.",
+        "body": "**says** = say + s (for he and she), and it sounds like 'sez'. **Saya** in the message becomes **he** or **she**. And add **is/are**: Indonesian has no 'to be' (*Saya terlambat* → *he **is** late*).",
+        "examples": [
+          {
+            "en": "Budi says he is late.",
+            "id": "Kata Budi, dia terlambat. (pesannya: 'Saya terlambat.')"
+          },
+          {
+            "en": "Sari says she is at home.",
+            "id": "Kata Sari, dia di rumah. (pesannya: 'Saya di rumah.')"
+          },
+          {
+            "en": "Pak Hasan says the meeting is at ten a.m.",
+            "id": "Kata Pak Hasan, rapatnya jam 10 pagi."
+          },
+          {
+            "en": "The sign says the shop opens at eight a.m.",
+            "id": "Di papan tertulis tokonya buka jam 8 pagi."
+          },
+          {
+            "en": "Sorry, fifteen or fifty?",
+            "id": "Maaf, lima belas atau lima puluh? (mengecek angka)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Sari is waiting at the station. She sends you a message for Tom.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "pass-on-information",
+          "prompt": "Sari writes: 'Keretanya terlambat.' Arrange the words to tell Tom.",
+          "tokens": [
+            "late",
+            "the",
+            "says",
+            "is",
+            "Sari",
+            "train"
+          ],
+          "solution": "Sari says the train is late.",
+          "explanation": "First who it's from (**Sari**), then **says**, then the fact: **the train is late**. Indonesian *terlambat* needs **is** in English."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "One more message. Who is 'saya' now?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pass-on-information",
+          "prompt": "Pak Joko texts you: 'Saya di lobi.' Your boss asks where he is. Complete: Pak Joko says ___ in the lobby.",
+          "options": [
+            "I am",
+            "he is",
+            "she is"
+          ],
+          "answer": 1,
+          "explanation": "The message is from Pak Joko, a man, so *saya* becomes **he**. And English needs **is**: *he is in the lobby*. *I am* would mean you are in the lobby."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything on one page. Keep it for the next time you're the bridge.",
+        "artifact": {
+          "title": "Cheat sheet · Passing on information",
+          "intro": "Indonesian on the left, what you say in English in the middle.",
+          "headers": [
+            "Indonesian",
+            "English",
+            "Watch out"
+          ],
+          "rows": [
+            [
+              "Rp50.000",
+              "fifty thousand rupiah",
+              "not 'point zero zero zero'"
+            ],
+            [
+              "25rb / 25k",
+              "twenty-five thousand",
+              "no -s on thousand"
+            ],
+            [
+              "Rp100.000",
+              "a hundred thousand rupiah",
+              "a = one (se-)"
+            ],
+            [
+              "jam 07.00",
+              "seven a.m.",
+              "a.m. = morning"
+            ],
+            [
+              "jam 19.00",
+              "seven p.m.",
+              "take away 12; not 'nineteen'"
+            ],
+            [
+              "setengah tujuh",
+              "half past six (6:30)",
+              "one hour less; not 'half seven'"
+            ],
+            [
+              "hari Senin",
+              "on Monday",
+              "capital letter, on + day"
+            ],
+            [
+              "tanggal 5 Mei",
+              "the fifth of May",
+              "ordinal: first, second, third…"
+            ],
+            [
+              "0812 5567",
+              "oh-eight-one-two, five-five-six-seven",
+              "one digit at a time"
+            ],
+            [
+              "Pak Hasan / Bu Ani",
+              "Mr Hasan / Ms Ani",
+              "names stay the same"
+            ],
+            [
+              "nomor HP",
+              "mobile number",
+              "American: cell phone number"
+            ],
+            [
+              "Budi: 'Saya terlambat.'",
+              "Budi says he is late.",
+              "says (+s); saya → he / she; add is"
+            ]
+          ],
+          "tips": [
+            "Don't translate every word: pass on the **key facts** (name, number, time, price).",
+            "**dia** = **he** (man) or **she** (woman): check who wrote the message.",
+            "Not sure about a number? Repeat it back: *Sorry, fifteen or fifty?*"
+          ],
+          "examples": [
+            {
+              "en": "It's fifteen thousand rupiah.",
+              "id": "Harganya Rp15.000."
+            },
+            {
+              "en": "The meeting is on Wednesday at two p.m.",
+              "id": "Rapatnya hari Rabu jam 14.00."
+            },
+            {
+              "en": "Her name is Wulan. W-U-L-A-N.",
+              "id": "Namanya Wulan."
+            },
+            {
+              "en": "Budi says he is late.",
+              "id": "Kata Budi, dia terlambat."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Listen to real messages",
+        "text": "Want more practice? Listen to a short phone message and a phone call to book a table, and catch the names, numbers and times."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu jadi jembatan antara bahasa Indonesia dan bahasa Inggris. Kamu akan menyampaikan harga, jam, nama dan nomor ke orang yang hanya bisa bahasa Inggris. Yuk, pelan-pelan saja.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Harga: titik bukan 'point'",
+        "text": "Bayangkan ada rekan kerja baru, Tom, yang hanya bisa bahasa Inggris. Dia tidak bisa membaca menu dan papan berbahasa Indonesia, jadi kamu membantunya. Kita mulai dari harga.",
+        "body": "Bahasa Indonesia menulis **Rp50.000** dengan titik di antara ribuan; bahasa Inggris menulis **50,000** dengan koma. Dalam bahasa Inggris titik adalah koma desimal (*point*), jadi jangan bilang *fifty point zero zero zero*. Sebutkan berapa **thousand** (ribu), lalu **rupiah**: **fifty thousand rupiah**. Singkatan chat *20rb* atau *20k* = twenty thousand. Tidak ada -s di *thousand* atau *rupiah*.",
+        "pairs": [
+          {
+            "en": "five thousand rupiah",
+            "id": "Rp5.000"
+          },
+          {
+            "en": "fifteen thousand rupiah",
+            "id": "Rp15.000"
+          },
+          {
+            "en": "fifty thousand rupiah",
+            "id": "Rp50.000"
+          },
+          {
+            "en": "twenty thousand",
+            "id": "20rb / 20k"
+          },
+          {
+            "en": "a hundred thousand rupiah",
+            "id": "Rp100.000 (seratus ribu)"
+          },
+          {
+            "en": "How much is it?",
+            "id": "Berapa harganya?"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Tom lapar. Bantu dia membaca menu.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "relay-from-indonesian",
+          "prompt": "Tom bertanya: 'How much is the nasi goreng?' Di menu tertulis: Nasi goreng Rp30.000. Kamu menjawab: It's…",
+          "options": [
+            "thirty point zero zero zero rupiah.",
+            "thirty thousand rupiah.",
+            "thirty thousands rupiahs."
+          ],
+          "answer": 1,
+          "explanation": "Titiknya memisahkan ribuan: 30.000 = tiga puluh ribu = **thirty thousand**. 'Point' hanya untuk desimal, dan *thousand* serta *rupiah* tidak pernah memakai -s setelah angka."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Jam dan hari",
+        "text": "Sekarang jam dan hari. Pesan di Indonesia sering memakai jam 24.",
+        "body": "Untuk 13.00–23.00, kurangi 12 lalu tambahkan **p.m.**: **19.00 → seven p.m.** (bukan *nineteen*). Jam pagi memakai **a.m.** Hati-hati dengan **setengah**: kurangi satu jam. *Setengah tujuh* = 6:30 = **half past six**. Jangan bilang *half seven* (dalam bahasa Inggris British artinya 7:30). Hari dan tanggal: **hari Senin → on Monday**, **tanggal 5 → the fifth**, dan **at** sebelum jam.",
+        "pairs": [
+          {
+            "en": "seven a.m.",
+            "id": "jam 07.00 (pagi)"
+          },
+          {
+            "en": "seven p.m.",
+            "id": "jam 19.00 (malam)"
+          },
+          {
+            "en": "half past six",
+            "id": "jam setengah tujuh (6:30)"
+          },
+          {
+            "en": "on Monday",
+            "id": "hari Senin"
+          },
+          {
+            "en": "the fifth of May",
+            "id": "tanggal 5 Mei"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina mengirim pesan tentang kereta. Tom bertanya apa isinya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "relay-from-indonesian",
+          "prompt": "Rina menulis: 'Kereta ke Bandung jam setengah tiga.' Tom bertanya: 'What time is the train?'",
+          "options": [
+            "At half past three.",
+            "At two o'clock.",
+            "At half past two."
+          ],
+          "answer": 2,
+          "explanation": "**Setengah tiga** itu satu jam kurang dari tiga: 2:30 = **half past two**. *Half past three* adalah 3:30 (setengah empat), kesalahan yang paling sering."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Nama dan nomor telepon",
+        "text": "Berikutnya: nama dan nomor telepon, misalnya dari kartu nama.",
+        "body": "**Nama tidak berubah**: Budi tetap Budi. Eja nama yang baru: *W-U-L-A-N*. Pak dan Bu boleh tetap dipakai, atau bilang **Mr** dan **Ms** (Mrs untuk perempuan yang sudah menikah). Baca nomor telepon **satu angka demi satu angka**, dalam kelompok kecil; 0 = **oh** atau **zero**. *Nomor HP* = **mobile number** (British) atau **cell phone number** (Amerika). Dan pilih: *dia* adalah **he** untuk laki-laki, **she** untuk perempuan.",
+        "pairs": [
+          {
+            "en": "Mr Hasan",
+            "id": "Pak Hasan"
+          },
+          {
+            "en": "Ms Ani",
+            "id": "Bu Ani"
+          },
+          {
+            "en": "oh / zero",
+            "id": "0 (nol)"
+          },
+          {
+            "en": "double five",
+            "id": "55 (lima lima)"
+          },
+          {
+            "en": "mobile number",
+            "id": "nomor HP"
+          },
+          {
+            "en": "his / her",
+            "id": "-nya (laki-laki / perempuan)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan bantu",
+        "text": "Tom bertanya sesuatu. Tekan play dan dengarkan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "relay-from-indonesian",
+          "prompt": "Di kartu nama Pak Hasan tertulis: HP 0812 7730 5146. Dengarkan Tom, lalu pilih jawabanmu.",
+          "listen": "What's Pak Hasan's mobile number?",
+          "options": [
+            "It's oh-eight-one-two, seven-seven-three-oh, five-one-four-six.",
+            "It's eight hundred and twelve, seven thousand seven hundred and thirty, five thousand one hundred and forty-six.",
+            "It's oh-eight-one-two, seven-three-seven-oh, five-one-four-six."
+          ],
+          "answer": 0,
+          "explanation": "Nomor telepon dibaca **satu angka demi satu angka**, per kelompok: oh-eight-one-two, seven-seven-three-oh… Jangan sebagai angka besar. Pilihan terakhir menukar dua angka (7730 adalah seven-seven-three-oh)."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Meneruskan pesan",
+        "text": "Sering kamu meneruskan satu pesan utuh. Sebutkan dari siapa, lalu says, lalu infonya.",
+        "body": "**says** = say + s (untuk he dan she), dibaca seperti 'sez'. **Saya** di pesan itu berubah jadi **he** atau **she**. Dan tambahkan **is/are**: bahasa Indonesia tidak punya 'to be' (*Saya terlambat* → *he **is** late*).",
+        "examples": [
+          {
+            "en": "Budi says he is late.",
+            "id": "Kata Budi, dia terlambat. (pesannya: 'Saya terlambat.')"
+          },
+          {
+            "en": "Sari says she is at home.",
+            "id": "Kata Sari, dia di rumah. (pesannya: 'Saya di rumah.')"
+          },
+          {
+            "en": "Pak Hasan says the meeting is at ten a.m.",
+            "id": "Kata Pak Hasan, rapatnya jam 10 pagi."
+          },
+          {
+            "en": "The sign says the shop opens at eight a.m.",
+            "id": "Di papan tertulis tokonya buka jam 8 pagi."
+          },
+          {
+            "en": "Sorry, fifteen or fifty?",
+            "id": "Maaf, lima belas atau lima puluh? (mengecek angka)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Sari menunggu di stasiun. Dia mengirim pesan untuk Tom.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "pass-on-information",
+          "prompt": "Sari menulis: 'Keretanya terlambat.' Susun kata-katanya untuk memberi tahu Tom.",
+          "tokens": [
+            "late",
+            "the",
+            "says",
+            "is",
+            "Sari",
+            "train"
+          ],
+          "solution": "Sari says the train is late.",
+          "explanation": "Pertama dari siapa (**Sari**), lalu **says**, lalu infonya: **the train is late**. *Terlambat* dalam bahasa Inggris butuh **is**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Satu pesan lagi. Sekarang 'saya' itu siapa?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "pass-on-information",
+          "prompt": "Pak Joko mengirim pesan: 'Saya di lobi.' Atasanmu bertanya dia di mana. Lengkapi: Pak Joko says ___ in the lobby.",
+          "options": [
+            "I am",
+            "he is",
+            "she is"
+          ],
+          "answer": 1,
+          "explanation": "Pesannya dari Pak Joko, seorang laki-laki, jadi *saya* berubah jadi **he**. Dan bahasa Inggris butuh **is**: *he is in the lobby*. *I am* berarti kamu yang ada di lobi."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini semuanya dalam satu halaman. Simpan untuk saat kamu jadi jembatan lagi.",
+        "artifact": {
+          "title": "Contekan · Menyampaikan info",
+          "intro": "Bahasa Indonesia di kiri, yang kamu ucapkan dalam bahasa Inggris di tengah.",
+          "headers": [
+            "Bahasa Indonesia",
+            "English",
+            "Hati-hati"
+          ],
+          "rows": [
+            [
+              "Rp50.000",
+              "fifty thousand rupiah",
+              "bukan 'point zero zero zero'"
+            ],
+            [
+              "25rb / 25k",
+              "twenty-five thousand",
+              "thousand tanpa -s"
+            ],
+            [
+              "Rp100.000",
+              "a hundred thousand rupiah",
+              "a = satu (se-)"
+            ],
+            [
+              "jam 07.00",
+              "seven a.m.",
+              "a.m. = pagi"
+            ],
+            [
+              "jam 19.00",
+              "seven p.m.",
+              "kurangi 12; bukan 'nineteen'"
+            ],
+            [
+              "setengah tujuh",
+              "half past six (6:30)",
+              "kurangi satu jam; bukan 'half seven'"
+            ],
+            [
+              "hari Senin",
+              "on Monday",
+              "huruf besar, on + hari"
+            ],
+            [
+              "tanggal 5 Mei",
+              "the fifth of May",
+              "angka urutan: first, second, third…"
+            ],
+            [
+              "0812 5567",
+              "oh-eight-one-two, five-five-six-seven",
+              "satu angka demi satu angka"
+            ],
+            [
+              "Pak Hasan / Bu Ani",
+              "Mr Hasan / Ms Ani",
+              "nama tidak berubah"
+            ],
+            [
+              "nomor HP",
+              "mobile number",
+              "Amerika: cell phone number"
+            ],
+            [
+              "Budi: 'Saya terlambat.'",
+              "Budi says he is late.",
+              "says (+s); saya → he / she; tambah is"
+            ]
+          ],
+          "tips": [
+            "Jangan terjemahkan setiap kata: sampaikan **info pentingnya** (nama, angka, jam, harga).",
+            "**dia** = **he** (laki-laki) atau **she** (perempuan): cek siapa yang menulis pesannya.",
+            "Ragu dengan angkanya? Ulangi untuk mengecek: *Sorry, fifteen or fifty?*"
+          ],
+          "examples": [
+            {
+              "en": "It's fifteen thousand rupiah.",
+              "id": "Harganya Rp15.000."
+            },
+            {
+              "en": "The meeting is on Wednesday at two p.m.",
+              "id": "Rapatnya hari Rabu jam 14.00."
+            },
+            {
+              "en": "Her name is Wulan. W-U-L-A-N.",
+              "id": "Namanya Wulan."
+            },
+            {
+              "en": "Budi says he is late.",
+              "id": "Kata Budi, dia terlambat."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Dengarkan pesan sungguhan",
+        "text": "Mau latihan lagi? Dengarkan pesan telepon singkat dan telepon untuk memesan meja, lalu tangkap nama, angka dan jamnya."
+      }
+    ]
+  }
+}

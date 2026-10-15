@@ -1,0 +1,672 @@
+{
+  "en": {
+    "greeting": "Hi! Today we make English words easier to understand: one strong beat in each word, clear endings like desk and lunch, and a quick way to check any word in a dictionary. Say everything out loud as we go.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "One strong beat",
+        "text": "Let's start with word stress. Tap each word and listen for the strong part.",
+        "body": "A **syllable** is one beat of a word: *ma-kan* has 2. In English, one syllable is **stressed**: louder, longer and a bit higher. We write it in CAPITALS: **TEA-cher**. Indonesian has no strong stress, so learners often say words flat or stress the end (*tea-CHER*). Rule of thumb: **most two-syllable nouns** (names of people, places, things) are strong at the **start**.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru · TEA-cher"
+          },
+          {
+            "en": "doctor",
+            "id": "dokter · DOC-tor"
+          },
+          {
+            "en": "office",
+            "id": "kantor · OF-fice"
+          },
+          {
+            "en": "water",
+            "id": "air · WA-ter"
+          },
+          {
+            "en": "morning",
+            "id": "pagi · MOR-ning"
+          },
+          {
+            "en": "market",
+            "id": "pasar · MAR-ket"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Rina is talking about her mother's job. Help her.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-stress",
+          "prompt": "Rina says: 'My mother is a tea-CHER.' What should she change?",
+          "options": [
+            "Make the first part strong: TEA-cher",
+            "Make the end long: tea-CHEER",
+            "Add a vowel at the end: tea-cher-e"
+          ],
+          "answer": 0,
+          "explanation": "**teacher** is a two-syllable noun, so the **first** syllable is strong: **TEA-cher**. Stressing the end (*tea-CHER*) is a very common mistake, and a longer end or an extra vowel makes it worse."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Stress that comes later",
+        "text": "Some common words break the rule of thumb. Learn this short list.",
+        "body": "Words we also have in Indonesian are a trap: we say *HO-tel*, *GI-tar*, *JU-li*, but English says **ho-TEL**, **gui-TAR**, **Ju-LY**. Words with a weak **a-**, **be-** or **to-** at the start are strong later: **a-GAIN**, **be-HIND**, **to-DAY**. And numbers: **-teen** is strong at the end (**thir-TEEN**), **-ty** at the start (**THIR-ty**). That's how people hear 13 or 30.",
+        "pairs": [
+          {
+            "en": "hotel",
+            "id": "hotel · ho-TEL"
+          },
+          {
+            "en": "guitar",
+            "id": "gitar · gui-TAR"
+          },
+          {
+            "en": "July",
+            "id": "Juli · Ju-LY"
+          },
+          {
+            "en": "again",
+            "id": "lagi · a-GAIN"
+          },
+          {
+            "en": "today",
+            "id": "hari ini · to-DAY"
+          },
+          {
+            "en": "behind",
+            "id": "di belakang · be-HIND"
+          },
+          {
+            "en": "thirteen",
+            "id": "tiga belas · thir-TEEN"
+          },
+          {
+            "en": "thirty",
+            "id": "tiga puluh · THIR-ty"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Stress in sentences",
+        "text": "Listen to each sentence, then say it yourself. Make the strong syllables strong.",
+        "body": "Strong parts: ho-TEL, MAR-ket, gui-TAR, OF-fice, be-HIND, com-PU-ter, WA-ter, MOR-ning.",
+        "examples": [
+          {
+            "en": "The hotel is near the market.",
+            "id": "Hotelnya dekat pasar."
+          },
+          {
+            "en": "Dimas can play the guitar.",
+            "id": "Dimas bisa main gitar."
+          },
+          {
+            "en": "My office is behind the bank.",
+            "id": "Kantorku di belakang bank."
+          },
+          {
+            "en": "Budi has a new computer.",
+            "id": "Budi punya komputer baru."
+          },
+          {
+            "en": "I drink water every morning.",
+            "id": "Saya minum air setiap pagi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: -teen or -ty?",
+        "text": "Press play. Listen for where the number is strong.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-stress",
+          "listen": "Sari is fourteen.",
+          "prompt": "Listen. How old is Sari?",
+          "options": [
+            "4",
+            "14",
+            "40"
+          ],
+          "answer": 1,
+          "explanation": "You heard **four-TEEN**: strong at the end, so it's **14**. **40** is **FOR-ty**, strong at the start. The stress is often the only way to hear the difference."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Finish the word",
+        "text": "Now the end of the word. Tap each word and listen to the last two sounds.",
+        "body": "Many English words end with **two consonants** (a **consonant** is a 'huruf mati' sound like k, s, t). Indonesian words almost never do, so learners drop one (*des*, *mil*, *tes*) or add a vowel (*deske*). Say both sounds, with no vowel after them. **lunch** ends like the **c** of *cari*: 'LANCH'. **box** ends with **k + s**. Why it matters: *tent* without t is **ten**, *belt* without t is **bell**.",
+        "pairs": [
+          {
+            "en": "desk",
+            "id": "meja kerja · s + k"
+          },
+          {
+            "en": "lunch",
+            "id": "makan siang · n + c"
+          },
+          {
+            "en": "milk",
+            "id": "susu · l + k"
+          },
+          {
+            "en": "test",
+            "id": "ujian · s + t"
+          },
+          {
+            "en": "hand",
+            "id": "tangan · n + d"
+          },
+          {
+            "en": "box",
+            "id": "kotak · k + s"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen to the end",
+        "text": "Press play and listen to the very last sound of the last word.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "final-consonants",
+          "listen": "Is this your card?",
+          "prompt": "Listen. Which word do you hear?",
+          "options": [
+            "car",
+            "card",
+            "cart"
+          ],
+          "answer": 1,
+          "explanation": "You heard **card** (kartu), ending with a clear **d**. Without the d it's **car** (mobil), and with a t it's **cart** (troli). All three make sense here, so only the last sound tells you which one it is."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Build the sentence, then say it out loud. Finish lunch and desk!",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "final-consonants",
+          "prompt": "Arrange the words: Makan siangku ada di atas meja.",
+          "tokens": [
+            "desk",
+            "is",
+            "My",
+            "the",
+            "lunch",
+            "on"
+          ],
+          "solution": "My lunch is on the desk.",
+          "explanation": "Subject first (**My lunch**), then **is**, then the place (**on the desk**). Now say it: finish **lunch** with the 'c' of *cari*, and **desk** with s + k, not 'des'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Check it in a dictionary",
+        "text": "Not sure where the stress is? A dictionary tells you.",
+        "body": "In **Cambridge**, **Oxford** or **Longman** (free online), look at the pronunciation between slashes. You don't need to read every symbol: find the small **high** mark **ˈ**. The syllable **right after it** is stressed: /həʊ**ˈtel**/ = ho-TEL. Dots (.) split the syllables. A **low** mark **ˌ** (as in *fifteen*) is a weaker stress: ignore it for now. Then press the **speaker** button and copy.",
+        "pairs": [
+          {
+            "en": "hotel",
+            "id": "hotel · /həʊˈtel/ → ho-TEL"
+          },
+          {
+            "en": "teacher",
+            "id": "guru · /ˈtiː.tʃər/ → TEA-cher"
+          },
+          {
+            "en": "banana",
+            "id": "pisang · /bəˈnɑː.nə/ → ba-NA-na"
+          },
+          {
+            "en": "fifteen",
+            "id": "lima belas · /ˌfɪfˈtiːn/ → fif-TEEN"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Read the dictionary",
+        "text": "Find the high mark ˈ and ignore the low one.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "dictionary-stress",
+          "prompt": "A dictionary shows: afternoon /ˌɑːf.təˈnuːn/. How do you say it?",
+          "options": [
+            "1st syllable: AF-ter-noon",
+            "2nd syllable: af-TER-noon",
+            "3rd syllable: af-ter-NOON"
+          ],
+          "answer": 2,
+          "explanation": "The **high** mark **ˈ** is right before *nuːn*, so the strong syllable is **NOON**: **af-ter-NOON**. The **low** mark **ˌ** at the start is only a weaker stress, so **AF-ter-noon** is wrong."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Everything from today on one page, to keep.",
+        "artifact": {
+          "title": "Cheat sheet · word stress & final sounds",
+          "intro": "Where to put the strong syllable (in CAPITALS), how to finish words that end with two consonants, and how to read stress in a dictionary.",
+          "headers": [
+            "Pattern",
+            "Examples",
+            "How to say it"
+          ],
+          "rows": [
+            [
+              "Most two-syllable nouns",
+              "teacher, doctor, water",
+              "strong start: TEA-cher"
+            ],
+            [
+              "Words also used in Indonesian",
+              "hotel, guitar, police, July",
+              "strong end: ho-TEL, Ju-LY"
+            ],
+            [
+              "Weak a-, be-, to- at the start",
+              "again, behind, today",
+              "a-GAIN, be-HIND, to-DAY"
+            ],
+            [
+              "-teen and -ty numbers",
+              "fourteen, forty",
+              "four-TEEN, FOR-ty"
+            ],
+            [
+              "Two consonants at the end",
+              "desk, milk, test, hand",
+              "say both, no extra vowel"
+            ],
+            [
+              "lunch, box",
+              "lunch, box",
+              "LANCH (c of cari), boks"
+            ],
+            [
+              "Dictionary: high mark ˈ",
+              "hotel /həʊˈtel/",
+              "the syllable after it is strong"
+            ],
+            [
+              "Dictionary: low mark ˌ",
+              "fifteen /ˌfɪfˈtiːn/",
+              "weaker stress: ignore it for now"
+            ]
+          ],
+          "tips": [
+            "Strong = **louder, longer, higher**. The other syllables are short and quiet.",
+            "Careful with words that look Indonesian: **ho-TEL**, **gui-TAR**, **po-LICE**, **Ju-LY**.",
+            "Finish every word: *desk*, not 'des'. Before a vowel, join it: 'my des-kis'."
+          ],
+          "examples": [
+            {
+              "en": "My sister is a teacher.",
+              "id": "Kakak perempuanku seorang guru."
+            },
+            {
+              "en": "My birthday is in July.",
+              "id": "Ulang tahunku bulan Juli."
+            },
+            {
+              "en": "Dimas has a test today.",
+              "id": "Dimas ada ujian hari ini."
+            },
+            {
+              "en": "We have lunch at twelve.",
+              "id": "Kami makan siang jam dua belas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and practise",
+        "text": "A short video about word stress, and a real dictionary page to practise with."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita membuat kata-kata bahasa Inggrismu lebih mudah dipahami: satu ketukan kuat di setiap kata, akhir kata yang jelas seperti desk dan lunch, dan cara cepat mengecek kata apa pun di kamus. Ucapkan semuanya dengan suara keras sambil kita belajar.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Satu ketukan kuat",
+        "text": "Kita mulai dari tekanan kata. Ketuk setiap kata dan dengarkan bagian yang kuat.",
+        "body": "**Suku kata** = satu ketukan dalam kata: *ma-kan* punya 2. Dalam bahasa Inggris, satu suku kata diberi **tekanan** (stress): lebih keras, lebih panjang dan sedikit lebih tinggi. Kita menulisnya dengan HURUF BESAR: **TEA-cher**. Bahasa Indonesia tidak punya tekanan yang kuat, jadi pelajar sering mengucapkan kata datar saja atau menekan akhirnya (*tea-CHER*). Pegangan praktis: **kebanyakan kata benda dua suku kata** (nama orang, tempat, benda) kuat di **awal**.",
+        "pairs": [
+          {
+            "en": "teacher",
+            "id": "guru · TEA-cher"
+          },
+          {
+            "en": "doctor",
+            "id": "dokter · DOC-tor"
+          },
+          {
+            "en": "office",
+            "id": "kantor · OF-fice"
+          },
+          {
+            "en": "water",
+            "id": "air · WA-ter"
+          },
+          {
+            "en": "morning",
+            "id": "pagi · MOR-ning"
+          },
+          {
+            "en": "market",
+            "id": "pasar · MAR-ket"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Rina sedang bercerita tentang pekerjaan ibunya. Bantu dia.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-stress",
+          "prompt": "Rina bilang: 'My mother is a tea-CHER.' Apa yang harus dia ubah?",
+          "options": [
+            "Make the first part strong: TEA-cher",
+            "Make the end long: tea-CHEER",
+            "Add a vowel at the end: tea-cher-e"
+          ],
+          "answer": 0,
+          "explanation": "**teacher** adalah kata benda dua suku kata, jadi suku kata **pertama** yang kuat: **TEA-cher**. Menekan bagian akhir (*tea-CHER*) adalah kesalahan yang sangat umum, dan memanjangkan akhir atau menambah vokal membuatnya makin salah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tekanan yang di belakang",
+        "text": "Beberapa kata umum tidak mengikuti pegangan tadi. Hafalkan daftar pendek ini.",
+        "body": "Kata yang juga ada di bahasa Indonesia itu jebakan: kita bilang *HO-tel*, *GI-tar*, *JU-li*, tapi bahasa Inggrisnya **ho-TEL**, **gui-TAR**, **Ju-LY**. Kata yang diawali **a-**, **be-** atau **to-** yang lemah kuat di belakang: **a-GAIN**, **be-HIND**, **to-DAY**. Lalu angka: **-teen** kuat di akhir (**thir-TEEN**), **-ty** kuat di awal (**THIR-ty**). Dari situlah orang mendengar 13 atau 30.",
+        "pairs": [
+          {
+            "en": "hotel",
+            "id": "hotel · ho-TEL"
+          },
+          {
+            "en": "guitar",
+            "id": "gitar · gui-TAR"
+          },
+          {
+            "en": "July",
+            "id": "Juli · Ju-LY"
+          },
+          {
+            "en": "again",
+            "id": "lagi · a-GAIN"
+          },
+          {
+            "en": "today",
+            "id": "hari ini · to-DAY"
+          },
+          {
+            "en": "behind",
+            "id": "di belakang · be-HIND"
+          },
+          {
+            "en": "thirteen",
+            "id": "tiga belas · thir-TEEN"
+          },
+          {
+            "en": "thirty",
+            "id": "tiga puluh · THIR-ty"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tekanan dalam kalimat",
+        "text": "Dengarkan setiap kalimat, lalu ucapkan sendiri. Buat suku kata yang kuat benar-benar kuat.",
+        "body": "Bagian yang kuat: ho-TEL, MAR-ket, gui-TAR, OF-fice, be-HIND, com-PU-ter, WA-ter, MOR-ning.",
+        "examples": [
+          {
+            "en": "The hotel is near the market.",
+            "id": "Hotelnya dekat pasar."
+          },
+          {
+            "en": "Dimas can play the guitar.",
+            "id": "Dimas bisa main gitar."
+          },
+          {
+            "en": "My office is behind the bank.",
+            "id": "Kantorku di belakang bank."
+          },
+          {
+            "en": "Budi has a new computer.",
+            "id": "Budi punya komputer baru."
+          },
+          {
+            "en": "I drink water every morning.",
+            "id": "Saya minum air setiap pagi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar: -teen atau -ty?",
+        "text": "Tekan play. Dengarkan di bagian mana angkanya kuat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "word-stress",
+          "listen": "Sari is fourteen.",
+          "prompt": "Dengarkan. Berapa umur Sari?",
+          "options": [
+            "4",
+            "14",
+            "40"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar **four-TEEN**: kuat di akhir, jadi **14**. **40** itu **FOR-ty**, kuat di awal. Sering kali hanya tekanan inilah yang membedakan keduanya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Selesaikan katanya",
+        "text": "Sekarang bagian akhir kata. Ketuk setiap kata dan dengarkan dua bunyi terakhirnya.",
+        "body": "Banyak kata bahasa Inggris berakhir dengan **dua konsonan** (**konsonan** = bunyi huruf mati seperti k, s, t). Kata bahasa Indonesia hampir tidak pernah begitu, jadi pelajar menghilangkan satu (*des*, *mil*, *tes*) atau menambah vokal (*deske*). Ucapkan kedua bunyinya, tanpa vokal sesudahnya. **lunch** berakhir seperti **c** di *cari*: 'LANC'. **box** berakhir **k + s**. Kenapa penting: *tent* (tenda) tanpa t jadi **ten** (sepuluh), *belt* (sabuk) tanpa t jadi **bell** (bel).",
+        "pairs": [
+          {
+            "en": "desk",
+            "id": "meja kerja · s + k"
+          },
+          {
+            "en": "lunch",
+            "id": "makan siang · n + c"
+          },
+          {
+            "en": "milk",
+            "id": "susu · l + k"
+          },
+          {
+            "en": "test",
+            "id": "ujian · s + t"
+          },
+          {
+            "en": "hand",
+            "id": "tangan · n + d"
+          },
+          {
+            "en": "box",
+            "id": "kotak · k + s"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan akhirnya",
+        "text": "Tekan play dan dengarkan bunyi paling akhir dari kata terakhir.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "final-consonants",
+          "listen": "Is this your card?",
+          "prompt": "Dengarkan. Kata mana yang kamu dengar?",
+          "options": [
+            "car",
+            "card",
+            "cart"
+          ],
+          "answer": 1,
+          "explanation": "Kamu mendengar **card** (kartu), diakhiri **d** yang jelas. Tanpa d jadinya **car** (mobil), dan dengan t jadinya **cart** (troli). Ketiganya masuk akal di kalimat ini, jadi hanya bunyi terakhir yang menentukan jawabannya."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Susun kalimatnya, lalu ucapkan dengan keras. Selesaikan lunch dan desk!",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "final-consonants",
+          "prompt": "Susun kata-katanya: Makan siangku ada di atas meja.",
+          "tokens": [
+            "desk",
+            "is",
+            "My",
+            "the",
+            "lunch",
+            "on"
+          ],
+          "solution": "My lunch is on the desk.",
+          "explanation": "Subjek dulu (**My lunch**), lalu **is**, lalu tempatnya (**on the desk**). Sekarang ucapkan: akhiri **lunch** dengan 'c' seperti di *cari*, dan **desk** dengan s + k, bukan 'des'."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Cek di kamus",
+        "text": "Tidak yakin di mana tekanannya? Kamus bisa memberi tahu.",
+        "body": "Di **Cambridge**, **Oxford** atau **Longman** (gratis online), lihat cara baca di antara dua garis miring. Kamu tidak perlu bisa membaca semua simbolnya: cari tanda kecil di **atas** **ˈ**. Suku kata **tepat sesudahnya** yang ditekan: /həʊ**ˈtel**/ = ho-TEL. Titik (.) memisahkan suku kata. Tanda di **bawah** **ˌ** (seperti di *fifteen*) adalah tekanan yang lebih lemah: abaikan dulu. Lalu tekan tombol **speaker** dan tirukan.",
+        "pairs": [
+          {
+            "en": "hotel",
+            "id": "hotel · /həʊˈtel/ → ho-TEL"
+          },
+          {
+            "en": "teacher",
+            "id": "guru · /ˈtiː.tʃər/ → TEA-cher"
+          },
+          {
+            "en": "banana",
+            "id": "pisang · /bəˈnɑː.nə/ → ba-NA-na"
+          },
+          {
+            "en": "fifteen",
+            "id": "lima belas · /ˌfɪfˈtiːn/ → fif-TEEN"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Baca kamusnya",
+        "text": "Cari tanda ˈ yang di atas, abaikan yang di bawah.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "dictionary-stress",
+          "prompt": "Kamus menunjukkan: afternoon /ˌɑːf.təˈnuːn/. Bagaimana cara mengucapkannya?",
+          "options": [
+            "1st syllable: AF-ter-noon",
+            "2nd syllable: af-TER-noon",
+            "3rd syllable: af-ter-NOON"
+          ],
+          "answer": 2,
+          "explanation": "Tanda **atas** **ˈ** ada tepat sebelum *nuːn*, jadi suku kata yang kuat adalah **NOON**: **af-ter-NOON**. Tanda **bawah** **ˌ** di awal hanya tekanan yang lebih lemah, jadi **AF-ter-noon** salah."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Semua materi hari ini dalam satu halaman, untuk disimpan.",
+        "artifact": {
+          "title": "Ringkasan · tekanan kata & bunyi akhir",
+          "intro": "Di mana suku kata yang kuat (ditulis HURUF BESAR), cara menyelesaikan kata yang berakhir dua konsonan, dan cara membaca tekanan di kamus.",
+          "headers": [
+            "Pola",
+            "Contoh",
+            "Cara mengucapkan"
+          ],
+          "rows": [
+            [
+              "Kebanyakan kata benda dua suku kata",
+              "teacher, doctor, water",
+              "kuat di awal: TEA-cher"
+            ],
+            [
+              "Kata yang juga dipakai di bahasa Indonesia",
+              "hotel, guitar, police, July",
+              "kuat di akhir: ho-TEL, Ju-LY"
+            ],
+            [
+              "Diawali a-, be-, to- yang lemah",
+              "again, behind, today",
+              "a-GAIN, be-HIND, to-DAY"
+            ],
+            [
+              "Angka -teen dan -ty",
+              "fourteen, forty",
+              "four-TEEN, FOR-ty"
+            ],
+            [
+              "Dua konsonan di akhir",
+              "desk, milk, test, hand",
+              "ucapkan keduanya, tanpa vokal tambahan"
+            ],
+            [
+              "lunch, box",
+              "lunch, box",
+              "LANC (c seperti di cari), boks"
+            ],
+            [
+              "Kamus: tanda atas ˈ",
+              "hotel /həʊˈtel/",
+              "suku kata sesudahnya yang kuat"
+            ],
+            [
+              "Kamus: tanda bawah ˌ",
+              "fifteen /ˌfɪfˈtiːn/",
+              "tekanan lebih lemah: abaikan dulu"
+            ]
+          ],
+          "tips": [
+            "Kuat = **lebih keras, lebih panjang, lebih tinggi**. Suku kata lainnya pendek dan pelan.",
+            "Hati-hati dengan kata yang mirip bahasa Indonesia: **ho-TEL**, **gui-TAR**, **po-LICE**, **Ju-LY**.",
+            "Selesaikan setiap kata: *desk*, bukan 'des'. Sebelum vokal, sambungkan: 'my des-kis'."
+          ],
+          "examples": [
+            {
+              "en": "My sister is a teacher.",
+              "id": "Kakak perempuanku seorang guru."
+            },
+            {
+              "en": "My birthday is in July.",
+              "id": "Ulang tahunku bulan Juli."
+            },
+            {
+              "en": "Dimas has a test today.",
+              "id": "Dimas ada ujian hari ini."
+            },
+            {
+              "en": "We have lunch at twelve.",
+              "id": "Kami makan siang jam dua belas."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan berlatih",
+        "text": "Video pendek tentang tekanan kata, dan halaman kamus sungguhan untuk berlatih."
+      }
+    ]
+  }
+}

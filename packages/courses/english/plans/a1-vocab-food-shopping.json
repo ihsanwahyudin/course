@@ -1,0 +1,730 @@
+{
+  "en": {
+    "greeting": "Hi! Today we go shopping in English: food, drinks, a bottle of this and a kilo of that, shops and prices. Small groups of words, one step at a time.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Food",
+        "text": "Let's start with food. Here are the words you'll use at the warung and the market.",
+        "body": "**rice** is *nasi* and *beras*: one English word for both.\n\nRemember: **rice, bread, meat, fish** and **fruit** are uncountable (you can't count them one by one), so no *a* and no *-s*: *I eat rice*, not *a rice*. **egg** is countable: *an egg, two eggs*. **vegetables** is usually plural.\n\n**chicken** = the meat (*I eat chicken*); **a chicken** = the animal.",
+        "pairs": [
+          {
+            "en": "rice",
+            "id": "nasi, beras"
+          },
+          {
+            "en": "bread",
+            "id": "roti"
+          },
+          {
+            "en": "egg",
+            "id": "telur"
+          },
+          {
+            "en": "chicken",
+            "id": "ayam"
+          },
+          {
+            "en": "fish",
+            "id": "ikan"
+          },
+          {
+            "en": "meat",
+            "id": "daging"
+          },
+          {
+            "en": "vegetables",
+            "id": "sayur"
+          },
+          {
+            "en": "fruit",
+            "id": "buah"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Drinks",
+        "text": "Now drinks. Two of them are real traps for Indonesian speakers.",
+        "body": "**air putih** is just **water**. *Putih* here means plain, not the colour, so never say *white water*.\n\n**es teh** is **iced tea**: in English the describing word comes **first** (tea with ice = *iced* tea).\n\nDrinks are uncountable: *I drink water*, not *a water*. When you order, *a coffee* = a cup of coffee, and that's fine.",
+        "pairs": [
+          {
+            "en": "water",
+            "id": "air putih"
+          },
+          {
+            "en": "tea",
+            "id": "teh"
+          },
+          {
+            "en": "coffee",
+            "id": "kopi"
+          },
+          {
+            "en": "milk",
+            "id": "susu"
+          },
+          {
+            "en": "orange juice",
+            "id": "jus jeruk"
+          },
+          {
+            "en": "iced tea",
+            "id": "es teh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas is thirsty. Help him order.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "food-drinks",
+          "prompt": "Dimas is at a warung. He wants air putih. What does he say?",
+          "options": [
+            "White water, please.",
+            "Water, please.",
+            "Waters, please."
+          ],
+          "answer": 1,
+          "explanation": "**Air putih** is just **water**: *putih* means plain here, not the colour. And water is uncountable, so no -s: not *waters*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "A bottle of, a kilo of",
+        "text": "To say how much you want, use a container or a weight. Indonesian puts it in front (*se*botol); English needs one more little word: **of**.",
+        "body": "**a bottle of** water = sebotol air. Never skip **of**: not `a bottle water`.\n\nMore than one? Put **-s** on the **container**: **two bottles** of water, **three kilos** of sugar.\n\n**bread** has no -s, so count the **loaf** (one whole bread): `two breads` → **two loaves of bread**. *loaf → loaves* is irregular: just remember it. British **packet** = American **pack**.",
+        "pairs": [
+          {
+            "en": "a bottle of",
+            "id": "sebotol"
+          },
+          {
+            "en": "a glass of",
+            "id": "segelas"
+          },
+          {
+            "en": "a cup of",
+            "id": "secangkir"
+          },
+          {
+            "en": "a can of",
+            "id": "sekaleng"
+          },
+          {
+            "en": "a packet of",
+            "id": "sebungkus"
+          },
+          {
+            "en": "a bag of",
+            "id": "sekantong"
+          },
+          {
+            "en": "a kilo of",
+            "id": "sekilo"
+          },
+          {
+            "en": "a loaf of → loaves",
+            "id": "satu roti tawar utuh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani is shopping for her warung. Choose the right words.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "containers-quantities",
+          "prompt": "Bu Ani buys two ___ cooking oil for her warung.",
+          "options": [
+            "bottle of",
+            "bottles of",
+            "bottles"
+          ],
+          "answer": 1,
+          "explanation": "There are two, so the container takes **-s**: bottles. And English always needs **of** between the container and the food: **two bottles of cooking oil**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Now build a sentence for your shopping list.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "containers-quantities",
+          "prompt": "Arrange the words: Saya butuh sekantong beras.",
+          "tokens": [
+            "rice",
+            "need",
+            "bag",
+            "I",
+            "of",
+            "a"
+          ],
+          "solution": "I need a bag of rice.",
+          "explanation": "Sekantong = **a bag of**, and **of** goes between the container and the food: **a bag of rice**. Rice is uncountable, so we count the bag."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Shops",
+        "text": "Where do you buy all this? Here are the shops.",
+        "body": "A **bakery** makes and sells bread and cakes. At a **pharmacy** you buy **medicine** (obat). Say **at the** + shop: *I buy vegetables at the market.*\n\nBritish vs American: British **shop**, American **store** (*bookshop / bookstore*). British people also call a pharmacy **the chemist's**. *Minimarket* is the Indonesian name: in English it's a **convenience store**.",
+        "pairs": [
+          {
+            "en": "supermarket",
+            "id": "supermarket"
+          },
+          {
+            "en": "market",
+            "id": "pasar"
+          },
+          {
+            "en": "convenience store",
+            "id": "minimarket"
+          },
+          {
+            "en": "bakery",
+            "id": "toko roti"
+          },
+          {
+            "en": "pharmacy",
+            "id": "apotek"
+          },
+          {
+            "en": "bookshop",
+            "id": "toko buku"
+          },
+          {
+            "en": "café",
+            "id": "kafe"
+          },
+          {
+            "en": "restaurant",
+            "id": "restoran"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Sari isn't well today. Where does she go?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shops-prices",
+          "prompt": "Sari is sick. She needs some medicine. She goes to the ___.",
+          "options": [
+            "bakery",
+            "market",
+            "pharmacy"
+          ],
+          "answer": 2,
+          "explanation": "A **pharmacy** (apotek) sells medicine. A bakery sells bread and cakes, and a market sells food like fish and vegetables."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Asking the price",
+        "text": "Now the most useful question when you shop: the price.",
+        "body": "Indonesian *Berapa harganya?* has no *is*, but an English question needs **is** or **are**: not `How much the price?`.\n\nOne thing or uncountable: **How much is** …? → **It's** … More than one: **How much are** …? → **They're** …\n\n**a kilo** = per kilo (sekilo). **cheap** = murah, **expensive** = mahal.",
+        "examples": [
+          {
+            "en": "How much is this bottle of water? — It's 5,000 rupiah.",
+            "id": "Air sebotol ini berapa? — 5.000 rupiah."
+          },
+          {
+            "en": "How much are these eggs? — They're 30,000 rupiah a kilo.",
+            "id": "Telur ini berapa? — 30.000 rupiah sekilo."
+          },
+          {
+            "en": "Wow, 3,000 rupiah? That's cheap!",
+            "id": "Wah, 3.000 rupiah? Murah!"
+          },
+          {
+            "en": "This phone is very expensive.",
+            "id": "HP ini mahal sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "You're at the market and the mangoes look good. Ask the price.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shops-prices",
+          "prompt": "At the market, you point at some mangoes. What do you ask the seller?",
+          "options": [
+            "How much the price?",
+            "How much is they?",
+            "How much are they?"
+          ],
+          "answer": 2,
+          "explanation": "Mangoes are more than one, so use **they** with **are**: **How much are they?** *How much the price?* has no is/are, and *is they* is wrong because *they* always takes *are*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's everything from today on one page. Take it shopping with you.",
+        "artifact": {
+          "title": "Cheat sheet · Food, drinks & shopping",
+          "intro": "Words for food, drinks, containers and shops, and how to ask the price.",
+          "headers": [
+            "Group",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Food",
+              "rice, bread, egg, chicken, fish, meat, vegetables, fruit",
+              "nasi/beras, roti, telur, ayam, ikan, daging, sayur, buah"
+            ],
+            [
+              "Drinks",
+              "water, tea, coffee, milk, orange juice, iced tea",
+              "air putih, teh, kopi, susu, jus jeruk, es teh"
+            ],
+            [
+              "Containers",
+              "a bottle of, a glass of, a cup of, a can of",
+              "sebotol, segelas, secangkir, sekaleng"
+            ],
+            [
+              "Containers",
+              "a packet of, a bag of, a loaf of (bread)",
+              "sebungkus, sekantong, satu roti tawar utuh"
+            ],
+            [
+              "Weights",
+              "a kilo of, half a kilo of",
+              "sekilo, setengah kilo"
+            ],
+            [
+              "More than one",
+              "two bottles of water, two loaves of bread",
+              "dua botol air, dua roti tawar"
+            ],
+            [
+              "Shops",
+              "supermarket, market, convenience store",
+              "supermarket, pasar, minimarket"
+            ],
+            [
+              "Shops",
+              "bakery, pharmacy, bookshop, café, restaurant",
+              "toko roti, apotek, toko buku, kafe, restoran"
+            ],
+            [
+              "Price: one thing",
+              "How much is it? — It's 15,000 rupiah.",
+              "Berapa harganya? — 15.000 rupiah."
+            ],
+            [
+              "Price: more than one",
+              "How much are they? — They're 20,000 rupiah a kilo.",
+              "Berapa harganya? — 20.000 rupiah sekilo."
+            ],
+            [
+              "Price words",
+              "cheap, expensive",
+              "murah, mahal"
+            ]
+          ],
+          "tips": [
+            "Always **of** after the container: a bottle **of** water, not `a bottle water`. More than one: **two bottles** of water.",
+            "Bread has no -s: `two breads` → **two loaves of bread**.",
+            "Prices need is/are: `How much the price?` → **How much is it?**"
+          ],
+          "examples": [
+            {
+              "en": "I need a bottle of oil and a kilo of sugar.",
+              "id": "Saya butuh sebotol minyak dan sekilo gula."
+            },
+            {
+              "en": "Bu Ani buys fish and vegetables at the market.",
+              "id": "Bu Ani membeli ikan dan sayur di pasar."
+            },
+            {
+              "en": "How much is this T-shirt? — It's 75,000 rupiah.",
+              "id": "Kaos ini berapa? — 75.000 rupiah."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Want more practice? These British Council pages have picture exercises for drinks and shopping."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belanja dalam bahasa Inggris: makanan, minuman, sebotol ini dan sekilo itu, toko dan harga. Sedikit demi sedikit, satu langkah setiap kali.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Makanan",
+        "text": "Kita mulai dari makanan. Ini kata-kata yang akan kamu pakai di warung dan di pasar.",
+        "body": "**rice** artinya *nasi* dan juga *beras*: satu kata bahasa Inggris untuk keduanya.\n\nIngat: **rice, bread, meat, fish** dan **fruit** tidak bisa dihitung satu per satu (uncountable), jadi tanpa *a* dan tanpa *-s*: *I eat rice*, bukan *a rice*. **egg** bisa dihitung: *an egg, two eggs*. **vegetables** biasanya jamak.\n\n**chicken** = dagingnya (*I eat chicken*); **a chicken** = hewannya (seekor ayam).",
+        "pairs": [
+          {
+            "en": "rice",
+            "id": "nasi, beras"
+          },
+          {
+            "en": "bread",
+            "id": "roti"
+          },
+          {
+            "en": "egg",
+            "id": "telur"
+          },
+          {
+            "en": "chicken",
+            "id": "ayam"
+          },
+          {
+            "en": "fish",
+            "id": "ikan"
+          },
+          {
+            "en": "meat",
+            "id": "daging"
+          },
+          {
+            "en": "vegetables",
+            "id": "sayur"
+          },
+          {
+            "en": "fruit",
+            "id": "buah"
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Minuman",
+        "text": "Sekarang minuman. Dua di antaranya jebakan untuk penutur bahasa Indonesia.",
+        "body": "**air putih** cukup **water**. *Putih* di sini artinya tawar/biasa, bukan warna, jadi jangan bilang *white water*.\n\n**es teh** adalah **iced tea**: dalam bahasa Inggris kata penjelasnya ada di **depan** (teh dengan es = *iced* tea).\n\nMinuman tidak bisa dihitung: *I drink water*, bukan *a water*. Saat memesan, *a coffee* = secangkir kopi, dan itu benar.",
+        "pairs": [
+          {
+            "en": "water",
+            "id": "air putih"
+          },
+          {
+            "en": "tea",
+            "id": "teh"
+          },
+          {
+            "en": "coffee",
+            "id": "kopi"
+          },
+          {
+            "en": "milk",
+            "id": "susu"
+          },
+          {
+            "en": "orange juice",
+            "id": "jus jeruk"
+          },
+          {
+            "en": "iced tea",
+            "id": "es teh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas haus. Bantu dia memesan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "food-drinks",
+          "prompt": "Dimas sedang di warung. Dia mau air putih. Apa yang dia katakan?",
+          "options": [
+            "White water, please.",
+            "Water, please.",
+            "Waters, please."
+          ],
+          "answer": 1,
+          "explanation": "**Air putih** cukup **water**: *putih* di sini artinya tawar, bukan warna. Dan water tidak bisa dihitung, jadi tanpa -s: bukan *waters*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Sebotol, sekilo",
+        "text": "Untuk mengatakan berapa banyak yang kamu mau, pakai wadah atau berat. Bahasa Indonesia menaruhnya di depan (*se*botol); bahasa Inggris butuh satu kata kecil lagi: **of**.",
+        "body": "**a bottle of** water = sebotol air. Jangan lupa **of**: bukan `a bottle water`.\n\nLebih dari satu? Taruh **-s** pada **wadahnya**: **two bottles** of water, **three kilos** of sugar.\n\n**bread** tidak pakai -s, jadi yang dihitung **loaf**-nya (satu roti utuh): `two breads` → **two loaves of bread**. *loaf → loaves* tidak beraturan: hafalkan saja. **packet** (Inggris Britania) = **pack** (Amerika).",
+        "pairs": [
+          {
+            "en": "a bottle of",
+            "id": "sebotol"
+          },
+          {
+            "en": "a glass of",
+            "id": "segelas"
+          },
+          {
+            "en": "a cup of",
+            "id": "secangkir"
+          },
+          {
+            "en": "a can of",
+            "id": "sekaleng"
+          },
+          {
+            "en": "a packet of",
+            "id": "sebungkus"
+          },
+          {
+            "en": "a bag of",
+            "id": "sekantong"
+          },
+          {
+            "en": "a kilo of",
+            "id": "sekilo"
+          },
+          {
+            "en": "a loaf of → loaves",
+            "id": "satu roti tawar utuh"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani sedang belanja untuk warungnya. Pilih kata yang tepat.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "containers-quantities",
+          "prompt": "Lengkapi: Bu Ani buys two ___ cooking oil for her warung.",
+          "options": [
+            "bottle of",
+            "bottles of",
+            "bottles"
+          ],
+          "answer": 1,
+          "explanation": "Jumlahnya dua, jadi wadahnya pakai **-s**: bottles. Dan bahasa Inggris selalu butuh **of** di antara wadah dan makanannya: **two bottles of cooking oil**."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimat",
+        "text": "Sekarang susun kalimat untuk daftar belanjamu.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "containers-quantities",
+          "prompt": "Susun kata-katanya: Saya butuh sekantong beras.",
+          "tokens": [
+            "rice",
+            "need",
+            "bag",
+            "I",
+            "of",
+            "a"
+          ],
+          "solution": "I need a bag of rice.",
+          "explanation": "Sekantong = **a bag of**, dan **of** ada di antara wadah dan makanannya: **a bag of rice**. Rice tidak bisa dihitung, jadi yang dihitung kantongnya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Toko",
+        "text": "Di mana kamu membeli semua ini? Ini nama-nama tokonya.",
+        "body": "**bakery** membuat dan menjual roti dan kue. Di **pharmacy** kamu membeli **medicine** (obat). Katakan **at the** + toko: *I buy vegetables at the market.*\n\nInggris Britania vs Amerika: Britania **shop**, Amerika **store** (*bookshop / bookstore*). Orang Inggris juga menyebut apotek **the chemist's**. *Minimarket* adalah sebutan di Indonesia: dalam bahasa Inggris namanya **convenience store**.",
+        "pairs": [
+          {
+            "en": "supermarket",
+            "id": "supermarket"
+          },
+          {
+            "en": "market",
+            "id": "pasar"
+          },
+          {
+            "en": "convenience store",
+            "id": "minimarket"
+          },
+          {
+            "en": "bakery",
+            "id": "toko roti"
+          },
+          {
+            "en": "pharmacy",
+            "id": "apotek"
+          },
+          {
+            "en": "bookshop",
+            "id": "toko buku"
+          },
+          {
+            "en": "café",
+            "id": "kafe"
+          },
+          {
+            "en": "restaurant",
+            "id": "restoran"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Sari sedang tidak enak badan. Dia pergi ke mana?",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shops-prices",
+          "prompt": "Lengkapi: Sari is sick. She needs some medicine. She goes to the ___.",
+          "options": [
+            "bakery",
+            "market",
+            "pharmacy"
+          ],
+          "answer": 2,
+          "explanation": "**Pharmacy** (apotek) menjual obat. Bakery menjual roti dan kue, dan market (pasar) menjual makanan seperti ikan dan sayur."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Menanyakan harga",
+        "text": "Sekarang pertanyaan paling berguna saat belanja: harganya.",
+        "body": "*Berapa harganya?* tidak punya kata *is*, tapi pertanyaan bahasa Inggris butuh **is** atau **are**: bukan `How much the price?`.\n\nSatu barang atau yang tidak bisa dihitung: **How much is** …? → **It's** … Lebih dari satu: **How much are** …? → **They're** …\n\n**a kilo** = per kilo (sekilo). **cheap** = murah, **expensive** = mahal.",
+        "examples": [
+          {
+            "en": "How much is this bottle of water? — It's 5,000 rupiah.",
+            "id": "Air sebotol ini berapa? — 5.000 rupiah."
+          },
+          {
+            "en": "How much are these eggs? — They're 30,000 rupiah a kilo.",
+            "id": "Telur ini berapa? — 30.000 rupiah sekilo."
+          },
+          {
+            "en": "Wow, 3,000 rupiah? That's cheap!",
+            "id": "Wah, 3.000 rupiah? Murah!"
+          },
+          {
+            "en": "This phone is very expensive.",
+            "id": "HP ini mahal sekali."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Kamu di pasar dan mangganya kelihatan bagus. Tanyakan harganya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "shops-prices",
+          "prompt": "Di pasar, kamu menunjuk beberapa mangga. Apa yang kamu tanyakan ke penjualnya?",
+          "options": [
+            "How much the price?",
+            "How much is they?",
+            "How much are they?"
+          ],
+          "answer": 2,
+          "explanation": "Mangganya lebih dari satu, jadi pakai **they** dengan **are**: **How much are they?** *How much the price?* tidak punya is/are, dan *is they* salah karena *they* selalu memakai *are*."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini semuanya dalam satu halaman. Bawa saat kamu belanja, ya.",
+        "artifact": {
+          "title": "Ringkasan · Makanan, minuman & belanja",
+          "intro": "Kosakata makanan, minuman, wadah dan toko, plus cara menanyakan harga.",
+          "headers": [
+            "Kelompok",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Makanan",
+              "rice, bread, egg, chicken, fish, meat, vegetables, fruit",
+              "nasi/beras, roti, telur, ayam, ikan, daging, sayur, buah"
+            ],
+            [
+              "Minuman",
+              "water, tea, coffee, milk, orange juice, iced tea",
+              "air putih, teh, kopi, susu, jus jeruk, es teh"
+            ],
+            [
+              "Wadah",
+              "a bottle of, a glass of, a cup of, a can of",
+              "sebotol, segelas, secangkir, sekaleng"
+            ],
+            [
+              "Wadah",
+              "a packet of, a bag of, a loaf of (bread)",
+              "sebungkus, sekantong, satu roti tawar utuh"
+            ],
+            [
+              "Berat",
+              "a kilo of, half a kilo of",
+              "sekilo, setengah kilo"
+            ],
+            [
+              "Lebih dari satu",
+              "two bottles of water, two loaves of bread",
+              "dua botol air, dua roti tawar"
+            ],
+            [
+              "Toko",
+              "supermarket, market, convenience store",
+              "supermarket, pasar, minimarket"
+            ],
+            [
+              "Toko",
+              "bakery, pharmacy, bookshop, café, restaurant",
+              "toko roti, apotek, toko buku, kafe, restoran"
+            ],
+            [
+              "Harga: satu barang",
+              "How much is it? — It's 15,000 rupiah.",
+              "Berapa harganya? — 15.000 rupiah."
+            ],
+            [
+              "Harga: lebih dari satu",
+              "How much are they? — They're 20,000 rupiah a kilo.",
+              "Berapa harganya? — 20.000 rupiah sekilo."
+            ],
+            [
+              "Kata harga",
+              "cheap, expensive",
+              "murah, mahal"
+            ]
+          ],
+          "tips": [
+            "Selalu pakai **of** setelah wadah: a bottle **of** water, bukan `a bottle water`. Lebih dari satu: **two bottles** of water.",
+            "Bread tidak pakai -s: `two breads` → **two loaves of bread**.",
+            "Harga butuh is/are: `How much the price?` → **How much is it?**"
+          ],
+          "examples": [
+            {
+              "en": "I need a bottle of oil and a kilo of sugar.",
+              "id": "Saya butuh sebotol minyak dan sekilo gula."
+            },
+            {
+              "en": "Bu Ani buys fish and vegetables at the market.",
+              "id": "Bu Ani membeli ikan dan sayur di pasar."
+            },
+            {
+              "en": "How much is this T-shirt? — It's 75,000 rupiah.",
+              "id": "Kaos ini berapa? — 75.000 rupiah."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Belajar lebih lanjut",
+        "text": "Mau latihan lagi? Halaman British Council ini punya latihan bergambar tentang minuman dan belanja."
+      }
+    ]
+  }
+}

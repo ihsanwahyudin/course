@@ -19,6 +19,9 @@ const (
 	MaxCheckItems      = 8
 	MinLevelCheckItems = 10
 	MaxLevelCheckItems = 15
+	// A level checkpoint's questions come from at least two thirds of the
+	// level's lessons, or from this many when the level is bigger.
+	MaxLevelSpread = 10
 	maxAccepted        = 20
 )
 
@@ -108,7 +111,7 @@ func ValidateCheckpoint(items []CheckItem, objectives map[string]bool, earlier [
 
 // ValidateLevelCheckpoint checks a level checkpoint: 10–15 questions, each
 // from one of the level's lessons and counted towards that lesson's
-// objective, spread over at least two thirds of the lessons.
+// objective, spread over at least LevelSpread of the lessons.
 // lessons maps each lesson id to its checkpoint objective.
 func ValidateLevelCheckpoint(items []CheckItem, lessons map[string]string, earlier []string) ([]CheckItem, error) {
 	objectives := map[string]bool{}
@@ -126,10 +129,15 @@ func ValidateLevelCheckpoint(items []CheckItem, lessons map[string]string, earli
 		}
 		used[it.LessonID] = true
 	}
-	if need := (2*len(lessons) + 2) / 3; len(used) < need {
+	if need := LevelSpread(len(lessons)); len(used) < need {
 		return nil, fmt.Errorf("questions come from %d lessons; spread them over at least %d", len(used), need)
 	}
 	return validateItems(items, objectives, earlier, MinLevelCheckItems, MaxLevelCheckItems)
+}
+
+// LevelSpread is how many different lessons a level checkpoint must draw on.
+func LevelSpread(lessons int) int {
+	return min((2*lessons+2)/3, MaxLevelSpread)
 }
 
 func validateItems(items []CheckItem, objectives map[string]bool, earlier []string, min, max int) ([]CheckItem, error) {
