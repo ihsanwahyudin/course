@@ -1,0 +1,806 @@
+{
+  "en": {
+    "greeting": "Hi! Today you write the documents that get things done at work: proposals and reports. You'll structure a proposal, write an executive summary a busy director will actually read, and cut the filler from business English.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Six headings of a proposal",
+        "text": "Quick recap: in B2 you wrote a short report (Introduction, Findings, Recommendations), and in the last lesson you built noun phrases. Now the proposal, which asks a reader to approve and pay for future work.",
+        "body": "A **proposal** asks a manager, ministry or donor to **approve and pay for future work**; a **report** says what happened or was found. Use short **headings**:\n- **Background**: the problem now, with facts\n- **Objectives**: specific and measurable (who, how many, by when)\n- **Plan**: what you will do and how\n- **Budget**: costs item by item, with a total\n- **Timeline**: when (phases, dates)\n- **Expected results**: what will change, and how you'll measure it\n\nNo *Puji syukur …* opening, no history lesson, no *Demikian proposal ini …* ending: start with the problem, end with the next step.",
+        "pairs": [
+          {
+            "en": "proposal",
+            "id": "proposal / usulan kegiatan atau dana"
+          },
+          {
+            "en": "report",
+            "id": "laporan"
+          },
+          {
+            "en": "Background",
+            "id": "latar belakang"
+          },
+          {
+            "en": "Objectives",
+            "id": "tujuan (spesifik, terukur)"
+          },
+          {
+            "en": "Plan",
+            "id": "rencana kegiatan"
+          },
+          {
+            "en": "Budget",
+            "id": "anggaran"
+          },
+          {
+            "en": "Timeline",
+            "id": "jadwal"
+          },
+          {
+            "en": "Expected results",
+            "id": "hasil yang diharapkan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Bu Ani's proposal",
+        "text": "Bu Ani runs an NGO in Bandung. She's asking a ministry to fund a digital literacy programme for small businesses. Here's one line from each section.",
+        "body": "Look at the money: English uses **commas for thousands** and **a point for decimals**, the opposite of Indonesian. *miliar* = **billion**, *juta* = **million**.",
+        "examples": [
+          {
+            "en": "Background: Only 2 in 10 small food businesses in Bandung accept digital payments.",
+            "id": "Latar belakang: Hanya 2 dari 10 usaha makanan kecil di Bandung yang menerima pembayaran digital."
+          },
+          {
+            "en": "Objectives: To train 2,000 small business owners in Bandung to accept QRIS payments safely by June 2027.",
+            "id": "Tujuan: Melatih 2.000 pemilik usaha kecil di Bandung agar bisa menerima pembayaran QRIS dengan aman paling lambat Juni 2027."
+          },
+          {
+            "en": "Plan: We will run 40 free workshops in community halls in all 30 districts of the city.",
+            "id": "Rencana: Kami akan mengadakan 40 workshop gratis di balai warga di ke-30 kecamatan di kota ini."
+          },
+          {
+            "en": "Budget: Total cost: Rp1,200,000,000 (Rp1.2 billion).",
+            "id": "Anggaran: Total biaya: Rp1.200.000.000 (Rp1,2 miliar)."
+          },
+          {
+            "en": "Timeline: Phase 1, workshops in the north and east of the city (January–March 2027).",
+            "id": "Jadwal: Tahap 1, workshop di wilayah utara dan timur kota (Januari–Maret 2027)."
+          },
+          {
+            "en": "Expected results: At least 1,500 participants will accept digital payments six months after their workshop.",
+            "id": "Hasil yang diharapkan: Minimal 1.500 peserta akan menerima pembayaran digital enam bulan setelah mengikuti workshop."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Which heading?",
+        "text": "Bu Ani's colleague wrote this sentence but didn't say where it goes.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "proposal-structure",
+          "options": [
+            "Objectives",
+            "Background",
+            "Expected results"
+          ],
+          "answer": 1,
+          "prompt": "Under which heading of the proposal does this sentence go? 'Many small traders in Bandung still accept only cash, because they do not trust digital payments.'",
+          "explanation": "It describes the **problem now**, so it goes under **Background**. Objectives say what the project will achieve (*To train … by …*), and Expected results say what will change after it."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "The executive summary",
+        "text": "Budi works for an e-commerce company in Surabaya. His 30-page report on late deliveries goes to the director, who will read only the first page.",
+        "body": "An **executive summary** = the whole document on one page. It's **written last** (when you know the findings) and **read first**, often alone.\n\nIt answers, in this order:\n1. **Purpose**: what is this about, or asking for?\n2. **Key findings**: 2–3 facts with numbers\n3. **Recommendations**\n4. **The decision needed**: what, by when, how much\n\n**BLUF** (bottom line up front): the main point in the first sentence. Indonesian trap: a warm-up (*Puji syukur …, Laporan ini disusun dalam rangka …*) or history first, and the director stops reading before the point.",
+        "pairs": [
+          {
+            "en": "executive summary",
+            "id": "ringkasan eksekutif"
+          },
+          {
+            "en": "purpose",
+            "id": "tujuan dokumen"
+          },
+          {
+            "en": "key findings",
+            "id": "temuan utama"
+          },
+          {
+            "en": "recommendations",
+            "id": "rekomendasi"
+          },
+          {
+            "en": "the decision needed",
+            "id": "keputusan yang diminta"
+          },
+          {
+            "en": "BLUF (bottom line up front)",
+            "id": "intinya di depan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The best first sentence",
+        "text": "Budi has three drafts for the first sentence of his executive summary.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "executive-summary",
+          "options": [
+            "Since the company was founded in Surabaya in 2015, fast delivery has always been one of our most important values.",
+            "With gratitude, our team is honoured to present this report, the result of three months of hard work.",
+            "This report recommends three changes to cut late deliveries in Surabaya by half, at a cost of Rp450 million a year."
+          ],
+          "answer": 2,
+          "prompt": "Which is the best first sentence of the executive summary for the director?",
+          "explanation": "**BLUF**: this first sentence gives the main point, the result and the cost, so the director knows at once what is being asked. The first option starts with history and the second is a polite warm-up: both delay the point."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Recommendations people can act on",
+        "text": "After the findings come the recommendations: the part that leads to action.",
+        "body": "Make each one **clear** (one action), **actionable** (who does what, by when), **prioritised** (numbered, most important first) and **linked to a finding** (*Based on Finding 2, …*).\n\n*Delivery should be improved.* ✗ (who? how?)\n*The operations team should add an evening sorting shift from 1 December.* ✓\n\nPatterns: **We recommend + -ing**, **We recommend that + we / a plural subject + verb**, **should + verb**, and in a numbered list the plain verb (*1. Add …*).\n\nIndonesian trap: *merekomendasikan untuk menambah* → *recommend to add* ✗ → **recommend adding**.",
+        "pairs": [
+          {
+            "en": "We recommend + -ing …",
+            "id": "Kami merekomendasikan …"
+          },
+          {
+            "en": "We recommend that staff + verb …",
+            "id": "Kami merekomendasikan agar staf …"
+          },
+          {
+            "en": "The team should + verb …",
+            "id": "Tim sebaiknya …"
+          },
+          {
+            "en": "Based on Finding 2, …",
+            "id": "Berdasarkan Temuan 2, …"
+          },
+          {
+            "en": "recommend adding (not 'recommend to add')",
+            "id": "merekomendasikan untuk menambah"
+          },
+          {
+            "en": "actionable",
+            "id": "bisa langsung dijalankan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the recommendation",
+        "text": "Finding 2 says the drivers on the East Surabaya routes have too many parcels. Budi writes his recommendation.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "executive-summary",
+          "tokens": [
+            "drivers",
+            "recommend",
+            "delivery",
+            "four",
+            "We",
+            "hiring",
+            "more"
+          ],
+          "solution": "We recommend hiring four more delivery drivers.",
+          "prompt": "Arrange the words: Kami merekomendasikan merekrut empat sopir pengiriman lagi.",
+          "explanation": "After **recommend** use the **-ing** form: *recommend hiring*, not *recommend to hire* (a word-for-word *merekomendasikan untuk*). It names the action and the number, so the director can act on it."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Cut the filler",
+        "text": "Last part: business readers are busy, so say it in fewer words.",
+        "body": "**Filler** adds words, not meaning: cut it (see the tiles). Also:\n- Use the **active** when it matters who acts: *A decision was made* → *The director decided*\n- **One idea per sentence** (about 15–25 words)\n- **Front-load** the point\n\nDon't overdo nominalisation: nouns are fine in titles (*a 20% fall in delays*), but *make a decision regarding* hides the verb: **decide on**.\n\nThe classic: *In order to be able to make a decision regarding the matter of the budget, …* → ***To decide on the budget, …***\n\nThese phrases aren't wrong, just long. And concise doesn't mean rude or telegraphic.",
+        "pairs": [
+          {
+            "en": "in order to → to",
+            "id": "untuk / agar"
+          },
+          {
+            "en": "due to the fact that → because",
+            "id": "karena"
+          },
+          {
+            "en": "at this point in time → now",
+            "id": "saat ini / sekarang"
+          },
+          {
+            "en": "make a decision regarding → decide on",
+            "id": "memutuskan (tentang)"
+          },
+          {
+            "en": "a large number of → many",
+            "id": "banyak"
+          },
+          {
+            "en": "it should be noted that → (delete)",
+            "id": "perlu dicatat bahwa → (hapus)"
+          },
+          {
+            "en": "with regard to → about",
+            "id": "terkait / mengenai"
+          },
+          {
+            "en": "prior to → before",
+            "id": "sebelum"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "The most concise rewrite",
+        "text": "Budi's colleague wrote a sentence for the report. Budi wants it shorter.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concise-business-writing",
+          "options": [
+            "To reduce late deliveries, management has decided to hire many new drivers.",
+            "In order to make a reduction in late deliveries, the management has made the decision to hire many new drivers.",
+            "Late deliveries. Management decision: hire drivers."
+          ],
+          "answer": 0,
+          "prompt": "Which is the best concise version of this sentence? 'In order to reduce the number of late deliveries, a decision has been made by the management to hire a large number of new drivers.'",
+          "explanation": "**in order to → to**, **a decision has been made by the management → management has decided** (active and shorter), **a large number of → many**. The second option is still wordy (*make a reduction, made the decision*); the third is so short that it isn't a sentence any more."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Key phrases",
+        "text": "Flip the cards and say the English before you look.",
+        "flashcards": [
+          {
+            "front": "Latar belakang / Tujuan / Rencana / Anggaran / Jadwal / Hasil yang diharapkan",
+            "back": "Background / Objectives / Plan / Budget / Timeline / Expected results"
+          },
+          {
+            "front": "Executive summary: ditulis kapan, dibaca kapan?",
+            "back": "Written last, read first (one page or less)"
+          },
+          {
+            "front": "BLUF",
+            "back": "Bottom line up front: the main point in the first sentence"
+          },
+          {
+            "front": "Kami merekomendasikan untuk menambah shift malam.",
+            "back": "We recommend adding an evening shift. (not 'recommend to add')"
+          },
+          {
+            "front": "in order to / due to the fact that",
+            "back": "to / because"
+          },
+          {
+            "front": "at this point in time / a large number of",
+            "back": "now / many"
+          },
+          {
+            "front": "make a decision regarding",
+            "back": "decide on"
+          },
+          {
+            "front": "Rp1,2 miliar (Rp1.200.000.000)",
+            "back": "Rp1.2 billion (Rp1,200,000,000)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page.",
+        "artifact": {
+          "title": "Cheat sheet · proposals, reports & concise writing",
+          "intro": "A proposal under six headings, an executive summary with the point first, recommendations people can act on, and no filler.",
+          "headers": [
+            "Part / phrase",
+            "What it does / say instead",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Background",
+              "the problem now, with facts and numbers",
+              "latar belakang"
+            ],
+            [
+              "Objectives",
+              "specific, measurable: To + verb … by + date",
+              "tujuan"
+            ],
+            [
+              "Plan",
+              "what you will do and how",
+              "rencana kegiatan"
+            ],
+            [
+              "Budget",
+              "costs item by item + total (Rp1,200,000,000)",
+              "anggaran"
+            ],
+            [
+              "Timeline",
+              "when: phases, months, deadlines",
+              "jadwal"
+            ],
+            [
+              "Expected results",
+              "what will change, how you'll measure it",
+              "hasil yang diharapkan"
+            ],
+            [
+              "Executive summary",
+              "written last, read first: purpose, key findings, recommendations, decision needed",
+              "ringkasan eksekutif"
+            ],
+            [
+              "We recommend + -ing",
+              "We recommend adding … (not 'recommend to add')",
+              "Kami merekomendasikan …"
+            ],
+            [
+              "in order to",
+              "to",
+              "untuk / agar"
+            ],
+            [
+              "due to the fact that",
+              "because",
+              "karena"
+            ],
+            [
+              "at this point in time",
+              "now",
+              "sekarang"
+            ],
+            [
+              "make a decision regarding",
+              "decide on",
+              "memutuskan"
+            ],
+            [
+              "a large number of",
+              "many",
+              "banyak"
+            ],
+            [
+              "It should be noted that …",
+              "delete it: just give the fact",
+              "perlu dicatat bahwa …"
+            ]
+          ],
+          "tips": [
+            "BLUF: put the main point in the first sentence of the summary, of an email and of each paragraph.",
+            "Use the active when it matters who acts (The director decided …), the passive when the doer is unknown or unimportant.",
+            "Don't start with 'Puji syukur' or history, and don't end with 'Demikian proposal ini …': start with the problem, end with the next step."
+          ],
+          "examples": [
+            {
+              "en": "This proposal requests Rp1.2 billion to train 2,000 small business owners in Bandung by June 2027.",
+              "id": "Proposal ini mengajukan Rp1,2 miliar untuk melatih 2.000 pemilik usaha kecil di Bandung paling lambat Juni 2027."
+            },
+            {
+              "en": "Based on Finding 1, we recommend adding an evening sorting shift.",
+              "id": "Berdasarkan Temuan 1, kami merekomendasikan penambahan shift sortir malam."
+            },
+            {
+              "en": "To decide on the budget, we need the final figures by Friday.",
+              "id": "Untuk memutuskan anggaran, kami membutuhkan angka finalnya paling lambat hari Jumat."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Learn more",
+        "text": "Two C1 model texts from the British Council: a proposal with subheadings and a report whose recommendations follow from its findings."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu menulis dokumen yang membuat sesuatu terjadi di tempat kerja: proposal dan laporan. Kamu akan menyusun proposal, menulis executive summary yang benar-benar dibaca direktur yang sibuk, dan membuang kata pengisi dari bahasa Inggris bisnis.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Enam judul bagian proposal",
+        "text": "Ulasan singkat: di B2 kamu sudah menulis laporan singkat (Introduction, Findings, Recommendations), dan di pelajaran sebelumnya kamu menyusun frasa kata benda. Sekarang proposal, yang meminta pembaca menyetujui dan membiayai pekerjaan di masa depan.",
+        "body": "**Proposal** meminta manajer, kementerian atau donor **menyetujui dan membiayai pekerjaan ke depan**; **laporan** (report) menceritakan apa yang terjadi atau ditemukan. Pakai **judul bagian** (heading) yang pendek:\n- **Background**: masalah saat ini, dengan fakta\n- **Objectives**: spesifik dan terukur (siapa, berapa, paling lambat kapan)\n- **Plan**: apa yang akan dilakukan dan bagaimana\n- **Budget**: biaya per item, dengan total\n- **Timeline**: kapan (tahap, tanggal)\n- **Expected results**: apa yang berubah, cara mengukurnya\n\nTanpa *Puji syukur …*, tanpa sejarah, tanpa *Demikian proposal ini …*: mulai dengan masalah, akhiri dengan langkah berikutnya.",
+        "pairs": [
+          {
+            "en": "proposal",
+            "id": "proposal / usulan kegiatan atau dana"
+          },
+          {
+            "en": "report",
+            "id": "laporan"
+          },
+          {
+            "en": "Background",
+            "id": "latar belakang"
+          },
+          {
+            "en": "Objectives",
+            "id": "tujuan (spesifik, terukur)"
+          },
+          {
+            "en": "Plan",
+            "id": "rencana kegiatan"
+          },
+          {
+            "en": "Budget",
+            "id": "anggaran"
+          },
+          {
+            "en": "Timeline",
+            "id": "jadwal"
+          },
+          {
+            "en": "Expected results",
+            "id": "hasil yang diharapkan"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Proposal Bu Ani",
+        "text": "Bu Ani mengelola sebuah LSM di Bandung. Dia meminta kementerian mendanai program literasi digital untuk usaha kecil. Ini satu kalimat dari setiap bagian.",
+        "body": "Perhatikan uangnya: bahasa Inggris memakai **koma untuk ribuan** dan **titik untuk desimal**, kebalikan dari bahasa Indonesia. *miliar* = **billion**, *juta* = **million**.",
+        "examples": [
+          {
+            "en": "Background: Only 2 in 10 small food businesses in Bandung accept digital payments.",
+            "id": "Latar belakang: Hanya 2 dari 10 usaha makanan kecil di Bandung yang menerima pembayaran digital."
+          },
+          {
+            "en": "Objectives: To train 2,000 small business owners in Bandung to accept QRIS payments safely by June 2027.",
+            "id": "Tujuan: Melatih 2.000 pemilik usaha kecil di Bandung agar bisa menerima pembayaran QRIS dengan aman paling lambat Juni 2027."
+          },
+          {
+            "en": "Plan: We will run 40 free workshops in community halls in all 30 districts of the city.",
+            "id": "Rencana: Kami akan mengadakan 40 workshop gratis di balai warga di ke-30 kecamatan di kota ini."
+          },
+          {
+            "en": "Budget: Total cost: Rp1,200,000,000 (Rp1.2 billion).",
+            "id": "Anggaran: Total biaya: Rp1.200.000.000 (Rp1,2 miliar)."
+          },
+          {
+            "en": "Timeline: Phase 1, workshops in the north and east of the city (January–March 2027).",
+            "id": "Jadwal: Tahap 1, workshop di wilayah utara dan timur kota (Januari–Maret 2027)."
+          },
+          {
+            "en": "Expected results: At least 1,500 participants will accept digital payments six months after their workshop.",
+            "id": "Hasil yang diharapkan: Minimal 1.500 peserta akan menerima pembayaran digital enam bulan setelah mengikuti workshop."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Judul bagian yang mana?",
+        "text": "Rekan kerja Bu Ani menulis kalimat ini tapi tidak bilang tempatnya di mana.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "proposal-structure",
+          "options": [
+            "Objectives",
+            "Background",
+            "Expected results"
+          ],
+          "answer": 1,
+          "prompt": "Di bawah judul bagian mana kalimat ini ditaruh dalam proposal? 'Many small traders in Bandung still accept only cash, because they do not trust digital payments.'",
+          "explanation": "Kalimat ini menggambarkan **masalah saat ini**, jadi tempatnya di **Background**. Objectives menyebut apa yang akan dicapai proyek (*To train … by …*), dan Expected results menyebut apa yang akan berubah sesudahnya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Executive summary",
+        "text": "Budi bekerja di sebuah perusahaan e-commerce di Surabaya. Laporannya tentang keterlambatan pengiriman setebal 30 halaman dikirim ke direktur, yang hanya akan membaca halaman pertama.",
+        "body": "**Executive summary** (ringkasan eksekutif) = seluruh dokumen dalam satu halaman. **Ditulis terakhir** (saat kamu sudah tahu temuannya) dan **dibaca pertama**, sering kali dibaca sendirian.\n\nIsinya menjawab, dengan urutan ini:\n1. **Purpose**: dokumen ini tentang apa, atau meminta apa?\n2. **Key findings**: 2–3 fakta dengan angka\n3. **Recommendations**\n4. **The decision needed**: apa, paling lambat kapan, berapa biayanya\n\n**BLUF** (bottom line up front): poin utama di kalimat pertama. Jebakan bahasa Indonesia: basa-basi pembuka (*Puji syukur …, Laporan ini disusun dalam rangka …*) atau sejarah dulu, lalu direktur berhenti membaca sebelum sampai ke poinnya.",
+        "pairs": [
+          {
+            "en": "executive summary",
+            "id": "ringkasan eksekutif"
+          },
+          {
+            "en": "purpose",
+            "id": "tujuan dokumen"
+          },
+          {
+            "en": "key findings",
+            "id": "temuan utama"
+          },
+          {
+            "en": "recommendations",
+            "id": "rekomendasi"
+          },
+          {
+            "en": "the decision needed",
+            "id": "keputusan yang diminta"
+          },
+          {
+            "en": "BLUF (bottom line up front)",
+            "id": "intinya di depan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Kalimat pertama terbaik",
+        "text": "Budi punya tiga draf untuk kalimat pertama executive summary-nya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "executive-summary",
+          "options": [
+            "Since the company was founded in Surabaya in 2015, fast delivery has always been one of our most important values.",
+            "With gratitude, our team is honoured to present this report, the result of three months of hard work.",
+            "This report recommends three changes to cut late deliveries in Surabaya by half, at a cost of Rp450 million a year."
+          ],
+          "answer": 2,
+          "prompt": "Mana kalimat pertama terbaik untuk executive summary yang dibaca direktur?",
+          "explanation": "**BLUF**: kalimat pertama ini memberi poin utama, hasilnya dan biayanya, jadi direktur langsung tahu apa yang diminta. Pilihan pertama dimulai dengan sejarah dan pilihan kedua adalah basa-basi sopan: keduanya menunda poin utamanya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rekomendasi yang bisa dijalankan",
+        "text": "Setelah temuan, datang rekomendasi: bagian yang menghasilkan tindakan.",
+        "body": "Buat setiap rekomendasi **jelas** (satu tindakan), **bisa dijalankan** (siapa melakukan apa, kapan), **berprioritas** (bernomor, yang terpenting dulu) dan **terhubung dengan temuan** (*Based on Finding 2, …*).\n\n*Delivery should be improved.* ✗ (siapa? bagaimana?)\n*The operations team should add an evening sorting shift from 1 December.* ✓\n\nPola: **We recommend + -ing**, **We recommend that + we / subjek jamak + kata kerja**, **should + kata kerja**, dan di daftar bernomor cukup kata kerja dasar (*1. Add …*).\n\nJebakan bahasa Indonesia: *merekomendasikan untuk menambah* → *recommend to add* ✗ → **recommend adding**.",
+        "pairs": [
+          {
+            "en": "We recommend + -ing …",
+            "id": "Kami merekomendasikan …"
+          },
+          {
+            "en": "We recommend that staff + verb …",
+            "id": "Kami merekomendasikan agar staf …"
+          },
+          {
+            "en": "The team should + verb …",
+            "id": "Tim sebaiknya …"
+          },
+          {
+            "en": "Based on Finding 2, …",
+            "id": "Berdasarkan Temuan 2, …"
+          },
+          {
+            "en": "recommend adding (not 'recommend to add')",
+            "id": "merekomendasikan untuk menambah"
+          },
+          {
+            "en": "actionable",
+            "id": "bisa langsung dijalankan"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun rekomendasinya",
+        "text": "Temuan 2 menyebutkan sopir di rute Surabaya Timur membawa terlalu banyak paket. Budi menulis rekomendasinya.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "executive-summary",
+          "tokens": [
+            "drivers",
+            "recommend",
+            "delivery",
+            "four",
+            "We",
+            "hiring",
+            "more"
+          ],
+          "solution": "We recommend hiring four more delivery drivers.",
+          "prompt": "Susun kata-katanya: Kami merekomendasikan merekrut empat sopir pengiriman lagi.",
+          "explanation": "Setelah **recommend** pakai bentuk **-ing**: *recommend hiring*, bukan *recommend to hire* (terjemahan kata per kata dari *merekomendasikan untuk*). Kalimat ini menyebut tindakannya dan jumlahnya, jadi direktur bisa langsung menjalankannya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Buang kata pengisi",
+        "text": "Bagian terakhir: pembaca bisnis itu sibuk, jadi sampaikan dengan lebih sedikit kata.",
+        "body": "**Kata pengisi** (filler) menambah kata, bukan makna: buang saja (lihat kartunya). Juga:\n- Pakai **kalimat aktif** kalau penting siapa pelakunya: *A decision was made* → *The director decided*\n- **Satu ide per kalimat** (sekitar 15–25 kata)\n- Taruh poinnya **di depan**\n\nJangan berlebihan dengan nominalisasi: kata benda boleh di judul (*a 20% fall in delays*), tapi *make a decision regarding* menyembunyikan kata kerjanya: **decide on**.\n\nContoh klasik: *In order to be able to make a decision regarding the matter of the budget, …* → ***To decide on the budget, …***\n\nFrasa-frasa ini tidak salah, hanya panjang. Dan ringkas bukan berarti kasar atau seperti telegram.",
+        "pairs": [
+          {
+            "en": "in order to → to",
+            "id": "untuk / agar"
+          },
+          {
+            "en": "due to the fact that → because",
+            "id": "karena"
+          },
+          {
+            "en": "at this point in time → now",
+            "id": "saat ini / sekarang"
+          },
+          {
+            "en": "make a decision regarding → decide on",
+            "id": "memutuskan (tentang)"
+          },
+          {
+            "en": "a large number of → many",
+            "id": "banyak"
+          },
+          {
+            "en": "it should be noted that → (delete)",
+            "id": "perlu dicatat bahwa → (hapus)"
+          },
+          {
+            "en": "with regard to → about",
+            "id": "terkait / mengenai"
+          },
+          {
+            "en": "prior to → before",
+            "id": "sebelum"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Versi paling ringkas",
+        "text": "Rekan kerja Budi menulis sebuah kalimat untuk laporan. Budi ingin kalimatnya lebih pendek.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concise-business-writing",
+          "options": [
+            "To reduce late deliveries, management has decided to hire many new drivers.",
+            "In order to make a reduction in late deliveries, the management has made the decision to hire many new drivers.",
+            "Late deliveries. Management decision: hire drivers."
+          ],
+          "answer": 0,
+          "prompt": "Mana versi ringkas terbaik dari kalimat ini? 'In order to reduce the number of late deliveries, a decision has been made by the management to hire a large number of new drivers.'",
+          "explanation": "**in order to → to**, **a decision has been made by the management → management has decided** (aktif dan lebih pendek), **a large number of → many**. Pilihan kedua masih bertele-tele (*make a reduction, made the decision*); pilihan ketiga terlalu pendek sampai bukan kalimat lagi."
+        }
+      },
+      {
+        "kind": "flashcards",
+        "title": "Frasa penting",
+        "text": "Balik kartunya dan ucapkan bahasa Inggrisnya sebelum kamu melihat.",
+        "flashcards": [
+          {
+            "front": "Latar belakang / Tujuan / Rencana / Anggaran / Jadwal / Hasil yang diharapkan",
+            "back": "Background / Objectives / Plan / Budget / Timeline / Expected results"
+          },
+          {
+            "front": "Executive summary: ditulis kapan, dibaca kapan?",
+            "back": "Written last, read first (one page or less)"
+          },
+          {
+            "front": "BLUF",
+            "back": "Bottom line up front: the main point in the first sentence"
+          },
+          {
+            "front": "Kami merekomendasikan untuk menambah shift malam.",
+            "back": "We recommend adding an evening shift. (not 'recommend to add')"
+          },
+          {
+            "front": "in order to / due to the fact that",
+            "back": "to / because"
+          },
+          {
+            "front": "at this point in time / a large number of",
+            "back": "now / many"
+          },
+          {
+            "front": "make a decision regarding",
+            "back": "decide on"
+          },
+          {
+            "front": "Rp1,2 miliar (Rp1.200.000.000)",
+            "back": "Rp1.2 billion (Rp1,200,000,000)"
+          }
+        ]
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh pelajaran dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · proposal, laporan & tulisan ringkas",
+          "intro": "Proposal dengan enam judul bagian, executive summary dengan poin utama di depan, rekomendasi yang bisa langsung dijalankan, dan tanpa kata pengisi.",
+          "headers": [
+            "Bagian / frasa",
+            "Fungsinya / ganti dengan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Background",
+              "the problem now, with facts and numbers",
+              "latar belakang"
+            ],
+            [
+              "Objectives",
+              "specific, measurable: To + verb … by + date",
+              "tujuan"
+            ],
+            [
+              "Plan",
+              "what you will do and how",
+              "rencana kegiatan"
+            ],
+            [
+              "Budget",
+              "costs item by item + total (Rp1,200,000,000)",
+              "anggaran"
+            ],
+            [
+              "Timeline",
+              "when: phases, months, deadlines",
+              "jadwal"
+            ],
+            [
+              "Expected results",
+              "what will change, how you'll measure it",
+              "hasil yang diharapkan"
+            ],
+            [
+              "Executive summary",
+              "written last, read first: purpose, key findings, recommendations, decision needed",
+              "ringkasan eksekutif"
+            ],
+            [
+              "We recommend + -ing",
+              "We recommend adding … (not 'recommend to add')",
+              "Kami merekomendasikan …"
+            ],
+            [
+              "in order to",
+              "to",
+              "untuk / agar"
+            ],
+            [
+              "due to the fact that",
+              "because",
+              "karena"
+            ],
+            [
+              "at this point in time",
+              "now",
+              "sekarang"
+            ],
+            [
+              "make a decision regarding",
+              "decide on",
+              "memutuskan"
+            ],
+            [
+              "a large number of",
+              "many",
+              "banyak"
+            ],
+            [
+              "It should be noted that …",
+              "delete it: just give the fact",
+              "perlu dicatat bahwa …"
+            ]
+          ],
+          "tips": [
+            "BLUF: taruh poin utama di kalimat pertama ringkasan, email, dan setiap paragraf.",
+            "Pakai kalimat aktif kalau penting siapa pelakunya (The director decided …), kalimat pasif kalau pelakunya tidak diketahui atau tidak penting.",
+            "Jangan mulai dengan 'Puji syukur' atau sejarah, dan jangan akhiri dengan 'Demikian proposal ini …': mulai dengan masalahnya, akhiri dengan langkah berikutnya."
+          ],
+          "examples": [
+            {
+              "en": "This proposal requests Rp1.2 billion to train 2,000 small business owners in Bandung by June 2027.",
+              "id": "Proposal ini mengajukan Rp1,2 miliar untuk melatih 2.000 pemilik usaha kecil di Bandung paling lambat Juni 2027."
+            },
+            {
+              "en": "Based on Finding 1, we recommend adding an evening sorting shift.",
+              "id": "Berdasarkan Temuan 1, kami merekomendasikan penambahan shift sortir malam."
+            },
+            {
+              "en": "To decide on the budget, we need the final figures by Friday.",
+              "id": "Untuk memutuskan anggaran, kami membutuhkan angka finalnya paling lambat hari Jumat."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Pelajari lebih lanjut",
+        "text": "Dua contoh tulisan tingkat C1 dari British Council: proposal dengan subjudul dan laporan yang rekomendasinya mengikuti temuannya."
+      }
+    ]
+  }
+}

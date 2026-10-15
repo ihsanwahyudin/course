@@ -1,0 +1,772 @@
+{
+  "en": {
+    "greeting": "Hi! Today you're in the chair: you'll open a meeting, keep the discussion fair and on track, calm a disagreement and lead the group to a clear decision.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Opening the meeting",
+        "text": "In B2 you took part in meetings: interrupting, clarifying, summing up. Now you're the **chair** (the person leading the meeting), and it starts with a strong first minute.",
+        "body": "Open in four moves. **Start on time:** *Thanks for coming. Let's make a start.* **Aim:** *The aim of today's meeting is to …* **Time and agenda:** *We've got 45 minutes and three items on the agenda.* **Roles and rules:** *Could Sari take the minutes?* (the minutes = notulen, not menit) and, in a hybrid meeting, *please stay on mute*. Traps: *Let's we start* ✗ → **Let's start**; and don't wait for latecomers (jam karet): people online are waiting too.",
+        "pairs": [
+          {
+            "en": "Thanks for coming. Let's make a start.",
+            "id": "Terima kasih sudah datang. Mari kita mulai."
+          },
+          {
+            "en": "The aim of today's meeting is to …",
+            "id": "Tujuan rapat hari ini adalah …"
+          },
+          {
+            "en": "We've got 45 minutes and three items on the agenda.",
+            "id": "Kita punya 45 menit dan tiga butir agenda."
+          },
+          {
+            "en": "Could Sari take the minutes?",
+            "id": "Bisakah Sari mencatat notulennya?"
+          },
+          {
+            "en": "Could Dimas keep an eye on the time?",
+            "id": "Bisakah Dimas memantau waktunya?"
+          },
+          {
+            "en": "For those joining online, please stay on mute.",
+            "id": "Untuk yang bergabung online, mohon tetap mute."
+          },
+          {
+            "en": "If you'd like to speak, use the raise-hand button.",
+            "id": "Kalau ingin bicara, pakai tombol angkat tangan."
+          },
+          {
+            "en": "We'll fill Budi in when he arrives.",
+            "id": "Nanti kita ceritakan ke Budi saat dia datang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: the first minute",
+        "text": "Choose the opening that a good chair would use.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "open-and-set-agenda",
+          "options": [
+            "Good morning, everyone. So, today we will discuss about many things. Let's we start.",
+            "Thanks for coming, everyone. We're here to plan the volunteer training. We've got an hour and three items on the agenda: the dates, the venue and the budget.",
+            "Good morning. Before we start, Pak Hasan, as the most senior person here, please tell us what you've already decided."
+          ],
+          "answer": 1,
+          "prompt": "You're opening a one-hour meeting at an NGO in Yogyakarta. Which opening tells people the aim, the time and the agenda?",
+          "explanation": "It welcomes people, gives the aim (*We're here to plan …*), the time (*an hour*) and the items on the agenda. The first one has two errors (*discuss about*, *Let's we*) and no clear aim. The third asks the senior person to decide before anyone has talked, so the meeting only confirms one view."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Managing the discussion",
+        "text": "Now the discussion is running. Your job: everyone is heard, nobody takes over, and you stay on the agenda and on time.",
+        "body": "**Quiet people:** invite by name, with a reason: *Dimas, we haven't heard from you yet.* Never *Why are you so quiet?* **Someone dominating:** thank, then open the floor: *Thanks, Budi. I'd like to hear from others too.* Not *You talk too much.* **Off topic:** *That's a valid point, but it's not on today's agenda. Can we park it?* (park = set aside for later). **Time:** *We've got five minutes left on this item.* Habit: the senior person often speaks first and nobody contradicts: hear the team first.",
+        "pairs": [
+          {
+            "en": "Dimas, we haven't heard from you yet.",
+            "id": "Dimas, kami belum mendengar pendapatmu."
+          },
+          {
+            "en": "Does anyone see it differently?",
+            "id": "Ada yang punya pandangan berbeda?"
+          },
+          {
+            "en": "Thanks, Budi. I'd like to hear from others too.",
+            "id": "Terima kasih, Budi. Saya juga ingin mendengar dari yang lain."
+          },
+          {
+            "en": "That's a valid point, but it's not on today's agenda.",
+            "id": "Poin yang bagus, tapi itu tidak ada di agenda hari ini."
+          },
+          {
+            "en": "Can we park it?",
+            "id": "Bisa kita sisihkan dulu, untuk dibahas nanti?"
+          },
+          {
+            "en": "We've got five minutes left on this item.",
+            "id": "Waktu untuk butir ini tinggal lima menit."
+          },
+          {
+            "en": "Let's move on to the next item.",
+            "id": "Mari lanjut ke butir berikutnya."
+          },
+          {
+            "en": "Let's hear from the team first, then Pak Hasan.",
+            "id": "Mari dengar dari tim dulu, lalu Pak Hasan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: Budi again",
+        "text": "You're chairing. Press play and listen to Budi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "manage-discussion-conflict",
+          "listen": "And another thing: the menu is too long, the colours are too dark, and honestly, I said all this last month. At my old company we always tested with real users first. Always. And the price is wrong too. Sorry, where was I? Oh yes, the colours. So, the colours...",
+          "options": [
+            "Budi, you talk too much. Please stop now.",
+            "Why is everybody else so quiet? Doesn't anyone have an opinion?",
+            "Thanks, Budi, those are useful points. I'd like to hear from others too. Sari, what's your view on the menu?"
+          ],
+          "answer": 2,
+          "prompt": "You're chairing a product meeting in Jakarta. Budi has been talking for ten minutes, and three people haven't spoken yet. Listen to Budi. What's the best thing to say next?",
+          "explanation": "Budi repeats himself and loses his own thread (*Sorry, where was I?*), so it's time to step in. **Thank him, then open the floor and invite someone by name.** *You talk too much* embarrasses him in front of everyone, and *Why is everybody else so quiet?* blames the quiet people instead of giving them a turn."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Handling conflict",
+        "text": "Disagreement is healthy; a fight isn't. Keep it about the issue, not the people, and don't take sides.",
+        "body": "**Name the feeling, calmly:** *I can see you both feel strongly about this.* **Separate the issues:** *Let's separate the two issues: first the date, then the budget.* **Find common ground:** *What do we agree on?* **Move a side argument out:** *Let's take that offline.* Trap: in Indonesian *offline* means luring / tatap muka, but here it means *later, separately, outside this meeting* (even on Zoom). Too harsh: *Stop arguing!* / *You're both wrong.*",
+        "pairs": [
+          {
+            "en": "I can see you both feel strongly about this.",
+            "id": "Saya lihat kalian berdua sangat peduli soal ini."
+          },
+          {
+            "en": "Let's separate the two issues.",
+            "id": "Mari kita pisahkan dua masalah ini."
+          },
+          {
+            "en": "What do we agree on?",
+            "id": "Hal apa yang sudah kita sepakati?"
+          },
+          {
+            "en": "Let's focus on the issue, not the person.",
+            "id": "Mari fokus pada masalahnya, bukan orangnya."
+          },
+          {
+            "en": "Let's take that offline.",
+            "id": "Kita bahas itu terpisah, di luar rapat."
+          },
+          {
+            "en": "Let's hear both sides first.",
+            "id": "Mari dengar kedua pihak dulu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: voices are getting louder",
+        "text": "Choose the chair's best move.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "manage-discussion-conflict",
+          "options": [
+            "I can see you both feel strongly about this. Let's separate the two issues: first the launch date, then the budget.",
+            "Okay, so we all agree on March, then. Next item.",
+            "Stop it, both of you. You're wasting everyone's time."
+          ],
+          "answer": 0,
+          "prompt": "Rina from marketing says the app must launch in March. Budi from IT says it won't be ready and the budget is too small anyway. They're both getting louder. You're the chair. What's the best thing to say?",
+          "explanation": "Two problems are mixed up here: the date and the budget. Naming the feeling calmly and **separating the issues** lets the group deal with one at a time. *So we all agree on March* fakes an agreement nobody made, and *Stop it, both of you* makes the conflict about people."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Steering to a decision",
+        "text": "When the group has talked enough, guide it to a decision: summarise, propose, check.",
+        "body": "**Summarise the positions** fairly, with names and reasons, without taking sides. **Propose:** *So, can we agree to …?* / *Shall we go with option B?* (Americans often say *Should we …?*). **Check:** consensus (*Can everyone live with that?* = can you accept it?) or a vote (*Let's put it to a vote*). Silence isn't agreement. **Musyawarah untuk mufakat** is a real strength: everyone is heard and owns the decision. International teams often expect a decision today, so say at the start how you'll decide.",
+        "pairs": [
+          {
+            "en": "So, there are two views on this.",
+            "id": "Jadi, ada dua pandangan soal ini."
+          },
+          {
+            "en": "So, can we agree to …?",
+            "id": "Jadi, bisakah kita sepakat untuk …?"
+          },
+          {
+            "en": "Shall we go with option B?",
+            "id": "Bagaimana kalau kita pilih opsi B?"
+          },
+          {
+            "en": "Can everyone live with that?",
+            "id": "Semuanya bisa menerima itu?"
+          },
+          {
+            "en": "Any objections?",
+            "id": "Ada keberatan?"
+          },
+          {
+            "en": "Let's put it to a vote.",
+            "id": "Mari kita putuskan lewat voting."
+          },
+          {
+            "en": "If we can't agree by eleven, we'll vote.",
+            "id": "Kalau sampai jam sebelas belum sepakat, kita voting."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: a fair summary",
+        "text": "Before you propose anything, sum up where everyone stands.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "steer-to-decision",
+          "options": [
+            "So, Budi is right: the agency is too expensive, and Rina's idea won't work.",
+            "So, we have two options. Rina prefers an agency because it's faster; Budi and Sari prefer to do it in-house because it's cheaper, although it'll take two months longer.",
+            "So, to sum up, we've all agreed to hire the agency."
+          ],
+          "answer": 1,
+          "prompt": "You're chairing a marketing meeting. Rina wants to hire an agency for the campaign: it's faster, but it costs Rp 150 million. Budi wants to do it in-house: it's cheaper, but it'll take two months longer. Sari also prefers to do it in-house, because of the cost. Which summary is the most accurate and fair?",
+          "explanation": "It gives **both positions, with names and reasons**, and the downside of each, without choosing. The first takes Budi's side (a chair stays neutral while summarising). The third claims a decision that nobody made."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Action points and closing",
+        "text": "Finish with clear action points and a proper close.",
+        "body": "Each action point needs **who + what + by when**. **by Thursday** = paling lambat Kamis (a deadline); *until Thursday* = sampai Kamis, for something that continues. Then go over the action points, sum up, give the next meeting and thank everyone.",
+        "examples": [
+          {
+            "en": "Rina will send the draft by Thursday.",
+            "id": "Rina akan mengirim drafnya paling lambat hari Kamis."
+          },
+          {
+            "en": "Budi, could you check the costs with finance by Wednesday?",
+            "id": "Budi, bisa cek biayanya dengan bagian keuangan paling lambat hari Rabu?"
+          },
+          {
+            "en": "Let's go over the action points.",
+            "id": "Mari kita tinjau poin tindak lanjutnya."
+          },
+          {
+            "en": "To sum up, we're going with option B.",
+            "id": "Sebagai rangkuman, kita pilih opsi B."
+          },
+          {
+            "en": "Our next meeting is on Tuesday the 9th at ten.",
+            "id": "Rapat kita berikutnya hari Selasa tanggal 9 jam sepuluh."
+          },
+          {
+            "en": "Thanks, everyone. I'll send round the minutes this afternoon.",
+            "id": "Terima kasih, semuanya. Notulennya saya kirim sore ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn: the action point",
+        "text": "This is what goes into the minutes. Make it impossible to misunderstand.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "steer-to-decision",
+          "options": [
+            "Someone should contact the new caterer soon.",
+            "Dimas will contact the new caterer until Friday.",
+            "Dimas will confirm the menu and the price with the new caterer by Friday."
+          ],
+          "answer": 2,
+          "prompt": "The team has decided to switch to a new catering company for the launch event. Which action point should go in the minutes?",
+          "explanation": "It has all three parts: **who** (Dimas), **what** (confirm the menu and the price) and **by when** (by Friday). *Someone … soon* has no name and no deadline, and *until Friday* is the *sampai* trap: for a deadline, English says **by**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "The chair's phrases, from the first minute to the last, on one page.",
+        "artifact": {
+          "title": "Cheat sheet · Leading meetings",
+          "intro": "What the chair says, from the first minute to the last.",
+          "headers": [
+            "Moment",
+            "Say",
+            "Remember"
+          ],
+          "rows": [
+            [
+              "Start",
+              "Thanks for coming. Let's make a start.",
+              "on time; not 'Let's we start'"
+            ],
+            [
+              "Aim",
+              "The aim of today's meeting is to …",
+              "aim = the result you want today"
+            ],
+            [
+              "Time and agenda",
+              "We've got 45 minutes and three items on the agenda.",
+              "item = one topic on the agenda"
+            ],
+            [
+              "Roles",
+              "Could Sari take the minutes?",
+              "the minutes = notulen (not menit)"
+            ],
+            [
+              "Hybrid rules",
+              "For those joining online, please stay on mute and use the raise-hand button.",
+              "set them at the start"
+            ],
+            [
+              "Quiet people",
+              "Dimas, we haven't heard from you yet.",
+              "by name, with a reason; never 'Why are you so quiet?'"
+            ],
+            [
+              "Someone dominating",
+              "Thanks, Budi. I'd like to hear from others too.",
+              "thank first; never 'You talk too much'"
+            ],
+            [
+              "Off topic",
+              "That's a valid point, but it's not on today's agenda. Can we park it?",
+              "park = set aside for later"
+            ],
+            [
+              "Time",
+              "We've got five minutes left. Let's move on.",
+              "keep an eye on the clock"
+            ],
+            [
+              "Conflict",
+              "I can see you both feel strongly. Let's separate the two issues. What do we agree on?",
+              "neutral: the issue, not the person"
+            ],
+            [
+              "Side argument",
+              "Let's take that offline.",
+              "offline = later, separately (not face to face)"
+            ],
+            [
+              "Decide",
+              "So, can we agree to …? / Shall we go with option B? / Can everyone live with that? / Let's put it to a vote.",
+              "silence isn't agreement"
+            ],
+            [
+              "Action point",
+              "Rina will send the draft by Thursday.",
+              "who + what + by when; by, not until"
+            ],
+            [
+              "Close",
+              "To sum up, … Our next meeting is on …",
+              "decisions, next meeting, thanks"
+            ]
+          ],
+          "tips": [
+            "Musyawarah is a strength: everyone is heard. With an international team, agree at the start how you'll decide if there's no consensus.",
+            "Ask the team before the most senior person, and invite disagreement: Does anyone see it differently?",
+            "by Thursday = paling lambat Kamis; until Thursday = sampai Kamis (continuing)."
+          ],
+          "examples": [
+            {
+              "en": "Thanks for coming, everyone. The aim of today's meeting is to choose a venue.",
+              "id": "Terima kasih sudah datang, semuanya. Tujuan rapat hari ini adalah memilih tempat acara."
+            },
+            {
+              "en": "Thanks, Budi. I'd like to hear from others too. Dimas?",
+              "id": "Terima kasih, Budi. Saya juga ingin mendengar dari yang lain. Dimas?"
+            },
+            {
+              "en": "Can everyone live with that?",
+              "id": "Semuanya bisa menerima itu?"
+            },
+            {
+              "en": "Rina will send the draft by Thursday.",
+              "id": "Rina akan mengirim drafnya paling lambat hari Kamis."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch more",
+        "text": "Two videos: a full lesson on chairing a meeting, and a short, funny BBC episode about setting an agenda."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kamu yang memimpin rapat: kamu akan membuka rapat, menjaga diskusi tetap adil dan fokus, meredakan perbedaan pendapat dan memimpin kelompok ke keputusan yang jelas.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Membuka rapat",
+        "text": "Di B2 kamu ikut serta dalam rapat: menyela, mengklarifikasi, merangkum. Sekarang kamu **chair** (pemimpin rapat), dan semuanya dimulai dengan menit pertama yang kuat.",
+        "body": "Buka dengan empat langkah. **Mulai tepat waktu:** *Thanks for coming. Let's make a start.* **Tujuan:** *The aim of today's meeting is to …* **Waktu dan agenda:** *We've got 45 minutes and three items on the agenda.* **Peran dan aturan:** *Could Sari take the minutes?* (the minutes = notulen, bukan menit) dan, di rapat hybrid, *please stay on mute*. Jebakan: *Let's we start* ✗ → **Let's start**; dan jangan menunggu yang terlambat (jam karet): peserta online juga menunggu.",
+        "pairs": [
+          {
+            "en": "Thanks for coming. Let's make a start.",
+            "id": "Terima kasih sudah datang. Mari kita mulai."
+          },
+          {
+            "en": "The aim of today's meeting is to …",
+            "id": "Tujuan rapat hari ini adalah …"
+          },
+          {
+            "en": "We've got 45 minutes and three items on the agenda.",
+            "id": "Kita punya 45 menit dan tiga butir agenda."
+          },
+          {
+            "en": "Could Sari take the minutes?",
+            "id": "Bisakah Sari mencatat notulennya?"
+          },
+          {
+            "en": "Could Dimas keep an eye on the time?",
+            "id": "Bisakah Dimas memantau waktunya?"
+          },
+          {
+            "en": "For those joining online, please stay on mute.",
+            "id": "Untuk yang bergabung online, mohon tetap mute."
+          },
+          {
+            "en": "If you'd like to speak, use the raise-hand button.",
+            "id": "Kalau ingin bicara, pakai tombol angkat tangan."
+          },
+          {
+            "en": "We'll fill Budi in when he arrives.",
+            "id": "Nanti kita ceritakan ke Budi saat dia datang."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: menit pertama",
+        "text": "Pilih pembukaan yang dipakai chair yang baik.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "open-and-set-agenda",
+          "options": [
+            "Good morning, everyone. So, today we will discuss about many things. Let's we start.",
+            "Thanks for coming, everyone. We're here to plan the volunteer training. We've got an hour and three items on the agenda: the dates, the venue and the budget.",
+            "Good morning. Before we start, Pak Hasan, as the most senior person here, please tell us what you've already decided."
+          ],
+          "answer": 1,
+          "prompt": "Kamu membuka rapat satu jam di sebuah LSM di Yogyakarta. Pembukaan mana yang menyebutkan tujuan, waktu dan agendanya?",
+          "explanation": "Pembukaan ini menyapa peserta, menyebutkan tujuannya (*We're here to plan …*), waktunya (*an hour*) dan butir-butir agendanya. Yang pertama punya dua kesalahan (*discuss about*, *Let's we*) dan tidak punya tujuan yang jelas. Yang ketiga meminta orang paling senior memutuskan sebelum ada yang berdiskusi, jadi rapatnya hanya mengiyakan satu pendapat."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mengelola diskusi",
+        "text": "Sekarang diskusi berjalan. Tugasmu: semua orang didengar, tidak ada yang menguasai pembicaraan, dan rapat tetap sesuai agenda dan waktu.",
+        "body": "**Yang pendiam:** ajak dengan menyebut nama dan alasannya: *Dimas, we haven't heard from you yet.* Jangan *Why are you so quiet?* **Yang mendominasi:** ucapkan terima kasih, lalu beri kesempatan yang lain: *Thanks, Budi. I'd like to hear from others too.* Bukan *You talk too much.* **Di luar topik:** *That's a valid point, but it's not on today's agenda. Can we park it?* (park = sisihkan untuk nanti). **Waktu:** *We've got five minutes left on this item.* Kebiasaan: orang paling senior sering bicara duluan dan tidak ada yang membantah: dengarkan tim lebih dulu.",
+        "pairs": [
+          {
+            "en": "Dimas, we haven't heard from you yet.",
+            "id": "Dimas, kami belum mendengar pendapatmu."
+          },
+          {
+            "en": "Does anyone see it differently?",
+            "id": "Ada yang punya pandangan berbeda?"
+          },
+          {
+            "en": "Thanks, Budi. I'd like to hear from others too.",
+            "id": "Terima kasih, Budi. Saya juga ingin mendengar dari yang lain."
+          },
+          {
+            "en": "That's a valid point, but it's not on today's agenda.",
+            "id": "Poin yang bagus, tapi itu tidak ada di agenda hari ini."
+          },
+          {
+            "en": "Can we park it?",
+            "id": "Bisa kita sisihkan dulu, untuk dibahas nanti?"
+          },
+          {
+            "en": "We've got five minutes left on this item.",
+            "id": "Waktu untuk butir ini tinggal lima menit."
+          },
+          {
+            "en": "Let's move on to the next item.",
+            "id": "Mari lanjut ke butir berikutnya."
+          },
+          {
+            "en": "Let's hear from the team first, then Pak Hasan.",
+            "id": "Mari dengar dari tim dulu, lalu Pak Hasan."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: Budi lagi",
+        "text": "Kamu chair-nya. Tekan putar dan dengarkan Budi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "manage-discussion-conflict",
+          "listen": "And another thing: the menu is too long, the colours are too dark, and honestly, I said all this last month. At my old company we always tested with real users first. Always. And the price is wrong too. Sorry, where was I? Oh yes, the colours. So, the colours...",
+          "options": [
+            "Budi, you talk too much. Please stop now.",
+            "Why is everybody else so quiet? Doesn't anyone have an opinion?",
+            "Thanks, Budi, those are useful points. I'd like to hear from others too. Sari, what's your view on the menu?"
+          ],
+          "answer": 2,
+          "prompt": "Kamu memimpin rapat produk di Jakarta. Budi sudah bicara sepuluh menit, dan tiga orang belum bicara sama sekali. Dengarkan Budi. Apa yang paling baik kamu ucapkan berikutnya?",
+          "explanation": "Budi mengulang-ulang dan kehilangan alur bicaranya sendiri (*Sorry, where was I?*), jadi sudah waktunya chair masuk. **Ucapkan terima kasih, lalu buka kesempatan dan ajak seseorang dengan menyebut namanya.** *You talk too much* mempermalukan Budi di depan semua orang, dan *Why is everybody else so quiet?* menyalahkan yang pendiam, bukan memberi mereka giliran."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menangani konflik",
+        "text": "Perbedaan pendapat itu sehat; pertengkaran tidak. Jaga supaya tetap soal masalahnya, bukan orangnya, dan jangan memihak.",
+        "body": "**Sebutkan perasaannya dengan tenang:** *I can see you both feel strongly about this.* **Pisahkan masalahnya:** *Let's separate the two issues: first the date, then the budget.* **Cari titik temu:** *What do we agree on?* **Bawa perdebatan sampingan keluar:** *Let's take that offline.* Jebakan: dalam bahasa Indonesia *offline* berarti luring / tatap muka, tapi di sini artinya *nanti, terpisah, di luar rapat ini* (bahkan lewat Zoom). Terlalu keras: *Stop arguing!* / *You're both wrong.*",
+        "pairs": [
+          {
+            "en": "I can see you both feel strongly about this.",
+            "id": "Saya lihat kalian berdua sangat peduli soal ini."
+          },
+          {
+            "en": "Let's separate the two issues.",
+            "id": "Mari kita pisahkan dua masalah ini."
+          },
+          {
+            "en": "What do we agree on?",
+            "id": "Hal apa yang sudah kita sepakati?"
+          },
+          {
+            "en": "Let's focus on the issue, not the person.",
+            "id": "Mari fokus pada masalahnya, bukan orangnya."
+          },
+          {
+            "en": "Let's take that offline.",
+            "id": "Kita bahas itu terpisah, di luar rapat."
+          },
+          {
+            "en": "Let's hear both sides first.",
+            "id": "Mari dengar kedua pihak dulu."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: suara makin keras",
+        "text": "Pilih langkah terbaik seorang chair.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "manage-discussion-conflict",
+          "options": [
+            "I can see you both feel strongly about this. Let's separate the two issues: first the launch date, then the budget.",
+            "Okay, so we all agree on March, then. Next item.",
+            "Stop it, both of you. You're wasting everyone's time."
+          ],
+          "answer": 0,
+          "prompt": "Rina dari bagian pemasaran bilang aplikasinya harus diluncurkan bulan Maret. Budi dari IT bilang aplikasinya belum akan siap dan anggarannya juga terlalu kecil. Suara mereka makin keras. Kamu chair-nya. Apa yang paling baik diucapkan?",
+          "explanation": "Ada dua masalah yang tercampur: tanggal dan anggaran. Menyebutkan perasaan mereka dengan tenang lalu **memisahkan masalahnya** membuat kelompok bisa membahasnya satu per satu. *So we all agree on March* memalsukan kesepakatan yang tidak pernah ada, dan *Stop it, both of you* membuat konfliknya jadi soal orang."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mengarahkan ke keputusan",
+        "text": "Kalau kelompok sudah cukup berdiskusi, arahkan ke keputusan: rangkum, usulkan, cek.",
+        "body": "**Rangkum posisi masing-masing** dengan adil, lengkap dengan nama dan alasan, tanpa memihak. **Usulkan:** *So, can we agree to …?* / *Shall we go with option B?* (orang Amerika sering bilang *Should we …?*). **Cek:** mufakat (*Can everyone live with that?* = bisa menerimanya?) atau voting (*Let's put it to a vote*). Diam bukan berarti setuju. **Musyawarah untuk mufakat** adalah kekuatan nyata: semua didengar dan merasa memiliki keputusannya. Tim internasional sering berharap keputusan diambil hari ini, jadi sebutkan di awal bagaimana kalian akan memutuskan.",
+        "pairs": [
+          {
+            "en": "So, there are two views on this.",
+            "id": "Jadi, ada dua pandangan soal ini."
+          },
+          {
+            "en": "So, can we agree to …?",
+            "id": "Jadi, bisakah kita sepakat untuk …?"
+          },
+          {
+            "en": "Shall we go with option B?",
+            "id": "Bagaimana kalau kita pilih opsi B?"
+          },
+          {
+            "en": "Can everyone live with that?",
+            "id": "Semuanya bisa menerima itu?"
+          },
+          {
+            "en": "Any objections?",
+            "id": "Ada keberatan?"
+          },
+          {
+            "en": "Let's put it to a vote.",
+            "id": "Mari kita putuskan lewat voting."
+          },
+          {
+            "en": "If we can't agree by eleven, we'll vote.",
+            "id": "Kalau sampai jam sebelas belum sepakat, kita voting."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: rangkuman yang adil",
+        "text": "Sebelum mengusulkan apa pun, rangkum dulu posisi semua orang.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "steer-to-decision",
+          "options": [
+            "So, Budi is right: the agency is too expensive, and Rina's idea won't work.",
+            "So, we have two options. Rina prefers an agency because it's faster; Budi and Sari prefer to do it in-house because it's cheaper, although it'll take two months longer.",
+            "So, to sum up, we've all agreed to hire the agency."
+          ],
+          "answer": 1,
+          "prompt": "Kamu memimpin rapat pemasaran. Rina ingin menyewa agensi untuk kampanyenya: lebih cepat, tapi biayanya Rp 150 juta. Budi ingin mengerjakannya sendiri (in-house): lebih murah, tapi butuh dua bulan lebih lama. Sari juga lebih memilih mengerjakannya sendiri, karena biayanya. Rangkuman mana yang paling akurat dan adil?",
+          "explanation": "Rangkuman ini menyebutkan **kedua posisi, lengkap dengan nama dan alasannya**, dan kekurangan masing-masing, tanpa memilih. Yang pertama memihak Budi (chair tetap netral saat merangkum). Yang ketiga mengklaim keputusan yang tidak pernah dibuat."
+        }
+      },
+      {
+        "kind": "examples",
+        "title": "Poin tindak lanjut dan penutup",
+        "text": "Akhiri dengan poin tindak lanjut yang jelas dan penutup yang rapi.",
+        "body": "Setiap poin tindak lanjut butuh **siapa + apa + paling lambat kapan**. **by Thursday** = paling lambat Kamis (tenggat); *until Thursday* = sampai Kamis, untuk sesuatu yang berlangsung terus. Lalu tinjau poin tindak lanjutnya, rangkum, sebutkan rapat berikutnya dan ucapkan terima kasih.",
+        "examples": [
+          {
+            "en": "Rina will send the draft by Thursday.",
+            "id": "Rina akan mengirim drafnya paling lambat hari Kamis."
+          },
+          {
+            "en": "Budi, could you check the costs with finance by Wednesday?",
+            "id": "Budi, bisa cek biayanya dengan bagian keuangan paling lambat hari Rabu?"
+          },
+          {
+            "en": "Let's go over the action points.",
+            "id": "Mari kita tinjau poin tindak lanjutnya."
+          },
+          {
+            "en": "To sum up, we're going with option B.",
+            "id": "Sebagai rangkuman, kita pilih opsi B."
+          },
+          {
+            "en": "Our next meeting is on Tuesday the 9th at ten.",
+            "id": "Rapat kita berikutnya hari Selasa tanggal 9 jam sepuluh."
+          },
+          {
+            "en": "Thanks, everyone. I'll send round the minutes this afternoon.",
+            "id": "Terima kasih, semuanya. Notulennya saya kirim sore ini."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu: poin tindak lanjut",
+        "text": "Ini yang masuk ke notulen. Buat supaya tidak mungkin disalahpahami.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "steer-to-decision",
+          "options": [
+            "Someone should contact the new caterer soon.",
+            "Dimas will contact the new caterer until Friday.",
+            "Dimas will confirm the menu and the price with the new caterer by Friday."
+          ],
+          "answer": 2,
+          "prompt": "Tim memutuskan pindah ke perusahaan katering baru untuk acara peluncuran. Poin tindak lanjut mana yang sebaiknya masuk ke notulen?",
+          "explanation": "Poin ini punya ketiga bagian: **siapa** (Dimas), **apa** (memastikan menu dan harganya) dan **paling lambat kapan** (by Friday). *Someone … soon* tidak punya nama dan tenggat, dan *until Friday* adalah jebakan *sampai*: untuk tenggat, bahasa Inggris memakai **by**."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ungkapan seorang chair, dari menit pertama sampai terakhir, dalam satu halaman.",
+        "artifact": {
+          "title": "Ringkasan · Memimpin rapat",
+          "intro": "Yang diucapkan chair, dari menit pertama sampai terakhir.",
+          "headers": [
+            "Momen",
+            "Ucapkan",
+            "Ingat"
+          ],
+          "rows": [
+            [
+              "Mulai",
+              "Thanks for coming. Let's make a start.",
+              "tepat waktu; bukan 'Let's we start'"
+            ],
+            [
+              "Tujuan",
+              "The aim of today's meeting is to …",
+              "aim = hasil yang diinginkan hari ini"
+            ],
+            [
+              "Waktu dan agenda",
+              "We've got 45 minutes and three items on the agenda.",
+              "item = satu topik di agenda"
+            ],
+            [
+              "Peran",
+              "Could Sari take the minutes?",
+              "the minutes = notulen (bukan menit)"
+            ],
+            [
+              "Aturan rapat hybrid",
+              "For those joining online, please stay on mute and use the raise-hand button.",
+              "sampaikan di awal"
+            ],
+            [
+              "Yang pendiam",
+              "Dimas, we haven't heard from you yet.",
+              "sebut nama dan alasannya; jangan 'Why are you so quiet?'"
+            ],
+            [
+              "Yang mendominasi",
+              "Thanks, Budi. I'd like to hear from others too.",
+              "terima kasih dulu; jangan 'You talk too much'"
+            ],
+            [
+              "Di luar topik",
+              "That's a valid point, but it's not on today's agenda. Can we park it?",
+              "park = sisihkan untuk nanti"
+            ],
+            [
+              "Waktu",
+              "We've got five minutes left. Let's move on.",
+              "pantau jam"
+            ],
+            [
+              "Konflik",
+              "I can see you both feel strongly. Let's separate the two issues. What do we agree on?",
+              "netral: masalahnya, bukan orangnya"
+            ],
+            [
+              "Perdebatan sampingan",
+              "Let's take that offline.",
+              "offline = nanti, terpisah (bukan tatap muka)"
+            ],
+            [
+              "Memutuskan",
+              "So, can we agree to …? / Shall we go with option B? / Can everyone live with that? / Let's put it to a vote.",
+              "diam bukan berarti setuju"
+            ],
+            [
+              "Poin tindak lanjut",
+              "Rina will send the draft by Thursday.",
+              "siapa + apa + paling lambat kapan; by, bukan until"
+            ],
+            [
+              "Penutup",
+              "To sum up, … Our next meeting is on …",
+              "keputusan, rapat berikutnya, terima kasih"
+            ]
+          ],
+          "tips": [
+            "Musyawarah itu kekuatan: semua orang didengar. Dengan tim internasional, sepakati di awal bagaimana memutuskan kalau tidak tercapai mufakat.",
+            "Tanya tim sebelum orang paling senior, dan undang perbedaan pendapat: Does anyone see it differently?",
+            "by Thursday = paling lambat Kamis; until Thursday = sampai Kamis (berlangsung terus)."
+          ],
+          "examples": [
+            {
+              "en": "Thanks for coming, everyone. The aim of today's meeting is to choose a venue.",
+              "id": "Terima kasih sudah datang, semuanya. Tujuan rapat hari ini adalah memilih tempat acara."
+            },
+            {
+              "en": "Thanks, Budi. I'd like to hear from others too. Dimas?",
+              "id": "Terima kasih, Budi. Saya juga ingin mendengar dari yang lain. Dimas?"
+            },
+            {
+              "en": "Can everyone live with that?",
+              "id": "Semuanya bisa menerima itu?"
+            },
+            {
+              "en": "Rina will send the draft by Thursday.",
+              "id": "Rina akan mengirim drafnya paling lambat hari Kamis."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton lagi",
+        "text": "Dua video: pelajaran lengkap tentang memimpin rapat, dan episode BBC yang pendek dan lucu tentang menyusun agenda."
+      }
+    ]
+  }
+}

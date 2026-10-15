@@ -1,0 +1,716 @@
+{
+  "en": {
+    "greeting": "Hi! Today you'll make your presentations persuasive: open with a hook, tell a short story with a point, speak from notes instead of a script, and stay calm when the questions get tough. Let's go step by step.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Open with a hook",
+        "text": "Quick recap: you have the signposts from B2 and the voice from the prosody lesson (step up on key words, pause before a key number). Now the first 30 seconds.",
+        "body": "A **hook** (pengait) is an opening that makes people *want* to listen:\n- a **question** to the audience: *How many of you …?*\n- a **surprising number**: *Last year, one in four of our new customers left within a month.*\n- a **very short story**: a name, a place, one moment.\nThen give your name and topic, briefly.\nThe trap: a minute of thanks (*terima kasih kepada Bapak Direktur, Bapak/Ibu …*) or only *My name is …, today I will talk about …*. Both are polite, but they give nobody a reason to listen yet.",
+        "pairs": [
+          {
+            "en": "hook",
+            "id": "pengait: pembukaan yang membuat orang ingin mendengarkan"
+          },
+          {
+            "en": "How many of you have …?",
+            "id": "Berapa banyak dari Anda yang pernah …?"
+          },
+          {
+            "en": "Last year, one in four of our new customers left within a month.",
+            "id": "Tahun lalu, satu dari empat pelanggan baru kita pergi dalam sebulan."
+          },
+          {
+            "en": "Thank you for having me.",
+            "id": "Terima kasih sudah mengundang saya."
+          },
+          {
+            "en": "I'm Dimas from the IT team.",
+            "id": "Saya Dimas dari tim IT."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Choose the hook",
+        "text": "Dimas wants the managers to listen from the first sentence.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "storytelling",
+          "prompt": "Dimas is presenting a new mobile banking app to the managers of a bank in Surabaya. Which opening is the strongest hook?",
+          "options": [
+            "First of all, I would like to thank the Director, all the managers, the IT team and everyone who helped me prepare this presentation.",
+            "Good morning. My name is Dimas, I'm from the IT team, and today I will talk about our new mobile app.",
+            "Last week, Pak Rahmat, a fish seller in Sidoarjo, closed his stall for half a day to queue at our branch. With our new app, the same transfer takes thirty seconds."
+          ],
+          "answer": 2,
+          "explanation": "A very short story with a name, a place and a number makes the managers feel the problem, and the app is the answer. The first opening spends the best 30 seconds on thanks. The second one is correct English, but it's only name and topic: give those right **after** the hook."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "A story with a point",
+        "text": "Numbers convince the head; a story makes people care. Here's the shape of a persuasive one.",
+        "body": "Keep it short (30–60 seconds), in four parts: **the situation** (who, where, when) → **the turning point** (the moment the problem became clear) → **the change** (what was done, what happened) → **the lesson** for this audience.\nUse **concrete detail**: a name, a place, a number, not *many customers have problems*.\nTell the story in the **past** (*called, was losing*), then switch to the **present** for the point, because it's about now: *That's why we need …*\nThe trap: no past ending. Indonesian doesn't change the verb, so `Last month a customer call us` ✗ → *called*.",
+        "pairs": [
+          {
+            "en": "the situation",
+            "id": "situasinya: siapa, di mana, kapan"
+          },
+          {
+            "en": "the turning point",
+            "id": "titik balik: saat masalahnya menjadi jelas"
+          },
+          {
+            "en": "the change",
+            "id": "perubahannya: apa yang dilakukan dan hasilnya"
+          },
+          {
+            "en": "the lesson",
+            "id": "pelajaran untuk audiens: poinnya"
+          },
+          {
+            "en": "concrete detail",
+            "id": "detail konkret: nama, tempat, angka"
+          },
+          {
+            "en": "That's why …",
+            "id": "Karena itulah …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "From story to action",
+        "text": "Rina is asking the directors of a logistics startup in Jakarta for a second warehouse. Tap each line and read it aloud.",
+        "body": "Notice the switch: **past** for the story, **present** for the point. Then the **rule of three** (three reasons sound complete; let your voice fall ↘ on the last one) and a **call to action** (ajakan bertindak): who does what by when. Not `That's all. Thank you.` ✗",
+        "examples": [
+          {
+            "en": "Last year, Pak Joko, a batik seller in Solo, was sending forty parcels a week through us.",
+            "id": "Tahun lalu, Pak Joko, penjual batik di Solo, mengirim empat puluh paket seminggu lewat kami. (situasi)"
+          },
+          {
+            "en": "Then, in March, his biggest customer cancelled an order because it was late again.",
+            "id": "Lalu, di bulan Maret, pelanggan terbesarnya membatalkan pesanan karena terlambat lagi. (titik balik)"
+          },
+          {
+            "en": "We moved his parcels to our warehouse in Semarang, and his late deliveries fell to zero.",
+            "id": "Kami memindahkan paketnya ke gudang kami di Semarang, dan keterlambatannya turun menjadi nol. (perubahan)"
+          },
+          {
+            "en": "A second warehouse in Central Java is faster, cheaper and closer to our sellers.",
+            "id": "Gudang kedua di Jawa Tengah lebih cepat, lebih murah dan lebih dekat dengan para penjual kita. (pelajaran + aturan tiga)"
+          },
+          {
+            "en": "Please give me your decision by the end of this month.",
+            "id": "Mohon berikan keputusan Anda kepada saya paling lambat akhir bulan ini. (call to action)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the call to action",
+        "text": "Budi is ending his talk to the board. He wants a clear yes or no.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "storytelling",
+          "prompt": "Arrange the words: Jadi, saya meminta Anda menyetujui uji coba ini.",
+          "tokens": [
+            "approve",
+            "pilot",
+            "I'm",
+            "So",
+            "to",
+            "this",
+            "you",
+            "asking"
+          ],
+          "solution": "So I'm asking you to approve this pilot.",
+          "explanation": "A call to action says who does what: **I'm asking you** (the board) **to approve** (the action) **this pilot**. Pattern: *ask someone to do something*. Add *when* if you can: *… by Friday*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Notes, not a script",
+        "text": "Now, how to say it all without reading.",
+        "body": "Reading a script sounds **flat**: your eyes are on the paper, and written sentences are long, so your voice loses its range and its natural pauses.\nUse **keyword notes**: a few words per idea, mostly names, numbers and key words (*Surabaya delivery: 5 → 2 days*). You build the sentence live, so you sound like a person talking.\n**Rehearse aloud** from the notes three or four times; learn by heart only your first and last lines.\n**Slides are prompts:** one idea per slide.\nLost your place? Stay silent for a second (not *eee…*), look at your notes, and carry on.",
+        "pairs": [
+          {
+            "en": "keyword notes",
+            "id": "catatan kata kunci"
+          },
+          {
+            "en": "rehearse aloud",
+            "id": "berlatih dengan suara keras"
+          },
+          {
+            "en": "one idea per slide",
+            "id": "satu ide per slide"
+          },
+          {
+            "en": "Where was I? Right, …",
+            "id": "Tadi sampai mana, ya? Oh iya, …"
+          },
+          {
+            "en": "Let me go back a step.",
+            "id": "Saya mundur selangkah dulu."
+          },
+          {
+            "en": "Let me put that another way.",
+            "id": "Saya jelaskan dengan cara lain."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Make a keyword note",
+        "text": "Sari is turning her script into notes.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "present-without-script",
+          "prompt": "Sari's script for a talk about her clinic in Yogyakarta says: 'In the first six months, online bookings rose from 200 to 1,500 a month, mainly thanks to the WhatsApp reminders.' Which is the best keyword note?",
+          "options": [
+            "Online bookings: 200 → 1,500 / month (WhatsApp)",
+            "In the first six months, online bookings rose from 200 to 1,500 a month, mainly thanks to the WhatsApp reminders.",
+            "Six months. Clinic. Online. Very good result."
+          ],
+          "answer": 0,
+          "explanation": "A keyword note keeps the facts she must not forget (the numbers and the reason) in a few words, so she builds the sentence live. The second one is the full sentence: she'll read it, and it will sound flat. The third one is short but loses the key facts: 200, 1,500 and WhatsApp."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Lost your place?",
+        "text": "It happens to every presenter. What matters is what you do next.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "present-without-script",
+          "prompt": "In the middle of her talk to investors in Jakarta, Rina loses her place: she can't remember what comes after the sales figures. What's the best thing to do?",
+          "options": [
+            "Say 'Sorry, sorry, I forgot… eee… apa ya…' and turn to look at the screen.",
+            "Go back to the first slide and start the whole talk again from the beginning.",
+            "Pause for a second, look at her notes, and say 'Where was I? Right, the costs.'"
+          ],
+          "answer": 2,
+          "explanation": "A short silent pause and a look at the notes look calm and confident, and **Where was I? Right, …** takes her straight back. Repeated apologies and *eee…* draw attention to the problem, and starting again wastes the investors' time."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Difficult questions",
+        "text": "Recap from B2: welcome, check, answer briefly, check back. Now the hard ones: hostile, unanswerable and off-topic questions.",
+        "body": "**Listen to the end** (don't interrupt), then **acknowledge**: *Thank you, that's a fair point.* **Rephrase calmly**: *So your question is whether …* (it takes the anger out and gives you time). **Answer briefly**, agreeing with what is true. **Admit** what you don't know, with a specific follow-up. **Park** off-topic questions politely, then **bridge back** to your message.\nNever argue (`That's not true. You don't understand.` ✗) or bluff.\nThe trap: avoiding *I don't know* to save face (gengsi). In English, honest and specific sounds professional.",
+        "pairs": [
+          {
+            "en": "I understand your concern.",
+            "id": "Saya memahami kekhawatiran Anda."
+          },
+          {
+            "en": "Thank you, that's a fair point.",
+            "id": "Terima kasih, itu poin yang masuk akal."
+          },
+          {
+            "en": "So your question is whether …",
+            "id": "Jadi pertanyaan Anda adalah apakah …"
+          },
+          {
+            "en": "You're right that …",
+            "id": "Anda benar bahwa …"
+          },
+          {
+            "en": "I don't have that figure with me, but I'll send it to you by Friday.",
+            "id": "Saya tidak membawa angka itu, tapi akan saya kirimkan paling lambat hari Jumat."
+          },
+          {
+            "en": "That's a bit outside today's topic, but I'm happy to discuss it after the session.",
+            "id": "Itu agak di luar topik hari ini, tapi dengan senang hati saya bahas setelah sesi ini."
+          },
+          {
+            "en": "That brings me back to my main point.",
+            "id": "Itu membawa saya kembali ke poin utama saya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen: a hostile question",
+        "text": "Press play and listen to Pak Hasan's question. He doesn't sound happy.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "handle-tough-questions",
+          "prompt": "You're presenting a plan for a new customer app to the managers of a bank in Surabaya. Listen to Pak Hasan's question. What's the best reply?",
+          "listen": "Honestly, this plan sounds far too expensive. Why should we spend two billion rupiah on an app that our customers never asked for?",
+          "options": [
+            "That's not true, Pak Hasan. With respect, you don't understand how the app works.",
+            "Thank you, that's a fair concern. So your question is whether the app is worth the cost. Our pilot in Malang cut queues by half, and I'll share the full figures after the session.",
+            "Good question. I think maybe it's not so expensive, about one billion. Next question, please."
+          ],
+          "answer": 1,
+          "explanation": "It **acknowledges** the concern, **rephrases** it calmly, **answers briefly** with one concrete result and offers a follow-up. The first reply is defensive and tells a senior manager he doesn't understand. The third one bluffs a number that contradicts the plan and then avoids the question."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "The whole lesson on one page. Keep it next to your keyword notes when you rehearse.",
+        "artifact": {
+          "title": "Cheat sheet · persuasive presentations",
+          "intro": "Hook first, a short story with a point, three reasons, a clear call to action; notes, not a script; calm, honest answers.",
+          "headers": [
+            "Moment",
+            "Say",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Hook",
+              "How many of you have …? / Last year, one in four of our customers … / Last March, Pak Joko, a batik seller in Solo, …",
+              "pertanyaan / angka mengejutkan / cerita sangat singkat"
+            ],
+            [
+              "Story",
+              "situation → turning point → the change → the lesson",
+              "past untuk ceritanya, present untuk poinnya"
+            ],
+            [
+              "The point",
+              "That's why we need …",
+              "karena itulah kita butuh …"
+            ],
+            [
+              "Rule of three",
+              "It's faster, cheaper and safer.",
+              "tiga alasan; nada turun ↘ di yang terakhir"
+            ],
+            [
+              "Call to action",
+              "So I'm asking you to … by …",
+              "siapa melakukan apa, kapan"
+            ],
+            [
+              "Keyword note",
+              "Surabaya delivery: 5 → 2 days (new warehouse)",
+              "nama, angka, kata kunci; bukan kalimat lengkap"
+            ],
+            [
+              "Lost your place",
+              "Where was I? Right, … / Let me go back a step.",
+              "tadi sampai mana? oh iya … / saya mundur selangkah"
+            ],
+            [
+              "Say it again",
+              "Let me put that another way.",
+              "saya jelaskan dengan cara lain"
+            ],
+            [
+              "Acknowledge",
+              "Thank you, that's a fair point. / I understand your concern.",
+              "terima kasih, poin yang masuk akal / saya memahami kekhawatiran Anda"
+            ],
+            [
+              "Rephrase",
+              "So your question is whether …",
+              "jadi pertanyaan Anda adalah apakah …"
+            ],
+            [
+              "Don't know",
+              "I don't have that figure with me, but I'll send it to you by Friday.",
+              "jujur + tindak lanjut yang spesifik"
+            ],
+            [
+              "Off topic",
+              "That's a bit outside today's topic, but I'm happy to discuss it after the session.",
+              "di luar topik; bahas setelah sesi"
+            ],
+            [
+              "Bridge back",
+              "That brings me back to my main point: …",
+              "kembali ke pesan utama"
+            ]
+          ],
+          "tips": [
+            "Don't spend the first minute on thanks, and don't open with only your name and topic: hook first, then name and topic.",
+            "Learn by heart only your first and last lines; rehearse the rest aloud from keyword notes, with one idea per slide.",
+            "Never argue, bluff or say 'No comment': acknowledge, rephrase, answer briefly, and follow up when you promised."
+          ],
+          "examples": [
+            {
+              "en": "Last year, one in four of our new customers left within a month.",
+              "id": "Tahun lalu, satu dari empat pelanggan baru kita pergi dalam sebulan."
+            },
+            {
+              "en": "Please give me your decision by the end of this month.",
+              "id": "Mohon berikan keputusan Anda paling lambat akhir bulan ini."
+            },
+            {
+              "en": "You're right that the first month was difficult. Since then, complaints have fallen by half.",
+              "id": "Anda benar bahwa bulan pertama memang sulit. Sejak itu, keluhan sudah turun setengahnya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and learn",
+        "text": "Two talks for native speakers: one on the structure behind persuasive presentations, one on speaking without a script and answering unexpected questions."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Halo! Hari ini kamu membuat presentasimu lebih meyakinkan: membuka dengan hook, menceritakan kisah pendek yang punya poin, berbicara dari catatan alih-alih naskah, dan tetap tenang saat pertanyaannya sulit. Ayo kita mulai langkah demi langkah.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Buka dengan hook",
+        "text": "Ulasan singkat: kamu sudah punya signpost dari B2 dan suara dari pelajaran prosodi (naikkan nada di kata kunci, beri jeda sebelum angka penting). Sekarang 30 detik pertama.",
+        "body": "**Hook** (pengait) adalah pembukaan yang membuat orang *ingin* mendengarkan:\n- **pertanyaan** untuk audiens: *How many of you …?*\n- **angka yang mengejutkan**: *Last year, one in four of our new customers left within a month.*\n- **cerita yang sangat singkat**: satu nama, satu tempat, satu momen.\nSetelah itu, sebutkan nama dan topikmu dengan singkat.\nJebakannya: satu menit ucapan terima kasih (*terima kasih kepada Bapak Direktur, Bapak/Ibu …*) atau hanya *My name is …, today I will talk about …*. Keduanya sopan, tapi belum memberi siapa pun alasan untuk mendengarkan.",
+        "pairs": [
+          {
+            "en": "hook",
+            "id": "pengait: pembukaan yang membuat orang ingin mendengarkan"
+          },
+          {
+            "en": "How many of you have …?",
+            "id": "Berapa banyak dari Anda yang pernah …?"
+          },
+          {
+            "en": "Last year, one in four of our new customers left within a month.",
+            "id": "Tahun lalu, satu dari empat pelanggan baru kita pergi dalam sebulan."
+          },
+          {
+            "en": "Thank you for having me.",
+            "id": "Terima kasih sudah mengundang saya."
+          },
+          {
+            "en": "I'm Dimas from the IT team.",
+            "id": "Saya Dimas dari tim IT."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Pilih hook-nya",
+        "text": "Dimas ingin para manajer mendengarkan sejak kalimat pertama.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "storytelling",
+          "prompt": "Dimas mempresentasikan aplikasi mobile banking baru kepada para manajer sebuah bank di Surabaya. Pembukaan mana yang merupakan hook paling kuat?",
+          "options": [
+            "First of all, I would like to thank the Director, all the managers, the IT team and everyone who helped me prepare this presentation.",
+            "Good morning. My name is Dimas, I'm from the IT team, and today I will talk about our new mobile app.",
+            "Last week, Pak Rahmat, a fish seller in Sidoarjo, closed his stall for half a day to queue at our branch. With our new app, the same transfer takes thirty seconds."
+          ],
+          "answer": 2,
+          "explanation": "Cerita yang sangat singkat dengan nama, tempat dan angka membuat para manajer merasakan masalahnya, dan aplikasinya menjadi jawabannya. Pembukaan pertama menghabiskan 30 detik terbaik untuk ucapan terima kasih. Yang kedua bahasa Inggrisnya benar, tapi hanya nama dan topik: sebutkan keduanya **setelah** hook."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Cerita yang punya poin",
+        "text": "Angka meyakinkan kepala; cerita membuat orang peduli. Ini bentuk cerita yang meyakinkan.",
+        "body": "Buat singkat (30–60 detik), dalam empat bagian: **situasinya** (siapa, di mana, kapan) → **titik baliknya** (saat masalahnya menjadi jelas) → **perubahannya** (apa yang dilakukan, apa hasilnya) → **pelajarannya** untuk audiens ini.\nPakai **detail konkret**: nama, tempat, angka, bukan *many customers have problems*.\nCeritakan kisahnya dalam bentuk **lampau** (*called, was losing*), lalu pindah ke bentuk **sekarang** (present) untuk poinnya, karena poinnya tentang saat ini: *That's why we need …*\nJebakannya: akhiran lampau hilang. Bahasa Indonesia tidak mengubah kata kerja, jadi `Last month a customer call us` ✗ → *called*.",
+        "pairs": [
+          {
+            "en": "the situation",
+            "id": "situasinya: siapa, di mana, kapan"
+          },
+          {
+            "en": "the turning point",
+            "id": "titik balik: saat masalahnya menjadi jelas"
+          },
+          {
+            "en": "the change",
+            "id": "perubahannya: apa yang dilakukan dan hasilnya"
+          },
+          {
+            "en": "the lesson",
+            "id": "pelajaran untuk audiens: poinnya"
+          },
+          {
+            "en": "concrete detail",
+            "id": "detail konkret: nama, tempat, angka"
+          },
+          {
+            "en": "That's why …",
+            "id": "Karena itulah …"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Dari cerita ke tindakan",
+        "text": "Rina meminta para direktur sebuah startup logistik di Jakarta untuk membuka gudang kedua. Ketuk setiap baris dan bacalah dengan suara keras.",
+        "body": "Perhatikan perpindahannya: **lampau** untuk ceritanya, **present** untuk poinnya. Lalu **aturan tiga** (rule of three: tiga alasan terdengar lengkap; turunkan nada ↘ di yang terakhir) dan **call to action** (ajakan bertindak): siapa melakukan apa, kapan. Bukan `That's all. Thank you.` ✗",
+        "examples": [
+          {
+            "en": "Last year, Pak Joko, a batik seller in Solo, was sending forty parcels a week through us.",
+            "id": "Tahun lalu, Pak Joko, penjual batik di Solo, mengirim empat puluh paket seminggu lewat kami. (situasi)"
+          },
+          {
+            "en": "Then, in March, his biggest customer cancelled an order because it was late again.",
+            "id": "Lalu, di bulan Maret, pelanggan terbesarnya membatalkan pesanan karena terlambat lagi. (titik balik)"
+          },
+          {
+            "en": "We moved his parcels to our warehouse in Semarang, and his late deliveries fell to zero.",
+            "id": "Kami memindahkan paketnya ke gudang kami di Semarang, dan keterlambatannya turun menjadi nol. (perubahan)"
+          },
+          {
+            "en": "A second warehouse in Central Java is faster, cheaper and closer to our sellers.",
+            "id": "Gudang kedua di Jawa Tengah lebih cepat, lebih murah dan lebih dekat dengan para penjual kita. (pelajaran + aturan tiga)"
+          },
+          {
+            "en": "Please give me your decision by the end of this month.",
+            "id": "Mohon berikan keputusan Anda kepada saya paling lambat akhir bulan ini. (call to action)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun call to action-nya",
+        "text": "Budi menutup presentasinya di depan dewan direksi. Dia ingin jawaban ya atau tidak yang jelas.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "storytelling",
+          "prompt": "Susun kata-katanya: Jadi, saya meminta Anda menyetujui uji coba ini.",
+          "tokens": [
+            "approve",
+            "pilot",
+            "I'm",
+            "So",
+            "to",
+            "this",
+            "you",
+            "asking"
+          ],
+          "solution": "So I'm asking you to approve this pilot.",
+          "explanation": "Call to action menyebutkan siapa melakukan apa: **I'm asking you** (dewan direksi) **to approve** (tindakannya) **this pilot** (uji coba ini). Polanya: *ask someone to do something* (meminta seseorang melakukan sesuatu). Tambahkan *kapan* kalau bisa: *… by Friday*."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Catatan, bukan naskah",
+        "text": "Sekarang, cara menyampaikan semuanya tanpa membaca.",
+        "body": "Membaca naskah terdengar **datar**: matamu tertuju ke kertas, dan kalimat tulisan itu panjang, jadi suaramu kehilangan rentang nada dan jeda alaminya.\nPakai **catatan kata kunci**: beberapa kata per ide, terutama nama, angka dan kata kunci (*Surabaya delivery: 5 → 2 days*). Kamu menyusun kalimatnya secara langsung, jadi kamu terdengar seperti orang yang berbicara.\n**Berlatih dengan suara keras** dari catatan itu tiga atau empat kali; hafalkan hanya kalimat pertama dan terakhirmu.\n**Slide adalah pengingat:** satu ide per slide.\nLupa sampai mana? Diam sedetik (bukan *eee…*), lihat catatanmu, lalu lanjutkan.",
+        "pairs": [
+          {
+            "en": "keyword notes",
+            "id": "catatan kata kunci"
+          },
+          {
+            "en": "rehearse aloud",
+            "id": "berlatih dengan suara keras"
+          },
+          {
+            "en": "one idea per slide",
+            "id": "satu ide per slide"
+          },
+          {
+            "en": "Where was I? Right, …",
+            "id": "Tadi sampai mana, ya? Oh iya, …"
+          },
+          {
+            "en": "Let me go back a step.",
+            "id": "Saya mundur selangkah dulu."
+          },
+          {
+            "en": "Let me put that another way.",
+            "id": "Saya jelaskan dengan cara lain."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Buat catatan kata kunci",
+        "text": "Sari sedang mengubah naskahnya menjadi catatan.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "present-without-script",
+          "prompt": "Naskah Sari untuk presentasi tentang kliniknya di Yogyakarta berbunyi: 'In the first six months, online bookings rose from 200 to 1,500 a month, mainly thanks to the WhatsApp reminders.' Mana catatan kata kunci yang terbaik?",
+          "options": [
+            "Online bookings: 200 → 1,500 / month (WhatsApp)",
+            "In the first six months, online bookings rose from 200 to 1,500 a month, mainly thanks to the WhatsApp reminders.",
+            "Six months. Clinic. Online. Very good result."
+          ],
+          "answer": 0,
+          "explanation": "Catatan kata kunci menyimpan fakta yang tidak boleh dia lupakan (angka dan alasannya) dalam beberapa kata, jadi dia menyusun kalimatnya secara langsung. Yang kedua adalah kalimat lengkap: dia akan membacanya, dan itu akan terdengar datar. Yang ketiga singkat tapi kehilangan fakta utamanya: 200, 1.500 dan WhatsApp."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Lupa sampai mana?",
+        "text": "Ini terjadi pada semua presenter. Yang penting adalah apa yang kamu lakukan setelahnya.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "present-without-script",
+          "prompt": "Di tengah presentasinya untuk para investor di Jakarta, Rina lupa sampai mana: dia tidak ingat apa yang datang setelah angka penjualan. Apa yang paling baik dia lakukan?",
+          "options": [
+            "Say 'Sorry, sorry, I forgot… eee… apa ya…' and turn to look at the screen.",
+            "Go back to the first slide and start the whole talk again from the beginning.",
+            "Pause for a second, look at her notes, and say 'Where was I? Right, the costs.'"
+          ],
+          "answer": 2,
+          "explanation": "Jeda singkat tanpa suara dan melihat catatan terlihat tenang dan percaya diri, dan **Where was I? Right, …** langsung membawanya kembali. Minta maaf berulang kali dan *eee…* justru menarik perhatian ke masalahnya, dan mengulang dari awal membuang waktu para investor."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Pertanyaan sulit",
+        "text": "Ulasan dari B2: sambut, cek, jawab singkat, cek kembali. Sekarang yang sulit: pertanyaan yang menyerang, yang tidak bisa kamu jawab, dan yang di luar topik.",
+        "body": "**Dengarkan sampai selesai** (jangan memotong), lalu **akui poinnya**: *Thank you, that's a fair point.* **Ulangi pertanyaannya dengan tenang**: *So your question is whether …* (meredakan emosi dan memberimu waktu). **Jawab singkat**, dan setujui bagian yang benar. **Akui** apa yang tidak kamu ketahui, dengan tindak lanjut yang spesifik. **Tunda** pertanyaan di luar topik dengan sopan, lalu **kembali** ke pesanmu.\nJangan berdebat (`That's not true. You don't understand.` ✗) atau pura-pura tahu.\nJebakannya: menghindari *I don't know* demi gengsi. Dalam bahasa Inggris, jujur dan spesifik terdengar profesional.",
+        "pairs": [
+          {
+            "en": "I understand your concern.",
+            "id": "Saya memahami kekhawatiran Anda."
+          },
+          {
+            "en": "Thank you, that's a fair point.",
+            "id": "Terima kasih, itu poin yang masuk akal."
+          },
+          {
+            "en": "So your question is whether …",
+            "id": "Jadi pertanyaan Anda adalah apakah …"
+          },
+          {
+            "en": "You're right that …",
+            "id": "Anda benar bahwa …"
+          },
+          {
+            "en": "I don't have that figure with me, but I'll send it to you by Friday.",
+            "id": "Saya tidak membawa angka itu, tapi akan saya kirimkan paling lambat hari Jumat."
+          },
+          {
+            "en": "That's a bit outside today's topic, but I'm happy to discuss it after the session.",
+            "id": "Itu agak di luar topik hari ini, tapi dengan senang hati saya bahas setelah sesi ini."
+          },
+          {
+            "en": "That brings me back to my main point.",
+            "id": "Itu membawa saya kembali ke poin utama saya."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengarkan: pertanyaan yang menyerang",
+        "text": "Tekan play dan dengarkan pertanyaan Pak Hasan. Dia tidak terdengar senang.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "handle-tough-questions",
+          "prompt": "Kamu mempresentasikan rencana aplikasi pelanggan baru kepada para manajer sebuah bank di Surabaya. Dengarkan pertanyaan Pak Hasan. Jawaban mana yang terbaik?",
+          "listen": "Honestly, this plan sounds far too expensive. Why should we spend two billion rupiah on an app that our customers never asked for?",
+          "options": [
+            "That's not true, Pak Hasan. With respect, you don't understand how the app works.",
+            "Thank you, that's a fair concern. So your question is whether the app is worth the cost. Our pilot in Malang cut queues by half, and I'll share the full figures after the session.",
+            "Good question. I think maybe it's not so expensive, about one billion. Next question, please."
+          ],
+          "answer": 1,
+          "explanation": "Jawaban ini **mengakui** kekhawatirannya, **mengulang** pertanyaannya dengan tenang, **menjawab singkat** dengan satu hasil konkret dan menawarkan tindak lanjut. Jawaban pertama defensif dan mengatakan kepada manajer senior bahwa dia tidak paham. Yang ketiga menebak angka yang bertentangan dengan rencananya, lalu menghindari pertanyaannya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Seluruh pelajaran dalam satu halaman. Simpan di samping catatan kata kuncimu saat berlatih.",
+        "artifact": {
+          "title": "Ringkasan · presentasi persuasif",
+          "intro": "Hook dulu, cerita singkat yang punya poin, tiga alasan, call to action yang jelas; catatan, bukan naskah; jawaban yang tenang dan jujur.",
+          "headers": [
+            "Momen",
+            "Ucapkan",
+            "Arti"
+          ],
+          "rows": [
+            [
+              "Hook",
+              "How many of you have …? / Last year, one in four of our customers … / Last March, Pak Joko, a batik seller in Solo, …",
+              "pertanyaan / angka mengejutkan / cerita sangat singkat"
+            ],
+            [
+              "Cerita",
+              "situation → turning point → the change → the lesson",
+              "past untuk ceritanya, present untuk poinnya"
+            ],
+            [
+              "Poinnya",
+              "That's why we need …",
+              "karena itulah kita butuh …"
+            ],
+            [
+              "Aturan tiga",
+              "It's faster, cheaper and safer.",
+              "tiga alasan; nada turun ↘ di yang terakhir"
+            ],
+            [
+              "Call to action",
+              "So I'm asking you to … by …",
+              "siapa melakukan apa, kapan"
+            ],
+            [
+              "Catatan kata kunci",
+              "Surabaya delivery: 5 → 2 days (new warehouse)",
+              "nama, angka, kata kunci; bukan kalimat lengkap"
+            ],
+            [
+              "Lupa sampai mana",
+              "Where was I? Right, … / Let me go back a step.",
+              "tadi sampai mana? oh iya … / saya mundur selangkah"
+            ],
+            [
+              "Ulangi dengan cara lain",
+              "Let me put that another way.",
+              "saya jelaskan dengan cara lain"
+            ],
+            [
+              "Akui poinnya",
+              "Thank you, that's a fair point. / I understand your concern.",
+              "terima kasih, poin yang masuk akal / saya memahami kekhawatiran Anda"
+            ],
+            [
+              "Ulangi pertanyaannya",
+              "So your question is whether …",
+              "jadi pertanyaan Anda adalah apakah …"
+            ],
+            [
+              "Tidak tahu",
+              "I don't have that figure with me, but I'll send it to you by Friday.",
+              "jujur + tindak lanjut yang spesifik"
+            ],
+            [
+              "Di luar topik",
+              "That's a bit outside today's topic, but I'm happy to discuss it after the session.",
+              "di luar topik; bahas setelah sesi"
+            ],
+            [
+              "Kembali ke pesan",
+              "That brings me back to my main point: …",
+              "kembali ke pesan utama"
+            ]
+          ],
+          "tips": [
+            "Jangan habiskan menit pertama untuk ucapan terima kasih, dan jangan membuka hanya dengan nama dan topik: hook dulu, baru nama dan topik.",
+            "Hafalkan hanya kalimat pertama dan terakhirmu; latih sisanya dengan suara keras dari catatan kata kunci, satu ide per slide.",
+            "Jangan berdebat, pura-pura tahu atau bilang 'No comment': akui poinnya, ulangi pertanyaannya, jawab singkat, dan tindak lanjuti sesuai janjimu."
+          ],
+          "examples": [
+            {
+              "en": "Last year, one in four of our new customers left within a month.",
+              "id": "Tahun lalu, satu dari empat pelanggan baru kita pergi dalam sebulan."
+            },
+            {
+              "en": "Please give me your decision by the end of this month.",
+              "id": "Mohon berikan keputusan Anda paling lambat akhir bulan ini."
+            },
+            {
+              "en": "You're right that the first month was difficult. Since then, complaints have fallen by half.",
+              "id": "Anda benar bahwa bulan pertama memang sulit. Sejak itu, keluhan sudah turun setengahnya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan pelajari",
+        "text": "Dua presentasi untuk penutur asli: satu tentang struktur di balik presentasi yang meyakinkan, satu tentang berbicara tanpa naskah dan menjawab pertanyaan yang tidak terduga."
+      }
+    ]
+  }
+}

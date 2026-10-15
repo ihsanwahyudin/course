@@ -1,0 +1,746 @@
+{
+  "en": {
+    "greeting": "Hi! Today is about holding your ground in a real debate: building an argument that stands up, answering the other side, handling sudden questions, and admitting a fair point without losing the argument. Let's start with what makes an argument strong.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "What makes an argument strong",
+        "text": "Quick recap first, then the new part.",
+        "body": "From B2 you can buy time, build on others and disagree politely (*I see what you mean, but …*); from hedging, a claim should match its evidence. A debate asks for more. A strong argument has four parts:\n**claim** (what you believe) → **reason** (why) → **evidence or an example** (facts, data, experience) → **link back** (*So that's why …*).\nThe part people skip is evidence. *Everyone knows that …* is not evidence: it's just the claim, louder.",
+        "pairs": [
+          {
+            "en": "a claim",
+            "id": "klaim (apa yang kamu yakini)"
+          },
+          {
+            "en": "a reason",
+            "id": "alasan"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti (fakta, data)"
+          },
+          {
+            "en": "an example",
+            "id": "contoh"
+          },
+          {
+            "en": "So that's why …",
+            "id": "jadi karena itulah … (kembali ke klaim)"
+          },
+          {
+            "en": "to rebut",
+            "id": "membantah"
+          },
+          {
+            "en": "the motion",
+            "id": "mosi (topik yang diperdebatkan)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "One argument, four parts",
+        "text": "Here's Rina in a university debate competition. The motion: compulsory internships.",
+        "body": "Claim → reason → evidence → link back. Notice that the evidence is the faculty's own data, and the claim isn't stronger than that data.",
+        "examples": [
+          {
+            "en": "Universities should make internships compulsory.",
+            "id": "Universitas sebaiknya mewajibkan magang."
+          },
+          {
+            "en": "Students learn skills that lectures can't teach, like dealing with real clients.",
+            "id": "Mahasiswa belajar keterampilan yang tidak bisa diajarkan di kuliah, seperti menghadapi klien sungguhan."
+          },
+          {
+            "en": "In our faculty, students who did an internship found their first job about four months sooner.",
+            "id": "Di fakultas kami, mahasiswa yang pernah magang mendapat pekerjaan pertama sekitar empat bulan lebih cepat."
+          },
+          {
+            "en": "So that's why internships should be part of every degree.",
+            "id": "Jadi karena itulah magang sebaiknya menjadi bagian dari setiap program studi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "In a team debate at a Jakarta startup, Budi argues: 'A four-day week would make our team more productive, because people would come to work less tired.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "build-rebut-arguments",
+          "options": [
+            "A four-day week is simply a better way to work, and everyone knows it.",
+            "When our Surabaya office tried it for three months, the team finished the same number of projects with fewer sick days.",
+            "People who disagree with this are just afraid of change."
+          ],
+          "answer": 1,
+          "prompt": "Which sentence adds the best evidence for Budi's argument?",
+          "explanation": "The Surabaya trial is **evidence**: real results from their own company. The first sentence just repeats the claim (*everyone knows* isn't evidence). The third attacks the people who disagree instead of supporting the argument."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Rebut the argument, not the person",
+        "text": "Now the other side. To rebut means to show where their argument is weak.",
+        "body": "**Even if that were true**: *were* as in *If I were you*: you imagine it without accepting it.\nAttack the argument, never the person: ✗ *You're too young to understand.* ✗ *You only say that because you live in Jakarta.*\nTwo Indonesian habits to adjust: staying quiet out of *sungkan*, or translating *Itu salah!* as a blunt *That's wrong!* Aim for firm and polite: *I disagree, because …* (**disagree** is a verb: not *I'm disagree*).",
+        "pairs": [
+          {
+            "en": "That argument overlooks …",
+            "id": "argumen itu mengabaikan …"
+          },
+          {
+            "en": "The evidence actually points the other way.",
+            "id": "buktinya justru menunjukkan sebaliknya"
+          },
+          {
+            "en": "Even if that were true, …",
+            "id": "seandainya itu pun benar, …"
+          },
+          {
+            "en": "That doesn't necessarily follow.",
+            "id": "belum tentu begitu"
+          },
+          {
+            "en": "I see it differently, and here's why.",
+            "id": "saya melihatnya berbeda, dan ini alasannya"
+          },
+          {
+            "en": "I disagree, because …",
+            "id": "saya tidak setuju, karena …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and rebut",
+        "text": "You're at a town-hall meeting about a new toll road near Bandung. A speaker makes a strong claim.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "build-rebut-arguments",
+          "listen": "This toll road will end traffic jams in our city for good. More roads always mean faster journeys.",
+          "options": [
+            "You obviously know nothing about traffic. That's wrong.",
+            "I'm disagree, because toll roads are expensive.",
+            "The evidence actually points the other way: in many big cities, new roads soon fill up with even more cars."
+          ],
+          "answer": 2,
+          "prompt": "Listen to the speaker. Choose the best rebuttal.",
+          "explanation": "**The evidence actually points the other way** answers the claim itself, with a reason: new roads often attract more cars. The first reply attacks the speaker and is blunt. The second has a grammar mistake (*I disagree*, not *I'm disagree*) and talks about price, not about whether the road ends traffic jams."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Think on your feet",
+        "text": "The hardest moment in a debate is the sudden question. Four steps help.",
+        "body": "**1. Buy a moment, briefly**: one phrase, then answer.\n**2. Clarify** if the challenge is unclear or exaggerated: *Are you suggesting that …?* Say it calmly; in an angry voice it sounds like an attack.\n**3. Answer the question actually asked.** Asked *how many*? Give the number first. Don't dodge with your prepared speech: judges and audiences notice.\n**4. Bridge back** to your point.\n*What I'd say to that is …* is a phrase to remember as one piece.",
+        "pairs": [
+          {
+            "en": "That's a good question. Let me put it this way …",
+            "id": "pertanyaan bagus. Begini …"
+          },
+          {
+            "en": "What I'd say to that is …",
+            "id": "yang ingin saya sampaikan soal itu adalah …"
+          },
+          {
+            "en": "It's a fair question, and the short answer is …",
+            "id": "pertanyaan yang wajar, dan jawaban singkatnya …"
+          },
+          {
+            "en": "Are you suggesting that …?",
+            "id": "maksud Anda …?"
+          },
+          {
+            "en": "If I understand you correctly, …",
+            "id": "kalau saya tidak salah tangkap, …"
+          },
+          {
+            "en": "Which brings me back to my main point …",
+            "id": "dan itu membawa saya kembali ke poin utama saya …"
+          },
+          {
+            "en": "And that's exactly why …",
+            "id": "dan justru karena itulah …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "In the four-day-week debate, Bu Ani says: 'Then the same work has to fit into fewer days.' You want to check what she means before you answer.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "respond-spontaneously",
+          "tokens": [
+            "longer",
+            "suggesting",
+            "everyone",
+            "Are",
+            "work",
+            "that",
+            "days",
+            "you",
+            "should"
+          ],
+          "solution": "Are you suggesting that everyone should work longer days?",
+          "prompt": "Arrange the words: Maksud Ibu, semua orang sebaiknya bekerja lebih lama setiap harinya?",
+          "explanation": "**Are you suggesting that …?** checks the challenge before you answer it. After *that*, use normal sentence order: *everyone should work longer days*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Answer the real question",
+        "text": "At the town-hall meeting, a resident asks the project spokesperson, Pak Hasan: 'How many houses will have to be demolished for this road?'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "respond-spontaneously",
+          "options": [
+            "What I'd say to that is that this road will bring jobs and investment to the whole region.",
+            "Let me think… I don't know, maybe it's not a big problem.",
+            "It's a fair question, and the short answer is about 120 houses. Let me explain how those families will be compensated."
+          ],
+          "answer": 2,
+          "prompt": "Which reply answers the question that was actually asked?",
+          "explanation": "The resident asked **how many**, and the third reply gives the number first, then explains. The first reply dodges: it's a prepared speech about jobs, not an answer. The second gives no answer and dismisses a serious worry."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Concede, then counter",
+        "text": "Last skill: admitting a fair point without losing the argument.",
+        "body": "**Order: acknowledge first, then counter with a reason.** Conceding shows you're fair and makes your counter more believable.\n**Tone:** say it sincerely and briefly. If *That's a fair point, but …* comes before every reply, it sounds like an empty formula: **name the point** (*a fair point about the cost*) and vary the phrases.\nDon't stop at the concession: *That's a fair point, so I agree* gives the debate away.\nIndonesian trap: *Walaupun …, tetapi …* → no *but* after a **While** clause.",
+        "pairs": [
+          {
+            "en": "to concede",
+            "id": "mengakui (pihak lain sebagian benar)"
+          },
+          {
+            "en": "That's a fair point (about …), but …",
+            "id": "poin (soal …) itu masuk akal, tapi …"
+          },
+          {
+            "en": "I take your point; however, …",
+            "id": "saya paham poin Anda; namun, …"
+          },
+          {
+            "en": "Granted, …, but …",
+            "id": "memang benar …, tapi …"
+          },
+          {
+            "en": "I'd agree up to a point.",
+            "id": "saya setuju sampai batas tertentu"
+          },
+          {
+            "en": "While it's true that …, …",
+            "id": "meskipun benar bahwa …, … (tanpa but)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Listen and reply",
+        "text": "Back at the university debate competition. Your opponent challenges your case for compulsory internships.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concede-and-counter",
+          "listen": "Compulsory internships sound good, but many small companies simply can't afford to train hundreds of students.",
+          "options": [
+            "That's a fair point about small companies, but universities could also place students in government offices and NGOs.",
+            "That's a fair point, so I agree that internships shouldn't be compulsory.",
+            "That's wrong. You obviously don't understand how internships work."
+          ],
+          "answer": 0,
+          "prompt": "Listen to your opponent. Choose the reply that concedes a point and then counters it.",
+          "explanation": "The first reply **names the point** (small companies) and then **counters** with a reason (other places can take students). The second concedes and stops, so it gives up the argument. The third is blunt and attacks the person."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole lesson on one page, for your next debate or meeting.",
+        "artifact": {
+          "title": "Cheat sheet · Debate and argument",
+          "intro": "Build it, defend it, and stay firm but polite: attack the argument, never the person.",
+          "headers": [
+            "Move",
+            "Phrase",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Build",
+              "claim → reason → evidence / example → So that's why …",
+              "klaim → alasan → bukti / contoh → kembali ke klaim"
+            ],
+            [
+              "Rebut",
+              "That argument overlooks …",
+              "argumen itu mengabaikan …"
+            ],
+            [
+              "Rebut",
+              "The evidence actually points the other way.",
+              "buktinya justru menunjukkan sebaliknya"
+            ],
+            [
+              "Rebut",
+              "Even if that were true, …",
+              "seandainya itu pun benar, …"
+            ],
+            [
+              "Rebut",
+              "That doesn't necessarily follow.",
+              "belum tentu begitu"
+            ],
+            [
+              "Buy time",
+              "That's a good question. Let me put it this way …",
+              "pertanyaan bagus. Begini …"
+            ],
+            [
+              "Buy time",
+              "What I'd say to that is …",
+              "yang ingin saya sampaikan adalah …"
+            ],
+            [
+              "Clarify",
+              "Are you suggesting that …? / If I understand you correctly, …",
+              "maksud Anda …? / kalau saya tidak salah tangkap, …"
+            ],
+            [
+              "Answer + bridge",
+              "The short answer is … Which brings me back to my main point.",
+              "jawaban singkatnya … ; kembali ke poin utama"
+            ],
+            [
+              "Concede + counter",
+              "That's a fair point about …, but …",
+              "poin soal … itu masuk akal, tapi …"
+            ],
+            [
+              "Concede + counter",
+              "I take your point; however, …",
+              "saya paham poin Anda; namun, …"
+            ],
+            [
+              "Concede + counter",
+              "Granted, …, but …",
+              "memang benar …, tapi …"
+            ],
+            [
+              "Concede + counter",
+              "I'd agree up to a point.",
+              "saya setuju sampai batas tertentu"
+            ],
+            [
+              "Concede + counter",
+              "While it's true that …, … (no but)",
+              "meskipun benar bahwa …, … (tanpa but)"
+            ]
+          ],
+          "tips": [
+            "A strong argument: claim → reason → evidence → link back. 'Everyone knows' isn't evidence.",
+            "Firm + polite: 'I disagree, because …' (not I'm disagree); never 'You're too young to understand'.",
+            "Answer the question asked first, then bridge back. Concede by naming the point, then counter."
+          ],
+          "examples": [
+            {
+              "en": "That argument overlooks the cost of maintaining the road.",
+              "id": "Argumen itu mengabaikan biaya perawatan jalannya."
+            },
+            {
+              "en": "If I understand you correctly, you're saying the trial was too short.",
+              "id": "Kalau saya tidak salah tangkap, maksud Anda uji cobanya terlalu singkat."
+            },
+            {
+              "en": "Granted, it's expensive, but it will save drivers an hour a day.",
+              "id": "Memang benar, itu mahal, tapi itu akan menghemat waktu pengendara satu jam sehari."
+            },
+            {
+              "en": "I see it differently, and here's why.",
+              "id": "Saya melihatnya berbeda, dan ini alasannya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch more",
+        "text": "A TED talk by a former world debate champion on disagreeing well, and a short engVid lesson on quick concession phrases."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini tentang bertahan dalam debat sungguhan: membangun argumen yang kokoh, menjawab pihak lawan, menghadapi pertanyaan mendadak, dan mengakui poin yang masuk akal tanpa kalah argumen. Kita mulai dari apa yang membuat argumen kuat.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Apa yang membuat argumen kuat",
+        "text": "Ulasan singkat dulu, lalu bagian barunya.",
+        "body": "Dari B2 kamu sudah bisa mengulur waktu, melanjutkan poin orang lain dan tidak setuju dengan sopan (*I see what you mean, but …*); dari hedging, klaim harus sesuai dengan buktinya. Debat menuntut lebih. Argumen yang kuat punya empat bagian:\n**claim** (apa yang kamu yakini) → **reason** (kenapa) → **evidence or an example** (fakta, data, pengalaman) → **link back** (*So that's why …*).\nBagian yang sering dilewati adalah bukti. *Everyone knows that …* bukan bukti: itu cuma klaim yang diucapkan lebih keras.",
+        "pairs": [
+          {
+            "en": "a claim",
+            "id": "klaim (apa yang kamu yakini)"
+          },
+          {
+            "en": "a reason",
+            "id": "alasan"
+          },
+          {
+            "en": "evidence",
+            "id": "bukti (fakta, data)"
+          },
+          {
+            "en": "an example",
+            "id": "contoh"
+          },
+          {
+            "en": "So that's why …",
+            "id": "jadi karena itulah … (kembali ke klaim)"
+          },
+          {
+            "en": "to rebut",
+            "id": "membantah"
+          },
+          {
+            "en": "the motion",
+            "id": "mosi (topik yang diperdebatkan)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Satu argumen, empat bagian",
+        "text": "Ini Rina di lomba debat antaruniversitas. Mosinya: magang wajib.",
+        "body": "Klaim → alasan → bukti → kembali ke klaim. Perhatikan bahwa buktinya adalah data fakultas sendiri, dan klaimnya tidak lebih kuat daripada data itu.",
+        "examples": [
+          {
+            "en": "Universities should make internships compulsory.",
+            "id": "Universitas sebaiknya mewajibkan magang."
+          },
+          {
+            "en": "Students learn skills that lectures can't teach, like dealing with real clients.",
+            "id": "Mahasiswa belajar keterampilan yang tidak bisa diajarkan di kuliah, seperti menghadapi klien sungguhan."
+          },
+          {
+            "en": "In our faculty, students who did an internship found their first job about four months sooner.",
+            "id": "Di fakultas kami, mahasiswa yang pernah magang mendapat pekerjaan pertama sekitar empat bulan lebih cepat."
+          },
+          {
+            "en": "So that's why internships should be part of every degree.",
+            "id": "Jadi karena itulah magang sebaiknya menjadi bagian dari setiap program studi."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dalam debat tim di sebuah startup di Jakarta, Budi berargumen: 'A four-day week would make our team more productive, because people would come to work less tired.'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "build-rebut-arguments",
+          "options": [
+            "A four-day week is simply a better way to work, and everyone knows it.",
+            "When our Surabaya office tried it for three months, the team finished the same number of projects with fewer sick days.",
+            "People who disagree with this are just afraid of change."
+          ],
+          "answer": 1,
+          "prompt": "Kalimat mana yang menambahkan bukti terbaik untuk argumen Budi?",
+          "explanation": "Uji coba di Surabaya adalah **bukti**: hasil nyata dari perusahaan mereka sendiri. Kalimat pertama hanya mengulang klaim (*everyone knows* bukan bukti). Kalimat ketiga menyerang orang yang tidak setuju, bukan mendukung argumennya."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bantah argumennya, bukan orangnya",
+        "text": "Sekarang sisi lawan. Membantah artinya menunjukkan di mana argumen mereka lemah.",
+        "body": "**Even if that were true**: *were* seperti di *If I were you*: kamu membayangkannya tanpa menerimanya.\nSerang argumennya, jangan pernah orangnya: ✗ *You're too young to understand.* ✗ *You only say that because you live in Jakarta.*\nDua kebiasaan yang perlu disesuaikan: diam karena *sungkan*, atau menerjemahkan *Itu salah!* menjadi *That's wrong!* yang blak-blakan. Usahakan tegas dan sopan: *I disagree, because …* (**disagree** adalah kata kerja: bukan *I'm disagree*).",
+        "pairs": [
+          {
+            "en": "That argument overlooks …",
+            "id": "argumen itu mengabaikan …"
+          },
+          {
+            "en": "The evidence actually points the other way.",
+            "id": "buktinya justru menunjukkan sebaliknya"
+          },
+          {
+            "en": "Even if that were true, …",
+            "id": "seandainya itu pun benar, …"
+          },
+          {
+            "en": "That doesn't necessarily follow.",
+            "id": "belum tentu begitu"
+          },
+          {
+            "en": "I see it differently, and here's why.",
+            "id": "saya melihatnya berbeda, dan ini alasannya"
+          },
+          {
+            "en": "I disagree, because …",
+            "id": "saya tidak setuju, karena …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan bantah",
+        "text": "Kamu ada di pertemuan warga tentang jalan tol baru di dekat Bandung. Seorang pembicara membuat klaim yang sangat yakin.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "build-rebut-arguments",
+          "listen": "This toll road will end traffic jams in our city for good. More roads always mean faster journeys.",
+          "options": [
+            "You obviously know nothing about traffic. That's wrong.",
+            "I'm disagree, because toll roads are expensive.",
+            "The evidence actually points the other way: in many big cities, new roads soon fill up with even more cars."
+          ],
+          "answer": 2,
+          "prompt": "Dengarkan pembicaranya. Pilih bantahan terbaik.",
+          "explanation": "**The evidence actually points the other way** menjawab klaimnya langsung, dengan alasan: jalan baru sering menarik lebih banyak mobil. Balasan pertama menyerang pembicaranya dan terlalu blak-blakan. Balasan kedua punya kesalahan tata bahasa (*I disagree*, bukan *I'm disagree*) dan membahas harga, bukan apakah jalan itu mengakhiri kemacetan."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Berpikir cepat saat ditantang",
+        "text": "Momen tersulit dalam debat adalah pertanyaan mendadak. Empat langkah ini membantu.",
+        "body": "**1. Ulur waktu sebentar saja**: satu frasa, lalu jawab.\n**2. Minta klarifikasi** kalau tantangannya kurang jelas atau dilebih-lebihkan: *Are you suggesting that …?* Ucapkan dengan tenang; dengan nada marah itu terdengar seperti serangan.\n**3. Jawab pertanyaan yang benar-benar diajukan.** Ditanya *how many*? Sebutkan angkanya dulu. Jangan mengelak dengan pidato yang sudah disiapkan: juri dan penonton akan sadar.\n**4. Kembalikan** ke poinmu.\n*What I'd say to that is …* adalah frasa yang diingat sebagai satu kesatuan.",
+        "pairs": [
+          {
+            "en": "That's a good question. Let me put it this way …",
+            "id": "pertanyaan bagus. Begini …"
+          },
+          {
+            "en": "What I'd say to that is …",
+            "id": "yang ingin saya sampaikan soal itu adalah …"
+          },
+          {
+            "en": "It's a fair question, and the short answer is …",
+            "id": "pertanyaan yang wajar, dan jawaban singkatnya …"
+          },
+          {
+            "en": "Are you suggesting that …?",
+            "id": "maksud Anda …?"
+          },
+          {
+            "en": "If I understand you correctly, …",
+            "id": "kalau saya tidak salah tangkap, …"
+          },
+          {
+            "en": "Which brings me back to my main point …",
+            "id": "dan itu membawa saya kembali ke poin utama saya …"
+          },
+          {
+            "en": "And that's exactly why …",
+            "id": "dan justru karena itulah …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Dalam debat soal empat hari kerja seminggu, Bu Ani berkata: 'Then the same work has to fit into fewer days.' Kamu ingin memastikan maksudnya sebelum menjawab.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "respond-spontaneously",
+          "tokens": [
+            "longer",
+            "suggesting",
+            "everyone",
+            "Are",
+            "work",
+            "that",
+            "days",
+            "you",
+            "should"
+          ],
+          "solution": "Are you suggesting that everyone should work longer days?",
+          "prompt": "Susun kata-katanya: Maksud Ibu, semua orang sebaiknya bekerja lebih lama setiap harinya?",
+          "explanation": "**Are you suggesting that …?** memastikan tantangannya sebelum kamu menjawab. Setelah *that*, pakai urutan kalimat biasa: *everyone should work longer days*."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Jawab pertanyaan yang sebenarnya",
+        "text": "Di pertemuan warga, seorang warga bertanya kepada juru bicara proyek, Pak Hasan: 'How many houses will have to be demolished for this road?'",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "respond-spontaneously",
+          "options": [
+            "What I'd say to that is that this road will bring jobs and investment to the whole region.",
+            "Let me think… I don't know, maybe it's not a big problem.",
+            "It's a fair question, and the short answer is about 120 houses. Let me explain how those families will be compensated."
+          ],
+          "answer": 2,
+          "prompt": "Balasan mana yang menjawab pertanyaan yang benar-benar diajukan?",
+          "explanation": "Warga itu bertanya **how many**, dan balasan ketiga menyebut angkanya dulu, lalu menjelaskan. Balasan pertama mengelak: itu pidato yang sudah disiapkan soal lapangan kerja, bukan jawaban. Balasan kedua tidak menjawab dan meremehkan kekhawatiran yang serius."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Akui dulu, lalu balas",
+        "text": "Keterampilan terakhir: mengakui poin yang masuk akal tanpa kalah argumen.",
+        "body": "**Urutan: akui dulu, lalu balas dengan alasan.** Mengakui menunjukkan kamu adil dan membuat balasanmu lebih meyakinkan.\n**Nada:** ucapkan dengan tulus dan singkat. Kalau *That's a fair point, but …* muncul sebelum setiap balasan, itu terdengar seperti rumus kosong: **sebutkan poinnya** (*a fair point about the cost*) dan variasikan frasanya.\nJangan berhenti setelah mengakui: *That's a fair point, so I agree* sama saja menyerahkan debatnya.\nJebakan bahasa Indonesia: *Walaupun …, tetapi …* → tanpa *but* setelah anak kalimat **While**.",
+        "pairs": [
+          {
+            "en": "to concede",
+            "id": "mengakui (pihak lain sebagian benar)"
+          },
+          {
+            "en": "That's a fair point (about …), but …",
+            "id": "poin (soal …) itu masuk akal, tapi …"
+          },
+          {
+            "en": "I take your point; however, …",
+            "id": "saya paham poin Anda; namun, …"
+          },
+          {
+            "en": "Granted, …, but …",
+            "id": "memang benar …, tapi …"
+          },
+          {
+            "en": "I'd agree up to a point.",
+            "id": "saya setuju sampai batas tertentu"
+          },
+          {
+            "en": "While it's true that …, …",
+            "id": "meskipun benar bahwa …, … (tanpa but)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Dengar dan balas",
+        "text": "Kembali ke lomba debat antaruniversitas. Lawanmu menantang argumenmu tentang magang wajib.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concede-and-counter",
+          "listen": "Compulsory internships sound good, but many small companies simply can't afford to train hundreds of students.",
+          "options": [
+            "That's a fair point about small companies, but universities could also place students in government offices and NGOs.",
+            "That's a fair point, so I agree that internships shouldn't be compulsory.",
+            "That's wrong. You obviously don't understand how internships work."
+          ],
+          "answer": 0,
+          "prompt": "Dengarkan lawanmu. Pilih balasan yang mengakui satu poin lalu membalasnya.",
+          "explanation": "Balasan pertama **menyebut poinnya** (perusahaan kecil) lalu **membalas** dengan alasan (tempat lain bisa menerima mahasiswa). Balasan kedua mengakui lalu berhenti, jadi menyerahkan argumennya. Balasan ketiga blak-blakan dan menyerang orangnya."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Contekan",
+        "text": "Ini seluruh pelajaran dalam satu halaman, untuk debat atau rapatmu berikutnya.",
+        "artifact": {
+          "title": "Contekan · Debat dan argumen",
+          "intro": "Bangun argumenmu, pertahankan, dan tetap tegas tapi sopan: serang argumennya, jangan pernah orangnya.",
+          "headers": [
+            "Langkah",
+            "Frasa",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Build",
+              "claim → reason → evidence / example → So that's why …",
+              "klaim → alasan → bukti / contoh → kembali ke klaim"
+            ],
+            [
+              "Rebut",
+              "That argument overlooks …",
+              "argumen itu mengabaikan …"
+            ],
+            [
+              "Rebut",
+              "The evidence actually points the other way.",
+              "buktinya justru menunjukkan sebaliknya"
+            ],
+            [
+              "Rebut",
+              "Even if that were true, …",
+              "seandainya itu pun benar, …"
+            ],
+            [
+              "Rebut",
+              "That doesn't necessarily follow.",
+              "belum tentu begitu"
+            ],
+            [
+              "Buy time",
+              "That's a good question. Let me put it this way …",
+              "pertanyaan bagus. Begini …"
+            ],
+            [
+              "Buy time",
+              "What I'd say to that is …",
+              "yang ingin saya sampaikan adalah …"
+            ],
+            [
+              "Clarify",
+              "Are you suggesting that …? / If I understand you correctly, …",
+              "maksud Anda …? / kalau saya tidak salah tangkap, …"
+            ],
+            [
+              "Answer + bridge",
+              "The short answer is … Which brings me back to my main point.",
+              "jawaban singkatnya … ; kembali ke poin utama"
+            ],
+            [
+              "Concede + counter",
+              "That's a fair point about …, but …",
+              "poin soal … itu masuk akal, tapi …"
+            ],
+            [
+              "Concede + counter",
+              "I take your point; however, …",
+              "saya paham poin Anda; namun, …"
+            ],
+            [
+              "Concede + counter",
+              "Granted, …, but …",
+              "memang benar …, tapi …"
+            ],
+            [
+              "Concede + counter",
+              "I'd agree up to a point.",
+              "saya setuju sampai batas tertentu"
+            ],
+            [
+              "Concede + counter",
+              "While it's true that …, … (no but)",
+              "meskipun benar bahwa …, … (tanpa but)"
+            ]
+          ],
+          "tips": [
+            "Argumen yang kuat: klaim → alasan → bukti → kembali ke klaim. 'Everyone knows' bukan bukti.",
+            "Tegas + sopan: 'I disagree, because …' (bukan I'm disagree); jangan pernah 'You're too young to understand'.",
+            "Jawab dulu pertanyaan yang diajukan, lalu kembali ke poinmu. Akui dengan menyebut poinnya, lalu balas."
+          ],
+          "examples": [
+            {
+              "en": "That argument overlooks the cost of maintaining the road.",
+              "id": "Argumen itu mengabaikan biaya perawatan jalannya."
+            },
+            {
+              "en": "If I understand you correctly, you're saying the trial was too short.",
+              "id": "Kalau saya tidak salah tangkap, maksud Anda uji cobanya terlalu singkat."
+            },
+            {
+              "en": "Granted, it's expensive, but it will save drivers an hour a day.",
+              "id": "Memang benar, itu mahal, tapi itu akan menghemat waktu pengendara satu jam sehari."
+            },
+            {
+              "en": "I see it differently, and here's why.",
+              "id": "Saya melihatnya berbeda, dan ini alasannya."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton lagi",
+        "text": "TED talk dari mantan juara debat dunia tentang cara tidak setuju dengan baik, dan pelajaran singkat engVid tentang frasa cepat untuk mengakui poin."
+      }
+    ]
+  }
+}

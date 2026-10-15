@@ -1,0 +1,764 @@
+{
+  "en": {
+    "greeting": "Hi! Today is about negotiating in English: making proposals, bargaining with 'if', saying no without sounding rude, and closing the deal so everyone agrees on the same terms. Let's start with the first move: the proposal.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Proposals and replies",
+        "text": "Quick recap: from meetings you can clarify and sum up; from hedging you can soften. A negotiation uses both.",
+        "body": "**Propose:** *We'd like to propose…* (formal), *How would you feel about…?* (+ noun or -ing), *What if we…?* (*What if we shared…* sounds more tentative, like the second conditional).\n\n**Respond:** *That sounds reasonable in principle* = yes to the idea, details still open. *I'm afraid that wouldn't work for us, because…* = a clear but polite no. *Could you be a bit more flexible on…?* = please move a little.\n\n**would** and **could** make it sound like something to discuss, not a demand. Trap: a price isn't `too expensive`; it's **high**.",
+        "pairs": [
+          {
+            "en": "a proposal",
+            "id": "usulan"
+          },
+          {
+            "en": "We'd like to propose …",
+            "id": "kami ingin mengusulkan …"
+          },
+          {
+            "en": "How would you feel about …?",
+            "id": "bagaimana pendapat Anda soal …?"
+          },
+          {
+            "en": "What if we …?",
+            "id": "bagaimana kalau kita …?"
+          },
+          {
+            "en": "in principle",
+            "id": "pada prinsipnya"
+          },
+          {
+            "en": "I'm afraid …",
+            "id": "maaf, sayangnya …"
+          },
+          {
+            "en": "flexible on …",
+            "id": "fleksibel soal …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Build the sentence",
+        "text": "Mark, the coffee buyer in Melbourne, wants delivery in four weeks. Sari, in Medan, needs six. She asks him to move a little.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "make-and-respond",
+          "prompt": "Arrange the words: Bisakah Anda sedikit lebih fleksibel soal pengiriman?",
+          "tokens": [
+            "flexible",
+            "you",
+            "on",
+            "a",
+            "Could",
+            "more",
+            "delivery",
+            "be",
+            "bit"
+          ],
+          "solution": "Could you be a bit more flexible on delivery?",
+          "explanation": "**Could you be a bit more flexible on…?** asks the other side to move without demanding it: *could* and *a bit* make the request small and polite. It's the business version of *Bisa kurang?*, never `Can discount?`."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "A clear no, not 'maybe'",
+        "text": "Now the hardest reply: no. Here's a habit to watch.",
+        "body": "In Indonesia we often say *nanti kami pertimbangkan*, *kami usahakan* or *insyaallah* when we mean no. Many foreign partners hear **'maybe yes'**: they wait, plan around it, and later feel misled.\n\nIn English, a diplomatic no is still **clear**: a soft start (*I'm afraid… / Unfortunately…*) + the no (*that wouldn't work for us / we're not in a position to…*) + the reason (*because…*) + an alternative if you have one (*but we could… instead*).\n\n*We'll think about it* is fine only if you really will think about it.",
+        "pairs": [
+          {
+            "en": "Unfortunately, …",
+            "id": "sayangnya, …"
+          },
+          {
+            "en": "that wouldn't work for us",
+            "id": "itu tidak bisa kami terima"
+          },
+          {
+            "en": "we're not in a position to …",
+            "id": "kami tidak bisa …"
+          },
+          {
+            "en": "because …",
+            "id": "karena …"
+          },
+          {
+            "en": "… instead",
+            "id": "… sebagai gantinya"
+          },
+          {
+            "en": "We'll think about it.",
+            "id": "Nanti kami pikirkan. (hanya kalau memang begitu)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Bu Ani manages a hotel in Ubud, Bali. A tour operator asks for Rp 800,000 a night in August, the peak season. The hotel can't go below Rp 1,200,000 in August, but October is quiet.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-and-respond",
+          "prompt": "Which reply is the best diplomatic no?",
+          "options": [
+            "Thank you for the offer. We'll think about it and let you know.",
+            "I'm afraid that wouldn't work for us in August, because it's our peak season. But we could offer that rate in October.",
+            "No. Rp 800,000 is impossible."
+          ],
+          "answer": 1,
+          "explanation": "It says no clearly (**wouldn't work for us**), gives the reason (peak season) and offers an alternative (October). *We'll think about it* sounds like 'maybe yes' to many partners, so they wait for an answer that won't come. *No. … is impossible.* is clear but blunt, and closes the door."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Bargaining with 'if'",
+        "text": "In a negotiation you rarely give a plain yes. You say: yes, if…",
+        "body": "- **Real offer** (first conditional): *If you can increase the order to 5,000 units, we could offer a 7% discount.* No *will* after *if*.\n- **Just an idea** (second conditional): *If you signed for three years, we could lower the fee.*\n- **Only if:** *provided that* (formal), *as long as* (not *as soon as*!). *We'd be prepared to… / We'd be willing to…* = kami bersedia.\n- **Soften:** *That might be difficult. We were hoping for something closer to…*\n\nRule one: **never give without getting.** Every concession comes with an *if*. And it's **a 7% discount**, not `discount 7%`.",
+        "pairs": [
+          {
+            "en": "a condition",
+            "id": "syarat"
+          },
+          {
+            "en": "a concession",
+            "id": "konsesi, hal yang kamu relakan"
+          },
+          {
+            "en": "provided that",
+            "id": "asalkan, dengan syarat (formal)"
+          },
+          {
+            "en": "as long as",
+            "id": "asalkan"
+          },
+          {
+            "en": "as soon as",
+            "id": "segera setelah (bukan syarat!)"
+          },
+          {
+            "en": "We'd be prepared to …",
+            "id": "kami bersedia …"
+          },
+          {
+            "en": "That might be difficult.",
+            "id": "Itu mungkin sulit."
+          },
+          {
+            "en": "We were hoping for …",
+            "id": "kami berharap … (lebih halus)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Offers, conditions and deadlock",
+        "text": "Here's bargaining in our three deals: coffee, software and a hotel.",
+        "body": "Stuck in **deadlock** (jalan buntu)? Look at it from a new angle, ask about **room for manoeuvre** (British spelling; American *maneuver*), or take a short break so both sides can check with their boss.",
+        "examples": [
+          {
+            "en": "If you pay within 14 days, we'll cover the shipping to Melbourne.",
+            "id": "Kalau Anda membayar dalam 14 hari, kami yang menanggung ongkos kirim ke Melbourne."
+          },
+          {
+            "en": "We'd be willing to include the staff training, as long as the contract starts in January.",
+            "id": "Kami bersedia memasukkan pelatihan staf, asalkan kontraknya dimulai bulan Januari."
+          },
+          {
+            "en": "Rp 800,000 a night might be difficult for us.",
+            "id": "Rp 800.000 per malam mungkin sulit bagi kami."
+          },
+          {
+            "en": "We were hoping for something closer to $6.80 per kilo.",
+            "id": "Kami berharap angkanya lebih dekat ke 6,80 dolar per kilo."
+          },
+          {
+            "en": "Let's look at it from a different angle: is the price or the date more important to you?",
+            "id": "Mari kita lihat dari sudut pandang lain: mana yang lebih penting bagi Anda, harganya atau tanggalnya?"
+          },
+          {
+            "en": "Is there any room for manoeuvre on the payment terms?",
+            "id": "Apakah ada kelonggaran soal ketentuan pembayarannya?"
+          },
+          {
+            "en": "Let's take a short break and check with our managers.",
+            "id": "Kita istirahat sebentar dan bertanya dulu ke atasan masing-masing."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas, at a software company in Jakarta, can give a bank a 5% discount, but only if the bank buys 500 licences instead of 300.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concede-and-bargain",
+          "prompt": "Which offer is correct and trades the discount for something?",
+          "options": [
+            "If you will buy 500 licences, we give you discount 5%.",
+            "We give you a 5% discount, and maybe you can buy 500 licences.",
+            "If you buy 500 licences, we can offer a 5% discount."
+          ],
+          "answer": 2,
+          "explanation": "if + present (**buy**, not *will buy*), **can offer** in the result, and **a 5% discount** (a + the number before *discount*). The first has *will* after *if* and the Indonesian order *diskon 5%*; the second gives the discount away with no condition."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Give and get",
+        "text": "Bu Ani, in procurement at the bank, asks Dimas to cut the yearly fee by 10%. Dimas's CEO says that's possible, but only if the bank signs for three years.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concede-and-bargain",
+          "prompt": "Which reply is the best bargaining move?",
+          "options": [
+            "We could reduce the fee by 10% if you signed a three-year contract.",
+            "OK, no problem. We'll cut the fee by 10%.",
+            "That's impossible. Our price is fixed."
+          ],
+          "answer": 0,
+          "explanation": "It trades the concession (10% off) for something back (three years): **never give without getting**. *signed… could* is the second conditional, a tentative offer that's still open to discussion. The second reply gives 10% away for nothing; the third isn't true (the CEO allows it) and creates deadlock."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Closing the deal",
+        "text": "You've agreed! Don't just say 'Deal!' and leave. Close in four moves.",
+        "body": "1. **Summarise** every term: *So, just to confirm: …* / *Let me just run through what we've agreed.*\n2. **Check:** *Is that right?* / *Have I missed anything?*\n3. **Next steps**, who + what + when: *We'll send the contract by Friday.*\n4. **A positive end:** *It's been a pleasure doing business with you.*\n\nA complete summary has **what and how much**, **when**, **how you pay** and **any conditions**: the piece you leave out is the piece people argue about later. Then confirm it by email the same day: a good relationship doesn't replace clear terms.",
+        "pairs": [
+          {
+            "en": "the terms",
+            "id": "ketentuan"
+          },
+          {
+            "en": "payment terms",
+            "id": "ketentuan pembayaran"
+          },
+          {
+            "en": "within 30 days",
+            "id": "dalam 30 hari"
+          },
+          {
+            "en": "by Friday",
+            "id": "paling lambat hari Jumat"
+          },
+          {
+            "en": "Have I missed anything?",
+            "id": "Ada yang terlewat?"
+          },
+          {
+            "en": "It's been a pleasure doing business with you.",
+            "id": "Senang sekali bisa bekerja sama dengan Anda."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Your turn",
+        "text": "Dimas and Bu Ani have agreed: 500 licences, Rp 1.2 billion a year, a two-year contract, and staff training included.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "close-the-deal",
+          "prompt": "Which summary is complete?",
+          "options": [
+            "Let me just run through what we've agreed: 500 licences on a two-year contract. Thank you!",
+            "Let me just run through what we've agreed: everything we discussed today. Is that right?",
+            "Let me just run through what we've agreed: 500 licences at Rp 1.2 billion a year on a two-year contract, with staff training included. Is that right?"
+          ],
+          "answer": 2,
+          "explanation": "It names every term (how many, how much, how long, what's included) and checks agreement with **Is that right?**. The first leaves out the price and the training and doesn't check; the second names no terms at all, so nobody can confirm anything."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Cheat sheet",
+        "text": "Here's the whole negotiation on one page, to keep open before your next call.",
+        "artifact": {
+          "title": "Cheat sheet · Negotiation",
+          "intro": "Propose, respond, bargain with 'if', say a clear no, and close with a full summary.",
+          "headers": [
+            "Move",
+            "English",
+            "Indonesian"
+          ],
+          "rows": [
+            [
+              "Propose",
+              "We'd like to propose …",
+              "Kami ingin mengusulkan …"
+            ],
+            [
+              "Propose",
+              "How would you feel about …? / What if we …?",
+              "Bagaimana pendapat Anda soal …? / Bagaimana kalau kita …?"
+            ],
+            [
+              "Say yes to the idea",
+              "That sounds reasonable in principle.",
+              "Pada prinsipnya masuk akal."
+            ],
+            [
+              "Say no",
+              "I'm afraid that wouldn't work for us, because …",
+              "Maaf, itu tidak bisa kami terima, karena …"
+            ],
+            [
+              "Ask them to move",
+              "Could you be a bit more flexible on …?",
+              "Bisakah Anda sedikit lebih fleksibel soal …?"
+            ],
+            [
+              "Offer with a condition",
+              "If you …, we can / could …",
+              "Kalau Anda …, kami bisa …"
+            ],
+            [
+              "Offer with a condition",
+              "We'd be prepared to …, provided that / as long as …",
+              "Kami bersedia …, asalkan …"
+            ],
+            [
+              "Soften",
+              "That might be difficult. / We were hoping for something closer to …",
+              "Itu mungkin sulit. / Kami berharap angkanya lebih dekat ke …"
+            ],
+            [
+              "Deadlock",
+              "Is there any room for manoeuvre on …?",
+              "Apakah ada kelonggaran soal …?"
+            ],
+            [
+              "Deadlock",
+              "Let's look at it from a different angle. / Let's take a short break.",
+              "Mari lihat dari sudut lain. / Kita istirahat sebentar."
+            ],
+            [
+              "Confirm",
+              "So, just to confirm: … Is that right?",
+              "Jadi, untuk memastikan: … Betul begitu?"
+            ],
+            [
+              "Next steps",
+              "We'll send the contract by Friday.",
+              "Kami akan mengirim kontraknya paling lambat hari Jumat."
+            ],
+            [
+              "Close",
+              "It's been a pleasure doing business with you.",
+              "Senang sekali bisa bekerja sama dengan Anda."
+            ]
+          ],
+          "tips": [
+            "Never give without getting: every concession comes with an 'if'.",
+            "A diplomatic no is still a clear no: soft start + no + reason + alternative. Not 'nanti kami pertimbangkan'.",
+            "No will after if, and 'a 7% discount', not 'discount 7%'."
+          ],
+          "examples": [
+            {
+              "en": "If you can increase the order to 5,000 units, we could offer a 7% discount.",
+              "id": "Kalau Anda bisa menaikkan pesanan jadi 5.000 unit, kami bisa memberi diskon 7%."
+            },
+            {
+              "en": "I'm afraid that wouldn't work for us, because our budget is fixed until January.",
+              "id": "Maaf, itu tidak bisa kami terima, karena anggaran kami sudah tetap sampai Januari."
+            },
+            {
+              "en": "So, just to confirm: delivery by 15 March, payment within 30 days and a 7% discount. Is that right?",
+              "id": "Jadi, untuk memastikan: dikirim paling lambat 15 Maret, dibayar dalam 30 hari, dan diskon 7%. Betul begitu?"
+            },
+            {
+              "en": "We'll send the contract by Friday.",
+              "id": "Kami akan mengirim kontraknya paling lambat hari Jumat."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Watch and read more",
+        "text": "Two engVid videos and a British Council article on negotiating in English, if you'd like more phrases and the culture side."
+      }
+    ]
+  },
+  "id": {
+    "greeting": "Hai! Hari ini kita belajar bernegosiasi dalam bahasa Inggris: membuat usulan, menawar dengan 'if', menolak tanpa terdengar kasar, dan menutup kesepakatan supaya semua pihak sepakat pada ketentuan yang sama. Kita mulai dari langkah pertama: usulan.",
+    "steps": [
+      {
+        "kind": "concept",
+        "title": "Usulan dan tanggapannya",
+        "text": "Ulasan singkat: dari pelajaran rapat kamu bisa mengklarifikasi dan merangkum; dari hedging kamu bisa memperhalus. Negosiasi memakai keduanya.",
+        "body": "**Mengusulkan:** *We'd like to propose…* (formal), *How would you feel about…?* (+ kata benda atau bentuk -ing), *What if we…?* (*What if we shared…* terdengar lebih hati-hati, seperti second conditional).\n\n**Menanggapi:** *That sounds reasonable in principle* = setuju dengan idenya, detailnya masih terbuka. *I'm afraid that wouldn't work for us, because…* = penolakan yang jelas tapi sopan. *Could you be a bit more flexible on…?* = tolong bergeser sedikit.\n\n**would** dan **could** membuatnya terdengar seperti bahan diskusi, bukan tuntutan. Jebakan: harga itu bukan `too expensive`, tapi **high**.",
+        "pairs": [
+          {
+            "en": "a proposal",
+            "id": "usulan"
+          },
+          {
+            "en": "We'd like to propose …",
+            "id": "kami ingin mengusulkan …"
+          },
+          {
+            "en": "How would you feel about …?",
+            "id": "bagaimana pendapat Anda soal …?"
+          },
+          {
+            "en": "What if we …?",
+            "id": "bagaimana kalau kita …?"
+          },
+          {
+            "en": "in principle",
+            "id": "pada prinsipnya"
+          },
+          {
+            "en": "I'm afraid …",
+            "id": "maaf, sayangnya …"
+          },
+          {
+            "en": "flexible on …",
+            "id": "fleksibel soal …"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Susun kalimatnya",
+        "text": "Mark, pembeli kopi di Melbourne, ingin barangnya dikirim dalam empat minggu. Sari, di Medan, butuh enam minggu. Ia meminta Mark bergeser sedikit.",
+        "question": {
+          "type": "word_order",
+          "objectiveId": "make-and-respond",
+          "prompt": "Susun kata-katanya: Bisakah Anda sedikit lebih fleksibel soal pengiriman?",
+          "tokens": [
+            "flexible",
+            "you",
+            "on",
+            "a",
+            "Could",
+            "more",
+            "delivery",
+            "be",
+            "bit"
+          ],
+          "solution": "Could you be a bit more flexible on delivery?",
+          "explanation": "**Could you be a bit more flexible on…?** meminta pihak lain bergeser tanpa menuntut: *could* dan *a bit* membuat permintaannya terasa kecil dan sopan. Ini versi bisnis dari *Bisa kurang?*, bukan `Can discount?`."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Tolak dengan jelas, bukan 'mungkin'",
+        "text": "Sekarang tanggapan yang paling sulit: menolak. Ada satu kebiasaan yang perlu diwaspadai.",
+        "body": "Di Indonesia kita sering bilang *nanti kami pertimbangkan*, *kami usahakan* atau *insyaallah* padahal maksudnya tidak. Banyak mitra asing mendengarnya sebagai **'mungkin ya'**: mereka menunggu, membuat rencana, lalu merasa dibohongi.\n\nDalam bahasa Inggris, penolakan yang diplomatis tetap **jelas**: pembuka yang halus (*I'm afraid… / Unfortunately…*) + penolakannya (*that wouldn't work for us / we're not in a position to…*) + alasannya (*because…*) + alternatif kalau ada (*but we could… instead*).\n\n*We'll think about it* hanya boleh kalau kamu memang akan memikirkannya.",
+        "pairs": [
+          {
+            "en": "Unfortunately, …",
+            "id": "sayangnya, …"
+          },
+          {
+            "en": "that wouldn't work for us",
+            "id": "itu tidak bisa kami terima"
+          },
+          {
+            "en": "we're not in a position to …",
+            "id": "kami tidak bisa …"
+          },
+          {
+            "en": "because …",
+            "id": "karena …"
+          },
+          {
+            "en": "… instead",
+            "id": "… sebagai gantinya"
+          },
+          {
+            "en": "We'll think about it.",
+            "id": "Nanti kami pikirkan. (hanya kalau memang begitu)"
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Bu Ani mengelola sebuah hotel di Ubud, Bali. Sebuah operator tur meminta harga Rp 800.000 per malam di bulan Agustus, musim ramai. Hotel tidak bisa memberi di bawah Rp 1.200.000 di bulan Agustus, tapi bulan Oktober sepi.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "make-and-respond",
+          "prompt": "Tanggapan mana yang merupakan penolakan diplomatis terbaik?",
+          "options": [
+            "Thank you for the offer. We'll think about it and let you know.",
+            "I'm afraid that wouldn't work for us in August, because it's our peak season. But we could offer that rate in October.",
+            "No. Rp 800,000 is impossible."
+          ],
+          "answer": 1,
+          "explanation": "Jawaban ini menolak dengan jelas (**wouldn't work for us**), memberi alasan (musim ramai) dan menawarkan alternatif (Oktober). *We'll think about it* terdengar seperti 'mungkin ya' bagi banyak mitra, jadi mereka menunggu jawaban yang tidak akan datang. *No. … is impossible.* memang jelas tapi ketus, dan menutup pintu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menawar dengan 'if'",
+        "text": "Dalam negosiasi kamu jarang menjawab 'ya' begitu saja. Kamu bilang: ya, kalau…",
+        "body": "- **Tawaran nyata** (first conditional): *If you can increase the order to 5,000 units, we could offer a 7% discount.* Tidak ada *will* setelah *if*.\n- **Baru sebatas ide** (second conditional): *If you signed for three years, we could lower the fee.*\n- **Hanya kalau:** *provided that* (formal), *as long as* (bukan *as soon as*!). *We'd be prepared to… / We'd be willing to…* = kami bersedia.\n- **Perhalus:** *That might be difficult. We were hoping for something closer to…*\n\nAturan pertama: **jangan memberi tanpa mendapat.** Setiap konsesi selalu disertai *if*. Dan katakan **a 7% discount**, bukan `discount 7%`.",
+        "pairs": [
+          {
+            "en": "a condition",
+            "id": "syarat"
+          },
+          {
+            "en": "a concession",
+            "id": "konsesi, hal yang kamu relakan"
+          },
+          {
+            "en": "provided that",
+            "id": "asalkan, dengan syarat (formal)"
+          },
+          {
+            "en": "as long as",
+            "id": "asalkan"
+          },
+          {
+            "en": "as soon as",
+            "id": "segera setelah (bukan syarat!)"
+          },
+          {
+            "en": "We'd be prepared to …",
+            "id": "kami bersedia …"
+          },
+          {
+            "en": "That might be difficult.",
+            "id": "Itu mungkin sulit."
+          },
+          {
+            "en": "We were hoping for …",
+            "id": "kami berharap … (lebih halus)"
+          }
+        ]
+      },
+      {
+        "kind": "examples",
+        "title": "Tawaran, syarat dan jalan buntu",
+        "text": "Ini cara menawar dalam tiga kesepakatan kita: kopi, software dan hotel.",
+        "body": "Terjebak **deadlock** (jalan buntu)? Lihat dari sudut pandang baru, tanyakan **room for manoeuvre** (kelonggaran; ejaan British, Amerika *maneuver*), atau istirahat sebentar supaya kedua pihak bisa bertanya ke atasannya.",
+        "examples": [
+          {
+            "en": "If you pay within 14 days, we'll cover the shipping to Melbourne.",
+            "id": "Kalau Anda membayar dalam 14 hari, kami yang menanggung ongkos kirim ke Melbourne."
+          },
+          {
+            "en": "We'd be willing to include the staff training, as long as the contract starts in January.",
+            "id": "Kami bersedia memasukkan pelatihan staf, asalkan kontraknya dimulai bulan Januari."
+          },
+          {
+            "en": "Rp 800,000 a night might be difficult for us.",
+            "id": "Rp 800.000 per malam mungkin sulit bagi kami."
+          },
+          {
+            "en": "We were hoping for something closer to $6.80 per kilo.",
+            "id": "Kami berharap angkanya lebih dekat ke 6,80 dolar per kilo."
+          },
+          {
+            "en": "Let's look at it from a different angle: is the price or the date more important to you?",
+            "id": "Mari kita lihat dari sudut pandang lain: mana yang lebih penting bagi Anda, harganya atau tanggalnya?"
+          },
+          {
+            "en": "Is there any room for manoeuvre on the payment terms?",
+            "id": "Apakah ada kelonggaran soal ketentuan pembayarannya?"
+          },
+          {
+            "en": "Let's take a short break and check with our managers.",
+            "id": "Kita istirahat sebentar dan bertanya dulu ke atasan masing-masing."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas, dari perusahaan software di Jakarta, bisa memberi sebuah bank diskon 5%, tapi hanya kalau bank membeli 500 lisensi, bukan 300.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concede-and-bargain",
+          "prompt": "Tawaran mana yang benar dan menukar diskonnya dengan sesuatu?",
+          "options": [
+            "If you will buy 500 licences, we give you discount 5%.",
+            "We give you a 5% discount, and maybe you can buy 500 licences.",
+            "If you buy 500 licences, we can offer a 5% discount."
+          ],
+          "answer": 2,
+          "explanation": "if + present (**buy**, bukan *will buy*), **can offer** di bagian hasil, dan **a 5% discount** (a + angkanya sebelum *discount*). Pilihan pertama memakai *will* setelah *if* dan urutan bahasa Indonesia *diskon 5%*; pilihan kedua memberikan diskonnya begitu saja tanpa syarat."
+        }
+      },
+      {
+        "kind": "question",
+        "title": "Memberi dan mendapat",
+        "text": "Bu Ani, dari bagian pengadaan bank, meminta Dimas memotong biaya tahunannya 10%. CEO Dimas bilang itu bisa, tapi hanya kalau bank menandatangani kontrak tiga tahun.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "concede-and-bargain",
+          "prompt": "Tanggapan mana yang merupakan langkah tawar-menawar terbaik?",
+          "options": [
+            "We could reduce the fee by 10% if you signed a three-year contract.",
+            "OK, no problem. We'll cut the fee by 10%.",
+            "That's impossible. Our price is fixed."
+          ],
+          "answer": 0,
+          "explanation": "Jawaban ini menukar konsesinya (potongan 10%) dengan sesuatu (kontrak tiga tahun): **jangan memberi tanpa mendapat**. *signed… could* adalah second conditional, tawaran hati-hati yang masih bisa dibicarakan. Jawaban kedua memberikan 10% begitu saja; jawaban ketiga tidak benar (CEO-nya mengizinkan) dan membuat jalan buntu."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Menutup kesepakatan",
+        "text": "Sudah sepakat! Jangan hanya bilang 'Deal!' lalu pergi. Tutup dengan empat langkah.",
+        "body": "1. **Rangkum** setiap ketentuan: *So, just to confirm: …* / *Let me just run through what we've agreed.*\n2. **Cek:** *Is that right?* / *Have I missed anything?*\n3. **Langkah berikutnya**, siapa + apa + kapan: *We'll send the contract by Friday.*\n4. **Akhir yang positif:** *It's been a pleasure doing business with you.*\n\nRangkuman yang lengkap berisi **apa dan berapa**, **kapan**, **cara bayar** dan **syarat apa pun**: bagian yang kamu lewatkan adalah bagian yang nanti diperdebatkan. Lalu tegaskan lewat email di hari yang sama: hubungan yang baik tidak menggantikan ketentuan yang jelas.",
+        "pairs": [
+          {
+            "en": "the terms",
+            "id": "ketentuan"
+          },
+          {
+            "en": "payment terms",
+            "id": "ketentuan pembayaran"
+          },
+          {
+            "en": "within 30 days",
+            "id": "dalam 30 hari"
+          },
+          {
+            "en": "by Friday",
+            "id": "paling lambat hari Jumat"
+          },
+          {
+            "en": "Have I missed anything?",
+            "id": "Ada yang terlewat?"
+          },
+          {
+            "en": "It's been a pleasure doing business with you.",
+            "id": "Senang sekali bisa bekerja sama dengan Anda."
+          }
+        ]
+      },
+      {
+        "kind": "question",
+        "title": "Giliranmu",
+        "text": "Dimas dan Bu Ani sudah sepakat: 500 lisensi, Rp 1,2 miliar per tahun, kontrak dua tahun, dan sudah termasuk pelatihan staf.",
+        "question": {
+          "type": "mcq",
+          "objectiveId": "close-the-deal",
+          "prompt": "Rangkuman mana yang lengkap?",
+          "options": [
+            "Let me just run through what we've agreed: 500 licences on a two-year contract. Thank you!",
+            "Let me just run through what we've agreed: everything we discussed today. Is that right?",
+            "Let me just run through what we've agreed: 500 licences at Rp 1.2 billion a year on a two-year contract, with staff training included. Is that right?"
+          ],
+          "answer": 2,
+          "explanation": "Rangkuman ini menyebut setiap ketentuan (berapa banyak, berapa harganya, berapa lama, apa saja yang termasuk) dan mengecek persetujuan dengan **Is that right?**. Yang pertama melewatkan harga dan pelatihannya, dan tidak mengecek; yang kedua tidak menyebut ketentuan apa pun, jadi tidak ada yang bisa dipastikan."
+        }
+      },
+      {
+        "kind": "artifact",
+        "title": "Ringkasan",
+        "text": "Ini seluruh negosiasi dalam satu halaman, untuk kamu buka sebelum panggilan berikutnya.",
+        "artifact": {
+          "title": "Ringkasan · Negosiasi",
+          "intro": "Usulkan, tanggapi, tawar dengan 'if', tolak dengan jelas, dan tutup dengan rangkuman yang lengkap.",
+          "headers": [
+            "Langkah",
+            "Bahasa Inggris",
+            "Bahasa Indonesia"
+          ],
+          "rows": [
+            [
+              "Mengusulkan",
+              "We'd like to propose …",
+              "Kami ingin mengusulkan …"
+            ],
+            [
+              "Mengusulkan",
+              "How would you feel about …? / What if we …?",
+              "Bagaimana pendapat Anda soal …? / Bagaimana kalau kita …?"
+            ],
+            [
+              "Setuju dengan idenya",
+              "That sounds reasonable in principle.",
+              "Pada prinsipnya masuk akal."
+            ],
+            [
+              "Menolak",
+              "I'm afraid that wouldn't work for us, because …",
+              "Maaf, itu tidak bisa kami terima, karena …"
+            ],
+            [
+              "Meminta bergeser",
+              "Could you be a bit more flexible on …?",
+              "Bisakah Anda sedikit lebih fleksibel soal …?"
+            ],
+            [
+              "Tawaran bersyarat",
+              "If you …, we can / could …",
+              "Kalau Anda …, kami bisa …"
+            ],
+            [
+              "Tawaran bersyarat",
+              "We'd be prepared to …, provided that / as long as …",
+              "Kami bersedia …, asalkan …"
+            ],
+            [
+              "Memperhalus",
+              "That might be difficult. / We were hoping for something closer to …",
+              "Itu mungkin sulit. / Kami berharap angkanya lebih dekat ke …"
+            ],
+            [
+              "Jalan buntu",
+              "Is there any room for manoeuvre on …?",
+              "Apakah ada kelonggaran soal …?"
+            ],
+            [
+              "Jalan buntu",
+              "Let's look at it from a different angle. / Let's take a short break.",
+              "Mari lihat dari sudut lain. / Kita istirahat sebentar."
+            ],
+            [
+              "Menegaskan",
+              "So, just to confirm: … Is that right?",
+              "Jadi, untuk memastikan: … Betul begitu?"
+            ],
+            [
+              "Langkah berikutnya",
+              "We'll send the contract by Friday.",
+              "Kami akan mengirim kontraknya paling lambat hari Jumat."
+            ],
+            [
+              "Menutup",
+              "It's been a pleasure doing business with you.",
+              "Senang sekali bisa bekerja sama dengan Anda."
+            ]
+          ],
+          "tips": [
+            "Jangan memberi tanpa mendapat: setiap konsesi selalu disertai 'if'.",
+            "Penolakan yang diplomatis tetap penolakan yang jelas: pembuka halus + penolakan + alasan + alternatif. Bukan 'nanti kami pertimbangkan'.",
+            "Tidak ada will setelah if, dan 'a 7% discount', bukan 'discount 7%'."
+          ],
+          "examples": [
+            {
+              "en": "If you can increase the order to 5,000 units, we could offer a 7% discount.",
+              "id": "Kalau Anda bisa menaikkan pesanan jadi 5.000 unit, kami bisa memberi diskon 7%."
+            },
+            {
+              "en": "I'm afraid that wouldn't work for us, because our budget is fixed until January.",
+              "id": "Maaf, itu tidak bisa kami terima, karena anggaran kami sudah tetap sampai Januari."
+            },
+            {
+              "en": "So, just to confirm: delivery by 15 March, payment within 30 days and a 7% discount. Is that right?",
+              "id": "Jadi, untuk memastikan: dikirim paling lambat 15 Maret, dibayar dalam 30 hari, dan diskon 7%. Betul begitu?"
+            },
+            {
+              "en": "We'll send the contract by Friday.",
+              "id": "Kami akan mengirim kontraknya paling lambat hari Jumat."
+            }
+          ]
+        }
+      },
+      {
+        "kind": "resources",
+        "title": "Tonton dan baca lagi",
+        "text": "Dua video engVid dan satu artikel British Council tentang bernegosiasi dalam bahasa Inggris (semuanya berbahasa Inggris), kalau kamu ingin lebih banyak ungkapan dan sisi budayanya."
+      }
+    ]
+  }
+}
