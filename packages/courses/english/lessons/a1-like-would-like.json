@@ -26,7 +26,13 @@
           "en": "My mother doesn't like driving.",
           "id": "Ibu saya tidak suka menyetir."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "like / love / hate + kata benda atau -ing",
+          "explanation": "Katakan apa yang kamu suka dengan like (suka), love (sangat suka) dan hate (benci). Setelahnya, taruh kata benda, yaitu nama sebuah benda (I like coffee), atau kata kerja + -ing untuk kegiatan (I love reading). 'Suka membaca' dalam bahasa Indonesia tidak punya -ing, tapi bahasa Inggris memerlukannya. Kalimat negatif: don't / doesn't like."
+        }
+      }
     },
     {
       "title": "Asking politely with I'd like",
@@ -40,7 +46,13 @@
           "en": "Would you like a drink? — Yes, please.",
           "id": "Mau minum? — Ya, mau."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Meminta dengan sopan memakai I'd like",
+          "explanation": "I'd like = I would like. Ini cara sopan untuk bilang apa yang kamu mau sekarang, saat memesan atau meminta sesuatu; 'would' di sini bukan 'akan'. Tawarkan sesuatu dengan Would you like ...? Tetap pakai a/an sebelum satu benda: a drink, an apple. 'a coffee' = satu cangkir kopi."
+        }
+      }
     },
     {
       "title": "I like or I'd like?",
@@ -54,7 +66,13 @@
           "en": "I'd like an orange juice, please.",
           "id": "Saya mau jus jeruk satu, ya. (sekarang)"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "I like atau I'd like?",
+          "explanation": "I like = secara umum, selalu (suka). I'd like = sekarang, sebuah permintaan (mau). Do you like ...? → Yes, I do. / No, I don't. Would you like ...? → Yes, please. / No, thank you."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -278,7 +296,8 @@
           "explain": "After like, use a verb + -ing: listening.",
           "i18n": {
             "id": {
-              "explain": "Setelah like, pakai kata kerja + -ing: listening."
+              "explain": "Setelah like, pakai kata kerja + -ing: listening.",
+              "prompt": "Lengkapi: Rina likes ___ to music in the car."
             }
           }
         }
@@ -308,22 +327,42 @@
             {
               "en": "read → reading",
               "id": "membaca",
-              "note": "+ ing"
+              "note": "+ ing",
+              "i18n": {
+                "id": {
+                  "note": "tambah ing"
+                }
+              }
             },
             {
               "en": "write → writing",
               "id": "menulis",
-              "note": "drop the e"
+              "note": "drop the e",
+              "i18n": {
+                "id": {
+                  "note": "buang huruf e"
+                }
+              }
             },
             {
               "en": "swim → swimming",
               "id": "berenang",
-              "note": "double m"
+              "note": "double m",
+              "i18n": {
+                "id": {
+                  "note": "huruf m digandakan"
+                }
+              }
             },
             {
               "en": "shop → shopping",
               "id": "berbelanja",
-              "note": "double p"
+              "note": "double p",
+              "i18n": {
+                "id": {
+                  "note": "huruf p digandakan"
+                }
+              }
             }
           ]
         },
@@ -348,7 +387,8 @@
           "explain": "Ride ends in a silent e, so drop the e and add -ing: riding. There is no double d.",
           "i18n": {
             "id": {
-              "explain": "Ride berakhiran e yang tidak dibaca, jadi buang e-nya lalu tambah -ing: riding. Huruf d tidak digandakan."
+              "explain": "Ride berakhiran e yang tidak dibaca, jadi buang e-nya lalu tambah -ing: riding. Huruf d tidak digandakan.",
+              "prompt": "Lengkapi dengan bentuk -ing dari ride: My little brother loves ___ his bike."
             }
           }
         }
@@ -378,12 +418,22 @@
             {
               "en": "I'd like a coffee, please.",
               "id": "Saya pesan kopi satu, ya.",
-              "note": "at a café"
+              "note": "at a café",
+              "i18n": {
+                "id": {
+                  "note": "di kafe"
+                }
+              }
             },
             {
               "en": "I'd like a bottle of water, please.",
               "id": "Saya mau sebotol air, ya.",
-              "note": "at a shop"
+              "note": "at a shop",
+              "i18n": {
+                "id": {
+                  "note": "di toko"
+                }
+              }
             },
             {
               "en": "Would you like a drink? — Yes, please.",
@@ -420,7 +470,8 @@
           "explain": "To offer something, ask Would you like ...? 'Do you like ...?' asks what someone enjoys in general.",
           "i18n": {
             "id": {
-              "explain": "Untuk menawarkan sesuatu, tanyakan Would you like ...? 'Do you like ...?' menanyakan apa yang disukai seseorang secara umum."
+              "explain": "Untuk menawarkan sesuatu, tanyakan Would you like ...? 'Do you like ...?' menanyakan apa yang disukai seseorang secara umum.",
+              "prompt": "Kamu menawarkan makanan ke temanmu. Lengkapi: '___ you like a sandwich?'"
             }
           }
         }
@@ -450,12 +501,22 @@
             {
               "en": "I like mangoes.",
               "id": "Saya suka mangga.",
-              "note": "always, in general"
+              "note": "always, in general",
+              "i18n": {
+                "id": {
+                  "note": "selalu, secara umum"
+                }
+              }
             },
             {
               "en": "I'd like two mangoes, please.",
               "id": "Saya mau dua mangga, ya.",
-              "note": "now, at the market"
+              "note": "now, at the market",
+              "i18n": {
+                "id": {
+                  "note": "sekarang, di pasar"
+                }
+              }
             },
             {
               "en": "Do you like football? — Yes, I do.",
@@ -497,7 +558,8 @@
           "explain": "Would you like ...? is an offer, so answer No, thank you. 'No, I don't' answers Do you like ...?",
           "i18n": {
             "id": {
-              "explain": "Would you like ...? adalah tawaran, jadi jawab No, thank you. 'No, I don't' menjawab Do you like ...?"
+              "explain": "Would you like ...? adalah tawaran, jadi jawab No, thank you. 'No, I don't' menjawab Do you like ...?",
+              "prompt": "Would you like a piece of cake? (Kamu tidak mau.) Mana jawaban yang tepat?"
             }
           }
         }

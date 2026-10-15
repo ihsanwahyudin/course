@@ -27,7 +27,13 @@
           "en": "I have two new books.",
           "id": "Saya punya dua buku baru."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata sifat sebelum kata benda",
+          "explanation": "Kata sifat (adjective) adalah kata yang menggambarkan sesuatu (red, big, cheap). Dalam bahasa Inggris, kata sifat ada sebelum kata benda (bendanya): a red car (mobil merah). a/an ditaruh sebelum kata sifat dan mengikuti bunyi kata tepat sesudahnya. Kata sifat tidak pernah diberi -s; hanya kata bendanya: two big bags."
+        }
+      }
     },
     {
       "title": "be + adjective",
@@ -45,7 +51,13 @@
           "en": "The bus isn't full.",
           "id": "Busnya tidak penuh."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "be + kata sifat",
+          "explanation": "Setelah orang atau benda, pakai am/is/are + kata sifat: She's tired (She's = She is). Kalimat 'Dia capek' tidak punya kata kerja, tapi kalimat bahasa Inggris selalu butuh kata kerja, dan am/is/are yang mengisinya. Jangan hilangkan be, dan jangan taruh 'a' sebelum kata sifat saja: a artinya 'satu (benda)' dan butuh kata benda."
+        }
+      }
     },
     {
       "title": "very and really",
@@ -63,7 +75,13 @@
           "en": "I really like it.",
           "id": "Saya suka sekali."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "very dan really",
+          "explanation": "Taruh very atau really sebelum kata sifat supaya artinya lebih kuat: very hot, really cheap. Sebelum kata kerja (kata kegiatan seperti like), pakai really, bukan very: I really like it. 'very much' berbeda: letaknya di akhir, I like it very much."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -223,12 +241,22 @@
             {
               "en": "an old bike",
               "id": "sepeda tua (*an*, karena *old* diawali bunyi 'o', bunyi vokal)",
-              "note": "an: old starts with an 'o' sound"
+              "note": "an: old starts with an 'o' sound",
+              "i18n": {
+                "id": {
+                  "note": "an: old diawali bunyi 'o'"
+                }
+              }
             },
             {
               "en": "two white cats",
               "id": "dua kucing putih (yang diberi -s hanya *cats*, bukan *white*)",
-              "note": "white, not whites"
+              "note": "white, not whites",
+              "i18n": {
+                "id": {
+                  "note": "white, bukan whites"
+                }
+              }
             }
           ]
         },
@@ -253,7 +281,8 @@
           "explain": "The adjective cheap goes before the noun bag, and it never takes -s.",
           "i18n": {
             "id": {
-              "explain": "Kata sifat cheap ada sebelum kata benda bag, dan tidak pernah diberi -s."
+              "explain": "Kata sifat cheap ada sebelum kata benda bag, dan tidak pernah diberi -s.",
+              "prompt": "Mana yang benar?"
             }
           }
         }
@@ -319,7 +348,8 @@
           "explain": "My phone = it (one thing), so we use is: My phone is old.",
           "i18n": {
             "id": {
-              "explain": "My phone = it (satu benda), jadi pakai is: My phone is old."
+              "explain": "My phone = it (satu benda), jadi pakai is: My phone is old.",
+              "prompt": "Lengkapi: My phone ___ old."
             }
           }
         }
@@ -361,7 +391,12 @@
             {
               "en": "I really like this song.",
               "id": "Saya suka sekali lagu ini. (*like* = kata kerja, jadi pakai *really*)",
-              "note": "really + verb"
+              "note": "really + verb",
+              "i18n": {
+                "id": {
+                  "note": "really + kata kerja"
+                }
+              }
             }
           ]
         },
@@ -395,7 +430,8 @@
           "explain": "very goes right before the adjective: very big.",
           "i18n": {
             "id": {
-              "explain": "very ada tepat sebelum kata sifat: very big."
+              "explain": "very ada tepat sebelum kata sifat: very big.",
+              "prompt": "Mana yang benar?"
             }
           }
         }

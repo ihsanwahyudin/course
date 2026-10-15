@@ -27,7 +27,13 @@
           "en": "Dimas never drinks coffee.",
           "id": "Dimas tidak pernah minum kopi."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Lima kata untuk seberapa sering",
+          "explanation": "always (100%), usually (hampir selalu), often (sering), sometimes (kadang-kadang), never (0%). Never sudah berarti 'tidak', jadi jangan tambah don't/doesn't."
+        }
+      }
     },
     {
       "title": "Where the word goes",
@@ -41,7 +47,13 @@
           "en": "The market is always busy on Sundays.",
           "id": "Pasar selalu ramai setiap hari Minggu."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Letak katanya",
+          "explanation": "Taruh sebelum kata kerja utama, yaitu kata kegiatannya (I usually walk to school), tapi setelah am/is/are (He is often tired), karena am/is/are bukan kegiatan. Triknya: cari am/is/are dulu. Dalam pertanyaan dengan do/does, kata ini ada setelah subjek (siapa yang melakukan), tetap tepat sebelum kata kegiatannya: Do you often cook?"
+        }
+      }
     },
     {
       "title": "Asking How often …?",
@@ -55,7 +67,13 @@
           "en": "How often does Sari call her mother? — Every day.",
           "id": "Seberapa sering Sari menelepon ibunya? — Setiap hari."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bertanya How often …?",
+          "explanation": "How often + do/does + subjek + kata kerja dasar (tanpa -s: cook, go). Jawab dengan kata seberapa sering tadi, atau dengan every day, once a week, twice a week, three times a month. 1 kali = once, 2 kali = twice (kata khusus); mulai 3 jadi three times, four times."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -221,27 +239,52 @@
             {
               "en": "I always get up at five.",
               "id": "Saya selalu bangun jam lima.",
-              "note": "100%"
+              "note": "100%",
+              "i18n": {
+                "id": {
+                  "note": "100%"
+                }
+              }
             },
             {
               "en": "Rina usually takes an ojek to work.",
               "id": "Rina biasanya naik ojek ke kantor.",
-              "note": "about 90%"
+              "note": "about 90%",
+              "i18n": {
+                "id": {
+                  "note": "sekitar 90%"
+                }
+              }
             },
             {
               "en": "We often eat nasi goreng.",
               "id": "Kami sering makan nasi goreng.",
-              "note": "about 70%"
+              "note": "about 70%",
+              "i18n": {
+                "id": {
+                  "note": "sekitar 70%"
+                }
+              }
             },
             {
               "en": "Budi sometimes plays futsal.",
               "id": "Budi kadang-kadang main futsal.",
-              "note": "about 50%"
+              "note": "about 50%",
+              "i18n": {
+                "id": {
+                  "note": "sekitar 50%"
+                }
+              }
             },
             {
               "en": "Dimas never drinks coffee.",
               "id": "Dimas tidak pernah minum kopi.",
-              "note": "0%"
+              "note": "0%",
+              "i18n": {
+                "id": {
+                  "note": "0%"
+                }
+              }
             }
           ]
         },
@@ -266,7 +309,8 @@
           "explain": "A vegetarian eats meat 0% of the time, so: never. 'doesn't never' has two 'not' words (a double negative), which is wrong in English.",
           "i18n": {
             "id": {
-              "explain": "Vegetarian makan daging 0% dari waktunya, jadi: never. 'doesn't never' punya dua kata 'tidak' (negatif ganda), dan itu salah dalam bahasa Inggris."
+              "explain": "Vegetarian makan daging 0% dari waktunya, jadi: never. 'doesn't never' punya dua kata 'tidak' (negatif ganda), dan itu salah dalam bahasa Inggris.",
+              "prompt": "Lengkapi: Rudi is a vegetarian. He ___ eats meat."
             }
           }
         }
@@ -296,22 +340,42 @@
             {
               "en": "My mother usually cooks dinner.",
               "id": "Ibu saya biasanya memasak makan malam. (*cooks* = kata kegiatan)",
-              "note": "before the main verb"
+              "note": "before the main verb",
+              "i18n": {
+                "id": {
+                  "note": "sebelum kata kerja utama"
+                }
+              }
             },
             {
               "en": "They often study at the library.",
               "id": "Mereka sering belajar di perpustakaan.",
-              "note": "before the main verb"
+              "note": "before the main verb",
+              "i18n": {
+                "id": {
+                  "note": "sebelum kata kerja utama"
+                }
+              }
             },
             {
               "en": "The market is always busy on Sundays.",
               "id": "Pasar selalu ramai setiap hari Minggu. (ada *is* → always setelahnya)",
-              "note": "after is"
+              "note": "after is",
+              "i18n": {
+                "id": {
+                  "note": "setelah is"
+                }
+              }
             },
             {
               "en": "I am sometimes late for class.",
               "id": "Saya kadang-kadang terlambat masuk kelas.",
-              "note": "after am"
+              "note": "after am",
+              "i18n": {
+                "id": {
+                  "note": "setelah am"
+                }
+              }
             }
           ]
         },
@@ -336,7 +400,8 @@
           "explain": "Often goes before the action word 'go', and with 'they' (more than one person) the verb has no -s.",
           "i18n": {
             "id": {
-              "explain": "Often ditaruh sebelum kata kegiatan 'go', dan dengan 'they' (lebih dari satu orang) kata kerjanya tanpa -s."
+              "explain": "Often ditaruh sebelum kata kegiatan 'go', dan dengan 'they' (lebih dari satu orang) kata kerjanya tanpa -s.",
+              "prompt": "Kalimat mana yang benar?"
             }
           }
         }
@@ -402,7 +467,8 @@
           "explain": "'Every morning' tells us how often, so the question is How often.",
           "i18n": {
             "id": {
-              "explain": "'Every morning' menjawab seberapa sering, jadi pertanyaannya How often."
+              "explain": "'Every morning' menjawab seberapa sering, jadi pertanyaannya How often.",
+              "prompt": "Lengkapi: ___ do you go to the warung? — Every morning."
             }
           }
         }

@@ -25,7 +25,13 @@
           "en": "Be careful. The floor is wet.",
           "id": "Hati-hati. Lantainya basah."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat perintah: kata kerja di depan, don't untuk larangan",
+          "explanation": "Mulai dengan kata kerja dasar (bentuk di kamus: turn, wait, sit) dan tanpa 'you': Turn left. Wait here. Untuk 'jangan', taruh Don't (= do not) sebelum kata kerja: Don't run. Kata sifat (careful, quiet, shy) menjelaskan keadaan, bukan kegiatan, jadi pakai be: Be careful. Tambahkan please supaya sopan."
+        }
+      }
     },
     {
       "title": "Let's + verb",
@@ -43,7 +49,13 @@
           "en": "Let's take a break. — Good idea!",
           "id": "Ayo istirahat sebentar. — Ide bagus!"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Let's + kata kerja",
+          "explanation": "Let's (= let us; us = kita) mengajak orang lain melakukan sesuatu bersamamu, seperti 'ayo kita'. Langsung pakai kata kerja dasar setelahnya: tanpa 'to', tanpa 'we' (kata 'kita' sudah ada di dalam Let's)."
+        }
+      }
     },
     {
       "title": "Understanding instructions and directions",
@@ -57,7 +69,13 @@
           "en": "The station is on your left.",
           "id": "Stasiunnya ada di sebelah kirimu."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Memahami perintah dan petunjuk arah",
+          "explanation": "Dengarkan kata kerjanya (go, turn, cross, stop) dan kata don't, lalu kata-kata tempatnya. 'Turn left' adalah gerakan (belok kiri); 'on your left' memberi tahu letak tempatnya (di sebelah kirimu)."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -272,7 +290,8 @@
           "explain": "An instruction starts with the base verb and has no subject (no *you* in front): Turn right. 'Turning' has -ing, and 'You turn right' sounds like a description, not an instruction.",
           "i18n": {
             "id": {
-              "explain": "Kalimat perintah dimulai dengan kata kerja dasar dan tanpa subjek (tanpa *you* di depan): Turn right. 'Turning' memakai -ing, dan 'You turn right' terdengar seperti cerita, bukan perintah."
+              "explain": "Kalimat perintah dimulai dengan kata kerja dasar dan tanpa subjek (tanpa *you* di depan): Turn right. 'Turning' memakai -ing, dan 'You turn right' terdengar seperti cerita, bukan perintah.",
+              "prompt": "Seorang sopir menanyakan jalan ke hotel. Mana yang benar?"
             }
           }
         }
@@ -338,7 +357,8 @@
           "explain": "For 'jangan', use Don't + verb: Don't shout. 'Not' and 'No' can't start an instruction.",
           "i18n": {
             "id": {
-              "explain": "Untuk 'jangan', pakai Don't + kata kerja: Don't shout. 'Not' dan 'No' tidak bisa dipakai untuk memulai kalimat larangan."
+              "explain": "Untuk 'jangan', pakai Don't + kata kerja: Don't shout. 'Not' dan 'No' tidak bisa dipakai untuk memulai kalimat larangan.",
+              "prompt": "Kita sedang di perpustakaan. Lengkapi: ___ shout, please."
             }
           }
         }
@@ -368,27 +388,52 @@
             {
               "en": "Be careful!",
               "id": "Hati-hati!",
-              "note": "careful = adjective"
+              "note": "careful = adjective",
+              "i18n": {
+                "id": {
+                  "note": "careful = kata sifat"
+                }
+              }
             },
             {
               "en": "Be quiet, please.",
               "id": "Tolong jangan berisik.",
-              "note": "quiet = adjective"
+              "note": "quiet = adjective",
+              "i18n": {
+                "id": {
+                  "note": "quiet = kata sifat"
+                }
+              }
             },
             {
               "en": "Be nice to your sister.",
               "id": "Bersikap baiklah pada adikmu.",
-              "note": "nice = adjective"
+              "note": "nice = adjective",
+              "i18n": {
+                "id": {
+                  "note": "nice = kata sifat"
+                }
+              }
             },
             {
               "en": "Don't be shy.",
               "id": "Jangan malu-malu.",
-              "note": "don't be + adjective"
+              "note": "don't be + adjective",
+              "i18n": {
+                "id": {
+                  "note": "don't be + kata sifat"
+                }
+              }
             },
             {
               "en": "Don't eat in the car.",
               "id": "Jangan makan di mobil.",
-              "note": "eat = verb, no be"
+              "note": "eat = verb, no be",
+              "i18n": {
+                "id": {
+                  "note": "eat = kata kerja, tanpa be"
+                }
+              }
             }
           ]
         },
@@ -413,7 +458,8 @@
           "explain": "Careful describes how you are (an adjective), not an action, so it needs be: Be careful.",
           "i18n": {
             "id": {
-              "explain": "Careful menjelaskan keadaan (kata sifat), bukan kegiatan, jadi perlu be: Be careful."
+              "explain": "Careful menjelaskan keadaan (kata sifat), bukan kegiatan, jadi perlu be: Be careful.",
+              "prompt": "Lantainya basah. Lengkapi: ___ careful!"
             }
           }
         }
@@ -479,7 +525,8 @@
           "explain": "Let's + base verb: Let's go. No 'we', no -ing.",
           "i18n": {
             "id": {
-              "explain": "Let's + kata kerja dasar: Let's go. Tanpa 'we', tanpa -ing."
+              "explain": "Let's + kata kerja dasar: Let's go. Tanpa 'we', tanpa -ing.",
+              "prompt": "Cuacanya panas. Lengkapi: ___ to the beach!"
             }
           }
         }
@@ -554,7 +601,8 @@
           "explain": "'Turn right' is where you go. 'On your left' is where the pharmacy is.",
           "i18n": {
             "id": {
-              "explain": "'Turn right' adalah arah jalanmu. 'On your left' adalah letak apoteknya."
+              "explain": "'Turn right' adalah arah jalanmu. 'On your left' adalah letak apoteknya.",
+              "prompt": "'Turn right at the school. The pharmacy is on your left.' Di mana apoteknya?"
             }
           }
         }

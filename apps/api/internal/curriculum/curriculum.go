@@ -130,9 +130,23 @@ type Example struct {
 }
 
 type KeyPoint struct {
-	Title       string    `json:"title"`
-	Explanation string    `json:"explanation"`
-	Examples    []Example `json:"examples"`
+	Title       string                  `json:"title"`
+	Explanation string                  `json:"explanation"`
+	Examples    []Example               `json:"examples"`
+	I18n        map[string]KeyPointText `json:"i18n,omitempty"`
+}
+
+type KeyPointText struct {
+	Title       string `json:"title"`
+	Explanation string `json:"explanation,omitempty"`
+}
+
+// TitleIn returns the key point's title in a language (English fallback).
+func (k KeyPoint) TitleIn(lang string) string {
+	if t := strings.TrimSpace(k.I18n[lang].Title); t != "" {
+		return t
+	}
+	return k.Title
 }
 
 type PracticePrompt struct {
@@ -806,6 +820,24 @@ func validateTranslations(c *Curriculum) []error {
 			}
 			if n := c.byID[id]; n == nil || n.ContentStatus != ContentReady {
 				continue
+			}
+			// Learners in this language see no English the lesson didn't mean to teach.
+			for _, k := range l.KeyPoints {
+				if strings.TrimSpace(k.I18n[lang].Title) == "" {
+					errs = append(errs, fmt.Errorf("lesson %q: missing %q title for key point %q", id, lang, k.Title))
+				}
+			}
+			for _, sec := range l.Material {
+				for _, b := range sec.Blocks {
+					if b.Type == "check" && strings.TrimSpace(b.I18n[lang].Prompt) == "" {
+						errs = append(errs, fmt.Errorf("lesson %q: missing %q prompt for check %q", id, lang, b.Prompt))
+					}
+					for _, r := range b.Rows {
+						if r.Note != "" && strings.TrimSpace(r.I18n[lang].Note) == "" {
+							errs = append(errs, fmt.Errorf("lesson %q: missing %q note for example %q", id, lang, r.EN))
+						}
+					}
+				}
 			}
 			known := map[string]bool{}
 			for _, it := range l.Assessment {

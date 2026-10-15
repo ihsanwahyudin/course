@@ -25,7 +25,13 @@
           "en": "My sister's wedding is in December.",
           "id": "Pernikahan kakakku bulan Desember."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "at, on, in untuk waktu dan tanggal",
+          "explanation": "at + waktu yang pasti (at eight o'clock, at noon). on + hari atau tanggal (on Friday, on 17 August). in + bulan, tahun, atau musim (in December, in 2026, in the dry season). Ingat dari kecil ke besar: at → on → in."
+        }
+      }
     },
     {
       "title": "Where things are",
@@ -43,7 +49,13 @@
           "en": "The bus stop is next to the school.",
           "id": "Halte busnya di sebelah sekolah."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Letak benda",
+          "explanation": "Pakai be + in (di dalam), on (di atas, menempel), under (di bawah), next to (di sebelah), between (di antara dua benda) atau behind (di belakang). Pakai satu preposisi saja: under the table, bukan 'in under the table'."
+        }
+      }
     },
     {
       "title": "Everyday time expressions",
@@ -61,7 +73,13 @@
           "en": "We visit Grandma at the weekend.",
           "id": "Kami mengunjungi Nenek di akhir pekan."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Ungkapan waktu sehari-hari",
+          "explanation": "in the morning, in the afternoon, in the evening, tapi at night. at the weekend (British) atau on the weekend (Amerika). Kalau ada nama hari, pakai on: on Friday evening. Tanpa preposisi sebelum this, every, atau tomorrow: this morning, every Sunday."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -224,27 +242,52 @@
             {
               "en": "The shop opens at nine o'clock.",
               "id": "Tokonya buka jam sembilan.",
-              "note": "at + clock time"
+              "note": "at + clock time",
+              "i18n": {
+                "id": {
+                  "note": "at + jam"
+                }
+              }
             },
             {
               "en": "We have lunch at noon.",
               "id": "Kami makan siang jam dua belas siang.",
-              "note": "at + exact time"
+              "note": "at + exact time",
+              "i18n": {
+                "id": {
+                  "note": "at + waktu yang pasti"
+                }
+              }
             },
             {
               "en": "I have English class on Wednesday.",
               "id": "Saya ada kelas bahasa Inggris hari Rabu.",
-              "note": "on + day"
+              "note": "on + day",
+              "i18n": {
+                "id": {
+                  "note": "on + hari"
+                }
+              }
             },
             {
               "en": "Mother's Day in Indonesia is on 22 December.",
               "id": "Hari Ibu di Indonesia tanggal 22 Desember.",
-              "note": "on + date"
+              "note": "on + date",
+              "i18n": {
+                "id": {
+                  "note": "on + tanggal"
+                }
+              }
             },
             {
               "en": "The rainy season starts in November.",
               "id": "Musim hujan mulai bulan November.",
-              "note": "in + month"
+              "note": "in + month",
+              "i18n": {
+                "id": {
+                  "note": "in + bulan"
+                }
+              }
             }
           ]
         },
@@ -269,7 +312,8 @@
           "explain": "Friday is a day, and days take on: on Friday.",
           "i18n": {
             "id": {
-              "explain": "Friday adalah nama hari, dan hari memakai on: on Friday."
+              "explain": "Friday adalah nama hari, dan hari memakai on: on Friday.",
+              "prompt": "Lengkapi: Our office party is ___ Friday."
             }
           }
         }
@@ -307,17 +351,32 @@
             {
               "en": "We watch TV in the evening.",
               "id": "Kami menonton TV malam hari.",
-              "note": "after about 6 p.m., before bed"
+              "note": "after about 6 p.m., before bed",
+              "i18n": {
+                "id": {
+                  "note": "setelah kira-kira jam 6 sore, sebelum tidur"
+                }
+              }
             },
             {
               "en": "The street is quiet at night.",
               "id": "Jalannya sepi pada malam hari.",
-              "note": "when people sleep"
+              "note": "when people sleep",
+              "i18n": {
+                "id": {
+                  "note": "saat orang-orang tidur"
+                }
+              }
             },
             {
               "en": "The market is busy on Sunday morning.",
               "id": "Pasarnya ramai hari Minggu pagi.",
-              "note": "day + part of the day → on"
+              "note": "day + part of the day → on",
+              "i18n": {
+                "id": {
+                  "note": "hari + bagian hari → on"
+                }
+              }
             }
           ]
         },
@@ -351,7 +410,8 @@
           "explain": "Parts of the day take in the: in the afternoon. Only night is different: at night. (No day name here, so not on.)",
           "i18n": {
             "id": {
-              "explain": "Bagian hari memakai in the: in the afternoon. Hanya malam (night) yang berbeda: at night. (Tidak ada nama hari di sini, jadi bukan on.)"
+              "explain": "Bagian hari memakai in the: in the afternoon. Hanya malam (night) yang berbeda: at night. (Tidak ada nama hari di sini, jadi bukan on.)",
+              "prompt": "Lengkapi: Pak Joko has a short sleep ___ the afternoon."
             }
           }
         }
@@ -381,12 +441,22 @@
             {
               "en": "The milk is in the fridge.",
               "id": "Susunya di dalam kulkas.",
-              "note": "in = inside"
+              "note": "in = inside",
+              "i18n": {
+                "id": {
+                  "note": "in = di dalam"
+                }
+              }
             },
             {
               "en": "Your glasses are on the table.",
               "id": "Kacamatamu di atas meja.",
-              "note": "on = touching the top"
+              "note": "on = touching the top",
+              "i18n": {
+                "id": {
+                  "note": "on = di atas, menempel"
+                }
+              }
             },
             {
               "en": "The ball is under the car.",
@@ -436,7 +506,8 @@
           "explain": "di dalam = inside, so in: The key is in the bag.",
           "i18n": {
             "id": {
-              "explain": "di dalam = inside, jadi in: The key is in the bag."
+              "explain": "di dalam = inside, jadi in: The key is in the bag.",
+              "prompt": "Kuncinya di dalam tas. → Lengkapi: The key is ___ the bag."
             }
           }
         }
@@ -497,7 +568,8 @@
           "explain": "Use there is + the thing + one preposition: There is a TV on the wall. 'have' doesn't work here, and 'in on' has two prepositions.",
           "i18n": {
             "id": {
-              "explain": "Pakai there is + bendanya + satu preposisi: There is a TV on the wall. 'have' tidak cocok di sini, dan 'in on' memakai dua preposisi."
+              "explain": "Pakai there is + bendanya + satu preposisi: There is a TV on the wall. 'have' tidak cocok di sini, dan 'in on' memakai dua preposisi.",
+              "prompt": "Pilih kalimat yang benar."
             }
           }
         }

@@ -28,7 +28,13 @@
           "en": "fourTEEN — FORty",
           "id": "14 — 40"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Huruf, angka, dan nama",
+          "explanation": "Nama dieja dengan nama huruf bahasa Inggris, yang berbeda dari bahasa Indonesia (E dibaca 'ii', I dibaca 'ai'), jadi hati-hati dengan pasangan yang bunyinya mirip (E/I, G/J, A/R). Nomor telepon disebut satu per satu angkanya, dengan 'oh' untuk 0 dan 'double' untuk dua angka yang sama. Untuk 13–19, tekanan (bagian yang lebih keras dan panjang) ada di akhir; untuk 30, 40, 50… tekanannya di awal."
+        }
+      }
     },
     {
       "title": "Greetings and classroom instructions",
@@ -46,7 +52,13 @@
           "en": "Look at the board.",
           "id": "Lihat papan tulis."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Salam dan instruksi di kelas",
+          "explanation": "Salam berubah sesuai waktu: pagi, siang, sore, malam. Good night hanya untuk pamit. Instruksi di kelas diawali kata tindakan: open, close, sit, stand, write, look, listen, repeat."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -247,7 +259,8 @@
           "explain": "Open (the action), book (the thing) and ten (the page) tell you what to do. Please and your are small helper words.",
           "i18n": {
             "id": {
-              "explain": "Open (tindakan), book (bendanya) dan ten (halamannya) memberitahu apa yang harus dilakukan. Please dan your hanya kata bantu kecil."
+              "explain": "Open (tindakan), book (bendanya) dan ten (halamannya) memberitahu apa yang harus dilakukan. Please dan your hanya kata bantu kecil.",
+              "prompt": "Kamu mendengar: 'Please open your book at page ten.' Mana kata kuncinya?"
             }
           }
         }
@@ -277,7 +290,12 @@
             {
               "en": "It's spelled D-E-W-I.",
               "id": "Dieja D-E-W-I.",
-              "note": "'dee, ee, double-you, eye'"
+              "note": "'dee, ee, double-you, eye'",
+              "i18n": {
+                "id": {
+                  "note": "dibaca 'dee, ee, double-you, eye'"
+                }
+              }
             },
             {
               "en": "Anna: A, double N, A.",
@@ -299,37 +317,72 @@
             {
               "en": "A",
               "id": "dibaca 'ei' (bukan 'a')",
-              "note": "like day"
+              "note": "like day",
+              "i18n": {
+                "id": {
+                  "note": "seperti di day"
+                }
+              }
             },
             {
               "en": "E",
               "id": "dibaca 'ii', i panjang (bukan 'e')",
-              "note": "like see"
+              "note": "like see",
+              "i18n": {
+                "id": {
+                  "note": "seperti di see"
+                }
+              }
             },
             {
               "en": "I",
               "id": "dibaca 'ai' (bukan 'i')",
-              "note": "like eye"
+              "note": "like eye",
+              "i18n": {
+                "id": {
+                  "note": "seperti di eye"
+                }
+              }
             },
             {
               "en": "O",
               "id": "dibaca 'ou'",
-              "note": "like no"
+              "note": "like no",
+              "i18n": {
+                "id": {
+                  "note": "seperti di no"
+                }
+              }
             },
             {
               "en": "U",
               "id": "dibaca 'yu'",
-              "note": "like you"
+              "note": "like you",
+              "i18n": {
+                "id": {
+                  "note": "seperti di you"
+                }
+              }
             },
             {
               "en": "K",
               "id": "dibaca 'kei'",
-              "note": "like okay"
+              "note": "like okay",
+              "i18n": {
+                "id": {
+                  "note": "seperti di okay"
+                }
+              }
             },
             {
               "en": "Z",
               "id": "dibaca 'zed' (Inggris/UK) atau 'zi' (Amerika)",
-              "note": "UK zed, US zee"
+              "note": "UK zed, US zee",
+              "i18n": {
+                "id": {
+                  "note": "Inggris (UK): zed, Amerika (US): zee"
+                }
+              }
             }
           ]
         },
@@ -354,7 +407,8 @@
           "explain": "'Jay' is J and 'kay' is K, so it's J-O-K-O: Joko. G is 'jee', and 'oh' is the letter O.",
           "i18n": {
             "id": {
-              "explain": "'Jay' adalah J dan 'kay' adalah K, jadi J-O-K-O: Joko. G dibaca 'jee', dan 'oh' adalah huruf O."
+              "explain": "'Jay' adalah J dan 'kay' adalah K, jadi J-O-K-O: Joko. G dibaca 'jee', dan 'oh' adalah huruf O.",
+              "prompt": "Kamu mendengar: 'jay, oh, kay, oh'. Nama yang mana?"
             }
           }
         }
@@ -392,7 +446,12 @@
             {
               "en": "fourTEEN — FORty",
               "id": "14 — 40",
-              "note": "listen for the stress"
+              "note": "listen for the stress",
+              "i18n": {
+                "id": {
+                  "note": "dengarkan bagian yang ditekan (diucapkan lebih keras)"
+                }
+              }
             },
             {
               "en": "It's twenty thousand rupiah.",
@@ -421,7 +480,8 @@
           "explain": "Stress at the start means a -ty number: SIXty = 60. Sixteen has the stress at the end: sixTEEN.",
           "i18n": {
             "id": {
-              "explain": "Tekanan di awal berarti angka -ty: SIXty = 60. Sixteen tekanannya di akhir: sixTEEN."
+              "explain": "Tekanan di awal berarti angka -ty: SIXty = 60. Sixteen tekanannya di akhir: sixTEEN.",
+              "prompt": "Kamu mendengar 'SIX-ty', dengan tekanan di awal. Angka berapa itu?"
             }
           }
         }
@@ -459,12 +519,22 @@
             {
               "en": "Good night!",
               "id": "Selamat malam! (saat pamit / mau tidur)",
-              "note": "only for leaving"
+              "note": "only for leaving",
+              "i18n": {
+                "id": {
+                  "note": "hanya untuk pamit"
+                }
+              }
             },
             {
               "en": "Nice to meet you.",
               "id": "Senang bertemu denganmu.",
-              "note": "reply: Nice to meet you too."
+              "note": "reply: Nice to meet you too.",
+              "i18n": {
+                "id": {
+                  "note": "balasannya: Nice to meet you too."
+                }
+              }
             },
             {
               "en": "See you tomorrow!",
@@ -493,7 +563,8 @@
           "explain": "8 p.m. is in the evening (20.00). After 6 p.m., hello is Good evening. Good night is only for leaving or going to bed.",
           "i18n": {
             "id": {
-              "explain": "8 p.m. = jam 8 malam (20.00). Setelah jam 18, salam bertemu adalah Good evening. Good night hanya untuk pamit atau mau tidur."
+              "explain": "8 p.m. = jam 8 malam (20.00). Setelah jam 18, salam bertemu adalah Good evening. Good night hanya untuk pamit atau mau tidur.",
+              "prompt": "Sekarang jam 8 malam (8 p.m.). Kamu datang ke sebuah pesta dan tuan rumah menyapamu. Apa yang dia ucapkan?"
             }
           }
         }
@@ -563,7 +634,8 @@
           "explain": "Board = papan tulis, so you look at the board.",
           "i18n": {
             "id": {
-              "explain": "Board = papan tulis, jadi kamu melihat ke papan tulis."
+              "explain": "Board = papan tulis, jadi kamu melihat ke papan tulis.",
+              "prompt": "Guru berkata 'Look at the board.' Kamu melihat ke mana?"
             }
           }
         }

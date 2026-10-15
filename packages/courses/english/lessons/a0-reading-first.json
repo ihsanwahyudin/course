@@ -29,7 +29,13 @@
           "en": "Price: Rp 12.000",
           "id": "Harga: Rp 12.000"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Baca kata kuncinya",
+          "explanation": "Di menu, poster, dan catatan, cari dulu kata yang sudah kamu tahu: nama benda, angka, warna. Kamu bisa paham pesannya tanpa harus mengerti setiap kata."
+        }
+      }
     },
     {
       "title": "Common signs",
@@ -47,7 +53,13 @@
           "en": "PULL",
           "id": "Tarik"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Papan tanda yang umum",
+          "explanation": "Papan tanda memakai satu atau dua kata, sering dengan huruf kapital. Hafalkan pasangannya: OPEN / CLOSED, ENTRANCE / EXIT, PUSH / PULL."
+        }
+      }
     },
     {
       "title": "Business cards and forms",
@@ -65,7 +77,13 @@
           "en": "Date of birth: 12/03/2001",
           "id": "Tanggal lahir: 12 Maret 2001"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kartu nama dan formulir",
+          "explanation": "Kartu nama berisi nama, jabatan, perusahaan, nomor telepon, dan email. Formulir menanyakan nama depan (first name), nama belakang (surname), tanggal lahir, alamat, dan tanda tangan."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -232,7 +250,12 @@
             {
               "en": "Free Wi-Fi",
               "id": "Wi-Fi gratis (free di sini = gratis; free juga bisa berarti bebas)",
-              "note": "free = gratis here"
+              "note": "free = gratis here",
+              "i18n": {
+                "id": {
+                  "note": "free = gratis di sini"
+                }
+              }
             }
           ]
         },
@@ -266,7 +289,8 @@
           "explain": "The list has tea, juice and water. Coffee is not there.",
           "i18n": {
             "id": {
-              "explain": "Daftarnya berisi tea, juice dan water. Coffee tidak ada."
+              "explain": "Daftarnya berisi tea, juice dan water. Coffee tidak ada.",
+              "prompt": "Menu kafe bertuliskan: 'Drinks: tea, juice, water'. Kata mana yang TIDAK ada di daftar itu?"
             }
           }
         }
@@ -308,7 +332,12 @@
             {
               "en": "TOILETS",
               "id": "Toilet",
-              "note": "US: Restroom; UK also LADIES / GENTS"
+              "note": "US: Restroom; UK also LADIES / GENTS",
+              "i18n": {
+                "id": {
+                  "note": "Amerika (US): Restroom; di Inggris (UK) juga LADIES / GENTS"
+                }
+              }
             },
             {
               "en": "NO SMOKING",
@@ -317,7 +346,12 @@
             {
               "en": "LIFT",
               "id": "Lift",
-              "note": "US: Elevator"
+              "note": "US: Elevator",
+              "i18n": {
+                "id": {
+                  "note": "Amerika (US): Elevator"
+                }
+              }
             },
             {
               "en": "STAFF ONLY",
@@ -355,7 +389,8 @@
           "explain": "ENTRANCE = pintu masuk. EXIT is the way out, and STAFF ONLY is only for workers.",
           "i18n": {
             "id": {
-              "explain": "ENTRANCE = pintu masuk. EXIT adalah jalan keluar, dan STAFF ONLY hanya untuk karyawan."
+              "explain": "ENTRANCE = pintu masuk. EXIT adalah jalan keluar, dan STAFF ONLY hanya untuk karyawan.",
+              "prompt": "Kamu mau masuk ke sebuah gedung. Papan tanda mana yang kamu cari?"
             }
           }
         }
@@ -385,32 +420,62 @@
             {
               "en": "Rina Kusuma",
               "id": "nama",
-              "note": "name"
+              "note": "name",
+              "i18n": {
+                "id": {
+                  "note": "nama"
+                }
+              }
             },
             {
               "en": "Sales Manager",
               "id": "jabatan: manajer penjualan",
-              "note": "job title"
+              "note": "job title",
+              "i18n": {
+                "id": {
+                  "note": "jabatan"
+                }
+              }
             },
             {
               "en": "PT Cahaya Abadi",
               "id": "nama perusahaan",
-              "note": "company"
+              "note": "company",
+              "i18n": {
+                "id": {
+                  "note": "perusahaan"
+                }
+              }
             },
             {
               "en": "Mobile: 0811 2233 4455",
               "id": "nomor HP",
-              "note": "mobile = HP (US: cell)"
+              "note": "mobile = HP (US: cell)",
+              "i18n": {
+                "id": {
+                  "note": "mobile = HP (Amerika/US: cell)"
+                }
+              }
             },
             {
               "en": "rina.k@cahayaabadi.co.id",
               "id": "alamat email",
-              "note": "email"
+              "note": "email",
+              "i18n": {
+                "id": {
+                  "note": "email"
+                }
+              }
             },
             {
               "en": "Jl. Sudirman 25, Jakarta",
               "id": "alamat kantor",
-              "note": "address"
+              "note": "address",
+              "i18n": {
+                "id": {
+                  "note": "alamat"
+                }
+              }
             }
           ]
         },
@@ -435,7 +500,8 @@
           "explain": "An email always has @. The numbers are a phone number, and Jl. starts an address.",
           "i18n": {
             "id": {
-              "explain": "Email selalu memakai @. Deretan angka itu nomor telepon, dan Jl. mengawali alamat."
+              "explain": "Email selalu memakai @. Deretan angka itu nomor telepon, dan Jl. mengawali alamat.",
+              "prompt": "Baris mana di kartu nama yang merupakan email?"
             }
           }
         }
@@ -473,7 +539,12 @@
             {
               "en": "Date of birth: 12/03/2001",
               "id": "Tanggal lahir: 12 Maret 2001",
-              "note": "day / month / year"
+              "note": "day / month / year",
+              "i18n": {
+                "id": {
+                  "note": "tanggal / bulan / tahun"
+                }
+              }
             },
             {
               "en": "Address: Jl. Melati 7, Bandung",
@@ -510,7 +581,8 @@
           "explain": "Surname is the family part of the name, at the end: Wijaya. Rina is her first name.",
           "i18n": {
             "id": {
-              "explain": "Surname adalah nama keluarga, di bagian akhir: Wijaya. Rina adalah nama depannya."
+              "explain": "Surname adalah nama keluarga, di bagian akhir: Wijaya. Rina adalah nama depannya.",
+              "prompt": "Rina Wijaya mengisi formulir. Apa yang dia tulis di sebelah 'Surname'?"
             }
           }
         }

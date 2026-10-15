@@ -25,7 +25,13 @@
           "en": "Two plates of rice, please.",
           "id": "Nasinya dua piring, ya."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bisa dihitung atau tidak bisa dihitung?",
+          "explanation": "Kata benda (noun) adalah nama sebuah benda. Kata benda yang bisa dihitung (countable) memakai a/an dan punya bentuk jamak: an apple, two apples. Kata benda yang tidak bisa dihitung (uncountable) tidak memakai a/an dan tanpa -s: rice, water, sugar, money (yang dihitung rupiahnya, bukan uangnya). Untuk menghitungnya, pakai satuan: a plate of rice, a glass of water."
+        }
+      }
     },
     {
       "title": "some and any",
@@ -43,7 +49,13 @@
           "en": "Is there any water in the bottle?",
           "id": "Ada air di botol itu?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "some dan any",
+          "explanation": "Pakai some di kalimat positif dan any di kalimat negatif dan pertanyaan. Keduanya dipakai dengan kata benda jamak (eggs) dan kata benda yang tidak bisa dihitung (milk)."
+        }
+      }
     },
     {
       "title": "How much …? and How many …?",
@@ -61,7 +73,13 @@
           "en": "How much is a kilo of sugar?",
           "id": "Sekilo gula harganya berapa?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "How much …? dan How many …?",
+          "explanation": "Tanyakan How many + kata benda jamak yang bisa dihitung, dan How much + kata benda yang tidak bisa dihitung. How much is it? juga dipakai untuk menanyakan harga."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -225,22 +243,42 @@
             {
               "en": "I have an egg and two bananas.",
               "id": "Saya punya sebutir telur dan dua pisang.",
-              "note": "countable"
+              "note": "countable",
+              "i18n": {
+                "id": {
+                  "note": "bisa dihitung"
+                }
+              }
             },
             {
               "en": "My brother has three books.",
               "id": "Kakak laki-laki saya punya tiga buku.",
-              "note": "countable"
+              "note": "countable",
+              "i18n": {
+                "id": {
+                  "note": "bisa dihitung"
+                }
+              }
             },
             {
               "en": "There is rice in the kitchen.",
               "id": "Ada beras di dapur.",
-              "note": "uncountable (rice = nasi, beras)"
+              "note": "uncountable (rice = nasi, beras)",
+              "i18n": {
+                "id": {
+                  "note": "tidak bisa dihitung (rice = nasi, beras)"
+                }
+              }
             },
             {
               "en": "I don't have money today.",
               "id": "Saya tidak punya uang hari ini.",
-              "note": "uncountable"
+              "note": "uncountable",
+              "i18n": {
+                "id": {
+                  "note": "tidak bisa dihitung"
+                }
+              }
             }
           ]
         },
@@ -265,7 +303,8 @@
           "explain": "Egg is countable, so one egg needs an: an egg. Rice and water are uncountable: no a/an.",
           "i18n": {
             "id": {
-              "explain": "Egg bisa dihitung, jadi satu telur perlu an: an egg. Rice dan water tidak bisa dihitung: tanpa a/an."
+              "explain": "Egg bisa dihitung, jadi satu telur perlu an: an egg. Rice dan water tidak bisa dihitung: tanpa a/an.",
+              "prompt": "Kata mana yang perlu a atau an?"
             }
           }
         }
@@ -295,27 +334,52 @@
             {
               "en": "I have 50,000 rupiah.",
               "id": "Saya punya 50.000 rupiah.",
-              "note": "count the rupiah"
+              "note": "count the rupiah",
+              "i18n": {
+                "id": {
+                  "note": "yang dihitung rupiahnya"
+                }
+              }
             },
             {
               "en": "I have some money.",
               "id": "Saya punya uang.",
-              "note": "money: no a, no -s"
+              "note": "money: no a, no -s",
+              "i18n": {
+                "id": {
+                  "note": "money: tanpa a, tanpa -s"
+                }
+              }
             },
             {
               "en": "two plates of rice",
               "id": "dua piring nasi",
-              "note": "count the plates"
+              "note": "count the plates",
+              "i18n": {
+                "id": {
+                  "note": "yang dihitung piringnya"
+                }
+              }
             },
             {
               "en": "a loaf of bread",
               "id": "sebungkus roti tawar",
-              "note": "count the loaf"
+              "note": "count the loaf",
+              "i18n": {
+                "id": {
+                  "note": "yang dihitung bungkusnya (loaf)"
+                }
+              }
             },
             {
               "en": "three bottles of water",
               "id": "tiga botol air",
-              "note": "count the bottles"
+              "note": "count the bottles",
+              "i18n": {
+                "id": {
+                  "note": "yang dihitung botolnya"
+                }
+              }
             }
           ]
         },
@@ -340,7 +404,8 @@
           "explain": "Money is uncountable: no a, no -s. You count the rupiah: 30,000 rupiah.",
           "i18n": {
             "id": {
-              "explain": "Money tidak bisa dihitung: tanpa a, tanpa -s. Yang dihitung rupiahnya: 30,000 rupiah."
+              "explain": "Money tidak bisa dihitung: tanpa a, tanpa -s. Yang dihitung rupiahnya: 30,000 rupiah.",
+              "prompt": "Mana yang benar?"
             }
           }
         }
@@ -397,7 +462,8 @@
           "explain": "Water is uncountable, so count the glass: a glass of water.",
           "i18n": {
             "id": {
-              "explain": "Water tidak bisa dihitung, jadi hitung gelasnya: a glass of water."
+              "explain": "Water tidak bisa dihitung, jadi hitung gelasnya: a glass of water.",
+              "prompt": "Mana yang benar?"
             }
           }
         }
@@ -463,7 +529,8 @@
           "explain": "It's a negative sentence (don't), so use any. Bread is uncountable, so a is wrong.",
           "i18n": {
             "id": {
-              "explain": "Ini kalimat negatif (don't), jadi pakai any. Bread tidak bisa dihitung, jadi a salah."
+              "explain": "Ini kalimat negatif (don't), jadi pakai any. Bread tidak bisa dihitung, jadi a salah.",
+              "prompt": "Lengkapi: We don't have ___ bread. Let's go to the shop."
             }
           }
         }
@@ -505,7 +572,12 @@
             {
               "en": "How much is the nasi uduk? — It's 15,000 rupiah.",
               "id": "Nasi uduknya berapa? — 15.000 rupiah.",
-              "note": "price"
+              "note": "price",
+              "i18n": {
+                "id": {
+                  "note": "harga"
+                }
+              }
             }
           ]
         },
@@ -529,7 +601,8 @@
           "explain": "Eggs is a plural countable noun, so use How many.",
           "i18n": {
             "id": {
-              "explain": "Eggs adalah kata benda jamak yang bisa dihitung, jadi pakai How many."
+              "explain": "Eggs adalah kata benda jamak yang bisa dihitung, jadi pakai How many.",
+              "prompt": "Lengkapi: How ___ eggs do you need for the cake?"
             }
           }
         }

@@ -26,7 +26,13 @@
           "en": "My uncle's son is my cousin.",
           "id": "Anak laki-laki paman saya adalah sepupu saya."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Anggota keluarga",
+          "explanation": "Keluarga inti: parents (orang tua = mother + father), brother, sister, siblings (saudara kandung = brothers and sisters), son, daughter, children, husband, wife. Keluarga besar: grandparents (kakek nenek = grandmother + grandfather), uncle, aunt, cousin. Bahasa Inggris menunjukkan apakah saudaramu laki-laki (brother) atau perempuan (sister); kakak/adik dalam bahasa Indonesia tidak."
+        }
+      }
     },
     {
       "title": "Rooms and furniture",
@@ -44,7 +50,13 @@
           "en": "My clothes are in the wardrobe.",
           "id": "Baju saya ada di lemari pakaian."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Ruangan dan perabot",
+          "explanation": "Ruangan: living room, bedroom, kitchen, bathroom, dining room, ditambah garden di luar rumah. Perabot: bed, sofa, wardrobe, table, chair, desk, fridge, shelf. Katakan the kitchen (dapur), bukan 'the kitchen room'; kamar mandi adalah the bathroom."
+        }
+      }
     },
     {
       "title": "Describing your home",
@@ -62,7 +74,13 @@
           "en": "My bedroom is small but nice.",
           "id": "Kamar tidur saya kecil tapi nyaman."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menggambarkan rumahmu",
+          "explanation": "Sebutkan di mana kamu tinggal, dengan siapa, dan rumahmu punya apa: I live in a house / a flat in Bandung. I live with my wife and my son. My house has two bedrooms. The living room is big. Pakai has (bentuk have untuk he, she, it) dengan my house, my flat, it. Kata sifat (adjective) ada sebelum kata benda: a big kitchen (dapur besar)."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -257,7 +275,12 @@
             {
               "en": "My older sister is a nurse.",
               "id": "Kakak perempuan saya seorang perawat.",
-              "note": "kakak = older"
+              "note": "kakak = older",
+              "i18n": {
+                "id": {
+                  "note": "kakak = older"
+                }
+              }
             },
             {
               "en": "Pak Joko has two sons and a daughter.",
@@ -290,7 +313,8 @@
           "explain": "Adik = younger, and laki-laki = brother. So: I have a younger brother.",
           "i18n": {
             "id": {
-              "explain": "Adik = younger, dan laki-laki = brother. Jadi: I have a younger brother."
+              "explain": "Adik = younger, dan laki-laki = brother. Jadi: I have a younger brother.",
+              "prompt": "Dewi berkata: 'Saya punya satu adik laki-laki.' Kalimat bahasa Inggris mana yang benar?"
             }
           }
         }
@@ -365,7 +389,8 @@
           "explain": "Your father's brother is your uncle (om / paman). His children are your cousins.",
           "i18n": {
             "id": {
-              "explain": "Saudara laki-laki ayahmu adalah uncle (om / paman). Anak-anaknya adalah cousins (sepupu)."
+              "explain": "Saudara laki-laki ayahmu adalah uncle (om / paman). Anak-anaknya adalah cousins (sepupu).",
+              "prompt": "Pak Hasan adalah saudara laki-laki ayahmu. Siapa dia bagimu?"
             }
           }
         }
@@ -435,7 +460,8 @@
           "explain": "You have a shower in the bathroom (kamar mandi).",
           "i18n": {
             "id": {
-              "explain": "Mandi (have a shower) di bathroom (kamar mandi)."
+              "explain": "Mandi (have a shower) di bathroom (kamar mandi).",
+              "prompt": "Biasanya kamu mandi (have a shower) di mana?"
             }
           }
         }
@@ -465,7 +491,12 @@
             {
               "en": "I live in a small flat in Jakarta.",
               "id": "Saya tinggal di apartemen kecil di Jakarta.",
-              "note": "flat (UK) = apartment (US)"
+              "note": "flat (UK) = apartment (US)",
+              "i18n": {
+                "id": {
+                  "note": "flat (Inggris British) = apartment (Inggris Amerika)"
+                }
+              }
             },
             {
               "en": "I live with my wife and my son.",
@@ -482,7 +513,12 @@
             {
               "en": "It's an old house, but I love it.",
               "id": "Rumahnya tua, tapi saya suka sekali.",
-              "note": "an old: 'old' starts with a vowel sound"
+              "note": "an old: 'old' starts with a vowel sound",
+              "i18n": {
+                "id": {
+                  "note": "an old: 'old' diawali bunyi vokal"
+                }
+              }
             }
           ]
         },
@@ -507,7 +543,8 @@
           "explain": "My home = it, so use has. 'Is a garden' means the home IS a garden.",
           "i18n": {
             "id": {
-              "explain": "My home = it, jadi pakai has. 'Is a garden' artinya rumahnya ADALAH kebun."
+              "explain": "My home = it, jadi pakai has. 'Is a garden' artinya rumahnya ADALAH kebun.",
+              "prompt": "Pilih kalimat yang benar."
             }
           }
         }

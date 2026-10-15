@@ -38,6 +38,12 @@ type ExampleRow struct {
 	EN   string `json:"en"`
 	ID   string `json:"id"` // Indonesian gloss
 	Note string `json:"note,omitempty"`
+	// I18n translates the note.
+	I18n map[string]RowI18n `json:"i18n,omitempty"`
+}
+
+type RowI18n struct {
+	Note string `json:"note,omitempty"`
 }
 
 type Block struct {
@@ -46,8 +52,8 @@ type Block struct {
 	Text string `json:"text,omitempty"`
 	// examples
 	Rows []ExampleRow `json:"rows,omitempty"`
-	// check: the prompt and options are English (the thing being learnt);
-	// the explanation is translated.
+	// check: the options are English (the thing being learnt); the prompt
+	// (which may carry an instruction) and the explanation are translated.
 	Prompt  string               `json:"prompt,omitempty"`
 	Options []string             `json:"options,omitempty"`
 	Answer  *int                 `json:"answer,omitempty"`
@@ -57,6 +63,7 @@ type Block struct {
 
 type BlockI18n struct {
 	Text    string `json:"text,omitempty"`
+	Prompt  string `json:"prompt,omitempty"`
 	Explain string `json:"explain,omitempty"`
 }
 
@@ -129,8 +136,21 @@ func (c *Curriculum) MaterialIn(nodeID, lang string) *MaterialView {
 				if t.Text != "" {
 					lb.Text = t.Text
 				}
+				if t.Prompt != "" {
+					lb.Prompt = t.Prompt
+				}
 				if t.Explain != "" {
 					lb.Explain = t.Explain
+				}
+			}
+			if len(b.Rows) > 0 {
+				lb.Rows = make([]ExampleRow, len(b.Rows))
+				for i, r := range b.Rows {
+					if t, ok := r.I18n[lang]; ok && t.Note != "" {
+						r.Note = t.Note
+					}
+					r.I18n = nil
+					lb.Rows[i] = r
 				}
 			}
 			ls.Blocks = append(ls.Blocks, lb)

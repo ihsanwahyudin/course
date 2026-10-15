@@ -27,7 +27,13 @@
           "en": "We've got a cat.",
           "id": "Kami punya seekor kucing."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "have / has untuk keluarga dan barang",
+          "explanation": "Pakai have (= punya) untuk keluarga dan barang yang kamu miliki. I, you, we, they pakai have; he, she, it pakai has. Kebanyakan kata kerja cukup ditambah -s untuk he/she/it (work → works), tapi have itu khusus: berubah jadi has. Jangan pernah 'she have' atau 'he haves'."
+        }
+      }
     },
     {
       "title": "Describing appearance with have",
@@ -41,7 +47,13 @@
           "en": "My father has got a moustache.",
           "id": "Ayah saya berkumis."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menggambarkan penampilan dengan have",
+          "explanation": "Pakai have/has (got) + kata sifat + kata benda untuk rambut, mata, jenggot atau kumis: She has long hair. Bukan 'She is long hair'. Kamu juga bisa bilang: Her hair is long. Hair tidak diberi -s (dianggap satu kesatuan), tapi eyes diberi -s (dua mata yang terpisah)."
+        }
+      }
     },
     {
       "title": "Negatives and questions: two systems",
@@ -59,7 +71,13 @@
           "en": "Has she got a sister? — No, she hasn't.",
           "id": "Dia punya saudara perempuan? — Tidak."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat negatif dan pertanyaan: dua cara",
+          "explanation": "Dengan have: I don't have / she doesn't have; Do you have ...? — Yes, I do. Setelah does/doesn't, has kembali jadi have, karena does sudah menunjukkan he/she. Dengan have got: I haven't got / she hasn't got; Have you got ...? — Yes, I have. Jangan dicampur: jangan pernah 'Do you have got ...?'."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -236,7 +254,12 @@
             {
               "en": "Sari has three children.",
               "id": "Sari punya tiga anak. (*child* = satu anak, *children* = beberapa anak: bentuk khusus, tanpa -s)",
-              "note": "child → children (special plural)"
+              "note": "child → children (special plural)",
+              "i18n": {
+                "id": {
+                  "note": "child → children (bentuk jamak khusus)"
+                }
+              }
             }
           ]
         },
@@ -261,7 +284,8 @@
           "explain": "My uncle = he, so use has. Don't put is before have: 'punya' is just have/has, with no am/is/are.",
           "i18n": {
             "id": {
-              "explain": "My uncle = he, jadi pakai has. Jangan taruh is sebelum have: 'punya' cukup have/has, tanpa am/is/are."
+              "explain": "My uncle = he, jadi pakai has. Jangan taruh is sebelum have: 'punya' cukup have/has, tanpa am/is/are.",
+              "prompt": "Lengkapi: My uncle ___ a shop in Medan."
             }
           }
         }
@@ -291,12 +315,22 @@
             {
               "en": "I've got two brothers.",
               "id": "Saya punya dua saudara laki-laki.",
-              "note": "= I have two brothers."
+              "note": "= I have two brothers.",
+              "i18n": {
+                "id": {
+                  "note": "artinya sama dengan I have two brothers."
+                }
+              }
             },
             {
               "en": "She's got a new phone.",
               "id": "Dia punya HP baru.",
-              "note": "she's = she has"
+              "note": "she's = she has",
+              "i18n": {
+                "id": {
+                  "note": "she's di sini = she has"
+                }
+              }
             },
             {
               "en": "We've got a cat.",
@@ -351,7 +385,12 @@
             {
               "en": "Grandma's got grey hair.",
               "id": "Nenek rambutnya beruban. (*Grandma's* di sini = Grandma has, karena sesudahnya *got*)",
-              "note": "Grandma's = Grandma has"
+              "note": "Grandma's = Grandma has",
+              "i18n": {
+                "id": {
+                  "note": "Grandma's di sini = Grandma has"
+                }
+              }
             }
           ]
         },
@@ -385,7 +424,8 @@
           "explain": "Andi = he, so use has. Use have/has, not is, for a beard, hair or eyes.",
           "i18n": {
             "id": {
-              "explain": "Andi = he, jadi pakai has. Untuk jenggot, rambut atau mata pakai have/has, bukan is."
+              "explain": "Andi = he, jadi pakai has. Untuk jenggot, rambut atau mata pakai have/has, bukan is.",
+              "prompt": "Kalimat mana yang benar?"
             }
           }
         }
@@ -415,12 +455,22 @@
             {
               "en": "I don't have a laptop.",
               "id": "Saya tidak punya laptop.",
-              "note": "= I haven't got a laptop."
+              "note": "= I haven't got a laptop.",
+              "i18n": {
+                "id": {
+                  "note": "artinya sama dengan I haven't got a laptop."
+                }
+              }
             },
             {
               "en": "Dimas doesn't have a sister.",
               "id": "Dimas tidak punya saudara perempuan.",
-              "note": "= Dimas hasn't got a sister."
+              "note": "= Dimas hasn't got a sister.",
+              "i18n": {
+                "id": {
+                  "note": "artinya sama dengan Dimas hasn't got a sister."
+                }
+              }
             },
             {
               "en": "Do you have a pen? — Yes, I do.",
@@ -453,7 +503,8 @@
           "explain": "The question starts with Does, so the short answer uses does: Yes, she does.",
           "i18n": {
             "id": {
-              "explain": "Pertanyaannya diawali Does, jadi jawaban singkatnya memakai does: Yes, she does."
+              "explain": "Pertanyaannya diawali Does, jadi jawaban singkatnya memakai does: Yes, she does.",
+              "prompt": "Lengkapi: Does your sister have a laptop? — Yes, she ___."
             }
           }
         }

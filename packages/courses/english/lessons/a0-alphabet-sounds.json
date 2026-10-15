@@ -23,7 +23,13 @@
           "en": "I — sounds like 'eye'",
           "id": "I dibaca 'ai', bukan 'i'"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nama huruf berbeda dari bahasa Indonesia",
+          "explanation": "Nama huruf dalam bahasa Inggris bunyinya berbeda. A dibaca 'ei' (seperti di 'day'), E dibaca 'i' (seperti di 'see'), I dibaca 'ai' (seperti 'eye'), G dibaca 'ji', J dibaca 'jei'."
+        }
+      }
     },
     {
       "title": "Five vowels",
@@ -37,7 +43,13 @@
           "en": "b-O-O-k has two vowels: O and O",
           "id": "book = buku"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Lima huruf vokal",
+          "explanation": "Huruf vokal adalah A, E, I, O, dan U. Semua huruf lain, termasuk Y, adalah konsonan. Y tetap huruf konsonan, tapi di beberapa kata Y 'meminjam' bunyi vokal, seperti di 'my' ('mai')."
+        }
+      }
     },
     {
       "title": "Spelling aloud",
@@ -51,7 +63,13 @@
           "en": "My name is Sari: S-A-R-I.",
           "id": "Nama saya Sari: S-A-R-I."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengeja dengan suara",
+          "explanation": "Untuk mengeja kata, sebutkan nama tiap huruf secara berurutan. Untuk huruf ganda kamu bisa bilang 'double': B-O-O-K dibaca 'B, double O, K'."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -218,7 +236,8 @@
           "explain": "Y is said 'why'. W is 'double-you' and I is 'eye'.",
           "i18n": {
             "id": {
-              "explain": "Y dibaca 'wai', seperti 'why'. W dibaca 'dabel-yu' dan I dibaca 'ai'."
+              "explain": "Y dibaca 'wai', seperti 'why'. W dibaca 'dabel-yu' dan I dibaca 'ai'.",
+              "prompt": "Nama huruf mana yang bunyinya seperti kata 'why'?"
             }
           }
         }
@@ -248,42 +267,82 @@
             {
               "en": "A — apple",
               "id": "nama 'ei' · di *apple* bunyinya 'e' ('E-pel')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "E — egg",
               "id": "nama 'i' · di *egg* bunyinya 'e' ('EG')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "I — ink",
               "id": "nama 'ai' · di *ink* bunyinya 'i' ('INK')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "U — umbrella",
               "id": "nama 'yu' · di *umbrella* bunyinya 'a' ('am-BRE-la')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "C — cat",
               "id": "nama 'si' · di *cat* bunyinya 'k' ('KET')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "G — goat",
               "id": "nama 'ji' · di *goat* bunyinya 'g' ('GOUT')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "Y — yellow",
               "id": "nama 'wai' · di *yellow* bunyinya 'y' ('YE-lou')",
-              "note": "name ≠ sound"
+              "note": "name ≠ sound",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf ≠ bunyinya"
+                }
+              }
             },
             {
               "en": "M — moon",
               "id": "nama 'em' · di *moon* bunyinya 'm' ('MUUN')",
-              "note": "here they are close"
+              "note": "here they are close",
+              "i18n": {
+                "id": {
+                  "note": "di sini nama dan bunyinya mirip"
+                }
+              }
             }
           ]
         },
@@ -307,7 +366,8 @@
           "explain": "When you spell, you say each letter's name. C is called 'see', even though cat starts with a 'k' sound.",
           "i18n": {
             "id": {
-              "explain": "Saat mengeja, kamu menyebut nama tiap huruf. Nama huruf C adalah 'see' (si), walaupun *cat* diawali bunyi 'k'."
+              "explain": "Saat mengeja, kamu menyebut nama tiap huruf. Nama huruf C adalah 'see' (si), walaupun *cat* diawali bunyi 'k'.",
+              "prompt": "Kamu mengeja kata 'cat' dengan suara. Bagaimana kamu menyebut huruf pertamanya?"
             }
           }
         }
@@ -360,7 +420,8 @@
           "explain": "p-h-O-n-E: the vowels are O and E. The E at the end isn't said in 'phone', but it's still a vowel letter.",
           "i18n": {
             "id": {
-              "explain": "p-h-O-n-E: vokalnya O dan E. Huruf E di akhir tidak dibunyikan saat mengucapkan 'phone', tapi tetap huruf vokal."
+              "explain": "p-h-O-n-E: vokalnya O dan E. Huruf E di akhir tidak dibunyikan saat mengucapkan 'phone', tapi tetap huruf vokal.",
+              "prompt": "Ada berapa huruf vokal di kata 'phone'?"
             }
           }
         }
@@ -413,7 +474,8 @@
           "explain": "B + double E = B-E-E = bee.",
           "i18n": {
             "id": {
-              "explain": "B + double E = B-E-E = bee (lebah)."
+              "explain": "B + double E = B-E-E = bee (lebah).",
+              "prompt": "Seseorang bilang: 'B, double E'. Kata apa itu?"
             }
           }
         }
@@ -443,7 +505,12 @@
             {
               "en": "My email is rina at mail dot com: R-I-N-A.",
               "id": "Email saya rina@mail.com: R-I-N-A. (@ dibaca 'at', titik dibaca 'dot')",
-              "note": "@ = 'at', . = 'dot'"
+              "note": "@ = 'at', . = 'dot'",
+              "i18n": {
+                "id": {
+                  "note": "@ dibaca 'at', . (titik) dibaca 'dot'"
+                }
+              }
             },
             {
               "en": "That's B as in Bravo, not D as in Delta.",

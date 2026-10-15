@@ -24,7 +24,13 @@
           "en": "They are happy.",
           "id": "Mereka senang."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "am / is / are",
+          "explanation": "I am. He, she, it is. You, we, they are. You selalu memakai are, walaupun untuk satu orang. Bahasa Inggris butuh kata kerja ini walaupun bahasa Indonesia tidak memakainya (Saya guru → I am a teacher)."
+        }
+      }
     },
     {
       "title": "Negative: be + not",
@@ -38,7 +44,13 @@
           "en": "We aren't late.",
           "id": "Kami tidak terlambat."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat negatif: be + not",
+          "explanation": "Taruh 'not' setelah am/is/are: I'm not, he isn't, they aren't. Not dipakai untuk 'tidak' maupun 'bukan'. Tidak ada bentuk 'amn't'."
+        }
+      }
     },
     {
       "title": "Questions and short answers",
@@ -52,7 +64,13 @@
           "en": "Are they students? — No, they aren't.",
           "id": "Apakah mereka pelajar? — Bukan."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan dan jawaban singkat",
+          "explanation": "Pindahkan am/is/are ke depan subjek: Are you tired? Bahasa Inggris tidak punya kata untuk 'apakah': kata kerja yang dipindah itulah yang menggantikannya. Jawaban singkat mengulang be: Yes, I am. / No, I'm not. Bukan 'Yes, I'm': bentuk singkat tidak boleh ada di akhir kalimat."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -219,7 +237,8 @@
           "explain": "My parents are two people, so my parents = they, and they takes are.",
           "i18n": {
             "id": {
-              "explain": "My parents itu dua orang, jadi my parents = they, dan they memakai are."
+              "explain": "My parents itu dua orang, jadi my parents = they, dan they memakai are.",
+              "prompt": "Lengkapi: My parents ___ in Surabaya."
             }
           }
         }
@@ -249,27 +268,52 @@
             {
               "en": "I am a teacher.",
               "id": "Saya guru.",
-              "note": "job → am"
+              "note": "job → am",
+              "i18n": {
+                "id": {
+                  "note": "pekerjaan → am"
+                }
+              }
             },
             {
               "en": "My mother is a nurse.",
               "id": "Ibu saya perawat.",
-              "note": "my mother = she → is"
+              "note": "my mother = she → is",
+              "i18n": {
+                "id": {
+                  "note": "my mother = she → is"
+                }
+              }
             },
             {
               "en": "They are happy.",
               "id": "Mereka senang.",
-              "note": "how they are → are"
+              "note": "how they are → are",
+              "i18n": {
+                "id": {
+                  "note": "keadaan mereka → are"
+                }
+              }
             },
             {
               "en": "We are at home.",
               "id": "Kami di rumah.",
-              "note": "place → are"
+              "note": "place → are",
+              "i18n": {
+                "id": {
+                  "note": "tempat → are"
+                }
+              }
             },
             {
               "en": "Is it far?",
               "id": "Jauh?",
-              "note": "English needs a subject: it"
+              "note": "English needs a subject: it",
+              "i18n": {
+                "id": {
+                  "note": "bahasa Inggris butuh subjek: it"
+                }
+              }
             }
           ]
         },
@@ -294,7 +338,8 @@
           "explain": "English needs be here: I takes am, so I am tired. 'I tired' has no verb, and 'is' is for he/she/it.",
           "i18n": {
             "id": {
-              "explain": "Bahasa Inggris butuh be di sini: I memakai am, jadi I am tired. 'I tired' tidak punya kata kerja, dan 'is' untuk he/she/it."
+              "explain": "Bahasa Inggris butuh be di sini: I memakai am, jadi I am tired. 'I tired' tidak punya kata kerja, dan 'is' untuk he/she/it.",
+              "prompt": "Pilih kalimat yang benar untuk: Saya lelah."
             }
           }
         }
@@ -347,7 +392,8 @@
           "explain": "The museum is one thing (= it), so is → isn't. 'not' alone is wrong because English can't drop be, and 'aren't' is for you/we/they.",
           "i18n": {
             "id": {
-              "explain": "The museum itu satu benda (= it), jadi is → isn't. 'not' saja salah karena be tidak boleh dihilangkan, dan 'aren't' untuk you/we/they."
+              "explain": "The museum itu satu benda (= it), jadi is → isn't. 'not' saja salah karena be tidak boleh dihilangkan, dan 'aren't' untuk you/we/they.",
+              "prompt": "Lengkapi: The museum ___ open on Monday."
             }
           }
         }
@@ -409,7 +455,8 @@
           "explain": "Your sister is one person (= she), so Is. Are is for you/we/they, and am only for I.",
           "i18n": {
             "id": {
-              "explain": "Your sister itu satu orang (= she), jadi Is. Are untuk you/we/they, dan am hanya untuk I."
+              "explain": "Your sister itu satu orang (= she), jadi Is. Are untuk you/we/they, dan am hanya untuk I.",
+              "prompt": "Lengkapi: ___ your sister a teacher?"
             }
           }
         }

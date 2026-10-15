@@ -25,7 +25,13 @@
           "en": "Can you speak more slowly, please?",
           "id": "Bisa bicara lebih pelan?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Minta diulang atau bicara lebih pelan",
+          "explanation": "Can you repeat that, please? atau Can you say that again, please? untuk minta seseorang mengulang. Can you speak more slowly, please? untuk minta mereka bicara lebih pelan. Sorry? atau Pardon? yang singkat (dengan nada naik) juga bisa."
+        }
+      }
     },
     {
       "title": "Asking about a word",
@@ -43,7 +49,13 @@
           "en": "What's 'meja' in English? — Table.",
           "id": "Apa bahasa Inggrisnya 'meja'? — Table."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bertanya tentang sebuah kata",
+          "explanation": "Arti: What does + kata + mean? Ejaan: How do you spell + kata? Bahasa Inggrisnya: What's + kata + in English? Jangan pakai 'How to spell…?'."
+        }
+      }
     },
     {
       "title": "Classroom instructions",
@@ -61,7 +73,13 @@
           "en": "Work in pairs.",
           "id": "Kerjakan berdua."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Instruksi di kelas",
+          "explanation": "Instruksi diawali kata kerja (kata yang menunjukkan tindakan): Listen. Repeat. Read. Write. Open your book. Close your book. Look at the board. Stand up. Sit down. Work in pairs."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -249,12 +267,22 @@
             {
               "en": "Sorry? Can you repeat that, please?",
               "id": "Maaf? Bisa diulang?",
-              "note": "Sorry? with the voice going up = what did you say?"
+              "note": "Sorry? with the voice going up = what did you say?",
+              "i18n": {
+                "id": {
+                  "note": "Sorry? dengan nada naik = tadi bilang apa?"
+                }
+              }
             },
             {
               "en": "Pardon?",
               "id": "Maaf, apa tadi?",
-              "note": "voice goes up"
+              "note": "voice goes up",
+              "i18n": {
+                "id": {
+                  "note": "nadanya naik"
+                }
+              }
             },
             {
               "en": "Can you speak more slowly, please?",
@@ -296,7 +324,8 @@
           "explain": "It's polite (Can you … , please?) and uses slowly, the right word after speak.",
           "i18n": {
             "id": {
-              "explain": "Kalimat ini sopan (Can you … , please?) dan memakai slowly, kata yang tepat setelah speak."
+              "explain": "Kalimat ini sopan (Can you … , please?) dan memakai slowly, kata yang tepat setelah speak.",
+              "prompt": "Temanmu dari London bicara sangat cepat. Apa yang paling tepat kamu ucapkan?"
             }
           }
         }
@@ -371,7 +400,8 @@
           "explain": "The pattern is What does + word + mean? The word goes in the middle and mean comes last. Does is the small helper word the question needs; without it ('What mean…?') it's a word-by-word translation.",
           "i18n": {
             "id": {
-              "explain": "Polanya What does + kata + mean? Katanya di tengah dan mean di akhir. Does adalah kata bantu yang dibutuhkan pertanyaan ini; tanpa does ('What mean…?') itu terjemahan kata per kata."
+              "explain": "Polanya What does + kata + mean? Katanya di tengah dan mean di akhir. Does adalah kata bantu yang dibutuhkan pertanyaan ini; tanpa does ('What mean…?') itu terjemahan kata per kata.",
+              "prompt": "Kamu membaca kata 'quiet'. Pertanyaan mana yang benar?"
             }
           }
         }
@@ -441,7 +471,8 @@
           "explain": "Repeat after me means say the same words after the teacher.",
           "i18n": {
             "id": {
-              "explain": "Repeat after me artinya ucapkan kata yang sama setelah guru."
+              "explain": "Repeat after me artinya ucapkan kata yang sama setelah guru.",
+              "prompt": "Guru bilang: 'Repeat after me: Good morning.' Apa yang kamu lakukan?"
             }
           }
         }
@@ -475,7 +506,12 @@
             {
               "en": "You're on mute.",
               "id": "Mikrofonmu masih mati.",
-              "note": "you're = you are"
+              "note": "you're = you are",
+              "i18n": {
+                "id": {
+                  "note": "you're = you are (bentuk pendek)"
+                }
+              }
             },
             {
               "en": "Sorry, I can't hear you.",
@@ -495,7 +531,8 @@
           "explain": "On mute means your microphone is off, so the teacher can't hear you. Turn it on.",
           "i18n": {
             "id": {
-              "explain": "On mute artinya mikrofonmu mati, jadi guru tidak bisa mendengarmu. Nyalakan mikrofonnya."
+              "explain": "On mute artinya mikrofonmu mati, jadi guru tidak bisa mendengarmu. Nyalakan mikrofonnya.",
+              "prompt": "Gurumu di Zoom bilang: 'Sari, you're on mute!' Apa yang kamu lakukan?"
             }
           }
         }

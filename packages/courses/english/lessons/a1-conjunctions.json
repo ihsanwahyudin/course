@@ -25,7 +25,13 @@
           "en": "I don't drink tea or coffee.",
           "id": "Saya tidak minum teh ataupun kopi."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menggabungkan kalimat dengan and, but, or",
+          "explanation": "and menambah ide (dan); dengan and kamu tidak perlu mengulang subjek (orang yang melakukan). but menunjukkan ide yang berbeda atau berlawanan (tapi); pakai koma sebelum but kalau menggabungkan dua kalimat. or memberi pilihan (atau). Di kalimat negatif (don't / doesn't), pakai or: I don't drink tea or coffee = tidak minum teh, dan tidak minum kopi juga."
+        }
+      }
     },
     {
       "title": "Giving reasons with because",
@@ -39,7 +45,13 @@
           "en": "I like Bandung because the weather is cool.",
           "id": "Saya suka Bandung karena udaranya sejuk."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Memberi alasan dengan because",
+          "explanation": "because (karena) memberi alasan. because menjawab pertanyaan Why? (Kenapa?). Tetap dalam satu kalimat: jangan pakai titik sebelum because."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -195,7 +207,12 @@
             {
               "en": "Rina works in Jakarta and lives in Depok.",
               "id": "Rina bekerja di Jakarta dan tinggal di Depok.",
-              "note": "same subject: no second 'she'"
+              "note": "same subject: no second 'she'",
+              "i18n": {
+                "id": {
+                  "note": "subjeknya sama: tidak perlu 'she' lagi"
+                }
+              }
             },
             {
               "en": "The warung is small, but the food is great.",
@@ -228,7 +245,8 @@
           "explain": "Likes and doesn't like are opposite ideas, so use but.",
           "i18n": {
             "id": {
-              "explain": "Likes dan doesn't like adalah ide yang berlawanan, jadi pakai but."
+              "explain": "Likes dan doesn't like adalah ide yang berlawanan, jadi pakai but.",
+              "prompt": "Lengkapi: Sari likes tea, ___ she doesn't like coffee."
             }
           }
         }
@@ -266,12 +284,22 @@
             {
               "en": "I don't drink tea or coffee.",
               "id": "Saya tidak minum teh ataupun kopi.",
-              "note": "negative → or"
+              "note": "negative → or",
+              "i18n": {
+                "id": {
+                  "note": "kalimat negatif → or"
+                }
+              }
             },
             {
               "en": "Dimas doesn't have a car or a motorbike.",
               "id": "Dimas tidak punya mobil ataupun motor.",
-              "note": "negative → or"
+              "note": "negative → or",
+              "i18n": {
+                "id": {
+                  "note": "kalimat negatif → or"
+                }
+              }
             }
           ]
         },
@@ -296,7 +324,8 @@
           "explain": "The sentence is negative (doesn't speak), so join the two languages with or.",
           "i18n": {
             "id": {
-              "explain": "Kalimatnya negatif (doesn't speak), jadi gabungkan dua bahasa itu dengan or."
+              "explain": "Kalimatnya negatif (doesn't speak), jadi gabungkan dua bahasa itu dengan or.",
+              "prompt": "Lengkapi: My grandmother doesn't speak English ___ Japanese."
             }
           }
         }
@@ -361,7 +390,8 @@
           "explain": "because joins the reason to the sentence, so there is no full stop before it.",
           "i18n": {
             "id": {
-              "explain": "because menggabungkan alasan ke kalimatnya, jadi tidak ada titik sebelumnya."
+              "explain": "because menggabungkan alasan ke kalimatnya, jadi tidak ada titik sebelumnya.",
+              "prompt": "Kalimat mana yang benar?"
             }
           }
         }
@@ -414,7 +444,8 @@
           "explain": "The seller gives you a choice between two drinks, so use or.",
           "i18n": {
             "id": {
-              "explain": "Penjual memberimu pilihan antara dua minuman, jadi pakai or."
+              "explain": "Penjual memberimu pilihan antara dua minuman, jadi pakai or.",
+              "prompt": "Di warung: Do you want hot tea ___ iced tea?"
             }
           }
         }

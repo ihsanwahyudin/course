@@ -27,7 +27,13 @@
           "en": "The kids are running in the park.",
           "id": "Anak-anak sedang berlari di taman."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "am / is / are + -ing",
+          "explanation": "Pakai am/is/are + kata kerja-ing (kata kegiatan + -ing) untuk kegiatan yang sedang terjadi sekarang. Jangan pernah hilangkan am/is/are. Ejaan: kebanyakan kata kerja cukup ditambah -ing; buang -e di akhir (make → making); gandakan huruf terakhir pada kata kerja satu ketukan yang berakhiran satu vokal + satu konsonan, seperti run → running dan sit → sitting (tapi cook → cooking: dua vokal)."
+        }
+      }
     },
     {
       "title": "Now or every day?",
@@ -41,7 +47,13 @@
           "en": "Budi works in a bank. Right now he's having lunch.",
           "id": "Budi bekerja di bank. Sekarang dia sedang makan siang."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Sekarang atau setiap hari?",
+          "explanation": "Pakai present continuous untuk yang sedang terjadi sekarang (now, right now, at the moment, today, Look!). Pakai simple present untuk kebiasaan dan rutinitas (every day, usually, on Mondays). Tentukan dari artinya, bukan dari ada tidaknya kata 'sedang': bahasa Indonesia sering tidak memakainya."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -214,7 +226,12 @@
             {
               "en": "Look! It's raining.",
               "id": "Lihat! Hujan turun. (*it* di sini tidak ada artinya: bahasa Inggris cuma butuh kata di depan)",
-              "note": "It's raining = sedang hujan; it means nothing here"
+              "note": "It's raining = sedang hujan; it means nothing here",
+              "i18n": {
+                "id": {
+                  "note": "It's raining = sedang hujan; it di sini tidak ada artinya"
+                }
+              }
             }
           ]
         },
@@ -239,7 +256,8 @@
           "explain": "It's happening now, so we need is + -ing: is crying.",
           "i18n": {
             "id": {
-              "explain": "Ini terjadi sekarang, jadi kita perlu is + -ing: is crying."
+              "explain": "Ini terjadi sekarang, jadi kita perlu is + -ing: is crying.",
+              "prompt": "Lengkapi: Listen! The baby ___."
             }
           }
         }
@@ -269,22 +287,42 @@
             {
               "en": "read → reading",
               "id": "membaca",
-              "note": "just add -ing"
+              "note": "just add -ing",
+              "i18n": {
+                "id": {
+                  "note": "cukup tambah -ing"
+                }
+              }
             },
             {
               "en": "make → making",
               "id": "membuat",
-              "note": "drop the e"
+              "note": "drop the e",
+              "i18n": {
+                "id": {
+                  "note": "buang e-nya"
+                }
+              }
             },
             {
               "en": "run → running",
               "id": "berlari",
-              "note": "double the n"
+              "note": "double the n",
+              "i18n": {
+                "id": {
+                  "note": "gandakan n"
+                }
+              }
             },
             {
               "en": "put → putting",
               "id": "menaruh",
-              "note": "double the t"
+              "note": "double the t",
+              "i18n": {
+                "id": {
+                  "note": "gandakan t"
+                }
+              }
             }
           ]
         },
@@ -300,7 +338,8 @@
           "explain": "Write ends in -e, so drop the e and add -ing: writing. Only one t.",
           "i18n": {
             "id": {
-              "explain": "Write berakhiran -e, jadi buang e-nya lalu tambah -ing: writing. Huruf t-nya cuma satu."
+              "explain": "Write berakhiran -e, jadi buang e-nya lalu tambah -ing: writing. Huruf t-nya cuma satu.",
+              "prompt": "Lengkapi dengan bentuk -ing dari write: Budi is ___ a letter. (write)"
             }
           }
         }
@@ -330,27 +369,52 @@
             {
               "en": "swim → swimming",
               "id": "berenang: s-w-**i**-m, satu vokal → gandakan m",
-              "note": "one vowel: double"
+              "note": "one vowel: double",
+              "i18n": {
+                "id": {
+                  "note": "satu vokal: gandakan"
+                }
+              }
             },
             {
               "en": "cook → cooking",
               "id": "memasak: **oo** = dua vokal → tidak digandakan",
-              "note": "two vowels"
+              "note": "two vowels",
+              "i18n": {
+                "id": {
+                  "note": "dua vokal"
+                }
+              }
             },
             {
               "en": "rain → raining",
               "id": "hujan: **ai** = dua vokal → tidak digandakan",
-              "note": "two vowels"
+              "note": "two vowels",
+              "i18n": {
+                "id": {
+                  "note": "dua vokal"
+                }
+              }
             },
             {
               "en": "work → working",
               "id": "bekerja: **rk** = dua konsonan → tidak digandakan",
-              "note": "two consonants"
+              "note": "two consonants",
+              "i18n": {
+                "id": {
+                  "note": "dua konsonan"
+                }
+              }
             },
             {
               "en": "listen → listening",
               "id": "mendengarkan: dua ketukan (LIS-ten) → tidak digandakan",
-              "note": "two beats"
+              "note": "two beats",
+              "i18n": {
+                "id": {
+                  "note": "dua ketukan"
+                }
+              }
             }
           ]
         },
@@ -375,7 +439,8 @@
           "explain": "Rain ends a-i-n: two vowels (ai) before the n, so don't double: raining.",
           "i18n": {
             "id": {
-              "explain": "Rain berakhiran a-i-n: ada dua vokal (ai) sebelum n, jadi tidak digandakan: raining."
+              "explain": "Rain berakhiran a-i-n: ada dua vokal (ai) sebelum n, jadi tidak digandakan: raining.",
+              "prompt": "Lengkapi dengan bentuk -ing dari rain: Look! It's ___. (rain)"
             }
           }
         }
@@ -428,7 +493,8 @@
           "explain": "Present continuous questions start with am/is/are. Rina = she → Is.",
           "i18n": {
             "id": {
-              "explain": "Pertanyaan present continuous diawali am/is/are. Rina = she → Is."
+              "explain": "Pertanyaan present continuous diawali am/is/are. Rina = she → Is.",
+              "prompt": "Lengkapi: ___ Rina working today? — Yes, she is."
             }
           }
         }
@@ -466,7 +532,12 @@
             {
               "en": "What do you do? — I'm a nurse.",
               "id": "Apa pekerjaanmu? — Saya perawat. (*do* pertama hanya untuk membuat pertanyaan; *do* kedua = bekerja/melakukan)",
-              "note": "job, not now"
+              "note": "job, not now",
+              "i18n": {
+                "id": {
+                  "note": "pekerjaan, bukan yang sedang terjadi sekarang"
+                }
+              }
             }
           ]
         },
@@ -491,7 +562,8 @@
           "explain": "'Every morning' is a routine, so use the simple present: reads.",
           "i18n": {
             "id": {
-              "explain": "'Every morning' adalah rutinitas, jadi pakai simple present: reads."
+              "explain": "'Every morning' adalah rutinitas, jadi pakai simple present: reads.",
+              "prompt": "Lengkapi: Pak Hasan ___ the newspaper every morning."
             }
           }
         }

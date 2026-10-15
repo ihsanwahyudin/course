@@ -25,7 +25,13 @@
           "en": "The food was delicious.",
           "id": "Makanannya enak."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "was / were dalam kalimat positif",
+          "explanation": "Bentuk lampau dari am/is → was (I, he, she, it). Bentuk lampau dari are → were (you, we, they). 'you' memakai were walaupun untuk satu orang, karena sekarangnya 'you are'. 'they' juga dipakai untuk benda (the rooms were …). Pakai bersama kata waktu lampau seperti yesterday, last night, last week."
+        }
+      }
     },
     {
       "title": "Negative: wasn't / weren't",
@@ -39,7 +45,13 @@
           "en": "The rooms weren't clean.",
           "id": "Kamar-kamarnya tidak bersih."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat negatif: wasn't / weren't",
+          "explanation": "Tambahkan not setelah was/were: was not → wasn't, were not → weren't. Tidak perlu kata lain."
+        }
+      }
     },
     {
       "title": "Was / Were questions and short answers",
@@ -53,7 +65,13 @@
           "en": "Were you tired? — No, I wasn't.",
           "id": "Kamu capek? — Tidak."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan dengan Was / Were dan jawaban singkat",
+          "explanation": "Taruh was/were sebelum subjek (siapa yang dibicarakan): Was he…? Were you…? Jawaban singkat mengulang was/were: Yes, he was. / No, I wasn't."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -216,22 +234,42 @@
             {
               "en": "I am at home. → I was at home.",
               "id": "Saya di rumah. → Tadi saya di rumah.",
-              "note": "now → past"
+              "note": "now → past",
+              "i18n": {
+                "id": {
+                  "note": "sekarang → masa lalu"
+                }
+              }
             },
             {
               "en": "She is happy. → She was happy.",
               "id": "Dia senang. → Dia (dulu/tadi) senang.",
-              "note": "he / she / it → was"
+              "note": "he / she / it → was",
+              "i18n": {
+                "id": {
+                  "note": "he / she / it → was"
+                }
+              }
             },
             {
               "en": "They are in Bali. → They were in Bali.",
               "id": "Mereka di Bali. → Mereka (waktu itu) di Bali.",
-              "note": "you / we / they → were"
+              "note": "you / we / they → were",
+              "i18n": {
+                "id": {
+                  "note": "you / we / they → were"
+                }
+              }
             },
             {
               "en": "You were late this morning.",
               "id": "Kamu terlambat tadi pagi.",
-              "note": "you → were (one person too)"
+              "note": "you → were (one person too)",
+              "i18n": {
+                "id": {
+                  "note": "you → were (untuk satu orang juga)"
+                }
+              }
             }
           ]
         },
@@ -256,7 +294,8 @@
           "explain": "My brother = he, and last week is the past → was.",
           "i18n": {
             "id": {
-              "explain": "My brother = he, dan last week itu masa lalu → was."
+              "explain": "My brother = he, dan last week itu masa lalu → was.",
+              "prompt": "Lengkapi: My brother ___ in Bali last week."
             }
           }
         }
@@ -286,7 +325,12 @@
             {
               "en": "Rina and Budi were at the mall on Sunday.",
               "id": "Rina dan Budi di mal hari Minggu kemarin.",
-              "note": "two people = they → were"
+              "note": "two people = they → were",
+              "i18n": {
+                "id": {
+                  "note": "dua orang = they → were"
+                }
+              }
             },
             {
               "en": "The weather was hot last week.",
@@ -295,7 +339,12 @@
             {
               "en": "I was born in Medan.",
               "id": "Saya lahir di Medan.",
-              "note": "a fixed phrase: always was born"
+              "note": "a fixed phrase: always was born",
+              "i18n": {
+                "id": {
+                  "note": "frasa tetap: selalu was born"
+                }
+              }
             }
           ]
         },
@@ -328,7 +377,8 @@
           "explain": "My cousins = they → were.",
           "i18n": {
             "id": {
-              "explain": "My cousins = they → were."
+              "explain": "My cousins = they → were.",
+              "prompt": "Kalimat mana yang benar?"
             }
           }
         }
@@ -393,7 +443,8 @@
           "explain": "My new shoes = more than one thing = they, so were not → weren't. In English, they is for things too.",
           "i18n": {
             "id": {
-              "explain": "My new shoes = lebih dari satu benda = they, jadi were not → weren't. Dalam bahasa Inggris, they juga dipakai untuk benda."
+              "explain": "My new shoes = lebih dari satu benda = they, jadi were not → weren't. Dalam bahasa Inggris, they juga dipakai untuk benda.",
+              "prompt": "Lengkapi: My new shoes ___ cheap. They were very expensive."
             }
           }
         }
@@ -455,7 +506,8 @@
           "explain": "Andi = he, and last night is the past → Was.",
           "i18n": {
             "id": {
-              "explain": "Andi = he, dan last night itu masa lalu → Was."
+              "explain": "Andi = he, dan last night itu masa lalu → Was.",
+              "prompt": "Lengkapi: ___ Andi at the futsal game last night?"
             }
           }
         }

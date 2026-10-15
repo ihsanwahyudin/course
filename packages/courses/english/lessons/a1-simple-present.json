@@ -25,7 +25,13 @@
           "en": "My father works in a bank.",
           "id": "Ayah saya bekerja di bank."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat positif dan -s untuk he/she/it",
+          "explanation": "Pakai kata kerja bentuk dasar dengan I, you, we, they. Tambahkan -s atau -es dengan he, she, it: I work → she works, I go → he goes. -s ini tidak berarti 'banyak'. have → has adalah pengecualian."
+        }
+      }
     },
     {
       "title": "Negatives with don't / doesn't",
@@ -39,7 +45,13 @@
           "en": "She doesn't like rain.",
           "id": "Dia tidak suka hujan."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kalimat negatif dengan don't / doesn't",
+          "explanation": "don't + kata kerja dasar untuk I/you/we/they; doesn't + kata kerja dasar untuk he/she/it. do/does di sini hanya kata bantu (tidak berarti 'melakukan'). -s pindah ke 'does', jadi kata kerja utamanya tidak memakai -s."
+        }
+      }
     },
     {
       "title": "Questions with do / does",
@@ -53,7 +65,13 @@
           "en": "What time does she start work?",
           "id": "Jam berapa dia mulai bekerja?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan dengan do / does",
+          "explanation": "Do/Does + subjek + kata kerja dasar: Do you play football? Does he live here? Do/Does di awal kalimat berfungsi seperti 'apakah'. Jawab dengan do/does, bukan dengan kata kerja utamanya: Yes, I do. / No, he doesn't."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -248,7 +266,8 @@
           "explain": "Watch ends in ch. 'watchs' is hard to say, so we add -es and an extra 'iz' sound: watches.",
           "i18n": {
             "id": {
-              "explain": "Watch berakhiran ch. 'watchs' susah diucapkan, jadi ditambah -es dan bunyi 'iz': watches."
+              "explain": "Watch berakhiran ch. 'watchs' susah diucapkan, jadi ditambah -es dan bunyi 'iz': watches.",
+              "prompt": "Lengkapi: My sister ___ TV every evening."
             }
           }
         }
@@ -278,37 +297,72 @@
             {
               "en": "work → works",
               "id": "bekerja: cukup tambah -s",
-              "note": "most verbs"
+              "note": "most verbs",
+              "i18n": {
+                "id": {
+                  "note": "sebagian besar kata kerja"
+                }
+              }
             },
             {
               "en": "watch → watches",
               "id": "menonton: berakhiran ch → -es, dibaca 'wot-chiz'",
-              "note": "extra 'iz' sound"
+              "note": "extra 'iz' sound",
+              "i18n": {
+                "id": {
+                  "note": "ada tambahan bunyi 'iz'"
+                }
+              }
             },
             {
               "en": "go → goes",
               "id": "pergi: berakhiran o → -es",
-              "note": "o → -es"
+              "note": "o → -es",
+              "i18n": {
+                "id": {
+                  "note": "o → -es"
+                }
+              }
             },
             {
               "en": "do → does",
               "id": "melakukan: berakhiran o → -es, dibaca 'daz'",
-              "note": "same rule as go"
+              "note": "same rule as go",
+              "i18n": {
+                "id": {
+                  "note": "aturannya sama dengan go"
+                }
+              }
             },
             {
               "en": "study → studies",
               "id": "belajar: huruf mati (d) + y → -ies",
-              "note": "consonant + y"
+              "note": "consonant + y",
+              "i18n": {
+                "id": {
+                  "note": "huruf mati (konsonan) + y"
+                }
+              }
             },
             {
               "en": "play → plays",
               "id": "bermain: huruf hidup (a) + y → cukup -s",
-              "note": "vowel + y"
+              "note": "vowel + y",
+              "i18n": {
+                "id": {
+                  "note": "huruf hidup (vokal) + y"
+                }
+              }
             },
             {
               "en": "have → has",
               "id": "punya: pengecualian, bukan 'haves'",
-              "note": "exception"
+              "note": "exception",
+              "i18n": {
+                "id": {
+                  "note": "pengecualian"
+                }
+              }
             }
           ]
         },
@@ -333,7 +387,8 @@
           "explain": "Budi = he, so add -s. Play ends in a vowel + y (a + y), so just add -s: plays.",
           "i18n": {
             "id": {
-              "explain": "Budi = he, jadi tambahkan -s. Play berakhiran huruf hidup + y (a + y), jadi cukup tambah -s: plays."
+              "explain": "Budi = he, jadi tambahkan -s. Play berakhiran huruf hidup + y (a + y), jadi cukup tambah -s: plays.",
+              "prompt": "Lengkapi: Budi ___ volleyball on Fridays."
             }
           }
         }
@@ -386,7 +441,8 @@
           "explain": "He → doesn't, and the verb stays in the base form: eat.",
           "i18n": {
             "id": {
-              "explain": "He → doesn't, dan kata kerjanya tetap bentuk dasar: eat."
+              "explain": "He → doesn't, dan kata kerjanya tetap bentuk dasar: eat.",
+              "prompt": "Lengkapi: He ___ meat."
             }
           }
         }
@@ -435,7 +491,8 @@
           "explain": "Your brother is one person (= he), so Does. Is is wrong because play is a normal verb: am/is/are is only for sentences with no other verb.",
           "i18n": {
             "id": {
-              "explain": "Your brother itu satu orang (= he), jadi Does. Is salah karena play adalah kata kerja biasa: am/is/are hanya untuk kalimat tanpa kata kerja lain."
+              "explain": "Your brother itu satu orang (= he), jadi Does. Is salah karena play adalah kata kerja biasa: am/is/are hanya untuk kalimat tanpa kata kerja lain.",
+              "prompt": "Lengkapi: ___ your brother play football?"
             }
           }
         }

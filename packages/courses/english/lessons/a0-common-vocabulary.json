@@ -10,7 +10,7 @@
     "water has no a/an because you don't count it one by one; you say water or a bottle of water. Say this, because the lesson tells learners to learn each word with a or an.",
     "Plural -s: for more than one, English adds -s to the noun (one phone, two phones; 19 students); Indonesian doesn't change the word (dua telepon). The -s goes only on the noun, never on the describing word. 'seven fish' style exceptions are not taught here.",
     "'one' in 'the big one' means 'yang' (the big one = yang besar), not the number 1. Age uses is, not has: My friend is sixteen. has = punya.",
-    "colour is British spelling, color American; both are correct. The 'twelve dollars' example is just a price: in Indonesia say rupiah."
+    "colour is British spelling, color American; both are correct."
   ],
   "keyPoints": [
     {
@@ -25,7 +25,13 @@
           "en": "a phone, a book, a table",
           "id": "telepon, buku, meja"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata benda sehari-hari",
+          "explanation": "Orang: mother, father, friend, teacher. Tempat: house, school, office, market. Benda: phone, book, table, water."
+        }
+      }
     },
     {
       "title": "Numbers 1–20",
@@ -39,7 +45,13 @@
           "en": "20 = twenty",
           "id": "dua puluh"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Angka 1–20",
+          "explanation": "one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, lalu thirteen sampai nineteen dengan -teen, dan twenty."
+        }
+      }
     },
     {
       "title": "Colours and adjectives go before the noun",
@@ -53,7 +65,13 @@
           "en": "a black cat",
           "id": "kucing hitam"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Warna dan kata sifat ditaruh sebelum kata benda",
+          "explanation": "Warna: red, blue, green, yellow, black, white. Kata sifat (kata yang menjelaskan sesuatu): big, small, new, old, hot, cold. Bilang 'a red car', bukan 'a car red'. Colour adalah ejaan British; bahasa Inggris Amerika menulis color."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -204,7 +222,8 @@
           "explain": "kantor = office (an office).",
           "i18n": {
             "id": {
-              "explain": "kantor = office (an office)."
+              "explain": "kantor = office (an office).",
+              "prompt": "Apa bahasa Inggrisnya 'kantor'?"
             }
           }
         }
@@ -246,7 +265,12 @@
             {
               "en": "13 thirteen · 15 fifteen · 18 eighteen",
               "id": "tiga belas, lima belas, delapan belas",
-              "note": "not 'threeteen' or 'fiveteen'"
+              "note": "not 'threeteen' or 'fiveteen'",
+              "i18n": {
+                "id": {
+                  "note": "bukan 'threeteen' atau 'fiveteen'"
+                }
+              }
             },
             {
               "en": "20 twenty",
@@ -266,7 +290,8 @@
           "explain": "15 = fifteen (fif-, not five-). Fifty is 50.",
           "i18n": {
             "id": {
-              "explain": "15 = fifteen (fif-, bukan five-). Fifty itu 50."
+              "explain": "15 = fifteen (fif-, bukan five-). Fifty itu 50.",
+              "prompt": "Bagaimana menulis 15 dengan huruf?"
             }
           }
         }
@@ -304,7 +329,12 @@
             {
               "en": "two new phones",
               "id": "dua telepon baru (-s hanya di phones)",
-              "note": "not 'news phones' (news is another word: berita)"
+              "note": "not 'news phones' (news is another word: berita)",
+              "i18n": {
+                "id": {
+                  "note": "bukan 'news phones' (news itu kata lain: berita)"
+                }
+              }
             },
             {
               "en": "hot coffee, cold water",
@@ -327,13 +357,14 @@
           "options": [
             "a bag blue",
             "a blue bag",
-            "a blues bag"
+            "blue a bag"
           ],
           "answer": 1,
-          "explain": "Colour first, then the noun: a blue bag.",
+          "explain": "Colour first, then the noun: a blue bag. 'a' always comes first, and a colour never takes -s.",
           "i18n": {
             "id": {
-              "explain": "Warna dulu, baru kata benda: a blue bag."
+              "explain": "Warna dulu, baru kata benda: a blue bag. 'a' selalu paling depan, dan warna tidak pernah diberi -s.",
+              "prompt": "Terjemahkan: 'tas biru'"
             }
           }
         }
@@ -350,10 +381,10 @@
       "blocks": [
         {
           "type": "text",
-          "text": "These words appear everywhere: prices in a shop (*twelve dollars*), phone numbers read digit by digit (*oh-eight-one-two…*), and describing what you want (*the black one, the big one*).",
+          "text": "These words appear everywhere: counting things (*twelve books*), phone numbers read digit by digit (*oh-eight-one-two…*), and describing what you want (*the black one, the big one*).",
           "i18n": {
             "id": {
-              "text": "Kata-kata ini muncul di mana-mana: harga di toko (*twelve dollars*), nomor telepon yang dibaca per angka (*oh-eight-one-two…*), dan menjelaskan barang yang kamu mau (*the black one, the big one*)."
+              "text": "Kata-kata ini muncul di mana-mana: menghitung barang (*twelve books*), nomor telepon yang dibaca per angka (*oh-eight-one-two…*), dan menjelaskan barang yang kamu mau (*the black one, the big one*)."
             }
           }
         },

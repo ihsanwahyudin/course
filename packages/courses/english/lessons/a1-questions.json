@@ -24,7 +24,13 @@
           "en": "Who is your teacher?",
           "id": "Siapa gurumu?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata tanya",
+          "explanation": "what (apa), where (di mana), who (siapa), when (kapan), how (bagaimana). How old? menanyakan umur. Nama ditanyakan dengan What: What's your name? (Siapa namamu?), jangan pernah 'Who is your name?'."
+        }
+      }
     },
     {
       "title": "Question word order",
@@ -38,7 +44,13 @@
           "en": "What does he do?",
           "id": "Apa pekerjaannya?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Urutan kata dalam pertanyaan",
+          "explanation": "Kata tanya + am/is/are + subjek? atau kata tanya + do/does + subjek + kata kerja? Jangan pakai urutan kalimat biasa. do/does di sini hanya kata bantu; dalam 'What does he do?', do yang kedua adalah kata kerja yang sebenarnya (melakukan/bekerja)."
+        }
+      }
     },
     {
       "title": "Asking for personal information",
@@ -52,7 +64,13 @@
           "en": "Where are you from? — I'm from Medan.",
           "id": "Kamu dari mana? — Saya dari Medan."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menanyakan data pribadi",
+          "explanation": "What's your name? (Siapa namamu?) Where are you from? (Kamu dari mana?) What do you do? (Apa pekerjaanmu?) How old are you? (Umurmu berapa?) What's your phone number? (Nomor teleponmu berapa?)"
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -169,7 +187,12 @@
             {
               "en": "What is your name?",
               "id": "what = apa · Siapa namamu? (nama → What, bukan Who)",
-              "note": "name → What, not Who"
+              "note": "name → What, not Who",
+              "i18n": {
+                "id": {
+                  "note": "nama → What, bukan Who"
+                }
+              }
             },
             {
               "en": "Where is the station?",
@@ -205,7 +228,8 @@
           "explain": "The answer is a time, so When.",
           "i18n": {
             "id": {
-              "explain": "Jawabannya waktu, jadi When."
+              "explain": "Jawabannya waktu, jadi When.",
+              "prompt": "Lengkapi: ___ is the meeting? — At 10 a.m."
             }
           }
         }
@@ -235,27 +259,52 @@
             {
               "en": "What's your name?",
               "id": "Siapa namamu?",
-              "note": "a name → What"
+              "note": "a name → What",
+              "i18n": {
+                "id": {
+                  "note": "nama → What"
+                }
+              }
             },
             {
               "en": "Who is your teacher?",
               "id": "Siapa gurumu?",
-              "note": "a person → Who"
+              "note": "a person → Who",
+              "i18n": {
+                "id": {
+                  "note": "orang → Who"
+                }
+              }
             },
             {
               "en": "How old are you?",
               "id": "Umurmu berapa?",
-              "note": "age → How old"
+              "note": "age → How old",
+              "i18n": {
+                "id": {
+                  "note": "umur → How old"
+                }
+              }
             },
             {
               "en": "How much is this bag?",
               "id": "Tas ini berapa harganya?",
-              "note": "price → How much"
+              "note": "price → How much",
+              "i18n": {
+                "id": {
+                  "note": "harga → How much"
+                }
+              }
             },
             {
               "en": "What's your phone number?",
               "id": "Nomor teleponmu berapa?",
-              "note": "a number to write down → What"
+              "note": "a number to write down → What",
+              "i18n": {
+                "id": {
+                  "note": "nomor yang dicatat → What"
+                }
+              }
             }
           ]
         },
@@ -280,7 +329,8 @@
           "explain": "You want a name, and a name is information, so What: What is your name? Indonesian says 'Siapa namamu?', but English never says 'Who is your name?'.",
           "i18n": {
             "id": {
-              "explain": "Kamu menanyakan nama, dan nama itu informasi, jadi What: What is your name? Bahasa Indonesia bilang 'Siapa namamu?', tapi bahasa Inggris tidak pernah bilang 'Who is your name?'."
+              "explain": "Kamu menanyakan nama, dan nama itu informasi, jadi What: What is your name? Bahasa Indonesia bilang 'Siapa namamu?', tapi bahasa Inggris tidak pernah bilang 'Who is your name?'.",
+              "prompt": "Kamu bertemu rekan kerja baru. Lengkapi: ___ is your name?"
             }
           }
         }
@@ -310,7 +360,12 @@
             {
               "en": "Where is the bathroom?",
               "id": "Kamar mandi / toiletnya di mana?",
-              "note": "US English: bathroom also means toilet"
+              "note": "US English: bathroom also means toilet",
+              "i18n": {
+                "id": {
+                  "note": "dalam bahasa Inggris Amerika (US), bathroom juga berarti toilet"
+                }
+              }
             },
             {
               "en": "How old are you?",
@@ -334,7 +389,8 @@
           "explain": "Question word + is + subject: What is your name?",
           "i18n": {
             "id": {
-              "explain": "Kata tanya + is + subjek: What is your name?"
+              "explain": "Kata tanya + is + subjek: What is your name?",
+              "prompt": "Pilih pertanyaan yang benar."
             }
           }
         }
@@ -387,7 +443,8 @@
           "explain": "Your brother is one person (= he), so does. 'is' is wrong because work is a normal verb: normal verbs need do/does in questions.",
           "i18n": {
             "id": {
-              "explain": "Your brother itu satu orang (= he), jadi does. 'is' salah karena work adalah kata kerja biasa: kata kerja biasa butuh do/does dalam pertanyaan."
+              "explain": "Your brother itu satu orang (= he), jadi does. 'is' salah karena work adalah kata kerja biasa: kata kerja biasa butuh do/does dalam pertanyaan.",
+              "prompt": "Lengkapi: Where ___ your brother work?"
             }
           }
         }

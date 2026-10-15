@@ -29,7 +29,13 @@
           "en": "Bye, Dimas! See you later.",
           "id": "Dah, Dimas! Sampai nanti."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Halo dan sampai jumpa di jam berapa pun",
+          "explanation": "Hello dan Hi bisa dipakai kapan saja. Good morning (sampai jam 12 siang), Good afternoon (jam 12 siang sampai sekitar jam 6 sore), Good evening (setelah sekitar jam 6 sore, saat kamu datang). Untuk pamit: Goodbye, Bye, See you. Good night hanya saat kamu pamit di malam hari atau mau tidur."
+        }
+      }
     },
     {
       "title": "Please, thank you, sorry, excuse me",
@@ -47,7 +53,13 @@
           "en": "Excuse me, where is the toilet?",
           "id": "Permisi, toiletnya di mana?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Please, thank you, sorry, excuse me",
+          "explanation": "Please membuat permintaan jadi sopan. Thank you (atau Thanks) saat seseorang membantumu; jawabannya You're welcome. Sorry diucapkan setelah berbuat salah. Excuse me diucapkan sebelum kamu bertanya ke orang yang tidak dikenal, memanggil seseorang, atau mau lewat."
+        }
+      }
     },
     {
       "title": "How are you?",
@@ -65,7 +77,13 @@
           "en": "Very well, thank you.",
           "id": "Baik sekali, terima kasih."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "How are you? (Apa kabar?)",
+          "explanation": "How are you? adalah bagian dari menyapa. Jawab singkat, ucapkan terima kasih, lalu tanya balik: I'm fine, thanks. And you? Jawaban bagus lainnya: I'm good, Very well, Not bad. I'm adalah bentuk pendek dari I am. Not bad terdengar negatif, tapi artinya 'lumayan', jawaban yang baik."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -255,22 +273,42 @@
             {
               "en": "Good morning, Bu Ani!",
               "id": "Selamat pagi, Bu Ani!",
-              "note": "until 12 noon"
+              "note": "until 12 noon",
+              "i18n": {
+                "id": {
+                  "note": "sampai jam 12 siang"
+                }
+              }
             },
             {
               "en": "Good afternoon, Pak Hasan.",
               "id": "Selamat siang / sore, Pak Hasan.",
-              "note": "12 noon – about 6 p.m."
+              "note": "12 noon – about 6 p.m.",
+              "i18n": {
+                "id": {
+                  "note": "jam 12 siang – sekitar jam 6 sore"
+                }
+              }
             },
             {
               "en": "Good evening, everyone.",
               "id": "Selamat malam, semuanya.",
-              "note": "after about 6 p.m., when you arrive"
+              "note": "after about 6 p.m., when you arrive",
+              "i18n": {
+                "id": {
+                  "note": "setelah sekitar jam 6 sore, saat kamu datang"
+                }
+              }
             },
             {
               "en": "Hi, Budi!",
               "id": "Hai, Budi!",
-              "note": "any time, with friends"
+              "note": "any time, with friends",
+              "i18n": {
+                "id": {
+                  "note": "kapan saja, dengan teman"
+                }
+              }
             }
           ]
         },
@@ -304,7 +342,8 @@
           "explain": "Until 12 noon it's Good morning in English, even when Indonesians already say selamat siang.",
           "i18n": {
             "id": {
-              "explain": "Sampai jam 12 siang, bahasa Inggris memakai Good morning, walaupun orang Indonesia sudah bilang selamat siang."
+              "explain": "Sampai jam 12 siang, bahasa Inggris memakai Good morning, walaupun orang Indonesia sudah bilang selamat siang.",
+              "prompt": "Jam 11 pagi. Kamu menelepon klien di Jakarta. Kamu mulai dengan apa?"
             }
           }
         }
@@ -346,7 +385,12 @@
             {
               "en": "Good night, Mum!",
               "id": "Selamat tidur, Bu! (Mum = ibu)",
-              "note": "going to bed · Mum is British, Americans say Mom"
+              "note": "going to bed · Mum is British, Americans say Mom",
+              "i18n": {
+                "id": {
+                  "note": "mau tidur · Mum itu bahasa Inggris British, orang Amerika bilang Mom"
+                }
+              }
             }
           ]
         },
@@ -371,7 +415,8 @@
           "explain": "They are leaving at night, so Good night. Good evening is for when people arrive.",
           "i18n": {
             "id": {
-              "explain": "Mereka pulang di malam hari, jadi Good night. Good evening dipakai saat orang datang."
+              "explain": "Mereka pulang di malam hari, jadi Good night. Good evening dipakai saat orang datang.",
+              "prompt": "Jam 9 malam. Tamumu mau pulang. Apa yang kamu ucapkan?"
             }
           }
         }
@@ -441,7 +486,8 @@
           "explain": "No problem (or You're welcome) answers thanks. 'Same-same' is a direct translation of sama-sama and isn't English.",
           "i18n": {
             "id": {
-              "explain": "No problem (atau You're welcome) adalah jawaban untuk ucapan terima kasih. 'Same-same' terjemahan langsung dari sama-sama dan bukan bahasa Inggris."
+              "explain": "No problem (atau You're welcome) adalah jawaban untuk ucapan terima kasih. 'Same-same' terjemahan langsung dari sama-sama dan bukan bahasa Inggris.",
+              "prompt": "Lengkapi jawabanmu. Budi: 'Thanks for your help!' Kamu: '___'"
             }
           }
         }
@@ -471,22 +517,42 @@
             {
               "en": "Sorry, I'm late!",
               "id": "Maaf, saya terlambat!",
-              "note": "after a mistake"
+              "note": "after a mistake",
+              "i18n": {
+                "id": {
+                  "note": "setelah berbuat salah"
+                }
+              }
             },
             {
               "en": "Oh, sorry!",
               "id": "Aduh, maaf!",
-              "note": "you bump into someone"
+              "note": "you bump into someone",
+              "i18n": {
+                "id": {
+                  "note": "kamu menabrak seseorang"
+                }
+              }
             },
             {
               "en": "Excuse me, where is the toilet?",
               "id": "Permisi, toiletnya di mana?",
-              "note": "before a question"
+              "note": "before a question",
+              "i18n": {
+                "id": {
+                  "note": "sebelum bertanya"
+                }
+              }
             },
             {
               "en": "Excuse me!",
               "id": "Permisi!",
-              "note": "to pass someone on a busy KRL train"
+              "note": "to pass someone on a busy KRL train",
+              "i18n": {
+                "id": {
+                  "note": "untuk lewat di KRL yang penuh"
+                }
+              }
             }
           ]
         },
@@ -502,7 +568,8 @@
           "explain": "Bumping into someone is a small mistake, so say sorry.",
           "i18n": {
             "id": {
-              "explain": "Menabrak orang adalah kesalahan kecil, jadi ucapkan sorry."
+              "explain": "Menabrak orang adalah kesalahan kecil, jadi ucapkan sorry.",
+              "prompt": "Kamu menabrak seorang ibu di pasar. Apa yang kamu ucapkan?"
             }
           }
         }
@@ -536,7 +603,12 @@
             {
               "en": "Very well, thank you. And you?",
               "id": "Baik sekali, terima kasih. Bapak sendiri?",
-              "note": "polite"
+              "note": "polite",
+              "i18n": {
+                "id": {
+                  "note": "sopan"
+                }
+              }
             },
             {
               "en": "Hi, Sari! How are you?",
@@ -545,7 +617,12 @@
             {
               "en": "Not bad, thanks. How about you?",
               "id": "Lumayan, makasih. Kamu gimana?",
-              "note": "relaxed"
+              "note": "relaxed",
+              "i18n": {
+                "id": {
+                  "note": "santai"
+                }
+              }
             }
           ]
         },
@@ -579,7 +656,8 @@
           "explain": "How are you? asks how you feel: answer short, say thanks and ask back.",
           "i18n": {
             "id": {
-              "explain": "How are you? menanyakan keadaanmu: jawab singkat, ucapkan terima kasih, lalu tanya balik."
+              "explain": "How are you? menanyakan keadaanmu: jawab singkat, ucapkan terima kasih, lalu tanya balik.",
+              "prompt": "Rina: 'How are you?' Jawaban mana yang paling tepat?"
             }
           }
         }

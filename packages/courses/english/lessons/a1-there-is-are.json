@@ -26,7 +26,13 @@
           "en": "There isn't a TV in my bedroom.",
           "id": "Tidak ada TV di kamar tidurku."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "There is / there are = ada",
+          "explanation": "Pakai there is (there's) untuk satu benda dan there are untuk dua atau lebih, lalu sebutkan tempatnya: There is a bed in my room. 'There' di sini bukan berarti 'di sana'; there is/are bersama-sama = ada. Kalimat negatif: there isn't a …, there aren't any …. Jangan pakai have untuk 'ada': have = punya."
+        }
+      }
     },
     {
       "title": "Is there …? / Are there …?",
@@ -44,7 +50,13 @@
           "en": "Are there two beds in the room? — Yes, there are.",
           "id": "Ada dua tempat tidur di kamarnya? — Ya, ada."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Is there …? / Are there …?",
+          "explanation": "Taruh is atau are di depan: Is there a …? (satu benda), Are there …? (dua atau lebih). Jawaban singkat memakai there: Yes, there is. / No, there isn't. Yes, there are. / No, there aren't."
+        }
+      }
     },
     {
       "title": "some and any",
@@ -62,7 +74,13 @@
           "en": "Are there any shops near here?",
           "id": "Ada toko di dekat sini?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "some dan any",
+          "explanation": "Untuk dua benda atau lebih, pakai some di kalimat positif (= beberapa) dan any di kalimat negatif dan pertanyaan: There are some shops. There aren't any shops. Are there any shops near here?"
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -239,17 +257,32 @@
             {
               "en": "There is a bed in my room.",
               "id": "Ada tempat tidur di kamarku.",
-              "note": "one thing → is"
+              "note": "one thing → is",
+              "i18n": {
+                "id": {
+                  "note": "satu benda → is"
+                }
+              }
             },
             {
               "en": "There's a big TV in the living room.",
               "id": "Ada TV besar di ruang tamu.",
-              "note": "there's = there is"
+              "note": "there's = there is",
+              "i18n": {
+                "id": {
+                  "note": "there's = there is"
+                }
+              }
             },
             {
               "en": "There are two bathrooms in our house.",
               "id": "Ada dua kamar mandi di rumah kami.",
-              "note": "two or more → are"
+              "note": "two or more → are",
+              "i18n": {
+                "id": {
+                  "note": "dua atau lebih → are"
+                }
+              }
             },
             {
               "en": "There are 30 students in my class.",
@@ -278,7 +311,8 @@
           "explain": "Two beds = two or more, so there are. 'Have' means punya (owns), so it's not used for 'ada'.",
           "i18n": {
             "id": {
-              "explain": "Two beds = dua atau lebih, jadi there are. 'Have' artinya punya, jadi tidak dipakai untuk 'ada'."
+              "explain": "Two beds = dua atau lebih, jadi there are. 'Have' artinya punya, jadi tidak dipakai untuk 'ada'.",
+              "prompt": "Kamar hotelmu di Bali besar. Lengkapi: There ___ two beds in the room."
             }
           }
         }
@@ -308,22 +342,42 @@
             {
               "en": "I have a fan.",
               "id": "Saya punya kipas angin.",
-              "note": "have = punya"
+              "note": "have = punya",
+              "i18n": {
+                "id": {
+                  "note": "have = punya"
+                }
+              }
             },
             {
               "en": "There is a fan in the room.",
               "id": "Ada kipas angin di kamar itu.",
-              "note": "there is = ada"
+              "note": "there is = ada",
+              "i18n": {
+                "id": {
+                  "note": "there is = ada"
+                }
+              }
             },
             {
               "en": "Budi has two cats.",
               "id": "Budi punya dua kucing.",
-              "note": "has = punya (he/she)"
+              "note": "has = punya (he/she)",
+              "i18n": {
+                "id": {
+                  "note": "has = punya (untuk he/she)"
+                }
+              }
             },
             {
               "en": "There are two cats in the garden.",
               "id": "Ada dua kucing di kebun.",
-              "note": "there are = ada"
+              "note": "there are = ada",
+              "i18n": {
+                "id": {
+                  "note": "there are = ada"
+                }
+              }
             }
           ]
         },
@@ -348,7 +402,8 @@
           "explain": "Ada + a place = there is: There is a mosque near here. Have means punya and needs an owner, and 'It is a mosque' means 'Itu masjid'.",
           "i18n": {
             "id": {
-              "explain": "Ada + tempat = there is: There is a mosque near here. Have artinya punya dan butuh pemilik, dan 'It is a mosque' artinya 'Itu masjid'."
+              "explain": "Ada + tempat = there is: There is a mosque near here. Have artinya punya dan butuh pemilik, dan 'It is a mosque' artinya 'Itu masjid'.",
+              "prompt": "Ada masjid di dekat sini. → Mana yang benar?"
             }
           }
         }
@@ -410,7 +465,8 @@
           "explain": "A TV = one thing, so there isn't. 'Don't have' is the have mistake again.",
           "i18n": {
             "id": {
-              "explain": "A TV = satu benda, jadi there isn't. 'Don't have' adalah kesalahan have tadi."
+              "explain": "A TV = satu benda, jadi there isn't. 'Don't have' adalah kesalahan have tadi.",
+              "prompt": "Kamar kos Rina tidak ada TV-nya. Lengkapi: There ___ a TV in her room."
             }
           }
         }
@@ -472,7 +528,8 @@
           "explain": "A pharmacy = one thing, so Is there …? Don't use have for 'ada'.",
           "i18n": {
             "id": {
-              "explain": "A pharmacy = satu benda, jadi Is there …? Jangan pakai have untuk 'ada'."
+              "explain": "A pharmacy = satu benda, jadi Is there …? Jangan pakai have untuk 'ada'.",
+              "prompt": "Kamu butuh obat. Pertanyaan mana yang benar?"
             }
           }
         }
@@ -502,17 +559,32 @@
             {
               "en": "There are some nice beaches in Lombok.",
               "id": "Ada beberapa pantai yang bagus di Lombok.",
-              "note": "positive → some"
+              "note": "positive → some",
+              "i18n": {
+                "id": {
+                  "note": "kalimat positif → some"
+                }
+              }
             },
             {
               "en": "There aren't any trains to Bali.",
               "id": "Tidak ada kereta ke Bali.",
-              "note": "negative → any"
+              "note": "negative → any",
+              "i18n": {
+                "id": {
+                  "note": "kalimat negatif → any"
+                }
+              }
             },
             {
               "en": "Are there any good warungs near here?",
               "id": "Ada warung yang enak di dekat sini?",
-              "note": "question → any"
+              "note": "question → any",
+              "i18n": {
+                "id": {
+                  "note": "pertanyaan → any"
+                }
+              }
             }
           ]
         },
@@ -537,7 +609,8 @@
           "explain": "It's a positive sentence (no not, not a question) with a plural noun (students = more than one), so some. Any is for negatives and questions, and a is only for one thing.",
           "i18n": {
             "id": {
-              "explain": "Ini kalimat positif (tanpa not, bukan pertanyaan) dengan kata benda jamak (students = lebih dari satu), jadi some. Any untuk kalimat negatif dan pertanyaan, dan a hanya untuk satu benda."
+              "explain": "Ini kalimat positif (tanpa not, bukan pertanyaan) dengan kata benda jamak (students = lebih dari satu), jadi some. Any untuk kalimat negatif dan pertanyaan, dan a hanya untuk satu benda.",
+              "prompt": "Lengkapi: There are ___ students in the library."
             }
           }
         }

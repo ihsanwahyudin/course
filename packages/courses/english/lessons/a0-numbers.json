@@ -26,7 +26,13 @@
           "en": "100 = one hundred / a hundred",
           "id": "seratus"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Angka 21–100",
+          "explanation": "Puluhan berakhiran -ty (ingat 'puluh'): twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, lalu one hundred. Beberapa ditulis berbeda dari angka kecilnya (two → twenty, three → thirty, four → forty, five → fifty): hafalkan saja. Untuk 21–99, sebut puluhannya dulu, lalu satuannya, dan dalam tulisan pakai tanda hubung (-). Angka -teen (ingat 'belas') ditekan paling kuat di akhir (thirTEEN), angka -ty di awal (THIRty)."
+        }
+      }
     },
     {
       "title": "Your age and phone number",
@@ -40,7 +46,13 @@
           "en": "My number is 0812 5567 3490.",
           "id": "Nomor saya 0812 5567 3490 (oh-eight-one-two, five-five-six-seven, three-four-nine-oh)."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Umur dan nomor teleponmu",
+          "explanation": "Untuk umur, katakan I'm (= I am) + angkanya, dan boleh tambah 'years old' (dua kata itu dipakai bersama). Dalam bahasa Inggris kamu 'adalah' 25 tahun, bukan 'punya' 25 tahun, jadi jangan pakai have. Baca nomor telepon satu per satu angka, dalam kelompok kecil; 0 dibaca 'oh' atau 'zero'."
+        }
+      }
     },
     {
       "title": "Prices in rupiah",
@@ -54,7 +66,13 @@
           "en": "3,500 rupiah = three thousand five hundred rupiah",
           "id": "tiga ribu lima ratus rupiah"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Harga dalam rupiah",
+          "explanation": "Sebut berapa ribu, lalu 'thousand rupiah'. Setelah angka, thousand dan hundred tidak diberi -s: keduanya bagian dari angkanya, seperti 'ribu' di 'dua ribu'. Bahasa Inggris menulis 25,000 dengan koma; bahasa Indonesia menulis 25.000 dengan titik."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -238,7 +256,12 @@
             {
               "en": "40 forty",
               "id": "empat puluh",
-              "note": "no u: not 'fourty'"
+              "note": "no u: not 'fourty'",
+              "i18n": {
+                "id": {
+                  "note": "tanpa u: bukan 'fourty'"
+                }
+              }
             },
             {
               "en": "50 fifty",
@@ -292,6 +315,7 @@
           "explain": "40 is forty: no u, even though 4 is four. This is one of the tens you just have to remember. Fourteen is 14.",
           "i18n": {
             "id": {
+              "prompt": "Bagaimana menulis 40 dengan huruf?",
               "explain": "40 adalah forty: tanpa u, walaupun 4 ditulis four. Ini salah satu puluhan yang memang harus dihafal. Fourteen itu 14."
             }
           }
@@ -352,7 +376,12 @@
             {
               "en": "My number is 0812 5567 3490.",
               "id": "Nomor saya 0812 5567 3490.",
-              "note": "oh-eight-one-two, five-five-six-seven, three-four-nine-oh"
+              "note": "oh-eight-one-two, five-five-six-seven, three-four-nine-oh",
+              "i18n": {
+                "id": {
+                  "note": "dibaca per angka: oh-eight-one-two, five-five-six-seven, three-four-nine-oh"
+                }
+              }
             },
             {
               "en": "0856 = oh-eight-five-six",
@@ -372,6 +401,7 @@
           "explain": "Age uses I'm (I am), not I have: in English you are 19, you don't have 19. 'My age 19' is missing the little word is, and English doesn't leave it out.",
           "i18n": {
             "id": {
+              "prompt": "Pilih jawaban yang tepat untuk: How old are you?",
               "explain": "Umur memakai I'm (I am), bukan I have: dalam bahasa Inggris kamu 'adalah' 19 tahun, bukan 'punya' 19 tahun. 'My age 19' tidak punya kata kecil is, padahal bahasa Inggris tidak boleh menghilangkannya."
             }
           }
@@ -402,27 +432,52 @@
             {
               "en": "5,000 rupiah",
               "id": "lima ribu rupiah",
-              "note": "five thousand rupiah"
+              "note": "five thousand rupiah",
+              "i18n": {
+                "id": {
+                  "note": "dibaca: five thousand rupiah"
+                }
+              }
             },
             {
               "en": "15,000 rupiah",
               "id": "lima belas ribu rupiah",
-              "note": "fifteen thousand rupiah"
+              "note": "fifteen thousand rupiah",
+              "i18n": {
+                "id": {
+                  "note": "dibaca: fifteen thousand rupiah"
+                }
+              }
             },
             {
               "en": "50,000 rupiah",
               "id": "lima puluh ribu rupiah",
-              "note": "fifty thousand rupiah"
+              "note": "fifty thousand rupiah",
+              "i18n": {
+                "id": {
+                  "note": "dibaca: fifty thousand rupiah"
+                }
+              }
             },
             {
               "en": "2,500 rupiah",
               "id": "dua ribu lima ratus rupiah",
-              "note": "two thousand five hundred rupiah"
+              "note": "two thousand five hundred rupiah",
+              "i18n": {
+                "id": {
+                  "note": "dibaca: two thousand five hundred rupiah"
+                }
+              }
             },
             {
               "en": "100,000 rupiah",
               "id": "seratus ribu rupiah",
-              "note": "a hundred thousand / one hundred thousand rupiah"
+              "note": "a hundred thousand / one hundred thousand rupiah",
+              "i18n": {
+                "id": {
+                  "note": "dibaca: a hundred thousand / one hundred thousand rupiah"
+                }
+              }
             }
           ]
         },
@@ -456,6 +511,7 @@
           "explain": "After a number, thousand has no -s, because it is part of the number (like 'ribu' in 'empat puluh lima ribu'): forty-five thousand rupiah.",
           "i18n": {
             "id": {
+              "prompt": "Rp45.000 dalam bahasa Inggris adalah…",
               "explain": "Setelah angka, thousand tidak diberi -s, karena thousand adalah bagian dari angkanya (seperti 'ribu' di 'empat puluh lima ribu'): forty-five thousand rupiah."
             }
           }
@@ -490,7 +546,12 @@
             {
               "en": "Room 44, please.",
               "id": "Kamar 44, ya.",
-              "note": "forty-four"
+              "note": "forty-four",
+              "i18n": {
+                "id": {
+                  "note": "dibaca: forty-four"
+                }
+              }
             },
             {
               "en": "Sorry, fifteen or fifty?",

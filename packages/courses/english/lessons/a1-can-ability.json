@@ -26,7 +26,13 @@
           "en": "Can you cook? — Yes, I can.",
           "id": "Kamu bisa masak? — Ya, bisa."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "can / can't untuk kemampuan",
+          "explanation": "Subjek (siapa yang melakukan) + can / can't + kata kerja dasar (tanpa -s, tanpa -ing, tanpa to), sama untuk semua subjek. Kata kerja biasa diberi -s untuk he/she (she cooks), tapi can adalah kata bantu dan tidak pernah berubah: she can cook. Pertanyaan: Can + subjek + kata kerja? (tanpa do: can sendiri pindah ke depan). Jawaban singkat: Yes, I can. / No, I can't."
+        }
+      }
     },
     {
       "title": "Requests with Can you …?",
@@ -40,7 +46,13 @@
           "en": "Can you pass the salt, please? — Sure!",
           "id": "Tolong ambilkan garamnya, ya? — Oke!"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Meminta tolong dengan Can you …?",
+          "explanation": "Can you + kata kerja (+ please)? dipakai untuk meminta orang melakukan sesuatu untukmu. Jawab: Sure! / Of course. / Sorry, I can't."
+        }
+      }
     },
     {
       "title": "Permission with Can I …?",
@@ -54,7 +66,13 @@
           "en": "You can't smoke here.",
           "id": "Dilarang merokok di sini."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Meminta izin dengan Can I …?",
+          "explanation": "Can I + kata kerja? dipakai untuk meminta izin. Beri izin dengan Yes, you can / Sure. Tolak dengan Sorry, you can't. Aturan juga memakai kata yang sama: You can't smoke here."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -282,7 +300,8 @@
           "explain": "Can is a helper word, and helper words never change: no -s for he/she, and no to before the verb. My mother can cook rendang.",
           "i18n": {
             "id": {
-              "explain": "Can adalah kata bantu, dan kata bantu tidak pernah berubah: tanpa -s untuk he/she, dan tanpa to sebelum kata kerja. My mother can cook rendang."
+              "explain": "Can adalah kata bantu, dan kata bantu tidak pernah berubah: tanpa -s untuk he/she, dan tanpa to sebelum kata kerja. My mother can cook rendang.",
+              "prompt": "Lengkapi: My mother ___ cook rendang."
             }
           }
         }
@@ -348,7 +367,8 @@
           "explain": "Answer with the same helper word as the question: Can …? → Yes, she can. Helper words never take -s, so not 'she cans'.",
           "i18n": {
             "id": {
-              "explain": "Jawab dengan kata bantu yang sama seperti di pertanyaan: Can …? → Yes, she can. Kata bantu tidak pernah diberi -s, jadi bukan 'she cans'."
+              "explain": "Jawab dengan kata bantu yang sama seperti di pertanyaan: Can …? → Yes, she can. Kata bantu tidak pernah diberi -s, jadi bukan 'she cans'.",
+              "prompt": "Pilih jawaban 'ya' yang benar: Can your sister speak English? (yes)"
             }
           }
         }
@@ -414,7 +434,8 @@
           "explain": "It's a request, not a question about what you're able to do, so just agree: Sure! (or Of course.) 'Yes, I do' answers a do-question.",
           "i18n": {
             "id": {
-              "explain": "Ini permintaan, bukan pertanyaan tentang kemampuanmu, jadi cukup setuju: Sure! (atau Of course.) 'Yes, I do' adalah jawaban untuk pertanyaan dengan do."
+              "explain": "Ini permintaan, bukan pertanyaan tentang kemampuanmu, jadi cukup setuju: Sure! (atau Of course.) 'Yes, I do' adalah jawaban untuk pertanyaan dengan do.",
+              "prompt": "Temanmu bertanya: 'Can you close the window, please?' Kamu mau membantu. Apa jawabanmu?"
             }
           }
         }
@@ -484,7 +505,8 @@
           "explain": "Permission for yourself = Can I …? Here Can I have …? means 'Boleh saya minta …?' (have isn't 'punya' here). 'Can you have …' is about your friend, and there is no do with can.",
           "i18n": {
             "id": {
-              "explain": "Izin untuk dirimu sendiri = Can I …? Di sini Can I have …? artinya 'Boleh saya minta …?' (have di sini bukan 'punya'). 'Can you have …' membicarakan temanmu, dan tidak ada do kalau memakai can."
+              "explain": "Izin untuk dirimu sendiri = Can I …? Di sini Can I have …? artinya 'Boleh saya minta …?' (have di sini bukan 'punya'). 'Can you have …' membicarakan temanmu, dan tidak ada do kalau memakai can.",
+              "prompt": "Kamu sedang di rumah teman dan kamu haus. Pertanyaan mana yang meminta izin?"
             }
           }
         }

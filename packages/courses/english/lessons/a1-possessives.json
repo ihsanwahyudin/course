@@ -26,7 +26,13 @@
           "en": "This is Pak Hadi's office.",
           "id": "Ini kantor Pak Hadi."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "'s untuk menunjukkan pemilik",
+          "explanation": "Pemilik + 's + benda. Dalam bahasa Inggris pemiliknya ditulis DULUAN: Rina's phone (HP Rina), my mother's name (nama ibu saya). Tanda kecil ' (apostrof) + s artinya 'milik'; s tanpa tanda itu artinya 'lebih dari satu' (cars)."
+        }
+      }
     },
     {
       "title": "Object pronouns",
@@ -44,7 +50,13 @@
           "en": "Budi works with me.",
           "id": "Budi bekerja dengan saya."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata ganti objek (object pronoun)",
+          "explanation": "Yang melakukan kegiatan (subjek) ada sebelum kata kerja: I, he, she, we, they. Yang menerima kegiatan (objek) ada setelah kata kerja atau setelah with/for/to: me, you, him, her, it, us, them. Tidak pakai 'to' setelah call, help atau know: kata kerja ini langsung diikuti orangnya."
+        }
+      }
     },
     {
       "title": "Whose …?",
@@ -58,7 +70,13 @@
           "en": "Whose glass is this? — It's my glass.",
           "id": "Gelas siapa ini? — Itu gelas saya."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Whose …?",
+          "explanation": "Tanyakan pemiliknya dengan Whose + benda + is this? Jawab dengan 's: It's Andi's (pen). Dalam 'It's Andi's', 's yang pertama = is, 's yang kedua = milik Andi."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -263,7 +281,8 @@
           "explain": "Owner first (my sister) + 's + thing (room): my sister's room.",
           "i18n": {
             "id": {
-              "explain": "Pemilik dulu (my sister) + 's + benda (room): my sister's room."
+              "explain": "Pemilik dulu (my sister) + 's + benda (room): my sister's room.",
+              "prompt": "Mana yang benar?"
             }
           }
         }
@@ -305,12 +324,22 @@
             {
               "en": "This coffee is good. I like it.",
               "id": "Kopi ini enak. Saya suka. (bahasa Inggris tetap butuh *it*)",
-              "note": "English needs it here"
+              "note": "English needs it here",
+              "i18n": {
+                "id": {
+                  "note": "di sini bahasa Inggris tetap butuh it"
+                }
+              }
             },
             {
               "en": "My shoes are old. I don't like them.",
               "id": "Sepatu saya sudah tua. Saya tidak suka. (bahasa Inggris tetap butuh *them*)",
-              "note": "English needs them here"
+              "note": "English needs them here",
+              "i18n": {
+                "id": {
+                  "note": "di sini bahasa Inggris tetap butuh them"
+                }
+              }
             }
           ]
         },
@@ -344,7 +373,8 @@
           "explain": "The word comes after the verb like, so we need the 'after the verb' form (object pronoun): he → him. his means 'belongs to him' (his bag).",
           "i18n": {
             "id": {
-              "explain": "Katanya ada setelah kata kerja like, jadi kita butuh bentuk 'setelah kata kerja' (object pronoun): he → him. his artinya 'milik dia' (his bag)."
+              "explain": "Katanya ada setelah kata kerja like, jadi kita butuh bentuk 'setelah kata kerja' (object pronoun): he → him. his artinya 'milik dia' (his bag).",
+              "prompt": "Lengkapi: Mr. Hadi is our teacher. We like ___ very much."
             }
           }
         }
@@ -406,7 +436,8 @@
           "explain": "We ask about the owner, so whose. Who's means who is.",
           "i18n": {
             "id": {
-              "explain": "Kita menanyakan pemiliknya, jadi whose. Who's artinya who is."
+              "explain": "Kita menanyakan pemiliknya, jadi whose. Who's artinya who is.",
+              "prompt": "Lengkapi: ___ laptop is this? — It's Rina's."
             }
           }
         }

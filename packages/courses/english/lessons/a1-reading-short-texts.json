@@ -26,7 +26,13 @@
           "en": "Departs 07:15 · Platform 3",
           "id": "Berangkat pukul 07.15 · Peron 3"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menu, papan tanda, dan jadwal",
+          "explanation": "Baca judul-judulnya dulu: bagian menu, hari di papan tanda, judul kolom di jadwal. Lalu cari baris yang kamu perlukan. Mon–Fri = Monday to Friday (Senin sampai Jumat; nama hari sering disingkat jadi tiga huruf); am = pagi, pm = setelah jam 12 siang; departs = berangkat, arrives = tiba."
+        }
+      }
     },
     {
       "title": "Messages and profiles",
@@ -40,7 +46,13 @@
           "en": "I'm from Makassar, but I live in Jakarta.",
           "id": "Aku berasal dari Makassar, tapi aku tinggal di Jakarta."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pesan dan profil",
+          "explanation": "Pesan menjawab siapa, apa, kapan, dan di mana. Nama di akhir pesan adalah penulisnya, jadi 'I' adalah orang itu. Profil memberi fakta tentang satu orang: nama, umur, asal, tempat tinggal, pekerjaan, dan kesukaannya."
+        }
+      }
     },
     {
       "title": "Scanning: find it fast",
@@ -58,7 +70,13 @@
           "en": "What's her number? → look for 08…",
           "id": "Berapa nomornya? → cari 08…"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Scanning: cari dengan cepat",
+          "explanation": "Baca pertanyaannya, tentukan seperti apa bentuk jawabannya, lalu gerakkan matamu dengan cepat di atas teks sampai kamu menemukannya. Jangan berhenti di kata yang tidak kamu tahu."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -297,12 +315,22 @@
             {
               "en": "Vegetable curry Rp 25.000",
               "id": "Kari sayur Rp 25.000",
-              "note": "vegetable = no meat"
+              "note": "vegetable = no meat",
+              "i18n": {
+                "id": {
+                  "note": "vegetable = sayur, tanpa daging"
+                }
+              }
             },
             {
               "en": "Iced tea / Hot tea",
               "id": "Es teh / Teh panas",
-              "note": "iced = with ice (pakai es)"
+              "note": "iced = with ice (pakai es)",
+              "i18n": {
+                "id": {
+                  "note": "iced = pakai es"
+                }
+              }
             }
           ]
         },
@@ -327,7 +355,8 @@
           "explain": "Today's special is the special dish of the day, here gado-gado for Rp 18.000. It isn't free: it has a price.",
           "i18n": {
             "id": {
-              "explain": "Today's special adalah menu spesial hari ini, di sini gado-gado seharga Rp 18.000. Tidak gratis: ada harganya."
+              "explain": "Today's special adalah menu spesial hari ini, di sini gado-gado seharga Rp 18.000. Tidak gratis: ada harganya.",
+              "prompt": "Di menu tertulis: 'Today's special: Gado-gado Rp 18.000'. Apa arti 'Today's special'?"
             }
           }
         }
@@ -369,7 +398,12 @@
             {
               "en": "OUT OF ORDER",
               "id": "Rusak / tidak bisa dipakai",
-              "note": "on lifts, machines, toilets"
+              "note": "on lifts, machines, toilets",
+              "i18n": {
+                "id": {
+                  "note": "ada di lift, mesin, toilet"
+                }
+              }
             },
             {
               "en": "NO PARKING",
@@ -395,32 +429,62 @@
             {
               "en": "Mon / Tue / Wed",
               "id": "Senin / Selasa / Rabu",
-              "note": "Monday, Tuesday, Wednesday"
+              "note": "Monday, Tuesday, Wednesday",
+              "i18n": {
+                "id": {
+                  "note": "Monday, Tuesday, Wednesday"
+                }
+              }
             },
             {
               "en": "Thu / Fri",
               "id": "Kamis / Jumat",
-              "note": "Thursday, Friday"
+              "note": "Thursday, Friday",
+              "i18n": {
+                "id": {
+                  "note": "Thursday, Friday"
+                }
+              }
             },
             {
               "en": "Sat / Sun",
               "id": "Sabtu / Minggu",
-              "note": "Saturday, Sunday = the weekend"
+              "note": "Saturday, Sunday = the weekend",
+              "i18n": {
+                "id": {
+                  "note": "Saturday, Sunday = the weekend (akhir pekan)"
+                }
+              }
             },
             {
               "en": "9 am",
               "id": "jam 9 pagi (09.00)",
-              "note": "am = before 12 noon"
+              "note": "am = before 12 noon",
+              "i18n": {
+                "id": {
+                  "note": "am = sebelum jam 12 siang"
+                }
+              }
             },
             {
               "en": "12 noon",
               "id": "jam 12 siang",
-              "note": "you may also see 12 pm"
+              "note": "you may also see 12 pm",
+              "i18n": {
+                "id": {
+                  "note": "kadang juga ditulis 12 pm"
+                }
+              }
             },
             {
               "en": "5 pm",
               "id": "jam 5 sore (17.00)",
-              "note": "pm = after 12 noon"
+              "note": "pm = after 12 noon",
+              "i18n": {
+                "id": {
+                  "note": "pm = setelah jam 12 siang"
+                }
+              }
             }
           ]
         },
@@ -445,7 +509,8 @@
           "explain": "Mon–Sat is Monday to Saturday. Sunday is not in it, so the shop is closed on Sunday.",
           "i18n": {
             "id": {
-              "explain": "Mon–Sat artinya Senin sampai Sabtu. Minggu tidak termasuk, jadi tokonya tutup hari Minggu."
+              "explain": "Mon–Sat artinya Senin sampai Sabtu. Minggu tidak termasuk, jadi tokonya tutup hari Minggu.",
+              "prompt": "Papan di sebuah toko bertuliskan: 'Open Mon–Sat 10 am – 9 pm'. Hari ini Minggu. Apakah tokonya buka?"
             }
           }
         }
@@ -483,12 +548,22 @@
             {
               "en": "Platform 3",
               "id": "Peron 3",
-              "note": "trains"
+              "note": "trains",
+              "i18n": {
+                "id": {
+                  "note": "kereta"
+                }
+              }
             },
             {
               "en": "Gate B2",
               "id": "Gerbang / pintu keberangkatan B2",
-              "note": "planes"
+              "note": "planes",
+              "i18n": {
+                "id": {
+                  "note": "pesawat"
+                }
+              }
             },
             {
               "en": "Delayed",
@@ -525,7 +600,8 @@
           "explain": "Delayed = terlambat / ditunda: the plane leaves later than the time on the board. 'No plane today' is Cancelled.",
           "i18n": {
             "id": {
-              "explain": "Delayed = terlambat / ditunda: pesawat berangkat lebih lambat dari jam di papan. 'Tidak ada pesawat hari ini' adalah Cancelled."
+              "explain": "Delayed = terlambat / ditunda: pesawat berangkat lebih lambat dari jam di papan. 'Tidak ada pesawat hari ini' adalah Cancelled.",
+              "prompt": "Papan di bandara bertuliskan: 'GA 404 · Denpasar · Gate C3 · Delayed'. Apa arti 'Delayed'?"
             }
           }
         }
@@ -555,7 +631,12 @@
             {
               "en": "Sorry, I'm late. I'm on the bus. – Andi",
               "id": "Maaf, aku terlambat. Aku di bus. – Andi",
-              "note": "I = Andi"
+              "note": "I = Andi",
+              "i18n": {
+                "id": {
+                  "note": "I = Andi"
+                }
+              }
             },
             {
               "en": "See you at 7!",
@@ -576,7 +657,12 @@
             {
               "en": "I work at a bank.",
               "id": "Aku bekerja di bank.",
-              "note": "at a bank or in a bank: both are correct"
+              "note": "at a bank or in a bank: both are correct",
+              "i18n": {
+                "id": {
+                  "note": "at a bank atau in a bank: dua-duanya benar"
+                }
+              }
             },
             {
               "en": "I like football and music.",
@@ -605,7 +691,8 @@
           "explain": "'I'm from Bali' tells you where he comes from. Bandung is where he lives now.",
           "i18n": {
             "id": {
-              "explain": "'I'm from Bali' memberi tahu asalnya. Bandung adalah tempat tinggalnya sekarang."
+              "explain": "'I'm from Bali' memberi tahu asalnya. Bandung adalah tempat tinggalnya sekarang.",
+              "prompt": "Baca: 'I'm Agus. I'm 30. I'm from Bali, but I live in Bandung. I'm a nurse.' Agus berasal dari mana?"
             }
           }
         }
@@ -635,32 +722,62 @@
             {
               "en": "How much…?",
               "id": "Berapa harganya?",
-              "note": "look for Rp"
+              "note": "look for Rp",
+              "i18n": {
+                "id": {
+                  "note": "cari Rp"
+                }
+              }
             },
             {
               "en": "What time…?",
               "id": "Jam berapa?",
-              "note": "look for 00:00, am, pm"
+              "note": "look for 00:00, am, pm",
+              "i18n": {
+                "id": {
+                  "note": "cari 00:00, am, pm"
+                }
+              }
             },
             {
               "en": "Which day…?",
               "id": "Hari apa?",
-              "note": "look for Monday … Sunday"
+              "note": "look for Monday … Sunday",
+              "i18n": {
+                "id": {
+                  "note": "cari Monday … Sunday"
+                }
+              }
             },
             {
               "en": "Where…?",
               "id": "Di mana?",
-              "note": "look for a place, Room, Platform, Gate"
+              "note": "look for a place, Room, Platform, Gate",
+              "i18n": {
+                "id": {
+                  "note": "cari nama tempat, Room, Platform, Gate"
+                }
+              }
             },
             {
               "en": "What's the number?",
               "id": "Berapa nomornya?",
-              "note": "look for 08…"
+              "note": "look for 08…",
+              "i18n": {
+                "id": {
+                  "note": "cari 08…"
+                }
+              }
             },
             {
               "en": "Who…?",
               "id": "Siapa?",
-              "note": "look for a name"
+              "note": "look for a name",
+              "i18n": {
+                "id": {
+                  "note": "cari nama orang"
+                }
+              }
             }
           ]
         },
@@ -685,7 +802,8 @@
           "explain": "Phone numbers in Indonesia start with 08 (or +62 8). A word with @ is an email, and Rp is a price.",
           "i18n": {
             "id": {
-              "explain": "Nomor telepon di Indonesia diawali 08 (atau +62 8). Kata dengan @ adalah email, dan Rp adalah harga."
+              "explain": "Nomor telepon di Indonesia diawali 08 (atau +62 8). Kata dengan @ adalah email, dan Rp adalah harga.",
+              "prompt": "Kamu mau menelepon sebuah toko. Apa yang kamu cari di iklannya?"
             }
           }
         }

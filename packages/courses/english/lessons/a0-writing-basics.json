@@ -21,7 +21,13 @@
           "en": "Where is Jalan Braga?",
           "id": "Jalan Braga di mana?"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Huruf kapital dan tanda baca",
+          "explanation": "Pakai huruf kapital untuk kata pertama dalam kalimat, kata I, nama orang dan nama tempat. Hanya I yang selalu kapital: my dan me tidak. Akhiri kalimat dengan full stop atau titik (.) (orang Amerika menyebutnya period) dan pertanyaan dengan question mark atau tanda tanya (?)."
+        }
+      }
     },
     {
       "title": "Writing your details",
@@ -39,7 +45,13 @@
           "en": "0821 7788 9900",
           "id": "nomor HP dalam kelompok kecil"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menulis data dirimu",
+          "explanation": "Nama orang dan nama tempat diawali huruf kapital. Alamat email ditulis dengan huruf kecil tanpa spasi: kalau orang bilang 'at' dan 'dot', kamu tulis @ dan titik. Kelompokkan nomor telepon supaya mudah dibaca. Dari luar negeri, +62 (kode negara Indonesia) menggantikan angka 0 di depan."
+        }
+      }
     },
     {
       "title": "Filling in a form",
@@ -53,7 +65,13 @@
           "en": "Date of birth: 17/08/1998",
           "id": "Tanggal lahir: 17 Agustus 1998"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengisi formulir",
+          "explanation": "First name adalah nama dirimu sendiri (nama depan), surname (juga: last name, family name) adalah bagian terakhir namamu. Tulis tanggal lahir dengan urutan hari/bulan/tahun, seperti di Indonesia; formulir Amerika memakai bulan/hari/tahun."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -212,12 +230,22 @@
             {
               "en": "My name is Budi and I live in Bandung.",
               "id": "Nama saya Budi dan saya tinggal di Bandung.",
-              "note": "not: my name is budi and i live in bandung"
+              "note": "not: my name is budi and i live in bandung",
+              "i18n": {
+                "id": {
+                  "note": "bukan: my name is budi and i live in bandung"
+                }
+              }
             },
             {
               "en": "Sari and I are Indonesian.",
               "id": "Sari dan saya orang Indonesia.",
-              "note": "I and Indonesian: capitals"
+              "note": "I and Indonesian: capitals",
+              "i18n": {
+                "id": {
+                  "note": "I dan Indonesian: huruf kapital"
+                }
+              }
             },
             {
               "en": "This is Pak Hasan from Medan.",
@@ -255,6 +283,7 @@
           "explain": "My is the first word, and Pak Hasan is a person's name (with his title). Teacher is a job, not a name, so it stays small.",
           "i18n": {
             "id": {
+              "prompt": "Kata mana yang perlu huruf kapital? my teacher is pak hasan.",
               "explain": "My kata pertama, dan Pak Hasan nama orang (dengan sapaannya). Teacher adalah pekerjaan, bukan nama, jadi tetap huruf kecil."
             }
           }
@@ -285,22 +314,42 @@
             {
               "en": "I'm a student.",
               "id": "Saya pelajar.",
-              "note": ". full stop"
+              "note": ". full stop",
+              "i18n": {
+                "id": {
+                  "note": ". titik (full stop)"
+                }
+              }
             },
             {
               "en": "What's your name?",
               "id": "Siapa namamu?",
-              "note": "? question mark"
+              "note": "? question mark",
+              "i18n": {
+                "id": {
+                  "note": "? tanda tanya (question mark)"
+                }
+              }
             },
             {
               "en": "I have a pen, a book and a bag.",
               "id": "Saya punya pulpen, buku dan tas.",
-              "note": ", comma"
+              "note": ", comma",
+              "i18n": {
+                "id": {
+                  "note": ", koma (comma)"
+                }
+              }
             },
             {
               "en": "Jalan Braga 10, Bandung",
               "id": "Jalan Braga 10, Bandung",
-              "note": ", comma in an address"
+              "note": ", comma in an address",
+              "i18n": {
+                "id": {
+                  "note": ", koma di alamat"
+                }
+              }
             }
           ]
         },
@@ -316,6 +365,7 @@
           "explain": "It's a question (it asks something), so it ends with a question mark, just like in Indonesian.",
           "i18n": {
             "id": {
+              "prompt": "Pilih tanda di akhir kalimat: How old are you_",
               "explain": "Ini pertanyaan (menanyakan sesuatu), jadi diakhiri tanda tanya, sama seperti bahasa Indonesia."
             }
           }
@@ -395,6 +445,7 @@
           "explain": "Email addresses use small letters, no spaces, and a dot (not a comma) before com.",
           "i18n": {
             "id": {
+              "prompt": "Alamat email mana yang ditulis dengan benar?",
               "explain": "Alamat email memakai huruf kecil, tanpa spasi, dan titik (bukan koma) sebelum com."
             }
           }
@@ -478,6 +529,7 @@
           "explain": "First name is your own name: Andi. Wijaya goes in the Surname box.",
           "i18n": {
             "id": {
+              "prompt": "Namamu Andi Wijaya. First name: ___",
               "explain": "First name adalah nama dirimu: Andi. Wijaya ditulis di kotak Surname."
             }
           }

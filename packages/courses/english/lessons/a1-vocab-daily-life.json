@@ -25,7 +25,13 @@
           "en": "My new jeans are blue.",
           "id": "Celana jeans baruku berwarna biru."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pakaian dan wear",
+          "explanation": "Pelajari kata-kata pakaian (shirt, T-shirt, trousers, jeans, skirt, dress, jacket, shoes, socks, hat). Untuk pakaian, 'pakai' adalah wear, bukan use: She is wearing a red dress. Trousers, jeans dan shorts selalu jamak (plural): My jeans are new."
+        }
+      }
     },
     {
       "title": "Talking about the weather",
@@ -43,7 +49,13 @@
           "en": "In the rainy season, it rains every afternoon.",
           "id": "Di musim hujan, setiap sore hujan."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Membicarakan cuaca",
+          "explanation": "Mulai dengan It (di sini it tidak punya arti; bahasa Inggris hanya butuh kata di awal kalimat): It's sunny, It's hot, It's cold, It's cloudy, It's windy. Untuk hujan yang sedang turun, katakan It's raining (bukan Today is rain). Untuk bertanya: What's the weather like? (di sini like ≠ suka)."
+        }
+      }
     },
     {
       "title": "Parts of the body",
@@ -61,7 +73,13 @@
           "en": "A baby has very small feet.",
           "id": "Bayi punya kaki yang sangat kecil."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bagian tubuh",
+          "explanation": "head, hair, eye, ear, nose, mouth, tooth, arm, hand, leg, foot, back, stomach. 'Tangan' bisa hand atau arm; 'kaki' bisa foot atau leg. Bentuk jamak yang tidak beraturan: one foot, two feet; one tooth, two teeth. Satu bagian: hurts; dua bagian: hurt."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -230,12 +248,22 @@
             {
               "en": "I wear a uniform every day.",
               "id": "Saya memakai seragam setiap hari.",
-              "note": "habit"
+              "note": "habit",
+              "i18n": {
+                "id": {
+                  "note": "kebiasaan"
+                }
+              }
             },
             {
               "en": "Today Rina is wearing a batik dress.",
               "id": "Hari ini Rina memakai gaun batik.",
-              "note": "now"
+              "note": "now",
+              "i18n": {
+                "id": {
+                  "note": "sekarang"
+                }
+              }
             },
             {
               "en": "Dimas is wearing shorts and sandals.",
@@ -244,7 +272,12 @@
             {
               "en": "My jeans are new.",
               "id": "Celana jeans-ku baru.",
-              "note": "jeans → are"
+              "note": "jeans → are",
+              "i18n": {
+                "id": {
+                  "note": "jeans → are"
+                }
+              }
             }
           ]
         },
@@ -269,7 +302,8 @@
           "explain": "A jacket keeps you warm when it's cold. Shorts and sandals are for hot days.",
           "i18n": {
             "id": {
-              "explain": "Jaket membuatmu hangat saat dingin. Celana pendek dan sandal untuk hari yang panas."
+              "explain": "Jaket membuatmu hangat saat dingin. Celana pendek dan sandal untuk hari yang panas.",
+              "prompt": "Lengkapi: It's cold tonight in Lembang. Take your ___."
             }
           }
         }
@@ -303,17 +337,32 @@
             {
               "en": "It's raining, so I'm taking an umbrella.",
               "id": "Sedang hujan, jadi saya bawa payung.",
-              "note": "now"
+              "note": "now",
+              "i18n": {
+                "id": {
+                  "note": "sekarang"
+                }
+              }
             },
             {
               "en": "In the rainy season, it rains every afternoon.",
               "id": "Di musim hujan, setiap sore hujan.",
-              "note": "habit"
+              "note": "habit",
+              "i18n": {
+                "id": {
+                  "note": "kebiasaan"
+                }
+              }
             },
             {
               "en": "It was cool in Puncak yesterday.",
               "id": "Kemarin di Puncak sejuk.",
-              "note": "was = past"
+              "note": "was = past",
+              "i18n": {
+                "id": {
+                  "note": "was = lampau (sudah lewat)"
+                }
+              }
             }
           ]
         },
@@ -338,7 +387,8 @@
           "explain": "Weather sentences start with it, and rain happening now is It's raining.",
           "i18n": {
             "id": {
-              "explain": "Kalimat cuaca dimulai dengan it, dan hujan yang sedang turun adalah It's raining."
+              "explain": "Kalimat cuaca dimulai dengan it, dan hujan yang sedang turun adalah It's raining.",
+              "prompt": "Kalimat mana yang benar?"
             }
           }
         }
@@ -368,12 +418,22 @@
             {
               "en": "My back hurts.",
               "id": "Punggungku sakit.",
-              "note": "one part (it) → hurts"
+              "note": "one part (it) → hurts",
+              "i18n": {
+                "id": {
+                  "note": "satu bagian (it) → hurts"
+                }
+              }
             },
             {
               "en": "My eyes hurt.",
               "id": "Mataku sakit.",
-              "note": "two (they) → hurt, no -s"
+              "note": "two (they) → hurt, no -s",
+              "i18n": {
+                "id": {
+                  "note": "dua (they) → hurt, tanpa -s"
+                }
+              }
             },
             {
               "en": "Wash your hands before lunch.",
@@ -406,7 +466,8 @@
           "explain": "You hold a pen with your hand, the part with fingers. The arm is from the shoulder to the hand.",
           "i18n": {
             "id": {
-              "explain": "Kita memegang pulpen dengan hand, bagian yang punya jari. Arm adalah lengan, dari bahu sampai tangan."
+              "explain": "Kita memegang pulpen dengan hand, bagian yang punya jari. Arm adalah lengan, dari bahu sampai tangan.",
+              "prompt": "Lengkapi: Rina is writing a letter. She holds the pen in her ___."
             }
           }
         }

@@ -21,7 +21,13 @@
           "en": "in December",
           "id": "pada bulan Desember"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Hari dan bulan",
+          "explanation": "Hari: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. Bulan: January sampai December. Selalu pakai huruf kapital (seperti Senin dan Mei dalam bahasa Indonesia). Bahasa Indonesia memakai satu kata, 'pada' (atau tanpa kata), tapi bahasa Inggris memakai kata kecil yang berbeda: on untuk hari dan tanggal, in untuk bulan."
+        }
+      }
     },
     {
       "title": "Telling the time",
@@ -39,7 +45,13 @@
           "en": "It's quarter to eight.",
           "id": "Jam delapan kurang seperempat (7:45)."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Menyebut jam",
+          "explanation": "Tanya 'What time is it?' dan jawab 'It's…'. Jam pas: o'clock. quarter past (:15) = lewat seperempat, quarter to (:45) = kurang seperempat, sama seperti bahasa Indonesia. Hanya 'setengah' yang berbeda: half past six = 6:30 = setengah tujuh, karena bahasa Inggris menghitung dari jam yang sudah lewat. Atau sebut angkanya saja (seven fifteen)."
+        }
+      }
     },
     {
       "title": "Ordinal numbers and dates",
@@ -53,7 +65,13 @@
           "en": "My birthday is on the fifth of June.",
           "id": "Ulang tahun saya tanggal 5 Juni."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bilangan urutan dan tanggal",
+          "explanation": "Tanggal memakai bilangan urutan, yaitu angka 'ke-': first (ke-1), second (ke-2), third (ke-3), fourth… Katakan the first of May, atau May the first, jangan 'the one of May'. Kebanyakan cukup ditambah -th; first, second, third dan beberapa lainnya khusus dan harus dihafal. Pakai on untuk tanggal."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -231,7 +249,12 @@
             {
               "en": "Wednesday",
               "id": "Rabu",
-              "note": "say WENZ-day; the first d is silent"
+              "note": "say WENZ-day; the first d is silent",
+              "i18n": {
+                "id": {
+                  "note": "dibaca WENZ-day; huruf d yang pertama tidak dibaca"
+                }
+              }
             },
             {
               "en": "Thursday",
@@ -293,6 +316,7 @@
           "explain": "January, February, March, April. Maret → April.",
           "i18n": {
             "id": {
+              "prompt": "Bulan apa yang datang setelah March?",
               "explain": "January, February, March, April. Maret → April."
             }
           }
@@ -372,6 +396,7 @@
           "explain": "2:30 is thirty minutes past two (the hour that has passed), so half past two. 'Half past three' is 3:30, and 'half three' also means 3:30 in British English.",
           "i18n": {
             "id": {
+              "prompt": "'Jam setengah tiga' (2:30) dalam bahasa Inggris adalah…",
               "explain": "2:30 itu tiga puluh menit lewat jam dua (jam yang sudah lewat), jadi half past two. 'Half past three' itu 3:30, dan 'half three' juga berarti 3:30 dalam bahasa Inggris British."
             }
           }
@@ -472,6 +497,7 @@
           "explain": "Dates use ordinals: 2 → second. 'The two of March' is the common mistake.",
           "i18n": {
             "id": {
+              "prompt": "Bagaimana cara menyebut tanggal 2 March (2 Maret)?",
               "explain": "Tanggal memakai bilangan urutan: 2 → second. 'The two of March' adalah kesalahan yang umum."
             }
           }

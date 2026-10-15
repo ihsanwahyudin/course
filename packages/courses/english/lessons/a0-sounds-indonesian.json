@@ -30,7 +30,13 @@
           "en": "good — food",
           "id": "baik (pendek /ʊ/) — makanan (panjang /uː/)"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Vokal pendek dan panjang",
+          "explanation": "Bahasa Inggris punya bunyi vokal pendek dan panjang. Ship punya /ɪ/ pendek dan santai, seperti 'i' pendek; sheep punya /iː/ panjang seperti 'ii', dengan bibir melebar seperti tersenyum. Kalau panjang bunyinya berubah, katanya juga berubah."
+        }
+      }
     },
     {
       "title": "th, v and sh",
@@ -48,7 +54,13 @@
           "en": "she /ʃ/",
           "id": "dia (perempuan) (bukan 'see')"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "th, v, dan sh",
+          "explanation": "Untuk th, taruh ujung lidah di antara gigi: /θ/ hanya dengan udara (think), /ð/ dengan suara yang bergetar (this). Untuk /v/, gigi atas menyentuh bibir bawah dan suaramu bergetar (very). Untuk /ʃ/, bulatkan bibir seperti 'sy' di 'syarat' (she)."
+        }
+      }
     },
     {
       "title": "Finish the word",
@@ -66,7 +78,13 @@
           "en": "bus",
           "id": "bis (akhiri dengan /s/)"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Selesaikan katanya",
+          "explanation": "Ucapkan konsonan terakhir dengan jelas. Tanpa bunyi itu, cat bisa terdengar seperti cap atau can. Huruf d di akhir tetap d (bed), tidak berubah jadi t (bet)."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -273,7 +291,8 @@
           "explain": "Tea has ea, a long /iː/. Fish and big have a short /ɪ/.",
           "i18n": {
             "id": {
-              "explain": "Tea ditulis dengan ea, bunyinya panjang /iː/. Fish dan big berbunyi pendek /ɪ/."
+              "explain": "Tea ditulis dengan ea, bunyinya panjang /iː/. Fish dan big berbunyi pendek /ɪ/.",
+              "prompt": "Kata mana yang punya bunyi 'ii' panjang /iː/?"
             }
           }
         }
@@ -303,7 +322,12 @@
             {
               "en": "think /θ/",
               "id": "berpikir (th, hanya udara)",
-              "note": "not 'tink'"
+              "note": "not 'tink'",
+              "i18n": {
+                "id": {
+                  "note": "bukan 'tink'"
+                }
+              }
             },
             {
               "en": "thank you /θ/",
@@ -312,7 +336,12 @@
             {
               "en": "this /ð/",
               "id": "ini (th, bergetar)",
-              "note": "not 'dis'"
+              "note": "not 'dis'",
+              "i18n": {
+                "id": {
+                  "note": "bukan 'dis'"
+                }
+              }
             },
             {
               "en": "mother /ð/",
@@ -341,7 +370,8 @@
           "explain": "Thank starts with /θ/: tongue tip between the teeth, air only. Behind the teeth is t; teeth on the lip is f or v.",
           "i18n": {
             "id": {
-              "explain": "Thank diawali /θ/: ujung lidah di antara gigi, hanya udara. Lidah di belakang gigi adalah t; gigi di bibir adalah f atau v."
+              "explain": "Thank diawali /θ/: ujung lidah di antara gigi, hanya udara. Lidah di belakang gigi adalah t; gigi di bibir adalah f atau v.",
+              "prompt": "Bagaimana cara memulai kata 'thank'?"
             }
           }
         }
@@ -371,7 +401,12 @@
             {
               "en": "very /v/",
               "id": "sangat",
-              "note": "not 'fery'"
+              "note": "not 'fery'",
+              "i18n": {
+                "id": {
+                  "note": "bukan 'fery'"
+                }
+              }
             },
             {
               "en": "seven /v/",
@@ -412,7 +447,8 @@
           "explain": "Shop starts with sh /ʃ/, round lips. Sea and sock start with /s/.",
           "i18n": {
             "id": {
-              "explain": "Shop diawali sh /ʃ/, bibir dibulatkan. Sea dan sock diawali /s/."
+              "explain": "Shop diawali sh /ʃ/, bibir dibulatkan. Sea dan sock diawali /s/.",
+              "prompt": "Kata mana yang diawali bunyi /ʃ/ (seperti 'sy')?"
             }
           }
         }
@@ -446,17 +482,32 @@
             {
               "en": "bed",
               "id": "tempat tidur",
-              "note": "ends with /d/, not /t/"
+              "note": "ends with /d/, not /t/",
+              "i18n": {
+                "id": {
+                  "note": "diakhiri /d/, bukan /t/"
+                }
+              }
             },
             {
               "en": "bus",
               "id": "bis",
-              "note": "ends with /s/"
+              "note": "ends with /s/",
+              "i18n": {
+                "id": {
+                  "note": "diakhiri /s/"
+                }
+              }
             },
             {
               "en": "books",
               "id": "buku-buku (lebih dari satu)",
-              "note": "ends with /s/"
+              "note": "ends with /s/",
+              "i18n": {
+                "id": {
+                  "note": "diakhiri /s/"
+                }
+              }
             }
           ]
         },
@@ -481,7 +532,8 @@
           "explain": "Cat ends with a clear /t/. Cap is 'topi' and can is 'kaleng'.",
           "i18n": {
             "id": {
-              "explain": "Cat diakhiri /t/ yang jelas. Cap artinya topi dan can artinya kaleng."
+              "explain": "Cat diakhiri /t/ yang jelas. Cap artinya topi dan can artinya kaleng.",
+              "prompt": "Kata mana yang artinya 'kucing'? Ucapkan bunyi terakhirnya dengan jelas."
             }
           }
         }
@@ -511,22 +563,42 @@
             {
               "en": "Thank you very much.",
               "id": "Terima kasih banyak.",
-              "note": "th /θ/ + v"
+              "note": "th /θ/ + v",
+              "i18n": {
+                "id": {
+                  "note": "th /θ/ (hanya udara) + v"
+                }
+              }
             },
             {
               "en": "This is my mother.",
               "id": "Ini ibu saya.",
-              "note": "th with voice /ð/"
+              "note": "th with voice /ð/",
+              "i18n": {
+                "id": {
+                  "note": "th yang bergetar /ð/"
+                }
+              }
             },
             {
               "en": "She is in the shop.",
               "id": "Dia (perempuan) ada di toko.",
-              "note": "sh /ʃ/"
+              "note": "sh /ʃ/",
+              "i18n": {
+                "id": {
+                  "note": "sh /ʃ/ (seperti 'sy')"
+                }
+              }
             },
             {
               "en": "Is this your seat?",
               "id": "Apakah ini kursimu?",
-              "note": "long 'ee' /iː/"
+              "note": "long 'ee' /iː/",
+              "i18n": {
+                "id": {
+                  "note": "'ii' panjang /iː/"
+                }
+              }
             }
           ]
         },

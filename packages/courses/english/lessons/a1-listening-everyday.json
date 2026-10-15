@@ -26,7 +26,13 @@
           "en": "half past three",
           "id": "3:30 (setengah empat)"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Nama, angka, harga, dan jam",
+          "explanation": "Baca pertanyaannya dulu, lalu dengarkan kata kuncinya. Surname = nama keluarga, dieja dengan nama huruf bahasa Inggris. fifTEEN (15) tekanannya (bagian yang lebih keras) di akhir, FIFty (50) di awal. Half past three adalah 3:30 (past = lewat dari jam itu), bukan 'setengah tiga'."
+        }
+      }
     },
     {
       "title": "Simple directions",
@@ -40,7 +46,13 @@
           "en": "It's on your right, next to the school.",
           "id": "Tempatnya di sebelah kananmu, di samping sekolah."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Petunjuk arah sederhana",
+          "explanation": "Go straight on, turn left dan turn right memberitahu apa yang harus kamu lakukan. On the left, on your right dan next to memberitahu letak tempatnya. Dengarkan bagian yang ditanyakan."
+        }
+      }
     },
     {
       "title": "Short announcements",
@@ -54,7 +66,13 @@
           "en": "The bus to Malang is late.",
           "id": "Bus ke Malang terlambat."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pengumuman singkat",
+          "explanation": "Pengumuman diawali dengan 'Attention, please'. Lalu dengarkan apa yang diumumkan (train, bus, shop), angka setelah platform atau gate, dan jam setelah at."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -299,7 +317,8 @@
           "explain": "What time asks for a time, so listen for a clock time like ten fifteen or half past six.",
           "i18n": {
             "id": {
-              "explain": "What time menanyakan jam, jadi dengarkan jam seperti ten fifteen atau half past six."
+              "explain": "What time menanyakan jam, jadi dengarkan jam seperti ten fifteen atau half past six.",
+              "prompt": "Pertanyaannya 'What time does the bus leave?'. Apa yang perlu kamu dengarkan?"
             }
           }
         }
@@ -329,22 +348,42 @@
             {
               "en": "A",
               "id": "dibaca 'ei' (bukan 'a')",
-              "note": "letter name"
+              "note": "letter name",
+              "i18n": {
+                "id": {
+                  "note": "nama huruf"
+                }
+              }
             },
             {
               "en": "E",
               "id": "dibaca 'ii' (seperti huruf i kita)",
-              "note": "easy to mix up with I"
+              "note": "easy to mix up with I",
+              "i18n": {
+                "id": {
+                  "note": "mudah tertukar dengan I"
+                }
+              }
             },
             {
               "en": "I",
               "id": "dibaca 'ai'",
-              "note": "easy to mix up with E"
+              "note": "easy to mix up with E",
+              "i18n": {
+                "id": {
+                  "note": "mudah tertukar dengan E"
+                }
+              }
             },
             {
               "en": "G / J",
               "id": "G dibaca 'ji', J dibaca 'jei'",
-              "note": "easy to mix up"
+              "note": "easy to mix up",
+              "i18n": {
+                "id": {
+                  "note": "mudah tertukar"
+                }
+              }
             },
             {
               "en": "H",
@@ -357,7 +396,12 @@
             {
               "en": "W",
               "id": "dibaca 'DA-bel-yu' (artinya 'double u')",
-              "note": "three beats"
+              "note": "three beats",
+              "i18n": {
+                "id": {
+                  "note": "tiga ketukan"
+                }
+              }
             },
             {
               "en": "Y",
@@ -371,17 +415,32 @@
             {
               "en": "My surname is Hartono: H-A-R-T-O-N-O.",
               "id": "Nama keluarga saya Hartono: H-A-R-T-O-N-O.",
-              "note": "H is 'aitch'"
+              "note": "H is 'aitch'",
+              "i18n": {
+                "id": {
+                  "note": "H dibaca 'aitch' (bunyinya 'eich')"
+                }
+              }
             },
             {
               "en": "The book is sixty thousand rupiah.",
               "id": "Bukunya enam puluh ribu rupiah.",
-              "note": "SIXty: stress at the start"
+              "note": "SIXty: stress at the start",
+              "i18n": {
+                "id": {
+                  "note": "SIXty: tekanan di awal"
+                }
+              }
             },
             {
               "en": "My number is 0812 3345 6071.",
               "id": "Nomor saya 0812 3345 6071.",
-              "note": "one digit at a time; 0 is often said 'oh'; 33 = double three (double = dua kali)"
+              "note": "one digit at a time; 0 is often said 'oh'; 33 = double three (double = dua kali)",
+              "i18n": {
+                "id": {
+                  "note": "satu angka demi satu angka; 0 sering dibaca 'oh'; 33 = double three (double = dua kali)"
+                }
+              }
             },
             {
               "en": "The class starts at quarter to eight.",
@@ -414,7 +473,8 @@
           "explain": "Stress at the end means a -teen number: thirteen = 13, so Rp13.000.",
           "i18n": {
             "id": {
-              "explain": "Tekanan di akhir berarti angka -teen: thirteen = 13, jadi Rp13.000."
+              "explain": "Tekanan di akhir berarti angka -teen: thirteen = 13, jadi Rp13.000.",
+              "prompt": "Kamu mendengar 'The ticket is thirTEEN thousand rupiah', dengan tekanan di akhir. Berapa harganya?"
             }
           }
         }
@@ -484,7 +544,8 @@
           "explain": "'Turn right' is what you do; 'on your left' tells you where the bank is.",
           "i18n": {
             "id": {
-              "explain": "'Turn right' adalah yang kamu lakukan; 'on your left' memberitahu letak bank-nya."
+              "explain": "'Turn right' adalah yang kamu lakukan; 'on your left' memberitahu letak bank-nya.",
+              "prompt": "Kamu mendengar: 'Turn right. The bank is on your left.' Bank-nya di mana?"
             }
           }
         }
@@ -550,7 +611,8 @@
           "explain": "The number right after 'platform' is nine. Seven forty (7:40) is the time.",
           "i18n": {
             "id": {
-              "explain": "Angka tepat setelah 'platform' adalah nine (9). Seven forty (7:40) adalah jamnya."
+              "explain": "Angka tepat setelah 'platform' adalah nine (9). Seven forty (7:40) adalah jamnya.",
+              "prompt": "Kamu mendengar: 'Attention, please. The train to Malang leaves from platform nine at seven forty.' Peron (platform) berapa?"
             }
           }
         }

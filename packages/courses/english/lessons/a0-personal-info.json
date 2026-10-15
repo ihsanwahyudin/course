@@ -22,7 +22,13 @@
           "en": "Kenji is from Japan. He's Japanese.",
           "id": "Kenji dari Jepang. Dia orang Jepang."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Negara dan kebangsaan",
+          "explanation": "Country (negara) adalah tempat (Indonesia, Japan). Nationality (kebangsaan) menjelaskan orang dari negara itu (Indonesian, Japanese). Katakan 'I'm from + negara' atau 'I'm + kebangsaan', bukan 'I'm Indonesia': kamu orang, bukan tempat. Tidak ada satu aturan untuk membentuk kebangsaan (-n, -ese, atau kata yang berbeda), jadi hafalkan tiap pasangannya."
+        }
+      }
     },
     {
       "title": "Personal details",
@@ -40,7 +46,13 @@
           "en": "I'm 25.",
           "id": "Umur saya 25 tahun."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Data diri",
+          "explanation": "Sebutkan data diri dengan kalimat pendek yang sudah baku, dan jangan buang 'is' (≈ 'adalah'): My name is…, I'm 25, My address is…, My email is…, My phone number is…. Bahasa Indonesia boleh menghilangkan kata itu ('Alamat saya Jalan Merdeka 5'); bahasa Inggris tidak boleh. Jangan pakai 'in' di situ: 'in' artinya 'di dalam', bukan 'adalah'."
+        }
+      }
     },
     {
       "title": "Fixed questions",
@@ -54,7 +66,13 @@
           "en": "How old are you? — I'm 19.",
           "id": "Berapa umurmu? — Umur saya 19 tahun."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan baku",
+          "explanation": "Hafalkan pertanyaannya sebagai satu kesatuan, dan jawab dengan kalimat pasangannya. What's = What is: jangan buang 's. Bahasa Indonesia bilang 'Siapa namamu?' dan 'Alamatmu di mana?', tapi bahasa Inggris menanyakan keduanya dengan What: What's your name? What's your address?"
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -223,42 +241,82 @@
             {
               "en": "Indonesia → Indonesian",
               "id": "Indonesia → orang Indonesia",
-              "note": "+ n"
+              "note": "+ n",
+              "i18n": {
+                "id": {
+                  "note": "tambah n"
+                }
+              }
             },
             {
               "en": "Malaysia → Malaysian",
               "id": "Malaysia → orang Malaysia",
-              "note": "+ n"
+              "note": "+ n",
+              "i18n": {
+                "id": {
+                  "note": "tambah n"
+                }
+              }
             },
             {
               "en": "Australia → Australian",
               "id": "Australia → orang Australia",
-              "note": "+ n"
+              "note": "+ n",
+              "i18n": {
+                "id": {
+                  "note": "tambah n"
+                }
+              }
             },
             {
               "en": "South Korea → Korean",
               "id": "Korea Selatan → orang Korea",
-              "note": "+ n (people usually just say Korean)"
+              "note": "+ n (people usually just say Korean)",
+              "i18n": {
+                "id": {
+                  "note": "tambah n (orang biasanya cukup bilang Korean)"
+                }
+              }
             },
             {
               "en": "Japan → Japanese",
               "id": "Jepang → orang Jepang",
-              "note": "+ ese"
+              "note": "+ ese",
+              "i18n": {
+                "id": {
+                  "note": "tambah ese"
+                }
+              }
             },
             {
               "en": "China → Chinese",
               "id": "Tiongkok → orang Tionghoa / Tiongkok",
-              "note": "+ ese"
+              "note": "+ ese",
+              "i18n": {
+                "id": {
+                  "note": "tambah ese"
+                }
+              }
             },
             {
               "en": "Thailand → Thai",
               "id": "Thailand → orang Thailand",
-              "note": "different"
+              "note": "different",
+              "i18n": {
+                "id": {
+                  "note": "bentuknya berbeda"
+                }
+              }
             },
             {
               "en": "the UK → British",
               "id": "Inggris Raya → orang Inggris",
-              "note": "different; 'the' because the full name is the United Kingdom"
+              "note": "different; 'the' because the full name is the United Kingdom",
+              "i18n": {
+                "id": {
+                  "note": "bentuknya berbeda; pakai 'the' karena nama lengkapnya the United Kingdom"
+                }
+              }
             }
           ]
         },
@@ -292,6 +350,7 @@
           "explain": "Thailand is the country. The nationality is Thai: a short, different form you just have to learn. 'Thailandese' is not a word.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: Somchai is from Thailand. He's ___.",
               "explain": "Thailand adalah negaranya. Kebangsaannya Thai: bentuk pendek yang berbeda dan memang harus dihafal. 'Thailandese' tidak ada."
             }
           }
@@ -326,7 +385,12 @@
             {
               "en": "I'm 28.",
               "id": "Umur saya 28 tahun.",
-              "note": "or: I'm 28 years old."
+              "note": "or: I'm 28 years old.",
+              "i18n": {
+                "id": {
+                  "note": "atau: I'm 28 years old."
+                }
+              }
             },
             {
               "en": "My address is Jalan Gatot Subroto 15, Jakarta.",
@@ -359,6 +423,7 @@
           "explain": "The sentence needs is (≈ adalah): My address is … . 'In' and 'at' mean 'di', and they can't join 'my address' to the address.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: My address ___ Jalan Sudirman 12.",
               "explain": "Kalimat ini butuh is (≈ adalah): My address is … . 'In' dan 'at' artinya 'di', dan keduanya tidak bisa menyambung 'my address' dengan alamatnya."
             }
           }
@@ -401,7 +466,12 @@
             {
               "en": "0812 5567 → oh eight one two, five five six seven",
               "id": "cara membaca 0812 5567",
-              "note": "55 = five five or double five"
+              "note": "55 = five five or double five",
+              "i18n": {
+                "id": {
+                  "note": "55 = five five atau double five"
+                }
+              }
             }
           ]
         },
@@ -471,6 +541,7 @@
           "explain": "How old are you? asks about age (old = tua, so literally 'how old'). How are you? asks how someone feels.",
           "i18n": {
             "id": {
+              "prompt": "Pertanyaan mana yang menanyakan umur?",
               "explain": "How old are you? menanyakan umur (old = tua, jadi kata per katanya 'seberapa tua'). How are you? menanyakan kabar."
             }
           }

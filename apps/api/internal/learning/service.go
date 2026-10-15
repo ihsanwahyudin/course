@@ -460,7 +460,7 @@ func (s *Service) Node(ctx context.Context, userID, courseSlug, id string) (Node
 	}
 	if l, ok := cur.Lesson(n.ID); ok {
 		for _, k := range l.KeyPoints {
-			d.KeyPoints = append(d.KeyPoints, k.Title)
+			d.KeyPoints = append(d.KeyPoints, k.TitleIn(st.lang))
 		}
 	}
 	if userID != "" {

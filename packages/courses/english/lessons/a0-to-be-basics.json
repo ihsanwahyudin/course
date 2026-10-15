@@ -26,7 +26,13 @@
           "en": "I'm a student.",
           "id": "Saya pelajar."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "I'm … dan I'm from …",
+          "explanation": "Sebut nama atau pekerjaanmu dengan I'm (= I am). Untuk kota atau negaramu, pakai I'm from …. Dalam 'Saya Budi' tidak ada kata apa pun di antara 'Saya' dan 'Budi', tapi bahasa Inggris butuh am di situ. Sebelum pekerjaan, tambahkan a (≈ seorang): I'm a student."
+        }
+      }
     },
     {
       "title": "This is … and It's …",
@@ -40,7 +46,13 @@
           "en": "This is my office. It's small.",
           "id": "Ini kantor saya. Kantornya kecil."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "This is … dan It's …",
+          "explanation": "Pakai This is untuk menunjukkan atau menyebut sesuatu yang dekat denganmu. Lalu pakai It's (= it is) untuk menjelaskan lebih lanjut benda yang sama, supaya kamu tidak mengulang namanya. Perhatikan urutannya: 'HP saya' menjadi 'my phone' (my di depan)."
+        }
+      }
     },
     {
       "title": "Never drop be",
@@ -58,7 +70,13 @@
           "en": "This is my bag.",
           "id": "Ini tas saya."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jangan pernah membuang be",
+          "explanation": "Bahasa Indonesia bilang 'Dia guru', tapi bahasa Inggris butuh am atau is setelah subjek (siapa atau apa yang dibicarakan dalam kalimat): She's a teacher. I memakai am; he, she, it, this dan nama orang memakai is. Kalau kalimatnya tidak punya am / is, tambahkan."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -204,7 +222,12 @@
             {
               "en": "I'm a student.",
               "id": "Saya pelajar.",
-              "note": "a = seorang: needed before a job"
+              "note": "a = seorang: needed before a job",
+              "i18n": {
+                "id": {
+                  "note": "a = seorang: wajib dipakai sebelum pekerjaan"
+                }
+              }
             },
             {
               "en": "I'm from Bandung.",
@@ -246,6 +269,7 @@
           "explain": "I'm = I am. 'I' alone is missing am. 'Me' also means 'saya', but English uses it after other words (Help me!), not at the start of a sentence like this.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: Hello, ___ Andi. I'm from Bogor.",
               "explain": "I'm = I am. 'I' saja tidak punya am. 'Me' juga berarti 'saya', tapi bahasa Inggris memakainya di belakang kata lain (Help me!), bukan di awal kalimat seperti ini."
             }
           }
@@ -284,12 +308,22 @@
             {
               "en": "What's this? It's a pen.",
               "id": "Ini apa? Ini pulpen.",
-              "note": "What's this? is a fixed question"
+              "note": "What's this? is a fixed question",
+              "i18n": {
+                "id": {
+                  "note": "What's this? adalah pertanyaan baku"
+                }
+              }
             },
             {
               "en": "This is my friend, Sari.",
               "id": "Ini teman saya, Sari.",
-              "note": "This is also introduces a person"
+              "note": "This is also introduces a person",
+              "i18n": {
+                "id": {
+                  "note": "This is juga dipakai untuk memperkenalkan orang"
+                }
+              }
             }
           ]
         },
@@ -314,6 +348,7 @@
           "explain": "English needs is after This, and my comes first: rumah saya → my house. So: This is my house.",
           "i18n": {
             "id": {
+              "prompt": "Kalimat mana yang artinya 'Ini rumah saya'?",
               "explain": "Bahasa Inggris butuh is setelah This, dan my ada di depan: rumah saya → my house. Jadi: This is my house."
             }
           }
@@ -353,22 +388,42 @@
             {
               "en": "She's a teacher.",
               "id": "Dia (perempuan) guru.",
-              "note": "not: She teacher. (a = seorang)"
+              "note": "not: She teacher. (a = seorang)",
+              "i18n": {
+                "id": {
+                  "note": "bukan: She teacher. (a = seorang)"
+                }
+              }
             },
             {
               "en": "I'm from Surabaya.",
               "id": "Saya dari Surabaya.",
-              "note": "not: I from Surabaya."
+              "note": "not: I from Surabaya.",
+              "i18n": {
+                "id": {
+                  "note": "bukan: I from Surabaya."
+                }
+              }
             },
             {
               "en": "This is my bag.",
               "id": "Ini tas saya.",
-              "note": "not: This my bag."
+              "note": "not: This my bag.",
+              "i18n": {
+                "id": {
+                  "note": "bukan: This my bag."
+                }
+              }
             },
             {
               "en": "He's a driver.",
               "id": "Dia (laki-laki) sopir.",
-              "note": "not: He driver."
+              "note": "not: He driver.",
+              "i18n": {
+                "id": {
+                  "note": "bukan: He driver."
+                }
+              }
             }
           ]
         },
@@ -392,6 +447,7 @@
           "explain": "Rina is a name (one person, not I), so it takes is: Rina is my friend. Am is only for I.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: Rina ___ my friend.",
               "explain": "Rina adalah nama (satu orang, bukan I), jadi pakai is: Rina is my friend. Am hanya untuk I."
             }
           }
@@ -408,6 +464,7 @@
           "explain": "After the subject (Andi, who the sentence is about) comes be (is), then the rest: Andi is my brother. Note the order: kakak/adik laki-laki saya → my brother.",
           "i18n": {
             "id": {
+              "prompt": "Kalimat mana yang benar?",
               "explain": "Setelah subjek (Andi, orang yang dibicarakan) datang be (is), lalu sisanya: Andi is my brother. Perhatikan urutannya: kakak/adik laki-laki saya → my brother."
             }
           }

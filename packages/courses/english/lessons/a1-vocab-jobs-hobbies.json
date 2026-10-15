@@ -26,7 +26,13 @@
           "en": "Pak Made is a farmer. He works on a farm in Bali.",
           "id": "Pak Made petani. Dia bekerja di ladang di Bali."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pekerjaan dan tempat kerja",
+          "explanation": "Sebutkan pekerjaanmu dengan a/an: I'm a nurse, She's an engineer. Untuk bertanya, pakai What do you do? Untuk tempatnya, pakai work in: work in a hospital, an office, a shop, a school, a bank, a factory. Farm berbeda: work on a farm."
+        }
+      }
     },
     {
       "title": "Hobbies and sports: play or go?",
@@ -44,7 +50,13 @@
           "en": "My hobby is cooking.",
           "id": "Hobi saya memasak."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Hobi dan olahraga: play atau go?",
+          "explanation": "Pakai play untuk olahraga dengan bola, permainan, dan alat musik: play football, play chess, play the guitar. Pakai go untuk kegiatan berakhiran -ing: go swimming, go cycling, go fishing, go shopping. Setelah My hobby is, pakai bentuk -ing: My hobby is reading."
+        }
+      }
     },
     {
       "title": "Weekend activities",
@@ -62,7 +74,13 @@
           "en": "On Sunday mornings we stay at home.",
           "id": "Setiap Minggu pagi kami di rumah saja."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kegiatan akhir pekan",
+          "explanation": "Ceritakan akhir pekanmu dengan simple present (bentuk kata kerja untuk kebiasaan): At the weekend I visit my grandparents. On Sundays we clean the house. Pakai go to + tempat (go to the beach), tapi go + -ing untuk kegiatan (go shopping)."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -295,7 +313,12 @@
             {
               "en": "farmer — farm",
               "id": "petani — ladang / sawah",
-              "note": "work ON a farm (just remember it)"
+              "note": "work ON a farm (just remember it)",
+              "i18n": {
+                "id": {
+                  "note": "work ON a farm (pakai on, hafalkan saja)"
+                }
+              }
             },
             {
               "en": "driver, police officer, engineer",
@@ -324,7 +347,8 @@
           "explain": "A job needs a/an after I'm: I'm a teacher. 'I teacher' has no am (I'm = I am), and English always needs it.",
           "i18n": {
             "id": {
-              "explain": "Pekerjaan butuh a/an setelah I'm: I'm a teacher. 'I teacher' tidak punya am (I'm = I am), padahal bahasa Inggris selalu membutuhkannya."
+              "explain": "Pekerjaan butuh a/an setelah I'm: I'm a teacher. 'I teacher' tidak punya am (I'm = I am), padahal bahasa Inggris selalu membutuhkannya.",
+              "prompt": "Lengkapi jawabannya: What do you do? — ___"
             }
           }
         }
@@ -390,7 +414,8 @@
           "explain": "Swimming ends in -ing, so use go, with no 'to': I go swimming.",
           "i18n": {
             "id": {
-              "explain": "Swimming berakhiran -ing, jadi pakai go, tanpa 'to': I go swimming."
+              "explain": "Swimming berakhiran -ing, jadi pakai go, tanpa 'to': I go swimming.",
+              "prompt": "Kalimat mana yang benar?"
             }
           }
         }
@@ -456,7 +481,8 @@
           "explain": "After My hobby is, use the -ing form: My hobby is cooking.",
           "i18n": {
             "id": {
-              "explain": "Setelah My hobby is, pakai bentuk -ing: My hobby is cooking."
+              "explain": "Setelah My hobby is, pakai bentuk -ing: My hobby is cooking.",
+              "prompt": "Lengkapi: My hobby is ___."
             }
           }
         }
@@ -530,7 +556,8 @@
           "explain": "go to + a place: go to the beach. You visit a person or a place without 'to'.",
           "i18n": {
             "id": {
-              "explain": "go to + tempat: go to the beach. Visit dipakai tanpa 'to' (visit my grandparents)."
+              "explain": "go to + tempat: go to the beach. Visit dipakai tanpa 'to' (visit my grandparents).",
+              "prompt": "Lengkapi: On Saturday I ___ to the beach with my family."
             }
           }
         }

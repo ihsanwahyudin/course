@@ -62,8 +62,10 @@ Each ready node has two files (see `english/lessons/a1-to-be.json` and `english/
 - **`lessons/<nodeId>.json`** — `intro`; `teachingNotes` (for the AI tutor: what to stress, the common errors, what NOT to teach
   yet); `keyPoints` (one per objective); `guidedPractice` (3–5) and `independentPractice` (2–3); `assessment` (the hand-written
   checkpoint, 5–7 items); `material` (3–5 sections of `text`, `tip`, `examples`, `check` blocks); `suggestedQuestions`;
-  `flashcards` (5–8); `resources` (0–3 links). Every text has its `i18n.id` translation, including `i18n.id.assessment`
-  (item id → Indonesian prompt).
+  `flashcards` (5–8); `resources` (0–3 links). Every text a learner sees has its `i18n.id` translation (the validator checks):
+  `i18n.id.assessment` (item id → Indonesian prompt), key point `i18n.id.title`/`explanation`, example-row `i18n.id.note`, and
+  check-block `i18n.id.prompt` (the options stay English: they're what's being learnt; a bare gap sentence gets an instruction,
+  "Lengkapi: I need ___ egg.").
 - **`plans/<nodeId>.json`** — the hand-written steps, `{"en": Plan, "id": Plan}`. 8–12 steps (concept, examples, question,
   timeline, flashcards, artifact = cheat sheet, resources last). First step is a concept; teach before testing; every objective
   has a question; 3–5 questions.

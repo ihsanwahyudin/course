@@ -25,7 +25,13 @@
           "en": "My father watches the news every evening.",
           "id": "Ayahku menonton berita setiap malam. (watches: WATCH-iz)"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Tiga bunyi untuk -s",
+          "explanation": "Jangan pernah menghilangkan -s. Dengarkan bunyi terakhir kata dasarnya (bukan huruf terakhirnya): setelah p, t, k, f, -s dibaca /s/, s yang lembut (works); setelah bunyi vokal atau bunyi yang 'bergetar', -s dibaca /z/, seperti z di zebra (plays, lives); setelah s, z, sh, ch, x atau bunyi j, -s dibaca /ɪz/, diucapkan 'iz', satu suku kata tambahan (watches = WATCH-iz). goes ditulis -es tapi tetap satu suku kata."
+        }
+      }
     },
     {
       "title": "Short forms (contractions)",
@@ -43,7 +49,13 @@
           "en": "We don't eat pork.",
           "id": "Kami tidak makan daging babi."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk pendek (contractions)",
+          "explanation": "Saat berbicara, kata-kata digabung: I am → I'm, is not → isn't, do not → don't, does not → doesn't. I'm hanya satu suku kata. Ucapkan n di n't dengan jelas: itulah kata 'tidak' di kalimat itu."
+        }
+      }
     },
     {
       "title": "Questions: up or down?",
@@ -57,7 +69,13 @@
           "en": "Where do you live? ↘",
           "id": "Kamu tinggal di mana? (turun)"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Pertanyaan: naik atau turun?",
+          "explanation": "Pertanyaan yes/no nadanya naik di akhir ↗ (Are you tired? Do you work here?). Pertanyaan wh- nadanya turun di akhir ↘ (Where do you live? What's your name?)."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -212,27 +230,52 @@
             {
               "en": "work → works",
               "id": "bekerja",
-              "note": "/s/"
+              "note": "/s/",
+              "i18n": {
+                "id": {
+                  "note": "/s/ seperti 's' biasa"
+                }
+              }
             },
             {
               "en": "stop → stops",
               "id": "berhenti",
-              "note": "/s/"
+              "note": "/s/",
+              "i18n": {
+                "id": {
+                  "note": "/s/ seperti 's' biasa"
+                }
+              }
             },
             {
               "en": "play → plays",
               "id": "bermain",
-              "note": "/z/"
+              "note": "/z/",
+              "i18n": {
+                "id": {
+                  "note": "/z/ seperti 'z' di zebra"
+                }
+              }
             },
             {
               "en": "live → lives",
               "id": "tinggal",
-              "note": "/z/"
+              "note": "/z/",
+              "i18n": {
+                "id": {
+                  "note": "/z/ seperti 'z' di zebra"
+                }
+              }
             },
             {
               "en": "go → goes",
               "id": "pergi",
-              "note": "/z/, one syllable"
+              "note": "/z/, one syllable",
+              "i18n": {
+                "id": {
+                  "note": "/z/, tetap satu suku kata"
+                }
+              }
             }
           ]
         },
@@ -257,7 +300,8 @@
           "explain": "play ends with a vowel sound, so the -s buzzes: /z/. work and eat end with k and t, so the -s is /s/.",
           "i18n": {
             "id": {
-              "explain": "play berakhir dengan bunyi vokal, jadi -s-nya bergetar: /z/. work dan eat berakhir dengan k dan t, jadi -s-nya /s/."
+              "explain": "play berakhir dengan bunyi vokal, jadi -s-nya bergetar: /z/. work dan eat berakhir dengan k dan t, jadi -s-nya /s/.",
+              "prompt": "Kata kerja mana yang berakhir dengan bunyi /z/ (bergetar, seperti 'z' di zebra)?"
             }
           }
         }
@@ -287,27 +331,52 @@
             {
               "en": "watch → watches",
               "id": "menonton",
-              "note": "WATCH-iz, 2 syllables"
+              "note": "WATCH-iz, 2 syllables",
+              "i18n": {
+                "id": {
+                  "note": "WATCH-iz, 2 suku kata"
+                }
+              }
             },
             {
               "en": "wash → washes",
               "id": "mencuci",
-              "note": "WASH-iz, 2 syllables"
+              "note": "WASH-iz, 2 syllables",
+              "i18n": {
+                "id": {
+                  "note": "WASH-iz, 2 suku kata"
+                }
+              }
             },
             {
               "en": "dance → dances",
               "id": "menari",
-              "note": "DANCE-iz, 2 syllables"
+              "note": "DANCE-iz, 2 syllables",
+              "i18n": {
+                "id": {
+                  "note": "DANCE-iz, 2 suku kata"
+                }
+              }
             },
             {
               "en": "bus → buses",
               "id": "bus",
-              "note": "BUS-iz, 2 syllables"
+              "note": "BUS-iz, 2 syllables",
+              "i18n": {
+                "id": {
+                  "note": "BUS-iz, 2 suku kata"
+                }
+              }
             },
             {
               "en": "work → works",
               "id": "bekerja",
-              "note": "still 1 syllable, not 'work-es'"
+              "note": "still 1 syllable, not 'work-es'",
+              "i18n": {
+                "id": {
+                  "note": "tetap 1 suku kata, bukan 'work-es'"
+                }
+              }
             }
           ]
         },
@@ -332,7 +401,8 @@
           "explain": "fix ends with x (/ks/), so -es adds a syllable: FIX-iz, two syllables.",
           "i18n": {
             "id": {
-              "explain": "fix berakhir dengan x (/ks/), jadi -es menambah satu suku kata: FIX-iz, dua suku kata."
+              "explain": "fix berakhir dengan x (/ks/), jadi -es menambah satu suku kata: FIX-iz, dua suku kata.",
+              "prompt": "Berapa suku kata (ketukan) dalam 'fixes'?"
             }
           }
         }
@@ -362,32 +432,62 @@
             {
               "en": "go → goes",
               "id": "go berakhir bunyi 'o' (vokal) → goes = 1 ketukan, -s dibaca z",
-              "note": "spelled -es, no extra beat"
+              "note": "spelled -es, no extra beat",
+              "i18n": {
+                "id": {
+                  "note": "ditulis -es, tapi tidak ada ketukan tambahan"
+                }
+              }
             },
             {
               "en": "do → does",
               "id": "dibaca 'DUZ' → 1 ketukan; bunyi o-nya juga berubah, hafalkan saja",
-              "note": "special: just remember it"
+              "note": "special: just remember it",
+              "i18n": {
+                "id": {
+                  "note": "khusus: hafalkan saja"
+                }
+              }
             },
             {
               "en": "live → lives",
               "id": "e tidak dibaca, bunyi terakhir 'v' → lives = 1 ketukan, dibaca 'LIVZ'",
-              "note": "silent e"
+              "note": "silent e",
+              "i18n": {
+                "id": {
+                  "note": "e tidak dibaca"
+                }
+              }
             },
             {
               "en": "dance → dances",
               "id": "ce dibaca 's' → bunyi s → DANCE-iz = 2 ketukan",
-              "note": "ce = s sound"
+              "note": "ce = s sound",
+              "i18n": {
+                "id": {
+                  "note": "ce = bunyi s"
+                }
+              }
             },
             {
               "en": "change → changes",
               "id": "ge dibaca 'j' → bunyi j → CHANGE-iz = 2 ketukan",
-              "note": "ge = j sound"
+              "note": "ge = j sound",
+              "i18n": {
+                "id": {
+                  "note": "ge = bunyi j"
+                }
+              }
             },
             {
               "en": "fix → fixes",
               "id": "x dibaca 'ks' → bunyi s di akhir → FIX-iz = 2 ketukan",
-              "note": "x = ks"
+              "note": "x = ks",
+              "i18n": {
+                "id": {
+                  "note": "x = ks"
+                }
+              }
             }
           ]
         },
@@ -412,7 +512,8 @@
           "explain": "wash ends with a 'sh' sound, a hissing sound, so washes is WASH-iz, two beats. live ends with a 'v' sound (the e is silent) and work with a 'k' sound, so lives and works stay one beat.",
           "i18n": {
             "id": {
-              "explain": "wash berakhir bunyi 'sh', bunyi mendesis, jadi washes dibaca WASH-iz, dua ketukan. live berakhir bunyi 'v' (e-nya tidak dibaca) dan work berakhir bunyi 'k', jadi lives dan works tetap satu ketukan."
+              "explain": "wash berakhir bunyi 'sh', bunyi mendesis, jadi washes dibaca WASH-iz, dua ketukan. live berakhir bunyi 'v' (e-nya tidak dibaca) dan work berakhir bunyi 'k', jadi lives dan works tetap satu ketukan.",
+              "prompt": "Kata mana yang mendapat suku kata tambahan ('iz' tambahan)?"
             }
           }
         }
@@ -442,22 +543,42 @@
             {
               "en": "I'm a teacher.",
               "id": "Saya seorang guru.",
-              "note": "I'm = 1 syllable"
+              "note": "I'm = 1 syllable",
+              "i18n": {
+                "id": {
+                  "note": "I'm = 1 suku kata"
+                }
+              }
             },
             {
               "en": "The bank isn't open today.",
               "id": "Banknya tidak buka hari ini.",
-              "note": "IZ-nt"
+              "note": "IZ-nt",
+              "i18n": {
+                "id": {
+                  "note": "dibaca IZ-nt"
+                }
+              }
             },
             {
               "en": "They don't speak Javanese.",
               "id": "Mereka tidak bisa berbahasa Jawa.",
-              "note": "o as in go"
+              "note": "o as in go",
+              "i18n": {
+                "id": {
+                  "note": "o seperti di go"
+                }
+              }
             },
             {
               "en": "Sari doesn't like durian.",
               "id": "Sari tidak suka durian.",
-              "note": "DUZ-nt"
+              "note": "DUZ-nt",
+              "i18n": {
+                "id": {
+                  "note": "dibaca DUZ-nt"
+                }
+              }
             }
           ]
         },
@@ -482,7 +603,8 @@
           "explain": "n't = not. Without it, 'I don't like it' sounds like 'I like it'.",
           "i18n": {
             "id": {
-              "explain": "n't = not (tidak). Tanpa itu, 'I don't like it' terdengar seperti 'I like it'."
+              "explain": "n't = not (tidak). Tanpa itu, 'I don't like it' terdengar seperti 'I like it'.",
+              "prompt": "Kenapa n di don't dan isn't harus diucapkan dengan jelas?"
             }
           }
         }
@@ -512,22 +634,42 @@
             {
               "en": "Are you hungry?",
               "id": "Kamu lapar?",
-              "note": "yes/no ↗ up"
+              "note": "yes/no ↗ up",
+              "i18n": {
+                "id": {
+                  "note": "yes/no ↗ naik"
+                }
+              }
             },
             {
               "en": "Does she speak English?",
               "id": "Apakah dia bisa berbahasa Inggris?",
-              "note": "yes/no ↗ up"
+              "note": "yes/no ↗ up",
+              "i18n": {
+                "id": {
+                  "note": "yes/no ↗ naik"
+                }
+              }
             },
             {
               "en": "What's your name?",
               "id": "Siapa namamu?",
-              "note": "wh- ↘ down"
+              "note": "wh- ↘ down",
+              "i18n": {
+                "id": {
+                  "note": "wh- ↘ turun"
+                }
+              }
             },
             {
               "en": "Where do you live?",
               "id": "Kamu tinggal di mana?",
-              "note": "wh- ↘ down"
+              "note": "wh- ↘ down",
+              "i18n": {
+                "id": {
+                  "note": "wh- ↘ turun"
+                }
+              }
             }
           ]
         },
@@ -552,7 +694,8 @@
           "explain": "Are you hungry? is a yes/no question, so it goes up. The other two start with wh- words, so they go down.",
           "i18n": {
             "id": {
-              "explain": "Are you hungry? adalah pertanyaan yes/no, jadi nadanya naik. Dua lainnya diawali kata wh-, jadi nadanya turun."
+              "explain": "Are you hungry? adalah pertanyaan yes/no, jadi nadanya naik. Dua lainnya diawali kata wh-, jadi nadanya turun.",
+              "prompt": "Pertanyaan mana yang biasanya NAIK nadanya di akhir?"
             }
           }
         }

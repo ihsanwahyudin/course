@@ -25,7 +25,13 @@
           "en": "Rina is a doctor. She is kind.",
           "id": "Rina seorang dokter. Dia (perempuan) baik."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata ganti subjek",
+          "explanation": "I, you, he (laki-laki), she (perempuan), it (benda atau hewan), we, they. Pakai kata-kata ini untuk menggantikan nama di awal kalimat."
+        }
+      }
     },
     {
       "title": "Possessive adjectives",
@@ -39,7 +45,13 @@
           "en": "Budi and Sari love their cat.",
           "id": "Budi dan Sari menyayangi kucing mereka."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kata ganti kepemilikan",
+          "explanation": "my, your, his, her, its, our, their menunjukkan siapa pemilik sesuatu. Kata-kata ini ditaruh SEBELUM kata benda."
+        }
+      }
     },
     {
       "title": "Replacing nouns",
@@ -53,7 +65,13 @@
           "en": "My parents are at home. They are happy.",
           "id": "Orang tua saya di rumah. Mereka senang."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Mengganti kata benda",
+          "explanation": "Satu orang: he atau she. Satu benda: it. Dua orang atau benda atau lebih: they. Kamu + saya: we."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -216,7 +234,8 @@
           "explain": "Rina is a woman, so we use she.",
           "i18n": {
             "id": {
-              "explain": "Rina perempuan, jadi pakai she."
+              "explain": "Rina perempuan, jadi pakai she.",
+              "prompt": "Lengkapi: Rina is a doctor. ___ works at a hospital."
             }
           }
         }
@@ -286,7 +305,8 @@
           "explain": "Before a noun (mother) we need the possessive, not he. And why his, not her, when the mother is a woman? Look at the owner: Budi is a man, so his. (Him is a different form, never used before a noun.)",
           "i18n": {
             "id": {
-              "explain": "Sebelum kata benda (mother) dibutuhkan kata kepemilikan, bukan he. Lalu kenapa his, bukan her, padahal ibunya perempuan? Lihat pemiliknya: Budi laki-laki, jadi his. (Him adalah bentuk lain yang tidak pernah dipakai sebelum kata benda.)"
+              "explain": "Sebelum kata benda (mother) dibutuhkan kata kepemilikan, bukan he. Lalu kenapa his, bukan her, padahal ibunya perempuan? Lihat pemiliknya: Budi laki-laki, jadi his. (Him adalah bentuk lain yang tidak pernah dipakai sebelum kata benda.)",
+              "prompt": "Lengkapi: Budi loves ___ mother."
             }
           }
         }
@@ -339,7 +359,8 @@
           "explain": "Shoes = more than one thing, so they.",
           "i18n": {
             "id": {
-              "explain": "Shoes = lebih dari satu benda, jadi they."
+              "explain": "Shoes = lebih dari satu benda, jadi they.",
+              "prompt": "Lengkapi: The shoes are too small. ___ are size 38."
             }
           }
         }

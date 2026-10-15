@@ -20,11 +20,17 @@
           "en": "We play football.",
           "id": "Kami bermain sepak bola."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Subjek + Kata kerja + Objek",
+          "explanation": "Kebanyakan kalimat bahasa Inggris diawali siapa yang melakukan (subjek), lalu kegiatannya (kata kerja), lalu bendanya (objek). Urutannya sama dengan bahasa Indonesia, tapi bahasa Inggris selalu memakai subjek."
+        }
+      }
     },
     {
       "title": "a or an",
-      "explanation": "Use a/an before one thing you can count (one, two, three…). Use 'an' before a vowel sound (an apple, an egg), 'a' before a consonant sound (a book, a car). Things you don't count one by one, like tea, coffee or music, take no a/an: I drink tea.",
+      "explanation": "Use a/an before one thing you can count (one, two, three…). Listen to the first sound when you say the word, not the first letter: 'an' before a vowel sound (the word starts with an a, e, i, o or u sound: an apple, an egg, an hour, because the h is silent), 'a' before any other sound (a book, a car, a university, because it starts with a 'yu' sound). Things you don't count one by one, like tea, coffee or music, take no a/an: I drink tea.",
       "examples": [
         {
           "en": "I have an apple.",
@@ -34,7 +40,13 @@
           "en": "She is a nurse.",
           "id": "Dia seorang perawat."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "a atau an",
+          "explanation": "Pakai a/an sebelum satu benda yang bisa dihitung (one, two, three…). Dengarkan bunyi pertama saat kata itu diucapkan, bukan huruf pertamanya: 'an' sebelum bunyi vokal (kata yang diawali bunyi a, e, i, o atau u: an apple, an egg, an hour, karena h-nya tidak dibaca), 'a' sebelum bunyi lain (a book, a car, a university, karena diawali bunyi 'yu'). Benda yang tidak dihitung satu per satu, seperti tea, coffee atau music, tidak pakai a/an: I drink tea."
+        }
+      }
     },
     {
       "title": "Plurals with -s / -es",
@@ -48,7 +60,13 @@
           "en": "three boxes",
           "id": "tiga kotak"
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Bentuk jamak dengan -s / -es",
+          "explanation": "Tambahkan -s untuk lebih dari satu: book → books. Tambahkan -es setelah s, x, ch, sh (box → boxes, class → classes), karena setelah bunyi-bunyi itu kamu tidak bisa mengucapkan s tambahan tanpa menambah sedikit bunyi. Jangan mengulang katanya seperti dalam bahasa Indonesia (buku-buku), dan tetap pakai -s setelah angka: two books."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -188,6 +206,7 @@
           "explain": "Subject (I, who) + verb (drink, the action) + object (tea, what). 'Drink tea.' has no subject, and 'Tea I drink.' has the wrong order.",
           "i18n": {
             "id": {
+              "prompt": "Pilih kalimat yang benar.",
               "explain": "Subjek (I, siapa) + kata kerja (drink, kegiatannya) + objek (tea, apa). 'Drink tea.' tidak punya subjek, dan 'Tea I drink.' urutannya salah."
             }
           }
@@ -226,12 +245,22 @@
             {
               "en": "It's an hour away.",
               "id": "Jaraknya satu jam.",
-              "note": "h is silent: 'our'"
+              "note": "h is silent: 'our'",
+              "i18n": {
+                "id": {
+                  "note": "h tidak dibaca: seperti 'our'"
+                }
+              }
             },
             {
               "en": "I go to a university.",
               "id": "Saya kuliah di universitas.",
-              "note": "u sounds like 'you' (goes = go, used with he/she: you'll learn this later)"
+              "note": "u sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "u dibaca seperti 'you'"
+                }
+              }
             }
           ]
         },
@@ -255,6 +284,7 @@
           "explain": "Egg starts with a vowel sound, so an egg.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: I need ___ egg.",
               "explain": "Egg diawali bunyi vokal, jadi an egg."
             }
           }
@@ -285,42 +315,82 @@
             {
               "en": "a university",
               "id": "dibaca 'YU-ni-ver-si-ti' → bunyi pertama 'y' (konsonan) → a",
-              "note": "u sounds like 'you'"
+              "note": "u sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "u dibaca seperti 'you'"
+                }
+              }
             },
             {
               "en": "a uniform",
               "id": "dibaca 'YU-ni-form' → bunyi 'y' → a",
-              "note": "u sounds like 'you'"
+              "note": "u sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "u dibaca seperti 'you'"
+                }
+              }
             },
             {
               "en": "a European city",
               "id": "dibaca 'YU-ro-pi-en' → bunyi 'y' → a",
-              "note": "eu sounds like 'you'"
+              "note": "eu sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "eu dibaca seperti 'you'"
+                }
+              }
             },
             {
               "en": "a one-way ticket",
               "id": "dibaca 'WAN-wei' → bunyi 'w' (konsonan) → a",
-              "note": "o sounds like 'w'"
+              "note": "o sounds like 'w'",
+              "i18n": {
+                "id": {
+                  "note": "o dibaca seperti 'w'"
+                }
+              }
             },
             {
               "en": "an uncle",
               "id": "dibaca 'AN-kel' → bunyi 'a' (vokal) → an",
-              "note": "here u sounds like 'a'"
+              "note": "here u sounds like 'a'",
+              "i18n": {
+                "id": {
+                  "note": "di sini u dibaca seperti 'a'"
+                }
+              }
             },
             {
               "en": "an hour",
               "id": "dibaca 'AW-er', h tidak dibaca → bunyi 'a' (vokal) → an",
-              "note": "silent h"
+              "note": "silent h",
+              "i18n": {
+                "id": {
+                  "note": "h tidak dibaca"
+                }
+              }
             },
             {
               "en": "an honest man",
               "id": "dibaca 'ON-est', h tidak dibaca → bunyi 'o' (vokal) → an",
-              "note": "silent h"
+              "note": "silent h",
+              "i18n": {
+                "id": {
+                  "note": "h tidak dibaca"
+                }
+              }
             },
             {
               "en": "a house",
               "id": "dibaca 'HAUS', h dibaca → bunyi 'h' (konsonan) → a",
-              "note": "h is said here"
+              "note": "h is said here",
+              "i18n": {
+                "id": {
+                  "note": "di sini h dibaca"
+                }
+              }
             }
           ]
         },
@@ -344,6 +414,7 @@
           "explain": "Uniform is said 'YU-ni-form'. It starts with a 'y' sound, a consonant sound, so it's a uniform, even though the first letter is u.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: Pak Budi wears ___ uniform to work.",
               "explain": "Uniform dibaca 'YU-ni-form'. Bunyi pertamanya 'y', yaitu bunyi konsonan, jadi a uniform, walaupun huruf pertamanya u."
             }
           }
@@ -374,7 +445,12 @@
             {
               "en": "two books",
               "id": "dua buku",
-              "note": "not 'two book'"
+              "note": "not 'two book'",
+              "i18n": {
+                "id": {
+                  "note": "bukan 'two book'"
+                }
+              }
             },
             {
               "en": "three boxes",
@@ -407,6 +483,7 @@
           "explain": "Bus ends in s, so add -es (said 'BAS-iz'): buses.",
           "i18n": {
             "id": {
+              "prompt": "Lengkapi: One bus, two ___.",
               "explain": "Bus berakhiran s, jadi tambah -es (dibaca BAS-iz): buses."
             }
           }

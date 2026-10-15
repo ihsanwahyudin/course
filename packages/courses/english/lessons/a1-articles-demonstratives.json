@@ -29,7 +29,13 @@
           "en": "Please open the door.",
           "id": "Tolong buka pintunya."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "the: kalian sama-sama tahu yang mana",
+          "explanation": "Pakai the kalau bendanya sudah disebut sebelumnya, kalau hanya ada satu (the sun, the moon), atau kalau sudah jelas yang mana di tempat itu (the door, the toilet). Pertama kali: a/an. Kedua kali: the."
+        }
+      }
     },
     {
       "title": "this, that, these, those",
@@ -47,7 +53,13 @@
           "en": "These shirts are cheap, and those shirts are expensive.",
           "id": "Kemeja-kemeja ini murah, dan kemeja-kemeja itu mahal."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "this, that, these, those",
+          "explanation": "this (satu, dekat) dan these (dua atau lebih, dekat) = ini. that (satu, jauh) dan those (dua atau lebih, jauh) = itu. Kata-kata ini ditaruh SEBELUM kata benda: this book = buku ini."
+        }
+      }
     },
     {
       "title": "Don't forget a/an",
@@ -65,7 +77,13 @@
           "en": "We have an hour for lunch.",
           "id": "Kita punya waktu satu jam untuk makan siang."
         }
-      ]
+      ],
+      "i18n": {
+        "id": {
+          "title": "Jangan lupa a/an",
+          "explanation": "Satu benda yang bisa dihitung butuh a atau an (atau my, this, the …). Sebuah, seorang, dan sebutir dalam bahasa Indonesia semuanya cukup a/an. Pakai an sebelum BUNYI vokal (an egg, an hour) dan a sebelum bunyi konsonan (a car, a university)."
+        }
+      }
     }
   ],
   "guidedPractice": [
@@ -215,22 +233,42 @@
             {
               "en": "I have a car.",
               "id": "Saya punya (sebuah) mobil.",
-              "note": "one car → a"
+              "note": "one car → a",
+              "i18n": {
+                "id": {
+                  "note": "satu mobil → a"
+                }
+              }
             },
             {
               "en": "She is an engineer.",
               "id": "Dia (perempuan) seorang insinyur.",
-              "note": "vowel sound → an"
+              "note": "vowel sound → an",
+              "i18n": {
+                "id": {
+                  "note": "bunyi vokal → an"
+                }
+              }
             },
             {
               "en": "It's an old house.",
               "id": "Itu rumah tua. (old dibaca 'OULD', diawali bunyi vokal → an)",
-              "note": "look at the next word: old"
+              "note": "look at the next word: old",
+              "i18n": {
+                "id": {
+                  "note": "lihat kata sesudahnya: old"
+                }
+              }
             },
             {
               "en": "He is a university student.",
               "id": "Dia (laki-laki) mahasiswa.",
-              "note": "u sounds like 'yu' → a"
+              "note": "u sounds like 'yu' → a",
+              "i18n": {
+                "id": {
+                  "note": "u dibaca seperti 'yu' → a"
+                }
+              }
             }
           ]
         },
@@ -254,7 +292,8 @@
           "explain": "The h in hour is silent, so the first sound is a vowel: an hour.",
           "i18n": {
             "id": {
-              "explain": "Huruf h pada hour tidak dibaca, jadi bunyi pertamanya vokal: an hour."
+              "explain": "Huruf h pada hour tidak dibaca, jadi bunyi pertamanya vokal: an hour.",
+              "prompt": "Lengkapi: We have ___ hour for lunch."
             }
           }
         }
@@ -284,42 +323,82 @@
             {
               "en": "a university",
               "id": "dibaca 'YU-ni-ver-si-ti' → bunyi pertama 'y' (konsonan) → a",
-              "note": "u sounds like 'you'"
+              "note": "u sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "u dibaca seperti 'you'"
+                }
+              }
             },
             {
               "en": "a uniform",
               "id": "dibaca 'YU-ni-form' → bunyi 'y' → a",
-              "note": "u sounds like 'you'"
+              "note": "u sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "u dibaca seperti 'you'"
+                }
+              }
             },
             {
               "en": "a European city",
               "id": "dibaca 'YU-ro-pi-en' → bunyi 'y' → a",
-              "note": "eu sounds like 'you'"
+              "note": "eu sounds like 'you'",
+              "i18n": {
+                "id": {
+                  "note": "eu dibaca seperti 'you'"
+                }
+              }
             },
             {
               "en": "a one-way ticket",
               "id": "dibaca 'WAN-wei' → bunyi 'w' (konsonan) → a",
-              "note": "o sounds like 'w'"
+              "note": "o sounds like 'w'",
+              "i18n": {
+                "id": {
+                  "note": "o dibaca seperti 'w'"
+                }
+              }
             },
             {
               "en": "an uncle",
               "id": "dibaca 'AN-kel' → bunyi 'a' (vokal) → an",
-              "note": "here u sounds like 'a'"
+              "note": "here u sounds like 'a'",
+              "i18n": {
+                "id": {
+                  "note": "di sini u dibaca seperti 'a'"
+                }
+              }
             },
             {
               "en": "an hour",
               "id": "dibaca 'AW-er', h tidak dibaca → bunyi 'a' (vokal) → an",
-              "note": "silent h"
+              "note": "silent h",
+              "i18n": {
+                "id": {
+                  "note": "h tidak dibaca"
+                }
+              }
             },
             {
               "en": "an honest man",
               "id": "dibaca 'ON-est', h tidak dibaca → bunyi 'o' (vokal) → an",
-              "note": "silent h"
+              "note": "silent h",
+              "i18n": {
+                "id": {
+                  "note": "h tidak dibaca"
+                }
+              }
             },
             {
               "en": "a house",
               "id": "dibaca 'HAUS', h dibaca → bunyi 'h' (konsonan) → a",
-              "note": "h is said here"
+              "note": "h is said here",
+              "i18n": {
+                "id": {
+                  "note": "di sini h dibaca"
+                }
+              }
             }
           ]
         },
@@ -343,7 +422,8 @@
           "explain": "Uniform is said 'YU-ni-form'. It starts with a 'y' sound, a consonant sound, so it's a uniform, even though the first letter is u.",
           "i18n": {
             "id": {
-              "explain": "Uniform dibaca 'YU-ni-form'. Bunyi pertamanya 'y', yaitu bunyi konsonan, jadi a uniform, walaupun huruf pertamanya u."
+              "explain": "Uniform dibaca 'YU-ni-form'. Bunyi pertamanya 'y', yaitu bunyi konsonan, jadi a uniform, walaupun huruf pertamanya u.",
+              "prompt": "Lengkapi: Pak Budi wears ___ uniform to work."
             }
           }
         }
@@ -373,22 +453,42 @@
             {
               "en": "Budi has a car. The car is red.",
               "id": "Budi punya mobil. Mobilnya merah.",
-              "note": "first a, then the"
+              "note": "first a, then the",
+              "i18n": {
+                "id": {
+                  "note": "pertama a, lalu the"
+                }
+              }
             },
             {
               "en": "The moon is beautiful tonight.",
               "id": "Bulannya indah malam ini.",
-              "note": "only one moon"
+              "note": "only one moon",
+              "i18n": {
+                "id": {
+                  "note": "bulan hanya ada satu"
+                }
+              }
             },
             {
               "en": "Please open the window.",
               "id": "Tolong buka jendelanya.",
-              "note": "the window in this room"
+              "note": "the window in this room",
+              "i18n": {
+                "id": {
+                  "note": "jendela di ruangan ini"
+                }
+              }
             },
             {
               "en": "The teacher is in the office.",
               "id": "Gurunya ada di kantor.",
-              "note": "our teacher, our office"
+              "note": "our teacher, our office",
+              "i18n": {
+                "id": {
+                  "note": "guru kita, kantor kita"
+                }
+              }
             }
           ]
         },
@@ -412,7 +512,8 @@
           "explain": "There is only one sky, so we say the sky.",
           "i18n": {
             "id": {
-              "explain": "Langit hanya ada satu, jadi kita bilang the sky."
+              "explain": "Langit hanya ada satu, jadi kita bilang the sky.",
+              "prompt": "Lengkapi: Look at ___ sky! It's very blue."
             }
           }
         }
@@ -442,22 +543,42 @@
             {
               "en": "This phone is new.",
               "id": "Ponsel ini baru.",
-              "note": "one, near"
+              "note": "one, near",
+              "i18n": {
+                "id": {
+                  "note": "satu, dekat"
+                }
+              }
             },
             {
               "en": "That building is my office.",
               "id": "Gedung itu kantor saya.",
-              "note": "one, far"
+              "note": "one, far",
+              "i18n": {
+                "id": {
+                  "note": "satu, jauh"
+                }
+              }
             },
             {
               "en": "These bananas are sweet.",
               "id": "Pisang-pisang ini manis.",
-              "note": "many, near"
+              "note": "many, near",
+              "i18n": {
+                "id": {
+                  "note": "banyak, dekat"
+                }
+              }
             },
             {
               "en": "Those students are from Surabaya.",
               "id": "Siswa-siswa itu dari Surabaya.",
-              "note": "many, far"
+              "note": "many, far",
+              "i18n": {
+                "id": {
+                  "note": "banyak, jauh"
+                }
+              }
             }
           ]
         },
@@ -482,7 +603,8 @@
           "explain": "The photos are near you (in your hand) and there are two or more: these.",
           "i18n": {
             "id": {
-              "explain": "Fotonya dekat denganmu (di tanganmu) dan jumlahnya lebih dari satu: these."
+              "explain": "Fotonya dekat denganmu (di tanganmu) dan jumlahnya lebih dari satu: these.",
+              "prompt": "Kamu menunjukkan beberapa foto di HP-mu kepada temanmu. Lengkapi: ___ are my kids."
             }
           }
         }
@@ -524,7 +646,12 @@
             {
               "en": "The red shirt is nice.",
               "id": "Kemeja yang merah bagus.",
-              "note": "the one we can both see; red before shirt"
+              "note": "the one we can both see; red before shirt",
+              "i18n": {
+                "id": {
+                  "note": "yang sama-sama kita lihat; red sebelum shirt"
+                }
+              }
             }
           ]
         },
@@ -539,7 +666,8 @@
           "explain": "The restaurant has its own toilet and you both know which one, so say the toilet. (Americans often say restroom or bathroom.)",
           "i18n": {
             "id": {
-              "explain": "Restorannya punya toilet sendiri dan kalian sama-sama tahu yang mana, jadi bilang the toilet. (Orang Amerika sering bilang restroom atau bathroom.)"
+              "explain": "Restorannya punya toilet sendiri dan kalian sama-sama tahu yang mana, jadi bilang the toilet. (Orang Amerika sering bilang restroom atau bathroom.)",
+              "prompt": "Kamu sedang di restoran. Lengkapi: Excuse me, where is ___ toilet?"
             }
           }
         }
