@@ -20,7 +20,8 @@ The visual design follows [ihsan.my.id](https://ihsan.my.id) (`../portofolio-web
 ```
 apps/mobile/            Expo app (routes in src/app, UI kit in src/components/ui)
 apps/api/               Go API (cmd/server, internal/*, migrations/)
-packages/courses/<slug>/  One folder per course: course.json, <level>.json roadmap files, lessons/<nodeId>.json
+packages/courses/<slug>/  One folder per course: course.json, <level>.json roadmap files, lessons/ + plans/ (hand-written
+                          steps) + audio/ per ready node. Content standard: packages/courses/CONTENT_GUIDE.md
 infra/docker-compose.yml  PostgreSQL (+ optional api service)
 scripts/e2e.sh          HTTP end-to-end check of the learning loop
 ```
@@ -166,7 +167,7 @@ The whole app works in **English and Bahasa Indonesia**.
   - Once logged in, the choice is saved to the account (`users.locale`, via `PATCH /api/v1/auth/me`) and follows the user across devices.
 - **UI text:** lives in `apps/mobile/src/i18n/en.ts` and `id.ts`. `id.ts` must have exactly the same keys as `en.ts`, so `tsc` fails if one is missing. API errors are translated from their `code`.
 - **Course content:** the client sends `Accept-Language`, and the API returns course titles, levels, and roadmap node titles/summaries/objectives in that language. Translations live in `i18n` blocks inside the course files. A course that lists `"languages": ["en","id"]` must be fully translated, or the API refuses to start.
-- **Tutor:** follows the language a lesson started in (`learning_sessions.locale`). With ID it explains and gives feedback mainly in Indonesian, while exercises and answers stay in English (`tutor.languagePolicy` in `course.json`). Switching the UI language mid-lesson doesn't change that lesson's tutor language.
+- **Lessons and tutor:** hand-written lessons follow the UI language, also mid-lesson (the learner keeps their step and answers; both languages have identical questions). With ID the tutor explains and gives feedback mainly in Indonesian, while exercises and answers stay in English (`tutor.languagePolicy` in `course.json`). Checkpoint questions are written in the lesson's language when the checkpoint starts.
 
 ## Step-by-step lessons
 
@@ -176,7 +177,8 @@ The whole app works in **English and Bahasa Indonesia**.
 - **AI-written plans** remain as a fallback for lessons without hand-written steps (and for personalisation later): the AI writes 4–12 steps from the material, Go validates them (one retry), and otherwise a plan built from the material is used. These are cached for 7 days per lesson, course version, language, goal and memory.
 - **Questions:** pick, then **Hint** (max 2, written by the AI; hints that contain the answer are rejected) or **Answer** (graded on the server). After both hints the learner may give up. After a wrong answer they choose **one similar question** ("3b", same rules, doesn't add to the step count) or continue. Answers and explanations stay on the server until a question is answered or given up.
 - **Ask AI** opens inside explanation steps. The tutor answers questions about this lesson in full, answers questions about another lesson briefly and points to it, and politely declines anything outside English.
-- **Checkpoint:** after the last step, one question at a time, typed or spoken, no hints. Passing writes a lesson summary (mastered · worth reviewing), saves the learner's mistakes as flashcards for Review, saves learning-pattern notes to memory, and prepares the next lesson's opening line. The next lesson starts with a chip of where the last one left off.
+- **Checkpoint:** after the last step, one question at a time, no hints. It is **written fresh by the AI for every attempt** (5–8 mixed questions: multiple choice, word order, open answers typed or spoken, listening), avoiding the learner's earlier questions; Go validates it and a second AI call checks every answer key, and the lesson's hand-written items are the fallback. The AI grades and explains every answer, right or wrong; multiple choice, word order and exact matches are scored by the server, and the pass mark (mean of objective scores ≥ 80) is applied on the server. Every attempt is kept with its corrections (history per lesson), wrong answers become flashcards, and after mastery the learner can take practice checkpoints that don't change progress. Passing writes a lesson summary, saves learning-pattern notes to memory and prepares the next lesson's opening line.
+- **Level checkpoints** (the `CK` node at the end of a level) test the whole level: 10–15 questions spread over its lessons, scored per objective and per lesson, with links back to the lessons that need work.
 - **Memory** (Account → "What the tutor remembers about you"): onboarding answers, learning patterns and personal notes the tutor picked up from questions. Learners can edit or delete each note, delete all, or switch off new memories.
 - **My notes:** cheat sheets saved from lessons. They can also be turned into flashcards.
 - **Voice:** examples play with OpenAI text-to-speech, read one item at a time with the current word or sentence highlighted. **Lesson audio is committed to the repo** (`packages/courses/<course>/audio/<sha256 of the sentence>.mp3`) and is **only made on purpose**: review the lesson first, then run `cd apps/api && go run ./cmd/server bundle-audio` (only new or changed sentences are synthesised, unused files are removed; `-fresh` re-records everything after a voice/model change) and commit the files. The server never calls the speech API by itself: a sentence without a recording gets 501 and the app uses the device voice. `LIVE_SPEECH=on` lets it make missing audio on demand and `WARM_SPEECH=on` ahead of time (both off by default). A lone letter is read as "A, as in apple.", because the voice garbles bare letters. A test fails while a lesson sentence has no recording.
@@ -189,7 +191,7 @@ The whole app works in **English and Bahasa Indonesia**.
 ### AI usage
 
 - **Prompt caching:** every lesson call starts with the same prefix (policy → language → lesson material → scope rules → about the learner) and carries `prompt_cache_key = course:node:language`, so OpenAI bills the repeated prefix as cached input.
-- **Exact-match grading:** checkpoint answers that exactly match a reference answer skip the evaluator, and practice questions are graded in Go without the AI.
+- **Grading in Go where possible:** practice questions, multiple choice, word order and exact (case-sensitive) matches are scored without the AI; the AI still writes each checkpoint answer's explanation.
 - **Daily budget:** usage is logged for every call in `ai_usage`, and `AI_DAILY_TOKENS_PER_USER` (default 150,000; cached input doesn't count) caps it per learner per day. Over the cap, plans fall back to the material's plan, hints to built-in ones, checkpoints to the lesson's hand-written questions graded against their answer key; Ask AI returns `ai_quota`.
 
 ## Personalization (onboarding) — switched off for now
@@ -229,7 +231,7 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
   - `lessons/<nodeId>.json`: content for every node marked `ready`.
 - At startup the API validates every course: unique slugs and IDs, valid prerequisites, no cycles, a ready root, and assessment coverage for every objective. It refuses to start if a course is broken.
 - English follows a reviewed CEFR roadmap (version 2026.11.0): **194 nodes** across A0–C2, each with a skill **strand** (GR grammar, VO vocabulary, PR pronunciation, LI listening, RE reading, SP speaking, WR writing, FN real-life situations, ME mediation, CK checkpoint), a CEFR-style **can-do** statement, an estimated study time and, for grammar/vocabulary/pronunciation, the **common mistakes** of Indonesian learners (shown on the node page and given to the tutor). Each level ends with a checkpoint node. References: CEFR + Companion Volume 2020, British Council–EAQUALS Core Inventory, English Grammar/Vocabulary Profile, Oxford 3000/5000, Academic Word List, Cambridge English Qualifications and IELTS.
-- Seven nodes have full lessons: alphabet & sounds, pronouns, common vocabulary, basic sentences, *to be*, simple present, and questions. The rest show as **Coming soon**. Basic Sentences keeps its old prerequisites until *First Sentences with Be* is written, so no ready lesson waits behind an unwritten one.
+- **38 nodes are ready**: all 14 A0 lessons and the A0 level checkpoint, and 23 of the A1 lessons. The rest show as **Coming soon**. Lesson content follows [`packages/courses/CONTENT_GUIDE.md`](packages/courses/CONTENT_GUIDE.md).
 - **Test-prep tracks** (TOEFL ITP, TOEIC, IELTS, TOEFL iBT) are separate coming-soon courses whose roadmaps follow each test's current official format (see each course's README for sources). The English roadmap ends with a "Continue with these tracks" box, and track lessons link to the English lessons they build on.
 - **Adding a course:** copy the `english` folder structure, write `course.json` and the level files, and run the Go tests. The new course then appears in the catalog automatically.
 
@@ -246,6 +248,6 @@ Every learner gets the same lessons, objectives, assessments and pass mark. Onbo
 
 1. Voice roleplay and more widgets (slider, chart).
 2. Password reset and email verification.
-3. More ready lessons (self-introduction, daily routines, everyday conversation).
+3. More ready lessons: the rest of A1 (self-introduction, daily routines, everyday conversation, …) and the A1 checkpoint, then A2.
 4. Spaced repetition and a placement test.
 5. Deploy: Go API + managed Postgres, and the Expo Web export (`npx expo export -p web`).
