@@ -258,6 +258,95 @@
       }
     },
     {
+      "id": "sound-not-letter",
+      "title": "Why 'a university' but 'an hour'?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Indonesian, a letter almost always has the same sound: **u** is always read 'u'. In English it **isn't**: one letter can have different sounds. That's why a/an **doesn't look at the first letter you write**. It listens to the **first sound you say**.\n\nSo don't look, **say it**: read the word out loud and listen to how it starts.\n- It starts with a **vowel sound** (your mouth is open: a, e, i, o, u) → **an**.\n- It starts with a **consonant sound** (b, k, m, **y**, **w** …) → **a**.",
+          "i18n": {
+            "id": {
+              "text": "Di bahasa Indonesia, satu huruf hampir selalu punya satu bunyi: huruf **u** selalu dibaca 'u'. Di bahasa Inggris **tidak begitu**: satu huruf bisa punya bunyi yang berbeda-beda. Karena itu, aturan a/an **tidak melihat huruf pertama yang ditulis**, tapi **mendengar bunyi pertama yang diucapkan**.\n\nJadi jangan dilihat, tapi **ucapkan**: baca katanya dengan suara keras, lalu dengarkan bunyi awalnya.\n- Diawali **bunyi vokal** (mulut langsung terbuka: a, e, i, o, u) → pakai **an**.\n- Diawali **bunyi konsonan** (b, k, m, **y**, **w** …) → pakai **a**."
+            }
+          }
+        },
+        {
+          "type": "examples",
+          "rows": [
+            {
+              "en": "a university",
+              "id": "dibaca 'YU-ni-ver-si-ti' → bunyi pertama 'y' (konsonan) → a",
+              "note": "u sounds like 'you'"
+            },
+            {
+              "en": "a uniform",
+              "id": "dibaca 'YU-ni-form' → bunyi 'y' → a",
+              "note": "u sounds like 'you'"
+            },
+            {
+              "en": "a European city",
+              "id": "dibaca 'YU-ro-pi-en' → bunyi 'y' → a",
+              "note": "eu sounds like 'you'"
+            },
+            {
+              "en": "a one-way ticket",
+              "id": "dibaca 'WAN-wei' → bunyi 'w' (konsonan) → a",
+              "note": "o sounds like 'w'"
+            },
+            {
+              "en": "an uncle",
+              "id": "dibaca 'AN-kel' → bunyi 'a' (vokal) → an",
+              "note": "here u sounds like 'a'"
+            },
+            {
+              "en": "an hour",
+              "id": "dibaca 'AW-er', h tidak dibaca → bunyi 'a' (vokal) → an",
+              "note": "silent h"
+            },
+            {
+              "en": "an honest man",
+              "id": "dibaca 'ON-est', h tidak dibaca → bunyi 'o' (vokal) → an",
+              "note": "silent h"
+            },
+            {
+              "en": "a house",
+              "id": "dibaca 'HAUS', h dibaca → bunyi 'h' (konsonan) → a",
+              "note": "h is said here"
+            }
+          ]
+        },
+        {
+          "type": "tip",
+          "text": "Two tricks to remember. **u** at the start is often said 'you', and 'you' starts with a **y** sound, a consonant: *a university, a uniform, a useful app*. And sometimes **h** is not said at all, so the word really starts with a vowel sound: *an hour, an honest man*. In most words h is said (*a house, a hotel, a hospital*). When you're not sure, say the word out loud: trust your ears, not your eyes.",
+          "i18n": {
+            "id": {
+              "text": "Dua trik supaya gampang ingat. Huruf **u** di awal kata sering dibaca 'yu', dan 'yu' diawali bunyi **y**, yaitu konsonan: *a university, a uniform, a useful app*. Lalu kadang huruf **h** tidak dibaca sama sekali, jadi katanya sebenarnya diawali bunyi vokal: *an hour, an honest man*. Di kebanyakan kata, h tetap dibaca (*a house, a hotel, a hospital*). Kalau ragu, ucapkan katanya dengan keras: percayai telingamu, bukan matamu."
+            }
+          }
+        },
+        {
+          "type": "check",
+          "prompt": "Pak Budi wears ___ uniform to work.",
+          "options": [
+            "a",
+            "an"
+          ],
+          "answer": 0,
+          "explain": "Uniform is said 'YU-ni-form'. It starts with a 'y' sound, a consonant sound, so it's a uniform, even though the first letter is u.",
+          "i18n": {
+            "id": {
+              "explain": "Uniform dibaca 'YU-ni-form'. Bunyi pertamanya 'y', yaitu bunyi konsonan, jadi a uniform, walaupun huruf pertamanya u."
+            }
+          }
+        }
+      ],
+      "i18n": {
+        "id": {
+          "title": "Kenapa 'a university' tapi 'an hour'?"
+        }
+      }
+    },
+    {
       "id": "plurals",
       "title": "Plurals with -s and -es",
       "blocks": [

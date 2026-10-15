@@ -5,10 +5,11 @@ import { colors, fonts } from '@/theme/tokens';
 
 type Props = { children: string; size?: number; color?: string; weight?: 'regular' | 'medium'; lineHeight?: number };
 
-// Course text supports **bold** and `code`; everything else is plain text
-// (no HTML or links), so content can't inject markup.
+// Course text supports **bold**, *italic*, `code`, line breaks and "- "
+// bullet lines; everything else is plain text (no HTML or links), so
+// content can't inject markup.
 export function RichText({ children, size = 16, color = colors.ink, weight = 'regular', lineHeight = 1.65 }: Props) {
-  const parts = children.split(/(\*\*[^*]+\*\*|`[^`]+`|\*[^*]+\*)/g).filter(Boolean);
+  const parts = children.replace(/^- /gm, '•  ').split(/(\*\*[^*]+\*\*|`[^`]+`|\*[^*]+\*)/g).filter(Boolean);
   return (
     <Text size={size} color={color} weight={weight} style={{ lineHeight: Math.round(size * lineHeight) }}>
       {parts.map((p, i) => {
