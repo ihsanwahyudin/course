@@ -262,3 +262,26 @@ func TestOldCheckpointsStillDecode(t *testing.T) {
 		t.Fatalf("an old item grades as before: %+v", items[0])
 	}
 }
+
+func TestRepeatedQuestionsAreDropped(t *testing.T) {
+	obj := map[string]bool{"o": true}
+	items := []CheckItem{textItem(1), textItem(2), textItem(3), textItem(4), textItem(5), textItem(6)}
+	out, err := ValidateCheckpoint(items, obj, []string{"Q2"})
+	if err != nil || len(out) != 5 || out[1].Prompt != "Q3" || out[4].ID != "q5" {
+		t.Fatalf("one repeat is dropped and the rest renumbered: %+v %v", out, err)
+	}
+	if _, err := ValidateCheckpoint(items, obj, []string{"Q2", "Q3"}); err == nil || !strings.Contains(err.Error(), "repeat") {
+		t.Fatalf("too few new questions left: %v", err)
+	}
+}
+
+func TestHeardTextIsMatchedByWholeWords(t *testing.T) {
+	q := Question{Type: QuestionMCQ, ObjectiveID: "o", Prompt: "Listen. Which letter is it? (Just one.)", Listen: "J.", Options: []string{"G", "J"}, Answer: 1, Explanation: "e"}
+	if _, err := ValidateQuestion(q, map[string]bool{"o": true}); err != nil {
+		t.Fatalf("a j inside a word isn't the heard letter: %v", err)
+	}
+	q.Prompt = "Listen to J. Which letter is it?"
+	if _, err := ValidateQuestion(q, map[string]bool{"o": true}); err == nil {
+		t.Fatal("the prompt must not show what is heard")
+	}
+}

@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"strings"
 
+	"fluentpath/api/internal/curriculum"
 	"fluentpath/api/internal/tutor"
 )
 
@@ -294,15 +295,64 @@ func beginnerRule(level string) string {
 	case "A0":
 		return `
 - This learner is an absolute beginner (A0) who knows almost no English yet. Every answer is a word or phrase this lesson's material
-  shows, exactly as shown: recognise it (mcq), fill one missing word of a taught phrase ("___ come in." → please), or type a taught
-  word or fixed phrase (at most about three words). Never ask them to build a sentence of their own, to change a taught phrase, or to
-  use a word the material doesn't teach.`
+  shows, exactly as shown, and they mostly tap rather than type: recognise it ("mcq", "multi"), pair it ("match"), spell it with tiles
+  ("letters"), fill one missing word of a taught phrase ("___ come in." → please), or — at most once — type a taught word or fixed
+  phrase (at most about three words). Never ask them to build a sentence of their own, to change a taught phrase, or to use a word the
+  material doesn't teach.`
 	case "A1":
 		return `
 - This learner is a beginner (A1): answers use only words from A0 and this lesson, in short sentences on the patterns the lesson
-  shows. Never ask for a word or a sentence pattern the lesson hasn't taught.`
+  shows; most questions are tapped ("mcq", "multi", "match", "word_order", "letters"). Never ask for a word or a sentence pattern the
+  lesson hasn't taught.`
 	}
 	return ""
+}
+
+// typeRules says what each question type is for. Beginners mostly tap
+// their answers: open "text" questions are capped at A0 and A1 (see
+// MaxTextItems), spelling is always letter tiles, and anything with more
+// than one right item is a tick-all.
+func typeRules(level string, levelCheck bool) string {
+	text := "at least two"
+	if levelCheck {
+		text = "at least three"
+	}
+	if n, ok := MaxTextItems(level, levelCheck); ok {
+		text = fmt.Sprintf("at most %d (fewer is fine)", n)
+	}
+	return fmt.Sprintf(`- Choose each question's type by what it tests, and mix the types:
+  "mcq" (pick ONE): 2–4 options with exactly one right answer, copied exactly into "correctOption"; every other option is clearly wrong
+    for this exact question (asking for "a vowel" with two vowels among the options, or two spellings the lesson accepts, is a broken
+    question). The wrong options are mistakes this learner could plausibly make.
+  "multi" (tick EVERY right one): 3–6 options; "correctOptions" lists every right option exactly as written, and at least one option is
+    wrong. Use it whenever more than one item is right ("which of these are vowels / polite words / past forms") — never an "mcq" with
+    two right options, nor a "text" that asks the learner to list several things.
+  "match" (pair up): 2–6 "pairs", best 3–4, each {left, right} with exactly one sensible partner on the other side (a word and its
+    meaning, a question and its answer, a letter and the word its name sounds like). The server shuffles the right side.
+  "word_order" (tap the words in order): "solution" is one natural sentence of 3–8 words and "tokens" are its words, shuffled — never
+    letters.
+  "letters" (tap letter tiles to spell ONE English word of 2–15 letters): "solution" is the word. The prompt must never show the word:
+    play it in "listen" (the word, or its letters spelled out like "B, O, O, K.") or give its meaning in the learner's language.
+    "tokens": leave empty for exactly the word's letters, or list the word's letters plus at most 3 extra letters a learner could
+    confuse (J beside G, I beside E). Every spelling question is "letters" — never a "text" asking for dashes or spaces between letters.
+  "text" (typed or spoken): only when the learner must produce English themselves — write %s of these.`, text)
+}
+
+// MaxTextItems is how many open "text" questions an AI checkpoint may have
+// at a beginner level (ok is false above A1, where there's no cap).
+func MaxTextItems(level string, levelCheck bool) (n int, ok bool) {
+	switch level {
+	case "A0":
+		n = 1
+	case "A1":
+		n = 2
+	default:
+		return 0, false
+	}
+	if levelCheck {
+		n++
+	}
+	return n, true
 }
 
 func checkpointTask(in CheckpointInput) string {
@@ -310,16 +360,9 @@ func checkpointTask(in CheckpointInput) string {
 	for _, o := range in.Node.Objectives {
 		ids = append(ids, o.ID)
 	}
-	type example struct {
-		ObjectiveID string   `json:"objectiveId"`
-		Prompt      string   `json:"prompt"`
-		Listen      string   `json:"listen,omitempty"`
-		Accepted    []string `json:"acceptedAnswers"`
-		Rubric      string   `json:"rubric"`
-	}
 	ex := make([]example, 0, len(in.Examples))
 	for _, it := range in.Examples {
-		ex = append(ex, example{it.ObjectiveID, in.Lesson.PromptIn(it, in.Locale), it.Listen, it.AcceptableAnswers, it.Rubric})
+		ex = append(ex, exampleOf(it, in.Lesson.PromptIn(it, in.Locale)))
 	}
 	examples, _ := json.Marshal(ex)
 	earlier := "(none yet)"
@@ -333,12 +376,7 @@ func checkpointTask(in CheckpointInput) string {
 	return fmt.Sprintf(`Write the checkpoint (final quiz) for this lesson: %d to %d questions that show whether the learner has really mastered it.
 - Test only what this lesson teaches (see Scope and the material), at the lesson's level. Cover every objective with at least one question
   (objective ids: %s), spreading the questions across them.
-- Mix the types. "mcq": 2–4 options with exactly ONE correct answer, copied exactly into "correctOption"; every other option must be clearly wrong
-  for this exact question (asking for "a vowel" with two vowels among the options, or two spellings the lesson accepts, is a broken
-  question). The wrong options are mistakes this learner could plausibly make.
-  "word_order": "solution" is one natural sentence of 3–8 words and "tokens" are its words in a shuffled order (the learner taps
-  them in order) — never letters to spell or anything that needs dashes; use "text" for spelling. "text": an open answer the learner types
-  or says; write at least two of these.
+%s
 - Every prompt's instruction to the learner is in the learner's language from the language rule — never write the instruction itself in
   English when that language isn't English. Only the English being tested (words, sentences, signs, spellings) stays in English. When
   the answer must be in English, say so in the learner's language ("Jawab dalam bahasa Inggris", never "dalam English").
@@ -351,34 +389,56 @@ func checkpointTask(in CheckpointInput) string {
 - Listening or pronunciation objectives: put the English the learner hears in "listen" (at most 300 characters, never shown in the prompt)
   and ask about what they hear. Leave "listen" empty otherwise.
 - "explanation": first work the question out yourself — one or two sentences on what the right answer is and why (it guides the
-  grader) — and only then fill "correctOption" / "solution" / "acceptedAnswers" to match it.
+  grader) — and only then fill "correctOption" / "correctOptions" / "pairs" / "solution" / "acceptedAnswers" to match it.
 - Fields a type doesn't use: empty string, empty list or 0.
 - Match the difficulty and style of the hand-written checkpoint below, but never copy or lightly reword its questions: %s
 - The learner has already answered these checkpoint questions. Do not repeat or lightly reword them; test the same skills with new
-  sentences, words and situations: %s%s`, tutor.MinCheckItems+1, tutor.MaxCheckItems, strings.Join(ids, ", "), beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
+  sentences, words and situations: %s%s`, tutor.MinCheckItems+1, tutor.MaxCheckItems, strings.Join(ids, ", "), typeRules(in.Node.Level, false),
+		beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
+}
+
+// example is a hand-written checkpoint question shown to the writer.
+type example struct {
+	LessonID       string                      `json:"lessonId,omitempty"`
+	ObjectiveID    string                      `json:"objectiveId,omitempty"`
+	Type           string                      `json:"type"`
+	Prompt         string                      `json:"prompt"`
+	Listen         string                      `json:"listen,omitempty"`
+	Options        []string                    `json:"options,omitempty"`
+	CorrectOption  string                      `json:"correctOption,omitempty"`
+	CorrectOptions []string                    `json:"correctOptions,omitempty"`
+	Tokens         []string                    `json:"tokens,omitempty"`
+	Solution       string                      `json:"solution,omitempty"`
+	Pairs          []curriculum.AssessmentPair `json:"pairs,omitempty"`
+	Accepted       []string                    `json:"acceptedAnswers,omitempty"`
+	Rubric         string                      `json:"rubric,omitempty"`
+}
+
+func exampleOf(it curriculum.AssessmentItem, prompt string) example {
+	typ := it.Type
+	if typ == "" {
+		typ = tutor.QuestionText
+	}
+	return example{ObjectiveID: it.ObjectiveID, Type: typ, Prompt: prompt, Listen: it.Listen, Options: it.Options, CorrectOption: it.CorrectOption,
+		CorrectOptions: it.CorrectOptions, Tokens: it.Tokens, Solution: it.Solution, Pairs: it.Pairs, Accepted: it.AcceptableAnswers, Rubric: it.Rubric}
 }
 
 // levelCheckpointTask asks for the level checkpoint: questions spread over
 // the level's lessons, each naming the lesson it comes from.
 func levelCheckpointTask(in CheckpointInput, earlier string) string {
-	type sample struct {
-		LessonID string   `json:"lessonId"`
-		Prompt   string   `json:"prompt"`
-		Listen   string   `json:"listen,omitempty"`
-		Accepted []string `json:"acceptedAnswers"`
-	}
-	var samples []sample
+	var samples []example
 	for _, l := range in.LevelLessons {
-		samples = append(samples, sample{l.ID, l.SamplePrompt, l.Sample.Listen, l.Sample.AcceptableAnswers})
+		e := exampleOf(l.Sample, l.SamplePrompt)
+		e.LessonID, e.ObjectiveID, e.Rubric = l.ID, "", ""
+		samples = append(samples, e)
 	}
 	examples, _ := json.Marshal(samples)
 	return fmt.Sprintf(`Write the level checkpoint: %d to %d questions that show whether the learner can use everything this level teaches,
 together. Give each question the "lessonId" of the lesson it tests and that lesson's checkpoint objective as "objectiveId" (see the list
 above). Spread them over the lessons: at least %d different lessons, no lesson more than twice, and every objective covered. Mix in a few questions that combine skills
 from two lessons (e.g. greet someone and give your phone number), named after the lesson they lean on most.
-- Same rules as a lesson checkpoint. "mcq": 2–4 options with exactly ONE correct answer, copied into "correctOption", every other option
-  clearly wrong. "word_order": a natural sentence of 3–8 words, tokens shuffled — never letters to spell. "text": an open answer, with
-  every acceptable answer listed and a rubric; at least three of these.
+%s
+- For "text", list every acceptable answer and write a rubric.
 - Every prompt's instruction is in the learner's language from the language rule; only the English being tested stays in English. Say
   when the answer must be in English, in the learner's language ("Jawab dalam bahasa Inggris", never "dalam English").
 - One clear situation and one request per prompt, in natural, grammatical wording; for "text", say how much to write (one word, two
@@ -388,7 +448,8 @@ from two lessons (e.g. greet someone and give your phone number), named after th
 - Fields a type doesn't use: empty string, empty list or 0.
 - Match the level of these hand-written questions (one per lesson), but never copy or lightly reword them: %s
 - The learner has already answered these checkpoint questions; don't repeat or lightly reword them: %s%s`,
-		tutor.MinLevelCheckItems+2, tutor.MaxLevelCheckItems-1, tutor.LevelSpread(len(in.LevelLessons)), beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
+		tutor.MinLevelCheckItems+2, tutor.MaxLevelCheckItems-1, tutor.LevelSpread(len(in.LevelLessons)), typeRules(in.Node.Level, true),
+		beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
 }
 
 // LevelFallback is the level checkpoint from the lessons' first
@@ -525,7 +586,8 @@ func verifyTask(in VerifyInput) string {
 For each question, first solve it yourself in "solve" (one short sentence: the right answer and why), then compare with the key.
 Set "ok" to false, with a one-sentence "problem", if ANY of these fail:
 1. The answer key is correct, and for "mcq" exactly one option is right — no other option is also correct or defensible under this
-   lesson's rules.
+   lesson's rules. For "multi", the key ticks every right option and no wrong one. For "match", every left item has exactly one sensible
+   partner on the right.
 2. For "text", the accepted answers cover the reasonable correct answers and contain no wrong ones.
 3. The question can be answered from the prompt (and the audio, if any) alone, and the prompt doesn't give the answer away.
 4. The instruction to the learner follows the language rule (only the English being tested is in English).
@@ -536,5 +598,7 @@ Set "ok" to false, with a one-sentence "problem", if ANY of these fail:
 7. The learner can answer it with what this lesson (and earlier levels) taught. At A0 the answer is a word or phrase the lesson's
    material shows, exactly as shown — never a sentence the learner has to build or a word the material doesn't teach; at A1, short
    sentences on the lesson's patterns. This lesson is level %s.
+8. The type fits the task: spelling a word is "letters" (and its prompt never shows the word); a question with several right items is
+   "multi"; "text" only when the learner must write English themselves.
 Otherwise "ok" is true and "problem" is empty. Judge strictly: a learner must never meet a question with two right answers or a wrong key.`, payload, in.Node.Level)
 }

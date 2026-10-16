@@ -224,6 +224,7 @@ func validateItems(items []CheckItem, objectives map[string]bool, earlier []stri
 	}
 	covered := map[string]bool{}
 	out := make([]CheckItem, 0, len(items))
+	var repeats []int
 	for i, it := range items {
 		var err error
 		switch it.Type {
@@ -245,9 +246,12 @@ func validateItems(items []CheckItem, objectives map[string]bool, earlier []stri
 		if err != nil {
 			return nil, fmt.Errorf("question %d: %w", i+1, err)
 		}
+		// A repeated question is dropped; the checkpoint fails only if too
+		// few new ones are left (narrow lessons make some repeats likely).
 		key := NormalizeWords(it.Prompt + " " + it.Listen)
 		if seen[key] {
-			return nil, fmt.Errorf("question %d repeats an earlier question", i+1)
+			repeats = append(repeats, i+1)
+			continue
 		}
 		seen[key] = true
 		if it.Type == QuestionWordOrder && !realWords(it.Tokens) {
@@ -256,9 +260,12 @@ func validateItems(items []CheckItem, objectives map[string]bool, earlier []stri
 		if it.Type == QuestionWordOrder && NormalizeWords(strings.Join(it.Tokens, " ")) == NormalizeWords(it.Solution) {
 			it.Tokens = append(it.Tokens[1:], it.Tokens[0])
 		}
-		it.ID = "q" + strconv.Itoa(i+1)
+		it.ID = "q" + strconv.Itoa(len(out)+1)
 		covered[it.ObjectiveID] = true
 		out = append(out, it)
+	}
+	if len(out) < min {
+		return nil, fmt.Errorf("questions %v repeat earlier questions, leaving %d new ones; write at least %d new questions", repeats, len(out), min)
 	}
 	for id := range objectives {
 		if !covered[id] {
@@ -291,7 +298,7 @@ func validateTextItem(it CheckItem, objectives map[string]bool) (CheckItem, erro
 	if runes(it.Listen) > 300 {
 		return it, fmt.Errorf("listen text must be at most 300 characters")
 	}
-	if it.Listen != "" && strings.Contains(NormalizeWords(it.Prompt), NormalizeWords(it.Listen)) {
+	if showsHeard(it.Prompt, it.Listen) {
 		return it, fmt.Errorf("the prompt must not show what the learner should hear")
 	}
 	var acc []string
@@ -726,14 +733,15 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 		if badLen(expl, maxText) {
 			return Review{}, nil, "", fmt.Errorf("%w: question %s needs an explanation", ErrMalformed, it.ID)
 		}
+		// Out-of-range scores mean broken output, even where the server's score stands.
+		if math.IsNaN(gi.Score) || gi.Score < 0 || gi.Score > 100 {
+			return Review{}, nil, "", fmt.Errorf("%w: question %s score out of range", ErrMalformed, it.ID)
+		}
 		score, isFixed := fixed[it.ID]
 		// A wrong key must not cost the learner: the grader's judgement
 		// against the real answer stands instead.
 		keyFixed := isFixed && gi.KeyWrong && clean(gi.CorrectAnswer) != ""
 		if !isFixed || keyFixed {
-			if math.IsNaN(gi.Score) || gi.Score < 0 || gi.Score > 100 {
-				return Review{}, nil, "", fmt.Errorf("%w: question %s score out of range", ErrMalformed, it.ID)
-			}
 			score = int(math.Round(gi.Score))
 		}
 		correct := it.Key()

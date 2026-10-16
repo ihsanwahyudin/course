@@ -12,6 +12,7 @@ import (
 	"github.com/jackc/pgx/v5"
 
 	"fluentpath/api/internal/ai"
+	"fluentpath/api/internal/curriculum"
 	"fluentpath/api/internal/progress"
 	"fluentpath/api/internal/storage"
 	"fluentpath/api/internal/tutor"
@@ -25,10 +26,10 @@ func aiCheckpoint(round int) json.RawMessage {
 	return json.RawMessage(fmt.Sprintf(`{"items":[
 	{"type":"mcq","objectiveId":"letter-names","prompt":"Round %[1]d: which letter sounds like 'eye'?","listen":"","options":["E","I","A"],"correctOption":"I","tokens":[],"solution":"","acceptedAnswers":[],"rubric":"","explanation":"I is said 'eye'."},
 	{"type":"word_order","objectiveId":"vowels","prompt":"Round %[1]d: put the words in order.","listen":"","options":[],"tokens":["A","and","E","are","vowels"],"solution":"A and E are vowels","acceptedAnswers":[],"rubric":"","explanation":"Subject, verb, noun."},
-	{"type":"text","objectiveId":"spelling","prompt":"Round %[1]d: spell '%[2]s' with dashes.","listen":"","options":[],"tokens":[],"solution":"","acceptedAnswers":["%[3]s"],"rubric":"All letters right = 100.","explanation":"Letter by letter."},
+	{"type":"letters","objectiveId":"spelling","prompt":"Round %[1]d: listen, then tap the letters in order.","listen":"%[3]s","options":[],"tokens":[],"solution":"%[2]s","acceptedAnswers":[],"rubric":"","explanation":"Letter by letter."},
 	{"type":"text","objectiveId":"letter-names","prompt":"Round %[1]d: write the letter you hear.","listen":"The letter is Q.","options":[],"tokens":[],"solution":"","acceptedAnswers":["q"],"rubric":"Q only.","explanation":"Q is said 'kyu'."},
 	{"type":"mcq","objectiveId":"vowels","prompt":"Round %[1]d: which one is a vowel?","listen":"","options":["B","O","K"],"correctOption":"O","tokens":[],"solution":"","acceptedAnswers":[],"rubric":"","explanation":"O is a vowel."}]}`,
-		round, w, strings.Join(strings.Split(w, ""), " ")))
+		round, w, strings.ToUpper(strings.Join(strings.Split(w, ""), ", "))+"."))
 }
 
 // pick is the index of an option's text in a checkpoint question (options are shuffled).
@@ -376,10 +377,7 @@ func TestLevelCheckpoint(t *testing.T) {
 	_ = json.Unmarshal(c.Items, &items)
 	answers := map[string]string{}
 	for _, it := range items {
-		answers[it.ID] = it.Accepted[0]
-		if it.LessonID == "a0-greetings" || it.LessonID == "a0-numbers" {
-			answers[it.ID] = "zzz"
-		}
+		answers[it.ID] = keyAnswer(it, it.LessonID != "a0-greetings" && it.LessonID != "a0-numbers")
 	}
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers)
 	if err != nil {
@@ -395,5 +393,20 @@ func TestLevelCheckpoint(t *testing.T) {
 	}
 	if mock.Calls.Summary != 0 {
 		t.Fatal("a level checkpoint has no lesson summary")
+	}
+}
+
+func TestBeginnerCheckpointsHaveFewOpenQuestions(t *testing.T) {
+	text := tutor.CheckItem{Question: tutor.Question{Type: tutor.QuestionText}}
+	mcq := tutor.CheckItem{Question: tutor.Question{Type: tutor.QuestionMCQ}}
+	two := []tutor.CheckItem{text, text, mcq, mcq, mcq}
+	if err := beginnerTexts(two, &curriculum.Node{Level: "A0"}); err == nil || !strings.Contains(err.Error(), "at most 1") {
+		t.Fatalf("A0: one open question at most: %v", err)
+	}
+	if err := beginnerTexts(two, &curriculum.Node{Level: "A1"}); err != nil {
+		t.Fatalf("A1 allows two: %v", err)
+	}
+	if err := beginnerTexts([]tutor.CheckItem{text, text, text, text, text}, &curriculum.Node{Level: "B1"}); err != nil {
+		t.Fatalf("no cap above A1: %v", err)
 	}
 }

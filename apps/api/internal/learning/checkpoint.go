@@ -235,6 +235,9 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			items, err = tutor.FromDrafts(out.Items)
 		}
 		if err == nil {
+			err = beginnerTexts(items, n)
+		}
+		if err == nil {
 			if items, err = validate(items, avoid); err == nil {
 				// A second look, question by question: drop any with two right
 				// answers, a wrong key or the wrong language, then check the rest
@@ -278,6 +281,25 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 	}
 	s.warmTexts(userID, texts, true)
 	return c, nil
+}
+
+// beginnerTexts: at A0 and A1 learners mostly tap their answers, so an AI
+// checkpoint may hold only a few open questions (ai.MaxTextItems).
+func beginnerTexts(items []tutor.CheckItem, n *curriculum.Node) error {
+	most, capped := ai.MaxTextItems(n.Level, n.LevelCheck())
+	if !capped {
+		return nil
+	}
+	texts := 0
+	for _, it := range items {
+		if it.Type == tutor.QuestionText {
+			texts++
+		}
+	}
+	if texts > most {
+		return fmt.Errorf("%d open \"text\" questions; at level %s write at most %d and use mcq, multi, match, letters or word_order for the rest", texts, n.Level, most)
+	}
+	return nil
 }
 
 // verifyCheckpoint asks the AI to check every question and returns the

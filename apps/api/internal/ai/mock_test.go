@@ -93,6 +93,17 @@ func TestLessonPrefix(t *testing.T) {
 	if !strings.Contains(ct, "absolute beginner (A0)") || beginnerRule("B2") != "" || !strings.Contains(beginnerRule("A1"), "beginner (A1)") {
 		t.Fatalf("beginner rule: %s", ct)
 	}
+	// Spelling is letter tiles, several right items a tick-all, and beginners get few open questions.
+	if !strings.Contains(ct, `Every spelling question is "letters"`) || !strings.Contains(ct, `"multi" (tick EVERY right one)`) ||
+		!strings.Contains(ct, "write at most 1 (fewer is fine) of these") || !strings.Contains(ct, `"type": "letters"`) {
+		t.Fatalf("checkpoint task misses the type rules or the typed examples: %s", ct)
+	}
+	if !strings.Contains(typeRules("B2", false), "at least two of these") || !strings.Contains(typeRules("A1", true), "at most 3") {
+		t.Fatal("open questions: capped at A0/A1, required above")
+	}
+	if v := verifyTask(VerifyInput{LessonInput: in, Items: items}); !strings.Contains(v, "The type fits the task") || !strings.Contains(v, "ticks every right option") {
+		t.Fatalf("verify task misses the type check: %s", v)
+	}
 }
 
 func TestTaskPrompts(t *testing.T) {

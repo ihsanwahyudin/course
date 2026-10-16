@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"fluentpath/api/internal/ai"
+	"fluentpath/api/internal/progress"
 	"fluentpath/api/internal/storage"
 	"fluentpath/api/internal/tutor"
 )
@@ -717,6 +718,24 @@ func TestLessonAudioIsMadeAhead(t *testing.T) {
 	}
 }
 
+// recordedLesson is an open lesson whose audio isn't waiting for review
+// (audio/pending.json), so startup warms it like every other.
+func recordedLesson(t *testing.T, s *Service) string {
+	t.Helper()
+	cur, _ := s.Catalog.Course(course)
+	rm, err := s.Roadmap(context.Background(), learnerID, course)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, n := range rm.Nodes {
+		if _, ok := cur.Lesson(n.ID); ok && n.Status == progress.StatusAvailable && !cur.AudioPending(n.ID) {
+			return n.ID
+		}
+	}
+	t.Fatal("no open lesson with recorded audio")
+	return ""
+}
+
 func TestMissingLessonAudioIsMadeAtStartup(t *testing.T) {
 	s := newService(t, &ai.Mock{})
 	withoutRecordedAudio(t, s)
@@ -734,7 +753,7 @@ func TestMissingLessonAudioIsMadeAtStartup(t *testing.T) {
 	// Already cached: a restart makes nothing new, and opening a lesson plays from the cache.
 	s.WarmAllLessons()
 	s.warm.Wait()
-	if _, err := s.StartSession(context.Background(), learnerID, course, "a0-alphabet-sounds"); err != nil {
+	if _, err := s.StartSession(context.Background(), learnerID, course, recordedLesson(t, s)); err != nil {
 		t.Fatal(err)
 	}
 	s.warm.Wait()

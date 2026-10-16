@@ -229,10 +229,16 @@ func checkBasics(q Question, objectives map[string]bool, maxPrompt int) (Questio
 	if runes(q.Listen) > 300 {
 		return q, fmt.Errorf("listen text must be at most 300 characters")
 	}
-	if q.Listen != "" && strings.Contains(NormalizeWords(q.Prompt), NormalizeWords(q.Listen)) {
+	if showsHeard(q.Prompt, q.Listen) {
 		return q, fmt.Errorf("the prompt must not show what the learner should hear")
 	}
 	return q, nil
+}
+
+// showsHeard: the prompt shows the text the learner should only hear. Whole
+// words only, so hearing "J." doesn't clash with a prompt that has a j in it.
+func showsHeard(prompt, listen string) bool {
+	return listen != "" && strings.Contains(" "+NormalizeWords(prompt)+" ", " "+NormalizeWords(listen)+" ")
 }
 
 func sameWords(tokens []string, solution string) bool {
