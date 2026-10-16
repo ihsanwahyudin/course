@@ -600,7 +600,13 @@ func FixedVerdict(it CheckItem, answer string, exact func(string, []string) bool
 		}
 		return int(math.Round(float64(right) * 100 / float64(max(1, len(it.Pairing))))), true
 	}
-	if exact(answer, it.Accepted) {
+	if FormatSensitiveText(it) {
+		return 0, false
+	}
+	// Legacy checkpoints may ask for a list of letter names in a text box.
+	// "a dan e" and "E, A" have the same content as "a e"; this narrowly
+	// scoped comparison never strips conjunctions from ordinary sentences.
+	if (listText.MatchString(it.Prompt) && LetterListMatch(answer, it.Accepted)) || exact(answer, it.Accepted) {
 		return 100, true
 	}
 	return 0, false

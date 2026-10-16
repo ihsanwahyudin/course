@@ -541,6 +541,10 @@ Grade the learner's checkpoint. Each item has the answer key, and the learner's 
 - Judge every other answer against the accepted answers and the rubric. Accept equivalent correct English (contractions, capitals,
   punctuation, a small typo that doesn't touch what is being tested), but not a different meaning or a mistake in the very thing being
   tested. Score 0–100 following the rubric.
+- Grade the content, not incidental answer formatting. For a list, accept the same items separated by spaces, commas, or the
+  connectors "and" or Indonesian "dan"; do not penalise those connectors as non-English. Ignore list order unless order is tested.
+  Ignore capitals and punctuation UNLESS the prompt or rubric explicitly tests capitalization, punctuation, spelling or a prescribed
+  format (for example editing a date to a house style). Then assess that target accurately; do not waive it as a formatting variation.
 - For EVERY item write "explanation" in the learner's language (language rule), one or two sentences to the learner: if right, why it is
   right; if wrong or partly right, what is wrong and the correct version. The explanation must agree with the score: never call an
   answer wrong when it scores 100, or right when it scores 0. "correctAnswer": the best correct answer.

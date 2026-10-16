@@ -239,6 +239,12 @@ func (m *Mock) GradeCheckpoint(ctx context.Context, in GradeInput) (Result, erro
 		score, fixed := in.Fixed[it.ID]
 		if !fixed {
 			switch {
+			case tutor.FormatSensitiveText(it):
+				// The offline fallback must not erase the very punctuation
+				// being assessed (for example commas in a house-style date).
+				if tutor.MatchFormattedText(it, ans) {
+					score = 100
+				}
 			case Matches(ans, it.Accepted):
 				score = 100
 			case ans != "":
