@@ -161,7 +161,7 @@ func TestTileQuestionsEarnPartMarks(t *testing.T) {
 	{"type":"multi","objectiveId":"vowels","prompt":"Tick every vowel in 'table'.","listen":"","options":["T","A","B","L","E"],"tokens":[],"solution":"","pairs":[],"correctOption":"","correctOptions":["A","E"],"acceptedAnswers":[],"rubric":"","explanation":"A and E."},
 	{"type":"match","objectiveId":"letter-names","prompt":"Match each letter to the word its name sounds like.","listen":"","options":[],"tokens":[],"solution":"","pairs":[{"left":"I","right":"eye"},{"left":"U","right":"you"},{"left":"Y","right":"why"}],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"Say them aloud."},
 	{"type":"mcq","objectiveId":"letter-names","prompt":"Which letter sounds like 'bee'?","listen":"","options":["B","D"],"correctOption":"B","tokens":[],"solution":"","pairs":[],"correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"B."},
-	{"type":"letters","objectiveId":"spelling","prompt":"Spell the English word for 'merah'.","listen":"","options":[],"tokens":["R","E","D","B"],"solution":"red","pairs":[],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"R-E-D."}]}`), nil
+	{"type":"letters","objectiveId":"spelling","prompt":"Spell the English word for 'merah'.","listen":"","options":[],"tokens":["R","E","D"],"solution":"red","pairs":[],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"R-E-D."}]}`), nil
 	}
 	s := newService(t, mock)
 	ctx := context.Background()
@@ -408,5 +408,43 @@ func TestBeginnerCheckpointsHaveFewOpenQuestions(t *testing.T) {
 	}
 	if err := beginnerTexts([]tutor.CheckItem{text, text, text, text, text}, &curriculum.Node{Level: "B1"}); err != nil {
 		t.Fatalf("no cap above A1: %v", err)
+	}
+}
+
+func TestCheckpointDoesNotGenerateSpeechWhenDisabled(t *testing.T) {
+	for _, warm := range []bool{false, true} {
+		t.Run(fmt.Sprint("warm=", warm), func(t *testing.T) {
+			provider := &audioMock{Mock: &ai.Mock{}}
+			s := newService(t, provider)
+			s.LiveSpeech = false
+			s.WarmSpeech = warm
+			startDone(t, s, context.Background(), "a0-alphabet-sounds")
+			s.warm.Wait()
+			if provider.speech.Load() != 0 {
+				t.Fatal("checkpoint spent TTS tokens despite LiveSpeech=false")
+			}
+		})
+	}
+}
+
+func TestA0TypedAnswersMustBeTaught(t *testing.T) {
+	cur, err := curriculum.LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	lesson, _ := cur.Lesson("a0-alphabet-sounds")
+	n := cur.LocalNode("a0-alphabet-sounds", "id")
+	q := tutor.CheckItem{Question: tutor.Question{Type: tutor.QuestionText}, Accepted: []string{"spell it out"}}
+	if err := taughtBeginnerAnswers([]tutor.CheckItem{q}, n, lesson); err == nil {
+		t.Fatal("untaught expression accepted")
+	}
+	q.Accepted = []string{"double O"}
+	if err := taughtBeginnerAnswers([]tutor.CheckItem{q}, n, lesson); err != nil {
+		t.Fatal("taught expression rejected", err)
+	}
+	n.Level = "A1"
+	q.Accepted = []string{"I work at a school"}
+	if err := taughtBeginnerAnswers([]tutor.CheckItem{q}, n, lesson); err != nil {
+		t.Fatal("A1 may produce taught patterns", err)
 	}
 }

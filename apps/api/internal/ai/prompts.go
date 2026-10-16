@@ -297,8 +297,9 @@ func beginnerRule(level string) string {
 - This learner is an absolute beginner (A0) who knows almost no English yet. Every answer is a word or phrase this lesson's material
   shows, exactly as shown, and they mostly tap rather than type: recognise it ("mcq", "multi"), pair it ("match"), spell it with tiles
   ("letters"), fill one missing word of a taught phrase ("___ come in." → please), or — at most once — type a taught word or fixed
-  phrase (at most about three words). Never ask them to build a sentence of their own, to change a taught phrase, or to use a word the
-  material doesn't teach.`
+  phrase (strict maximum THREE words in EVERY accepted answer). Prefer zero text questions at A0: use recognition or tiles. Never ask them to build a sentence of their own, to change a taught phrase, or to use a word the
+  material doesn't teach. Teacher notes are advice to you, not proof the learner saw the words: only learner-facing material counts.
+  Never test IPA notation unless that notation is explicitly taught to the learner.`
 	case "A1":
 		return `
 - This learner is a beginner (A1): answers use only words from A0 and this lesson, in short sentences on the patterns the lesson
@@ -334,7 +335,8 @@ func typeRules(level string, levelCheck bool) string {
   "letters" (tap letter tiles to spell ONE English word of 2–15 letters): "solution" is the word. The prompt must never show the word:
     play it in "listen" (the word, or its letters spelled out like "B, O, O, K.") or give its meaning in the learner's language.
     "tokens": leave empty for exactly the word's letters, or list the word's letters plus at most 3 extra letters a learner could
-    confuse (J beside G, I beside E). Every spelling question is "letters" — never a "text" asking for dashes or spaces between letters.
+    confuse (J beside G, I beside E). At A0 use NO extra letters; at A1 use at most 2 extra letters.
+    Every spelling question is "letters" — never a "text" asking for dashes or spaces between letters.
   "text" (typed or spoken): only when the learner must produce English themselves — write %s of these.`, text)
 }
 
@@ -597,8 +599,10 @@ Set "ok" to false, with a one-sentence "problem", if ANY of these fail:
    together), and for "text" says how much to write (a word, two words, a short sentence) in a way that fits the accepted answers.
 7. The learner can answer it with what this lesson (and earlier levels) taught. At A0 the answer is a word or phrase the lesson's
    material shows, exactly as shown — never a sentence the learner has to build or a word the material doesn't teach; at A1, short
-   sentences on the lesson's patterns. This lesson is level %s.
+   sentences on the lesson's patterns. Teacher notes are not learner exposure: reject IPA notation or English expressions that
+   appear only in teacher guidance. This lesson is level %s.
 8. The type fits the task: spelling a word is "letters" (and its prompt never shows the word); a question with several right items is
-   "multi"; "text" only when the learner must write English themselves.
+   "multi"; "text" only when the learner must write English themselves. At A0 EVERY accepted text answer has at most three words;
+   letter tiles have no decoys at A0 and at most two at A1. Reject a typed list or typed spelling task.
 Otherwise "ok" is true and "problem" is empty. Judge strictly: a learner must never meet a question with two right answers or a wrong key.`, payload, in.Node.Level)
 }

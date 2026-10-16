@@ -228,6 +228,7 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			slog.Warn("checkpoint call failed", "provider", s.AI.Name(), "node", n.ID, "err", err)
 			break
 		}
+		in.Problems = nil // The next rejection must describe this draft, not the previous one.
 		var out struct {
 			Items []tutor.DraftItem `json:"items"`
 		}
@@ -236,6 +237,9 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 		}
 		if err == nil {
 			err = beginnerTexts(items, n)
+			if err == nil {
+				err = taughtBeginnerAnswers(items, n, lesson)
+			}
 		}
 		if err == nil {
 			if items, err = validate(items, avoid); err == nil {
@@ -279,13 +283,44 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			texts = append(texts, it.Listen)
 		}
 	}
-	s.warmTexts(userID, texts, true)
+	if s.WarmSpeech {
+		s.warmTexts(userID, texts, s.LiveSpeech)
+	}
 	return c, nil
+}
+
+// An A0 typed answer must be a phrase the learner actually saw. Teacher
+// notes can inform explanations but do not count as learner exposure.
+func taughtBeginnerAnswers(items []tutor.CheckItem, n *curriculum.Node, lesson *curriculum.Lesson) error {
+	if n.Level != "A0" || n.LevelCheck() || lesson == nil {
+		return nil
+	}
+	material := " " + tutor.NormalizeWords(lesson.MaterialText()) + " "
+	for i, it := range items {
+		if it.Type != tutor.QuestionText {
+			continue
+		}
+		for _, answer := range it.Accepted {
+			// The alphabet teaches all 26 names. A heard letter need not also
+			// occur in a written example to be a valid one-letter answer.
+			a := tutor.NormalizeWords(answer)
+			if n.ID == "a0-alphabet-sounds" && len(a) == 1 && a[0] >= 'a' && a[0] <= 'z' {
+				continue
+			}
+			if !strings.Contains(material, " "+tutor.NormalizeWords(answer)+" ") {
+				return fmt.Errorf("question %d: A0 typed answer %q is not shown in learner material; use recognition or tiles instead", i+1, answer)
+			}
+		}
+	}
+	return nil
 }
 
 // beginnerTexts: at A0 and A1 learners mostly tap their answers, so an AI
 // checkpoint may hold only a few open questions (ai.MaxTextItems).
 func beginnerTexts(items []tutor.CheckItem, n *curriculum.Node) error {
+	if err := tutor.ValidateLevelQuestions(items, n.Level); err != nil {
+		return err
+	}
 	most, capped := ai.MaxTextItems(n.Level, n.LevelCheck())
 	if !capped {
 		return nil
