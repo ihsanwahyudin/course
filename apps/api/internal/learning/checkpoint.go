@@ -37,10 +37,13 @@ type CheckItemView struct {
 	ID          string   `json:"id"`
 	LessonID    string   `json:"lessonId,omitempty"` // level checkpoints: the lesson it comes from
 	ObjectiveID string   `json:"objectiveId"`
-	Type        string   `json:"type"` // mcq | word_order | text
+	Type        string   `json:"type"` // mcq | multi | word_order | letters | match | text
 	Prompt      string   `json:"prompt"`
-	Options     []string `json:"options,omitempty"`
-	Tokens      []string `json:"tokens,omitempty"`
+	Options     []string `json:"options,omitempty"` // mcq, multi
+	Tokens      []string `json:"tokens,omitempty"`  // word_order: words; letters: letter tiles
+	// Left and Right: match, the two columns (Right shuffled).
+	Left  []string `json:"left,omitempty"`
+	Right []string `json:"right,omitempty"`
 	// HasAudio: a listening question, played from …/checkpoints/{id}/items/{itemId}/listen.
 	HasAudio bool `json:"hasAudio"`
 }
@@ -60,7 +63,8 @@ func checkpointView(c storage.Checkpoint, attempt int) (*CheckpointView, error) 
 	}
 	v := &CheckpointView{ID: c.ID, Practice: c.Practice, Attempt: attempt, Items: make([]CheckItemView, 0, len(items))}
 	for _, it := range items {
-		v.Items = append(v.Items, CheckItemView{it.ID, it.LessonID, it.ObjectiveID, it.Type, it.Prompt, it.Options, it.Tokens, it.Listen != ""})
+		v.Items = append(v.Items, CheckItemView{ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt,
+			Options: it.Options, Tokens: it.Tokens, Left: it.Left, Right: it.Right, HasAudio: it.Listen != ""})
 	}
 	return v, nil
 }

@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"maps"
 	"strings"
 	"testing"
 
@@ -149,6 +150,75 @@ func TestAICheckpointIsCheckedGradedAndExplained(t *testing.T) {
 		t.Fatalf("a repeated submission after mastery is answered, not failed: %v", err)
 	}
 	assertAttempts(t, s, sess.ID, 2)
+}
+
+func TestTileQuestionsEarnPartMarks(t *testing.T) {
+	mock := &ai.Mock{}
+	mock.CheckpointFunc = func(in ai.CheckpointInput) (json.RawMessage, error) {
+		return json.RawMessage(`{"items":[
+	{"type":"letters","objectiveId":"spelling","prompt":"Listen and spell the word.","listen":"house","options":[],"tokens":[],"solution":"house","pairs":[],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"H-O-U-S-E."},
+	{"type":"multi","objectiveId":"vowels","prompt":"Tick every vowel in 'table'.","listen":"","options":["T","A","B","L","E"],"tokens":[],"solution":"","pairs":[],"correctOption":"","correctOptions":["A","E"],"acceptedAnswers":[],"rubric":"","explanation":"A and E."},
+	{"type":"match","objectiveId":"letter-names","prompt":"Match each letter to the word its name sounds like.","listen":"","options":[],"tokens":[],"solution":"","pairs":[{"left":"I","right":"eye"},{"left":"U","right":"you"},{"left":"Y","right":"why"}],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"Say them aloud."},
+	{"type":"mcq","objectiveId":"letter-names","prompt":"Which letter sounds like 'bee'?","listen":"","options":["B","D"],"correctOption":"B","tokens":[],"solution":"","pairs":[],"correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"B."},
+	{"type":"letters","objectiveId":"spelling","prompt":"Spell the English word for 'merah'.","listen":"","options":[],"tokens":["R","E","D","B"],"solution":"red","pairs":[],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"R-E-D."}]}`), nil
+	}
+	s := newService(t, mock)
+	ctx := context.Background()
+	sess := startDone(t, s, ctx, "a0-alphabet-sounds")
+	cp := sess.Checkpoint
+	raw, _ := json.Marshal(cp)
+	for _, leak := range []string{"house", `"answers"`, `"pairing"`, "correctOptions"} {
+		if strings.Contains(string(raw), leak) {
+			t.Fatalf("the key stays on the server (%s): %s", leak, raw)
+		}
+	}
+	if it := cp.Items[0]; it.Type != tutor.QuestionLetters || len(it.Tokens) != 5 || !it.HasAudio {
+		t.Fatalf("letters come as tiles: %+v", it)
+	}
+	m := cp.Items[2]
+	if len(m.Left) != 3 || len(m.Right) != 3 || m.Left[0] != "I" {
+		t.Fatalf("match shows both columns: %+v", m)
+	}
+	idx := func(xs []string, x string) string {
+		for i, v := range xs {
+			if v == x {
+				return fmt.Sprint(i)
+			}
+		}
+		return "missing"
+	}
+	answers := map[string]string{
+		"q1": "H-O-S-E",                                                                   // one letter missing: 50
+		"q2": pick(cp, "q2", "A"),                                                         // one of two vowels: 50
+		"q3": idx(m.Right, "eye") + "," + idx(m.Right, "why") + "," + idx(m.Right, "you"), // one pair of three: 33
+		"q4": pick(cp, "q4", "B"),                                                         // 100
+		"q5": "red",                                                                       // 100
+	}
+	for id, a := range map[string]string{"q1": "zzz", "q2": "0,0", "q3": "0,1", "q5": "reed"} {
+		bad := maps.Clone(answers)
+		bad[id] = a
+		if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, bad); code(err) != "invalid_answers" {
+			t.Fatalf("%s: %q doesn't fit its question: %v", id, a, err)
+		}
+	}
+	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var review tutor.Review
+	_ = json.Unmarshal(res.Attempt.Review, &review)
+	want := map[string]int{"q1": 50, "q2": 50, "q3": 33, "q4": 100, "q5": 100}
+	for _, it := range review.Items {
+		if it.Score != want[it.ID] {
+			t.Errorf("%s: score %d, want %d", it.ID, it.Score, want[it.ID])
+		}
+	}
+	if r := review.Items[0]; r.Answer != "H-O-S-E" || r.CorrectAnswer != "H-O-U-S-E" || r.Verdict != tutor.VerdictPartial {
+		t.Fatalf("a spelling answer reads as letters: %+v", r)
+	}
+	if r := review.Items[2]; r.Answer != "I → eye; U → why; Y → you" || r.CorrectAnswer != "I → eye; U → you; Y → why" {
+		t.Fatalf("a match answer reads as pairs: %+v", r)
+	}
 }
 
 func TestRejectedAICheckpointUsesHandWrittenQuestions(t *testing.T) {

@@ -157,14 +157,38 @@ type PracticePrompt struct {
 }
 
 type AssessmentItem struct {
-	ID                string   `json:"id"`
-	ObjectiveID       string   `json:"objectiveId"`
-	Prompt            string   `json:"prompt"`
-	AcceptableAnswers []string `json:"acceptableAnswers"`
+	ID          string `json:"id"`
+	ObjectiveID string `json:"objectiveId"`
+	// Type is how the learner answers: text (typed or spoken, the default),
+	// mcq (pick one), multi (tick every right one), word_order (tap the
+	// words in order), letters (tap letter tiles to spell) or match (pair
+	// the two columns).
+	Type   string `json:"type,omitempty"`
+	Prompt string `json:"prompt"`
+	// Options: mcq and multi, with the right ones given by their text.
+	Options        []string `json:"options,omitempty"`
+	CorrectOption  string   `json:"correctOption,omitempty"`
+	CorrectOptions []string `json:"correctOptions,omitempty"`
+	// Tokens and Solution: word_order's words and sentence; letters' tiles
+	// (optional: the word's own letters, plus any decoys) and word.
+	Tokens   []string         `json:"tokens,omitempty"`
+	Solution string           `json:"solution,omitempty"`
+	Pairs    []AssessmentPair `json:"pairs,omitempty"` // match
+	// AcceptableAnswers: text items.
+	AcceptableAnswers []string `json:"acceptableAnswers,omitempty"`
 	Rubric            string   `json:"rubric"`
 	// Listen is English played to the learner (not shown) for listening items.
 	Listen string `json:"listen,omitempty"`
 }
+
+// AssessmentPair is one pair of a match item.
+type AssessmentPair struct {
+	Left  string `json:"left"`
+	Right string `json:"right"`
+}
+
+// Assessment item types; an empty type is text.
+var assessmentTypes = map[string]bool{"": true, "text": true, "mcq": true, "multi": true, "word_order": true, "letters": true, "match": true}
 
 // Lesson is the teachable content for a ready node.
 type Lesson struct {
@@ -641,7 +665,10 @@ func validateLessons(c *Curriculum) []error {
 			if !objIDs[it.ObjectiveID] {
 				errs = append(errs, fmt.Errorf("lesson %q: item %q targets unknown objective %q", id, it.ID, it.ObjectiveID))
 			}
-			if len(it.AcceptableAnswers) == 0 {
+			if !assessmentTypes[it.Type] {
+				errs = append(errs, fmt.Errorf("lesson %q: item %q has unknown type %q", id, it.ID, it.Type))
+			}
+			if (it.Type == "" || it.Type == "text") && len(it.AcceptableAnswers) == 0 {
 				errs = append(errs, fmt.Errorf("lesson %q: item %q needs at least one acceptable answer", id, it.ID))
 			}
 			if len([]rune(it.Listen)) > 300 {

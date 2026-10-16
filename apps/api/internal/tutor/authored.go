@@ -20,6 +20,41 @@ func objectiveIDs(n *curriculum.Node) []string {
 	return ids
 }
 
+// AuthoredDraft is a hand-written checkpoint item as a writer's draft, with
+// its prompt in the learner's language.
+func AuthoredDraft(it curriculum.AssessmentItem, prompt string) DraftItem {
+	typ := it.Type
+	if typ == "" {
+		typ = QuestionText
+	}
+	d := DraftItem{
+		CheckItem: CheckItem{
+			Question: Question{Type: typ, ObjectiveID: it.ObjectiveID, Prompt: prompt, Listen: it.Listen, Explanation: it.Rubric,
+				Options: slices.Clone(it.Options), Tokens: slices.Clone(it.Tokens), Solution: it.Solution},
+			Accepted: it.AcceptableAnswers, Rubric: it.Rubric,
+		},
+		CorrectOption: it.CorrectOption, CorrectOptions: it.CorrectOptions,
+	}
+	for _, p := range it.Pairs {
+		d.Pairs = append(d.Pairs, MatchPair(p))
+	}
+	return d
+}
+
+// AuthoredDrafts is a lesson's hand-written checkpoint as drafts.
+func AuthoredDrafts(l *curriculum.Lesson, lang string) []DraftItem {
+	ds := make([]DraftItem, 0, len(l.Assessment))
+	for _, it := range l.Assessment {
+		ds = append(ds, AuthoredDraft(it, l.PromptIn(it, lang)))
+	}
+	return ds
+}
+
+// AuthoredItems is a lesson's hand-written checkpoint, before validation.
+func AuthoredItems(l *curriculum.Lesson, lang string) ([]CheckItem, error) {
+	return FromDrafts(AuthoredDrafts(l, lang))
+}
+
 // AuthoredPlan returns a lesson's hand-written plan in a language. ok is
 // false when the lesson has none in that language.
 func AuthoredPlan(c *curriculum.Curriculum, nodeID, lang string) (p Plan, ok bool, err error) {
@@ -77,12 +112,11 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 	for _, lang := range courseLanguages(c) {
 		// The hand-written checkpoint is the fallback when the AI can't write
 		// one, so it has to pass the same checks.
-		items := make([]CheckItem, 0, len(lesson.Assessment))
-		for _, it := range lesson.Assessment {
-			items = append(items, CheckItem{Question: Question{Type: QuestionText, ObjectiveID: it.ObjectiveID,
-				Prompt: lesson.PromptIn(it, lang), Listen: it.Listen}, Accepted: it.AcceptableAnswers, Rubric: it.Rubric})
+		items, err := AuthoredItems(lesson, lang)
+		if err == nil {
+			_, err = ValidateCheckpoint(items, objectives, nil)
 		}
-		if _, err := ValidateCheckpoint(items, objectives, nil); err != nil {
+		if err != nil {
 			bad("%s/%s: hand-written checkpoint: %v", n.ID, lang, err)
 		}
 	}

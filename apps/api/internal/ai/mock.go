@@ -185,9 +185,9 @@ func (m *Mock) Checkpoint(ctx context.Context, in CheckpointInput) (Result, erro
 		return Result{}, fmt.Errorf("%w: %v", ErrUnavailable, err)
 	}
 	if len(in.LevelLessons) > 0 {
-		return ok(map[string]any{"items": LevelFallback(in.LevelLessons)})
+		return ok(map[string]any{"items": levelDrafts(in.LevelLessons)})
 	}
-	return ok(map[string]any{"items": AuthoredCheckpoint(in.Lesson, in.Locale)})
+	return ok(map[string]any{"items": tutor.AuthoredDrafts(in.Lesson, in.Locale)})
 }
 
 // VerifyCheckpoint passes every question unless a test says otherwise.
@@ -209,16 +209,11 @@ func (m *Mock) VerifyCheckpoint(ctx context.Context, in VerifyInput) (Result, er
 	return ok(map[string]any{"items": out})
 }
 
-// AuthoredCheckpoint turns a lesson's hand-written checkpoint into open
-// questions (also the fallback when the AI's checkpoint doesn't validate).
+// AuthoredCheckpoint is a lesson's hand-written checkpoint (also the
+// fallback when the AI's checkpoint doesn't validate). The course check
+// makes sure it converts.
 func AuthoredCheckpoint(l *curriculum.Lesson, lang string) []tutor.CheckItem {
-	items := make([]tutor.CheckItem, 0, len(l.Assessment))
-	for _, it := range l.Assessment {
-		items = append(items, tutor.CheckItem{
-			Question: tutor.Question{Type: tutor.QuestionText, ObjectiveID: it.ObjectiveID, Prompt: l.PromptIn(it, lang), Listen: it.Listen, Explanation: it.Rubric},
-			Accepted: it.AcceptableAnswers, Rubric: it.Rubric,
-		})
-	}
+	items, _ := tutor.AuthoredItems(l, lang)
 	return items
 }
 

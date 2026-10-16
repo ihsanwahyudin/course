@@ -4,15 +4,26 @@ import (
 	"encoding/json"
 	"fmt"
 	"hash/fnv"
+	"maps"
 	"math"
 	"math/rand/v2"
+	"slices"
 	"strconv"
 	"strings"
 )
 
-// QuestionText is an open checkpoint answer, typed or spoken, graded against
-// accepted answers and a rubric.
-const QuestionText = "text"
+// Checkpoint-only question types. Besides multiple choice and word order:
+const (
+	// QuestionText is an open answer, typed or spoken, graded against
+	// accepted answers and a rubric.
+	QuestionText = "text"
+	// QuestionLetters: spell a word by tapping letter tiles.
+	QuestionLetters = "letters"
+	// QuestionMulti: tick every right option; more than one is right.
+	QuestionMulti = "multi"
+	// QuestionMatch: pair each item on the left with one on the right.
+	QuestionMatch = "match"
+)
 
 const (
 	MinCheckItems      = 5
@@ -26,16 +37,28 @@ const (
 	// A checkpoint question may quote a short text to read (an email, a
 	// notice), so its prompt can be longer than a lesson step's.
 	maxCheckPrompt = 800
+	maxSpelled     = 15 // letters: the longest word to spell
+	maxDecoys      = 3  // letters: extra tiles that aren't in the word
+	maxMatchPairs  = 6
 )
 
 // CheckItem is one checkpoint question. Multiple choice and word order use
-// the lesson question fields; open answers use Accepted and Rubric. The
-// answer key never leaves the server before grading.
+// the lesson question fields; letters uses Tokens (the tiles) and Solution
+// (the word); multi uses Options and Answers; match uses Left, Right and
+// Pairing; open answers use Accepted and Rubric. The answer key never
+// leaves the server before grading.
 type CheckItem struct {
 	ID string `json:"id"`
 	// LessonID: in a level checkpoint, the lesson the question comes from.
 	LessonID string `json:"lessonId,omitempty"`
 	Question
+	// Answers: multi, the indexes of every right option.
+	Answers []int `json:"answers,omitempty"`
+	// Left and Right: match, the two columns. Pairing[i] is the index in
+	// Right that goes with Left[i].
+	Left     []string `json:"left,omitempty"`
+	Right    []string `json:"right,omitempty"`
+	Pairing  []int    `json:"pairing,omitempty"`
 	Accepted []string `json:"acceptedAnswers"`
 	Rubric   string   `json:"rubric"`
 }
@@ -49,6 +72,12 @@ func (it CheckItem) Key() string {
 		}
 	case QuestionWordOrder:
 		return it.Solution
+	case QuestionLetters:
+		return spellOut(it.Solution)
+	case QuestionMulti:
+		return it.optionsText(it.Answers)
+	case QuestionMatch:
+		return it.pairsText(it.Pairing)
 	}
 	if len(it.Accepted) > 0 {
 		return it.Accepted[0]
@@ -57,52 +86,94 @@ func (it CheckItem) Key() string {
 }
 
 // DraftItem is a checkpoint question as the writer sends it, with the right
-// option given by its text (models get an index wrong far more often).
+// options given by their text (models get an index wrong far more often)
+// and a match question as its pairs.
 type DraftItem struct {
 	CheckItem
-	CorrectOption string `json:"correctOption"`
+	CorrectOption  string      `json:"correctOption"`
+	CorrectOptions []string    `json:"correctOptions"`
+	Pairs          []MatchPair `json:"pairs"`
 }
 
-// FromDrafts turns a writer's questions into items: the right option becomes
-// its index, and options are shuffled so the right one isn't always first.
+// MatchPair is one pair of a match question, as the writer gives it.
+type MatchPair struct {
+	Left  string `json:"left"`
+	Right string `json:"right"`
+}
+
+// FromDrafts turns a writer's questions into items: right options become
+// indexes, and options and match columns are shuffled so the answer isn't
+// always in the same place.
 func FromDrafts(ds []DraftItem) ([]CheckItem, error) {
 	items := make([]CheckItem, 0, len(ds))
 	for i, d := range ds {
 		it := d.CheckItem
-		if it.Type == QuestionMCQ {
-			it.Answer = -1
-			for j, o := range it.Options {
-				if NormalizeWords(o) == NormalizeWords(d.CorrectOption) && strings.TrimSpace(d.CorrectOption) != "" {
-					it.Answer = j
-					break
-				}
-			}
+		switch it.Type {
+		case QuestionMCQ:
+			it.Answer = optionIndex(it.Options, d.CorrectOption)
 			if it.Answer < 0 {
 				return nil, fmt.Errorf("question %d: the correct option %q isn't one of its options", i+1, d.CorrectOption)
 			}
-			it.Options, it.Answer = shuffleOptions(it.Options, it.Answer, it.Prompt)
+			order := shuffled(len(it.Options), it.Prompt)
+			it.Options, it.Answer = permute(it.Options, order), order[it.Answer]
+		case QuestionMulti:
+			it.Answers = nil
+			for _, c := range d.CorrectOptions {
+				j := optionIndex(it.Options, c)
+				if j < 0 {
+					return nil, fmt.Errorf("question %d: the correct option %q isn't one of its options", i+1, c)
+				}
+				it.Answers = append(it.Answers, j)
+			}
+			order := shuffled(len(it.Options), it.Prompt)
+			it.Options = permute(it.Options, order)
+			for k, a := range it.Answers {
+				it.Answers[k] = order[a]
+			}
+			slices.Sort(it.Answers)
+		case QuestionMatch:
+			it.Left, it.Right, it.Pairing = nil, nil, nil
+			for _, p := range d.Pairs {
+				it.Left = append(it.Left, p.Left)
+				it.Right = append(it.Right, p.Right)
+			}
+			order := shuffled(len(it.Right), it.Prompt)
+			it.Right = permute(it.Right, order)
+			it.Pairing = order
 		}
 		items = append(items, it)
 	}
 	return items, nil
 }
 
-// shuffleOptions reorders options by a hash of the prompt (stable for a
-// question, different across questions).
-func shuffleOptions(options []string, answer int, seed string) ([]string, int) {
+// optionIndex finds an option by its text, or -1.
+func optionIndex(options []string, text string) int {
+	if strings.TrimSpace(text) == "" {
+		return -1
+	}
+	for j, o := range options {
+		if NormalizeWords(o) == NormalizeWords(text) {
+			return j
+		}
+	}
+	return -1
+}
+
+// shuffled is a permutation of n chosen by a hash of seed (stable for a
+// question, different across questions): item i moves to order[i].
+func shuffled(n int, seed string) []int {
 	h := fnv.New32a()
 	_, _ = h.Write([]byte(seed))
 	r := rand.New(rand.NewPCG(uint64(h.Sum32()), 0x9e3779b97f4a7c15))
-	order := r.Perm(len(options))
-	out := make([]string, len(options))
-	newAnswer := 0
-	for to, from := range order {
-		out[to] = options[from]
-		if from == answer {
-			newAnswer = to
-		}
+	return r.Perm(n)
+}
+
+func permute[T any](xs []T, order []int) []T {
+	out := make([]T, len(xs))
+	for from, to := range order {
+		out[to] = xs[from]
 	}
-	return out, newAnswer
+	return out
 }
 
 // ValidateCheckpoint checks a written checkpoint: 5–8 valid questions that
@@ -155,14 +226,20 @@ func validateItems(items []CheckItem, objectives map[string]bool, earlier []stri
 	out := make([]CheckItem, 0, len(items))
 	for i, it := range items {
 		var err error
-		if it.Type == QuestionText {
+		switch it.Type {
+		case QuestionText:
 			it, err = validateTextItem(it, objectives)
-		} else {
+		case QuestionMCQ, QuestionWordOrder:
 			// The grader writes each explanation; a key explanation is optional here.
 			if strings.TrimSpace(it.Explanation) == "" {
 				it.Explanation = "-"
 			}
 			it.Question, err = validateQuestion(it.Question, objectives, maxCheckPrompt)
+			it.Answers, it.Left, it.Right, it.Pairing = nil, nil, nil, nil
+		default:
+			it, err = validateTileItem(it, objectives)
+		}
+		if err == nil && it.Type != QuestionText {
 			it.Accepted, it.Rubric = []string{it.Key()}, clean(it.Rubric)
 		}
 		if err != nil {
@@ -231,8 +308,224 @@ func validateTextItem(it CheckItem, objectives map[string]bool) (CheckItem, erro
 	return it, nil
 }
 
+// validateTileItem checks a letters, multi or match question.
+func validateTileItem(it CheckItem, objectives map[string]bool) (CheckItem, error) {
+	if strings.TrimSpace(it.Explanation) == "" {
+		it.Explanation = "-"
+	}
+	q, err := checkBasics(it.Question, objectives, maxCheckPrompt)
+	if err != nil {
+		return it, err
+	}
+	it.Question = q
+	it.Options, it.Left, it.Right, it.Solution, it.Answer = cleanAll(it.Options), cleanAll(it.Left), cleanAll(it.Right), clean(it.Solution), 0
+	switch it.Type {
+	case QuestionLetters:
+		return validateLetters(it)
+	case QuestionMulti:
+		return validateMulti(it)
+	case QuestionMatch:
+		return validateMatch(it)
+	}
+	return it, fmt.Errorf("unknown question type %q", it.Type)
+}
+
+// validateLetters: Solution is one word to spell; Tokens are its letters,
+// shuffled, plus at most maxDecoys others. Without tokens the tiles are the
+// word's own letters.
+func validateLetters(it CheckItem) (CheckItem, error) {
+	word := letters(it.Solution)
+	if word == "" || word != strings.ToLower(FoldAccents(it.Solution)) || len(word) < 2 || len(word) > maxSpelled {
+		return it, fmt.Errorf("a letters question spells one word of 2–%d letters", maxSpelled)
+	}
+	shown := strings.FieldsFunc(strings.ToLower(FoldAccents(it.Prompt)), func(r rune) bool { return r < 'a' || r > 'z' })
+	if slices.Contains(shown, word) {
+		return it, fmt.Errorf("a letters question must not show the word; play it (listen) or give its meaning")
+	}
+	tiles := make([]string, 0, len(word)+maxDecoys)
+	for _, t := range it.Tokens {
+		l := letters(t)
+		if len(l) != 1 || runes(clean(t)) != 1 {
+			return it, fmt.Errorf("letter tiles must be single letters")
+		}
+		tiles = append(tiles, strings.ToUpper(l))
+	}
+	if len(tiles) == 0 {
+		for _, r := range word {
+			tiles = append(tiles, strings.ToUpper(string(r)))
+		}
+	}
+	if !fitsTiles(word, tiles) {
+		return it, fmt.Errorf("the letter tiles must include every letter of %q", it.Solution)
+	}
+	if len(tiles) > len(word)+maxDecoys {
+		return it, fmt.Errorf("at most %d extra letter tiles", maxDecoys)
+	}
+	if letters(strings.Join(tiles, "")) == word || len(it.Tokens) == 0 {
+		tiles = permute(tiles, shuffled(len(tiles), it.Prompt+it.Solution))
+		if letters(strings.Join(tiles, "")) == word {
+			tiles = append(tiles[1:], tiles[0])
+		}
+	}
+	it.Tokens, it.Solution = tiles, word
+	it.Options, it.Answers, it.Left, it.Right, it.Pairing = nil, nil, nil, nil, nil
+	return it, nil
+}
+
+// validateMulti: 3–6 distinct options, at least one right and one wrong.
+func validateMulti(it CheckItem) (CheckItem, error) {
+	if len(it.Options) < 3 || len(it.Options) > 6 || !distinct(it.Options) {
+		return it, fmt.Errorf("a multi question needs 3–6 distinct options")
+	}
+	seen := map[int]bool{}
+	for _, a := range it.Answers {
+		if a < 0 || a >= len(it.Options) || seen[a] {
+			return it, fmt.Errorf("multi answers must be distinct options")
+		}
+		seen[a] = true
+	}
+	if len(seen) == 0 || len(seen) == len(it.Options) {
+		return it, fmt.Errorf("a multi question needs at least one right and one wrong option")
+	}
+	it.Answers = slices.Sorted(maps.Keys(seen))
+	it.Tokens, it.Solution, it.Left, it.Right, it.Pairing = nil, "", nil, nil, nil
+	return it, nil
+}
+
+// validateMatch: 2–6 pairs, distinct on each side; the right column never
+// starts in the answer's order.
+func validateMatch(it CheckItem) (CheckItem, error) {
+	n := len(it.Left)
+	if n < 2 || n > maxMatchPairs || len(it.Right) != n || len(it.Pairing) != n {
+		return it, fmt.Errorf("a match question needs 2–%d pairs", maxMatchPairs)
+	}
+	if !distinct(it.Left) || !distinct(it.Right) {
+		return it, fmt.Errorf("match items must be distinct and short")
+	}
+	if !isPermutation(it.Pairing) {
+		return it, fmt.Errorf("match pairing must use each right item once")
+	}
+	inOrder := true
+	for i, p := range it.Pairing {
+		inOrder = inOrder && p == i
+	}
+	if inOrder {
+		it.Right = append(it.Right[1:], it.Right[0])
+		for i := range it.Pairing {
+			it.Pairing[i] = (i + n - 1) % n
+		}
+	}
+	it.Options, it.Answers, it.Tokens, it.Solution = nil, nil, nil, ""
+	return it, nil
+}
+
+func cleanAll(xs []string) []string {
+	if xs == nil {
+		return nil
+	}
+	out := make([]string, len(xs))
+	for i, x := range xs {
+		out[i] = clean(x)
+	}
+	return out
+}
+
+// distinct: every entry is non-empty, short and different (ignoring case).
+func distinct(xs []string) bool {
+	seen := map[string]bool{}
+	for _, x := range xs {
+		k := strings.ToLower(x)
+		if badLen(x, maxShort) || seen[k] {
+			return false
+		}
+		seen[k] = true
+	}
+	return true
+}
+
+func isPermutation(xs []int) bool {
+	seen := make([]bool, len(xs))
+	for _, x := range xs {
+		if x < 0 || x >= len(xs) || seen[x] {
+			return false
+		}
+		seen[x] = true
+	}
+	return true
+}
+
+// letters keeps only the letters of s, lowercased: "H-O-U-S-E" → "house".
+func letters(s string) string {
+	var b strings.Builder
+	for _, r := range strings.ToLower(FoldAccents(s)) {
+		if r >= 'a' && r <= 'z' {
+			b.WriteRune(r)
+		}
+	}
+	return b.String()
+}
+
+// spellOut writes a word as its letters: "house" → "H-O-U-S-E".
+func spellOut(word string) string {
+	return strings.Join(strings.Split(strings.ToUpper(letters(word)), ""), "-")
+}
+
+// fitsTiles: s can be spelled with the tiles, each used at most once.
+func fitsTiles(s string, tiles []string) bool {
+	left := map[rune]int{}
+	for _, t := range tiles {
+		for _, r := range letters(t) {
+			left[r]++
+		}
+	}
+	for _, r := range s {
+		if left[r] == 0 {
+			return false
+		}
+		left[r]--
+	}
+	return true
+}
+
+// indexes parses a "2,0,1" answer: distinct indexes below n.
+func indexes(answer string, n int) ([]int, bool) {
+	var out []int
+	seen := map[int]bool{}
+	for _, f := range strings.Split(answer, ",") {
+		i, err := strconv.Atoi(strings.TrimSpace(f))
+		if err != nil || i < 0 || i >= n || seen[i] {
+			return nil, false
+		}
+		seen[i] = true
+		out = append(out, i)
+	}
+	return out, len(out) > 0
+}
+
+func (it CheckItem) optionsText(picks []int) string {
+	var out []string
+	for _, i := range slices.Sorted(slices.Values(picks)) {
+		if i >= 0 && i < len(it.Options) {
+			out = append(out, it.Options[i])
+		}
+	}
+	return strings.Join(out, ", ")
+}
+
+func (it CheckItem) pairsText(pairing []int) string {
+	var out []string
+	for i, j := range pairing {
+		if i < len(it.Left) && j >= 0 && j < len(it.Right) {
+			out = append(out, it.Left[i]+" → "+it.Right[j])
+		}
+	}
+	return strings.Join(out, "; ")
+}
+
 // AnswerFits reports whether an answer has the question's shape: an option
-// index for multiple choice, the given words for word order.
+// index for multiple choice, the given words for word order, letters from
+// the tiles for letters, option indexes ("0,2") for multi, and one right
+// item per left item ("2,0,1") for match.
 func AnswerFits(it CheckItem, answer string) bool {
 	switch it.Type {
 	case QuestionMCQ:
@@ -240,13 +533,23 @@ func AnswerFits(it CheckItem, answer string) bool {
 		return err == nil && i >= 0 && i < len(it.Options)
 	case QuestionWordOrder:
 		return sameWords(it.Tokens, answer)
+	case QuestionLetters:
+		l := letters(answer)
+		return l != "" && fitsTiles(l, it.Tokens)
+	case QuestionMulti:
+		_, ok := indexes(answer, len(it.Options))
+		return ok
+	case QuestionMatch:
+		picks, ok := indexes(answer, len(it.Right))
+		return ok && len(picks) == len(it.Left)
 	}
 	return true
 }
 
 // FixedVerdict grades what needs no judgement: multiple choice and word
-// order are right or wrong, and an open answer equal to an accepted one is
-// right. ok is false when an open answer needs the grader.
+// order are right or wrong; letters, multi and match earn part marks; an
+// open answer equal to an accepted one is right. ok is false when an open
+// answer needs the grader.
 func FixedVerdict(it CheckItem, answer string, exact func(string, []string) bool) (score int, ok bool) {
 	switch it.Type {
 	case QuestionMCQ:
@@ -260,11 +563,83 @@ func FixedVerdict(it CheckItem, answer string, exact func(string, []string) bool
 			return 100, true
 		}
 		return 0, true
+	case QuestionLetters:
+		got, want := letters(answer), letters(it.Solution)
+		switch {
+		case got == want:
+			return 100, true
+		case len(want) >= 4 && editDistance(got, want) == 1:
+			return 50, true // one letter wrong, missing or extra
+		}
+		return 0, true
+	case QuestionMulti:
+		picks, _ := indexes(answer, len(it.Options))
+		right := 0
+		for _, p := range picks {
+			if slices.Contains(it.Answers, p) {
+				right++
+			}
+		}
+		// A wrong tick cancels a right one, so ticking everything earns nothing.
+		net := max(0, right-(len(picks)-right))
+		return int(math.Round(float64(net) * 100 / float64(max(1, len(it.Answers))))), true
+	case QuestionMatch:
+		picks, _ := indexes(answer, len(it.Right))
+		right := 0
+		for i, p := range picks {
+			if i < len(it.Pairing) && it.Pairing[i] == p {
+				right++
+			}
+		}
+		return int(math.Round(float64(right) * 100 / float64(max(1, len(it.Pairing))))), true
 	}
 	if exact(answer, it.Accepted) {
 		return 100, true
 	}
 	return 0, false
+}
+
+// AnswerText is an answer as a person reads it: the option's text for
+// multiple choice and multi, spelled letters, the pairs for match.
+func AnswerText(it CheckItem, answer string) string {
+	answer = strings.TrimSpace(answer)
+	switch it.Type {
+	case QuestionMCQ:
+		if n, err := strconv.Atoi(answer); err == nil && n >= 0 && n < len(it.Options) {
+			return it.Options[n]
+		}
+	case QuestionLetters:
+		return spellOut(answer)
+	case QuestionMulti:
+		if picks, ok := indexes(answer, len(it.Options)); ok {
+			return it.optionsText(picks)
+		}
+	case QuestionMatch:
+		if picks, ok := indexes(answer, len(it.Right)); ok {
+			return it.pairsText(picks)
+		}
+	}
+	return answer
+}
+
+func editDistance(a, b string) int {
+	prev := make([]int, len(b)+1)
+	for j := range prev {
+		prev[j] = j
+	}
+	for i := 1; i <= len(a); i++ {
+		cur := make([]int, len(b)+1)
+		cur[0] = i
+		for j := 1; j <= len(b); j++ {
+			cost := 1
+			if a[i-1] == b[j-1] {
+				cost = 0
+			}
+			cur[j] = min(prev[j]+1, cur[j-1]+1, prev[j-1]+cost)
+		}
+		prev = cur
+	}
+	return prev[len(b)]
 }
 
 // ItemReview is how one answer was graded, kept with the attempt.
@@ -365,12 +740,7 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 		if (it.Type == QuestionText || keyFixed) && clean(gi.CorrectAnswer) != "" {
 			correct = clean(gi.CorrectAnswer)
 		}
-		ans := strings.TrimSpace(answers[it.ID])
-		if it.Type == QuestionMCQ {
-			if n, err := strconv.Atoi(ans); err == nil && n >= 0 && n < len(it.Options) {
-				ans = it.Options[n]
-			}
-		}
+		ans := AnswerText(it, answers[it.ID])
 		rev.Items = append(rev.Items, ItemReview{
 			ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt, Options: it.Options, Listen: it.Listen,
 			Answer: ans, CorrectAnswer: correct, Score: score, Verdict: verdict(score), Explanation: expl, KeyFixed: keyFixed,
