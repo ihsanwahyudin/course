@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+<linearGradient id="ring" x1="1" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#f5844c"/><stop offset="0.35" stop-color="#c04cf5"/><stop offset="0.75" stop-color="#5b4cf5"/><stop offset="1" stop-color="#5b4cf5"/></linearGradient>
+<linearGradient id="mark" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5b4cf5"/><stop offset="0.55" stop-color="#c04cf5"/><stop offset="1" stop-color="#f5844c"/></linearGradient>
+</defs>
+
+<circle cx="512" cy="512" r="444.44444444444446" fill="#ffffff"/>
+<circle cx="512" cy="512" r="472.22222222222223" fill="none" stroke="url(#ring)" stroke-width="55.55555555555555"/>
+<g transform="translate(282 282) scale(19.166666666666668)" fill="none" stroke="url(#mark)" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>
+</g></svg>
