@@ -165,62 +165,80 @@
     {
       "id": "cs-1",
       "objectiveId": "countable-uncountable",
-      "prompt": "Which word is uncountable? Write it: banana, chair, milk, egg",
-      "acceptableAnswers": [
-        "milk"
+      "prompt": "Choose the correct answer. Which word is uncountable? Choose it: banana, chair, milk, egg",
+      "rubric": "Correct: milk. Any other word = 0.",
+      "type": "mcq",
+      "options": [
+        "milk",
+        "banana",
+        "chair"
       ],
-      "rubric": "Correct: milk. Any other word = 0."
+      "correctOption": "milk"
     },
     {
       "id": "cs-2",
       "objectiveId": "countable-uncountable",
-      "prompt": "Correct the mistake: Sari buys two sugars at the market.",
-      "acceptableAnswers": [
-        "sari buys two kilos of sugar at the market",
-        "sari buys two bags of sugar at the market",
-        "sari buys two packs of sugar at the market",
-        "sari buys two packets of sugar at the market",
-        "sari buys two kilograms of sugar at the market",
-        "sari buys some sugar at the market"
+      "prompt": "Choose the correct answer. Choose the correct sentence about two bags (kantong) of sugar.",
+      "rubric": "Correct: a countable unit + of sugar (two kilos / bags / packs of sugar), or 'some sugar'. 'two kilo of sugar' (no -s on the unit) = 70. 'two sugar' = 20. The sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "Sari buys two bags of sugar at the market.",
+        "Sari buys two kilo of sugar at the market.",
+        "Sari buys two kilos sugars at the market."
       ],
-      "rubric": "Correct: a countable unit + of sugar (two kilos / bags / packs of sugar), or 'some sugar'. 'two kilo of sugar' (no -s on the unit) = 70. 'two sugar' = 20. The sentence unchanged = 0."
+      "correctOption": "Sari buys two bags of sugar at the market."
     },
     {
       "id": "cs-3",
       "objectiveId": "some-any",
-      "prompt": "Complete with some or any: Do you have ___ brothers or sisters?",
-      "acceptableAnswers": [
-        "any"
+      "prompt": "Choose the correct answer. Complete with some or any: Do you have ___ brothers or sisters?",
+      "rubric": "Correct: any (a question). 'some' = 0.",
+      "type": "mcq",
+      "options": [
+        "any",
+        "an",
+        "much"
       ],
-      "rubric": "Correct: any (a question). 'some' = 0."
+      "correctOption": "any"
     },
     {
       "id": "cs-4",
       "objectiveId": "some-any",
-      "prompt": "Complete with some or any: We need ___ tomatoes for the sambal.",
-      "acceptableAnswers": [
-        "some"
+      "prompt": "Choose the correct answer. Complete with some or any: We need ___ tomatoes for the sambal.",
+      "rubric": "Correct: some (a positive sentence). 'any' = 0.",
+      "type": "mcq",
+      "options": [
+        "some",
+        "any",
+        "an"
       ],
-      "rubric": "Correct: some (a positive sentence). 'any' = 0."
+      "correctOption": "some"
     },
     {
       "id": "cs-5",
       "objectiveId": "how-much-many",
-      "prompt": "Complete with much or many: How ___ people are there in your family?",
-      "acceptableAnswers": [
-        "many"
+      "prompt": "Choose the correct answer. Complete with much or many: How ___ people are there in your family?",
+      "rubric": "Correct: many, because people is a plural countable noun (one person, two people). 'much' = 0.",
+      "type": "mcq",
+      "options": [
+        "many",
+        "much",
+        "some"
       ],
-      "rubric": "Correct: many, because people is a plural countable noun (one person, two people). 'much' = 0."
+      "correctOption": "many"
     },
     {
       "id": "cs-6",
       "objectiveId": "how-much-many",
-      "prompt": "Correct the mistake: How many money have you got?",
-      "acceptableAnswers": [
-        "how much money have you got",
-        "how much money do you have"
+      "prompt": "Choose the correct answer. Correct the mistake: How many money have you got?",
+      "rubric": "Correct: How much money have you got? (money is uncountable). 'How much money do you have?' is also correct. 'How much moneys ...' = 50. The sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "How much money have you got",
+        "How many money have you got?",
+        "How much money has you got?"
       ],
-      "rubric": "Correct: How much money have you got? (money is uncountable). 'How much money do you have?' is also correct. 'How much moneys ...' = 50. The sentence unchanged = 0."
+      "correctOption": "How much money have you got"
     }
   ],
   "material": [
@@ -678,12 +696,12 @@
         "Bagaimana cara tahu kata benda itu countable atau tidak?"
       ],
       "assessment": {
-        "cs-1": "Kata mana yang tidak bisa dihitung (uncountable)? Tulis katanya: banana, chair, milk, egg",
-        "cs-2": "Perbaiki kesalahannya: Sari buys two sugars at the market.",
-        "cs-3": "Lengkapi dengan some atau any: Do you have ___ brothers or sisters?",
-        "cs-4": "Lengkapi dengan some atau any: We need ___ tomatoes for the sambal.",
-        "cs-5": "Lengkapi dengan much atau many: How ___ people are there in your family?",
-        "cs-6": "Perbaiki kesalahannya: How many money have you got?"
+        "cs-1": "Pilih jawaban yang benar. Kata mana yang tidak bisa dihitung (uncountable)? Pilih katanya: banana, chair, milk, egg",
+        "cs-2": "Pilih jawaban yang benar. Pilih kalimat yang benar tentang dua kantong (bags) gula.",
+        "cs-3": "Pilih jawaban yang benar. Lengkapi dengan some atau any: Do you have ___ brothers or sisters?",
+        "cs-4": "Pilih jawaban yang benar. Lengkapi dengan some atau any: We need ___ tomatoes for the sambal.",
+        "cs-5": "Pilih jawaban yang benar. Lengkapi dengan much atau many: How ___ people are there in your family?",
+        "cs-6": "Pilih jawaban yang benar. Perbaiki kesalahannya: How many money have you got?"
       }
     }
   }

@@ -100,8 +100,7 @@
       "objectiveId": "contractions",
       "prompt": "Write the short form of 'is not'.",
       "expected": [
-        "isn't",
-        "isnt"
+        "isn't"
       ],
       "hint": "Join the words and put an apostrophe where the o was. Say it IZ-nt."
     },
@@ -127,8 +126,7 @@
       "objectiveId": "contractions",
       "prompt": "Say it the natural way. Write it with a short form: He does not work on Sundays.",
       "expected": [
-        "he doesn't work on sundays",
-        "he doesnt work on sundays"
+        "he doesn't work on sundays"
       ],
       "hint": "does not → doesn't (DUZ-nt)."
     },
@@ -145,41 +143,56 @@
     {
       "id": "pe-1",
       "objectiveId": "s-endings",
-      "prompt": "Listen. Write the verb you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the verb you hear.",
       "listen": "Pak Budi teaches English at a school in Bandung.",
-      "acceptableAnswers": [
-        "teaches"
+      "rubric": "Correct: teaches (TEACH-iz, with an extra syllable). 'teach' = 0 (ending not heard). Spelling slip 'teachs' = 50.",
+      "type": "mcq",
+      "options": [
+        "teaches",
+        "teach",
+        "taught"
       ],
-      "rubric": "Correct: teaches (TEACH-iz, with an extra syllable). 'teach' = 0 (ending not heard). Spelling slip 'teachs' = 50."
+      "correctOption": "teaches"
     },
     {
       "id": "pe-2",
       "objectiveId": "s-endings",
-      "prompt": "Which word has an extra syllable /ɪz/ at the end: goes, closes or plays? Write it.",
-      "acceptableAnswers": [
-        "closes"
+      "prompt": "Choose the correct answer. Which word has an extra syllable /ɪz/ at the end: goes, closes or plays? Choose it.",
+      "rubric": "Correct: closes (CLOSE-iz, after a z sound). 'goes' = 0: it is spelled -es but ends with /z/, one syllable. 'plays' = 0.",
+      "type": "mcq",
+      "options": [
+        "closes",
+        "goes",
+        "plays"
       ],
-      "rubric": "Correct: closes (CLOSE-iz, after a z sound). 'goes' = 0: it is spelled -es but ends with /z/, one syllable. 'plays' = 0."
+      "correctOption": "closes"
     },
     {
       "id": "pe-3",
       "objectiveId": "s-endings",
-      "prompt": "Which verb ends with the sound /s/, with no buzz: reads, likes or calls? Write it.",
-      "acceptableAnswers": [
-        "likes"
+      "prompt": "Choose the correct answer. Which verb ends with the sound /s/, with no buzz: reads, likes or calls? Choose it.",
+      "rubric": "Correct: likes (after k, -s is /s/). 'reads' and 'calls' end with /z/ = 0.",
+      "type": "mcq",
+      "options": [
+        "likes",
+        "reads",
+        "calls"
       ],
-      "rubric": "Correct: likes (after k, -s is /s/). 'reads' and 'calls' end with /z/ = 0."
+      "correctOption": "likes"
     },
     {
       "id": "pe-4",
       "objectiveId": "contractions",
-      "prompt": "Listen. Write the short form (contraction) you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the short form (contraction) you hear.",
       "listen": "I don't drink coffee in the evening.",
-      "acceptableAnswers": [
+      "rubric": "Correct: don't. 'do not' = 50 (right meaning, but not the short form you heard). 'doesn't' = 0.",
+      "type": "mcq",
+      "options": [
         "don't",
-        "dont"
+        "doesn't",
+        "can't"
       ],
-      "rubric": "Correct: don't. 'do not' = 50 (right meaning, but not the short form you heard). 'doesn't' = 0."
+      "correctOption": "don't"
     },
     {
       "id": "pe-5",
@@ -194,20 +207,28 @@
     {
       "id": "pe-6",
       "objectiveId": "question-intonation",
-      "prompt": "Does your voice go up or down at the end of this question? Write up or down: Where does your brother work?",
-      "acceptableAnswers": [
-        "down"
+      "prompt": "Choose the correct answer. Does your voice go up or down at the end of this question? Choose up or down: Where does your brother work?",
+      "rubric": "Correct: down (wh- question with Where). 'up' = 0.",
+      "type": "mcq",
+      "options": [
+        "down",
+        "up",
+        "flat"
       ],
-      "rubric": "Correct: down (wh- question with Where). 'up' = 0."
+      "correctOption": "down"
     },
     {
       "id": "pe-7",
       "objectiveId": "question-intonation",
-      "prompt": "Does your voice go up or down at the end of this question? Write up or down: Is your office in Jakarta?",
-      "acceptableAnswers": [
-        "up"
+      "prompt": "Choose the correct answer. Does your voice go up or down at the end of this question? Choose up or down: Is your office in Jakarta?",
+      "rubric": "Correct: up (yes/no question with Is). 'down' = 0.",
+      "type": "mcq",
+      "options": [
+        "up",
+        "down",
+        "flat"
       ],
-      "rubric": "Correct: up (yes/no question with Is). 'down' = 0."
+      "correctOption": "up"
     }
   ],
   "material": [
@@ -795,13 +816,13 @@
         "Kenapa nada 'Where do you live?' turun di akhir?"
       ],
       "assessment": {
-        "pe-1": "Dengarkan. Tulis kata kerja yang kamu dengar.",
-        "pe-2": "Kata mana yang punya suku kata tambahan /ɪz/ di akhir: goes, closes atau plays? Tulis katanya.",
-        "pe-3": "Kata kerja mana yang berakhir dengan bunyi /s/, tanpa getaran: reads, likes atau calls? Tulis katanya.",
-        "pe-4": "Dengarkan. Tulis bentuk singkat (kontraksi) yang kamu dengar.",
+        "pe-1": "Pilih jawaban yang benar. Dengarkan. Pilih kata kerja yang kamu dengar.",
+        "pe-2": "Pilih jawaban yang benar. Kata mana yang punya suku kata tambahan /ɪz/ di akhir: goes, closes atau plays? Pilih katanya.",
+        "pe-3": "Pilih jawaban yang benar. Kata kerja mana yang berakhir dengan bunyi /s/, tanpa getaran: reads, likes atau calls? Pilih katanya.",
+        "pe-4": "Pilih jawaban yang benar. Dengarkan. Pilih bentuk singkat (kontraksi) yang kamu dengar.",
         "pe-5": "Ucapkan dengan cara yang alami, pakai bentuk singkat. Tulis dalam bahasa Inggris: I am not ready.",
-        "pe-6": "Apakah suaramu naik atau turun di akhir pertanyaan ini? Tulis up atau down: Where does your brother work?",
-        "pe-7": "Apakah suaramu naik atau turun di akhir pertanyaan ini? Tulis up atau down: Is your office in Jakarta?"
+        "pe-6": "Pilih jawaban yang benar. Apakah suaramu naik atau turun di akhir pertanyaan ini? Pilih up atau down: Where does your brother work?",
+        "pe-7": "Pilih jawaban yang benar. Apakah suaramu naik atau turun di akhir pertanyaan ini? Pilih up atau down: Is your office in Jakarta?"
       }
     }
   }

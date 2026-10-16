@@ -6,7 +6,7 @@ import { LoadingState } from '@/components/ui/Bits';
 import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
-import { useT } from '@/i18n';
+import { type TKey, useT } from '@/i18n';
 import type { AssessmentResult, CheckItemView, Session } from '@/lib/api';
 import { useErrorText } from '@/lib/errors';
 import { useStartCheckpoint, useSubmitAssessment } from '@/lib/queries';
@@ -15,21 +15,35 @@ import { colors, fonts, radius } from '@/theme/tokens';
 import { MicButton } from './AskBox';
 import { AttemptHistory, AttemptReview } from './CheckpointReview';
 import { ListenButton, Option, WordPicker } from './QuestionCard';
+import { LetterPicker, MatchPicker, MultiPicker, indexesOf } from './TilePickers';
 import { Indented, TutorLine } from './StepParts';
 
-// Word-order drafts hold the picked token indexes ("2,0,1").
-const pickedOf = (draft: string) => (draft ? draft.split(',').map(Number) : []);
+// Word-order, letters and multi drafts hold the picked indexes ("2,0,1");
+// match drafts the right item per left one ("2,,0").
+const pickedOf = indexesOf;
 
-// What gets sent: an mcq answer is the option's index, word order the sentence.
+// What gets sent: option indexes for mcq, multi and match, the sentence for
+// word order, the letters for letters.
 function answerOf(it: CheckItemView, draft: string) {
   if (it.type === 'word_order') return pickedOf(draft).map((i) => it.tokens?.[i] ?? '').join(' ');
+  if (it.type === 'letters') return pickedOf(draft).map((i) => it.tokens?.[i] ?? '').join('');
   return draft.trim();
 }
 
 function filled(it: CheckItemView, draft: string) {
   if (it.type === 'word_order') return pickedOf(draft).length === (it.tokens?.length ?? 0);
+  if (it.type === 'match') return draft.split(',').filter((p) => p !== '').length === (it.left?.length ?? 0);
   return draft.trim() !== '';
 }
+
+const how: Record<CheckItemView['type'], TKey> = {
+  mcq: 'checkpoint.pickOne',
+  multi: 'checkpoint.tickAll',
+  word_order: 'checkpoint.buildSentence',
+  letters: 'checkpoint.spell',
+  match: 'checkpoint.matchHint',
+  text: 'checkpoint.typeOrSpeak',
+};
 
 // The checkpoint: the only way to master a lesson, written fresh for every
 // attempt. One question at a time, no hints; the AI grades and explains
@@ -76,7 +90,6 @@ export function Checkpoint({
   const weakLessons = failed?.review?.lessons
     ? (session.level?.lessons ?? []).filter((l) => (failed.review!.lessons![l.id] ?? 100) < failed.threshold)
     : [];
-  const objective = (id: string) => session.node.objectives.find((o) => o.id === id)?.text;
   const draft = item ? (drafts[item.id] ?? '') : '';
   const isLast = idx === items.length - 1;
   const answering = started && !!cp;
@@ -244,14 +257,11 @@ export function Checkpoint({
               <Text size={19} weight="medium" tight style={{ lineHeight: 28 }}>
                 {item.prompt}
               </Text>
-              {item.hasAudio ? <ListenButton key={item.id} path={`/api/v1/sessions/${session.id}/checkpoints/${cp.id}/items/${item.id}/listen`} /> : null}
+              {item.hasAudio ? <ListenButton key={`${item.id}-listen`} path={`/api/v1/sessions/${session.id}/checkpoints/${cp.id}/items/${item.id}/listen`} /> : null}
+              {/* Not the item's objective: objectives often name what's being tested (e.g. "please, sorry, excuse me"). */}
               {item.lessonId && lessonTitles[item.lessonId] ? (
                 <Text size={13} color={colors.muted}>
                   {t('level.from', { title: lessonTitles[item.lessonId] })}
-                </Text>
-              ) : objective(item.objectiveId) ? (
-                <Text size={13} color={colors.muted}>
-                  {t('checkpoint.objective', { text: objective(item.objectiveId)! })}
                 </Text>
               ) : null}
 
@@ -261,8 +271,14 @@ export function Checkpoint({
                     <Option key={`${item.id}-${i}`} label={o} state={draft === String(i) ? 'picked' : 'idle'} disabled={submit.isPending} onPress={() => set(String(i))} />
                   ))}
                 </View>
+              ) : item.type === 'multi' ? (
+                <MultiPicker key={item.id} options={item.options ?? []} picked={pickedOf(draft)} setPicked={(p) => set(p.join(','))} disabled={submit.isPending} />
               ) : item.type === 'word_order' ? (
                 <WordPicker key={item.id} tokens={item.tokens ?? []} picked={pickedOf(draft)} setPicked={(p) => set(p.join(','))} />
+              ) : item.type === 'letters' ? (
+                <LetterPicker key={item.id} tiles={item.tokens ?? []} picked={pickedOf(draft)} setPicked={(p) => set(p.join(','))} disabled={submit.isPending} />
+              ) : item.type === 'match' ? (
+                <MatchPicker key={item.id} left={item.left ?? []} right={item.right ?? []} draft={draft} setDraft={set} disabled={submit.isPending} />
               ) : (
                 <View style={styles.inputRow}>
                   <TextInput
@@ -284,7 +300,7 @@ export function Checkpoint({
 
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
                 <Text size={13} color={colors.muted} style={{ flex: 1, minWidth: 160 }}>
-                  {item.type === 'mcq' ? t('checkpoint.pickOne') : item.type === 'word_order' ? t('checkpoint.buildSentence') : t('checkpoint.typeOrSpeak')}
+                  {t(how[item.type] ?? 'checkpoint.typeOrSpeak')}
                 </Text>
                 {idx > 0 ? <PillButton label={t('checkpoint.back')} variant="secondary" size="sm" disabled={submit.isPending} onPress={() => go(idx - 1)} /> : null}
                 {isLast ? (

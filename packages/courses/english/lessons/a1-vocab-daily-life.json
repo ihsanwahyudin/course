@@ -165,67 +165,81 @@
     {
       "id": "dl-1",
       "objectiveId": "clothes",
-      "prompt": "What are they called in English? You wear them on your feet, inside your shoes. (one word)",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. What are they called in English? You wear them on your feet, inside your shoes. (one word)",
+      "rubric": "Correct: socks. 'sock' = 80 (right word, but we usually say the plural). 'shoes' or 'sandals' = 0.",
+      "type": "mcq",
+      "options": [
         "socks",
-        "sock"
+        "gloves",
+        "boots"
       ],
-      "rubric": "Correct: socks. 'sock' = 80 (right word, but we usually say the plural). 'shoes' or 'sandals' = 0."
+      "correctOption": "socks"
     },
     {
       "id": "dl-2",
       "objectiveId": "clothes",
-      "prompt": "Correct the mistake: My sister is using a long skirt today.",
-      "acceptableAnswers": [
-        "my sister is wearing a long skirt today",
-        "my sister's wearing a long skirt today",
-        "today my sister is wearing a long skirt",
-        "today my sister's wearing a long skirt"
+      "prompt": "Choose the correct answer. Correct the mistake: My sister is using a long skirt today.",
+      "rubric": "Correct: replace 'using' with 'wearing' and keep 'is': My sister is wearing a long skirt today. 'My sister wears a long skirt today' = 60 (right verb, wrong tense for now). Keeping 'using' = 0.",
+      "type": "mcq",
+      "options": [
+        "My sister is wearing a long skirt today",
+        "My sister wearing a long skirt today.",
+        "My sister are wearing a long skirt today."
       ],
-      "rubric": "Correct: replace 'using' with 'wearing' and keep 'is': My sister is wearing a long skirt today. 'My sister wears a long skirt today' = 60 (right verb, wrong tense for now). Keeping 'using' = 0."
+      "correctOption": "My sister is wearing a long skirt today"
     },
     {
       "id": "dl-3",
       "objectiveId": "weather",
-      "prompt": "Look at the sky: there are a lot of grey clouds and no sun. Complete with one word: It's ___ today.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Look at the sky: there are a lot of grey clouds and no sun. Complete with one word: It's ___ today.",
+      "rubric": "Correct: cloudy. 'cloud' or 'clouds' = 30 (noun, not the weather word). 'sunny' or 'rainy' = 0.",
+      "type": "mcq",
+      "options": [
         "cloudy",
-        "very cloudy"
+        "sunny",
+        "snowy"
       ],
-      "rubric": "Correct: cloudy. 'cloud' or 'clouds' = 30 (noun, not the weather word). 'sunny' or 'rainy' = 0."
+      "correctOption": "cloudy"
     },
     {
       "id": "dl-4",
       "objectiveId": "weather",
-      "prompt": "Listen. What's the weather like? Write one word.",
+      "prompt": "Choose the correct answer. Listen. What's the weather like? Choose one word.",
       "listen": "It's very windy on the beach today.",
-      "acceptableAnswers": [
+      "rubric": "Correct: windy. 'wind' = 50 (noun). Any other weather word = 0.",
+      "type": "mcq",
+      "options": [
         "windy",
-        "very windy",
-        "it's windy",
-        "it is windy",
-        "it's very windy",
-        "it is very windy"
+        "sunny",
+        "rainy"
       ],
-      "rubric": "Correct: windy. 'wind' = 50 (noun). Any other weather word = 0."
+      "correctOption": "windy"
     },
     {
       "id": "dl-5",
       "objectiveId": "body-parts",
-      "prompt": "Complete with one word: I brush my ___ with toothpaste every morning.",
-      "acceptableAnswers": [
-        "teeth"
+      "prompt": "Choose the correct answer. Complete with one word: I brush my ___ with toothpaste every morning.",
+      "rubric": "Correct: teeth (irregular plural of tooth). 'tooth' = 40, 'tooths' or 'teeths' = 40 (right body part, wrong plural).",
+      "type": "mcq",
+      "options": [
+        "teeth",
+        "tooth",
+        "hair"
       ],
-      "rubric": "Correct: teeth (irregular plural of tooth). 'tooth' = 40, 'tooths' or 'teeths' = 40 (right body part, wrong plural)."
+      "correctOption": "teeth"
     },
     {
       "id": "dl-6",
       "objectiveId": "body-parts",
-      "prompt": "Budi is at the dentist. Complete what the dentist says with one word: 'Open your ___, please.'",
-      "acceptableAnswers": [
-        "mouth"
+      "prompt": "Choose the correct answer. Budi is at the dentist. Complete what the dentist says with one word: 'Open your ___, please.'",
+      "rubric": "Correct: mouth. 'teeth' or 'eyes' = 0.",
+      "type": "mcq",
+      "options": [
+        "mouth",
+        "hand",
+        "ear"
       ],
-      "rubric": "Correct: mouth. 'teeth' or 'eyes' = 0."
+      "correctOption": "mouth"
     }
   ],
   "material": [
@@ -567,12 +581,12 @@
         "Kapan pakai 'wear' dan kapan 'wearing'?"
       ],
       "assessment": {
-        "dl-1": "Apa namanya dalam bahasa Inggris? Kamu memakainya di kaki, di dalam sepatu. (satu kata)",
-        "dl-2": "Perbaiki kesalahannya: My sister is using a long skirt today.",
-        "dl-3": "Lihat langit: ada banyak awan abu-abu dan tidak ada matahari. Lengkapi dengan satu kata: It's ___ today.",
-        "dl-4": "Dengarkan. Bagaimana cuacanya? Tulis satu kata dalam bahasa Inggris.",
-        "dl-5": "Lengkapi dengan satu kata: I brush my ___ with toothpaste every morning.",
-        "dl-6": "Budi sedang di dokter gigi. Lengkapi ucapan dokter gigi dengan satu kata: 'Open your ___, please.'"
+        "dl-1": "Pilih jawaban yang benar. Apa namanya dalam bahasa Inggris? Kamu memakainya di kaki, di dalam sepatu. (satu kata)",
+        "dl-2": "Pilih jawaban yang benar. Perbaiki kesalahannya: My sister is using a long skirt today.",
+        "dl-3": "Pilih jawaban yang benar. Lihat langit: ada banyak awan abu-abu dan tidak ada matahari. Lengkapi dengan satu kata: It's ___ today.",
+        "dl-4": "Pilih jawaban yang benar. Dengarkan. Bagaimana cuacanya? Pilih satu kata dalam bahasa Inggris.",
+        "dl-5": "Pilih jawaban yang benar. Lengkapi dengan satu kata: I brush my ___ with toothpaste every morning.",
+        "dl-6": "Pilih jawaban yang benar. Budi sedang di dokter gigi. Lengkapi ucapan dokter gigi dengan satu kata: 'Open your ___, please.'"
       }
     }
   }

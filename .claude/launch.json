@@ -4,8 +4,38 @@
     {
       "name": "mobile-web",
       "runtimeExecutable": "sh",
-      "runtimeArgs": ["-c", "cd apps/mobile && BROWSER=none npx expo start --port 8081"],
+      "runtimeArgs": [
+        "-c",
+        "cd apps/mobile && BROWSER=none npx expo start --port 8081"
+      ],
       "port": 8081
+    },
+    {
+      "name": "api",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd apps/api && go build -o bin/server ./cmd/server && COURSES_DIR=../../packages/courses ./bin/server"
+      ],
+      "port": 8080
+    },
+    {
+      "name": "api-mock",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd apps/api && go build -o bin/server ./cmd/server && AI_PROVIDER=mock COURSES_DIR=../../packages/courses ./bin/server"
+      ],
+      "port": 8080
+    },
+    {
+      "name": "portfolio",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd ../portofolio-web && npx next dev -p 3005"
+      ],
+      "port": 3005
     }
   ]
 }

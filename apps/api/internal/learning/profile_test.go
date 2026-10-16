@@ -114,15 +114,15 @@ func TestProfilePersonalisesRoadmapAndTutor(t *testing.T) {
 	}
 	sess = finishSteps(t, s, sess)
 	// The evaluator gets the profile too.
-	// One wrong answer: the grader judges it, the exact matches are fixed.
+	// One letter missing: the tiles score it (50); every answer here is tapped, so all are fixed.
 	ans := answers(s, "a0-alphabet-sounds", true)
 	ans["q5"] = "g-r-e-n"
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, ans)
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(seenGrade) != 1 || !strings.Contains(seenGrade[0].GoalHint, "work") || len(seenGrade[0].Items) != 5 || len(seenGrade[0].Fixed) != 4 {
-		t.Fatalf("the grader should get the goal hint, every item and the 4 fixed scores: %+v", seenGrade)
+	if len(seenGrade) != 1 || !strings.Contains(seenGrade[0].GoalHint, "work") || len(seenGrade[0].Items) != 5 || len(seenGrade[0].Fixed) != 5 || seenGrade[0].Fixed["q5"] != 50 {
+		t.Fatalf("the grader should get the goal hint, every item and the fixed scores: %+v", seenGrade)
 	}
 	if res.Attempt.Threshold != 80 {
 		t.Fatalf("profile must not change the pass mark: %+v", res.Attempt)

@@ -175,19 +175,9 @@ func ValidateQuestion(q Question, objectives map[string]bool) (Question, error) 
 }
 
 func validateQuestion(q Question, objectives map[string]bool, maxPrompt int) (Question, error) {
-	q.Prompt, q.Explanation, q.ObjectiveID = clean(q.Prompt), clean(q.Explanation), clean(q.ObjectiveID)
-	if badLen(q.Prompt, maxPrompt) || badLen(q.Explanation, maxText) {
-		return q, fmt.Errorf("question needs a prompt and an explanation")
-	}
-	if !objectives[q.ObjectiveID] {
-		return q, fmt.Errorf("question targets unknown objective %q", q.ObjectiveID)
-	}
-	q.Listen = clean(q.Listen)
-	if runes(q.Listen) > 300 {
-		return q, fmt.Errorf("listen text must be at most 300 characters")
-	}
-	if q.Listen != "" && strings.Contains(NormalizeWords(q.Prompt), NormalizeWords(q.Listen)) {
-		return q, fmt.Errorf("the prompt must not show what the learner should hear")
+	q, err := checkBasics(q, objectives, maxPrompt)
+	if err != nil {
+		return q, err
 	}
 	switch q.Type {
 	case QuestionMCQ:
@@ -223,6 +213,32 @@ func validateQuestion(q Question, objectives map[string]bool, maxPrompt int) (Qu
 		return q, fmt.Errorf("unknown question type %q", q.Type)
 	}
 	return q, nil
+}
+
+// checkBasics checks and cleans what every question has: a prompt, an
+// explanation, a known objective and at most a short text to hear.
+func checkBasics(q Question, objectives map[string]bool, maxPrompt int) (Question, error) {
+	q.Prompt, q.Explanation, q.ObjectiveID = clean(q.Prompt), clean(q.Explanation), clean(q.ObjectiveID)
+	if badLen(q.Prompt, maxPrompt) || badLen(q.Explanation, maxText) {
+		return q, fmt.Errorf("question needs a prompt and an explanation")
+	}
+	if !objectives[q.ObjectiveID] {
+		return q, fmt.Errorf("question targets unknown objective %q", q.ObjectiveID)
+	}
+	q.Listen = clean(q.Listen)
+	if runes(q.Listen) > 300 {
+		return q, fmt.Errorf("listen text must be at most 300 characters")
+	}
+	if showsHeard(q.Prompt, q.Listen) {
+		return q, fmt.Errorf("the prompt must not show what the learner should hear")
+	}
+	return q, nil
+}
+
+// showsHeard: the prompt shows the text the learner should only hear. Whole
+// words only, so hearing "J." doesn't clash with a prompt that has a j in it.
+func showsHeard(prompt, listen string) bool {
+	return listen != "" && strings.Contains(" "+NormalizeWords(prompt)+" ", " "+NormalizeWords(listen)+" ")
 }
 
 func sameWords(tokens []string, solution string) bool {

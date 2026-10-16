@@ -117,50 +117,67 @@
     {
       "id": "sent-1",
       "objectiveId": "word-order",
-      "prompt": "Put the words in order: rice / they / eat",
-      "acceptableAnswers": [
-        "they eat rice"
-      ],
-      "rubric": "Correct: They eat rice. Any other order = 0–30."
+      "prompt": "Arrange the tiles. Put the words in order: rice / they / eat",
+      "rubric": "Correct: They eat rice. Any other order = 0–30.",
+      "type": "word_order",
+      "solution": "they eat rice",
+      "tokens": [
+        "eat",
+        "rice",
+        "they"
+      ]
     },
     {
       "id": "sent-2",
       "objectiveId": "word-order",
-      "prompt": "Translate into English: Saya membaca buku.",
-      "acceptableAnswers": [
-        "i read a book",
-        "i read books",
-        "i am reading a book",
-        "i read the book"
+      "prompt": "Choose the correct answer. Translate into English: Saya membaca buku.",
+      "rubric": "Must have subject I + read + book with an article or plural. Missing article = 70.",
+      "type": "mcq",
+      "options": [
+        "I read a book",
+        "I book read.",
+        "I reading a book."
       ],
-      "rubric": "Must have subject I + read + book with an article or plural. Missing article = 70."
+      "correctOption": "I read a book"
     },
     {
       "id": "sent-3",
       "objectiveId": "articles",
-      "prompt": "a or an? She has ___ umbrella.",
-      "acceptableAnswers": [
-        "an"
+      "prompt": "Choose the correct answer. a or an? She has ___ umbrella.",
+      "rubric": "Correct: an.",
+      "type": "mcq",
+      "options": [
+        "an",
+        "a",
+        "the"
       ],
-      "rubric": "Correct: an."
+      "correctOption": "an"
     },
     {
       "id": "sent-4",
       "objectiveId": "articles",
-      "prompt": "a or an? My father is ___ driver.",
-      "acceptableAnswers": [
-        "a"
+      "prompt": "Choose the correct answer. a or an? My father is ___ driver.",
+      "rubric": "Correct: a.",
+      "type": "mcq",
+      "options": [
+        "a",
+        "an",
+        "any"
       ],
-      "rubric": "Correct: a."
+      "correctOption": "a"
     },
     {
       "id": "sent-5",
       "objectiveId": "plurals",
-      "prompt": "Make it plural: one watch → two ___",
-      "acceptableAnswers": [
-        "watches"
+      "prompt": "Choose the correct answer. Make it plural: one watch → two ___",
+      "rubric": "Correct: watches. 'watchs' = 40.",
+      "type": "mcq",
+      "options": [
+        "watches",
+        "watchs",
+        "watch"
       ],
-      "rubric": "Correct: watches. 'watchs' = 40."
+      "correctOption": "watches"
     }
   ],
   "material": [
@@ -617,11 +634,11 @@
         "Kenapa tidak ada pengulangan kata seperti 'buku-buku'?"
       ],
       "assessment": {
-        "sent-1": "Susun kata-katanya: rice / they / eat",
-        "sent-2": "Terjemahkan ke bahasa Inggris: Saya membaca buku.",
-        "sent-3": "a atau an? She has ___ umbrella.",
-        "sent-4": "a atau an? My father is ___ driver.",
-        "sent-5": "Ubah ke bentuk jamak: one watch → two ___"
+        "sent-1": "Susun ubin kata. Susun kata-katanya: rice / they / eat",
+        "sent-2": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Saya membaca buku.",
+        "sent-3": "Pilih jawaban yang benar. a atau an? She has ___ umbrella.",
+        "sent-4": "Pilih jawaban yang benar. a atau an? My father is ___ driver.",
+        "sent-5": "Pilih jawaban yang benar. Ubah ke bentuk jamak: one watch → two ___"
       }
     }
   }

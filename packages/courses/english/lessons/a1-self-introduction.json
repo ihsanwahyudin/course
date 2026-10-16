@@ -135,14 +135,14 @@
     },
     {
       "objectiveId": "talk-about-your",
-      "prompt": "Write in English: Saya sangat suka membaca novel.",
+      "prompt": "Write in English: Saya sangat suka memasak.",
       "expected": [
-        "i really like reading novels",
-        "i like reading novels very much",
-        "i love reading novels",
-        "i really like to read novels"
+        "i really like cooking",
+        "i like cooking very much",
+        "i love cooking",
+        "i really like to cook"
       ],
-      "hint": "Not 'I very like'. Use really like, love, or very much at the end."
+      "hint": "Use I really like + cooking. Cooking = memasak."
     },
     {
       "objectiveId": "respond-when-someone",
@@ -159,84 +159,86 @@
     {
       "id": "si-1",
       "objectiveId": "introduce-yourself-with",
-      "prompt": "Correct the sentence: I'm from Indonesian.",
-      "acceptableAnswers": [
-        "i'm from indonesia",
-        "i am from indonesia",
-        "i'm indonesian",
-        "i am indonesian"
+      "prompt": "Choose the correct answer. Correct the sentence: I'm from Indonesian.",
+      "rubric": "Correct: I'm from Indonesia (from + country) or I'm Indonesian (nationality, without from). 'I'm Indonesia' or 'I from Indonesia' = 0. A small spelling slip (Indonesa) = 80.",
+      "type": "mcq",
+      "options": [
+        "I'm from indonesia",
+        "I'm from Indonesian.",
+        "I'm from Indonesia person."
       ],
-      "rubric": "Correct: I'm from Indonesia (from + country) or I'm Indonesian (nationality, without from). 'I'm Indonesia' or 'I from Indonesia' = 0. A small spelling slip (Indonesa) = 80."
+      "correctOption": "I'm from indonesia"
     },
     {
       "id": "si-2",
       "objectiveId": "introduce-yourself-with",
-      "prompt": "Write in English: Saya guru. Saya bekerja di sekolah.",
-      "acceptableAnswers": [
-        "i'm a teacher i work in a school",
-        "i am a teacher i work in a school",
-        "i'm a teacher i work at a school",
-        "i am a teacher i work at a school",
-        "i'm a teacher and i work in a school",
-        "i am a teacher and i work in a school",
-        "i'm a teacher and i work at a school",
-        "i am a teacher and i work at a school"
+      "prompt": "Choose the correct answer. Choose in English: Saya guru. Saya bekerja di sekolah.",
+      "rubric": "Two parts, 50 each: I'm a teacher (keep am and a) + I work in/at a school (no am before work). 'I teacher' or 'I'm teacher' = 25 for the first part. 'I am work in a school' or 'I working in a school' = 25 for the second part. Missing 'a' before school = minus 10.",
+      "type": "mcq",
+      "options": [
+        "I'm a teacher. I work in a school.",
+        "I'm teacher. I work in school a.",
+        "I a teacher. I work in a school."
       ],
-      "rubric": "Two parts, 50 each: I'm a teacher (keep am and a) + I work in/at a school (no am before work). 'I teacher' or 'I'm teacher' = 25 for the first part. 'I am work in a school' or 'I working in a school' = 25 for the second part. Missing 'a' before school = minus 10."
+      "correctOption": "I'm a teacher. I work in a school."
     },
     {
       "id": "si-3",
       "objectiveId": "talk-about-your",
-      "prompt": "Write in English: Saya suka bermain gitar.",
-      "acceptableAnswers": [
-        "i like playing the guitar",
-        "i like playing guitar",
-        "i like to play the guitar",
-        "i like to play guitar"
+      "prompt": "Choose the English sentence: Saya suka memasak.",
+      "rubric": "I like cooking: after like, use the -ing form for an activity.",
+      "type": "mcq",
+      "options": [
+        "I like cooking.",
+        "I like cook.",
+        "I likes cooking."
       ],
-      "rubric": "Correct: I like playing (the) guitar; I like to play (the) guitar is also correct. 'I like play guitar' = 40 (-ing is needed after like). 'I like guitar' = 60 (correct English, but it doesn't say playing). 'I love playing the guitar' = 80 (love is stronger than suka)."
+      "correctOption": "I like cooking."
     },
     {
       "id": "si-4",
       "objectiveId": "talk-about-your",
-      "prompt": "Complete with one word: My hobbies ___ cooking and swimming.",
-      "acceptableAnswers": [
-        "are"
+      "prompt": "Choose the correct answer. Complete with one word: My hobbies ___ cooking and swimming.",
+      "rubric": "Correct: are (hobbies = more than one, so are). 'is' = 0. 'am' or 'be' = 0.",
+      "type": "mcq",
+      "options": [
+        "are",
+        "is",
+        "am"
       ],
-      "rubric": "Correct: are (hobbies = more than one, so are). 'is' = 0. 'am' or 'be' = 0."
+      "correctOption": "are"
     },
     {
       "id": "si-5",
       "objectiveId": "respond-when-someone",
-      "prompt": "Listen to your new colleague. Reply to what he says. (Write a short reply.)",
+      "prompt": "Choose the correct answer. Listen to your new colleague. Reply to what he says.",
       "listen": "Hi, I'm Kevin. Nice to meet you.",
-      "acceptableAnswers": [
+      "rubric": "Best: Nice to meet you too (or You too). Adding hi, Kevin or your own name is full marks. 'Nice to meet you' without 'too' = 80. 'Thank you' alone = 30. 'I'm fine, thanks' = 0 (that answers How are you?).",
+      "type": "mcq",
+      "options": [
         "nice to meet you too",
-        "nice to meet you too kevin",
-        "you too",
-        "hi kevin nice to meet you too",
-        "hello kevin nice to meet you too",
-        "pleased to meet you too",
-        "nice to meet you as well"
+        "Goodbye.",
+        "You're welcome."
       ],
-      "rubric": "Best: Nice to meet you too (or You too). Adding hi, Kevin or your own name is full marks. 'Nice to meet you' without 'too' = 80. 'Thank you' alone = 30. 'I'm fine, thanks' = 0 (that answers How are you?)."
+      "correctOption": "nice to meet you too"
     },
     {
       "id": "si-6",
       "objectiveId": "respond-when-someone",
-      "prompt": "Bu Ani says: 'I'm a doctor.' Ask her where she works. (Write the question.)",
-      "acceptableAnswers": [
-        "where do you work",
-        "where do you work bu ani",
-        "bu ani where do you work",
-        "oh nice where do you work"
+      "prompt": "Choose the correct answer. Bu Ani says: 'I'm a doctor.' Ask her where she works.",
+      "rubric": "Correct: Where do you work? 'Where you work?' = 50 (do is needed). 'Where are you work?' = 40. 'Where is your work?' = 50. 'Where does she work?' = 30 (you are talking to her, so you).",
+      "type": "mcq",
+      "options": [
+        "Where do you work",
+        "Where you work?",
+        "Where does you work?"
       ],
-      "rubric": "Correct: Where do you work? 'Where you work?' = 50 (do is needed). 'Where are you work?' = 40. 'Where is your work?' = 50. 'Where does she work?' = 30 (you are talking to her, so you)."
+      "correctOption": "Where do you work"
     },
     {
       "id": "si-7",
       "objectiveId": "respond-when-someone",
-      "prompt": "Rina says: 'I love cooking.' You love cooking too. Reply with two words.",
+      "prompt": "Rina says: 'I love cooking.' You love cooking too. Give a short reply to say you share this hobby.",
       "acceptableAnswers": [
         "me too",
         "so do i"
@@ -658,13 +660,13 @@
         "Apa yang saya bilang tentang pekerjaan kalau saya belum bekerja?"
       ],
       "assessment": {
-        "si-1": "Perbaiki kalimat ini: I'm from Indonesian.",
-        "si-2": "Tulis dalam bahasa Inggris: Saya guru. Saya bekerja di sekolah.",
-        "si-3": "Tulis dalam bahasa Inggris: Saya suka bermain gitar.",
-        "si-4": "Lengkapi dengan satu kata: My hobbies ___ cooking and swimming.",
-        "si-5": "Dengarkan rekan kerja barumu. Tanggapi ucapannya dalam bahasa Inggris. (Tulis jawaban pendek.)",
-        "si-6": "Bu Ani berkata: 'I'm a doctor.' Tanyakan di mana dia bekerja. (Tulis pertanyaannya dalam bahasa Inggris.)",
-        "si-7": "Rina berkata: 'I love cooking.' Kamu juga suka sekali memasak. Jawab dengan dua kata bahasa Inggris."
+        "si-1": "Pilih jawaban yang benar. Perbaiki kalimat ini: I'm from Indonesian.",
+        "si-2": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: Saya guru. Saya bekerja di sekolah.",
+        "si-3": "Pilih kalimat bahasa Inggris: Saya suka memasak.",
+        "si-4": "Pilih jawaban yang benar. Lengkapi dengan satu kata: My hobbies ___ cooking and swimming.",
+        "si-5": "Pilih jawaban yang benar. Dengarkan rekan kerja barumu. Tanggapi ucapannya dalam bahasa Inggris.",
+        "si-6": "Pilih jawaban yang benar. Bu Ani berkata: 'I'm a doctor.' Tanyakan di mana dia bekerja.",
+        "si-7": "Rina berkata: 'I love cooking.' Kamu juga suka sekali memasak. Jawab dengan ungkapan singkat bahasa Inggris."
       }
     }
   }

@@ -160,3 +160,29 @@ func TestFitCutsLongMaterialAtABoundary(t *testing.T) {
 		t.Fatal("short text should stay as it is")
 	}
 }
+
+func TestHandWrittenItemsOfEveryType(t *testing.T) {
+	l := &curriculum.Lesson{Assessment: []curriculum.AssessmentItem{
+		{ID: "x-1", ObjectiveID: "o", Type: "letters", Prompt: "Listen and spell the word.", Listen: "green", Solution: "green", Rubric: "G-R-E-E-N"},
+		{ID: "x-2", ObjectiveID: "o", Type: "multi", Prompt: "Tick the vowels in 'table'.", Options: []string{"T", "A", "B", "E"}, CorrectOptions: []string{"A", "E"}, Rubric: "A and E"},
+		{ID: "x-3", ObjectiveID: "o", Type: "match", Prompt: "Match each colour.", Pairs: []curriculum.AssessmentPair{{Left: "red", Right: "merah"}, {Left: "blue", Right: "biru"}}, Rubric: "r"},
+		{ID: "x-4", ObjectiveID: "o", Type: "mcq", Prompt: "Which letter sounds like 'eye'?", Options: []string{"A", "I", "E"}, CorrectOption: "I", Rubric: "I"},
+		{ID: "x-5", ObjectiveID: "o", Prompt: "Say hello.", AcceptableAnswers: []string{"hello"}, Rubric: "hello"},
+	}}
+	items, err := AuthoredItems(l, "en")
+	if err == nil {
+		items, err = ValidateCheckpoint(items, map[string]bool{"o": true}, nil)
+	}
+	if err != nil {
+		t.Fatal(err)
+	}
+	want := []string{"G-R-E-E-N", "A, E", "red → merah; blue → biru", "I", "hello"}
+	for i, it := range items {
+		if it.Key() != want[i] {
+			t.Errorf("item %d (%s): key %q, want %q", i+1, it.Type, it.Key(), want[i])
+		}
+	}
+	if items[4].Type != QuestionText {
+		t.Error("an item without a type is open text")
+	}
+}

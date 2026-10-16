@@ -1,5 +1,5 @@
 import { useRouter } from 'expo-router';
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { memo, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { Modal, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path } from 'react-native-svg';
@@ -16,18 +16,17 @@ import { edgePath, layoutRoadmap, type Box, type Branch, type BranchLayout, type
 
 const unlocked = (n: RoadmapNode) => n.status === 'available' || n.status === 'in_progress' || n.status === 'mastered';
 
-function NodeCard({ course, node, box, next, onNavigate }: { course: string; node: RoadmapNode; box: Box; next: boolean; onNavigate?: () => void }) {
-  const router = useRouter();
+type OpenNode = (id: string) => void;
+
+// Memoised, so opening a lesson's dialog doesn't redraw every card.
+const NodeCard = memo(function NodeCard({ node, box, next, onOpen }: { node: RoadmapNode; box: Box; next: boolean; onOpen: OpenNode }) {
   const [hovered, setHovered] = useState(false);
   const t = useT();
   const s = node.status;
   const bg = s === 'mastered' ? colors.mint : s === 'in_progress' ? colors.lavender : s === 'coming_soon' ? 'rgba(255,255,255,0.55)' : colors.card;
   return (
     <Pressable
-      onPress={() => {
-        onNavigate?.();
-        router.push(`/courses/${course}/${node.id}`);
-      }}
+      onPress={() => onOpen(node.id)}
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
@@ -75,7 +74,7 @@ function NodeCard({ course, node, box, next, onNavigate }: { course: string; nod
       ) : null}
     </Pressable>
   );
-}
+});
 
 function TrackCard({ track, box, level, onNavigate }: { track: Course; box: Box; level: string; onNavigate?: () => void }) {
   const router = useRouter();
@@ -139,55 +138,61 @@ function BranchHead({ lane, nextLevel }: { lane: BranchLayout; nextLevel?: strin
   );
 }
 
-type Canvas = { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; layout: GraphLayout; width: number; nextNodeId: string | null; onNavigate?: () => void };
+type Canvas = { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; layout: GraphLayout; width: number; nextNodeId: string | null; onOpen: OpenNode; onNavigate?: () => void };
 
 // Shared SVG node-and-edge roadmap (works on Android, iOS and Web). Side
 // tracks branch off beside the checkpoint they start after, like roadmap.sh.
-function RoadmapCanvas({ course, nodes, levels, layout, width, nextNodeId, onNavigate }: Canvas) {
+function RoadmapCanvas({ nodes, levels, layout, width, nextNodeId, onOpen, onNavigate }: Canvas) {
   const t = useT();
   const byId = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
 
   // Keep the map readable with ~200 nodes: draw links inside a level, links
   // across levels only between ready lessons, and none into checkpoints
   // (they close their level). Every prerequisite is listed on the node page.
-  const edges = nodes.flatMap((n) =>
-    n.strand === 'CK'
-      ? []
-      : n.prerequisiteIds
-          .map((p) => byId.get(p)!)
-          .filter((from) => from.level === n.level || (from.status !== 'coming_soon' && n.status !== 'coming_soon'))
-          .map((from) => {
-            const active = from.status === 'mastered' && unlocked(n);
-            return { key: `${from.id}->${n.id}`, d: edgePath(layout.boxes[from.id], layout.boxes[n.id]), active, soon: n.status === 'coming_soon' };
-          }),
-  );
-  // A dotted link from the checkpoint to the branch's bar, which holds its cards.
-  for (const l of layout.lanes) {
-    const a = layout.boxes[l.anchor];
-    const y = a.y + a.h / 2;
-    const active = byId.get(l.anchor)?.status === 'mastered';
-    edges.push({ key: `${l.anchor}->branch`, d: `M${a.x + a.w},${y} H${l.bar.x}`, active, soon: true });
-    edges.push({ key: `${l.anchor}->bar`, d: `M${l.bar.x},${l.bar.y1} V${l.bar.y2}`, active, soon: false });
-  }
+  // Memoised, so opening a lesson doesn't redraw hundreds of links.
+  const lines = useMemo(() => {
+    const edges = nodes.flatMap((n) =>
+      n.strand === 'CK'
+        ? []
+        : n.prerequisiteIds
+            .map((p) => byId.get(p)!)
+            .filter((from) => from.level === n.level || (from.status !== 'coming_soon' && n.status !== 'coming_soon'))
+            .map((from) => {
+              const active = from.status === 'mastered' && unlocked(n);
+              return { key: `${from.id}->${n.id}`, d: edgePath(layout.boxes[from.id], layout.boxes[n.id]), active, soon: n.status === 'coming_soon' };
+            }),
+    );
+    // A dotted link from the checkpoint to the branch's bar, which holds its cards.
+    for (const l of layout.lanes) {
+      const a = layout.boxes[l.anchor];
+      const y = a.y + a.h / 2;
+      const active = byId.get(l.anchor)?.status === 'mastered';
+      edges.push({ key: `${l.anchor}->branch`, d: `M${a.x + a.w},${y} H${l.bar.x}`, active, soon: true });
+      edges.push({ key: `${l.anchor}->bar`, d: `M${l.bar.x},${l.bar.y1} V${l.bar.y2}`, active, soon: false });
+    }
+    return (
+        <Svg width={width} height={layout.height} style={StyleSheet.absoluteFill} pointerEvents="none">
+          {edges
+            .sort((a, b) => Number(a.active) - Number(b.active))
+            .map((e) => (
+              <Path
+                key={e.key}
+                d={e.d}
+                fill="none"
+                stroke={e.active ? colors.accent : colors.lineStrong}
+                strokeOpacity={e.active ? 0.7 : 1}
+                strokeWidth={e.active ? 2 : 1.25}
+                strokeDasharray={e.soon ? '4 5' : undefined}
+              />
+            ))}
+        </Svg>
+    );
+  }, [nodes, byId, layout, width]);
   const nextLevel = (level: string) => levels[levels.findIndex((l) => l.level === level) + 1]?.level;
 
   return (
     <View style={{ width, height: layout.height }}>
-      <Svg width={width} height={layout.height} style={StyleSheet.absoluteFill} pointerEvents="none">
-        {edges
-          .sort((a, b) => Number(a.active) - Number(b.active))
-          .map((e) => (
-            <Path
-              key={e.key}
-              d={e.d}
-              fill="none"
-              stroke={e.active ? colors.accent : colors.lineStrong}
-              strokeOpacity={e.active ? 0.7 : 1}
-              strokeWidth={e.active ? 2 : 1.25}
-              strokeDasharray={e.soon ? '4 5' : undefined}
-            />
-          ))}
-      </Svg>
+      {lines}
       {layout.headers.map((h) => (
         <View key={h.level} pointerEvents="none" style={[styles.header, { top: h.y }]}>
           <View style={styles.levelPill}>
@@ -200,7 +205,7 @@ function RoadmapCanvas({ course, nodes, levels, layout, width, nextNodeId, onNav
         </View>
       ))}
       {nodes.map((n) => (
-        <NodeCard key={n.id} course={course} node={n} box={layout.boxes[n.id]} next={n.id === nextNodeId} onNavigate={onNavigate} />
+        <NodeCard key={n.id} node={n} box={layout.boxes[n.id]} next={n.id === nextNodeId} onOpen={onOpen} />
       ))}
       {layout.lanes.map((l) => (
         <View key={l.anchor} pointerEvents="box-none" style={StyleSheet.absoluteFill}>
@@ -289,7 +294,14 @@ function ZoomView({ canvas, focus, onClose }: { canvas: Omit<Canvas, 'onNavigate
           <ScrollView ref={across} horizontal scrollEventThrottle={32} onScroll={(e) => (view.current.x = e.nativeEvent.contentOffset.x)}>
             <View style={{ padding: pad, paddingBottom: pad + insets.bottom }}>
               <Scaled width={canvas.width} height={canvas.layout.height} scale={z}>
-                <RoadmapCanvas {...canvas} onNavigate={onClose} />
+                <RoadmapCanvas
+                  {...canvas}
+                  onNavigate={onClose}
+                  onOpen={(id) => {
+                    onClose();
+                    canvas.onOpen(id);
+                  }}
+                />
               </Scaled>
             </View>
           </ScrollView>
@@ -311,6 +323,7 @@ export function RoadmapGraph({
   wide,
   nextNodeId,
   branches = [],
+  onOpen,
 }: {
   course: string;
   nodes: RoadmapNode[];
@@ -319,13 +332,15 @@ export function RoadmapGraph({
   wide: boolean;
   nextNodeId: string | null;
   branches?: Branch[];
+  /** Opens a lesson's dialog. */
+  onOpen: OpenNode;
 }) {
   const t = useT();
   const designW = wide ? width : Math.max(width, DESIGN_W);
   const layout = useMemo(() => layoutRoadmap(nodes, levels, designW, branches), [nodes, levels, designW, branches]);
   const [focus, setFocus] = useState<Point | null>(null);
   const frame = useRef<View>(null);
-  const canvas = { course, nodes, levels, layout, width: designW, nextNodeId };
+  const canvas = { course, nodes, levels, layout, width: designW, nextNodeId, onOpen };
   if (wide) return <RoadmapCanvas {...canvas} />;
 
   const scale = width / designW;

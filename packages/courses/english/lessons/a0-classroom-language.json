@@ -152,25 +152,15 @@
     {
       "id": "class-1",
       "objectiveId": "ask-someone-to",
-      "prompt": "You didn't hear what the teacher said. Write a polite question to ask her to say it again.",
-      "acceptableAnswers": [
-        "can you repeat that please",
-        "could you repeat that please",
-        "can you say that again please",
-        "could you say that again please",
-        "can you repeat that",
-        "could you repeat that",
-        "can you repeat it please",
-        "could you repeat it please",
-        "can you say it again please",
-        "can you repeat please",
-        "sorry can you repeat that please",
-        "sorry could you repeat that please",
-        "excuse me can you repeat that please",
-        "pardon",
-        "sorry"
+      "prompt": "Choose the correct answer. You didn't hear what the teacher said. Choose a polite question to ask her to say it again.",
+      "rubric": "Correct: Can/Could you repeat that, please? or Can you say that again, please? Without please = 90. 'Repeat!' or 'Repeat please' = 50 (sounds like an order). 'You repeat?' = 30.",
+      "type": "mcq",
+      "options": [
+        "Can you repeat that please",
+        "Can you repeats that, please?",
+        "Can repeat you that, please?"
       ],
-      "rubric": "Correct: Can/Could you repeat that, please? or Can you say that again, please? Without please = 90. 'Repeat!' or 'Repeat please' = 50 (sounds like an order). 'You repeat?' = 30."
+      "correctOption": "Can you repeat that please"
     },
     {
       "id": "class-2",
@@ -186,65 +176,55 @@
     {
       "id": "class-3",
       "objectiveId": "ask-what-a",
-      "prompt": "You see the word 'tired' in your book. Write a question to ask your teacher what it means.",
-      "acceptableAnswers": [
-        "what does tired mean",
-        "what does the word tired mean",
-        "what does it mean",
-        "what does tired mean please",
-        "excuse me what does tired mean",
-        "sorry what does tired mean",
-        "what's the meaning of tired",
-        "what is the meaning of tired",
-        "what does tired mean in indonesian"
+      "prompt": "Choose the correct answer. You see the word 'tired' in your book. Choose a question to ask your teacher what it means.",
+      "rubric": "Correct: What does 'tired' mean? 'What is tired mean?' or 'What mean tired?' = 40 (meaning clear, form wrong).",
+      "type": "mcq",
+      "options": [
+        "What does tired mean",
+        "What tired does mean?",
+        "What do tired mean?"
       ],
-      "rubric": "Correct: What does 'tired' mean? 'What is tired mean?' or 'What mean tired?' = 40 (meaning clear, form wrong)."
+      "correctOption": "What does tired mean"
     },
     {
       "id": "class-4",
       "objectiveId": "ask-what-a",
-      "prompt": "Your new classmate says, 'My name is Wahyu.' Write a question to ask him for the letters of his name.",
-      "acceptableAnswers": [
-        "how do you spell your name",
-        "how do you spell wahyu",
-        "how do you spell it",
-        "how do you spell that",
-        "how do you spell your name please",
-        "how do you spell it please",
-        "can you spell your name please",
-        "can you spell it please",
-        "can you spell that please",
-        "could you spell your name please",
-        "could you spell it please",
-        "can you spell your name",
-        "sorry how do you spell your name"
+      "prompt": "Choose the correct answer. Your new classmate says, 'My name is Wahyu.' Choose a question to ask him for the letters of his name.",
+      "rubric": "Correct: How do you spell your name / Wahyu / it? Accept Can you spell it, please? 'How to spell your name?' = 40 (common error: missing 'do you').",
+      "type": "mcq",
+      "options": [
+        "How do you spell your name",
+        "How you spell your name?",
+        "How does you spell your name?"
       ],
-      "rubric": "Correct: How do you spell your name / Wahyu / it? Accept Can you spell it, please? 'How to spell your name?' = 40 (common error: missing 'do you')."
+      "correctOption": "How do you spell your name"
     },
     {
       "id": "class-5",
       "objectiveId": "follow-instructions",
-      "prompt": "Listen to the teacher. Where do you look? Write one or two words.",
+      "prompt": "Choose the correct answer. Listen to the teacher. Where do you look? Choose one or two words.",
       "listen": "Look at the board, please.",
-      "acceptableAnswers": [
+      "rubric": "Correct: the board. 'the book' = 0.",
+      "type": "mcq",
+      "options": [
         "the board",
-        "board",
-        "at the board",
-        "the whiteboard",
-        "whiteboard"
+        "the door",
+        "the window"
       ],
-      "rubric": "Correct: the board. 'the book' = 0."
+      "correctOption": "the board"
     },
     {
       "id": "class-6",
       "objectiveId": "follow-instructions",
-      "prompt": "The teacher says 'Stand up.' Later she wants everyone back on their chairs. Write her instruction (two words).",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. The teacher says 'Stand up.' Later she wants everyone back on their chairs. Choose her instruction (two words).",
+      "rubric": "Correct: Sit down. 'Sit' alone = 70. 'Stand down' = 0.",
+      "type": "mcq",
+      "options": [
         "sit down",
-        "sit down please",
-        "please sit down"
+        "Stand up.",
+        "Open your book."
       ],
-      "rubric": "Correct: Sit down. 'Sit' alone = 70. 'Stand down' = 0."
+      "correctOption": "sit down"
     }
   ],
   "material": [
@@ -616,12 +596,12 @@
         "Bagaimana menanyakan bahasa Inggris dari sebuah kata?"
       ],
       "assessment": {
-        "class-1": "Kamu tidak mendengar ucapan guru. Tulis pertanyaan sopan dalam bahasa Inggris untuk memintanya mengulang.",
+        "class-1": "Pilih jawaban yang benar. Kamu tidak mendengar ucapan guru. Pilih pertanyaan sopan dalam bahasa Inggris untuk memintanya mengulang.",
         "class-2": "Rina menyebut namamu, tapi suaranya pelan sekali. Tulis SATU kata sopan dalam bahasa Inggris yang kamu ucapkan dengan nada naik supaya dia mengulanginya.",
-        "class-3": "Kamu melihat kata 'tired' di bukumu. Tulis pertanyaan dalam bahasa Inggris untuk menanyakan artinya kepada guru.",
-        "class-4": "Teman sekelasmu yang baru berkata, 'My name is Wahyu.' Tulis pertanyaan dalam bahasa Inggris untuk memintanya mengeja namanya.",
-        "class-5": "Dengarkan guru. Kamu harus melihat ke mana? Tulis satu atau dua kata dalam bahasa Inggris.",
-        "class-6": "Guru berkata 'Stand up.' Lalu dia ingin semua murid duduk kembali. Tulis instruksinya (dua kata dalam bahasa Inggris)."
+        "class-3": "Pilih jawaban yang benar. Kamu melihat kata 'tired' di bukumu. Pilih pertanyaan dalam bahasa Inggris untuk menanyakan artinya kepada guru.",
+        "class-4": "Pilih jawaban yang benar. Teman sekelasmu yang baru berkata, 'My name is Wahyu.' Pilih pertanyaan dalam bahasa Inggris untuk memintanya mengeja namanya.",
+        "class-5": "Pilih jawaban yang benar. Dengarkan guru. Kamu harus melihat ke mana? Pilih satu atau dua kata dalam bahasa Inggris.",
+        "class-6": "Pilih jawaban yang benar. Guru berkata 'Stand up.' Lalu dia ingin semua murid duduk kembali. Pilih instruksinya (dua kata dalam bahasa Inggris)."
       }
     }
   }

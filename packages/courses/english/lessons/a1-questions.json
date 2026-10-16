@@ -124,47 +124,70 @@
     {
       "id": "q-1",
       "objectiveId": "wh-words",
-      "prompt": "Which question word? ___ is your mother? — She's fine, thanks.",
-      "acceptableAnswers": [
-        "how"
+      "prompt": "Choose the correct answer. Which question word? ___ is your mother? — She's fine, thanks.",
+      "rubric": "Correct: How (asking about someone's health or feelings). 'What' or 'Who' = 0.",
+      "type": "mcq",
+      "options": [
+        "how",
+        "Where",
+        "Who"
       ],
-      "rubric": "Correct: How (asking about someone's health or feelings). 'What' or 'Who' = 0."
+      "correctOption": "how"
     },
     {
       "id": "q-2",
       "objectiveId": "wh-words",
-      "prompt": "Which question word? ___ is your bag? — It's under the table.",
-      "acceptableAnswers": [
-        "where"
+      "prompt": "Choose the correct answer. Which question word? ___ is your bag? — It's under the table.",
+      "rubric": "Correct: Where.",
+      "type": "mcq",
+      "options": [
+        "where",
+        "Who",
+        "When"
       ],
-      "rubric": "Correct: Where."
+      "correctOption": "where"
     },
     {
       "id": "q-3",
       "objectiveId": "question-order",
-      "prompt": "Put in order: does / work / she / where",
-      "acceptableAnswers": [
-        "where does she work"
-      ],
-      "rubric": "Correct: Where does she work?"
+      "prompt": "Arrange the tiles. Put in order: does / work / she / where",
+      "rubric": "Correct: Where does she work?",
+      "type": "word_order",
+      "solution": "where does she work",
+      "tokens": [
+        "does",
+        "she",
+        "work",
+        "where"
+      ]
     },
     {
       "id": "q-4",
       "objectiveId": "question-order",
-      "prompt": "Correct the question: Where you are from?",
-      "acceptableAnswers": [
-        "where are you from"
-      ],
-      "rubric": "Correct: Where are you from?"
+      "prompt": "Arrange the tiles. Correct the question: Where you are from?",
+      "rubric": "Correct: Where are you from?",
+      "type": "word_order",
+      "solution": "where are you from",
+      "tokens": [
+        "are",
+        "you",
+        "from",
+        "where"
+      ]
     },
     {
       "id": "q-5",
       "objectiveId": "personal-info",
-      "prompt": "Write a question to ask someone's age.",
-      "acceptableAnswers": [
-        "how old are you"
-      ],
-      "rubric": "Correct: How old are you? 'How old you are' = 40."
+      "prompt": "Arrange the tiles. Write a question to ask someone's age.",
+      "rubric": "Correct: How old are you? 'How old you are' = 40.",
+      "type": "word_order",
+      "solution": "how old are you",
+      "tokens": [
+        "old",
+        "are",
+        "you",
+        "how"
+      ]
     }
   ],
   "material": [
@@ -590,11 +613,11 @@
         "Kenapa 'Where are you from?' bukan 'Where you are from?'"
       ],
       "assessment": {
-        "q-1": "Kata tanya apa? ___ is your mother? — She's fine, thanks.",
-        "q-2": "Kata tanya apa? ___ is your bag? — It's under the table.",
-        "q-3": "Susun kata-katanya: does / work / she / where",
-        "q-4": "Perbaiki pertanyaannya: Where you are from?",
-        "q-5": "Tulis pertanyaan dalam bahasa Inggris untuk menanyakan umur seseorang."
+        "q-1": "Pilih jawaban yang benar. Kata tanya apa? ___ is your mother? — She's fine, thanks.",
+        "q-2": "Pilih jawaban yang benar. Kata tanya apa? ___ is your bag? — It's under the table.",
+        "q-3": "Susun ubin kata. Susun kata-katanya: does / work / she / where",
+        "q-4": "Susun ubin kata. Perbaiki pertanyaannya: Where you are from?",
+        "q-5": "Susun ubin kata. Tulis pertanyaan dalam bahasa Inggris untuk menanyakan umur seseorang."
       }
     }
   }

@@ -168,83 +168,94 @@
     {
       "id": "fh-1",
       "objectiveId": "family",
-      "prompt": "Complete with one word: Dimas lives with his mother and his father. He lives with his ___ (orang tua).",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with one word: Dimas lives with his mother and his father. He lives with his ___ (orang tua).",
+      "rubric": "Correct: parents (plural). 'parent' = 30 (orang tua is always plural). 'family' = 30 (not the word for mother + father). 'old people' = 0.",
+      "type": "mcq",
+      "options": [
         "parents",
-        "his parents"
+        "parent",
+        "children"
       ],
-      "rubric": "Correct: parents (plural). 'parent' = 30 (orang tua is always plural). 'family' = 30 (not the word for mother + father). 'old people' = 0."
+      "correctOption": "parents"
     },
     {
       "id": "fh-2",
       "objectiveId": "family",
-      "prompt": "Complete with one word: Uncle Hadi's daughter is my ___.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with one word: Uncle Hadi's daughter is my ___.",
+      "rubric": "Correct: cousin. 'sister' or 'niece' = 0. 'cousins' = 70 (one person, so no -s).",
+      "type": "mcq",
+      "options": [
         "cousin",
-        "my cousin"
+        "uncle",
+        "aunt"
       ],
-      "rubric": "Correct: cousin. 'sister' or 'niece' = 0. 'cousins' = 70 (one person, so no -s)."
+      "correctOption": "cousin"
     },
     {
       "id": "fh-3",
       "objectiveId": "family",
-      "prompt": "Rina has one brother and one sister. Complete with one word: Rina has two ___.",
-      "acceptableAnswers": [
-        "siblings"
+      "prompt": "Choose the correct answer. Rina has one brother and one sister. Complete with one word: Rina has two ___.",
+      "rubric": "Correct: siblings (brothers and sisters together). 'brothers' = 0 (one is a sister). 'sibling' = 50 (needs the plural -s). 'cousins' = 0.",
+      "type": "mcq",
+      "options": [
+        "siblings",
+        "parents",
+        "cousins"
       ],
-      "rubric": "Correct: siblings (brothers and sisters together). 'brothers' = 0 (one is a sister). 'sibling' = 50 (needs the plural -s). 'cousins' = 0."
+      "correctOption": "siblings"
     },
     {
       "id": "fh-4",
       "objectiveId": "rooms-furniture",
-      "prompt": "Correct the mistake: Mum is in the kitchen room.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Correct the mistake: Mum is in the kitchen room.",
+      "rubric": "Correct: Mum is in the kitchen (no 'room' after kitchen). Changing the room (e.g. the living room) = 0. Small spelling slip in 'kitchen' = 80.",
+      "type": "mcq",
+      "options": [
         "mum is in the kitchen",
-        "mum's in the kitchen",
-        "mom is in the kitchen",
-        "mom's in the kitchen"
+        "Mum in the kitchen.",
+        "Mum are in the kitchen."
       ],
-      "rubric": "Correct: Mum is in the kitchen (no 'room' after kitchen). Changing the room (e.g. the living room) = 0. Small spelling slip in 'kitchen' = 80."
+      "correctOption": "mum is in the kitchen"
     },
     {
       "id": "fh-5",
       "objectiveId": "rooms-furniture",
-      "prompt": "What is 'lemari pakaian' in English? Write one word.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. What is 'lemari pakaian' in English? Choose one word.",
+      "rubric": "Correct: wardrobe (closet in American English is also fine). 'cupboard' = 50 (a cupboard is usually for plates or food). 'table' or 'shelf' = 0.",
+      "type": "mcq",
+      "options": [
         "wardrobe",
-        "a wardrobe",
-        "closet",
-        "a closet"
+        "fridge",
+        "sofa"
       ],
-      "rubric": "Correct: wardrobe (closet in American English is also fine). 'cupboard' = 50 (a cupboard is usually for plates or food). 'table' or 'shelf' = 0."
+      "correctOption": "wardrobe"
     },
     {
       "id": "fh-6",
       "objectiveId": "describe-home",
-      "prompt": "Listen to Budi. How many bedrooms does his house have? Write the number.",
+      "prompt": "Choose the correct answer. Listen to Budi. How many bedrooms does his house have? Choose the number.",
       "listen": "My house is small. It has two bedrooms, a kitchen and a living room.",
-      "acceptableAnswers": [
+      "rubric": "Correct: two (2). Any other number = 0.",
+      "type": "mcq",
+      "options": [
         "two",
-        "2",
-        "two bedrooms",
-        "2 bedrooms"
+        "one",
+        "four"
       ],
-      "rubric": "Correct: two (2). Any other number = 0."
+      "correctOption": "two"
     },
     {
       "id": "fh-7",
       "objectiveId": "describe-home",
-      "prompt": "Translate into English: Rumah saya punya tiga kamar tidur.",
-      "acceptableAnswers": [
-        "my house has three bedrooms",
-        "my house has 3 bedrooms",
-        "my house has got three bedrooms",
-        "my house has got 3 bedrooms",
-        "my house's got three bedrooms",
-        "my home has three bedrooms",
-        "my home has 3 bedrooms"
+      "prompt": "Choose the correct answer. Translate into English: Rumah saya punya tiga kamar tidur.",
+      "rubric": "Correct: My house has three bedrooms. 'My house have ...' = 50. Missing plural -s (three bedroom) = 70. 'three rooms' = 60 (kamar tidur = bedroom).",
+      "type": "mcq",
+      "options": [
+        "My house has three bedrooms",
+        "My house have three bedrooms.",
+        "My house three bedrooms has."
       ],
-      "rubric": "Correct: My house has three bedrooms. 'My house have ...' = 50. Missing plural -s (three bedroom) = 70. 'three rooms' = 60 (kamar tidur = bedroom)."
+      "correctOption": "My house has three bedrooms"
     }
   ],
   "material": [
@@ -632,13 +643,13 @@
         "Bisa cek deskripsi rumahku?"
       ],
       "assessment": {
-        "fh-1": "Lengkapi dengan satu kata: Dimas lives with his mother and his father. He lives with his ___ (orang tua).",
-        "fh-2": "Lengkapi dengan satu kata: Uncle Hadi's daughter is my ___.",
-        "fh-3": "Rina punya satu saudara laki-laki dan satu saudara perempuan. Lengkapi dengan satu kata: Rina has two ___.",
-        "fh-4": "Perbaiki kesalahannya: Mum is in the kitchen room.",
-        "fh-5": "Apa bahasa Inggrisnya 'lemari pakaian'? Tulis satu kata.",
-        "fh-6": "Dengarkan Budi. Berapa kamar tidur di rumahnya? Tulis angkanya.",
-        "fh-7": "Terjemahkan ke bahasa Inggris: Rumah saya punya tiga kamar tidur."
+        "fh-1": "Pilih jawaban yang benar. Lengkapi dengan satu kata: Dimas lives with his mother and his father. He lives with his ___ (orang tua).",
+        "fh-2": "Pilih jawaban yang benar. Lengkapi dengan satu kata: Uncle Hadi's daughter is my ___.",
+        "fh-3": "Pilih jawaban yang benar. Rina punya satu saudara laki-laki dan satu saudara perempuan. Lengkapi dengan satu kata: Rina has two ___.",
+        "fh-4": "Pilih jawaban yang benar. Perbaiki kesalahannya: Mum is in the kitchen room.",
+        "fh-5": "Pilih jawaban yang benar. Apa bahasa Inggrisnya 'lemari pakaian'? Pilih satu kata.",
+        "fh-6": "Pilih jawaban yang benar. Dengarkan Budi. Berapa kamar tidur di rumahnya? Pilih angkanya.",
+        "fh-7": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Rumah saya punya tiga kamar tidur."
       }
     }
   }

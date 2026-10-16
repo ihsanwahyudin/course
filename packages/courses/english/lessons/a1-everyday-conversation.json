@@ -169,88 +169,69 @@
     {
       "id": "ec-1",
       "objectiveId": "order-food-and",
-      "prompt": "Make this order polite. Use I'd like: 'I want orange juice.'",
-      "acceptableAnswers": [
-        "i'd like an orange juice please",
-        "i would like an orange juice please",
-        "i'd like an orange juice",
-        "i would like an orange juice",
-        "i'd like orange juice please",
-        "i would like orange juice please",
-        "i'd like a glass of orange juice please",
-        "i would like a glass of orange juice please",
-        "i'd like an orange juice thank you",
-        "i'd like an orange juice thanks"
+      "prompt": "Choose the correct answer. Make this order polite. Use I'd like: 'I want orange juice.'",
+      "rubric": "Correct: I'd like (I would like) an orange juice, please. 'Please' and 'an' make it best; without them still accept. 'I'd like a orange juice' = 80 (orange starts with a vowel sound, so an). 'I like orange juice' = 0 (that says what you enjoy, not an order). 'I want orange juice, please' = 30.",
+      "type": "mcq",
+      "options": [
+        "I'd like an orange juice please",
+        "I'd like orange juice an please.",
+        "I would likes an orange juice, please."
       ],
-      "rubric": "Correct: I'd like (I would like) an orange juice, please. 'Please' and 'an' make it best; without them still accept. 'I'd like a orange juice' = 80 (orange starts with a vowel sound, so an). 'I like orange juice' = 0 (that says what you enjoy, not an order). 'I want orange juice, please' = 30."
+      "correctOption": "I'd like an orange juice please"
     },
     {
       "id": "ec-2",
       "objectiveId": "order-food-and",
-      "prompt": "You are at a café and you have everything you want. Listen to the waiter and answer politely.",
+      "prompt": "Choose the correct answer. You are at a café and you have everything you want. Listen to the waiter and answer politely.",
       "listen": "Anything else?",
-      "acceptableAnswers": [
-        "no that's all thanks",
-        "no that's all thank you",
-        "no that is all thanks",
-        "no that is all thank you",
-        "that's all thanks",
-        "that's all thank you",
-        "no thanks that's all",
-        "no thank you that's all",
-        "no thanks",
-        "no thank you",
-        "no that's all",
-        "that's all"
+      "rubric": "Correct: No, that's all, thanks (or No, thank you). Only 'No' = 50 (not polite). 'Yes, please' = 0 (you want more). 'You're welcome' = 0.",
+      "type": "mcq",
+      "options": [
+        "No that's all thanks",
+        "Yes, I want nothing.",
+        "Good morning."
       ],
-      "rubric": "Correct: No, that's all, thanks (or No, thank you). Only 'No' = 50 (not polite). 'Yes, please' = 0 (you want more). 'You're welcome' = 0."
+      "correctOption": "No that's all thanks"
     },
     {
       "id": "ec-3",
       "objectiveId": "ask-for-prices",
-      "prompt": "You are in a shop in Bandung and you like a bag. Ask the shop assistant the price. (Write one short question.)",
-      "acceptableAnswers": [
-        "how much is it",
-        "how much is this",
-        "how much is this bag",
-        "how much is the bag",
-        "how much is it please",
-        "excuse me how much is it",
-        "excuse me how much is this",
-        "excuse me how much is this bag",
-        "excuse me how much is the bag",
-        "how much does it cost",
-        "how much does this bag cost",
-        "what's the price of this bag",
-        "what is the price of this bag"
+      "prompt": "Choose the correct answer. You are in a shop in Bandung and you like a bag. Ask the shop assistant the price.",
+      "rubric": "Correct: How much is it / this (bag)? 'How much it is?' = 60 (wrong word order in a question). 'How much are this bag?' = 60 (one bag, so is). 'How much the price?' = 30 (no verb).",
+      "type": "mcq",
+      "options": [
+        "How much is it",
+        "How many is it?",
+        "How much it is?"
       ],
-      "rubric": "Correct: How much is it / this (bag)? 'How much it is?' = 60 (wrong word order in a question). 'How much are this bag?' = 60 (one bag, so is). 'How much the price?' = 30 (no verb)."
+      "correctOption": "How much is it"
     },
     {
       "id": "ec-4",
       "objectiveId": "ask-for-prices",
-      "prompt": "You need cash. Ask a stranger in English: 'Permisi, ada ATM di dekat sini?'",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. You need cash. Ask a stranger in English: 'Permisi, ada ATM di dekat sini?'",
+      "rubric": "Correct: Excuse me, is there an ATM near here? Without 'Excuse me' still accept. 'a ATM' = 80 (ATM starts with a vowel sound, 'ei'). 'Excuse me, where is the ATM?' = 70 (a good question, but it doesn't ask if there is one). 'There is an ATM near here?' = 50 (not question order).",
+      "type": "mcq",
+      "options": [
         "excuse me is there an atm near here",
-        "is there an atm near here",
-        "excuse me is there an atm here",
-        "excuse me is there an atm nearby",
-        "is there an atm nearby"
+        "Excuse me, is an ATM near here?",
+        "Excuse me, there is an ATM near here?"
       ],
-      "rubric": "Correct: Excuse me, is there an ATM near here? Without 'Excuse me' still accept. 'a ATM' = 80 (ATM starts with a vowel sound, 'ei'). 'Excuse me, where is the ATM?' = 70 (a good question, but it doesn't ask if there is one). 'There is an ATM near here?' = 50 (not question order)."
+      "correctOption": "excuse me is there an atm near here"
     },
     {
       "id": "ec-5",
       "objectiveId": "ask-for-prices",
-      "prompt": "You ask the way to the pharmacy. Listen to the answer. Is the pharmacy on the left or on the right? (Write one word.)",
+      "prompt": "Choose the correct answer. You ask the way to the pharmacy. Listen to the answer. Is the pharmacy on the left or on the right?",
       "listen": "Go straight on and turn right. The pharmacy is on the left.",
-      "acceptableAnswers": [
+      "rubric": "Correct: left. 'right' = 0 (that is where you turn, not where the pharmacy is).",
+      "type": "mcq",
+      "options": [
         "left",
-        "on the left",
-        "the left",
-        "it's on the left"
+        "right",
+        "behind"
       ],
-      "rubric": "Correct: left. 'right' = 0 (that is where you turn, not where the pharmacy is)."
+      "correctOption": "left"
     },
     {
       "id": "ec-6",
@@ -258,10 +239,7 @@
       "prompt": "Your colleague Sari says: 'I can speak four languages!' You are surprised and want to hear more. Write a one-word question that shows interest.",
       "acceptableAnswers": [
         "really",
-        "oh really",
-        "really wow",
-        "wow really",
-        "seriously"
+        "oh really"
       ],
       "rubric": "Correct: Really? 'Wow!' = 70 (shows interest but isn't a question). 'Me too' = 0 (it agrees, it doesn't show surprise). 'Yes' = 0."
     },
@@ -666,11 +644,11 @@
         "Apa yang bisa aku ucapkan kalau tidak paham petunjuk arahnya?"
       ],
       "assessment": {
-        "ec-1": "Buat pesanan ini jadi sopan. Pakai I'd like: 'I want orange juice.'",
-        "ec-2": "Kamu di kafe dan pesananmu sudah lengkap. Dengarkan pelayannya, lalu jawab dengan sopan dalam bahasa Inggris.",
-        "ec-3": "Kamu di sebuah toko di Bandung dan suka sebuah tas. Tanyakan harganya kepada pramuniaga dalam bahasa Inggris. (Tulis satu pertanyaan pendek.)",
-        "ec-4": "Kamu perlu uang tunai. Tanyakan kepada orang yang tidak kamu kenal, dalam bahasa Inggris: 'Permisi, ada ATM di dekat sini?'",
-        "ec-5": "Kamu menanyakan jalan ke apotek. Dengarkan jawabannya. Apoteknya di sebelah kiri (left) atau kanan (right)? (Tulis satu kata bahasa Inggris.)",
+        "ec-1": "Pilih jawaban yang benar. Buat pesanan ini jadi sopan. Pakai I'd like: 'I want orange juice.'",
+        "ec-2": "Pilih jawaban yang benar. Kamu di kafe dan pesananmu sudah lengkap. Dengarkan pelayannya, lalu jawab dengan sopan dalam bahasa Inggris.",
+        "ec-3": "Pilih jawaban yang benar. Kamu di sebuah toko di Bandung dan suka sebuah tas. Tanyakan harganya kepada pramuniaga dalam bahasa Inggris.",
+        "ec-4": "Pilih jawaban yang benar. Kamu perlu uang tunai. Tanyakan kepada orang yang tidak kamu kenal, dalam bahasa Inggris: 'Permisi, ada ATM di dekat sini?'",
+        "ec-5": "Pilih jawaban yang benar. Kamu menanyakan jalan ke apotek. Dengarkan jawabannya. Apoteknya di sebelah kiri (left) atau kanan (right)?",
         "ec-6": "Rekan kerjamu, Sari, berkata: 'I can speak four languages!' Kamu kaget dan ingin tahu lebih banyak. Tulis pertanyaan satu kata dalam bahasa Inggris yang menunjukkan minatmu.",
         "ec-7": "Budi bertanya: 'Where do you work?' Jawab, lalu tanyakan hal yang sama kepadanya dengan dua kata bahasa Inggris. Lengkapi: 'I work at a bank. ___ ___?'"
       }

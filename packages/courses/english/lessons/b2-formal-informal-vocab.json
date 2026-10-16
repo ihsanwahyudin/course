@@ -202,12 +202,12 @@
     {
       "id": "fiv-6",
       "objectiveId": "match-the-reader",
-      "prompt": "You're writing a formal email to a buyer at a company in Singapore. His name is Andi Wijaya, and Wijaya is his surname (family name). Write the greeting (no comma needed).",
+      "prompt": "You're writing a formal email to a buyer at a company in Singapore. His name is Andi Wijaya, and Wijaya is his surname (family name). Write the greeting (a comma is optional).",
       "acceptableAnswers": [
         "dear mr wijaya",
         "dear mister wijaya"
       ],
-      "rubric": "Correct: Dear Mr Wijaya (Mr + surname; 'Mr.' with a full stop is the American spelling, also fine). 'Dear Mr Andi Wijaya' or 'Dear Andi Wijaya' = 70 (polite, but here you know the surname, so Mr + surname is the standard). 'Dear Pak Andi' = 50 (the Indonesian custom, fine with colleagues in Indonesia, less suitable for a formal international email). 'Dear Mr Andi' = 0 (Mr + first name: the classic mistake). 'Hi Sir' or 'Dear Sir' = 0."
+      "rubric": "Correct: Dear Mr Wijaya (Mr + surname; 'Mr.' with a full stop is the American spelling, also fine). 'Dear Mr Andi Wijaya' or 'Dear Andi Wijaya' = 70 (polite, but here you know the surname, so Mr + surname is the standard). 'Dear Pak Andi' = 50 (the Indonesian custom, fine with colleagues in Indonesia, less suitable for a formal international email). 'Dear Mr Andi' = 0 (Mr + first name: the classic mistake). 'Hi Sir' or 'Dear Sir' = 0. A comma after the greeting is optional; assess the greeting, not the comma."
     },
     {
       "id": "fiv-7",
@@ -707,7 +707,7 @@
         "fiv-3": "Lengkapi kalimat dari situs web hotel ini dengan satu kata kerja formal (dalam bahasa Inggris) yang berarti help: 'Our staff will be happy to ___ you with any questions about your booking.'",
         "fiv-4": "Buat kalimat dari laporan perusahaan ini lebih formal: ganti phrasal verb-nya dengan satu kata kerja dari bahasa Latin dalam bentuk yang sama. 'The IT department is looking into the problem with the payroll system.' Tulis kata kerja barunya saja.",
         "fiv-5": "Ganti went up dengan satu kata kerja formal dalam past simple, untuk laporan perusahaan: 'In 2025, the price of cooking oil in Surabaya went up by 15%.'",
-        "fiv-6": "Kamu menulis email formal untuk seorang pembeli di perusahaan di Singapura. Namanya Andi Wijaya, dan Wijaya adalah nama keluarganya (surname). Tulis salam pembukanya dalam bahasa Inggris (tidak perlu koma).",
+        "fiv-6": "Kamu menulis email formal untuk seorang pembeli di perusahaan di Singapura. Namanya Andi Wijaya, dan Wijaya adalah nama keluarganya (surname). Tulis salam pembukanya dalam bahasa Inggris (boleh dengan atau tanpa koma).",
         "fiv-7": "Kamu mengirim pesan WhatsApp ke Dimas, rekan kerja yang duduk di dekatmu. Pesan mana yang lebih cocok untuk pembaca ini? Tulis A atau B. A: 'Could you inform me once the client arrives? Kind regards, Rina' B: 'Can you let me know when the client gets here? Thanks!'"
       }
     }

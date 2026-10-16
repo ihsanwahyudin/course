@@ -29,7 +29,8 @@ export function Option({ label, state, onPress, disabled }: { label: string; sta
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="radio"
-      accessibilityState={{ selected: state === 'picked' || state === 'right', disabled }}
+      accessibilityState={{ checked: state === 'picked' || state === 'right', disabled }}
+      aria-checked={state === 'picked' || state === 'right'}
       style={[styles.option, { backgroundColor: look.bg, borderColor: look.border }, Platform.OS === 'web' && ({ cursor: disabled ? 'default' : 'pointer' } as object)]}
     >
       {state === 'right' ? <Icon name="check" size={14} color={look.fg} strokeWidth={2.5} /> : null}

@@ -131,39 +131,54 @@
     {
       "id": "pron-2",
       "objectiveId": "subject-pronouns",
-      "prompt": "Sari and Dewi are sisters. ___ live in Bandung.",
-      "acceptableAnswers": [
-        "they"
+      "prompt": "Choose the correct answer. Sari and Dewi are sisters. ___ live in Bandung.",
+      "rubric": "Correct: They.",
+      "type": "mcq",
+      "options": [
+        "they",
+        "she",
+        "we"
       ],
-      "rubric": "Correct: They."
+      "correctOption": "they"
     },
     {
       "id": "pron-3",
       "objectiveId": "possessives",
-      "prompt": "Complete: Mrs. Lee loves ___ garden.",
-      "acceptableAnswers": [
-        "her"
+      "prompt": "Mrs. Lee owns the garden. Choose the possessive: Mrs. Lee loves ___ garden.",
+      "rubric": "Correct: her. 'she' = 20 (wrong form).",
+      "type": "mcq",
+      "options": [
+        "her",
+        "she",
+        "his"
       ],
-      "rubric": "Correct: her. 'she' = 20 (wrong form)."
+      "correctOption": "her"
     },
     {
       "id": "pron-4",
       "objectiveId": "possessives",
-      "prompt": "Complete: We have a new house. ___ house is big.",
-      "acceptableAnswers": [
-        "our"
+      "prompt": "Choose the correct answer. Complete: We have a new house. ___ house is big.",
+      "rubric": "Correct: Our.",
+      "type": "mcq",
+      "options": [
+        "our",
+        "we",
+        "their"
       ],
-      "rubric": "Correct: Our."
+      "correctOption": "our"
     },
     {
       "id": "pron-5",
       "objectiveId": "pronoun-reference",
-      "prompt": "Rewrite with a pronoun for the words in capitals: THE COFFEE is hot.",
-      "acceptableAnswers": [
-        "it is hot",
-        "it"
+      "prompt": "Choose the correct answer. Choose the pronoun for THE COFFEE: ___ is hot.",
+      "rubric": "Correct: It is hot. Accept just 'It'.",
+      "type": "mcq",
+      "options": [
+        "It",
+        "He",
+        "They"
       ],
-      "rubric": "Correct: It is hot. Accept just 'It'."
+      "correctOption": "It"
     }
   ],
   "material": [
@@ -486,10 +501,10 @@
       ],
       "assessment": {
         "pron-1": "My brother is 20. ___ is a student. (Tulis kata gantinya.)",
-        "pron-2": "Lengkapi dengan kata ganti: Sari and Dewi are sisters. ___ live in Bandung.",
-        "pron-3": "Lengkapi: Mrs. Lee loves ___ garden.",
-        "pron-4": "Lengkapi: We have a new house. ___ house is big.",
-        "pron-5": "Tulis ulang kalimatnya dengan kata ganti untuk kata berhuruf kapital: THE COFFEE is hot."
+        "pron-2": "Pilih jawaban yang benar. Lengkapi dengan kata ganti: Sari and Dewi are sisters. ___ live in Bandung.",
+        "pron-3": "Kebun itu milik Mrs. Lee. Pilih kata kepemilikannya: Mrs. Lee loves ___ garden.",
+        "pron-4": "Pilih jawaban yang benar. Lengkapi: We have a new house. ___ house is big.",
+        "pron-5": "Pilih jawaban yang benar. Pilih kata ganti untuk THE COFFEE: ___ is hot."
       }
     }
   }

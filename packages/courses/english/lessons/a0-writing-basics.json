@@ -77,7 +77,7 @@
   "guidedPractice": [
     {
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the words that need a capital letter: my name is budi.",
+      "prompt": "Which group contains every word that needs a capital letter in 'my name is budi.': 'my, budi', 'name, is', or 'is, budi'?",
       "expected": [
         "my budi"
       ],
@@ -116,7 +116,7 @@
   "independentPractice": [
     {
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the words that need a capital letter: i'm from surabaya.",
+      "prompt": "Which group contains every word that needs a capital letter in \"i'm from surabaya.\": \"i'm, surabaya\", 'from, surabaya', or 'surabaya' only?",
       "expected": [
         "i'm surabaya"
       ],
@@ -124,7 +124,7 @@
     },
     {
       "objectiveId": "write-details",
-      "prompt": "Write the words that need a capital letter in this address: jalan sudirman 10, jakarta",
+      "prompt": "Which group contains every word that needs a capital letter in 'jalan sudirman 10, jakarta': 'jalan, sudirman, jakarta', 'sudirman' only, or 'jakarta' only?",
       "expected": [
         "jalan sudirman jakarta"
       ],
@@ -144,52 +144,75 @@
     {
       "id": "wb-1",
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the words that need a capital letter: this is my friend dewi from bogor.",
-      "acceptableAnswers": [
-        "this dewi bogor",
-        "this dewi and bogor"
+      "prompt": "Choose all the words that need a capital letter: this is my friend dewi from bogor.",
+      "rubric": "Correct: This, Dewi, Bogor (any order). Each missing or extra word = minus 30.",
+      "type": "multi",
+      "options": [
+        "this",
+        "is",
+        "my",
+        "friend",
+        "dewi",
+        "bogor"
       ],
-      "rubric": "Correct: This, Dewi, Bogor (any order). Each missing or extra word = minus 30."
+      "correctOptions": [
+        "this",
+        "dewi",
+        "bogor"
+      ]
     },
     {
       "id": "wb-2",
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the word that needs a capital letter: My brother and i are students.",
-      "acceptableAnswers": [
-        "i"
+      "prompt": "Choose the correct answer. Choose the word that needs a capital letter: My brother and i are students.",
+      "rubric": "Correct: I. Any other word = 0.",
+      "type": "mcq",
+      "options": [
+        "I",
+        "My",
+        "students"
       ],
-      "rubric": "Correct: I. Any other word = 0."
+      "correctOption": "I"
     },
     {
       "id": "wb-3",
       "objectiveId": "capitals-punctuation",
-      "prompt": "Which punctuation mark ends this question? Where are you from (Write the name of the mark.)",
-      "acceptableAnswers": [
-        "question mark",
-        "a question mark",
-        "the question mark"
+      "prompt": "Choose the correct answer. Which punctuation mark ends this question? Where are you from",
+      "rubric": "Correct: a question mark (?). Full stop = 0.",
+      "type": "mcq",
+      "options": [
+        "question mark (?)",
+        "full stop (.)",
+        "comma (,)"
       ],
-      "rubric": "Correct: a question mark (?). Full stop = 0."
+      "correctOption": "question mark (?)"
     },
     {
       "id": "wb-4",
       "objectiveId": "write-details",
-      "prompt": "Listen. Write the phone number you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the phone number you hear.",
       "listen": "My phone number is 0857 2109 4836.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 0857 2109 4836 (spaces or dashes are fine). One wrong digit = 50; two or more = 0.",
+      "type": "mcq",
+      "options": [
         "0857 2109 4836",
-        "085721094836"
+        "0857 2109 4863",
+        "0857 2109 8436"
       ],
-      "rubric": "Correct: 0857 2109 4836 (spaces or dashes are fine). One wrong digit = 50; two or more = 0."
+      "correctOption": "0857 2109 4836"
     },
     {
       "id": "wb-5",
       "objectiveId": "write-details",
-      "prompt": "Write this email address the way you type it: budiman at yahoo dot com",
-      "acceptableAnswers": [
-        "budiman yahoo com"
+      "prompt": "Choose the correct answer. Choose this email address the way you type it: budiman at yahoo dot com",
+      "rubric": "Correct: budiman@yahoo.com. Words 'at'/'dot' instead of @ and . = 30. Spaces inside the address = minus 20.",
+      "type": "mcq",
+      "options": [
+        "budiman@yahoo.com",
+        "budiman@gmail.com",
+        "budiman@yahoo.co.id"
       ],
-      "rubric": "Correct: budiman@yahoo.com. Words 'at'/'dot' instead of @ and . = 30. Spaces inside the address = minus 20."
+      "correctOption": "budiman@yahoo.com"
     },
     {
       "id": "wb-6",
@@ -203,11 +226,15 @@
     {
       "id": "wb-7",
       "objectiveId": "fill-form",
-      "prompt": "On a form, what does 'DOB' mean? Write the words.",
-      "acceptableAnswers": [
-        "date of birth"
+      "prompt": "Choose the correct answer. On a form, what does 'DOB' mean? Choose the words.",
+      "rubric": "Correct: date of birth. 'birthday' = 60.",
+      "type": "mcq",
+      "options": [
+        "date of birth",
+        "date of booking",
+        "day of business"
       ],
-      "rubric": "Correct: date of birth. 'birthday' = 60."
+      "correctOption": "date of birth"
     }
   ],
   "material": [
@@ -618,13 +645,13 @@
         "Bagaimana menulis tanggal lahirku di formulir?"
       ],
       "assessment": {
-        "wb-1": "Tulis kata-kata yang harus diawali huruf kapital: this is my friend dewi from bogor.",
-        "wb-2": "Tulis kata yang harus ditulis dengan huruf kapital: My brother and i are students.",
-        "wb-3": "Tanda baca apa yang menutup pertanyaan ini? Where are you from (Tulis nama tandanya dalam bahasa Inggris.)",
-        "wb-4": "Dengarkan. Tulis nomor telepon yang kamu dengar.",
-        "wb-5": "Tulis alamat email ini seperti saat kamu mengetiknya: budiman at yahoo dot com",
+        "wb-1": "Pilih semua kata yang harus diawali huruf besar: this is my friend dewi from bogor.",
+        "wb-2": "Pilih jawaban yang benar. Pilih kata yang harus ditulis dengan huruf kapital: My brother and i are students.",
+        "wb-3": "Pilih jawaban yang benar. Tanda baca apa yang menutup pertanyaan ini? Where are you from",
+        "wb-4": "Pilih jawaban yang benar. Dengarkan. Pilih nomor telepon yang kamu dengar.",
+        "wb-5": "Pilih jawaban yang benar. Pilih alamat email ini seperti saat kamu mengetiknya: budiman at yahoo dot com",
         "wb-6": "Namamu Rina Kartika. Apa yang kamu tulis di kolom 'Surname'?",
-        "wb-7": "Di formulir, apa kepanjangan 'DOB'? Tulis kata-katanya dalam bahasa Inggris."
+        "wb-7": "Pilih jawaban yang benar. Di formulir, apa kepanjangan 'DOB'? Pilih kata-katanya dalam bahasa Inggris."
       }
     }
   }

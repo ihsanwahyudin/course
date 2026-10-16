@@ -177,109 +177,100 @@
     {
       "id": "le-1",
       "objectiveId": "catch-details",
-      "prompt": "Listen. Write the person's surname (family name).",
+      "prompt": "Choose the correct answer. Listen. Choose the person's surname (family name).",
       "listen": "Hello, I'm Sari. My surname is Wijaya: W-I-J-A-Y-A.",
-      "acceptableAnswers": [
-        "wijaya"
+      "rubric": "Correct: Wijaya. One wrong letter = 50 (e.g. 'Wejaya', 'Wijaja'). The first name 'Sari' = 0.",
+      "type": "mcq",
+      "options": [
+        "wijaya",
+        "Wijoyo",
+        "Widjono"
       ],
-      "rubric": "Correct: Wijaya. One wrong letter = 50 (e.g. 'Wejaya', 'Wijaja'). The first name 'Sari' = 0."
+      "correctOption": "wijaya"
     },
     {
       "id": "le-2",
       "objectiveId": "catch-details",
-      "prompt": "Listen. What time is the appointment? Write it in numbers, like 6:00.",
+      "prompt": "Choose the correct answer. Listen. What time is the appointment? Choose it in numbers, like 6:00.",
       "listen": "Your appointment with Doctor Hasan is on Tuesday at half past four.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 4:30 (or 16:30). 3:30 = 0 (the 'setengah empat' trap: half past four is 4:30). 4:00 or 4:15 = 0.",
+      "type": "mcq",
+      "options": [
         "4 30",
-        "04 30",
-        "430",
-        "0430",
-        "16 30",
-        "1630",
-        "4 30 pm",
-        "4 30pm",
-        "4 30 p m"
+        "4:13",
+        "5:30"
       ],
-      "rubric": "Correct: 4:30 (or 16:30). 3:30 = 0 (the 'setengah empat' trap: half past four is 4:30). 4:00 or 4:15 = 0."
+      "correctOption": "4 30"
     },
     {
       "id": "le-3",
       "objectiveId": "catch-details",
-      "prompt": "Listen. How much is the T-shirt? Write the price in numbers.",
+      "prompt": "Choose the correct answer. Listen. How much is the T-shirt? Choose the price in numbers.",
       "listen": "This T-shirt is fifty thousand rupiah.",
-      "acceptableAnswers": [
+      "rubric": "Correct: Rp50.000. Accept 50000, 50.000 or 50,000 with or without Rp/rupiah. 15.000 (fifteen) = 0: FIFty has the stress at the start.",
+      "type": "mcq",
+      "options": [
         "50000",
-        "50 000",
-        "rp50000",
-        "rp 50000",
-        "rp50 000",
-        "rp 50 000",
-        "50000 rupiah",
-        "50 000 rupiah"
+        "Rp15.000",
+        "Rp5.000"
       ],
-      "rubric": "Correct: Rp50.000. Accept 50000, 50.000 or 50,000 with or without Rp/rupiah. 15.000 (fifteen) = 0: FIFty has the stress at the start."
+      "correctOption": "50000"
     },
     {
       "id": "le-4",
       "objectiveId": "follow-directions",
-      "prompt": "Listen to the directions. At the traffic lights, do you turn left or right? Write one word.",
+      "prompt": "Choose the correct answer. Listen to the directions. At the traffic lights, do you turn left or right? Choose one word.",
       "listen": "Go straight on to the traffic lights and turn right. The hospital is on the left.",
-      "acceptableAnswers": [
+      "rubric": "Correct: right. 'left' = 0 (left is where the hospital is, not where you turn).",
+      "type": "mcq",
+      "options": [
         "right",
-        "turn right",
-        "kanan"
+        "left",
+        "straight ahead"
       ],
-      "rubric": "Correct: right. 'left' = 0 (left is where the hospital is, not where you turn)."
+      "correctOption": "right"
     },
     {
       "id": "le-5",
       "objectiveId": "follow-directions",
-      "prompt": "Listen to the directions. What is the café next to? Write the place in English.",
+      "prompt": "Choose the correct answer. Listen to the directions. What is the café next to? Choose the place in English.",
       "listen": "Go straight on and turn left at the corner. The café is on the right, next to the bank.",
-      "acceptableAnswers": [
+      "rubric": "Correct: the bank. 'the corner' or 'on the right' = 0.",
+      "type": "mcq",
+      "options": [
         "bank",
-        "the bank",
-        "a bank",
-        "next to the bank"
+        "school",
+        "hospital"
       ],
-      "rubric": "Correct: the bank. 'the corner' or 'on the right' = 0."
+      "correctOption": "bank"
     },
     {
       "id": "le-6",
       "objectiveId": "short-announcements",
-      "prompt": "Listen to the announcement. Which platform does the train to Bandung leave from? Write the number.",
+      "prompt": "Choose the correct answer. Listen to the announcement. Which platform does the train to Bandung leave from? Choose the number.",
       "listen": "Attention, please. The train to Bandung leaves from platform four at ten fifteen. The train to Surabaya leaves from platform seven.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 4. 7 (the Surabaya train) = 0; 10 or 15 (the time) = 0.",
+      "type": "mcq",
+      "options": [
         "4",
-        "four",
-        "platform 4",
-        "platform four"
+        "2",
+        "6"
       ],
-      "rubric": "Correct: 4. 7 (the Surabaya train) = 0; 10 or 15 (the time) = 0."
+      "correctOption": "4"
     },
     {
       "id": "le-7",
       "objectiveId": "short-announcements",
-      "prompt": "Listen to the announcement. What time does the store close? Write it in numbers, like 6:00.",
+      "prompt": "Choose the correct answer. Listen to the announcement. What time does the store close? Choose it in numbers, like 6:00.",
       "listen": "Good evening, shoppers. The store closes in fifteen minutes, at nine o'clock. Thank you for shopping with us.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 9:00 (or 21:00). 'fifteen' or 9:15 = 0: fifteen minutes is how long until closing, not the time.",
+      "type": "mcq",
+      "options": [
         "9 00",
-        "9",
-        "900",
-        "0900",
-        "09 00",
-        "21 00",
-        "2100",
-        "9 pm",
-        "9pm",
-        "9 p m",
-        "9 00 pm",
-        "9 00 p m",
-        "nine",
-        "nine o'clock",
-        "9 o'clock"
+        "8:00",
+        "10:00"
       ],
-      "rubric": "Correct: 9:00 (or 21:00). 'fifteen' or 9:15 = 0: fifteen minutes is how long until closing, not the time."
+      "correctOption": "9 00"
     }
   ],
   "material": [
@@ -712,13 +703,13 @@
         "Apa yang bisa aku katakan kalau orang bicara terlalu cepat?"
       ],
       "assessment": {
-        "le-1": "Dengarkan. Tulis surname (nama keluarga) orang itu.",
-        "le-2": "Dengarkan. Jam berapa janji temunya? Tulis dengan angka, seperti 6:00.",
-        "le-3": "Dengarkan. Berapa harga kausnya? Tulis harganya dengan angka.",
-        "le-4": "Dengarkan petunjuk arahnya. Di lampu merah, kamu belok kiri atau kanan? Tulis satu kata dalam bahasa Inggris.",
-        "le-5": "Dengarkan petunjuk arahnya. Kafenya di sebelah apa? Tulis tempatnya dalam bahasa Inggris.",
-        "le-6": "Dengarkan pengumumannya. Kereta ke Bandung berangkat dari peron nomor berapa? Tulis nomornya.",
-        "le-7": "Dengarkan pengumumannya. Jam berapa tokonya tutup? Tulis dengan angka, seperti 6:00."
+        "le-1": "Pilih jawaban yang benar. Dengarkan. Pilih surname (nama keluarga) orang itu.",
+        "le-2": "Pilih jawaban yang benar. Dengarkan. Jam berapa janji temunya? Pilih dengan angka, seperti 6:00.",
+        "le-3": "Pilih jawaban yang benar. Dengarkan. Berapa harga kausnya? Pilih harganya dengan angka.",
+        "le-4": "Pilih jawaban yang benar. Dengarkan petunjuk arahnya. Di lampu merah, kamu belok kiri atau kanan? Pilih satu kata dalam bahasa Inggris.",
+        "le-5": "Pilih jawaban yang benar. Dengarkan petunjuk arahnya. Kafenya di sebelah apa? Pilih tempatnya dalam bahasa Inggris.",
+        "le-6": "Pilih jawaban yang benar. Dengarkan pengumumannya. Kereta ke Bandung berangkat dari peron nomor berapa? Pilih nomornya.",
+        "le-7": "Pilih jawaban yang benar. Dengarkan pengumumannya. Jam berapa tokonya tutup? Pilih dengan angka, seperti 6:00."
       }
     }
   }

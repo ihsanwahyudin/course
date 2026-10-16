@@ -145,80 +145,82 @@
     {
       "id": "td-1",
       "objectiveId": "days-months",
-      "prompt": "What day comes after Wednesday?",
-      "acceptableAnswers": [
-        "thursday"
+      "prompt": "Choose the correct answer. What day comes after Wednesday?",
+      "rubric": "Correct: Thursday. Small spelling slip (Thurday) = 70. Tuesday = 0.",
+      "type": "mcq",
+      "options": [
+        "Thursday",
+        "Tuesday",
+        "Friday"
       ],
-      "rubric": "Correct: Thursday. Small spelling slip (Thurday) = 70. Tuesday = 0."
+      "correctOption": "Thursday"
     },
     {
       "id": "td-2",
       "objectiveId": "days-months",
-      "prompt": "Complete with on, in or at: I have a holiday ___ July.",
-      "acceptableAnswers": [
-        "in"
+      "prompt": "Choose the correct answer. Complete with on, in or at: I have a holiday ___ July.",
+      "rubric": "Correct: in (in + month). 'on' or 'at' = 0.",
+      "type": "mcq",
+      "options": [
+        "in",
+        "on",
+        "at"
       ],
-      "rubric": "Correct: in (in + month). 'on' or 'at' = 0."
+      "correctOption": "in"
     },
     {
       "id": "td-3",
       "objectiveId": "telling-time",
-      "prompt": "Write this time in words: 8:30",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Choose this time in words: 8:30",
+      "rubric": "Correct: half past eight / eight thirty. 'Half eight' is informal British for 8:30 — accept. 'Half past nine' or 'half nine' = 0 (the 'setengah sembilan' trap).",
+      "type": "mcq",
+      "options": [
         "half past eight",
-        "eight thirty",
-        "it's half past eight",
-        "it is half past eight",
-        "it's eight thirty",
-        "it is eight thirty",
-        "half eight"
+        "half past seven",
+        "half past nine"
       ],
-      "rubric": "Correct: half past eight / eight thirty. 'Half eight' is informal British for 8:30 — accept. 'Half past nine' or 'half nine' = 0 (the 'setengah sembilan' trap)."
+      "correctOption": "half past eight"
     },
     {
       "id": "td-4",
       "objectiveId": "telling-time",
-      "prompt": "Listen. What time is the meeting? Write it in numbers, like 6:00.",
+      "prompt": "Choose the correct answer. Listen. What time is the meeting? Choose it in numbers, like 6:00.",
       "listen": "The meeting is at quarter to ten.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 9:45 (or 09.45 / 21:45). 10:45 or 9:15 = 0 (quarter to/past confusion).",
+      "type": "mcq",
+      "options": [
         "9 45",
-        "09 45",
-        "945",
-        "0945",
-        "21 45"
+        "9:15",
+        "10:45"
       ],
-      "rubric": "Correct: 9:45 (or 09.45 / 21:45). 10:45 or 9:15 = 0 (quarter to/past confusion)."
+      "correctOption": "9 45"
     },
     {
       "id": "td-5",
       "objectiveId": "ordinals-dates",
-      "prompt": "Complete the date for 1 January: the ___ of January.",
-      "acceptableAnswers": [
-        "first"
+      "prompt": "Choose the correct answer. Complete the date for 1 January: the ___ of January.",
+      "rubric": "Correct: first. '1st' = 70. 'one' = 0 (common error).",
+      "type": "mcq",
+      "options": [
+        "first",
+        "one",
+        "third"
       ],
-      "rubric": "Correct: first. '1st' = 70. 'one' = 0 (common error)."
+      "correctOption": "first"
     },
     {
       "id": "td-6",
       "objectiveId": "ordinals-dates",
-      "prompt": "Listen. When is her birthday? Write the day and the month, like 5 June.",
+      "prompt": "Choose the correct answer. Listen. When is her birthday? Choose the day and the month, like 5 June.",
       "listen": "My birthday is on the twelfth of March.",
-      "acceptableAnswers": [
-        "12 march",
-        "march 12",
-        "12th march",
-        "march 12th",
-        "12th of march",
-        "the 12th of march",
-        "twelfth of march",
-        "the twelfth of march",
-        "march the twelfth",
-        "march twelfth",
-        "12 maret",
-        "12 3",
-        "12 03"
+      "rubric": "Correct: 12 March. 20 March or 2 March = 0. Right day, wrong month = 30.",
+      "type": "mcq",
+      "options": [
+        "12 March",
+        "21 March",
+        "12 May"
       ],
-      "rubric": "Correct: 12 March. 20 March or 2 March = 0. Right day, wrong month = 30."
+      "correctOption": "12 March"
     }
   ],
   "material": [
@@ -648,12 +650,12 @@
         "Bilangan urutan mana saja yang tidak beraturan?"
       ],
       "assessment": {
-        "td-1": "Hari apa yang datang setelah Wednesday? Tulis dalam bahasa Inggris.",
-        "td-2": "Lengkapi dengan on, in atau at: I have a holiday ___ July.",
-        "td-3": "Tulis jam ini dengan kata-kata dalam bahasa Inggris: 8:30",
-        "td-4": "Dengarkan. Jam berapa rapatnya? Tulis dengan angka, seperti 6:00.",
-        "td-5": "Lengkapi tanggal untuk 1 Januari: the ___ of January.",
-        "td-6": "Dengarkan. Kapan ulang tahunnya? Tulis tanggal dan bulannya, seperti 5 June."
+        "td-1": "Pilih jawaban yang benar. Hari apa yang datang setelah Wednesday? Pilih dalam bahasa Inggris.",
+        "td-2": "Pilih jawaban yang benar. Lengkapi dengan on, in atau at: I have a holiday ___ July.",
+        "td-3": "Pilih jawaban yang benar. Pilih jam ini dengan kata-kata dalam bahasa Inggris: 8:30",
+        "td-4": "Pilih jawaban yang benar. Dengarkan. Jam berapa rapatnya? Pilih dengan angka, seperti 6:00.",
+        "td-5": "Pilih jawaban yang benar. Lengkapi tanggal untuk 1 Januari: the ___ of January.",
+        "td-6": "Pilih jawaban yang benar. Dengarkan. Kapan ulang tahunnya? Pilih tanggal dan bulannya, seperti 5 June."
       }
     }
   }

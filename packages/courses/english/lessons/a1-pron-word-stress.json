@@ -160,63 +160,82 @@
     {
       "id": "ws-1",
       "objectiveId": "word-stress",
-      "prompt": "Which word is stressed on the FIRST syllable: hotel, kitchen or again? Write it.",
-      "acceptableAnswers": [
-        "kitchen"
+      "prompt": "Choose the correct answer. Which word is stressed on the FIRST syllable: hotel, kitchen or again? Choose it.",
+      "rubric": "Correct: kitchen (KIT-chen, a two-syllable noun stressed at the start). 'hotel' (ho-TEL) and 'again' (a-GAIN) are stressed on the second syllable = 0.",
+      "type": "mcq",
+      "options": [
+        "kitchen",
+        "hotel",
+        "again"
       ],
-      "rubric": "Correct: kitchen (KIT-chen, a two-syllable noun stressed at the start). 'hotel' (ho-TEL) and 'again' (a-GAIN) are stressed on the second syllable = 0."
+      "correctOption": "kitchen"
     },
     {
       "id": "ws-2",
       "objectiveId": "word-stress",
-      "prompt": "Listen. Write the number you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the number you hear.",
       "listen": "My grandmother is seventy.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 70 (SEV-en-ty, stress at the start). '17' = 0: seventeen is stressed at the end (seven-TEEN). Spelling slip like 'seventi' = 50.",
+      "type": "mcq",
+      "options": [
         "70",
-        "seventy"
+        "17",
+        "7"
       ],
-      "rubric": "Correct: 70 (SEV-en-ty, stress at the start). '17' = 0: seventeen is stressed at the end (seven-TEEN). Spelling slip like 'seventi' = 50."
+      "correctOption": "70"
     },
     {
       "id": "ws-3",
       "objectiveId": "final-consonants",
-      "prompt": "Listen. Do you hear six or sick? Write the word you hear.",
+      "prompt": "Choose the correct answer. Listen. Do you hear six or sick? Choose the word you hear.",
       "listen": "My son is six.",
-      "acceptableAnswers": [
+      "rubric": "Correct: six (ends with 'ks'). Accept '6'. 'sick' = 0: the final s was heard.",
+      "type": "mcq",
+      "options": [
         "six",
-        "6"
+        "sick",
+        "seek"
       ],
-      "rubric": "Correct: six (ends with 'ks'). Accept '6'. 'sick' = 0: the final s was heard."
+      "correctOption": "six"
     },
     {
       "id": "ws-4",
       "objectiveId": "final-consonants",
-      "prompt": "Budi says: 'This is my frien, Dimas.' Which sound is missing at the end of 'friend'? Write the letter.",
-      "acceptableAnswers": [
-        "d"
+      "prompt": "Choose the correct answer. Budi says: 'This is my frien, Dimas.' Which sound is missing at the end of 'friend'? Choose the letter.",
+      "rubric": "Correct: d (friend ends with n + d). 'n' = 0 (Budi said the n). 'nd' = 50.",
+      "type": "mcq",
+      "options": [
+        "d",
+        "t",
+        "s"
       ],
-      "rubric": "Correct: d (friend ends with n + d). 'n' = 0 (Budi said the n). 'nd' = 50."
+      "correctOption": "d"
     },
     {
       "id": "ws-5",
       "objectiveId": "dictionary-stress",
-      "prompt": "A dictionary shows potato /pəˈteɪ.təʊ/. Which syllable is stressed: first, second or third? Write it.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. A dictionary shows potato /pəˈteɪ.təʊ/. Which syllable is stressed: first, second or third? Choose it.",
+      "rubric": "Correct: second (po-TA-to: the mark ˈ comes right before 'teɪ'). 'first' or 'third' = 0.",
+      "type": "mcq",
+      "options": [
         "second",
-        "the second",
-        "2",
-        "2nd"
+        "first",
+        "third"
       ],
-      "rubric": "Correct: second (po-TA-to: the mark ˈ comes right before 'teɪ'). 'first' or 'third' = 0."
+      "correctOption": "second"
     },
     {
       "id": "ws-6",
       "objectiveId": "dictionary-stress",
-      "prompt": "In the Cambridge and Oxford dictionaries, does the stress mark ˈ come before or after the stressed syllable? Write before or after.",
-      "acceptableAnswers": [
-        "before"
+      "prompt": "Choose the correct answer. In the Cambridge and Oxford dictionaries, does the stress mark ˈ come before or after the stressed syllable? Choose before or after.",
+      "rubric": "Correct: before (hotel /həʊˈtel/: the mark is before 'tel'). 'after' = 0.",
+      "type": "mcq",
+      "options": [
+        "before",
+        "after",
+        "at the end of the word"
       ],
-      "rubric": "Correct: before (hotel /həʊˈtel/: the mark is before 'tel'). 'after' = 0."
+      "correctOption": "before"
     }
   ],
   "material": [
@@ -715,12 +734,12 @@
         "Kamus gratis mana yang paling bagus untuk mengecek tekanan kata?"
       ],
       "assessment": {
-        "ws-1": "Kata mana yang ditekan di suku kata PERTAMA: hotel, kitchen atau again? Tulis katanya.",
-        "ws-2": "Dengarkan. Tulis angka yang kamu dengar.",
-        "ws-3": "Dengarkan. Kamu mendengar six atau sick? Tulis kata yang kamu dengar.",
-        "ws-4": "Budi bilang: 'This is my frien, Dimas.' Bunyi apa yang hilang di akhir kata 'friend'? Tulis hurufnya.",
-        "ws-5": "Kamus menunjukkan potato /pəˈteɪ.təʊ/. Suku kata mana yang ditekan: first, second atau third? Tulis jawabannya dalam bahasa Inggris.",
-        "ws-6": "Di kamus Cambridge dan Oxford, apakah tanda tekanan ˈ ada sebelum atau sesudah suku kata yang ditekan? Tulis before atau after."
+        "ws-1": "Pilih jawaban yang benar. Kata mana yang ditekan di suku kata PERTAMA: hotel, kitchen atau again? Pilih katanya.",
+        "ws-2": "Pilih jawaban yang benar. Dengarkan. Pilih angka yang kamu dengar.",
+        "ws-3": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar six atau sick? Pilih kata yang kamu dengar.",
+        "ws-4": "Pilih jawaban yang benar. Budi bilang: 'This is my frien, Dimas.' Bunyi apa yang hilang di akhir kata 'friend'? Pilih hurufnya.",
+        "ws-5": "Pilih jawaban yang benar. Kamus menunjukkan potato /pəˈteɪ.təʊ/. Suku kata mana yang ditekan: first, second atau third? Pilih jawabannya dalam bahasa Inggris.",
+        "ws-6": "Pilih jawaban yang benar. Di kamus Cambridge dan Oxford, apakah tanda tekanan ˈ ada sebelum atau sesudah suku kata yang ditekan? Pilih before atau after."
       }
     }
   }

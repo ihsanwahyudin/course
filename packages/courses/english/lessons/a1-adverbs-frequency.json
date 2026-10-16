@@ -154,69 +154,100 @@
     {
       "id": "af-1",
       "objectiveId": "frequency-words",
-      "prompt": "Pak Hasan goes to the gym every day, from Monday to Sunday. Complete: Pak Hasan ___ goes to the gym.",
-      "acceptableAnswers": [
-        "always"
+      "prompt": "Choose the correct answer. Pak Hasan goes to the gym every day, from Monday to Sunday. Complete: Pak Hasan ___ goes to the gym.",
+      "rubric": "Correct: always (every day = 100%). 'usually' = 40 (not every day). 'often' or 'sometimes' = 20. 'never' = 0.",
+      "type": "mcq",
+      "options": [
+        "always",
+        "never",
+        "rarely"
       ],
-      "rubric": "Correct: always (every day = 100%). 'usually' = 40 (not every day). 'often' or 'sometimes' = 20. 'never' = 0."
+      "correctOption": "always"
     },
     {
       "id": "af-2",
       "objectiveId": "frequency-words",
-      "prompt": "Correct the mistake: My son doesn't never drink milk.",
-      "acceptableAnswers": [
-        "my son never drinks milk",
-        "my son doesn't ever drink milk",
-        "my son does not ever drink milk"
+      "prompt": "Choose the correct answer. Correct the mistake: My son doesn't never drink milk.",
+      "rubric": "Correct: My son never drinks milk. 'My son never drink milk' (no -s) = 60. Keeping 'doesn't never' = 0. 'My son doesn't drink milk' = 50 (correct English but the frequency word is lost).",
+      "type": "mcq",
+      "options": [
+        "My son never drinks milk",
+        "My son doesn't never drink milk.",
+        "My son never drink milk."
       ],
-      "rubric": "Correct: My son never drinks milk. 'My son never drink milk' (no -s) = 60. Keeping 'doesn't never' = 0. 'My son doesn't drink milk' = 50 (correct English but the frequency word is lost)."
+      "correctOption": "My son never drinks milk"
     },
     {
       "id": "af-3",
       "objectiveId": "use-adverbs-of",
-      "prompt": "Put 'never' in the right place: We watch TV in the morning.",
-      "acceptableAnswers": [
-        "we never watch tv in the morning",
-        "in the morning we never watch tv"
+      "prompt": "Choose the correct answer. Put 'never' in the right place: We watch TV in the morning.",
+      "rubric": "Correct: We never watch TV in the morning. 'We watch never TV' or 'We don't never watch' = 0.",
+      "type": "mcq",
+      "options": [
+        "We never watch TV in the morning",
+        "We watch never TV in the morning.",
+        "We watch TV in never the morning."
       ],
-      "rubric": "Correct: We never watch TV in the morning. 'We watch never TV' or 'We don't never watch' = 0."
+      "correctOption": "We never watch TV in the morning"
     },
     {
       "id": "af-4",
       "objectiveId": "use-adverbs-of",
-      "prompt": "Put 'always' in the right place: Our teacher is friendly.",
-      "acceptableAnswers": [
-        "our teacher is always friendly"
+      "prompt": "Choose the correct answer. Put 'always' in the right place: Our teacher is friendly.",
+      "rubric": "Correct: Our teacher is always friendly (after 'is'). 'Our teacher always is friendly' = 30.",
+      "type": "mcq",
+      "options": [
+        "Our teacher is always friendly",
+        "Our teacher is always friend.",
+        "Our teacher is friendly always is."
       ],
-      "rubric": "Correct: Our teacher is always friendly (after 'is'). 'Our teacher always is friendly' = 30."
+      "correctOption": "Our teacher is always friendly"
     },
     {
       "id": "af-5",
       "objectiveId": "ask-how-often",
-      "prompt": "Make a question with How often: you / play badminton",
-      "acceptableAnswers": [
-        "how often do you play badminton"
-      ],
-      "rubric": "Correct: How often do you play badminton? Missing 'do' ('How often you play badminton?') = 50. 'How often are you play' = 30."
+      "prompt": "Arrange the tiles. Make a question with How often: you / play badminton",
+      "rubric": "Correct: How often do you play badminton? Missing 'do' ('How often you play badminton?') = 50. 'How often are you play' = 30.",
+      "type": "word_order",
+      "solution": "how often do you play badminton",
+      "tokens": [
+        "often",
+        "do",
+        "you",
+        "play",
+        "badminton",
+        "how"
+      ]
     },
     {
       "id": "af-6",
       "objectiveId": "ask-how-often",
-      "prompt": "Make a question with How often: Rina / visit her grandmother",
-      "acceptableAnswers": [
-        "how often does rina visit her grandmother"
-      ],
-      "rubric": "Correct: How often does Rina visit her grandmother? 'do Rina' = 50. 'does Rina visits' = 60. Missing does = 40."
+      "prompt": "Arrange the tiles. Make a question with How often: Rina / visit her grandmother",
+      "rubric": "Correct: How often does Rina visit her grandmother? 'do Rina' = 50. 'does Rina visits' = 60. Missing does = 40.",
+      "type": "word_order",
+      "solution": "how often does rina visit her grandmother",
+      "tokens": [
+        "often",
+        "does",
+        "rina",
+        "visit",
+        "her",
+        "grandmother",
+        "how"
+      ]
     },
     {
       "id": "af-7",
       "objectiveId": "ask-how-often",
-      "prompt": "Rina cleans her room every Saturday and on no other day. Complete the answer: How often does Rina clean her room? — ___ a week.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Rina cleans her room every Saturday and on no other day. Complete the answer: How often does Rina clean her room? — ___ a week.",
+      "rubric": "Correct: once (one time a week). 'one time' = 70 (understood, but 'once' is the normal word). 'twice' = 0.",
+      "type": "mcq",
+      "options": [
         "once",
-        "once a week"
+        "twice",
+        "three times"
       ],
-      "rubric": "Correct: once (one time a week). 'one time' = 70 (understood, but 'once' is the normal word). 'twice' = 0."
+      "correctOption": "once"
     }
   ],
   "material": [
@@ -585,13 +616,13 @@
         "Apa bahasa Inggrisnya 'jarang'?"
       ],
       "assessment": {
-        "af-1": "Pak Hasan pergi ke gym setiap hari, dari Senin sampai Minggu. Lengkapi: Pak Hasan ___ goes to the gym.",
-        "af-2": "Perbaiki kesalahannya: My son doesn't never drink milk.",
-        "af-3": "Taruh 'never' di tempat yang benar: We watch TV in the morning.",
-        "af-4": "Taruh 'always' di tempat yang benar: Our teacher is friendly.",
-        "af-5": "Buat pertanyaan dengan How often: you / play badminton",
-        "af-6": "Buat pertanyaan dengan How often: Rina / visit her grandmother",
-        "af-7": "Rina membersihkan kamarnya setiap hari Sabtu dan tidak pada hari lain. Lengkapi jawabannya: How often does Rina clean her room? — ___ a week."
+        "af-1": "Pilih jawaban yang benar. Pak Hasan pergi ke gym setiap hari, dari Senin sampai Minggu. Lengkapi: Pak Hasan ___ goes to the gym.",
+        "af-2": "Pilih jawaban yang benar. Perbaiki kesalahannya: My son doesn't never drink milk.",
+        "af-3": "Pilih jawaban yang benar. Taruh 'never' di tempat yang benar: We watch TV in the morning.",
+        "af-4": "Pilih jawaban yang benar. Taruh 'always' di tempat yang benar: Our teacher is friendly.",
+        "af-5": "Susun ubin kata. Buat pertanyaan dengan How often: you / play badminton",
+        "af-6": "Susun ubin kata. Buat pertanyaan dengan How often: Rina / visit her grandmother",
+        "af-7": "Pilih jawaban yang benar. Rina membersihkan kamarnya setiap hari Sabtu dan tidak pada hari lain. Lengkapi jawabannya: How often does Rina clean her room? — ___ a week."
       }
     }
   }

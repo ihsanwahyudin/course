@@ -4,9 +4,10 @@ import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View, type Text
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Card } from '@/components/ui/Card';
-import { DotPattern, GradientRing } from '@/components/ui/Decor';
+import { CanvasDots, GradientRing, MeshBlob } from '@/components/ui/Decor';
+import { GradientText } from '@/components/ui/GradientText';
 import { PillButton } from '@/components/ui/PillButton';
-import { Eyebrow, Heading, Span, Text } from '@/components/ui/Text';
+import { Eyebrow, Heading, Text } from '@/components/ui/Text';
 import { TextField } from '@/components/ui/TextField';
 import { ApiError } from '@/lib/api';
 import { useAuth } from '@/lib/auth';
@@ -64,10 +65,10 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
 
   return (
     <View style={styles.root}>
-      <DotPattern />
+      <CanvasDots />
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView contentContainerStyle={[styles.scroll, { paddingTop: insets.top + 112, paddingBottom: insets.bottom + 40 }]} keyboardShouldPersistTaps="handled">
-          <Card reveal={0} padding={28} spotlight={false} style={styles.card}>
+          <Card reveal={0} padding={28} spotlight={false} style={styles.card} decoration={<MeshBlob color={colors.lavender} size={280} style={{ right: -120, top: -140 }} />}>
             <View style={{ gap: 18 }}>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                 <GradientRing size={48} />
@@ -77,7 +78,11 @@ export function AuthForm({ mode }: { mode: 'login' | 'register' }) {
                 <Eyebrow>{isRegister ? t('auth.createAccount') : t('auth.welcomeBack')}</Eyebrow>
                 <Heading size={34}>
                   {isRegister ? t('auth.startYour') : t('auth.continueYour')}
-                  <Span color={colors.accent}>{t('auth.roadmapWord')}</Span>
+                  {Platform.OS === 'web' ? (
+                    <GradientText style={{ fontFamily: fonts.semibold, fontSize: 34, lineHeight: 35, letterSpacing: -1.5 }}>{t('auth.roadmapWord')}</GradientText>
+                  ) : (
+                    t('auth.roadmapWord')
+                  )}
                 </Heading>
                 <Text color={colors.muted}>
                   {isRegister ? t('auth.registerIntro') : t('auth.loginIntro')}

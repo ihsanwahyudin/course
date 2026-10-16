@@ -1,13 +1,15 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import { NodeModal } from '@/components/roadmap/NodeModal';
 import { RoadmapGraph } from '@/components/roadmap/RoadmapGraph';
 import { RoadmapList } from '@/components/roadmap/RoadmapList';
 import { branchesFor } from '@/components/roadmap/layout';
 import { ErrorState, GoalBadge, LoadingState, ProgressBar, SegmentedPill, StatusChip } from '@/components/ui/Bits';
 import { Icon } from '@/components/ui/Icon';
 import { Card } from '@/components/ui/Card';
-import { GradientRing } from '@/components/ui/Decor';
+import { DotPattern, GradientRing, MeshBlob } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Span, Text } from '@/components/ui/Text';
@@ -28,6 +30,9 @@ export default function CourseScreen() {
   const view = useUI((s) => s.roadmapView);
   const setView = useUI((s) => s.setRoadmapView);
   const pad = wide ? 32 : 16;
+  // The lesson shown in the dialog (setState is stable, so the memoised cards
+  // don't redraw when it opens).
+  const [open, setOpen] = useState<string | null>(null);
   const t = useT();
   const errorText = useErrorText();
 
@@ -81,6 +86,7 @@ export default function CourseScreen() {
       reveal={0}
       padding={wide ? 32 : 24}
       style={{ width: wide ? span(contentWidth, gap, 3, 2) : contentWidth, gap: 24 }}
+      decoration={<MeshBlob color={colors.lavender} size={320} style={{ right: -120, top: -140 }} />}
     >
       <View style={styles.row}>
         <GradientRing size={44} />
@@ -120,7 +126,7 @@ export default function CourseScreen() {
   );
 
   const progressTile = (
-    <Card reveal={1} style={{ width: wide ? span(contentWidth, gap, 3, 1) : contentWidth, gap: 16, justifyContent: 'space-between' }}>
+    <Card tone={data.enrolled ? 'mint' : 'sky'} reveal={1} style={{ width: wide ? span(contentWidth, gap, 3, 1) : contentWidth, gap: 16, justifyContent: 'space-between' }}>
       <Eyebrow color="rgba(17,17,19,0.6)">{data.enrolled ? t('course.yourProgress') : course.recommendedAfter ? t('course.recommendedEyebrow') : t('course.theGoal')}</Eyebrow>
       {data.enrolled ? (
         <>
@@ -209,13 +215,14 @@ export default function CourseScreen() {
         {data.nodes.some((n) => n.recommended) ? <GoalBadge /> : null}
       </View>
       {view === 'graph' ? (
-        <Card padding={pad} spotlight={false}>
-          <RoadmapGraph course={course.slug} nodes={data.nodes} levels={summary.levels} width={contentWidth - pad * 2 - 2} wide={wide} nextNodeId={data.nextNodeId} branches={branches} />
+        <Card padding={pad} spotlight={false} decoration={<DotPattern size={16} r={1.2} color="rgba(17,17,19,0.10)" />}>
+          <RoadmapGraph course={course.slug} nodes={data.nodes} levels={summary.levels} width={contentWidth - pad * 2 - 2} wide={wide} nextNodeId={data.nextNodeId} branches={branches} onOpen={setOpen} />
         </Card>
       ) : (
-        <RoadmapList course={course.slug} nodes={data.nodes} levels={summary.levels} branches={branches} />
+        <RoadmapList course={course.slug} nodes={data.nodes} levels={summary.levels} branches={branches} onOpen={setOpen} />
       )}
       {rest.length ? <RelatedTracks tracks={rest} /> : null}
+      {open ? <NodeModal course={course.slug} nodeId={open} onSwitch={setOpen} onClose={() => setOpen(null)} /> : null}
     </Screen>
   );
 }

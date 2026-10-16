@@ -147,58 +147,67 @@
     {
       "id": "read-1",
       "objectiveId": "words-phrases",
-      "prompt": "Read the board at a warung: 'Tea Rp 5.000 · Coffee Rp 8.000 · Water Rp 4.000'. Which drink costs Rp 8.000? Write the word.",
-      "acceptableAnswers": [
-        "coffee"
+      "prompt": "Choose the correct answer. Read the board at a warung: 'Tea Rp 5.000 · Coffee Rp 8.000 · Water Rp 4.000'. Which drink costs Rp 8.000? Choose the word.",
+      "rubric": "Correct: coffee. 'kopi' (right meaning, Indonesian) = 70. 'tea' or 'water' = 0.",
+      "type": "mcq",
+      "options": [
+        "coffee",
+        "tea",
+        "water"
       ],
-      "rubric": "Correct: coffee. 'kopi' (right meaning, Indonesian) = 70. 'tea' or 'water' = 0."
+      "correctOption": "coffee"
     },
     {
       "id": "read-2",
       "objectiveId": "words-phrases",
-      "prompt": "Read the note on the door: 'Meeting today in Room 5.' Which room is the meeting in? Write the number.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Read the note on the door: 'Meeting today in Room 5.' Which room is the meeting in? Choose the number.",
+      "rubric": "Correct: 5 (or Room 5). Any other number = 0.",
+      "type": "mcq",
+      "options": [
         "5",
-        "five",
-        "room 5",
-        "room five"
+        "2",
+        "8"
       ],
-      "rubric": "Correct: 5 (or Room 5). Any other number = 0."
+      "correctOption": "5"
     },
     {
       "id": "read-3",
       "objectiveId": "signs",
-      "prompt": "Fire! You need to leave the building. Which sign do you follow: ENTRANCE, EXIT or LIFT? Write the word.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Fire! You need to leave the building. Which sign do you follow: ENTRANCE, EXIT or LIFT? Choose the word.",
+      "rubric": "Correct: EXIT. ENTRANCE or LIFT = 0 (you don't use the lift in a fire).",
+      "type": "mcq",
+      "options": [
         "exit",
-        "fire exit"
+        "ENTRANCE",
+        "LIFT"
       ],
-      "rubric": "Correct: EXIT. ENTRANCE or LIFT = 0 (you don't use the lift in a fire)."
+      "correctOption": "exit"
     },
     {
       "id": "read-4",
       "objectiveId": "signs",
-      "prompt": "The sign on the pharmacy door says CLOSED. Can you buy medicine there now? Write yes or no.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. The sign on the pharmacy door says CLOSED. Can you buy medicine there now? Choose yes or no.",
+      "rubric": "Correct: no (CLOSED = tutup). 'yes' = 0.",
+      "type": "mcq",
+      "options": [
         "no",
-        "tidak",
-        "no i can't",
-        "no i cannot"
+        "yes",
+        "open"
       ],
-      "rubric": "Correct: no (CLOSED = tutup). 'yes' = 0."
+      "correctOption": "no"
     },
     {
       "id": "read-5",
       "objectiveId": "cards-forms",
-      "prompt": "Read the business card: 'Sari Wulandari · Marketing Manager · PT Maju Jaya · Mobile: 0812 3456 7890 · sari@majujaya.co.id'. What is Sari's job? Write it in English.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Read the business card: 'Sari Wulandari · Marketing Manager · PT Maju Jaya · Mobile: 0812 3456 7890 · sari@majujaya.co.id'. What is Sari's job? Choose it in English.",
+      "rubric": "Correct: Marketing Manager (accept 'manager'). 'PT Maju Jaya' (the company) = 0. 'Manajer pemasaran' (right meaning, Indonesian) = 70.",
+      "type": "mcq",
+      "options": [
         "marketing manager",
-        "manager",
-        "a marketing manager",
-        "she's a marketing manager",
-        "she is a marketing manager"
+        "nurse",
+        "teacher"
       ],
-      "rubric": "Correct: Marketing Manager (accept 'manager'). 'PT Maju Jaya' (the company) = 0. 'Manajer pemasaran' (right meaning, Indonesian) = 70."
+      "correctOption": "marketing manager"
     },
     {
       "id": "read-6",
@@ -682,11 +691,11 @@
         "Apa arti STAFF ONLY?"
       ],
       "assessment": {
-        "read-1": "Baca papan menu di warung: 'Tea Rp 5.000 · Coffee Rp 8.000 · Water Rp 4.000'. Minuman apa yang harganya Rp 8.000? Tulis katanya dalam bahasa Inggris.",
-        "read-2": "Baca catatan di pintu: 'Meeting today in Room 5.' Rapatnya di ruangan nomor berapa? Tulis angkanya.",
-        "read-3": "Ada kebakaran! Kamu harus keluar dari gedung. Tanda mana yang kamu ikuti: ENTRANCE, EXIT atau LIFT? Tulis katanya.",
-        "read-4": "Tulisan di pintu apotek: CLOSED. Bisakah kamu membeli obat di sana sekarang? Tulis yes atau no.",
-        "read-5": "Baca kartu nama ini: 'Sari Wulandari · Marketing Manager · PT Maju Jaya · Mobile: 0812 3456 7890 · sari@majujaya.co.id'. Apa pekerjaan Sari? Tulis dalam bahasa Inggris.",
+        "read-1": "Pilih jawaban yang benar. Baca papan menu di warung: 'Tea Rp 5.000 · Coffee Rp 8.000 · Water Rp 4.000'. Minuman apa yang harganya Rp 8.000? Pilih katanya dalam bahasa Inggris.",
+        "read-2": "Pilih jawaban yang benar. Baca catatan di pintu: 'Meeting today in Room 5.' Rapatnya di ruangan nomor berapa? Pilih angkanya.",
+        "read-3": "Pilih jawaban yang benar. Ada kebakaran! Kamu harus keluar dari gedung. Tanda mana yang kamu ikuti: ENTRANCE, EXIT atau LIFT? Pilih katanya.",
+        "read-4": "Pilih jawaban yang benar. Tulisan di pintu apotek: CLOSED. Bisakah kamu membeli obat di sana sekarang? Pilih yes atau no.",
+        "read-5": "Pilih jawaban yang benar. Baca kartu nama ini: 'Sari Wulandari · Marketing Manager · PT Maju Jaya · Mobile: 0812 3456 7890 · sari@majujaya.co.id'. Apa pekerjaan Sari? Pilih dalam bahasa Inggris.",
         "read-6": "Baca formulir ini: 'First name: Budi · Surname: Santoso · Phone: 0857 1122 3344 · City: Bandung'. Apa nama belakang (surname) Budi?"
       }
     }

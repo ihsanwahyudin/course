@@ -152,65 +152,82 @@
     {
       "id": "adj-1",
       "objectiveId": "adjective-before-noun",
-      "prompt": "Put the words in order: phone / I / new / a / have",
-      "acceptableAnswers": [
-        "i have a new phone"
-      ],
-      "rubric": "Correct: I have a new phone. 'I have a phone new' = 30 (adjective after the noun)."
+      "prompt": "Arrange the tiles. Put the words in order: phone / I / new / a / have",
+      "rubric": "Correct: I have a new phone. 'I have a phone new' = 30 (adjective after the noun).",
+      "type": "word_order",
+      "solution": "i have a new phone",
+      "tokens": [
+        "have",
+        "a",
+        "new",
+        "phone",
+        "i"
+      ]
     },
     {
       "id": "adj-2",
       "objectiveId": "adjective-before-noun",
-      "prompt": "Correct the mistake: It's a shirt blue.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Correct the mistake: It's a shirt blue.",
+      "rubric": "Correct: It's a blue shirt. The adjective goes before the noun. 'It's blue shirt' (no a) = 70.",
+      "type": "mcq",
+      "options": [
         "it's a blue shirt",
-        "it is a blue shirt"
+        "It's a shirt blue.",
+        "It's blue a shirt."
       ],
-      "rubric": "Correct: It's a blue shirt. The adjective goes before the noun. 'It's blue shirt' (no a) = 70."
+      "correctOption": "it's a blue shirt"
     },
     {
       "id": "adj-3",
       "objectiveId": "be-adjective",
-      "prompt": "Correct the mistake: My sister tired today.",
-      "acceptableAnswers": [
-        "my sister is tired today",
-        "my sister's tired today"
+      "prompt": "Choose the correct answer. Correct the mistake: My sister tired today.",
+      "rubric": "Correct: My sister is / My sister's tired today. Must add is. 'My sister is a tired today' = 40. 'My sister are tired' = 40.",
+      "type": "mcq",
+      "options": [
+        "My sister is tired today",
+        "My sister tired today.",
+        "My sister are tired today."
       ],
-      "rubric": "Correct: My sister is / My sister's tired today. Must add is. 'My sister is a tired today' = 40. 'My sister are tired' = 40."
+      "correctOption": "My sister is tired today"
     },
     {
       "id": "adj-4",
       "objectiveId": "be-adjective",
-      "prompt": "Translate into English: Hotelnya murah.",
-      "acceptableAnswers": [
-        "the hotel is cheap",
-        "the hotel's cheap",
-        "the hotel is inexpensive"
+      "prompt": "Choose the correct answer. Translate into English: Hotelnya murah.",
+      "rubric": "Correct: The hotel is cheap (or inexpensive). Missing is ('The hotel cheap') = 30. 'The hotel is a cheap' = 40.",
+      "type": "mcq",
+      "options": [
+        "The hotel is cheap",
+        "The hotel are cheap.",
+        "The cheap is hotel."
       ],
-      "rubric": "Correct: The hotel is cheap (or inexpensive). Missing is ('The hotel cheap') = 30. 'The hotel is a cheap' = 40."
+      "correctOption": "The hotel is cheap"
     },
     {
       "id": "adj-5",
       "objectiveId": "very-really",
-      "prompt": "Correct the mistake: We very like the new teacher.",
-      "acceptableAnswers": [
-        "we really like the new teacher",
-        "we like the new teacher very much",
-        "we like the new teacher a lot"
+      "prompt": "Choose the correct answer. Correct the mistake: We very like the new teacher.",
+      "rubric": "Correct: We really like the new teacher. (We like the new teacher very much / a lot is also correct.) Keeping 'very like' = 0.",
+      "type": "mcq",
+      "options": [
+        "We really like the new teacher",
+        "We very like the new teacher.",
+        "We like very the new teacher."
       ],
-      "rubric": "Correct: We really like the new teacher. (We like the new teacher very much / a lot is also correct.) Keeping 'very like' = 0."
+      "correctOption": "We really like the new teacher"
     },
     {
       "id": "adj-6",
       "objectiveId": "very-really",
-      "prompt": "Translate into English: Jakarta sangat panas.",
-      "acceptableAnswers": [
-        "jakarta is very hot",
-        "jakarta is really hot",
-        "jakarta's very hot",
-        "jakarta's really hot"
+      "prompt": "Choose the correct answer. Translate into English: Jakarta sangat panas.",
+      "rubric": "Correct: Jakarta is very / really hot. 'Jakarta is hot very' = 40. Missing is = 40. 'Jakarta is so hot' = 80.",
+      "type": "mcq",
+      "options": [
+        "Jakarta is very hot",
+        "Jakarta very is hot.",
+        "Jakarta are very hot."
       ],
-      "rubric": "Correct: Jakarta is very / really hot. 'Jakarta is hot very' = 40. Missing is = 40. 'Jakarta is so hot' = 80."
+      "correctOption": "Jakarta is very hot"
     }
   ],
   "material": [
@@ -569,12 +586,12 @@
         "Boleh bilang 'very like'?"
       ],
       "assessment": {
-        "adj-1": "Susun kata-katanya: phone / I / new / a / have",
-        "adj-2": "Perbaiki kesalahannya: It's a shirt blue.",
-        "adj-3": "Perbaiki kesalahannya: My sister tired today.",
-        "adj-4": "Terjemahkan ke bahasa Inggris: Hotelnya murah.",
-        "adj-5": "Perbaiki kesalahannya: We very like the new teacher.",
-        "adj-6": "Terjemahkan ke bahasa Inggris: Jakarta sangat panas."
+        "adj-1": "Susun ubin kata. Susun kata-katanya: phone / I / new / a / have",
+        "adj-2": "Pilih jawaban yang benar. Perbaiki kesalahannya: It's a shirt blue.",
+        "adj-3": "Pilih jawaban yang benar. Perbaiki kesalahannya: My sister tired today.",
+        "adj-4": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Hotelnya murah.",
+        "adj-5": "Pilih jawaban yang benar. Perbaiki kesalahannya: We very like the new teacher.",
+        "adj-6": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Jakarta sangat panas."
       }
     }
   }

@@ -163,79 +163,81 @@
     {
       "id": "fs-1",
       "objectiveId": "food-drinks",
-      "prompt": "Complete with one word: Kangkung, carrots and potatoes are all ___.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with one word: Kangkung, carrots and potatoes are all ___.",
+      "rubric": "Correct: vegetables. 'vegetable' (no -s) = 70. 'fruit' or 'food' = 20 (too general or wrong group). Anything else = 0.",
+      "type": "mcq",
+      "options": [
         "vegetables",
-        "veggies",
-        "veg"
+        "fruit",
+        "drinks"
       ],
-      "rubric": "Correct: vegetables. 'vegetable' (no -s) = 70. 'fruit' or 'food' = 20 (too general or wrong group). Anything else = 0."
+      "correctOption": "vegetables"
     },
     {
       "id": "fs-2",
       "objectiveId": "food-drinks",
-      "prompt": "Listen to Dimas at a café. What does he want to drink? Write it in English.",
+      "prompt": "Choose the correct answer. Listen to Dimas at a café. What does he want to drink? Choose it in English.",
       "listen": "I'm very thirsty. A glass of orange juice, please.",
-      "acceptableAnswers": [
+      "rubric": "Correct: orange juice. 'juice' alone = 70. 'orange' alone = 30. 'water' or another drink = 0.",
+      "type": "mcq",
+      "options": [
         "orange juice",
-        "a glass of orange juice",
-        "glass of orange juice",
-        "an orange juice",
-        "orange juice please"
+        "coffee",
+        "apple juice"
       ],
-      "rubric": "Correct: orange juice. 'juice' alone = 70. 'orange' alone = 30. 'water' or another drink = 0."
+      "correctOption": "orange juice"
     },
     {
       "id": "fs-3",
       "objectiveId": "containers-quantities",
-      "prompt": "Correct the mistake: I buy a bottle water every morning.",
-      "acceptableAnswers": [
-        "i buy a bottle of water every morning",
-        "every morning i buy a bottle of water"
+      "prompt": "Choose the correct answer. Correct the mistake: I buy a bottle water every morning.",
+      "rubric": "Correct: add of: I buy a bottle of water every morning. 'a bottles of water' = 50. The sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "I buy a bottle of water every morning",
+        "I buy a bottle of waters every morning.",
+        "I buys a bottle of water every morning."
       ],
-      "rubric": "Correct: add of: I buy a bottle of water every morning. 'a bottles of water' = 50. The sentence unchanged = 0."
+      "correctOption": "I buy a bottle of water every morning"
     },
     {
       "id": "fs-4",
       "objectiveId": "containers-quantities",
-      "prompt": "Write it in English: dua kilo beras",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Choose it in English: dua kilo beras",
+      "rubric": "Correct: two kilos of rice. 'two kilo of rice' (no -s on kilo) = 70. 'two kilos rice' (no of) = 60. 'two rices' = 20.",
+      "type": "mcq",
+      "options": [
         "two kilos of rice",
-        "2 kilos of rice",
-        "two kilograms of rice",
-        "2 kilograms of rice",
-        "2 kg of rice",
-        "2kg of rice"
+        "two kilo of rice",
+        "two kilos rice"
       ],
-      "rubric": "Correct: two kilos of rice. 'two kilo of rice' (no -s on kilo) = 70. 'two kilos rice' (no of) = 60. 'two rices' = 20."
+      "correctOption": "two kilos of rice"
     },
     {
       "id": "fs-5",
       "objectiveId": "shops-prices",
-      "prompt": "This shop makes and sells bread and cakes. What is it called in English? (one word)",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. This shop makes and sells bread and cakes. What is it called in English? (one word)",
+      "rubric": "Correct: bakery. 'bakery shop' = 80. 'supermarket' or 'market' = 0 (they sell other things too).",
+      "type": "mcq",
+      "options": [
         "bakery",
-        "a bakery",
-        "the bakery"
+        "pharmacy",
+        "bank"
       ],
-      "rubric": "Correct: bakery. 'bakery shop' = 80. 'supermarket' or 'market' = 0 (they sell other things too)."
+      "correctOption": "bakery"
     },
     {
       "id": "fs-6",
       "objectiveId": "shops-prices",
-      "prompt": "You are at the market. Correct the mistake: How much the price of this rice?",
-      "acceptableAnswers": [
-        "how much is this rice",
-        "how much is the rice",
-        "what is the price of this rice",
-        "what's the price of this rice",
-        "whats the price of this rice",
-        "how much is this rice per kilo",
-        "how much is a kilo of this rice",
-        "how much does this rice cost",
-        "how much does the rice cost"
+      "prompt": "Choose the correct answer. You are at the market. Correct the mistake: How much the price of this rice?",
+      "rubric": "Correct: How much is this rice? (or What's the price of this rice?). 'How much is the price of this rice?' = 50 (has is, but 'how much' + 'the price' says it twice). 'How much are this rice?' = 50 (rice is uncountable, so is). The sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "How much is this rice",
+        "How much this rice is?",
+        "How many is this rice?"
       ],
-      "rubric": "Correct: How much is this rice? (or What's the price of this rice?). 'How much is the price of this rice?' = 50 (has is, but 'how much' + 'the price' says it twice). 'How much are this rice?' = 50 (rice is uncountable, so is). The sentence unchanged = 0."
+      "correctOption": "How much is this rice"
     }
   ],
   "material": [
@@ -687,12 +689,12 @@
         "Apa bedanya market dan supermarket?"
       ],
       "assessment": {
-        "fs-1": "Lengkapi dengan satu kata: Kangkung, carrots and potatoes are all ___.",
-        "fs-2": "Dengarkan Dimas di sebuah kafe. Dia mau minum apa? Tulis dalam bahasa Inggris.",
-        "fs-3": "Perbaiki kesalahannya: I buy a bottle water every morning.",
-        "fs-4": "Tulis dalam bahasa Inggris: dua kilo beras",
-        "fs-5": "Toko ini membuat dan menjual roti dan kue. Apa namanya dalam bahasa Inggris? (satu kata)",
-        "fs-6": "Kamu sedang di pasar. Perbaiki kesalahannya: How much the price of this rice?"
+        "fs-1": "Pilih jawaban yang benar. Lengkapi dengan satu kata: Kangkung, carrots and potatoes are all ___.",
+        "fs-2": "Pilih jawaban yang benar. Dengarkan Dimas di sebuah kafe. Dia mau minum apa? Pilih dalam bahasa Inggris.",
+        "fs-3": "Pilih jawaban yang benar. Perbaiki kesalahannya: I buy a bottle water every morning.",
+        "fs-4": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: dua kilo beras",
+        "fs-5": "Pilih jawaban yang benar. Toko ini membuat dan menjual roti dan kue. Apa namanya dalam bahasa Inggris? (satu kata)",
+        "fs-6": "Pilih jawaban yang benar. Kamu sedang di pasar. Perbaiki kesalahannya: How much the price of this rice?"
       }
     }
   }

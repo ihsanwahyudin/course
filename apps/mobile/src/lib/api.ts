@@ -189,10 +189,15 @@ export type CheckItemView = {
   /** Level checkpoints: the lesson the question comes from. */
   lessonId?: string;
   objectiveId: string;
-  type: 'mcq' | 'word_order' | 'text';
+  type: 'mcq' | 'multi' | 'word_order' | 'letters' | 'match' | 'text';
   prompt: string;
+  /** mcq and multi. */
   options?: string[];
+  /** word_order: the words; letters: the letter tiles. */
   tokens?: string[];
+  /** match: the two columns (right shuffled). */
+  left?: string[];
+  right?: string[];
   hasAudio: boolean;
 };
 export type CheckpointView = { id: string; practice: boolean; attempt: number; items: CheckItemView[] };

@@ -5,12 +5,14 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"maps"
 	"strings"
 	"testing"
 
 	"github.com/jackc/pgx/v5"
 
 	"fluentpath/api/internal/ai"
+	"fluentpath/api/internal/curriculum"
 	"fluentpath/api/internal/progress"
 	"fluentpath/api/internal/storage"
 	"fluentpath/api/internal/tutor"
@@ -24,10 +26,10 @@ func aiCheckpoint(round int) json.RawMessage {
 	return json.RawMessage(fmt.Sprintf(`{"items":[
 	{"type":"mcq","objectiveId":"letter-names","prompt":"Round %[1]d: which letter sounds like 'eye'?","listen":"","options":["E","I","A"],"correctOption":"I","tokens":[],"solution":"","acceptedAnswers":[],"rubric":"","explanation":"I is said 'eye'."},
 	{"type":"word_order","objectiveId":"vowels","prompt":"Round %[1]d: put the words in order.","listen":"","options":[],"tokens":["A","and","E","are","vowels"],"solution":"A and E are vowels","acceptedAnswers":[],"rubric":"","explanation":"Subject, verb, noun."},
-	{"type":"text","objectiveId":"spelling","prompt":"Round %[1]d: spell '%[2]s' with dashes.","listen":"","options":[],"tokens":[],"solution":"","acceptedAnswers":["%[3]s"],"rubric":"All letters right = 100.","explanation":"Letter by letter."},
+	{"type":"letters","objectiveId":"spelling","prompt":"Round %[1]d: listen, then tap the letters in order.","listen":"%[3]s","options":[],"tokens":[],"solution":"%[2]s","acceptedAnswers":[],"rubric":"","explanation":"Letter by letter."},
 	{"type":"text","objectiveId":"letter-names","prompt":"Round %[1]d: write the letter you hear.","listen":"The letter is Q.","options":[],"tokens":[],"solution":"","acceptedAnswers":["q"],"rubric":"Q only.","explanation":"Q is said 'kyu'."},
 	{"type":"mcq","objectiveId":"vowels","prompt":"Round %[1]d: which one is a vowel?","listen":"","options":["B","O","K"],"correctOption":"O","tokens":[],"solution":"","acceptedAnswers":[],"rubric":"","explanation":"O is a vowel."}]}`,
-		round, w, strings.Join(strings.Split(w, ""), " ")))
+		round, w, strings.ToUpper(strings.Join(strings.Split(w, ""), ", "))+"."))
 }
 
 // pick is the index of an option's text in a checkpoint question (options are shuffled).
@@ -149,6 +151,75 @@ func TestAICheckpointIsCheckedGradedAndExplained(t *testing.T) {
 		t.Fatalf("a repeated submission after mastery is answered, not failed: %v", err)
 	}
 	assertAttempts(t, s, sess.ID, 2)
+}
+
+func TestTileQuestionsEarnPartMarks(t *testing.T) {
+	mock := &ai.Mock{}
+	mock.CheckpointFunc = func(in ai.CheckpointInput) (json.RawMessage, error) {
+		return json.RawMessage(`{"items":[
+	{"type":"letters","objectiveId":"spelling","prompt":"Listen and spell the word.","listen":"house","options":[],"tokens":[],"solution":"house","pairs":[],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"H-O-U-S-E."},
+	{"type":"multi","objectiveId":"vowels","prompt":"Tick every vowel in 'table'.","listen":"","options":["T","A","B","L","E"],"tokens":[],"solution":"","pairs":[],"correctOption":"","correctOptions":["A","E"],"acceptedAnswers":[],"rubric":"","explanation":"A and E."},
+	{"type":"match","objectiveId":"letter-names","prompt":"Match each letter to the word its name sounds like.","listen":"","options":[],"tokens":[],"solution":"","pairs":[{"left":"I","right":"eye"},{"left":"U","right":"you"},{"left":"Y","right":"why"}],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"Say them aloud."},
+	{"type":"mcq","objectiveId":"letter-names","prompt":"Which letter sounds like 'bee'?","listen":"","options":["B","D"],"correctOption":"B","tokens":[],"solution":"","pairs":[],"correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"B."},
+	{"type":"letters","objectiveId":"spelling","prompt":"Spell the English word for 'merah'.","listen":"","options":[],"tokens":["R","E","D"],"solution":"red","pairs":[],"correctOption":"","correctOptions":[],"acceptedAnswers":[],"rubric":"","explanation":"R-E-D."}]}`), nil
+	}
+	s := newService(t, mock)
+	ctx := context.Background()
+	sess := startDone(t, s, ctx, "a0-alphabet-sounds")
+	cp := sess.Checkpoint
+	raw, _ := json.Marshal(cp)
+	for _, leak := range []string{"house", `"answers"`, `"pairing"`, "correctOptions"} {
+		if strings.Contains(string(raw), leak) {
+			t.Fatalf("the key stays on the server (%s): %s", leak, raw)
+		}
+	}
+	if it := cp.Items[0]; it.Type != tutor.QuestionLetters || len(it.Tokens) != 5 || !it.HasAudio {
+		t.Fatalf("letters come as tiles: %+v", it)
+	}
+	m := cp.Items[2]
+	if len(m.Left) != 3 || len(m.Right) != 3 || m.Left[0] != "I" {
+		t.Fatalf("match shows both columns: %+v", m)
+	}
+	idx := func(xs []string, x string) string {
+		for i, v := range xs {
+			if v == x {
+				return fmt.Sprint(i)
+			}
+		}
+		return "missing"
+	}
+	answers := map[string]string{
+		"q1": "H-O-S-E",                                                                   // one letter missing: 50
+		"q2": pick(cp, "q2", "A"),                                                         // one of two vowels: 50
+		"q3": idx(m.Right, "eye") + "," + idx(m.Right, "why") + "," + idx(m.Right, "you"), // one pair of three: 33
+		"q4": pick(cp, "q4", "B"),                                                         // 100
+		"q5": "red",                                                                       // 100
+	}
+	for id, a := range map[string]string{"q1": "zzz", "q2": "0,0", "q3": "0,1", "q5": "reed"} {
+		bad := maps.Clone(answers)
+		bad[id] = a
+		if _, err := s.SubmitAssessment(ctx, learnerID, sess.ID, bad); code(err) != "invalid_answers" {
+			t.Fatalf("%s: %q doesn't fit its question: %v", id, a, err)
+		}
+	}
+	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var review tutor.Review
+	_ = json.Unmarshal(res.Attempt.Review, &review)
+	want := map[string]int{"q1": 50, "q2": 50, "q3": 33, "q4": 100, "q5": 100}
+	for _, it := range review.Items {
+		if it.Score != want[it.ID] {
+			t.Errorf("%s: score %d, want %d", it.ID, it.Score, want[it.ID])
+		}
+	}
+	if r := review.Items[0]; r.Answer != "H-O-S-E" || r.CorrectAnswer != "H-O-U-S-E" || r.Verdict != tutor.VerdictPartial {
+		t.Fatalf("a spelling answer reads as letters: %+v", r)
+	}
+	if r := review.Items[2]; r.Answer != "I → eye; U → why; Y → you" || r.CorrectAnswer != "I → eye; U → you; Y → why" {
+		t.Fatalf("a match answer reads as pairs: %+v", r)
+	}
 }
 
 func TestRejectedAICheckpointUsesHandWrittenQuestions(t *testing.T) {
@@ -306,10 +377,7 @@ func TestLevelCheckpoint(t *testing.T) {
 	_ = json.Unmarshal(c.Items, &items)
 	answers := map[string]string{}
 	for _, it := range items {
-		answers[it.ID] = it.Accepted[0]
-		if it.LessonID == "a0-greetings" || it.LessonID == "a0-numbers" {
-			answers[it.ID] = "zzz"
-		}
+		answers[it.ID] = keyAnswer(it, it.LessonID != "a0-greetings" && it.LessonID != "a0-numbers")
 	}
 	res, err := s.SubmitAssessment(ctx, learnerID, sess.ID, answers)
 	if err != nil {
@@ -325,5 +393,58 @@ func TestLevelCheckpoint(t *testing.T) {
 	}
 	if mock.Calls.Summary != 0 {
 		t.Fatal("a level checkpoint has no lesson summary")
+	}
+}
+
+func TestBeginnerCheckpointsHaveFewOpenQuestions(t *testing.T) {
+	text := tutor.CheckItem{Question: tutor.Question{Type: tutor.QuestionText}}
+	mcq := tutor.CheckItem{Question: tutor.Question{Type: tutor.QuestionMCQ}}
+	two := []tutor.CheckItem{text, text, mcq, mcq, mcq}
+	if err := beginnerTexts(two, &curriculum.Node{Level: "A0"}); err == nil || !strings.Contains(err.Error(), "at most 1") {
+		t.Fatalf("A0: one open question at most: %v", err)
+	}
+	if err := beginnerTexts(two, &curriculum.Node{Level: "A1"}); err != nil {
+		t.Fatalf("A1 allows two: %v", err)
+	}
+	if err := beginnerTexts([]tutor.CheckItem{text, text, text, text, text}, &curriculum.Node{Level: "B1"}); err != nil {
+		t.Fatalf("no cap above A1: %v", err)
+	}
+}
+
+func TestCheckpointDoesNotGenerateSpeechWhenDisabled(t *testing.T) {
+	for _, warm := range []bool{false, true} {
+		t.Run(fmt.Sprint("warm=", warm), func(t *testing.T) {
+			provider := &audioMock{Mock: &ai.Mock{}}
+			s := newService(t, provider)
+			s.LiveSpeech = false
+			s.WarmSpeech = warm
+			startDone(t, s, context.Background(), "a0-alphabet-sounds")
+			s.warm.Wait()
+			if provider.speech.Load() != 0 {
+				t.Fatal("checkpoint spent TTS tokens despite LiveSpeech=false")
+			}
+		})
+	}
+}
+
+func TestA0TypedAnswersMustBeTaught(t *testing.T) {
+	cur, err := curriculum.LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	lesson, _ := cur.Lesson("a0-alphabet-sounds")
+	n := cur.LocalNode("a0-alphabet-sounds", "id")
+	q := tutor.CheckItem{Question: tutor.Question{Type: tutor.QuestionText}, Accepted: []string{"spell it out"}}
+	if err := taughtBeginnerAnswers([]tutor.CheckItem{q}, n, lesson); err == nil {
+		t.Fatal("untaught expression accepted")
+	}
+	q.Accepted = []string{"double O"}
+	if err := taughtBeginnerAnswers([]tutor.CheckItem{q}, n, lesson); err != nil {
+		t.Fatal("taught expression rejected", err)
+	}
+	n.Level = "A1"
+	q.Accepted = []string{"I work at a school"}
+	if err := taughtBeginnerAnswers([]tutor.CheckItem{q}, n, lesson); err != nil {
+		t.Fatal("A1 may produce taught patterns", err)
 	}
 }

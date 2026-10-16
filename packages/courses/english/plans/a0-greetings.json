@@ -91,7 +91,7 @@
         "kind": "concept",
         "title": "The magic words",
         "text": "Now some small words that make you sound kind and polite.",
-        "body": "**Please** makes a request polite: at the end when you ask for something (*Two teas, please.*), at the start when you invite (*Please come in.*). Say **Thank you** (or **Thanks** with friends) when someone helps you; the answer is **You're welcome**, a fixed phrase like *sama-sama*. Say **Sorry** after a mistake. Say **Excuse me** before you ask a stranger something or need to pass.",
+        "body": "**Please** makes what you say polite. Practise these two patterns:\n- **Asking for something** → in a short noun request, put please at the **end**: *Two teas, please.*\n- **Inviting someone** → in this invitation, put please at the **start**: *Please come in.*\nSay **Thank you** (or **Thanks** with friends) when someone helps you; the answer is **You're welcome**, a fixed phrase like *sama-sama*. Say **Sorry** after a mistake. Say **Excuse me** before you ask a stranger something or need to pass.\n**Water** means *air putih*. These are the patterns we practise here; please can also have other positions in longer sentences.",
         "pairs": [
           {
             "en": "please",
@@ -121,21 +121,19 @@
       },
       {
         "kind": "question",
-        "title": "Build the sentence",
-        "text": "You're at a café in Bandung. Order politely.",
+        "title": "Your turn",
+        "text": "You're at a café in Bandung and want a glass of water.",
         "question": {
-          "type": "word_order",
+          "type": "mcq",
           "objectiveId": "use-please-thank",
-          "prompt": "Arrange the words: Minta secangkir kopi.",
-          "tokens": [
-            "please",
-            "coffee",
-            "A",
-            "of",
-            "cup"
+          "options": [
+            "Water!",
+            "Water, please.",
+            "Water, sorry."
           ],
-          "solution": "A cup of coffee, please.",
-          "explanation": "In a short request, **please** usually goes at the end: **A cup of coffee, please.** Without please, a request can sound rude in English."
+          "answer": 1,
+          "prompt": "Which is the polite way to ask for it?",
+          "explanation": "You're **asking for something**, so use the short-request pattern **noun + please**: **Water, please.** Just *Water!* can sound rude, and **sorry** is for after a mistake."
         }
       },
       {
@@ -467,7 +465,7 @@
         "kind": "concept",
         "title": "Kata-kata ajaib",
         "text": "Sekarang beberapa kata kecil yang membuatmu terdengar ramah dan sopan.",
-        "body": "**Please** membuat permintaan jadi sopan: di akhir saat meminta sesuatu (*Two teas, please.*), di awal saat mempersilakan (*Please come in.*). Ucapkan **Thank you** (atau **Thanks** ke teman) saat dibantu; jawabannya **You're welcome**, ungkapan tetap seperti *sama-sama*. Ucapkan **Sorry** setelah berbuat salah. Ucapkan **Excuse me** sebelum bertanya kepada orang asing atau saat mau lewat.",
+        "body": "**Please** membuat ucapanmu sopan. Latih dua pola ini:\n- **Meminta sesuatu** → dalam permintaan singkat berupa benda, please di **akhir**: *Two teas, please.* (Dua teh, ya.)\n- **Mempersilakan orang** → dalam ajakan ini, please di **awal**: *Please come in.* (Silakan masuk.)\nUcapkan **Thank you** (atau **Thanks** ke teman) saat dibantu; jawabannya **You're welcome**, ungkapan tetap seperti *sama-sama*. Ucapkan **Sorry** setelah berbuat salah. Ucapkan **Excuse me** sebelum bertanya kepada orang asing atau saat mau lewat.\n**Water** = *air putih*. Ini dua pola yang kita latih di sini; dalam kalimat lain please bisa berada di posisi lain.",
         "pairs": [
           {
             "en": "please",
@@ -497,21 +495,19 @@
       },
       {
         "kind": "question",
-        "title": "Susun kalimatnya",
-        "text": "Kamu di kafe di Bandung. Pesan dengan sopan.",
+        "title": "Giliranmu",
+        "text": "Kamu di kafe di Bandung dan mau minta air putih.",
         "question": {
-          "type": "word_order",
+          "type": "mcq",
           "objectiveId": "use-please-thank",
-          "prompt": "Susun kata-katanya: Minta secangkir kopi.",
-          "tokens": [
-            "please",
-            "coffee",
-            "A",
-            "of",
-            "cup"
+          "options": [
+            "Water!",
+            "Water, please.",
+            "Water, sorry."
           ],
-          "solution": "A cup of coffee, please.",
-          "explanation": "Dalam permintaan pendek, **please** biasanya di akhir: **A cup of coffee, please.** Tanpa please, permintaan bisa terdengar kasar dalam bahasa Inggris."
+          "answer": 1,
+          "prompt": "Mana cara yang sopan untuk memintanya?",
+          "explanation": "Kamu **meminta sesuatu**, jadi gunakan pola permintaan singkat **benda + please**: **Water, please.** Kalau hanya *Water!* bisa terdengar kasar, dan **sorry** dipakai setelah berbuat salah."
         }
       },
       {

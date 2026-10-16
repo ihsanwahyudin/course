@@ -167,37 +167,41 @@
     {
       "id": "greet-1",
       "objectiveId": "greet-people-and",
-      "prompt": "It's 2 p.m. You walk into Bu Ani's office. Complete: Good ___, Bu Ani!",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. It's 2 p.m. You walk into Bu Ani's office. Complete: Good ___, Bu Ani!",
+      "rubric": "Correct: afternoon (12 noon to about 6 p.m.). 'morning', 'evening', 'night' or 'noon' = 0.",
+      "type": "mcq",
+      "options": [
         "afternoon",
-        "good afternoon"
+        "morning",
+        "evening"
       ],
-      "rubric": "Correct: afternoon (12 noon to about 6 p.m.). 'morning', 'evening', 'night' or 'noon' = 0."
+      "correctOption": "afternoon"
     },
     {
       "id": "greet-2",
       "objectiveId": "greet-people-and",
-      "prompt": "It's Tuesday afternoon. You leave the office. Your next meeting with your colleague is on Wednesday morning. Complete: See you ___!",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. It's Tuesday afternoon. You leave the office. Your next meeting with your colleague is on Wednesday morning. Complete: See you ___!",
+      "rubric": "Correct: tomorrow. Also accept '(on) Wednesday'. 'later' = 60 (true but not the best answer). 'Good night' = 0.",
+      "type": "mcq",
+      "options": [
         "tomorrow",
-        "see you tomorrow",
-        "on wednesday",
-        "wednesday"
+        "yesterday",
+        "last week"
       ],
-      "rubric": "Correct: tomorrow. Also accept '(on) Wednesday'. 'later' = 60 (true but not the best answer). 'Good night' = 0."
+      "correctOption": "tomorrow"
     },
     {
       "id": "greet-3",
       "objectiveId": "use-please-thank",
-      "prompt": "A shop assistant at Indomaret gives you your change. What do you say to her?",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. A shop assistant at Indomaret gives you your change. What do you say to her?",
+      "rubric": "Correct: Thank you / Thanks (any polite thanks). 'Sorry', 'Please' or 'You're welcome' = 0.",
+      "type": "mcq",
+      "options": [
         "thank you",
-        "thanks",
-        "thank you very much",
-        "thanks a lot",
-        "thank you so much"
+        "Sorry.",
+        "Goodbye."
       ],
-      "rubric": "Correct: Thank you / Thanks (any polite thanks). 'Sorry', 'Please' or 'You're welcome' = 0."
+      "correctOption": "thank you"
     },
     {
       "id": "greet-4",
@@ -211,46 +215,29 @@
     {
       "id": "greet-5",
       "objectiveId": "how-are-you",
-      "prompt": "It's 8 a.m. You meet your friend Dimas. Greet him and ask how he is. (Write one short line.)",
-      "acceptableAnswers": [
-        "good morning how are you",
-        "good morning dimas how are you",
-        "morning dimas how are you",
-        "hi dimas how are you",
-        "hello dimas how are you",
-        "hi how are you",
-        "hello how are you",
-        "good morning dimas how are you today",
-        "hi dimas how are you today"
+      "prompt": "It's 8 a.m. You meet Dimas. Choose the greeting for this time.",
+      "rubric": "Needs a greeting (Hi / Hello / Good morning) and 'How are you?'. Missing the greeting = 60. 'Who are you?' = 0 for the question part. 'Good evening/night' = 50.",
+      "type": "mcq",
+      "options": [
+        "Good morning, Dimas.",
+        "Good evening, Dimas.",
+        "Good night, Dimas."
       ],
-      "rubric": "Needs a greeting (Hi / Hello / Good morning) and 'How are you?'. Missing the greeting = 60. 'Who are you?' = 0 for the question part. 'Good evening/night' = 50."
+      "correctOption": "Good morning, Dimas."
     },
     {
       "id": "greet-6",
       "objectiveId": "how-are-you",
-      "prompt": "Listen. Answer the question, then ask it back.",
+      "prompt": "Listen to the greeting. Choose a polite reply.",
       "listen": "Hello! How are you?",
-      "acceptableAnswers": [
-        "i'm fine thanks and you",
-        "i'm fine thank you and you",
-        "i am fine thanks and you",
-        "i am fine thank you and you",
-        "fine thanks and you",
-        "fine thank you and you",
-        "i'm good thanks and you",
-        "i'm good and you",
-        "i'm fine and you",
-        "very well thank you and you",
-        "very well thanks and you",
-        "not bad thanks and you",
-        "not bad and you",
-        "i'm fine thanks how about you",
-        "i'm fine thanks what about you",
-        "i'm good thanks how about you",
-        "i'm fine thanks how are you",
-        "i'm good thanks how are you"
+      "rubric": "Needs a short positive answer (I'm fine / good / very well / not bad) and a question back (And you? / How about you?). Answer without the question back = 70. Giving a name ('I'm Rina') = 0.",
+      "type": "mcq",
+      "options": [
+        "I'm fine, thanks. And you?",
+        "My name is Rina.",
+        "Good night."
       ],
-      "rubric": "Needs a short positive answer (I'm fine / good / very well / not bad) and a question back (And you? / How about you?). Answer without the question back = 70. Giving a name ('I'm Rina') = 0."
+      "correctOption": "I'm fine, thanks. And you?"
     }
   ],
   "material": [
@@ -745,12 +732,12 @@
         "Apakah harus bilang 'I'm fine' kalau sedang tidak baik?"
       ],
       "assessment": {
-        "greet-1": "Jam 2 siang. Kamu masuk ke kantor Bu Ani. Lengkapi: Good ___, Bu Ani!",
-        "greet-2": "Hari Selasa sore. Kamu pulang dari kantor dan akan bertemu rekan kerjamu lagi Rabu pagi. Lengkapi: See you ___!",
-        "greet-3": "Kasir Indomaret memberikan uang kembalianmu. Apa yang kamu ucapkan kepadanya (dalam bahasa Inggris)?",
+        "greet-1": "Pilih jawaban yang benar. Jam 2 siang. Kamu masuk ke kantor Bu Ani. Lengkapi: Good ___, Bu Ani!",
+        "greet-2": "Pilih jawaban yang benar. Hari Selasa sore. Kamu pulang dari kantor dan akan bertemu rekan kerjamu lagi Rabu pagi. Lengkapi: See you ___!",
+        "greet-3": "Pilih jawaban yang benar. Kasir Indomaret memberikan uang kembalianmu. Apa yang kamu ucapkan kepadanya (dalam bahasa Inggris)?",
         "greet-4": "Kamu tersesat di Bandung dan mau bertanya kepada orang yang tidak kamu kenal. Dua kata bahasa Inggris apa yang kamu ucapkan lebih dulu?",
-        "greet-5": "Jam 8 pagi. Kamu bertemu temanmu, Dimas. Sapa dia dan tanyakan kabarnya dalam bahasa Inggris. (Tulis satu kalimat pendek.)",
-        "greet-6": "Dengarkan. Jawab pertanyaannya dalam bahasa Inggris, lalu tanyakan balik."
+        "greet-5": "Jam 8 pagi. Kamu bertemu Dimas. Pilih sapaan untuk waktu ini.",
+        "greet-6": "Dengarkan sapaan itu. Pilih balasan yang sopan."
       }
     }
   }

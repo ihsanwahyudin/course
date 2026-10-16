@@ -3,7 +3,7 @@
   "intro": "Hi! In this lesson you'll learn four small but very useful words: and, but, or and because. With them you can join short sentences, like 'I like rice, but I don't like noodles', and give reasons, like 'I study English because I need it for work.' Warm-up: what food do you like, and what food don't you like?",
   "teachingNotes": [
     "and = adds an idea (dan); but = a different or opposite idea (tapi / tetapi), usually with a comma before it when it joins two sentences; or = a choice (atau). With and, the same subject doesn't need to be repeated: Budi gets up and has a shower.",
-    "Negatives take or, not and: 'I don't like tea or coffee', not *'I don't like tea and coffee' (Indonesian 'tidak suka teh dan kopi' causes this). Choice questions also use or: Do you want tea or coffee?",
+    "To mean neither of two things in a negative sentence, use or: 'I don't like tea or coffee'. 'I don't like tea and coffee' can instead reject the combination; it is not always ungrammatical. Choice questions use or too: Do you want tea or coffee?",
     "because = karena. It gives the reason and stays inside ONE sentence: 'I stay at home because I'm sick.' The common error is a full stop before because: *'I stay at home. Because I'm sick.' In conversation a short answer to Why? can start with Because ('Why are you at home?' 'Because I'm sick.'), but when writing a full sentence, join the two parts.",
     "Don't mix up but (tapi) and because (karena): 'Dewi is happy because it's her birthday', not *'... but it's her birthday'. 'Because I'm sick, I stay at home' is also correct English: accept it, but practise the because-in-the-middle pattern.",
     "Limits: only and, but, or, because. Don't teach so, although, because of, when or if yet. Use the simple present and to be only (no past simple except was/were, no future, no perfect). Real contexts: work, family, food, warung, transport in Jakarta, Bandung, Bogor."
@@ -65,12 +65,12 @@
     },
     {
       "objectiveId": "and-but-or",
-      "prompt": "Correct the mistake: I don't like tea and coffee.",
+      "prompt": "You dislike both tea and coffee. Change 'and' to the word that makes this meaning clear: I don't like tea and coffee.",
       "expected": [
         "i don't like tea or coffee",
         "i do not like tea or coffee"
       ],
-      "hint": "After don't / doesn't, use or."
+      "hint": "To say no tea and no coffee either, join them with or."
     },
     {
       "objectiveId": "and-but-or",
@@ -113,74 +113,93 @@
     {
       "id": "cj-1",
       "objectiveId": "and-but-or",
-      "prompt": "Complete with and, but or or: My phone is old, ___ it works well.",
-      "acceptableAnswers": [
-        "but"
+      "prompt": "Choose the word that shows a contrast: My phone is old, ___ it works well.",
+      "rubric": "Correct: but (a different, surprising idea). 'and' = 30 (grammatical but misses the contrast). 'or' or 'because' = 0.",
+      "type": "mcq",
+      "options": [
+        "but",
+        "and",
+        "or"
       ],
-      "rubric": "Correct: but (a different, surprising idea). 'and' = 30 (grammatical but misses the contrast). 'or' or 'because' = 0."
+      "correctOption": "but"
     },
     {
       "id": "cj-2",
       "objectiveId": "and-but-or",
-      "prompt": "Correct the mistake: Budi doesn't eat meat and fish.",
-      "acceptableAnswers": [
-        "budi doesn't eat meat or fish",
-        "budi does not eat meat or fish"
+      "prompt": "Budi eats neither meat nor fish. Choose the sentence with this meaning.",
+      "rubric": "Correct: Budi doesn't eat meat or fish (negative → or). Only the word 'or' = 80. Sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "Budi doesn't eat meat or fish",
+        "Budi doesn't eat meat or fishes.",
+        "Budi don't eat meat or fish."
       ],
-      "rubric": "Correct: Budi doesn't eat meat or fish (negative → or). Only the word 'or' = 80. Sentence unchanged = 0."
+      "correctOption": "Budi doesn't eat meat or fish"
     },
     {
       "id": "cj-3",
       "objectiveId": "and-but-or",
-      "prompt": "At a shop in Bandung, the cashier asks you a question. Complete with and, but or or: 'Do you want to pay in cash ___ by card?'",
-      "acceptableAnswers": [
-        "or"
+      "prompt": "Choose the correct answer. At a shop in Bandung, the cashier asks you a question. Complete with and, but or or: 'Do you want to pay in cash ___ by card?'",
+      "rubric": "Correct: or (a choice between two things). 'and' or 'but' = 0.",
+      "type": "mcq",
+      "options": [
+        "or",
+        "but",
+        "because"
       ],
-      "rubric": "Correct: or (a choice between two things). 'and' or 'but' = 0."
+      "correctOption": "or"
     },
     {
       "id": "cj-4",
       "objectiveId": "and-but-or",
-      "prompt": "Join the two sentences with and: Rina speaks English. She speaks Japanese.",
-      "acceptableAnswers": [
-        "rina speaks english and she speaks japanese",
-        "rina speaks english and japanese",
-        "rina speaks english and speaks japanese",
-        "rina speaks english and she also speaks japanese",
-        "rina speaks english and also speaks japanese"
+      "prompt": "Choose the correct answer. Join the two sentences with and: Rina speaks English. She speaks Japanese.",
+      "rubric": "Correct: Rina speaks English and Japanese / Rina speaks English and she speaks Japanese. 'Rina speak English and Japanese' (no -s) = 60. Two sentences without and = 0.",
+      "type": "mcq",
+      "options": [
+        "Rina speaks English and she speaks Japanese",
+        "Rina speak English and Japanese.",
+        "Rina speaks English and she speak Japanese."
       ],
-      "rubric": "Correct: Rina speaks English and Japanese / Rina speaks English and she speaks Japanese. 'Rina speak English and Japanese' (no -s) = 60. Two sentences without and = 0."
+      "correctOption": "Rina speaks English and she speaks Japanese"
     },
     {
       "id": "cj-5",
       "objectiveId": "because",
-      "prompt": "Join the two sentences with because: Budi takes the bus. He doesn't have a car.",
-      "acceptableAnswers": [
-        "budi takes the bus because he doesn't have a car",
-        "budi takes the bus because he does not have a car",
-        "budi takes the bus because he hasn't got a car",
-        "budi takes the bus because he has not got a car"
+      "prompt": "Choose the correct answer. Join the two sentences with because: Budi takes the bus. He doesn't have a car.",
+      "rubric": "Correct: Budi takes the bus because he doesn't have a car. 'Because he doesn't have a car, Budi takes the bus' is also correct = 100. A full stop before because = 40. 'He doesn't have a car because he takes the bus' (reason reversed) = 0.",
+      "type": "mcq",
+      "options": [
+        "Budi takes the bus because he doesn't have a car",
+        "Budi take the bus because he doesn't have a car.",
+        "Budi takes the bus because he don't have a car."
       ],
-      "rubric": "Correct: Budi takes the bus because he doesn't have a car. 'Because he doesn't have a car, Budi takes the bus' is also correct = 100. A full stop before because = 40. 'He doesn't have a car because he takes the bus' (reason reversed) = 0."
+      "correctOption": "Budi takes the bus because he doesn't have a car"
     },
     {
       "id": "cj-6",
       "objectiveId": "because",
-      "prompt": "Correct the mistake: I drink coffee every morning. Because I am always sleepy.",
-      "acceptableAnswers": [
-        "i drink coffee every morning because i am always sleepy",
-        "i drink coffee every morning because i'm always sleepy"
+      "prompt": "Choose the correct answer. Correct the mistake: I drink coffee every morning. Because I am always sleepy.",
+      "rubric": "Correct: one sentence, no full stop before because: I drink coffee every morning because I'm always sleepy. 'Because I am always sleepy, I drink coffee every morning' is also correct = 100. Sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "I drink coffee every morning because I am always sleepy",
+        "I drinks coffee every morning because I am always sleepy.",
+        "I drink coffee every morning because am always sleepy."
       ],
-      "rubric": "Correct: one sentence, no full stop before because: I drink coffee every morning because I'm always sleepy. 'Because I am always sleepy, I drink coffee every morning' is also correct = 100. Sentence unchanged = 0."
+      "correctOption": "I drink coffee every morning because I am always sleepy"
     },
     {
       "id": "cj-7",
       "objectiveId": "because",
-      "prompt": "Complete with but or because: Dewi is very happy today ___ it's her birthday.",
-      "acceptableAnswers": [
-        "because"
+      "prompt": "Choose the word that gives the reason: Dewi is very happy today ___ it's her birthday.",
+      "rubric": "Correct: because (her birthday is the reason she is happy). 'but' = 0.",
+      "type": "mcq",
+      "options": [
+        "because",
+        "but",
+        "or"
       ],
-      "rubric": "Correct: because (her birthday is the reason she is happy). 'but' = 0."
+      "correctOption": "because"
     }
   ],
   "material": [
@@ -529,13 +548,13 @@
         "Apa bedanya but dan because?"
       ],
       "assessment": {
-        "cj-1": "Lengkapi dengan and, but atau or: My phone is old, ___ it works well.",
-        "cj-2": "Perbaiki kesalahannya: Budi doesn't eat meat and fish.",
-        "cj-3": "Di sebuah toko di Bandung, kasir bertanya kepadamu. Lengkapi dengan and, but atau or: 'Do you want to pay in cash ___ by card?'",
-        "cj-4": "Gabungkan kedua kalimat dengan and: Rina speaks English. She speaks Japanese.",
-        "cj-5": "Gabungkan kedua kalimat dengan because: Budi takes the bus. He doesn't have a car.",
-        "cj-6": "Perbaiki kesalahannya: I drink coffee every morning. Because I am always sleepy.",
-        "cj-7": "Lengkapi dengan but atau because: Dewi is very happy today ___ it's her birthday."
+        "cj-1": "Pilih kata yang menunjukkan pertentangan: My phone is old, ___ it works well.",
+        "cj-2": "Budi tidak makan daging maupun ikan. Pilih kalimat dengan arti ini.",
+        "cj-3": "Pilih jawaban yang benar. Di sebuah toko di Bandung, kasir bertanya kepadamu. Lengkapi dengan and, but atau or: 'Do you want to pay in cash ___ by card?'",
+        "cj-4": "Pilih jawaban yang benar. Gabungkan kedua kalimat dengan and: Rina speaks English. She speaks Japanese.",
+        "cj-5": "Pilih jawaban yang benar. Gabungkan kedua kalimat dengan because: Budi takes the bus. He doesn't have a car.",
+        "cj-6": "Pilih jawaban yang benar. Perbaiki kesalahannya: I drink coffee every morning. Because I am always sleepy.",
+        "cj-7": "Pilih kata yang menunjukkan alasan: Dewi is very happy today ___ it's her birthday."
       }
     }
   }

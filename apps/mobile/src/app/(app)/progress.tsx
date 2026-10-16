@@ -6,6 +6,8 @@ import { Headline } from '@/components/Headline';
 import { PageHeader } from '@/components/PageHeader';
 import { Chip, ErrorState, LoadingState, ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
+import { GradientText } from '@/components/ui/GradientText';
+import { MeshBlob } from '@/components/ui/Decor';
 import { PillButton } from '@/components/ui/PillButton';
 import { Screen, span, useLayout } from '@/components/ui/Screen';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -34,7 +36,7 @@ export default function ProgressScreen() {
     <Screen onRefresh={refetch} refreshing={isRefetching}>
       <PageHeader
         label={t('progress.title')}
-        title={wide ? <Headline size={60} before={t('progress.before')} highlight={t('progress.gradient')} after={t('progress.after')} /> : t('progress.title')}
+        title={wide ? <Headline size={60} before={t('progress.before')} gradient={t('progress.gradient')} after={t('progress.after')} /> : t('progress.title')}
         description={t('progress.description')}
       />
       {enrolled.length > 1 ? (
@@ -49,7 +51,7 @@ export default function ProgressScreen() {
       ) : dashboard.isError ? (
         <ErrorState title={t('progress.loadError')} message={errorText(dashboard.error)} onRetry={dashboard.refetch} />
       ) : !course || !data ? (
-        <Card style={{ gap: 12 }}>
+        <Card tone="sky" style={{ gap: 12 }}>
           <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.nothingYet')}</Eyebrow>
           <Heading size={28}>{t('progress.startToTrack')}</Heading>
           <Text color="rgba(17,17,19,0.7)">{t('progress.startToTrackText')}</Text>
@@ -60,16 +62,16 @@ export default function ProgressScreen() {
       ) : (
         <View style={{ flexDirection: wide ? 'row' : 'column', gap, alignItems: 'flex-start' }}>
           <View style={{ width: left, gap }}>
-            <Card tone="ink" reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }}>
+            <Card tone="ink" reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }} decoration={<MeshBlob color="rgba(91,76,245,0.5)" size={240} style={{ right: -70, top: -70 }} />}>
               <Eyebrow color="rgba(255,255,255,0.6)">{t('progress.skillsMastered')}</Eyebrow>
               <View>
                 <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
                   <Heading size={72} color={colors.white} tabular>
                     {data.mastered.length}
                   </Heading>
-                  <Heading size={32} color="rgba(255,255,255,0.45)" style={{ marginBottom: 6 }}>
+                  <GradientText animated={false} style={{ fontFamily: fonts.semibold, fontSize: 32, lineHeight: 42, letterSpacing: -1.4 }}>
                     {`/${data.summary.targetNodes}`}
-                  </Heading>
+                  </GradientText>
                 </View>
                 <Text color="rgba(255,255,255,0.7)" style={{ marginTop: 8 }}>
                   {t('progress.onTheWay', { course: data.course.title, target: data.course.progress?.targetLevel ?? '', level: data.course.progress?.currentLevel ?? '' })}
@@ -99,7 +101,7 @@ export default function ProgressScreen() {
                 )}
               </View>
             </Card>
-            <Card reveal={1} style={{ gap: 16 }}>
+            <Card tone="lavender" reveal={1} style={{ gap: 16 }}>
               <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.last7')}</Eyebrow>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 {[
@@ -189,8 +191,8 @@ export default function ProgressScreen() {
               )}
             </Card>
 
-            <Card reveal={3} style={{ gap: 14 }}>
-              <Eyebrow>{t('progress.byLevel')}</Eyebrow>
+            <Card tone="sky" reveal={3} style={{ gap: 14 }}>
+              <Eyebrow color="rgba(17,17,19,0.6)">{t('progress.byLevel')}</Eyebrow>
               {data.summary.levels.map((l) => (
                 <View key={l.level} style={[styles.row, { gap: 12 }]}>
                   <View style={styles.levelPill}>

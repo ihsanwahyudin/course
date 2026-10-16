@@ -146,72 +146,98 @@
     {
       "id": "pb-1",
       "objectiveId": "affirmative",
-      "prompt": "Complete with was or were: Yesterday Budi ___ at the office all day.",
-      "acceptableAnswers": [
-        "was"
+      "prompt": "Choose the correct answer. Complete with was or were: Yesterday Budi ___ at the office all day.",
+      "rubric": "Correct: was (Budi = he, past). 'is' = 30 (wrong time). 'were' = 30.",
+      "type": "mcq",
+      "options": [
+        "was",
+        "were",
+        "is"
       ],
-      "rubric": "Correct: was (Budi = he, past). 'is' = 30 (wrong time). 'were' = 30."
+      "correctOption": "was"
     },
     {
       "id": "pb-2",
       "objectiveId": "affirmative",
-      "prompt": "Translate: Kemarin kami di Bandung.",
-      "acceptableAnswers": [
-        "we were in bandung yesterday",
-        "yesterday we were in bandung"
+      "prompt": "Choose the correct answer. Translate: Kemarin kami di Bandung.",
+      "rubric": "Needs 'were'. 'we are in Bandung yesterday' = 30. 'we was' = 40. Missing verb = 20. 'at Bandung' = 80.",
+      "type": "mcq",
+      "options": [
+        "We were in Bandung yesterday",
+        "We was in Bandung yesterday.",
+        "We were yesterday Bandung in."
       ],
-      "rubric": "Needs 'were'. 'we are in Bandung yesterday' = 30. 'we was' = 40. Missing verb = 20. 'at Bandung' = 80."
+      "correctOption": "We were in Bandung yesterday"
     },
     {
       "id": "pb-3",
       "objectiveId": "negative",
-      "prompt": "Make it negative: The shop was open on Sunday.",
-      "acceptableAnswers": [
-        "the shop wasn't open on sunday",
-        "the shop was not open on sunday"
+      "prompt": "Choose the correct answer. Make it negative: The shop was open on Sunday.",
+      "rubric": "Correct: The shop wasn't / was not open on Sunday. 'weren't' = 40. 'isn't' = 30. 'didn't open' = 30.",
+      "type": "mcq",
+      "options": [
+        "The shop wasn't open on Sunday",
+        "The shop weren't open on Sunday.",
+        "The shop didn't was open on Sunday."
       ],
-      "rubric": "Correct: The shop wasn't / was not open on Sunday. 'weren't' = 40. 'isn't' = 30. 'didn't open' = 30."
+      "correctOption": "The shop wasn't open on Sunday"
     },
     {
       "id": "pb-4",
       "objectiveId": "negative",
-      "prompt": "Translate: Kami tidak terlambat kemarin.",
-      "acceptableAnswers": [
-        "we weren't late yesterday",
-        "we were not late yesterday",
-        "yesterday we weren't late",
-        "yesterday we were not late"
+      "prompt": "Choose the correct answer. Translate: Kami tidak terlambat kemarin.",
+      "rubric": "Needs 'weren't' / 'were not'. 'wasn't' = 40. 'aren't' = 30. Missing 'yesterday' = 70.",
+      "type": "mcq",
+      "options": [
+        "We weren't late yesterday",
+        "We wasn't late yesterday.",
+        "We didn't were late yesterday."
       ],
-      "rubric": "Needs 'weren't' / 'were not'. 'wasn't' = 40. 'aren't' = 30. Missing 'yesterday' = 70."
+      "correctOption": "We weren't late yesterday"
     },
     {
       "id": "pb-5",
       "objectiveId": "questions",
-      "prompt": "Make a question: Your parents were at home last night.",
-      "acceptableAnswers": [
-        "were your parents at home last night"
-      ],
-      "rubric": "Correct: Were your parents at home last night? Statement order with a question mark = 20. 'Was your parents' = 40."
+      "prompt": "Arrange the tiles. Make a question: Your parents were at home last night.",
+      "rubric": "Correct: Were your parents at home last night? Statement order with a question mark = 20. 'Was your parents' = 40.",
+      "type": "word_order",
+      "solution": "were your parents at home last night",
+      "tokens": [
+        "your",
+        "parents",
+        "at",
+        "home",
+        "last",
+        "night",
+        "were"
+      ]
     },
     {
       "id": "pb-6",
       "objectiveId": "questions",
-      "prompt": "Listen. Give a short YES answer.",
+      "prompt": "Choose the correct answer. Listen. Give a short YES answer.",
       "listen": "Was your sister at the wedding on Sunday?",
-      "acceptableAnswers": [
-        "yes she was"
+      "rubric": "Correct: Yes, she was. 'Yes, he was' = 50 (wrong person). 'Yes, I was' = 40. 'Yes' alone = 40. 'Yes, she is' = 30.",
+      "type": "mcq",
+      "options": [
+        "Yes she was",
+        "Yes, she were.",
+        "Yes, she is."
       ],
-      "rubric": "Correct: Yes, she was. 'Yes, he was' = 50 (wrong person). 'Yes, I was' = 40. 'Yes' alone = 40. 'Yes, she is' = 30."
+      "correctOption": "Yes she was"
     },
     {
       "id": "pb-7",
       "objectiveId": "questions",
-      "prompt": "Give a short NEGATIVE answer: Were they late for the meeting?",
-      "acceptableAnswers": [
-        "no they weren't",
-        "no they were not"
+      "prompt": "Choose the correct answer. Give a short NEGATIVE answer: Were they late for the meeting?",
+      "rubric": "Correct: No, they weren't. 'No, they wasn't' = 40. 'No, they aren't' = 30. 'No' alone = 40.",
+      "type": "mcq",
+      "options": [
+        "No they weren't",
+        "No, they wasn't.",
+        "No, they didn't."
       ],
-      "rubric": "Correct: No, they weren't. 'No, they wasn't' = 40. 'No, they aren't' = 30. 'No' alone = 40."
+      "correctOption": "No they weren't"
     }
   ],
   "material": [
@@ -615,13 +641,13 @@
         "Bagaimana mengucapkan 'was' dan 'wasn't' dengan alami?"
       ],
       "assessment": {
-        "pb-1": "Lengkapi dengan was atau were: Yesterday Budi ___ at the office all day.",
-        "pb-2": "Terjemahkan ke bahasa Inggris: Kemarin kami di Bandung.",
-        "pb-3": "Ubah ke kalimat negatif: The shop was open on Sunday.",
-        "pb-4": "Terjemahkan ke bahasa Inggris: Kami tidak terlambat kemarin.",
-        "pb-5": "Ubah ke kalimat tanya: Your parents were at home last night.",
-        "pb-6": "Dengarkan. Beri jawaban singkat YA dalam bahasa Inggris.",
-        "pb-7": "Beri jawaban singkat NEGATIF dalam bahasa Inggris: Were they late for the meeting?"
+        "pb-1": "Pilih jawaban yang benar. Lengkapi dengan was atau were: Yesterday Budi ___ at the office all day.",
+        "pb-2": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Kemarin kami di Bandung.",
+        "pb-3": "Pilih jawaban yang benar. Ubah ke kalimat negatif: The shop was open on Sunday.",
+        "pb-4": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Kami tidak terlambat kemarin.",
+        "pb-5": "Susun ubin kata. Ubah ke kalimat tanya: Your parents were at home last night.",
+        "pb-6": "Pilih jawaban yang benar. Dengarkan. Beri jawaban singkat YA dalam bahasa Inggris.",
+        "pb-7": "Pilih jawaban yang benar. Beri jawaban singkat NEGATIF dalam bahasa Inggris: Were they late for the meeting?"
       }
     }
   }

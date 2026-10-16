@@ -123,73 +123,80 @@
     {
       "id": "dr-1",
       "objectiveId": "describe-a-typical",
-      "prompt": "Pak Hasan tells you about his evening, in order. Complete with the word that shows the order: '___, I close my warung. Then I have dinner. After that, I watch TV.'",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Choose the word for the first activity: '___, I close my warung. Then I have dinner. After that, I watch TV.'",
+      "rubric": "Correct: First (Firstly is also fine). 'Finally' = 0 (it's for the last thing). 'Usually' or 'Every day' = 30 (true English, but they don't show the order).",
+      "type": "mcq",
+      "options": [
         "first",
-        "firstly"
+        "Finally",
+        "After that"
       ],
-      "rubric": "Correct: First (Firstly is also fine). 'Finally' = 0 (it's for the last thing). 'Usually' or 'Every day' = 30 (true English, but they don't show the order)."
+      "correctOption": "first"
     },
     {
       "id": "dr-2",
       "objectiveId": "describe-a-typical",
-      "prompt": "Correct the mistake: Every morning my mother gets up at five and she is cook rice.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Correct the mistake: Every morning my mother gets up at five and she is cook rice.",
+      "rubric": "Correct: remove 'is' and add -s: '... and (she) cooks rice'. Removing 'is' but writing 'cook' with no -s = 60. Keeping 'is' = 0.",
+      "type": "mcq",
+      "options": [
         "every morning my mother gets up at five and cooks rice",
-        "every morning my mother gets up at five and she cooks rice",
-        "every morning my mother gets up at 5 and cooks rice",
-        "every morning my mother gets up at 5 and she cooks rice",
-        "my mother gets up at five every morning and cooks rice"
+        "Every morning my mother gets up at five and cook rice.",
+        "Every morning my mother gets up at five and she cooking rice."
       ],
-      "rubric": "Correct: remove 'is' and add -s: '... and (she) cooks rice'. Removing 'is' but writing 'cook' with no -s = 60. Keeping 'is' = 0."
+      "correctOption": "every morning my mother gets up at five and cooks rice"
     },
     {
       "id": "dr-3",
       "objectiveId": "describe-a-typical",
-      "prompt": "Translate: Setelah itu, saya pulang.",
-      "acceptableAnswers": [
-        "after that i go home",
-        "after that i go back home",
-        "then i go home",
-        "after that i return home"
+      "prompt": "Choose the correct answer. Translate: Setelah itu, saya pulang.",
+      "rubric": "Correct: After that, I go home. 'Then I go home' = 70 (good order word, but 'setelah itu' is after that). 'go to home' = 60. 'After that I am go home' = 30.",
+      "type": "mcq",
+      "options": [
+        "after that I go home",
+        "After that I go to home.",
+        "After that I home go."
       ],
-      "rubric": "Correct: After that, I go home. 'Then I go home' = 70 (good order word, but 'setelah itu' is after that). 'go to home' = 60. 'After that I am go home' = 30."
+      "correctOption": "after that I go home"
     },
     {
       "id": "dr-4",
       "objectiveId": "use-time-expressions",
-      "prompt": "Complete with in, on or at: I always drink coffee ___ the morning.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with in, on or at: I always drink coffee ___ the morning.",
+      "rubric": "Correct: in (in the morning). 'at' or 'on' = 0.",
+      "type": "mcq",
+      "options": [
         "in",
-        "in the morning"
+        "on",
+        "at"
       ],
-      "rubric": "Correct: in (in the morning). 'at' or 'on' = 0."
+      "correctOption": "in"
     },
     {
       "id": "dr-5",
       "objectiveId": "use-time-expressions",
-      "prompt": "Pak Budi says: 'Saya berangkat kerja jam setengah tujuh.' Complete in English with the time in words: I go to work at ___.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Pak Budi says: 'Saya berangkat kerja jam setengah tujuh.' Complete in English with the time in words: I go to work at ___.",
+      "rubric": "Correct: half past six / six thirty (6:30). 'half past seven' = 0 (that's 7:30, the Indonesian trap). 'half seven' = 0 (British for 7:30).",
+      "type": "mcq",
+      "options": [
         "half past six",
-        "six thirty",
-        "at half past six",
-        "at six thirty",
-        "6 30",
-        "630",
-        "at 6 30"
+        "half past seven",
+        "half past five"
       ],
-      "rubric": "Correct: half past six / six thirty (6:30). 'half past seven' = 0 (that's 7:30, the Indonesian trap). 'half seven' = 0 (British for 7:30)."
+      "correctOption": "half past six"
     },
     {
       "id": "dr-6",
       "objectiveId": "use-time-expressions",
-      "prompt": "Correct the mistake: I go jogging on every Sunday.",
-      "acceptableAnswers": [
-        "i go jogging every sunday",
-        "every sunday i go jogging",
-        "i go jogging on sundays"
+      "prompt": "Choose the correct answer. Correct the mistake: I go jogging on every Sunday.",
+      "rubric": "Correct: I go jogging every Sunday (no on before every). 'I go jogging on Sundays' is also correct. 'in every Sunday' or 'at every Sunday' = 0.",
+      "type": "mcq",
+      "options": [
+        "I go jogging every Sunday",
+        "I goes jogging every Sunday.",
+        "I go jogging every Sundays."
       ],
-      "rubric": "Correct: I go jogging every Sunday (no on before every). 'I go jogging on Sundays' is also correct. 'in every Sunday' or 'at every Sunday' = 0."
+      "correctOption": "I go jogging every Sunday"
     }
   ],
   "material": [
@@ -614,12 +621,12 @@
         "Bagaimana bilang 'setengah sembilan' dalam bahasa Inggris?"
       ],
       "assessment": {
-        "dr-1": "Pak Hasan menceritakan malamnya secara berurutan. Lengkapi dengan kata yang menunjukkan urutan: '___, I close my warung. Then I have dinner. After that, I watch TV.'",
-        "dr-2": "Perbaiki kesalahannya: Every morning my mother gets up at five and she is cook rice.",
-        "dr-3": "Terjemahkan ke bahasa Inggris: Setelah itu, saya pulang.",
-        "dr-4": "Lengkapi dengan in, on atau at: I always drink coffee ___ the morning.",
-        "dr-5": "Pak Budi bilang: 'Saya berangkat kerja jam setengah tujuh.' Lengkapi dalam bahasa Inggris, tulis jamnya dengan kata-kata: I go to work at ___.",
-        "dr-6": "Perbaiki kesalahannya: I go jogging on every Sunday."
+        "dr-1": "Pilih jawaban yang benar. Pilih kata untuk kegiatan pertama: '___, I close my warung. Then I have dinner. After that, I watch TV.'",
+        "dr-2": "Pilih jawaban yang benar. Perbaiki kesalahannya: Every morning my mother gets up at five and she is cook rice.",
+        "dr-3": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Setelah itu, saya pulang.",
+        "dr-4": "Pilih jawaban yang benar. Lengkapi dengan in, on atau at: I always drink coffee ___ the morning.",
+        "dr-5": "Pilih jawaban yang benar. Pak Budi bilang: 'Saya berangkat kerja jam setengah tujuh.' Lengkapi dalam bahasa Inggris, Pilih jamnya dengan kata-kata: I go to work at ___.",
+        "dr-6": "Pilih jawaban yang benar. Perbaiki kesalahannya: I go jogging on every Sunday."
       }
     }
   }

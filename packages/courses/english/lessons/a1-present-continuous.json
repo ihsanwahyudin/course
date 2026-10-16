@@ -134,64 +134,81 @@
     {
       "id": "pc-1",
       "objectiveId": "form-present-continuous",
-      "prompt": "Complete with 'play': Look! The children ___ football in the garden.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with 'play': Look! The children ___ football in the garden.",
+      "rubric": "Correct: are playing. 'playing' without are = 30 (missing be). 'is playing' = 60 (wrong be for plural). 'play' or 'are play' = 20.",
+      "type": "mcq",
+      "options": [
         "are playing",
-        "they are playing",
-        "they're playing"
+        "is playing",
+        "play"
       ],
-      "rubric": "Correct: are playing. 'playing' without are = 30 (missing be). 'is playing' = 60 (wrong be for plural). 'play' or 'are play' = 20."
+      "correctOption": "are playing"
     },
     {
       "id": "pc-2",
       "objectiveId": "form-present-continuous",
-      "prompt": "Write the -ing form of 'stop'.",
-      "acceptableAnswers": [
-        "stopping"
+      "prompt": "Choose the correct answer. Choose the -ing form of 'stop'.",
+      "rubric": "Correct: stopping (short verb, consonant + vowel + consonant → double the p). 'stoping' = 40.",
+      "type": "mcq",
+      "options": [
+        "stopping",
+        "stoping",
+        "stops"
       ],
-      "rubric": "Correct: stopping (short verb, consonant + vowel + consonant → double the p). 'stoping' = 40."
+      "correctOption": "stopping"
     },
     {
       "id": "pc-3",
       "objectiveId": "form-present-continuous",
-      "prompt": "Listen. Write the -ing word you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the -ing word you hear.",
       "listen": "Sari is dancing at the party.",
-      "acceptableAnswers": [
+      "rubric": "Correct: dancing (dance drops the final e). 'danceing' = 50. 'dansing' = 40. A different word = 0.",
+      "type": "mcq",
+      "options": [
         "dancing",
-        "is dancing"
+        "drawing",
+        "driving"
       ],
-      "rubric": "Correct: dancing (dance drops the final e). 'danceing' = 50. 'dansing' = 40. A different word = 0."
+      "correctOption": "dancing"
     },
     {
       "id": "pc-4",
       "objectiveId": "form-present-continuous",
-      "prompt": "Make it negative: Dimas is watching TV.",
-      "acceptableAnswers": [
-        "dimas isn't watching tv",
-        "dimas is not watching tv"
+      "prompt": "Choose the correct answer. Make it negative: Dimas is watching TV.",
+      "rubric": "Correct: Dimas isn't watching TV. 'Dimas not watching TV' = 30. 'Dimas doesn't watching TV' = 20. 'Dimas doesn't watch TV' = 30 (changes the tense).",
+      "type": "mcq",
+      "options": [
+        "Dimas isn't watching TV",
+        "Dimas doesn't watching TV.",
+        "Dimas aren't watching TV."
       ],
-      "rubric": "Correct: Dimas isn't watching TV. 'Dimas not watching TV' = 30. 'Dimas doesn't watching TV' = 20. 'Dimas doesn't watch TV' = 30 (changes the tense)."
+      "correctOption": "Dimas isn't watching TV"
     },
     {
       "id": "pc-5",
       "objectiveId": "contrast-now-with",
-      "prompt": "Complete with 'go': Rina ___ to the office by bus every day.",
-      "acceptableAnswers": [
-        "goes"
+      "prompt": "Choose the correct answer. Complete with 'go': Rina ___ to the office by bus every day.",
+      "rubric": "Correct: goes ('every day' = routine → simple present). 'go' = 40 (missing -es). 'is going' or 'is go' = 0.",
+      "type": "mcq",
+      "options": [
+        "goes",
+        "is going",
+        "go"
       ],
-      "rubric": "Correct: goes ('every day' = routine → simple present). 'go' = 40 (missing -es). 'is going' or 'is go' = 0."
+      "correctOption": "goes"
     },
     {
       "id": "pc-6",
       "objectiveId": "contrast-now-with",
-      "prompt": "Complete with 'wear': Andi usually wears a T-shirt, but today he ___ a batik shirt.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with 'wear': Andi usually wears a T-shirt, but today he ___ a batik shirt.",
+      "rubric": "Correct: is wearing ('but today' = now, not the usual habit). 'wears' = 30. 'wearing' without is = 40. 'is wear' = 30.",
+      "type": "mcq",
+      "options": [
         "is wearing",
-        "'s wearing",
-        "he is wearing",
-        "he's wearing"
+        "wears",
+        "wearing"
       ],
-      "rubric": "Correct: is wearing ('but today' = now, not the usual habit). 'wears' = 30. 'wearing' without is = 40. 'is wear' = 30."
+      "correctOption": "is wearing"
     }
   ],
   "material": [
@@ -647,12 +664,12 @@
         "Apa bedanya 'What are you doing?' dan 'What do you do?'"
       ],
       "assessment": {
-        "pc-1": "Lengkapi dengan 'play': Look! The children ___ football in the garden.",
-        "pc-2": "Tulis bentuk -ing dari 'stop'.",
-        "pc-3": "Dengarkan. Tulis kata berakhiran -ing yang kamu dengar.",
-        "pc-4": "Ubah ke kalimat negatif: Dimas is watching TV.",
-        "pc-5": "Lengkapi dengan 'go': Rina ___ to the office by bus every day.",
-        "pc-6": "Lengkapi dengan 'wear': Andi usually wears a T-shirt, but today he ___ a batik shirt."
+        "pc-1": "Pilih jawaban yang benar. Lengkapi dengan 'play': Look! The children ___ football in the garden.",
+        "pc-2": "Pilih jawaban yang benar. Pilih bentuk -ing dari 'stop'.",
+        "pc-3": "Pilih jawaban yang benar. Dengarkan. Pilih kata berakhiran -ing yang kamu dengar.",
+        "pc-4": "Pilih jawaban yang benar. Ubah ke kalimat negatif: Dimas is watching TV.",
+        "pc-5": "Pilih jawaban yang benar. Lengkapi dengan 'go': Rina ___ to the office by bus every day.",
+        "pc-6": "Pilih jawaban yang benar. Lengkapi dengan 'wear': Andi usually wears a T-shirt, but today he ___ a batik shirt."
       }
     }
   }

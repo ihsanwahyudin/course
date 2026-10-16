@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"math/rand/v2"
 	"os"
+	"slices"
 	"strings"
 	"sync"
 	"testing"
@@ -84,19 +85,72 @@ func code(err error) string {
 	return ""
 }
 
+// answers answers the learner's checkpoint for a lesson (the open one, or
+// else the last), right or wrong, from its stored answer keys.
 func answers(s *Service, nodeID string, correct bool) map[string]string {
-	lesson := lessonOf(s, nodeID)
+	var raw []byte
+	err := s.Store.Pool.QueryRow(context.Background(), `SELECT c.items FROM checkpoints c JOIN learning_sessions ls ON ls.id = c.session_id
+		WHERE ls.user_id = $1 AND ls.node_id = $2 ORDER BY c.submitted_at IS NULL DESC, c.created_at DESC LIMIT 1`, learnerID, nodeID).Scan(&raw)
+	var items []tutor.CheckItem
+	if err == nil {
+		err = json.Unmarshal(raw, &items)
+	}
+	if err != nil {
+		panic(fmt.Sprintf("no checkpoint for %s: %v", nodeID, err))
+	}
 	out := map[string]string{}
-	// The mock writes the hand-written checkpoint, numbered q1, q2, …
-	for i, it := range lesson.Assessment {
-		id := fmt.Sprintf("q%d", i+1)
-		if correct {
-			out[id] = it.AcceptableAnswers[0]
-		} else {
-			out[id] = "zzz"
-		}
+	for _, it := range items {
+		out[it.ID] = keyAnswer(it, correct)
 	}
 	return out
+}
+
+// keyAnswer is the right answer to a checkpoint item as the app sends it,
+// or a wrong one of the same shape.
+func keyAnswer(it tutor.CheckItem, correct bool) string {
+	join := func(xs []int) string {
+		var b []string
+		for _, x := range xs {
+			b = append(b, fmt.Sprint(x))
+		}
+		return strings.Join(b, ",")
+	}
+	switch it.Type {
+	case tutor.QuestionMCQ:
+		if correct {
+			return fmt.Sprint(it.Answer)
+		}
+		return fmt.Sprint((it.Answer + 1) % len(it.Options))
+	case tutor.QuestionMulti:
+		if correct {
+			return join(it.Answers)
+		}
+		for i := range it.Options {
+			if !slices.Contains(it.Answers, i) {
+				return fmt.Sprint(i)
+			}
+		}
+	case tutor.QuestionMatch:
+		if correct {
+			return join(it.Pairing)
+		}
+		wrong := append(slices.Clone(it.Pairing[1:]), it.Pairing[0])
+		return join(wrong)
+	case tutor.QuestionWordOrder:
+		if correct {
+			return it.Solution
+		}
+		return strings.Join(it.Tokens, " ")
+	case tutor.QuestionLetters:
+		if correct {
+			return it.Solution
+		}
+		return it.Tokens[0]
+	}
+	if correct {
+		return it.Accepted[0]
+	}
+	return "zzz"
 }
 
 func TestFullLoopMastersAndUnlocks(t *testing.T) {

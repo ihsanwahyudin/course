@@ -112,14 +112,10 @@
       "objectiveId": "messages-profiles",
       "prompt": "Read the message: 'Mum, I'm at Dewi's house. Home at 8. Rina'. Where is Rina now?",
       "expected": [
-        "at dewis house",
-        "dewis house",
-        "at dewi s house",
-        "dewi s house",
-        "shes at dewis house",
-        "she is at dewis house",
         "at dewi's house",
-        "dewi's house"
+        "dewi's house",
+        "she's at dewi's house",
+        "she is at dewi's house"
       ],
       "hint": "Rina wrote the message, so 'I' = Rina."
     },
@@ -143,7 +139,6 @@
         "teacher",
         "a teacher",
         "he is a teacher",
-        "hes a teacher",
         "he's a teacher"
       ],
       "hint": "Look for the word after 'I'm a'."
@@ -156,7 +151,7 @@
         "12",
         "12 00",
         "twelve",
-        "twelve oclock",
+        "twelve o'clock",
         "noon",
         "midday",
         "12 pm",
@@ -180,101 +175,97 @@
     {
       "id": "rst-1",
       "objectiveId": "menus-signs-timetables",
-      "prompt": "Read the menu at a café in Bandung: 'Main dishes: Fried rice Rp 25.000 · Chicken soup Rp 22.000 · Drinks: Iced tea Rp 6.000 · Orange juice Rp 15.000'. How much is the chicken soup? Write the price.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Read the menu at a café in Bandung: 'Main dishes: Fried rice Rp 25.000 · Chicken soup Rp 22.000 · Drinks: Iced tea Rp 6.000 · Orange juice Rp 15.000'. How much is the chicken soup? Choose the price.",
+      "rubric": "Correct: Rp 22.000 (any format: 22.000, 22,000, 22000, twenty-two thousand). 'Rp 25.000' (fried rice) or any other price = 0. '22' alone = 50.",
+      "type": "mcq",
+      "options": [
         "rp 22000",
-        "rp22000",
-        "22000",
-        "22 000",
-        "rp 22 000",
-        "22000 rupiah",
-        "twenty two thousand",
-        "twenty two thousand rupiah"
+        "Rp25.000",
+        "Rp6.000"
       ],
-      "rubric": "Correct: Rp 22.000 (any format: 22.000, 22,000, 22000, twenty-two thousand). 'Rp 25.000' (fried rice) or any other price = 0. '22' alone = 50."
+      "correctOption": "rp 22000"
     },
     {
       "id": "rst-2",
       "objectiveId": "menus-signs-timetables",
-      "prompt": "The lift in your office has a sign on it: 'OUT OF ORDER'. Can you use the lift today? Write yes or no.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. The lift in your office has a sign on it: 'OUT OF ORDER'. Can you use the lift today? Choose yes or no.",
+      "rubric": "Correct: no (OUT OF ORDER = rusak, the lift doesn't work). 'yes' = 0.",
+      "type": "mcq",
+      "options": [
         "no",
-        "tidak",
-        "no i can't",
-        "no i cant",
-        "no i cannot",
-        "no you can't",
-        "no you cant",
-        "no you cannot"
+        "yes",
+        "sometimes"
       ],
-      "rubric": "Correct: no (OUT OF ORDER = rusak, the lift doesn't work). 'yes' = 0."
+      "correctOption": "no"
     },
     {
       "id": "rst-3",
       "objectiveId": "menus-signs-timetables",
-      "prompt": "Read the train timetable: 'Bandung → Jakarta (Gambir) · Departs 06:30 · Arrives 09:45 · Platform 2'. What time does the train arrive in Jakarta?",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Read the train timetable: 'Bandung → Jakarta (Gambir) · Departs 06:30 · Arrives 09:45 · Platform 2'. What time does the train arrive in Jakarta?",
+      "rubric": "Correct: 09:45 (also 9.45, nine forty-five, quarter to ten). '06:30' (the departure time) = 0. '2' (the platform) = 0.",
+      "type": "mcq",
+      "options": [
         "0945",
-        "945",
-        "09 45",
-        "9 45",
-        "at 0945",
-        "at 945",
-        "nine forty five",
-        "quarter to ten",
-        "a quarter to ten",
-        "945 am",
-        "0945 am"
+        "06:30",
+        "09:15"
       ],
-      "rubric": "Correct: 09:45 (also 9.45, nine forty-five, quarter to ten). '06:30' (the departure time) = 0. '2' (the platform) = 0."
+      "correctOption": "0945"
     },
     {
       "id": "rst-4",
       "objectiveId": "messages-profiles",
-      "prompt": "Read Budi's message: 'Hi Rina, the team meeting is on Thursday, not Wednesday. Room 3, 10 am. See you there! Budi'. Which day is the meeting?",
-      "acceptableAnswers": [
-        "thursday",
-        "on thursday",
-        "its on thursday",
-        "it is on thursday",
-        "the meeting is on thursday"
+      "prompt": "Choose the correct answer. Read Budi's message: 'Hi Rina, the team meeting is on Thursday, not Wednesday. Room 3, 10 am. See you there! Budi'. Which day is the meeting?",
+      "rubric": "Correct: Thursday. 'Wednesday' = 0 (the message says NOT Wednesday). 'Kamis' (right day, Indonesian) = 70.",
+      "type": "mcq",
+      "options": [
+        "Thursday",
+        "Wednesday",
+        "Tuesday"
       ],
-      "rubric": "Correct: Thursday. 'Wednesday' = 0 (the message says NOT Wednesday). 'Kamis' (right day, Indonesian) = 70."
+      "correctOption": "Thursday"
     },
     {
       "id": "rst-5",
       "objectiveId": "messages-profiles",
-      "prompt": "Read the profile: 'Hi, I'm Sari. I'm 24 and I'm from Medan. I live in Surabaya and I work in a hotel. I love cooking.' Where does Sari live?",
-      "acceptableAnswers": [
-        "surabaya",
-        "in surabaya",
-        "she lives in surabaya"
+      "prompt": "Choose the correct answer. Read the profile: 'Hi, I'm Sari. I'm 24 and I'm from Medan. I live in Surabaya and I work in a hotel. I love cooking.' Where does Sari live?",
+      "rubric": "Correct: Surabaya. 'Medan' = 0 (that's where she is from, not where she lives). 'in a hotel' = 0 (that's where she works).",
+      "type": "mcq",
+      "options": [
+        "Surabaya",
+        "Medan",
+        "Jakarta"
       ],
-      "rubric": "Correct: Surabaya. 'Medan' = 0 (that's where she is from, not where she lives). 'in a hotel' = 0 (that's where she works)."
+      "correctOption": "Surabaya"
     },
     {
       "id": "rst-6",
       "objectiveId": "scanning",
-      "prompt": "Scan the notice: 'SWIMMING POOL · Open every day 6 am – 8 pm · Adults Rp 30.000 · Children Rp 15.000 · Swimming lessons: Tuesday and Thursday, 4 pm'. On which days are the swimming lessons?",
-      "acceptableAnswers": [
-        "tuesday and thursday",
-        "on tuesday and thursday",
-        "tuesdays and thursdays",
-        "on tuesdays and thursdays",
-        "tuesday thursday",
-        "thursday and tuesday"
+      "prompt": "Read: 'Swimming lessons: Tuesday and Thursday, 4 pm'. Choose all the days with swimming lessons.",
+      "rubric": "Correct: Tuesday and Thursday (both days). Only one of the two days = 50. 'every day' = 0 (that's when the pool is open). 'Selasa dan Kamis' = 70.",
+      "type": "multi",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
       ],
-      "rubric": "Correct: Tuesday and Thursday (both days). Only one of the two days = 50. 'every day' = 0 (that's when the pool is open). 'Selasa dan Kamis' = 70."
+      "correctOptions": [
+        "Tuesday",
+        "Thursday"
+      ]
     },
     {
       "id": "rst-7",
       "objectiveId": "scanning",
-      "prompt": "Scan the advert: 'ROOM FOR RENT · Jl. Dago 15, Bandung · Rp 1.500.000 a month · Free Wi-Fi · Call Pak Hadi: 0812 7788 1234 (after 5 pm)'. What number do you call?",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Scan the advert: 'ROOM FOR RENT · Jl. Dago 15, Bandung · Rp 1.500.000 a month · Free Wi-Fi · Call Pak Hadi: 0812 7788 1234 (after 5 pm)'. What number do you call?",
+      "rubric": "Correct: 0812 7788 1234 (spaces don't matter). One wrong digit = 50. '15' (the house number) or the price = 0.",
+      "type": "mcq",
+      "options": [
         "0812 7788 1234",
-        "081277881234"
+        "0812 7788 1243",
+        "0812 7788 1324"
       ],
-      "rubric": "Correct: 0812 7788 1234 (spaces don't matter). One wrong digit = 50. '15' (the house number) or the price = 0."
+      "correctOption": "0812 7788 1234"
     }
   ],
   "material": [
@@ -905,13 +896,13 @@
         "Bagaimana menemukan informasi dengan cepat tanpa membaca setiap kata?"
       ],
       "assessment": {
-        "rst-1": "Baca menu di sebuah kafe di Bandung: 'Main dishes: Fried rice Rp 25.000 · Chicken soup Rp 22.000 · Drinks: Iced tea Rp 6.000 · Orange juice Rp 15.000'. Berapa harga chicken soup? Tulis harganya.",
-        "rst-2": "Lift di kantormu ada tulisan: 'OUT OF ORDER'. Bisakah kamu memakai lift itu hari ini? Tulis yes atau no.",
-        "rst-3": "Baca jadwal kereta: 'Bandung → Jakarta (Gambir) · Departs 06:30 · Arrives 09:45 · Platform 2'. Jam berapa kereta tiba di Jakarta?",
-        "rst-4": "Baca pesan dari Budi: 'Hi Rina, the team meeting is on Thursday, not Wednesday. Room 3, 10 am. See you there! Budi'. Rapatnya hari apa? Tulis dalam bahasa Inggris.",
-        "rst-5": "Baca profil ini: 'Hi, I'm Sari. I'm 24 and I'm from Medan. I live in Surabaya and I work in a hotel. I love cooking.' Di mana Sari tinggal?",
-        "rst-6": "Cari infonya dengan cepat di pengumuman ini: 'SWIMMING POOL · Open every day 6 am – 8 pm · Adults Rp 30.000 · Children Rp 15.000 · Swimming lessons: Tuesday and Thursday, 4 pm'. Hari apa saja ada les renang? Tulis dalam bahasa Inggris.",
-        "rst-7": "Cari infonya dengan cepat di iklan ini: 'ROOM FOR RENT · Jl. Dago 15, Bandung · Rp 1.500.000 a month · Free Wi-Fi · Call Pak Hadi: 0812 7788 1234 (after 5 pm)'. Nomor berapa yang kamu telepon?"
+        "rst-1": "Pilih jawaban yang benar. Baca menu di sebuah kafe di Bandung: 'Main dishes: Fried rice Rp 25.000 · Chicken soup Rp 22.000 · Drinks: Iced tea Rp 6.000 · Orange juice Rp 15.000'. Berapa harga chicken soup? Pilih harganya.",
+        "rst-2": "Pilih jawaban yang benar. Lift di kantormu ada tulisan: 'OUT OF ORDER'. Bisakah kamu memakai lift itu hari ini? Pilih yes atau no.",
+        "rst-3": "Pilih jawaban yang benar. Baca jadwal kereta: 'Bandung → Jakarta (Gambir) · Departs 06:30 · Arrives 09:45 · Platform 2'. Jam berapa kereta tiba di Jakarta?",
+        "rst-4": "Pilih jawaban yang benar. Baca pesan dari Budi: 'Hi Rina, the team meeting is on Thursday, not Wednesday. Room 3, 10 am. See you there! Budi'. Rapatnya hari apa? Pilih dalam bahasa Inggris.",
+        "rst-5": "Pilih jawaban yang benar. Baca profil ini: 'Hi, I'm Sari. I'm 24 and I'm from Medan. I live in Surabaya and I work in a hotel. I love cooking.' Di mana Sari tinggal?",
+        "rst-6": "Baca: 'Swimming lessons: Tuesday and Thursday, 4 pm'. Pilih semua hari dengan kelas renang.",
+        "rst-7": "Pilih jawaban yang benar. Cari infonya dengan cepat di iklan ini: 'ROOM FOR RENT · Jl. Dago 15, Bandung · Rp 1.500.000 a month · Free Wi-Fi · Call Pak Hadi: 0812 7788 1234 (after 5 pm)'. Nomor berapa yang kamu telepon?"
       }
     }
   }

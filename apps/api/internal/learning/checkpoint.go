@@ -37,10 +37,13 @@ type CheckItemView struct {
 	ID          string   `json:"id"`
 	LessonID    string   `json:"lessonId,omitempty"` // level checkpoints: the lesson it comes from
 	ObjectiveID string   `json:"objectiveId"`
-	Type        string   `json:"type"` // mcq | word_order | text
+	Type        string   `json:"type"` // mcq | multi | word_order | letters | match | text
 	Prompt      string   `json:"prompt"`
-	Options     []string `json:"options,omitempty"`
-	Tokens      []string `json:"tokens,omitempty"`
+	Options     []string `json:"options,omitempty"` // mcq, multi
+	Tokens      []string `json:"tokens,omitempty"`  // word_order: words; letters: letter tiles
+	// Left and Right: match, the two columns (Right shuffled).
+	Left  []string `json:"left,omitempty"`
+	Right []string `json:"right,omitempty"`
 	// HasAudio: a listening question, played from …/checkpoints/{id}/items/{itemId}/listen.
 	HasAudio bool `json:"hasAudio"`
 }
@@ -60,7 +63,8 @@ func checkpointView(c storage.Checkpoint, attempt int) (*CheckpointView, error) 
 	}
 	v := &CheckpointView{ID: c.ID, Practice: c.Practice, Attempt: attempt, Items: make([]CheckItemView, 0, len(items))}
 	for _, it := range items {
-		v.Items = append(v.Items, CheckItemView{it.ID, it.LessonID, it.ObjectiveID, it.Type, it.Prompt, it.Options, it.Tokens, it.Listen != ""})
+		v.Items = append(v.Items, CheckItemView{ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt,
+			Options: it.Options, Tokens: it.Tokens, Left: it.Left, Right: it.Right, HasAudio: it.Listen != ""})
 	}
 	return v, nil
 }
@@ -224,6 +228,7 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			slog.Warn("checkpoint call failed", "provider", s.AI.Name(), "node", n.ID, "err", err)
 			break
 		}
+		in.Problems = nil // The next rejection must describe this draft, not the previous one.
 		var out struct {
 			Items []tutor.DraftItem `json:"items"`
 		}
@@ -231,11 +236,21 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			items, err = tutor.FromDrafts(out.Items)
 		}
 		if err == nil {
+			err = beginnerTexts(items, n)
+			if err == nil {
+				err = taughtBeginnerAnswers(items, n, lesson)
+			}
+		}
+		if err == nil {
 			if items, err = validate(items, avoid); err == nil {
 				// A second look, question by question: drop any with two right
 				// answers, a wrong key or the wrong language, then check the rest
 				// still covers the lesson.
-				kept, problems := s.verifyCheckpoint(ctx, userID, in.LessonInput, items)
+				kept, problems, verifyErr := s.verifyCheckpoint(ctx, userID, in.LessonInput, items)
+				if verifyErr != nil {
+					slog.Warn("checkpoint check unavailable; using authored fallback", "node", n.ID, "err", verifyErr)
+					break
+				}
 				if items, err = validate(kept, avoid); err == nil {
 					source = s.AI.Name()
 					break
@@ -272,37 +287,101 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			texts = append(texts, it.Listen)
 		}
 	}
-	s.warmTexts(userID, texts, true)
+	if s.WarmSpeech {
+		s.warmTexts(userID, texts, s.LiveSpeech)
+	}
 	return c, nil
+}
+
+// An A0 typed answer must be a phrase the learner actually saw. Teacher
+// notes can inform explanations but do not count as learner exposure.
+func taughtBeginnerAnswers(items []tutor.CheckItem, n *curriculum.Node, lesson *curriculum.Lesson) error {
+	if n.Level != "A0" || n.LevelCheck() || lesson == nil {
+		return nil
+	}
+	material := " " + tutor.NormalizeWords(lesson.MaterialText()) + " "
+	for i, it := range items {
+		if it.Type != tutor.QuestionText {
+			continue
+		}
+		for _, answer := range it.Accepted {
+			// The alphabet teaches all 26 names. A heard letter need not also
+			// occur in a written example to be a valid one-letter answer.
+			a := tutor.NormalizeWords(answer)
+			if n.ID == "a0-alphabet-sounds" && len(a) == 1 && a[0] >= 'a' && a[0] <= 'z' {
+				continue
+			}
+			if !strings.Contains(material, " "+tutor.NormalizeWords(answer)+" ") {
+				return fmt.Errorf("question %d: A0 typed answer %q is not shown in learner material; use recognition or tiles instead", i+1, answer)
+			}
+		}
+	}
+	return nil
+}
+
+// beginnerTexts: at A0 and A1 learners mostly tap their answers, so an AI
+// checkpoint may hold only a few open questions (ai.MaxTextItems).
+func beginnerTexts(items []tutor.CheckItem, n *curriculum.Node) error {
+	if err := tutor.ValidateLevelQuestions(items, n.Level); err != nil {
+		return err
+	}
+	most, capped := ai.MaxTextItems(n.Level, n.LevelCheck())
+	if !capped {
+		return nil
+	}
+	texts := 0
+	for _, it := range items {
+		if it.Type == tutor.QuestionText {
+			texts++
+		}
+	}
+	if texts > most {
+		return fmt.Errorf("%d open \"text\" questions; at level %s write at most %d and use mcq, multi, match, letters or word_order for the rest", texts, n.Level, most)
+	}
+	return nil
 }
 
 // verifyCheckpoint asks the AI to check every question and returns the
 // ones that passed, with the problems found in the others. If the check
-// itself fails, the (already validated) questions are kept.
-func (s *Service) verifyCheckpoint(ctx context.Context, userID string, in ai.LessonInput, items []tutor.CheckItem) ([]tutor.CheckItem, []string) {
+// itself fails or omits a question, unverified AI questions are never used.
+func (s *Service) verifyCheckpoint(ctx context.Context, userID string, in ai.LessonInput, items []tutor.CheckItem) ([]tutor.CheckItem, []string, error) {
 	if err := s.checkQuota(ctx, userID); err != nil {
-		return items, nil
+		return nil, nil, err
 	}
 	res, err := s.AI.VerifyCheckpoint(ctx, ai.VerifyInput{LessonInput: in, Items: items})
 	s.recordUsage(ctx, userID, "checkpoint", res.Usage)
 	var out struct {
 		Items []struct {
 			ID      string `json:"id"`
-			OK      bool   `json:"ok"`
+			OK      *bool  `json:"ok"`
 			Problem string `json:"problem"`
 		} `json:"items"`
 	}
 	if err == nil {
 		err = json.Unmarshal(res.Raw, &out)
 	}
-	if err != nil || len(out.Items) == 0 {
-		slog.Warn("checkpoint check unavailable; keeping the questions", "err", err)
-		return items, nil
+	if err != nil {
+		return nil, nil, fmt.Errorf("verify checkpoint: %w", err)
+	}
+	if len(out.Items) != len(items) {
+		return nil, nil, errors.New("verifier must check every question")
+	}
+	known, seen := map[string]bool{}, map[string]bool{}
+	for _, it := range items {
+		known[it.ID] = true
 	}
 	bad := map[string]string{}
 	for _, c := range out.Items {
-		if !c.OK {
-			bad[c.ID] = strings.TrimSpace(c.Problem)
+		if !known[c.ID] || seen[c.ID] || c.OK == nil {
+			return nil, nil, errors.New("verifier returned a missing, duplicate or unknown verdict")
+		}
+		seen[c.ID] = true
+		if !*c.OK {
+			p := strings.TrimSpace(c.Problem)
+			if p == "" {
+				p = "The question cannot be answered clearly from the information given."
+			}
+			bad[c.ID] = p
 		}
 	}
 	var kept []tutor.CheckItem
@@ -314,7 +393,7 @@ func (s *Service) verifyCheckpoint(ctx context.Context, userID string, in ai.Les
 		}
 		kept = append(kept, it)
 	}
-	return kept, problems
+	return kept, problems, nil
 }
 
 // prefetchCheckpoint writes the next checkpoint in the background, so the
@@ -424,7 +503,7 @@ func (s *Service) SubmitCheckpoint(ctx context.Context, userID, sessionID, check
 	lang := cur.Lang(c.Locale)
 	fixed := map[string]int{}
 	for _, it := range items {
-		if score, ok := tutor.FixedVerdict(it, clean[it.ID], ai.StrictMatch); ok {
+		if score, ok := tutor.FixedVerdict(it, clean[it.ID], ai.ExactMatch); ok {
 			fixed[it.ID] = score
 		}
 	}
@@ -577,7 +656,7 @@ func (s *Service) gradeCheckpoint(ctx context.Context, userID string, st state, 
 			slog.Warn("checkpoint grading failed", "provider", s.AI.Name(), "err", err)
 			return tutor.Review{}, nil, "", nil, errf(502, "evaluator_unavailable", true, "Your answers couldn't be scored right now. Nothing was saved — please submit again.")
 		}
-		review, scores, feedback, err := tutor.ApplyGrade(res.Raw, items, answers, fixed)
+		review, scores, feedback, err := tutor.ApplyGrade(res.Raw, items, answers, fixed, lang)
 		if err == nil {
 			return review, scores, feedback, res.Raw, nil
 		}
