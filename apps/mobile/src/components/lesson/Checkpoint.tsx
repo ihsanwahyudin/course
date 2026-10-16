@@ -76,7 +76,6 @@ export function Checkpoint({
   const weakLessons = failed?.review?.lessons
     ? (session.level?.lessons ?? []).filter((l) => (failed.review!.lessons![l.id] ?? 100) < failed.threshold)
     : [];
-  const objective = (id: string) => session.node.objectives.find((o) => o.id === id)?.text;
   const draft = item ? (drafts[item.id] ?? '') : '';
   const isLast = idx === items.length - 1;
   const answering = started && !!cp;
@@ -245,13 +244,10 @@ export function Checkpoint({
                 {item.prompt}
               </Text>
               {item.hasAudio ? <ListenButton key={item.id} path={`/api/v1/sessions/${session.id}/checkpoints/${cp.id}/items/${item.id}/listen`} /> : null}
+              {/* Not the item's objective: objectives often name what's being tested (e.g. "please, sorry, excuse me"). */}
               {item.lessonId && lessonTitles[item.lessonId] ? (
                 <Text size={13} color={colors.muted}>
                   {t('level.from', { title: lessonTitles[item.lessonId] })}
-                </Text>
-              ) : objective(item.objectiveId) ? (
-                <Text size={13} color={colors.muted}>
-                  {t('checkpoint.objective', { text: objective(item.objectiveId)! })}
                 </Text>
               ) : null}
 

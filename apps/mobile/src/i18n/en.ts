@@ -440,7 +440,6 @@ export const en = {
     practise: 'Practise first',
     noHints: 'Checkpoint · no hints',
     of: '{n} / {total}',
-    objective: 'Objective: {text}',
     typeOrSpeak: 'Answer by typing or speaking',
     answerLabel: 'Answer {n}: {prompt}',
     back: 'Back',

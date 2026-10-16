@@ -441,7 +441,6 @@ export const id: Dict = {
     practise: 'Latihan dulu',
     noHints: 'Checkpoint · tanpa petunjuk',
     of: '{n} / {total}',
-    objective: 'Tujuan: {text}',
     typeOrSpeak: 'Bisa dijawab dengan mengetik atau bicara',
     answerLabel: 'Jawaban {n}: {prompt}',
     back: 'Kembali',
