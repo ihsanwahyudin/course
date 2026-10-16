@@ -386,6 +386,10 @@ func checkpointTask(in CheckpointInput) string {
   requests run together, like asking someone to "sit" and "come in" at once). For "text", say how much to write so it matches the
   accepted answers: one word, two words, or a short sentence (and roughly how long). Never name the answer, or a list of phrases that
   includes it, in the prompt.%s
+- Every question must include the clue or situation needed to choose its answer. "Tuliskan 1 huruf yang benar. Jawab dalam bahasa
+  Inggris." / "Write one correct letter." is NOT a complete question: it specifies only response length. Ask which letter's name
+  sounds like a given word, which letter comes next, or attach listening audio and ask which letter was heard. Never expect the
+  learner to infer a hidden key or rubric. If the task refers to something heard, "listen" must be nonempty.
 - Every question has one clear, checkable answer. For "text", list in "acceptedAnswers" every answer you would accept (full and short
   forms, contractions, with or without an article where both are right), and write a "rubric" saying what earns full, partial and no credit.
 - Listening or pronunciation objectives: put the English the learner hears in "listen" (at most 300 characters, never shown in the prompt)
@@ -535,7 +539,7 @@ Grade the learner's checkpoint. Each item has the answer key, and the learner's 
 %s
 - Items with "fixedScore" were scored by the server against the answer key (multiple choice, tick-all "multi", word order, letter
   tiles, "match" pairs, or an exact match; multi, letters and match earn part marks): give exactly that score — unless the answer key itself is wrong for that question. Only then set "keyWrong" true, give the real correct
-  answer, and score the learner's answer against it. Otherwise "keyWrong" is false.
+  answer, and score the learner's answer against it. Otherwise "keyWrong" is false. A difference only in case or incidental punctuation is not a wrong answer key.
 - Word-order and letters answers are built by tapping the given tiles, so never mark them down for spaces, dashes, capitals or
   punctuation.
 - Judge every other answer against the accepted answers and the rubric. Accept equivalent correct English (contractions, capitals,
@@ -543,8 +547,9 @@ Grade the learner's checkpoint. Each item has the answer key, and the learner's 
   tested. Score 0–100 following the rubric.
 - Grade the content, not incidental answer formatting. For a list, accept the same items separated by spaces, commas, or the
   connectors "and" or Indonesian "dan"; do not penalise those connectors as non-English. Ignore list order unless order is tested.
-  Ignore capitals and punctuation UNLESS the prompt or rubric explicitly tests capitalization, punctuation, spelling or a prescribed
+  Ignore capitals and punctuation UNLESS the learner-visible prompt explicitly tests capitalization, punctuation, spelling or a prescribed
   format (for example editing a date to a house style). Then assess that target accurately; do not waive it as a formatting variation.
+  Never add a requirement from the hidden rubric that was not stated to the learner. An uppercase key "A" does not by itself require uppercase: "a" is equally correct.
 - For EVERY item write "explanation" in the learner's language (language rule), one or two sentences to the learner: if right, why it is
   right; if wrong or partly right, what is wrong and the correct version. The explanation must agree with the score: never call an
   answer wrong when it scores 100, or right when it scores 0. "correctAnswer": the best correct answer.
@@ -589,13 +594,18 @@ func verifyTask(in VerifyInput) string {
 	payload, _ := json.MarshalIndent(items, "", "  ")
 	return fmt.Sprintf(`You are checking a checkpoint another teacher wrote for this lesson before a learner sees it:
 %s
-For each question, first solve it yourself in "solve" (one short sentence: the right answer and why), then compare with the key.
+For each question, first solve it using ONLY the learner-visible prompt, options/tiles and audio, WITHOUT relying on the hidden
+answer key or accepted answers. In "solve", identify the clue that determines the answer; only then compare with the key.
+If the clue is missing, reject the question even if its hidden answer key looks plausible.
 Set "ok" to false, with a one-sentence "problem", if ANY of these fail:
 1. The answer key is correct, and for "mcq" exactly one option is right — no other option is also correct or defensible under this
    lesson's rules. For "multi", the key ticks every right option and no wrong one. For "match", every left item has exactly one sensible
    partner on the right.
 2. For "text", the accepted answers cover the reasonable correct answers and contain no wrong ones.
 3. The question can be answered from the prompt (and the audio, if any) alone, and the prompt doesn't give the answer away.
+   "Tuliskan 1 huruf yang benar. Jawab dalam bahasa Inggris." / "Write one correct letter." with no audio or clue is INVALID:
+   there is no way to choose one letter over another. The hidden key "A" is not a clue. A requested answer length is not a question.
+   If the prompt asks about audio, audioTheLearnerHears must be present.
 4. The instruction to the learner follows the language rule (only the English being tested is in English).
 5. It tests this lesson's objective (objectiveId) at this lesson's level — in a level checkpoint, the lesson named by lessonId — with
    natural, correct English.

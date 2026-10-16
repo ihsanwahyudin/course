@@ -40,3 +40,29 @@ func TestOfflineFormatPreservesTargetCase(t *testing.T) {
 		t.Fatal("capitalization target must preserve case")
 	}
 }
+
+func TestLetterQuestionNeedsAClue(t *testing.T) {
+	for _, prompt := range []string{"Tuliskan 1 huruf yang benar. Jawab dalam bahasa Inggris.", "Tulis satu huruf.", "Write one correct letter. Answer in English.", "Write one letter that is correct."} {
+		q := CheckItem{Question: Question{Type: QuestionText, Prompt: prompt, ObjectiveID: "o"}, Accepted: []string{"A"}, Rubric: "A"}
+		if _, err := validateTextItem(q, map[string]bool{"o": true}); err == nil {
+			t.Errorf("contextless question accepted: %s", prompt)
+		}
+		q.Listen = "A."
+		if _, err := validateTextItem(q, map[string]bool{"o": true}); err != nil {
+			t.Errorf("audio supplies the missing clue: %v", err)
+		}
+	}
+	q := CheckItem{Question: Question{Type: QuestionText, Prompt: "Which letter comes after B?", ObjectiveID: "o"}, Accepted: []string{"C"}, Rubric: "C"}
+	if _, err := validateTextItem(q, map[string]bool{"o": true}); err != nil {
+		t.Fatal("a specific clue is valid", err)
+	}
+}
+
+func TestExplicitCaseRequirementStaysAssessed(t *testing.T) {
+	for _, prompt := range []string{"Write the uppercase form of a.", "Write the lower case form of A.", "Tulis huruf kecil dari A."} {
+		q := CheckItem{Question: Question{Type: QuestionText, Prompt: prompt}, Accepted: []string{"A"}}
+		if _, fixed := FixedVerdict(q, "a", func(string, []string) bool { return true }); fixed {
+			t.Fatalf("explicit case target bypassed: %s", prompt)
+		}
+	}
+}

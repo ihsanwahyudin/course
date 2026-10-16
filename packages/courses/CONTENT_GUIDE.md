@@ -90,11 +90,15 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
 - **Typed items** use `acceptableAnswers` and a rubric; tapped items use `type` and the corresponding `options`/`correctOption`,
   `correctOptions`, `pairs`, or `solution`/`tokens`. Both languages have the same options, pairs and keys; translate the instruction.
 - **Fair grading:** equivalent list separators (spaces, commas, `and`, `dan`) and case do not change a content answer. If capitalization,
-  punctuation or an exact format is itself the objective, state that clearly and assess it. Never globally strip conjunctions from
+  punctuation or an exact format is itself the objective, state that clearly in the learner-visible prompt and assess it. A hidden
+  rubric or uppercase reference answer must not create a requirement the learner was never told about. Never globally strip conjunctions from
   sentences or ignore a format being tested. Keep correctly formatted reference answers for genuine writing/editing tasks.
 - **Teaching before testing:** make vocabulary and patterns explicit in the material before asking learners to use them. Word tiles
   supply words but do not teach their meanings. Simplify rules for beginners by naming the particular pattern being practised, without
   presenting a pattern such as *noun + please* as the only possible position of *please* in English.
+- **A complete question:** a response-length instruction such as “Tuliskan 1 huruf yang benar” does not identify an answer. Supply
+  a clue, situation, source sentence, or listening audio; the hidden key and rubric are not learner-visible clues. AI checkpoints
+  require a verdict for every question; unavailable or incomplete verification falls back to authored questions.
 - **One clear, correct answer.** Every multiple-choice distractor must be clearly wrong *for this exact sentence* (asking for "a
   vowel" with two vowels among the options, or offering *and* where *and* is also grammatical, are broken questions). Use real
   mistakes Indonesian learners make as distractors.

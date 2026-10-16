@@ -298,6 +298,9 @@ func validateTextItem(it CheckItem, objectives map[string]bool) (CheckItem, erro
 	if runes(it.Listen) > 300 {
 		return it, fmt.Errorf("listen text must be at most 300 characters")
 	}
+	if it.Listen == "" && contextlessLetterRequest.MatchString(NormalizeWords(it.Prompt)) {
+		return it, fmt.Errorf("a letter question needs a clue in its prompt or listening audio; an answer-length instruction alone is not a question")
+	}
 	if showsHeard(it.Prompt, it.Listen) {
 		return it, fmt.Errorf("the prompt must not show what the learner should hear")
 	}
@@ -718,7 +721,11 @@ type Grade struct {
 // items keep their score whatever the grader says, every item needs an
 // explanation, and open answers need a score in 0–100. It returns the
 // review, per-objective scores (mean of their items) and the feedback.
-func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]string, fixed map[string]int) (Review, map[string]int, string, error) {
+func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]string, fixed map[string]int, locale ...string) (Review, map[string]int, string, error) {
+	lang := "en"
+	if len(locale) > 0 {
+		lang = locale[0]
+	}
 	var g Grade
 	if err := json.Unmarshal(raw, &g); err != nil {
 		return Review{}, nil, "", fmt.Errorf("%w: %v", ErrMalformed, err)
@@ -729,6 +736,7 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 	}
 	rev := Review{Items: make([]ItemReview, 0, len(items)), Strengths: cleanList(g.Strengths, 4), ToReview: cleanList(g.ToReview, 4)}
 	sum, count := map[string]int{}, map[string]int{}
+	correctedVerdict := false
 	for _, it := range items {
 		i, ok := byID[it.ID]
 		if !ok {
@@ -746,15 +754,22 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 		score, isFixed := fixed[it.ID]
 		// A wrong key must not cost the learner: the grader's judgement
 		// against the real answer stands instead.
-		keyFixed := isFixed && gi.KeyWrong && clean(gi.CorrectAnswer) != ""
+		keyFixed := isFixed && gi.KeyWrong && clean(gi.CorrectAnswer) != "" && NormalizeWords(gi.CorrectAnswer) != NormalizeWords(it.Key())
 		if !isFixed || keyFixed {
 			score = int(math.Round(gi.Score))
 		}
 		correct := it.Key()
-		if (it.Type == QuestionText || keyFixed) && clean(gi.CorrectAnswer) != "" {
+		if ((it.Type == QuestionText && !isFixed) || keyFixed) && clean(gi.CorrectAnswer) != "" {
 			correct = clean(gi.CorrectAnswer)
 		}
 		ans := AnswerText(it, answers[it.ID])
+		// A model cannot contradict the server's verdict or invent a case
+		// requirement for an answer that is already known to be correct.
+		caseOnly := it.Type == QuestionText && score == 100 && ans != it.Key() && strings.EqualFold(strings.TrimSpace(ans), strings.TrimSpace(it.Key()))
+		if isFixed && !keyFixed && (int(math.Round(gi.Score)) != score || caseOnly) {
+			expl = fixedGradeExplanation(score, correct, lang, caseOnly)
+			correctedVerdict = true
+		}
 		rev.Items = append(rev.Items, ItemReview{
 			ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt, Options: it.Options, Listen: it.Listen,
 			Answer: ans, CorrectAnswer: correct, Score: score, Verdict: verdict(score), Explanation: expl, KeyFixed: keyFixed,
@@ -779,7 +794,33 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 			rev.Lessons[id] = int(math.Round(float64(lsum[id]) / float64(n)))
 		}
 	}
-	return rev, scores, clean(g.Feedback), nil
+	feedback := clean(g.Feedback)
+	if correctedVerdict {
+		// Feedback and review advice from the same contradicted verdict may
+		// repeat its invented requirement. Build them from final scores.
+		rev.ToReview = []string{}
+		for i, it := range rev.Items {
+			if it.Score < 100 && len(rev.ToReview) < 4 {
+				label := fmt.Sprintf("Question %d", i+1)
+				if lang == "id" {
+					label = fmt.Sprintf("Soal %d", i+1)
+				}
+				rev.ToReview = append(rev.ToReview, label)
+			}
+		}
+		if lang == "id" {
+			feedback = "Lihat ulasan tiap jawaban untuk bagian yang perlu dilatih."
+			if len(rev.ToReview) == 0 {
+				feedback = "Semua jawaban benar. Kerja bagus!"
+			}
+		} else {
+			feedback = "See each answer's review for what to practise."
+			if len(rev.ToReview) == 0 {
+				feedback = "Every answer is correct. Well done!"
+			}
+		}
+	}
+	return rev, scores, feedback, nil
 }
 
 func cleanList(in []string, max int) []string {

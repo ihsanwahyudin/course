@@ -278,3 +278,14 @@ Model mengikuti `.env`: `gpt-5.4-mini`. Semua panggilan melalui API/server + Pos
 Batas uji: maksimum enam request per run dan berhenti sebelum request berikutnya setelah ambang 20.000 token. Satu request yang sedang berjalan bisa melewati ambang sedikit; pemakaian aktual dicatat di atas. Ini sampel nyata, bukan bukti bahwa semua variasi model selalu benar: validator, verifier, dan authored fallback tetap wajib. Test live bersifat opt-in; tes biasa tidak menyentuh token pemilik. Mode generation-only dapat dipilih dengan `LIVE_CHECKPOINT_GENERATION_ONLY=1`.
 
 Merge/publish dan pembuatan audio tetap menunggu review pemilik sesuai cakupan plan.
+
+## Tindak lanjut dari pengujian pemilik: konteks soal dan kapitalisasi
+
+Pemilik menemukan soal OpenAI “Tuliskan 1 huruf yang benar. Jawab dalam bahasa Inggris.” tanpa petunjuk atau audio, dengan kunci tersembunyi A. Jawaban `a` dinilai salah karena pencocokan awal server masih mempertahankan kapitalisasi, lalu penilai mengarang syarat huruf besar.
+
+- Pencocokan isi sekarang mengabaikan kapitalisasi dan tanda baca sampingan. Prompt yang secara eksplisit menguji uppercase/lowercase, tanda baca, atau house style tetap mengikuti rubrik formatnya.
+- Instruksi jawaban huruf tanpa konteks seperti contoh tersebut ditolak validator. Writer/verifier wajib menggunakan petunjuk yang dilihat/didengar siswa; kunci tersembunyi bukan petunjuk.
+- Pemeriksa AI harus mengembalikan tepat satu verdict untuk setiap ID soal. Kegagalan provider, kuota, JSON rusak, ID hilang/duplikat/tidak dikenal, atau verdict kosong langsung memakai authored fallback.
+- Nilai pasti dari server juga mengendalikan penjelasan dan feedback ketika AI menyanggahnya. Klaim `keyWrong` yang hanya mengubah kapitalisasi tidak membatalkan jawaban benar.
+- Tes regresi memutar ulang contoh pemilik dan keluaran penilai yang salah, termasuk feedback kapitalisasi yang dikarang. Semua tes Go/database, coursecheck, dan e2e 194 node lulus; tidak ada panggilan OpenAI/TTS untuk pengujian tindak lanjut ini.
+- Hanya hasil percobaan lokal yang dilaporkan diperbaiki dari 89 menjadi 100; data asli dicadangkan secara privat dan raw evaluator response dipertahankan. Tampilan browser telah diverifikasi menunjukkan `a` sebagai benar. Tidak ada penghapusan atau penilaian ulang massal riwayat pengguna.

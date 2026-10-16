@@ -246,7 +246,11 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 				// A second look, question by question: drop any with two right
 				// answers, a wrong key or the wrong language, then check the rest
 				// still covers the lesson.
-				kept, problems := s.verifyCheckpoint(ctx, userID, in.LessonInput, items)
+				kept, problems, verifyErr := s.verifyCheckpoint(ctx, userID, in.LessonInput, items)
+				if verifyErr != nil {
+					slog.Warn("checkpoint check unavailable; using authored fallback", "node", n.ID, "err", verifyErr)
+					break
+				}
 				if items, err = validate(kept, avoid); err == nil {
 					source = s.AI.Name()
 					break
@@ -339,31 +343,45 @@ func beginnerTexts(items []tutor.CheckItem, n *curriculum.Node) error {
 
 // verifyCheckpoint asks the AI to check every question and returns the
 // ones that passed, with the problems found in the others. If the check
-// itself fails, the (already validated) questions are kept.
-func (s *Service) verifyCheckpoint(ctx context.Context, userID string, in ai.LessonInput, items []tutor.CheckItem) ([]tutor.CheckItem, []string) {
+// itself fails or omits a question, unverified AI questions are never used.
+func (s *Service) verifyCheckpoint(ctx context.Context, userID string, in ai.LessonInput, items []tutor.CheckItem) ([]tutor.CheckItem, []string, error) {
 	if err := s.checkQuota(ctx, userID); err != nil {
-		return items, nil
+		return nil, nil, err
 	}
 	res, err := s.AI.VerifyCheckpoint(ctx, ai.VerifyInput{LessonInput: in, Items: items})
 	s.recordUsage(ctx, userID, "checkpoint", res.Usage)
 	var out struct {
 		Items []struct {
 			ID      string `json:"id"`
-			OK      bool   `json:"ok"`
+			OK      *bool  `json:"ok"`
 			Problem string `json:"problem"`
 		} `json:"items"`
 	}
 	if err == nil {
 		err = json.Unmarshal(res.Raw, &out)
 	}
-	if err != nil || len(out.Items) == 0 {
-		slog.Warn("checkpoint check unavailable; keeping the questions", "err", err)
-		return items, nil
+	if err != nil {
+		return nil, nil, fmt.Errorf("verify checkpoint: %w", err)
+	}
+	if len(out.Items) != len(items) {
+		return nil, nil, errors.New("verifier must check every question")
+	}
+	known, seen := map[string]bool{}, map[string]bool{}
+	for _, it := range items {
+		known[it.ID] = true
 	}
 	bad := map[string]string{}
 	for _, c := range out.Items {
-		if !c.OK {
-			bad[c.ID] = strings.TrimSpace(c.Problem)
+		if !known[c.ID] || seen[c.ID] || c.OK == nil {
+			return nil, nil, errors.New("verifier returned a missing, duplicate or unknown verdict")
+		}
+		seen[c.ID] = true
+		if !*c.OK {
+			p := strings.TrimSpace(c.Problem)
+			if p == "" {
+				p = "The question cannot be answered clearly from the information given."
+			}
+			bad[c.ID] = p
 		}
 	}
 	var kept []tutor.CheckItem
@@ -375,7 +393,7 @@ func (s *Service) verifyCheckpoint(ctx context.Context, userID string, in ai.Les
 		}
 		kept = append(kept, it)
 	}
-	return kept, problems
+	return kept, problems, nil
 }
 
 // prefetchCheckpoint writes the next checkpoint in the background, so the
@@ -485,7 +503,7 @@ func (s *Service) SubmitCheckpoint(ctx context.Context, userID, sessionID, check
 	lang := cur.Lang(c.Locale)
 	fixed := map[string]int{}
 	for _, it := range items {
-		if score, ok := tutor.FixedVerdict(it, clean[it.ID], ai.StrictMatch); ok {
+		if score, ok := tutor.FixedVerdict(it, clean[it.ID], ai.ExactMatch); ok {
 			fixed[it.ID] = score
 		}
 	}
@@ -638,7 +656,7 @@ func (s *Service) gradeCheckpoint(ctx context.Context, userID string, st state, 
 			slog.Warn("checkpoint grading failed", "provider", s.AI.Name(), "err", err)
 			return tutor.Review{}, nil, "", nil, errf(502, "evaluator_unavailable", true, "Your answers couldn't be scored right now. Nothing was saved — please submit again.")
 		}
-		review, scores, feedback, err := tutor.ApplyGrade(res.Raw, items, answers, fixed)
+		review, scores, feedback, err := tutor.ApplyGrade(res.Raw, items, answers, fixed, lang)
 		if err == nil {
 			return review, scores, feedback, res.Raw, nil
 		}

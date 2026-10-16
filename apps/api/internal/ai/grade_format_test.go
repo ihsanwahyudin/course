@@ -13,7 +13,7 @@ func TestGradeFormattingPolicyAndFallback(t *testing.T) {
 	in, _ := lessonInput(t, "c2-editing", "id")
 	q := tutor.CheckItem{ID: "date", Question: tutor.Question{Type: tutor.QuestionText, ObjectiveID: in.Node.Objectives[0].ID, Prompt: "House style: day + month in words + year, with no comma."}, Accepted: []string{"3 october 2026"}}
 	task := gradeTask(GradeInput{LessonInput: in, Items: []tutor.CheckItem{q}})
-	for _, want := range []string{`Indonesian "dan"`, "unless order is tested", "UNLESS the prompt or rubric explicitly tests"} {
+	for _, want := range []string{`Indonesian "dan"`, "unless order is tested", "UNLESS the learner-visible prompt explicitly tests"} {
 		if !strings.Contains(task, want) {
 			t.Errorf("grading policy missing %q", want)
 		}
