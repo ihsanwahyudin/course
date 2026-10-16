@@ -117,6 +117,20 @@ Write ONE new question of the same type, testing the same objective (%s) with a 
 Include a short explanation in the learner's language.`, q, in.Question.ObjectiveID)
 }
 
+func askLanguagePolicy(locale string) string {
+	fallback := "English"
+	if locale == "id" {
+		fallback = "Indonesian (Bahasa Indonesia)"
+	}
+	return fmt.Sprintf(`For Ask AI, choose the reply language from the learner's latest question, regardless of the app language or earlier replies.
+If the latest question is in Indonesian (including informal Indonesian such as "kenapa oo dibaca u?"), write the entire explanation in Indonesian (Bahasa Indonesia).
+If it is in English, explain in English. Follow an explicit request to explain in Indonesian or English.
+For mixed-language questions, use the language of the surrounding question, not quoted English words or example sentences.
+For a language-ambiguous question, use %s as the default.
+Keep English words, example sentences, spellings and pronunciation targets in English; explain them in the chosen reply language.
+This language choice changes only the reply language; all lesson scope and answer-protection rules still apply.`, fallback)
+}
+
 func askTask(in AskInput) string {
 	step, _ := json.Marshal(publicStep(in.Step))
 	return fmt.Sprintf(`The learner is on this step of the lesson: %s

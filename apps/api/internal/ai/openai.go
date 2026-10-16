@@ -92,6 +92,10 @@ func (o *OpenAI) SimilarQuestion(ctx context.Context, in SimilarInput) (Result, 
 }
 
 func (o *OpenAI) Ask(ctx context.Context, in AskInput) (Result, error) {
+	// Ask AI follows the learner's latest question, independently of the UI.
+	// Replace the UI-only policy at system priority so it cannot conflict with
+	// the reply-language instruction or be overridden by earlier English replies.
+	in.LanguagePolicy = askLanguagePolicy(in.Locale)
 	h := in.History
 	if len(h) > 8 {
 		h = h[len(h)-8:]
