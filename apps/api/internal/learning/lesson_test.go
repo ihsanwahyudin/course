@@ -295,6 +295,28 @@ func TestAskScopeAndMemory(t *testing.T) {
 	if mem, _ := s.Memory(ctx, learnerID); mem.Enabled || len(mem.Items) != 1 {
 		t.Fatalf("with memory off nothing new is saved: %+v", mem)
 	}
+
+	// Moving forward and chatting elsewhere must preserve this step's thread.
+	if _, err := s.NextStep(ctx, learnerID, sess.ID, 0); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := s.AskStep(ctx, learnerID, sess.ID, 1, AskInput{Content: "Question on the next step"}); err != nil {
+		t.Fatal(err)
+	}
+	sess, err = s.AskStep(ctx, learnerID, sess.ID, 0, AskInput{Content: "Back to my earlier question"})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if in := seen[len(seen)-1]; len(in.History) != 4 || in.History[0].Content != "How do I say 'kemarin saya bekerja'?" || in.History[2].Content != "And tomorrow?" {
+		t.Fatalf("reopened step lost or mixed its context: %+v", in.History)
+	}
+	sess, err = s.GetSession(ctx, learnerID, sess.ID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if sess.Lesson.StepIndex != 1 || len(sess.Lesson.Steps[0].Asks) != 3 || len(sess.Lesson.Steps[1].Asks) != 1 {
+		t.Fatalf("chatting on an earlier step changed progress or history: %+v", sess.Lesson)
+	}
 }
 
 // withoutAuthoredPlans makes the AI write plans, as with personalisation on.

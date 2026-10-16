@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ActivityIndicator, Platform, Pressable, StyleSheet, TextInput, View } from 'react-native';
 
 import { Icon } from '@/components/ui/Icon';
-import { IconButton } from '@/components/ui/PillButton';
+import { IconButton, PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Text } from '@/components/ui/Text';
 import { useT } from '@/i18n';
 import { ApiError, type AskEntry } from '@/lib/api';
@@ -70,65 +70,77 @@ function Answer({ a }: { a: AskEntry }) {
   );
 }
 
-// "Tanya AI" inside a step: questions stay about this lesson.
-export function AskBox({ asks, onAsk, onClose, pending, error }: { asks: AskEntry[]; onAsk: (q: string) => void; onClose: () => void; pending: string | null; error?: string }) {
+const CHAT_PAGE_SIZE = 5;
+
+// Every step owns its collapsed state and visible history independently.
+export function AskBox({ asks, onAsk, pending = null, error }: { asks: AskEntry[]; onAsk?: (q: string) => void; pending?: string | null; error?: string }) {
   const t = useT();
+  const [open, setOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(CHAT_PAGE_SIZE);
   const [draft, setDraft] = useState('');
+  const firstVisible = Math.max(0, asks.length - visibleCount);
   const send = () => {
     const q = draft.trim();
-    if (!q || pending) return;
+    if (!q || pending || !onAsk) return;
     onAsk(q);
     setDraft('');
   };
   return (
     <View style={styles.box}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityState={{ expanded: open }}
+        onPress={() => {
+          setOpen((v) => !v);
+          setVisibleCount(CHAT_PAGE_SIZE);
+        }}
+        style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}
+      >
         <Icon name="chat" size={15} color={colors.accent} />
-        <Eyebrow color={colors.accent} style={{ flex: 1 }}>
-          {t('step.askTitle')}
-        </Eyebrow>
-        <IconButton icon="close" label={t('step.closeAsk')} variant="soft" size={30} onPress={onClose} />
-      </View>
-      {asks.map((a, i) => (
-        <Answer key={i} a={a} />
-      ))}
-      {pending ? (
-        <View style={{ gap: 12 }}>
-          <View style={styles.q}>
-            <Text size={15} color={colors.white}>
-              {pending}
-            </Text>
-          </View>
-          <View style={styles.a} accessibilityLiveRegion="polite">
-            <ActivityIndicator size="small" color={colors.accent} />
-            <Text size={14} color={colors.muted}>
-              {t('step.thinking')}
-            </Text>
-          </View>
+        <Eyebrow color={colors.accent} style={{ flex: 1 }}>{t('step.askTitle')}</Eyebrow>
+        {asks.length > 0 ? <Text size={12} color={colors.muted}>{asks.length}</Text> : null}
+        <View style={{ transform: [{ rotate: open ? '90deg' : '0deg' }] }}>
+          <Icon name="chevronRight" size={16} color={colors.accent} />
+        </View>
+      </Pressable>
+      {open ? (
+        <View style={{ gap: 16 }}>
+          {firstVisible > 0 ? (
+            <PillButton label={t('step.loadEarlier')} variant="secondary" onPress={() => setVisibleCount((n) => n + CHAT_PAGE_SIZE)} />
+          ) : null}
+          {asks.slice(firstVisible).map((a, i) => (
+            <Answer key={firstVisible + i} a={a} />
+          ))}
+          {pending ? (
+            <View style={{ gap: 12 }}>
+              <View style={styles.q}><Text size={15} color={colors.white}>{pending}</Text></View>
+              <View style={styles.a} accessibilityLiveRegion="polite">
+                <ActivityIndicator size="small" color={colors.accent} />
+                <Text size={14} color={colors.muted}>{t('step.thinking')}</Text>
+              </View>
+            </View>
+          ) : null}
+          {error ? <Text size={14} color={colors.danger}>{error}</Text> : null}
+          {onAsk ? (
+            <View style={styles.inputRow}>
+              <TextInput
+                value={draft}
+                onChangeText={setDraft}
+                onSubmitEditing={send}
+                placeholder={t('step.askPlaceholder')}
+                placeholderTextColor={colors.muted}
+                accessibilityLabel={t('step.askLabel')}
+                maxLength={2000}
+                editable={!pending}
+                returnKeyType="send"
+                style={styles.input}
+              />
+              <MicButton onText={(txt) => setDraft((d) => (d ? `${d} ${txt}` : txt))} />
+              <IconButton icon="arrowUp" label={t('step.send')} variant="accent" size={36} onPress={pending || !draft.trim() ? undefined : send} />
+            </View>
+          ) : null}
         </View>
       ) : null}
-      {error ? (
-        <Text size={14} color={colors.danger}>
-          {error}
-        </Text>
-      ) : null}
-      <View style={styles.inputRow}>
-        <TextInput
-          value={draft}
-          onChangeText={setDraft}
-          onSubmitEditing={send}
-          placeholder={t('step.askPlaceholder')}
-          placeholderTextColor={colors.muted}
-          accessibilityLabel={t('step.askLabel')}
-          maxLength={2000}
-          editable={!pending}
-          autoFocus={Platform.OS === 'web'}
-          returnKeyType="send"
-          style={styles.input}
-        />
-        <MicButton onText={(txt) => setDraft((d) => (d ? `${d} ${txt}` : txt))} />
-        <IconButton icon="arrowUp" label={t('step.send')} variant="accent" size={36} onPress={send} />
-      </View>
     </View>
   );
 }

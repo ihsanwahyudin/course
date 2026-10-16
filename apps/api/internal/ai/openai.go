@@ -96,11 +96,9 @@ func (o *OpenAI) Ask(ctx context.Context, in AskInput) (Result, error) {
 	// Replace the UI-only policy at system priority so it cannot conflict with
 	// the reply-language instruction or be overridden by earlier English replies.
 	in.LanguagePolicy = askLanguagePolicy(in.Locale)
-	h := in.History
-	if len(h) > 8 {
-		h = h[len(h)-8:]
-	}
-	return o.lessonCall(ctx, in.LessonInput, askTask(in), in.Question, "answer", answerSchema(), 700, h)
+	// The service caps questions per step. Keep that entire bounded history:
+	// displaying only recent chats must not discard older context for the AI.
+	return o.lessonCall(ctx, in.LessonInput, askTask(in), in.Question, "answer", answerSchema(), 700, in.History)
 }
 
 func (o *OpenAI) Summarize(ctx context.Context, in SummaryInput) (Result, error) {

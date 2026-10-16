@@ -58,7 +58,21 @@ function Widget({ step, ctx }: { step: StepView; ctx: Ctx }) {
 
 const noop = () => {};
 
-// A finished step, opened again from its collapsed row: read-only.
+// Chat can be resumed on any opened step while the lesson session is open.
+function StepChat({ step, ctx }: { step: StepView; ctx: Ctx }) {
+  const act = useStepAction(ctx.session.id);
+  const errorText = useErrorText();
+  return (
+    <AskBox
+      asks={step.asks}
+      pending={act.isPending && act.variables?.action === 'ask' ? act.variables.content : null}
+      error={act.error && !act.isPending ? errorText(act.error) : undefined}
+      onAsk={ctx.session.endedAt ? undefined : (content) => act.mutate({ action: 'ask', step: step.index, content })}
+    />
+  );
+}
+
+// A finished step: practice stays read-only; its chat can be continued.
 function PastStep({ step, ctx }: { step: StepView; ctx: Ctx }) {
   const t = useT();
   return (
@@ -79,6 +93,7 @@ function PastStep({ step, ctx }: { step: StepView; ctx: Ctx }) {
         <Widget step={step} ctx={ctx} />
       )}
       {step.similar ? <QuestionCard q={step.similar} eyebrow={t('step.similarLabel', { n: step.index + 1 })} busy={null} readOnly onAnswer={noop} onHint={noop} onReveal={noop} /> : null}
+      {!step.question || step.asks.length > 0 ? <StepChat step={step} ctx={ctx} /> : null}
     </DoneStep>
   );
 }
@@ -91,8 +106,6 @@ function ActiveStep({ step, total, ctx, greeting }: { step: StepView; total: num
   const t = useT();
   const errorText = useErrorText();
   const act = useStepAction(ctx.session.id);
-  const [askOpen, setAskOpen] = useState(step.asks.length > 0);
-  const [askPending, setAskPending] = useState<string | null>(null);
   const n = step.index;
   const v = act.isPending ? act.variables : undefined;
 
@@ -170,20 +183,8 @@ function ActiveStep({ step, total, ctx, greeting }: { step: StepView; total: num
     body = (
       <Indented>
         <Widget step={step} ctx={ctx} />
-        {askOpen ? (
-          <AskBox
-            asks={step.asks}
-            pending={askPending}
-            error={act.error && act.variables?.action === 'ask' && !act.isPending ? errorText(act.error) : undefined}
-            onClose={() => setAskOpen(false)}
-            onAsk={(content) => {
-              setAskPending(content);
-              act.mutate({ action: 'ask', step: n, content }, { onSettled: () => setAskPending(null) });
-            }}
-          />
-        ) : null}
+        <StepChat step={step} ctx={ctx} />
         <ActionRow>
-          {!askOpen ? <PillButton label={t('step.askAi')} icon="chat" variant="secondary" disabled={act.isPending} onPress={() => setAskOpen(true)} /> : null}
           {next}
         </ActionRow>
       </Indented>

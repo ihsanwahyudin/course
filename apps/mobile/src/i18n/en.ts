@@ -383,6 +383,7 @@ export const en = {
     continue: 'Continue',
     askAi: 'Ask AI',
     askTitle: 'Ask AI · about this step',
+    loadEarlier: 'Load earlier conversations',
     askPlaceholder: 'Ask about this step…',
     askLabel: 'Question for the tutor about this step',
     send: 'Send',

@@ -384,6 +384,7 @@ export const id: Dict = {
     continue: 'Lanjut',
     askAi: 'Tanya AI',
     askTitle: 'Tanya AI · tentang langkah ini',
+    loadEarlier: 'Muat percakapan sebelumnya',
     askPlaceholder: 'Tanya tentang langkah ini…',
     askLabel: 'Pertanyaan untuk tutor tentang langkah ini',
     send: 'Kirim',

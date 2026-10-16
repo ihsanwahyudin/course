@@ -3,11 +3,46 @@ package ai
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"strings"
 	"testing"
 )
+
+func TestAskKeepsHistoryBeyondVisibleChats(t *testing.T) {
+	var messages []ChatMessage
+	o := fakeOpenAI(t, func(w http.ResponseWriter, r *http.Request) {
+		var body struct {
+			Input []ChatMessage `json:"input"`
+		}
+		if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
+			t.Error(err)
+		}
+		messages = body.Input
+		_, _ = io.WriteString(w, `{"status":"completed","output":[{"type":"message","content":[{"type":"output_text","text":"{}"}]}]}`)
+	})
+	in, _ := lessonInput(t, "a0-alphabet-sounds", "id")
+	var history []ChatMessage
+	for i := 0; i < 7; i++ {
+		history = append(history, ChatMessage{Role: "user", Content: fmt.Sprintf("Pertanyaan %d", i)}, ChatMessage{Role: "assistant", Content: fmt.Sprintf("Jawaban %d", i)})
+	}
+	const question = "Jelaskan lagi jawaban pertamamu."
+	if _, err := o.Ask(context.Background(), AskInput{LessonInput: in, History: history, Question: question}); err != nil {
+		t.Fatal(err)
+	}
+	if len(messages) != len(history)+3 {
+		t.Fatalf("history was truncated: got %d messages, want %d", len(messages), len(history)+3)
+	}
+	for i, want := range history {
+		if got := messages[i+1]; got != want {
+			t.Fatalf("history message %d: got %+v, want %+v", i, got, want)
+		}
+	}
+	if got := messages[len(messages)-1]; got.Role != "user" || got.Content != question {
+		t.Fatalf("latest question: %+v", got)
+	}
+}
 
 // Exercise the actual provider request: the language override must replace
 // the conflicting UI policy in the system message, with the question intact.
