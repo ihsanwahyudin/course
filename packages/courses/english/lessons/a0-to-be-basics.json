@@ -139,63 +139,80 @@
     {
       "id": "tbb-1",
       "objectiveId": "introduce-yourself",
-      "prompt": "Write in English: Saya Dewi.",
-      "acceptableAnswers": [
-        "i'm dewi",
-        "i am dewi"
+      "prompt": "Choose the correct answer. Choose in English: Saya Dewi.",
+      "rubric": "Correct: I'm Dewi / I am Dewi. 'My name is Dewi' is good English but not the target form = 70. 'I Dewi' = 0 (be missing).",
+      "type": "mcq",
+      "options": [
+        "I'm Dewi",
+        "I Dewi.",
+        "I is Dewi."
       ],
-      "rubric": "Correct: I'm Dewi / I am Dewi. 'My name is Dewi' is good English but not the target form = 70. 'I Dewi' = 0 (be missing)."
+      "correctOption": "I'm Dewi"
     },
     {
       "id": "tbb-2",
       "objectiveId": "introduce-yourself",
-      "prompt": "Write in English: Saya dari Medan.",
-      "acceptableAnswers": [
-        "i'm from medan",
-        "i am from medan"
+      "prompt": "Choose the correct answer. Choose in English: Saya dari Medan.",
+      "rubric": "Correct: I'm from Medan / I am from Medan. 'I from Medan' = 0 (be missing). Missing 'from' = 30.",
+      "type": "mcq",
+      "options": [
+        "I'm from Medan",
+        "I from Medan.",
+        "I are from Medan."
       ],
-      "rubric": "Correct: I'm from Medan / I am from Medan. 'I from Medan' = 0 (be missing). Missing 'from' = 30."
+      "correctOption": "I'm from Medan"
     },
     {
       "id": "tbb-3",
       "objectiveId": "this-is-its",
-      "prompt": "Write in English: Ini buku saya.",
-      "acceptableAnswers": [
-        "this is my book"
+      "prompt": "Choose the correct answer. Choose in English: Ini buku saya.",
+      "rubric": "Correct: This is my book. 'This my book' = 0 (be missing). 'This is book my' = 30 (word order).",
+      "type": "mcq",
+      "options": [
+        "this is my book",
+        "This my book.",
+        "This are my book."
       ],
-      "rubric": "Correct: This is my book. 'This my book' = 0 (be missing). 'This is book my' = 30 (word order)."
+      "correctOption": "this is my book"
     },
     {
       "id": "tbb-4",
       "objectiveId": "this-is-its",
-      "prompt": "Complete the second sentence: This is my car. ___ red.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete the second sentence: This is my car. ___ red.",
+      "rubric": "Correct: It's / It is. 'Its' (no apostrophe) = 50. 'It' alone = 0 (be missing).",
+      "type": "mcq",
+      "options": [
         "it's",
-        "it is",
-        "it's red",
-        "it is red"
+        "It",
+        "They are"
       ],
-      "rubric": "Correct: It's / It is. 'Its' (no apostrophe) = 50. 'It' alone = 0 (be missing)."
+      "correctOption": "it's"
     },
     {
       "id": "tbb-5",
       "objectiveId": "keep-be",
-      "prompt": "Correct the sentence: My mother nurse.",
-      "acceptableAnswers": [
-        "my mother is a nurse",
-        "my mother's a nurse"
+      "prompt": "Choose the correct answer. Correct the sentence: My mother nurse.",
+      "rubric": "Correct: My mother is a nurse. 'My mother is nurse' (no a) = 70. Any answer without is = 0.",
+      "type": "mcq",
+      "options": [
+        "My mother is a nurse",
+        "My mother are a nurse.",
+        "My mother nurse is."
       ],
-      "rubric": "Correct: My mother is a nurse. 'My mother is nurse' (no a) = 70. Any answer without is = 0."
+      "correctOption": "My mother is a nurse"
     },
     {
       "id": "tbb-6",
       "objectiveId": "keep-be",
-      "prompt": "Write in English: Dia (perempuan) dari Bali.",
-      "acceptableAnswers": [
-        "she's from bali",
-        "she is from bali"
+      "prompt": "Choose the correct answer. Choose in English: Dia (perempuan) dari Bali.",
+      "rubric": "Correct: She's from Bali / She is from Bali. 'She from Bali' = 0 (be missing). 'He's from Bali' = 40 (wrong pronoun).",
+      "type": "mcq",
+      "options": [
+        "She's from Bali",
+        "She from Bali.",
+        "She are from Bali."
       ],
-      "rubric": "Correct: She's from Bali / She is from Bali. 'She from Bali' = 0 (be missing). 'He's from Bali' = 40 (wrong pronoun)."
+      "correctOption": "She's from Bali"
     }
   ],
   "material": [
@@ -599,12 +616,12 @@
         "Boleh bilang 'My name is …' sebagai ganti 'I'm …'?"
       ],
       "assessment": {
-        "tbb-1": "Tulis dalam bahasa Inggris: Saya Dewi.",
-        "tbb-2": "Tulis dalam bahasa Inggris: Saya dari Medan.",
-        "tbb-3": "Tulis dalam bahasa Inggris: Ini buku saya.",
-        "tbb-4": "Lengkapi kalimat kedua: This is my car. ___ red.",
-        "tbb-5": "Perbaiki kalimatnya: My mother nurse.",
-        "tbb-6": "Tulis dalam bahasa Inggris: Dia (perempuan) dari Bali."
+        "tbb-1": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: Saya Dewi.",
+        "tbb-2": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: Saya dari Medan.",
+        "tbb-3": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: Ini buku saya.",
+        "tbb-4": "Pilih jawaban yang benar. Lengkapi kalimat kedua: This is my car. ___ red.",
+        "tbb-5": "Pilih jawaban yang benar. Perbaiki kalimatnya: My mother nurse.",
+        "tbb-6": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: Dia (perempuan) dari Bali."
       }
     }
   }

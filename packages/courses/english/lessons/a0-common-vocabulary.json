@@ -134,40 +134,62 @@
     {
       "id": "vocab-2",
       "objectiveId": "everyday-nouns",
-      "prompt": "What is 'meja' in English?",
-      "acceptableAnswers": [
-        "table",
-        "desk"
-      ],
-      "rubric": "Correct: table (desk also acceptable)."
+      "prompt": "Match each English word with its Indonesian meaning.",
+      "rubric": "Correct: table (desk also acceptable).",
+      "type": "match",
+      "pairs": [
+        {
+          "left": "table",
+          "right": "meja"
+        },
+        {
+          "left": "book",
+          "right": "buku"
+        },
+        {
+          "left": "phone",
+          "right": "telepon"
+        }
+      ]
     },
     {
       "id": "vocab-3",
       "objectiveId": "numbers",
-      "prompt": "Write the number 18 in words.",
-      "acceptableAnswers": [
-        "eighteen"
+      "prompt": "Choose the correct answer. Choose the number 18 in words.",
+      "rubric": "Correct: eighteen. 'eighty' = 0; minor misspelling = 70.",
+      "type": "mcq",
+      "options": [
+        "eighteen",
+        "eighty",
+        "eight"
       ],
-      "rubric": "Correct: eighteen. 'eighty' = 0; minor misspelling = 70."
+      "correctOption": "eighteen"
     },
     {
       "id": "vocab-4",
       "objectiveId": "numbers",
-      "prompt": "Write the number 20 in words.",
-      "acceptableAnswers": [
-        "twenty"
+      "prompt": "Choose the correct answer. Choose the number 20 in words.",
+      "rubric": "Correct: twenty.",
+      "type": "mcq",
+      "options": [
+        "twenty",
+        "twelve",
+        "two"
       ],
-      "rubric": "Correct: twenty."
+      "correctOption": "twenty"
     },
     {
       "id": "vocab-5",
       "objectiveId": "colours-adjectives",
-      "prompt": "Translate 'kucing hitam' into English.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Translate 'kucing hitam' into English.",
+      "rubric": "Correct: (a) black cat. 'cat black' = 30 (word order).",
+      "type": "mcq",
+      "options": [
         "black cat",
-        "a black cat"
+        "cat black",
+        "black a cat"
       ],
-      "rubric": "Correct: (a) black cat. 'cat black' = 30 (word order)."
+      "correctOption": "black cat"
     }
   ],
   "material": [
@@ -490,10 +512,10 @@
       ],
       "assessment": {
         "vocab-1": "Apa bahasa Inggrisnya 'guru'?",
-        "vocab-2": "Apa bahasa Inggrisnya 'meja'?",
-        "vocab-3": "Tulis angka 18 dengan huruf dalam bahasa Inggris.",
-        "vocab-4": "Tulis angka 20 dengan huruf dalam bahasa Inggris.",
-        "vocab-5": "Terjemahkan 'kucing hitam' ke bahasa Inggris."
+        "vocab-2": "Pasangkan setiap kata bahasa Inggris dengan artinya dalam bahasa Indonesia.",
+        "vocab-3": "Pilih jawaban yang benar. Pilih angka 18 dengan huruf dalam bahasa Inggris.",
+        "vocab-4": "Pilih jawaban yang benar. Pilih angka 20 dengan huruf dalam bahasa Inggris.",
+        "vocab-5": "Pilih jawaban yang benar. Terjemahkan 'kucing hitam' ke bahasa Inggris."
       }
     }
   }

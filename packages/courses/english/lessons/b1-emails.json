@@ -166,12 +166,12 @@
     {
       "id": "em-1",
       "objectiveId": "structure-an-email",
-      "prompt": "You're writing to the manager of a hotel in Bali, Mr David Wilson. You have never met him. Write the greeting of your email (no comma needed).",
+      "prompt": "You're writing to the manager of a hotel in Bali, Mr David Wilson. You have never met him. Write the greeting of your email (a comma is optional).",
       "acceptableAnswers": [
         "dear mr wilson",
         "dear mister wilson"
       ],
-      "rubric": "Correct: Dear Mr Wilson (Mr. Wilson in American English; Dear + Mr + surname). 'Dear Mr David Wilson' = 70 (understood, but the first name isn't needed). 'Dear Sir' = 60 (you know his name, so use it). 'Dear David' = 50 (too familiar for someone you've never met). 'Dear Mr David' = 30 (Mr goes with the surname, not the first name). 'Hi David' or 'Hey Mr Wilson' = 20."
+      "rubric": "Correct: Dear Mr Wilson (Mr. Wilson in American English; Dear + Mr + surname). 'Dear Mr David Wilson' = 70 (understood, but the first name isn't needed). 'Dear Sir' = 60 (you know his name, so use it). 'Dear David' = 50 (too familiar for someone you've never met). 'Dear Mr David' = 30 (Mr goes with the surname, not the first name). 'Hi David' or 'Hey Mr Wilson' = 20. A comma after the greeting is optional; assess the greeting, not the comma."
     },
     {
       "id": "em-2",
@@ -810,7 +810,7 @@
         "Bolehkah memakai bentuk singkat seperti I'm di email kerja?"
       ],
       "assessment": {
-        "em-1": "Kamu menulis email ke manajer sebuah hotel di Bali, Mr David Wilson. Kamu belum pernah bertemu dengannya. Tulis salam pembuka emailmu dalam bahasa Inggris (tidak perlu koma).",
+        "em-1": "Kamu menulis email ke manajer sebuah hotel di Bali, Mr David Wilson. Kamu belum pernah bertemu dengannya. Tulis salam pembuka emailmu dalam bahasa Inggris (boleh dengan atau tanpa koma).",
         "em-2": "Kamu baru saja mengirim daftar harga baru ke timmu lewat email. Tulis kalimat penutup dalam bahasa Inggris (kalimat tepat sebelum Best regards) yang mempersilakan mereka bertanya.",
         "em-3": "Perbaiki kesalahannya: I would like to ask the parking at your hotel.",
         "em-4": "Ubah permintaan ini menjadi sopan untuk email ke pemasok. Pakai Could you: Send me the invoice by Friday.",

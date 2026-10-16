@@ -191,82 +191,94 @@
     {
       "id": "jh-1",
       "objectiveId": "jobs-workplaces",
-      "prompt": "Pak Hasan drives a bus in Jakarta every day. What is his job? Complete: He is a bus ___.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Pak Hasan drives a bus in Jakarta every day. What is his job? Complete: He is a bus ___.",
+      "rubric": "Correct: driver. 'drive' or 'drivers' = 50.",
+      "type": "mcq",
+      "options": [
         "driver",
-        "bus driver",
-        "he is a bus driver",
-        "he's a bus driver"
+        "nurse",
+        "teacher"
       ],
-      "rubric": "Correct: driver. 'drive' or 'drivers' = 50."
+      "correctOption": "driver"
     },
     {
       "id": "jh-2",
       "objectiveId": "jobs-workplaces",
-      "prompt": "Complete with a workplace: Doctors and nurses work in a ___.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with a workplace: Doctors and nurses work in a ___.",
+      "rubric": "Correct: hospital (clinic is also correct). 'hospitals' = 70. 'office' or 'school' = 0.",
+      "type": "mcq",
+      "options": [
         "hospital",
-        "clinic",
-        "a hospital",
-        "a clinic"
+        "bank",
+        "bakery"
       ],
-      "rubric": "Correct: hospital (clinic is also correct). 'hospitals' = 70. 'office' or 'school' = 0."
+      "correctOption": "hospital"
     },
     {
       "id": "jh-3",
       "objectiveId": "jobs-workplaces",
-      "prompt": "Write in English: Saya insinyur.",
-      "acceptableAnswers": [
-        "i'm an engineer",
-        "i am an engineer"
+      "prompt": "Choose the correct answer. Choose in English: Saya insinyur.",
+      "rubric": "Correct: I'm an engineer. / I am an engineer. 'I am engineer' (no article) = 60. 'I'm a engineer' = 80.",
+      "type": "mcq",
+      "options": [
+        "I'm an engineer",
+        "I'm a engineer.",
+        "I engineer am."
       ],
-      "rubric": "Correct: I'm an engineer. / I am an engineer. 'I am engineer' (no article) = 60. 'I'm a engineer' = 80."
+      "correctOption": "I'm an engineer"
     },
     {
       "id": "jh-4",
       "objectiveId": "hobbies-sports",
-      "prompt": "Complete with the right form of play or go: My brother ___ basketball after school.",
-      "acceptableAnswers": [
-        "plays"
+      "prompt": "Choose the correct answer. Complete with the right form of play or go: My brother ___ basketball after school.",
+      "rubric": "Correct: plays (basketball is a ball sport, and my brother = he, so -s). 'play' = 50. 'goes' = 0.",
+      "type": "mcq",
+      "options": [
+        "plays",
+        "play",
+        "goes"
       ],
-      "rubric": "Correct: plays (basketball is a ball sport, and my brother = he, so -s). 'play' = 50. 'goes' = 0."
+      "correctOption": "plays"
     },
     {
       "id": "jh-5",
       "objectiveId": "hobbies-sports",
-      "prompt": "Correct the mistake: My hobby is play chess.",
-      "acceptableAnswers": [
-        "my hobby is playing chess"
+      "prompt": "Choose the correct answer. Correct the mistake: My hobby is play chess.",
+      "rubric": "Correct: My hobby is playing chess. 'My hobby is chess' = 70 (correct English, but the -ing form was the point). 'My hobby is plays chess' = 0.",
+      "type": "mcq",
+      "options": [
+        "My hobby is playing chess",
+        "My hobby is play chess.",
+        "My hobby are playing chess."
       ],
-      "rubric": "Correct: My hobby is playing chess. 'My hobby is chess' = 70 (correct English, but the -ing form was the point). 'My hobby is plays chess' = 0."
+      "correctOption": "My hobby is playing chess"
     },
     {
       "id": "jh-6",
       "objectiveId": "weekend-activities",
-      "prompt": "Listen to Dimas. What does he do on Saturdays? (two words)",
+      "prompt": "Choose the correct answer. Listen to Dimas. What does he do on Saturdays? (two words)",
       "listen": "Hi, I'm Dimas. I work in a bank from Monday to Friday. On Saturdays I go fishing with my dad.",
-      "acceptableAnswers": [
+      "rubric": "Correct: (he) goes fishing. 'fishing' alone = 100. 'works in a bank' = 0 (that's Monday to Friday). 'play fishing' = 50.",
+      "type": "mcq",
+      "options": [
         "go fishing",
-        "goes fishing",
-        "he goes fishing",
-        "fishing",
-        "he goes fishing with his dad",
-        "goes fishing with his dad",
-        "go fishing with his dad",
-        "go fishing with my dad"
+        "play chess",
+        "go swimming"
       ],
-      "rubric": "Correct: (he) goes fishing. 'fishing' alone = 100. 'works in a bank' = 0 (that's Monday to Friday). 'play fishing' = 50."
+      "correctOption": "go fishing"
     },
     {
       "id": "jh-7",
       "objectiveId": "weekend-activities",
-      "prompt": "Correct the mistake: At the weekend we go to shopping at the mall.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Correct the mistake: At the weekend we go to shopping at the mall.",
+      "rubric": "Correct: At the weekend we go shopping at the mall (go + -ing, no 'to'). 'on the weekend' is also correct. 'go to the mall' = 80 (correct, but changes the sentence). Keeping 'go to shopping' = 0.",
+      "type": "mcq",
+      "options": [
         "at the weekend we go shopping at the mall",
-        "on the weekend we go shopping at the mall",
-        "at the weekend we go shopping in the mall"
+        "At the weekend we goes shopping at the mall.",
+        "At the weekend we go to shopping at the mall."
       ],
-      "rubric": "Correct: At the weekend we go shopping at the mall (go + -ing, no 'to'). 'on the weekend' is also correct. 'go to the mall' = 80 (correct, but changes the sentence). Keeping 'go to shopping' = 0."
+      "correctOption": "at the weekend we go shopping at the mall"
     }
   ],
   "material": [
@@ -645,13 +657,13 @@
         "Apa bedanya cook dan cooker?"
       ],
       "assessment": {
-        "jh-1": "Pak Hasan menyetir bus di Jakarta setiap hari. Apa pekerjaannya? Lengkapi: He is a bus ___.",
-        "jh-2": "Lengkapi dengan nama tempat kerja: Doctors and nurses work in a ___.",
-        "jh-3": "Tulis dalam bahasa Inggris: Saya insinyur.",
-        "jh-4": "Lengkapi dengan bentuk play atau go yang benar: My brother ___ basketball after school.",
-        "jh-5": "Perbaiki kesalahannya: My hobby is play chess.",
-        "jh-6": "Dengarkan Dimas. Apa yang dia lakukan setiap hari Sabtu? Jawab dalam bahasa Inggris (dua kata).",
-        "jh-7": "Perbaiki kesalahannya: At the weekend we go to shopping at the mall."
+        "jh-1": "Pilih jawaban yang benar. Pak Hasan menyetir bus di Jakarta setiap hari. Apa pekerjaannya? Lengkapi: He is a bus ___.",
+        "jh-2": "Pilih jawaban yang benar. Lengkapi dengan nama tempat kerja: Doctors and nurses work in a ___.",
+        "jh-3": "Pilih jawaban yang benar. Pilih dalam bahasa Inggris: Saya insinyur.",
+        "jh-4": "Pilih jawaban yang benar. Lengkapi dengan bentuk play atau go yang benar: My brother ___ basketball after school.",
+        "jh-5": "Pilih jawaban yang benar. Perbaiki kesalahannya: My hobby is play chess.",
+        "jh-6": "Pilih jawaban yang benar. Dengarkan Dimas. Apa yang dia lakukan setiap hari Sabtu? Jawab dalam bahasa Inggris (dua kata).",
+        "jh-7": "Pilih jawaban yang benar. Perbaiki kesalahannya: At the weekend we go to shopping at the mall."
       }
     }
   }

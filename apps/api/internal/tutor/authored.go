@@ -114,7 +114,28 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 		// one, so it has to pass the same checks.
 		items, err := AuthoredItems(lesson, lang)
 		if err == nil {
-			_, err = ValidateCheckpoint(items, objectives, nil)
+			items, err = ValidateCheckpoint(items, objectives, nil)
+		}
+		if err == nil {
+			err = ValidateLevelQuestions(items, n.Level)
+		}
+		if err == nil {
+			most := -1
+			switch n.Level {
+			case "A0":
+				most = 1
+			case "A1":
+				most = 2
+			}
+			texts := 0
+			for _, it := range items {
+				if it.Type == QuestionText {
+					texts++
+				}
+			}
+			if most >= 0 && texts > most {
+				err = fmt.Errorf("level %s permits at most %d text items, got %d", n.Level, most, texts)
+			}
 		}
 		if err != nil {
 			bad("%s/%s: hand-written checkpoint: %v", n.ID, lang, err)

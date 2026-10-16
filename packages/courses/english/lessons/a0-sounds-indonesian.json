@@ -151,70 +151,97 @@
     {
       "id": "snd-1",
       "objectiveId": "short-long-vowels",
-      "prompt": "Listen. Do you hear live or leave? Write the word you hear.",
+      "prompt": "Choose the correct answer. Listen. Do you hear live or leave? Choose the word you hear.",
       "listen": "The word is leave.",
-      "acceptableAnswers": [
-        "leave"
+      "rubric": "Correct: leave (long /iː/). 'live' = 0.",
+      "type": "mcq",
+      "options": [
+        "leave",
+        "live",
+        "life"
       ],
-      "rubric": "Correct: leave (long /iː/). 'live' = 0."
+      "correctOption": "leave"
     },
     {
       "id": "snd-2",
       "objectiveId": "short-long-vowels",
-      "prompt": "Which word has the long sound /uː/, like in 'food': full or fool? Write it.",
-      "acceptableAnswers": [
-        "fool"
+      "prompt": "Choose the correct answer. Which word has the long sound /uː/, like in 'food': full or fool? Choose it.",
+      "rubric": "Correct: fool (long /uː/). 'full' has the short /ʊ/ = 0.",
+      "type": "mcq",
+      "options": [
+        "fool",
+        "full",
+        "fill"
       ],
-      "rubric": "Correct: fool (long /uː/). 'full' has the short /ʊ/ = 0."
+      "correctOption": "fool"
     },
     {
       "id": "snd-3",
       "objectiveId": "th-v-sh",
-      "prompt": "Listen. Do you hear tree or three? Write the word you hear.",
+      "prompt": "Choose the correct answer. Listen. Do you hear tree or three? Choose the word you hear.",
       "listen": "The word is three.",
-      "acceptableAnswers": [
+      "rubric": "Correct: three (/θ/). Accept '3'. 'tree' = 0.",
+      "type": "mcq",
+      "options": [
         "three",
-        "3"
+        "tree",
+        "free"
       ],
-      "rubric": "Correct: three (/θ/). Accept '3'. 'tree' = 0."
+      "correctOption": "three"
     },
     {
       "id": "snd-4",
       "objectiveId": "th-v-sh",
-      "prompt": "Listen. Do you hear safe or save? Write the word you hear.",
+      "prompt": "Choose the correct answer. Listen. Do you hear safe or save? Choose the word you hear.",
       "listen": "The word is save.",
-      "acceptableAnswers": [
-        "save"
+      "rubric": "Correct: save (ends with /v/). 'safe' = 0.",
+      "type": "mcq",
+      "options": [
+        "save",
+        "safe",
+        "same"
       ],
-      "rubric": "Correct: save (ends with /v/). 'safe' = 0."
+      "correctOption": "save"
     },
     {
       "id": "snd-5",
       "objectiveId": "th-v-sh",
-      "prompt": "Which word starts with the voiced th /ð/ (tongue between the teeth, with voice): thank, they or day? Write it.",
-      "acceptableAnswers": [
-        "they"
+      "prompt": "Choose the correct answer. Which word starts with the voiced th /ð/ (tongue between the teeth, with voice): thank, they or day? Choose it.",
+      "rubric": "Correct: they. 'thank' has the voiceless /θ/; 'day' starts with /d/ = 0.",
+      "type": "mcq",
+      "options": [
+        "they",
+        "thank",
+        "day"
       ],
-      "rubric": "Correct: they. 'thank' has the voiceless /θ/; 'day' starts with /d/ = 0."
+      "correctOption": "they"
     },
     {
       "id": "snd-6",
       "objectiveId": "final-consonants",
-      "prompt": "Listen. Do you hear back, bag or bad? Write the word you hear.",
+      "prompt": "Choose the correct answer. Listen. Do you hear back, bag or bad? Choose the word you hear.",
       "listen": "The word is bag.",
-      "acceptableAnswers": [
-        "bag"
+      "rubric": "Correct: bag (ends with /g/). 'back' or 'bad' = 0.",
+      "type": "mcq",
+      "options": [
+        "bag",
+        "back",
+        "bad"
       ],
-      "rubric": "Correct: bag (ends with /g/). 'back' or 'bad' = 0."
+      "correctOption": "bag"
     },
     {
       "id": "snd-7",
       "objectiveId": "final-consonants",
-      "prompt": "Write the English word for 'nasi'. It ends with the sound /s/.",
-      "acceptableAnswers": [
-        "rice"
+      "prompt": "Choose the English word for 'bis'. It ends with /s/ (a clear 's' sound).",
+      "rubric": "Bus ends with /s/, like a clear s; but ends in /t/ and bun in /n/.",
+      "type": "mcq",
+      "options": [
+        "bus",
+        "but",
+        "bun"
       ],
-      "rubric": "Correct: rice. Spelling slips (e.g. 'rise') = 50."
+      "correctOption": "bus"
     }
   ],
   "material": [
@@ -703,13 +730,13 @@
         "Kenapa bunyi terakhir sebuah kata begitu penting?"
       ],
       "assessment": {
-        "snd-1": "Dengarkan. Kamu mendengar live atau leave? Tulis kata yang kamu dengar.",
-        "snd-2": "Kata mana yang punya bunyi panjang /uː/ seperti dalam 'food': full atau fool? Tulis katanya.",
-        "snd-3": "Dengarkan. Kamu mendengar tree atau three? Tulis kata yang kamu dengar.",
-        "snd-4": "Dengarkan. Kamu mendengar safe atau save? Tulis kata yang kamu dengar.",
-        "snd-5": "Kata mana yang diawali bunyi th bersuara /ð/ (lidah di antara gigi, pita suara bergetar): thank, they atau day? Tulis katanya.",
-        "snd-6": "Dengarkan. Kamu mendengar back, bag atau bad? Tulis kata yang kamu dengar.",
-        "snd-7": "Tulis kata bahasa Inggris untuk 'nasi'. Kata itu berakhir dengan bunyi /s/."
+        "snd-1": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar live atau leave? Pilih kata yang kamu dengar.",
+        "snd-2": "Pilih jawaban yang benar. Kata mana yang punya bunyi panjang /uː/ seperti dalam 'food': full atau fool? Pilih katanya.",
+        "snd-3": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar tree atau three? Pilih kata yang kamu dengar.",
+        "snd-4": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar safe atau save? Pilih kata yang kamu dengar.",
+        "snd-5": "Pilih jawaban yang benar. Kata mana yang diawali bunyi th bersuara /ð/ (lidah di antara gigi, pita suara bergetar): thank, they atau day? Pilih katanya.",
+        "snd-6": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar back, bag atau bad? Pilih kata yang kamu dengar.",
+        "snd-7": "Pilih kata bahasa Inggris untuk 'bis'. Kata itu berakhir dengan bunyi /s/ (bunyi 's' yang jelas)."
       }
     }
   }

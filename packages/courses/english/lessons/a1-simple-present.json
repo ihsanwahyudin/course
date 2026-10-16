@@ -132,56 +132,65 @@
     {
       "id": "sp-1",
       "objectiveId": "affirmative",
-      "prompt": "Complete with 'go': My brother ___ to school by bus.",
-      "acceptableAnswers": [
-        "goes"
+      "prompt": "Choose the correct answer. Complete with 'go': My brother ___ to school by bus.",
+      "rubric": "Correct: goes. 'go' = 30, 'gos' = 50.",
+      "type": "mcq",
+      "options": [
+        "goes",
+        "go",
+        "going"
       ],
-      "rubric": "Correct: goes. 'go' = 30, 'gos' = 50."
+      "correctOption": "goes"
     },
     {
       "id": "sp-2",
       "objectiveId": "negative",
-      "prompt": "Make it negative: We eat meat.",
-      "acceptableAnswers": [
-        "we don't eat meat",
-        "we do not eat meat"
-      ],
-      "rubric": "Correct: We don't eat meat."
+      "prompt": "Arrange the tiles. Make it negative: We eat meat.",
+      "rubric": "Correct: We don't eat meat.",
+      "type": "word_order",
+      "solution": "we don't eat meat",
+      "tokens": [
+        "don't",
+        "eat",
+        "meat",
+        "we"
+      ]
     },
     {
       "id": "sp-3",
       "objectiveId": "negative",
-      "prompt": "Make it negative: She watches TV.",
-      "acceptableAnswers": [
-        "she doesn't watch tv",
-        "she does not watch tv"
+      "prompt": "Choose the correct answer. Make it negative: She watches TV.",
+      "rubric": "Correct: She doesn't watch TV. 'doesn't watches' = 50.",
+      "type": "mcq",
+      "options": [
+        "She doesn't watch TV",
+        "She don't watch TV.",
+        "She doesn't watches TV."
       ],
-      "rubric": "Correct: She doesn't watch TV. 'doesn't watches' = 50."
+      "correctOption": "She doesn't watch TV"
     },
     {
       "id": "sp-4",
       "objectiveId": "questions",
-      "prompt": "Make a question: He speaks Japanese.",
-      "acceptableAnswers": [
-        "does he speak japanese"
-      ],
-      "rubric": "Correct: Does he speak Japanese? 'Does he speaks' = 50."
+      "prompt": "Arrange the tiles. Make a question: He speaks Japanese.",
+      "rubric": "Correct: Does he speak Japanese? 'Does he speaks' = 50.",
+      "type": "word_order",
+      "solution": "does he speak japanese",
+      "tokens": [
+        "he",
+        "speak",
+        "japanese",
+        "does"
+      ]
     },
     {
       "id": "sp-5",
       "objectiveId": "affirmative",
       "prompt": "Write one sentence about what you do in the evening (use the simple present).",
       "acceptableAnswers": [
-        "in the evening i",
-        "i watch",
-        "i cook",
-        "i read",
-        "i study",
-        "i have dinner",
-        "i eat dinner",
-        "i go to bed",
-        "i relax",
-        "i play"
+        "i watch tv in the evening",
+        "in the evening i watch tv",
+        "i read a book in the evening"
       ],
       "rubric": "Any correct simple present sentence about an evening routine scores 100. Third-person or tense errors reduce the score."
     }
@@ -622,10 +631,10 @@
         "Apa bedanya dengan am/is/are?"
       ],
       "assessment": {
-        "sp-1": "Lengkapi dengan 'go': My brother ___ to school by bus.",
-        "sp-2": "Ubah ke kalimat negatif: We eat meat.",
-        "sp-3": "Ubah ke kalimat negatif: She watches TV.",
-        "sp-4": "Ubah ke kalimat tanya: He speaks Japanese.",
+        "sp-1": "Pilih jawaban yang benar. Lengkapi dengan 'go': My brother ___ to school by bus.",
+        "sp-2": "Susun ubin kata. Ubah ke kalimat negatif: We eat meat.",
+        "sp-3": "Pilih jawaban yang benar. Ubah ke kalimat negatif: She watches TV.",
+        "sp-4": "Susun ubin kata. Ubah ke kalimat tanya: He speaks Japanese.",
         "sp-5": "Tulis satu kalimat bahasa Inggris tentang kegiatanmu di malam hari (pakai simple present)."
       }
     }

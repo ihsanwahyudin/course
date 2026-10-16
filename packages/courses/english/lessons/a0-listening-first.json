@@ -133,71 +133,72 @@
     {
       "id": "lis-1",
       "objectiveId": "letters-numbers-names",
-      "prompt": "Listen. A man spells his name. Write the name.",
+      "prompt": "Choose the correct answer. Listen. A man spells his name. Choose the name.",
       "listen": "My name is spelled W-A-H-Y-U.",
-      "acceptableAnswers": [
-        "wahyu"
+      "rubric": "Correct: Wahyu. One wrong letter = 50 (e.g. 'Wahiu', 'Wayu').",
+      "type": "mcq",
+      "options": [
+        "wahyu",
+        "Wahyo",
+        "Wahyul"
       ],
-      "rubric": "Correct: Wahyu. One wrong letter = 50 (e.g. 'Wahiu', 'Wayu')."
+      "correctOption": "wahyu"
     },
     {
       "id": "lis-2",
       "objectiveId": "letters-numbers-names",
-      "prompt": "Listen. Write the phone number you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the phone number you hear.",
       "listen": "My phone number is 0821 4467 1950.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 0821 4467 1950 (spaces or dashes are fine). One wrong digit = 50; more = 0.",
+      "type": "mcq",
+      "options": [
         "0821 4467 1950",
-        "082144671950"
+        "0821 4467 1590",
+        "0821 4467 1905"
       ],
-      "rubric": "Correct: 0821 4467 1950 (spaces or dashes are fine). One wrong digit = 50; more = 0."
+      "correctOption": "0821 4467 1950"
     },
     {
       "id": "lis-3",
       "objectiveId": "letters-numbers-names",
-      "prompt": "Listen. How much is the food? Write the price in numbers.",
+      "prompt": "Choose the correct answer. Listen. How much is the food? Choose the price in numbers.",
       "listen": "The nasi goreng is fifteen thousand rupiah.",
-      "acceptableAnswers": [
+      "rubric": "Correct: Rp15.000. Accept 15000, 15.000, 15,000 with or without Rp/rupiah. 50.000 (fifty) = 0.",
+      "type": "mcq",
+      "options": [
         "15000",
-        "15 000",
-        "rp15000",
-        "rp 15000",
-        "rp 15 000",
-        "15000 rupiah",
-        "15 000 rupiah",
-        "rp15 000"
+        "Rp50.000",
+        "Rp5.000"
       ],
-      "rubric": "Correct: Rp15.000. Accept 15000, 15.000, 15,000 with or without Rp/rupiah. 50.000 (fifty) = 0."
+      "correctOption": "15000"
     },
     {
       "id": "lis-4",
       "objectiveId": "greetings-instructions",
-      "prompt": "Listen and write a short, polite reply.",
+      "prompt": "Choose the correct answer. Listen and write a short, polite reply.",
       "listen": "Good afternoon! How are you today?",
-      "acceptableAnswers": [
-        "i'm fine thanks",
-        "i am fine thanks",
-        "i'm fine thank you",
-        "i am fine thank you",
-        "fine thanks",
-        "fine thank you",
-        "i'm good thanks",
-        "i am good thank you",
-        "good afternoon i'm fine thanks",
-        "i'm fine thanks and you",
-        "i am fine thank you and you"
+      "rubric": "Correct: any polite answer to How are you? (I'm fine, thanks. / I'm good, thank you.), with or without 'Good afternoon' and 'And you?'. 'Good night' or only a name = 0.",
+      "type": "mcq",
+      "options": [
+        "I'm fine thanks",
+        "Goodbye.",
+        "My name is Rina."
       ],
-      "rubric": "Correct: any polite answer to How are you? (I'm fine, thanks. / I'm good, thank you.), with or without 'Good afternoon' and 'And you?'. 'Good night' or only a name = 0."
+      "correctOption": "I'm fine thanks"
     },
     {
       "id": "lis-5",
       "objectiveId": "greetings-instructions",
-      "prompt": "Listen to the teacher. Sit down or stand up? Write what she wants.",
+      "prompt": "Choose the correct answer. Listen to the teacher. Sit down or stand up? Choose what she wants.",
       "listen": "Everybody, stand up, please.",
-      "acceptableAnswers": [
+      "rubric": "Correct: stand up. 'sit down' = 0.",
+      "type": "mcq",
+      "options": [
         "stand up",
-        "stand up please"
+        "sit down",
+        "open the door"
       ],
-      "rubric": "Correct: stand up. 'sit down' = 0."
+      "correctOption": "stand up"
     },
     {
       "id": "lis-6",
@@ -213,15 +214,16 @@
     {
       "id": "lis-7",
       "objectiveId": "greetings-instructions",
-      "prompt": "Listen to the teacher. What do you write?",
+      "prompt": "Choose the correct answer. Listen to the teacher. What do you write?",
       "listen": "Write your name at the top of the page.",
-      "acceptableAnswers": [
+      "rubric": "Correct: your/my name. Accept just 'name'.",
+      "type": "mcq",
+      "options": [
         "my name",
-        "your name",
-        "name",
-        "the name"
+        "My phone number",
+        "my address"
       ],
-      "rubric": "Correct: your/my name. Accept just 'name'."
+      "correctOption": "my name"
     }
   ],
   "material": [
@@ -735,13 +737,13 @@
         "Apa yang bisa aku katakan kalau tidak mengerti?"
       ],
       "assessment": {
-        "lis-1": "Dengarkan. Seorang pria mengeja namanya. Tulis namanya.",
-        "lis-2": "Dengarkan. Tulis nomor telepon yang kamu dengar.",
-        "lis-3": "Dengarkan. Berapa harga makanannya? Tulis harganya dengan angka.",
-        "lis-4": "Dengarkan, lalu tulis balasan singkat yang sopan dalam bahasa Inggris.",
-        "lis-5": "Dengarkan guru. Duduk atau berdiri? Tulis instruksinya dalam bahasa Inggris.",
+        "lis-1": "Pilih jawaban yang benar. Dengarkan. Seorang pria mengeja namanya. Pilih namanya.",
+        "lis-2": "Pilih jawaban yang benar. Dengarkan. Pilih nomor telepon yang kamu dengar.",
+        "lis-3": "Pilih jawaban yang benar. Dengarkan. Berapa harga makanannya? Pilih harganya dengan angka.",
+        "lis-4": "Pilih jawaban yang benar. Dengarkan, lalu Pilih balasan singkat yang sopan dalam bahasa Inggris.",
+        "lis-5": "Pilih jawaban yang benar. Dengarkan guru. Duduk atau berdiri? Pilih instruksinya dalam bahasa Inggris.",
         "lis-6": "Dengarkan. Orang itu menyapa (hello) atau berpamitan (goodbye)? Tulis satu kata dalam bahasa Inggris.",
-        "lis-7": "Dengarkan guru. Apa yang harus kamu tulis? Jawab dalam bahasa Inggris."
+        "lis-7": "Pilih jawaban yang benar. Dengarkan guru. Apa yang harus kamu Pilih? Jawab dalam bahasa Inggris."
       }
     }
   }

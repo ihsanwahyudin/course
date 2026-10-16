@@ -146,21 +146,28 @@
     {
       "id": "lw-1",
       "objectiveId": "like-ing",
-      "prompt": "Complete with the -ing form of 'run': My father loves ___ in the park every morning.",
-      "acceptableAnswers": [
-        "running"
+      "prompt": "Choose the correct answer. Complete with the -ing form of 'run': My father loves ___ in the park every morning.",
+      "rubric": "Correct: running (double the n). 'runing' = 50. 'run' or 'runs' = 0.",
+      "type": "mcq",
+      "options": [
+        "running",
+        "runing",
+        "runs"
       ],
-      "rubric": "Correct: running (double the n). 'runing' = 50. 'run' or 'runs' = 0."
+      "correctOption": "running"
     },
     {
       "id": "lw-2",
       "objectiveId": "like-ing",
-      "prompt": "Correct the mistake: I hate wait for the bus.",
-      "acceptableAnswers": [
-        "i hate waiting for the bus",
-        "i hate to wait for the bus"
+      "prompt": "Choose the correct answer. Correct the mistake: I hate wait for the bus.",
+      "rubric": "Correct: I hate waiting for the bus. 'I hate to wait for the bus' is also correct. 'waitting' = 50. The sentence unchanged = 0.",
+      "type": "mcq",
+      "options": [
+        "I hate waiting for the bus",
+        "I hate wait for the bus.",
+        "I hates waiting for the bus."
       ],
-      "rubric": "Correct: I hate waiting for the bus. 'I hate to wait for the bus' is also correct. 'waitting' = 50. The sentence unchanged = 0."
+      "correctOption": "I hate waiting for the bus"
     },
     {
       "id": "lw-3",
@@ -193,42 +200,42 @@
     {
       "id": "lw-5",
       "objectiveId": "like-vs-would-like",
-      "prompt": "Complete with like or would like. At the station: 'I ___ a ticket to Surabaya, please.'",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with like or would like. At the station: 'I ___ a ticket to Surabaya, please.'",
+      "rubric": "Correct: would like ('d like), because it is a request now. 'like' = 0.",
+      "type": "mcq",
+      "options": [
         "would like",
-        "'d like",
-        "d like"
+        "like",
+        "likes"
       ],
-      "rubric": "Correct: would like ('d like), because it is a request now. 'like' = 0."
+      "correctOption": "would like"
     },
     {
       "id": "lw-6",
       "objectiveId": "like-vs-would-like",
-      "prompt": "Listen to your friend's question. You want it. Answer politely. (Write a short answer.)",
+      "prompt": "Choose the correct answer. Listen to your friend's question. You want it. Answer politely.",
       "listen": "Would you like a banana?",
-      "acceptableAnswers": [
+      "rubric": "Correct: Yes, please. 'Yes, I would' or 'Yes, thank you' also correct. 'Yes, I do' = 30 (answers Do you like...?). 'Yes, I like' = 0.",
+      "type": "mcq",
+      "options": [
         "yes please",
-        "yes please thank you",
-        "yes please thanks",
-        "yes thank you",
-        "yes thanks",
-        "yes i would",
-        "yes i'd like a banana",
-        "yes i would like a banana",
-        "yes please i'd like a banana"
+        "No, thank you.",
+        "Yes, I do."
       ],
-      "rubric": "Correct: Yes, please. 'Yes, I would' or 'Yes, thank you' also correct. 'Yes, I do' = 30 (answers Do you like...?). 'Yes, I like' = 0."
+      "correctOption": "yes please"
     },
     {
       "id": "lw-7",
       "objectiveId": "like-vs-would-like",
-      "prompt": "Answer with a short answer (yes): Do you like spicy food?",
-      "acceptableAnswers": [
-        "yes i do",
-        "yes i do i love it",
-        "yes i do i like it"
+      "prompt": "Choose the correct answer. Answer with a short answer (yes): Do you like spicy food?",
+      "rubric": "Correct: Yes, I do. Only 'Yes' = 50. 'Yes, I like' = 30. 'Yes, please' = 0 (that answers an offer, Would you like...?).",
+      "type": "mcq",
+      "options": [
+        "Yes I do",
+        "Yes, I am.",
+        "Yes, I like."
       ],
-      "rubric": "Correct: Yes, I do. Only 'Yes' = 50. 'Yes, I like' = 30. 'Yes, please' = 0 (that answers an offer, Would you like...?)."
+      "correctOption": "Yes I do"
     }
   ],
   "material": [
@@ -643,13 +650,13 @@
         "Kapan huruf terakhir digandakan sebelum -ing?"
       ],
       "assessment": {
-        "lw-1": "Lengkapi dengan bentuk -ing dari 'run': My father loves ___ in the park every morning.",
-        "lw-2": "Perbaiki kesalahannya: I hate wait for the bus.",
+        "lw-1": "Pilih jawaban yang benar. Lengkapi dengan bentuk -ing dari 'run': My father loves ___ in the park every morning.",
+        "lw-2": "Pilih jawaban yang benar. Perbaiki kesalahannya: I hate wait for the bus.",
         "lw-3": "Kamu di sebuah kafe di Bandung. Minta secangkir teh dengan sopan dalam bahasa Inggris. Pakai would like. (Tulis satu kalimat pendek.)",
         "lw-4": "Temanmu, Dimas, berkunjung ke rumahmu. Tawarkan segelas air kepadanya dalam bahasa Inggris. (Tulis satu pertanyaan pendek.)",
-        "lw-5": "Lengkapi dengan like atau would like. Di stasiun: 'I ___ a ticket to Surabaya, please.'",
-        "lw-6": "Dengarkan pertanyaan temanmu. Kamu mau. Jawab dengan sopan dalam bahasa Inggris. (Tulis jawaban singkat.)",
-        "lw-7": "Jawab dengan jawaban singkat bahasa Inggris (ya): Do you like spicy food?"
+        "lw-5": "Pilih jawaban yang benar. Lengkapi dengan like atau would like. Di stasiun: 'I ___ a ticket to Surabaya, please.'",
+        "lw-6": "Pilih jawaban yang benar. Dengarkan pertanyaan temanmu. Kamu mau. Jawab dengan sopan dalam bahasa Inggris.",
+        "lw-7": "Pilih jawaban yang benar. Jawab dengan jawaban singkat bahasa Inggris (ya): Do you like spicy food?"
       }
     }
   }

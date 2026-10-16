@@ -156,92 +156,95 @@
     {
       "id": "can-1",
       "objectiveId": "talk-about-abilities",
-      "prompt": "Make a question with can: you / speak / Javanese",
-      "acceptableAnswers": [
-        "can you speak javanese"
-      ],
-      "rubric": "Correct: Can you speak Javanese? 'Do you can speak Javanese?' = 30. 'You can speak Javanese?' = 50. 'Can you to speak' = 50."
+      "prompt": "Arrange the tiles. Make a question with can: you / speak / Javanese",
+      "rubric": "Correct: Can you speak Javanese? 'Do you can speak Javanese?' = 30. 'You can speak Javanese?' = 50. 'Can you to speak' = 50.",
+      "type": "word_order",
+      "solution": "can you speak javanese",
+      "tokens": [
+        "you",
+        "speak",
+        "javanese",
+        "can"
+      ]
     },
     {
       "id": "can-2",
       "objectiveId": "talk-about-abilities",
-      "prompt": "Make it negative: Rina can drive a car.",
-      "acceptableAnswers": [
-        "rina can't drive a car",
-        "rina cannot drive a car",
-        "rina can not drive a car",
-        "she can't drive a car",
-        "she cannot drive a car"
+      "prompt": "Choose the correct answer. Make it negative: Rina can drive a car.",
+      "rubric": "Correct: Rina can't / cannot drive a car. 'Rina doesn't can drive' = 30. 'Rina can't drives' = 50. 'Rina not can drive' = 30.",
+      "type": "mcq",
+      "options": [
+        "Rina can't drive a car",
+        "Rina don't can drive a car.",
+        "Rina can not drives a car."
       ],
-      "rubric": "Correct: Rina can't / cannot drive a car. 'Rina doesn't can drive' = 30. 'Rina can't drives' = 50. 'Rina not can drive' = 30."
+      "correctOption": "Rina can't drive a car"
     },
     {
       "id": "can-3",
       "objectiveId": "talk-about-abilities",
-      "prompt": "Listen. Can Dimas swim? Write yes or no.",
+      "prompt": "Choose the correct answer. Listen. Can Dimas swim? Choose yes or no.",
       "listen": "Dimas can't swim, but he can play football very well.",
-      "acceptableAnswers": [
+      "rubric": "Correct: No (he can't swim). 'Yes' = 0: the learner heard 'can' instead of the stressed 'can't'.",
+      "type": "mcq",
+      "options": [
         "no",
-        "no he can't",
-        "no he cannot",
-        "no he can not"
+        "yes",
+        "sometimes"
       ],
-      "rubric": "Correct: No (he can't swim). 'Yes' = 0: the learner heard 'can' instead of the stressed 'can't'."
+      "correctOption": "no"
     },
     {
       "id": "can-4",
       "objectiveId": "ask-polite-requests",
-      "prompt": "You are carrying three big boxes. Ask your colleague Budi to open the door for you. Start with 'Can you'.",
-      "acceptableAnswers": [
-        "can you open the door",
-        "can you open the door please",
-        "can you please open the door",
-        "can you open the door for me",
-        "can you open the door for me please",
-        "budi can you open the door please",
-        "budi can you open the door",
-        "budi can you open the door for me please"
+      "prompt": "Choose the correct answer. You are carrying three big boxes. Ask your colleague Budi to open the door for you. Start with 'Can you'.",
+      "rubric": "Correct: Can you open the door (for me), please? Without please = 90. 'Do you can open' = 30. 'Can I open the door?' = 0 (that asks for permission).",
+      "type": "mcq",
+      "options": [
+        "Can you open the door",
+        "Can you opens the door?",
+        "Do you can open the door?"
       ],
-      "rubric": "Correct: Can you open the door (for me), please? Without please = 90. 'Do you can open' = 30. 'Can I open the door?' = 0 (that asks for permission)."
+      "correctOption": "Can you open the door"
     },
     {
       "id": "can-5",
       "objectiveId": "ask-polite-requests",
-      "prompt": "Correct the mistake: Do you can turn on the AC, please?",
-      "acceptableAnswers": [
-        "can you turn on the ac please",
-        "can you please turn on the ac",
-        "can you turn the ac on please",
-        "can you turn on the ac",
-        "can you turn the ac on"
+      "prompt": "Choose the correct answer. Correct the mistake: Do you can turn on the AC, please?",
+      "rubric": "Correct: Can you turn on the AC, please? No 'do' with can. 'Do you turn on the AC?' = 30 (a different question). 'Can you to turn on' = 50.",
+      "type": "mcq",
+      "options": [
+        "Can you turn on the AC please",
+        "Do you can turn on the AC, please?",
+        "Can you turns on the AC, please?"
       ],
-      "rubric": "Correct: Can you turn on the AC, please? No 'do' with can. 'Do you turn on the AC?' = 30 (a different question). 'Can you to turn on' = 50."
+      "correctOption": "Can you turn on the AC please"
     },
     {
       "id": "can-6",
       "objectiveId": "ask-permission",
-      "prompt": "You are in class and it's very hot. Ask your teacher for permission to open the window. Start with 'Can I'.",
-      "acceptableAnswers": [
-        "can i open the window",
-        "can i open the window please",
-        "can i please open the window",
-        "excuse me can i open the window",
-        "excuse me can i open the window please"
+      "prompt": "Choose the correct answer. You are in class and it's very hot. Ask your teacher for permission to open the window. Start with 'Can I'.",
+      "rubric": "Correct: Can I open the window, please? Without please = 90. 'Can you open the window?' = 30 (a request, not permission). 'Do I can open' = 30.",
+      "type": "mcq",
+      "options": [
+        "Can I open the window",
+        "Can I opens the window?",
+        "Do I can open the window?"
       ],
-      "rubric": "Correct: Can I open the window, please? Without please = 90. 'Can you open the window?' = 30 (a request, not permission). 'Do I can open' = 30."
+      "correctOption": "Can I open the window"
     },
     {
       "id": "can-7",
       "objectiveId": "ask-permission",
-      "prompt": "A sign in front of a shop says NO PARKING. Complete: You ___ park here.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. A sign in front of a shop says NO PARKING. Complete: You ___ park here.",
+      "rubric": "Correct: can't / cannot (mustn't is also correct). 'can' = 0. 'don't can' = 30.",
+      "type": "mcq",
+      "options": [
         "can't",
-        "cannot",
-        "can not",
-        "mustn't",
-        "must not"
+        "can",
+        "am not"
       ],
-      "rubric": "Correct: can't / cannot (mustn't is also correct). 'can' = 0. 'don't can' = 30."
+      "correctOption": "can't"
     }
   ],
   "material": [
@@ -606,13 +609,13 @@
         "Apa bedanya can dan may?"
       ],
       "assessment": {
-        "can-1": "Buat kalimat tanya dengan can: you / speak / Javanese",
-        "can-2": "Ubah ke kalimat negatif: Rina can drive a car.",
-        "can-3": "Dengarkan. Apakah Dimas bisa berenang? Tulis yes atau no.",
-        "can-4": "Kamu membawa tiga kardus besar. Minta rekan kerjamu, Budi, membukakan pintu untukmu dalam bahasa Inggris. Mulai dengan 'Can you'.",
-        "can-5": "Perbaiki kesalahannya: Do you can turn on the AC, please?",
-        "can-6": "Kamu di kelas dan udaranya sangat panas. Minta izin kepada gurumu untuk membuka jendela dalam bahasa Inggris. Mulai dengan 'Can I'.",
-        "can-7": "Ada tanda NO PARKING di depan sebuah toko. Lengkapi: You ___ park here."
+        "can-1": "Susun ubin kata. Buat kalimat tanya dengan can: you / speak / Javanese",
+        "can-2": "Pilih jawaban yang benar. Ubah ke kalimat negatif: Rina can drive a car.",
+        "can-3": "Pilih jawaban yang benar. Dengarkan. Apakah Dimas bisa berenang? Pilih yes atau no.",
+        "can-4": "Pilih jawaban yang benar. Kamu membawa tiga kardus besar. Minta rekan kerjamu, Budi, membukakan pintu untukmu dalam bahasa Inggris. Mulai dengan 'Can you'.",
+        "can-5": "Pilih jawaban yang benar. Perbaiki kesalahannya: Do you can turn on the AC, please?",
+        "can-6": "Pilih jawaban yang benar. Kamu di kelas dan udaranya sangat panas. Minta izin kepada gurumu untuk membuka jendela dalam bahasa Inggris. Mulai dengan 'Can I'.",
+        "can-7": "Pilih jawaban yang benar. Ada tanda NO PARKING di depan sebuah toko. Lengkapi: You ___ park here."
       }
     }
   }

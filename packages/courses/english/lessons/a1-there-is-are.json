@@ -152,89 +152,94 @@
     {
       "id": "there-1",
       "objectiveId": "describe-a-room",
-      "prompt": "Complete with is or are: There ___ three windows in Rina's kitchen.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with is or are: There ___ three windows in Rina's kitchen.",
+      "rubric": "Correct: are (three windows = plural). 'is' = 0.",
+      "type": "mcq",
+      "options": [
         "are",
-        "there are",
-        "there are three windows in rina's kitchen"
+        "is",
+        "am"
       ],
-      "rubric": "Correct: are (three windows = plural). 'is' = 0."
+      "correctOption": "are"
     },
     {
       "id": "there-2",
       "objectiveId": "describe-a-room",
-      "prompt": "Correct the sentence: In my office have a big printer.",
-      "acceptableAnswers": [
-        "there is a big printer in my office",
-        "there's a big printer in my office",
-        "in my office there is a big printer",
-        "in my office there's a big printer"
+      "prompt": "Choose the correct answer. Correct the sentence: In my office have a big printer.",
+      "rubric": "Correct: There is / There's a big printer in my office. 'My office has a big printer' = 70 (correct English, but not there is). 'There are a big printer' = 40. Keeping 'have' = 0.",
+      "type": "mcq",
+      "options": [
+        "There is a big printer in my office",
+        "There are a big printer in my office.",
+        "In my office have a big printer."
       ],
-      "rubric": "Correct: There is / There's a big printer in my office. 'My office has a big printer' = 70 (correct English, but not there is). 'There are a big printer' = 40. Keeping 'have' = 0."
+      "correctOption": "There is a big printer in my office"
     },
     {
       "id": "there-3",
       "objectiveId": "describe-a-room",
-      "prompt": "Make it negative: There is a lift in this building.",
-      "acceptableAnswers": [
-        "there isn't a lift in this building",
-        "there is not a lift in this building",
-        "there's not a lift in this building",
-        "there is no lift in this building",
-        "there's no lift in this building"
+      "prompt": "Choose the correct answer. Make it negative: There is a lift in this building.",
+      "rubric": "Correct: There isn't a lift in this building (also There's no lift …). 'There aren't a lift' = 40. 'There don't have a lift' = 0.",
+      "type": "mcq",
+      "options": [
+        "There isn't a lift in this building",
+        "There aren't a lift in this building.",
+        "There doesn't a lift in this building."
       ],
-      "rubric": "Correct: There isn't a lift in this building (also There's no lift …). 'There aren't a lift' = 40. 'There don't have a lift' = 0."
+      "correctOption": "There isn't a lift in this building"
     },
     {
       "id": "there-4",
       "objectiveId": "ask-questions-with",
-      "prompt": "You are at a hotel in Yogyakarta. Ask the receptionist if the hotel has a restaurant. Start with Is there …",
-      "acceptableAnswers": [
-        "is there a restaurant in the hotel",
-        "is there a restaurant in this hotel",
-        "is there a restaurant in your hotel",
-        "is there a restaurant here",
-        "is there a restaurant",
-        "excuse me is there a restaurant in the hotel",
-        "excuse me is there a restaurant in this hotel",
-        "excuse me is there a restaurant here",
-        "excuse me is there a restaurant"
+      "prompt": "Choose the correct answer. You are at a hotel in Yogyakarta. Ask the receptionist if the hotel has a restaurant. Start with Is there …",
+      "rubric": "Correct: Is there a restaurant (in the hotel / here)? 'Is there restaurant' (no a) = 70. 'Are there a restaurant' = 40. 'There is a restaurant?' = 30 (statement order). 'Have a restaurant?' = 0.",
+      "type": "mcq",
+      "options": [
+        "Is there a restaurant in the hotel",
+        "Is there a restaurant in the hotel is?",
+        "Are there a restaurant in the hotel?"
       ],
-      "rubric": "Correct: Is there a restaurant (in the hotel / here)? 'Is there restaurant' (no a) = 70. 'Are there a restaurant' = 40. 'There is a restaurant?' = 30 (statement order). 'Have a restaurant?' = 0."
+      "correctOption": "Is there a restaurant in the hotel"
     },
     {
       "id": "there-5",
       "objectiveId": "ask-questions-with",
-      "prompt": "Listen to the question. The answer is no. Write the short answer.",
+      "prompt": "Choose the correct answer. Listen to the question. The answer is no. Choose the short answer.",
       "listen": "Is there a bus stop near your house?",
-      "acceptableAnswers": [
-        "no there isn't",
-        "no there is not",
-        "no there's not"
+      "rubric": "Correct: No, there isn't. 'No, there aren't' = 40 (the question is about one bus stop). 'No, it isn't' = 30. 'No' alone = 30. 'No, I don't have' = 0.",
+      "type": "mcq",
+      "options": [
+        "No there isn't",
+        "No, there aren't.",
+        "No, it doesn't."
       ],
-      "rubric": "Correct: No, there isn't. 'No, there aren't' = 40 (the question is about one bus stop). 'No, it isn't' = 30. 'No' alone = 30. 'No, I don't have' = 0."
+      "correctOption": "No there isn't"
     },
     {
       "id": "there-6",
       "objectiveId": "some-any",
-      "prompt": "Complete with some or any: There aren't ___ chairs in the classroom.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with some or any: There aren't ___ chairs in the classroom.",
+      "rubric": "Correct: any (negative sentence). 'some' = 0.",
+      "type": "mcq",
+      "options": [
         "any",
-        "there aren't any chairs in the classroom",
-        "there are not any chairs in the classroom"
+        "some",
+        "a"
       ],
-      "rubric": "Correct: any (negative sentence). 'some' = 0."
+      "correctOption": "any"
     },
     {
       "id": "there-7",
       "objectiveId": "some-any",
-      "prompt": "Complete with some or any: There are ___ good cafés in Bandung.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with some or any: There are ___ good cafés in Bandung.",
+      "rubric": "Correct: some (positive sentence). 'any' = 0.",
+      "type": "mcq",
+      "options": [
         "some",
-        "there are some good cafés in bandung",
-        "there are some good cafes in bandung"
+        "any",
+        "an"
       ],
-      "rubric": "Correct: some (positive sentence). 'any' = 0."
+      "correctOption": "some"
     }
   ],
   "material": [
@@ -698,13 +703,13 @@
         "Boleh menulis 'there're' untuk there are?"
       ],
       "assessment": {
-        "there-1": "Lengkapi dengan is atau are: There ___ three windows in Rina's kitchen.",
-        "there-2": "Perbaiki kalimatnya: In my office have a big printer.",
-        "there-3": "Ubah ke kalimat negatif: There is a lift in this building.",
-        "there-4": "Kamu di sebuah hotel di Yogyakarta. Tanyakan kepada resepsionis apakah ada restoran di hotel itu, dalam bahasa Inggris. Mulai dengan Is there …",
-        "there-5": "Dengarkan pertanyaannya. Jawabannya tidak. Tulis jawaban singkatnya dalam bahasa Inggris.",
-        "there-6": "Lengkapi dengan some atau any: There aren't ___ chairs in the classroom.",
-        "there-7": "Lengkapi dengan some atau any: There are ___ good cafés in Bandung."
+        "there-1": "Pilih jawaban yang benar. Lengkapi dengan is atau are: There ___ three windows in Rina's kitchen.",
+        "there-2": "Pilih jawaban yang benar. Perbaiki kalimatnya: In my office have a big printer.",
+        "there-3": "Pilih jawaban yang benar. Ubah ke kalimat negatif: There is a lift in this building.",
+        "there-4": "Pilih jawaban yang benar. Kamu di sebuah hotel di Yogyakarta. Tanyakan kepada resepsionis apakah ada restoran di hotel itu, dalam bahasa Inggris. Mulai dengan Is there …",
+        "there-5": "Pilih jawaban yang benar. Dengarkan pertanyaannya. Jawabannya tidak. Pilih jawaban singkatnya dalam bahasa Inggris.",
+        "there-6": "Pilih jawaban yang benar. Lengkapi dengan some atau any: There aren't ___ chairs in the classroom.",
+        "there-7": "Pilih jawaban yang benar. Lengkapi dengan some atau any: There are ___ good cafés in Bandung."
       }
     }
   }

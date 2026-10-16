@@ -151,81 +151,83 @@
     {
       "id": "num-1",
       "objectiveId": "numbers-21-100",
-      "prompt": "Write the number 47 in words.",
-      "acceptableAnswers": [
-        "forty seven"
+      "prompt": "Choose the correct answer. Choose the number 47 in words.",
+      "rubric": "Correct: forty-seven (with or without the hyphen). 'fourty-seven' = 70 (spelling). 'fourteen'/'seventy-four' = 0.",
+      "type": "mcq",
+      "options": [
+        "forty seven",
+        "seventy-four",
+        "fourteen"
       ],
-      "rubric": "Correct: forty-seven (with or without the hyphen). 'fourty-seven' = 70 (spelling). 'fourteen'/'seventy-four' = 0."
+      "correctOption": "forty seven"
     },
     {
       "id": "num-2",
       "objectiveId": "numbers-21-100",
-      "prompt": "Listen. Write the room number you hear (in digits).",
+      "prompt": "Choose the correct answer. Listen. Choose the room number you hear (in digits).",
       "listen": "My classroom is room thirty.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 30. '13' = 0 (teen/ty confusion).",
+      "type": "mcq",
+      "options": [
         "30",
-        "thirty"
+        "13",
+        "3"
       ],
-      "rubric": "Correct: 30. '13' = 0 (teen/ty confusion)."
+      "correctOption": "30"
     },
     {
       "id": "num-3",
       "objectiveId": "age-phone",
-      "prompt": "Say it in English: Umur saya 32 tahun.",
-      "acceptableAnswers": [
-        "i'm 32",
-        "i am 32",
-        "im 32",
-        "i'm 32 years old",
-        "i am 32 years old",
-        "im 32 years old",
-        "i'm thirty two",
-        "i am thirty two",
-        "i'm thirty two years old",
-        "i am thirty two years old"
+      "prompt": "Choose the correct answer. Say it in English: Umur saya 32 tahun.",
+      "rubric": "Correct: I'm 32 / I am 32 (years old). 'I'm 32 years' without 'old' = 60. 'I have 32 years (old)' = 0 (common error).",
+      "type": "mcq",
+      "options": [
+        "I'm 32",
+        "I 32 years.",
+        "I have 32 years."
       ],
-      "rubric": "Correct: I'm 32 / I am 32 (years old). 'I'm 32 years' without 'old' = 60. 'I have 32 years (old)' = 0 (common error)."
+      "correctOption": "I'm 32"
     },
     {
       "id": "num-4",
       "objectiveId": "age-phone",
-      "prompt": "Listen. Write the phone number you hear (digits only).",
+      "prompt": "Choose the correct answer. Listen. Choose the phone number you hear (digits only).",
       "listen": "My phone number is 0 8 1 3, 2 2 4 7, 6 9 1 0.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 0813 2247 6910 (spaces or dashes don't matter). One wrong digit = 50; two or more = 0.",
+      "type": "mcq",
+      "options": [
         "0813 2247 6910",
-        "081322476910",
-        "0 8 1 3 2 2 4 7 6 9 1 0"
+        "0813 2247 6190",
+        "0813 2247 6901"
       ],
-      "rubric": "Correct: 0813 2247 6910 (spaces or dashes don't matter). One wrong digit = 50; two or more = 0."
+      "correctOption": "0813 2247 6910"
     },
     {
       "id": "num-5",
       "objectiveId": "prices",
-      "prompt": "Write the price in words: Rp35.000",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Choose the price in words: Rp35.000",
+      "rubric": "Correct: thirty-five thousand rupiah ('rupiah' may be left out). 'thousands' = 50. 'thirteen/fifteen thousand' or 'three thousand five hundred' = 0.",
+      "type": "mcq",
+      "options": [
         "thirty five thousand rupiah",
-        "thirty five thousand"
+        "fifty-three thousand rupiah",
+        "three thousand five hundred rupiah"
       ],
-      "rubric": "Correct: thirty-five thousand rupiah ('rupiah' may be left out). 'thousands' = 50. 'thirteen/fifteen thousand' or 'three thousand five hundred' = 0."
+      "correctOption": "thirty five thousand rupiah"
     },
     {
       "id": "num-6",
       "objectiveId": "prices",
-      "prompt": "Listen. How much is the coffee? Write the price in digits.",
+      "prompt": "Choose the correct answer. Listen. How much is the coffee? Choose the price in digits.",
       "listen": "The coffee is eighteen thousand rupiah.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 18,000 (or 18.000, Rp18.000). '80,000' = 0 (teen/ty confusion). '1,800' = 0.",
+      "type": "mcq",
+      "options": [
         "18000",
-        "18 000",
-        "rp18000",
-        "rp 18000",
-        "rp18 000",
-        "rp 18 000",
-        "18000 rupiah",
-        "18 000 rupiah",
-        "eighteen thousand",
-        "eighteen thousand rupiah"
+        "Rp80.000",
+        "Rp8.000"
       ],
-      "rubric": "Correct: 18,000 (or 18.000, Rp18.000). '80,000' = 0 (teen/ty confusion). '1,800' = 0."
+      "correctOption": "18000"
     }
   ],
   "material": [
@@ -656,12 +658,12 @@
         "Bagaimana cara menanyakan harga sesuatu?"
       ],
       "assessment": {
-        "num-1": "Tulis angka 47 dengan huruf dalam bahasa Inggris.",
-        "num-2": "Dengarkan. Tulis nomor ruangan yang kamu dengar (dengan angka).",
-        "num-3": "Katakan dalam bahasa Inggris: Umur saya 32 tahun.",
-        "num-4": "Dengarkan. Tulis nomor telepon yang kamu dengar (angka saja).",
-        "num-5": "Tulis harganya dengan huruf dalam bahasa Inggris: Rp35.000",
-        "num-6": "Dengarkan. Berapa harga kopinya? Tulis harganya dengan angka."
+        "num-1": "Pilih jawaban yang benar. Pilih angka 47 dengan huruf dalam bahasa Inggris.",
+        "num-2": "Pilih jawaban yang benar. Dengarkan. Pilih nomor ruangan yang kamu dengar (dengan angka).",
+        "num-3": "Pilih jawaban yang benar. Katakan dalam bahasa Inggris: Umur saya 32 tahun.",
+        "num-4": "Pilih jawaban yang benar. Dengarkan. Pilih nomor telepon yang kamu dengar (angka saja).",
+        "num-5": "Pilih jawaban yang benar. Pilih harganya dengan huruf dalam bahasa Inggris: Rp35.000",
+        "num-6": "Pilih jawaban yang benar. Dengarkan. Berapa harga kopinya? Pilih harganya dengan angka."
       }
     }
   }

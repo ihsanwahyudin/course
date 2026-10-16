@@ -154,80 +154,82 @@
     {
       "id": "imp-1",
       "objectiveId": "imperatives",
-      "prompt": "Make it negative: Open the window.",
-      "acceptableAnswers": [
-        "don't open the window",
-        "do not open the window",
-        "please don't open the window",
-        "don't open the window please"
+      "prompt": "Choose the correct answer. Make it negative: Open the window.",
+      "rubric": "Correct: Don't / Do not open the window. 'Not open the window' or 'No open the window' = 20. 'Don't to open' = 50. 'You don't open the window' = 40 (a statement, not an instruction).",
+      "type": "mcq",
+      "options": [
+        "Don't open the window",
+        "Not open the window.",
+        "Don't opens the window."
       ],
-      "rubric": "Correct: Don't / Do not open the window. 'Not open the window' or 'No open the window' = 20. 'Don't to open' = 50. 'You don't open the window' = 40 (a statement, not an instruction)."
+      "correctOption": "Don't open the window"
     },
     {
       "id": "imp-2",
       "objectiveId": "imperatives",
-      "prompt": "Your friend is often late. Translate into English: Jangan terlambat!",
-      "acceptableAnswers": [
-        "don't be late",
-        "do not be late",
-        "please don't be late",
-        "don't be late please",
-        "don't come late",
-        "do not come late"
+      "prompt": "Choose the correct answer. Your friend is often late. Translate into English: Jangan terlambat!",
+      "rubric": "Correct: Don't be late (also accept 'Don't come late'). Missing 'be' ('Don't late') = 40. 'Not late!' = 20. 'You don't late' = 10.",
+      "type": "mcq",
+      "options": [
+        "Don't be late",
+        "Don't late.",
+        "Don't is late."
       ],
-      "rubric": "Correct: Don't be late (also accept 'Don't come late'). Missing 'be' ('Don't late') = 40. 'Not late!' = 20. 'You don't late' = 10."
+      "correctOption": "Don't be late"
     },
     {
       "id": "imp-3",
       "objectiveId": "lets",
-      "prompt": "You and your friend are hungry. Translate into English: Ayo kita makan!",
-      "acceptableAnswers": [
-        "let's eat",
-        "let us eat",
-        "let's eat now",
-        "let's eat something",
-        "let's eat together"
+      "prompt": "Choose the English invitation: Ayo kita makan!",
+      "rubric": "Correct: Let's eat. 'Let's have lunch/dinner' = 90 (fine meaning). 'Let's we eat' = 40. 'Let's to eat' or 'Let's eating' = 40. 'Eat!' = 30 (an order, not an invitation).",
+      "type": "mcq",
+      "options": [
+        "Let's eat!",
+        "Let's eating!",
+        "Let's to eat!"
       ],
-      "rubric": "Correct: Let's eat. 'Let's have lunch/dinner' = 90 (fine meaning). 'Let's we eat' = 40. 'Let's to eat' or 'Let's eating' = 40. 'Eat!' = 30 (an order, not an invitation)."
+      "correctOption": "Let's eat!"
     },
     {
       "id": "imp-4",
       "objectiveId": "lets",
-      "prompt": "Correct the sentence: Let's to take a taxi.",
-      "acceptableAnswers": [
-        "let's take a taxi",
-        "let us take a taxi"
+      "prompt": "Choose the correct answer. Correct the sentence: Let's to take a taxi.",
+      "rubric": "Correct: Let's take a taxi (no 'to'). 'Let's taking a taxi' = 30. 'Lets take a taxi' without the apostrophe = 90.",
+      "type": "mcq",
+      "options": [
+        "Let's take a taxi",
+        "Let's to take a taxi.",
+        "Let's takes a taxi."
       ],
-      "rubric": "Correct: Let's take a taxi (no 'to'). 'Let's taking a taxi' = 30. 'Lets take a taxi' without the apostrophe = 90."
+      "correctOption": "Let's take a taxi"
     },
     {
       "id": "imp-5",
       "objectiveId": "follow-instructions",
-      "prompt": "Listen to the directions. Is the bank on the left or on the right? Write one word.",
+      "prompt": "Choose the correct answer. Listen to the directions. Is the bank on the left or on the right? Choose one word.",
       "listen": "Go straight on and turn left at the traffic lights. The bank is on your right.",
-      "acceptableAnswers": [
+      "rubric": "Correct: right. 'Left' = 0 (that is where you turn, not where the bank is).",
+      "type": "mcq",
+      "options": [
         "right",
-        "on the right",
-        "on your right",
-        "the right"
+        "left",
+        "behind"
       ],
-      "rubric": "Correct: right. 'Left' = 0 (that is where you turn, not where the bank is)."
+      "correctOption": "right"
     },
     {
       "id": "imp-6",
       "objectiveId": "follow-instructions",
-      "prompt": "You are at a bus stop in Jakarta. Listen to the man. Which bus do you take? Write the number.",
+      "prompt": "Choose the correct answer. You are at a bus stop in Jakarta. Listen to the man. Which bus do you take? Choose the number.",
       "listen": "Take bus number 12 to Blok M. Don't take bus number 20.",
-      "acceptableAnswers": [
+      "rubric": "Correct: 12. '20' = 0 (that bus is the one NOT to take). '2' or '21' = 0.",
+      "type": "mcq",
+      "options": [
         "12",
-        "twelve",
-        "bus 12",
-        "number 12",
-        "bus number 12",
-        "bus twelve",
-        "number twelve"
+        "20",
+        "2"
       ],
-      "rubric": "Correct: 12. '20' = 0 (that bus is the one NOT to take). '2' or '21' = 0."
+      "correctOption": "12"
     }
   ],
   "material": [
@@ -690,12 +692,12 @@
         "Bagaimana cara bertanya arah dengan sopan?"
       ],
       "assessment": {
-        "imp-1": "Ubah ke kalimat larangan (negatif): Open the window.",
-        "imp-2": "Temanmu sering terlambat. Terjemahkan ke bahasa Inggris: Jangan terlambat!",
-        "imp-3": "Kamu dan temanmu lapar. Terjemahkan ke bahasa Inggris: Ayo kita makan!",
-        "imp-4": "Perbaiki kalimat ini: Let's to take a taxi.",
-        "imp-5": "Dengarkan petunjuk arahnya. Bank ada di kiri atau di kanan? Tulis satu kata dalam bahasa Inggris.",
-        "imp-6": "Kamu di halte bus di Jakarta. Dengarkan pria itu. Bus nomor berapa yang kamu naiki? Tulis angkanya."
+        "imp-1": "Pilih jawaban yang benar. Ubah ke kalimat larangan (negatif): Open the window.",
+        "imp-2": "Pilih jawaban yang benar. Temanmu sering terlambat. Terjemahkan ke bahasa Inggris: Jangan terlambat!",
+        "imp-3": "Pilih ajakan dalam bahasa Inggris: Ayo kita makan!",
+        "imp-4": "Pilih jawaban yang benar. Perbaiki kalimat ini: Let's to take a taxi.",
+        "imp-5": "Pilih jawaban yang benar. Dengarkan petunjuk arahnya. Bank ada di kiri atau di kanan? Pilih satu kata dalam bahasa Inggris.",
+        "imp-6": "Pilih jawaban yang benar. Kamu di halte bus di Jakarta. Dengarkan pria itu. Bus nomor berapa yang kamu naiki? Pilih angkanya."
       }
     }
   }

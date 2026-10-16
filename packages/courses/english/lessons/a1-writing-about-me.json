@@ -90,7 +90,7 @@
     },
     {
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the words that need a capital letter: my friend tom speaks english and indonesian.",
+      "prompt": "Which group contains every word that needs a capital letter in 'my friend tom speaks english and indonesian.': 'my, tom, english, indonesian', 'friend, speaks', or 'tom, and'?",
       "expected": [
         "my tom english indonesian"
       ],
@@ -128,7 +128,7 @@
     },
     {
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the words that need a capital letter: my birthday is in june.",
+      "prompt": "Which group contains every word that needs a capital letter in 'my birthday is in june.': 'my, june', 'birthday, is', or 'june' only?",
       "expected": [
         "my june"
       ],
@@ -157,12 +157,15 @@
     {
       "id": "wa-2",
       "objectiveId": "sentences-about-me",
-      "prompt": "Correct the mistake: My mother is cook breakfast every morning.",
-      "acceptableAnswers": [
-        "my mother cooks breakfast every morning",
-        "every morning my mother cooks breakfast"
+      "prompt": "Choose the correct answer. Correct the mistake: My mother is cook breakfast every morning.",
+      "rubric": "Correct: My mother cooks breakfast every morning. Removing 'is' but keeping 'cook' (no -s) = 50. 'is cooking' = 30. 'My mother is a cook' (different meaning) = 0.",
+      "type": "mcq",
+      "options": [
+        "My mother cooks breakfast every morning",
+        "My mother is cooks breakfast every morning.",
+        "My mother cook breakfast every morning."
       ],
-      "rubric": "Correct: My mother cooks breakfast every morning. Removing 'is' but keeping 'cook' (no -s) = 50. 'is cooking' = 30. 'My mother is a cook' (different meaning) = 0."
+      "correctOption": "My mother cooks breakfast every morning"
     },
     {
       "id": "wa-3",
@@ -178,42 +181,62 @@
     {
       "id": "wa-4",
       "objectiveId": "capitals-punctuation",
-      "prompt": "Write the words that need a capital letter: on saturday i visit my aunt in bogor.",
-      "acceptableAnswers": [
-        "on saturday i bogor",
-        "on saturday i and bogor"
+      "prompt": "Choose all the words that need a capital letter: on saturday i visit my aunt in bogor.",
+      "rubric": "Correct: On, Saturday, I, Bogor (any order). Each missing or extra word = minus 25 ('aunt' and 'my' are not capitals).",
+      "type": "multi",
+      "options": [
+        "on",
+        "saturday",
+        "i",
+        "visit",
+        "aunt",
+        "bogor"
       ],
-      "rubric": "Correct: On, Saturday, I, Bogor (any order). Each missing or extra word = minus 25 ('aunt' and 'my' are not capitals)."
+      "correctOptions": [
+        "on",
+        "saturday",
+        "i",
+        "bogor"
+      ]
     },
     {
       "id": "wa-5",
       "objectiveId": "capitals-punctuation",
-      "prompt": "This message needs one more full stop. Write the word that comes just before it: My name is Dewi I'm a nurse in Medan.",
-      "acceptableAnswers": [
-        "dewi"
+      "prompt": "Choose the correct answer. This message needs one more full stop. Choose the word that comes just before it: My name is Dewi I'm a nurse in Medan.",
+      "rubric": "Correct: Dewi (My name is Dewi. I'm a nurse in Medan.). Any other word = 0.",
+      "type": "mcq",
+      "options": [
+        "Dewi",
+        "name",
+        "nurse"
       ],
-      "rubric": "Correct: Dewi (My name is Dewi. I'm a nurse in Medan.). Any other word = 0."
+      "correctOption": "Dewi"
     },
     {
       "id": "wa-6",
       "objectiveId": "short-message",
-      "prompt": "You write a postcard to your friend Lisa. Write the greeting (the first line).",
-      "acceptableAnswers": [
-        "dear lisa",
-        "hi lisa",
-        "hello lisa"
+      "prompt": "Choose the correct answer. You write a postcard to your friend Lisa. Choose the greeting (the first line).",
+      "rubric": "Correct: Dear Lisa, / Hi Lisa, / Hello Lisa,. Only 'Lisa' = 50. A greeting without the name = 50. 'lisa' with a small l = minus 20.",
+      "type": "mcq",
+      "options": [
+        "dear Lisa",
+        "Goodbye, Lisa.",
+        "See you later, Lisa."
       ],
-      "rubric": "Correct: Dear Lisa, / Hi Lisa, / Hello Lisa,. Only 'Lisa' = 50. A greeting without the name = 50. 'lisa' with a small l = minus 20."
+      "correctOption": "dear Lisa"
     },
     {
       "id": "wa-7",
       "objectiveId": "short-message",
-      "prompt": "Put the parts of this postcard in the right order. Write the letters. A: Love, Dimas  B: Hi Nadia,  C: See you soon!  D: I'm in Lombok with my family. The beach is beautiful.",
-      "acceptableAnswers": [
-        "bdca",
-        "b d c a"
+      "prompt": "Choose the order of these postcard parts. A: Love, Dimas  B: Hi Nadia,  C: See you soon!  D: I'm in Lombok with my family. The beach is beautiful.",
+      "rubric": "Correct: B, D, C, A. Greeting first and name last but C and D swapped = 60. Any other order = 0.",
+      "type": "mcq",
+      "options": [
+        "B → D → C → A",
+        "A → C → D → B",
+        "D → A → B → C"
       ],
-      "rubric": "Correct: B, D, C, A. Greeting first and name last but C and D swapped = 60. Any other order = 0."
+      "correctOption": "B → D → C → A"
     }
   ],
   "material": [
@@ -684,12 +707,12 @@
       ],
       "assessment": {
         "wa-1": "Pakai catatan ini untuk menulis satu kalimat dalam bahasa Inggris: my brother / work / in a bank / in Jakarta",
-        "wa-2": "Perbaiki kesalahannya: My mother is cook breakfast every morning.",
+        "wa-2": "Pilih jawaban yang benar. Perbaiki kesalahannya: My mother is cook breakfast every morning.",
         "wa-3": "Pakai catatan ini untuk menulis satu kalimat dalam bahasa Inggris: Pak Hasan / have / three children",
-        "wa-4": "Tulis kata-kata yang harus diawali huruf kapital: on saturday i visit my aunt in bogor.",
-        "wa-5": "Pesan ini butuh satu titik lagi. Tulis kata yang ada tepat sebelum titik itu: My name is Dewi I'm a nurse in Medan.",
-        "wa-6": "Kamu menulis kartu pos untuk temanmu Lisa. Tulis salam pembukanya (baris pertama) dalam bahasa Inggris.",
-        "wa-7": "Susun bagian-bagian kartu pos ini dengan urutan yang benar. Tulis hurufnya. A: Love, Dimas  B: Hi Nadia,  C: See you soon!  D: I'm in Lombok with my family. The beach is beautiful."
+        "wa-4": "Pilih semua kata yang harus diawali huruf besar: on saturday i visit my aunt in bogor.",
+        "wa-5": "Pilih jawaban yang benar. Pesan ini butuh satu titik lagi. Pilih kata yang ada tepat sebelum titik itu: My name is Dewi I'm a nurse in Medan.",
+        "wa-6": "Pilih jawaban yang benar. Kamu menulis kartu pos untuk temanmu Lisa. Pilih salam pembukanya (baris pertama) dalam bahasa Inggris.",
+        "wa-7": "Pilih urutan bagian kartu pos ini. A: Love, Dimas  B: Hi Nadia,  C: See you soon!  D: I'm in Lombok with my family. The beach is beautiful."
       }
     }
   }

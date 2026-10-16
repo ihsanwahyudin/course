@@ -152,48 +152,67 @@
     {
       "id": "poss-1",
       "objectiveId": "possessive-s",
-      "prompt": "Join the words with 's: Andi + laptop",
-      "acceptableAnswers": [
-        "andi's laptop"
+      "prompt": "Choose the correct answer. Join the words with 's: Andi + laptop",
+      "rubric": "Correct: Andi's laptop. 'Andi laptop' = 30. 'laptop Andi' or 'Andi laptop's' = 10.",
+      "type": "mcq",
+      "options": [
+        "Andi's laptop",
+        "Andis laptop",
+        "Andi laptop's"
       ],
-      "rubric": "Correct: Andi's laptop. 'Andi laptop' = 30. 'laptop Andi' or 'Andi laptop's' = 10."
+      "correctOption": "Andi's laptop"
     },
     {
       "id": "poss-2",
       "objectiveId": "possessive-s",
-      "prompt": "Translate into English: Kantor ayah saya di Jakarta.",
-      "acceptableAnswers": [
-        "my father's office is in jakarta",
-        "my dad's office is in jakarta"
+      "prompt": "Choose the correct answer. Translate into English: Kantor ayah saya di Jakarta.",
+      "rubric": "Correct: My father's office is in Jakarta. 'The office of my father' = 50. 'Office my father' = 20. Missing 'is' = 60.",
+      "type": "mcq",
+      "options": [
+        "My father's office is in Jakarta",
+        "My father office is in Jakarta.",
+        "My father's office are in Jakarta."
       ],
-      "rubric": "Correct: My father's office is in Jakarta. 'The office of my father' = 50. 'Office my father' = 20. Missing 'is' = 60."
+      "correctOption": "My father's office is in Jakarta"
     },
     {
       "id": "poss-3",
       "objectiveId": "object-pronouns",
-      "prompt": "Complete with one word: Budi is my friend. I see ___ every day at school.",
-      "acceptableAnswers": [
-        "him"
+      "prompt": "Choose the correct answer. Complete with one word: Budi is my friend. I see ___ every day at school.",
+      "rubric": "Correct: him. 'he' or 'his' = 0.",
+      "type": "mcq",
+      "options": [
+        "him",
+        "he",
+        "his"
       ],
-      "rubric": "Correct: him. 'he' or 'his' = 0."
+      "correctOption": "him"
     },
     {
       "id": "poss-4",
       "objectiveId": "object-pronouns",
-      "prompt": "Complete with one word: We are new here. Please help ___.",
-      "acceptableAnswers": [
-        "us"
+      "prompt": "Choose the correct answer. Complete with one word: We are new here. Please help ___.",
+      "rubric": "Correct: us. 'we' = 0. 'me' = 40 (we = more than one person). 'to us' = 50.",
+      "type": "mcq",
+      "options": [
+        "us",
+        "we",
+        "our"
       ],
-      "rubric": "Correct: us. 'we' = 0. 'me' = 40 (we = more than one person). 'to us' = 50."
+      "correctOption": "us"
     },
     {
       "id": "poss-5",
       "objectiveId": "object-pronouns",
-      "prompt": "Correct the mistake: I know she.",
-      "acceptableAnswers": [
-        "i know her"
+      "prompt": "Choose the correct answer. Correct the mistake: I know she.",
+      "rubric": "Correct: I know her. 'I know him' changes the person = 60.",
+      "type": "mcq",
+      "options": [
+        "I know her",
+        "I know she.",
+        "I know hers."
       ],
-      "rubric": "Correct: I know her. 'I know him' changes the person = 60."
+      "correctOption": "I know her"
     },
     {
       "id": "poss-6",
@@ -211,18 +230,16 @@
     {
       "id": "poss-7",
       "objectiveId": "whose",
-      "prompt": "Listen to the question. The bag belongs to Budi. Answer with a short sentence.",
+      "prompt": "Choose the correct answer. Listen to the question. The bag belongs to Budi. Answer with a short sentence.",
       "listen": "Whose bag is this?",
-      "acceptableAnswers": [
-        "it's budi's",
-        "it is budi's",
-        "it's budi's bag",
-        "it is budi's bag",
-        "this is budi's bag",
-        "budi's",
-        "budi's bag"
+      "rubric": "Correct: It's Budi's (bag). 'It's Budi' (no 's) = 40. 'Bag Budi' = 20.",
+      "type": "mcq",
+      "options": [
+        "it's Budi's",
+        "It's Budi.",
+        "It Budi's."
       ],
-      "rubric": "Correct: It's Budi's (bag). 'It's Budi' (no 's) = 40. 'Bag Budi' = 20."
+      "correctOption": "it's Budi's"
     }
   ],
   "material": [
@@ -557,13 +574,13 @@
         "Apakah 's di 'Rina's a nurse' sama dengan di 'Rina's phone'?"
       ],
       "assessment": {
-        "poss-1": "Gabungkan kata-katanya dengan 's: Andi + laptop",
-        "poss-2": "Terjemahkan ke bahasa Inggris: Kantor ayah saya di Jakarta.",
-        "poss-3": "Lengkapi dengan satu kata: Budi is my friend. I see ___ every day at school.",
-        "poss-4": "Lengkapi dengan satu kata: We are new here. Please help ___.",
-        "poss-5": "Perbaiki kesalahannya: I know she.",
+        "poss-1": "Pilih jawaban yang benar. Gabungkan kata-katanya dengan 's: Andi + laptop",
+        "poss-2": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Kantor ayah saya di Jakarta.",
+        "poss-3": "Pilih jawaban yang benar. Lengkapi dengan satu kata: Budi is my friend. I see ___ every day at school.",
+        "poss-4": "Pilih jawaban yang benar. Lengkapi dengan satu kata: We are new here. Please help ___.",
+        "poss-5": "Pilih jawaban yang benar. Perbaiki kesalahannya: I know she.",
         "poss-6": "Kamu menemukan jaket di kursi di kelasmu. Tulis pertanyaan dalam bahasa Inggris untuk mencari tahu siapa pemiliknya. Pakai Whose.",
-        "poss-7": "Dengarkan pertanyaannya. Tas itu milik Budi. Jawab dengan kalimat pendek dalam bahasa Inggris."
+        "poss-7": "Pilih jawaban yang benar. Dengarkan pertanyaannya. Tas itu milik Budi. Jawab dengan kalimat pendek dalam bahasa Inggris."
       }
     }
   }

@@ -139,80 +139,67 @@
     {
       "id": "med-1",
       "objectiveId": "relay-from-indonesian",
-      "prompt": "The menu says: Sate ayam Rp28.000. Tom asks: How much is the chicken satay? Write the price in words.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. The menu says: Sate ayam Rp28.000. Tom asks: How much is the chicken satay? Choose the price in words.",
+      "rubric": "Correct: twenty-eight thousand rupiah ('rupiah' may be left out). 'twenty-eight thousands' or 'rupiahs' = 70. 'twenty-eight point zero zero zero' or 'twenty-eight' alone = 0.",
+      "type": "mcq",
+      "options": [
         "twenty eight thousand rupiah",
-        "twenty eight thousand",
-        "it's twenty eight thousand rupiah",
-        "it is twenty eight thousand rupiah",
-        "its twenty eight thousand rupiah",
-        "twentyeight thousand rupiah"
+        "eighty-two thousand rupiah",
+        "two thousand eight hundred rupiah"
       ],
-      "rubric": "Correct: twenty-eight thousand rupiah ('rupiah' may be left out). 'twenty-eight thousands' or 'rupiahs' = 70. 'twenty-eight point zero zero zero' or 'twenty-eight' alone = 0."
+      "correctOption": "twenty eight thousand rupiah"
     },
     {
       "id": "med-2",
       "objectiveId": "relay-from-indonesian",
-      "prompt": "A WhatsApp message says: Kelas yoga mulai jam 18.00. Tom asks: What time does the yoga class start? Answer with a.m. or p.m.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. A WhatsApp message says: Kelas yoga mulai jam 18.00. Tom asks: What time does the yoga class start? Answer with a.m. or p.m.",
+      "rubric": "Correct: six p.m. / six in the evening. 'six o'clock' without p.m. = 60. 'six a.m.' or 'eighteen' = 0.",
+      "type": "mcq",
+      "options": [
         "6 pm",
-        "6pm",
-        "six pm",
-        "at 6 pm",
-        "at six pm",
-        "it's at 6 pm",
-        "it's at six pm",
-        "it is at six pm",
-        "it starts at 6 pm",
-        "it starts at six pm",
-        "6 00 pm",
-        "at 6 00 pm",
-        "six in the evening",
-        "at six in the evening",
-        "it starts at six in the evening"
+        "6 a.m.",
+        "8 p.m."
       ],
-      "rubric": "Correct: six p.m. / six in the evening. 'six o'clock' without p.m. = 60. 'six a.m.' or 'eighteen' = 0."
+      "correctOption": "6 pm"
     },
     {
       "id": "med-3",
       "objectiveId": "relay-from-indonesian",
-      "prompt": "Your boss writes: Rapat jam setengah sepuluh pagi. Tom asks: What time is the meeting? Write the time in English words.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Your boss writes: Rapat jam setengah sepuluh pagi. Tom asks: What time is the meeting? Choose the time in English words.",
+      "rubric": "Correct: half past nine / nine thirty (9:30). 'half past ten' or 'ten thirty' = 0 (that is setengah sebelas). 'half nine' = 50 (British only, and easy to misunderstand). Digits only (9:30) = 70.",
+      "type": "mcq",
+      "options": [
         "half past nine",
-        "at half past nine",
-        "it's at half past nine",
-        "it is at half past nine",
-        "half past nine in the morning",
-        "at half past nine in the morning",
-        "nine thirty",
-        "at nine thirty",
-        "it's at nine thirty",
-        "nine thirty am",
-        "at nine thirty am",
-        "half past nine am"
+        "half past ten",
+        "half past eight"
       ],
-      "rubric": "Correct: half past nine / nine thirty (9:30). 'half past ten' or 'ten thirty' = 0 (that is setengah sebelas). 'half nine' = 50 (British only, and easy to misunderstand). Digits only (9:30) = 70."
+      "correctOption": "half past nine"
     },
     {
       "id": "med-4",
       "objectiveId": "relay-from-indonesian",
-      "prompt": "Pak Hasan's business card says: HP 0857 1234 6612. Tom asks for his number. Write the first part, 0857, in words, the way you say it.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Pak Hasan's business card says: HP 0857 1234 6612. Tom asks for his number. Choose the first part, 0857, in words, the way you say it.",
+      "rubric": "Correct: oh / zero, eight, five, seven (one digit at a time). 'eight hundred and fifty-seven' or 'eight five seven' without the 0 = 0.",
+      "type": "mcq",
+      "options": [
         "oh eight five seven",
-        "zero eight five seven",
-        "o eight five seven"
+        "oh seven five eight",
+        "oh eight seven five"
       ],
-      "rubric": "Correct: oh / zero, eight, five, seven (one digit at a time). 'eight hundred and fifty-seven' or 'eight five seven' without the 0 = 0."
+      "correctOption": "oh eight five seven"
     },
     {
       "id": "med-5",
       "objectiveId": "pass-on-information",
-      "prompt": "Rina writes in the office group: 'Saya sakit hari ini.' Your boss doesn't read Indonesian. Complete: Rina says ___ sick today.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Rina writes in the office group: 'Saya sakit hari ini.' Your boss doesn't read Indonesian. Complete: Rina says ___ sick today.",
+      "rubric": "Correct: she is / she's (Rina is a woman, and English needs 'is'). 'she' alone = 50 (is missing). 'I am' or 'he is' = 0.",
+      "type": "mcq",
+      "options": [
         "she is",
-        "she's"
+        "she are",
+        "her is"
       ],
-      "rubric": "Correct: she is / she's (Rina is a woman, and English needs 'is'). 'she' alone = 50 (is missing). 'I am' or 'he is' = 0."
+      "correctOption": "she is"
     },
     {
       "id": "med-6",
@@ -674,11 +661,11 @@
         "Bagaimana kalau aku tidak paham pesan bahasa Indonesianya?"
       ],
       "assessment": {
-        "med-1": "Di menu tertulis: Sate ayam Rp28.000. Tom bertanya: How much is the chicken satay? Tulis harganya dengan kata-kata dalam bahasa Inggris.",
-        "med-2": "Pesan WhatsApp: Kelas yoga mulai jam 18.00. Tom bertanya: What time does the yoga class start? Jawab dalam bahasa Inggris dengan a.m. atau p.m.",
-        "med-3": "Atasanmu menulis: Rapat jam setengah sepuluh pagi. Tom bertanya: What time is the meeting? Tulis jamnya dengan kata-kata bahasa Inggris.",
-        "med-4": "Di kartu nama Pak Hasan tertulis: HP 0857 1234 6612. Tom menanyakan nomornya. Tulis bagian pertama, 0857, dengan kata-kata bahasa Inggris, seperti cara kamu mengucapkannya.",
-        "med-5": "Rina menulis di grup kantor: 'Saya sakit hari ini.' Atasanmu tidak bisa membaca bahasa Indonesia. Lengkapi: Rina says ___ sick today.",
+        "med-1": "Pilih jawaban yang benar. Di menu tertulis: Sate ayam Rp28.000. Tom bertanya: How much is the chicken satay? Pilih harganya dengan kata-kata dalam bahasa Inggris.",
+        "med-2": "Pilih jawaban yang benar. Pesan WhatsApp: Kelas yoga mulai jam 18.00. Tom bertanya: What time does the yoga class start? Jawab dalam bahasa Inggris dengan a.m. atau p.m.",
+        "med-3": "Pilih jawaban yang benar. Atasanmu menulis: Rapat jam setengah sepuluh pagi. Tom bertanya: What time is the meeting? Pilih jamnya dengan kata-kata bahasa Inggris.",
+        "med-4": "Pilih jawaban yang benar. Di kartu nama Pak Hasan tertulis: HP 0857 1234 6612. Tom menanyakan nomornya. Pilih bagian pertama, 0857, dengan kata-kata bahasa Inggris, seperti cara kamu mengucapkannya.",
+        "med-5": "Pilih jawaban yang benar. Rina menulis di grup kantor: 'Saya sakit hari ini.' Atasanmu tidak bisa membaca bahasa Indonesia. Lengkapi: Rina says ___ sick today.",
         "med-6": "Gurumu, Bu Ani, menulis: 'Kelas bahasa Inggris hari Jumat.' Sampaikan ke Tom dalam satu kalimat bahasa Inggris. Mulai dengan: Bu Ani says"
       }
     }

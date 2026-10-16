@@ -1,10 +1,10 @@
 {
   "nodeId": "a0-alphabet-sounds",
-  "intro": "Hi, welcome to FluentPath! In this first lesson we'll learn the names of English letters, find the vowels, and spell words out loud — useful every time you give your name or email. Warm-up: can you write your first name, letter by letter, with a dash between letters? (Example: B-U-D-I)",
+  "intro": "Hi, welcome to FluentPath! In this first lesson we'll learn the names of English letters, find the vowels, and spell words out loud — useful every time you give your name or email. Warm-up: can you say the letters of your first name one by one?",
   "teachingNotes": [
     "Learners know the Latin alphabet from Indonesian, but the English letter NAMES differ: e.g. A is /eɪ/ (not 'a'), E is /iː/, I is /aɪ/, G is /dʒiː/, J is /dʒeɪ/.",
     "Text-only lesson: describe letter names with sound-alike words (C sounds like 'see', I like 'eye', Y like 'why').",
-    "Spelling practice: learners write letters separated by dashes, e.g. C-A-T.",
+    "Spelling practice: learners tap letter tiles in sequence. Dashes only display a spelling; they are never required in an answer. Do not assess phonetic IPA notation, which is teacher guidance rather than a taught learner skill.",
     "Common confusions for Indonesian speakers: E vs I, G vs J, A vs E.",
     "Separate a letter's NAME from its SOUND. The name is what you say when spelling (A = 'ay'); inside a word the letter often sounds different (apple starts with an 'e'-like sound, cat with a 'k' sound, umbrella with an 'a' sound). Say this explicitly whenever an example word doesn't start with the letter's name.",
     "Vowel = huruf vokal (huruf hidup), consonant = huruf konsonan (huruf mati). Y is counted as a consonant letter (yes, yellow), but in my and happy it makes a vowel sound; say that it 'borrows' a vowel sound so the two statements don't seem to contradict each other.",
@@ -94,7 +94,7 @@
     },
     {
       "objectiveId": "spelling",
-      "prompt": "Spell the word 'cat' with dashes between the letters.",
+      "prompt": "Choose the correct spelling of 'cat': C-A-T, C-T-A, or A-C-T. You do not need to type the dashes.",
       "expected": [
         "c a t"
       ],
@@ -112,7 +112,7 @@
     },
     {
       "objectiveId": "spelling",
-      "prompt": "Spell the word 'book' with dashes.",
+      "prompt": "Choose the correct spelling of 'book': B-O-O-K, B-O-K-O, or O-B-O-K. You do not need to type the dashes.",
       "expected": [
         "b o o k"
       ],
@@ -178,19 +178,9 @@
       "id": "alpha-5",
       "objectiveId": "spelling",
       "type": "letters",
-      "prompt": "Listen to the spelling of a colour, then tap the letters in order. Careful: some letters are extra.",
+      "prompt": "Listen to the spelling of a colour, then tap the letters in order.",
       "listen": "G, R, E, E, N.",
       "solution": "green",
-      "tokens": [
-        "G",
-        "R",
-        "E",
-        "E",
-        "N",
-        "J",
-        "I",
-        "A"
-      ],
       "rubric": "G-R-E-E-N (green). G is 'jee', not J; E is 'ee', not I."
     }
   ],
@@ -633,7 +623,7 @@
   ],
   "i18n": {
     "id": {
-      "intro": "Hai, selamat datang di FluentPath! Di pelajaran pertama ini kita akan belajar nama huruf dalam bahasa Inggris, mengenali huruf vokal, dan mengeja kata dengan lantang — berguna setiap kali kamu menyebut nama atau email. Pemanasan: coba tulis nama depanmu huruf demi huruf, dengan tanda strip di antara hurufnya. (Contoh: B-U-D-I)",
+      "intro": "Hai, selamat datang di FluentPath! Di pelajaran pertama ini kita akan belajar nama huruf dalam bahasa Inggris, mengenali huruf vokal, dan mengeja kata dengan lantang — berguna setiap kali kamu menyebut nama atau email. Pemanasan: coba sebutkan huruf-huruf nama depanmu satu per satu.",
       "suggestedQuestions": [
         "Kenapa huruf I dibaca seperti 'eye'?",
         "Bagaimana mengeja kata dengan huruf dobel?",
@@ -645,7 +635,7 @@
         "alpha-2": "Dengarkan nama hurufnya. Huruf yang mana?",
         "alpha-3": "Pilih semua huruf vokal dalam kata 'table'.",
         "alpha-4": "Dengarkan ejaannya, lalu ketuk hurufnya sesuai urutan.",
-        "alpha-5": "Dengarkan ejaan nama sebuah warna, lalu ketuk hurufnya sesuai urutan. Hati-hati, ada huruf yang tidak dipakai."
+        "alpha-5": "Dengarkan ejaan nama sebuah warna, lalu ketuk hurufnya sesuai urutan."
       }
     }
   }

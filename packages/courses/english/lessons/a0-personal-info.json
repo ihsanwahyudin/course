@@ -148,77 +148,94 @@
     {
       "id": "pi-1",
       "objectiveId": "countries-nationalities",
-      "prompt": "Complete with a nationality: Ahmad is from Malaysia. He's ___.",
-      "acceptableAnswers": [
-        "malaysian"
+      "prompt": "Choose the correct answer. Complete with a nationality: Ahmad is from Malaysia. He's ___.",
+      "rubric": "Correct: Malaysian. 'Malaysia' (the country) = 0.",
+      "type": "mcq",
+      "options": [
+        "Malaysian",
+        "Malaysia",
+        "Japanese"
       ],
-      "rubric": "Correct: Malaysian. 'Malaysia' (the country) = 0."
+      "correctOption": "Malaysian"
     },
     {
       "id": "pi-2",
       "objectiveId": "countries-nationalities",
-      "prompt": "Complete with a country: Yuki is Japanese. She's from ___.",
-      "acceptableAnswers": [
-        "japan"
+      "prompt": "Choose the correct answer. Complete with a country: Yuki is Japanese. She's from ___.",
+      "rubric": "Correct: Japan. 'Japanese' (the nationality) = 0.",
+      "type": "mcq",
+      "options": [
+        "Japan",
+        "Japanese",
+        "Malaysia"
       ],
-      "rubric": "Correct: Japan. 'Japanese' (the nationality) = 0."
+      "correctOption": "Japan"
     },
     {
       "id": "pi-3",
       "objectiveId": "personal-details",
-      "prompt": "Correct the sentence: My address in Jalan Diponegoro 8.",
-      "acceptableAnswers": [
-        "my address is jalan diponegoro 8",
-        "my address is jalan diponegoro eight",
-        "my address is jl diponegoro 8"
+      "prompt": "Choose the correct answer. Correct the sentence: My address in Jalan Diponegoro 8.",
+      "rubric": "Correct: My address is Jalan Diponegoro 8. The key fix is 'is' instead of 'in'; any other change to the address = small deduction.",
+      "type": "mcq",
+      "options": [
+        "My address is jalan diponegoro 8",
+        "My address Jalan Diponegoro 8.",
+        "My address are Jalan Diponegoro 8."
       ],
-      "rubric": "Correct: My address is Jalan Diponegoro 8. The key fix is 'is' instead of 'in'; any other change to the address = small deduction."
+      "correctOption": "My address is jalan diponegoro 8"
     },
     {
       "id": "pi-4",
       "objectiveId": "personal-details",
-      "prompt": "Translate into English: Saya berumur 30 tahun.",
-      "acceptableAnswers": [
-        "i'm 30",
-        "i am 30",
-        "i'm 30 years old",
-        "i am 30 years old",
-        "i'm thirty",
-        "i am thirty",
-        "i'm thirty years old",
-        "i am thirty years old"
+      "prompt": "Choose the correct answer. Translate into English: Saya berumur 30 tahun.",
+      "rubric": "Correct: I'm 30 (years old). 'I have 30 years' = 20. 'I'm 30 years' (without old) = 70. 'I'm 13' or 'thirteen' = 0.",
+      "type": "mcq",
+      "options": [
+        "I'm 30",
+        "I have 30 years.",
+        "I 30 old."
       ],
-      "rubric": "Correct: I'm 30 (years old). 'I have 30 years' = 20. 'I'm 30 years' (without old) = 70. 'I'm 13' or 'thirteen' = 0."
+      "correctOption": "I'm 30"
     },
     {
       "id": "pi-5",
       "objectiveId": "personal-details",
-      "prompt": "Listen. Write the email address you hear.",
+      "prompt": "Choose the correct answer. Listen. Choose the email address you hear.",
       "listen": "My email is dewi dot lestari at gmail dot com.",
-      "acceptableAnswers": [
-        "dewi lestari gmail com",
-        "dewi dot lestari at gmail dot com"
+      "rubric": "Correct: dewi.lestari@gmail.com. Missing the dot between dewi and lestari = 60. Wrong provider or name = 0.",
+      "type": "mcq",
+      "options": [
+        "Dewi.lestari@gmail.com",
+        "Dewi.lestari@yahoo.com",
+        "Dewi.lestari@gmail.co.id"
       ],
-      "rubric": "Correct: dewi.lestari@gmail.com. Missing the dot between dewi and lestari = 60. Wrong provider or name = 0."
+      "correctOption": "Dewi.lestari@gmail.com"
     },
     {
       "id": "pi-6",
       "objectiveId": "set-questions",
-      "prompt": "Write the question. The answer is: I'm from Bandung.",
-      "acceptableAnswers": [
-        "where are you from"
+      "prompt": "Choose the correct answer. Choose the question. The answer is: I'm from Bandung.",
+      "rubric": "Correct: Where are you from? 'Where you from?' = 50. 'Where do you live?' = 60 (works, but it asks about home, not origin).",
+      "type": "mcq",
+      "options": [
+        "Where are you from",
+        "What are you from?",
+        "Where you are from?"
       ],
-      "rubric": "Correct: Where are you from? 'Where you from?' = 50. 'Where do you live?' = 60 (works, but it asks about home, not origin)."
+      "correctOption": "Where are you from"
     },
     {
       "id": "pi-7",
       "objectiveId": "set-questions",
-      "prompt": "Correct the question: What your name?",
-      "acceptableAnswers": [
-        "what's your name",
-        "what is your name"
+      "prompt": "Choose the correct answer. Correct the question: What your name?",
+      "rubric": "Correct: What's your name? / What is your name?",
+      "type": "mcq",
+      "options": [
+        "What's your name",
+        "What your name is?",
+        "What are your name?"
       ],
-      "rubric": "Correct: What's your name? / What is your name?"
+      "correctOption": "What's your name"
     }
   ],
   "material": [
@@ -700,13 +717,13 @@
         "Bagaimana cara menyebut nomor teleponku dalam bahasa Inggris?"
       ],
       "assessment": {
-        "pi-1": "Lengkapi dengan kewarganegaraan (dalam bahasa Inggris): Ahmad is from Malaysia. He's ___.",
-        "pi-2": "Lengkapi dengan nama negara (dalam bahasa Inggris): Yuki is Japanese. She's from ___.",
-        "pi-3": "Perbaiki kalimatnya: My address in Jalan Diponegoro 8.",
-        "pi-4": "Terjemahkan ke bahasa Inggris: Saya berumur 30 tahun.",
-        "pi-5": "Dengarkan. Tulis alamat email yang kamu dengar.",
-        "pi-6": "Tulis pertanyaannya dalam bahasa Inggris. Jawabannya: I'm from Bandung.",
-        "pi-7": "Perbaiki pertanyaannya: What your name?"
+        "pi-1": "Pilih jawaban yang benar. Lengkapi dengan kewarganegaraan (dalam bahasa Inggris): Ahmad is from Malaysia. He's ___.",
+        "pi-2": "Pilih jawaban yang benar. Lengkapi dengan nama negara (dalam bahasa Inggris): Yuki is Japanese. She's from ___.",
+        "pi-3": "Pilih jawaban yang benar. Perbaiki kalimatnya: My address in Jalan Diponegoro 8.",
+        "pi-4": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Saya berumur 30 tahun.",
+        "pi-5": "Pilih jawaban yang benar. Dengarkan. Pilih alamat email yang kamu dengar.",
+        "pi-6": "Pilih jawaban yang benar. Pilih pertanyaannya dalam bahasa Inggris. Jawabannya: I'm from Bandung.",
+        "pi-7": "Pilih jawaban yang benar. Perbaiki pertanyaannya: What your name?"
       }
     }
   }

@@ -124,61 +124,81 @@
     {
       "id": "be-1",
       "objectiveId": "be-affirmative",
-      "prompt": "Complete: We ___ from Indonesia.",
-      "acceptableAnswers": [
-        "are"
+      "prompt": "Choose the correct answer. Complete: We ___ from Indonesia.",
+      "rubric": "Correct: are.",
+      "type": "mcq",
+      "options": [
+        "are",
+        "is",
+        "am"
       ],
-      "rubric": "Correct: are."
+      "correctOption": "are"
     },
     {
       "id": "be-2",
       "objectiveId": "be-affirmative",
-      "prompt": "Translate: Dia (laki-laki) seorang insinyur.",
-      "acceptableAnswers": [
-        "he is an engineer",
-        "he's an engineer"
+      "prompt": "Choose the correct answer. Translate: Dia (laki-laki) seorang insinyur.",
+      "rubric": "Must include 'is'. Missing 'is' = 30. 'a engineer' = 80.",
+      "type": "mcq",
+      "options": [
+        "He is an engineer",
+        "He are an engineer.",
+        "He an engineer."
       ],
-      "rubric": "Must include 'is'. Missing 'is' = 30. 'a engineer' = 80."
+      "correctOption": "He is an engineer"
     },
     {
       "id": "be-3",
       "objectiveId": "be-negative",
-      "prompt": "Make it negative: I am hungry.",
-      "acceptableAnswers": [
-        "i am not hungry",
-        "i'm not hungry"
+      "prompt": "Choose the correct answer. Make it negative: I am hungry.",
+      "rubric": "Correct: I'm not / I am not hungry. *'I amn't' = 30.",
+      "type": "mcq",
+      "options": [
+        "I am not hungry",
+        "I not am hungry.",
+        "I am no hungry."
       ],
-      "rubric": "Correct: I'm not / I am not hungry. *'I amn't' = 30."
+      "correctOption": "I am not hungry"
     },
     {
       "id": "be-4",
       "objectiveId": "be-negative",
-      "prompt": "Make it negative: The shop is open.",
-      "acceptableAnswers": [
-        "the shop isn't open",
-        "the shop is not open",
-        "the shop's not open"
+      "prompt": "Choose the correct answer. Make it negative: The shop is open.",
+      "rubric": "Correct: The shop isn't / is not open.",
+      "type": "mcq",
+      "options": [
+        "The shop isn't open",
+        "The shop aren't open.",
+        "The shop no open."
       ],
-      "rubric": "Correct: The shop isn't / is not open."
+      "correctOption": "The shop isn't open"
     },
     {
       "id": "be-5",
       "objectiveId": "be-questions",
-      "prompt": "Make a question: They are your friends.",
-      "acceptableAnswers": [
-        "are they your friends"
-      ],
-      "rubric": "Correct: Are they your friends? Missing question mark is fine."
+      "prompt": "Arrange the tiles. Make a question: They are your friends.",
+      "rubric": "Correct: Are they your friends? Missing question mark is fine.",
+      "type": "word_order",
+      "solution": "are they your friends",
+      "tokens": [
+        "they",
+        "your",
+        "friends",
+        "are"
+      ]
     },
     {
       "id": "be-6",
       "objectiveId": "be-questions",
-      "prompt": "Give a short NEGATIVE answer: Are you a student?",
-      "acceptableAnswers": [
-        "no i'm not",
-        "no i am not"
+      "prompt": "Choose the correct answer. Give a short NEGATIVE answer: Are you a student?",
+      "rubric": "Correct: No, I'm not. 'No' alone = 40.",
+      "type": "mcq",
+      "options": [
+        "No I'm not",
+        "No, I isn't.",
+        "No, I don't."
       ],
-      "rubric": "Correct: No, I'm not. 'No' alone = 40."
+      "correctOption": "No I'm not"
     }
   ],
   "material": [
@@ -580,12 +600,12 @@
         "Apa bedanya isn't dan aren't?"
       ],
       "assessment": {
-        "be-1": "Lengkapi: We ___ from Indonesia.",
-        "be-2": "Terjemahkan ke bahasa Inggris: Dia (laki-laki) seorang insinyur.",
-        "be-3": "Ubah ke kalimat negatif: I am hungry.",
-        "be-4": "Ubah ke kalimat negatif: The shop is open.",
-        "be-5": "Ubah ke kalimat tanya: They are your friends.",
-        "be-6": "Beri jawaban singkat NEGATIF dalam bahasa Inggris: Are you a student?"
+        "be-1": "Pilih jawaban yang benar. Lengkapi: We ___ from Indonesia.",
+        "be-2": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Dia (laki-laki) seorang insinyur.",
+        "be-3": "Pilih jawaban yang benar. Ubah ke kalimat negatif: I am hungry.",
+        "be-4": "Pilih jawaban yang benar. Ubah ke kalimat negatif: The shop is open.",
+        "be-5": "Susun ubin kata. Ubah ke kalimat tanya: They are your friends.",
+        "be-6": "Pilih jawaban yang benar. Beri jawaban singkat NEGATIF dalam bahasa Inggris: Are you a student?"
       }
     }
   }

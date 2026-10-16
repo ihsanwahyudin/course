@@ -152,74 +152,93 @@
     {
       "id": "pr-1",
       "objectiveId": "use-in-on",
-      "prompt": "Complete with in, on or at: My birthday is ___ 5 June.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with in, on or at: My birthday is ___ 5 June.",
+      "rubric": "Correct: on (a date). 'in' = 0 (in is for the whole month: in June). 'at' = 0.",
+      "type": "mcq",
+      "options": [
         "on",
-        "on 5 june"
+        "in",
+        "at"
       ],
-      "rubric": "Correct: on (a date). 'in' = 0 (in is for the whole month: in June). 'at' = 0."
+      "correctOption": "on"
     },
     {
       "id": "pr-2",
       "objectiveId": "use-in-on",
-      "prompt": "Complete with in, on or at: The train to Bandung leaves ___ half past seven.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with in, on or at: The train to Bandung leaves ___ half past seven.",
+      "rubric": "Correct: at (an exact clock time). 'in' or 'on' = 0.",
+      "type": "mcq",
+      "options": [
         "at",
-        "at half past seven"
+        "in",
+        "on"
       ],
-      "rubric": "Correct: at (an exact clock time). 'in' or 'on' = 0."
+      "correctOption": "at"
     },
     {
       "id": "pr-3",
       "objectiveId": "use-in-on",
-      "prompt": "Complete with in, on or at: Indonesian Independence Day is ___ August.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with in, on or at: Indonesian Independence Day is ___ August.",
+      "rubric": "Correct: in (a month). 'on' = 0 (on needs the date: on 17 August). 'at' = 0.",
+      "type": "mcq",
+      "options": [
         "in",
-        "in august"
+        "on",
+        "at"
       ],
-      "rubric": "Correct: in (a month). 'on' = 0 (on needs the date: on 17 August). 'at' = 0."
+      "correctOption": "in"
     },
     {
       "id": "pr-4",
       "objectiveId": "use-prepositions-to",
-      "prompt": "Translate: Kucingnya di belakang sofa.",
-      "acceptableAnswers": [
-        "the cat is behind the sofa",
-        "the cat's behind the sofa",
-        "the cat is behind the couch",
-        "the cat's behind the couch"
+      "prompt": "Choose the correct answer. Translate: Kucingnya di belakang sofa.",
+      "rubric": "Needs 'behind'. 'in behind the sofa' or 'at behind' = 50 (one preposition only). 'There is a cat behind the sofa' = 80. 'under' / 'next to' / 'on' = 0. Missing 'is' = 60.",
+      "type": "mcq",
+      "options": [
+        "The cat is behind the sofa",
+        "The cat behind the sofa.",
+        "The cat is the sofa behind."
       ],
-      "rubric": "Needs 'behind'. 'in behind the sofa' or 'at behind' = 50 (one preposition only). 'There is a cat behind the sofa' = 80. 'under' / 'next to' / 'on' = 0. Missing 'is' = 60."
+      "correctOption": "The cat is behind the sofa"
     },
     {
       "id": "pr-5",
       "objectiveId": "use-prepositions-to",
-      "prompt": "The bank is on Jalan Sudirman. There is a post office on its left and a café on its right. Complete: The bank is ___ the post office and the café.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. The bank is on Jalan Sudirman. There is a post office on its left and a café on its right. Complete: The bank is ___ the post office and the café.",
+      "rubric": "Correct: between (in the middle of two places). 'next to' = 40 (true, but it needs one place, not two). 'behind' = 0.",
+      "type": "mcq",
+      "options": [
         "between",
-        "in between"
+        "behind",
+        "under"
       ],
-      "rubric": "Correct: between (in the middle of two places). 'next to' = 40 (true, but it needs one place, not two). 'behind' = 0."
+      "correctOption": "between"
     },
     {
       "id": "pr-6",
       "objectiveId": "time-expressions",
-      "prompt": "Complete with in, on or at: Dewi is a nurse. She works ___ night and sleeps in the morning.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with in, on or at: Dewi is a nurse. She works ___ night and sleeps in the morning.",
+      "rubric": "Correct: at (at night is a fixed phrase). 'in' = 0 (common mistake: 'in night'). 'on' = 0.",
+      "type": "mcq",
+      "options": [
         "at",
-        "at night"
+        "in",
+        "on"
       ],
-      "rubric": "Correct: at (at night is a fixed phrase). 'in' = 0 (common mistake: 'in night'). 'on' = 0."
+      "correctOption": "at"
     },
     {
       "id": "pr-7",
       "objectiveId": "time-expressions",
-      "prompt": "Complete with in, on or at: Our team meeting is ___ Monday morning.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with in, on or at: Our team meeting is ___ Monday morning.",
+      "rubric": "Correct: on (a named day + part of the day takes on). 'in' = 0 (common mistake: 'in Monday morning'). 'at' = 0.",
+      "type": "mcq",
+      "options": [
         "on",
-        "on monday morning"
+        "in",
+        "at"
       ],
-      "rubric": "Correct: on (a named day + part of the day takes on). 'in' = 0 (common mistake: 'in Monday morning'). 'at' = 0."
+      "correctOption": "on"
     }
   ],
   "material": [
@@ -657,13 +676,13 @@
         "Apa bahasa Inggrisnya 'di depan'?"
       ],
       "assessment": {
-        "pr-1": "Lengkapi dengan in, on atau at: My birthday is ___ 5 June.",
-        "pr-2": "Lengkapi dengan in, on atau at: The train to Bandung leaves ___ half past seven.",
-        "pr-3": "Lengkapi dengan in, on atau at: Indonesian Independence Day is ___ August.",
-        "pr-4": "Terjemahkan ke bahasa Inggris: Kucingnya di belakang sofa.",
-        "pr-5": "Bank itu ada di Jalan Sudirman. Di sebelah kirinya ada kantor pos dan di sebelah kanannya ada kafe. Lengkapi: The bank is ___ the post office and the café.",
-        "pr-6": "Lengkapi dengan in, on atau at: Dewi is a nurse. She works ___ night and sleeps in the morning.",
-        "pr-7": "Lengkapi dengan in, on atau at: Our team meeting is ___ Monday morning."
+        "pr-1": "Pilih jawaban yang benar. Lengkapi dengan in, on atau at: My birthday is ___ 5 June.",
+        "pr-2": "Pilih jawaban yang benar. Lengkapi dengan in, on atau at: The train to Bandung leaves ___ half past seven.",
+        "pr-3": "Pilih jawaban yang benar. Lengkapi dengan in, on atau at: Indonesian Independence Day is ___ August.",
+        "pr-4": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Kucingnya di belakang sofa.",
+        "pr-5": "Pilih jawaban yang benar. Bank itu ada di Jalan Sudirman. Di sebelah kirinya ada kantor pos dan di sebelah kanannya ada kafe. Lengkapi: The bank is ___ the post office and the café.",
+        "pr-6": "Pilih jawaban yang benar. Lengkapi dengan in, on atau at: Dewi is a nurse. She works ___ night and sleeps in the morning.",
+        "pr-7": "Pilih jawaban yang benar. Lengkapi dengan in, on atau at: Our team meeting is ___ Monday morning."
       }
     }
   }

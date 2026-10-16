@@ -77,6 +77,24 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
 
 ## 5. Questions
 
+- **Test the taught skill, not input formatting.** Each prompt has one natural situation and one task. A0 mostly taps; allow at most
+  one text item per lesson (two in a level checkpoint), restricted to a taught word or fixed phrase of at most three words. A1 mostly
+  taps, with at most two text items per lesson (three in a level checkpoint), on short taught sentence patterns. These limits apply to
+  authored fallback content as well as AI-written questions. A2+ retains productive writing/speaking tasks.
+- **Choose the interaction by the task:** `mcq` for one right option; `multi` for all the right items (3–6 options, at least one right
+  and one wrong); `match` for 2–6 distinct pairs with one clear partner each; `letters` for spelling one word; `word_order` for a short
+  taught sentence with one natural order. Never ask beginners to type a list or to put dashes between spelled letters.
+- **Letter tiles:** the prompt never displays the answer word; play its spelling or give its meaning. No decoy letters at A0; at most
+  two at A1. Repeated letters are separate tiles. Listening to a new name/word's spelled letters tests letter recognition, not knowing
+  that word's meaning. Do not ask for an untaught translation as an indirect way of testing spelling.
+- **Typed items** use `acceptableAnswers` and a rubric; tapped items use `type` and the corresponding `options`/`correctOption`,
+  `correctOptions`, `pairs`, or `solution`/`tokens`. Both languages have the same options, pairs and keys; translate the instruction.
+- **Fair grading:** equivalent list separators (spaces, commas, `and`, `dan`) and case do not change a content answer. If capitalization,
+  punctuation or an exact format is itself the objective, state that clearly and assess it. Never globally strip conjunctions from
+  sentences or ignore a format being tested. Keep correctly formatted reference answers for genuine writing/editing tasks.
+- **Teaching before testing:** make vocabulary and patterns explicit in the material before asking learners to use them. Word tiles
+  supply words but do not teach their meanings. Simplify rules for beginners by naming the particular pattern being practised, without
+  presenting a pattern such as *noun + please* as the only possible position of *please* in English.
 - **One clear, correct answer.** Every multiple-choice distractor must be clearly wrong *for this exact sentence* (asking for "a
   vowel" with two vowels among the options, or offering *and* where *and* is also grammatical, are broken questions). Use real
   mistakes Indonesian learners make as distractors.
@@ -88,10 +106,11 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
   `listen` is read by one voice (at most 300 characters): in a dialogue, the speaker labels ("Rina: …") are read aloud too.
 - **Length:** a step question's prompt is at most 400 characters; a checkpoint item's may be up to 800, so it can quote a
   short email, message or notice to read.
-- **Hand-written checkpoint items** are short, checkable answers (lowercase, punctuation-free `acceptableAnswers` with the common
+- **Text checkpoint items** have short, checkable `acceptableAnswers` with the common
   valid variants: contractions both ways, keeping the apostrophe, which matching keeps too (*didn't* and *did not*, never only *didnt*), with/without article, "9 45"/"0945" for times, "22 000" for prices) plus a `rubric` for
   partial credit (at most 20 accepted answers: accents don't matter, so *cafe*/*café* is one; leave rarer phrasings to the
-  rubric and the AI grader). They are the fallback when the AI can't write a checkpoint and the examples the AI matches in level and style,
+  rubric and the AI grader). Keep case/punctuation in references where those are assessed. Authored items of every type are the fallback
+  when the AI can't write a checkpoint and the examples the AI matches in level and style,
   so make them exemplary.
 - The checkpoint the learner normally sees is **written by the AI for every attempt** from the lesson (see the API README); the
   pass mark is applied on the server.
@@ -129,7 +148,16 @@ engVid, Woodward English. Say in the note when a link is above the lesson's leve
 cd apps/api && go run ./cmd/coursecheck                     # every course, as the API checks it at startup
 cd apps/api && go test ./internal/tutor -run TestAuthoredPlans
 scripts/e2e.sh                                               # every ready lesson mastered end to end (mock AI)
+python3 scripts/checkpoint_audit.py --output review/checkpoint-audit-candidates.json
 ```
 
 Then re-read every question and checkpoint item yourself: is the answer right and the only one? Would a beginner understand the
 explanation in Indonesian?
+
+The audit script inventories every assessment and EN/ID step question. Its vocabulary and wording flags require contextual human
+review; an inflected form, proper name, quoted reading passage or a spelled word can be legitimate. Record reviewed changes and
+decisions in `review/checkpoint-audit-id.md`. A successful structural validator alone does not prove sound teaching.
+
+For OpenAI verification with no TTS, explicitly set both `LIVE_SPEECH=off` and `WARM_SPEECH=off`; disable checkpoint prefetching for
+small controlled runs. New audio remains pending owner review. Test a fresh checkpoint, inspect its saved source, and distinguish
+AI output from the authored fallback. Never delete learner progress merely to clear an old checkpoint.

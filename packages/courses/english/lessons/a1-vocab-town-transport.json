@@ -166,79 +166,94 @@
     {
       "id": "tt-1",
       "objectiveId": "places-in-town",
-      "prompt": "Translate into English (two words): kantor pos",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Translate into English (two words): kantor pos",
+      "rubric": "Correct: post office. 'office post' = 30 (the word order flips from Indonesian). 'post' or 'office' alone = 20. Small spelling slip (e.g. 'post ofice') = 80.",
+      "type": "mcq",
+      "options": [
         "post office",
-        "the post office",
-        "a post office"
+        "police station",
+        "train station"
       ],
-      "rubric": "Correct: post office. 'office post' = 30 (the word order flips from Indonesian). 'post' or 'office' alone = 20. Small spelling slip (e.g. 'post ofice') = 80."
+      "correctOption": "post office"
     },
     {
       "id": "tt-2",
       "objectiveId": "places-in-town",
-      "prompt": "Complete with one word: Budi takes the train to Bandung. He buys his ticket at the train ___.",
-      "acceptableAnswers": [
-        "station"
+      "prompt": "Choose the correct answer. Complete with one word: Budi takes the train to Bandung. He buys his ticket at the train ___.",
+      "rubric": "Correct: station (train station = stasiun). 'stop' = 40 (a bus stop is for buses). 'terminal' = 30 (in English that's mostly for buses and planes). Small spelling slip = 80.",
+      "type": "mcq",
+      "options": [
+        "station",
+        "airport",
+        "stop"
       ],
-      "rubric": "Correct: station (train station = stasiun). 'stop' = 40 (a bus stop is for buses). 'terminal' = 30 (in English that's mostly for buses and planes). Small spelling slip = 80."
+      "correctOption": "station"
     },
     {
       "id": "tt-3",
       "objectiveId": "transport",
-      "prompt": "Correct the mistake: Pak Joko goes to Bandung with car.",
-      "acceptableAnswers": [
-        "pak joko goes to bandung by car",
-        "pak joko goes to bandung in his car",
-        "pak joko goes to bandung in a car"
+      "prompt": "Choose the correct answer. Correct the mistake: Pak Joko goes to Bandung with car.",
+      "rubric": "Correct: Pak Joko goes to Bandung by car (by + transport, no a/the). 'by a car' or 'by the car' = 60. 'go' instead of 'goes' = 70. Keeping 'with' = 0.",
+      "type": "mcq",
+      "options": [
+        "pak Joko goes to Bandung by car",
+        "Pak Joko goes to Bandung with car.",
+        "Pak Joko go to Bandung by car."
       ],
-      "rubric": "Correct: Pak Joko goes to Bandung by car (by + transport, no a/the). 'by a car' or 'by the car' = 60. 'go' instead of 'goes' = 70. Keeping 'with' = 0."
+      "correctOption": "pak Joko goes to Bandung by car"
     },
     {
       "id": "tt-4",
       "objectiveId": "transport",
-      "prompt": "Complete with one word: Rina's office is very near her house. She walks there. She goes to work ___ foot.",
-      "acceptableAnswers": [
-        "on"
+      "prompt": "Choose the correct answer. Complete with one word: Rina's office is very near her house. She walks there. She goes to work ___ foot.",
+      "rubric": "Correct: on (on foot = jalan kaki). 'by' = 20 (by foot is the most common mistake). 'with' = 0.",
+      "type": "mcq",
+      "options": [
+        "on",
+        "by",
+        "in"
       ],
-      "rubric": "Correct: on (on foot = jalan kaki). 'by' = 20 (by foot is the most common mistake). 'with' = 0."
+      "correctOption": "on"
     },
     {
       "id": "tt-5",
       "objectiveId": "direction-words",
-      "prompt": "Correct the mistake: At the bank, turn to left.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Correct the mistake: At the bank, turn to left.",
+      "rubric": "Correct: At the bank, turn left (no 'to'; 'turn to the left' with 'the' is also correct). 'turn the left' = 30. Changing left to right = 0.",
+      "type": "mcq",
+      "options": [
         "at the bank turn left",
-        "turn left at the bank",
-        "at the bank turn to the left",
-        "turn to the left at the bank"
+        "At the bank, turn left to.",
+        "At the bank, turns left."
       ],
-      "rubric": "Correct: At the bank, turn left (no 'to'; 'turn to the left' with 'the' is also correct). 'turn the left' = 30. Changing left to right = 0."
+      "correctOption": "at the bank turn left"
     },
     {
       "id": "tt-6",
       "objectiveId": "direction-words",
-      "prompt": "Listen to the directions. Is the post office on the left or on the right? Write one word.",
+      "prompt": "Choose the correct answer. Listen to the directions. Is the post office on the left or on the right? Choose one word.",
       "listen": "Turn left at the corner and go straight on. The post office is on the right, next to the mosque.",
-      "acceptableAnswers": [
+      "rubric": "Correct: right. 'left' = 0 (left is the turn, not where the post office is).",
+      "type": "mcq",
+      "options": [
         "right",
-        "on the right",
-        "the right"
+        "left",
+        "straight ahead"
       ],
-      "rubric": "Correct: right. 'left' = 0 (left is the turn, not where the post office is)."
+      "correctOption": "right"
     },
     {
       "id": "tt-7",
       "objectiveId": "direction-words",
-      "prompt": "Translate into English: Belok kiri di lampu merah.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Translate into English: Belok kiri di lampu merah.",
+      "rubric": "Correct: Turn left at the traffic lights. 'at the red light' = 60 (lampu merah = traffic lights). 'turn to left' = 50. 'turn right' = 0. Missing 'at' or 'the' = 70.",
+      "type": "mcq",
+      "options": [
         "turn left at the traffic lights",
-        "turn left at the traffic light",
-        "at the traffic lights turn left",
-        "at the traffic light turn left",
-        "please turn left at the traffic lights"
+        "Turn right at the traffic lights.",
+        "Turn left at the station."
       ],
-      "rubric": "Correct: Turn left at the traffic lights. 'at the red light' = 60 (lampu merah = traffic lights). 'turn to left' = 50. 'turn right' = 0. Missing 'at' or 'the' = 70."
+      "correctOption": "turn left at the traffic lights"
     }
   ],
   "material": [
@@ -616,13 +631,13 @@
         "Bisa cek petunjuk arah ke rumahku?"
       ],
       "assessment": {
-        "tt-1": "Terjemahkan ke bahasa Inggris (dua kata): kantor pos",
-        "tt-2": "Lengkapi dengan satu kata: Budi takes the train to Bandung. He buys his ticket at the train ___.",
-        "tt-3": "Perbaiki kesalahannya: Pak Joko goes to Bandung with car.",
-        "tt-4": "Lengkapi dengan satu kata: Rina's office is very near her house. She walks there. She goes to work ___ foot.",
-        "tt-5": "Perbaiki kesalahannya: At the bank, turn to left.",
-        "tt-6": "Dengarkan petunjuk arahnya. Kantor posnya di sebelah kiri (left) atau kanan (right)? Tulis satu kata dalam bahasa Inggris.",
-        "tt-7": "Terjemahkan ke bahasa Inggris: Belok kiri di lampu merah."
+        "tt-1": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris (dua kata): kantor pos",
+        "tt-2": "Pilih jawaban yang benar. Lengkapi dengan satu kata: Budi takes the train to Bandung. He buys his ticket at the train ___.",
+        "tt-3": "Pilih jawaban yang benar. Perbaiki kesalahannya: Pak Joko goes to Bandung with car.",
+        "tt-4": "Pilih jawaban yang benar. Lengkapi dengan satu kata: Rina's office is very near her house. She walks there. She goes to work ___ foot.",
+        "tt-5": "Pilih jawaban yang benar. Perbaiki kesalahannya: At the bank, turn to left.",
+        "tt-6": "Pilih jawaban yang benar. Dengarkan petunjuk arahnya. Kantor posnya di sebelah kiri (left) atau kanan (right)? Pilih satu kata dalam bahasa Inggris.",
+        "tt-7": "Pilih jawaban yang benar. Terjemahkan ke bahasa Inggris: Belok kiri di lampu merah."
       }
     }
   }

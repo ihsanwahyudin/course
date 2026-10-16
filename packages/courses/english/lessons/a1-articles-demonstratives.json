@@ -155,62 +155,80 @@
     {
       "id": "art-1",
       "objectiveId": "no-missing-article",
-      "prompt": "Correct the sentence: My brother is teacher.",
-      "acceptableAnswers": [
-        "my brother is a teacher",
-        "my brother's a teacher"
+      "prompt": "Choose the correct answer. Correct the sentence: My brother is teacher.",
+      "rubric": "Correct: My brother is a teacher. 'an teacher' = 50. No article = 0.",
+      "type": "mcq",
+      "options": [
+        "My brother is a teacher",
+        "My brother is teacher.",
+        "My brother are a teacher."
       ],
-      "rubric": "Correct: My brother is a teacher. 'an teacher' = 50. No article = 0."
+      "correctOption": "My brother is a teacher"
     },
     {
       "id": "art-2",
       "objectiveId": "no-missing-article",
-      "prompt": "Complete with a or an: Sari has ___ umbrella.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with a or an: Sari has ___ umbrella.",
+      "rubric": "Correct: an (umbrella starts with a vowel sound). 'a' = 0.",
+      "type": "mcq",
+      "options": [
         "an",
-        "an umbrella",
-        "sari has an umbrella"
+        "a",
+        "the"
       ],
-      "rubric": "Correct: an (umbrella starts with a vowel sound). 'a' = 0."
+      "correctOption": "an"
     },
     {
       "id": "art-3",
       "objectiveId": "use-the",
-      "prompt": "Complete with a, an or the: Pak Hasan has a shop in Bogor. ___ shop is small.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with a, an or the: Pak Hasan has a shop in Bogor. ___ shop is small.",
+      "rubric": "Correct: The (the shop was mentioned before). 'A' = 0.",
+      "type": "mcq",
+      "options": [
         "the",
-        "the shop is small"
+        "a",
+        "an"
       ],
-      "rubric": "Correct: The (the shop was mentioned before). 'A' = 0."
+      "correctOption": "the"
     },
     {
       "id": "art-4",
       "objectiveId": "use-the",
-      "prompt": "Complete with a, an or the: It's very hot. ___ sun is strong today.",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. Complete with a, an or the: It's very hot. ___ sun is strong today.",
+      "rubric": "Correct: The (there is only one sun). 'A' = 0.",
+      "type": "mcq",
+      "options": [
         "the",
-        "the sun is strong today"
+        "a",
+        "an"
       ],
-      "rubric": "Correct: The (there is only one sun). 'A' = 0."
+      "correctOption": "the"
     },
     {
       "id": "art-5",
       "objectiveId": "demonstratives",
-      "prompt": "You point at a bus far away, across the street. Complete with this, that, these or those: Is ___ the bus to Bandung?",
-      "acceptableAnswers": [
+      "prompt": "Choose the correct answer. You point at a bus far away, across the street. Complete with this, that, these or those: Is ___ the bus to Bandung?",
+      "rubric": "Correct: that (one thing, far). 'this' = 40 (near). 'those/these' = 0 (plural).",
+      "type": "mcq",
+      "options": [
         "that",
-        "is that the bus to bandung"
+        "these",
+        "those"
       ],
-      "rubric": "Correct: that (one thing, far). 'this' = 40 (near). 'those/these' = 0 (plural)."
+      "correctOption": "that"
     },
     {
       "id": "art-6",
       "objectiveId": "demonstratives",
-      "prompt": "You are holding the shoes in your hands. Correct the sentence: This shoes are new.",
-      "acceptableAnswers": [
-        "these shoes are new"
+      "prompt": "Choose the correct answer. You are holding the shoes in your hands. Correct the sentence: This shoes are new.",
+      "rubric": "Correct: These shoes are new (plural and near). 'Those shoes' = 50 (plural but far). Keeping 'This' = 0.",
+      "type": "mcq",
+      "options": [
+        "these shoes are new",
+        "This shoes are new.",
+        "These shoes is new."
       ],
-      "rubric": "Correct: These shoes are new (plural and near). 'Those shoes' = 50 (plural but far). Keeping 'This' = 0."
+      "correctOption": "these shoes are new"
     }
   ],
   "material": [
@@ -755,12 +773,12 @@
         "Boleh bilang 'this a book'?"
       ],
       "assessment": {
-        "art-1": "Perbaiki kalimatnya: My brother is teacher.",
-        "art-2": "Lengkapi dengan a atau an: Sari has ___ umbrella.",
-        "art-3": "Lengkapi dengan a, an atau the: Pak Hasan has a shop in Bogor. ___ shop is small.",
-        "art-4": "Lengkapi dengan a, an atau the: It's very hot. ___ sun is strong today.",
-        "art-5": "Kamu menunjuk sebuah bus yang jauh, di seberang jalan. Lengkapi dengan this, that, these atau those: Is ___ the bus to Bandung?",
-        "art-6": "Kamu sedang memegang sepatunya. Perbaiki kalimatnya: This shoes are new."
+        "art-1": "Pilih jawaban yang benar. Perbaiki kalimatnya: My brother is teacher.",
+        "art-2": "Pilih jawaban yang benar. Lengkapi dengan a atau an: Sari has ___ umbrella.",
+        "art-3": "Pilih jawaban yang benar. Lengkapi dengan a, an atau the: Pak Hasan has a shop in Bogor. ___ shop is small.",
+        "art-4": "Pilih jawaban yang benar. Lengkapi dengan a, an atau the: It's very hot. ___ sun is strong today.",
+        "art-5": "Pilih jawaban yang benar. Kamu menunjuk sebuah bus yang jauh, di seberang jalan. Lengkapi dengan this, that, these atau those: Is ___ the bus to Bandung?",
+        "art-6": "Pilih jawaban yang benar. Kamu sedang memegang sepatunya. Perbaiki kalimatnya: This shoes are new."
       }
     }
   }
