@@ -285,6 +285,25 @@ func checkpointSchema() map[string]any {
 	return obj(map[string]any{"items": arr(item)})
 }
 
+// beginnerRule keeps beginners' checkpoints to what the lesson shows: an A0
+// learner knows almost no English, so a question must never ask them to
+// build a sentence or use a word the lesson doesn't teach.
+func beginnerRule(level string) string {
+	switch level {
+	case "A0":
+		return `
+- This learner is an absolute beginner (A0) who knows almost no English yet. Every answer is a word or phrase this lesson's material
+  shows, exactly as shown: recognise it (mcq), fill one missing word of a taught phrase ("___ come in." → please), or type a taught
+  word or fixed phrase (at most about three words). Never ask them to build a sentence of their own, to change a taught phrase, or to
+  use a word the material doesn't teach.`
+	case "A1":
+		return `
+- This learner is a beginner (A1): answers use only words from A0 and this lesson, in short sentences on the patterns the lesson
+  shows. Never ask for a word or a sentence pattern the lesson hasn't taught.`
+	}
+	return ""
+}
+
 func checkpointTask(in CheckpointInput) string {
 	ids := make([]string, 0, len(in.Node.Objectives))
 	for _, o := range in.Node.Objectives {
@@ -322,6 +341,10 @@ func checkpointTask(in CheckpointInput) string {
 - Every prompt's instruction to the learner is in the learner's language from the language rule — never write the instruction itself in
   English when that language isn't English. Only the English being tested (words, sentences, signs, spellings) stays in English. When
   the answer must be in English, say so in the learner's language ("Jawab dalam bahasa Inggris", never "dalam English").
+- Every prompt sets up ONE clear situation and asks for ONE thing, in natural, grammatical wording in the learner's language (never two
+  requests run together, like asking someone to "sit" and "come in" at once). For "text", say how much to write so it matches the
+  accepted answers: one word, two words, or a short sentence (and roughly how long). Never name the answer, or a list of phrases that
+  includes it, in the prompt.%s
 - Every question has one clear, checkable answer. For "text", list in "acceptedAnswers" every answer you would accept (full and short
   forms, contractions, with or without an article where both are right), and write a "rubric" saying what earns full, partial and no credit.
 - Listening or pronunciation objectives: put the English the learner hears in "listen" (at most 300 characters, never shown in the prompt)
@@ -331,7 +354,7 @@ func checkpointTask(in CheckpointInput) string {
 - Fields a type doesn't use: empty string, empty list or 0.
 - Match the difficulty and style of the hand-written checkpoint below, but never copy or lightly reword its questions: %s
 - The learner has already answered these checkpoint questions. Do not repeat or lightly reword them; test the same skills with new
-  sentences, words and situations: %s%s`, tutor.MinCheckItems+1, tutor.MaxCheckItems, strings.Join(ids, ", "), examples, earlier, problems(in.Problems))
+  sentences, words and situations: %s%s`, tutor.MinCheckItems+1, tutor.MaxCheckItems, strings.Join(ids, ", "), beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
 }
 
 // levelCheckpointTask asks for the level checkpoint: questions spread over
@@ -357,12 +380,14 @@ from two lessons (e.g. greet someone and give your phone number), named after th
   every acceptable answer listed and a rubric; at least three of these.
 - Every prompt's instruction is in the learner's language from the language rule; only the English being tested stays in English. Say
   when the answer must be in English, in the learner's language ("Jawab dalam bahasa Inggris", never "dalam English").
+- One clear situation and one request per prompt, in natural, grammatical wording; for "text", say how much to write (one word, two
+  words, a short sentence) to match the accepted answers; never name the answer or a list of phrases that includes it.%s
 - Listening: put what the learner hears in "listen" (at most 300 characters, never in the prompt). Include at least two listening questions.
 - "explanation": work the question out first, then fill the answer fields to match it.
 - Fields a type doesn't use: empty string, empty list or 0.
 - Match the level of these hand-written questions (one per lesson), but never copy or lightly reword them: %s
 - The learner has already answered these checkpoint questions; don't repeat or lightly reword them: %s%s`,
-		tutor.MinLevelCheckItems+2, tutor.MaxLevelCheckItems-1, tutor.LevelSpread(len(in.LevelLessons)), examples, earlier, problems(in.Problems))
+		tutor.MinLevelCheckItems+2, tutor.MaxLevelCheckItems-1, tutor.LevelSpread(len(in.LevelLessons)), beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
 }
 
 // LevelFallback is the level checkpoint from the lessons' first
@@ -506,5 +531,10 @@ Set "ok" to false, with a one-sentence "problem", if ANY of these fail:
 4. The instruction to the learner follows the language rule (only the English being tested is in English).
 5. It tests this lesson's objective (objectiveId) at this lesson's level — in a level checkpoint, the lesson named by lessonId — with
    natural, correct English.
-Otherwise "ok" is true and "problem" is empty. Judge strictly: a learner must never meet a question with two right answers or a wrong key.`, payload)
+6. The instruction is natural and grammatical in its own language, sets up one situation and asks for one thing (not two requests run
+   together), and for "text" says how much to write (a word, two words, a short sentence) in a way that fits the accepted answers.
+7. The learner can answer it with what this lesson (and earlier levels) taught. At A0 the answer is a word or phrase the lesson's
+   material shows, exactly as shown — never a sentence the learner has to build or a word the material doesn't teach; at A1, short
+   sentences on the lesson's patterns. This lesson is level %s.
+Otherwise "ok" is true and "problem" is empty. Judge strictly: a learner must never meet a question with two right answers or a wrong key.`, payload, in.Node.Level)
 }

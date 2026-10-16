@@ -81,6 +81,18 @@ func TestLessonPrefix(t *testing.T) {
 	if !strings.Contains(ct, "Old question?") || !strings.Contains(ct, "subject-pronouns") {
 		t.Fatalf("checkpoint task: %s", ct)
 	}
+	// One situation and one request per question, its length spelt out, and no answer named in it.
+	if !strings.Contains(ct, "asks for ONE thing") || !strings.Contains(ct, "how much to write") || !strings.Contains(ct, "Never name the answer") {
+		t.Fatalf("checkpoint task misses the wording rules: %s", ct)
+	}
+	if v := verifyTask(VerifyInput{LessonInput: in, Items: items}); !strings.Contains(v, "not two requests run") || !strings.Contains(v, "how much to write") ||
+		!strings.Contains(v, "This lesson is level A0") {
+		t.Fatalf("verify task misses the wording or level check: %s", v)
+	}
+	// An A0 checkpoint only asks for words and phrases the lesson shows; levels above A1 get no such rule.
+	if !strings.Contains(ct, "absolute beginner (A0)") || beginnerRule("B2") != "" || !strings.Contains(beginnerRule("A1"), "beginner (A1)") {
+		t.Fatalf("beginner rule: %s", ct)
+	}
 }
 
 func TestTaskPrompts(t *testing.T) {
