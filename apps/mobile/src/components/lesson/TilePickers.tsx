@@ -75,6 +75,7 @@ export function MultiPicker({ options, picked, setPicked, disabled }: { options:
             onPress={() => toggle(i)}
             accessibilityRole="checkbox"
             accessibilityState={{ checked: on, disabled }}
+            aria-checked={on}
             style={[styles.option, on ? styles.optionOn : null, pointer]}
           >
             <View style={[styles.box, on ? styles.boxOn : null]}>{on ? <Icon name="check" size={12} color={colors.white} strokeWidth={3} /> : null}</View>
@@ -121,6 +122,7 @@ export function MatchPicker({ left, right, draft, setDraft, disabled }: { left: 
               onPress={() => tapRow(i)}
               accessibilityRole="button"
               accessibilityState={{ selected: on }}
+              aria-pressed={on}
               accessibilityLabel={t('checkpoint.pairFor', { left: l })}
               style={[styles.row, on ? styles.rowOn : null, pointer]}
             >
