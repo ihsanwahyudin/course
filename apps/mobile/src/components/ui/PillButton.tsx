@@ -52,7 +52,7 @@ export function PillButton({ label, onPress, variant = 'primary', icon, disabled
       ]}
     >
       {loading ? <ActivityIndicator size="small" color={fg} /> : null}
-      <Text size={size === 'sm' ? 13 : 14} weight="medium" color={fg} style={{ fontFamily: fonts.medium }}>
+      <Text size={size === 'sm' ? 13 : 14} weight="medium" color={fg} style={{ fontFamily: fonts.medium, flexShrink: 1, textAlign: 'center' }}>
         {label}
       </Text>
       {icon && !loading ? (
@@ -95,6 +95,8 @@ const styles = StyleSheet.create({
     gap: 8,
     borderRadius: radius.pill,
     alignSelf: 'flex-start',
+    // A long label (a lesson title) wraps instead of running off a phone screen.
+    maxWidth: '100%',
   },
   md: { paddingHorizontal: 20, paddingVertical: 12, minHeight: 44 },
   sm: { paddingHorizontal: 14, paddingVertical: 8, minHeight: 36 },
