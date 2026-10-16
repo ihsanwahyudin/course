@@ -1,6 +1,8 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
+import { NodeModal } from '@/components/roadmap/NodeModal';
 import { RoadmapGraph } from '@/components/roadmap/RoadmapGraph';
 import { RoadmapList } from '@/components/roadmap/RoadmapList';
 import { branchesFor } from '@/components/roadmap/layout';
@@ -28,6 +30,9 @@ export default function CourseScreen() {
   const view = useUI((s) => s.roadmapView);
   const setView = useUI((s) => s.setRoadmapView);
   const pad = wide ? 32 : 16;
+  // The lesson shown in the dialog (setState is stable, so the memoised cards
+  // don't redraw when it opens).
+  const [open, setOpen] = useState<string | null>(null);
   const t = useT();
   const errorText = useErrorText();
 
@@ -210,12 +215,13 @@ export default function CourseScreen() {
       </View>
       {view === 'graph' ? (
         <Card padding={pad} spotlight={false}>
-          <RoadmapGraph course={course.slug} nodes={data.nodes} levels={summary.levels} width={contentWidth - pad * 2 - 2} wide={wide} nextNodeId={data.nextNodeId} branches={branches} />
+          <RoadmapGraph course={course.slug} nodes={data.nodes} levels={summary.levels} width={contentWidth - pad * 2 - 2} wide={wide} nextNodeId={data.nextNodeId} branches={branches} onOpen={setOpen} />
         </Card>
       ) : (
-        <RoadmapList course={course.slug} nodes={data.nodes} levels={summary.levels} branches={branches} />
+        <RoadmapList course={course.slug} nodes={data.nodes} levels={summary.levels} branches={branches} onOpen={setOpen} />
       )}
       {rest.length ? <RelatedTracks tracks={rest} /> : null}
+      {open ? <NodeModal course={course.slug} nodeId={open} onSwitch={setOpen} onClose={() => setOpen(null)} /> : null}
     </Screen>
   );
 }

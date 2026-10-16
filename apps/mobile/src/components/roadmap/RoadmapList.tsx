@@ -11,13 +11,12 @@ import { useT } from '@/i18n';
 import { colors, radius } from '@/theme/tokens';
 import type { Branch } from './layout';
 
-function Row({ course, node }: { course: string; node: RoadmapNode }) {
-  const router = useRouter();
+function Row({ node, onOpen }: { node: RoadmapNode; onOpen: (id: string) => void }) {
   const [hovered, setHovered] = useState(false);
   const t = useT();
   return (
     <Pressable
-      onPress={() => router.push(`/courses/${course}/${node.id}`)}
+      onPress={() => onOpen(node.id)}
       onHoverIn={() => setHovered(true)}
       onHoverOut={() => setHovered(false)}
       accessibilityRole="button"
@@ -91,7 +90,8 @@ function BranchCard({ branch, next }: { branch: Branch; next?: string }) {
 }
 
 // Accessible list alternative to the graph, grouped by level.
-export function RoadmapList({ course, nodes, levels, branches = [] }: { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; branches?: Branch[] }) {
+// Rows open the lesson dialog.
+export function RoadmapList({ nodes, levels, branches = [], onOpen }: { course: string; nodes: RoadmapNode[]; levels: LevelSummary[]; branches?: Branch[]; onOpen: (id: string) => void }) {
   return (
     <View style={{ gap: 12 }}>
       {levels.map((l, i) => (
@@ -119,7 +119,7 @@ export function RoadmapList({ course, nodes, levels, branches = [] }: { course: 
             {nodes
               .filter((n) => n.level === l.level)
               .map((n) => (
-                <Row key={n.id} course={course} node={n} />
+                <Row key={n.id} node={n} onOpen={onOpen} />
               ))}
           </Card>
           {branches
