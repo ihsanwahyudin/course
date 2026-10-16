@@ -75,6 +75,33 @@ def answer_for(q):
     return {"choice": 0} if q["type"] == "mcq" else {"tokens": q["tokens"]}
 
 
+def checkpoint_answer(item, authored, wrong=False):
+    """Encode valid answers per type, using only offline authored fixture keys.
+
+    A wrong academic answer must still have a valid wire shape; otherwise the
+    test checks request validation instead of checkpoint failure/progression.
+    """
+    kind = item["type"]
+    if kind == "mcq":
+        key = authored["correctOption"]
+        right = item["options"].index(key)
+        return str((right + 1) % len(item["options"]) if wrong else right)
+    if kind == "multi":
+        right = [i for i, text in enumerate(item["options"]) if text in authored["correctOptions"]]
+        return str(next(i for i in range(len(item["options"])) if i not in right)) if wrong else ",".join(map(str, right))
+    if kind == "match":
+        pairs = {p["left"]: p["right"] for p in authored["pairs"]}
+        right = [item["right"].index(pairs[left]) for left in item["left"]]
+        if wrong:
+            right = right[1:] + right[:1]
+        return ",".join(map(str, right))
+    if kind == "letters":
+        return item["tokens"][0] if wrong else authored["solution"]
+    if kind == "word_order":
+        return " ".join(reversed(authored["solution"].split())) if wrong else authored["solution"]
+    return "zzz" if wrong else authored["acceptableAnswers"][0]
+
+
 def walk_steps(api, node_id, s, helper):
     """Goes through every step; on the helper lesson it also asks, uses both hints,
     gives up, takes the similar question and checks the rules on the way."""
@@ -161,7 +188,7 @@ def drive(api, node_id, lesson, helper=False):
 
     # A failing attempt first: must not unlock anything, and the lesson stays open.
     cp = start_checkpoint(api, node_id, s, lesson, attempt=1)
-    wrong = [{"itemId": it["id"], "answer": "zzz"} for it in cp["items"]]
+    wrong = [{"itemId": it["id"], "answer": checkpoint_answer(it, lesson["assessment"][i], wrong=True)} for i, it in enumerate(cp["items"])]
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": wrong})
     if status != 200 or r["passed"] or r["unlocked"]:
         fail(f"{node_id}: failing attempt misbehaved: {status} {r}")
@@ -175,7 +202,7 @@ def drive(api, node_id, lesson, helper=False):
     s = r["session"]
     # A retake is a new checkpoint.
     cp = start_checkpoint(api, node_id, s, lesson, attempt=2)
-    right = [{"itemId": it["id"], "answer": lesson["assessment"][i]["acceptableAnswers"][0]} for i, it in enumerate(cp["items"])]
+    right = [{"itemId": it["id"], "answer": checkpoint_answer(it, lesson["assessment"][i])} for i, it in enumerate(cp["items"])]
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": right})
     if status != 200 or not r["passed"]:
         fail(f"{node_id}: passing attempt failed: {status} {r}")
@@ -278,7 +305,7 @@ def level_checkpoint(api, ls, ck):
     def key(it):
         for a in ls[it["lessonId"]]["assessment"]:
             if a["prompt"] == it["prompt"]:
-                return a["acceptableAnswers"][0]
+                return checkpoint_answer(it, a)
         fail(f"no hand-written question matches {it['prompt']!r}")
     right = [{"itemId": it["id"], "answer": key(it)} for it in cp["items"]]
     status, r = call(api, "POST", f"/api/v1/sessions/{s['id']}/assessment", {"checkpointId": cp["id"], "answers": right})
