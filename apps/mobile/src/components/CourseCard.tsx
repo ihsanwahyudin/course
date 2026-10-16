@@ -3,6 +3,7 @@ import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
 
 import { ProgressBar } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
+import { MeshBlob } from '@/components/ui/Decor';
 import { Icon } from '@/components/ui/Icon';
 import { ArrowBadge } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -10,8 +11,15 @@ import type { Course } from '@/lib/api';
 import { useT } from '@/i18n';
 import { colors, radius, toneBg, type Tone } from '@/theme/tokens';
 
-// A course tile for the catalog and dashboard: title, tagline, size, and
-// progress once enrolled.
+const blobFor: Record<string, string> = {
+  lavender: colors.lavender,
+  peach: colors.peach,
+  mint: colors.mint,
+  sky: colors.sky,
+};
+
+// A course tile for the catalog and dashboard: a soft pastel mesh in the
+// course's tone, title, tagline, size, and progress once enrolled.
 export function CourseCard({ course, reveal, style }: { course: Course; reveal?: number; style?: StyleProp<ViewStyle> }) {
   const router = useRouter();
   const t = useT();
@@ -23,6 +31,7 @@ export function CourseCard({ course, reveal, style }: { course: Course; reveal?:
       onPress={() => router.push(`/courses/${course.slug}`)}
       accessibilityLabel={t('catalog.courseLabel', { title: course.title })}
       style={[{ gap: 20, minHeight: 240, justifyContent: 'space-between' }, style]}
+      decoration={<MeshBlob color={blobFor[course.tone] ?? colors.lavender} size={280} style={{ right: -110, top: -120 }} />}
     >
       <View style={[styles.row, { justifyContent: 'space-between' }]}>
         <Eyebrow>

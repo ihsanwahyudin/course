@@ -21,7 +21,7 @@ export default function CoursesScreen() {
       <PageHeader
         label={t('nav.courses')}
         eyebrow={courses.data ? (courses.data.length === 1 ? t('catalog.countOne') : t('catalog.count', { n: courses.data.length })) : t('nav.courses')}
-        title={wide ? <Headline size={60} before={t('catalog.before')} highlight={t('catalog.gradient')} after={t('catalog.after')} /> : t('nav.courses')}
+        title={wide ? <Headline size={60} before={t('catalog.before')} gradient={t('catalog.gradient')} after={t('catalog.after')} /> : t('nav.courses')}
         description={t('catalog.description')}
       />
       {courses.isPending ? (

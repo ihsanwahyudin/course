@@ -2,6 +2,8 @@ import { StyleSheet, View } from 'react-native';
 
 import { Chip, DotList, pad2, StatusChip } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
+import { GradientRing, MeshBlob } from '@/components/ui/Decor';
+import { GradientText } from '@/components/ui/GradientText';
 import { Icon } from '@/components/ui/Icon';
 import { PillButton } from '@/components/ui/PillButton';
 import { span } from '@/components/ui/Screen';
@@ -44,7 +46,7 @@ export function NodeDetailView({
 
   const main = (
     <View style={{ width: mainW, gap }}>
-      <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }}>
+      <Card reveal={0} padding={wide ? 32 : 24} style={{ gap: 28 }} decoration={<MeshBlob color={colors.lavender} size={300} style={{ right: -120, top: -140 }} />}>
         <View style={styles.row}>
           <Crumb onPress={onCourse} label={node.course.title} />
           <Eyebrow>/ {node.level}</Eyebrow>
@@ -200,6 +202,7 @@ export function NodeDetailView({
         reveal={wide ? 1 : 4}
         padding={wide ? 32 : 24}
         style={{ gap: 28 }}
+        decoration={<MeshBlob color="rgba(91,76,245,0.5)" size={240} style={{ right: -70, top: -70 }} />}
       >
         <Eyebrow color="rgba(255,255,255,0.6)">{t('node.mastery')}</Eyebrow>
         <View>
@@ -207,9 +210,9 @@ export function NodeDetailView({
             <Heading size={72} color={colors.white} tabular>
               {node.masteryThreshold}
             </Heading>
-            <Heading size={32} color="rgba(255,255,255,0.45)" style={{ marginBottom: 6 }}>
+            <GradientText animated={false} style={{ fontFamily: fonts.semibold, fontSize: 32, lineHeight: 40, letterSpacing: -1.4 }}>
               /100
-            </Heading>
+            </GradientText>
           </View>
           <Text color="rgba(255,255,255,0.7)" style={{ marginTop: 8 }}>
             {t('node.masteryText')}
@@ -233,8 +236,11 @@ export function NodeDetailView({
         </View>
       </Card>
       {node.keyPoints.length > 0 ? (
-        <Card reveal={wide ? 2 : 5} style={{ gap: 16 }}>
-          <Eyebrow>{t('node.keyIdeas')}</Eyebrow>
+        <Card tone="lavender" reveal={wide ? 2 : 5} style={{ gap: 16 }}>
+          <View style={[styles.row, { justifyContent: 'space-between' }]}>
+            <Eyebrow color="rgba(17,17,19,0.6)">{t('node.keyIdeas')}</Eyebrow>
+            <GradientRing size={32} />
+          </View>
           <DotList items={node.keyPoints} />
         </Card>
       ) : null}

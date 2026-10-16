@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { colors, layout } from '@/theme/tokens';
 import { BOTTOM_TAB_HEIGHT, useChrome } from './chrome';
-import { DotPattern } from './Decor';
+import { CanvasDots } from './Decor';
 
 export function useLayout() {
   const { width } = useWindowDimensions();
@@ -28,7 +28,7 @@ export function Screen({ children, onRefresh, refreshing = false, maxWidth = lay
   const chrome = useChrome();
   return (
     <View style={styles.root}>
-      <DotPattern />
+      <CanvasDots />
       <ScrollView
         contentContainerStyle={{
           // Clear whichever chrome is on screen: the floating top nav, or the

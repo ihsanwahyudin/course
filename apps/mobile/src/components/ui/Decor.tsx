@@ -1,7 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { useEffect, useId, useState } from 'react';
+import { createElement, useEffect, useId, useState } from 'react';
 import { Animated, Easing, Platform, StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
-import Svg, { Circle, Defs, LinearGradient as SvgLinearGradient, Path, Pattern, Rect, Stop } from 'react-native-svg';
+import Svg, { Circle, Defs, LinearGradient as SvgLinearGradient, Path, Pattern, RadialGradient, Rect, Stop } from 'react-native-svg';
 
 import { colors, radius, shadow } from '@/theme/tokens';
 
@@ -20,20 +20,122 @@ export function DotPattern({ size = 24, r = 1.2, color = colors.dot, style }: { 
   );
 }
 
-// A 0 → 1 loop for the ping ring around PulseDot.
-function usePing(duration: number) {
+// Hover glow for the page's dot grid, as on ihsan.my.id: a gradient copy of
+// the grid shows through a small, faint circle around the pointer. Web with a
+// mouse only, and off for people who prefer reduced motion.
+function DotGlow({ size = 24 }: { size?: number }) {
+  const [glow, setGlow] = useState<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (!glow || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let frame = 0;
+    let x = 0;
+    let y = 0;
+    const paint = () => {
+      frame = 0;
+      const box = glow.getBoundingClientRect();
+      glow.style.setProperty('--dot-x', `${x - box.left}px`);
+      glow.style.setProperty('--dot-y', `${y - box.top}px`);
+    };
+    const onMove = (e: PointerEvent) => {
+      x = e.clientX;
+      y = e.clientY;
+      glow.style.opacity = '1';
+      if (!frame) frame = requestAnimationFrame(paint);
+    };
+    const onLeave = () => {
+      glow.style.opacity = '0';
+    };
+    window.addEventListener('pointermove', onMove, { passive: true });
+    document.documentElement.addEventListener('pointerleave', onLeave);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('pointermove', onMove);
+      document.documentElement.removeEventListener('pointerleave', onLeave);
+    };
+  }, [glow]);
+  return createElement(
+    'div',
+    {
+      ref: setGlow,
+      'aria-hidden': true,
+      style: {
+        position: 'absolute',
+        inset: 0,
+        pointerEvents: 'none',
+        opacity: 0,
+        transition: 'opacity 700ms',
+        maskImage: 'radial-gradient(circle 150px at var(--dot-x, 50%) var(--dot-y, 50%), rgba(0,0,0,0.55), transparent)',
+        WebkitMaskImage: 'radial-gradient(circle 150px at var(--dot-x, 50%) var(--dot-y, 50%), rgba(0,0,0,0.55), transparent)',
+      },
+    },
+    createElement('div', {
+      style: {
+        position: 'absolute',
+        inset: 0,
+        backgroundImage: `linear-gradient(120deg, ${colors.accent}, ${colors.magenta}, ${colors.orange})`,
+        maskImage: 'radial-gradient(black 1.4px, transparent 1.4px)',
+        WebkitMaskImage: 'radial-gradient(black 1.4px, transparent 1.4px)',
+        maskSize: `${size}px ${size}px`,
+        WebkitMaskSize: `${size}px ${size}px`,
+      },
+    }),
+  );
+}
+
+// The page canvas: the dot grid, plus its pointer glow on the web.
+export function CanvasDots() {
+  return (
+    <>
+      <DotPattern />
+      {Platform.OS === 'web' ? <DotGlow /> : null}
+    </>
+  );
+}
+
+function useLoop(duration: number, delay = 0, alternate = true) {
   const v = useState(() => new Animated.Value(0))[0];
   useEffect(() => {
-    const anim = Animated.loop(Animated.timing(v, { toValue: 1, duration, easing: Easing.bezier(0, 0, 0.2, 1), useNativeDriver: Platform.OS !== 'web' }));
+    const anim = alternate
+      ? Animated.loop(
+          Animated.sequence([
+            Animated.timing(v, { toValue: 1, duration, delay, easing: Easing.inOut(Easing.ease), useNativeDriver: Platform.OS !== 'web' }),
+            Animated.timing(v, { toValue: 0, duration, easing: Easing.inOut(Easing.ease), useNativeDriver: Platform.OS !== 'web' }),
+          ]),
+        )
+      : Animated.loop(Animated.timing(v, { toValue: 1, duration, delay, easing: Easing.bezier(0, 0, 0.2, 1), useNativeDriver: Platform.OS !== 'web' }));
     anim.start();
     return () => anim.stop();
-  }, [v, duration]);
+  }, [v, duration, delay, alternate]);
   return v;
+}
+
+// Soft blurred pastel blob (the site's blur-3xl mesh circles), drifting slowly.
+export function MeshBlob({ color, size, style, delay = 0 }: { color: string; size: number; style?: StyleProp<ViewStyle>; delay?: number }) {
+  const id = useId().replace(/:/g, '');
+  const t = useLoop(7000, delay);
+  const translateX = t.interpolate({ inputRange: [0, 0.5, 1], outputRange: [0, size * 0.06, -size * 0.05] });
+  const translateY = t.interpolate({ inputRange: [0, 0.5, 1], outputRange: [0, -size * 0.04, size * 0.05] });
+  const scale = t.interpolate({ inputRange: [0, 0.5, 1], outputRange: [1, 1.1, 0.95] });
+  return (
+    <Animated.View style={[{ position: 'absolute', width: size, height: size, transform: [{ translateX }, { translateY }, { scale }] }, style]}>
+      <Svg width={size} height={size}>
+        <Defs>
+          <RadialGradient id={`blob${id}`} cx="50%" cy="50%" r="50%">
+            <Stop offset="0" stopColor={color} stopOpacity={1} />
+            <Stop offset="0.55" stopColor={color} stopOpacity={0.7} />
+            <Stop offset="1" stopColor={color} stopOpacity={0} />
+          </RadialGradient>
+        </Defs>
+        <Circle cx={size / 2} cy={size / 2} r={size / 2} fill={`url(#blob${id})`} />
+      </Svg>
+    </Animated.View>
+  );
 }
 
 // Pulsing accent dot with concentric rings (the site's "based in" marker).
 export function PulseDot({ size = 16, rings = true, color = colors.accent }: { size?: number; rings?: boolean; color?: string }) {
-  const t = usePing(3000);
+  const t = useLoop(2400, 0, false);
   const scale = t.interpolate({ inputRange: [0, 0.75, 1], outputRange: [1, 2, 2] });
   const opacity = t.interpolate({ inputRange: [0, 0.75, 1], outputRange: [0.4, 0, 0] });
   const box = rings ? size * 11 : size * 2.2;
@@ -82,6 +184,18 @@ export function GradientRing({ size = 36, glyph = 'route' }: { size?: number; gl
   );
 }
 
+// Small live indicator: solid dot with a slow ping (the site's "Currently" dot).
+export function LiveDot({ color = colors.emerald, size = 8 }: { color?: string; size?: number }) {
+  const t = useLoop(2400, 0, false);
+  const scale = t.interpolate({ inputRange: [0, 0.75, 1], outputRange: [1, 2, 2] });
+  const opacity = t.interpolate({ inputRange: [0, 0.75, 1], outputRange: [0.75, 0, 0] });
+  return (
+    <View style={{ width: size, height: size }}>
+      <Animated.View style={[StyleSheet.absoluteFill, { borderRadius: radius.pill, backgroundColor: color, opacity, transform: [{ scale }] }]} />
+      <View style={{ width: size, height: size, borderRadius: radius.pill, backgroundColor: color }} />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   ring: { position: 'absolute', borderRadius: radius.pill, borderWidth: 1 },

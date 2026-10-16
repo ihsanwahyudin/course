@@ -5,7 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Chip, ErrorState, LoadingState, PageDots } from '@/components/ui/Bits';
 import { Card } from '@/components/ui/Card';
-import { DotPattern } from '@/components/ui/Decor';
+import { CanvasDots } from '@/components/ui/Decor';
 import { Icon } from '@/components/ui/Icon';
 import { IconButton, PillButton } from '@/components/ui/PillButton';
 import { Eyebrow, Heading, Text } from '@/components/ui/Text';
@@ -232,7 +232,7 @@ export default function OnboardingScreen() {
   const errorText = useErrorText();
   return (
     <View style={styles.root}>
-      <DotPattern />
+      <CanvasDots />
       {isPending ? (
         <View style={styles.center}>
           <LoadingState label={t('onboarding.loading')} />
