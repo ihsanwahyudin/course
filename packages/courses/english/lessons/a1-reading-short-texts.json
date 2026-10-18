@@ -349,7 +349,12 @@
           "i18n": {
             "id": {
               "explain": "Today's special adalah menu spesial hari ini, di sini gado-gado seharga Rp 18.000. Tidak gratis: ada harganya.",
-              "prompt": "Di menu tertulis: 'Today's special: Gado-gado Rp 18.000'. Apa arti 'Today's special'?"
+              "prompt": "Di menu tertulis: 'Today's special: Gado-gado Rp 18.000'. Apa arti 'Today's special'?",
+              "options": [
+                "hidangan khusus hari ini",
+                "minuman gratis",
+                "hidangan penutup"
+              ]
             }
           }
         }
@@ -503,7 +508,12 @@
           "i18n": {
             "id": {
               "explain": "Mon–Sat artinya Senin sampai Sabtu. Minggu tidak termasuk, jadi tokonya tutup hari Minggu.",
-              "prompt": "Papan di sebuah toko bertuliskan: 'Open Mon–Sat 10 am – 9 pm'. Hari ini Minggu. Apakah tokonya buka?"
+              "prompt": "Papan di sebuah toko bertuliskan: 'Open Mon–Sat 10 am – 9 pm'. Hari ini Minggu. Apakah tokonya buka?",
+              "options": [
+                "Ya, sepanjang hari.",
+                "Tidak.",
+                "Ya, mulai pukul 10 pagi."
+              ]
             }
           }
         }
@@ -594,7 +604,12 @@
           "i18n": {
             "id": {
               "explain": "Delayed = terlambat / ditunda: pesawat berangkat lebih lambat dari jam di papan. 'Tidak ada pesawat hari ini' adalah Cancelled.",
-              "prompt": "Papan di bandara bertuliskan: 'GA 404 · Denpasar · Gate C3 · Delayed'. Apa arti 'Delayed'?"
+              "prompt": "Papan di bandara bertuliskan: 'GA 404 · Denpasar · Gate C3 · Delayed'. Apa arti 'Delayed'?",
+              "options": [
+                "Pesawatnya terlambat.",
+                "Pesawatnya penuh.",
+                "Tidak ada penerbangan hari ini."
+              ]
             }
           }
         }
@@ -685,7 +700,12 @@
           "i18n": {
             "id": {
               "explain": "'I'm from Bali' memberi tahu asalnya. Bandung adalah tempat tinggalnya sekarang.",
-              "prompt": "Baca: 'I'm Agus. I'm 30. I'm from Bali, but I live in Bandung. I'm a nurse.' Agus berasal dari mana?"
+              "prompt": "Baca: 'I'm Agus. I'm 30. I'm from Bali, but I live in Bandung. I'm a nurse.' Agus berasal dari mana?",
+              "options": [
+                "Bali",
+                "Bandung",
+                "rumah sakit"
+              ]
             }
           }
         }
@@ -796,7 +816,12 @@
           "i18n": {
             "id": {
               "explain": "Nomor telepon di Indonesia diawali 08 (atau +62 8). Kata dengan @ adalah email, dan Rp adalah harga.",
-              "prompt": "Kamu mau menelepon sebuah toko. Apa yang kamu cari di iklannya?"
+              "prompt": "Kamu mau menelepon sebuah toko. Apa yang kamu cari di iklannya?",
+              "options": [
+                "kata yang mengandung @",
+                "nomor yang diawali 08",
+                "Rp dan sebuah angka"
+              ]
             }
           }
         }

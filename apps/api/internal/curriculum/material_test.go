@@ -86,3 +86,59 @@ func TestRepositoryMaterial(t *testing.T) {
 		t.Fatalf("material text for the prompt: %s", txt)
 	}
 }
+
+func TestExplanatoryOptionTranslationsKeepEnglishTargetsAndIndexes(t *testing.T) {
+	c, err := LoadCourse("../../../../packages/courses/english")
+	if err != nil {
+		t.Fatal(err)
+	}
+	find := func(lang, section string) Block {
+		for _, s := range c.MaterialIn("a0-sounds-indonesian", lang).Sections {
+			if s.ID == section {
+				for _, b := range s.Blocks {
+					if b.Type == BlockCheck {
+						return b
+					}
+				}
+			}
+		}
+		t.Fatalf("missing %s check", section)
+		return Block{}
+	}
+	en, id := find("en", "th"), find("id", "th")
+	if id.Options[1] != "Ujung lidah di antara gigi, lalu hembuskan udara" || *en.Answer != *id.Answer || en.Options[1] != "Tongue tip between the teeth, push air out" {
+		t.Fatalf("translated material changed its key: %+v", id)
+	}
+	if find("id", "vowels").Options[2] != "tea" {
+		t.Fatal("English being tested must stay English")
+	}
+	id.Options[1] = "changed copy"
+	if find("id", "th").Options[1] == "changed copy" || find("en", "th").Options[1] != en.Options[1] {
+		t.Fatal("localized material mutated source content")
+	}
+	l, _ := c.Lesson("a0-sounds-indonesian")
+	for i := range l.Material {
+		if l.Material[i].ID != "th" {
+			continue
+		}
+		for j := range l.Material[i].Blocks {
+			b := &l.Material[i].Blocks[j]
+			if b.Type != BlockCheck {
+				continue
+			}
+			text := b.I18n["id"]
+			text.Options = []string{"wrong count"}
+			b.I18n["id"] = text
+		}
+	}
+	errors := validateMaterial(c)
+	found := false
+	for _, err := range errors {
+		if strings.Contains(err.Error(), "translated option labels must match") {
+			found = true
+		}
+	}
+	if !found {
+		t.Fatal("partial material option translations must be rejected")
+	}
+}

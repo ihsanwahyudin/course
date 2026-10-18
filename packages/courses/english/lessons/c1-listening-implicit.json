@@ -365,7 +365,12 @@
           "i18n": {
             "id": {
               "prompt": "Manajermu membaca proposalmu lalu berkata: 'Hmm. It's certainly very long.' Kemungkinan besar apa pendapatnya?",
-              "explain": "Ini pujian tipis: ia diminta pendapat tentang proposalnya, tapi hanya mengomentari panjangnya, bukan idenya. Kalau ia suka, ia akan memuji isinya. 'She hasn't read it' salah: ia baru saja membacanya."
+              "explain": "Ini pujian tipis: ia diminta pendapat tentang proposalnya, tapi hanya mengomentari panjangnya, bukan idenya. Kalau ia suka, ia akan memuji isinya. 'She hasn't read it' salah: ia baru saja membacanya.",
+              "options": [
+                "Dia menganggapnya sangat bagus dan terperinci.",
+                "Dia kurang puas, tetapi menyampaikannya dengan sopan.",
+                "Dia belum membacanya."
+              ]
             }
           }
         }
@@ -567,7 +572,12 @@
           "i18n": {
             "id": {
               "prompt": "Seorang dosen berkata: 'You all know the story of how the Jakarta MRT was built, so I'll skip that. But make a note of this: most passengers walk less than one kilometre to the station.' Apa yang sebaiknya kamu tulis di catatanmu?",
-              "explain": "'Make a note of this' (catat ini) menandai poin penting: kebanyakan penumpang berjalan kurang dari 1 km. Sejarahnya justru dilewati dosen karena kamu sudah tahu. Ini bukan 'sekadar contoh': ini poin yang dosen minta kamu catat."
+              "explain": "'Make a note of this' (catat ini) menandai poin penting: kebanyakan penumpang berjalan kurang dari 1 km. Sejarahnya justru dilewati dosen karena kamu sudah tahu. Ini bukan 'sekadar contoh': ini poin yang dosen minta kamu catat.",
+              "options": [
+                "Sejarah pembangunan MRT",
+                "Sebagian besar penumpang berjalan < 1 km ke stasiun !!",
+                "Tidak perlu: itu hanya contoh"
+              ]
             }
           }
         }
@@ -639,7 +649,12 @@
           "i18n": {
             "id": {
               "prompt": "Catatan mana yang cocok dengan kalimat dari kuliah ini? 'Ticket prices have doubled; therefore, fewer students are taking the train.'",
-              "explain": "'Doubled' (naik dua kali lipat) = ×2, 'therefore' (maka) = ∴, dan 'fewer students' (makin sedikit mahasiswa) = ↓. Pilihan kedua membalik kedua perubahannya. Pilihan ketiga membalik sebab dan akibat: harganya adalah sebab, bukan akibat."
+              "explain": "'Doubled' (naik dua kali lipat) = ×2, 'therefore' (maka) = ∴, dan 'fewer students' (makin sedikit mahasiswa) = ↓. Pilihan kedua membalik kedua perubahannya. Pilihan ketiga membalik sebab dan akibat: harganya adalah sebab, bukan akibat.",
+              "options": [
+                "harga tiket ×2 ∴ mahasiswa naik kereta ↓",
+                "harga tiket ↓ ∴ mahasiswa naik kereta ↑",
+                "harga tiket ×2 karena mahasiswa naik kereta ↓"
+              ]
             }
           }
         }

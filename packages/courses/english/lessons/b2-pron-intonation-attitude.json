@@ -319,7 +319,12 @@
           "i18n": {
             "id": {
               "prompt": "Sari mendengar timnya memenangkan penghargaan. Dia sama sekali tidak tahu sebelumnya. Bagaimana dia mengucapkan 'Really?'",
-              "explain": "Dia terkejut dan senang, jadi suaranya melompat cepat dari rendah ke sangat tinggi ↗. Pelan dan turun-naik ↘↗ terdengar ragu, seolah dia tidak percaya; datar dan rendah terdengar bosan."
+              "explain": "Dia terkejut dan senang, jadi suaranya melompat cepat dari rendah ke sangat tinggi ↗. Pelan dan turun-naik ↘↗ terdengar ragu, seolah dia tidak percaya; datar dan rendah terdengar bosan.",
+              "options": [
+                "Perlahan, turun lalu naik ↘↗",
+                "Cepat, dengan lompatan nada besar ke atas ↗",
+                "Datar dan rendah →"
+              ]
             }
           }
         }
@@ -420,7 +425,12 @@
           "i18n": {
             "id": {
               "prompt": "Rina meminta rekan kerja baru menandatangani formulir. Cara bertanya mana yang paling ramah?",
-              "explain": "Kata-kata sopan ditambah suara yang mulai lebih tinggi dan naik pelan ↗ terdengar ramah. Kata-kata yang sama dengan suara rendah, datar dan turun cepat bisa terdengar tidak sabar, dan Sign this for me yang diucapkan datar terdengar seperti perintah."
+              "explain": "Kata-kata sopan ditambah suara yang mulai lebih tinggi dan naik pelan ↗ terdengar ramah. Kata-kata yang sama dengan suara rendah, datar dan turun cepat bisa terdengar tidak sabar, dan Sign this for me yang diucapkan datar terdengar seperti perintah.",
+              "options": [
+                "Could you sign this for me? (rendah dan datar, turun cepat ↘)",
+                "Sign this for me. (datar →)",
+                "Could you sign this for me? (mulai lebih tinggi, naik perlahan ↗)"
+              ]
             }
           }
         }

@@ -16,6 +16,9 @@ WORDS = re.compile(r"[a-zA-Z]+(?:'[a-zA-Z]+)?")
 FORMATTING = re.compile(r'(?i)dash|hyphen|strip|comma|capital|huruf besar|huruf kapital|koma')
 LIST = re.compile(r'(?i)(?:write|list|name|tulis|sebutkan).*(?:vowels|vowel letters|words.*capital|huruf.*vokal|kata.*kapital)')
 PRODUCTION = re.compile(r'(?i)translate|rewrite|correct the|make (?:a|it)|write.*sentence|terjemah|tulis ulang|perbaiki|susun.*kalimat')
+SOUND_TOPIC = re.compile(r'(?i)\b(?:bunyi|vokal|pengucapan|diucapkan|sounds?|vowels?|pronunciation|pronounced|rhymes?|berima)\b')
+SOUND_QUOTED_REFERENCE = re.compile(r"(?i)\b(?:seperti(?:\s+(?:pada|di|dalam))?|(?:as|like)(?:\s+in)?|rhymes?\s+with|berima\s+dengan)\s+(?:(?:the\s+word|word|kata)\s+)?['\"‘’“”*`]([a-z]+)['\"‘’“”*`](?:$|[^a-z])")
+SOUND_PLAIN_REFERENCE = re.compile(r"(?i)\b(?:seperti(?:\s+(?:pada|di|dalam))?|as\s+in|(?:sounds?|vowels?)\s+(?:as|like)|like\s+in|rhymes?\s+with|berima\s+dengan)\s+(?:(?:the\s+word|word|kata)\s+)?([a-z]+)\b")
 
 
 def strings(value):
@@ -58,6 +61,14 @@ def audit():
                 if LEVELS.index(nodes[parent]['level']) < LEVELS.index(level):
                     exposure |= exposures[parent]
         groups = [('assessment', lesson['assessment'])]
+        translated_assessment = []
+        translation = lesson.get('i18n', {}).get('id', {})
+        for item in lesson['assessment']:
+            q = dict(item)
+            q['prompt'] = translation.get('assessment', {}).get(item['id'], item['prompt'])
+            q['displayOptions'] = translation.get('assessmentOptions', {}).get(item['id'], [])
+            translated_assessment.append(q)
+        groups.append(('assessment.id', translated_assessment))
         groups += [(name, [dict(q, id=f'{name}-{i+1}') for i, q in enumerate(lesson.get(name, []))])
                    for name in ('guidedPractice', 'independentPractice')]
         groups += [(f'plan.{lang}', [dict(s['question'], id=f'step-{i+1}') for i, s in enumerate(plan['steps']) if 'question' in s]) for lang, plan in plans.get(node, {}).items()]
@@ -70,6 +81,7 @@ def audit():
                     q = dict(block, id=f"{section['id']}-block-{index+1}", type='mcq')
                     if lang == 'id':
                         q['prompt'] = block.get('i18n', {}).get('id', {}).get('prompt', block['prompt'])
+                        q['displayOptions'] = block.get('i18n', {}).get('id', {}).get('options', [])
                     material_questions.append(q)
             groups.append((f'material.{lang}', material_questions))
         for source, questions in groups:
@@ -88,12 +100,19 @@ def audit():
                 if not targets and kind == 'mcq' and 0 <= q.get('answer', -1) < len(q.get('options', [])):
                     targets = q['options'][q['answer']]
                 targets = targets or []
+                references = {m.group(1).lower() for pattern in (SOUND_QUOTED_REFERENCE, SOUND_PLAIN_REFERENCE)
+                              for m in pattern.finditer(prompt)} if SOUND_TOPIC.search(prompt) else set()
+                if any(' '.join(WORDS.findall(text.lower())) in references for text in strings(targets)):
+                    flags.append('sound_comparison_reuses_reference_as_answer')
                 # Proper names/numbers and distractors are not evidence of untaught target language.
                 unseen = sorted(words(targets) - exposure - words(prompt)) if level in ('A0', 'A1') else []
                 if unseen: flags.append('target_vocabulary_not_found_in_material_or_prerequisites')
                 records.append({'lesson': node, 'level': level, 'source': source, 'id': q['id'], 'type': kind,
-                                'prompt': prompt, 'flags': flags, 'unseenTargetWords': unseen})
-    return {'method': 'All assessment items, practice templates, EN/ID material checks and step questions. Vocabulary exposure uses learner-facing material and plans, excluding teacher notes and assessment keys. Flags require contextual human review.',
+                                'prompt': prompt, 'canonicalOptions': q.get('options', []),
+                                'visibleOptions': q.get('displayOptions') or q.get('options', []),
+                                'hasTranslatedOptions': bool(q.get('displayOptions')),
+                                'flags': flags, 'unseenTargetWords': unseen})
+    return {'method': 'All assessment items, practice templates, EN/ID assessment prompts, material checks and step questions. Option labels include the translations learners actually see. Vocabulary exposure uses learner-facing material and plans, excluding teacher notes and assessment keys. Flags require contextual human review.',
             'totals': dict(sorted(totals.items())), 'questions': records}
 
 

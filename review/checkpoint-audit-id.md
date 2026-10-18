@@ -289,3 +289,94 @@ Pemilik menemukan soal OpenAI “Tuliskan 1 huruf yang benar. Jawab dalam bahasa
 - Nilai pasti dari server juga mengendalikan penjelasan dan feedback ketika AI menyanggahnya. Klaim `keyWrong` yang hanya mengubah kapitalisasi tidak membatalkan jawaban benar.
 - Tes regresi memutar ulang contoh pemilik dan keluaran penilai yang salah, termasuk feedback kapitalisasi yang dikarang. Semua tes Go/database, coursecheck, dan e2e 194 node lulus; tidak ada panggilan OpenAI/TTS untuk pengujian tindak lanjut ini.
 - Hanya hasil percobaan lokal yang dilaporkan diperbaiki dari 89 menjadi 100; data asli dicadangkan secara privat dan raw evaluator response dipertahankan. Tampilan browser telah diverifikasi menunjukkan `a` sebagai benar. Tidak ada penghapusan atau penilaian ulang massal riwayat pengguna.
+
+
+## Perbaikan bahasa opsi — 18 Oktober 2026
+
+Opsi berupa instruksi pelafalan atau penjelasan aturan mengikuti bahasa UI. Kata/kalimat bahasa Inggris yang sedang diuji tetap
+bahasa Inggris (misalnya `ship` / `sheep`, bentuk kata kerja, dan ejaan `double P`). Aturan lama yang mewajibkan semua opsi dalam
+bahasa Inggris diperbaiki pada panduan konten serta prompt penulis/pemeriksa AI, termasuk soal serupa dan checkpoint level.
+
+- Sembilan soal langkah A0–A1 pada tujuh lesson memiliki `displayOptions` Indonesia; termasuk soal Rina mengucapkan `I tink so`.
+- Delapan cek materi memiliki `i18n.id.options`; empat item checkpoint pelafalan memiliki `i18n.id.assessmentOptions`.
+- Opsi asli dan kunci indeks tetap sama. Label terjemahan ikut diacak bersama opsi; tampilan jawaban, hint, Ask AI, kartu kesalahan,
+  contoh generator, verifier, dan grader memakai label yang dilihat siswa.
+- Penambahan label merupakan koreksi wording: sesi lama diperbarui di tempat, jawaban/progres tetap, dan pindah EN ↔ ID tetap
+  mempertahankan sesi. Validasi menolak label kosong, duplikat, atau jumlah yang tidak cocok.
+- Verifikasi: semua tes Go (termasuk database dalam schema terpisah), `coursecheck`, serta e2e 194 node dengan AI mock berhasil.
+  Tampilan cek materi Indonesia diperiksa di browser lokal. Tidak ada panggilan OpenAI atau TTS dalam pengujian.
+
+## Audit seluruh opsi A0–C2 — 18 Oktober 2026
+
+Permintaan lanjutan memperluas pemeriksaan ke seluruh 1.743 soal beropsi: 695 soal langkah, 795 cek materi,
+serta 253 item checkpoint authored. Setiap prompt dan opsi dibaca dalam konteksnya; klasifikasi tidak ditentukan dari
+panjang teks atau bahasa opsi saja. Empat course persiapan tes belum memiliki lesson siap pakai; kebijakan bahasa kelima course
+juga diperjelas agar opsi penjelasan/strategi berbahasa Indonesia, sedangkan soal resmi yang melatih bahasa Inggris tetap Inggris.
+
+Ditemukan dan diterjemahkan **232 soal tambahan pada 78 pelajaran**. Digabung dengan perbaikan awal, totalnya **253 soal pada 85
+pelajaran**: 115 langkah latihan, 131 cek materi, dan 7 item checkpoint. Jumlah ini menghitung soal, bukan masing-masing tombol opsi.
+
+| Level | Soal beropsi ditinjau | Soal dengan label Indonesia |
+| --- | ---: | ---: |
+| A0 | 178 | 10 |
+| A1 | 412 | 35 |
+| A2 | 225 | 34 |
+| B1 | 275 | 32 |
+| B2 | 270 | 39 |
+| C1 | 220 | 43 |
+| C2 | 163 | 60 |
+| Total | 1.743 | 253 |
+
+Yang diterjemahkan: instruksi posisi lidah/bunyi, ketukan dan tekanan kata, strategi membaca/menyimak, penjelasan aturan,
+interpretasi cerita dan nada bicara, arti idiom, kategori bagian teks, serta langkah penyuntingan. Contoh: `Both are correct`
+menjadi `Keduanya benar`; `Read the title and the first sentence of each paragraph` menjadi `Baca judul dan kalimat pertama tiap
+paragraf`; `She disagrees with halving the budget` menjadi `Dia tidak setuju anggarannya dipotong setengah`. Nama kategori resmi
+seperti `Grammatical Range and Accuracy` tetap dicantumkan bersama arti Indonesianya.
+
+Yang dipertahankan: bentuk grammar yang dibandingkan, kata yang harus dipilih untuk melengkapi kalimat Inggris, contoh respons
+untuk percakapan Inggris, kutipan sumber yang harus dikenali, ejaan/nama huruf, target kosakata Inggris, dan data seperti nama,
+angka, jam, simbol atau opsi yang sebelumnya sudah Indonesia. Tidak menerjemahkan perbedaan `can` / `can't`, `had` / `would`, atau
+bentuk benar/salah tata bahasa menjadi padanan Indonesia yang akan menghilangkan hal yang diuji.
+
+Semua plan EN, opsi asli, indeks kunci, item checkpoint asli, dan teks audio sama dengan HEAD. Label tampilan tetap terpisah,
+sehingga koreksi wording mempertahankan progres sesi. Tombol opsi materi, MCQ latihan/checkpoint, dan multi kini dibatasi lebar
+panel; teks panjang membungkus tanpa terpotong, diperiksa pada viewport 390 piksel. Tidak ada perubahan audio.
+
+Verifikasi:
+
+- Tes Go baru membaca seluruh label di semua level, memeriksa kesamaan struktur EN/ID, kompatibilitas sesi lama, pengacakan,
+  kunci, dan nilai checkpoint. Seluruh tes Go dijalankan ulang dengan `-count=1`, termasuk database dalam schema terpisah.
+- `coursecheck` lolos untuk semua course; 194 node English siap.
+- E2E lolos untuk seluruh 194 node secara terpisah dalam mode EN dan ID. Run ID memeriksa seluruh 253 soal berlabel terjemahan
+  melalui HTTP, termasuk materi, latihan, checkpoint gagal/lulus, progres setelah restart, dan isolasi pengguna.
+- Typecheck, Expo lint, dan export web lolos; tampilan opsi panjang Indonesia diperiksa pada browser lokal.
+- Generator/verifier dan kebijakan bahasa diperbarui, tetapi pengujian tidak memanggil OpenAI asli atau TTS.
+
+`scripts/checkpoint_audit.py` kini menyertakan prompt checkpoint ID dan `canonicalOptions`, `visibleOptions`,
+`hasTranslatedOptions`, sehingga audit berikutnya menampilkan teks yang benar-benar dilihat siswa.
+Jalankan `E2E_LOCALE=id E2E_PORT=8092 LIVE_SPEECH=off WARM_SPEECH=off PREFETCH_CHECKPOINTS=off scripts/e2e.sh`
+untuk mengulang pemeriksaan label Indonesia tanpa token OpenAI.
+
+## Pembanding bunyi tidak boleh menjadi kunci — 18 Oktober 2026
+
+Laporan pengguna: checkpoint AI bertanya `Kata mana yang punya bunyi pendek /ɪ/ seperti pada 'ship'?`, tetapi kuncinya `ship`.
+Kata itu memang memiliki bunyi yang disebut, namun penyebutan `seperti ship` terbaca sebagai permintaan contoh lain dan sekaligus
+membocorkan kunci. Perbaikan tidak menganggap jawaban pengguna `shap` otomatis benar; masalahnya ada pada rancangan soal.
+
+- Penulis soal (termasuk latihan serupa dan checkpoint level) serta verifier mendapat aturan konkret: kata pembanding bukan kunci.
+  Minta kata lain yang sudah diajarkan, misalnya `sit` untuk pembanding `ship`, dengan pilihan `sit / seat / food`; atau gunakan
+  audio tanpa menulis kata yang harus didengar dalam prompt. Opsi pengenalan memakai kata nyata yang telah diajarkan; ejaan rekaan
+  hanya digunakan sebagai contoh kesalahan pengucapan yang secara eksplisit diminta untuk diperbaiki.
+- Validasi server menolak kata pembanding yang muncul sebagai kunci MCQ, salah satu accepted answer teks, atau jawaban multi.
+  Pemeriksaan mengenali cue pembanding EN/ID, bukan sekadar melarang kata kunci muncul di prompt. Pertanyaan yang menyebut
+  pilihan, membandingkan `full / fool` dengan `food`, atau meminta huruf yang namanya terdengar seperti `eye` tetap sah.
+  Penggunaan biasa `as a capital letter` dan `would like a short answer` tidak dianggap pembanding bunyi.
+- Penolakan menyertakan alasan spesifik untuk retry generator. Tes database membuktikan draft melingkar tidak mencapai verifier;
+  soal retry yang mengganti kunci dengan `sit` diterima, atau fallback authored digunakan setelah dua draft gagal. Keduanya masih
+  dapat dinilai 100 dan membuka progres melalui alur normal.
+- Audit 7.219 entri authored (termasuk versi prompt EN/ID, materi, dan template latihan) tidak menemukan kasus ini.
+  Scanner audit kini memberi flag `sound_comparison_reuses_reference_as_answer` untuk pemeriksaan berikutnya.
+- Tes Go/database, coursecheck, dan e2e mock 194 node dalam mode Indonesia lolos. Tidak memakai token OpenAI atau TTS.
+
+Riwayat attempt yang sudah dinilai dipertahankan. Aturan baru berlaku pada soal yang dibuat setelah kode diperbarui;
+perbaikan ini belum di-commit, di-push, atau diterapkan ke produksi.

@@ -604,7 +604,12 @@
           "i18n": {
             "id": {
               "explain": "'Turn right' adalah arah jalanmu. 'On your left' adalah letak apoteknya.",
-              "prompt": "'Turn right at the school. The pharmacy is on your left.' Di mana apoteknya?"
+              "prompt": "'Turn right at the school. The pharmacy is on your left.' Di mana apoteknya?",
+              "options": [
+                "di sebelah kanan",
+                "di sebelah kiri",
+                "di sekolah"
+              ]
             }
           }
         }

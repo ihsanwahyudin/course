@@ -338,7 +338,11 @@
           "i18n": {
             "id": {
               "prompt": "Bagaimana cara mengucapkan 'teacher'?",
-              "explain": "teacher adalah kata benda dua suku kata, jadi suku kata pertama yang kuat: TEA-cher. tea-CHER adalah kesalahan yang sangat umum."
+              "explain": "teacher adalah kata benda dua suku kata, jadi suku kata pertama yang kuat: TEA-cher. tea-CHER adalah kesalahan yang sangat umum.",
+              "options": [
+                "TEA-cher (tekanan di awal)",
+                "tea-CHER (tekanan di akhir)"
+              ]
             }
           }
         }
@@ -650,7 +654,11 @@
           "i18n": {
             "id": {
               "prompt": "Kamus menunjukkan fifteen /ˌfɪfˈtiːn/. Di mana tekanan utamanya?",
-              "explain": "Tanda atas ˈ ada sebelum 'tiːn', jadi tekanan utamanya fif-TEEN. Tanda bawah ˌ di awal hanya tekanan yang lebih lemah."
+              "explain": "Tanda atas ˈ ada sebelum 'tiːn', jadi tekanan utamanya fif-TEEN. Tanda bawah ˌ di awal hanya tekanan yang lebih lemah.",
+              "options": [
+                "FIF-teen (tekanan di awal)",
+                "fif-TEEN (tekanan di akhir)"
+              ]
             }
           }
         }
@@ -738,8 +746,20 @@
         "ws-2": "Pilih jawaban yang benar. Dengarkan. Pilih angka yang kamu dengar.",
         "ws-3": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar six atau sick? Pilih kata yang kamu dengar.",
         "ws-4": "Pilih jawaban yang benar. Budi bilang: 'This is my frien, Dimas.' Bunyi apa yang hilang di akhir kata 'friend'? Pilih hurufnya.",
-        "ws-5": "Pilih jawaban yang benar. Kamus menunjukkan potato /pəˈteɪ.təʊ/. Suku kata mana yang ditekan: first, second atau third? Pilih jawabannya dalam bahasa Inggris.",
-        "ws-6": "Pilih jawaban yang benar. Di kamus Cambridge dan Oxford, apakah tanda tekanan ˈ ada sebelum atau sesudah suku kata yang ditekan? Pilih before atau after."
+        "ws-5": "Pilih jawaban yang benar. Kamus menunjukkan potato /pəˈteɪ.təʊ/. Suku kata mana yang ditekan: pertama, kedua, atau ketiga?",
+        "ws-6": "Pilih jawaban yang benar. Di kamus Cambridge dan Oxford, apakah tanda tekanan ˈ ada sebelum atau sesudah suku kata yang ditekan? Pilih sebelum atau sesudah."
+      },
+      "assessmentOptions": {
+        "ws-5": [
+          "kedua",
+          "pertama",
+          "ketiga"
+        ],
+        "ws-6": [
+          "sebelum",
+          "sesudah",
+          "di akhir kata"
+        ]
       }
     }
   }

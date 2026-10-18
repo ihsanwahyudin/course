@@ -55,17 +55,27 @@ type Example struct {
 // Question is a practice question. Answer, Solution and Explanation stay on
 // the server until the learner has answered (or given up).
 type Question struct {
-	Type        string   `json:"type"` // mcq | word_order
-	ObjectiveID string   `json:"objectiveId"`
-	Prompt      string   `json:"prompt"`
-	Options     []string `json:"options"`  // mcq
-	Answer      int      `json:"answer"`   // mcq: index into Options
-	Tokens      []string `json:"tokens"`   // word_order: words shown, shuffled
-	Solution    string   `json:"solution"` // word_order: the correct sentence
-	Explanation string   `json:"explanation"`
+	Type           string   `json:"type"` // mcq | word_order
+	ObjectiveID    string   `json:"objectiveId"`
+	Prompt         string   `json:"prompt"`
+	Options        []string `json:"options"`                  // mcq: canonical grading order
+	DisplayOptions []string `json:"displayOptions,omitempty"` // optional translated labels, same indexes
+	Answer         int      `json:"answer"`                   // mcq: index into Options
+	Tokens         []string `json:"tokens"`                   // word_order: words shown, shuffled
+	Solution       string   `json:"solution"`                 // word_order: the correct sentence
+	Explanation    string   `json:"explanation"`
 	// Listen is English the learner hears (and doesn't see) before answering:
 	// listening and pronunciation questions. Shown after answering.
 	Listen string `json:"listen,omitempty"`
+}
+
+// OptionsForDisplay translates explanatory labels while preserving the
+// canonical choices used to compare lesson versions and grade by index.
+func (q Question) OptionsForDisplay() []string {
+	if len(q.DisplayOptions) > 0 && len(q.DisplayOptions) == len(q.Options) {
+		return q.DisplayOptions
+	}
+	return q.Options
 }
 
 type Mark struct {
@@ -193,6 +203,9 @@ func validateQuestion(q Question, objectives map[string]bool, maxPrompt int) (Qu
 			seen[strings.ToLower(o)] = true
 			q.Options[i] = o
 		}
+		if err := validateSoundComparison(q.Prompt, []string{q.Options[q.Answer], q.OptionsForDisplay()[q.Answer]}); err != nil {
+			return q, err
+		}
 		q.Tokens, q.Solution = nil, ""
 	case QuestionWordOrder:
 		if len(q.Tokens) < 2 || len(q.Tokens) > maxTokens {
@@ -224,6 +237,20 @@ func checkBasics(q Question, objectives map[string]bool, maxPrompt int) (Questio
 	}
 	if !objectives[q.ObjectiveID] {
 		return q, fmt.Errorf("question targets unknown objective %q", q.ObjectiveID)
+	}
+	if len(q.DisplayOptions) > 0 {
+		if q.Type != QuestionMCQ || len(q.DisplayOptions) != len(q.Options) {
+			return q, fmt.Errorf("translated option labels must match every mcq option")
+		}
+		seen := map[string]bool{}
+		for i, label := range q.DisplayOptions {
+			label = clean(label)
+			if badLen(label, maxShort) || seen[strings.ToLower(label)] {
+				return q, fmt.Errorf("translated option labels must be distinct and non-empty")
+			}
+			seen[strings.ToLower(label)] = true
+			q.DisplayOptions[i] = label
+		}
 	}
 	q.Listen = clean(q.Listen)
 	if runes(q.Listen) > 300 {
@@ -366,9 +393,15 @@ func LeaksAnswer(hint string, q Question) bool {
 	var answer string
 	switch q.Type {
 	case QuestionMCQ:
-		answer = NormalizeWords(q.Options[q.Answer])
+		// Check both the canonical answer and the translated label.
 		// A short answer like "he" counts only as a whole word.
-		return answer != "" && strings.Contains(h, " "+answer+" ")
+		for _, label := range []string{q.Options[q.Answer], q.OptionsForDisplay()[q.Answer]} {
+			answer = NormalizeWords(label)
+			if answer != "" && strings.Contains(h, " "+answer+" ") {
+				return true
+			}
+		}
+		return false
 	case QuestionWordOrder:
 		answer = NormalizeWords(q.Solution)
 		return answer != "" && strings.Contains(h, answer)

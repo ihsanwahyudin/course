@@ -12,6 +12,8 @@ import urllib.request
 
 
 COURSE = "english"
+LOCALE = os.environ.get("E2E_LOCALE", "en")
+OPTION_COVERAGE = {"plan": set(), "material": set(), "assessment": set()}
 EMAIL_A, EMAIL_B, PASSWORD = "e2e-a@example.com", "e2e-b@example.com", "e2e-password-123"
 TOKEN = {"value": ""}
 
@@ -19,8 +21,7 @@ TOKEN = {"value": ""}
 def call(api, method, path, body=None, lang=None):
     data = json.dumps(body).encode() if body is not None else None
     headers = {"Content-Type": "application/json", "X-FluentPath-Client": "native"}
-    if lang:
-        headers["Accept-Language"] = lang
+    headers["Accept-Language"] = lang or LOCALE
     if TOKEN["value"]:
         headers["Authorization"] = "Bearer " + TOKEN["value"]
     req = urllib.request.Request(api + path, data=data, method=method, headers=headers)
@@ -40,6 +41,13 @@ def lessons(curriculum):
     for p in glob.glob(os.path.join(curriculum, "lessons", "*.json")):
         with open(p) as f:
             l = json.load(f)
+        translation = l.get("i18n", {}).get(LOCALE, {})
+        for item in l["assessment"]:
+            item["displayOptions"] = translation.get("assessmentOptions", {}).get(item["id"], [])
+            item["localizedPrompt"] = translation.get("assessment", {}).get(item["id"], item["prompt"])
+        plan_path = os.path.join(curriculum, "plans", l["nodeId"] + ".json")
+        with open(plan_path) as f:
+            l["plan"] = json.load(f)[LOCALE]
         out[l["nodeId"]] = l
     return out
 
@@ -84,6 +92,8 @@ def checkpoint_answer(item, authored, wrong=False):
     kind = item["type"]
     if kind == "mcq":
         key = authored["correctOption"]
+        if authored.get("displayOptions"):
+            key = authored["displayOptions"][authored["options"].index(key)]
         right = item["options"].index(key)
         return str((right + 1) % len(item["options"]) if wrong else right)
     if kind == "multi":
@@ -102,7 +112,7 @@ def checkpoint_answer(item, authored, wrong=False):
     return "zzz" if wrong else authored["acceptableAnswers"][0]
 
 
-def walk_steps(api, node_id, s, helper):
+def walk_steps(api, node_id, s, helper, plan):
     """Goes through every step; on the helper lesson it also asks, uses both hints,
     gives up, takes the similar question and checks the rules on the way."""
     sid = s["id"]
@@ -111,6 +121,13 @@ def walk_steps(api, node_id, s, helper):
         n = s["lesson"]["stepIndex"]
         step = s["lesson"]["steps"][n]
         q = step["question"]
+        authored = plan["steps"][n].get("question")
+        if q and authored and q["type"] == "mcq":
+            labels = authored.get("displayOptions") or authored["options"]
+            if q["options"] != labels:
+                fail(f"{node_id}: step {n + 1} option language differs from {LOCALE} content")
+            if authored.get("displayOptions"):
+                OPTION_COVERAGE["plan"].add((node_id, n))
         if helper and n == 0 and not step["asks"]:
             status, s = step_call(api, sid, 0, "ask", {"content": "Can you explain this again?"})
             if status != 200 or len(s["lesson"]["steps"][0]["asks"]) != 1:
@@ -181,8 +198,17 @@ def drive(api, node_id, lesson, helper=False):
         status, c = call(api, "POST", f"/api/v1/flashcards/{q['cards'][0]['id']}/review", {"grade": "good"})
         if status != 200 or c["intervalDays"] != 1:
             fail(f"{node_id}: review flashcard: {status} {c}")
+    for section, authored_section in zip(s["material"]["sections"], lesson["material"]):
+        for n, (block, authored) in enumerate(zip(section["blocks"], authored_section["blocks"])):
+            if authored["type"] != "check":
+                continue
+            translated = authored.get("i18n", {}).get(LOCALE, {}).get("options")
+            if block["options"] != (translated or authored["options"]) or block["answer"] != authored["answer"]:
+                fail(f"{node_id}/{section['id']}: material option language or answer changed")
+            if translated:
+                OPTION_COVERAGE["material"].add((node_id, section["id"], n))
     total = s["lesson"]["totalSteps"]
-    s = walk_steps(api, node_id, s, helper)
+    s = walk_steps(api, node_id, s, helper, lesson["plan"])
     if helper:
         print(f"  ✓ {node_id}: {total} steps — asked, 2 hints then gave up, similar question once; flashcards saved and reviewed")
 
@@ -240,6 +266,14 @@ def start_checkpoint(api, node_id, s, lesson, attempt, practice=False):
         fail(f"{node_id}: checkpoint {attempt}: {status} {cp}")
     if any("acceptedAnswers" in it or "rubric" in it for it in cp["items"]):
         fail(f"{node_id}: the checkpoint must not carry its answers")
+    for item, authored in zip(cp["items"], lesson["assessment"]):
+        if item["type"] not in ("mcq", "multi"):
+            continue
+        labels = authored.get("displayOptions") or authored["options"]
+        if sorted(item["options"]) != sorted(labels):
+            fail(f"{node_id}/{authored['id']}: checkpoint option language changed")
+        if authored.get("displayOptions"):
+            OPTION_COVERAGE["assessment"].add((node_id, authored["id"]))
     return cp
 
 
@@ -283,7 +317,13 @@ def learn(api, curriculum):
         status, body = call(api, "POST", "/api/v1/sessions", {"course": course, "nodeId": nid})
         if status != 409:
             fail(f"{course}/{nid} should not start: {status} {body}")
-    print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A}")
+    print(f"  ✓ all {len(ls)} ready lessons mastered by {EMAIL_A} in {LOCALE}")
+    if LOCALE == "id":
+        expected = {"plan": 115, "material": 131, "assessment": 7}
+        actual = {kind: len(items) for kind, items in OPTION_COVERAGE.items()}
+        if actual != expected:
+            fail(f"Indonesian option translation coverage: {actual}, expected {expected}")
+        print(f"  ✓ all 253 translated questions verified over HTTP: {actual}")
     for ck in ("a0-checkpoint", "a1-checkpoint", "a2-checkpoint", "b1-checkpoint", "b2-checkpoint", "c1-checkpoint", "c2-checkpoint"):
         level_checkpoint(api, ls, ck)
     sign_in(api, EMAIL_B, register=False)
@@ -304,7 +344,7 @@ def level_checkpoint(api, ls, ck):
     # The offline provider uses hand-written questions from the level's lessons.
     def key(it):
         for a in ls[it["lessonId"]]["assessment"]:
-            if a["prompt"] == it["prompt"]:
+            if a["localizedPrompt"] == it["prompt"]:
                 return checkpoint_answer(it, a)
         fail(f"no hand-written question matches {it['prompt']!r}")
     right = [{"itemId": it["id"], "answer": key(it)} for it in cp["items"]]
@@ -345,5 +385,7 @@ def verify(api, curriculum):
 
 
 if __name__ == "__main__":
+    if LOCALE not in ("en", "id"):
+        fail("E2E_LOCALE must be en or id")
     mode, api, curriculum = sys.argv[1:4]
     {"learn": learn, "verify": verify}[mode](api, curriculum)

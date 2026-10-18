@@ -34,7 +34,7 @@ export function Option({ label, state, onPress, disabled }: { label: string; sta
       style={[styles.option, { backgroundColor: look.bg, borderColor: look.border }, Platform.OS === 'web' && ({ cursor: disabled ? 'default' : 'pointer' } as object)]}
     >
       {state === 'right' ? <Icon name="check" size={14} color={look.fg} strokeWidth={2.5} /> : null}
-      <Text size={16} weight="medium" color={look.fg}>
+      <Text size={16} weight="medium" color={look.fg} style={{ flexShrink: 1 }}>
         {label}
       </Text>
     </Pressable>
@@ -233,7 +233,7 @@ export function QuestionCard({ q, eyebrow, listenPath, busy, readOnly, onAnswer,
 
 const styles = StyleSheet.create({
   card: { backgroundColor: colors.card, borderWidth: 1, borderColor: colors.line, borderRadius: 24, padding: 20, gap: 16 },
-  option: { flexDirection: 'row', alignItems: 'center', gap: 6, borderWidth: 1.5, borderRadius: radius.pill, paddingHorizontal: 18, paddingVertical: 9, minHeight: 44 },
+  option: { maxWidth: '100%', flexDirection: 'row', alignItems: 'center', gap: 6, borderWidth: 1.5, borderRadius: radius.pill, paddingHorizontal: 18, paddingVertical: 9, minHeight: 44 },
   hint: { flexDirection: 'row', gap: 10, backgroundColor: colors.amberSoft, borderRadius: radius.xxl, padding: 14 },
   listen: { flexDirection: 'row', alignItems: 'center', gap: 10, alignSelf: 'flex-start', backgroundColor: colors.accentSoft, borderRadius: radius.pill, paddingHorizontal: 18, paddingVertical: 12 },
   result: { borderRadius: radius.xxl, padding: 16, gap: 8 },

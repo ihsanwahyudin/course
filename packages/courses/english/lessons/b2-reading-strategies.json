@@ -391,7 +391,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu butuh tanggal rapat dewan berikutnya dari laporan dua halaman. Apa yang kamu lakukan?",
-              "explain": "Kamu butuh satu fakta, jadi kamu scanning: tanggal punya nama bulan atau tahun, jadi matamu mencari itu. Membaca semuanya terlalu lambat, dan judul serta paragraf pertama memberi inti teks, belum tentu tanggalnya."
+              "explain": "Kamu butuh satu fakta, jadi kamu scanning: tanggal punya nama bulan atau tahun, jadi matamu mencari itu. Membaca semuanya terlalu lambat, dan judul serta paragraf pertama memberi inti teks, belum tentu tanggalnya.",
+              "options": [
+                "Baca seluruh laporan dengan teliti dari awal.",
+                "Cari nama bulan atau tahun dengan cepat, lalu baca kalimatnya.",
+                "Baca judul dan paragraf pertama saja."
+              ]
             }
           }
         }
@@ -492,7 +497,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: 'The city spent Rp500 billion on new drains in Kemang. This year, 120 homes in the area flooded, the same number as last year.' Apa yang disiratkan penulis?",
-              "explain": "Penulis meletakkan biaya besar di sebelah **the same number as last year** (jumlah yang sama dengan tahun lalu): tidak ada yang berubah. 'Terlalu sedikit' kebalikan dari yang ditekankan teks (uang yang banyak), dan 'tahun depan' terlalu jauh: teksnya tidak bicara tentang masa depan."
+              "explain": "Penulis meletakkan biaya besar di sebelah **the same number as last year** (jumlah yang sama dengan tahun lalu): tidak ada yang berubah. 'Terlalu sedikit' kebalikan dari yang ditekankan teks (uang yang banyak), dan 'tahun depan' terlalu jauh: teksnya tidak bicara tentang masa depan.",
+              "options": [
+                "Saluran air itu belum membantu.",
+                "Dana untuk saluran air terlalu sedikit.",
+                "Saluran air akan bekerja lebih baik tahun depan."
+              ]
             }
           }
         }
@@ -603,7 +613,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: 'The new bike-sharing scheme is a real step forward for Medan. In its first month, people made 30,000 trips, twice the number the city expected.' Bagaimana sikap penulisnya?",
-              "explain": "**a real step forward** (langkah maju yang nyata) adalah penilaian positif, dan penulis menambahkan hasil yang bagus (dua kali lipat dari yang diharapkan). Tidak ada may, so far atau but, jadi bukan cautious, dan tidak ada yang dikritik."
+              "explain": "**a real step forward** (langkah maju yang nyata) adalah penilaian positif, dan penulis menambahkan hasil yang bagus (dua kali lipat dari yang diharapkan). Tidak ada may, so far atau but, jadi bukan cautious, dan tidak ada yang dikritik.",
+              "options": [
+                "Positif",
+                "Berhati-hati",
+                "Kritis"
+              ]
             }
           }
         },
@@ -620,7 +635,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: 'Wonderful: after five years and Rp3 trillion, the new road is finished. It floods every time it rains.' Bagaimana sikap penulisnya?",
-              "explain": "Ini **ironi**: *Wonderful* (luar biasa) berdampingan dengan fakta buruk (lima tahun, biaya besar, dan jalannya banjir setiap hujan). Maksud penulis kebalikan dari luar biasa, jadi sikapnya kritis."
+              "explain": "Ini **ironi**: *Wonderful* (luar biasa) berdampingan dengan fakta buruk (lima tahun, biaya besar, dan jalannya banjir setiap hujan). Maksud penulis kebalikan dari luar biasa, jadi sikapnya kritis.",
+              "options": [
+                "Positif",
+                "Netral",
+                "Kritis"
+              ]
             }
           }
         }
@@ -741,7 +761,12 @@
           "i18n": {
             "id": {
               "prompt": "Di sebuah artikel opini kamu membaca: 'Critics argue that the new bus lanes make traffic worse.' Ini pendapat siapa?",
-              "explain": "**Critics argue that…** memberi tahu apa yang dipikirkan orang lain. Penulis bisa setuju atau tidak: cari kata-kata penulis sendiri (in my view, should, But…) di bagian selanjutnya. Tidak ada angka atau sumber, jadi ini bukan fakta dari survei."
+              "explain": "**Critics argue that…** memberi tahu apa yang dipikirkan orang lain. Penulis bisa setuju atau tidak: cari kata-kata penulis sendiri (in my view, should, But…) di bagian selanjutnya. Tidak ada angka atau sumber, jadi ini bukan fakta dari survei.",
+              "options": [
+                "Pendapat penulis sendiri",
+                "Pendapat orang lain yang dilaporkan penulis",
+                "Fakta dari survei"
+              ]
             }
           }
         }
@@ -778,7 +803,12 @@
           "i18n": {
             "id": {
               "prompt": "Scan: seberapa cepat tanahnya turun di beberapa daerah?",
-              "explain": "Cari angka di dekat kata **ground** (tanah) dan **a year** (per tahun): sekitar 10 sentimeter. 12 adalah panjang tembok dalam kilometer dan 50 adalah jumlah pompa: angka-angka lain itulah jebakannya."
+              "explain": "Cari angka di dekat kata **ground** (tanah) dan **a year** (per tahun): sekitar 10 sentimeter. 12 adalah panjang tembok dalam kilometer dan 50 adalah jumlah pompa: angka-angka lain itulah jebakannya.",
+              "options": [
+                "Sekitar 10 sentimeter per tahun",
+                "Sekitar 12 sentimeter per tahun",
+                "Sekitar 50 sentimeter per tahun"
+              ]
             }
           }
         },
@@ -795,7 +825,12 @@
           "i18n": {
             "id": {
               "prompt": "'The plan has 40 pages about the wall. It has one page about groundwater.' Apa yang disiratkan penulis?",
-              "explain": "Penulis meletakkan 40 halaman di sebelah satu halaman, dalam paragraf tersendiri: penekanan itu berarti masalah air tanah kurang diperhatikan. Panjang rencananya bukan intinya, dan penulis jelas menganggap air tanah masalah besar (kota ini ambles karenanya)."
+              "explain": "Penulis meletakkan 40 halaman di sebelah satu halaman, dalam paragraf tersendiri: penekanan itu berarti masalah air tanah kurang diperhatikan. Panjang rencananya bukan intinya, dan penulis jelas menganggap air tanah masalah besar (kota ini ambles karenanya).",
+              "options": [
+                "Rencana itu kurang serius menangani air tanah.",
+                "Rencananya terlalu panjang.",
+                "Air tanah bukan masalah di Jakarta Utara."
+              ]
             }
           }
         },
@@ -812,7 +847,12 @@
           "i18n": {
             "id": {
               "prompt": "Menurut penulis, uangnya sebaiknya dipakai pertama-tama untuk apa?",
-              "explain": "Paragraf terakhir berisi pendapat penulis: **in my view, the money should go first to clean piped water** (menurut saya, uangnya sebaiknya dipakai dulu untuk air ledeng yang bersih). Tembok dan pompa adalah rencana pemerintah; penulis melaporkannya lalu berkata **But**."
+              "explain": "Paragraf terakhir berisi pendapat penulis: **in my view, the money should go first to clean piped water** (menurut saya, uangnya sebaiknya dipakai dulu untuk air ledeng yang bersih). Tembok dan pompa adalah rencana pemerintah; penulis melaporkannya lalu berkata **But**.",
+              "options": [
+                "Tanggul laut yang lebih besar",
+                "Lebih banyak pompa",
+                "Air bersih perpipaan untuk setiap rumah"
+              ]
             }
           }
         }

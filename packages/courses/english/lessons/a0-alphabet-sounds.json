@@ -383,7 +383,11 @@
           "i18n": {
             "id": {
               "explain": "Saat mengeja, kamu menyebut nama tiap huruf. Nama huruf C adalah 'see' (si), walaupun *cat* diawali bunyi 'k'.",
-              "prompt": "Kamu mengeja kata 'cat' dengan suara. Bagaimana kamu menyebut huruf pertamanya?"
+              "prompt": "Kamu mengeja kata 'cat' dengan suara. Bagaimana kamu menyebut huruf pertamanya?",
+              "options": [
+                "'k', bunyi awal kata cat",
+                "'see', nama huruf C"
+              ]
             }
           }
         }

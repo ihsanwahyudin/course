@@ -319,7 +319,12 @@
           "i18n": {
             "id": {
               "prompt": "Pertanyaannya 'How long is the delay?' (Berapa lama keterlambatannya?). Apa yang perlu kamu dengarkan?",
-              "explain": "How long menanyakan lamanya waktu, jadi dengarkan jumlah menit, biasanya tepat setelah 'delayed by': delayed by twenty minutes (terlambat dua puluh menit)."
+              "explain": "How long menanyakan lamanya waktu, jadi dengarkan jumlah menit, biasanya tepat setelah 'delayed by': delayed by twenty minutes (terlambat dua puluh menit).",
+              "options": [
+                "Nomor gerbang",
+                "Jumlah menit",
+                "Kota"
+              ]
             }
           }
         }
@@ -414,7 +419,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu mendengar: 'The train to Bandung is delayed by twenty minutes. It now leaves at ten forty.' Jam berapa keretanya berangkat?",
-              "explain": "Jam yang baru ada setelah 'now': ten forty = 10.40. Twenty (dua puluh) adalah lamanya keterlambatan."
+              "explain": "Jam yang baru ada setelah 'now': ten forty = 10.40. Twenty (dua puluh) adalah lamanya keterlambatan.",
+              "options": [
+                "10:20",
+                "10:40",
+                "Dalam 40 menit"
+              ]
             }
           }
         }
@@ -497,7 +507,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu mendengar: 'Take the third street on the right.' Apa yang kamu lakukan?",
-              "explain": "Third = ketiga, jadi kamu hitung tiga jalan, dan 'on the right' berarti kamu belok kanan di sana."
+              "explain": "Third = ketiga, jadi kamu hitung tiga jalan, dan 'on the right' berarti kamu belok kanan di sana.",
+              "options": [
+                "Belok kiri ke jalan ketiga.",
+                "Belok kanan ke jalan ketiga.",
+                "Belok kanan ke jalan pertama."
+              ]
             }
           }
         }
@@ -582,7 +597,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu mendengar: 'Good morning. I have an appointment with Doctor Hasan at ten.' — 'OK. Please sit down and wait. He is with a patient now.' Mereka di mana?",
-              "explain": "Appointment (janji temu), doctor dan patient (pasien) adalah kata-kata di klinik, jadi mereka ada di klinik."
+              "explain": "Appointment (janji temu), doctor dan patient (pasien) adalah kata-kata di klinik, jadi mereka ada di klinik.",
+              "options": [
+                "Di bank",
+                "Di klinik",
+                "Di sekolah"
+              ]
             }
           }
         }

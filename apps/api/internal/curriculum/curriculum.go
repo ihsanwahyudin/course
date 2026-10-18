@@ -223,6 +223,12 @@ func (l *Lesson) PromptIn(it AssessmentItem, lang string) string {
 	return it.Prompt
 }
 
+// AssessmentLabelsIn returns optional translations of explanatory options.
+// The canonical options and their answer indexes remain language-independent.
+func (l *Lesson) AssessmentLabelsIn(it AssessmentItem, lang string) []string {
+	return l.I18n[lang].AssessmentOptions[it.ID]
+}
+
 // TutorPolicy is the course-specific teaching contract given to the AI.
 type TutorPolicy struct {
 	Policy          string `json:"policy"`
@@ -879,6 +885,20 @@ func validateTranslations(c *Curriculum) []error {
 				known[it.ID] = true
 				if strings.TrimSpace(l.I18n[lang].Assessment[it.ID]) == "" {
 					errs = append(errs, fmt.Errorf("lesson %q: missing %q prompt for checkpoint item %q", id, lang, it.ID))
+				}
+			}
+			for itemID, labels := range l.I18n[lang].AssessmentOptions {
+				var item *AssessmentItem
+				for i := range l.Assessment {
+					if l.Assessment[i].ID == itemID {
+						item = &l.Assessment[i]
+						break
+					}
+				}
+				if item == nil || item.Type != "mcq" {
+					errs = append(errs, fmt.Errorf("lesson %q: %q option labels require a known mcq checkpoint item %q", id, lang, itemID))
+				} else if err := validateOptionLabels(item.Options, labels); err != nil {
+					errs = append(errs, fmt.Errorf("lesson %q checkpoint item %q: %q %w", id, itemID, lang, err))
 				}
 			}
 			for itemID := range l.I18n[lang].Assessment {

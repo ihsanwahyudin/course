@@ -505,7 +505,12 @@
           ],
           "answer": 2,
           "prompt": "Dengarkan. Berapa lama keterlambatannya?",
-          "explanation": "Kamu mendengar 'delayed **by** FIFty minutes': *by* + berapa lama. **FIF**ty tekanannya di awal; fif**TEEN** di akhir. Eleven (11) adalah nomor gate, bukan lamanya keterlambatan."
+          "explanation": "Kamu mendengar 'delayed **by** FIFty minutes': *by* + berapa lama. **FIF**ty tekanannya di awal; fif**TEEN** di akhir. Eleven (11) adalah nomor gate, bukan lamanya keterlambatan.",
+          "displayOptions": [
+            "15 menit",
+            "11 menit",
+            "50 menit"
+          ]
         }
       },
       {
@@ -559,7 +564,12 @@
           ],
           "answer": 2,
           "prompt": "Dengarkan petunjuk arah ke terminal bus. Rute mana yang benar?",
-          "explanation": "**Go past** the bank = lewati bank-nya, jangan belok di sana, dan **the first street on the right** = belok kanan di jalan nomor 1. Terminal busnya ada di ujung jalan itu."
+          "explanation": "**Go past** the bank = lewati bank-nya, jangan belok di sana, dan **the first street on the right** = belok kanan di jalan nomor 1. Terminal busnya ada di ujung jalan itu.",
+          "displayOptions": [
+            "Belok kanan di bank, lalu jalan sampai ujung jalan.",
+            "Lewati bank, lalu belok ke jalan kedua di sebelah kanan.",
+            "Lewati bank, lalu belok ke jalan pertama di sebelah kanan."
+          ]
         }
       },
       {
@@ -577,7 +587,12 @@
           ],
           "answer": 1,
           "prompt": "Dengarkan instruksi di mesin tiket. Apa yang kamu lakukan pertama kali?",
-          "explanation": "Kata urutan **first** ada sebelum *choose your station* (pilih stasiunmu). **Then** (lalu) kamu masukkan uangnya. Dan **don't** press the red button: don't = jangan tekan tombol merah."
+          "explanation": "Kata urutan **first** ada sebelum *choose your station* (pilih stasiunmu). **Then** (lalu) kamu masukkan uangnya. Dan **don't** press the red button: don't = jangan tekan tombol merah.",
+          "displayOptions": [
+            "Masukkan uangmu.",
+            "Pilih stasiun tujuanmu.",
+            "Tekan tombol merah."
+          ]
         }
       },
       {
@@ -631,7 +646,12 @@
           ],
           "answer": 0,
           "prompt": "Dengarkan Rina dan Dimas. Apa poin utamanya?",
-          "explanation": "Dimas bilang **No, I'm at home. I'm sick today.** (Tidak, aku di rumah. Aku sakit hari ini.) Itulah poin utamanya. Dia bisa mengirim laporannya, tapi dia tidak di kantor, dan yang sakit bukan Rina."
+          "explanation": "Dimas bilang **No, I'm at home. I'm sick today.** (Tidak, aku di rumah. Aku sakit hari ini.) Itulah poin utamanya. Dia bisa mengirim laporannya, tapi dia tidak di kantor, dan yang sakit bukan Rina.",
+          "displayOptions": [
+            "Dimas sakit, jadi hari ini ia di rumah.",
+            "Dimas di kantor bersama laporannya.",
+            "Rina sakit dan perlu ke dokter."
+          ]
         }
       },
       {

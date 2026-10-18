@@ -292,7 +292,12 @@
           "i18n": {
             "id": {
               "prompt": "Kata mana yang kuat di 'The children are at school'?",
-              "explain": "children dan school adalah kata benda, jadi keduanya membawa arti: the CHIL-dren are at SCHOOL. the, are dan at adalah kata tugas: cepat dan lemah."
+              "explain": "children dan school adalah kata benda, jadi keduanya membawa arti: the CHIL-dren are at SCHOOL. the, are dan at adalah kata tugas: cepat dan lemah.",
+              "options": [
+                "children, school",
+                "the, are, at",
+                "semua kata sama kuat"
+              ]
             }
           }
         }
@@ -556,7 +561,12 @@
           "i18n": {
             "id": {
               "prompt": "Sari bilang: 'I | WANT | TO | GO | TO | THE | MARKET', semua kata kuat, dengan jeda. Apa yang harus dia ubah?",
-              "explain": "want, go dan market membawa arti. I, to dan the adalah kata tugas: lemah dan diselipkan di antara ketukan: I WANT to GO to the MAR-ket."
+              "explain": "want, go dan market membawa arti. I, to dan the adalah kata tugas: lemah dan diselipkan di antara ketukan: I WANT to GO to the MAR-ket.",
+              "options": [
+                "Tekankan want, go, dan market; ucapkan kata kecil dengan cepat tanpa berhenti.",
+                "Tekankan to, to, dan the karena kata-katanya pendek.",
+                "Ucapkan semua kata lebih keras."
+              ]
             }
           }
         }

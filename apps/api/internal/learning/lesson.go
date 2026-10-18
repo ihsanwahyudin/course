@@ -131,7 +131,7 @@ type LessonView struct {
 }
 
 func questionView(q tutor.Question, st qState) *QuestionView {
-	v := &QuestionView{Type: q.Type, ObjectiveID: q.ObjectiveID, Prompt: q.Prompt, Options: q.Options, Tokens: q.Tokens,
+	v := &QuestionView{Type: q.Type, ObjectiveID: q.ObjectiveID, Prompt: q.Prompt, Options: q.OptionsForDisplay(), Tokens: q.Tokens,
 		Hints: st.Hints, HintsLeft: tutor.MaxHints - len(st.Hints), Choice: st.Choice, Picked: st.Tokens,
 		Answered: st.Answered, Correct: st.Correct, Revealed: st.Revealed}
 	if v.Hints == nil {
@@ -223,7 +223,7 @@ func levelLessons(cur *curriculum.Curriculum, ck *curriculum.Node, lang string) 
 			continue
 		}
 		local := cur.LocalNode(n.ID, lang)
-		ll := ai.LevelLesson{ID: n.ID, Title: local.Title, Objective: objective[n.ID], Sample: l.Assessment[0], SamplePrompt: l.PromptIn(l.Assessment[0], lang)}
+		ll := ai.LevelLesson{ID: n.ID, Title: local.Title, Objective: objective[n.ID], Sample: l.Assessment[0], SamplePrompt: l.PromptIn(l.Assessment[0], lang), SampleDisplayOptions: l.AssessmentLabelsIn(l.Assessment[0], lang)}
 		for _, o := range local.Objectives {
 			ll.Objectives = append(ll.Objectives, o.Text)
 		}
@@ -699,7 +699,7 @@ func mistakes(lc *lessonCtx) (texts []string, cards []storage.NewFlashcard) {
 		}
 		answer := q.Solution
 		if q.Type == tutor.QuestionMCQ {
-			answer = q.Options[q.Answer]
+			answer = q.OptionsForDisplay()[q.Answer]
 		}
 		texts = append(texts, fmt.Sprintf("%s → %s", q.Prompt, answer))
 		front := q.Prompt

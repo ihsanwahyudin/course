@@ -400,7 +400,12 @@
           "i18n": {
             "id": {
               "prompt": "Kemarin Sari bilang: 'The MRT doesn't run after midnight.' Ini masih benar. Laporan mana yang benar?",
-              "explain": "Isinya **masih benar**, jadi bentuk sekarang boleh dipertahankan, dan backshift (*didn't run*) selalu benar setelah *said*. Keduanya benar."
+              "explain": "Isinya **masih benar**, jadi bentuk sekarang boleh dipertahankan, dan backshift (*didn't run*) selalu benar setelah *said*. Keduanya benar.",
+              "options": [
+                "Sari said the MRT doesn't run after midnight.",
+                "Sari said the MRT didn't run after midnight.",
+                "Keduanya benar."
+              ]
             }
           }
         }

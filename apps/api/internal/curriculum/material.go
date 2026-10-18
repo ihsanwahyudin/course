@@ -52,8 +52,8 @@ type Block struct {
 	Text string `json:"text,omitempty"`
 	// examples
 	Rows []ExampleRow `json:"rows,omitempty"`
-	// check: the options are English (the thing being learnt); the prompt
-	// (which may carry an instruction) and the explanation are translated.
+	// check: English being tested stays English. Explanatory choices may
+	// have translated labels in I18n, preserving their indexes.
 	Prompt  string               `json:"prompt,omitempty"`
 	Options []string             `json:"options,omitempty"`
 	Answer  *int                 `json:"answer,omitempty"`
@@ -62,9 +62,10 @@ type Block struct {
 }
 
 type BlockI18n struct {
-	Text    string `json:"text,omitempty"`
-	Prompt  string `json:"prompt,omitempty"`
-	Explain string `json:"explain,omitempty"`
+	Text    string   `json:"text,omitempty"`
+	Prompt  string   `json:"prompt,omitempty"`
+	Explain string   `json:"explain,omitempty"`
+	Options []string `json:"options,omitempty"`
 }
 
 // Resource is a hand-picked real-world link shown with the lesson.
@@ -92,8 +93,10 @@ type LessonText struct {
 	Intro              string   `json:"intro"`
 	SuggestedQuestions []string `json:"suggestedQuestions,omitempty"`
 	// Assessment maps a checkpoint item's id to its prompt in this language.
-	// Answers and rubrics stay in English for grading.
+	// Canonical answers and rubrics stay in English for grading.
 	Assessment map[string]string `json:"assessment,omitempty"`
+	// AssessmentOptions translates explanatory choices, preserving their indexes.
+	AssessmentOptions map[string][]string `json:"assessmentOptions,omitempty"`
 }
 
 // MaterialView is a lesson's reading material in one language.
@@ -141,6 +144,9 @@ func (c *Curriculum) MaterialIn(nodeID, lang string) *MaterialView {
 				}
 				if t.Explain != "" {
 					lb.Explain = t.Explain
+				}
+				if len(t.Options) > 0 {
+					lb.Options = append([]string{}, t.Options...)
 				}
 			}
 			if len(b.Rows) > 0 {
@@ -234,6 +240,16 @@ func validateMaterial(c *Curriculum) []error {
 			seen[s.ID] = true
 			for i, b := range s.Blocks {
 				where := fmt.Sprintf("lesson %q section %q block %d", id, s.ID, i)
+				for lang, text := range b.I18n {
+					if len(text.Options) == 0 {
+						continue
+					}
+					if b.Type != BlockCheck {
+						errs = append(errs, fmt.Errorf("%s: %q option labels require a check block", where, lang))
+					} else if err := validateOptionLabels(b.Options, text.Options); err != nil {
+						errs = append(errs, fmt.Errorf("%s: %q %w", where, lang, err))
+					}
+				}
 				switch b.Type {
 				case BlockText, BlockTip:
 					if strings.TrimSpace(b.Text) == "" {
@@ -310,3 +326,19 @@ func validateMaterial(c *Curriculum) []error {
 
 // FlashcardMax caps each side of a flashcard.
 const FlashcardMax = 160
+
+// Translations preserve the number and index of the canonical choices.
+func validateOptionLabels(options, labels []string) error {
+	if len(labels) != len(options) {
+		return fmt.Errorf("translated option labels must match every option")
+	}
+	seen := map[string]bool{}
+	for _, label := range labels {
+		key := strings.ToLower(strings.TrimSpace(label))
+		if key == "" || len([]rune(label)) > 200 || seen[key] {
+			return fmt.Errorf("translated option labels must be distinct, non-empty and at most 200 characters")
+		}
+		seen[key] = true
+	}
+	return nil
+}

@@ -64,7 +64,7 @@ func checkpointView(c storage.Checkpoint, attempt int) (*CheckpointView, error) 
 	v := &CheckpointView{ID: c.ID, Practice: c.Practice, Attempt: attempt, Items: make([]CheckItemView, 0, len(items))}
 	for _, it := range items {
 		v.Items = append(v.Items, CheckItemView{ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt,
-			Options: it.Options, Tokens: it.Tokens, Left: it.Left, Right: it.Right, HasAudio: it.Listen != ""})
+			Options: it.OptionsForDisplay(), Tokens: it.Tokens, Left: it.Left, Right: it.Right, HasAudio: it.Listen != ""})
 	}
 	return v, nil
 }

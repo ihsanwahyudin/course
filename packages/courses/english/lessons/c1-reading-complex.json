@@ -412,7 +412,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca kalimat dari sebuah abstrak ini: 'Data were collected through interviews with 35 nurses at two hospitals in Surabaya.' Ini bagian abstrak yang mana?",
-              "explain": "**Data were collected through interviews with 35 nurses** (data dikumpulkan lewat wawancara dengan 35 perawat) menjelaskan **bagaimana** penelitian dilakukan dan dengan siapa: itu metode. Tujuan (aim) akan menyebut apa yang ingin diketahui (This study examines…), dan temuan (findings) akan memberi hasil (Results show…)."
+              "explain": "**Data were collected through interviews with 35 nurses** (data dikumpulkan lewat wawancara dengan 35 perawat) menjelaskan **bagaimana** penelitian dilakukan dan dengan siapa: itu metode. Tujuan (aim) akan menyebut apa yang ingin diketahui (This study examines…), dan temuan (findings) akan memberi hasil (Results show…).",
+              "options": [
+                "Tujuan",
+                "Metode",
+                "Temuan"
+              ]
             }
           }
         }
@@ -523,7 +528,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: '6.1 You can cancel at any time. 6.2 If you cancel in the first 12 months, you agree to pay an early termination fee of Rp750,000. 6.3 After 12 months, no fee applies.' Budi menandatangani kontraknya 18 bulan lalu. Berapa yang harus dia bayar untuk membatalkannya?",
-              "explain": "18 bulan itu **setelah 12 bulan**, jadi yang berlaku klausul 6.3: **tidak ada biaya**. Rp750.000 hanya untuk 12 bulan pertama (6.2), dan teksnya tidak menyebut setengah biaya sama sekali."
+              "explain": "18 bulan itu **setelah 12 bulan**, jadi yang berlaku klausul 6.3: **tidak ada biaya**. Rp750.000 hanya untuk 12 bulan pertama (6.2), dan teksnya tidak menyebut setengah biaya sama sekali.",
+              "options": [
+                "Rp750.000",
+                "Tidak perlu membayar",
+                "Setengah biaya: Rp375.000"
+              ]
             }
           }
         }
@@ -634,7 +644,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: 'Critics say the new tax will force small cafés to close.' Ini bagian argumen yang mana?",
-              "explain": "**Critics say…** (para pengkritik bilang…) melaporkan pendapat pihak lain: argumen tandingan. Tidak ada angka, contoh atau penelitian, jadi bukan bukti, dan kesimpulan akan mengulang klaim penulis sendiri (Therefore…, For these reasons…)."
+              "explain": "**Critics say…** (para pengkritik bilang…) melaporkan pendapat pihak lain: argumen tandingan. Tidak ada angka, contoh atau penelitian, jadi bukan bukti, dan kesimpulan akan mengulang klaim penulis sendiri (Therefore…, For these reasons…).",
+              "options": [
+                "Bukti",
+                "Argumen tandingan",
+                "Kesimpulan"
+              ]
             }
           }
         }
@@ -846,7 +861,12 @@
           "i18n": {
             "id": {
               "prompt": "Sebuah iklan berkata: 'Our students' scores rose 20% after our new course!' Pertanyaan mana yang paling penting?",
-              "explain": "Kenaikan tidak banyak artinya tanpa **pembanding**: kalau siswa yang tidak ikut kursus juga naik 20%, kursus itu tidak istimewa. Apakah 20% terdengar besar, atau seberapa bagus bahasa iklannya, tidak memberi tahu apakah buktinya mendukung klaimnya."
+              "explain": "Kenaikan tidak banyak artinya tanpa **pembanding**: kalau siswa yang tidak ikut kursus juga naik 20%, kursus itu tidak istimewa. Apakah 20% terdengar besar, atau seberapa bagus bahasa iklannya, tidak memberi tahu apakah buktinya mendukung klaimnya.",
+              "options": [
+                "Dibandingkan dengan apa? Apakah siswa tanpa kursus juga meningkat?",
+                "Apakah 20% termasuk angka besar?",
+                "Apakah bahasa Inggris iklannya bagus?"
+              ]
             }
           }
         }

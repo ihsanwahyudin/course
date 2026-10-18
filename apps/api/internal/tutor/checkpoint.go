@@ -68,7 +68,7 @@ func (it CheckItem) Key() string {
 	switch it.Type {
 	case QuestionMCQ:
 		if it.Answer >= 0 && it.Answer < len(it.Options) {
-			return it.Options[it.Answer]
+			return it.OptionsForDisplay()[it.Answer]
 		}
 	case QuestionWordOrder:
 		return it.Solution
@@ -116,6 +116,9 @@ func FromDrafts(ds []DraftItem) ([]CheckItem, error) {
 			}
 			order := shuffled(len(it.Options), it.Prompt)
 			it.Options, it.Answer = permute(it.Options, order), order[it.Answer]
+			if len(it.DisplayOptions) == len(order) {
+				it.DisplayOptions = permute(it.DisplayOptions, order)
+			}
 		case QuestionMulti:
 			it.Answers = nil
 			for _, c := range d.CorrectOptions {
@@ -313,6 +316,9 @@ func validateTextItem(it CheckItem, objectives map[string]bool) (CheckItem, erro
 	if len(acc) == 0 || len(acc) > maxAccepted {
 		return it, fmt.Errorf("an open question needs 1–%d accepted answers", maxAccepted)
 	}
+	if err := validateSoundComparison(it.Prompt, acc); err != nil {
+		return it, err
+	}
 	it.Accepted = acc
 	it.Options, it.Answer, it.Tokens, it.Solution = nil, 0, nil, ""
 	return it, nil
@@ -398,6 +404,13 @@ func validateMulti(it CheckItem) (CheckItem, error) {
 		return it, fmt.Errorf("a multi question needs at least one right and one wrong option")
 	}
 	it.Answers = slices.Sorted(maps.Keys(seen))
+	var keys []string
+	for _, a := range it.Answers {
+		keys = append(keys, it.Options[a])
+	}
+	if err := validateSoundComparison(it.Prompt, keys); err != nil {
+		return it, err
+	}
 	it.Tokens, it.Solution, it.Left, it.Right, it.Pairing = nil, "", nil, nil, nil
 	return it, nil
 }
@@ -622,7 +635,7 @@ func AnswerText(it CheckItem, answer string) string {
 	switch it.Type {
 	case QuestionMCQ:
 		if n, err := strconv.Atoi(answer); err == nil && n >= 0 && n < len(it.Options) {
-			return it.Options[n]
+			return it.OptionsForDisplay()[n]
 		}
 	case QuestionLetters:
 		return spellOut(answer)
@@ -771,7 +784,7 @@ func ApplyGrade(raw json.RawMessage, items []CheckItem, answers map[string]strin
 			correctedVerdict = true
 		}
 		rev.Items = append(rev.Items, ItemReview{
-			ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt, Options: it.Options, Listen: it.Listen,
+			ID: it.ID, LessonID: it.LessonID, ObjectiveID: it.ObjectiveID, Type: it.Type, Prompt: it.Prompt, Options: it.OptionsForDisplay(), Listen: it.Listen,
 			Answer: ans, CorrectAnswer: correct, Score: score, Verdict: verdict(score), Explanation: expl, KeyFixed: keyFixed,
 		})
 		sum[it.ObjectiveID] += score
