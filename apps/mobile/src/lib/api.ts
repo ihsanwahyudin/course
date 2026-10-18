@@ -241,7 +241,7 @@ export type Material = { lead: string; sections: Section[]; suggestedQuestions: 
 // ---- step-by-step lessons ----
 
 export type StepKind = 'concept' | 'examples' | 'question' | 'timeline' | 'flashcards' | 'artifact' | 'resources';
-export type Pair = { en: string; id: string };
+export type Pair = { en: string; id: string; speechText?: string };
 export type Artifact = { title: string; intro: string; headers: string[]; rows: string[][]; tips: string[]; examples: Pair[] };
 export type Timeline = { title: string; caption: string; marks: { label: string; kind: 'past' | 'now' | 'future' }[] };
 

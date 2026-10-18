@@ -150,6 +150,10 @@ engVid, Woodward English. Say in the note when a link is above the lesson's leve
 
 - Every English sentence a plan reads aloud (word tiles, examples, cheat-sheet examples, `listen`) and every checkpoint `listen` is
   recorded once and committed in `<course>/audio/`.
+- A concept pair normally reads its visible `en` text exactly. If the teaching audio intentionally adds context, set the pair's optional
+  `speechText` explicitly (for example alphabet `I` → `I, as in ink.`) in both plan languages. Audio is keyed by that spoken text,
+  including for "listen to all" and audio bundling. The pronoun `I` reads only `I`; never globally expand a one-letter word to an
+  alphabet example. Audio-only wording changes do not restart learning steps or erase answers.
 - New lessons go into `audio/pending.json`. **Audio is made only after the content is reviewed**: remove the node from
   `pending.json`, then `cd apps/api && go run ./cmd/server bundle-audio` (only new or changed sentences are recorded).
 - Changing a spoken English sentence means re-recording it. Prefer changing explanations and Indonesian glosses.

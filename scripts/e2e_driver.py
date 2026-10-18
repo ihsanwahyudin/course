@@ -4,11 +4,13 @@
   e2e_driver.py verify <api> <course_dir>   log in again, check progress survived
 """
 import glob
+import hashlib
 import json
 import os
 import sys
 import urllib.error
 import urllib.request
+import urllib.parse
 
 
 COURSE = "english"
@@ -120,6 +122,8 @@ def walk_steps(api, node_id, s, helper, plan):
     while not s["lesson"]["checkpoint"]:
         n = s["lesson"]["stepIndex"]
         step = s["lesson"]["steps"][n]
+        if plan["steps"][n].get("pairs") and step["pairs"] != plan["steps"][n]["pairs"]:
+            fail(f"{node_id}: concept word labels or spoken text differ from authored content")
         q = step["question"]
         authored = plan["steps"][n].get("question")
         if q and authored and q["type"] == "mcq":
@@ -290,6 +294,25 @@ def enroll(api):
     print("  ✓ enrolled without onboarding (personalisation off), target B2")
 
 
+def check_literal_and_alphabet_audio(api, curriculum):
+    recordings = []
+    for text in ("I", "I, as in ink."):
+        path = "/api/v1/tts?" + urllib.parse.urlencode({"text": text, "v": "2"})
+        req = urllib.request.Request(api + path, headers={"Authorization": "Bearer " + TOKEN["value"]})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            if r.headers.get_content_type() != "audio/mpeg":
+                fail(f"{text}: expected the existing MP3, not device fallback")
+            recording = r.read()
+        digest = hashlib.sha256(text.encode()).hexdigest()
+        with open(os.path.join(curriculum, "audio", digest + ".mp3"), "rb") as f:
+            if recording != f.read():
+                fail(f"{text}: the speech endpoint returned the wrong recording")
+        recordings.append(recording)
+    if not all(recordings) or recordings[0] == recordings[1]:
+        fail("pronoun I and the alphabet example share one recording")
+    print("  ✓ pronoun I and alphabet I use separate recorded audio over HTTP (no TTS)")
+
+
 def learn(api, curriculum):
     # Anonymous visitors can browse but not learn.
     status, _ = call(api, "GET", f"/api/v1/courses/{COURSE}/roadmap")
@@ -301,6 +324,7 @@ def learn(api, curriculum):
     sign_in(api, EMAIL_B, register=True)
     sign_in(api, EMAIL_A, register=True)
     enroll(api)
+    check_literal_and_alphabet_audio(api, curriculum)
     ls = lessons(curriculum)
     for _ in range(len(ls) + 1):
         statuses, _ = roadmap_statuses(api)

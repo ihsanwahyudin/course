@@ -404,3 +404,20 @@ Masuk kategori bunyi yang benar tidak cukup: di A0, ejaan dan bunyi kata pemband
   fallback aman, nilai 100 yang tetap membuka progres, serta pembatasan berdasarkan lessonId di checkpoint level.
   Coursecheck lolos dan e2e mock mode Indonesia melewati 194 node sampai C2, termasuk login ulang setelah restart.
   Tidak memakai token OpenAI maupun TTS. Server lokal :8090 sudah memakai kode ini; belum diterapkan ke produksi.
+
+## 2026-10-18 — Audio kata ganti I tercampur dengan contoh alfabet
+
+Kartu `I` di `a0-pronouns` meminta audio untuk teks `I`, tetapi backend lama menambahkan `, as in ink.`
+ke semua huruf besar tunggal. Hasilnya tersimpan di bundle dan cache dengan kunci `I`, lalu dipakai juga untuk kata ganti.
+
+- Audio kini membaca teks yang diminta secara literal. Contoh alfabet ditentukan eksplisit melalui `pair.speechText`
+  di plan EN/ID `a0-alphabet-sounds` dan `a0-listening-first`. Label kartu tetap berupa satu huruf.
+  Klik kartu, "Dengar semua", pemanasan audio, dan bundling menggunakan teks ucapan yang sama.
+- Memindahkan 26 rekaman alfabet yang ada ke kunci kalimat eksplisit tanpa mengubah byte rekamannya. Bundle literal `I`
+  memakai rekaman `eye` yang sudah ada (pelafalan sama /aɪ/), sehingga tidak membuat TTS baru.
+- Cache disk huruf tunggal memakai versi baru dan URL pemutaran memakai `v=2`, melewati cache HTTP lama yang berlaku seminggu.
+  Progres, jawaban, dan chat dipertahankan saat sesi lama menerima metadata audio yang baru.
+- Semua tes Go/database dan coursecheck lolos; typecheck, lint, dan build web lolos. E2E mock Indonesia melewati 194 node,
+  memeriksa dua rekaman berbeda lewat HTTP dan metadata ucapan di langkah konsep, lalu memeriksa progres setelah restart.
+  Klik `I` dan "Dengar semua" juga berhasil mulai/selesai di browser lokal. Tidak memakai token OpenAI atau TTS.
+  Server lokal :8090 sudah memakai perbaikan ini; perubahan belum diterapkan ke produksi.

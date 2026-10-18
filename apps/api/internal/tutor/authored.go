@@ -248,7 +248,7 @@ func SpeechTexts(p Plan, limit int) []string {
 			add(st.Question.Listen)
 		}
 		for _, x := range st.Pairs {
-			add(x.EN)
+			add(x.SpokenText())
 		}
 		for _, x := range st.Examples {
 			add(x.EN)
