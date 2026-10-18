@@ -502,7 +502,12 @@
           "i18n": {
             "id": {
               "prompt": "Apa yang bisa kamu pakai di antara dua kalimat lengkap?",
-              "explain": "Dua ide lengkap butuh titik (lalu huruf kapital) atau kata penghubung seperti and: I live in Medan. I work in a bank. / I live in Medan and I work in a bank. Koma saja adalah kesalahan dalam bahasa Inggris."
+              "explain": "Dua ide lengkap butuh titik (lalu huruf kapital) atau kata penghubung seperti and: I live in Medan. I work in a bank. / I live in Medan and I work in a bank. Koma saja adalah kesalahan dalam bahasa Inggris.",
+              "options": [
+                "koma",
+                "titik atau kata and",
+                "tidak perlu pemisah"
+              ]
             }
           }
         }

@@ -174,6 +174,6 @@ const styles = StyleSheet.create({
   exampleRow: { paddingHorizontal: 16, paddingVertical: 12, gap: 2 },
   tip: { flexDirection: 'row', gap: 10, backgroundColor: colors.accentSoft, borderRadius: radius.xxl + 4, padding: 16 },
   check: { gap: 12, borderWidth: 1, borderColor: colors.line, borderStyle: 'dashed', borderRadius: radius.xxl + 4, padding: 16, backgroundColor: colors.card },
-  option: { borderWidth: 1.5, borderColor: colors.line, borderRadius: radius.pill, paddingHorizontal: 16, paddingVertical: 8, backgroundColor: colors.card },
+  option: { maxWidth: '100%', borderWidth: 1.5, borderColor: colors.line, borderRadius: radius.pill, paddingHorizontal: 16, paddingVertical: 8, backgroundColor: colors.card },
   cards: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 14, borderWidth: 1, borderColor: colors.line, borderRadius: 20, padding: 18, backgroundColor: colors.card },
 });

@@ -423,7 +423,12 @@
           "i18n": {
             "id": {
               "explain": "fix berakhir dengan x (/ks/), jadi -es menambah satu suku kata: FIX-iz, dua suku kata.",
-              "prompt": "Berapa suku kata (ketukan) dalam 'fixes'?"
+              "prompt": "Berapa suku kata (ketukan) dalam 'fixes'?",
+              "options": [
+                "satu",
+                "dua",
+                "tiga"
+              ]
             }
           }
         }
@@ -625,7 +630,12 @@
           "i18n": {
             "id": {
               "explain": "n't = not (tidak). Tanpa itu, 'I don't like it' terdengar seperti 'I like it'.",
-              "prompt": "Kenapa n di don't dan isn't harus diucapkan dengan jelas?"
+              "prompt": "Kenapa n di don't dan isn't harus diucapkan dengan jelas?",
+              "options": [
+                "Bunyinya menandakan kalimat negatif (tidak).",
+                "Bunyinya mengubah kalimat menjadi pertanyaan.",
+                "Bunyinya menunjukkan lebih dari satu orang."
+              ]
             }
           }
         }
@@ -821,8 +831,20 @@
         "pe-3": "Pilih jawaban yang benar. Kata kerja mana yang berakhir dengan bunyi /s/, tanpa getaran: reads, likes atau calls? Pilih katanya.",
         "pe-4": "Pilih jawaban yang benar. Dengarkan. Pilih bentuk singkat (kontraksi) yang kamu dengar.",
         "pe-5": "Ucapkan dengan cara yang alami, pakai bentuk singkat. Tulis dalam bahasa Inggris: I am not ready.",
-        "pe-6": "Pilih jawaban yang benar. Apakah suaramu naik atau turun di akhir pertanyaan ini? Pilih up atau down: Where does your brother work?",
-        "pe-7": "Pilih jawaban yang benar. Apakah suaramu naik atau turun di akhir pertanyaan ini? Pilih up atau down: Is your office in Jakarta?"
+        "pe-6": "Pilih jawaban yang benar. Apakah suaramu naik atau turun di akhir pertanyaan ini? Pilih naik atau turun: Where does your brother work?",
+        "pe-7": "Pilih jawaban yang benar. Apakah suaramu naik atau turun di akhir pertanyaan ini? Pilih naik atau turun: Is your office in Jakarta?"
+      },
+      "assessmentOptions": {
+        "pe-6": [
+          "turun",
+          "naik",
+          "datar"
+        ],
+        "pe-7": [
+          "naik",
+          "turun",
+          "datar"
+        ]
       }
     }
   }

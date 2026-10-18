@@ -424,7 +424,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: 'The library is open from 8 am to 4 pm, Monday to Saturday.' Kalimat mana yang benar?",
-              "explain": "Monday to Saturday (Senin sampai Sabtu) termasuk hari Sabtu, jadi perpustakaannya buka hari Sabtu. Bukanya jam 8 pagi (jam 4 sore itu jam tutupnya), dan hari Minggu tidak termasuk."
+              "explain": "Monday to Saturday (Senin sampai Sabtu) termasuk hari Sabtu, jadi perpustakaannya buka hari Sabtu. Bukanya jam 8 pagi (jam 4 sore itu jam tutupnya), dan hari Minggu tidak termasuk.",
+              "options": [
+                "Perpustakaan buka pukul 4 sore.",
+                "Perpustakaan buka hari Sabtu.",
+                "Perpustakaan buka hari Minggu."
+              ]
             }
           }
         }
@@ -527,7 +532,12 @@
           "i18n": {
             "id": {
               "prompt": "Baca: 'Dear guests, we are sorry: the swimming pool is closed today for cleaning. Hotel Bunga, Malang'. Siapa 'we' di sini?",
-              "explain": "Penulisnya ada di akhir: Hotel Bunga. Di email atau pengumuman dari hotel, 'we' = pihak hotel. Para tamu (guests) adalah pembacanya ('Dear guests')."
+              "explain": "Penulisnya ada di akhir: Hotel Bunga. Di email atau pengumuman dari hotel, 'we' = pihak hotel. Para tamu (guests) adalah pembacanya ('Dear guests').",
+              "options": [
+                "para tamu",
+                "pihak hotel",
+                "kolam renang"
+              ]
             }
           }
         }

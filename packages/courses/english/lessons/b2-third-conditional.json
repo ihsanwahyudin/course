@@ -324,7 +324,12 @@
           "i18n": {
             "id": {
               "prompt": "Bu Ani berkata: 'If I had seen your message, I would have replied.' Apakah Bu Ani membalas?",
-              "explain": "*If I had seen …, I would have replied* membayangkan masa lalu yang **tidak terjadi**: dia tidak melihat pesannya, jadi dia tidak membalas."
+              "explain": "*If I had seen …, I would have replied* membayangkan masa lalu yang **tidak terjadi**: dia tidak melihat pesannya, jadi dia tidak membalas.",
+              "options": [
+                "Ya, dia membalas.",
+                "Tidak, dia tidak melihat pesannya, jadi tidak membalas.",
+                "Dia akan membalas nanti."
+              ]
             }
           }
         }
@@ -485,7 +490,12 @@
           "i18n": {
             "id": {
               "prompt": "Sari: 'If you'd booked earlier, we'd have got a cheaper ticket.' Apa arti kedua 'd itu?",
-              "explain": "*you'd booked*: 'd + bentuk ketiga, di bagian if → **had**. *we'd have got*: 'd + have + bentuk ketiga → **would**."
+              "explain": "*you'd booked*: 'd + bentuk ketiga, di bagian if → **had**. *we'd have got*: 'd + have + bentuk ketiga → **would**.",
+              "options": [
+                "would, lalu had",
+                "had, lalu would",
+                "had, lalu had"
+              ]
             }
           }
         }

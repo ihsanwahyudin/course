@@ -451,7 +451,12 @@
           ],
           "answer": 1,
           "prompt": "Baca abstraknya: '(1) This study investigates whether a vocabulary app helps first-year university students. (2) 240 students were split into two groups for one semester. (3) Students who used the app daily raised their vocabulary scores by 11%, compared with 4% in the other group. (4) However, the study lasted only one semester.' Kalimat (3) bagian yang mana?",
-          "explanation": "Kalimat (3) memberi **hasil**, dengan angka (11% dibandingkan 4%): itu **findings** (temuan). Kalimat (2) adalah metode (bagaimana penelitiannya dilakukan), dan kalimat (4), setelah **However**, adalah keterbatasan (limitation)."
+          "explanation": "Kalimat (3) memberi **hasil**, dengan angka (11% dibandingkan 4%): itu **findings** (temuan). Kalimat (2) adalah metode (bagaimana penelitiannya dilakukan), dan kalimat (4), setelah **However**, adalah keterbatasan (limitation).",
+          "displayOptions": [
+            "Metode",
+            "Temuan",
+            "Keterbatasan"
+          ]
         }
       },
       {
@@ -508,7 +513,12 @@
           ],
           "answer": 1,
           "prompt": "Baca: '5.1 You can ask for a full refund of a top-up within 7 days. 5.4 Notwithstanding clause 5.1, top-ups made with a promo code are non-refundable.' Tiga hari lalu Rina top-up Rp200.000 dengan kode promo. Bisakah uangnya kembali?",
-          "explanation": "**Notwithstanding clause 5.1** artinya: walaupun 5.1 membolehkan refund dalam 7 hari, aturan inilah yang berlaku. Rina memakai kode promo, jadi top-up-nya **non-refundable** (tidak dapat dikembalikan). Angka 7 hari di 5.1 adalah jebakannya, dan teksnya tidak menyebut refund setengah sama sekali."
+          "explanation": "**Notwithstanding clause 5.1** artinya: walaupun 5.1 membolehkan refund dalam 7 hari, aturan inilah yang berlaku. Rina memakai kode promo, jadi top-up-nya **non-refundable** (tidak dapat dikembalikan). Angka 7 hari di 5.1 adalah jebakannya, dan teksnya tidak menyebut refund setengah sama sekali.",
+          "displayOptions": [
+            "Ya, karena ia meminta dalam 7 hari.",
+            "Tidak, karena klausul 5.4 mengesampingkan klausul 5.1.",
+            "Ya, tetapi hanya setengahnya."
+          ]
         }
       },
       {
@@ -565,7 +575,12 @@
           ],
           "answer": 1,
           "prompt": "Baca: '(A) Hospitals should shorten night shifts. (B) Tired nurses make more mistakes, because they get too little sleep. (C) At one hospital in Medan, night nurses made twice as many medicine errors as day nurses last year. (D) Critics say shorter shifts cost more.' Kalimat (C) bagian argumen yang mana?",
-          "explanation": "Kalimat (C) memberi **fakta dengan angka** dari tempat yang nyata: kalimat ini menunjukkan bahwa alasan (B) benar, jadi ini **evidence** (bukti). (B) adalah alasan (menjawab **mengapa**, dengan **because**), dan (D), dengan **Critics say**, adalah argumen tandingan."
+          "explanation": "Kalimat (C) memberi **fakta dengan angka** dari tempat yang nyata: kalimat ini menunjukkan bahwa alasan (B) benar, jadi ini **evidence** (bukti). (B) adalah alasan (menjawab **mengapa**, dengan **because**), dan (D), dengan **Critics say**, adalah argumen tandingan.",
+          "displayOptions": [
+            "Alasan",
+            "Bukti",
+            "Argumen tandingan"
+          ]
         }
       },
       {
@@ -679,7 +694,12 @@
           ],
           "answer": 0,
           "prompt": "Baca: 'NEW BUS LINE A HUGE SUCCESS. In its best week, during the school holidays, Bandung's new Line 9 carried 40,000 passengers. The city had planned for 30,000 a week.' Pemerintah kota belum mengumumkan angka untuk minggu-minggu lainnya. Apa masalah utama dari buktinya?",
-          "explanation": "Penulis memilih **minggu terbaik**, saat liburan sekolah, dan minggu-minggu lainnya **tidak ada**: contoh khas angka yang dipilih-pilih (cherry-picked). 40.000 penumpang bukan sampel kecil, dan teksnya tidak bilang satu hal menyebabkan hal lain."
+          "explanation": "Penulis memilih **minggu terbaik**, saat liburan sekolah, dan minggu-minggu lainnya **tidak ada**: contoh khas angka yang dipilih-pilih (cherry-picked). 40.000 penumpang bukan sampel kecil, dan teksnya tidak bilang satu hal menyebabkan hal lain.",
+          "displayOptions": [
+            "Hanya memakai minggu terbaik, jadi datanya mungkin dipilih agar terlihat bagus.",
+            "Sampel 40.000 penumpang terlalu kecil.",
+            "Mencampuradukkan korelasi dengan hubungan sebab-akibat."
+          ]
         }
       },
       {

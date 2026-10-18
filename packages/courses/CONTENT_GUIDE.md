@@ -67,8 +67,9 @@ Each ready node has two files (see `english/lessons/a1-to-be.json` and `english/
   checkpoint, 5–7 items); `material` (3–5 sections of `text`, `tip`, `examples`, `check` blocks); `suggestedQuestions`;
   `flashcards` (5–8); `resources` (0–3 links). Every text a learner sees has its `i18n.id` translation (the validator checks):
   `i18n.id.assessment` (item id → Indonesian prompt), key point `i18n.id.title`/`explanation`, example-row `i18n.id.note`, and
-  check-block `i18n.id.prompt` (the options stay English: they're what's being learnt; a bare gap sentence gets an instruction,
-  "Lengkapi: I need ___ egg.").
+  check-block `i18n.id.prompt`. English words or sentences being tested stay English; explanatory choices use the learner's
+  language via check-block `i18n.id.options` or lesson `i18n.id.assessmentOptions` (item id → option labels). A bare gap sentence
+  gets an instruction, for example "Lengkapi: I need ___ egg."
 - **`plans/<nodeId>.json`** — the hand-written steps, `{"en": Plan, "id": Plan}`. 8–12 steps (concept, examples, question,
   timeline, flashcards, artifact = cheat sheet, resources last). First step is a concept; teach before testing; every objective
   has a question; 3–5 questions.
@@ -88,7 +89,10 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
   two at A1. Repeated letters are separate tiles. Listening to a new name/word's spelled letters tests letter recognition, not knowing
   that word's meaning. Do not ask for an untaught translation as an indirect way of testing spelling.
 - **Typed items** use `acceptableAnswers` and a rubric; tapped items use `type` and the corresponding `options`/`correctOption`,
-  `correctOptions`, `pairs`, or `solution`/`tokens`. Both languages have the same options, pairs and keys; translate the instruction.
+  `correctOptions`, `pairs`, or `solution`/`tokens`. Both languages have the same canonical options, pairs and keys; translate the instruction and explanatory labels.
+  For example, `ship` / `sheep` stay English, but "Put her tongue between her teeth for th" becomes
+  "Letakkan ujung lidah di antara gigi untuk bunyi th". In plans, optional `question.displayOptions` supplies one translated label
+  for every canonical `options` entry, in the same order. Never translate an English form that the question tests.
 - **Fair grading:** equivalent list separators (spaces, commas, `and`, `dan`) and case do not change a content answer. If capitalization,
   punctuation or an exact format is itself the objective, state that clearly in the learner-visible prompt and assess it. A hidden
   rubric or uppercase reference answer must not create a requirement the learner was never told about. Never globally strip conjunctions from
@@ -106,6 +110,10 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
   order.
 - **No giveaways:** nothing shown before a question contains its answer sentence; practice questions never reuse checkpoint
   items or their exact answers.
+- **Sound comparisons:** a word used as a reference cannot also be a correct answer. "Kata mana yang punya bunyi pendek /ɪ/
+  seperti pada 'ship'?" with key `ship` is confusing and gives the key away. Ask for **another** taught word, such as `sit`, and
+  leave `ship` out of the choices; or play a word and ask which word was heard without naming it in the prompt. Recognition
+  choices are real taught words. Invented spellings are only for an explicitly labelled pronunciation mistake to diagnose.
 - **Listening questions** put the English the learner hears in `listen` and never in the prompt.
   `listen` is read by one voice (at most 300 characters): in a dialogue, the speaker labels ("Rina: …") are read aloud too.
 - **Length:** a step question's prompt is at most 400 characters; a checkpoint item's may be up to 800, so it can quote a
@@ -122,7 +130,8 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
 ## 6. Both languages
 
 - `en` and `id` plans have the same steps, kinds and identical questions (type, objective, options in the same order, answer,
-  tokens, solution, listen). Only wording differs: an Indonesian instruction in `id` is fine.
+  tokens, solution, listen). Wording may differ, including `displayOptions` for explanatory choices. Translated labels never
+  change the correct index; shuffling must move each label with its canonical option.
 - The `id` field of word tiles and examples, and flashcard backs, hold the Indonesian meaning in **both** versions.
 
 ## 7. Resources
@@ -141,7 +150,8 @@ engVid, Woodward English. Say in the note when a link is above the lesson's leve
 
 ## 9. Editing a lesson that learners are already taking
 
-- **Wording only** (explanations, titles, prompts, Indonesian glosses, material): applied in place; learners keep their step.
+- **Wording only** (explanations, titles, prompts, translated option labels, Indonesian glosses, material): applied in place; learners
+  keep their step. Keep canonical options and answer indexes unchanged when adding translated labels.
 - **Steps or questions changed** (count, kinds, options, answers, tokens, solutions, listen): learners on the old version start the
   new one (the old session is kept).
 - `material` is not part of the steps and can always be improved freely.
@@ -152,6 +162,7 @@ engVid, Woodward English. Say in the note when a link is above the lesson's leve
 cd apps/api && go run ./cmd/coursecheck                     # every course, as the API checks it at startup
 cd apps/api && go test ./internal/tutor -run TestAuthoredPlans
 scripts/e2e.sh                                               # every ready lesson mastered end to end (mock AI)
+E2E_LOCALE=id E2E_PORT=8092 scripts/e2e.sh                      # Indonesian options and answer keys over HTTP
 python3 scripts/checkpoint_audit.py --output review/checkpoint-audit-candidates.json
 ```
 

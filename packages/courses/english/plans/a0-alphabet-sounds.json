@@ -677,7 +677,12 @@
           ],
           "answer": 0,
           "prompt": "Huruf mana yang vokal dalam kata 'bike'?",
-          "explanation": "B-I-K-E punya dua vokal: **I** dan **E** di akhir. Huruf E tidak dibunyikan saat mengucapkan 'bike', tapi tetap huruf vokal."
+          "explanation": "B-I-K-E punya dua vokal: **I** dan **E** di akhir. Huruf E tidak dibunyikan saat mengucapkan 'bike', tapi tetap huruf vokal.",
+          "displayOptions": [
+            "I dan E",
+            "Hanya I",
+            "B dan K"
+          ]
         }
       },
       {
@@ -694,7 +699,12 @@
           ],
           "answer": 0,
           "prompt": "Huruf mana yang konsonan dalam kata 'desk'?",
-          "explanation": "D-E-S-K: **E** satu-satunya vokal, jadi **D, S dan K** adalah konsonan."
+          "explanation": "D-E-S-K: **E** satu-satunya vokal, jadi **D, S dan K** adalah konsonan.",
+          "displayOptions": [
+            "D, S, dan K",
+            "D, E, dan K",
+            "Hanya E"
+          ]
         }
       },
       {

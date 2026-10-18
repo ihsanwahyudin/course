@@ -392,7 +392,12 @@
           "i18n": {
             "id": {
               "prompt": "Seorang manajer berkata: 'Our office is going to close at three o'clock on Friday. Cleaners are coming to clean the carpets. Please take your laptops home on Thursday.' Apa poin utamanya?",
-              "explain": "Kalimat pertama memberi poin utamanya: kantor tutup lebih awal (jam tiga) hari Jumat. Petugas kebersihan adalah alasannya, sebuah detail; karpetnya tidak disebut tua. Kamis hanya hari untuk membawa laptop pulang."
+              "explain": "Kalimat pertama memberi poin utamanya: kantor tutup lebih awal (jam tiga) hari Jumat. Petugas kebersihan adalah alasannya, sebuah detail; karpetnya tidak disebut tua. Kamis hanya hari untuk membawa laptop pulang.",
+              "options": [
+                "Kantor akan tutup lebih awal pada hari Jumat.",
+                "Karpet di kantor sudah sangat tua.",
+                "Kantor akan tutup hari Kamis."
+              ]
             }
           }
         }
@@ -493,7 +498,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu mendengar: 'The training isn't in Bandung this year. Instead, it's going to be in Yogyakarta.' Di mana pelatihannya tahun ini?",
-              "explain": "Instead memperkenalkan rencana baru: Yogyakarta. Bandung adalah tempat yang lama ('isn't in Bandung' = tidak di Bandung), dan Jakarta tidak disebut sama sekali."
+              "explain": "Instead memperkenalkan rencana baru: Yogyakarta. Bandung adalah tempat yang lama ('isn't in Bandung' = tidak di Bandung), dan Jakarta tidak disebut sama sekali.",
+              "options": [
+                "Di Bandung",
+                "Di Jakarta",
+                "Di Yogyakarta"
+              ]
             }
           }
         }
@@ -594,7 +604,12 @@
           "i18n": {
             "id": {
               "prompt": "Sebuah podcast dimulai: 'Hi, I'm Budi, and this is Weekend Kitchen. Last week we made fried rice. Today I'm going to show you an easy chicken soup.' Apa topik hari ini?",
-              "explain": "'Today I'm going to show you…' (Hari ini aku akan menunjukkan…) memberi topik hari ini: sup ayam yang mudah. Nasi goreng adalah topik minggu lalu, dan Weekend Kitchen hanya nama podcast-nya."
+              "explain": "'Today I'm going to show you…' (Hari ini aku akan menunjukkan…) memberi topik hari ini: sup ayam yang mudah. Nasi goreng adalah topik minggu lalu, dan Weekend Kitchen hanya nama podcast-nya.",
+              "options": [
+                "Nasi goreng",
+                "Sup ayam yang mudah dibuat",
+                "Dapur baru Budi"
+              ]
             }
           }
         }
@@ -675,7 +690,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu mendengar: 'The library is closing early today, at a quarter past four.' Catatan mana yang benar?",
-              "explain": "A quarter past four = lima belas menit setelah jam empat = 4.15 (empat lewat seperempat). A quarter to four = 3.45, dan a quarter to five = 4.45."
+              "explain": "A quarter past four = lima belas menit setelah jam empat = 4.15 (empat lewat seperempat). A quarter to four = 3.45, dan a quarter to five = 4.45.",
+              "options": [
+                "Perpustakaan tutup pukul 15:45 hari ini",
+                "Perpustakaan tutup pukul 16:15 hari ini",
+                "Perpustakaan tutup pukul 16:45 hari ini"
+              ]
             }
           }
         }

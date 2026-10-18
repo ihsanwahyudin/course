@@ -79,7 +79,7 @@ export function MultiPicker({ options, picked, setPicked, disabled }: { options:
             style={[styles.option, on ? styles.optionOn : null, pointer]}
           >
             <View style={[styles.box, on ? styles.boxOn : null]}>{on ? <Icon name="check" size={12} color={colors.white} strokeWidth={3} /> : null}</View>
-            <Text size={16} weight="medium" color={on ? colors.accent : colors.ink}>
+            <Text size={16} weight="medium" color={on ? colors.accent : colors.ink} style={{ flexShrink: 1 }}>
               {o}
             </Text>
           </Pressable>
@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
   letterPlaced: { backgroundColor: colors.accentSoft },
   letterGhost: { backgroundColor: colors.inkSoft },
   option: {
+    maxWidth: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,

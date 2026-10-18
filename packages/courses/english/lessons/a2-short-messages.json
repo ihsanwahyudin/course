@@ -337,7 +337,12 @@
           "i18n": {
             "id": {
               "prompt": "Bagian mana yang tidak ada? Hi Dimas! I bought a new laptop yesterday. See you soon, Budi",
-              "explain": "Hi Dimas! adalah salam pembuka, I bought a new laptop yesterday adalah kabarnya, dan See you soon, Budi adalah penutup. Tidak ada pertanyaan untuk Dimas, seperti How are you? atau How was your weekend?"
+              "explain": "Hi Dimas! adalah salam pembuka, I bought a new laptop yesterday adalah kabarnya, dan See you soon, Budi adalah penutup. Tidak ada pertanyaan untuk Dimas, seperti How are you? atau How was your weekend?",
+              "options": [
+                "salam pembuka",
+                "pertanyaan balik",
+                "penutup"
+              ]
             }
           }
         }
@@ -614,7 +619,12 @@
           "i18n": {
             "id": {
               "prompt": "Rina menulis: 'Last Sunday I went to the market and I buy some vegetables.' Apa yang salah?",
-              "explain": "Last Sunday itu masa lalu, jadi semua kata kerjanya lampau: went dan bought. 'buy' kembali ke bentuk present. (bought, dengan ou, adalah lampau dari buy; brought adalah lampau dari bring.)"
+              "explain": "Last Sunday itu masa lalu, jadi semua kata kerjanya lampau: went dan bought. 'buy' kembali ke bentuk present. (bought, dengan ou, adalah lampau dari buy; brought adalah lampau dari bring.)",
+              "options": [
+                "buy seharusnya bought",
+                "went seharusnya go",
+                "Tidak ada yang salah."
+              ]
             }
           }
         }

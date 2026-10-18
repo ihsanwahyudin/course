@@ -661,7 +661,12 @@
           "i18n": {
             "id": {
               "prompt": "Budi menyalin kalimat ini dari sebuah laporan ke skripsinya dan menambahkan sitasi, tapi tanpa tanda kutip: 'Flooding poses a serious threat to coastal communities in northern Java (Wibowo, 2023).' Apakah ini boleh?",
-              "explain": "Sitasinya mengakui **ide** Wibowo, tapi **kata-katanya** tetap milik Wibowo: tanpa tanda kutip, kelihatannya Budi yang menulisnya. Dia harus mengutipnya (\"…\" + halamannya) atau memparafrasekannya dengan benar. Tidak ada jumlah kata yang 'aman' untuk disalin."
+              "explain": "Sitasinya mengakui **ide** Wibowo, tapi **kata-katanya** tetap milik Wibowo: tanpa tanda kutip, kelihatannya Budi yang menulisnya. Dia harus mengutipnya (\"…\" + halamannya) atau memparafrasekannya dengan benar. Tidak ada jumlah kata yang 'aman' untuk disalin.",
+              "options": [
+                "Ya, karena ia mencantumkan nama penulis dan tahun.",
+                "Tidak: kata yang disalin harus diberi tanda kutip atau diparafrasekan.",
+                "Ya, asalkan kalimatnya kurang dari 20 kata."
+              ]
             }
           }
         }
@@ -752,7 +757,12 @@
           "i18n": {
             "id": {
               "prompt": "Sebuah pertanyaan IELTS: 'More people are moving from villages to big cities. Why is this happening? Is it a positive or negative development?' Apa yang harus dilakukan esainya?",
-              "explain": "Ini pertanyaan **dua bagian**: setiap pertanyaan adalah bagian dari tugasnya. Melewatkan salah satunya, atau menulis tentang topik lain (kehidupan desa secara umum), melemahkan **Task Response**. Rencanakan satu paragraf isi untuk alasannya dan satu untuk pandanganmu."
+              "explain": "Ini pertanyaan **dua bagian**: setiap pertanyaan adalah bagian dari tugasnya. Melewatkan salah satunya, atau menulis tentang topik lain (kehidupan desa secara umum), melemahkan **Task Response**. Rencanakan satu paragraf isi untuk alasannya dan satu untuk pandanganmu.",
+              "options": [
+                "Menjawab kedua pertanyaan: alasannya dan apakah perkembangannya positif atau negatif.",
+                "Membahas kelebihan dan kekurangan hidup di desa.",
+                "Hanya memberi pendapat penulis tentang positif atau negatifnya."
+              ]
             }
           }
         }

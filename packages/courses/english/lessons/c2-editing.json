@@ -272,7 +272,12 @@
           "i18n": {
             "id": {
               "prompt": "Seorang rekan menulis: 'On page 2 you wrote 15 March 2026, and on page 6 March 15, 2026. Our guide uses 15 March 2026.' Ini termasuk tingkat menyunting yang mana?",
-              "explain": "Ini soal **konsistensi** dengan style guide (format tanggal), jadi termasuk copy-edit. Structural edit melihat urutan dan bagian yang hilang; line edit melihat bagaimana setiap kalimat terbaca."
+              "explain": "Ini soal **konsistensi** dengan style guide (format tanggal), jadi termasuk copy-edit. Structural edit melihat urutan dan bagian yang hilang; line edit melihat bagaimana setiap kalimat terbaca.",
+              "options": [
+                "penyuntingan struktur (structural edit)",
+                "penyuntingan kalimat (line edit)",
+                "penyuntingan ejaan dan konsistensi (copy-edit)"
+              ]
             }
           }
         }
@@ -555,7 +560,12 @@
           "i18n": {
             "id": {
               "prompt": "Komentar mana yang membahas teksnya, bukan orangnya, dan memberi tahu penulis apa yang harus dilakukan?",
-              "explain": "Pilihan kedua menunjuk satu kalimat, menyebut alasannya (58 kata) dan menyarankan tindakan yang jelas, dalam bentuk pertanyaan. Pilihan pertama membahas orangnya (*You always …*); yang ketiga terlalu umum untuk ditindaklanjuti."
+              "explain": "Pilihan kedua menunjuk satu kalimat, menyebut alasannya (58 kata) dan menyarankan tindakan yang jelas, dalam bentuk pertanyaan. Pilihan pertama membahas orangnya (*You always …*); yang ketiga terlalu umum untuk ditindaklanjuti.",
+              "options": [
+                "Kalimat-kalimatmu selalu terlalu panjang.",
+                "Kalimat ini berisi 58 kata: bisa dibagi setelah 'budget'?",
+                "Bagus, tetapi panjang."
+              ]
             }
           }
         }

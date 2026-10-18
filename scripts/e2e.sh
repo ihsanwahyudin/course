@@ -7,6 +7,7 @@
 #   checkpoint → summary + mistake flashcards → unlock → second user sees none of it → API restart →
 #   log in again → progress, flashcards and notes still there.
 # Requires: docker compose db running (infra/docker-compose.yml), Go, python3.
+# Set E2E_LOCALE=id to verify every Indonesian option label and translated checkpoint key.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"

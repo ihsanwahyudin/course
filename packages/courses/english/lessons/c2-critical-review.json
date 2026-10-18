@@ -326,7 +326,12 @@
           "i18n": {
             "id": {
               "prompt": "Ulasan Sari sepanjang 900 kata tentang sebuah novel rekaan berisi 650 kata ringkasan alur dan 250 kata penilaian. Apa yang sebaiknya dia ubah?",
-              "explain": "Dalam ulasan kritis, ringkasan adalah bagian yang pendek (paling banyak sekitar sepertiga) dan penilaian adalah bagian utama. Ringkasan yang panjang tidak membuktikan dia membaca dengan cermat: penilaian yang cermatlah buktinya. Dan ulasan tanpa penilaian bukan netral, tapi memang bukan ulasan."
+              "explain": "Dalam ulasan kritis, ringkasan adalah bagian yang pendek (paling banyak sekitar sepertiga) dan penilaian adalah bagian utama. Ringkasan yang panjang tidak membuktikan dia membaca dengan cermat: penilaian yang cermatlah buktinya. Dan ulasan tanpa penilaian bukan netral, tapi memang bukan ulasan.",
+              "options": [
+                "Tidak perlu diubah: ringkasan terperinci menunjukkan ia membaca dengan teliti.",
+                "Persingkat ringkasan dan perluas penilaiannya.",
+                "Hapus penilaian agar ulasannya tetap netral."
+              ]
             }
           }
         }
@@ -408,7 +413,12 @@
           "i18n": {
             "id": {
               "prompt": "Seorang pengulas menulis: 'The authors claim that the training programme reduced staff turnover, but they never compare it with a group of staff who had no training.' Kriteria apa yang sedang dia nilai?",
-              "explain": "Dia menilai rancangan penelitiannya: tanpa kelompok pembanding, tidak ada yang bisa tahu apakah tingkat karyawan keluar turun karena pelatihan itu atau karena alasan lain. Pacing dan acting adalah kriteria untuk film dan serial, bukan penelitian."
+              "explain": "Dia menilai rancangan penelitiannya: tanpa kelompok pembanding, tidak ada yang bisa tahu apakah tingkat karyawan keluar turun karena pelatihan itu atau karena alasan lain. Pacing dan acting adalah kriteria untuk film dan serial, bukan penelitian.",
+              "options": [
+                "alur dan tempo penyajian",
+                "metode",
+                "akting"
+              ]
             }
           }
         }

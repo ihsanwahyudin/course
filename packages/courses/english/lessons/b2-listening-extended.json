@@ -438,7 +438,12 @@
           "i18n": {
             "id": {
               "prompt": "Seorang dosen berkata: 'So that's how the old system worked. Moving on, let me turn to the new online system and its problems.' Bagian kuliah berikutnya tentang apa?",
-              "explain": "'Let me turn to' (sekarang saya beralih ke) memulai bagian baru: sistem online yang baru dan masalah-masalahnya. 'So that's how the old system worked' (begitulah cara kerja sistem lama) menutup bagian yang baru selesai. Tidak ada yang bilang dosennya menyukai sistem lama."
+              "explain": "'Let me turn to' (sekarang saya beralih ke) memulai bagian baru: sistem online yang baru dan masalah-masalahnya. 'So that's how the old system worked' (begitulah cara kerja sistem lama) menutup bagian yang baru selesai. Tidak ada yang bilang dosennya menyukai sistem lama.",
+              "options": [
+                "Cara kerja sistem lama",
+                "Sistem online baru dan masalahnya",
+                "Alasan dosen menyukai sistem lama"
+              ]
             }
           }
         }
@@ -529,7 +534,12 @@
           "i18n": {
             "id": {
               "prompt": "Seorang pembicara berkata: 'Admittedly, online meetings save time. That said, I'm not convinced they're good for new employees.' Apa opini utama pembicara?",
-              "explain": "'Admittedly' menerima satu poin baik (rapat online menghemat waktu). Setelah 'That said' (meskipun begitu) datang opini sebenarnya: pembicara ragu ('I'm not convinced') rapat online bagus untuk karyawan baru. Pembicara bilang rapat online menghemat waktu, jadi 'waste time' (membuang waktu) salah."
+              "explain": "'Admittedly' menerima satu poin baik (rapat online menghemat waktu). Setelah 'That said' (meskipun begitu) datang opini sebenarnya: pembicara ragu ('I'm not convinced') rapat online bagus untuk karyawan baru. Pembicara bilang rapat online menghemat waktu, jadi 'waste time' (membuang waktu) salah.",
+              "options": [
+                "Rapat online bagus untuk semua orang.",
+                "Rapat online mungkin kurang cocok bagi karyawan baru.",
+                "Rapat online membuang banyak waktu."
+              ]
             }
           }
         }
@@ -711,7 +721,12 @@
           "i18n": {
             "id": {
               "prompt": "Kamu mendengar: 'Since the new metro opened, traffic in the city centre has gone down, so the air is cleaner.' Catatan mana yang benar?",
-              "explain": "Traffic has gone down (kemacetan berkurang) = traffic ↓, dan 'so' (hasilnya) = →: udaranya lebih bersih. ↑ berarti kemacetannya bertambah, dan tidak ada yang bilang udaranya lebih kotor."
+              "explain": "Traffic has gone down (kemacetan berkurang) = traffic ↓, dan 'so' (hasilnya) = →: udaranya lebih bersih. ↑ berarti kemacetannya bertambah, dan tidak ada yang bilang udaranya lebih kotor.",
+              "options": [
+                "metro baru → lalu lintas ↑ → udara lebih bersih",
+                "metro baru → lalu lintas ↓ → udara lebih bersih",
+                "metro baru ≠ lalu lintas → udara lebih kotor"
+              ]
             }
           }
         }

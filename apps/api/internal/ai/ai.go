@@ -69,8 +69,9 @@ type LevelLesson struct {
 	CommonErrors []string
 	// Sample is one of the lesson's hand-written checkpoint questions (its
 	// prompt in the learner's language): for level and style, and the fallback.
-	Sample       curriculum.AssessmentItem
-	SamplePrompt string
+	Sample               curriculum.AssessmentItem
+	SampleDisplayOptions []string
+	SamplePrompt         string
 }
 
 type HintInput struct {

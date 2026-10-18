@@ -22,7 +22,7 @@ func objectiveIDs(n *curriculum.Node) []string {
 
 // AuthoredDraft is a hand-written checkpoint item as a writer's draft, with
 // its prompt in the learner's language.
-func AuthoredDraft(it curriculum.AssessmentItem, prompt string) DraftItem {
+func AuthoredDraft(it curriculum.AssessmentItem, prompt string, displayOptions ...[]string) DraftItem {
 	typ := it.Type
 	if typ == "" {
 		typ = QuestionText
@@ -35,6 +35,9 @@ func AuthoredDraft(it curriculum.AssessmentItem, prompt string) DraftItem {
 		},
 		CorrectOption: it.CorrectOption, CorrectOptions: it.CorrectOptions,
 	}
+	if len(displayOptions) > 0 {
+		d.DisplayOptions = slices.Clone(displayOptions[0])
+	}
 	for _, p := range it.Pairs {
 		d.Pairs = append(d.Pairs, MatchPair(p))
 	}
@@ -45,7 +48,7 @@ func AuthoredDraft(it curriculum.AssessmentItem, prompt string) DraftItem {
 func AuthoredDrafts(l *curriculum.Lesson, lang string) []DraftItem {
 	ds := make([]DraftItem, 0, len(l.Assessment))
 	for _, it := range l.Assessment {
-		ds = append(ds, AuthoredDraft(it, l.PromptIn(it, lang)))
+		ds = append(ds, AuthoredDraft(it, l.PromptIn(it, lang), l.AssessmentLabelsIn(it, lang)))
 	}
 	return ds
 }
@@ -215,7 +218,7 @@ func SameSteps(a, b Plan) bool {
 }
 
 // sameQuestion compares what's graded: type, objective, options, answer,
-// tokens and solution (prompts and explanations may be translated).
+// tokens and solution (prompts, explanations and display labels may be translated).
 func sameQuestion(a, b Question) bool {
 	return a.Type == b.Type && a.ObjectiveID == b.ObjectiveID && a.Listen == b.Listen && slices.Equal(a.Options, b.Options) &&
 		a.Answer == b.Answer && slices.Equal(a.Tokens, b.Tokens) && a.Solution == b.Solution

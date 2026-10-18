@@ -452,7 +452,12 @@
           "i18n": {
             "id": {
               "explain": "Repeat after me artinya ucapkan kata yang sama setelah guru.",
-              "prompt": "Guru bilang: 'Repeat after me: Good morning.' Apa yang kamu lakukan?"
+              "prompt": "Guru bilang: 'Repeat after me: Good morning.' Apa yang kamu lakukan?",
+              "options": [
+                "Tulis 'Good morning'.",
+                "Ucapkan 'Good morning'.",
+                "Tutup bukumu."
+              ]
             }
           }
         }
@@ -512,7 +517,12 @@
           "i18n": {
             "id": {
               "explain": "On mute artinya mikrofonmu mati, jadi guru tidak bisa mendengarmu. Nyalakan mikrofonnya.",
-              "prompt": "Gurumu di Zoom bilang: 'Sari, you're on mute!' Apa yang kamu lakukan?"
+              "prompt": "Gurumu di Zoom bilang: 'Sari, you're on mute!' Apa yang kamu lakukan?",
+              "options": [
+                "Nyalakan mikrofonmu.",
+                "Tutup bukumu.",
+                "Berdiri."
+              ]
             }
           }
         }

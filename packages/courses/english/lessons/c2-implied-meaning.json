@@ -379,7 +379,12 @@
           "i18n": {
             "id": {
               "prompt": "Rekan kerjamu dari Australia berkata tentang rencanamu dalam rapat: 'I hear what you're saying, but I'm not sure that's the best idea. Perhaps we could run a small trial in one city first.' Apa maksudnya?",
-              "explain": "'I hear what you're saying, but' dan 'I'm not sure that's the best idea' adalah kode sopan untuk tidak setuju, dan 'Perhaps we could …' memberi usulannya: uji coba kecil. Ia tidak setuju dengan rencananya yang sekarang. 'I hear what you're saying' menunjukkan ia sudah paham rencananya."
+              "explain": "'I hear what you're saying, but' dan 'I'm not sure that's the best idea' adalah kode sopan untuk tidak setuju, dan 'Perhaps we could …' memberi usulannya: uji coba kecil. Ia tidak setuju dengan rencananya yang sekarang. 'I hear what you're saying' menunjukkan ia sudah paham rencananya.",
+              "options": [
+                "Dia setuju dan ingin segera mulai.",
+                "Dia tidak setuju dengan rencana penuh dan mengusulkan uji coba lebih kecil.",
+                "Dia tidak memahami rencananya."
+              ]
             }
           }
         }
@@ -571,7 +576,12 @@
           "i18n": {
             "id": {
               "prompt": "Laptop Rina mati tepat sebelum presentasinya, lalu proyektornya berhenti bekerja. Ia berkata: 'Brilliant. Now the Wi-Fi's down too.' Apa maksudnya?",
-              "explain": "Ironi: kata positif (Brilliant) di samping fakta yang jelas buruk (Wi-Fi mati, setelah laptop mati dan proyektor rusak). Faktanya menunjukkan ia frustrasi. Dua pilihan lainnya memahami 'Brilliant' secara harfiah."
+              "explain": "Ironi: kata positif (Brilliant) di samping fakta yang jelas buruk (Wi-Fi mati, setelah laptop mati dan proyektor rusak). Faktanya menunjukkan ia frustrasi. Dua pilihan lainnya memahami 'Brilliant' secara harfiah.",
+              "options": [
+                "Dia senang Wi-Fi-nya mati.",
+                "Dia frustrasi: ada satu masalah lagi.",
+                "Dia menganggap Wi-Fi-nya luar biasa."
+              ]
             }
           }
         }
@@ -662,7 +672,12 @@
           "i18n": {
             "id": {
               "prompt": "Sari: 'Is the new app ready for the client demo on Monday?' Budi: 'The login page looks fantastic.' Jawaban Budi menunjukkan apa?",
-              "explain": "Sari bertanya tentang seluruh aplikasi; Budi hanya memuji satu bagian kecil, yaitu halaman login. Jawaban yang lebih lemah dari pertanyaannya = bagian lainnya mungkin belum siap. Kalau semuanya sudah siap, ia cukup bilang ya. Ia jelas mendengar pertanyaannya: ia menjawab soal aplikasinya."
+              "explain": "Sari bertanya tentang seluruh aplikasi; Budi hanya memuji satu bagian kecil, yaitu halaman login. Jawaban yang lebih lemah dari pertanyaannya = bagian lainnya mungkin belum siap. Kalau semuanya sudah siap, ia cukup bilang ya. Ia jelas mendengar pertanyaannya: ia menjawab soal aplikasinya.",
+              "options": [
+                "Seluruh aplikasinya siap.",
+                "Mungkin baru sebagian aplikasi yang siap.",
+                "Budi tidak mendengar pertanyaannya."
+              ]
             }
           }
         }

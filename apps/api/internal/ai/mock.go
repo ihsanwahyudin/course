@@ -81,6 +81,9 @@ func (m *Mock) SimilarQuestion(ctx context.Context, in SimilarInput) (Result, er
 	if q.Type == tutor.QuestionMCQ && len(q.Options) > 1 {
 		opts := append(append([]string{}, q.Options[1:]...), q.Options[0])
 		q.Options, q.Answer = opts, (q.Answer-1+len(opts))%len(opts)
+		if len(q.DisplayOptions) > 0 {
+			q.DisplayOptions = append(append([]string{}, q.DisplayOptions[1:]...), q.DisplayOptions[0])
+		}
 	}
 	return ok(q)
 }

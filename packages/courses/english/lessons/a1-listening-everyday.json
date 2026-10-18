@@ -309,7 +309,12 @@
           "i18n": {
             "id": {
               "explain": "What time menanyakan jam, jadi dengarkan jam seperti ten fifteen atau half past six.",
-              "prompt": "Pertanyaannya 'What time does the bus leave?'. Apa yang perlu kamu dengarkan?"
+              "prompt": "Pertanyaannya 'What time does the bus leave?'. Apa yang perlu kamu dengarkan?",
+              "options": [
+                "Harga",
+                "Waktu",
+                "Tempat"
+              ]
             }
           }
         }
@@ -536,7 +541,12 @@
           "i18n": {
             "id": {
               "explain": "'Turn right' adalah yang kamu lakukan; 'on your left' memberitahu letak bank-nya.",
-              "prompt": "Kamu mendengar: 'Turn right. The bank is on your left.' Bank-nya di mana?"
+              "prompt": "Kamu mendengar: 'Turn right. The bank is on your left.' Bank-nya di mana?",
+              "options": [
+                "Di sebelah kananmu",
+                "Di sebelah kirimu",
+                "Lurus ke depan"
+              ]
             }
           }
         }
@@ -603,7 +613,12 @@
           "i18n": {
             "id": {
               "explain": "Angka tepat setelah 'platform' adalah nine (9). Seven forty (7:40) adalah jamnya.",
-              "prompt": "Kamu mendengar: 'Attention, please. The train to Malang leaves from platform nine at seven forty.' Peron (platform) berapa?"
+              "prompt": "Kamu mendengar: 'Attention, please. The train to Malang leaves from platform nine at seven forty.' Peron (platform) berapa?",
+              "options": [
+                "Peron 7",
+                "Peron 9",
+                "Peron 40"
+              ]
             }
           }
         }
