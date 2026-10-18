@@ -123,6 +123,9 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 			err = ValidateLevelQuestions(items, n.Level)
 		}
 		if err == nil {
+			err = ValidateRecognitionVocabulary(items, lesson.RecognitionVocabulary)
+		}
+		if err == nil {
 			most := -1
 			switch n.Level {
 			case "A0":
@@ -155,6 +158,9 @@ func ValidateLessonSteps(c *curriculum.Curriculum, nodeID string) error {
 			continue
 		}
 		mat := c.MaterialIn(n.ID, lang)
+		if err := validateRecognitionExposure(p, lesson.RecognitionVocabulary); err != nil {
+			bad("%s/%s: %v", n.ID, lang, err)
+		}
 		for i, st := range p.Steps {
 			if q := st.Question; q != nil {
 				for _, it := range lesson.Assessment {

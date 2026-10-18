@@ -195,6 +195,40 @@ func (l *Lesson) MaterialText() string {
 	return b.String()
 }
 
+// RecognitionVocabulary must be supported by teaching, not merely appear in
+// a quiz or teacher notes. These checks are lexical evidence, not a substitute
+// for reviewing whether the pronunciation is actually explained.
+var recognitionVocabularyWord = regexp.MustCompile(`^[a-z]+(?:'[a-z]+)?$`)
+
+func validateRecognitionVocabulary(l *Lesson) []error {
+	var errs []error
+	var teaching strings.Builder
+	for _, section := range l.Material {
+		for _, block := range section.Blocks {
+			switch block.Type {
+			case BlockText, BlockTip:
+				teaching.WriteString(block.Text + "\n")
+			case BlockExamples:
+				for _, row := range block.Rows {
+					teaching.WriteString(row.EN + "\n")
+				}
+			}
+		}
+	}
+	seen := map[string]bool{}
+	for _, word := range l.RecognitionVocabulary {
+		if !recognitionVocabularyWord.MatchString(word) || seen[word] {
+			errs = append(errs, fmt.Errorf("lesson %q: recognition vocabulary needs distinct lowercase English words, got %q", l.NodeID, word))
+			continue
+		}
+		seen[word] = true
+		if !regexp.MustCompile(`(?i)\b` + regexp.QuoteMeta(word) + `\b`).MatchString(teaching.String()) {
+			errs = append(errs, fmt.Errorf("lesson %q: recognition word %q is missing from teaching material", l.NodeID, word))
+		}
+	}
+	return errs
+}
+
 var youTubeIDRe = regexp.MustCompile(`^[A-Za-z0-9_-]{11}$`)
 
 // YouTubeID extracts the video id from a youtube.com/watch or youtu.be URL.

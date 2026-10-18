@@ -100,6 +100,12 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
 - **Teaching before testing:** make vocabulary and patterns explicit in the material before asking learners to use them. Word tiles
   supply words but do not teach their meanings. Simplify rules for beginners by naming the particular pattern being practised, without
   presenting a pattern such as *noun + please* as the only possible position of *please* in English.
+  A phonics category is not permission to test any word containing that sound: `live / leave` needs prior teaching even when
+  `ship / sheep` has been taught. For a closed set of recognition words, set lesson `recognitionVocabulary` to distinct lowercase
+  English words. Include only words explained in both reading material and teaching steps. This bank applies to single-word MCQ/multi
+  choices, including distractors, in authored and AI checkpoints and when that lesson is sampled in a level checkpoint. Sentence
+  tasks and explanatory choices still require content review and AI verification. Quizzes, flashcards alone, and teacher notes are
+  not evidence of prior teaching. Retakes vary tasks using the taught words; they must not introduce new pairs to avoid repetition.
 - **A complete question:** a response-length instruction such as “Tuliskan 1 huruf yang benar” does not identify an answer. Supply
   a clue, situation, source sentence, or listening audio; the hidden key and rubric are not learner-visible clues. AI checkpoints
   require a verdict for every question; unavailable or incomplete verification falls back to authored questions.

@@ -35,6 +35,9 @@ func lessonPrefix(in LessonInput) string {
 		}
 	}
 	if l := in.Lesson; l != nil {
+		if len(l.RecognitionVocabulary) > 0 {
+			fmt.Fprintf(&b, "\nTaught recognition vocabulary (a closed word bank for BOTH correct choices and distractors): %s.\n", strings.Join(l.RecognitionVocabulary, ", "))
+		}
 		if m := l.MaterialText(); m != "" {
 			b.WriteString("\nCurated material (ground everything in this; do not contradict it):\n")
 			b.WriteString(m)
@@ -54,6 +57,9 @@ func lessonPrefix(in LessonInput) string {
 				fmt.Fprintf(&b, " Typical mistakes: %s.", strings.Join(l.CommonErrors, "; "))
 			}
 			b.WriteString("\n")
+			if len(l.RecognitionVocabulary) > 0 {
+				fmt.Fprintf(&b, "  Taught recognition vocabulary (correct choices AND distractors): %s.\n", strings.Join(l.RecognitionVocabulary, ", "))
+			}
 		}
 		b.WriteString("\n## Scope\n")
 		b.WriteString("Stay strictly inside these lessons at this level; don't test anything from later levels.\n")
@@ -407,8 +413,10 @@ func checkpointTask(in CheckpointInput) string {
   grader) — and only then fill "correctOption" / "correctOptions" / "pairs" / "solution" / "acceptedAnswers" to match it.
 - Fields a type doesn't use: empty string, empty list or 0.
 - Match the difficulty and style of the hand-written checkpoint below, but never copy or lightly reword its questions: %s
-- The learner has already answered these checkpoint questions. Do not repeat or lightly reword them; test the same skills with new
-  sentences, words and situations: %s%s`, tutor.MinCheckItems+1, tutor.MaxCheckItems, strings.Join(ids, ", "), typeRules(in.Node.Level, false),
+- The learner has already answered these checkpoint questions. Do not repeat or lightly reword them; vary the tasks and situations
+  using taught vocabulary. A closed recognition word bank limits BOTH answers and distractors: never introduce live/leave, full/fool,
+  or safe/save merely because they test a sound in this lesson. New examples must be taught first. Reuse taught words in genuinely
+  different tasks rather than inventing new word pairs for a retake: %s%s`, tutor.MinCheckItems+1, tutor.MaxCheckItems, strings.Join(ids, ", "), typeRules(in.Node.Level, false),
 		beginnerRule(in.Node.Level), examples, earlier, problems(in.Problems))
 }
 
@@ -639,7 +647,10 @@ Set "ok" to false, with a one-sentence "problem", if ANY of these fail:
 7. The learner can answer it with what this lesson (and earlier levels) taught. At A0 the answer is a word or phrase the lesson's
    material shows, exactly as shown — never a sentence the learner has to build or a word the material doesn't teach; at A1, short
    sentences on the lesson's patterns. Teacher notes are not learner exposure: reject IPA notation or English expressions that
-   appear only in teacher guidance. This lesson is level %s.
+   appear only in teacher guidance. When a closed recognition word bank is given, EVERY word-recognition option (including wrong
+   choices) must come from that bank. Being another example of a taught sound does not mean its spelling/pronunciation was taught:
+   reject live/leave or full/fool when the material only teaches ship/sheep and good/food. Do not treat the authored quiz, previous
+   checkpoints, or the draft itself as teaching evidence. This lesson is level %s.
 8. The type fits the task: spelling a word is "letters" (and its prompt never shows the word); a question with several right items is
    "multi"; "text" only when the learner must write English themselves. At A0 EVERY accepted text answer has at most three words;
    letter tiles have no decoys at A0 and at most two at A1. Reject a typed list or typed spelling task.

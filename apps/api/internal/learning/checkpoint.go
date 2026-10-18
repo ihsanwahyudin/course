@@ -197,6 +197,9 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 		}
 	}
 	validate := func(items []tutor.CheckItem, avoid []string) ([]tutor.CheckItem, error) {
+		if err := tutor.ValidateRecognitionVocabulary(items, lesson.RecognitionVocabulary); err != nil {
+			return nil, err
+		}
 		return tutor.ValidateCheckpoint(items, objs, avoid)
 	}
 	fallback := func() []tutor.CheckItem { return ai.AuthoredCheckpoint(lesson, lang) }
@@ -209,6 +212,13 @@ func (s *Service) writeCheckpoint(ctx context.Context, userID string, sess stora
 			}
 		}
 		validate = func(items []tutor.CheckItem, avoid []string) ([]tutor.CheckItem, error) {
+			for _, it := range items {
+				if l, ok := cur.Lesson(it.LessonID); ok {
+					if err := tutor.ValidateRecognitionVocabulary([]tutor.CheckItem{it}, l.RecognitionVocabulary); err != nil {
+						return nil, err
+					}
+				}
+			}
 			return tutor.ValidateLevelCheckpoint(items, lessons, avoid)
 		}
 		fallback = func() []tutor.CheckItem { return ai.LevelFallback(in.LevelLessons) }

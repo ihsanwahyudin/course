@@ -380,3 +380,27 @@ membocorkan kunci. Perbaikan tidak menganggap jawaban pengguna `shap` otomatis b
 
 Riwayat attempt yang sudah dinilai dipertahankan. Aturan baru berlaku pada soal yang dibuat setelah kode diperbarui;
 perbaikan ini belum di-commit, di-push, atau diterapkan ke produksi.
+
+## 2026-10-18 — Soal bunyi memakai kata yang belum diajarkan
+
+Laporan `live / leave / life` cocok dengan item authored `snd-1`, yang juga menjadi contoh bagi generator AI.
+Pasangan ini tidak dikenalkan dalam langkah konsep pelajaran `a0-sounds-indonesian`. Pemeriksaan ketujuh item
+menemukan contoh serupa: `full / fool`, `tree / three`, `safe / save`, `they / day`, dan `back / bag / bad`.
+Masuk kategori bunyi yang benar tidak cukup: di A0, ejaan dan bunyi kata pembanding perlu dikenalkan lebih dulu.
+
+- Checkpoint EN/ID kini memakai kata yang sudah dijelaskan: `chip / cheap`, `good / food`, `think / this`,
+  `very / fan`, `mother`, `bed / bet`, dan `bus`. Distraktor juga berasal dari kata yang telah dikenalkan.
+- Pelajaran memiliki `recognitionVocabulary`, sebuah bank tertutup berisi 29 kata. Validasi konten memeriksa
+  kemunculannya di materi pengajaran dan langkah konsep/contoh/contekan kedua bahasa, tanpa memakai soal atau
+  teacher notes sebagai bukti. Pemeriksaan ini adalah bukti leksikal; penjelasan bunyinya tetap ditinjau manusia.
+- Pilihan MCQ/multi berupa satu kata di luar bank ditolak sebelum verifikasi AI. Berlaku juga pada fallback authored
+  dan soal dari pelajaran ini di checkpoint level. Instruksi penulis/verifier mewajibkan kata yang sudah diajarkan,
+  termasuk pilihan salah, dan melarang retake memperkenalkan pasangan baru demi menghindari pengulangan.
+  Pemeriksaan deterministik ini tidak menilai seluruh kosakata kalimat atau pilihan berupa instruksi panjang.
+- Tidak mengubah plan, langkah latihan, progres, atau attempt tersimpan. Checkpoint baru memakai aturan baru;
+  checkpoint lama yang masih terbuka juga tetap tersimpan. Tidak ada migrasi/penghapusan data learner.
+- Listening pengganti memakai audio `chip`, `think`, dan `bed` yang sudah tercatat di repo; tidak membuat audio baru.
+- Semua tes Go/database lolos. Tes regresi EN/ID membuktikan penolakan sebelum verifier, retry yang diperbaiki,
+  fallback aman, nilai 100 yang tetap membuka progres, serta pembatasan berdasarkan lessonId di checkpoint level.
+  Coursecheck lolos dan e2e mock mode Indonesia melewati 194 node sampai C2, termasuk login ulang setelah restart.
+  Tidak memakai token OpenAI maupun TTS. Server lokal :8090 sudah memakai kode ini; belum diterapkan ke produksi.
