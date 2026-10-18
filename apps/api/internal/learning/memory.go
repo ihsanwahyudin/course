@@ -224,26 +224,7 @@ func speechText(text string) string { return curriculum.SpeechKey(text) }
 
 // say asks the provider for a sentence's audio.
 func (s *Service) say(ctx context.Context, text string) ([]byte, error) {
-	return s.AI.Speech(ctx, speakable(text))
-}
-
-// letterWords gives each letter a common word, so a lone letter is read as
-// "A, as in apple." The voice garbles a bare letter (a clipped "uh" for A),
-// and this is how letters are spelled out loud anyway.
-var letterWords = map[byte]string{
-	'A': "apple", 'B': "ball", 'C': "cat", 'D': "dog", 'E': "egg", 'F': "fish", 'G': "goat", 'H': "hat", 'I': "ink",
-	'J': "jam", 'K': "kite", 'L': "lion", 'M': "moon", 'N': "nose", 'O': "orange", 'P': "pen", 'Q': "queen", 'R': "rain",
-	'S': "sun", 'T': "tree", 'U': "umbrella", 'V': "van", 'W': "water", 'X': "box", 'Y': "yellow", 'Z': "zoo",
-}
-
-// speakable is what the voice is given for a sentence.
-func speakable(text string) string {
-	if len(text) == 1 {
-		if w, ok := letterWords[text[0]]; ok {
-			return text + ", as in " + w + "."
-		}
-	}
-	return text
+	return s.AI.Speech(ctx, text)
 }
 
 // bundledAudio returns a sentence's audio from a course folder (lesson
@@ -261,6 +242,11 @@ func (s *Service) speechPath(text string) string {
 	voice := s.AI.Name()
 	if v, ok := s.AI.(interface{ SpeechVoice() string }); ok {
 		voice += "/" + v.SpeechVoice()
+	}
+	// Earlier versions expanded every bare capital letter to "as in ...".
+	// Never reuse those persistent recordings for literal word/letter audio.
+	if len(text) == 1 && text[0] >= 'A' && text[0] <= 'Z' {
+		voice += "/literal-v2"
 	}
 	h := sha256.Sum256([]byte(voice + "\x00" + text))
 	dir := s.SpeechCacheDir

@@ -66,7 +66,7 @@ export function ConceptCard({ step }: { step: StepView }) {
   const t = useT();
   const sp = useSpeak();
   const pairs = step.pairs ?? [];
-  const texts = pairs.map((p) => p.en);
+  const texts = pairs.map((p) => p.speechText?.trim() || p.en);
   const playing = playingIndex(sp, texts);
   return (
     <WidgetCard eyebrow={t('step.conceptCard')} title={step.title}>
@@ -78,7 +78,7 @@ export function ConceptCard({ step }: { step: StepView }) {
             return (
               <Pressable
                 key={i}
-                onPress={() => (on ? sp.stop() : sp.speak(p.en))}
+                onPress={() => (on ? sp.stop() : sp.speak(texts[i]))}
                 accessibilityRole="button"
                 accessibilityLabel={on ? t('step.stop') : t('step.listen', { text: p.en })}
                 accessibilityState={{ selected: on }}

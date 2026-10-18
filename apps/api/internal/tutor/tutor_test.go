@@ -12,7 +12,7 @@ import (
 
 func validPlan() Plan {
 	return Plan{Greeting: "Hi!", Steps: []Step{
-		{Kind: StepConcept, Title: "Pronouns", Text: "Let's start.", Body: "he = laki-laki", Pairs: []Pair{{"he", "dia (lk)"}}},
+		{Kind: StepConcept, Title: "Pronouns", Text: "Let's start.", Body: "he = laki-laki", Pairs: []Pair{{EN: "he", ID: "dia (lk)"}}},
 		{Kind: StepExamples, Title: "Examples", Examples: []Example{{"He is busy.", "Dia sibuk."}}},
 		{Kind: StepQuestion, Title: "Try", Question: &Question{Type: QuestionMCQ, ObjectiveID: "subject", Prompt: "Andi is my manager. ___ is busy.", Options: []string{"He", "She", "It"}, Answer: 0, Explanation: "Andi is a man."}},
 		{Kind: StepQuestion, Title: "Order", Question: &Question{Type: QuestionWordOrder, ObjectiveID: "possessive", Prompt: "Tasnya (Rina) baru.", Tokens: []string{"new", "Her", "is", "bag"}, Solution: "Her bag is new.", Explanation: "her + noun"}},

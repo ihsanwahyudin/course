@@ -780,7 +780,7 @@ func TestRecordedLessonAudioNeedsNoProvider(t *testing.T) {
 		t.Fatal(err)
 	}
 	s.warm.Wait()
-	text := sess.Lesson.Steps[0].Pairs[0].EN
+	text := sess.Lesson.Steps[0].Pairs[0].SpokenText()
 	cur, _ := s.Catalog.Course(course)
 	want, _ := os.ReadFile(cur.AudioPath(text))
 	b, err := s.Speech(ctx, learnerID, text)

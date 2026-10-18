@@ -100,6 +100,12 @@ Markup in course text: `**bold**`, `*italic*`, `` `code` ``, line breaks, and li
 - **Teaching before testing:** make vocabulary and patterns explicit in the material before asking learners to use them. Word tiles
   supply words but do not teach their meanings. Simplify rules for beginners by naming the particular pattern being practised, without
   presenting a pattern such as *noun + please* as the only possible position of *please* in English.
+  A phonics category is not permission to test any word containing that sound: `live / leave` needs prior teaching even when
+  `ship / sheep` has been taught. For a closed set of recognition words, set lesson `recognitionVocabulary` to distinct lowercase
+  English words. Include only words explained in both reading material and teaching steps. This bank applies to single-word MCQ/multi
+  choices, including distractors, in authored and AI checkpoints and when that lesson is sampled in a level checkpoint. Sentence
+  tasks and explanatory choices still require content review and AI verification. Quizzes, flashcards alone, and teacher notes are
+  not evidence of prior teaching. Retakes vary tasks using the taught words; they must not introduce new pairs to avoid repetition.
 - **A complete question:** a response-length instruction such as “Tuliskan 1 huruf yang benar” does not identify an answer. Supply
   a clue, situation, source sentence, or listening audio; the hidden key and rubric are not learner-visible clues. AI checkpoints
   require a verdict for every question; unavailable or incomplete verification falls back to authored questions.
@@ -144,6 +150,10 @@ engVid, Woodward English. Say in the note when a link is above the lesson's leve
 
 - Every English sentence a plan reads aloud (word tiles, examples, cheat-sheet examples, `listen`) and every checkpoint `listen` is
   recorded once and committed in `<course>/audio/`.
+- A concept pair normally reads its visible `en` text exactly. If the teaching audio intentionally adds context, set the pair's optional
+  `speechText` explicitly (for example alphabet `I` → `I, as in ink.`) in both plan languages. Audio is keyed by that spoken text,
+  including for "listen to all" and audio bundling. The pronoun `I` reads only `I`; never globally expand a one-letter word to an
+  alphabet example. Audio-only wording changes do not restart learning steps or erase answers.
 - New lessons go into `audio/pending.json`. **Audio is made only after the content is reviewed**: remove the node from
   `pending.json`, then `cd apps/api && go run ./cmd/server bundle-audio` (only new or changed sentences are recorded).
 - Changing a spoken English sentence means re-recording it. Prefer changing explanations and Indonesian glosses.

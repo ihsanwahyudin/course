@@ -45,6 +45,16 @@ const (
 type Pair struct {
 	EN string `json:"en"`
 	ID string `json:"id"`
+	// SpeechText is an explicit spoken form when the teaching audio includes
+	// more than the visible label (e.g. "I, as in ink." in the alphabet).
+	SpeechText string `json:"speechText,omitempty"`
+}
+
+func (p Pair) SpokenText() string {
+	if text := strings.TrimSpace(p.SpeechText); text != "" {
+		return text
+	}
+	return p.EN
 }
 
 type Example struct {
@@ -319,6 +329,12 @@ func ValidatePlan(p *Plan, objectives []string) error {
 		}
 		if badLen(s.Title, maxShort) || runes(s.Text) > maxText || runes(s.Body) > maxText {
 			return fmt.Errorf("step %d: needs a short title and bounded text", i)
+		}
+		for j := range s.Pairs {
+			s.Pairs[j].SpeechText = clean(s.Pairs[j].SpeechText)
+			if runes(s.Pairs[j].SpeechText) > MaxSpeechRunes {
+				return fmt.Errorf("step %d: pair speech text is too long", i)
+			}
 		}
 		switch s.Kind {
 		case StepConcept:

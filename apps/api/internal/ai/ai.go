@@ -62,11 +62,12 @@ type LessonInput struct {
 
 // LevelLesson is one lesson a level checkpoint covers.
 type LevelLesson struct {
-	ID           string
-	Title        string
-	Objective    string   // the checkpoint objective its questions count towards
-	Objectives   []string // what the lesson teaches
-	CommonErrors []string
+	ID                    string
+	Title                 string
+	Objective             string   // the checkpoint objective its questions count towards
+	Objectives            []string // what the lesson teaches
+	CommonErrors          []string
+	RecognitionVocabulary []string
 	// Sample is one of the lesson's hand-written checkpoint questions (its
 	// prompt in the learner's language): for level and style, and the fallback.
 	Sample               curriculum.AssessmentItem

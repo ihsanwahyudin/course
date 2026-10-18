@@ -224,6 +224,7 @@ func levelLessons(cur *curriculum.Curriculum, ck *curriculum.Node, lang string) 
 		}
 		local := cur.LocalNode(n.ID, lang)
 		ll := ai.LevelLesson{ID: n.ID, Title: local.Title, Objective: objective[n.ID], Sample: l.Assessment[0], SamplePrompt: l.PromptIn(l.Assessment[0], lang), SampleDisplayOptions: l.AssessmentLabelsIn(l.Assessment[0], lang)}
+		ll.RecognitionVocabulary = l.RecognitionVocabulary
 		for _, o := range local.Objectives {
 			ll.Objectives = append(ll.Objectives, o.Text)
 		}

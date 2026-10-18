@@ -380,3 +380,44 @@ membocorkan kunci. Perbaikan tidak menganggap jawaban pengguna `shap` otomatis b
 
 Riwayat attempt yang sudah dinilai dipertahankan. Aturan baru berlaku pada soal yang dibuat setelah kode diperbarui;
 perbaikan ini belum di-commit, di-push, atau diterapkan ke produksi.
+
+## 2026-10-18 — Soal bunyi memakai kata yang belum diajarkan
+
+Laporan `live / leave / life` cocok dengan item authored `snd-1`, yang juga menjadi contoh bagi generator AI.
+Pasangan ini tidak dikenalkan dalam langkah konsep pelajaran `a0-sounds-indonesian`. Pemeriksaan ketujuh item
+menemukan contoh serupa: `full / fool`, `tree / three`, `safe / save`, `they / day`, dan `back / bag / bad`.
+Masuk kategori bunyi yang benar tidak cukup: di A0, ejaan dan bunyi kata pembanding perlu dikenalkan lebih dulu.
+
+- Checkpoint EN/ID kini memakai kata yang sudah dijelaskan: `chip / cheap`, `good / food`, `think / this`,
+  `very / fan`, `mother`, `bed / bet`, dan `bus`. Distraktor juga berasal dari kata yang telah dikenalkan.
+- Pelajaran memiliki `recognitionVocabulary`, sebuah bank tertutup berisi 29 kata. Validasi konten memeriksa
+  kemunculannya di materi pengajaran dan langkah konsep/contoh/contekan kedua bahasa, tanpa memakai soal atau
+  teacher notes sebagai bukti. Pemeriksaan ini adalah bukti leksikal; penjelasan bunyinya tetap ditinjau manusia.
+- Pilihan MCQ/multi berupa satu kata di luar bank ditolak sebelum verifikasi AI. Berlaku juga pada fallback authored
+  dan soal dari pelajaran ini di checkpoint level. Instruksi penulis/verifier mewajibkan kata yang sudah diajarkan,
+  termasuk pilihan salah, dan melarang retake memperkenalkan pasangan baru demi menghindari pengulangan.
+  Pemeriksaan deterministik ini tidak menilai seluruh kosakata kalimat atau pilihan berupa instruksi panjang.
+- Tidak mengubah plan, langkah latihan, progres, atau attempt tersimpan. Checkpoint baru memakai aturan baru;
+  checkpoint lama yang masih terbuka juga tetap tersimpan. Tidak ada migrasi/penghapusan data learner.
+- Listening pengganti memakai audio `chip`, `think`, dan `bed` yang sudah tercatat di repo; tidak membuat audio baru.
+- Semua tes Go/database lolos. Tes regresi EN/ID membuktikan penolakan sebelum verifier, retry yang diperbaiki,
+  fallback aman, nilai 100 yang tetap membuka progres, serta pembatasan berdasarkan lessonId di checkpoint level.
+  Coursecheck lolos dan e2e mock mode Indonesia melewati 194 node sampai C2, termasuk login ulang setelah restart.
+  Tidak memakai token OpenAI maupun TTS. Server lokal :8090 sudah memakai kode ini; belum diterapkan ke produksi.
+
+## 2026-10-18 — Audio kata ganti I tercampur dengan contoh alfabet
+
+Kartu `I` di `a0-pronouns` meminta audio untuk teks `I`, tetapi backend lama menambahkan `, as in ink.`
+ke semua huruf besar tunggal. Hasilnya tersimpan di bundle dan cache dengan kunci `I`, lalu dipakai juga untuk kata ganti.
+
+- Audio kini membaca teks yang diminta secara literal. Contoh alfabet ditentukan eksplisit melalui `pair.speechText`
+  di plan EN/ID `a0-alphabet-sounds` dan `a0-listening-first`. Label kartu tetap berupa satu huruf.
+  Klik kartu, "Dengar semua", pemanasan audio, dan bundling menggunakan teks ucapan yang sama.
+- Memindahkan 26 rekaman alfabet yang ada ke kunci kalimat eksplisit tanpa mengubah byte rekamannya. Bundle literal `I`
+  memakai rekaman `eye` yang sudah ada (pelafalan sama /aɪ/), sehingga tidak membuat TTS baru.
+- Cache disk huruf tunggal memakai versi baru dan URL pemutaran memakai `v=2`, melewati cache HTTP lama yang berlaku seminggu.
+  Progres, jawaban, dan chat dipertahankan saat sesi lama menerima metadata audio yang baru.
+- Semua tes Go/database dan coursecheck lolos; typecheck, lint, dan build web lolos. E2E mock Indonesia melewati 194 node,
+  memeriksa dua rekaman berbeda lewat HTTP dan metadata ucapan di langkah konsep, lalu memeriksa progres setelah restart.
+  Klik `I` dan "Dengar semua" juga berhasil mulai/selesai di browser lokal. Tidak memakai token OpenAI atau TTS.
+  Server lokal :8090 sudah memakai perbaikan ini; perubahan belum diterapkan ke produksi.

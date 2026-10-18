@@ -199,6 +199,9 @@ type Lesson struct {
 	GuidedPractice    []PracticePrompt `json:"guidedPractice"`
 	IndependentPrompt []PracticePrompt `json:"independentPractice"`
 	Assessment        []AssessmentItem `json:"assessment"`
+	// RecognitionVocabulary is an optional closed bank of taught words for
+	// word-recognition choices, including distractors (e.g. beginner phonics).
+	RecognitionVocabulary []string `json:"recognitionVocabulary,omitempty"`
 	// Reading material shown on the lesson page, with the AI helper beside it.
 	Material           []Section             `json:"material"`
 	SuggestedQuestions []string              `json:"suggestedQuestions,omitempty"`
@@ -649,6 +652,7 @@ func validateLessons(c *Curriculum) []error {
 		if strings.TrimSpace(l.Intro) == "" {
 			errs = append(errs, fmt.Errorf("lesson %q: missing intro", id))
 		}
+		errs = append(errs, validateRecognitionVocabulary(l)...)
 		objIDs := map[string]bool{}
 		for _, o := range n.Objectives {
 			objIDs[o.ID] = true

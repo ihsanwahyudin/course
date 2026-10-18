@@ -151,95 +151,94 @@
     {
       "id": "snd-1",
       "objectiveId": "short-long-vowels",
-      "prompt": "Choose the correct answer. Listen. Do you hear live or leave? Choose the word you hear.",
-      "listen": "The word is leave.",
-      "rubric": "Correct: leave (long /iː/). 'live' = 0.",
+      "prompt": "Choose the correct answer. Listen, then choose the word you hear.",
+      "listen": "chip",
+      "rubric": "Chip has the short, relaxed 'i' sound /ɪ/. Cheap and seat have the long 'ii' sound /iː/.",
       "type": "mcq",
       "options": [
-        "leave",
-        "live",
-        "life"
+        "chip",
+        "cheap",
+        "seat"
       ],
-      "correctOption": "leave"
+      "correctOption": "chip"
     },
     {
       "id": "snd-2",
       "objectiveId": "short-long-vowels",
-      "prompt": "Choose the correct answer. Which word has the long sound /uː/, like in 'food': full or fool? Choose it.",
-      "rubric": "Correct: fool (long /uː/). 'full' has the short /ʊ/ = 0.",
+      "prompt": "Which word has the long 'uu' sound /uː/?",
+      "rubric": "Food has the long 'uu' /uː/. Good has a short 'u' /ʊ/; seat has a long 'ii' /iː/. Learn each word with its sound; spelling alone does not decide it.",
       "type": "mcq",
       "options": [
-        "fool",
-        "full",
-        "fill"
+        "food",
+        "good",
+        "seat"
       ],
-      "correctOption": "fool"
+      "correctOption": "food"
     },
     {
       "id": "snd-3",
       "objectiveId": "th-v-sh",
-      "prompt": "Choose the correct answer. Listen. Do you hear tree or three? Choose the word you hear.",
-      "listen": "The word is three.",
-      "rubric": "Correct: three (/θ/). Accept '3'. 'tree' = 0.",
+      "prompt": "Listen, then choose the word you hear.",
+      "listen": "think",
+      "rubric": "Think starts with th with air only: put the tongue tip lightly between the teeth. This and that start with th with voice.",
       "type": "mcq",
       "options": [
-        "three",
-        "tree",
-        "free"
+        "think",
+        "this",
+        "that"
       ],
-      "correctOption": "three"
+      "correctOption": "think"
     },
     {
       "id": "snd-4",
       "objectiveId": "th-v-sh",
-      "prompt": "Choose the correct answer. Listen. Do you hear safe or save? Choose the word you hear.",
-      "listen": "The word is save.",
-      "rubric": "Correct: save (ends with /v/). 'safe' = 0.",
+      "prompt": "Which word starts with v: top teeth on the lower lip and a vibrating voice?",
+      "rubric": "Very starts with v: top teeth on the lower lip with a vibrating voice. Fan starts with f, air only; see starts with s.",
       "type": "mcq",
       "options": [
-        "save",
-        "safe",
-        "same"
+        "very",
+        "fan",
+        "see"
       ],
-      "correctOption": "save"
+      "correctOption": "very"
     },
     {
       "id": "snd-5",
       "objectiveId": "th-v-sh",
-      "prompt": "Choose the correct answer. Which word starts with the voiced th /ð/ (tongue between the teeth, with voice): thank, they or day? Choose it.",
-      "rubric": "Correct: they. 'thank' has the voiceless /θ/; 'day' starts with /d/ = 0.",
+      "prompt": "Which word has th with a vibrating voice, like this?",
+      "rubric": "Mother has th with voice, like this. Think and thank have th with air only. Both th sounds use the tongue tip lightly between the teeth.",
       "type": "mcq",
       "options": [
-        "they",
-        "thank",
-        "day"
+        "mother",
+        "think",
+        "thank"
       ],
-      "correctOption": "they"
+      "correctOption": "mother"
     },
     {
       "id": "snd-6",
       "objectiveId": "final-consonants",
-      "prompt": "Choose the correct answer. Listen. Do you hear back, bag or bad? Choose the word you hear.",
-      "listen": "The word is bag.",
-      "rubric": "Correct: bag (ends with /g/). 'back' or 'bad' = 0.",
+      "prompt": "Listen, then choose the word you hear. Pay attention to the last sound.",
+      "listen": "bed",
+      "rubric": "Bed ends with d, with voice; do not change it to t as in bet. Bus ends with s. Finish the word without adding a vowel.",
       "type": "mcq",
       "options": [
-        "bag",
-        "back",
-        "bad"
+        "bed",
+        "bet",
+        "bus"
       ],
-      "correctOption": "bag"
+      "correctOption": "bed"
     },
     {
       "id": "snd-7",
       "objectiveId": "final-consonants",
-      "prompt": "Choose the English word for 'bis'. It ends with /s/ (a clear 's' sound).",
-      "rubric": "Bus ends with /s/, like a clear s; but ends in /t/ and bun in /n/.",
+      "prompt": "Choose the English word for 'bis'. It ends with a clear s sound.",
+      "rubric": "Bus means bis and ends with s. Books means buku-buku and also ends with s, but it has a different meaning; bed means tempat tidur and ends with d.",
       "type": "mcq",
       "options": [
         "bus",
-        "but",
-        "bun"
+        "books",
+        "bed"
       ],
       "correctOption": "bus"
     }
@@ -735,14 +734,45 @@
         "Kenapa bunyi terakhir sebuah kata begitu penting?"
       ],
       "assessment": {
-        "snd-1": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar live atau leave? Pilih kata yang kamu dengar.",
-        "snd-2": "Pilih jawaban yang benar. Kata mana yang punya bunyi panjang /uː/ seperti dalam 'food': full atau fool? Pilih katanya.",
-        "snd-3": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar tree atau three? Pilih kata yang kamu dengar.",
-        "snd-4": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar safe atau save? Pilih kata yang kamu dengar.",
-        "snd-5": "Pilih jawaban yang benar. Kata mana yang diawali bunyi th bersuara /ð/ (lidah di antara gigi, pita suara bergetar): thank, they atau day? Pilih katanya.",
-        "snd-6": "Pilih jawaban yang benar. Dengarkan. Kamu mendengar back, bag atau bad? Pilih kata yang kamu dengar.",
-        "snd-7": "Pilih kata bahasa Inggris untuk 'bis'. Kata itu berakhir dengan bunyi /s/ (bunyi 's' yang jelas)."
+        "snd-1": "Pilih jawaban yang benar. Dengarkan, lalu pilih kata yang kamu dengar.",
+        "snd-2": "Kata mana yang punya bunyi 'uu' panjang /uː/?",
+        "snd-3": "Dengarkan, lalu pilih kata yang kamu dengar.",
+        "snd-4": "Kata mana yang diawali bunyi v: gigi atas menyentuh bibir bawah dan suara bergetar?",
+        "snd-5": "Kata mana yang punya bunyi th dengan suara bergetar, seperti this?",
+        "snd-6": "Dengarkan, lalu pilih kata yang kamu dengar. Perhatikan bunyi terakhirnya.",
+        "snd-7": "Pilih kata bahasa Inggris untuk 'bis'. Kata itu diakhiri bunyi s yang jelas."
       }
     }
-  }
+  },
+  "recognitionVocabulary": [
+    "ship",
+    "sheep",
+    "sit",
+    "seat",
+    "chip",
+    "cheap",
+    "good",
+    "food",
+    "think",
+    "thank",
+    "this",
+    "that",
+    "mother",
+    "bathroom",
+    "very",
+    "seven",
+    "van",
+    "fan",
+    "she",
+    "see",
+    "shop",
+    "fish",
+    "cat",
+    "cap",
+    "can",
+    "bed",
+    "bet",
+    "bus",
+    "books"
+  ]
 }
