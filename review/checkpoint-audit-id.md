@@ -421,3 +421,19 @@ ke semua huruf besar tunggal. Hasilnya tersimpan di bundle dan cache dengan kunc
   memeriksa dua rekaman berbeda lewat HTTP dan metadata ucapan di langkah konsep, lalu memeriksa progres setelah restart.
   Klik `I` dan "Dengar semua" juga berhasil mulai/selesai di browser lokal. Tidak memakai token OpenAI atau TTS.
   Server lokal :8090 sudah memakai perbaikan ini; perubahan belum diterapkan ke produksi.
+
+## 2026-10-26 — Audio Thursday hampir hening
+
+File standalone `Thursday` ada dan dapat didekode, tetapi isinya hampir hening: rerata -57,9 dBFS dan puncak -47,6 dBFS.
+Karena server mengembalikan MP3 yang valid, pemutar tidak memakai fallback suara perangkat.
+
+- Mengganti hanya rekaman `Thursday` dengan kata terakhir dari rekaman existing `No, I said Tuesday, not Thursday.`
+  (asset `12e9420520ff3a2c6147f71a352e113e92d89ddc62bedc62d88f477552f247f3.mp3`, rentang 3,00–3,90 detik).
+  Kata `not` berakhir sebelum rentang ini; potongan mencakup awal th dan akhir day, dengan padding dan fade singkat.
+  Tidak memakai TTS baru atau token OpenAI, dan tidak mengubah kalimat sumber maupun materi pelajaran.
+- Hasil MP3 mono 24 kHz/128 kbps berdurasi 1,032 detik, rerata -21,5 dBFS dan puncak -6,3 dBFS.
+  Ketujuh nama hari berhasil didekode; semua memiliki level suara normal pada pemeriksaan amplitudo.
+- URL audio `Thursday` memakai revisi 3 untuk melewati cache HTTP lama; rekaman lain tetap pada revisi 2.
+  Perubahan tidak mengubah plan, jawaban, atau progres. Aplikasi yang memakai bundle lama perlu diperbarui/reload setelah deploy.
+- Typecheck, lint, build web, coursecheck, validasi plan, dan pemeriksaan kelengkapan audio lolos.
+  Perubahan tersedia di workspace; belum di-deploy ke produksi.
