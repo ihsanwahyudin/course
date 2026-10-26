@@ -18,7 +18,8 @@ let generation = 0;
 const SERVER_WAIT_MS = 4000;
 
 // Revision bypasses the previous week-long HTTP cache for corrected recordings.
-const ttsUrl = (text: string) => `${API_URL}/api/v1/tts?text=${encodeURIComponent(text)}&v=2`;
+const recordingRevisions: Readonly<Record<string, number>> = { Thursday: 3 };
+const ttsUrl = (text: string) => `${API_URL}/api/v1/tts?text=${encodeURIComponent(text)}&v=${recordingRevisions[text] ?? 2}`;
 const pause = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 // Web: the sentence's audio as a blob URL (fetched once), or null without a server voice.
